@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reproduire les contrôles, tests, graphes et résultats du programme ORI-C.">
+  <meta name="theme-color" content="#07111f">
+  <title>Reproductibilité | ORI-C</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Organisation, histoire, futurs accessibles</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="site-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a></nav></div></header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="wrap narrow"><p class="eyebrow">Code, données et contrôles</p><h1>Reproductibilité</h1><p>Le dépôt conserve les données, les scripts, les résultats positifs, les résultats négatifs, les empreintes SHA-256 et les limites d'environnement.</p><a class="ci-badge" href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml"><img src="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml/badge.svg" alt="État de la validation GitHub Actions"></a></div>
+    </section>
+
+    <section class="section compact">
+      <div class="wrap">
+        <div class="metric-grid four">
+          <article class="metric"><strong>986</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
+          <article class="metric"><strong>151</strong><span>tests du socle réussis</span><small>environnement publié</small></article>
+          <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
+          <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests optionnels ignorés</small></article>
+        </div>
+        <p class="data-note">Les compteurs dépendent de l'environnement. Le fichier <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">ETAT_DES_TESTS.md</a> indique les versions qui font foi et documente l'échec attendu restant.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap two-column align-start">
+        <div><p class="eyebrow">Contrôle global</p><h2>Vérifier le dossier en une commande</h2><p>Le script vérifie chaque empreinte, détecte les fichiers absents ou non listés et contrôle la présence des éléments canoniques.</p></div>
+        <div class="terminal" aria-label="Commandes de vérification"><div class="terminal-bar"><span></span><span></span><span></span></div><pre><code>git clone https://github.com/dalozedidier-dot/ORI-C.git
+cd ORI-C
+python verifier_dossier.py
+python scripts/valider_tout.py</code></pre></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Suites séparées</p><h2>Reproduire sans mélanger les verdicts</h2></div>
+        <div class="command-grid">
+          <article><h3>Socle</h3><pre><code>cd 00_socle
+python -m pytest -q</code></pre><p>Carte, généalogie, test interventionnel et règles transversales.</p></article>
+          <article><h3>Mémoire historique</h3><pre><code>cd 02_branche_systeme_solaire/couche_memoire_historique
+export PYTHONPATH="$PWD/src"
+python -m unittest discover -s tests</code></pre><p>Tests MPT, exoplanète, ablations et stress.</p></article>
+          <article><h3>Couche astronomique</h3><pre><code>cd 02_branche_systeme_solaire/couche_astronomique
+cat REPRODUCTION.md</code></pre><p>La reproduction complète suit le protocole et les données de référence de la couche.</p></article>
+          <article><h3>Généalogies</h3><pre><code>python 00_socle/genealogie/arbre_genealogique.py
+python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Clôture de l'arbre global et de la généalogie matérielle.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Traçabilité</p><h2>Documents faisant autorité</h2></div>
+        <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf"><strong>Dossier scientifique</strong><span>Lecture continue du programme et de ses limites</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/documentation/POINT_D_ENTREE.md"><strong>Point d'entrée canonique</strong><span>Carte des documents et fichiers machine lisibles</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_PREUVES.md"><strong>État des preuves</strong><span>Statut transversal des couches et résultats</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md"><strong>État des tests</strong><span>Compteurs générés et environnement</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/AUTORITE_DES_DOCUMENTS.md"><strong>Autorité des documents</strong><span>Règles en cas de contradiction</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/MANIFEST.sha256"><strong>Manifeste SHA-256</strong><span>Empreintes de tous les fichiers contrôlés</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap two-column align-start">
+        <div><p class="eyebrow">Lecture honnête</p><h2>Un échec attendu n'est pas caché</h2></div>
+        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité attend une référence identifiable pour TR-021 vers TR-028 et TR-024 vers TR-023. Le dossier les conserve comme échec attendu au lieu de les faire passer artificiellement au vert.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Code, données et contrôles publics.</p></div><div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div><div><a href="methode.html">Méthode</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div></footer>
+</body>
+</html>

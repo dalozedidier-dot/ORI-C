@@ -13,6 +13,11 @@
       "sha256": "c0618f278308b0c11f7e4f390eaacb9aa9c113d0d8792c2b14271c8c21d9698c"
     },
     {
+      "path": ".github/workflows/pages.yml",
+      "size": 845,
+      "sha256": "6849d4d8cbc838a6f94f28c788a51c233c5147a83b0b67ded3fab7adbf1cba99"
+    },
+    {
       "path": ".gitignore",
       "size": 275,
       "sha256": "721488139093f989cd90819665bffdbe24acbc06b0b254e00bc20fff123785ad"
@@ -3159,8 +3164,8 @@
     },
     {
       "path": "README.md",
-      "size": 7247,
-      "sha256": "25e40aff923de074aedf697f2702c302a2cb902b348abf161172736f49850e15"
+      "size": 7338,
+      "sha256": "f79ccf4f2d6feb13cbd43984320082f3cd31d59eef46e2055295c1299627642c"
     },
     {
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
@@ -4886,6 +4891,41 @@
       "path": "scripts/valider_tout.py",
       "size": 1844,
       "sha256": "c31addfc28db38994aeceff7460cafaf9ba4f9522b322d0e79607af1b1d744d7"
+    },
+    {
+      "path": "site/assets/app.js",
+      "size": 1098,
+      "sha256": "3e8dad277476c5a603429615777469ba154efc3b7c41132a59e0ca4582e1df16"
+    },
+    {
+      "path": "site/assets/favicon.svg",
+      "size": 601,
+      "sha256": "b9bae848df3e93f0959cce9b1ec53bb262b4b9e53c378d27bf27393dfe239665"
+    },
+    {
+      "path": "site/assets/styles.css",
+      "size": 19838,
+      "sha256": "dd0102e209902038f39e85528c95bf73f0a737eb4fa13275706dbd781941db18"
+    },
+    {
+      "path": "site/index.html",
+      "size": 11299,
+      "sha256": "d95334b1ff8e72969403e84a2462d8bd20d60de5422e144aa1f0cb357e3b35c6"
+    },
+    {
+      "path": "site/methode.html",
+      "size": 8482,
+      "sha256": "dc907f32e20582cd71832b89afa6aa9f3f9ae664512f09a3081928ee56e2c4cf"
+    },
+    {
+      "path": "site/preuves.html",
+      "size": 20990,
+      "sha256": "79315f63f7dde50536599cfe6c26146104ece5d83f14e51432920c3cecc3667e"
+    },
+    {
+      "path": "site/reproductibilite.html",
+      "size": 7104,
+      "sha256": "fd4f5dd62bf584a1e25dc4f71fce23485f2c9672d51fa81e9e9e593526ad3f1c"
     },
     {
       "path": "verifier_dossier.py",
