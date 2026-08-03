@@ -8,6 +8,26 @@
       "sha256": "74ad1be9cce46af05bcefe9e260db7c2e5deb3d7215c63f156624eddd3f9efce"
     },
     {
+      "path": ".github/workflows/analyse-donnees-reelles.yml",
+      "size": 6205,
+      "sha256": "389efc6f7f30268e77a3a26ff24a2d2ff4edddd81f9896fe27322891f41270e5"
+    },
+    {
+      "path": ".github/workflows/analyse-paleoclimat-approfondie.yml",
+      "size": 4478,
+      "sha256": "3f6abb091a65c0af9446f4031f0932149b36df2d4817520e4dc2b1ee2ec04aeb"
+    },
+    {
+      "path": ".github/workflows/analyse-structure.yml",
+      "size": 7285,
+      "sha256": "dc4e8f599de62fdfe680a4e6eb408082399eb7fbd70264580eeb09e8f50e3b08"
+    },
+    {
+      "path": ".github/workflows/analyse-systeme-solaire.yml",
+      "size": 6327,
+      "sha256": "941355db10ece88e56ef29c2b26bd8969ff5816da38bcbf3838d191cfc7545ce"
+    },
+    {
       "path": ".github/workflows/ci.yml",
       "size": 559,
       "sha256": "c0618f278308b0c11f7e4f390eaacb9aa9c113d0d8792c2b14271c8c21d9698c"
@@ -15,7 +35,7 @@
     {
       "path": ".github/workflows/pages.yml",
       "size": 1631,
-      "sha256": "19a3fd02dfee1e9eff6a5123eae60c383b0e2026a0a2bbb2efea759c9c4cde55"
+      "sha256": "cb945aa7d3e3264bdc754d89b5f5bf521bf3f629c2eaeae8125e56c6ddfe5385"
     },
     {
       "path": ".gitignore",

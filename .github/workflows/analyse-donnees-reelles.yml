@@ -1,0 +1,168 @@
+name: Analyses ORI-C sur données réelles
+
+on:
+  workflow_dispatch:
+    inputs:
+      campagne:
+        description: Niveau d'exécution
+        required: true
+        default: ciblee
+        type: choice
+        options:
+          - ciblee
+          - complete
+  push:
+    branches: [main]
+    paths:
+      - 'plateforme/campagne_maximale_reelle/data/**'
+      - 'plateforme/campagne_maximale_reelle/*.py'
+      - 'plateforme/campagne_maximale_reelle/scripts/**'
+      - 'plateforme/source_corrigee/**'
+      - 'plan_directeur/campagne_plateforme/**'
+      - '.github/workflows/analyse-donnees-reelles.yml'
+  schedule:
+    - cron: '29 4 15 * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: analyse-donnees-reelles-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  donnees-reelles:
+    name: Climat, exoplanètes, antibiotiques et plateforme
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONHASHSEED: '0'
+      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+      DATA: ${{ github.workspace }}/plateforme/campagne_maximale_reelle/data
+      OUT: ${{ runner.temp }}/oric-donnees-reelles
+
+    steps:
+      - name: Récupérer le dépôt et Git LFS
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Finaliser Git LFS
+        run: git lfs pull
+
+      - name: Installer Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+
+      - name: Installer la plateforme ORI-C
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+          python -m pip install --no-build-isolation --no-deps -e plateforme/source_corrigee
+
+      - name: Préparer les artefacts
+        run: mkdir -p "$OUT/logs" "$OUT/resultats"
+
+      - name: Auditer la plateforme et valider les données
+        run: |
+          python -m oric_full audit --output "$OUT/resultats/platform_audit.json" \
+            | tee "$OUT/logs/platform_audit.log"
+          set +e
+          python -m oric_full validate-data --data-dir "$DATA" \
+            | tee "$OUT/logs/validation_donnees.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          if [ "$code" -gt 1 ]; then
+            exit "$code"
+          fi
+          echo "Code attendu avec tables manquantes: $code" \
+            >> "$OUT/logs/validation_donnees.log"
+
+      - name: Analyser la mémoire distribuée dans GISTEMP
+        run: |
+          python plateforme/campagne_maximale_reelle/memoire_distribuee_gistemp.py \
+            --data-dir "$DATA" \
+            --sortie "$OUT/resultats" \
+            | tee "$OUT/logs/memoire_gistemp.log"
+
+      - name: Analyser la vallée des rayons exoplanétaires
+        run: |
+          python plateforme/campagne_maximale_reelle/vallee_des_rayons_exoplanetes.py \
+            --data-dir "$DATA" \
+            --sortie "$OUT/resultats" \
+            --tirages 2000 \
+            | tee "$OUT/logs/vallee_exoplanetes.log"
+
+      - name: Tester l'apport de l'histoire sur les antibiotiques
+        run: |
+          python plateforme/campagne_maximale_reelle/scripts/benchmark_antibiotic_history.py \
+            | tee "$OUT/logs/benchmark_antibiotiques.log"
+          cp plateforme/campagne_maximale_reelle/resultats_consolides/benchmark_antibiotic_history.json \
+            "$OUT/resultats/"
+
+      - name: Estimer la reachability observationnelle dans deux branches
+        run: |
+          python plateforme/campagne_maximale_reelle/scripts/pacc_observationnel_deux_branches.py \
+            | tee "$OUT/logs/pacc_observationnel.log"
+          cp plateforme/campagne_maximale_reelle/resultats_consolides/pacc_observationnel_deux_branches.json \
+            "$OUT/resultats/"
+
+      - name: Exécuter les 683 entrées sur données réelles
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.campagne == 'complete' }}
+        run: |
+          python -m oric_full run \
+            --all \
+            --real-data-only \
+            --data-dir "$DATA" \
+            --output-dir "$OUT/resultats/campagne_complete" \
+            --oric-root "$GITHUB_WORKSPACE" \
+            | tee "$OUT/logs/campagne_complete.log"
+
+      - name: Rassembler provenance, bilan et métadonnées
+        if: always()
+        run: |
+          cp plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/EXCLUSIONS.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/PROVENANCE_*.json "$OUT/resultats/" 2>/dev/null || true
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          out = Path(os.environ['OUT'])
+          payload = {
+              'workflow': 'analyse-donnees-reelles',
+              'commit': os.environ.get('GITHUB_SHA'),
+              'event': os.environ.get('GITHUB_EVENT_NAME'),
+              'requested_campaign': os.environ.get('INPUT_CAMPAGNE', 'ciblee'),
+              'generated_at_utc': datetime.now(timezone.utc).isoformat(),
+              'scientific_scope': (
+                  'Les sorties techniques et exploratoires restent séparées des '
+                  'verdicts confirmatoires. Aucun jeu synthétique ne doit être '
+                  'interprété comme donnée réelle.'
+              ),
+          }
+          (out / 'execution.json').write_text(
+              json.dumps(payload, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          PY
+          python -m pip freeze > "$OUT/pip-freeze.txt"
+        env:
+          INPUT_CAMPAGNE: ${{ inputs.campagne || 'ciblee' }}
+
+      - name: Publier les analyses sur données réelles
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: analyses-donnees-reelles-${{ github.sha }}
+          path: ${{ runner.temp }}/oric-donnees-reelles
+          if-no-files-found: error
+          retention-days: 30

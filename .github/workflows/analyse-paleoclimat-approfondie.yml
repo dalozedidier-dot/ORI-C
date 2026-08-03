@@ -1,0 +1,135 @@
+name: Analyse paléoclimatique approfondie ORI-C
+
+on:
+  workflow_dispatch:
+    inputs:
+      bloc:
+        description: Batterie de stress à exécuter
+        required: true
+        default: tests-reels
+        type: choice
+        options:
+          - tests-reels
+          - mecanismes
+          - complete
+
+permissions:
+  contents: read
+
+concurrency:
+  group: analyse-paleoclimat-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  stress-paleoclimat:
+    name: Tests réels, témoins, mécanismes et spectres nuls
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONHASHSEED: '0'
+      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+      OUT: ${{ runner.temp }}/oric-paleoclimat
+      MEMORY: ${{ github.workspace }}/02_branche_systeme_solaire/couche_memoire_historique
+      BLOC: ${{ inputs.bloc }}
+
+    steps:
+      - name: Récupérer le dépôt et Git LFS
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Finaliser Git LFS
+        run: git lfs pull
+
+      - name: Installer Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+
+      - name: Vérifier la couche avant les analyses lourdes
+        run: |
+          mkdir -p "$OUT/logs"
+          cd "$MEMORY"
+          export PYTHONPATH="$MEMORY/src"
+          python -m unittest discover -s tests \
+            | tee "$OUT/logs/tests_memoire.log"
+          bash scripts/run_all.sh \
+            | tee "$OUT/logs/campagne_principale.log"
+
+      - name: Exécuter la batterie sélectionnée
+        run: |
+          set -euo pipefail
+          cd "$MEMORY/stress"
+          export PYTHONPATH="$MEMORY/src:$MEMORY/stress"
+
+          tests_reels=(
+            f_tests_reels.py
+            g_tests_reels_2.py
+            h_g2_corrige.py
+          )
+          mecanismes=(
+            i_criteres_discriminants.py
+            j_mecanismes_wp_c7.py
+            k_familles_wp_c4.py
+            l_familles_memoire_wp_c3.py
+            m_prospectif_wp_c2.py
+            n_nulls_spectraux_lr04.py
+          )
+
+          case "$BLOC" in
+            tests-reels) scripts=("${tests_reels[@]}") ;;
+            mecanismes) scripts=("${mecanismes[@]}") ;;
+            complete) scripts=("${tests_reels[@]}" "${mecanismes[@]}") ;;
+            *) echo "Bloc inconnu: $BLOC" >&2; exit 2 ;;
+          esac
+
+          for script in "${scripts[@]}"; do
+            echo "=== $script ==="
+            set +e
+            python "$script" | tee "$OUT/logs/${script%.py}.log"
+            code=${PIPESTATUS[0]}
+            set -e
+            if [ "$code" -gt 1 ]; then
+              exit "$code"
+            fi
+            echo "Code scientifique accepté: $code" >> "$OUT/logs/${script%.py}.log"
+          done
+
+      - name: Régénérer les figures et le rapport complet
+        if: ${{ inputs.bloc == 'complete' }}
+        working-directory: 02_branche_systeme_solaire/couche_memoire_historique/stress
+        run: |
+          export PYTHONPATH="$MEMORY/src:$MEMORY/stress"
+          python figures.py | tee "$OUT/logs/figures.log"
+          python make_report.py | tee "$OUT/logs/rapport.log"
+
+      - name: Rassembler les sorties paléoclimatiques
+        if: always()
+        run: |
+          mkdir -p "$OUT/resultats"
+          cp -R "$MEMORY/results" "$OUT/resultats/" 2>/dev/null || true
+          cp -R "$MEMORY/results_stress" "$OUT/resultats/" 2>/dev/null || true
+          cp "$MEMORY/RAPPORT_CORRIGE.md" "$OUT/resultats/" 2>/dev/null || true
+          cp "$MEMORY/stress/PREENREGISTREMENT_PROSPECTIF.md" "$OUT/resultats/" 2>/dev/null || true
+          git diff --binary -- 02_branche_systeme_solaire/couche_memoire_historique \
+            > "$OUT/regeneration_paleoclimat.diff" || true
+          python -m pip freeze > "$OUT/pip-freeze.txt"
+
+      - name: Publier les résultats paléoclimatiques
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: analyse-paleoclimat-${{ inputs.bloc }}-${{ github.sha }}
+          path: ${{ runner.temp }}/oric-paleoclimat
+          if-no-files-found: error
+          retention-days: 30

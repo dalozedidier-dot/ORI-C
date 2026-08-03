@@ -1,0 +1,206 @@
+name: Analyses structurelles ORI-C
+
+on:
+  workflow_dispatch:
+    inputs:
+      profondeur:
+        description: Niveau d analyse structurelle
+        required: true
+        default: rapide
+        type: choice
+        options:
+          - rapide
+          - complete
+  push:
+    branches: [main]
+    paths:
+      - '00_socle/**'
+      - '01_branche_matiere/**'
+      - 'plan_directeur/**'
+      - 'scripts/**'
+      - '.github/workflows/analyse-structure.yml'
+  schedule:
+    - cron: '17 3 * * 0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: analyse-structure-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  structure:
+    name: Graphe, généalogie, inventaire et audit transversal
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+      OUT: ${{ runner.temp }}/oric-structure
+
+    steps:
+      - name: Récupérer le dépôt et Git LFS
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Finaliser Git LFS
+        run: git lfs pull
+
+      - name: Installer Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+
+      - name: Préparer les artefacts
+        run: mkdir -p "$OUT/logs" "$OUT/resultats"
+
+      - name: Vérifier l'état initial
+        run: |
+          python verifier_dossier.py | tee "$OUT/logs/integrite_initiale.log"
+          python scripts/valider_tout.py | tee "$OUT/logs/validation_rapide.log"
+
+      - name: Recalculer la carte relationnelle
+        run: |
+          python 00_socle/carte_relationnelle/analyse_graphe.py \
+            | tee "$OUT/logs/analyse_graphe.log"
+
+      - name: Exécuter les benchmarks structurels complets
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.profondeur == 'complete' }}
+        run: |
+          run_scientific_analysis() {
+            local script="$1"
+            local log="$2"
+            set +e
+            python "$script" | tee "$log"
+            local code=${PIPESTATUS[0]}
+            set -e
+            if [ "$code" -gt 1 ]; then
+              return "$code"
+            fi
+            echo "Code scientifique accepté: $code" >> "$log"
+          }
+          run_scientific_analysis \
+            00_socle/carte_relationnelle/benchmark_hors_noeud.py \
+            "$OUT/logs/benchmark_hors_noeud.log"
+          run_scientific_analysis \
+            00_socle/carte_relationnelle/reconstruction_wp_m5.py \
+            "$OUT/logs/reconstruction_wp_m5.log"
+
+      - name: Recalculer les généalogies
+        run: |
+          python 00_socle/genealogie/arbre_genealogique.py \
+            | tee "$OUT/logs/arbre_genealogique.log"
+          python 01_branche_matiere/genealogie/construire_genealogie.py \
+            | tee "$OUT/logs/genealogie_matiere.log"
+
+      - name: Recalculer l'hypergraphe et ses épreuves
+        working-directory: 01_branche_matiere/hypergraphe_transformations
+        run: |
+          python construire_et_valider.py \
+            | tee "$OUT/logs/hypergraphe_validation.log"
+          python analyser_inventaire.py \
+            | tee "$OUT/logs/inventaire_accessible.log"
+          set +e
+          python tester_hierarchie.py \
+            | tee "$OUT/logs/test_hierarchie.log"
+          code=${PIPESTATUS[0]}
+          set -e
+          if [ "$code" -gt 1 ]; then
+            exit "$code"
+          fi
+          echo "Code scientifique attendu: $code" >> "$OUT/logs/test_hierarchie.log"
+
+      - name: Étendre l'analyse de l'inventaire hiérarchique
+        working-directory: 01_branche_matiere/inventaire_hierarchique
+        run: |
+          python detecter_manques.py \
+            | tee "$OUT/logs/detection_manques.log"
+          python carte_causale.py \
+            | tee "$OUT/logs/carte_causale.log"
+          python chaine_filtres.py \
+            | tee "$OUT/logs/chaine_filtres.log"
+
+      - name: Recalculer l'audit transversal
+        run: |
+          python plan_directeur/audit_transversal.py \
+            | tee "$OUT/logs/audit_transversal.log"
+
+      - name: Rassembler les sorties contrôlables
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import shutil
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root = Path.cwd()
+          out = Path(os.environ['OUT'])
+          resultats = out / 'resultats'
+          resultats.mkdir(parents=True, exist_ok=True)
+
+          chemins = [
+              '00_socle/carte_relationnelle/resultats_analyse',
+              '00_socle/genealogie/cloture_arbre.json',
+              '01_branche_matiere/genealogie/cloture_genealogie.json',
+              '01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json',
+              '01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json',
+              '01_branche_matiere/hypergraphe_transformations/test_hierarchie_resultats.json',
+              '01_branche_matiere/inventaire_hierarchique/manques_detectes.json',
+              '01_branche_matiere/inventaire_hierarchique/carte_causale.json',
+              '01_branche_matiere/inventaire_hierarchique/chaine_filtres_azote.json',
+              'plan_directeur/audit_transversal.json',
+          ]
+          copies = []
+          for relatif in chemins:
+              source = root / relatif
+              if not source.exists():
+                  continue
+              cible = resultats / relatif
+              cible.parent.mkdir(parents=True, exist_ok=True)
+              if source.is_dir():
+                  shutil.copytree(source, cible, dirs_exist_ok=True)
+              else:
+                  shutil.copy2(source, cible)
+              copies.append(relatif)
+
+          metadata = {
+              'workflow': 'analyse-structure',
+              'commit': os.environ.get('GITHUB_SHA'),
+              'event': os.environ.get('GITHUB_EVENT_NAME'),
+              'generated_at_utc': datetime.now(timezone.utc).isoformat(),
+              'copied_outputs': copies,
+              'scientific_scope': (
+                  'Recalcul structurel et analyses internes. Une réussite du workflow '
+                  'ne constitue pas une validation empirique générale d ORI-C.'
+              ),
+          }
+          (out / 'execution.json').write_text(
+              json.dumps(metadata, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          PY
+          git diff --binary > "$OUT/regeneration.diff" || true
+          python -m pip freeze > "$OUT/pip-freeze.txt"
+
+      - name: Publier les résultats structurels
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: analyses-structurelles-${{ github.sha }}
+          path: ${{ runner.temp }}/oric-structure
+          if-no-files-found: error
+          retention-days: 30
