@@ -2,11 +2,13 @@
 
 Ce fichier indique où trouver le contenu scientifique et les résultats contrôlables. Les numéros de publication ne définissent pas l'autorité d'un document. L'autorité dépend de sa fonction, de son niveau de preuve et de son lien avec les données ou calculs reproduisibles.
 
-## Lecture scientifique complète
+## Synthèse de lecture
 
-- `dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf` : lecture continue du programme, de l'architecture scientifique, des branches, des résultats, de la généalogie et des limites.
-- `dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx` : source modifiable du même document.
-- `../ORI-C_Architecture_generale_du_programme.pdf` : architecture générale du programme.
+- `dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf` : synthèse continue du programme. Ce document ne suffit pas, à lui seul, pour déterminer l’état exact des preuves.
+- `dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx` : source modifiable de la même synthèse.
+- `../ORI-C_Architecture_generale_du_programme.pdf` : présentation de l’architecture générale du programme.
+
+Pour les verdicts, les limites et les résultats reproductibles, les fichiers de la section suivante et les sorties machine lisibles priment sur cette synthèse.
 
 ## Autorité transversale
 

@@ -3164,8 +3164,8 @@
     },
     {
       "path": "README.md",
-      "size": 7247,
-      "sha256": "25e40aff923de074aedf697f2702c302a2cb902b348abf161172736f49850e15"
+      "size": 7460,
+      "sha256": "8bd6413ae3d8ad98f87cc7807787b157fd8e0858d1a626e879ede254c6396c1c"
     },
     {
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
@@ -3234,8 +3234,8 @@
     },
     {
       "path": "documentation/POINT_D_ENTREE.md",
-      "size": 2439,
-      "sha256": "44443bad072197f9dfa80ed8529d73ac0fd27075a7f05f16702054cb4192326c"
+      "size": 2608,
+      "sha256": "8e28bf3736d8145b38db4ffaefec2b1e01ea25ba5771b838aaf531caa68dcfe0"
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
@@ -4909,8 +4909,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 11299,
-      "sha256": "d95334b1ff8e72969403e84a2462d8bd20d60de5422e144aa1f0cb357e3b35c6"
+      "size": 11269,
+      "sha256": "8df77d90e2249436e4256dd6908a17faa956d60d9710d5274374a6dcffe5cf1d"
     },
     {
       "path": "site/methode.html",
@@ -4924,8 +4924,8 @@
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 7104,
-      "sha256": "fd4f5dd62bf584a1e25dc4f71fce23485f2c9672d51fa81e9e9e593526ad3f1c"
+      "size": 7077,
+      "sha256": "6f59d50890a4bee1325dc163a5f514b1a05ff69e3735485588bec02480fc3557"
     },
     {
       "path": "verifier_dossier.py",

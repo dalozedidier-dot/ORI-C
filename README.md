@@ -2,6 +2,8 @@
 
 Didier Daloze | Juillet 2026
 
+**Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
+
 Ce dossier rassemble **l'état intégré du programme ORI-C consacré à la
 chronologie des architectures matérielles, à l'architecture du Système solaire
 et au vivant**, sous une forme unique : un socle commun et trois branches
@@ -46,7 +48,7 @@ séparés.
 
 ## Par où commencer
 
-0. **`documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf`** — le document scientifique complet. Il réunit le socle, les trois branches, les résultats, les réfutations, l'arbre généalogique et les limites.
+0. `documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf` — document de synthèse pour une lecture continue. Il ne suffit pas, à lui seul, pour déterminer l’état exact des preuves. Les fichiers `ETAT_DES_PREUVES.md`, `ETAT_DES_TESTS.md`, `SCIENTIFIC_SCOPE.md` et les résultats machine lisibles font autorité pour les verdicts.
 1. `documentation/POINT_D_ENTREE.md` — la carte des documents faisant autorité et des fichiers machine lisibles.
 2. `ORI-C_Architecture_generale_du_programme.pdf` — l'architecture générale du programme.
 3. `ARCHITECTURE.md` — ce qui relie les branches, ce qui les sépare, et pourquoi le socle n'en est pas une.
