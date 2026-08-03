@@ -25,6 +25,10 @@ concurrency:
   group: analyse-systeme-solaire-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   memoire:
     name: Couche mémoire historique

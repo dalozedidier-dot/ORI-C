@@ -1,6 +1,6 @@
 # Campagne réelle consolidée - bilan canonique
 
-Date d’exécution : 2026-08-01. Catalogue : 683 entrées.
+Date d’exécution : 2026-08-03. Catalogue : 683 entrées.
 
 ## Composition des données actives
 
@@ -22,9 +22,9 @@ Date d’exécution : 2026-08-01. Catalogue : 683 entrées.
 
 | Statut technique | Nombre |
 |---|---:|
-| Réussites | 213 |
+| Réussites | 211 |
 | Échecs | 0 |
-| Bloqués | 438 |
+| Bloqués | 440 |
 | Erreurs | 0 |
 | Non exécutés | 32 |
 
@@ -38,10 +38,10 @@ Date d’exécution : 2026-08-01. Catalogue : 683 entrées.
 
 Les sorties complètes sont dans `resultats_consolides/`.
 
-## Pourquoi le nombre de réussites est inférieur à 249
+## Pourquoi le total diffère du bilan précédent
 
-Les anciens résultats étendus comptaient certaines opérations GISTEMP comme des réussites alors que le jeu ne contient ni modèles climatiques indépendants, ni scénarios d’émissions, ni phase de retrait ou de restauration. La fusion rétablit les garde-fous de portée scientifique. Ces opérations deviennent des blocages explicites au lieu de réussites techniques. Le total consolidé est donc plus prudent et plus cohérent avec la nature réelle des données.
+Le bilan précédent comptait 213 réussites et 438 blocages. La réexécution stricte du 3 août 2026 a reclassé deux opérations qui dépendaient de la table absente `modern_climate_ensemble.csv`. Elles sont désormais correctement enregistrées comme bloquées au lieu d’être comptées comme réussites techniques.
 
 ## Interprétation
 
-La campagne ne produit aucun soutien scientifique confirmatoire à ORI-C. Elle établit qu’une partie des moteurs traite correctement les jeux présents et documente précisément les analyses impossibles avec les données actuelles.
+La campagne ne produit aucun soutien scientifique confirmatoire à ORI-C. Elle établit qu’une partie des 59 moteurs traite correctement les 33 jeux présents et documente précisément les analyses impossibles avec les données actuelles. Une réussite technique ne devient jamais automatiquement une preuve scientifique.

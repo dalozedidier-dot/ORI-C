@@ -1,8 +1,8 @@
 # Rapport d’exécution ORI-C complet
 
-- Exécution : `oric-20260801T205435Z-d4f2daf6`
-- Début : 2026-08-01T20:54:35.477654+00:00
-- Fin : 2026-08-01T20:54:37.062158+00:00
+- Exécution : `oric-20260803T192943Z-e0e38329`
+- Début : 2026-08-03T19:29:43.808726+00:00
+- Fin : 2026-08-03T19:29:44.835719+00:00
 - Entrées sélectionnées : 683
 
 ## Lecture obligatoire
@@ -11,10 +11,10 @@ Le **statut technique** indique si le moteur informatique s’est exécuté corr
 
 ## Statuts techniques
 
-- pass: 213
+- pass: 211
 - fail: 0
 - skip: 0
-- blocked: 438
+- blocked: 440
 - error: 0
 - not_run: 32
 
@@ -120,15 +120,15 @@ Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `B1-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
-- `B1-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
+- `B1-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv
 
 ### WP-B2
 
@@ -136,18 +136,18 @@ Technique : blocked=12
 
 Scientifique : undetermined=12
 
-- `B2-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
 
 ### WP-B3
 
@@ -155,15 +155,15 @@ Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `B3-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
-- `B3-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
+- `B3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv
 
 ### WP-C1
 
@@ -233,7 +233,7 @@ Scientifique : undetermined=10
 
 ### WP-CL2
 
-Technique : blocked=8, not_run=1, pass=1
+Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
@@ -241,6 +241,7 @@ Scientifique : not_applicable=1, undetermined=9
 - `CL2-002` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-003` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-004` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
+- `CL2-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
 - `CL2-006` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-007` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-009` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
@@ -252,31 +253,32 @@ Technique : blocked=10
 
 Scientifique : undetermined=10
 
-- `CL3-001` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-002` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-003` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-004` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-005` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-006` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-007` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-008` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-009` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL3-010` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
+- `CL3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
 
 ### WP-CL4
 
-Technique : blocked=8, not_run=1, pass=1
+Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `CL4-002` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-003` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-004` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-005` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-006` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-007` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-008` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
-- `CL4-009` — **blocked** — Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents
+- `CL4-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
 
 ### WP-M1
 
@@ -291,16 +293,16 @@ Technique : blocked=10
 
 Scientifique : undetermined=10
 
-- `M2-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
 
 ### WP-M3
 
@@ -308,21 +310,21 @@ Technique : blocked=15
 
 Scientifique : undetermined=15
 
-- `M3-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv
 
 ### WP-M4
 
@@ -330,21 +332,21 @@ Technique : blocked=15
 
 Scientifique : undetermined=15
 
-- `M4-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
-- `M4-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
+- `M4-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv
 
 ### WP-M5
 
@@ -359,16 +361,16 @@ Technique : blocked=10
 
 Scientifique : undetermined=10
 
-- `P1-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
 
 ### WP-P2
 
@@ -393,21 +395,21 @@ Technique : blocked=15
 
 Scientifique : undetermined=15
 
-- `P3-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
-- `P3-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
+- `P3-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv
 
 ### WP-P4
 
@@ -415,15 +417,15 @@ Technique : blocked=9, pass=1
 
 Scientifique : undetermined=10
 
-- `P4-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
-- `P4-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
+- `P4-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv
 
 ### WP-P5
 
@@ -431,16 +433,16 @@ Technique : blocked=10
 
 Scientifique : undetermined=10
 
-- `P5-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
-- `P5-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
+- `P5-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv
 
 ### WP-P6
 
@@ -448,17 +450,17 @@ Technique : blocked=11, not_run=1
 
 Scientifique : not_applicable=1, undetermined=11
 
-- `P6-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
-- `P6-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
+- `P6-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv
 
 ### WP-R1
 
@@ -580,21 +582,21 @@ Technique : blocked=15, not_run=1
 
 Scientifique : not_applicable=1, undetermined=15
 
-- `T1-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T1-016` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T1-016` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
 
 ### WP-T2
 
@@ -602,15 +604,15 @@ Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `T2-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T2-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T2-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
 
 ### WP-T3
 
@@ -618,15 +620,15 @@ Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `T3-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T3-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
 
 ### WP-T4
 
@@ -634,12 +636,12 @@ Technique : blocked=6
 
 Scientifique : undetermined=6
 
-- `T4-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T4-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T4-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T4-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T4-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T4-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T4-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
 
 ### WP-T5
 
@@ -647,15 +649,15 @@ Technique : blocked=9, not_run=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `T5-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
-- `T5-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
+- `T5-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv
 
 ### WP-V1
 
@@ -680,26 +682,26 @@ Technique : blocked=33, not_run=1, pass=6
 
 Scientifique : not_applicable=1, undetermined=39
 
-- `V2-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-016` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-017` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-018` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-019` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-020` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-021` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-022` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V2-023` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-016` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-017` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-018` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-019` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-020` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-021` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-022` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V2-023` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
 - … 13 autres entrées dans `results.json`.
 
 ### WP-V3
@@ -708,25 +710,25 @@ Technique : blocked=19, not_run=1
 
 Scientifique : not_applicable=1, undetermined=19
 
-- `V3-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-014` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-016` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-017` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-018` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-019` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V3-020` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-014` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-016` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-017` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-018` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-019` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V3-020` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
 
 ### WP-V4
 
@@ -734,25 +736,25 @@ Technique : blocked=19, pass=1
 
 Scientifique : undetermined=20
 
-- `V4-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-010` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-011` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-012` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-013` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-015` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-016` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-017` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-018` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-019` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V4-020` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-010` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-011` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-012` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-013` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-015` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-016` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-017` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-018` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-019` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V4-020` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
 
 ### WP-V5
 
@@ -760,12 +762,12 @@ Technique : blocked=6, not_run=1, pass=3
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `V5-001` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V5-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V5-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V5-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V5-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V5-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-001` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V5-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
 
 ### WP-V6
 
@@ -773,11 +775,11 @@ Technique : blocked=8, not_run=1, pass=1
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `V6-002` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-003` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-004` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-005` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-006` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-007` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-008` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
-- `V6-009` — **blocked** — Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-002` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-003` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-004` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-005` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-006` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-007` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-008` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv
+- `V6-009` — **blocked** — Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv

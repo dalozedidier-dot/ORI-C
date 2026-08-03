@@ -20,6 +20,10 @@ concurrency:
   group: analyse-paleoclimat-${{ github.ref }}
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   stress-paleoclimat:
     name: Tests réels, témoins, mécanismes et spectres nuls

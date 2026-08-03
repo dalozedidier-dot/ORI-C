@@ -117,8 +117,8 @@
               <div class="evidence-top"><span class="status established">Inventaire contrôlé</span><span class="evidence-id">M-02</span></div>
               <h3>Inventaire hiérarchique de la matière</h3>
               <p class="claim">Le registre sépare ce qui existe de la généalogie qui explique son origine.</p>
-              <dl><div><dt>Résultat</dt><dd>6 392 entrées détaillées, 550 entrées d'index, 5 843 nuclides et 118 éléments.</dd></div><div><dt>Contrôle</dt><dd>13 comptages sur 13 concordent, racine unique, aucun parent orphelin et une URL sur chaque ligne contrôlée.</dd></div><div><dt>Limite</dt><dd>Molécules, phases, matériaux, réservoirs et objets biologiques forment un inventaire ouvert.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/README_INVENTAIRE_COMPLET.md">Périmètre et comptages</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tables/01_Index_maitre.csv">Index maître</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tests/test_inventaire_hierarchique.py">Tests</a></div>
+              <dl><div><dt>Résultat</dt><dd>6 392 entrées détaillées, 550 entrées d'index, 5 843 nuclides et 118 éléments.</dd></div><div><dt>Chaîne mesurée</dt><dd>Pour l'azote terrestre, présence, accessibilité et mobilisabilité sont calculées. La fraction mobilisable dépend fortement de l'horizon.</dd></div><div><dt>Contrôle</dt><dd>13 comptages sur 13 concordent, racine unique, aucun parent orphelin et une URL sur chaque ligne contrôlée.</dd></div><div><dt>Limite</dt><dd>L'opérativité reste sans donnée et les catégories ouvertes ne constituent pas un inventaire clos.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/chaine_filtres_azote.json">Chaîne quantitative de l'azote</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/README_INVENTAIRE_COMPLET.md">Périmètre et comptages</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tests/test_inventaire_hierarchique.py">Tests</a></div>
             </article>
 
             <article class="evidence-card" id="hypergraphe" data-status="structural">
@@ -141,7 +141,7 @@
               <div class="evidence-top"><span class="status supported">Fortement appuyé</span><span class="evidence-id">M-05</span></div>
               <h3>Inventaire accessible et contrôle indépendant</h3>
               <p class="claim">La composition totale ne détermine pas la fraction réellement disponible pour les transformations ultérieures.</p>
-              <dl><div><dt>Données</dt><dd>31 enregistrements sourcés pour l'azote, le carbone, l'hydrogène et le soufre.</dd></div><div><dt>Contrôle</dt><dd>Les budgets noyau plus silicate ferment avec un écart maximal de 2,88 %.</dd></div><div><dt>Épreuve indépendante</dt><dd>Les coefficients de partage recouvrent les répartitions observées pour C, H et N. Le soufre reste en désaccord.</dd></div><div><dt>Limite</dt><dd>La mobilisabilité exige des flux et des horizons. Elle n'est pas encore mesurée.</dd></div></dl>
+              <dl><div><dt>Données</dt><dd>31 enregistrements sourcés pour l'azote, le carbone, l'hydrogène et le soufre.</dd></div><div><dt>Contrôle</dt><dd>Les budgets noyau plus silicate ferment avec un écart maximal de 2,88 %.</dd></div><div><dt>Mobilisation</dt><dd>Pour l'azote terrestre, la fraction mobilisable passe de 6 × 10⁻⁶ à 100 ans à 0,631 à 20 Ma dans un modèle de premier ordre.</dd></div><div><dt>Limite</dt><dd>L'opérativité reste sans stock mesuré et le résultat porte sur un seul élément et un seul corps.</dd></div></dl>
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/coefficients_partage.csv">Coefficients expérimentaux</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/PROTOCOLE_INVENTAIRE_ACCESSIBLE.md">Protocole</a></div>
             </article>
           </div>
@@ -208,8 +208,40 @@
               <div class="evidence-top"><span class="status structural">Outil vérifié</span><span class="evidence-id">T-02</span></div>
               <h3>Campagne plateforme <code>oric-full 0.2.0</code></h3>
               <p class="claim">La campagne vérifie l'outillage et conserve un verdict scientifique nul au lieu de transformer les réussites techniques en preuves.</p>
-              <dl><div><dt>Couverture</dt><dd>683 entrées, 51 groupes de travail et 235 réussites techniques.</dd></div><div><dt>Contrôles positifs</dt><dd>Périodes de Milankovitch retrouvées et horizon de divergence La2010 établi.</dd></div><div><dt>Contrôle de la carte</dt><dd>AUC de 0,4938, indépendante du dossier et au niveau du hasard.</dd></div><div><dt>Verdict ORI-C</dt><dd>Aucune hypothèse soutenue, soit 0 <code>supports</code> défendable sur 683.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/README.md">Bilan de campagne</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/resultats/results.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/preenregistrement/catalogue_frozen.json">Catalogue préenregistré</a></div>
+              <dl><div><dt>Couverture</dt><dd>683 entrées, 51 groupes de travail, 59 moteurs et 33 jeux de données.</dd></div><div><dt>Exécution</dt><dd>211 réussites techniques, 440 blocages, 32 non-exécutions, 0 échec et 0 erreur.</dd></div><div><dt>Contrôles positifs</dt><dd>Périodes de Milankovitch retrouvées et horizon de divergence La2010 établi.</dd></div><div><dt>Verdict ORI-C</dt><dd>Aucun soutien confirmatoire, soit 651 verdicts indéterminés et 32 non applicables.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md">Bilan canonique actuel</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/results.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/source_corrigee/audit/platform_audit.json">Audit de la plateforme</a></div>
+            </article>
+
+            <article class="evidence-card" id="gistemp" data-status="refuted">
+              <div class="evidence-top"><span class="status refuted">Témoin apparié meilleur</span><span class="evidence-id">T-04</span></div>
+              <h3>Mémoire distribuée sur GISTEMP</h3>
+              <p class="claim">Le modèle multi-mémoires améliore l'intégrale cumulée simple, mais perd contre un témoin de même complexité.</p>
+              <dl><div><dt>RMSE</dt><dd>0,4563 pour l'intégrale simple, 0,1252 pour les multi-mémoires et 0,0997 pour le témoin apparié.</dd></div><div><dt>Prédiction qualitative</dt><dd>La constante de temps sud est plus longue que la constante nord.</dd></div><div><dt>Verdict</dt><dd>La structure particulière des compartiments n'est pas validée.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/memoire_distribuee_gistemp.json">Résultat machine</a></div>
+            </article>
+
+            <article class="evidence-card" id="vallee-exoplanetes" data-status="refuted">
+              <div class="evidence-top"><span class="status refuted">Critère manqué</span><span class="evidence-id">T-05</span></div>
+              <h3>Vallée des rayons exoplanétaires</h3>
+              <p class="claim">Le creux recherché n'atteint pas le critère préenregistré face aux permutations.</p>
+              <dl><div><dt>Données</dt><dd>3 298 planètes retenues sur 6 333.</dd></div><div><dt>Résultat</dt><dd>Position 1,502 R⊕, profondeur −0,00242 et quantile 0,0005 contre 0,95 requis.</dd></div><div><dt>Limite</dt><dd>Le contrôle entre méthodes est dominé par 3 271 détections par transit.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/vallee_des_rayons.json">Résultat machine</a></div>
+            </article>
+
+            <article class="evidence-card" id="antibiotiques" data-status="inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Exploratoire non concluant</span><span class="evidence-id">T-06</span></div>
+              <h3>Apport de l'histoire sur les antibiotiques</h3>
+              <p class="claim">Le modèle historique présente un léger avantage moyen, mais l'intervalle de confiance inclut zéro.</p>
+              <dl><div><dt>Erreur moyenne</dt><dd>0,6301 pour l'histoire contre 0,6414 pour le témoin de même complexité.</dd></div><div><dt>Gain</dt><dd>0,0114, IC 95 % [−0,0354 ; 0,0598].</dd></div><div><dt>Portée</dt><dd>Un seul antibiotique et aucun jeu final laissé intact.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/benchmark_antibiotic_history.json">Résultat machine</a></div>
+            </article>
+
+            <article class="evidence-card" id="pacc-observationnel" data-status="inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Estimateur saturé</span><span class="evidence-id">T-07</span></div>
+              <h3>Premier proxy observationnel de <code>Pacc</code></h3>
+              <p class="claim">Toutes les classes initiales atteignent les cinq classes futures dans les deux domaines testés.</p>
+              <dl><div><dt>Résultat</dt><dd><code>Pacc = 1</code> pour chaque état antibiotique et paléoclimatique.</dd></div><div><dt>Lecture</dt><dd>L'estimateur ne discrimine aucune architecture.</dd></div><div><dt>Limite</dt><dd>Sans interventions appariées, il ne mesure pas une accessibilité contrefactuelle causale.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/pacc_observationnel_deux_branches.json">Résultat machine</a></div>
             </article>
 
             <article class="evidence-card" id="plan-directeur" data-status="established refuted inconclusive">
@@ -233,12 +265,12 @@
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/README.md">Statut de la branche</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ARCHITECTURE.md">Articulation interbranches</a></div>
             </article>
 
-            <article class="evidence-card" data-status="untested">
-              <div class="evidence-top"><span class="status untested">Non testé</span><span class="evidence-id">V-02</span></div>
+            <article class="evidence-card" data-status="inconclusive untested">
+              <div class="evidence-top"><span class="status inconclusive">Exploratoire seulement</span><span class="evidence-id">V-02</span></div>
               <h3>Résistance aux antibiotiques</h3>
-              <p class="claim">Un protocole transforme le cadre en variables et critères expérimentaux sur une population déjà vivante.</p>
-              <dl><div><dt>Disponible</dt><dd>Prédiction minimale et protocole gelé.</dd></div><div><dt>Absent</dt><dd>Aucune exécution expérimentale du protocole ORI-C.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/protocoles_geles/ANTIBIOTIQUES_PREDICTION_MINIMALE.md">Prédiction minimale</a></div>
+              <p class="claim">Les données Windels permettent un premier benchmark historique, mais le protocole confirmatoire ORI-C reste non exécuté.</p>
+              <dl><div><dt>Exploratoire</dt><dd>Faible avantage moyen de l'histoire, intervalle de confiance traversant zéro.</dd></div><div><dt>Encore absent</dt><dd>Séquences manipulées indépendamment et jeu final laissé intact.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_consolides/benchmark_antibiotic_history.json">Benchmark exploratoire</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/protocoles_geles/ANTIBIOTIQUES_PREDICTION_MINIMALE.md">Prédiction minimale</a></div>
             </article>
 
             <article class="evidence-card" data-status="untested">

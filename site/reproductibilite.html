@@ -31,7 +31,7 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid four">
-          <article class="metric"><strong>989</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
+          <article class="metric"><strong>995</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
           <article class="metric"><strong>152</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
           <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests optionnels ignorés</small></article>
@@ -64,6 +64,18 @@ python -m unittest discover -s tests</code></pre><p>Tests MPT, exoplanète, abla
 cat REPRODUCTION.md</code></pre><p>La reproduction complète suit le protocole et les données de référence de la couche.</p></article>
           <article><h3>Généalogies</h3><pre><code>python 00_socle/genealogie/arbre_genealogique.py
 python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Clôture de l'arbre global et de la généalogie matérielle.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Analyses automatisées</p><h2>Quatre workflows séparés</h2><p>Chaque campagne publie ses logs, son environnement Python et ses résultats comme artefacts. Le succès technique d'un workflow ne change pas automatiquement un verdict scientifique.</p></div>
+        <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Carte, généalogies, inventaire, hypergraphe et audit transversal</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Données réelles</strong><span>GISTEMP, exoplanètes, antibiotiques, proxy Pacc et campagne complète</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Mémoire historique et 25 calculs astronomiques</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-paleoclimat-approfondie.yml"><strong>Paléoclimat approfondi</strong><span>Tests réels, témoins, mécanismes et spectres nuls</span></a>
         </div>
       </div>
     </section>

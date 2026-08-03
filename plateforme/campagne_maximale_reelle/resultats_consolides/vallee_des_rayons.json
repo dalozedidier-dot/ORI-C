@@ -1,0 +1,32 @@
+{
+  "source": "NASA Exoplanet Archive, table PS par défaut",
+  "planetes_au_catalogue": 6333,
+  "planetes_retenues": 3298,
+  "criteres_fixes_avant_execution": {
+    "fenetre_du_creux_rayons_terrestres": [
+      1.5,
+      2.2
+    ],
+    "quantile_minimal_contre_permutations": 0.95,
+    "ecart_maximal_entre_methodes_rayons": 0.4
+  },
+  "creux": {
+    "position_rayons_terrestres": 1.501564206427075,
+    "profondeur_relative": -0.0024200729203816967,
+    "quantile_contre_permutations": 0.0005,
+    "tirages": 2000,
+    "reussi": false
+  },
+  "temoin_methode_de_decouverte": {
+    "par_methode": {
+      "Transit": {
+        "n": 3271,
+        "position": 1.501564206427075,
+        "profondeur": -0.002336728209203295
+      }
+    },
+    "ecart_de_position": 0.0,
+    "critere": 0.4,
+    "reussi": true
+  }
+}

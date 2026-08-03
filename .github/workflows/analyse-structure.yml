@@ -29,6 +29,10 @@ concurrency:
   group: analyse-structure-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   structure:
     name: Graphe, généalogie, inventaire et audit transversal

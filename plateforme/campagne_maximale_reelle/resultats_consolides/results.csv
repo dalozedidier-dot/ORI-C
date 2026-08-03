@@ -1,684 +1,684 @@
 test_id,wp,technical_outcome,scientific_verdict,criterion_id,metric,threshold,message,duration_s
-S1-001,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.162699999213146e-05
-S1-002,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.7559999555014656e-06
-S1-003,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5730000200164795e-06
-S1-004,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.009999644149502e-07
-S1-005,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2610000226231932e-06
-S1-006,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.90999978967011e-07
-S1-007,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.019999881980766e-07
-S1-008,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.310000000870787e-07
-S1-009,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.310000225719705e-07
-S1-010,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.019999881980766e-07
-S1-011,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.209999577957205e-07
-S1-012,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.320000344814616e-07
-S1-013,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.009999987734773e-07
-S1-014,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.809999829078151e-07
-S1-015,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.220000040637387e-07
-S1-016,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.209999921542476e-07
-S1-017,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.110000067063083e-07
-S1-018,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.820000291758333e-07
-S1-019,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.6640000214683823e-06
-S1-020,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.60999967042153e-07
-S1-021,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.810000172663422e-07
-S1-022,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.209999577957205e-07
-S1-023,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.220000040637387e-07
-S1-024,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.510000384376326e-07
-S1-025,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.920000252350292e-07
-S1-026,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.409999736613827e-07
-S1-027,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.819999948173063e-07
-S1-028,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.310000000870787e-07
-S1-029,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.509999815942138e-07
-S1-030,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.510000159527408e-07
-S1-031,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.409999736613827e-07
-S1-032,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.91000013325538e-07
-S1-033,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.710000093335111e-07
-S1-034,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.410000080199097e-07
-S1-035,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.609999895270448e-07
-S1-036,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.310000225719705e-07
-S1-037,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.809999604229233e-07
-S1-038,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.110000067063083e-07
-S1-039,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.310000000870787e-07
-S1-040,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-S1-041,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.510000159527408e-07
-S1-042,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0210000027655042e-06
-S1-043,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.009999762885855e-07
-S1-044,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-S1-045,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.909999908406462e-07
-S1-046,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.81000005392707e-07
-S1-047,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.419999855708738e-07
-S1-048,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.809999604229233e-07
-S1-049,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.009999987734773e-07
-S1-050,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0320000001229346e-06
-S2-001,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.009999987734773e-07
-S2-002,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.909999683557544e-07
-S2-003,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.510000040791056e-07
-S2-004,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.410000080199097e-07
-S2-005,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.909999683557544e-07
-S2-006,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.009999762885855e-07
-S2-007,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.910000251991733e-07
-S2-008,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.110000067063083e-07
-S2-009,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.910000251991733e-07
-S2-010,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.010000331320043e-07
-S2-011,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.809999604229233e-07
-S2-012,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.010000331320043e-07
-S2-013,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.209999921542476e-07
-S2-014,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.193000000261236e-06
-S2-015,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.809999829078151e-07
-S2-016,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-S2-017,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.710000093335111e-07
-S2-018,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.110000410648354e-07
-S2-019,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.809999604229233e-07
-S2-020,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.210000489976665e-07
-S3-001,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,0.006037756000011996
-S3-002,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,5.318000035003934e-06
-S3-003,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.633999997669889e-06
-S3-004,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.6329999539266282e-06
-S3-005,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.1350000426755287e-06
-S3-006,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.5219999909277249e-06
-S3-007,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.0709999855862407e-06
-S3-008,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.2730000068804657e-06
-S3-009,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.3920000014877587e-06
-S3-010,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.2620000120477926e-06
-S3-011,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.3519999697564344e-06
-S3-012,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.2119999723836372e-06
-S3-013,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.2319999882492993e-06
-S3-014,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.202000021294225e-06
-S3-015,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.4149999805777043e-06
-S3-016,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.401999952577171e-06
-S3-017,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.3320000107341912e-06
-S3-018,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",9.90999978967011e-07
-S3-019,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.4130000067780202e-06
-S3-020,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.4519999922413263e-06
-M1-001,M1,pass,undetermined,,0.0,,Base des transitions validée,0.0023785800000268864
-M1-002,M1,pass,undetermined,,0.0,,Base des transitions validée,3.0950000109442044e-06
-M1-003,M1,pass,undetermined,,0.0,,Base des transitions validée,1.6920000120990153e-06
-M1-004,M1,pass,undetermined,,0.0,,Base des transitions validée,1.492999956553831e-06
-M1-005,M1,pass,undetermined,,0.0,,Base des transitions validée,1.2820000279134547e-06
-M1-006,M1,pass,undetermined,,0.0,,Base des transitions validée,1.401999952577171e-06
-M1-007,M1,pass,undetermined,,0.0,,Base des transitions validée,1.3620000345326844e-06
-M1-008,M1,pass,undetermined,,0.0,,Base des transitions validée,1.5330000451285741e-06
-M1-009,M1,pass,undetermined,,0.0,,Base des transitions validée,1.3120000517119479e-06
-M1-010,M1,pass,undetermined,,0.0,,Base des transitions validée,1.212000029227056e-06
-M1-011,M1,pass,undetermined,,0.0,,Base des transitions validée,1.9229999566050537e-06
-M1-012,M1,pass,undetermined,,0.0,,Base des transitions validée,1.2920000358462858e-06
-M1-013,M1,pass,undetermined,,0.0,,Base des transitions validée,1.2519999472715426e-06
-M1-014,M1,pass,undetermined,,0.0,,Base des transitions validée,1.212000029227056e-06
-M1-015,M1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.0430000517990266e-06
-M2-001,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,5.056499998090658e-05
-M2-002,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.8329999988964119e-06
-M2-003,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,4.877999970176461e-06
-M2-004,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.4120000173534208e-06
-M2-005,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.1619999895629007e-06
-M2-006,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.3719999856220966e-06
-M2-007,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.1519999816300697e-06
-M2-008,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.1719999974957318e-06
-M2-009,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.1319999657644075e-06
-M2-010,M2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.1520000384734885e-06
-M3-001,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.4365999991005083e-05
-M3-002,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.4519999922413263e-06
-M3-003,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.2620000120477926e-06
-M3-004,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1319999657644075e-06
-M3-005,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1610000001383014e-06
-M3-006,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.5630000120836485e-06
-M3-007,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.2319999882492993e-06
-M3-008,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1520000384734885e-06
-M3-009,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1409999842726393e-06
-M3-010,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1209999684069771e-06
-M3-011,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1520000384734885e-06
-M3-012,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.202000021294225e-06
-M3-013,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1419999736972386e-06
-M3-014,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.1320000226078264e-06
-M3-015,M3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.2820000279134547e-06
-M4-001,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.6603999995368213e-05
-M4-002,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.401999952577171e-06
-M4-003,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.7319999869869207e-06
-M4-004,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.2520000041149615e-06
-M4-005,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.2119999723836372e-06
-M4-006,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1520000384734885e-06
-M4-007,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1120000067421643e-06
-M4-008,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.202000021294225e-06
-M4-009,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1220000146749953e-06
-M4-010,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1509999922054703e-06
-M4-011,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1409999842726393e-06
-M4-012,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.2419999961821304e-06
-M4-013,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1619999895629007e-06
-M4-014,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.1420000305406575e-06
-M4-015,M4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.2820000279134547e-06
-M5-001,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,0.002259312999967733
-M5-002,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.38500001362263e-06
-M5-003,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.9319999751132855e-06
-M5-004,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.5020000319054816e-06
-M5-005,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.5119999829948938e-06
-M5-006,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.4519999922413263e-06
-M5-007,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.3919999446443398e-06
-M5-008,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.4130000067780202e-06
-M5-009,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,1.2419999961821304e-06
-M5-010,M5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.293000022746128e-06
-P1-001,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,6.792100003849555e-05
-P1-002,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.972999996269209e-06
-P1-003,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.421999968442833e-06
-P1-004,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.2919999790028669e-06
-P1-005,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.3420000186670222e-06
-P1-006,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.2520000041149615e-06
-P1-007,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.2220000371598871e-06
-P1-008,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.212000029227056e-06
-P1-009,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.1519999816300697e-06
-P1-010,P1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.2119999723836372e-06
-P2-001,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7120000279646774e-06
-P2-002,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1409999842726393e-06
-P2-003,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.220000265486306e-07
-P2-004,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.531999998860556e-06
-P2-005,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.942999972470716e-06
-P2-006,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.192000013361394e-06
-P2-007,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1620000464063196e-06
-P2-008,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.309999657285516e-07
-P2-009,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0509999697205785e-06
-P2-010,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.919999802652455e-07
-P3-001,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.136199998403754e-05
-P3-002,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.5919999896141235e-06
-P3-003,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.1519999816300697e-06
-P3-004,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.2419999961821304e-06
-P3-005,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.5830000279493106e-06
-P3-006,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.2919999790028669e-06
-P3-007,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.2309999988247e-06
-P3-008,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.32200000280136e-06
-P3-009,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.1909999670933757e-06
-P3-010,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.131000033183227e-06
-P3-011,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.212000029227056e-06
-P3-012,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.1519999816300697e-06
-P3-013,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.1619999895629007e-06
-P3-014,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.1719999974957318e-06
-P3-015,P3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.192000013361394e-06
-P4-001,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.4500999952815619e-05
-P4-002,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.6220000134126167e-06
-P4-003,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.8029999750979187e-06
-P4-004,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.4919999671292317e-06
-P4-005,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.1820000054285629e-06
-P4-006,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.1719999974957318e-06
-P4-007,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.1719999974957318e-06
-P4-008,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.311999994868529e-06
-P4-009,P4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.2819999710700358e-06
-P4-010,P4,pass,undetermined,,6333.0,,Démographie observationnelle des exoplanètes auditée,0.024121702999991612
-P5-001,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,6.86120000068513e-05
-P5-002,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.532999985760398e-06
-P5-003,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.5020000319054816e-06
-P5-004,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.3819999935549276e-06
-P5-005,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.4419999843084952e-06
-P5-006,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.4720000081069884e-06
-P5-007,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.0030000200677023e-06
-P5-008,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.212000029227056e-06
-P5-009,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.531999998860556e-06
-P5-010,P5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,1.311999994868529e-06
-P6-001,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.162300000918549e-05
-P6-002,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.542000006793387e-06
-P6-003,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.3619999776892655e-06
-P6-004,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.1019999988093332e-06
-P6-005,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.2520000041149615e-06
-P6-006,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.1320000226078264e-06
-P6-007,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.1619999895629007e-06
-P6-008,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.3320000107341912e-06
-P6-009,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.1319999657644075e-06
-P6-010,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.0609999776534096e-06
-P6-011,P6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.1520000384734885e-06
-P6-012,P6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.1350000426755287e-06
-A1-001,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4519999922413263e-06
-A1-002,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.320000119965698e-07
-A1-003,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.709999631013488e-07
-A1-004,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.319999776380428e-07
-A1-005,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0510000265639974e-06
-A1-006,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.809999829078151e-07
-A1-007,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.209999802806124e-07
-A1-008,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.810000172663422e-07
-A1-009,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.710000093335111e-07
-A1-010,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.6100000140068e-07
-A2-001,A2,pass,undetermined,,1.0,,Conditions initiales auditées,0.002127035999990312
-A2-002,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.4349999964433664e-06
-A2-003,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.193000000261236e-06
-A2-004,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.633000010770047e-06
-A2-005,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.4020000094205898e-06
-A2-006,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.421999968442833e-06
-A2-007,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.3420000186670222e-06
-A2-008,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.3619999776892655e-06
-A2-009,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.3920000014877587e-06
-A2-010,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.2419999961821304e-06
-A3-001,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1129999936420063e-06
-A3-002,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.520000278622319e-07
-A3-003,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.000999986899842e-06
-A3-004,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0119999842572724e-06
-A3-005,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.009999987734773e-07
-A3-006,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.32200000280136e-06
-A3-007,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2619999552043737e-06
-A3-008,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.81000005392707e-07
-A3-009,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.419999974445091e-07
-A3-010,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.310000225719705e-07
-A3-011,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.210000146391394e-07
-A3-012,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-A3-013,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.210000146391394e-07
-A3-014,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.010000331320043e-07
-A3-015,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-A3-016,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.109999842214165e-07
-A4-001,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1320000226078264e-06
-A4-002,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.310000225719705e-07
-A4-003,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.910000251991733e-07
-A4-004,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.110000410648354e-07
-A4-005,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.409999511764909e-07
-A4-006,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.510000384376326e-07
-A4-007,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,6.710000093335111e-07
-A4-008,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0610000344968284e-06
-A4-009,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.520000503471238e-07
-A4-010,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.610000120119366e-07
-A4-011,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.920000027501374e-07
-A4-012,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.061999967078009e-06
-A5-001,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,0.05127848300003279
-A5-002,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.924999987248157e-06
-A5-003,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.322999989701202e-06
-A5-004,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.8220000015389815e-06
-A5-005,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.8320000094718125e-06
-A5-006,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.552000014726218e-06
-A5-007,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.843000006829243e-06
-A5-008,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.7419999949197518e-06
-A5-009,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.952999980403547e-06
-A5-010,A5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.525000010995427e-06
-A6-001,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6829999935907836e-06
-A6-002,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1710000080711325e-06
-A6-003,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3009999975110986e-06
-A6-004,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1520000384734885e-06
-A6-005,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.192000013361394e-06
-A6-006,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0310000106983352e-06
-C1-001,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.006377783000004911
-C1-002,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.8759999938520195e-06
-C1-003,C1,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,0.0014110100000266357
-C1-004,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.6650000083682244e-06
-C1-005,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,0.012340606999998727
-C1-006,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,3.724999999121792e-06
-C1-007,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.6540000135355513e-06
-C1-008,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.98300000420204e-06
-C1-009,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.7630000002100132e-06
-C1-010,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.9230000134484726e-06
-C2-001,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,0.0015091060000145262
-C2-002,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.005150896000031935
-C2-003,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.1060000057768775e-06
-C2-004,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.6470000256704225e-06
-C2-005,C2,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,0.0019121859999700064
-C2-006,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.9039999844826525e-06
-C2-007,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,3.714999991188961e-06
-C2-008,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.2450000162498327e-06
-C2-009,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.172999984395574e-06
-C2-010,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8820000491359679e-06
-C3-001,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.48548382300003823
-C3-002,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.5169999793870375e-06
-C3-003,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.6840000373340445e-06
-C3-004,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.1629999764627428e-06
-C3-005,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8029999750979187e-06
-C3-006,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.092999977776344e-06
-C3-007,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.612999994904385e-06
-C3-008,C3,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,2.9440000162139768e-06
-C3-009,C3,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,0.0027456159999701413
-C3-010,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.936000041449006e-06
-C3-011,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.304000020103558e-06
-C3-012,C3,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,2.5639999989834905e-06
-C3-013,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.863000022694905e-06
-C3-014,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.7930000240085064e-06
-C3-015,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8129999830307497e-06
-C3-016,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.4620000001741573e-06
-C3-017,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.4820000160398195e-06
-C3-018,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.4720000081069884e-06
-C3-019,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.2820000279134547e-06
-C3-020,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.5620000226590491e-06
-C3-021,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.3619999776892655e-06
-C3-022,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.5019999750620627e-06
-C4-001,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.005294861000038509
-C4-002,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.886000001784851e-06
-C4-003,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.98300000420204e-06
-C4-004,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.531999998860556e-06
-C4-005,C4,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,2.613999981804227e-06
-C4-006,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.174000030663592e-06
-C4-007,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.093000034619763e-06
-C4-008,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.98300000420204e-06
-C4-009,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.0129999711571145e-06
-C4-010,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8829999817171483e-06
-C4-011,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.5829999711058917e-06
-C4-012,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.7729999512994254e-06
-C4-013,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.6729999856579525e-06
-C4-014,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.5119999829948938e-06
-C4-015,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.6220000134126167e-06
-C5-001,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.9140000492589024e-06
-C5-002,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.3420000186670222e-06
-C5-003,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.3519999697564344e-06
-C5-004,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.2820000279134547e-06
-C5-005,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.5329999882851553e-06
-C5-006,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.5819999816812924e-06
-C5-007,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.5630000120836485e-06
-C5-008,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.9929999552914524e-06
-C5-009,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.8929999896499794e-06
-C5-010,C5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.3449999818913057e-06
-C6-001,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.005297864999988633
-C6-002,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.6849999673904676e-06
-C6-003,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.2340000214171596e-06
-C6-004,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.932999964537885e-06
-C6-005,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,2.4539999685657676e-06
-C6-006,C6,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.2430000399253913e-06
-C6-007,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,2.223000024059729e-06
-C6-008,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,1.5829999711058917e-06
-C6-009,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.972999996269209e-06
-C6-010,C6,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,2.072999961910682e-06
-C6-011,C6,pass,undetermined,,0.7812914506862445,,Moteur spécialisé exécuté: climate_path_dependence,0.009803560999955607
-C6-012,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.216999968775781e-06
-C6-013,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,2.5840000148491526e-06
-C6-014,C6,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,2.4240000016106933e-06
-C6-015,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.9330000213813037e-06
-C7-001,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.004941744999996445
-C7-002,C7,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,3.6650000083682244e-06
-C7-003,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.402999996320432e-06
-C7-004,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.0329999870227766e-06
-C7-005,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8329999988964119e-06
-C7-006,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.8220000015389815e-06
-C7-007,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.542000006793387e-06
-C7-008,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.4620000001741573e-06
-C7-009,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.6529999697922904e-06
-C7-010,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.6420000292782788e-06
-CL1-001,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,0.0043287020000093435
-CL1-002,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.4850000361075217e-06
-CL1-003,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.863000022694905e-06
-CL1-004,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.5020000319054816e-06
-CL1-005,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.3139999711929704e-06
-CL1-006,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.842999949985824e-06
-CL1-007,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.4920000239726505e-06
-CL1-008,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.6429999618594593e-06
-CL1-009,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.4520000490847451e-06
-CL1-010,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,1.393000047755777e-06
-CL2-001,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,0.00359174600004053
-CL2-002,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.1949999765856774e-06
-CL2-003,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.2329999751491414e-06
-CL2-004,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,1.7630000002100132e-06
-CL2-005,CL2,pass,undetermined,,3802.0,,GISTEMP audité comme reconstruction observationnelle avec incertitude,0.3734097120000115
-CL2-006,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,5.85899999805406e-06
-CL2-007,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.8649999990193464e-06
-CL2-008,CL2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.316000001836073e-06
-CL2-009,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.5339999751849973e-06
-CL2-010,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.1330000095076684e-06
-CL3-001,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,0.27630917800001953
-CL3-002,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,5.258000044250366e-06
-CL3-003,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,2.3540000029242947e-06
-CL3-004,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.9029999975828105e-06
-CL3-005,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.7529999922771822e-06
-CL3-006,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,2.06300001082127e-06
-CL3-007,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,3.855999977986357e-06
-CL3-008,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,2.0030000200677023e-06
-CL3-009,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.843000006829243e-06
-CL3-010,CL3,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.952999980403547e-06
-CL4-001,CL4,pass,undetermined,,3802.0,,GISTEMP audité comme reconstruction observationnelle avec incertitude,7.100000004811591e-06
-CL4-002,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,0.26337866200003646
-CL4-003,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,5.02699998605749e-06
-CL4-004,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,2.1630000333061616e-06
-CL4-005,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.6930000015236146e-06
-CL4-006,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.3920000014877587e-06
-CL4-007,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.411999960510002e-06
-CL4-008,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.5019999750620627e-06
-CL4-009,CL4,blocked,undetermined,,,,Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents,1.4120000173534208e-06
-CL4-010,CL4,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.5450000268610893e-06
-V1-001,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.182999992328405e-06
-V1-002,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.401999952577171e-06
-V1-003,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2520000041149615e-06
-V1-004,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.510000040791056e-07
-V1-005,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.910000358104298e-07
-V1-006,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.109999723477813e-07
-V1-007,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0310000106983352e-06
-V1-008,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.110000067063083e-07
-V1-009,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.000999986899842e-06
-V1-010,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0219999921901035e-06
-V2-001,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,0.00012153099999068218
-V2-002,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.7840000029755174e-06
-V2-003,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.7030000094564457e-06
-V2-004,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4729999975315877e-06
-V2-005,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.7419999949197518e-06
-V2-006,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,0.004002146000004814
-V2-007,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,3.7860000361433777e-06
-V2-008,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9029999975828105e-06
-V2-009,V2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.945000005638576e-06
-V2-010,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2429999830819725e-06
-V2-011,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.7319999869869207e-06
-V2-012,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.5830000254245533e-06
-V2-013,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.981999957934022e-06
-V2-014,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3819999935549276e-06
-V2-015,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3619999776892655e-06
-V2-016,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1820000054285629e-06
-V2-017,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4020000094205898e-06
-V2-018,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1820000054285629e-06
-V2-019,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.32200000280136e-06
-V2-020,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3819999935549276e-06
-V2-021,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3920000014877587e-06
-V2-022,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2319999882492993e-06
-V2-023,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5019999750620627e-06
-V2-024,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.6220000134126167e-06
-V2-025,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.4519999922413263e-06
-V2-026,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3419999618236034e-06
-V2-027,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.8030000319413375e-06
-V2-028,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4120000173534208e-06
-V2-029,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.502999964486662e-06
-V2-030,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.6729999856579525e-06
-V2-031,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.411999960510002e-06
-V2-032,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.661999988300522e-06
-V2-033,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4819999591964006e-06
-V2-034,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4930000133972499e-06
-V2-035,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4120000173534208e-06
-V2-036,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2419999961821304e-06
-V2-037,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2809999816454365e-06
-V2-038,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.6220000134126167e-06
-V2-039,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2419999961821304e-06
-V2-040,V2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2919999790028669e-06
-V3-001,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,4.1701999975884974e-05
-V3-002,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.6630000345685403e-06
-V3-003,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.542000006793387e-06
-V3-004,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5829999711058917e-06
-V3-005,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.531999998860556e-06
-V3-006,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5829999711058917e-06
-V3-007,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.411999960510002e-06
-V3-008,V3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.4729999975315877e-06
-V3-009,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3720000424655154e-06
-V3-010,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3819999935549276e-06
-V3-011,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4629999895987567e-06
-V3-012,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.552000014726218e-06
-V3-013,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2920000358462858e-06
-V3-014,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2319999882492993e-06
-V3-015,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1720000543391507e-06
-V3-016,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1120000067421643e-06
-V3-017,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1419999736972386e-06
-V3-018,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2220000371598871e-06
-V3-019,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4319999763756641e-06
-V3-020,V3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.311999994868529e-06
-V4-001,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.799699998628057e-05
-V4-002,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4519999922413263e-06
-V4-003,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2920000358462858e-06
-V4-004,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.192000013361394e-06
-V4-005,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1220000146749953e-06
-V4-006,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2819999710700358e-06
-V4-007,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.192000013361394e-06
-V4-008,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2520000041149615e-06
-V4-009,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.311999994868529e-06
-V4-010,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2419999961821304e-06
-V4-011,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4719999512635695e-06
-V4-012,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4720000081069884e-06
-V4-013,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4720000081069884e-06
-V4-014,V4,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.0129999711571145e-06
-V4-015,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.15400001479793e-06
-V4-016,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2919999790028669e-06
-V4-017,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.6319999645020289e-06
-V4-018,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5829999711058917e-06
-V4-019,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2820000279134547e-06
-V4-020,V4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2019999644508061e-06
-V5-001,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4170999975249288e-05
-V5-002,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5019999750620627e-06
-V5-003,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4130000067780202e-06
-V5-004,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.4920000239726505e-06
-V5-005,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3620000345326844e-06
-V5-006,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.4620000001741573e-06
-V5-007,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.742999984344351e-06
-V5-008,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.5019999750620627e-06
-V5-009,V5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.432000033219083e-06
-V5-010,V5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.4519999922413263e-06
-V6-001,V6,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.5819999816812924e-06
-V6-002,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3639999963288574e-05
-V6-003,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.5620000226590491e-06
-V6-004,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.7529999922771822e-06
-V6-005,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.6120000054797856e-06
-V6-006,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.3519999697564344e-06
-V6-007,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.1519999816300697e-06
-V6-008,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.2019999644508061e-06
-V6-009,V6,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.542000006793387e-06
-V6-010,V6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.1619999895629007e-06
-B1-001,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.8117000024631125e-05
-B1-002,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.4530000385093444e-06
-B1-003,B1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.0710000424296595e-06
-B1-004,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.3520000265998533e-06
-B1-005,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.311999994868529e-06
-B1-006,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.2820000279134547e-06
-B1-007,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.311999994868529e-06
-B1-008,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.5619999658156303e-06
-B1-009,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.503000021330081e-06
-B1-010,B1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,1.3719999856220966e-06
-B2-001,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.403099997787649e-05
-B2-002,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.4120000173534208e-06
-B2-003,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.2720000199806236e-06
-B2-004,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.7830000160756754e-06
-B2-005,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.2520000041149615e-06
-B2-006,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.5719999737484613e-06
-B2-007,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.2419999961821304e-06
-B2-008,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.421999968442833e-06
-B2-009,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.3819999935549276e-06
-B2-010,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.2419999961821304e-06
-B2-011,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.32200000280136e-06
-B2-012,B2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,1.220999990891869e-06
-B3-001,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.2979999951312493e-05
-B3-002,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.3719999856220966e-06
-B3-003,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.2919999790028669e-06
-B3-004,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.5429999962179863e-06
-B3-005,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.2520000041149615e-06
-B3-006,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.3920000014877587e-06
-B3-007,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.3120000517119479e-06
-B3-008,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.1719999974957318e-06
-B3-009,B3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.1019999988093332e-06
-B3-010,B3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,1.1910000239367946e-06
-R1-001,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2809999816454365e-06
-R1-002,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0709999855862407e-06
-R1-003,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0520000159885967e-06
-R1-004,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0109999948326731e-06
-R1-005,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.210000371240312e-07
-R1-006,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.82000017302198e-07
-R1-007,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.0310000106983352e-06
-R1-008,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,9.919999683916103e-07
-R1-009,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.010000331320043e-07
-R1-010,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,8.609999895270448e-07
-R2-001,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,0.0013425579999761794
-R2-002,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.175000017563434e-06
-R2-003,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.0130000280005333e-06
-R2-004,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.8929999896499794e-06
-R2-005,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.7630000002100132e-06
-R2-006,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.373999961946538e-06
-R2-007,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.1029999857091752e-06
-R2-008,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.8129999830307497e-06
-R2-009,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.7320000438303396e-06
-R2-010,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.2910000464216864e-06
-R2-011,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",9.209999802806124e-07
-R2-012,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3719999856220966e-06
-R2-013,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.6530000266357092e-06
-R2-014,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.7319999869869207e-06
-R2-015,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,1.7920000345839071e-06
-R3-001,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,0.006954310000025998
-R3-002,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.6850000242338865e-06
-R3-003,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.093000034619763e-06
-R3-004,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.8329999988964119e-06
-R3-005,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.5119999829948938e-06
-R3-006,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.762000010785414e-06
-R3-007,R3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.4240000016106933e-06
-R3-008,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.9829999473586213e-06
-R3-009,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.7319999869869207e-06
-R3-010,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.662000045143941e-06
-R3-011,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.5830000279493106e-06
-R3-012,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.4419999843084952e-06
-R3-013,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.6719999962333532e-06
-R3-014,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.6319999645020289e-06
-R3-015,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.442000041151914e-06
-R4-001,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,0.01220093500000985
-R4-002,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.3250000228690624e-06
-R4-003,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.1939999896858353e-06
-R4-004,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.8929999896499794e-06
-R4-005,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.6630000345685403e-06
-R4-006,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.6719999962333532e-06
-R4-007,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.5530000041508174e-06
-R4-008,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.6120000054797856e-06
-R4-009,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.5929999790387228e-06
-R4-010,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.5020000319054816e-06
-R4-011,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.6630000345685403e-06
-R4-012,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.5620000226590491e-06
-R4-013,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.5429999962179863e-06
-R4-014,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.4519999922413263e-06
-R4-015,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.531999998860556e-06
-R5-001,R5,pass,undetermined,,,,Modèles concurrents comparés,0.005474076999973931
-R5-002,R5,pass,undetermined,,,,Modèles concurrents comparés,3.7049999832561298e-06
-R5-003,R5,pass,undetermined,,,,Modèles concurrents comparés,1.9029999975828105e-06
-R5-004,R5,pass,undetermined,,,,Modèles concurrents comparés,1.4720000081069884e-06
-R5-005,R5,pass,undetermined,,,,Modèles concurrents comparés,1.4519999922413263e-06
-R5-006,R5,pass,undetermined,,,,Modèles concurrents comparés,1.3320000107341912e-06
-R5-007,R5,pass,undetermined,,,,Modèles concurrents comparés,1.8329999988964119e-06
-R5-008,R5,pass,undetermined,,,,Modèles concurrents comparés,1.662000045143941e-06
-R6-001,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.035000020190637e-06
-R6-002,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3320000107341912e-06
-R6-003,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3320000107341912e-06
-R6-004,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.1520000384734885e-06
-R6-005,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,0.0012440819999710584
-R6-006,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,3.3150000149362313e-06
-R6-007,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,2.2229999672163103e-06
-R6-008,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,1.6319999645020289e-06
-T1-001,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,4.565800003319964e-05
-T1-002,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.1029999857091752e-06
-T1-003,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.633000010770047e-06
-T1-004,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.6220000134126167e-06
-T1-005,T1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.2529999910148035e-06
-T1-006,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.843000006829243e-06
-T1-007,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.7630000002100132e-06
-T1-008,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.6930000015236146e-06
-T1-009,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.7119999711212586e-06
-T1-010,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5329999882851553e-06
-T1-011,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.531999998860556e-06
-T1-012,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.2520000041149615e-06
-T1-013,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.2520000041149615e-06
-T1-014,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5019999750620627e-06
-T1-015,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.2610000226231932e-06
-T1-016,T1,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.1209999684069771e-06
-T2-001,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.8768000018098974e-05
-T2-002,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4430000305765134e-06
-T2-003,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4419999843084952e-06
-T2-004,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5819999816812924e-06
-T2-005,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.372999975046696e-06
-T2-006,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5820000385247113e-06
-T2-007,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.411999960510002e-06
-T2-008,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.301999986935698e-06
-T2-009,T2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.733000033254939e-06
-T2-010,T2,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.3320000107341912e-06
-T3-001,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.3550000005579932e-05
-T3-002,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.8320000094718125e-06
-T3-003,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.442000041151914e-06
-T3-004,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.2419999961821304e-06
-T3-005,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5720000305918802e-06
-T3-006,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.3619999776892655e-06
-T3-007,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.7120000279646774e-06
-T3-008,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.5429999962179863e-06
-T3-009,T3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",9.510000040791056e-07
-T3-010,T3,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4029999988451891e-06
-T4-001,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.1727000014616351e-05
-T4-002,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4419999843084952e-06
-T4-003,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.3519999697564344e-06
-T4-004,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.552000014726218e-06
-T4-005,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4419999843084952e-06
-T4-006,T4,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4620000001741573e-06
-T5-001,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.121699995110248e-05
-T5-002,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4530000385093444e-06
-T5-003,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.64199997243486e-06
-T5-004,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.6029999869715539e-06
-T5-005,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.2629999989476346e-06
-T5-006,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.6930000015236146e-06
-T5-007,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.4020000094205898e-06
-T5-008,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.411999960510002e-06
-T5-009,T5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",9.009999644149502e-07
-T5-010,T5,blocked,undetermined,,,,Jeu de données absent: /mnt/data/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,1.6420000292782788e-06
+S1-001,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9919999999729043e-05
+S1-002,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.617000001871929e-06
+S1-003,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.504000008229923e-06
+S1-004,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6420000008565694e-06
+S1-005,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1830000207501143e-06
+S1-006,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.491999995550941e-06
+S1-007,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.362000006110975e-06
+S1-008,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2220000087381777e-06
+S1-009,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3819999935549276e-06
+S1-010,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5919999896141235e-06
+S1-011,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4329999942219729e-06
+S1-012,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7520000028525828e-06
+S1-013,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3420000186670222e-06
+S1-014,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2120000008053466e-06
+S1-015,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1820000054285629e-06
+S1-016,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2319999882492993e-06
+S1-017,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1519999816300697e-06
+S1-018,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2719999915589142e-06
+S1-019,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2619999836260831e-06
+S1-020,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2120000008053466e-06
+S1-021,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2019999928725156e-06
+S1-022,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1820000054285629e-06
+S1-023,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1620000179846102e-06
+S1-024,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1620000179846102e-06
+S1-025,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1919999849396845e-06
+S1-026,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.251999975693252e-06
+S1-027,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5419999783716776e-06
+S1-028,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2419999961821304e-06
+S1-029,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2919999790028669e-06
+S1-030,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2319999882492993e-06
+S1-031,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2319999882492993e-06
+S1-032,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2019999928725156e-06
+S1-033,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.152000010051779e-06
+S1-034,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4129999783563107e-06
+S1-035,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4020000094205898e-06
+S1-036,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.542000006793387e-06
+S1-037,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3020000153574074e-06
+S1-038,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3320000107341912e-06
+S1-039,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1719999974957318e-06
+S1-040,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2320000166710088e-06
+S1-041,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3920000014877587e-06
+S1-042,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4130000067780202e-06
+S1-043,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2520000041149615e-06
+S1-044,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3020000153574074e-06
+S1-045,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2719999915589142e-06
+S1-046,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.491999995550941e-06
+S1-047,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.05700001238074e-06
+S1-048,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3519999981781439e-06
+S1-049,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.1820000054285629e-06
+S1-050,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3419999902453128e-06
+S2-001,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.362000006110975e-06
+S2-002,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3619999776892655e-06
+S2-003,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3920000014877587e-06
+S2-004,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4620000001741573e-06
+S2-005,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2619999836260831e-06
+S2-006,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4119999889317114e-06
+S2-007,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.5349999905065488e-06
+S2-008,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.772000018718245e-06
+S2-009,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3619999776892655e-06
+S2-010,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5020000034837722e-06
+S2-011,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.531999998860556e-06
+S2-012,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2109999829590379e-06
+S2-013,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4620000001741573e-06
+S2-014,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.311999994868529e-06
+S2-015,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.32200000280136e-06
+S2-016,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2719999915589142e-06
+S2-017,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2319999882492993e-06
+S2-018,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2419999961821304e-06
+S2-019,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3819999935549276e-06
+S2-020,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2019999928725156e-06
+S3-001,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,0.011583462999993799
+S3-002,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,8.031999982449634e-06
+S3-003,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,4.266999980018227e-06
+S3-004,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.72400001222195e-06
+S3-005,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.37700001043595e-06
+S3-006,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.3829999804547697e-06
+S3-007,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.6719999962333532e-06
+S3-008,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.4249999885105353e-06
+S3-009,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.5839999864274432e-06
+S3-010,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.5639999989834905e-06
+S3-011,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.4329999916972156e-06
+S3-012,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.0930000061980536e-06
+S3-013,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.1230000015748374e-06
+S3-014,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.304000020103558e-06
+S3-015,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.7339999917330715e-06
+S3-016,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.474000012853139e-06
+S3-017,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.1339999989322678e-06
+S3-018,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.5219999909277249e-06
+S3-019,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.2939999837490177e-06
+S3-020,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.233000003570851e-06
+M1-001,M1,pass,undetermined,,0.0,,Base des transitions validée,0.0028647780000028433
+M1-002,M1,pass,undetermined,,0.0,,Base des transitions validée,4.405999987966425e-06
+M1-003,M1,pass,undetermined,,0.0,,Base des transitions validée,2.663999993046673e-06
+M1-004,M1,pass,undetermined,,0.0,,Base des transitions validée,2.9650000215042382e-06
+M1-005,M1,pass,undetermined,,0.0,,Base des transitions validée,2.2830000148132967e-06
+M1-006,M1,pass,undetermined,,0.0,,Base des transitions validée,2.152999996951621e-06
+M1-007,M1,pass,undetermined,,0.0,,Base des transitions validée,2.1230000015748374e-06
+M1-008,M1,pass,undetermined,,0.0,,Base des transitions validée,2.104000003555484e-06
+M1-009,M1,pass,undetermined,,0.0,,Base des transitions validée,2.213000016126898e-06
+M1-010,M1,pass,undetermined,,0.0,,Base des transitions validée,2.2440000009282812e-06
+M1-011,M1,pass,undetermined,,0.0,,Base des transitions validée,3.034000002344328e-06
+M1-012,M1,pass,undetermined,,0.0,,Base des transitions validée,2.182999992328405e-06
+M1-013,M1,pass,undetermined,,0.0,,Base des transitions validée,2.0930000061980536e-06
+M1-014,M1,pass,undetermined,,0.0,,Base des transitions validée,2.483999992364261e-06
+M1-015,M1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.155000001697772e-06
+M2-001,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,6.067099999995662e-05
+M2-002,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.05499997921288e-06
+M2-003,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.5539999910506594e-06
+M2-004,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.14299998901879e-06
+M2-005,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.2540000088611123e-06
+M2-006,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.0329999870227766e-06
+M2-007,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.9829999757803307e-06
+M2-008,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.9130000055156415e-06
+M2-009,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,1.90300002600452e-06
+M2-010,M2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.0530000028884388e-06
+M3-001,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.716599999847858e-05
+M3-002,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.4139999936778622e-06
+M3-003,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.2229999956380198e-06
+M3-004,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.1339999989322678e-06
+M3-005,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.962999988336378e-06
+M3-006,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.5939999943602743e-06
+M3-007,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.3540000029242947e-06
+M3-008,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,2.1330000095076684e-06
+M3-009,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.9430000008924253e-06
+M3-010,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.9619999989117787e-06
+M3-011,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.9730000246909185e-06
+M3-012,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.9329999929595942e-06
+M3-013,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.98300000420204e-06
+M3-014,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.962999988336378e-06
+M3-015,M3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/reaction_network.csv,1.9929999837131618e-06
+M4-001,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.8262000000722765e-05
+M4-002,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.2830000148132967e-06
+M4-003,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.8750000069521775e-06
+M4-004,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.3430000055668643e-06
+M4-005,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.033000015444486e-06
+M4-006,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.023000007511655e-06
+M4-007,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.9630000167580874e-06
+M4-008,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.043000023377317e-06
+M4-009,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.1840000101747137e-06
+M4-010,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.4440000174763554e-06
+M4-011,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.9029999975828105e-06
+M4-012,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.023000007511655e-06
+M4-013,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.9530000088252564e-06
+M4-014,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.8629999942731956e-06
+M4-015,M4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,1.952999980403547e-06
+M5-001,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,0.0031883560000096622
+M5-002,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,4.367000002503119e-06
+M5-003,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.8240000062851323e-06
+M5-004,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.2629999989476346e-06
+M5-005,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.4240000016106933e-06
+M5-006,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.172999984395574e-06
+M5-007,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.1840000101747137e-06
+M5-008,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.193000000261236e-06
+M5-009,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.1639999943090515e-06
+M5-010,M5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.843999993729085e-06
+P1-001,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,5.5763999995406266e-05
+P1-002,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.8839999970387e-06
+P1-003,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.6640000214683823e-06
+P1-004,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.23399999299545e-06
+P1-005,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.0729999903323915e-06
+P1-006,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.1339999989322678e-06
+P1-007,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.362999993010817e-06
+P1-008,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.053999992313038e-06
+P1-009,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,2.1830000207501143e-06
+P1-010,P1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,1.9230000134484726e-06
+P2-001,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2039999976186664e-06
+P2-002,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.250999999541818e-06
+P2-003,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5820000101030018e-06
+P2-004,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4519999922413263e-06
+P2-005,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3519999981781439e-06
+P2-006,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.301999986935698e-06
+P2-007,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3819999935549276e-06
+P2-008,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6019999975469545e-06
+P2-009,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.362000006110975e-06
+P2-010,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2620000120477926e-06
+P3-001,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,3.3059999992701705e-05
+P3-002,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.3530000134996953e-06
+P3-003,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.06300001082127e-06
+P3-004,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.0729999903323915e-06
+P3-005,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.1030000141308847e-06
+P3-006,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.043000023377317e-06
+P3-007,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.0729999903323915e-06
+P3-008,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.3039999916818488e-06
+P3-009,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.0229999790899456e-06
+P3-010,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,2.0729999903323915e-06
+P3-011,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.9430000008924253e-06
+P3-012,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.972999996269209e-06
+P3-013,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.9929999837131618e-06
+P3-014,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.952999980403547e-06
+P3-015,P3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/partition_experiments.csv,1.952999980403547e-06
+P4-001,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.6640000015731857e-05
+P4-002,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.2730000068804657e-06
+P4-003,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.0229999790899456e-06
+P4-004,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.1639999943090515e-06
+P4-005,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.182999992328405e-06
+P4-006,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.23399999299545e-06
+P4-007,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,1.9130000055156415e-06
+P4-008,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.0829999982652225e-06
+P4-009,P4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.0239999969362543e-06
+P4-010,P4,pass,undetermined,,6333.0,,Démographie observationnelle des exoplanètes auditée,0.03144055900000353
+P5-001,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,7.684500002369532e-05
+P5-002,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.7260000169681007e-06
+P5-003,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.714000004289119e-06
+P5-004,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.694000016845166e-06
+P5-005,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.5839999864274432e-06
+P5-006,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.2229999956380198e-06
+P5-007,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.6750000163010554e-06
+P5-008,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.8449999831536843e-06
+P5-009,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.7840000029755174e-06
+P5-010,P5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,2.5740000069163216e-06
+P6-001,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.5042000007479146e-05
+P6-002,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.3829999804547697e-06
+P6-003,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.2929999943244184e-06
+P6-004,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.334000015480342e-06
+P6-005,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.0530000028884388e-06
+P6-006,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,1.9930000121348712e-06
+P6-007,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.164000022730761e-06
+P6-008,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.0329999870227766e-06
+P6-009,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.0429999949556077e-06
+P6-010,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.2140000055514975e-06
+P6-011,P6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.0530000028884388e-06
+P6-012,P6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.4170000137455645e-06
+A1-001,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.623999989737058e-06
+A1-002,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.531999998860556e-06
+A1-003,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5720000021701708e-06
+A1-004,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5120000114166032e-06
+A1-005,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5819999816812924e-06
+A1-006,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4519999922413263e-06
+A1-007,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3519999981781439e-06
+A1-008,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.542000006793387e-06
+A1-009,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5029999929083715e-06
+A1-010,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6620000167222315e-06
+A2-001,A2,pass,undetermined,,1.0,,Conditions initiales auditées,0.002863196999982165
+A2-002,A2,pass,undetermined,,1.0,,Conditions initiales auditées,4.7469999913118954e-06
+A2-003,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.945000005638576e-06
+A2-004,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.504000008229923e-06
+A2-005,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.7439999996659026e-06
+A2-006,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.223999985062619e-06
+A2-007,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.193000000261236e-06
+A2-008,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.223999985062619e-06
+A2-009,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.443999989054646e-06
+A2-010,A2,pass,undetermined,,1.0,,Conditions initiales auditées,2.373000000943648e-06
+A3-001,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.2639999858474766e-06
+A3-002,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8329999988964119e-06
+A3-003,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.711999999542968e-06
+A3-004,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3519999981781439e-06
+A3-005,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.602000025968664e-06
+A3-006,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.104000003555484e-06
+A3-007,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.542000006793387e-06
+A3-008,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.633000010770047e-06
+A3-009,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5620000226590491e-06
+A3-010,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3519999981781439e-06
+A3-011,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5620000226590491e-06
+A3-012,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5829999995276012e-06
+A3-013,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3320000107341912e-06
+A3-014,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2620000120477926e-06
+A3-015,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2520000041149615e-06
+A3-016,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.503000021330081e-06
+A4-001,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3819999935549276e-06
+A4-002,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.301999986935698e-06
+A4-003,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5730000200164795e-06
+A4-004,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3419999902453128e-06
+A4-005,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.471999979685279e-06
+A4-006,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4930000133972499e-06
+A4-007,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4320000047973735e-06
+A4-008,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3120000232902385e-06
+A4-009,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2819999994917453e-06
+A4-010,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3420000186670222e-06
+A4-011,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3320000107341912e-06
+A4-012,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5820000101030018e-06
+A5-001,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,0.07678606300001434
+A5-002,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,5.77899999143483e-06
+A5-003,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.826000011031283e-06
+A5-004,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.7840000029755174e-06
+A5-005,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.64400000560272e-06
+A5-006,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.8040000188411796e-06
+A5-007,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.8450000115753937e-06
+A5-008,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.833999985796254e-06
+A5-009,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,2.7550000254450424e-06
+A5-010,A5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.415999995899256e-06
+A6-001,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.1849999970745557e-06
+A6-002,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2529999910148035e-06
+A6-003,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.263999988372234e-06
+A6-004,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.711999999542968e-06
+A6-005,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4219999968645425e-06
+A6-006,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5919999896141235e-06
+C1-001,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.010048823999994738
+C1-002,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.03800001183663e-06
+C1-003,C1,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,0.0020838750000109485
+C1-004,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.078999973624377e-06
+C1-005,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,0.021612467000011293
+C1-006,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,4.7569999992447265e-06
+C1-007,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.95500001104665e-06
+C1-008,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.1849999970745557e-06
+C1-009,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.6540000135355513e-06
+C1-010,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.2730000068804657e-06
+C2-001,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,0.002211506000008967
+C2-002,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.008409387999989804
+C2-003,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.797999991978941e-06
+C2-004,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.6689999894388166e-06
+C2-005,C2,pass,undetermined,,1.4589703354616934,,Moteur spécialisé exécuté: climate_identifiability,0.0028910580000172104
+C2-006,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.146999998511092e-06
+C2-007,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,4.988000000594184e-06
+C2-008,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.015999991224817e-06
+C2-009,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.983999991101882e-06
+C2-010,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.64400000560272e-06
+C3-001,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.7448851050000087
+C3-002,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.547999990085373e-06
+C3-003,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7049999832561298e-06
+C3-004,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.7649999765344546e-06
+C3-005,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.7239999838002404e-06
+C3-006,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.5439999831178284e-06
+C3-007,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.4639999764985987e-06
+C3-008,C3,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,4.206999989264659e-06
+C3-009,C3,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,0.003607535999975653
+C3-010,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.818999994744445e-06
+C3-011,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.5760000116624724e-06
+C3-012,C3,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,3.96600000840408e-06
+C3-013,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.324999994447353e-06
+C3-014,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.663999993046673e-06
+C3-015,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.7339999917330715e-06
+C3-016,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.7339999917330715e-06
+C3-017,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.403999985745031e-06
+C3-018,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.3540000029242947e-06
+C3-019,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.4139999936778622e-06
+C3-020,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.2830000148132967e-06
+C3-021,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.383000008876479e-06
+C3-022,C3,pass,undetermined,,0.3360184651159999,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.4040000141667406e-06
+C4-001,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.008700797000017246
+C4-002,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.1879999887205486e-06
+C4-003,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.314999986514522e-06
+C4-004,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.694000016845166e-06
+C4-005,C4,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,4.195999991907229e-06
+C4-006,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.9439999877922673e-06
+C4-007,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.5539999910506594e-06
+C4-008,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.453999996987477e-06
+C4-009,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.2039999976186664e-06
+C4-010,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.4739999844314298e-06
+C4-011,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.5340000036067067e-06
+C4-012,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.322999989701202e-06
+C4-013,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.1339999989322678e-06
+C4-014,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.193000000261236e-06
+C4-015,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.3839999983010784e-06
+C5-001,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.2549999957609543e-06
+C5-002,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.1430000174404995e-06
+C5-003,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.04699999812874e-05
+C5-004,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.5539999910506594e-06
+C5-005,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.3030000022572494e-06
+C5-006,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.5340000036067067e-06
+C5-007,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.684000008912335e-06
+C5-008,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.3530000134996953e-06
+C5-009,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,2.8649999990193464e-06
+C5-010,C5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.036000007090479e-06
+C6-001,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.008591211999998905
+C6-002,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.087999994657366e-06
+C6-003,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.504999995129765e-06
+C6-004,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.544000011539538e-06
+C6-005,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,3.695000003745008e-06
+C6-006,C6,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.294999999070569e-06
+C6-007,C6,pass,undetermined,,1.4589703354616934,,Moteur spécialisé exécuté: climate_identifiability,3.4249999885105353e-06
+C6-008,C6,pass,undetermined,,1.4589703354616934,,Moteur spécialisé exécuté: climate_identifiability,2.7039999963562877e-06
+C6-009,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.8739999891058687e-06
+C6-010,C6,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,3.0150000043249747e-06
+C6-011,C6,pass,undetermined,,0.7812914506862445,,Moteur spécialisé exécuté: climate_path_dependence,0.01711431100000027
+C6-012,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.509000002097309e-06
+C6-013,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,4.776999986688679e-06
+C6-014,C6,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,4.287000024305598e-06
+C6-015,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.4139999936778622e-06
+C7-001,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.008503289999993058
+C7-002,C7,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,5.647999984148555e-06
+C7-003,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.785999979299959e-06
+C7-004,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.854000001661916e-06
+C7-005,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.7940000109083485e-06
+C7-006,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.0150000043249747e-06
+C7-007,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.5840000148491526e-06
+C7-008,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.694000016845166e-06
+C7-009,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.0049999963921437e-06
+C7-010,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.5840000148491526e-06
+CL1-001,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,0.0064397860000156015
+CL1-002,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,4.5369999952527e-06
+CL1-003,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.294999999070569e-06
+CL1-004,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.6140000102259364e-06
+CL1-005,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.646000010348871e-06
+CL1-006,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.633999997669889e-06
+CL1-007,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.403999985745031e-06
+CL1-008,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.3739999903682474e-06
+CL1-009,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.0729999903323915e-06
+CL1-010,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.332999997634033e-06
+CL2-001,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,0.004999830000002703
+CL2-002,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,4.546000013760931e-06
+CL2-003,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.7339999917330715e-06
+CL2-004,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.5340000036067067e-06
+CL2-005,CL2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,0.0031081150000034086
+CL2-006,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,5.057999999280582e-06
+CL2-007,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.2250000003841706e-06
+CL2-008,CL2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.517000007808747e-06
+CL2-009,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.38500001362263e-06
+CL2-010,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,2.464000004920308e-06
+CL3-001,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.864799998609669e-05
+CL3-002,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.5939999943602743e-06
+CL3-003,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.4840000207859703e-06
+CL3-004,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.4340000095435244e-06
+CL3-005,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.332999997634033e-06
+CL3-006,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.14299998901879e-06
+CL3-007,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.4040000141667406e-06
+CL3-008,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.045600001883031e-05
+CL3-009,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.7359999964792223e-06
+CL3-010,CL3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.5549999779505015e-06
+CL4-001,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,4.416999985323855e-06
+CL4-002,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.583299999831979e-05
+CL4-003,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.9440000162139768e-06
+CL4-004,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.332999997634033e-06
+CL4-005,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.3839999983010784e-06
+CL4-006,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.163000004884452e-06
+CL4-007,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.104000003555484e-06
+CL4-008,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.0329999870227766e-06
+CL4-009,CL4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.0429999949556077e-06
+CL4-010,CL4,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.4440000174763554e-06
+V1-001,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1940000181075447e-06
+V1-002,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6520000087894005e-06
+V1-003,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.422000025286252e-06
+V1-004,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5020000034837722e-06
+V1-005,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7819999982293666e-06
+V1-006,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6019999975469545e-06
+V1-007,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8529999863403646e-06
+V1-008,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6319999929237383e-06
+V1-009,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.633000010770047e-06
+V1-010,V1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4620000001741573e-06
+V2-001,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.8342999996766594e-05
+V2-002,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.64400000560272e-06
+V2-003,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2829999863915873e-06
+V2-004,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1740000022418826e-06
+V2-005,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,9.906900001510621e-05
+V2-006,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,0.004068238999991536
+V2-007,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,5.558999987442803e-06
+V2-008,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,3.2250000003841706e-06
+V2-009,V2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.066000002467263e-06
+V2-010,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,3.003999978545835e-06
+V2-011,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.413000004253263e-06
+V2-012,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.2750000116266165e-06
+V2-013,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.8649999990193464e-06
+V2-014,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.152999996951621e-06
+V2-015,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.002999991645993e-06
+V2-016,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.922999985026763e-06
+V2-017,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9930000121348712e-06
+V2-018,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9519999909789476e-06
+V2-019,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1129999936420063e-06
+V2-020,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.002999991645993e-06
+V2-021,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.284000004237896e-06
+V2-022,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.233000003570851e-06
+V2-023,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2140000055514975e-06
+V2-024,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.7540000075987336e-06
+V2-025,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.3439999949914636e-06
+V2-026,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1129999936420063e-06
+V2-027,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.5340000036067067e-06
+V2-028,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.093999995622653e-06
+V2-029,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1330000095076684e-06
+V2-030,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.3640000108571257e-06
+V2-031,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0329999870227766e-06
+V2-032,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0930000061980536e-06
+V2-033,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.223000024059729e-06
+V2-034,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.083000026686932e-06
+V2-035,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1039999751337746e-06
+V2-036,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2629999989476346e-06
+V2-037,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.023000007511655e-06
+V2-038,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1330000095076684e-06
+V2-039,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2640000167939434e-06
+V2-040,V2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.233000003570851e-06
+V3-001,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,5.520299998806877e-05
+V3-002,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.793999982486639e-06
+V3-003,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.322999989701202e-06
+V3-004,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.203000008194067e-06
+V3-005,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.23399999299545e-06
+V3-006,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.073000018754101e-06
+V3-007,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2730000068804657e-06
+V3-008,V3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.3030000022572494e-06
+V3-009,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.3939999778122e-06
+V3-010,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1230000015748374e-06
+V3-011,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1029999857091752e-06
+V3-012,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.012999999578824e-06
+V3-013,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.98300000420204e-06
+V3-014,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.023000007511655e-06
+V3-015,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9829999757803307e-06
+V3-016,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1129999936420063e-06
+V3-017,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.073999979756991e-06
+V3-018,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0629999823995604e-06
+V3-019,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.012999999578824e-06
+V3-020,V3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0729999903323915e-06
+V4-001,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,3.12970000209134e-05
+V4-002,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.5340000036067067e-06
+V4-003,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0530000028884388e-06
+V4-004,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0030000200677023e-06
+V4-005,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9929999837131618e-06
+V4-006,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.012999999578824e-06
+V4-007,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.012999999578824e-06
+V4-008,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,1.9630000167580874e-06
+V4-009,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.073000018754101e-06
+V4-010,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1129999936420063e-06
+V4-011,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0729999903323915e-06
+V4-012,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.023000007511655e-06
+V4-013,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.012999999578824e-06
+V4-014,V4,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.985000008948191e-06
+V4-015,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.7640000155315647e-06
+V4-016,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.3430000055668643e-06
+V4-017,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1439999784433894e-06
+V4-018,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2829999863915873e-06
+V4-019,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1639999943090515e-06
+V4-020,V4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1030000141308847e-06
+V5-001,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.4897999992390396e-05
+V5-002,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.3330000260557426e-06
+V5-003,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2929999943244184e-06
+V5-004,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.7139999758674094e-06
+V5-005,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1129999936420063e-06
+V5-006,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0829999982652225e-06
+V5-007,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.623999989737058e-06
+V5-008,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.423000012186094e-06
+V5-009,V5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.31399999961468e-06
+V5-010,V5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8529999863403646e-06
+V6-001,V6,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,2.5340000036067067e-06
+V6-002,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2434000015891797e-05
+V6-003,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.2540000088611123e-06
+V6-004,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.3339999870586325e-06
+V6-005,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.403999985745031e-06
+V6-006,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.0429999949556077e-06
+V6-007,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.1939999896858353e-06
+V6-008,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.4340000095435244e-06
+V6-009,V6,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv,2.243000011503682e-06
+V6-010,V6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.932000003534995e-06
+B1-001,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.3886000008133124e-05
+B1-002,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.4739999844314298e-06
+B1-003,B1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.843000006829243e-06
+B1-004,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.31399999961468e-06
+B1-005,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.213000016126898e-06
+B1-006,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.2440000009282812e-06
+B1-007,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.322999989701202e-06
+B1-008,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.163000004884452e-06
+B1-009,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.2629999989476346e-06
+B1-010,B1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/cell_architecture.csv,2.06300001082127e-06
+B2-001,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.5698999991163873e-05
+B2-002,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.373000000943648e-06
+B2-003,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.1230000015748374e-06
+B2-004,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.334000015480342e-06
+B2-005,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.193000000261236e-06
+B2-006,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.263999988372234e-06
+B2-007,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.193000000261236e-06
+B2-008,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.4240000016106933e-06
+B2-009,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.31399999961468e-06
+B2-010,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.3829999804547697e-06
+B2-011,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.0530000028884388e-06
+B2-012,B2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.0030000200677023e-06
+B3-001,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.178200000457764e-05
+B3-002,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.2229999956380198e-06
+B3-003,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.1230000015748374e-06
+B3-004,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.243000011503682e-06
+B3-005,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.273999996305065e-06
+B3-006,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.0829999982652225e-06
+B3-007,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.1740000022418826e-06
+B3-008,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.1730000128172833e-06
+B3-009,B3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8229999909635808e-06
+B3-010,B3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/biology_cases.csv,2.273999996305065e-06
+R1-001,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.98300000420204e-06
+R1-002,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7129999889675673e-06
+R1-003,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5119999829948938e-06
+R1-004,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.4319999763756641e-06
+R1-005,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2419999961821304e-06
+R1-006,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.3320000107341912e-06
+R1-007,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.2419999961821304e-06
+R1-008,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5020000034837722e-06
+R1-009,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5730000200164795e-06
+R1-010,R1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.531999998860556e-06
+R2-001,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,0.0019582259999992857
+R2-002,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.957000015792801e-06
+R2-003,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.6839999804906256e-06
+R2-004,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.023999994411497e-06
+R2-005,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.6229999718907493e-06
+R2-006,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.074000005653943e-06
+R2-007,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.0540000182099902e-06
+R2-008,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.6939999884234567e-06
+R2-009,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.514000016162754e-06
+R2-010,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.2329999751491414e-06
+R2-011,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.4229999862891418e-06
+R2-012,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3320000107341912e-06
+R2-013,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.573999978494612e-06
+R2-014,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.5740000069163216e-06
+R2-015,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,2.2440000009282812e-06
+R3-001,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,0.009145074999992175
+R3-002,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,4.968000013150231e-06
+R3-003,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.1749999891417247e-06
+R3-004,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.934999997705745e-06
+R3-005,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.864000009594747e-06
+R3-006,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.4006000018061968e-05
+R3-007,R3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.775999999788837e-06
+R3-008,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.904000012904362e-06
+R3-009,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.125000006320988e-06
+R3-010,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.7439999996659026e-06
+R3-011,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.2939999837490177e-06
+R3-012,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.1030000141308847e-06
+R3-013,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.1840000101747137e-06
+R3-014,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.6140000102259364e-06
+R3-015,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,2.5740000069163216e-06
+R4-001,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,0.018115287000000535
+R4-002,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.956999987371091e-06
+R4-003,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.063999997721112e-06
+R4-004,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.4729999950068304e-06
+R4-005,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.2729999784587562e-06
+R4-006,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.6040000022931054e-06
+R4-007,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.284000004237896e-06
+R4-008,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.3839999983010784e-06
+R4-009,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.4040000141667406e-06
+R4-010,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.4329999916972156e-06
+R4-011,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.3929999883876008e-06
+R4-012,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.4830000029396615e-06
+R4-013,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.2929999943244184e-06
+R4-014,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.3640000108571257e-06
+R4-015,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,2.1230000015748374e-06
+R5-001,R5,pass,undetermined,,,,Modèles concurrents comparés,0.007332358999974531
+R5-002,R5,pass,undetermined,,,,Modèles concurrents comparés,5.589000011241296e-06
+R5-003,R5,pass,undetermined,,,,Modèles concurrents comparés,3.274999983204907e-06
+R5-004,R5,pass,undetermined,,,,Modèles concurrents comparés,2.7439999996659026e-06
+R5-005,R5,pass,undetermined,,,,Modèles concurrents comparés,2.653999985113842e-06
+R5-006,R5,pass,undetermined,,,,Modèles concurrents comparés,2.813999998352301e-06
+R5-007,R5,pass,undetermined,,,,Modèles concurrents comparés,2.725000001646549e-06
+R5-008,R5,pass,undetermined,,,,Modèles concurrents comparés,2.342999977145155e-06
+R6-001,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.305999993903242e-06
+R6-002,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.0829999982652225e-06
+R6-003,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.5740000069163216e-06
+R6-004,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8930000180716888e-06
+R6-005,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,0.0017435830000067654
+R6-006,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,5.016999978124659e-06
+R6-007,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,3.1640000202060037e-06
+R6-008,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,2.5339999751849973e-06
+T1-001,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,5.911900001365211e-05
+T1-002,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,3.3050000070034002e-06
+T1-003,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.8549999910865154e-06
+T1-004,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.5039999798082135e-06
+T1-005,T1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.1739999997171253e-06
+T1-006,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.7940000109083485e-06
+T1-007,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.6230000003124587e-06
+T1-008,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.504000008229923e-06
+T1-009,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.2830000148132967e-06
+T1-010,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.1939999896858353e-06
+T1-011,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.243000011503682e-06
+T1-012,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.322999989701202e-06
+T1-013,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.4729999950068304e-06
+T1-014,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.4530000075628777e-06
+T1-015,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.4739999844314298e-06
+T1-016,T1,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.093999995622653e-06
+T2-001,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,3.4120999998776824e-05
+T2-002,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.544000011539538e-06
+T2-003,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.554000019472369e-06
+T2-004,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.4139999936778622e-06
+T2-005,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3039999916818488e-06
+T2-006,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.0629999823995604e-06
+T2-007,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3540000029242947e-06
+T2-008,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3540000029242947e-06
+T2-009,T2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.5639999989834905e-06
+T2-010,T2,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.403999985745031e-06
+T3-001,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.5227999998378436e-05
+T3-002,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.7940000109083485e-06
+T3-003,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.243000011503682e-06
+T3-004,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.273999996305065e-06
+T3-005,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.182999992328405e-06
+T3-006,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3039999916818488e-06
+T3-007,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.304000020103558e-06
+T3-008,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.193000000261236e-06
+T3-009,T3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.9230000134484726e-06
+T3-010,T3,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.775000012888995e-06
+T4-001,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3245000022598106e-05
+T4-002,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.653999985113842e-06
+T4-003,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3630000214325264e-06
+T4-004,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.31399999961468e-06
+T4-005,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3939999778122e-06
+T4-006,T4,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.413000004253263e-06
+T5-001,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.1763000006558286e-05
+T5-002,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.3739999903682474e-06
+T5-003,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.332999997634033e-06
+T5-004,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.5030000188053236e-06
+T5-005,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,3.54499999843938e-06
+T5-006,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.544000011539538e-06
+T5-007,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.4240000016106933e-06
+T5-008,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.2440000009282812e-06
+T5-009,T5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8929999896499794e-06
+T5-010,T5,blocked,undetermined,,,,Jeu de données absent: /home/runner/work/ORI-C/ORI-C/plateforme/campagne_maximale_reelle/data/benchmark_cases.csv,2.1730000128172833e-06

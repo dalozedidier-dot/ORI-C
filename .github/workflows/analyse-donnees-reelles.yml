@@ -30,6 +30,10 @@ concurrency:
   group: analyse-donnees-reelles-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   donnees-reelles:
     name: Climat, exoplanètes, antibiotiques et plateforme

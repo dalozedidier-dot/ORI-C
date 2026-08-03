@@ -1,5 +1,7 @@
 # Campagne plateforme — exécution du plan directeur par `oric-full`
 
+> **État historique.** Les compteurs 175/235 ci-dessous décrivent les deux premières campagnes du plan directeur. Le bilan consolidé actuel fait autorité pour l’état présent : 211 réussites techniques, 440 blocages, 32 non-exécutions et aucun soutien confirmatoire. Voir `../../plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`.
+
 **Statut : exécution outillée du plan. Aucun résultat ne soutient une
 hypothèse ORI-C.**
 

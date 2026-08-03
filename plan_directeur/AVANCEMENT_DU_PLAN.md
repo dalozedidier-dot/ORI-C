@@ -18,19 +18,19 @@ sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
 | 5. benchmark de valeur ajoutée | **fait** pour la carte et la couche mémoire | `ANALYSE_GRAPHE.md`, `RAPPORT_WP_C4.md` |
 | 6. réplication du résultat négatif climatique | **fait**, 9 tests réels | `…/results_stress/tests_reels/` |
 | 7. réparation du protocole prospectif | **fait**, 10 items sur 10 | `…/prospectif_c2/RAPPORT_WP_C2.md` |
-| 8. extension astronomique par ablations | **bloqué** — `rebound` absent | `ENVIRONNEMENT.md` |
+| 8. extension astronomique par ablations | **fait**, 25 calculs, 13 critères sur 15 | `02_branche_systeme_solaire/couche_astronomique/` |
 | 9. méta-analyse des filtrages planétaires | **bloqué** — données absentes | — |
-| 10. préparation confirmatoire antibiotique | non fait | WP-R1 |
+| 10. préparation confirmatoire antibiotique | **partiel** — benchmark exploratoire, aucun jeu final intact | `plateforme/campagne_maximale_reelle/resultats_consolides/benchmark_antibiotic_history.json` |
 | 11. durcissement du schéma de lignées | **fait** | `03_.../programme_prebiotique/` |
 | 12. préenregistrement public | **partiel**, deux protocoles scellés | `PREENREGISTREMENT_PROSPECTIF.md`, `PROTOCOLE_C2.json` |
 
-**8 faits, 2 partiels, 2 bloqués.**
+**8 faits, 3 partiels, 1 bloqué.**
 
 ## Groupes de travail ouverts
 
 | Groupe | Items | Traités | Résultat principal |
 |---|---:|---:|---|
-| Étape 0 | 10 | 6 | environnement enregistré ; `rebound` absent |
+| Étape 0 | 10 | 8 | environnement enregistré ; `rebound` installé et campagne astronomique exécutée |
 | Étape 1 | — | **fait** | 28 hypothèses, 16 champs |
 | Étape 2, grille universelle | 30 | **30/59 cases** | `GRILLE_ETAPE_2.md` |
 | S1.2 à S1.5 | 42 | ~12 | banc synthétique, 4 volets sur 4 |
@@ -45,7 +45,7 @@ sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
 | WP-C6 | 15 | 10 | **M2 non identifiable** |
 | WP-C7 | 10 | 5 | le signal manquant est la bande de 100 ka |
 | WP-T2 | 10 | 5 | 8 notions sur 15 traversent 2 branches |
-| WP-T4 | 6 | 3 | 5,0 concepts par résultat positif |
+| WP-T4 | 6 | 3 | 3,75 concepts par résultat positif |
 | WP-V1 | 10 | 4 | validateur de lignées vérifié |
 
 ## Les huit résultats qui comptent
@@ -69,6 +69,16 @@ sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
    et 4 impossible quand référence et points testés sont dans des régimes
    différents.
 
+## Résultats ajoutés par les workflows d’analyse
+
+1. **Astronomie** : 25 calculs, 13 critères sur 15, accord avec JPL et La2010, et effets des interventions sur Jupiter et Saturne supérieurs de plusieurs millions de fois à la dispersion du témoin. Le résultat reste une causalité dans le modèle réduit.
+2. **Azote terrestre** : présence, accessibilité et mobilisabilité sont calculées dans un modèle de premier ordre. L'opérativité reste sans donnée.
+3. **GISTEMP** : le modèle multi-mémoires améliore l'intégrale simple, mais perd contre le témoin de complexité égale. La structure proposée n'est pas validée.
+4. **Vallée des rayons exoplanétaires** : le critère préenregistré échoue nettement dans cette implémentation.
+5. **Antibiotiques** : le modèle historique présente un faible avantage moyen, mais son intervalle de confiance traverse zéro. Le résultat est exploratoire et non concluant.
+6. **Proxy `Pacc`** : toutes les classes atteignent toutes les classes futures, soit `Pacc = 1`. L'estimateur est saturé et ne mesure pas une accessibilité causale.
+7. **Campagne réelle consolidée** : 211 réussites techniques, 440 blocages et 32 non-exécutions, avec zéro soutien confirmatoire à ORI-C.
+
 ## Quatre défauts de mes propres bancs, trouvés et corrigés
 
 Tous sont documentés avec leur première exécution conservée.
@@ -89,7 +99,7 @@ Tous sont documentés avec leur première exécution conservée.
 **Données absentes du dossier** — WP-M2 à M4, WP-P1 à P6, WP-C1.4-6, WP-C5,
 WP-CL1 à CL4, WP-B2. Environ **190 items**.
 
-**Environnement** — WP-A1 à A6, `rebound` non installé. **59 items**.
+**Environnement** — le verrou `rebound` est levé. Les calculs astronomiques sont exécutables sur GitHub Actions. Les blocages résiduels concernent désormais les données, le coût des campagnes longues ou des dépendances propres à d’autres WP et doivent être recomptés séparément.
 
 **Humains ou laboratoires** — WP-S3.5-7, WP-V2 à V6, WP-R1 à R6, WP-B1, WP-B3,
 WP-T5, Niveaux 3 et 4. Environ **250 items**.
@@ -107,11 +117,11 @@ Le plan fixe douze conditions. État :
 | 2. base de données de la branche matière | **fait** comme schéma, à remplir |
 | 3. une prédiction propre réussissant hors échantillon par branche | **aucune** |
 | 4. chaque réussite bat un témoin apparié | sans objet, aucune réussite |
-| 5. chaque mécanisme soutenu par une ablation | **fait** pour CHM et MEM |
+| 5. chaque mécanisme soutenu par une ablation | **fait** pour CHM, MEM et les interventions astronomiques |
 | 6. dépendance au chemin à conditions finales vérifiées | **fait** |
 | 7. persistance au-delà des constantes de temps | **fait** |
 | 8. `D`, `H`, `L` publiés séparément | **fait** dans le banc synthétique |
-| 9. `Pacc` mesuré dans un système par branche | **non**, seulement en synthétique |
+| 9. `Pacc` mesuré dans un système par branche | **non** — le proxy observationnel est saturé et non causal |
 | 10. deux résultats reproduits par des équipes indépendantes | **non** |
 | 11. un résultat traversant deux branches sans redéfinition | **non** |
 | 12. résultats négatifs visibles et versionnés | **fait** |

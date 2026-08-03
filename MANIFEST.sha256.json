@@ -9,23 +9,23 @@
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 6366,
-      "sha256": "0caec06d1f621c0eeeb88ed72316781e059c75dd41137607bf9f30913d163ed7"
+      "size": 6400,
+      "sha256": "2e43392c043c37349595444abc5f2ee26ee65fe5e3abececce76b0341070083f"
     },
     {
       "path": ".github/workflows/analyse-paleoclimat-approfondie.yml",
-      "size": 4704,
-      "sha256": "a87b8411f5b72025fa31531cf5c93b9773c611bfbdbdf040c06df90739eb23de"
+      "size": 4738,
+      "sha256": "f40d70398d6ab145e0831d418b907f7dc2d590a2f50a6fa0d28e0701415103b6"
     },
     {
       "path": ".github/workflows/analyse-structure.yml",
-      "size": 7417,
-      "sha256": "12841af75411418c943a7f82f26d8542ff9505a1e8c65f1b543c96e6a71b2be0"
+      "size": 7451,
+      "sha256": "a8408fa4bf7372b8ba634be153762ccbd97fc7bd92180c8b7cc316515b1b964a"
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 6789,
-      "sha256": "009db21a48da0b102aa4e31bf341daeddca78d9ffd2b6ab41e380503ae66884d"
+      "size": 6823,
+      "sha256": "3d3d55f96eb4df57674496ae0448d9117ac705fa0af4649345ed5e276cc79092"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -989,8 +989,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/MANIFESTE.json",
-      "size": 52103,
-      "sha256": "147862982a46f71f2883f75f0efabce92512ba646e3c3dfe3a3cdd74025bacf5"
+      "size": 51927,
+      "sha256": "da0e808e8e66343aa60431ecbb0143f95fa9575efd74aa41328a0dceb1f4c5de"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/REPRODUCTION.md",
@@ -999,8 +999,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/SHA256SUMS.txt",
-      "size": 34144,
-      "sha256": "c487f2bee19aee18f442d2bbd11e65750616f4b99584ad8b80d39140ee1a3520"
+      "size": 34039,
+      "sha256": "e20c1a70489b0f3427f2737d6d1043b92f549926536acd329850df88c291f4fd"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/STATUT_SCIENTIFIQUE.md",
@@ -1014,8 +1014,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/.gitattributes",
-      "size": 148,
-      "sha256": "8f39e57c969adedb0a6c6bcbad666f8416e5d6daf0ef976d395401255a3e9adb"
+      "size": 279,
+      "sha256": "367763f5fbe5563a345ed6fcaca5fc7e96a8b3d0ec6612e54e7008a8e0599b8f"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/.github/workflows/ci.yml",
@@ -1075,7 +1075,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/HORIZONS_PROVENANCE.md",
       "size": 1383,
-      "sha256": "1e190b7dd701ecbf8dd822b6612936f78fe5bfed81427d1db02251b993b3f837"
+      "sha256": "92e8e7ab2399d272ac57fa943052779d6c1d65c47ce4374973c3ef43f0bebea9"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/horizons_j2000_de441.csv",
@@ -2309,8 +2309,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/scripts/verifier_paquet.py",
-      "size": 4588,
-      "sha256": "7af4ffbf39461592adf8a27634e47224b3e17f35ec4bf3b37713a539b41c9483"
+      "size": 4702,
+      "sha256": "83bcdaaed03b07dab3fd305e6899774aeb497e6141e905f9c44f70bb34397dd8"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/CITATION.cff",
@@ -3124,8 +3124,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 22011,
-      "sha256": "ce072ccd2af82307ce8b91c1a28e5c6de54a17828c1c5075c8f5e0b20ba90b3e"
+      "size": 24001,
+      "sha256": "7774097ef0dc4c165b5df98889596ef4a5060e41dd2979aba9c4e8fa641521be"
     },
     {
       "path": "ETAT_DES_TESTS.md",
@@ -3404,13 +3404,13 @@
     },
     {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
-      "size": 4655,
-      "sha256": "093541955947ce4387650f99b6da6c8193a1c19d7ac94540d731fb4d6d95420f"
+      "size": 3787,
+      "sha256": "e56a01ce86021a24633e277d29599a7c1b9e684a14eb4cde9bc46fa78f93fb42"
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 6863,
-      "sha256": "a2f99d0cf1040ec4401c7c0f3b2da3af57b8b0d713c652e485f8e944a4098c51"
+      "size": 8612,
+      "sha256": "1834acbe7b5a23d29df2485684a43177b45945643abb997b1a0cd3e5834999cc"
     },
     {
       "path": "plan_directeur/GRILLE_ETAPE_2.md",
@@ -3429,8 +3429,8 @@
     },
     {
       "path": "plan_directeur/audit_transversal.json",
-      "size": 5349,
-      "sha256": "bc90ee98f1d6c8a7a2bfa8e578af566b9b5f6476a8b051fe4310bcd3ba4613ca"
+      "size": 5526,
+      "sha256": "129a95730ce087495ad5b9d5fbe9195c1cb4310a835b544003753455da1ada8d"
     },
     {
       "path": "plan_directeur/audit_transversal.py",
@@ -3439,8 +3439,8 @@
     },
     {
       "path": "plan_directeur/campagne_plateforme/README.md",
-      "size": 7838,
-      "sha256": "0c58dc7e1d7416be9dd301a54da9fe8a1e86ce9aeac3b365e40d938520cd774a"
+      "size": 8185,
+      "sha256": "e298f77019dbe42baa4373f58f47458a2307b0b4cc772b8709be4e3d8856d835"
     },
     {
       "path": "plan_directeur/campagne_plateforme/correctifs/appliquer_correctifs.py",
@@ -3684,8 +3684,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md",
-      "size": 2098,
-      "sha256": "cfa8a770d183d395d6abb4f7b6d14c5084ecb3d646805e1fe23d9ea16daccd08"
+      "size": 2028,
+      "sha256": "5aa4c5b8fb10559858187da3c1c952e3ca3053f5b505ab6ebaeb7c3c300eed02"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/BILAN_CORRIGE.md",
@@ -3859,13 +3859,18 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/REPORT.md",
-      "size": 55593,
-      "sha256": "58f8168de6e7f7d245354f922ae671fd615b5a7ab751bf18b386a42c5d24f4e6"
+      "size": 59875,
+      "sha256": "0f592a47159178ec3b021ea2da95fd6ce6181860106c67afc6dbb72c7508e498"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/benchmark_antibiotic_history.json",
       "size": 1105,
-      "sha256": "b279be8d5f5a155aae5a1f5de424027b73378aa10f2a0edbfd6aec0b92b1027f"
+      "sha256": "8e78f95cdc6d2cdd1ff08ce6e81642d0d06c90262e901af514aacab628ab0186"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resultats_consolides/memoire_distribuee_gistemp.json",
+      "size": 1270,
+      "sha256": "e9003355d4abe06c9f7000c2ca40e64983b0bb7d0f2b260c93cb11a4cf7499e4"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/pacc_observationnel_deux_branches.json",
@@ -3874,13 +3879,18 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/results.csv",
-      "size": 97764,
-      "sha256": "ebd223f52a5fb32564161032bee1bac7833971885ccc2be301236018989388fb"
+      "size": 102018,
+      "sha256": "dd3d6e9b1d91b7d5002bec8880b8a5aacb9c48d6075d5072a5943c5140b87dc4"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/results.json",
-      "size": 2764281,
-      "sha256": "254e31c315256104cad50ba7b8784fea432194a4acde9d053456b1fa62af9746"
+      "size": 2767395,
+      "sha256": "97e91be8ee22735f8cf3836dcc3cd1a6c740f6d7435a934359cd72186f6d5903"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resultats_consolides/vallee_des_rayons.json",
+      "size": 810,
+      "sha256": "e291abac798485555b33341e6e2cca5ccdf1b6ce5b38edc753d859aa1ad2662e"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_corriges/REPORT.md",
@@ -4080,7 +4090,7 @@
     {
       "path": "plateforme/source_corrigee/audit/platform_audit.json",
       "size": 295,
-      "sha256": "1d2a39006abdf5b4e32b75737b5a3ae9721e9854ac2cd781a8afb5649bf0465f"
+      "sha256": "95189feab6877c7cc5e6acbf1e8fdc31b4488dbae4b6dc38d2e14668eedffa46"
     },
     {
       "path": "plateforme/source_corrigee/audit/validation_results.json",
@@ -4934,8 +4944,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 12969,
-      "sha256": "e683e9cf21d3ec239c5c5c2c89648f078bbbeb7487672aaa590fee5c2c9f9199"
+      "size": 13015,
+      "sha256": "a63d8bb65e03857a36ed7814e01b1f96182951d1da5ae25664923222a3c7e6d5"
     },
     {
       "path": "site/methode.html",
@@ -4944,13 +4954,13 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 32937,
-      "sha256": "ae83f328bbd3d80446a6b78c0d0531d15e749ec5250986dbc4a42e2859930076"
+      "size": 37532,
+      "sha256": "91a6322f185e89d7b62050df9eabb45969af31a94da026d70c4717b83b68fc6a"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 8576,
-      "sha256": "de32bc8e924b8f267c8d55a23929b789b9a0b8ac9b776f9bbab4c36484997184"
+      "size": 9915,
+      "sha256": "642496a929ecf2e1bb93e3d435c41f7af94466fcc46e6a88bbb4c5bcd3525932"
     },
     {
       "path": "site/robots.txt",

@@ -90,7 +90,7 @@ datées.
 | Constituants fondamentaux, nuclides, éléments | **Établi, exhaustif** | registres fermés ou évalués : 18, 5 843, 118 |
 | Molécules, phases, matériaux, réservoirs, biologique | Structurant | **ouvert, non clos**, le fichier ne prétend pas l'inverse |
 | Séparation confirmé / hypothétique | **Établi comme règle** | aucun candidat de matière noire ne porte « confirmé » |
-| Chaîne présence → accessibilité → mobilisabilité → opérativité | Définition opérationnelle | quatre degrés, aucun encore mesuré |
+| Chaîne présence → accessibilité → mobilisabilité → opérativité | **Mesurée partiellement pour l’azote terrestre** | présence, accessibilité et mobilisabilité calculées ; opérativité sans donnée |
 | Sourçage | **Établi** | 100 % des lignes contrôlées portent une URL |
 
 Les effectifs annoncés ont été recomptés feuille par feuille : **treize sur
@@ -99,8 +99,13 @@ est close avec une racine unique et aucun parent orphelin.
 
 Cette couche éclaire une limite constatée ailleurs. Les vingt-huit
 enregistrements d'inventaire accessible sans valeur chiffrée mesurent une
-**présence** par réservoir. Passer à la mobilisabilité exige des flux et des
-horizons, que des coefficients de partage à l'équilibre ne fournissent pas.
+**présence** par réservoir. Une première chaîne quantitative est maintenant
+calculée pour l'azote terrestre. Selon le scénario de noyau, la fraction
+accessible vaut 1,93 %, 3,05 % ou 21,94 %. Avec un flux naturel total de
+228 Tg/an, la fraction mobilisable passe de 6 × 10⁻⁶ à 100 ans à 0,0554 à
+1 Ma, puis 0,631 à 20 Ma. Le résultat établit dans ce modèle que la
+mobilisabilité dépend de l'horizon. `Q_operatoire` reste vide, faute de stock
+d'azote effectivement incorporé dans les architectures vivantes.
 
 ### Couche hypergraphe mécanistique
 
@@ -119,7 +124,7 @@ jusqu'aux interfaces réactives. La base historique
 | Bouclage des budgets publiés | **Établi** | noyau + silicate reconstitue le total, écart max 2,88 % |
 | Coefficients de partage métal-silicate | Fortement appuyé | 9 valeurs expérimentales, N C H S, bornes déclarées |
 | Prédiction de la répartition par les coefficients | **Établi pour C, H, N — désaccord pour S** | épreuve indépendante, sans circularité |
-| Facteurs de mobilisation à horizon donné | **Non testé** | exigent des flux, pas des coefficients d'équilibre |
+| Facteurs de mobilisation à horizon donné | **Calculés pour l’azote terrestre dans un modèle de premier ordre** | fonction explicite de l’horizon ; opérativité non mesurée |
 
 Deux résultats méritent d'être lus ensemble, parce qu'ils vont en sens
 contraire.
@@ -283,18 +288,35 @@ publiée, et les quatre solutions La2010.
 Détail : `couche_memoire_historique/results_stress/tests_reels/`
 `RAPPORT_TESTS_REELS.md` et `RAPPORT_TESTS_REELS_2.md`.
 
-### Campagne plateforme — `oric-full` 0.2.0
+### Campagne réelle consolidée — `oric-full` 0.2.0
 
 | Élément | Résultat | Statut |
 |---|---|---|
-| Couverture du plan | 683 entrées, 51 WP, 235 réussites techniques | outil vérifié |
+| Couverture | 683 entrées, 51 WP, 59 moteurs et 33 jeux de données | outil vérifié |
+| Exécution technique | 211 réussites, 440 blocages, 32 non-exécutions, 0 échec et 0 erreur | **réexécution consolidée** |
+| Verdicts scientifiques | 651 indéterminés, 32 non applicables | aucune conversion automatique d'un succès technique en preuve |
 | Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
 | Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |
-| Écart La2004 / La2010 sous horizon | 2,31 × 10⁻⁵ contre 1,79 × 10⁻² hors horizon | **Établi** |
-| AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat du socle |
-| Hypothèses ORI-C soutenues | **aucune** | 0 `supports` défendable sur 683 |
+| AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat négatif du socle |
+| Hypothèses ORI-C soutenues | **aucune** | 0 soutien confirmatoire sur 683 |
 
-Détail : `plan_directeur/campagne_plateforme/README.md`.
+Les compteurs 235/370 conservés dans `plan_directeur/campagne_plateforme/README.md`
+appartiennent à une campagne historique. Le bilan actuel est
+`plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`.
+
+### Analyses exploratoires sur les données réelles
+
+| Analyse | Résultat | Statut |
+|---|---|---|
+| Mémoire distribuée GISTEMP | RMSE 0,1252 contre 0,4563 pour l'intégrale simple, mais 0,0997 pour le témoin apparié | **ne valide pas la structure proposée** |
+| Vallée des rayons exoplanétaires | creux à 1,502 R⊕, quantile de permutation 0,0005 contre 0,95 requis | **Réfuté dans cette implémentation** |
+| Histoire antibiotique | gain moyen 0,0114, IC 95 % [−0,0354 ; 0,0598] | **Non concluant**, exploratoire |
+| Proxy observationnel de `Pacc` | `Pacc = 1` pour toutes les classes dans deux domaines | **Estimateur saturé**, non causal |
+
+Ces analyses n'ont pas été ajoutées après coup au registre comme hypothèses
+confirmatoires. Elles servent à éprouver les définitions et à préparer de
+nouveaux protocoles. Les résultats machine sont dans
+`plateforme/campagne_maximale_reelle/resultats_consolides/`.
 
 ### Campagne du plan directeur
 
@@ -336,7 +358,7 @@ concept* comme le reste du vocabulaire.
 |---|---|
 | Acte 1, cellule eucaryote comme architecture | Preuve de concept |
 | Acte 2, endosymbiose mitochondriale | Preuve de concept, faits sous-jacents fortement appuyés |
-| Acte 3, résistance aux antibiotiques | **Non testé**, protocole proposé |
+| Acte 3, résistance aux antibiotiques | **Exploratoire, non concluant** ; protocole confirmatoire encore non exécuté |
 | Universalité, supériorité explicative, pouvoir prédictif | **Non testé** |
 
 Le document est explicite : « Il ne démontre pas son universalité, sa
@@ -356,9 +378,12 @@ signale à chaque exécution.
 
 ## Lecture d'ensemble
 
-Une seule couche du programme a été soumise à un test comparatif avec témoin
-apparié : la couche mémoire de la branche 2. Elle a échoué. Ce fait ne réfute
-pas le reste, parce que le reste n'a pas été soumis au même test.
+Plusieurs couches sont désormais soumises à des témoins appariés ou à des
+ablations. La couche mémoire paléoclimatique et la mémoire GISTEMP perdent
+contre leurs témoins de complexité égale. Le benchmark antibiotique reste non
+concluant. La couche astronomique répond nettement aux interventions dans le
+modèle réduit. Ces verdicts restent séparés et ne valident ni ne réfutent le
+cadre général.
 
 C'est la principale conclusion transversale disponible aujourd'hui, et elle
 oriente le travail à venir : la question ouverte n'est pas de savoir si le

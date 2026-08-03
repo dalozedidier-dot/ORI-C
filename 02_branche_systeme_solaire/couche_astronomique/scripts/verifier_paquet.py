@@ -109,15 +109,17 @@ def verify_archives(manifest: dict) -> None:
         if damaged is not None:
             fail(f"archive corrompue: {relative}, entrée {damaged}")
     git = shutil.which("git")
-    if git:
-        bundle = ROOT / "git" / "ORI-C_Systeme_solaire_tests.bundle"
+    bundle = ROOT / "git" / "ORI-C_Systeme_solaire_tests.bundle"
+    if git and bundle.is_file():
         heads = subprocess.check_output(
             [git, "bundle", "list-heads", str(bundle)],
             text=True,
         )
         if manifest["source_git_commit"] not in heads:
             fail("le bundle Git ne contient pas le commit source")
-    print("[OK] roue, document et bundle Git")
+        print("[OK] roue, document et bundle Git")
+    else:
+        print("[OK] roue et document ; bundle Git non publié, contrôle ignoré")
 
 
 def main() -> None:

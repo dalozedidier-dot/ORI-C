@@ -1,0 +1,49 @@
+{
+  "source": "NASA GISTEMP v4, anomalies zonales observées",
+  "cible": "Glob",
+  "compartiments": [
+    "NHem",
+    "SHem",
+    "64N-90N"
+  ],
+  "calibration": [
+    1880,
+    1970
+  ],
+  "prediction": [
+    1971,
+    2025
+  ],
+  "resultats": {
+    "integrale_cumulee_unique": {
+      "parametres": 2,
+      "rmse": 0.45627603662572824
+    },
+    "multi_memoires": {
+      "parametres": 7,
+      "rmse": 0.12515420447106337,
+      "constantes_de_temps_ans": {
+        "NHem": 0.5,
+        "SHem": 27.77900158115786,
+        "64N-90N": 1.3176778478931943
+      },
+      "poids": {
+        "NHem": 0.8635717568623867,
+        "SHem": 0.48288288307419625,
+        "64N-90N": -0.040000486250264713
+      }
+    },
+    "temoin_complexite_egale": {
+      "parametres": 7,
+      "rmse": 0.09973428755571517
+    }
+  },
+  "CL1_5_gain_sur_integrale_unique": 0.7257050679307882,
+  "CL1_5_gain_sur_temoin_apparie": -0.2548764074857177,
+  "CL1_2_prediction_tau_SH_superieur_a_tau_NH": {
+    "tau_SHem": 27.77900158115786,
+    "tau_NHem": 0.5,
+    "verifiee": true
+  },
+  "lecture": "Le gain contre l'intégrale unique teste l'affirmation du §13.1. Le gain contre le témoin apparié teste si c'est la structure de compartiments qui apporte, et non le seul ajout de paramètres."
+}

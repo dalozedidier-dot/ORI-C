@@ -2,8 +2,8 @@
   "ok": true,
   "catalogue_entries": 683,
   "work_packages": 51,
-  "engines": 51,
-  "datasets": 31,
+  "engines": 59,
+  "datasets": 33,
   "issues": [
     {
       "level": "warning",

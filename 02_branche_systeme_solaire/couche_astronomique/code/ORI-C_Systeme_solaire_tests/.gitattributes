@@ -1,3 +1,5 @@
-data/**/*.csv whitespace=cr-at-eol
-src/oric_solar_history/data/*.csv whitespace=cr-at-eol
+data/horizons_j2000_de441.csv text eol=lf
+src/oric_solar_history/data/horizons_j2000_de441.csv text eol=lf
+data/**/*.csv text eol=lf whitespace=cr-at-eol
+src/oric_solar_history/data/*.csv text eol=lf whitespace=cr-at-eol
 data/reference/la2010/README.TXT whitespace=-blank-at-eol
