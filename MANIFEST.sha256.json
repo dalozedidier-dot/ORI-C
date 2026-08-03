@@ -10,7 +10,7 @@
     {
       "path": ".github/workflows/ci.yml",
       "size": 447,
-      "sha256": "705677a5fde6925a53f837466118a47cbc2a4fd2d9826e74e65a9d29a9038b42"
+      "sha256": "d3dfba50b5891fb32121eef632387b85a11489d2a4a58bcd553f5bd316074baf"
     },
     {
       "path": ".gitignore",
@@ -4534,8 +4534,8 @@
     },
     {
       "path": "plateforme/source_corrigee/requirements-lock.txt",
-      "size": 237,
-      "sha256": "a3653230a892eeb3bfd9c5b99f56e77f17420d964c62ca89e08317eeefde06fe"
+      "size": 316,
+      "sha256": "de9a9c0694932b7ed1920b58481ad1d4a48dc50d5dd060a61e8eda63e0cddc05"
     },
     {
       "path": "plateforme/source_corrigee/requirements.txt",
