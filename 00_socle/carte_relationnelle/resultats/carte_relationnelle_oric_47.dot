@@ -1,0 +1,166 @@
+digraph ORI_C_47 {
+	bgcolor=white compound=true concentrate=false dpi=240 fontname="DejaVu Sans" fontsize=18 label="Carte relationnelle de travail ORI-C
+40 transitions, 47 liens typés - causalité, dépendances et contexte distingués" labelloc=t margin=0.04 newrank=true nodesep=0.23 outputorder=edgesfirst overlap=false pad=0.18 rankdir=TB ranksep="0.68 equally" ratio=compress size="15.8,22.7!" splines=spline
+	node [color="#43596A" fixedsize=true fontname="DejaVu Sans" fontsize=8.4 height=0.70 margin="0.08,0.05" penwidth=0.9 shape=box style="rounded,filled" width=2.18]
+	edge [arrowsize=0.62 fontname="DejaVu Sans" fontsize=6.5 penwidth=1.15]
+	subgraph cluster_R1 {
+		color="#9AA9B3" fillcolor="#EAF0F5" fontname="DejaVu Sans" fontsize=10.5 label="R1  Physique fondamentale" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-001" [label=<TR-001<BR/><FONT POINT-SIZE="7.4">Passage au régime<BR/>électrofaible brisé</FONT>> fillcolor="#EAF0F5" tooltip="Passage au régime électrofaible brisé"]
+		"TR-002" [label=<TR-002<BR/><FONT POINT-SIZE="7.4">Asymétrie matière-antimatière</FONT>> fillcolor="#EAF0F5" tooltip="Asymétrie matière-antimatière"]
+		"TR-003" [label=<TR-003<BR/><FONT POINT-SIZE="7.4">Confinement des quarks</FONT>> fillcolor="#EAF0F5" tooltip="Confinement des quarks"]
+		"TR-004" [label=<TR-004<BR/><FONT POINT-SIZE="7.4">Nucléosynthèse primordiale</FONT>> fillcolor="#EAF0F5" tooltip="Nucléosynthèse primordiale"]
+		"TR-005" [label=<TR-005<BR/><FONT POINT-SIZE="7.4">Recombinaison cosmologique<BR/>(He puis H)</FONT>> fillcolor="#EAF0F5" tooltip="Recombinaison cosmologique (He puis H)"]
+		"TR-001" -> "TR-002" [style=invis weight=80]
+		"TR-002" -> "TR-003" [style=invis weight=80]
+		"TR-003" -> "TR-004" [style=invis weight=80]
+		"TR-004" -> "TR-005" [style=invis weight=80]
+	}
+	subgraph cluster_R2 {
+		color="#9AA9B3" fillcolor="#F5EFE7" fontname="DejaVu Sans" fontsize=10.5 label="R2  Atomes et étoiles" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-006" [label=<TR-006<BR/><FONT POINT-SIZE="7.4">Effondrement des premiers<BR/>nuages stellaires</FONT>> fillcolor="#F5EFE7" tooltip="Effondrement des premiers nuages stellaires"]
+		"TR-007" [label=<TR-007<BR/><FONT POINT-SIZE="7.4">Nucléosynthèse stellaire</FONT>> fillcolor="#F5EFE7" tooltip="Nucléosynthèse stellaire"]
+		"TR-008" [label=<TR-008<BR/><FONT POINT-SIZE="7.4">Étoiles AGB, processus s et<BR/>poussières</FONT>> fillcolor="#F5EFE7" tooltip="Étoiles AGB, processus s et poussières"]
+		"TR-009" [label=<TR-009<BR/><FONT POINT-SIZE="7.4">Explosions stellaires et<BR/>enrichissement</FONT>> fillcolor="#F5EFE7" tooltip="Explosions stellaires et enrichissement"]
+		"TR-010" [label=<TR-010<BR/><FONT POINT-SIZE="7.4">Matière neutronique et<BR/>fusions d&#x27;étoiles à neutrons</FONT>> fillcolor="#F5EFE7" tooltip="Matière neutronique et fusions d'étoiles à neutrons"]
+		"TR-006" -> "TR-007" [style=invis weight=80]
+		"TR-007" -> "TR-008" [style=invis weight=80]
+		"TR-008" -> "TR-009" [style=invis weight=80]
+		"TR-009" -> "TR-010" [style=invis weight=80]
+	}
+	subgraph cluster_R3 {
+		color="#9AA9B3" fillcolor="#EAF4EC" fontname="DejaVu Sans" fontsize=10.5 label="R3  Molécules" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-011" [label=<TR-011<BR/><FONT POINT-SIZE="7.4">Formation de HeH+</FONT>> fillcolor="#EAF4EC" tooltip="Formation de HeH+"]
+		"TR-012" [label=<TR-012<BR/><FONT POINT-SIZE="7.4">Formation de H₂ et HD</FONT>> fillcolor="#EAF4EC" tooltip="Formation de H₂ et HD"]
+		"TR-013" [label=<TR-013<BR/><FONT POINT-SIZE="7.4">Chimie carbonée simple du<BR/>milieu interstellaire</FONT>> fillcolor="#EAF4EC" tooltip="Chimie carbonée simple du milieu interstellaire"]
+		"TR-014" [label=<TR-014<BR/><FONT POINT-SIZE="7.4">Manteaux de glace sur les<BR/>grains</FONT>> fillcolor="#EAF4EC" tooltip="Manteaux de glace sur les grains"]
+		"TR-015" [label=<TR-015<BR/><FONT POINT-SIZE="7.4">Molécules organiques<BR/>complexes et cages carbonées</FONT>> fillcolor="#EAF4EC" tooltip="Molécules organiques complexes et cages carbonées"]
+		"TR-011" -> "TR-012" [style=invis weight=80]
+		"TR-012" -> "TR-013" [style=invis weight=80]
+		"TR-013" -> "TR-014" [style=invis weight=80]
+		"TR-014" -> "TR-015" [style=invis weight=80]
+	}
+	subgraph cluster_R4 {
+		color="#9AA9B3" fillcolor="#F5ECEA" fontname="DejaVu Sans" fontsize=10.5 label="R4  Solides cosmiques" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-016" [label=<TR-016<BR/><FONT POINT-SIZE="7.4">Condensation de grains<BR/>présolaires</FONT>> fillcolor="#F5ECEA" tooltip="Condensation de grains présolaires"]
+		"TR-017" [label=<TR-017<BR/><FONT POINT-SIZE="7.4">Formation des CAI</FONT>> fillcolor="#F5ECEA" tooltip="Formation des CAI"]
+		"TR-018" [label=<TR-018<BR/><FONT POINT-SIZE="7.4">Formation des chondres et<BR/>remaniement thermique des<BR/>solides réfractaires</FONT>> fillcolor="#F5ECEA" tooltip="Formation des chondres et remaniement thermique des solides réfractaires"]
+		"TR-019" [label=<TR-019<BR/><FONT POINT-SIZE="7.4">Concentration collective des<BR/>galets</FONT>> fillcolor="#F5ECEA" tooltip="Concentration collective des galets"]
+		"TR-020" [label=<TR-020<BR/><FONT POINT-SIZE="7.4">Accrétion d&#x27;embryons<BR/>planétaires</FONT>> fillcolor="#F5ECEA" tooltip="Accrétion d'embryons planétaires"]
+		"TR-016" -> "TR-017" [style=invis weight=80]
+		"TR-017" -> "TR-018" [style=invis weight=80]
+		"TR-018" -> "TR-019" [style=invis weight=80]
+		"TR-019" -> "TR-020" [style=invis weight=80]
+	}
+	subgraph cluster_R5 {
+		color="#9AA9B3" fillcolor="#F0EDF5" fontname="DejaVu Sans" fontsize=10.5 label="R5  Architectures planétaires" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-021" [label=<TR-021<BR/><FONT POINT-SIZE="7.4">Différenciation métal-<BR/>silicate</FONT>> fillcolor="#F0EDF5" tooltip="Différenciation métal-silicate"]
+		"TR-022" [label=<TR-022<BR/><FONT POINT-SIZE="7.4">Océans magmatiques et<BR/>cristallisation fractionnée</FONT>> fillcolor="#F0EDF5" tooltip="Océans magmatiques et cristallisation fractionnée"]
+		"TR-023" [label=<TR-023<BR/><FONT POINT-SIZE="7.4">Hydrosphères liquides<BR/>durables</FONT>> fillcolor="#F0EDF5" tooltip="Hydrosphères liquides durables"]
+		"TR-024" [label=<TR-024<BR/><FONT POINT-SIZE="7.4">Atmosphères secondaires</FONT>> fillcolor="#F0EDF5" tooltip="Atmosphères secondaires"]
+		"TR-025" [label=<TR-025<BR/><FONT POINT-SIZE="7.4">Recyclage tectonique global</FONT>> fillcolor="#F0EDF5" tooltip="Recyclage tectonique global"]
+		"TR-021" -> "TR-022" [style=invis weight=80]
+		"TR-022" -> "TR-023" [style=invis weight=80]
+		"TR-023" -> "TR-024" [style=invis weight=80]
+		"TR-024" -> "TR-025" [style=invis weight=80]
+	}
+	subgraph cluster_R6 {
+		color="#9AA9B3" fillcolor="#F4F0EA" fontname="DejaVu Sans" fontsize=10.5 label="R6  Diversification minérale" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-026" [label=<TR-026<BR/><FONT POINT-SIZE="7.4">Altération aqueuse et argiles</FONT>> fillcolor="#F4F0EA" tooltip="Altération aqueuse et argiles"]
+		"TR-027" [label=<TR-027<BR/><FONT POINT-SIZE="7.4">Précipitation chimique à<BR/>grande échelle</FONT>> fillcolor="#F4F0EA" tooltip="Précipitation chimique à grande échelle"]
+		"TR-028" [label=<TR-028<BR/><FONT POINT-SIZE="7.4">Phases de haute pression et<BR/>de choc</FONT>> fillcolor="#F4F0EA" tooltip="Phases de haute pression et de choc"]
+		"TR-029" [label=<TR-029<BR/><FONT POINT-SIZE="7.4">Oxygénation durable de la<BR/>surface</FONT>> fillcolor="#F4F0EA" tooltip="Oxygénation durable de la surface"]
+		"TR-030" [label=<TR-030<BR/><FONT POINT-SIZE="7.4">Biominéralisation contrôlée</FONT>> fillcolor="#F4F0EA" tooltip="Biominéralisation contrôlée"]
+		"TR-026" -> "TR-027" [style=invis weight=80]
+		"TR-027" -> "TR-028" [style=invis weight=80]
+		"TR-028" -> "TR-029" [style=invis weight=80]
+		"TR-029" -> "TR-030" [style=invis weight=80]
+	}
+	subgraph cluster_R7 {
+		color="#9AA9B3" fillcolor="#F6EDF3" fontname="DejaVu Sans" fontsize=10.5 label="R7  Voies prébiotiques" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-031" [label=<TR-031<BR/><FONT POINT-SIZE="7.4">Synthèse couplée de<BR/>précurseurs biologiques</FONT>> fillcolor="#F6EDF3" tooltip="Synthèse couplée de précurseurs biologiques"]
+		"TR-032" [label=<TR-032<BR/><FONT POINT-SIZE="7.4">Concentration, activation et<BR/>polymérisation</FONT>> fillcolor="#F6EDF3" tooltip="Concentration, activation et polymérisation"]
+		"TR-033" [label=<TR-033<BR/><FONT POINT-SIZE="7.4">Auto-assemblage de<BR/>compartiments</FONT>> fillcolor="#F6EDF3" tooltip="Auto-assemblage de compartiments"]
+		"TR-034" [label=<TR-034<BR/><FONT POINT-SIZE="7.4">Réseaux autocatalytiques et<BR/>protométabolismes</FONT>> fillcolor="#F6EDF3" tooltip="Réseaux autocatalytiques et protométabolismes"]
+		"TR-035" [label=<TR-035<BR/><FONT POINT-SIZE="7.4">Catalyse ARN et copie dirigée<BR/>par matrice</FONT>> fillcolor="#F6EDF3" tooltip="Catalyse ARN et copie dirigée par matrice"]
+		"TR-031" -> "TR-032" [style=invis weight=80]
+		"TR-032" -> "TR-033" [style=invis weight=80]
+		"TR-033" -> "TR-034" [style=invis weight=80]
+		"TR-034" -> "TR-035" [style=invis weight=80]
+	}
+	subgraph cluster_R8 {
+		color="#9AA9B3" fillcolor="#EEEEEE" fontname="DejaVu Sans" fontsize=10.5 label="R8  Vivant" labelloc=t margin=12 penwidth=0.8 style="rounded,filled"
+		rank=same
+		"TR-036" [label=<TR-036<BR/><FONT POINT-SIZE="7.4">Établissement du code et de<BR/>la traduction</FONT>> fillcolor="#EEEEEE" tooltip="Établissement du code et de la traduction"]
+		"TR-037" [label=<TR-037<BR/><FONT POINT-SIZE="7.4">LUCA</FONT>> fillcolor="#EEEEEE" tooltip=LUCA]
+		"TR-038" [label=<TR-038<BR/><FONT POINT-SIZE="7.4">Photosynthèse oxygénique</FONT>> fillcolor="#EEEEEE" tooltip="Photosynthèse oxygénique"]
+		"TR-039" [label=<TR-039<BR/><FONT POINT-SIZE="7.4">Endosymbiose mitochondriale</FONT>> fillcolor="#EEEEEE" tooltip="Endosymbiose mitochondriale"]
+		"TR-040" [label=<TR-040<BR/><FONT POINT-SIZE="7.4">Multicellularités complexes<BR/>indépendantes</FONT>> fillcolor="#EEEEEE" tooltip="Multicellularités complexes indépendantes"]
+		"TR-036" -> "TR-037" [style=invis weight=80]
+		"TR-037" -> "TR-038" [style=invis weight=80]
+		"TR-038" -> "TR-039" [style=invis weight=80]
+		"TR-039" -> "TR-040" [style=invis weight=80]
+	}
+	"TR-001" -> "TR-006" [minlen=2 style=invis weight=1200]
+	"TR-006" -> "TR-011" [minlen=2 style=invis weight=1200]
+	"TR-011" -> "TR-016" [minlen=2 style=invis weight=1200]
+	"TR-016" -> "TR-021" [minlen=2 style=invis weight=1200]
+	"TR-021" -> "TR-026" [minlen=2 style=invis weight=1200]
+	"TR-026" -> "TR-031" [minlen=2 style=invis weight=1200]
+	"TR-031" -> "TR-036" [minlen=2 style=invis weight=1200]
+	"TR-001" -> "TR-004" [color="#666666" constraint=false style=dashed tooltip="CNST: contraint - Les masses et couplages issus du régime électrofaible brisé contraignent les réactions et abondances de la nucléosynthèse primordiale."]
+	"TR-002" -> "TR-004" [color="#666666" constraint=false style=dashed tooltip="CNST: contraint - L’asymétrie matière-antimatière détermine la quantité baryonique nette qui subsiste après les annihilations et constitue un paramètre d’entrée de la nucléosynthèse primordiale. Elle ne cause pas le confinement des quarks."]
+	"TR-003" -> "TR-004" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les protons et neutrons issus du confinement fournissent les constituants de la nucléosynthèse primordiale."]
+	"TR-004" -> "TR-005" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les noyaux légers produits dans l’Univers primordial s’associent ensuite aux électrons lors de la recombinaison."]
+	"TR-005" -> "TR-011" [color="#2F6B45" constraint=true minlen=2 style=solid tooltip="ENBL: rend possible - Au cours de la recombinaison cosmologique, l’hélium devient neutre avant l’hydrogène. L’hélium neutre peut alors s’associer radiativement aux protons pour former HeH+."]
+	"TR-005" -> "TR-012" [color="#2F6B45" constraint=true minlen=2 style=solid tooltip="ENBL: rend possible - La recombinaison rend possible la formation durable de H2 et HD dans le gaz primordial."]
+	"TR-012" -> "TR-006" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - Le refroidissement par H2 et HD facilite l’effondrement des premiers nuages stellaires."]
+	"TR-006" -> "TR-007" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La formation des premières étoiles ouvre la nucléosynthèse stellaire. L’existence historique des étoiles de Population III est très fortement inférée, mais leurs masses et leur distribution restent ouvertes."]
+	"TR-006" -> "TR-008" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La formation et l’évolution d’étoiles de masse faible ou intermédiaire rendent possibles les phases AGB."]
+	"TR-007" -> "TR-009" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les noyaux synthétisés dans les étoiles sont les matériaux dispersés lors des explosions stellaires."]
+	"TR-006" -> "TR-010" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - L’évolution des étoiles massives rend possible la formation d’étoiles à neutrons et leurs fusions ultérieures."]
+	"TR-009" -> "TR-013" [color="#A76523" constraint=true minlen=1 style=solid tooltip="MATR: fournit les constituants - L’enrichissement stellaire fournit le carbone, l’azote et l’oxygène nécessaires à la chimie interstellaire carbonée."]
+	"TR-008" -> "TR-014" [color="#A76523" constraint=true minlen=1 style=solid tooltip="MATR: fournit les constituants - Les poussières issues notamment des étoiles AGB fournissent des surfaces sur lesquelles se déposent les manteaux de glace."]
+	"TR-014" -> "TR-015" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La chimie de surface et le réchauffement des glaces ouvrent des voies vers plusieurs molécules organiques complexes."]
+	"TR-008" -> "TR-016" [color="#A76523" constraint=true minlen=2 style=solid tooltip="MATR: fournit les constituants - Les étoiles AGB constituent une source importante de grains présolaires."]
+	"TR-016" -> "TR-017" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les grains et le gaz enrichi fournissent les constituants incorporés dans les CAI."]
+	"TR-016" -> "TR-019" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les grains solides participent au réservoir de particules susceptible d’être concentré collectivement dans les disques."]
+	"TR-019" -> "TR-020" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La concentration collective des galets peut conduire à l’effondrement gravitationnel en planétésimaux puis à la croissance d’embryons."]
+	"TR-020" -> "TR-021" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - La croissance des corps et l’énergie d’accrétion rendent possible la différenciation métal-silicate."]
+	"TR-020" -> "TR-022" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - L’accrétion, les impacts et les radionucléides peuvent produire des océans magmatiques."]
+	"TR-022" -> "TR-023" [color="#2F6F94" constraint=false style=solid tooltip="ENVR: modifie l'environnement - Sur Terre, le refroidissement, la cristallisation, le dégazage et les apports volatils ont rendu possible une hydrosphère ancienne. Pour les exoplanètes rocheuses, les hydrosphères restent des scénarios de modèle."]
+	"TR-022" -> "TR-024" [color="#2F6F94" constraint=false style=solid tooltip="ENVR: modifie l'environnement - Le dégazage des réservoirs internes peut produire une atmosphère secondaire. JWST soutient fortement une atmosphère volatile sur 55 Cancri e, possiblement couplée à un océan magmatique."]
+	"TR-021" -> "TR-025" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - Une planète différenciée possédant manteau et croûte fournit l’architecture nécessaire à un recyclage tectonique global."]
+	"TR-023" -> "TR-026" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - L’eau liquide rend possible l’altération aqueuse et la formation d’argiles."]
+	"TR-023" -> "TR-027" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - Les hydrosphères permettent le transport, la concentration et la précipitation chimique à grande échelle."]
+	"TR-021" -> "TR-028" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - Les impacts, l’enfouissement et les gradients internes des corps différenciés ouvrent des domaines de haute pression et de choc."]
+	"TR-038" -> "TR-029" [color="#2F6F94" constraint=false style=solid tooltip="ENVR: modifie l'environnement - La photosynthèse oxygénique transforme progressivement l’état redox des océans, de l’atmosphère et des surfaces."]
+	"TR-036" -> "TR-030" [color="#596B7A" constraint=false style=dotted tooltip="DEPG: dépendance fonctionnelle générale - Toute biominéralisation biologique connue mobilise une machinerie d’expression et de régulation génétiques, donc suppose déjà un code et une traduction fonctionnels. Le lien signale cet arrière-plan fonctionnel général."]
+	"TR-026" -> "TR-031" [color="#8A6D2F" constraint=true minlen=1 style=solid tooltip="CATL: catalyse - Les surfaces minérales et argileuses peuvent concentrer ou catalyser certaines chimies de précurseurs, sans établir la voie historique réelle."]
+	"TR-031" -> "TR-032" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les précurseurs compatibles fournissent les monomères nécessaires aux étapes de concentration, activation et polymérisation."]
+	"TR-031" -> "TR-033" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les précurseurs lipidiques ou amphiphiles fournissent les constituants nécessaires à l’auto-assemblage de compartiments."]
+	"TR-032" -> "TR-034" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La concentration et la polymérisation ouvrent la possibilité de réseaux autocatalytiques plus intégrés."]
+	"TR-032" -> "TR-035" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - La production de polymères nucléotidiques est un préalable à la catalyse ARN et à la copie dirigée par matrice."]
+	"TR-035" -> "TR-036" [color="#2F6B45" constraint=true minlen=1 style=solid tooltip="ENBL: rend possible - La catalyse ARN et la copie constituent des mécanismes candidats en amont de l’établissement du code et de la traduction."]
+	"TR-036" -> "TR-037" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - LUCA est reconstruit comme un organisme déjà doté d’un système génétique et traductionnel complexe; le code et la traduction précèdent donc logiquement LUCA."]
+	"TR-037" -> "TR-038" [color="#555555" constraint=false style=dotted tooltip="DESC: ascendance générale - La photosynthèse oxygénique apparaît dans des lignées descendantes du vivant cellulaire dont LUCA est l’ancêtre commun reconstruit."]
+	"TR-037" -> "TR-039" [color="#555555" constraint=false style=dotted tooltip="DESC: ascendance générale - L’endosymbiose mitochondriale survient dans une lignée eucaryote très postérieure à LUCA, au sein de la descendance cellulaire commune."]
+	"TR-039" -> "TR-040" [color="#2F6B45" constraint=false style=solid tooltip="ENBL: rend possible - L’architecture eucaryote issue de l’endosymbiose mitochondriale fournit une organisation énergétique et cellulaire compatible avec plusieurs formes de multicellularité complexe."]
+	"TR-009" -> "TR-016" [color="#A76523" constraint=true minlen=2 style=solid tooltip="MATR: fournit les constituants - Les éjecta stellaires enrichis condensent et alimentent une partie des grains présolaires."]
+	"TR-013" -> "TR-014" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les molécules simples du gaz sont incorporées ou transformées dans les manteaux de glace des grains."]
+	"TR-017" -> "TR-018" [color="#8B6F47" constraint=false style=dotted tooltip="INCO: incorporation ou trace - Les CAI sont généralement antérieures aux chondres. Des fragments réfractaires peuvent être incorporés, remaniés ou partiellement refondus dans certains chondres; ce lien n’indique pas que les CAI produisent les chondres."]
+	"TR-018" -> "TR-019" [color="#A76523" constraint=false style=solid tooltip="MATR: fournit les constituants - Les chondres contribuent à la population de solides millimétriques concentrée par les mécanismes hydrodynamiques, sans en être les seuls constituants."]
+	"TR-024" -> "TR-023" [color="#725B8C" constraint=false style=solid tooltip="STAB: stabilise - Une atmosphère peut élargir le domaine de stabilité de l’eau liquide en contrôlant pression, température et redistribution thermique."]
+	"TR-023" -> "TR-025" [color="#7A5E99" constraint=false style=dashed tooltip="CONT: contribue ou favorise - L’eau peut modifier la rhéologie du manteau et de la lithosphère et favoriser certaines conditions de subduction. Une hydrosphère ne suffit toutefois pas à déclencher ni à maintenir une tectonique globale."]
+	"TR-033" -> "TR-034" [color="#725B8C" constraint=false style=solid tooltip="STAB: stabilise - La compartimentation peut retenir des réactifs et stabiliser localement des réseaux autocatalytiques."]
+	"TR-029" -> "TR-038" [color="#A52A2A" constraint=false minlen=2 penwidth=2.0 style=bold tooltip="FEED: rétroaction - Après l’apparition de la photosynthèse oxygénique, l’oxygénation durable modifie les niches, les cycles nutritifs et les contraintes écologiques des lignées photosynthétiques. Il s’agit d’une rétroaction tardive, non de l’origine de la photosynthèse."]
+	"TR-029" -> "TR-040" [color="#2F6F94" constraint=true minlen=2 style=solid tooltip="ENVR: modifie l'environnement - L’oxygénation modifie les niches et les budgets énergétiques accessibles à plusieurs multicellularités complexes, sans constituer une cause unique."]
+	LEGEND [label=<<TABLE BORDER="1" COLOR="#B5BEC5" CELLBORDER="0" CELLSPACING="0" CELLPADDING="2"><TR><TD COLSPAN="5"><B>Codes de liens</B></TD></TR><TR><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#2F6B45"><B>ENBL</B>  rend possible</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#A76523"><B>MATR</B>  fournit les constituants</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#2F6F94"><B>ENVR</B>  modifie l&#x27;environnement</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#725B8C"><B>STAB</B>  stabilise</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#8A6D2F"><B>CATL</B>  catalyse</FONT></TD></TR><TR><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#666666"><B>CNST</B>  contraint</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#7A5E99"><B>CONT</B>  contribue ou favorise</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#596B7A"><B>DEPG</B>  dépendance fonctionnelle générale</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#8B6F47"><B>INCO</B>  incorporation ou trace</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#555555"><B>DESC</B>  ascendance générale</FONT></TD><TD BORDER="0" CELLPADDING="5"><FONT COLOR="#A52A2A"><B>FEED</B>  rétroaction</FONT></TD></TR><TR><TD COLSPAN="5"><FONT POINT-SIZE="6.5">INCO, DESC et DEPG sont contextuels et non causaux historiquement; CONT indique une contribution non suffisante.</FONT></TD></TR></TABLE>> color=white fillcolor=white fixedsize=false fontname="DejaVu Sans" fontsize=8.2 height=0 shape=plain style="" width=0]
+	"TR-036" -> LEGEND [minlen=2 style=invis weight=1500]
+}

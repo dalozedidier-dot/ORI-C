@@ -1,0 +1,80 @@
+{
+  "question": "Le spectre survit-il au-delà de l'horizon de divergence chaotique, alors que la phase ne survit pas ?",
+  "sources": [
+    "intégration N-corps du dossier, 20 Ma, dérive 1,33e-11",
+    "Laskar La2004, solution publiée"
+  ],
+  "horizon_de_divergence_mesure_ka": 6900,
+  "par_fenetre": [
+    {
+      "fenetre_ka": 100,
+      "correlation": 0.9999712034157772,
+      "rmse": 0.00011433258957758277,
+      "periode_nbody_ka": 50.5,
+      "periode_la2004_ka": 50.5
+    },
+    {
+      "fenetre_ka": 250,
+      "correlation": 0.9998820272213823,
+      "rmse": 0.00038691860719444813,
+      "periode_nbody_ka": 125.5,
+      "periode_la2004_ka": 125.5
+    },
+    {
+      "fenetre_ka": 500,
+      "correlation": 0.9987622561949685,
+      "rmse": 0.0006769046935524982,
+      "periode_nbody_ka": 100.2,
+      "periode_la2004_ka": 100.2
+    },
+    {
+      "fenetre_ka": 1000,
+      "correlation": 0.9972703948120972,
+      "rmse": 0.0009471725796327587,
+      "periode_nbody_ka": 125.125,
+      "periode_la2004_ka": 125.125
+    },
+    {
+      "fenetre_ka": 2000,
+      "correlation": 0.9914556635596627,
+      "rmse": 0.001773302537742916,
+      "periode_nbody_ka": 95.28571428571428,
+      "periode_la2004_ka": 95.28571428571428
+    },
+    {
+      "fenetre_ka": 4000,
+      "correlation": 0.9669443068276985,
+      "rmse": 0.0034347572737436723,
+      "periode_nbody_ka": 400.0999999999999,
+      "periode_la2004_ka": 400.0999999999999
+    },
+    {
+      "fenetre_ka": 6900,
+      "correlation": 0.9124756685446703,
+      "rmse": 0.005515653706095076,
+      "periode_nbody_ka": 405.94117647058823,
+      "periode_la2004_ka": 405.94117647058823
+    },
+    {
+      "fenetre_ka": 10000,
+      "correlation": 0.8269855811025307,
+      "rmse": 0.007719981239684592,
+      "periode_nbody_ka": 400.03999999999996,
+      "periode_la2004_ka": 400.03999999999996
+    },
+    {
+      "fenetre_ka": 15000,
+      "correlation": 0.6580593621151561,
+      "rmse": 0.010897012637129706,
+      "periode_nbody_ka": 405.43243243243245,
+      "periode_la2004_ka": 405.43243243243245
+    },
+    {
+      "fenetre_ka": 20000,
+      "correlation": 0.49566503153750324,
+      "rmse": 0.01323477240701565,
+      "periode_nbody_ka": 408.1836734693877,
+      "periode_la2004_ka": 408.1836734693877
+    }
+  ]
+}

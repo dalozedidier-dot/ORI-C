@@ -1,0 +1,20 @@
+Source,Type,Cible,Mécanisme ou justification
+Serpentinisation et précipitation minérale,MATR,Paroi nanoporeuse hydrothermale,La précipitation construit une frontière solide poreuse à partir des fluides et minéraux.
+Paroi nanoporeuse hydrothermale,CNST,Transport ionique sélectif,"La taille, charge et connectivité des pores filtrent les espèces et limitent les trajectoires."
+Gradient de pH et de salinité,ENBL,Potentiel électrochimique,La séparation des fluides fournit la différence de potentiel exploitable.
+Potentiel électrochimique,ENBL,Réseau prébiotique alimenté,Le gradient fournit une source d’énergie libre aux réactions couplées.
+Surfaces minérales Fe-S ou Fe-oxyhydroxydes,CATL,Réactions redox prébiotiques,Les surfaces réduisent des barrières et sélectionnent des voies réactionnelles.
+Polymères de charges opposées,ENBL,Coacervat,La complexation et la séparation de phase produisent un compartiment enrichi.
+Coacervat,CNST,Partition sélective des ARN,La phase condensée concentre certaines longueurs et structures plus que d’autres.
+Coacervat,CATL,Catalyse et polymérisation ARN,La concentration et le microenvironnement modifient les vitesses et mécanismes.
+Flux hors équilibre dans un pore,FEED,Fission et maintien des coacervats,"Le gradient et l’écoulement soutiennent division, croissance et sélection."
+Séparation de phase biomoléculaire,STAB,Organite sans membrane,La phase condensée localise un sous-réseau biochimique sans membrane lipidique.
+Condensat biomoléculaire,CATL,Microenvironnement réactionnel,"La partition modifie les concentrations, la diffusion et les réactions locales."
+Activation locale et inhibition diffusible,FEED,Motif réaction-diffusion,La boucle non linéaire et la diffusion différentielle créent un motif spatial.
+Motif réaction-diffusion,INCO,Différenciation spatiale,La position dans le motif inscrit des états ou trajectoires distincts.
+Densité et ralentissement de motilité,ENBL,Séparation de phase active,La baisse de vitesse avec la densité déclenche l’agrégation et la coexistence de phases.
+Alignement actif,CLOS,Séparation macroscopique complète,L’alignement et la rupture des amas peuvent interrompre la coalescence.
+Métabolismes de tapis microbiens,FEED,Microgradients redox et pH,Les réactions biologiques entretiennent des gradients locaux.
+Matrice extracellulaire et sédiments,STAB,Lamination microbienne,Le piégeage et la cohésion stabilisent les couches.
+Métabolismes et alcalinité,ENVR,Précipitation carbonatée,L’activité microbienne modifie le milieu chimique et favorise la minéralisation.
+Microbialite,INCO,Archive géologique,La lithification conserve une partie de l’organisation et de l’activité passées.

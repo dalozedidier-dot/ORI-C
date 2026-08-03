@@ -1,0 +1,36 @@
+nom,usage,url,langage,licence_acces,hypotheses_oric,apport
+REBOUND,dynamique N-corps,https://github.com/hannorein/rebound,Python/C,ouvert,H-A-001,Étendre A1–A6 et résoudre la Lune
+REBOUNDx,forces additionnelles,https://github.com/dtamayo/reboundx,C/Python,ouvert,H-A-001,"J2, relativité, marées et forces non gravitationnelles"
+celmech,mécanique céleste,https://github.com/shadden/celmech,Python,ouvert,H-A-001,Analyse séculaire et résonances
+VPLanet,évolution planétaire couplée,https://github.com/VirtualPlanetaryLaboratory/vplanet,C,ouvert,H-A-001;H-C-011,"Rotation, marées, climat réduit, habitabilité"
+ExoPlaSim,GCM exoplanètes,https://github.com/Heng3618/ExoPlaSim,Fortran/Python,ouvert,H-C-011;H-C-012;H-C-013;H-C-016,Banc de bistabilité et histoires contrôlées
+ROCKE-3D,GCM planétaire,https://github.com/nasa/ROCKE-3D,Fortran,ouvert,H-C-011;H-C-012,Validation GCM plus réaliste
+climlab,modèles climatiques hiérarchiques,https://github.com/climlab/climlab,Python,ouvert,H-C-*;H-CL-001,Construire témoins et modèles réduits
+PyCO2SYS,chimie carbonatée,https://github.com/mvdh7/PyCO2SYS,Python,ouvert,H-C-*;H-CL-001,Couplages carbone océaniques
+Cantera,cinétique chimique,https://github.com/Cantera/cantera,C++/Python,ouvert,H-V-001;H-M-001,Simulations de réseaux réactionnels
+COPASI,réseaux biochimiques,https://copasi.org/,C++/GUI,ouvert,H-V-001;H-V-002,"Cinétique, sensibilité et estimation"
+Tellurium/libRoadRunner,biologie des systèmes,https://github.com/sys-bio/tellurium,Python/C++,ouvert,H-V-001;H-V-002,"SBML, simulation et analyse"
+COBRApy,métabolisme,https://github.com/opencobra/cobrapy,Python,ouvert,H-V-002,Témoins physiologiques et allocation métabolique
+PHREEQC,géochimie aqueuse,https://www.usgs.gov/software/phreeqc-version-3,C++/interfaces,ouvert,H-M-001;H-V-001,"Spéciation, minéraux, interfaces eau-roche"
+BurnMan,minéralogie planétaire,https://github.com/geodynamics/burnman,Python,ouvert,H-M-001,Propriétés mantelliques et intérieurs
+Perple_X,équilibres de phases,https://www.perplex.ethz.ch/,Fortran,"gratuit, licence à vérifier",H-M-001,Différenciation et assemblages minéraux
+pMELTS / alphaMELTS,pétrologie magmatique,https://magmasource.caltech.edu/alphamelts/,C/GUI,"gratuit, conditions à vérifier",H-M-001,Fusion et différenciation silicatée
+PySINDy,identification parcimonieuse,https://github.com/dynamicslab/pysindy,Python,ouvert,H-C-014;H-C-015;H-T-001,Découvrir équations et comparer M2
+PySR,régression symbolique,https://github.com/MilesCranmer/PySR,Julia/Python,ouvert,H-M-001;H-C-014;H-T-001,Chercher métriques/lois compactes
+AI Feynman,régression symbolique,https://github.com/SJ001/AI-Feynman,Python,ouvert,H-T-001,Découverte d’équations avec contraintes
+Tigramite,causalité séries temporelles,https://github.com/jakobrunge/tigramite,Python,ouvert,H-C-007;H-T-001;H-V-002,"PCMCI+, médiations et causalité temporelle"
+causal-learn,découverte causale,https://github.com/py-why/causal-learn,Python,ouvert,H-S-002;H-T-001,PC/FCI/GES et graphes causaux
+DoWhy,inférence causale,https://github.com/py-why/dowhy,Python,ouvert,H-T-001;H-V-002,"Estimands, réfutations et interventions"
+CausalFlow / CAnDOIT,causalité observationnelle + interventions,https://github.com/lcastri/causalflow,Python,ouvert,H-T-001;H-V-002,Instancier chaîne ORI-C avec interventions
+IDTxl,dynamique de l’information,https://github.com/pwollstadt/IDTxl,Python,ouvert,H-S-002;H-T-002,"PID, transfert et réseaux d’information"
+dit,théorie de l’information,https://github.com/dit/dit,Python,ouvert,H-S-002;H-T-002,Information multivariée et PID
+einet,information effective réseau,https://github.com/jkbren/einet,R,"ouvert, à vérifier",H-S-002;H-M-001,Tester émergence causale de niveaux
+NetworkX,graphes,https://github.com/networkx/networkx,Python,ouvert,H-S-004;H-M-001,"Nuls, prédiction de liens, robustesse"
+pathpy,réseaux temporels et ordre supérieur,https://github.com/pathpy/pathpy,Python,ouvert,H-S-004;H-M-001,Remplacer carte statique par réseau temporel
+giotto-tda,analyse topologique,https://github.com/giotto-ai/giotto-tda,Python,ouvert,H-S-002;H-M-001,Topologie des états et transitions
+GUDHI,topologie computationnelle,https://github.com/GUDHI/gudhi-devel,C++/Python,ouvert,H-S-002;H-M-001,Homologie persistante et bassins
+AUTO-07p,continuation/bifurcations,https://github.com/auto-07p/auto-07p,Fortran/Python,ouvert,H-C-005;H-C-011;H-C-012;H-C-013,Cartographier bifurcations et bassins
+DDE-Biftool,bifurcations DDE,https://github.com/DDE-BifTool/DDE-Biftool,MATLAB/Octave,ouvert,H-C-005;H-C-017,Tester familles à retard du MPT
+SALib,sensibilité globale,https://github.com/SALib/SALib,Python,ouvert,H-C-015;H-A-001,Sobol/Morris et identifiabilité pratique
+ArviZ,diagnostic bayésien,https://github.com/arviz-devs/arviz,Python,ouvert,H-C-015,Posterior predictive checks et diagnostics
+Snakemake,pipelines reproductibles,https://github.com/snakemake/snakemake,Python,ouvert,toutes,Exécution déterministe de la revue et des tests

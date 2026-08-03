@@ -1,0 +1,163 @@
+{
+  "graine": 20260801,
+  "A_metriques": {
+    "noeuds": 40,
+    "liens": 47,
+    "densite": 0.03012820512820513,
+    "modularite": 0.6587901701323252,
+    "nombre_de_communautes": 5,
+    "longueur_du_plus_long_chemin": 24,
+    "plus_long_chemin": [
+      "TR-001",
+      "TR-004",
+      "TR-005",
+      "TR-012",
+      "TR-006",
+      "TR-007",
+      "TR-009",
+      "TR-016",
+      "TR-017",
+      "TR-018",
+      "TR-019",
+      "TR-020",
+      "TR-022",
+      "TR-024",
+      "TR-023",
+      "TR-026",
+      "TR-031",
+      "TR-032",
+      "TR-035",
+      "TR-036",
+      "TR-037",
+      "TR-038",
+      "TR-029",
+      "TR-040"
+    ],
+    "points_d_articulation": [
+      "TR-004",
+      "TR-005",
+      "TR-006",
+      "TR-012",
+      "TR-014",
+      "TR-016",
+      "TR-019",
+      "TR-020",
+      "TR-021",
+      "TR-023",
+      "TR-026",
+      "TR-031",
+      "TR-032",
+      "TR-035",
+      "TR-036",
+      "TR-037"
+    ],
+    "cinq_plus_intermediaires": [
+      [
+        "TR-020",
+        0.18893387314439944
+      ],
+      [
+        "TR-019",
+        0.18421052631578946
+      ],
+      [
+        "TR-016",
+        0.16194331983805668
+      ],
+      [
+        "TR-022",
+        0.16194331983805668
+      ],
+      [
+        "TR-023",
+        0.16194331983805668
+      ]
+    ],
+    "degre_entrant_max": 3,
+    "degre_sortant_max": 3
+  },
+  "B_graphes_nuls": {
+    "tirages_reussis": 2000,
+    "nul_respectant_l_ordre": {
+      "tirages": 2000,
+      "modularite": {
+        "observe": 0.6587901701323252,
+        "nulle_moyenne": 0.6676442571810992,
+        "nulle_ecart_type": 0.020494776597627933,
+        "z": -0.4320167632273078,
+        "p_bilaterale": 0.6931534232883558,
+        "quantite": "modularité"
+      },
+      "longueur_du_plus_long_chemin": {
+        "observe": 24.0,
+        "nulle_moyenne": 6.0675,
+        "nulle_ecart_type": 9.947885401530367,
+        "z": 1.802644408955625,
+        "p_bilaterale": 0.08995502248875563,
+        "quantite": "longueur du plus long chemin"
+      },
+      "nombre_de_communautes": {
+        "observe": 5.0,
+        "nulle_moyenne": 5.814,
+        "nulle_ecart_type": 0.6477760468738032,
+        "z": -1.256607131320155,
+        "p_bilaterale": 0.3823088455772114,
+        "quantite": "nombre de communautés"
+      }
+    },
+    "modularite": {
+      "observe": 0.6587901701323252,
+      "nulle_moyenne": 0.6302665953120787,
+      "nulle_ecart_type": 0.024722263903205324,
+      "z": 1.15376063179021,
+      "p_bilaterale": 0.2543728135932034,
+      "quantite": "modularité"
+    },
+    "longueur_du_plus_long_chemin": {
+      "observe": 24.0,
+      "nulle_moyenne": 0.0,
+      "nulle_ecart_type": 0.0,
+      "z": null,
+      "p_bilaterale": 0.0004997501249375312,
+      "quantite": "longueur du plus long chemin"
+    },
+    "nombre_de_communautes": {
+      "observe": 5.0,
+      "nulle_moyenne": 6.0925,
+      "nulle_ecart_type": 0.7295271447502578,
+      "z": -1.497545372864776,
+      "p_bilaterale": 0.21339330334832585,
+      "quantite": "nombre de communautés"
+    },
+    "lecture": "Le rebranchement conserve les degrés entrants et sortants de chaque nœud. Une quantité dont le z est faible ne distingue pas la carte d'un graphe aléatoire de mêmes degrés : elle vient du choix des nœuds, pas du codage des liens."
+  },
+  "C_prediction_de_liens": {
+    "structurel": {
+      "auc_moyenne": 0.4906250000000001,
+      "auc_ecart_type": 0.033167831060741206,
+      "auc_ic_2.5": 0.44375,
+      "auc_ic_97.5": 0.5461523437500001
+    },
+    "proximite": {
+      "auc_moyenne": 0.9225703125,
+      "auc_ecart_type": 0.033174746315330385,
+      "auc_ic_2.5": 0.8506640625,
+      "auc_ic_97.5": 0.97658203125
+    },
+    "hasard": {
+      "auc_moyenne": 0.50678125,
+      "auc_ecart_type": 0.10872749380842828,
+      "auc_ic_2.5": 0.2763671875,
+      "auc_ic_97.5": 0.6928515625000001
+    },
+    "structurel_moins_proximite": {
+      "moyenne": -0.43194531249999996,
+      "ic_2.5": -0.5054882812499999,
+      "ic_97.5": -0.3507421874999999,
+      "fraction_de_tirages_favorables_au_structurel": 0.0
+    },
+    "repetitions": 200,
+    "liens_masques_par_tirage": 8,
+    "lecture": "Le témoin de proximité prédit qu'une transition est liée à celles qui la suivent immédiatement. Si le prédicteur structurel ne le bat pas, la carte n'ajoute rien à une chronologie ordonnée."
+  }
+}

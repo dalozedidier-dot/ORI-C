@@ -1,0 +1,142 @@
+{
+  "SCIENTIFIC_VALIDATION_REPORT.md": {
+    "bytes": 15632,
+    "sha256": "7ce52de4f6c3080c3ebc152af6384ff4a9e7ab896904bdabd6479638d064923b"
+  },
+  "acceptance_tests.csv": {
+    "bytes": 1813,
+    "sha256": "86feeed869f30493c8739b8de3fb9e7784fa2794e3e7598f70be565e07e8a8ff"
+  },
+  "analysis_summary.json": {
+    "bytes": 1173,
+    "sha256": "67f85cfbd3e74118cb4f7196ca6b2c69f009e1c1768128294fd8ffb578b056e2"
+  },
+  "counterfactual_band_metrics.csv": {
+    "bytes": 2825,
+    "sha256": "06f833334d7bdeec08ba428b2574fc71403b0f3ae8a01ea89f2699a55ffd806b"
+  },
+  "counterfactual_effects.csv": {
+    "bytes": 1580,
+    "sha256": "8dcf439b91104197b93a6f5283b6a5360d3e2b1afebf66cf122aba9886b31f1d"
+  },
+  "ensemble_divergence.csv": {
+    "bytes": 2744853,
+    "sha256": "a989ba8d7bd71df9bbd55b7610efdd492a95641a8a054452e8ac1fae52bbb4e7"
+  },
+  "ensemble_divergence_binned.csv": {
+    "bytes": 3654,
+    "sha256": "8865395f444cff197015ac5b59cc082552af15999e97b6b6ceb267d64666bb6c"
+  },
+  "figures/counterfactual_effects.png": {
+    "bytes": 67381,
+    "sha256": "5592789c3636566c33ecd43873eedca99c85bbe079cf597f403970be657439ad"
+  },
+  "figures/ensemble_divergence.png": {
+    "bytes": 85365,
+    "sha256": "8c7e9ae8a7bc7721ea3b20696b11c58df0fcded391221e1c504c90295c4bff5b"
+  },
+  "figures/horizons_reference_6kyr.png": {
+    "bytes": 54855,
+    "sha256": "a921ead1615e2c40588c7dbc7c4eec34ac7dfc8f42166de02ad4189a64267eba"
+  },
+  "figures/multitaper_spectra.png": {
+    "bytes": 116094,
+    "sha256": "b8e16798052bc65833a9038c79a76bd772673918185174ae4fe84f61c15ef1f7"
+  },
+  "figures/numerical_invariants.png": {
+    "bytes": 130863,
+    "sha256": "698ecc35717e3fda6cb550968322bf236abbc7f62a99d0d59205faa619d03c14"
+  },
+  "figures/reference_correlation_horizon.png": {
+    "bytes": 39894,
+    "sha256": "e28ad7c9d42051041ba1ba6ff4d4b8e75928a44a3f51d7c8b93c59e4b28110c1"
+  },
+  "figures/reference_first_2myr.png": {
+    "bytes": 169722,
+    "sha256": "a59839283328866240a8684f1a817bfda74e3c4b465f6439d2b7205cb8aec20b"
+  },
+  "horizons_reference_metrics.csv": {
+    "bytes": 1056,
+    "sha256": "8d75c23508124ecfa8deb19303efe80f9bee8094fb11f675977662b8a24eaac3"
+  },
+  "job_integrity.csv": {
+    "bytes": 790,
+    "sha256": "8e8ac256cf87a8df1ae46891aae4bbac8493c176a4dcbdd2f1a36f3a83baae56"
+  },
+  "job_summaries.csv": {
+    "bytes": 6751,
+    "sha256": "6b8e0c2460800ff941f5f7c9a87c485126d0a600d5c5113f269b7d7b0627ab80"
+  },
+  "la2010_ensemble_spread.csv": {
+    "bytes": 429852,
+    "sha256": "18910a4ecc3fe2b46f713de8a3a3752fcdd684911fd3d0415794c80624be1082"
+  },
+  "numerical_comparisons.csv": {
+    "bytes": 1727,
+    "sha256": "2b884f3a54cf253e8b8097b9d5db6a5b3987a3f7731886b061d4974d067d9607"
+  },
+  "peaks_baseline_20myr.csv": {
+    "bytes": 998,
+    "sha256": "dd440e34d4158f96065f9a39a7eb0d2edf413d00c4c784264e6a247422211921"
+  },
+  "peaks_la2010a_20myr.csv": {
+    "bytes": 986,
+    "sha256": "beba001b9405ba489102fa93c66fbb20bd3796aaece38f8a211655f61de2fc41"
+  },
+  "reference_ensemble_metrics.csv": {
+    "bytes": 2180,
+    "sha256": "4c9bb0187fdf6165e26b17e02f613bc1b939b989dc534d752f05763b4e8c71ef"
+  },
+  "reference_metrics_by_horizon.csv": {
+    "bytes": 1544,
+    "sha256": "a874399302ef0f61fb22156c3fdbbb598ead24c7ab7433b387680180c2781ce6"
+  },
+  "roundtrip_summary.csv": {
+    "bytes": 638,
+    "sha256": "39844de9c1b79c5abbd94561ac0446662de0d48c54c1bfbc22ccd2d7e92a14ea"
+  },
+  "spectral_band_comparison.csv": {
+    "bytes": 971,
+    "sha256": "6d5f75c1be1c0d1d3a440490ca086d10608dc86b1ad2d73c54980af56aa92788"
+  },
+  "spectral_stability_405k.csv": {
+    "bytes": 2921,
+    "sha256": "3a7577dc41ee52da71dc64c40bb0981a9114ffb7c379d31b09fbde1be17b95db"
+  },
+  "spectrum_baseline_20myr.csv": {
+    "bytes": 67505,
+    "sha256": "dc75e2a5cb2c6dfb817a1ddeeb953861644313c44f8cf1a552c3bca241291623"
+  },
+  "spectrum_baseline_2myr.csv": {
+    "bytes": 6571,
+    "sha256": "27fff84d0b34f5cb19a46436851cb9bcd72180ca21b71f62eab02829742b9249"
+  },
+  "spectrum_jupiter_a_minus_0p5pct_2myr.csv": {
+    "bytes": 6619,
+    "sha256": "5e41ba90a4c752ebbd0635bba30608711ec823a99b3f1edf76c6d2059ff7925b"
+  },
+  "spectrum_jupiter_a_plus_0p5pct_2myr.csv": {
+    "bytes": 6575,
+    "sha256": "7753a9ec49f2317684b40ee72bef13588e986ce16ad67a7f073225329d68e1f3"
+  },
+  "spectrum_jupiter_mass_minus_5pct_2myr.csv": {
+    "bytes": 6554,
+    "sha256": "d2678f2efee7f8f1eef9dfb26da7f333823468c182152ed122b0cdb4d8490fd2"
+  },
+  "spectrum_jupiter_mass_plus_5pct_2myr.csv": {
+    "bytes": 6581,
+    "sha256": "aab2ce42e9f44041e3ba4313365f4dd167dfda06c2872ec1219e3dc9bc45e938"
+  },
+  "spectrum_la2010a_20myr.csv": {
+    "bytes": 67482,
+    "sha256": "b8b49ddd99efdf4c2239bac1d1fbab9af888e657aaa7dbb887a7015d9272c30e"
+  },
+  "spectrum_saturn_mass_minus_5pct_2myr.csv": {
+    "bytes": 6561,
+    "sha256": "97e43496ccd7ed1905692e2dd43a95e8acb3a1f81cbd1d2fcf62c22fa9a00498"
+  },
+  "spectrum_saturn_mass_plus_5pct_2myr.csv": {
+    "bytes": 6580,
+    "sha256": "d8a12c9bd01bf040d773cbb91c6472cb042cb8f091faa506529970b1d14efe4e"
+  }
+}

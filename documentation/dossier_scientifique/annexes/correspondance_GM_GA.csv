@@ -1,0 +1,25 @@
+id_gm;id_ga;type_correspondance;commentaire
+GM-001;GA-001;directe;Confinement et nucléons
+GM-002;GA-002;directe;Deutérium
+GM-003;GA-003;directe;Nucléosynthèse primordiale
+GM-004;GA-004;directe;Atomes neutres
+GM-005;GA-005;directe;Dihydrogène en phase gazeuse
+GM-006;GA-006;directe;Premières étoiles
+GM-007;GA-007;directe;Carbone 12
+GM-008;GA-008;directe;Éléments alpha
+GM-009;GA-009;directe;Pic du fer
+GM-010;GA-010;directe;Voie s
+GM-011;GA-011;directe;Voie r et actinides
+GM-012;GA-012;directe;Aluminium 26 séparé de la voie r
+GM-013;GA-013;directe;Grains réfractaires
+GM-014;GA-014;directe;Dihydrogène de surface
+GM-015;GA-015;directe;Manteaux de glace
+GM-016;GA-016;directe;Molécules organiques complexes
+;GA-017;ajout_global;Condensats réfractaires du disque
+;GA-018;ajout_global;Chondres
+GM-017;GA-019;directe;Agrégats poreux
+GM-018;GA-020;directe;Galets
+GM-019;GA-021;directe;Concentrations de galets
+GM-020;GA-022;directe;Planétésimaux
+GM-021;GA-023;directe;Chauffage précoce par aluminium 26
+GM-022;GA-024;partielle;Différenciation détaillée dans GM, produits séparés dans GA

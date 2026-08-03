@@ -1,0 +1,186 @@
+{
+  "graine": 20260801,
+  "A_cinetiques": {
+    "par_cinetique": {
+      "monod": {
+        "seuil_de_lavage": 0.85,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 49.736842105263136
+      },
+      "masse_action": {
+        "seuil_de_lavage": 1.2,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 49.74999999999999
+      },
+      "haldane": {
+        "seuil_de_lavage": 0.71,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 49.73682752426271
+      },
+      "hill": {
+        "seuil_de_lavage": 0.9400000000000001,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 48.852921330647185
+      },
+      "contois": {
+        "seuil_de_lavage": 0.9400000000000001,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 39.58333333333333
+      },
+      "droop": {
+        "seuil_de_lavage": 0.7000000000000001,
+        "P_etoile_decroit_avec_l": true,
+        "nombre_de_remontees": 0,
+        "P_etoile_a_l_nul": 49.919786096256686
+      }
+    },
+    "lecture": "Le seuil de lavage et la décroissance de P* avec l sont les deux propriétés dont dépend l'affirmation causale. Une cinétique qui les perd sort du domaine de validité du test 11/11."
+  },
+  "B_extensions": {
+    "par_variante": {
+      "base": {
+        "seuil_de_lavage": 0.86,
+        "P_a_l_nul": 49.7368421052633,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.07848379534141836,
+        "non_monotone": false
+      },
+      "seconde_ressource": {
+        "seuil_de_lavage": 0.67,
+        "P_a_l_nul": 32.75877305390906,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.08700479304474373,
+        "non_monotone": false
+      },
+      "competition": {
+        "seuil_de_lavage": null,
+        "P_a_l_nul": 6.941566154968685e-14,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": 0.0,
+        "non_monotone": false
+      },
+      "cross_feeding": {
+        "seuil_de_lavage": 0.86,
+        "P_a_l_nul": 59.90140640858332,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.09472088110026933,
+        "non_monotone": false
+      },
+      "predation": {
+        "seuil_de_lavage": 0.86,
+        "P_a_l_nul": 49.736842105263115,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.0784837953414188,
+        "non_monotone": false
+      },
+      "retard": {
+        "seuil_de_lavage": 0.86,
+        "P_a_l_nul": 49.73684210526322,
+        "nombre_de_remontees": 11,
+        "plus_grande_remontee": 3.5339120352212223,
+        "non_monotone": true
+      },
+      "spatial": {
+        "seuil_de_lavage": 1.2,
+        "P_a_l_nul": 49.7368421052633,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.02775421601976058,
+        "non_monotone": false
+      },
+      "perte_densite": {
+        "seuil_de_lavage": 0.86,
+        "P_a_l_nul": 49.7368421052633,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.0317796433945887,
+        "non_monotone": false
+      },
+      "perte_correlee": {
+        "seuil_de_lavage": 1.03,
+        "P_a_l_nul": 49.7368421052633,
+        "nombre_de_remontees": 0,
+        "plus_grande_remontee": -0.0526490945899738,
+        "non_monotone": false
+      }
+    },
+    "variantes_non_monotones": [
+      "retard"
+    ],
+    "lecture": "Une variante non monotone est un domaine où augmenter la perte augmente la biomasse finale — donc où réduire la perte la diminue. C'est l'item 14 du WP-S2."
+  },
+  "C_bruit": {
+    "fraction_de_survie_par_perte": {
+      "demographique": {
+        "0.0": 1.0,
+        "0.2": 1.0,
+        "0.4": 1.0,
+        "0.6": 1.0,
+        "0.8": 0.95
+      },
+      "environnemental_colore": {
+        "0.0": 0.0,
+        "0.2": 0.0,
+        "0.4": 0.0,
+        "0.6": 0.0,
+        "0.8": 0.0
+      }
+    },
+    "repetitions": 40,
+    "lecture": "Sous bruit, le seuil de lavage cesse d'être net : la survie devient une probabilité. Le test déterministe 11/11 ne dit rien de ce régime."
+  },
+  "D_recherche_item_14": {
+    "tirages_de_parametres": 200,
+    "cas_non_monotones_trouves": 9,
+    "par_variante": {
+      "predation": 9,
+      "cross_feeding": 0,
+      "competition": 0
+    },
+    "trois_exemples": [
+      {
+        "variante": "predation",
+        "parametres": {
+          "mu_max": 1.1543812138305003,
+          "K_s": 0.8402082005101026,
+          "D": 0.12977566515675742,
+          "S_in": 15.569619507191407,
+          "decay": 0.07773444872821796
+        },
+        "plus_grande_remontee": 0.0010863554274056497,
+        "P_min": 0.4522080429530715,
+        "P_max": 8.923151990929096
+      },
+      {
+        "variante": "predation",
+        "parametres": {
+          "mu_max": 1.2101011482597324,
+          "K_s": 2.3965242197185157,
+          "D": 0.1261754701212242,
+          "S_in": 10.26927170950115,
+          "decay": 0.05430893579278159
+        },
+        "plus_grande_remontee": 0.0026934273806205056,
+        "P_min": 0.012938075048196626,
+        "P_max": 7.815461452367681
+      },
+      {
+        "variante": "predation",
+        "parametres": {
+          "mu_max": 1.2707353012617126,
+          "K_s": 1.3616515705225654,
+          "D": 0.13919024007853087,
+          "S_in": 18.801284947494175,
+          "decay": 0.12181968986049627
+        },
+        "plus_grande_remontee": 0.02099478394551646,
+        "P_min": 1.060052257849962,
+        "P_max": 13.658128261579378
+      }
+    ],
+    "lecture": "Zéro cas trouvé signifierait que « réduire une perte peut nuire » n'a aucun domaine de validité dans ces structures, et que le résultat 11/11 ne dit rien de plus que la théorie du chémostat."
+  }
+}

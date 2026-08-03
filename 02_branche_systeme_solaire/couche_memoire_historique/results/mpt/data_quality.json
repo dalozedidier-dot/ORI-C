@@ -1,0 +1,14 @@
+{
+  "row_count": 2601,
+  "age_min_kyr_bp": 0.0,
+  "age_max_kyr_bp": 2600.0,
+  "grid_step_kyr": 1.0,
+  "null_count": 0,
+  "duplicate_age_count": 0,
+  "lr04_source_rows": 2115,
+  "la2004_source_rows": 51001,
+  "lr04_sha256": "ec3c4af8f80c4de1d36fb0ac9fabbde28520f77f0832958caacbae4957afb412",
+  "la2004_sha256": "3f13b9f8e69085baf40bc67a2669e6f6af4148fef9218ed2158772aa91e35f8c",
+  "insolation_min_wm2": 435.5166390167031,
+  "insolation_max_wm2": 564.6945607062362
+}

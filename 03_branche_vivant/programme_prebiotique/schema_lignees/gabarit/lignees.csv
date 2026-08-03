@@ -1,0 +1,9 @@
+experience_id;trajectoire;temoin;compartiment_id;cycle;parent_id;matrice_id;variante;longueur_polymere;copies_produites;fidelite;volume;division;transmis;fonction_mesuree;reinitialisation
+GABARIT_SYNTHETIQUE;humide_sec;complet;C-001;0;;M-001;reference;24;0;;1.0;non;non;1.00;non
+GABARIT_SYNTHETIQUE;humide_sec;complet;C-002;1;C-001;M-001;reference;24;3;0.97;1.4;oui;oui;1.02;non
+GABARIT_SYNTHETIQUE;humide_sec;complet;C-003;1;C-001;M-001;V-A;26;3;0.95;1.5;oui;oui;1.31;non
+GABARIT_SYNTHETIQUE;humide_sec;complet;C-004;2;C-003;M-001;V-A;26;4;0.96;1.6;oui;oui;1.28;non
+GABARIT_SYNTHETIQUE;humide_sec;complet;C-005;2;C-002;M-001;reference;24;2;0.98;1.3;oui;oui;0.99;non
+GABARIT_SYNTHETIQUE;humide_sec;complexite_egale;T-001;0;;;reference;24;0;;1.0;non;non;1.01;non
+GABARIT_SYNTHETIQUE;humide_sec;complexite_egale;T-002;1;T-001;;reference;24;0;;1.2;oui;non;1.00;non
+GABARIT_SYNTHETIQUE;humide_sec;complexite_egale;T-003;2;T-002;;reference;24;0;;1.1;oui;non;0.98;non

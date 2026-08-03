@@ -1,0 +1,28 @@
+{
+  "acceptance_failed": 2,
+  "acceptance_passed": 13,
+  "all_job_hashes_valid": true,
+  "ensemble": {
+    "descriptive_efolding_years": 3012505.5459544756,
+    "ensemble_floor_rms_0_to_2myr": 1.368853352919966e-09,
+    "first_crossing_rms_1e-03_years": null,
+    "first_crossing_rms_1e-04_years": null,
+    "first_crossing_rms_1e-05_years": null,
+    "first_crossing_rms_1e-06_years": null,
+    "first_crossing_rms_1e-07_years": null,
+    "first_crossing_rms_1e-08_years": 10000000.0,
+    "fit_end_years": 10000000.0,
+    "fit_samples": 37,
+    "fit_start_years": 1124500.0,
+    "log_linear_fit_r_squared": 0.9372158212794005
+  },
+  "gr_full_newtonian_abs_angmom_rel_error": 5.276233334369168e-10,
+  "initial_eccentricity_abs_error": 2.19234200238283e-10,
+  "initial_eccentricity_candidate": 0.0167023622192342,
+  "initial_eccentricity_la2010": 0.016702362,
+  "long_baseline_completed_years": 20000000.0,
+  "max_production_abs_angmom_rel_error_excluding_gr_full": 4.327659171203274e-12,
+  "roundtrip_max_relative_state_error_dt10": 2.7628025558976285e-05,
+  "roundtrip_max_relative_state_error_dt5": 7.539589433650647e-06,
+  "total_computation_seconds": 21987.227103111
+}

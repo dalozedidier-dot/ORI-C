@@ -1,0 +1,190 @@
+{
+  "reference_vs_M1": {
+    "passed": 2,
+    "total": 5,
+    "detail": [
+      {
+        "criterion": "forecast_rmse_gain_at_least_5pct",
+        "value": 0.06038914803188522,
+        "threshold": 0.05,
+        "passed": true
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (naif)",
+        "value": -128.22451357852083,
+        "threshold": -10.0,
+        "passed": true
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (n_eff)",
+        "value": 6.515676375970372,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "100k_regime_within_factor_2_and_closer_than_reference",
+        "value": 0.018625225025704528,
+        "threshold": 1.3018123209125594,
+        "passed": false
+      },
+      {
+        "criterion": "chronology_correlation_and_termination_timing",
+        "value": 0.0934906247265145,
+        "threshold": 0.4,
+        "passed": false
+      },
+      {
+        "criterion": "blockwise_wilcoxon_M2_better",
+        "value": 5.960464477539063e-08,
+        "threshold": 0.05,
+        "passed": true
+      }
+    ],
+    "observed_power_ratio": 2.6036246418251188,
+    "termination_timing_mae_kyr": 11.714285714285714,
+    "residual_lag1_autocorrelation_M2": 0.9708869376456146,
+    "effective_sample_size_M2": 17.72586451204348,
+    "actual_sample_size": 1200
+  },
+  "reference_vs_M1P": {
+    "passed": 0,
+    "total": 5,
+    "detail": [
+      {
+        "criterion": "forecast_rmse_gain_at_least_5pct",
+        "value": -0.18386883476373805,
+        "threshold": 0.05,
+        "passed": false
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (naif)",
+        "value": 405.0905973013205,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (n_eff)",
+        "value": 5.314703622602821,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "100k_regime_within_factor_2_and_closer_than_reference",
+        "value": 0.018625225025704528,
+        "threshold": 1.3018123209125594,
+        "passed": false
+      },
+      {
+        "criterion": "chronology_correlation_and_termination_timing",
+        "value": 0.0934906247265145,
+        "threshold": 0.4,
+        "passed": false
+      },
+      {
+        "criterion": "blockwise_wilcoxon_M2_better",
+        "value": 0.9999999403953552,
+        "threshold": 0.05,
+        "passed": false
+      }
+    ],
+    "observed_power_ratio": 2.6036246418251188,
+    "termination_timing_mae_kyr": 11.714285714285714,
+    "residual_lag1_autocorrelation_M2": 0.9708869376456146,
+    "effective_sample_size_M2": 17.72586451204348,
+    "actual_sample_size": 1200
+  },
+  "wide_vs_M1": {
+    "passed": 1,
+    "total": 5,
+    "detail": [
+      {
+        "criterion": "forecast_rmse_gain_at_least_5pct",
+        "value": 0.035741361544417094,
+        "threshold": 0.05,
+        "passed": false
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (naif)",
+        "value": -66.07950518165262,
+        "threshold": -10.0,
+        "passed": true
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (n_eff)",
+        "value": 8.358981609936109,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "100k_regime_within_factor_2_and_closer_than_reference",
+        "value": 0.004694662409914815,
+        "threshold": 1.3018123209125594,
+        "passed": false
+      },
+      {
+        "criterion": "chronology_correlation_and_termination_timing",
+        "value": 0.2595458575630887,
+        "threshold": 0.4,
+        "passed": false
+      },
+      {
+        "criterion": "blockwise_wilcoxon_M2_better",
+        "value": 0.00011962652206420898,
+        "threshold": 0.05,
+        "passed": true
+      }
+    ],
+    "observed_power_ratio": 2.6036246418251188,
+    "termination_timing_mae_kyr": 9.761904761904763,
+    "residual_lag1_autocorrelation_M2": 0.970261864164815,
+    "effective_sample_size_M2": 18.11219292789239,
+    "actual_sample_size": 1200
+  },
+  "wide_vs_M1P": {
+    "passed": 0,
+    "total": 5,
+    "detail": [
+      {
+        "criterion": "forecast_rmse_gain_at_least_5pct",
+        "value": -0.31568283027747013,
+        "threshold": 0.05,
+        "passed": false
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (naif)",
+        "value": 658.4539042271776,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "forecast_delta_bic_at_most_minus_10 (n_eff)",
+        "value": 9.343167206416737,
+        "threshold": -10.0,
+        "passed": false
+      },
+      {
+        "criterion": "100k_regime_within_factor_2_and_closer_than_reference",
+        "value": 0.004694662409914815,
+        "threshold": 1.3018123209125594,
+        "passed": false
+      },
+      {
+        "criterion": "chronology_correlation_and_termination_timing",
+        "value": 0.2595458575630887,
+        "threshold": 0.4,
+        "passed": false
+      },
+      {
+        "criterion": "blockwise_wilcoxon_M2_better",
+        "value": 0.9999980330467224,
+        "threshold": 0.05,
+        "passed": false
+      }
+    ],
+    "observed_power_ratio": 2.6036246418251188,
+    "termination_timing_mae_kyr": 9.761904761904763,
+    "residual_lag1_autocorrelation_M2": 0.970261864164815,
+    "effective_sample_size_M2": 18.11219292789239,
+    "actual_sample_size": 1200
+  }
+}

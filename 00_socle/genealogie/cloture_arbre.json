@@ -1,0 +1,18 @@
+{
+  "transitions": 39,
+  "produits_distincts": 53,
+  "relations_parent_produit": 77,
+  "transitions_par_branche": {
+    "1 matière": 19,
+    "2 planétaire": 10,
+    "3 vivant": 10
+  },
+  "cloture_genealogique": true,
+  "anomalies": [],
+  "certitudes_synthetiques": {
+    "établi": 29,
+    "fortement inféré": 7,
+    "plausible": 3
+  },
+  "possibilites_fermees_declarees": 19
+}

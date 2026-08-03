@@ -1,0 +1,48 @@
+{
+  "supports_bruts": 6,
+  "soutiens_scientifiques_oric_defendables": 0,
+  "comptes_par_categorie": {
+    "comparaison_non_interpretable": 1,
+    "controle_de_protocole": 1,
+    "controle_positif_astronomique": 4
+  },
+  "details": [
+    {
+      "test_id": "A1-003",
+      "verdict_brut": "supports",
+      "categorie": "controle_positif_astronomique",
+      "soutien_scientifique_oric_defendable": false
+    },
+    {
+      "test_id": "A5-001",
+      "verdict_brut": "supports",
+      "categorie": "controle_positif_astronomique",
+      "soutien_scientifique_oric_defendable": false
+    },
+    {
+      "test_id": "A5-002",
+      "verdict_brut": "supports",
+      "categorie": "controle_positif_astronomique",
+      "soutien_scientifique_oric_defendable": false
+    },
+    {
+      "test_id": "A5-004",
+      "verdict_brut": "supports",
+      "categorie": "controle_positif_astronomique",
+      "soutien_scientifique_oric_defendable": false
+    },
+    {
+      "test_id": "C5-009",
+      "verdict_brut": "supports",
+      "categorie": "controle_de_protocole",
+      "soutien_scientifique_oric_defendable": false
+    },
+    {
+      "test_id": "C6-001",
+      "verdict_brut": "supports",
+      "categorie": "comparaison_non_interpretable",
+      "soutien_scientifique_oric_defendable": false
+    }
+  ],
+  "note": "C5-009 contrôle une fraction de holdout. C6-001 compare des RMSE issues de modèles et procédures non comparables. Ils ne valident pas ORI-C."
+}

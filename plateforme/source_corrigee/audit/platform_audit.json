@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "catalogue_entries": 683,
+  "work_packages": 51,
+  "engines": 51,
+  "datasets": 31,
+  "issues": [
+    {
+      "level": "warning",
+      "code": "DUPLICATE_DESCRIPTIONS",
+      "message": "4 descriptions répétées. Elles restent distinguées par leur contexte WP."
+    }
+  ]
+}

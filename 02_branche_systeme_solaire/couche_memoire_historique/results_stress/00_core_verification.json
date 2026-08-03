@@ -1,0 +1,19 @@
+{
+  "mpt_max_absolute_difference": {
+    "M0": 0.0,
+    "M1": 0.0,
+    "M2": 0.0,
+    "M2A": 0.0
+  },
+  "exoplanet_max_relative_difference": {
+    "classic": 2.7987775137422515e-17,
+    "ablated": 2.802967106541825e-17,
+    "M2": 1.117465492008396e-16
+  },
+  "mpt_reference_seconds_per_call": 0.010128510001231916,
+  "mpt_compiled_seconds_per_call": 7.865600011427887e-05,
+  "speedup": 128.76970589041218,
+  "verification_seconds": 3.6621954000147525,
+  "mpt_bit_identical": true,
+  "exoplanet_within_1e-12": true
+}

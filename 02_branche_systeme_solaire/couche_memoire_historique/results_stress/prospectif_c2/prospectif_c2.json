@@ -1,0 +1,470 @@
+{
+  "protocole": {
+    "hypothese": "Avec un témoin correctement apparié, M2 conserve une multistabilité que M2P n'a pas, aux points discriminants.",
+    "points_discriminants": [
+      {
+        "obliquite": 30.0,
+        "excentricite": 0.1,
+        "etendue_glace_finale": 0.924072959381144,
+        "multistable": true
+      },
+      {
+        "obliquite": 40.0,
+        "excentricite": 0.0,
+        "etendue_glace_finale": 0.8686471534960875,
+        "multistable": true
+      }
+    ],
+    "calibration_des_entrees": {
+      "forcage_de_reference": {
+        "obliquite": 23.5,
+        "excentricite": 0.05
+      },
+      "entree_du_regolithe": 0.9997772843549828,
+      "entree_de_la_memoire": 0.2636134525977447,
+      "mesure": {
+        "entree_du_regolithe": 0.9997772843549828,
+        "entree_de_la_memoire": 0.2636134525977447,
+        "dispersion_ice": 8.326672684688674e-15,
+        "dispersion_productivite": 1.0602629885170245e-13,
+        "reference_monostable": true
+      }
+    },
+    "seuil_de_multistabilite": 0.05,
+    "seuil_d_appariement": 2.0,
+    "duree_Ma": 400.0,
+    "etats_initiaux": 24,
+    "puissance_par_nombre_d_etats": {
+      "4": 0.924072959381144,
+      "8": 0.924072959381144,
+      "16": 0.9240729735802725,
+      "24": 0.9240729735802725
+    },
+    "empreinte_sha256": "6647085d3ca16742f3d9851a515b2ada31703071cdd6da4c660ca01baecdd35a"
+  },
+  "cartographie": {
+    "classic": {
+      "points_multistables": 1,
+      "sur": 20
+    },
+    "M2": {
+      "points_multistables": 2,
+      "sur": 20
+    }
+  },
+  "cartographie_detaillee": {
+    "classic": {
+      "points": [
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 5.204170427930421e-17,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 0.8619197123241313,
+          "multistable": true
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 1.0299920638612292e-18,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 8.881784197001252e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 1.1102230246251565e-15,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 4.90059381963448e-17,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 1.6728900708272432e-20,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 1.1102230246251565e-15,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 1.6740081543176188e-16,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 5.183841637196318e-19,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 5.37667398159468e-23,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 9.80118763926896e-17,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 9.147955830346444e-19,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 8.07328277851755e-22,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 9.087677628146056e-27,
+          "multistable": false
+        }
+      ],
+      "points_multistables": 1,
+      "sur": 20
+    },
+    "M2": {
+      "points": [
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 5.725420137991932e-13,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 4.635070105507566e-12,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 1.5030332534138324e-10,
+          "multistable": false
+        },
+        {
+          "obliquite": 12.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 0.003475829623641364,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 4.0706327197881365e-12,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 5.181355344774374e-11,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 4.396196184863754e-09,
+          "multistable": false
+        },
+        {
+          "obliquite": 18.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 4.100418377190999e-05,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 3.1054048221790254e-11,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 6.449983880330024e-10,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 0.0015978454008355424,
+          "multistable": false
+        },
+        {
+          "obliquite": 23.5,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 6.780925205902976e-07,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 5.757732068900623e-10,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 0.924072959381144,
+          "multistable": true
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 1.4146955341230647e-05,
+          "multistable": false
+        },
+        {
+          "obliquite": 30.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 1.973759131646731e-09,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.0,
+          "etendue_glace_finale": 0.8686471534960875,
+          "multistable": true
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.1,
+          "etendue_glace_finale": 2.6314433525992658e-05,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.2,
+          "etendue_glace_finale": 2.1868061610724894e-08,
+          "multistable": false
+        },
+        {
+          "obliquite": 40.0,
+          "excentricite": 0.3,
+          "etendue_glace_finale": 4.3418336946807436e-13,
+          "multistable": false
+        }
+      ],
+      "points_multistables": 2,
+      "sur": 20
+    }
+  },
+  "resultats": {
+    "obl30.0_e0.10": {
+      "classic": {
+        "etendue_glace_finale": 1.6740081543176188e-16,
+        "mediane_glace_finale": 0.007687937142143742,
+        "multistable": false,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.007687937142143742,
+            "etendue": 0.47544890479464186
+          },
+          "productivite": {
+            "mediane": 0.9854579139106509,
+            "etendue": 0.8364180948793569
+          },
+          "regolith": {
+            "mediane": 0.6581994351000855,
+            "etendue": 0.0
+          },
+          "memoire": {
+            "mediane": 0.6785751894842371,
+            "etendue": 0.0
+          }
+        }
+      },
+      "M2": {
+        "etendue_glace_finale": 0.9242897104750643,
+        "mediane_glace_finale": 0.021923996271315846,
+        "multistable": true,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.02311177709057345,
+            "etendue": 0.4084751272671169
+          },
+          "productivite": {
+            "mediane": 0.9116825161572796,
+            "etendue": 0.5955141181188462
+          },
+          "regolith": {
+            "mediane": 0.8550081525429666,
+            "etendue": 0.1316776861547838
+          },
+          "memoire": {
+            "mediane": 0.9115221169345,
+            "etendue": 0.4967035722761868
+          }
+        }
+      },
+      "M2P_corrige": {
+        "etendue_glace_finale": 0.8585733477938398,
+        "mediane_glace_finale": 0.08362486136607593,
+        "multistable": true,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.08362486136589801,
+            "etendue": 0.3838365796293129
+          },
+          "productivite": {
+            "mediane": 0.9773165928503068,
+            "etendue": 0.6392450603805662
+          },
+          "regolith": {
+            "mediane": 0.1316044011080717,
+            "etendue": 0.5252612512640741
+          },
+          "memoire": {
+            "mediane": 0.26361345260512614,
+            "etendue": 0.4139243325442651
+          }
+        }
+      }
+    },
+    "obl40.0_e0.00": {
+      "classic": {
+        "etendue_glace_finale": 9.80118763926896e-17,
+        "mediane_glace_finale": 0.004704167759529566,
+        "multistable": false,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.004704167759529566,
+            "etendue": 0.4784066907443618
+          },
+          "productivite": {
+            "mediane": 0.9793783417363521,
+            "etendue": 0.8303735829188721
+          },
+          "regolith": {
+            "mediane": 0.6581994351000855,
+            "etendue": 0.0
+          },
+          "memoire": {
+            "mediane": 0.6785751894842371,
+            "etendue": 0.0
+          }
+        }
+      },
+      "M2": {
+        "etendue_glace_finale": 0.8690188711624202,
+        "mediane_glace_finale": 0.010821667651200687,
+        "multistable": true,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.011304915912560968,
+            "etendue": 0.4712940105675472
+          },
+          "productivite": {
+            "mediane": 0.9052301528797868,
+            "etendue": 0.7598177532892342
+          },
+          "regolith": {
+            "mediane": 0.9173112932396872,
+            "etendue": 0.2177085038153201
+          },
+          "memoire": {
+            "mediane": 0.9051584794043757,
+            "etendue": 0.5204386056393664
+          }
+        }
+      },
+      "M2P_corrige": {
+        "etendue_glace_finale": 0.8191350877184417,
+        "mediane_glace_finale": 0.04229457081379074,
+        "multistable": true,
+        "plages_d_exploitation": {
+          "ice": {
+            "mediane": 0.0422945708137257,
+            "etendue": 0.3955144630301374
+          },
+          "productivite": {
+            "mediane": 0.9939698405204365,
+            "etendue": 0.7993466362544193
+          },
+          "regolith": {
+            "mediane": 0.1316044011080717,
+            "etendue": 0.5252612512640741
+          },
+          "memoire": {
+            "mediane": 0.26361345260512614,
+            "etendue": 0.4139243325442651
+          }
+        }
+      }
+    }
+  },
+  "verification_d_appariement": {
+    "obl30.0_e0.10": {
+      "rapports": {
+        "regolithe": 6.496805162624051,
+        "memoire": 3.4577981811113947
+      },
+      "apparie": false
+    },
+    "obl40.0_e0.00": {
+      "rapports": {
+        "regolithe": 6.970217451059284,
+        "memoire": 3.4336581477889805
+      },
+      "apparie": false
+    }
+  },
+  "lecture": "Le témoin n'est recevable que si `apparie` vaut vrai. Sinon le résultat n'est pas interprétable, exactement comme dans la version d'origine."
+}

@@ -1,0 +1,40 @@
+id_transition;preuve_experimentale_declaree;preuve_observationnelle_declaree;reference_primaire_identifiable;statut
+GA-001;collisions d'ions lourds, RHIC et LHC;abondance baryonique du fond diffus;;référence primaire à compléter
+GA-002;sections efficaces mesurées;D/H des systèmes Lyman-α;;référence primaire à compléter
+GA-003;réseau nucléaire mesuré;Y_p ≈ 0,247 en régions H II pauvres;;référence primaire à compléter
+GA-004;spectroscopie atomique;fond diffus cosmologique;;référence primaire à compléter
+GA-005;taux de réaction mesurés;inféré, non observé directement;;référence primaire à compléter
+GA-006;sans objet;étoiles extrêmement pauvres en métaux;;référence primaire à compléter
+GA-007;état de Hoyle mesuré;carbone des géantes AGB;;référence primaire à compléter
+GA-008;sections efficaces de capture alpha;rapports alpha sur fer;;référence primaire à compléter
+GA-009;courbe d'énergie de liaison;courbes de lumière de supernovæ;;référence primaire à compléter
+GA-010;sections efficaces neutroniques;technétium dans les spectres AGB;;référence primaire à compléter
+GA-011;faisceaux radioactifs;kilonova AT2017gfo associée à GW170817;;référence primaire à compléter
+GA-012;sections efficaces et produits de réaction mesurés en physique nucléaire;"émission gamma galactique du ²⁶Al ; excès de ²⁶Mg dans les solides primitifs";;référence primaire à compléter
+GA-013;"condensation en four ; grains présolaires";bandes silicatées à 9,7 et 18 µm;;référence primaire à compléter
+GA-014;surfaces sous ultravide;H₂ des nuages sombres;;référence primaire à compléter
+GA-015;glaces analogues;"bandes à 3,0, 4,27 et 4,67 µm ; JWST";;référence primaire à compléter
+GA-016;glycine et sucres en glaces analogues;"molécules complexes en millimétrique ; acides aminés de Murchison";;référence primaire à compléter
+GA-017;séquences de condensation calculées et vérifiées;inclusions réfractaires calco-alumineuses, 4 567,3 Ma;;référence primaire à compléter
+GA-018;reproduction texturale en four à trempe;chondres des chondrites ordinaires et carbonées;;référence primaire à compléter
+GA-019;collisions en microgravité;opacité et polarisation des disques;;référence primaire à compléter
+GA-020;seuils de rebond et de fragmentation;indices spectraux millimétriques;;référence primaire à compléter
+GA-021;"lits de particules ; simulations";anneaux et cavités résolus par ALMA;;référence primaire à compléter
+GA-022;sans objet;"distribution de tailles de Kuiper ; binaires";;référence primaire à compléter
+GA-023;modèles thermiques calibrés;"excès de ²⁶Mg ; Hf-W ; achondrites précoces";;référence primaire à compléter
+GA-024;partage à haute pression;"météorites de fer ; déficit du manteau terrestre";;référence primaire à compléter
+GA-025;sans objet;"démographie exoplanétaire ; 6 333 planètes du catalogue NASA";;référence primaire à compléter
+GA-026;expériences d'équilibrage à haute pression;"système Terre-Lune ; chronologie Hf-W";;référence primaire à compléter
+GA-027;solubilité des volatils dans les silicates;D/H des océans comparé aux chondrites carbonées;;référence primaire à compléter
+GA-028;modèles d'échappement calibrés;D/H de Vénus, enrichi d'un facteur 100;;référence primaire à compléter
+GA-029;serpentinisation reproduite en autoclave;"champs hydrothermaux type Lost City ; minéraux d'altération des chondrites";;référence primaire à compléter
+GA-030;"Miller-Urey ; Strecker ; formose";acides aminés et sucres de Murchison et Ryugu;;référence primaire à compléter
+GA-031;"polymérisation en cycles humide-sec ; montmorillonite";aucune trace directe conservée;;référence primaire à compléter
+GA-032;réseaux peptidiques autocatalytiques en laboratoire;aucune;;référence primaire à compléter
+GA-033;vésicules d'acides gras, croissance et division;acides gras dans les chondrites carbonées;;référence primaire à compléter
+GA-034;"protocellules à croissance et division ; copie non enzymatique en vésicule";aucune;;référence primaire à compléter
+GA-035;"copie non enzymatique d'ARN ; ribozymes polymérases partiels";"aucune ; ARN ancestral non conservé";;référence primaire à compléter
+GA-036;"évolution expérimentale de ribozymes ; évolution bactérienne sous antibiotiques, 942 cycles réels";"arbre du vivant ; horloges moléculaires";;référence primaire à compléter
+GA-037;"chimiosmose démontrée ; traduction reconstituée in vitro";"universalité du code génétique ; LUCA";;référence primaire à compléter
+GA-038;endosymbioses expérimentales chez les amibes;phylogénie mitochondriale au sein des alphaprotéobactéries;;référence primaire à compléter
+GA-039;import protéique reconstitué;"gènes d'origine mitochondriale dans le noyau ; fossiles eucaryotes";;référence primaire à compléter

@@ -1,0 +1,227 @@
+[C] étape forcings ...
+  juin65N_livre: gain/M1=+0.0359 gain/M1P=-0.3148 r=0.260
+  juin45N: gain/M1=+0.1574 gain/M1P=-0.1552 r=0.006
+  juin55N: gain/M1=+0.1565 gain/M1P=-0.1492 r=0.054
+  juin75N: gain/M1=+0.0367 gain/M1P=-0.3158 r=0.284
+  juin65S: gain/M1=+0.1734 gain/M1P=-0.1346 r=0.424
+  decembre65N: gain/M1=+0.1720 gain/M1P=-0.1102 r=0.410
+  equinoxe_mars_65N: gain/M1=+0.1465 gain/M1P=-0.1509 r=0.233
+  energie_estivale_65N: gain/M1=+0.0343 gain/M1P=-0.3231 r=0.265
+  obliquite_seule: gain/M1=+0.1699 gain/M1P=-0.1610 r=0.422
+  excentricite_seule: gain/M1=+0.1656 gain/M1P=-0.1483 r=0.402
+  precession_climatique: gain/M1=+0.1500 gain/M1P=-0.1598 r=0.254
+[C] forcings terminé en 1057.6 s
+[C] étape reverse ...
+[C] reverse terminé en 75.0 s
+[C] étape stability ...
+  stabilité split 1000 terminée
+  stabilité split 1100 terminée
+  stabilité split 1200 terminée
+  stabilité split 1300 terminée
+  stabilité split 1400 terminée
+[C] stability terminé en 181.4 s
+[C] étape capacity ...
+  capacité M1: ratio libre max = 2.604 (cible 2.604, RMSE à ce point 2.775)
+  capacité M2: ratio libre max = 2.604 (cible 2.604, RMSE à ce point 6.833)
+  capacité M1P: ratio libre max = 2.604 (cible 2.604, RMSE à ce point 15.923)
+[C] capacity terminé en 4112.5 s
+[C] étape profile ...
+  profil forcing_gain terminé
+  profil forcing_offset terminé
+  profil tau_fast_kyr terminé
+  profil tau_memory_gain_kyr terminé
+  profil regolith_scale terminé
+  profil tau_regolith_kyr terminé
+  profil carbon_feedback_gain terminé
+  profil tau_carbon_kyr terminé
+  profil carbon_offset terminé
+[C] profile terminé en 1378.3 s
+{
+  "forcing_definitions": [
+    "juin65N_livre",
+    "juin45N",
+    "juin55N",
+    "juin75N",
+    "juin65S",
+    "decembre65N",
+    "equinoxe_mars_65N",
+    "energie_estivale_65N",
+    "obliquite_seule",
+    "excentricite_seule",
+    "precession_climatique"
+  ],
+  "forcings": {
+    "forcings_tested": 11,
+    "gain_vs_M1_min": 0.03434560883663651,
+    "gain_vs_M1_max": 0.17337974967608005,
+    "count_gain_above_5pct_vs_M1": 8,
+    "count_gain_above_5pct_vs_M1P": 0,
+    "best_correlation_M2": 0.424144908249746,
+    "best_correlation_forcing": "juin65S",
+    "max_power_ratio_M2": 1246.3763280410494
+  },
+  "reverse": {
+    "M0": {
+      "prediction_rmse": 1.1238978037783405,
+      "correlation": 0.29289342093562215,
+      "bic_effective": 13.271575738065799
+    },
+    "M1": {
+      "prediction_rmse": 1.4798350238054976,
+      "correlation": -0.31214858310387983,
+      "bic_effective": 24.797632972627895
+    },
+    "M2": {
+      "prediction_rmse": 1.7588716872142927,
+      "correlation": -0.12974112645915958,
+      "bic_effective": 26.20994672429243
+    },
+    "M1P": {
+      "prediction_rmse": 2.052822606299496,
+      "correlation": 0.3089392979723309,
+      "bic_effective": 29.062882408279126
+    },
+    "gain_M2_vs_M1": -0.18855930486847994,
+    "gain_M2_vs_M1P": 0.14319353176604555,
+    "delta_bic_effective_M2_vs_M1": 1.4123137516645343
+  },
+  "stability": {
+    "forcing_gain": {
+      "min": -2.6348061145128714,
+      "max": -0.813562793779958,
+      "median": -1.101913859963427,
+      "orders_of_magnitude_spanned": 0.5103575836063725,
+      "sign_changes": false
+    },
+    "forcing_offset": {
+      "min": -3.978545030359461,
+      "max": 3.5803025777705795,
+      "median": 0.4459790397196996,
+      "orders_of_magnitude_spanned": 1.7723808179025073,
+      "sign_changes": true
+    },
+    "tau_fast_kyr": {
+      "min": 1.000438694260525,
+      "max": 47.715288968757434,
+      "median": 4.481034947859296,
+      "orders_of_magnitude_spanned": 1.6784670775853598,
+      "sign_changes": false
+    },
+    "tau_memory_gain_kyr": {
+      "min": 0.019046491351766573,
+      "max": 33.25480013847494,
+      "median": 8.998753080613273,
+      "orders_of_magnitude_spanned": 3.2420393582175033,
+      "sign_changes": false
+    },
+    "regolith_scale": {
+      "min": 0.0035925875371106324,
+      "max": 0.06559010014979304,
+      "median": 0.006748340093199719,
+      "orders_of_magnitude_spanned": 1.2614309350592021,
+      "sign_changes": false
+    },
+    "tau_regolith_kyr": {
+      "min": 19.999999999999996,
+      "max": 340.22044568370416,
+      "median": 20.00266607481735,
+      "orders_of_magnitude_spanned": 1.2307304134973402,
+      "sign_changes": false
+    },
+    "carbon_feedback_gain": {
+      "min": -20.0,
+      "max": -19.92192639723257,
+      "median": -19.999996633080283,
+      "orders_of_magnitude_spanned": 0.00169866442584375,
+      "sign_changes": false
+    },
+    "tau_carbon_kyr": {
+      "min": 22.21541914078623,
+      "max": 12648.753534003567,
+      "median": 10845.257235425112,
+      "orders_of_magnitude_spanned": 2.7553932187202888,
+      "sign_changes": false
+    },
+    "carbon_offset": {
+      "min": -0.8551849231382243,
+      "max": 0.1491479933855271,
+      "median": -0.3340522418602626,
+      "orders_of_magnitude_spanned": 2.5933096683127492,
+      "sign_changes": true
+    }
+  },
+  "capacity": {
+    "observed_power_ratio": 2.60362464182512,
+    "factor_2_lower_bound": 1.30181232091256,
+    "honest_fit": {
+      "M1": {
+        "prediction_rmse": 2.1177903406960645,
+        "power_ratio": 0.02063638186860486
+      },
+      "M2": {
+        "prediction_rmse": 2.0418466969566307,
+        "power_ratio": 0.0047316042057213535
+      },
+      "M1P": {
+        "prediction_rmse": 1.5600213860098877,
+        "power_ratio": 0.020283304315917648
+      }
+    },
+    "note": "Test de capacité : la fenêtre de prédiction sert d'oracle. Un succès ici ne vaut pas validation, un échec vaut réfutation structurelle.",
+    "tradeoff": {
+      "M1": {
+        "free_best_power_ratio": 2.6036215709744766,
+        "free_prediction_rmse": 2.775035440012272,
+        "structurally_capable": true,
+        "min_rmse_ratio_reaching_band": 1.0,
+        "reaches_band_without_degrading_below_M1": true
+      },
+      "M2": {
+        "free_best_power_ratio": 2.603750803702711,
+        "free_prediction_rmse": 6.833227421935464,
+        "structurally_capable": true,
+        "min_rmse_ratio_reaching_band": 1.0,
+        "reaches_band_without_degrading_below_M1": true
+      },
+      "M1P": {
+        "free_best_power_ratio": 2.6036246452936704,
+        "free_prediction_rmse": 15.922888291133372,
+        "structurally_capable": true,
+        "min_rmse_ratio_reaching_band": 1.0,
+        "reaches_band_without_degrading_below_M1": true
+      }
+    }
+  },
+  "profile": {
+    "best_training_rmse": 0.8545451558653052,
+    "best_parameters": {
+      "forcing_gain": -2.448579081520924,
+      "forcing_offset": -2.5055754731701185,
+      "tau_fast_kyr": 1.00012549108243,
+      "tau_memory_gain_kyr": 42.47353686171576,
+      "regolith_scale": 0.04355824092890518,
+      "tau_regolith_kyr": 330.07451530144897,
+      "carbon_feedback_gain": -19.999999971612034,
+      "tau_carbon_kyr": 24.761642097684224,
+      "carbon_offset": -0.14950148452908651
+    },
+    "parameters": {
+      "forcing_gain": {
+        "max_relative_excess": 0.14228743910660932,
+        "flat_fraction_within_1pct": 0.07692307692307693,
+        "identified_range_low": -3.0,
+        "identified_range_high": -3.0,
+        "identified": true
+      },
+      "forcing_offset": {
+        "max_relative_excess": 0.024243375732444224,
+        "flat_fraction_within_1pct": 0.5384615384615384,
+        "identified_range_low": -2.0,
+        "identified_range_high": 2.666666666666666,
+        "identified": false
+      },
+      "tau_fast_kyr": {
+        "max_relative_excess": 0.09487832950278859,
+        "flat_fraction_within_1pct": 0.5384615384615384,
+        "identified_range_low": 1.0,
+  

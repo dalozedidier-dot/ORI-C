@@ -1,0 +1,15 @@
+{
+  "date_de_gel": "2026-08-01",
+  "criteres_geles": [
+    "C1-008",
+    "C3-020",
+    "C5-009",
+    "C6-001",
+    "C7-010"
+  ],
+  "gels_refuses_car_non_automatisables": [],
+  "confirmatoires_non_geles": 22,
+  "motif_de_non_gel": "Non gelé : soit les données manquent, soit le test n'est pas automatisable. Geler ici donnerait une couverture fictive.",
+  "empreinte_de_la_grille": "a10371505eb6abb1ff80da43cc9d64a5b1ee3685fa85f04863ab773578712cad",
+  "regle": "Aucun résultat n'a été lu avant l'écriture de ce fichier. Les seuils reprennent ceux déjà préenregistrés par le dossier ORI-C."
+}

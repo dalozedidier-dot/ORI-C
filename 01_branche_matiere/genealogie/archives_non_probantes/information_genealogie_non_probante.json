@@ -1,0 +1,34 @@
+{
+  "transitions": 21,
+  "entropie_cible_bits": 0.998363672593813,
+  "im_position_seule_bits": 0.3442999824266894,
+  "par_champ": {
+    "mecanisme": {
+      "im": 0.998363672593813,
+      "gain_conditionnel": 0.6540636901671235
+    },
+    "conditions_necessaires": {
+      "im": 0.998363672593813,
+      "gain_conditionnel": 0.6540636901671235
+    },
+    "parents_materiels": {
+      "im": 0.8078874821176225,
+      "gain_conditionnel": 0.4635874996909331
+    },
+    "proprietes_nouvelles": {
+      "im": 0.998363672593813,
+      "gain_conditionnel": 0.6540636901671235
+    },
+    "milieu": {
+      "im": 0.998363672593813,
+      "gain_conditionnel": 0.6540636901671235
+    },
+    "voies_concurrentes": {
+      "im": 0.998363672593813,
+      "gain_conditionnel": 0.6540636901671235
+    }
+  },
+  "aretes_parent_produit": 34,
+  "produits_distincts": 27,
+  "comparaison": "L'ancienne base des 40 transitions donnait 0,000 bit de gain conditionnel pour les six dimensions. Elle n'avait aucune arête parent→produit."
+}

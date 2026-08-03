@@ -1,0 +1,123 @@
+# Avancement du plan directeur
+
+Le plan porte **804 items numérotés** répartis en 58 groupes de travail. Ce
+document dit lesquels sont exécutés, lesquels sont bloqués et pourquoi.
+
+Il ne fixe aucun statut : `ETAT_DES_PREUVES.md` et
+`REGISTRE_HYPOTHESES.csv` s'en chargent. **Cocher un item ne valide rien** —
+sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
+
+## Niveau 1 du plan — immédiat, faible coût, forte valeur
+
+| Item | État | Où |
+|---|---|---|
+| 1. registre complet des hypothèses | **fait**, 28 hypothèses | `REGISTRE_HYPOTHESES.csv` |
+| 2. base de données des 40 transitions | **fait** comme schéma, 8 champs sur 23 remplis | `01_branche_matiere/base_transitions/` |
+| 3. tests synthétiques du socle | **fait**, 4 volets | `00_socle/banc_synthetique/` |
+| 4. régénération et audit de la carte | **partiel** — audit fait, figures bloquées | `…/carte_relationnelle/ANALYSE_GRAPHE.md` |
+| 5. benchmark de valeur ajoutée | **fait** pour la carte et la couche mémoire | `ANALYSE_GRAPHE.md`, `RAPPORT_WP_C4.md` |
+| 6. réplication du résultat négatif climatique | **fait**, 9 tests réels | `…/results_stress/tests_reels/` |
+| 7. réparation du protocole prospectif | **fait**, 10 items sur 10 | `…/prospectif_c2/RAPPORT_WP_C2.md` |
+| 8. extension astronomique par ablations | **bloqué** — `rebound` absent | `ENVIRONNEMENT.md` |
+| 9. méta-analyse des filtrages planétaires | **bloqué** — données absentes | — |
+| 10. préparation confirmatoire antibiotique | non fait | WP-R1 |
+| 11. durcissement du schéma de lignées | **fait** | `03_.../programme_prebiotique/` |
+| 12. préenregistrement public | **partiel**, deux protocoles scellés | `PREENREGISTREMENT_PROSPECTIF.md`, `PROTOCOLE_C2.json` |
+
+**8 faits, 2 partiels, 2 bloqués.**
+
+## Groupes de travail ouverts
+
+| Groupe | Items | Traités | Résultat principal |
+|---|---:|---:|---|
+| Étape 0 | 10 | 6 | environnement enregistré ; `rebound` absent |
+| Étape 1 | — | **fait** | 28 hypothèses, 16 champs |
+| Étape 2, grille universelle | 30 | **30/59 cases** | `GRILLE_ETAPE_2.md` |
+| S1.2 à S1.5 | 42 | ~12 | banc synthétique, 4 volets sur 4 |
+| WP-S2 | 20 | 14 | **item 14 positif** : 10 cas sur 600 |
+| WP-S3 | 20 | 9 | carte non distinguable d'un graphe nul |
+| WP-M1 | 15 | 15 | base construite, complétude mesurée |
+| WP-M5 | 10 | 2 | graphe pire que la chronologie |
+| WP-C1 | 10 | 6 | verdict négatif répliqué |
+| WP-C2 | 10 | **10** | non concluant, contradiction dans le protocole |
+| WP-C3 | 22 | en cours | 7 mécanismes sur 16 |
+| WP-C4 | 15 | 7 | **`persistance` à 0 paramètre bat M2** |
+| WP-C6 | 15 | 10 | **M2 non identifiable** |
+| WP-C7 | 10 | 5 | le signal manquant est la bande de 100 ka |
+| WP-T2 | 10 | 5 | 8 notions sur 15 traversent 2 branches |
+| WP-T4 | 6 | 3 | 5,0 concepts par résultat positif |
+| WP-V1 | 10 | 4 | validateur de lignées vérifié |
+
+## Les huit résultats qui comptent
+
+1. **`persistance`, zéro paramètre, se classe 2e sur 11 familles** et bat M2 de
+   16 %. Neuf modèles sur onze tiennent dans un intervalle de 5 %.
+2. **Les paramètres de M2 ne sont pas identifiables** : dispersion relative de
+   1,233 entre graines, contre 0,003 pour M0.
+3. **La bande de 100 ka est entièrement dans le résidu** des quatre modèles,
+   à 38–41 %. C'est là que se trouve le mécanisme manquant.
+4. **La bande de 405 ka n'est pas résolvable** sur la fenêtre de prédiction :
+   1 point de fréquence sur 1200 ka.
+5. **La carte relationnelle ne se distingue pas d'un graphe nul** à degrés et
+   ordre conservés, et son prédicteur structurel est au niveau du hasard.
+6. **La chaîne ORI-C ne produit aucune mesure** dans aucune branche.
+7. **L'item 14 du WP-S2 a un domaine de validité** : réduire une perte diminue
+   la persistance dans 10 configurations sur 600, par libération compétitive et
+   par retard.
+8. **Le WP-C2 est contradictoire dans ses propres termes** : l'item 5 impose
+   une calibration au point de référence, ce qui rend l'appariement des items 3
+   et 4 impossible quand référence et points testés sont dans des régimes
+   différents.
+
+## Quatre défauts de mes propres bancs, trouvés et corrigés
+
+Tous sont documentés avec leur première exécution conservée.
+
+| Banc | Défaut | Effet |
+|---|---|---|
+| Banc synthétique S1.5 | estimateur saturé | **réussissait en ne testant rien** |
+| Banc synthétique S1.2 | pas de bruit d'observation | 0 % des cas « état » reconnus |
+| Banc synthétique S1.3 | grille de constantes fixe | identification à 0,000 |
+| Analyse de graphe | nul détruisant l'acyclicité | `p = 0,0005` sans signification |
+| WP-S2 | bruit coloré 35× trop fort | extinction même à perte nulle |
+| WP-S2 | critère de non-monotonie absolu | retenait du bruit d'intégration |
+| WP-C3 | rétroaction accumulée au lieu d'un taux | 4 mécanismes sur 7 divergeaient |
+| G2 | masque confondant segment et direction | **changeait la conclusion** |
+
+## Ce qui reste, par cause de blocage
+
+**Données absentes du dossier** — WP-M2 à M4, WP-P1 à P6, WP-C1.4-6, WP-C5,
+WP-CL1 à CL4, WP-B2. Environ **190 items**.
+
+**Environnement** — WP-A1 à A6, `rebound` non installé. **59 items**.
+
+**Humains ou laboratoires** — WP-S3.5-7, WP-V2 à V6, WP-R1 à R6, WP-B1, WP-B3,
+WP-T5, Niveaux 3 et 4. Environ **250 items**.
+
+**Exécutable et non fait** — WP-C3 partiellement en cours, WP-T1 benchmark
+multi-domaines, WP-T3 valeur prédictive, S1.1. Environ **70 items**.
+
+## Sur le seuil scientifique du §XIV
+
+Le plan fixe douze conditions. État :
+
+| Condition | État |
+|---|---|
+| 1. identifiant et statut pour chaque affirmation majeure | **fait**, 28 |
+| 2. base de données de la branche matière | **fait** comme schéma, à remplir |
+| 3. une prédiction propre réussissant hors échantillon par branche | **aucune** |
+| 4. chaque réussite bat un témoin apparié | sans objet, aucune réussite |
+| 5. chaque mécanisme soutenu par une ablation | **fait** pour CHM et MEM |
+| 6. dépendance au chemin à conditions finales vérifiées | **fait** |
+| 7. persistance au-delà des constantes de temps | **fait** |
+| 8. `D`, `H`, `L` publiés séparément | **fait** dans le banc synthétique |
+| 9. `Pacc` mesuré dans un système par branche | **non**, seulement en synthétique |
+| 10. deux résultats reproduits par des équipes indépendantes | **non** |
+| 11. un résultat traversant deux branches sans redéfinition | **non** |
+| 12. résultats négatifs visibles et versionnés | **fait** |
+
+**Sept conditions sur douze sont remplies.** Les cinq manquantes — 3, 4, 9, 10,
+11 — sont précisément celles qui exigent un résultat **positif**, une mesure de
+`Pacc` sur un système réel, et une réplication externe.
+
+Le programme n'a franchi ni le premier seuil ni, a fortiori, le seuil fort.

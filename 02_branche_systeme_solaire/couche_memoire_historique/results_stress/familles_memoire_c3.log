@@ -1,0 +1,17 @@
+[C3] volume_de_glace en 242 s
+[C3] erosion_du_regolithe en 303 s
+[C3] alteration_continentale en 214 s
+[C3] isostasie en 254 s
+[C3] seuil_de_calotte en 324 s
+[C3] delais_distribues en 256 s
+[C3] couplage_etat_dependant en 197 s
+
+variante                 ablation   apparie       complet  gain_sur_ablation  gain_sur_apparie
+mecanisme                                                                                     
+erosion_du_regolithe     2.097459  1.716531      1.888091           0.099820         -0.099946
+alteration_continentale  2.097459  1.760428      2.158837          -0.029263         -0.226313
+seuil_de_calotte         2.097459  1.682925      2.101492          -0.001923         -0.248715
+delais_distribues        2.097459  1.637312      2.074847           0.010781         -0.267227
+isostasie                2.097459  1.637312      2.074847           0.010781         -0.267227
+volume_de_glace          2.097459  1.594955      2.036451           0.029086         -0.276808
+couplage_etat_dependant  2.097459       NaN  20566.212204       -9804.298882               NaN

@@ -1,0 +1,13 @@
+domaine,test_ou_objet,resultat,statut
+Socle,Test interventionnel,"11/11 dans le modèle réduit, six cinétiques robustes",Validé dans le modèle réduit
+Socle,Effet contre-intuitif,"10 cas sur 600, compétition et retard",Exploratoire
+Carte,Prédiction de liens,"AUC structurelle 0,491, chronologie 0,922",Résultat négatif
+Matière,Six dimensions,"0,000 bit propre",Codage actuel réfuté comme mesure indépendante
+Matière,Échelle de capacités,"0,595 bit net, p = 5e-5, rho = 0,74",Établi dans le graphe
+Matière,Inventaire accessible,"C, H, N recouvrent les coefficients, S en désaccord","Fortement appuyé, tension identifiée"
+Astronomie,N-corps,13 critères sur 15,Validé dans le modèle réduit
+Climat,M2 contre M1P,"0 critère sur 5, gain RMSE -31,6 %",Réfuté
+Exoplanètes,Dépendance au chemin,"4 variables sur 4, ablation 4 sur 4",Validation structurelle
+Exoplanètes,Persistance,0 variable matérielle après palier long,Non réussi
+Vivant,Programme prébiotique,aucune donnée collectée,Non testé
+Généalogie,Clôture du graphe,"39 transitions, 77 relations parent-produit, aucune anomalie formelle",Cohérence structurelle vérifiée

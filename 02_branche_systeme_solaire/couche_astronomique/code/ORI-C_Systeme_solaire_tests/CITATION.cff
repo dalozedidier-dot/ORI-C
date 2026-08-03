@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "ORI-C — Architecture historique du Système solaire : dépôt de tests"
+message: "Merci de citer ce dépôt et le document scientifique associé."
+type: software
+authors:
+  - family-names: Daloze
+    given-names: Didier
+version: 0.1.0
+date-released: 2026-07-29
+license: MIT

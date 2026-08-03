@@ -1,0 +1,48 @@
+source;target;code_relation;classe_genealogique;portee_originale;niveau_preuve;reference_cle
+TR-001;TR-004;CNST;contrainte_inventaire;contrainte;Plausible;"Particle Data Group, Review of Particle Physics (2024; mise à jour 2025), sections cosmologie et nucléosynthèse primordiale."
+TR-002;TR-004;CNST;contrainte_inventaire;contrainte sur l’inventaire baryonique;Établi;"Particle Data Group (2024/2025); Schöneberg, JCAP 2024(06), 006, doi:10.1088/1475-7516/2024/06/006."
+TR-003;TR-004;MATR;filiation_materielle;fourniture de constituants;Établi;"Particle Data Group (2024/2025); Wilson, Phys. Rev. D 10, 2445-2459 (1974), doi:10.1103/PhysRevD.10.2445."
+TR-004;TR-005;MATR;filiation_materielle;fourniture de constituants;Établi;"Particle Data Group (2024/2025); Cooke, Big Bang Nucleosynthesis, arXiv:2409.06015."
+TR-005;TR-011;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Güsten et al., Nature 568, 357-359 (2019), doi:10.1038/s41586-019-1090-x.
+TR-005;TR-012;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Galli & Palla, Annual Review of Astronomy and Astrophysics 51, 163-206 (2013), doi:10.1146/annurev-astro-082812-141029.
+TR-012;TR-006;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Klessen & Glover, Annual Review of Astronomy and Astrophysics 61, 65-130 (2023), doi:10.1146/annurev-astro-071221-053453.
+TR-006;TR-007;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Klessen & Glover (2023), doi:10.1146/annurev-astro-071221-053453.
+TR-006;TR-008;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;"Klessen & Glover (2023); Zinner, Presolar Grains, Treatise on Geochemistry (2014)."
+TR-007;TR-009;MATR;filiation_materielle;fourniture de constituants;Établi;Burbidge et al., Reviews of Modern Physics 29, 547-650 (1957), doi:10.1103/RevModPhys.29.547.
+TR-006;TR-010;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;"Klessen & Glover (2023); Watson et al., Nature 574, 497-500 (2019), doi:10.1038/s41586-019-1676-3."
+TR-009;TR-013;MATR;filiation_materielle;fourniture de constituants;Établi;"Burbidge et al. (1957); McGuire et al., Science 371, 1265-1269 (2021), doi:10.1126/science.abb7535."
+TR-008;TR-014;MATR;filiation_materielle;fourniture de constituants;Plausible;"Zinner (2014); Nittler & Ciesla, Annual Review of Astronomy and Astrophysics 54, 53-93 (2016), doi:10.1146/annurev-astro-082214-122505."
+TR-014;TR-015;ENBL;condition_ouverture;ouverture ou dépendance;Établi;"Sewiło et al., ApJL 853, L19 (2018), doi:10.3847/2041-8213/aaa079; McGuire et al. (2021)."
+TR-008;TR-016;MATR;filiation_materielle;fourniture de constituants;Établi;"Zinner (2014); Nittler & Ciesla (2016), doi:10.1146/annurev-astro-082214-122505."
+TR-016;TR-017;MATR;filiation_materielle;fourniture de constituants;Établi;Connelly et al., Science 338, 651-655 (2012), doi:10.1126/science.1226919.
+TR-016;TR-019;MATR;filiation_materielle;fourniture de constituants;Plausible;Johansen et al., Nature 448, 1022-1025 (2007), doi:10.1038/nature06086.
+TR-019;TR-020;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Johansen et al. (2007), doi:10.1038/nature06086.
+TR-020;TR-021;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;"Connelly et al. (2012); archives isotopiques des météorites différenciées."
+TR-020;TR-022;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Elkins-Tanton, Annual Review of Earth and Planetary Sciences 40, 113-139 (2012), doi:10.1146/annurev-earth-042711-105503.
+TR-022;TR-023;ENVR;transformation_environnementale;transformation environnementale;Plausible;"Wilde et al., Nature 409, 175-178 (2001), doi:10.1038/35051550; Vulpius et al., Nature Reviews Earth & Environment 7, 412-426 (2026), doi:10.1038/s43017-026-00803-0."
+TR-022;TR-024;ENVR;transformation_environnementale;transformation environnementale;Établi;"Hu et al., Nature 630, 609-612 (2024), doi:10.1038/s41586-024-07432-x; exemples du Système solaire."
+TR-021;TR-025;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;Houchin et al., PNAS 123, e2525466123 (2026), doi:10.1073/pnas.2525466123.
+TR-023;TR-026;ENBL;condition_ouverture;ouverture ou dépendance;Établi;"Wilde et al. (2001); Hazen et al., American Mineralogist 93, 1693-1720 (2008), doi:10.2138/am.2008.2955."
+TR-023;TR-027;ENBL;condition_ouverture;ouverture ou dépendance;Établi;"Archives sédimentaires et géochimiques; Hazen et al. (2008)."
+TR-021;TR-028;ENBL;condition_ouverture;ouverture ou dépendance;Établi;Observations minéralogiques naturelles et expériences de haute pression.
+TR-038;TR-029;ENVR;transformation_environnementale;transformation environnementale;Fortement inféré;Planavsky et al., Nature Geoscience 7, 283-286 (2014), doi:10.1038/ngeo2122.
+TR-036;TR-030;DEPG;dependance_non_genealogique;dépendance fonctionnelle générale, non causale historiquement;Établi;"de la Torre & Chin, Nature Reviews Genetics 22, 169-184 (2021), doi:10.1038/s41576-020-00307-7; littérature sur la biominéralisation."
+TR-026;TR-031;CATL;condition_ouverture;contribution catalytique;Plausible;"Patel et al., Nature Chemistry 7, 301-307 (2015), doi:10.1038/nchem.2202; scénarios minéraux candidats."
+TR-031;TR-032;MATR;filiation_materielle;fourniture de constituants;Plausible;Patel et al. (2015), doi:10.1038/nchem.2202.
+TR-031;TR-033;MATR;filiation_materielle;fourniture de constituants;Plausible;Adamala & Szostak, Nature Chemistry 5, 495-501 (2013), doi:10.1038/nchem.1650.
+TR-032;TR-034;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;Hordijk & Steel, Journal of Systems Chemistry 6, 1 (2015), doi:10.1186/s13322-014-0006-2.
+TR-032;TR-035;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;van Nies et al., Nature Communications 9, 1583 (2018), doi:10.1038/s41467-018-03926-1.
+TR-035;TR-036;ENBL;condition_ouverture;ouverture ou dépendance;Hypothétique;"Koonin & Novozhilov, IUBMB Life 61, 99-111 (2009), doi:10.1002/iub.146; origine historique ouverte."
+TR-036;TR-037;ENBL;condition_ouverture;ouverture ou dépendance;Fortement inféré;Moody et al., Nature Ecology & Evolution 8, 1654-1666 (2024), doi:10.1038/s41559-024-02461-1.
+TR-037;TR-038;DESC;dependance_non_genealogique;ascendance générale, non causale;Fortement inféré;"Moody et al. (2024), doi:10.1038/s41559-024-02461-1; aucune attribution de la photosynthèse à LUCA."
+TR-037;TR-039;DESC;dependance_non_genealogique;ascendance générale, non causale;Fortement inféré;"Moody et al. (2024); reconstructions phylogénétiques de l’endosymbiose mitochondriale."
+TR-039;TR-040;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;"Bozdag et al., Nature 617, 747-754 (2023), doi:10.1038/s41586-023-06052-1; littérature sur les origines multiples de la multicellularité."
+TR-009;TR-016;MATR;filiation_materielle;fourniture de constituants;Établi;"Zinner (2014); Nittler & Ciesla (2016), doi:10.1146/annurev-astro-082214-122505."
+TR-013;TR-014;MATR;filiation_materielle;fourniture de constituants;Établi;"Galli & Palla (2013); observations de glaces interstellaires."
+TR-017;TR-018;INCO;transmission_trace_historique;incorporation ou trace historique, non causale;Établi;"Krot et al., Nature 434, 998-1001 (2005), doi:10.1038/nature03470; Connelly et al. (2012)."
+TR-018;TR-019;MATR;filiation_materielle;fourniture de constituants;Plausible;"Connelly et al. (2012); Johansen et al. (2007)."
+TR-024;TR-023;STAB;condition_ouverture;stabilisation;Plausible;"Modèles climatiques planétaires; aucune hydrosphère détectée sur TRAPPIST-1e."
+TR-023;TR-025;CONT;condition_ouverture;contribution possible, non suffisante;Hypothétique;Green et al., Nature 467, 448-451 (2010), doi:10.1038/nature09369.
+TR-033;TR-034;STAB;condition_ouverture;stabilisation;Plausible;Adamala et al., Nature Communications 7, 11041 (2016), doi:10.1038/ncomms11041.
+TR-029;TR-038;FEED;transformation_environnementale;rétroaction;Plausible;Planavsky et al. (2014), doi:10.1038/ngeo2122.
+TR-029;TR-040;ENVR;transformation_environnementale;transformation environnementale;Plausible;"Bozdag et al. (2023); littérature sur l’oxygène et l’évolution de la complexité."

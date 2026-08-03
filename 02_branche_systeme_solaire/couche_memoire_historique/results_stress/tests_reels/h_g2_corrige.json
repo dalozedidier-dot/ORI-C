@@ -1,0 +1,37 @@
+{
+  "masque": {
+    "points": 1431,
+    "age_debut_ka": 2015.0,
+    "age_fin_ka": 585.0,
+    "symetrique_par_retournement": true
+  },
+  "rmse_ajustement": {
+    "avant": {
+      "M0": 0.984768910759743,
+      "M1": 0.9303314136907811,
+      "M2": 0.9051131927287384,
+      "M1P": 0.8733642777065698
+    },
+    "arriere": {
+      "M0": 0.9984023635222147,
+      "M1": 0.8718544436471521,
+      "M2": 0.8690627694791875,
+      "M1P": 0.8632317078431521
+    }
+  },
+  "asymetrie_temporelle": {
+    "M0": 0.013633452762471632,
+    "M1": -0.05847697004362895,
+    "M2": -0.03605042324955088,
+    "M1P": -0.010132569863417706
+  },
+  "asymetrie_relative": {
+    "M0": 0.013844316786923654,
+    "M1": -0.0628560631008266,
+    "M2": -0.03982974012439918,
+    "M1P": -0.011601768153405074
+  },
+  "M2_plus_directionnel_que_M1P": false,
+  "ecart_M2_moins_M1P": -0.02591785338613317,
+  "lecture": "Les deux sens ajustent exactement les mêmes points. Une asymétrie de M2 non supérieure à celle de M1P signifie que sa mémoire ne porte pas d'information de direction que le témoin apparié n'ait déjà."
+}

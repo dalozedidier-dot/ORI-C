@@ -1,0 +1,16 @@
+test,observed,operator,threshold,passed,meaning
+all_bodies_bound,True,==,True,True,Aucune planète ou petit corps ne devient non lié.
+energy_conservation,1.3251353459634007e-11,<=,1e-08,True,La dérive énergétique reste sous le seuil préenregistré.
+angular_momentum_conservation,5.276233334369168e-10,<=,1e-10,False,"Maximum newtonien sur tous les jobs, y compris le contrôle 1PN gr_full."
+initial_eccentricity_vs_la2010,2.19234200238283e-10,<=,1e-08,True,Le point de départ J2000 concorde avec La2010.
+horizons_correlation_6kyr,0.9999998095408391,>=,0.99,True,Accord de phase avec l’éphéméride JPL DE441.
+horizons_rmse_6kyr,4.826436049436027e-07,<=,0.0002,True,Écart absolu à l’éphéméride JPL DE441.
+la2010_correlation_100000yr,0.999971224841701,>=,0.95,True,Accord de phase avec la solution orbitale indépendante.
+la2010_correlation_500000yr,0.9987600581192526,>=,0.8,True,Accord de phase avec la solution orbitale indépendante.
+la2010_correlation_1000000yr,0.997269675397316,>=,0.6,True,Accord de phase avec la solution orbitale indépendante.
+whfast_step_convergence_2myr,8.426552319976023e-07,<=,0.0001,True,Le résultat est stable quand le pas est divisé par deux.
+integrator_crosscheck_20kyr,3.1309832571378374e-07,<=,1e-06,True,WHFast et IAS15 donnent la même excentricité à court terme.
+roundtrip_reversibility_100kyr,2.7628025558976285e-05,<=,1e-05,False,"Maximum des allers-retours aux pas 0,01 et 0,005 an."
+spectral_peak_405_kyr,0.007860922146636423,<=,0.05,True,La période du pic 405 kyr tombe dans la tolérance fixée.
+spectral_peak_2.4_Myr,0.1666250000000001,<=,0.2,True,La période du pic 2.4 Myr tombe dans la tolérance fixée.
+counterfactuals_above_ensemble_floor,6274389.677402444,>=,3.0,True,Chaque intervention dépasse la dispersion des états quasi identiques.

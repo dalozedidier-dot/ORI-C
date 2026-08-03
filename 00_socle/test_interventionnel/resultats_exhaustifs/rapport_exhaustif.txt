@@ -1,0 +1,86 @@
+ANALYSE EXHAUSTIVE — TEST INTERVENTIONNEL ORI-C
+========================================================================
+
+A. DOMAINE ADMISSIBLE
+------------------------------------------------------------------------
+  D > 0                  Sans dilution, l'apport de substrat disparaît et le système dégénère.
+  S_in > 0               Sans substrat entrant, seul le lavage subsiste.
+  mu_max > 0             Une croissance maximale nulle interdit tout équilibre intérieur.
+  K_s > 0                K_s = 0 rend mu discontinue en S = 0.
+  delta >= 0             Une dégradation négative n'a pas de sens physique.
+  l >= 0                 Une perte négative serait un apport, hors du protocole.
+  m = delta + l > 0      Condition non triviale : voir le théorème A1.
+
+B. PARTITION EXHAUSTIVE
+------------------------------------------------------------------------
+  Tirages classés          : 2000000 / 2000000
+  Cellules impossibles     : 0
+
+  A                  Réduction de perte, les deux systèmes viables                 263721
+  B                  Réduction de perte, phase libre lavée, compartiment viable     23304
+  C                  Réduction de perte, les deux systèmes lavés                   813172
+  D_viable           Intervention nulle, les deux systèmes viables                  48201
+  D_lave             Intervention nulle, les deux systèmes lavés                   151785
+  E                  Intervention inverse, les deux systèmes viables               161494
+  E_lavage_induit    Intervention inverse, compartiment lavé, phase libre viable      6201
+  E_lave             Intervention inverse, les deux systèmes lavés                 532122
+  F                  Frontière exacte : au moins un système est exactement au seuil         0
+
+  Le découpage A/B/C n'est complet que sous la contrainte de protocole l_selectif <= l_libre. Sans elle, une quatrième cellule de viabilité existe : phase libre viable et compartiment lavé, atteinte lorsque l'intervention est inverse (régime E_lavage_induit). Elle est ici atteinte 6201 fois.
+
+C. THÉORÈMES
+------------------------------------------------------------------------
+  C1 : Équilibre de lavage E0 = (S_in, 0), toujours présent. Valeurs propres -D et mu(S_in) - m.
+  C2 : Équilibre intérieur E* = (K_s m/(mu_max - m), D(S_in - S*)/m), existant et positif si et seulement si m < mu(S_in).
+  C3 : dP*/dm = -D [K_s m^2 + S_in (m - mu_max)^2] / [m^2 (mu_max - m)^2] < 0 pour tout m > 0, m != mu_max. La décroissance est donc stricte sur tout le domaine admissible, sans condition de viabilité.
+  C4 : trace J(E*) = -D [K_s m^2 + S_in (m - mu_max)^2] / (K_s m mu_max) < 0 ; det J(E*) > 0 dès que E* est intérieur. E* est donc toujours localement asymptotiquement stable.
+  C5 : Avec B = 1/P, div(B f) = -D/P - mu'(S) < 0 sur P > 0 : critère de Dulac satisfait, aucune orbite périodique dans le quadrant ouvert.
+  C6 : pour toute mu strictement croissante et dérivable, dP*/dm < 0
+       dès que l'équilibre intérieur existe.
+
+D. ÉQUILIBRES
+------------------------------------------------------------------------
+  Exclusivité E0 / E* vérifiée : True
+  Attractivité globale, 42 conditions initiales, écart max 2.00e-15
+
+E. BIFURCATION
+------------------------------------------------------------------------
+  Type                     : bifurcation transcritique
+  l_crit                   : 0.859091
+  Échange de stabilité     : True
+  tau ~ 1/|l - l_crit|     : True
+  Pente log-log asymptotique: -1.015951
+  Stabilité de tau*écart   : rapport max/min 1.126199
+  Décroissance au seuil    : algébrique en 1/t, True
+
+F. CERTIFICATION PAR INTERVALLES
+------------------------------------------------------------------------
+  Boîtes certifiées        : 2248
+  Boîtes indéterminées     : 5120 (voisinage de m = mu_max)
+
+G. STRUCTURES DE MODÈLE
+------------------------------------------------------------------------
+  Structures testées       : 12
+  Hors théorème C6         : 8
+  Sans décroissance stricte: 0
+
+H. NIVEAUX DE CONCLUSION
+------------------------------------------------------------------------
+  Niveau 1, théorème dans le modèle      : ÉTABLI
+  Niveau 2, robustesse structurelle      : ÉTABLI, avec réserve
+  Niveau 3, validité biologique          : NON ÉTABLI
+
+------------------------------------------------------------------------
+  A01  RÉUSSI   Nécessité de m > 0
+  A02  RÉUSSI   Borne uniforme des trajectoires
+  B01  RÉUSSI   Partition exhaustive en régimes
+  B02  RÉUSSI   Signe de l'effet par régime
+  C01  RÉUSSI   Théorèmes symboliques
+  C02  RÉUSSI   Généralisation à toute mu croissante
+  D01  RÉUSSI   Inventaire des équilibres
+  D02  RÉUSSI   Attractivité globale
+  E01  RÉUSSI   Bifurcation transcritique
+  F01  RÉUSSI   Certification par intervalles
+  G01  RÉUSSI   Matrice de structures
+
+Bilan : 11 / 11 sections réussies.

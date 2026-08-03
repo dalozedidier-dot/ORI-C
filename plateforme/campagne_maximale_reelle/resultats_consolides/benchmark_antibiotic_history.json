@@ -1,0 +1,36 @@
+{
+  "status": "exploratory_not_confirmatory",
+  "outcome": "next_observed_log10_survival",
+  "lineages": 148,
+  "prediction_rows": 358,
+  "repeated_group_splits": 200,
+  "models": {
+    "state_only": {
+      "mae_mean": 0.6408327450342647,
+      "mae_ci_2.5": 0.5228118979100166,
+      "mae_ci_97.5": 0.7715258813598241
+    },
+    "equal_complexity": {
+      "mae_mean": 0.6414484598305557,
+      "mae_ci_2.5": 0.49584213344176836,
+      "mae_ci_97.5": 0.784311881056153
+    },
+    "history": {
+      "mae_mean": 0.6300855740669157,
+      "mae_ci_2.5": 0.49431373851419036,
+      "mae_ci_97.5": 0.770721683048451
+    }
+  },
+  "equal_complexity_minus_history": {
+    "mean": 0.011362885763639828,
+    "ci_2.5": -0.03535313382054278,
+    "ci_97.5": 0.059765657585179016,
+    "fraction_history_better": 0.65
+  },
+  "limitations": [
+    "single antibiotic (amikacin)",
+    "exploratory repeated splits; no untouched final test set",
+    "endpoint MIC/persister rows cannot be joined to longitudinal lineages",
+    "history features summarize prior survival, not independently varied exposure sequences"
+  ]
+}

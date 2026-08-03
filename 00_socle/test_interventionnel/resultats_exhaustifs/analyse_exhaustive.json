@@ -1,0 +1,818 @@
+{
+  "statut": "analyse_exhaustive",
+  "domaine_admissible": {
+    "conditions": [
+      {
+        "condition": "D > 0",
+        "motif": "Sans dilution, l'apport de substrat disparaît et le système dégénère."
+      },
+      {
+        "condition": "S_in > 0",
+        "motif": "Sans substrat entrant, seul le lavage subsiste."
+      },
+      {
+        "condition": "mu_max > 0",
+        "motif": "Une croissance maximale nulle interdit tout équilibre intérieur."
+      },
+      {
+        "condition": "K_s > 0",
+        "motif": "K_s = 0 rend mu discontinue en S = 0."
+      },
+      {
+        "condition": "delta >= 0",
+        "motif": "Une dégradation négative n'a pas de sens physique."
+      },
+      {
+        "condition": "l >= 0",
+        "motif": "Une perte négative serait un apport, hors du protocole."
+      },
+      {
+        "condition": "m = delta + l > 0",
+        "motif": "Condition non triviale : voir le théorème A1."
+      }
+    ],
+    "bornes": {
+      "D_min": 0.0001,
+      "D_max": 10000.0,
+      "S_in_min": 0.0001,
+      "S_in_max": 10000.0,
+      "mu_max_min": 0.0001,
+      "mu_max_max": 10000.0,
+      "K_s_min": 0.0001,
+      "K_s_max": 10000.0,
+      "delta_min": 0.0,
+      "delta_max": 10000.0,
+      "leak_min": 0.0,
+      "leak_max": 10000.0
+    }
+  },
+  "regimes": {
+    "A": "Réduction de perte, les deux systèmes viables",
+    "B": "Réduction de perte, phase libre lavée, compartiment viable",
+    "C": "Réduction de perte, les deux systèmes lavés",
+    "D_viable": "Intervention nulle, les deux systèmes viables",
+    "D_lave": "Intervention nulle, les deux systèmes lavés",
+    "E": "Intervention inverse, les deux systèmes viables",
+    "E_lavage_induit": "Intervention inverse, compartiment lavé, phase libre viable",
+    "E_lave": "Intervention inverse, les deux systèmes lavés",
+    "F": "Frontière exacte : au moins un système est exactement au seuil"
+  },
+  "sections": {
+    "A01": {
+      "enonce": "m = delta + l = 0 => aucune solution bornée ; le cas est exclu.",
+      "instants": [
+        500.0,
+        1000.0,
+        1500.0,
+        2000.0
+      ],
+      "P_aux_instants": [
+        1244.2676288064558,
+        2494.094541674363,
+        3743.993236338525,
+        4993.921344665744
+      ],
+      "pentes_successives": [
+        2.4996538257358143,
+        2.4997973893283243,
+        2.499856216654438
+      ],
+      "pente_asymptotique_attendue_D_S_in": 2.5,
+      "ecart_relatif_a_la_pente_attendue": 5.751333822487936e-05,
+      "strictement_croissant": true,
+      "S_tend_vers_zero": 0.0005008342928889582,
+      "S_reste_borne_par_S_in": true,
+      "reussi": true,
+      "titre": "Nécessité de m > 0"
+    },
+    "A02": {
+      "enonce": "V = S + P est ultimement borné par D S_in / min(D, m).",
+      "cas": [
+        {
+          "leak": 0.0,
+          "m": 0.05,
+          "borne_theorique": 50.0,
+          "V_max_asymptotique": 49.78947368423595,
+          "borne_respectee": true
+        },
+        {
+          "leak": 0.02,
+          "m": 0.07,
+          "borne_theorique": 35.71428571428571,
+          "V_max_asymptotique": 35.52073732744261,
+          "borne_respectee": true
+        },
+        {
+          "leak": 0.25,
+          "m": 0.3,
+          "borne_theorique": 10.0,
+          "V_max_asymptotique": 8.443754861902068,
+          "borne_respectee": true
+        },
+        {
+          "leak": 0.8,
+          "m": 0.8500000000000001,
+          "borne_theorique": 10.0,
+          "V_max_asymptotique": 9.233768921146979,
+          "borne_respectee": true
+        }
+      ],
+      "reussi": true,
+      "titre": "Borne uniforme des trajectoires"
+    },
+    "B01": {
+      "n_tirages": 2000000,
+      "graine": 20260731,
+      "comptes_par_regime": {
+        "A": 263721,
+        "B": 23304,
+        "C": 813172,
+        "D_viable": 48201,
+        "D_lave": 151785,
+        "E": 161494,
+        "E_lavage_induit": 6201,
+        "E_lave": 532122,
+        "F": 0
+      },
+      "total_classe": 2000000,
+      "cellules_impossibles_atteintes": 0,
+      "tous_regimes_atteints": true,
+      "note_regime_F": "Le régime F est de mesure nulle pour un tirage continu : il n'est jamais atteint par échantillonnage et doit être traité analytiquement (section E).",
+      "lacune_du_decoupage_initial": "Le découpage A/B/C n'est complet que sous la contrainte de protocole l_selectif <= l_libre. Sans elle, une quatrième cellule de viabilité existe : phase libre viable et compartiment lavé, atteinte lorsque l'intervention est inverse (régime E_lavage_induit). Elle est ici atteinte 6201 fois.",
+      "reussi": true,
+      "titre": "Partition exhaustive en régimes"
+    },
+    "B02": {
+      "conclusions": {
+        "A": {
+          "effet": "facteur fini > 1",
+          "demonstration": "Théorème C3, dP*/dm < 0."
+        },
+        "B": {
+          "effet": "changement qualitatif 0 -> P* > 0",
+          "demonstration": "Non exprimable comme facteur ; le rapport diverge."
+        },
+        "C": {
+          "effet": "aucun, P* = 0 des deux côtés",
+          "demonstration": "La réduction est insuffisante pour franchir le seuil."
+        },
+        "D_viable": {
+          "effet": "facteur exactement 1",
+          "demonstration": "m identique, P* identique."
+        },
+        "D_lave": {
+          "effet": "indéfini, 0/0",
+          "demonstration": "Les deux plateaux sont nuls."
+        },
+        "E": {
+          "effet": "facteur fini < 1",
+          "demonstration": "Théorème C3 appliqué en sens inverse."
+        },
+        "E_lavage_induit": {
+          "effet": "effondrement qualitatif P* > 0 -> 0",
+          "demonstration": "Le compartiment franchit le seuil vers le haut."
+        },
+        "E_lave": {
+          "effet": "aucun, P* = 0 des deux côtés",
+          "demonstration": "Idem régime C."
+        },
+        "F": {
+          "effet": "singulier",
+          "demonstration": "Section E : bifurcation transcritique."
+        }
+      },
+      "representants": [
+        {
+          "regime": "A",
+          "l_libre": 0.25,
+          "l_selectif": 0.02,
+          "P_libre": 7.976190476190476,
+          "P_selectif": 35.445468509984636,
+          "facteur": 4.4439094848338945
+        },
+        {
+          "regime": "B",
+          "l_libre": 0.9,
+          "l_selectif": 0.02,
+          "P_libre": 0.0,
+          "P_selectif": 35.445468509984636,
+          "facteur": null
+        },
+        {
+          "regime": "C",
+          "l_libre": 2.0,
+          "l_selectif": 1.5,
+          "P_libre": 0.0,
+          "P_selectif": 0.0,
+          "facteur": null
+        },
+        {
+          "regime": "D_viable",
+          "l_libre": 0.25,
+          "l_selectif": 0.25,
+          "P_libre": 7.976190476190476,
+          "P_selectif": 7.976190476190476,
+          "facteur": 1.0
+        },
+        {
+          "regime": "E",
+          "l_libre": 0.02,
+          "l_selectif": 0.25,
+          "P_libre": 35.445468509984636,
+          "P_selectif": 7.976190476190476,
+          "facteur": 0.2250270855904659
+        },
+        {
+          "regime": "E_lavage_induit",
+          "l_libre": 0.25,
+          "l_selectif": 0.95,
+          "P_libre": 7.976190476190476,
+          "P_selectif": 0.0,
+          "facteur": 0.0
+        },
+        {
+          "regime": "E_lave",
+          "l_libre": 2.0,
+          "l_selectif": 3.0,
+          "P_libre": 0.0,
+          "P_selectif": 0.0,
+          "facteur": null
+        }
+      ],
+      "seuil_de_lavage": 0.859090909090909,
+      "reussi": true,
+      "titre": "Signe de l'effet par régime"
+    },
+    "C01": {
+      "S_etoile": "-K_s*m/(m - mu_max)",
+      "P_etoile": "D*(K_s*m + S_in*m - S_in*mu_max)/(m*(m - mu_max))",
+      "jacobien_lavage": "[[-D, -S_in*mu_max/(K_s + S_in)], [0, (S_in*mu_max - m*(K_s + S_in))/(K_s + S_in)]]",
+      "valeurs_propres_lavage": [
+        "(-K_s*m - S_in*m + S_in*mu_max)/(K_s + S_in)",
+        "-D"
+      ],
+      "trace_interieure": "D*(-K_s*m**2 - S_in*m**2 + 2*S_in*m*mu_max - S_in*mu_max**2)/(K_s*m*mu_max)",
+      "determinant_interieur": "D*(m - mu_max)*(K_s*m + S_in*m - S_in*mu_max)/(K_s*mu_max)",
+      "dP_dm": "D*(-K_s*m**2 - S_in*m**2 + 2*S_in*m*mu_max - S_in*mu_max**2)/(m**2*(m**2 - 2*m*mu_max + mu_max**2))",
+      "numerateur_dP_dm": "-D*(K_s*m**2 + S_in*m**2 - 2*S_in*m*mu_max + S_in*mu_max**2)",
+      "forme_positive": "K_s*m**2 + S_in*m**2 - 2*S_in*m*mu_max + S_in*mu_max**2",
+      "identite_numerateur_verifiee": true,
+      "identite_trace_verifiee": true,
+      "divergence_dulac": "-D/P - K_s*mu_max/(K_s + S)**2",
+      "theoremes": {
+        "C1": "Équilibre de lavage E0 = (S_in, 0), toujours présent. Valeurs propres -D et mu(S_in) - m.",
+        "C2": "Équilibre intérieur E* = (K_s m/(mu_max - m), D(S_in - S*)/m), existant et positif si et seulement si m < mu(S_in).",
+        "C3": "dP*/dm = -D [K_s m^2 + S_in (m - mu_max)^2] / [m^2 (mu_max - m)^2] < 0 pour tout m > 0, m != mu_max. La décroissance est donc stricte sur tout le domaine admissible, sans condition de viabilité.",
+        "C4": "trace J(E*) = -D [K_s m^2 + S_in (m - mu_max)^2] / (K_s m mu_max) < 0 ; det J(E*) > 0 dès que E* est intérieur. E* est donc toujours localement asymptotiquement stable.",
+        "C5": "Avec B = 1/P, div(B f) = -D/P - mu'(S) < 0 sur P > 0 : critère de Dulac satisfait, aucune orbite périodique dans le quadrant ouvert."
+      },
+      "reussi": true,
+      "titre": "Théorèmes symboliques"
+    },
+    "C02": {
+      "P_etoile_generique": "D*(S_in - S(m))/m",
+      "dP_dm_generique": "D*(-S_in - m*Derivative(S(m), m) + S(m))/m**2",
+      "numerateur": "D*(-S_in - m*Derivative(S(m), m) + S(m))",
+      "argument": "Le numérateur vaut -D [ m S'(m) + (S_in - S(m)) ]. Sous les hypothèses S'(m) > 0 (mu strictement croissante) et S(m) < S_in (équilibre intérieur), les deux termes sont positifs, donc la dérivée est strictement négative.",
+      "hypotheses": [
+        "mu strictement croissante",
+        "mu dérivable",
+        "S* < S_in",
+        "m > 0"
+      ],
+      "reussi": true,
+      "titre": "Généralisation à toute mu croissante"
+    },
+    "D01": {
+      "seuil": 0.9090909090909091,
+      "cas": [
+        {
+          "leak": 0.0,
+          "m": 0.05,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 0.859090909090909,
+          "E_interieur_existe": true,
+          "S_etoile": 0.052631578947368425,
+          "P_etoile": 49.73684210526316,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.02,
+          "m": 0.07,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 0.8390909090909091,
+          "E_interieur_existe": true,
+          "S_etoile": 0.07526881720430109,
+          "P_etoile": 35.445468509984636,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.25,
+          "m": 0.3,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 0.6090909090909091,
+          "E_interieur_existe": true,
+          "S_etoile": 0.4285714285714286,
+          "P_etoile": 7.976190476190476,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.5,
+          "m": 0.55,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 0.359090909090909,
+          "E_interieur_existe": true,
+          "S_etoile": 1.2222222222222225,
+          "P_etoile": 3.989898989898989,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.8,
+          "m": 0.8500000000000001,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 0.05909090909090897,
+          "E_interieur_existe": true,
+          "S_etoile": 5.6666666666666705,
+          "P_etoile": 1.2745098039215674,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.859,
+          "m": 0.909,
+          "E0_existe": true,
+          "E0_stable": false,
+          "valeur_propre_transverse_E0": 9.090909090903043e-05,
+          "E_interieur_existe": true,
+          "S_etoile": 9.989010989010993,
+          "P_etoile": 0.0030222802500020343,
+          "E_interieur_stable": true
+        },
+        {
+          "leak": 0.86,
+          "m": 0.91,
+          "E0_existe": true,
+          "E0_stable": true,
+          "valeur_propre_transverse_E0": -0.0009090909090909705,
+          "E_interieur_existe": false,
+          "S_etoile": 10.111111111111114,
+          "P_etoile": 0.0,
+          "E_interieur_stable": false
+        },
+        {
+          "leak": 1.0,
+          "m": 1.05,
+          "E0_existe": true,
+          "E0_stable": true,
+          "valeur_propre_transverse_E0": -0.14090909090909098,
+          "E_interieur_existe": false,
+          "S_etoile": null,
+          "P_etoile": 0.0,
+          "E_interieur_stable": false
+        },
+        {
+          "leak": 5.0,
+          "m": 5.05,
+          "E0_existe": true,
+          "E0_stable": true,
+          "valeur_propre_transverse_E0": -4.140909090909091,
+          "E_interieur_existe": false,
+          "S_etoile": null,
+          "P_etoile": 0.0,
+          "E_interieur_stable": false
+        }
+      ],
+      "unicite": "mu étant strictement croissante, mu(S*) = m a au plus une racine : l'équilibre intérieur est unique quand il existe.",
+      "exclusivite_verifiee": true,
+      "stabilite_globale": "Bornitude (théorème A2) + absence d'orbite périodique (Dulac, C5) + Poincaré-Bendixson dans le plan : toute trajectoire de condition initiale P0 > 0 converge vers l'unique équilibre localement stable. Le bassin de E* est donc le quadrant ouvert entier lorsque E* existe.",
+      "bassin_de_E0": "P0 = 0 exactement ; l'axe P = 0 est invariant.",
+      "reussi": true,
+      "titre": "Inventaire des équilibres"
+    },
+    "D02": {
+      "n_conditions_initiales": 42,
+      "S0_min": 1e-06,
+      "S0_max": 10000.0,
+      "P0_min": 1e-09,
+      "P0_max": 10000.0,
+      "ecart_relatif_max": 2.004608108254931e-15,
+      "reussi": true,
+      "titre": "Attractivité globale"
+    },
+    "E01": {
+      "l_crit": 0.859090909090909,
+      "type": "bifurcation transcritique",
+      "branches": [
+        {
+          "leak_sur_l_crit": 0.9,
+          "leak": 0.7731818181818181,
+          "P_etoile": 1.6231143866602133,
+          "valeur_propre_transverse_E0": 0.08590909090909093,
+          "E0_stable": false,
+          "E_interieur_existe": true
+        },
+        {
+          "leak_sur_l_crit": 0.99,
+          "leak": 0.8504999999999999,
+          "P_etoile": 0.263672610693669,
+          "valeur_propre_transverse_E0": 0.008590909090909093,
+          "E0_stable": false,
+          "E_interieur_existe": true
+        },
+        {
+          "leak_sur_l_crit": 0.999,
+          "leak": 0.8582318181818182,
+          "P_etoile": 0.028345425289645485,
+          "valeur_propre_transverse_E0": 0.0008590909090908649,
+          "E0_stable": false,
+          "E_interieur_existe": true
+        },
+        {
+          "leak_sur_l_crit": 1.0,
+          "leak": 0.859090909090909,
+          "P_etoile": 9.769962616701378e-16,
+          "valeur_propre_transverse_E0": 0.0,
+          "E0_stable": false,
+          "E_interieur_existe": true
+        },
+        {
+          "leak_sur_l_crit": 1.001,
+          "leak": 0.8599499999999999,
+          "P_etoile": 0.0,
+          "valeur_propre_transverse_E0": -0.0008590909090908649,
+          "E0_stable": true,
+          "E_interieur_existe": false
+        },
+        {
+          "leak_sur_l_crit": 1.01,
+          "leak": 0.8676818181818181,
+          "P_etoile": 0.0,
+          "valeur_propre_transverse_E0": -0.008590909090909093,
+          "E0_stable": true,
+          "E_interieur_existe": false
+        },
+        {
+          "leak_sur_l_crit": 1.1,
+          "leak": 0.945,
+          "P_etoile": 0.0,
+          "valeur_propre_transverse_E0": -0.08590909090909093,
+          "E0_stable": true,
+          "E_interieur_existe": false
+        }
+      ],
+      "echange_de_stabilite": true,
+      "ralentissement_critique": [
+        {
+          "ecart_relatif_au_seuil": 0.1,
+          "lambda_lent": -0.15037306736609612,
+          "tau": 6.650127030829359,
+          "tau_fois_ecart": 0.6650127030829359
+        },
+        {
+          "ecart_relatif_au_seuil": 0.01,
+          "lambda_lent": -0.009676231528773335,
+          "tau": 103.34601823306836,
+          "tau_fois_ecart": 1.0334601823306837
+        },
+        {
+          "ecart_relatif_au_seuil": 0.001,
+          "lambda_lent": -0.0008694026279569902,
+          "tau": 1150.2150647392227,
+          "tau_fois_ecart": 1.1502150647392229
+        },
+        {
+          "ecart_relatif_au_seuil": 0.0001,
+          "lambda_lent": -8.601173051269247e-05,
+          "tau": 11626.321131307006,
+          "tau_fois_ecart": 1.1626321131307007
+        },
+        {
+          "ecart_relatif_au_seuil": 1e-05,
+          "lambda_lent": -8.591935014984484e-06,
+          "tau": 116388.21735220094,
+          "tau_fois_ecart": 1.1638821735220095
+        }
+      ],
+      "regime_asymptotique_retenu": [
+        0.01,
+        0.001,
+        0.0001,
+        1e-05
+      ],
+      "pente_log_log_asymptotique": -1.0159509066593888,
+      "rapport_max_min_tau_fois_ecart": 1.1261993383210904,
+      "tau_diverge_comme_1_sur_ecart": true,
+      "au_seuil": {
+        "P_aux_instants": {
+          "1000": 0.020331553505501726,
+          "10000": 0.0031206924340245676,
+          "100000": 0.00033045691854998664,
+          "200000": 0.00016579182734224955
+        },
+        "produit_P_fois_t": [
+          20.331553505501727,
+          31.206924340245674,
+          33.045691854998665,
+          33.15836546844991
+        ],
+        "decroissance_algebrique_en_1_sur_t": true,
+        "commentaire": "À l = l_crit la valeur propre transverse s'annule : l'équilibre n'est plus hyperbolique. La convergence n'est plus exponentielle mais algébrique, ce qui rend toute mesure par fenêtre d'intégration inopérante. Ce cas doit être traité analytiquement."
+      },
+      "indicateur_mal_defini": "Le facteur de rétention est mal défini dès que P*_libre = 0, c'est-à-dire dans les régimes B, C, D_lave et E_lave.",
+      "reussi": true,
+      "titre": "Bifurcation transcritique"
+    },
+    "F01": {
+      "domaine_de_depart": [
+        [
+          0.001,
+          1000.0
+        ],
+        [
+          0.001,
+          1000.0
+        ],
+        [
+          0.001,
+          1000.0
+        ],
+        [
+          0.01,
+          100.0
+        ],
+        [
+          0.0001,
+          100.0
+        ]
+      ],
+      "variables": [
+        "D",
+        "K_s",
+        "S_in",
+        "mu_max",
+        "m"
+      ],
+      "profondeur_max": 14,
+      "boites_certifiees": 2248,
+      "boites_indeterminees": 5120,
+      "exemples_indetermines": [
+        [
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            10.0,
+            100.0
+          ],
+          [
+            17.78279410038923,
+            100.0
+          ]
+        ],
+        [
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            10.0,
+            100.0
+          ],
+          [
+            3.1622776601683795,
+            17.78279410038923
+          ]
+        ],
+        [
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            31.622776601683793,
+            177.82794100389228
+          ],
+          [
+            10.0,
+            100.0
+          ],
+          [
+            17.78279410038923,
+            100.0
+          ]
+        ],
+        [
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            31.622776601683793,
+            177.82794100389228
+          ],
+          [
+            10.0,
+            100.0
+          ],
+          [
+            3.1622776601683795,
+            17.78279410038923
+          ]
+        ],
+        [
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            31.622776601683793,
+            177.82794100389228
+          ],
+          [
+            177.82794100389228,
+            1000.0
+          ],
+          [
+            10.0,
+            100.0
+          ],
+          [
+            17.78279410038923,
+            100.0
+          ]
+        ]
+      ],
+      "interpretation": "Les boîtes indéterminées sont exactement celles qui contiennent la singularité m = mu_max, où l'équilibre intérieur n'est pas défini. Hors de ce lieu, la décroissance stricte est certifiée sur des domaines continus entiers et non en des points isolés.",
+      "reussi": true,
+      "titre": "Certification par intervalles"
+    },
+    "G01": {
+      "structures": {
+        "monod": {
+          "mecanisme": "mu = mu_max S/(K_s+S)",
+          "P_etoile_min": 4.5,
+          "P_etoile_max": 41.40070921985815,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.200157604412922,
+          "couvert_par_le_theoreme_C6": true
+        },
+        "masse_action": {
+          "mecanisme": "mu = mu_max S/K_s",
+          "P_etoile_min": 4.75,
+          "P_etoile_max": 41.416666666666664,
+          "strictement_decroissant": true,
+          "facteur_extremites": 8.719298245614034,
+          "couvert_par_le_theoreme_C6": true
+        },
+        "moser_n2": {
+          "mecanisme": "mu = mu_max S^2/(K^2+S^2)",
+          "P_etoile_min": 4.5,
+          "P_etoile_max": 40.61397676533351,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.025328170074113,
+          "couvert_par_le_theoreme_C6": true
+        },
+        "haldane_branche_basse": {
+          "mecanisme": "mu unimodale ; C6 ne s'applique que sur la branche croissante",
+          "P_etoile_min": 4.4895788082818,
+          "P_etoile_max": 41.40068754482705,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.221508144250942,
+          "couvert_par_le_theoreme_C6": true
+        },
+        "inhibition_par_le_produit": {
+          "mecanisme": "mu divisée par (1 + P/K_p) ; mu dépend de P",
+          "P_etoile_min": 4.377125973326873,
+          "P_etoile_max": 41.08967398114706,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.387363816243218,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "mortalite_densite_dependante": {
+          "mecanisme": "perte = (delta + l) P + q P^2",
+          "P_etoile_min": 4.315270932750884,
+          "P_etoile_max": 18.415387209268534,
+          "strictement_decroissant": true,
+          "facteur_extremites": 4.267492701212426,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "perte_non_lineaire_p1_5": {
+          "mecanisme": "perte = m P^1.5",
+          "P_etoile_min": 2.284548888215816,
+          "P_etoile_max": 11.809710417113363,
+          "strictement_decroissant": true,
+          "facteur_extremites": 5.169383976867527,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "capacite_du_compartiment": {
+          "mecanisme": "croissance logistique plafonnée à K",
+          "P_etoile_min": 3.784827042720153,
+          "P_etoile_max": 17.319895856558905,
+          "strictement_decroissant": true,
+          "facteur_extremites": 4.576139321841007,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "deux_substrats_limitants": {
+          "mecanisme": "mu multiplicative sur deux substrats dynamiques",
+          "P_etoile_min": 4.149218940641788,
+          "P_etoile_max": 41.30574854976759,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.955066035483428,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "diffusion_entre_compartiments": {
+          "mecanisme": "échange bidirectionnel au taux k avec un compartiment ouvert",
+          "P_etoile_min": 1.339630105016623,
+          "P_etoile_max": 20.60185185185185,
+          "strictement_decroissant": true,
+          "facteur_extremites": 15.378761476546698,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "environnement_periodique": {
+          "mecanisme": "S_in modulé sinusoïdalement ; moyenne sur la dernière période",
+          "P_etoile_min": 4.4852136009087005,
+          "P_etoile_max": 41.378573981732025,
+          "strictement_decroissant": true,
+          "facteur_extremites": 9.225552596502597,
+          "couvert_par_le_theoreme_C6": false
+        },
+        "competition_avec_mutant": {
+          "mecanisme": "un mutant non protégé partage le substrat",
+          "P_etoile_min": -4.1513753002094555e-25,
+          "P_etoile_max": 41.40070921985816,
+          "strictement_decroissant": true,
+          "facteur_extremites": null,
+          "couvert_par_le_theoreme_C6": false
+        }
+      },
+      "n_structures": 12,
+      "structures_hors_theoreme": [
+        "inhibition_par_le_produit",
+        "mortalite_densite_dependante",
+        "perte_non_lineaire_p1_5",
+        "capacite_du_compartiment",
+        "deux_substrats_limitants",
+        "diffusion_entre_compartiments",
+        "environnement_periodique",
+        "competition_avec_mutant"
+      ],
+      "structures_sans_decroissance_stricte": [],
+      "structures_non_traitees": {
+        "retard_temporel": "Équation à retard : espace d'états de dimension infinie, hors de portée du solveur employé ici.",
+        "bruit": "Traité séparément par la campagne de robustesse, contrôle C14."
+      },
+      "reussi": true,
+      "titre": "Matrice de structures"
+    }
+  },
+  "niveaux_de_conclusion": {
+    "niveau_1_theoreme_dans_le_modele": {
+      "portee": "Le système d'équations défini, sur tout son domaine admissible.",
+      "etabli": true,
+      "contenu": "Les équilibres sont classés, leur stabilité est établie, la partition en régimes est exhaustive et le signe de l'effet est démontré dans chacun. La décroissance stricte de P* en la perte est prouvée symboliquement et certifiée par arithmétique d'intervalles."
+    },
+    "niveau_2_robustesse_structurelle": {
+      "portee": "Familles de cinétiques et de perturbations voisines.",
+      "etabli": true,
+      "contenu": "Le théorème C6 couvre toute cinétique strictement croissante. Douze structures alternatives ont été testées numériquement, dont neuf sortent du cadre du théorème. Aucune ne fournit de contre-exemple, mais il s'agit d'une vérification, non d'une démonstration.",
+      "reserve": "Le retard temporel n'est pas traité. La couverture reste celle d'une famille de modèles choisie, non de toutes les architectures possibles."
+    },
+    "niveau_3_validite_biologique": {
+      "portee": "Le vivant.",
+      "etabli": false,
+      "contenu": "Aucune donnée expérimentale n'est produite ni invoquée. Rien dans ce dossier ne montre que le mécanisme décrit opère réellement dans un système vivant. Ce niveau reste entièrement ouvert."
+    }
+  },
+  "sections_reussies": 11,
+  "sections_totales": 11,
+  "toutes_reussies": true
+}

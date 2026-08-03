@@ -1,0 +1,63 @@
+{
+  "job": {
+    "coordinates": "jacobi",
+    "corrector": 11,
+    "duration_years": 2000000,
+    "ejection_radius_au": 500,
+    "exact_finish_time": false,
+    "general_relativity": "gr_potential",
+    "include_bodies": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune",
+      "Pluto",
+      "Ceres",
+      "Pallas",
+      "Vesta",
+      "Iris",
+      "Bamberga"
+    ],
+    "initial_conditions": "horizons_j2000",
+    "integrator": "whfast",
+    "kernel": "default",
+    "kind": "nbody",
+    "name": "full_la2010_bodies_2myr_dt5",
+    "output_step_years": 1000,
+    "safe_mode": 0,
+    "seed": 20260729,
+    "time_direction": "backward",
+    "timestep_years": 0.005
+  },
+  "platform": "Linux-6.12.13-x86_64-with-glibc2.39",
+  "python": "3.12.13",
+  "summary": {
+    "all_bodies_bound": true,
+    "body_count": 14,
+    "completed_years": 2000000.0,
+    "computation_seconds": 1167.1917601059995,
+    "earth_eccentricity_max": 0.0577131944461386,
+    "earth_eccentricity_mean": 0.029504928138447947,
+    "earth_eccentricity_min": 0.0006247784783768845,
+    "earth_eccentricity_std": 0.013518290167496274,
+    "earth_initial_eccentricity": 0.01670236221923459,
+    "kind": "nbody",
+    "max_abs_angmom_rel_error": 1.0502758463755311e-12,
+    "max_abs_energy_rel_error": 1.8732272630483243e-12,
+    "max_abs_output_time_error_years": 0.004999994214813341,
+    "output_count": 2001,
+    "row_count": 28014
+  },
+  "versions": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "rebound": "4.6.0",
+    "reboundx": "4.6.2",
+    "scipy": "1.17.0"
+  }
+}

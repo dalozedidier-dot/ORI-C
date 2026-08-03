@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-01",
+  "archive": "ORI-C",
+  "tests": {
+    "socle": {
+      "passed": 121,
+      "xfailed": 1
+    },
+    "memoire_historique": {
+      "passed": 32
+    },
+    "astronomie": {
+      "passed": 10,
+      "skipped": 2
+    },
+    "plateforme": {
+      "passed": 13
+    }
+  },
+  "campaign": {
+    "technical": {
+      "pass": 213,
+      "fail": 0,
+      "skip": 0,
+      "blocked": 438,
+      "error": 0,
+      "not_run": 32
+    },
+    "scientific": {
+      "undetermined": 651,
+      "supports": 0,
+      "does_not_support": 0,
+      "inconclusive": 0,
+      "not_applicable": 32
+    }
+  },
+  "data_rows": {
+    "orbital_timeseries": 51001,
+    "orbital_reference": 1381,
+    "ephemerides": 15,
+    "orbital_initial_conditions": 15,
+    "paleoclimate_timeseries": 2601,
+    "modern_climate_timeseries": 3802,
+    "modern_climate_ensemble": 338400,
+    "exoplanet_observations": 6333,
+    "antibiotic_cycles": 942,
+    "antibiotic_measurements": 1068,
+    "prebiotic_rna_evolution": 80
+  },
+  "integrity": {
+    "root_manifest_files": 918,
+    "platform_manifest_files": 264,
+    "python_mirror_common_files": 42,
+    "python_mirror_mismatches": 0
+  }
+}

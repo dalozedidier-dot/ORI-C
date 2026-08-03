@@ -1,0 +1,22 @@
+{
+  "source": "NASA Exoplanet Archive, Planetary Systems (PS), default_flag=1",
+  "source_url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "tap_query": "select pl_name,hostname,discoverymethod,disc_year,pl_orbper,pl_orbpererr1,pl_orbpererr2,pl_rade,pl_radeerr1,pl_radeerr2,pl_bmasse,pl_bmasseerr1,pl_bmasseerr2,pl_bmassprov,pl_dens,pl_denserr1,pl_denserr2,pl_eqt,pl_eqterr1,pl_eqterr2,st_teff,st_tefferr1,st_tefferr2,st_rad,st_raderr1,st_raderr2,st_mass,st_masserr1,st_masserr2,sy_pnum,pl_refname,disc_refname,rowupdate from ps where default_flag=1",
+  "tap_format": "csv",
+  "documentation": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+  "dataset_doi": "10.26133/NEA2",
+  "accessed_at": "2026-08-01",
+  "transformed_at_utc": "2026-08-01T20:37:51.451720+00:00",
+  "path_base": "plateforme/campagne_maximale_reelle",
+  "raw_file": "sources_brutes/NASA_Exoplanet_Archive/NASA_Exoplanet_Archive_PS_default.csv",
+  "raw_sha256": "2d07e1b00510911bbbf5bdd9174ea9c848f14c36f6f49865945b435bc8874c9a",
+  "output_file": "data/exoplanet_observations.csv",
+  "output_sha256": "73c244beaa86f243d33e4b767f974d39ca4415e46bc7eacec7cfac2136d17c78",
+  "rows": 6333,
+  "rules": [
+    "solutions publiees marquees default_flag=1 par l'archive",
+    "aucune imputation, interpolation, simulation ou augmentation",
+    "cellules absentes conservees vides",
+    "PS choisi pour conserver un jeu de parametres auto-coherent par reference"
+  ]
+}

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oric-solar-history"
+version = "0.2.0"
+description = "Tests quantitatifs de l'architecture historique du Systeme solaire dans le cadre ORI-C"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Didier Daloze"}]
+license = {text = "MIT"}
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.14,<2",
+  "pandas>=2.2,<3",
+  "matplotlib>=3.9,<4",
+  "PyYAML>=6.0,<7",
+  "tabulate>=0.9,<1",
+]
+
+[project.optional-dependencies]
+nbody = ["rebound>=4.6,<5.1"]
+science = ["rebound>=4.6,<5", "reboundx==4.6.2"]
+dev = ["pytest>=8.3,<9", "ruff>=0.9,<1"]
+
+[project.scripts]
+oric-solar-history = "oric_solar_history.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+oric_solar_history = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

@@ -1,0 +1,21 @@
+{
+  "source": "Papastavrou, Horning & Joyce, RNA-Catalyzed Evolution of Catalytic RNA",
+  "repository": "Zenodo 10714366",
+  "dataset_doi": "10.5061/dryad.rxwdbrvgs",
+  "accessed_at": "2026-08-01",
+  "path_base": "plateforme/campagne_maximale_reelle",
+  "raw_files": {
+    "sources_brutes/Zenodo_10714366/figure_data/figure_data/Papastavrou_23_fig_3_data.xlsx": "812de78e698aa56df773ca8a9133a6baa1603343730513c2a70b0d41cf1be714",
+    "sources_brutes/Zenodo_10714366/figure_data/figure_data/Papastavrou_23_fig_S3_data.xlsx": "3166821efe38d9fd6c4ba0fd1a23fa5e6658f1e0fc0c2202282e17795c3da022"
+  },
+  "output": {
+    "path": "data/prebiotic_rna_evolution.csv",
+    "sha256": "0417cd368d4e0243302f698b86c2441fbc6b0315c0a152cc21547f5284e1b84c",
+    "rows": 80
+  },
+  "rules": [
+    "fréquences de figures publiées uniquement",
+    "aucune imputation, simulation ou reconstruction généalogique",
+    "deux branches conservées séparément"
+  ]
+}

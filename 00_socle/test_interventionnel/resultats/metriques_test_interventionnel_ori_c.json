@@ -1,0 +1,53 @@
+{
+  "status": "illustrative_controlled_model",
+  "parameters": {
+    "mu_max": 1.0,
+    "K_s": 1.0,
+    "dilution": 0.25,
+    "S_in": 10.0,
+    "decay": 0.05,
+    "leak_free": 0.25,
+    "leak_membrane": 0.02,
+    "S0": 1.0,
+    "P0": 0.1,
+    "t_end": 500.0,
+    "n_points": 2001
+  },
+  "intervention": {
+    "variable": "loss_rate_of_P",
+    "free": 0.25,
+    "selective_compartment": 0.02
+  },
+  "plateau_free": {
+    "mean": 7.976190476181671,
+    "std": 1.2320886099396322e-11,
+    "cv": 1.5447081079857217e-12,
+    "relative_drift": 3.1088842942826185e-12
+  },
+  "plateau_selective_compartment": {
+    "mean": 35.445468509859055,
+    "std": 7.366435028626937e-10,
+    "cv": 2.078244508625407e-11,
+    "relative_drift": 5.241448820672737e-11
+  },
+  "retention_ratio": 4.443909484823056,
+  "delta_V": 3.443909484823056,
+  "delta_Pi": 27.469278033677384,
+  "stable_free": true,
+  "stable_selective_compartment": true,
+  "analytic_reference": {
+    "P_free": 7.976190476190476,
+    "P_selective_compartment": 35.445468509984636,
+    "retention_ratio": 4.4439094848338945,
+    "relative_gap_free": 1.1039607039465545e-12,
+    "relative_gap_selective_compartment": 3.5429443705297645e-12,
+    "relative_gap_retention_ratio": 2.4389428480912793e-12,
+    "convergence_tolerance": 1e-06,
+    "converged_free": true,
+    "converged_selective_compartment": true,
+    "slow_relaxation_time_free": 3.287089868536702,
+    "slow_relaxation_time_selective_compartment": 14.369783078264115
+  },
+  "defined_causal_criterion_met": true,
+  "scope_note": "Illustrative deterministic model; not an empirical or general biological proof."
+}

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Pour citer ORI-C, utilisez les informations suivantes."
+title: "ORI-C — architecture, mémoire et futurs accessibles"
+type: software
+authors:
+  - family-names: Daloze
+    given-names: Didier
+date-released: 2026-08-03
+repository-code: "À compléter lors de la création du dépôt"

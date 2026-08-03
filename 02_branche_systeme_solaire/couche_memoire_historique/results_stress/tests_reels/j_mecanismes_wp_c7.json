@@ -1,0 +1,305 @@
+{
+  "C7_1_2_residus_et_dissociation": {
+    "largeur_fenetre_ka": 200,
+    "pas_ka": 25,
+    "dissociation_amplitude_signature": {
+      "M0": {
+        "fenetres": 40,
+        "correlation_mediane": 0.10259222900647649,
+        "pente_mediane": 0.5964226786335094,
+        "fenetres_a_correlation_superieure_a_0_5": 0,
+        "pente_mediane_sur_ces_fenetres": null,
+        "ecart_de_pente_a_1": null
+      },
+      "M1": {
+        "fenetres": 40,
+        "correlation_mediane": 0.07492890102830171,
+        "pente_mediane": 0.348304394628035,
+        "fenetres_a_correlation_superieure_a_0_5": 0,
+        "pente_mediane_sur_ces_fenetres": null,
+        "ecart_de_pente_a_1": null
+      },
+      "M2": {
+        "fenetres": 40,
+        "correlation_mediane": 0.2601516192006689,
+        "pente_mediane": 0.7650496383968208,
+        "fenetres_a_correlation_superieure_a_0_5": 0,
+        "pente_mediane_sur_ces_fenetres": null,
+        "ecart_de_pente_a_1": null
+      },
+      "M1P": {
+        "fenetres": 40,
+        "correlation_mediane": 0.11026965974238036,
+        "pente_mediane": 0.5879396875672227,
+        "fenetres_a_correlation_superieure_a_0_5": 0,
+        "pente_mediane_sur_ces_fenetres": null,
+        "ecart_de_pente_a_1": null
+      }
+    },
+    "spectre_des_residus": {
+      "M0": {
+        "part_41_ka": 0.09096371431213608,
+        "part_100_ka": 0.38328966708593276,
+        "n_eff": 17.616268260176792,
+        "ecart_type": 1.529088339787548,
+        "moyenne": 1.431359163739332
+      },
+      "M1": {
+        "part_41_ka": 0.0804257790429724,
+        "part_100_ka": 0.3940466807048942,
+        "n_eff": 17.574548413148463,
+        "ecart_type": 1.5329887644520215,
+        "moyenne": 1.4611575463342135
+      },
+      "M2": {
+        "part_41_ka": 0.02590695249829575,
+        "part_100_ka": 0.41196757839875364,
+        "n_eff": 18.110892181824735,
+        "ecart_type": 1.4805225303044856,
+        "moyenne": 1.4063549883200763
+      },
+      "M1P": {
+        "part_41_ka": 0.08611089249145812,
+        "part_100_ka": 0.3827665887510967,
+        "n_eff": 18.54588054596558,
+        "ecart_type": 1.5086812074661209,
+        "moyenne": 0.3696706208882871
+      }
+    },
+    "lecture": "Une corrélation élevée avec une pente éloignée de 1 est la signature d'un modèle qui trouve la forme et rate le gain. C'est ce que T2 et T4 laissaient soupçonner ; ici il est mesuré fenêtre par fenêtre."
+  },
+  "C7_3_forme_du_correctif": {
+    "par_modele": {
+      "M0": {
+        "formes": {
+          "brut": {
+            "rmse": 2.094492827988389,
+            "parametres_ajoutes": 0,
+            "bic": 1774.3474492495004
+          },
+          "additif": {
+            "rmse": 1.529088339787548,
+            "parametres_ajoutes": 1,
+            "bic": 1026.302160347918
+          },
+          "affine": {
+            "rmse": 1.5225931719832178,
+            "parametres_ajoutes": 2,
+            "bic": 1023.1759507140595
+          },
+          "conditionnel": {
+            "rmse": 1.5187355333341097,
+            "parametres_ajoutes": 3,
+            "bic": 1024.177676950457
+          }
+        },
+        "forme_retenue_par_bic": "affine",
+        "gain_rmse_de_la_forme_retenue": 0.2730492309942356
+      },
+      "M1": {
+        "formes": {
+          "brut": {
+            "rmse": 2.1177903406960645,
+            "parametres_ajoutes": 0,
+            "bic": 1800.8958071886054
+          },
+          "additif": {
+            "rmse": 1.5329887644520215,
+            "parametres_ajoutes": 1,
+            "bic": 1032.4163266075536
+          },
+          "affine": {
+            "rmse": 1.5226399147095935,
+            "parametres_ajoutes": 2,
+            "bic": 1023.2496281897185
+          },
+          "conditionnel": {
+            "rmse": 1.5127893840031188,
+            "parametres_ajoutes": 3,
+            "bic": 1014.7627606396462
+          }
+        },
+        "forme_retenue_par_bic": "conditionnel",
+        "gain_rmse_de_la_forme_retenue": 0.28567556715463016
+      },
+      "M2": {
+        "formes": {
+          "brut": {
+            "rmse": 2.042004239934863,
+            "parametres_ajoutes": 0,
+            "bic": 1713.4363106498643
+          },
+          "additif": {
+            "rmse": 1.4805225303044856,
+            "parametres_ajoutes": 1,
+            "bic": 948.8382843906402
+          },
+          "affine": {
+            "rmse": 1.4758998901058777,
+            "parametres_ajoutes": 2,
+            "bic": 948.4231106632321
+          },
+          "conditionnel": {
+            "rmse": 1.4757021944636892,
+            "parametres_ajoutes": 3,
+            "bic": 955.1916878331541
+          }
+        },
+        "forme_retenue_par_bic": "affine",
+        "gain_rmse_de_la_forme_retenue": 0.27722976219042683
+      },
+      "M1P": {
+        "formes": {
+          "brut": {
+            "rmse": 1.5533110936671264,
+            "parametres_ajoutes": 0,
+            "bic": 1056.9332207646523
+          },
+          "additif": {
+            "rmse": 1.5086812074661209,
+            "parametres_ajoutes": 1,
+            "bic": 994.0562288577802
+          },
+          "affine": {
+            "rmse": 1.5047826129473103,
+            "parametres_ajoutes": 2,
+            "bic": 994.9364205760321
+          },
+          "conditionnel": {
+            "rmse": 1.5043031412870502,
+            "parametres_ajoutes": 3,
+            "bic": 1001.261659126463
+          }
+        },
+        "forme_retenue_par_bic": "additif",
+        "gain_rmse_de_la_forme_retenue": 0.028732097763907172
+      }
+    },
+    "lecture": "Si la forme retenue est `affine`, il manque une échelle ; si elle est `conditionnel`, le gain dépend d'un état lent, ce qui est l'hypothèse du §13.4 : une variable lente modifie l'opérateur de réponse."
+  },
+  "C7_4_dependance_au_regime": {
+    "parametres_par_regime": {
+      "avant_MPT_2600_1200": {
+        "M0": {
+          "vecteur": [
+            -0.7264196454059102,
+            0.003249507113881067,
+            10.653185532748875
+          ],
+          "rmse_entrainement": 0.9679602962841887
+        },
+        "M1": {
+          "vecteur": [
+            -0.6938013463304692,
+            -0.10962827554664582,
+            1.0000001377589771,
+            12.32679417882815,
+            0.08675076262211388,
+            20.000000203903525
+          ],
+          "rmse_entrainement": 0.9601901229049702
+        },
+        "M2": {
+          "vecteur": [
+            -2.4481246859114334,
+            2.6618349524497513,
+            17.339573605205405,
+            26.106045744217692,
+            0.04605909554514626,
+            349.0207633396528,
+            -20.0,
+            24.761506162973443,
+            0.10872676587510961
+          ],
+          "rmse_entrainement": 0.85456289791387
+        },
+        "M1P": {
+          "vecteur": [
+            -0.9420300635637431,
+            -3.9722623721969725,
+            5.007807221019589,
+            8.063053067717272,
+            0.012161999012991653,
+            20.000086218861007,
+            -3.4348908827813527,
+            2432.6450994730467,
+            -1.90320668919375
+          ],
+          "rmse_entrainement": 0.8719839913522857
+        }
+      },
+      "apres_MPT_1200_0": {
+        "M0": {
+          "vecteur": [
+            -0.5737983240855525,
+            -0.0027467282354821467,
+            22.492196784072217
+          ],
+          "rmse_entrainement": 0.9943116820581752
+        },
+        "M1": {
+          "vecteur": [
+            -5.999904525444037,
+            -0.14331923347896194,
+            8.877642094249456,
+            418.2666639876115,
+            0.032213303089164966,
+            214.69536612054307
+          ],
+          "rmse_entrainement": 0.9924818051770629
+        },
+        "M2": {
+          "vecteur": [
+            -1.0920105452103146,
+            3.1965702706782793,
+            1.341186033272062,
+            205.03653018942333,
+            0.2494579837929531,
+            21.28598341998352,
+            -19.985874620122384,
+            154.44444934978804,
+            0.3047940792787007
+          ],
+          "rmse_entrainement": 0.8913505856146118
+        },
+        "M1P": {
+          "vecteur": [
+            0.9093473328095112,
+            0.8788443929200944,
+            8.086507692833582,
+            1307.1161817628076,
+            0.17944740949167162,
+            23.825084542099603,
+            -5.76457140990499,
+            2288.2209150336503,
+            -0.22778824236420503
+          ],
+          "rmse_entrainement": 0.9703591829563417
+        }
+      }
+    },
+    "ecarts": {
+      "M0": {
+        "ecart_relatif_max": 1.8452753415275884,
+        "ecart_relatif_median": 0.5263608248220157,
+        "parametres_stables_entre_regimes": false
+      },
+      "M1": {
+        "ecart_relatif_max": 0.9705288629476021,
+        "ecart_relatif_median": 0.8858610320738171,
+        "parametres_stables_entre_regimes": false
+      },
+      "M2": {
+        "ecart_relatif_max": 0.9390122718880514,
+        "ecart_relatif_median": 0.8153633135134504,
+        "parametres_stables_entre_regimes": false
+      },
+      "M1P": {
+        "ecart_relatif_max": 1.965306063979963,
+        "ecart_relatif_median": 0.8803134501063034,
+        "parametres_stables_entre_regimes": false
+      }
+    },
+    "lecture": "Des paramètres qui changent fortement entre les deux régimes indiquent que l'opérateur de réponse n'est pas fixe — c'est l'affirmation du §13.4 du CODEBOOK, testée ici sur données réelles. Ce n'est pas un succès du modèle : c'est un constat que sa forme actuelle ne suffit pas."
+  }
+}

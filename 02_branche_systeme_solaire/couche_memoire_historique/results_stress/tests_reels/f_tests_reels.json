@@ -1,0 +1,103 @@
+{
+  "T1_plancher_incertitude": {
+    "erreur_publiee_moyenne_standardisee": 0.20128976119373804,
+    "erreur_publiee_mediane_standardisee": 0.18276915362627547,
+    "rmse_par_modele": {
+      "M0": 2.094492827988389,
+      "M1": 2.1177903406960645,
+      "M2": 2.042004239934863,
+      "M1P": 1.5533110936671264
+    },
+    "amelioration_absolue_M2_sur_M1": 0.07578610076120151,
+    "amelioration_absolue_M2_sur_M1P": -0.48869314626773663,
+    "gain_M2_sur_M1_depasse_l_incertitude": false,
+    "rapport_gain_sur_incertitude": 0.3765025121583738,
+    "lecture": "Un écart de RMSE plus petit que l'incertitude publiée de l'archive ne peut pas être attribué au modèle."
+  },
+  "T2_enregistrement_complet": {
+    "calibration_ka": [
+      5300,
+      2600
+    ],
+    "prediction_ka": [
+      2600,
+      0
+    ],
+    "points_calibration": 2701,
+    "points_prediction": 2600,
+    "metriques": {
+      "M0": {
+        "rmse": 3.8736107506300823,
+        "correlation": 0.42718950554014024,
+        "rapport_100_41": 0.031652396299795105,
+        "n_eff": 25.933031305612513
+      },
+      "M1": {
+        "rmse": 4.267485700750265,
+        "correlation": 0.388473696895193,
+        "rapport_100_41": 0.04060300519142281,
+        "n_eff": 24.984912365890153
+      },
+      "M2": {
+        "rmse": 6.7566027377531634,
+        "correlation": 0.5218444259705348,
+        "rapport_100_41": 1.6945692341567724,
+        "n_eff": 7.4499417448799115
+      },
+      "M1P": {
+        "rmse": 2.7673831505711144,
+        "correlation": 0.48867698826874856,
+        "rapport_100_41": 0.0297507582914022,
+        "n_eff": 28.810840354439517
+      }
+    },
+    "rapport_100_41_observe": 1.2902739305470834,
+    "gains": {
+      "M1": {
+        "gain": -0.5832748394599865,
+        "ic_2.5": -0.8120716058549572,
+        "ic_97.5": -0.13178550857940222
+      },
+      "M1P": {
+        "gain": -1.4415132889563123,
+        "ic_2.5": -1.7885819044522209,
+        "ic_97.5": -0.8097714325194872
+      }
+    },
+    "lecture": "La transition du Pléistocène moyen est ici entièrement hors échantillon, ce que la fenêtre 2,6-1,2 Ma ne permettait pas."
+  },
+  "T3_plancher_orbital": {
+    "disponible": true,
+    "solutions": [
+      "La2010a_",
+      "La2010b_",
+      "La2010c_",
+      "La2010d_"
+    ],
+    "points_compares": 2601,
+    "dispersion_moyenne": 1.4355639369473293e-05,
+    "dispersion_max": 0.00010632900000000049,
+    "excentricite_moyenne": 0.027646048695597846,
+    "dispersion_relative_moyenne": 0.0005192655025511541,
+    "lecture": "Quatre solutions orbitales également admissibles diffèrent de cette quantité. Aucun résultat dont l'effet est plus petit que cette dispersion ne peut être attribué à l'astronomie."
+  },
+  "T4_chronologie_spectrale": {
+    "largeur_fenetre_ka": 800,
+    "pas_ka": 50,
+    "date_de_transition_ka": {
+      "LR04": 4350.0,
+      "M0": null,
+      "M1": 3150.0,
+      "M2": 1850.0,
+      "M1P": null
+    },
+    "rapport_max_par_serie": {
+      "LR04": 6.626841562835038,
+      "M0": 0.31580009317724156,
+      "M1": 1.0224789885235972,
+      "M2": 15.746138995480235,
+      "M1P": 0.38339532581677443
+    },
+    "lecture": "La date de franchissement du rapport 1 mesure la chronologie de la transition. Un modèle qui ne franchit jamais 1 ne la produit pas."
+  }
+}

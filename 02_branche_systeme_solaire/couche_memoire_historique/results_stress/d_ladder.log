@@ -1,0 +1,31 @@
+  reference/livre: gain vs M1 = +0.0600, vs M1P = -0.1838 (3 s)
+  reference/faible: gain vs M1 = +0.0599, vs M1P = -0.1839 (9 s)
+  reference/moyen: gain vs M1 = +0.0604, vs M1P = -0.1839 (26 s)
+  reference/eleve: gain vs M1 = +0.0604, vs M1P = -0.1839 (65 s)
+  reference/maximal: gain vs M1 = +0.0604, vs M1P = -0.1839 (93 s)
+  wide/livre: gain vs M1 = +0.0360, vs M1P = -0.3163 (3 s)
+  wide/faible: gain vs M1 = +0.0360, vs M1P = -0.3036 (11 s)
+  wide/moyen: gain vs M1 = +0.0360, vs M1P = -0.3097 (33 s)
+  wide/eleve: gain vs M1 = +0.0358, vs M1P = -0.3149 (144 s)
+  wide/maximal: gain vs M1 = +0.0357, vs M1P = -0.3156 (219 s)
+{
+  "seeds": [
+    729,
+    766,
+    803,
+    840
+  ],
+  "levels": [
+    "livre",
+    "faible",
+    "moyen",
+    "eleve",
+    "maximal"
+  ],
+  "gain_vs_M1_at_delivered_budget": 0.05998444759560695,
+  "gain_vs_M1_at_maximal_budget": 0.03573691391200107,
+  "gain_vs_M1P_at_maximal_budget": -0.3156430276014077,
+  "levels_where_gain_vs_M1_above_5pct": 5,
+  "levels_where_gain_vs_M1P_above_5pct": 0,
+  "total_levels": 10
+}

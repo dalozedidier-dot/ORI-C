@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "ORI-C — plateforme complète de tests"
+message: "Citez ce logiciel et les documents ORI-C associés lorsque vous l'utilisez."
+type: software
+authors:
+  - family-names: Daloze
+    given-names: Didier
+version: 0.2.0
+date-released: 2026-08-01

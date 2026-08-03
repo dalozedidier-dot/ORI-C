@@ -1,0 +1,18 @@
+{
+  "tau_temperature_myr": 0.05,
+  "tau_ice_myr": 0.18,
+  "tau_co2_myr": 0.8,
+  "global_forcing_gain": 2.2,
+  "co2_temperature_gain": 1.6,
+  "ice_albedo_gain": 3.8,
+  "polar_forcing_gain": 1.3,
+  "ice_threshold": 0.2,
+  "ice_transition_width": 0.55,
+  "bedrock_ice_gain": 1.5,
+  "bedrock_tau_gain": 1.5,
+  "regolith_erosion_rate": 0.11,
+  "tau_regolith_recovery_myr": 60.0,
+  "carbon_sequestration_gain": 0.6,
+  "tau_carbon_memory_myr": 8.0,
+  "weathering_temperature_gain": 0.09
+}

@@ -1,0 +1,15 @@
+TEST INTERVENTIONNEL ORI-C - MODÈLE CONTRÔLÉ ILLUSTRATIF
+Conditions initiales, apport de S et cinétique : identiques
+Intervention unique : perte de P 0.250 -> 0.020
+Horizon d'intégration : 500 unités
+Plateau P, phase libre : 7.976190
+Plateau P, compartiment sélectif : 35.445469
+Facteur de rétention : 4.4439
+Facteur de rétention, valeur analytique exacte : 4.4439
+Écart relatif au stationnaire exact : 2.44e-12
+Delta_V : 3.4439
+Delta_Pi : 27.4693
+Plateaux stables : libre=True, compartiment=True
+Plateaux convergés : libre=True, compartiment=True
+Verdict interne : Le critère causal défini est satisfait dans ce modèle : la variation contrôlée de la perte de P modifie reproductiblement l'état stationnaire.
+Portée : test de cohérence interne d'un modèle défini, sans portée probante générale sur le vivant.

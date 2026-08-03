@@ -1,0 +1,65 @@
+{
+  "status": "valid",
+  "errors": [],
+  "nodes": 53,
+  "hyperedges": 53,
+  "sources": 27,
+  "multi_input_edges": 29,
+  "multi_output_edges": 13,
+  "recycling_or_transport_edges_with_shared_endpoint": 5,
+  "explicit_scenario_or_hypothesis_edges": 4,
+  "edge_types": {
+    "transmission": 6,
+    "transformation": 17,
+    "transport": 6,
+    "assemblage": 9,
+    "recyclage": 2,
+    "concentration": 1,
+    "collectif": 1,
+    "transition": 3,
+    "filtrage": 2,
+    "separation": 1,
+    "fragmentation": 1,
+    "partitionnement": 1,
+    "selection": 1,
+    "contrainte": 1,
+    "condition": 1
+  },
+  "evidence_statuses": {
+    "observe_infere": 17,
+    "modele_appuye": 7,
+    "observe_modele": 9,
+    "experience_modele": 3,
+    "modele": 2,
+    "observe": 8,
+    "observe_hypothese": 1,
+    "observe_experience": 2,
+    "scenario_concurrent": 2,
+    "definition_operationnelle": 1,
+    "hypothese_testable": 1
+  },
+  "old_relations_reclassified": 47,
+  "old_relation_classes": {
+    "contrainte_inventaire": 2,
+    "filiation_materielle": 13,
+    "condition_ouverture": 23,
+    "transformation_environnementale": 5,
+    "dependance_non_genealogique": 3,
+    "transmission_trace_historique": 1
+  },
+  "tests": {
+    "not_a_linear_tree": true,
+    "all_endpoints_exist": true,
+    "all_edges_sourced": true,
+    "competing_scenarios_explicit": true,
+    "four_relation_families_represented": true,
+    "genealogically_closed": true,
+    "cosmic_continuity_complete": true
+  },
+  "declared_roots": [
+    "N036"
+  ],
+  "nodes_reachable_from_root": 53,
+  "unreachable_nodes": [],
+  "scope": "Hypergraphe mécanistique initial. Il organise des relations sourcées et des scénarios; il ne valide pas ORI-C ni ne remplace une mesure quantitative d'inventaire accessible."
+}

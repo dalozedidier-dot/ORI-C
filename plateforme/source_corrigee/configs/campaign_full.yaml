@@ -1,0 +1,14 @@
+name: ORI-C-complet
+selection:
+  all: true
+  max_priority: 3
+execution:
+  seed: 20260801
+  allow_missing_data: true
+  include_noncomputational: true
+paths:
+  data_dir: ../data
+  output_dir: ../results/full
+  criteria_file: ../preregistration/criteria.csv
+metadata:
+  scope: totalité du programme ORI-C

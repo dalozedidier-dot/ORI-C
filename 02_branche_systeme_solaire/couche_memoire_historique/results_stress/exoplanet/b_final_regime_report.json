@@ -1,0 +1,87 @@
+{
+  "grid_points": 54,
+  "obliquities_deg": [
+    5.0,
+    12.0,
+    18.0,
+    23.5,
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    70.0
+  ],
+  "eccentricities": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.18,
+    0.3
+  ],
+  "attractor_probes_per_point": 150,
+  "attractor_duration_myr": 400.0,
+  "variables": {
+    "temperature_k": {
+      "threshold": 0.1,
+      "max_attractor_spread": 2.664477773246955,
+      "points_with_multiple_attractors": 4,
+      "max_delta_10myr": 0.16782694070324303,
+      "max_delta_200myr": 0.0077178375667177335,
+      "points_material_at_10myr": 2,
+      "points_material_at_200myr": 0
+    },
+    "ice_fraction": {
+      "threshold": 0.01,
+      "max_attractor_spread": 0.9243429311269372,
+      "points_with_multiple_attractors": 4,
+      "max_delta_10myr": 0.05810452910155389,
+      "max_delta_200myr": 0.0027577074330963607,
+      "points_material_at_10myr": 5,
+      "points_material_at_200myr": 0
+    },
+    "co2_ppm": {
+      "threshold": 1.0,
+      "max_attractor_spread": 181.39438501199353,
+      "points_with_multiple_attractors": 4,
+      "max_delta_10myr": 8.356647499659886,
+      "max_delta_200myr": 0.3877383449353857,
+      "points_material_at_10myr": 26,
+      "points_material_at_200myr": 0
+    },
+    "productivity": {
+      "threshold": 0.01,
+      "max_attractor_spread": 0.6039367235940585,
+      "points_with_multiple_attractors": 4,
+      "max_delta_10myr": 0.03404986468438037,
+      "max_delta_200myr": 0.0015110168471820784,
+      "points_material_at_10myr": 3,
+      "points_material_at_200myr": 0
+    }
+  },
+  "best_temperature_point": {
+    "final_obliquity_deg": 30.0,
+    "final_eccentricity": 0.1,
+    "attractor_ice_mean": 0.4224162025063659,
+    "attractor_temperature_mean": -1.3838971086530778,
+    "attractor_spread_temperature_k": 2.563567033988991,
+    "delta10_temperature_k": 0.16782694070324303,
+    "delta50_temperature_k": 0.0703502455228763,
+    "delta200_temperature_k": 0.0077178375667177335,
+    "attractor_spread_ice_fraction": 0.9243429311269372,
+    "delta10_ice_fraction": 0.05810452910155389,
+    "delta50_ice_fraction": 0.025403308087557905,
+    "delta200_ice_fraction": 0.0027577074330963607,
+    "attractor_spread_co2_ppm": 181.39438501199353,
+    "delta10_co2_ppm": 7.568169214565884,
+    "delta50_co2_ppm": 3.702729391675831,
+    "delta200_co2_ppm": 0.3877383449353857,
+    "attractor_spread_productivity": 0.6039367235940585,
+    "delta10_productivity": 0.03404986468438037,
+    "delta50_productivity": 0.013957557478619542,
+    "delta200_productivity": 0.0015110168471820784
+  },
+  "non_snowball_points": 31,
+  "non_snowball_max_delta10_temperature_k": 0.16782694070324303,
+  "non_snowball_max_delta200_temperature_k": 0.0077178375667177335
+}

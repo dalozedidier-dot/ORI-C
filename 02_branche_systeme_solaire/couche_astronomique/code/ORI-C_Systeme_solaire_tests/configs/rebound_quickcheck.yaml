@@ -1,0 +1,49 @@
+experiment:
+  name: rebound_quickcheck
+  backend: rebound
+  duration_years: 200
+  output_step_years: 0.5
+  seed: 20260729
+  output_dir: runs/rebound_quickcheck
+
+rebound:
+  integrator: whfast
+  timestep_years: 0.01
+  exact_finish_time: false
+  include_planets: [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]
+  ejection_radius_au: 200.0
+
+scenarios:
+  - name: baseline
+    modifications: {}
+  - name: jupiter_mass_plus_5pct
+    modifications:
+      Jupiter:
+        mass_scale: 1.05
+
+spectrum:
+  target_body: Earth
+  variable: eccentricity
+  min_period_years: 2
+  max_period_years: 150
+  peak_count: 6
+  red_noise_surrogates: 16
+  confidence: 0.95
+
+insolation:
+  latitude_deg: 65.0
+  solar_longitude_deg: 90.0
+  solar_constant_w_m2: 1361.0
+  obliquity_deg: 23.44
+
+climate:
+  response_time_years: 20
+  ice_response_time_years: 80
+  reference_temperature_c: 8.0
+  forcing_sensitivity_k_per_w_m2: 0.035
+  ice_cooling_k: 10.0
+  freeze_on_c: 5.5
+  melt_off_c: 7.0
+
+archive:
+  enabled: false

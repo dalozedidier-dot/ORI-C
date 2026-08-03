@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-tmp/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Les données brutes volumineuses seront archivées sur OSF/Zenodo.
+plateforme/campagne_maximale_reelle/sources_brutes/
+

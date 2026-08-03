@@ -1,0 +1,19 @@
+Famille;Génération;Nom;Symbole;Charge e;Spin;Charge de couleur;Antiparticule;Stabilité;Rôle physique;Statut;Référence;Source URL
+Fermion, quark;1;up;u;+2/3;1/2;Oui;anti-u;Instable à l'état libre, confiné;Constituant des protons et neutrons;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, quark;1;down;d;-1/3;1/2;Oui;anti-d;Instable à l'état libre, confiné;Constituant des protons et neutrons;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, quark;2;charm;c;+2/3;1/2;Oui;anti-c;Très instable;Hadrons charmés;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, quark;2;strange;s;-1/3;1/2;Oui;anti-s;Instable;Hadrons étranges;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, quark;3;top;t;+2/3;1/2;Oui;anti-t;Extrêmement instable, pas d'hadronisation ordinaire;Quark le plus massif connu;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, quark;3;bottom;b;-1/3;1/2;Oui;anti-b;Très instable;Hadrons beaux;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;1;électron;e-;−1;1/2;Non;positron e+;Stable dans les limites observées;Atomes, courants électriques, chimie;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;1;neutrino électronique;νe;0;1/2;Non;anti-νe ou identité Majorana non résolue;Stable ou extrêmement long vécu;Interactions faibles, oscillations;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;2;muon;μ-;−1;1/2;Non;anti-muon μ+;Instable;Lepton lourd;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;2;neutrino muonique;νμ;0;1/2;Non;anti-νμ ou identité Majorana non résolue;Stable ou extrêmement long vécu;Interactions faibles, oscillations;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;3;tau;τ-;−1;1/2;Non;anti-tau τ+;Très instable;Lepton lourd;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Fermion, lepton;3;neutrino tauique;ντ;0;1/2;Non;anti-ντ ou identité Majorana non résolue;Stable ou extrêmement long vécu;Interactions faibles, oscillations;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson de jauge;Sans génération;photon;γ;0;1;Non;Lui-même;Stable;Interaction électromagnétique;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson de jauge;Sans génération;gluon;g;0;1;Oui, charge de couleur;Lui-même au niveau des états de couleur;Confiné;Interaction forte;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson de jauge;Sans génération;boson W positif;W+;+1;1;Non;W-;Très instable;Interaction faible chargée;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson de jauge;Sans génération;boson W négatif;W-;−1;1;Non;W+;Très instable;Interaction faible chargée;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson de jauge;Sans génération;boson Z;Z0;0;1;Non;Lui-même;Très instable;Interaction faible neutre;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/
+Boson scalaire;Sans génération;boson de Higgs;H0;0;0;Non;Lui-même dans le Modèle standard;Très instable;Excitation du champ de Higgs;Confirmé;CERN / PDG;https://home.cern/science/physics/standard-model/

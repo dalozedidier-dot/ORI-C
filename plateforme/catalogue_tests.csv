@@ -1,0 +1,684 @@
+test_id,wp,section,ordinal,description,mode,engine,required_datasets,confirmatory,priority,source_line
+S1-001,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",1,Vérifier qu’elles peuvent être codées sans chevauchement complet sur au moins 100 systèmes provenant des trois branches.,automated,core_formal,,False,1,115
+S1-002,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",2,Mesurer l’accord entre plusieurs codeurs indépendants.,human_review,core_formal,,False,1,116
+S1-003,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",3,Calculer la stabilité du codage après retrait du nom du domaine.,automated,core_formal,,False,1,117
+S1-004,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",4,Tester des cas limites où une variable peut appartenir à deux dimensions.,automated,core_formal,,False,1,118
+S1-005,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",5,"Comparer une version à six dimensions à des versions réduites à cinq, quatre et trois dimensions.",automated,core_formal,,False,1,119
+S1-006,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",6,Tester si l’ajout de chaque dimension améliore réellement une tâche de classification ou de prédiction.,automated,core_formal,,False,1,120
+S1-007,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",7,Mesurer la redondance entre dimensions par information mutuelle et corrélations conditionnelles.,automated,core_formal,,False,1,121
+S1-008,S1,"S1.1 Les six dimensions `n, G, I, E, Π, H`",8,Vérifier l’invariance des conclusions sous plusieurs normalisations.,automated,core_formal,,False,1,122
+S1-009,S1,"S1.2 Séparation `X`, `m` et `A`",9,Construire des systèmes synthétiques où la vérité est connue.,automated,core_formal,,False,1,126
+S1-010,S1,"S1.2 Séparation `X`, `m` et `A`",10,Produire des changements d’état sans changement d’opérateur.,automated,core_formal,,False,1,127
+S1-011,S1,"S1.2 Séparation `X`, `m` et `A`",11,Produire des changements de paramètres structurels.,automated,core_formal,,False,1,128
+S1-012,S1,"S1.2 Séparation `X`, `m` et `A`",12,Produire des changements de topologie.,automated,core_formal,,False,1,129
+S1-013,S1,"S1.2 Séparation `X`, `m` et `A`",13,Tester si la règle ORI-C classe correctement les trois cas.,automated,core_formal,,False,1,130
+S1-014,S1,"S1.2 Séparation `X`, `m` et `A`",14,Comparer cette classification à des méthodes de détection de changement de régime.,automated,core_formal,,False,1,131
+S1-015,S1,"S1.2 Séparation `X`, `m` et `A`",15,Tester la dépendance au niveau de description.,automated,core_formal,,False,1,132
+S1-016,S1,"S1.2 Séparation `X`, `m` et `A`",16,Mesurer l’accord entre codeurs sur des cas empiriques.,human_review,core_formal,,False,1,133
+S1-017,S1,"S1.2 Séparation `X`, `m` et `A`",17,Vérifier si un changement classé architectural améliore la prédiction d’une réponse future.,automated,core_formal,,False,1,134
+S1-018,S1,"S1.2 Séparation `X`, `m` et `A`",18,Rechercher des faux positifs où une dérive lente de paramètres ressemble à une transformation architecturale.,automated,core_formal,,False,1,135
+S1-019,S1,S1.3 Mémoire distribuée,19,Simuler une mémoire unique à noyau fixe.,automated,core_formal,,False,1,139
+S1-020,S1,S1.3 Mémoire distribuée,20,Simuler plusieurs mémoires indépendantes.,automated,core_formal,,False,1,140
+S1-021,S1,S1.3 Mémoire distribuée,21,Simuler plusieurs mémoires couplées.,automated,core_formal,,False,1,141
+S1-022,S1,S1.3 Mémoire distribuée,22,Rendre les noyaux dépendants de l’état.,automated,core_formal,,False,1,142
+S1-023,S1,S1.3 Mémoire distribuée,23,Faire varier les constantes de temps sur plusieurs ordres de grandeur.,automated,core_formal,,False,1,143
+S1-024,S1,S1.3 Mémoire distribuée,24,Comparer une intégrale cumulée unique à un modèle multi-mémoires.,automated,core_formal,,False,1,144
+S1-025,S1,S1.3 Mémoire distribuée,25,Tester l’identifiabilité du nombre de mémoires.,automated,core_formal,,False,1,145
+S1-026,S1,S1.3 Mémoire distribuée,26,Tester la capacité à distinguer mémoire longue et attracteur multiple.,automated,core_formal,,False,1,146
+S1-027,S1,S1.3 Mémoire distribuée,27,Tester le transfert d’une trace rapide vers un compartiment lent.,automated,core_formal,,False,1,147
+S1-028,S1,S1.3 Mémoire distribuée,28,Tester le transfert inverse.,automated,core_formal,,False,1,148
+S1-029,S1,S1.3 Mémoire distribuée,29,Mesurer la durée nécessaire pour éviter de confondre relaxation et inscription.,automated,core_formal,,False,1,149
+S1-030,S1,S1.3 Mémoire distribuée,30,"Comparer modèles convolutionnels, espaces d’état, équations différentielles retardées et réseaux récurrents contraints.",automated,core_formal,,False,1,150
+S1-031,S1,S1.4 Diagnostic `D-H-L`,31,Générer des systèmes présentant `D` seul.,automated,core_formal,,False,1,154
+S1-032,S1,S1.4 Diagnostic `D-H-L`,32,Générer des systèmes présentant `H` seul.,automated,core_formal,,False,1,155
+S1-033,S1,S1.4 Diagnostic `D-H-L`,33,Générer des systèmes présentant `L` seul.,automated,core_formal,,False,1,156
+S1-034,S1,S1.4 Diagnostic `D-H-L`,34,Générer les quatre combinaisons doubles et la combinaison triple.,automated,core_formal,,False,1,157
+S1-035,S1,S1.4 Diagnostic `D-H-L`,35,Vérifier que les métriques restent séparables.,automated,core_formal,,False,1,158
+S1-036,S1,S1.4 Diagnostic `D-H-L`,36,Tester la sensibilité au bruit et aux données manquantes.,data_required,core_formal,,False,1,159
+S1-037,S1,S1.4 Diagnostic `D-H-L`,37,Comparer plusieurs estimateurs du temps de relaxation.,automated,core_formal,,False,1,160
+S1-038,S1,S1.4 Diagnostic `D-H-L`,38,Comparer plusieurs définitions de seuil aller-retour.,automated,core_formal,,False,1,161
+S1-039,S1,S1.4 Diagnostic `D-H-L`,39,Tester la détection de pertes topologiques.,automated,core_formal,,False,1,162
+S1-040,S1,S1.4 Diagnostic `D-H-L`,40,Vérifier que `L` distingue perte réelle et coût d’accès accru.,automated,core_formal,,False,1,163
+S1-041,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",41,Définir un estimateur opérationnel par domaine.,automated,core_formal,,False,1,167
+S1-042,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",42,Tester la dépendance à l’horizon `T`.,automated,core_formal,,False,1,168
+S1-043,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",43,Tester la dépendance aux ressources et contraintes `C`.,automated,core_formal,,False,1,169
+S1-044,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",44,Tester la dépendance au seuil probabiliste `ε`.,automated,core_formal,,False,1,170
+S1-045,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",45,"Comparer échantillonnage Monte-Carlo, continuation numérique, méthodes de viabilité et apprentissage de variétés.",automated,core_formal,,False,1,171
+S1-046,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",46,Mesurer le volume accessible avant et après une transition.,automated,core_formal,,False,1,172
+S1-047,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",47,Mesurer les états nouvellement accessibles.,automated,core_formal,,False,1,173
+S1-048,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",48,Mesurer les états devenus inaccessibles.,automated,core_formal,,False,1,174
+S1-049,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",49,Mesurer le coût énergétique et temporel d’accès.,automated,core_formal,,False,1,175
+S1-050,S1,"S1.5 `Pth` et `Pacc(T,C,ε)`",50,Vérifier la robustesse des conclusions à la métrique de distance choisie.,automated,core_formal,,False,1,176
+S2-001,S2,Test interventionnel du socle,1,"Remplacer la cinétique de Monod par Hill, Contois, Haldane et Droop.",automated,intervention,,False,1,182
+S2-002,S2,Test interventionnel du socle,2,Ajouter une ressource secondaire limitante.,automated,intervention,,False,1,183
+S2-003,S2,Test interventionnel du socle,3,Ajouter plusieurs espèces concurrentes.,laboratory,intervention,,False,1,184
+S2-004,S2,Test interventionnel du socle,4,Ajouter coopération et cross-feeding.,automated,intervention,,False,1,185
+S2-005,S2,Test interventionnel du socle,5,Ajouter prédation ou phage.,automated,intervention,,False,1,186
+S2-006,S2,Test interventionnel du socle,6,Ajouter bruit démographique.,automated,intervention,,False,1,187
+S2-007,S2,Test interventionnel du socle,7,Ajouter bruit environnemental coloré.,automated,intervention,,False,1,188
+S2-008,S2,Test interventionnel du socle,8,Ajouter délais et mémoire physiologique.,automated,intervention,,False,1,189
+S2-009,S2,Test interventionnel du socle,9,Ajouter hétérogénéité spatiale.,automated,intervention,,False,1,190
+S2-010,S2,Test interventionnel du socle,10,Ajouter biofilm et diffusion.,automated,intervention,,False,1,191
+S2-011,S2,Test interventionnel du socle,11,Tester des pertes dépendantes de la densité.,automated,intervention,,False,1,192
+S2-012,S2,Test interventionnel du socle,12,Tester des pertes pulsées.,automated,intervention,,False,1,193
+S2-013,S2,Test interventionnel du socle,13,Tester des pertes corrélées à la ressource.,automated,intervention,,False,1,194
+S2-014,S2,Test interventionnel du socle,14,Rechercher les domaines où réduire une perte diminue la persistance globale par effet indirect.,automated,intervention,,False,1,195
+S2-015,S2,Test interventionnel du socle,15,Comparer le résultat à des modèles de contrôle optimal.,automated,intervention,,False,1,196
+S2-016,S2,Test interventionnel du socle,16,Tester le seuil de lavage sur données expérimentales de chémostat publiées.,laboratory,intervention,,False,1,197
+S2-017,S2,Test interventionnel du socle,17,Concevoir une expérience de laboratoire simple avec intervention préenregistrée.,laboratory,intervention,,True,1,198
+S2-018,S2,Test interventionnel du socle,18,Répliquer dans au moins deux espèces et deux milieux.,laboratory,intervention,,False,1,199
+S2-019,S2,Test interventionnel du socle,19,Tester la généralisation hors chémostat.,laboratory,intervention,,False,1,200
+S2-020,S2,Test interventionnel du socle,20,"Séparer clairement le théorème local, la robustesse structurelle et la validité biologique.",automated,intervention,,False,1,201
+S3-001,S3,Carte relationnelle et transitions,1,Régénérer la carte avec `CLOS` et `INTG` instanciés.,data_required,relation_graph,relations;states,False,1,205
+S3-002,S3,Carte relationnelle et transitions,2,Vérifier automatiquement l’absence de cycles interdits.,data_required,relation_graph,relations;states,False,1,206
+S3-003,S3,Carte relationnelle et transitions,3,Vérifier la cohérence chronologique de chaque relation.,data_required,relation_graph,relations;states,False,1,207
+S3-004,S3,Carte relationnelle et transitions,4,Vérifier la compatibilité du type de relation avec les définitions.,data_required,relation_graph,relations;states,False,1,208
+S3-005,S3,Carte relationnelle et transitions,5,Faire coder les 47 relations par trois experts indépendants.,human_review,relation_graph,relations;states,False,1,209
+S3-006,S3,Carte relationnelle et transitions,6,Mesurer l’accord inter-évaluateurs.,human_review,relation_graph,relations;states,False,1,210
+S3-007,S3,Carte relationnelle et transitions,7,Publier les désaccords.,human_review,relation_graph,relations;states,False,1,211
+S3-008,S3,Carte relationnelle et transitions,8,Tester des relations candidates refusées.,data_required,relation_graph,relations;states,False,1,212
+S3-009,S3,Carte relationnelle et transitions,9,Ajouter des contre-exemples pour chaque type de lien.,data_required,relation_graph,relations;states,False,1,213
+S3-010,S3,Carte relationnelle et transitions,10,Tester la stabilité de la carte lorsque les transitions incertaines sont retirées.,data_required,relation_graph,relations;states,False,1,214
+S3-011,S3,Carte relationnelle et transitions,11,Tester la stabilité sous fusion ou division de transitions.,data_required,relation_graph,relations;states,False,1,215
+S3-012,S3,Carte relationnelle et transitions,12,"Mesurer centralité, modularité, chemins et goulets d’étranglement.",data_required,relation_graph,relations;states,False,1,216
+S3-013,S3,Carte relationnelle et transitions,13,Vérifier que les propriétés de graphe ne proviennent pas du choix manuel des nœuds.,data_required,relation_graph,relations;states,False,1,217
+S3-014,S3,Carte relationnelle et transitions,14,Comparer à des graphes nuls conservant le degré.,data_required,relation_graph,relations;states,False,1,218
+S3-015,S3,Carte relationnelle et transitions,15,Tester si la carte prédit correctement des relations masquées.,data_required,relation_graph,relations;states,False,1,219
+S3-016,S3,Carte relationnelle et transitions,16,Comparer cette prédiction à des méthodes simples de proximité temporelle.,data_required,relation_graph,relations;states,False,1,220
+S3-017,S3,Carte relationnelle et transitions,17,Comparer à des graph embeddings.,data_required,relation_graph,relations;states,False,1,221
+S3-018,S3,Carte relationnelle et transitions,18,Tester la capacité à proposer des relations nouvelles qui seront ensuite validées par la littérature.,human_review,relation_graph,relations;states,False,1,222
+S3-019,S3,Carte relationnelle et transitions,19,Mesurer le taux de faux positifs.,data_required,relation_graph,relations;states,False,1,223
+S3-020,S3,Carte relationnelle et transitions,20,Geler une version confirmatoire de la carte avant toute nouvelle recherche bibliographique.,data_required,relation_graph,relations;states,False,1,224
+M1-001,M1,Base de données des transitions matérielles,1,définir l’état antérieur,data_required,matter_transitions,matter_transitions,False,1,236
+M1-002,M1,Base de données des transitions matérielles,2,définir l’état postérieur,data_required,matter_transitions,matter_transitions,False,1,237
+M1-003,M1,Base de données des transitions matérielles,3,"définir les variables `n, G, I, E, Π, H`",data_required,matter_transitions,matter_transitions,False,1,238
+M1-004,M1,Base de données des transitions matérielles,4,dater la transition avec intervalle d’incertitude,data_required,matter_transitions,matter_transitions,False,1,239
+M1-005,M1,Base de données des transitions matérielles,5,lister les preuves directes,data_required,matter_transitions,matter_transitions,False,1,240
+M1-006,M1,Base de données des transitions matérielles,6,lister les preuves indirectes,data_required,matter_transitions,matter_transitions,False,1,241
+M1-007,M1,Base de données des transitions matérielles,7,lister les modèles concurrents,data_required,matter_transitions,matter_transitions,False,1,242
+M1-008,M1,Base de données des transitions matérielles,8,identifier le seuil ou la plage de transition,data_required,matter_transitions,matter_transitions,False,1,243
+M1-009,M1,Base de données des transitions matérielles,9,identifier la vitesse de variation,data_required,matter_transitions,matter_transitions,False,1,244
+M1-010,M1,Base de données des transitions matérielles,10,identifier les états devenus accessibles,data_required,matter_transitions,matter_transitions,False,1,245
+M1-011,M1,Base de données des transitions matérielles,11,identifier les états fermés,data_required,matter_transitions,matter_transitions,False,1,246
+M1-012,M1,Base de données des transitions matérielles,12,identifier les pertes,data_required,matter_transitions,matter_transitions,False,1,247
+M1-013,M1,Base de données des transitions matérielles,13,identifier les mécanismes de persistance,data_required,matter_transitions,matter_transitions,False,1,248
+M1-014,M1,Base de données des transitions matérielles,14,identifier les contre-exemples,data_required,matter_transitions,matter_transitions,False,1,249
+M1-015,M1,Base de données des transitions matérielles,15,attribuer un niveau de preuve par évaluateurs indépendants,human_review,matter_transitions,matter_transitions,False,1,250
+M2-001,M2,Nucléosynthèse et enrichissement,1,Reproduire les abondances primordiales avec plusieurs codes publics.,external_code,nucleosynthesis,nucleosynthesis_yields,False,2,254
+M2-002,M2,Nucléosynthèse et enrichissement,2,"Comparer aux observations de deutérium, hélium et lithium.",data_required,nucleosynthesis,nucleosynthesis_yields,False,2,255
+M2-003,M2,Nucléosynthèse et enrichissement,3,Quantifier les incertitudes nucléaires.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,256
+M2-004,M2,Nucléosynthèse et enrichissement,4,Tester l’effet des masses stellaires sur les rendements.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,257
+M2-005,M2,Nucléosynthèse et enrichissement,5,"Tester métallicité, rotation et binarité.",data_required,nucleosynthesis,nucleosynthesis_yields,False,2,258
+M2-006,M2,Nucléosynthèse et enrichissement,6,"Comparer supernovæ, étoiles AGB, fusions d’objets compacts et autres sources.",data_required,nucleosynthesis,nucleosynthesis_yields,False,2,259
+M2-007,M2,Nucléosynthèse et enrichissement,7,Construire des histoires d’enrichissement différentes atteignant une métallicité finale comparable.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,260
+M2-008,M2,Nucléosynthèse et enrichissement,8,Mesurer les différences de rapports isotopiques résiduels.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,261
+M2-009,M2,Nucléosynthèse et enrichissement,9,Tester si l’histoire reste récupérable à partir de l’état final.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,262
+M2-010,M2,Nucléosynthèse et enrichissement,10,Mesurer l’expansion du réseau de réactions accessible après chaque famille d’éléments.,data_required,nucleosynthesis,nucleosynthesis_yields,False,2,263
+M3-001,M3,"Molécules, grains et glaces",1,Construire un réseau chimique interstellaire versionné.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,267
+M3-002,M3,"Molécules, grains et glaces",2,"Tester température, densité, ionisation, UV et chocs.",data_required,astrochemistry,reaction_network;molecular_inventory,False,2,268
+M3-003,M3,"Molécules, grains et glaces",3,Comparer chimie gazeuse et chimie de surface.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,269
+M3-004,M3,"Molécules, grains et glaces",4,Tester la composition des grains.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,270
+M3-005,M3,"Molécules, grains et glaces",5,Tester l’épaisseur et la stratification des glaces.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,271
+M3-006,M3,"Molécules, grains et glaces",6,"Tester plusieurs ordres d’irradiation, chauffage et refroidissement.",data_required,astrochemistry,reaction_network;molecular_inventory,False,2,272
+M3-007,M3,"Molécules, grains et glaces",7,Rechercher des dépendances au chemin à état final macroscopique égal.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,273
+M3-008,M3,"Molécules, grains et glaces",8,Mesurer les molécules nouvellement accessibles.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,274
+M3-009,M3,"Molécules, grains et glaces",9,Mesurer les molécules détruites ou rendues inaccessibles.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,275
+M3-010,M3,"Molécules, grains et glaces",10,Comparer les prédictions aux inventaires moléculaires astronomiques.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,276
+M3-011,M3,"Molécules, grains et glaces",11,Tester la robustesse aux incertitudes de taux réactionnels.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,277
+M3-012,M3,"Molécules, grains et glaces",12,Faire une analyse globale de sensibilité.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,278
+M3-013,M3,"Molécules, grains et glaces",13,Identifier les réactions qui contrôlent le plus `Pacc`.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,279
+M3-014,M3,"Molécules, grains et glaces",14,Tester la généralisation à plusieurs nuages et disques.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,280
+M3-015,M3,"Molécules, grains et glaces",15,Répliquer avec un second réseau chimique indépendant.,data_required,astrochemistry,reaction_network;molecular_inventory,False,2,281
+M4-001,M4,"Condensation, chondres et solides",1,Reproduire plusieurs séquences de condensation à l’équilibre.,data_required,condensation,thermochemical_phases,False,2,285
+M4-002,M4,"Condensation, chondres et solides",2,"Faire varier pression, C/O, redox et composition.",data_required,condensation,thermochemical_phases,False,2,286
+M4-003,M4,"Condensation, chondres et solides",3,Ajouter cinétique et systèmes ouverts.,data_required,condensation,thermochemical_phases,False,2,287
+M4-004,M4,"Condensation, chondres et solides",4,Ajouter séparation gaz-solides.,data_required,condensation,thermochemical_phases,False,2,288
+M4-005,M4,"Condensation, chondres et solides",5,Ajouter transport radial.,data_required,condensation,thermochemical_phases,False,2,289
+M4-006,M4,"Condensation, chondres et solides",6,Tester plusieurs vitesses de refroidissement.,data_required,condensation,thermochemical_phases,False,2,290
+M4-007,M4,"Condensation, chondres et solides",7,"Comparer aux CAI, chondres et matrices météoritiques.",data_required,condensation,thermochemical_phases,False,2,291
+M4-008,M4,"Condensation, chondres et solides",8,Tester l’héritage présolaire.,data_required,condensation,thermochemical_phases,False,2,292
+M4-009,M4,"Condensation, chondres et solides",9,Mesurer les minéraux accessibles selon l’ordre des traitements.,data_required,condensation,thermochemical_phases,False,2,293
+M4-010,M4,"Condensation, chondres et solides",10,Rechercher des états finaux de composition globale proche mais de minéralogie différente.,data_required,condensation,thermochemical_phases,False,2,294
+M4-011,M4,"Condensation, chondres et solides",11,Mesurer la fermeture de voies par évaporation ou séquestration.,data_required,condensation,thermochemical_phases,False,2,295
+M4-012,M4,"Condensation, chondres et solides",12,Comparer aux bases de données minérales terrestres et météoritiques.,data_required,condensation,thermochemical_phases,False,2,296
+M4-013,M4,"Condensation, chondres et solides",13,Tester la croissance combinatoire du nombre de phases.,data_required,condensation,thermochemical_phases,False,2,297
+M4-014,M4,"Condensation, chondres et solides",14,Comparer cette croissance à des graphes chimiques nuls.,data_required,condensation,thermochemical_phases,False,2,298
+M4-015,M4,"Condensation, chondres et solides",15,Évaluer si ORI-C prédit mieux les phases observées qu’un simple gradient de volatilité.,data_required,condensation,thermochemical_phases,False,2,299
+M5-001,M5,Valeur ajoutée de la branche matière,1,Masquer 20 % des transitions et tenter de les reconstruire avec ORI-C.,data_required,matter_value,matter_transitions,False,2,303
+M5-002,M5,Valeur ajoutée de la branche matière,2,Comparer à une chronologie descriptive simple.,data_required,matter_value,matter_transitions,False,2,304
+M5-003,M5,Valeur ajoutée de la branche matière,3,Comparer à un graphe causal standard.,data_required,matter_value,matter_transitions,False,2,305
+M5-004,M5,Valeur ajoutée de la branche matière,4,Comparer à un modèle de réseau sans histoire.,data_required,matter_value,matter_transitions,False,2,306
+M5-005,M5,Valeur ajoutée de la branche matière,5,Tester si les dimensions ORI-C améliorent la prédiction de la transition suivante.,data_required,matter_value,matter_transitions,False,2,307
+M5-006,M5,Valeur ajoutée de la branche matière,6,Tester si elles améliorent la prédiction des états fermés.,data_required,matter_value,matter_transitions,False,2,308
+M5-007,M5,Valeur ajoutée de la branche matière,7,Tester si elles améliorent l’inférence de l’histoire depuis l’état final.,data_required,matter_value,matter_transitions,False,2,309
+M5-008,M5,Valeur ajoutée de la branche matière,8,Tester la calibration probabiliste des prédictions.,data_required,matter_value,matter_transitions,False,2,310
+M5-009,M5,Valeur ajoutée de la branche matière,9,Répéter sur des sous-domaines indépendants.,data_required,matter_value,matter_transitions,False,2,311
+M5-010,M5,Valeur ajoutée de la branche matière,10,Faire évaluer les prédictions à l’aveugle par des spécialistes.,human_review,matter_value,matter_transitions,True,2,312
+P1-001,P1,Provenance des matériaux,1,"Compiler les isotopes Ti, Cr, Mo, W, Ni, Ru, Pd et autres traceurs disponibles.",data_required,planetary_provenance,isotope_tracers,False,2,320
+P1-002,P1,Provenance des matériaux,2,Tester la dichotomie carbonée et non carbonée par plusieurs méthodes de clustering.,data_required,planetary_provenance,isotope_tracers,False,2,321
+P1-003,P1,Provenance des matériaux,3,Quantifier l’incertitude de classification.,data_required,planetary_provenance,isotope_tracers,False,2,322
+P1-004,P1,Provenance des matériaux,4,Tester les météorites intermédiaires et les exceptions.,data_required,planetary_provenance,isotope_tracers,False,2,323
+P1-005,P1,Provenance des matériaux,5,Comparer plusieurs modèles de barrière dans le disque.,data_required,planetary_provenance,isotope_tracers,False,2,324
+P1-006,P1,Provenance des matériaux,6,Tester les scénarios de transport radial.,data_required,planetary_provenance,isotope_tracers,False,2,325
+P1-007,P1,Provenance des matériaux,7,Reconstruire les mélanges possibles.,data_required,planetary_provenance,isotope_tracers,False,2,326
+P1-008,P1,Provenance des matériaux,8,Vérifier si la provenance améliore la prédiction de la composition finale des corps.,data_required,planetary_provenance,isotope_tracers,False,2,327
+P1-009,P1,Provenance des matériaux,9,Tester cette prédiction hors échantillon sur des groupes météoritiques masqués.,data_required,planetary_provenance,isotope_tracers,True,1,328
+P1-010,P1,Provenance des matériaux,10,Comparer à un modèle fondé uniquement sur la distance au Soleil.,data_required,planetary_provenance,isotope_tracers,False,2,329
+P2-001,P2,Date d’accrétion et chauffage radiogénique,1,"Compiler les chronomètres Al-Mg, Hf-W, Mn-Cr et Pb-Pb.",data_required,planetesimal_thermal,chronometers;body_properties,False,2,333
+P2-002,P2,Date d’accrétion et chauffage radiogénique,2,Propager toutes les incertitudes de datation.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,334
+P2-003,P2,Date d’accrétion et chauffage radiogénique,3,Tester distribution homogène et hétérogène de l’aluminium 26.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,335
+P2-004,P2,Date d’accrétion et chauffage radiogénique,4,Simuler des corps de tailles et porosités variées.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,336
+P2-005,P2,Date d’accrétion et chauffage radiogénique,5,"Tester conduction, convection, fusion et migration des fluides.",data_required,planetesimal_thermal,chronometers;body_properties,False,2,337
+P2-006,P2,Date d’accrétion et chauffage radiogénique,6,Comparer les prédictions aux achondrites et corps primitifs.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,338
+P2-007,P2,Date d’accrétion et chauffage radiogénique,7,Produire des paires à composition initiale semblable et dates différentes.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,339
+P2-008,P2,Date d’accrétion et chauffage radiogénique,8,"Mesurer l’effet causal sur fusion, différenciation et perte de volatils.",data_required,planetesimal_thermal,chronometers;body_properties,False,2,340
+P2-009,P2,Date d’accrétion et chauffage radiogénique,9,Tester la capacité d’inférer la date d’accrétion depuis la structure finale.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,341
+P2-010,P2,Date d’accrétion et chauffage radiogénique,10,Comparer à des modèles thermiques standards sans variables ORI-C.,data_required,planetesimal_thermal,chronometers;body_properties,False,2,342
+P3-001,P3,Différenciation métal-silicate,1,Compiler les expériences de partage disponibles.,data_required,metal_silicate,partition_experiments,False,2,346
+P3-002,P3,Différenciation métal-silicate,2,"Harmoniser pression, température, redox et composition.",data_required,metal_silicate,partition_experiments,False,2,347
+P3-003,P3,Différenciation métal-silicate,3,Construire une méta-analyse hiérarchique.,data_required,metal_silicate,partition_experiments,False,2,348
+P3-004,P3,Différenciation métal-silicate,4,Tester les interactions entre variables.,data_required,metal_silicate,partition_experiments,False,2,349
+P3-005,P3,Différenciation métal-silicate,5,Comparer plusieurs lois de partage.,data_required,metal_silicate,partition_experiments,False,2,350
+P3-006,P3,Différenciation métal-silicate,6,Tester les trajectoires d’accrétion continues et par épisodes.,data_required,metal_silicate,partition_experiments,False,2,351
+P3-007,P3,Différenciation métal-silicate,7,Permuter l’ordre des apports oxydés et réduits.,data_required,metal_silicate,partition_experiments,False,2,352
+P3-008,P3,Différenciation métal-silicate,8,"Mesurer les différences de noyau, manteau et surface à inventaire global comparable.",data_required,metal_silicate,partition_experiments,False,2,353
+P3-009,P3,Différenciation métal-silicate,9,"Tester Fe, Ni, Co, Nb, Ta, W, Mo, N, P, C, S et éléments hautement sidérophiles.",data_required,metal_silicate,partition_experiments,False,2,354
+P3-010,P3,Différenciation métal-silicate,10,Quantifier l’accessibilité ultérieure des éléments de surface.,data_required,metal_silicate,partition_experiments,False,2,355
+P3-011,P3,Différenciation métal-silicate,11,Tester la sensibilité aux océans magmatiques.,data_required,metal_silicate,partition_experiments,False,2,356
+P3-012,P3,Différenciation métal-silicate,12,Tester l’équilibration complète et incomplète.,data_required,metal_silicate,partition_experiments,False,2,357
+P3-013,P3,Différenciation métal-silicate,13,"Comparer Terre, Mars, Vesta et corps différenciés.",data_required,metal_silicate,partition_experiments,False,2,358
+P3-014,P3,Différenciation métal-silicate,14,Étendre aux exoplanètes rocheuses simulées.,data_required,metal_silicate,partition_experiments,False,2,359
+P3-015,P3,Différenciation métal-silicate,15,Faire une validation aveugle sur expériences non utilisées à l’ajustement.,data_required,metal_silicate,partition_experiments,True,1,360
+P4-001,P4,"Volatils, dégazage et pertes",1,"Compiler eau, carbone, azote et soufre dans les météorites différenciées.",data_required,volatile_budget,volatile_inventory,False,2,364
+P4-002,P4,"Volatils, dégazage et pertes",2,"Tester taille, température, durée de fusion et gravité.",data_required,volatile_budget,volatile_inventory,False,2,365
+P4-003,P4,"Volatils, dégazage et pertes",3,Tester atmosphère présente ou absente pendant le dégazage.,data_required,volatile_budget,volatile_inventory,False,2,366
+P4-004,P4,"Volatils, dégazage et pertes",4,Tester impacts et érosion atmosphérique.,data_required,volatile_budget,volatile_inventory,False,2,367
+P4-005,P4,"Volatils, dégazage et pertes",5,Tester photodissociation et échappement.,data_required,volatile_budget,volatile_inventory,False,2,368
+P4-006,P4,"Volatils, dégazage et pertes",6,Comparer pertes précoces et tardives.,data_required,volatile_budget,volatile_inventory,False,2,369
+P4-007,P4,"Volatils, dégazage et pertes",7,Mesurer `inventaire initial` et `inventaire conservé`.,data_required,volatile_budget,volatile_inventory,False,2,370
+P4-008,P4,"Volatils, dégazage et pertes",8,"Produire des courbes de transfert vers noyau, manteau, atmosphère et espace.",data_required,volatile_budget,volatile_inventory,False,2,371
+P4-009,P4,"Volatils, dégazage et pertes",9,Tester l’hystérésis de rétention.,data_required,volatile_budget,volatile_inventory,False,2,372
+P4-010,P4,"Volatils, dégazage et pertes",10,Comparer aux observations des planètes et météorites.,data_required,volatile_budget,volatile_inventory,False,2,373
+P5-001,P5,Apports tardifs,1,"Compiler Mo, Ru, W, Os, Ir, Au et autres traceurs.",data_required,late_accretion,late_accretion_tracers,False,2,377
+P5-002,P5,Apports tardifs,2,Tester plusieurs dates et masses d’apport.,data_required,late_accretion,late_accretion_tracers,False,2,378
+P5-003,P5,Apports tardifs,3,Tester l’équilibrage avec le noyau.,data_required,late_accretion,late_accretion_tracers,False,2,379
+P5-004,P5,Apports tardifs,4,Tester les scénarios d’impact lunaire.,data_required,late_accretion,late_accretion_tracers,False,2,380
+P5-005,P5,Apports tardifs,5,Tester les apports carbonés et non carbonés.,data_required,late_accretion,late_accretion_tracers,False,2,381
+P5-006,P5,Apports tardifs,6,Quantifier la contribution aux volatils de surface.,data_required,late_accretion,late_accretion_tracers,False,2,382
+P5-007,P5,Apports tardifs,7,Séparer matière tardive et conservation pendant la formation du noyau.,data_required,late_accretion,late_accretion_tracers,False,2,383
+P5-008,P5,Apports tardifs,8,Comparer plusieurs modèles de mélange.,data_required,late_accretion,late_accretion_tracers,False,2,384
+P5-009,P5,Apports tardifs,9,Tester la récupération de l’histoire d’apport depuis les isotopes finaux.,data_required,late_accretion,late_accretion_tracers,False,2,385
+P5-010,P5,Apports tardifs,10,Réaliser une validation croisée par familles d’éléments.,data_required,late_accretion,late_accretion_tracers,True,1,386
+P6-001,P6,Valeur ajoutée ORI-C sur les planètes,1,Prédire la distribution noyau-manteau-surface à partir de la seule composition initiale.,data_required,planetary_value,planetary_histories,False,2,390
+P6-002,P6,Valeur ajoutée ORI-C sur les planètes,2,Ajouter la provenance.,data_required,planetary_value,planetary_histories,False,2,391
+P6-003,P6,Valeur ajoutée ORI-C sur les planètes,3,Ajouter la date d’accrétion.,data_required,planetary_value,planetary_histories,False,2,392
+P6-004,P6,Valeur ajoutée ORI-C sur les planètes,4,Ajouter l’histoire thermique.,data_required,planetary_value,planetary_histories,False,2,393
+P6-005,P6,Valeur ajoutée ORI-C sur les planètes,5,Ajouter le redox.,data_required,planetary_value,planetary_histories,False,2,394
+P6-006,P6,Valeur ajoutée ORI-C sur les planètes,6,Ajouter les pertes.,data_required,planetary_value,planetary_histories,False,2,395
+P6-007,P6,Valeur ajoutée ORI-C sur les planètes,7,Ajouter les apports tardifs.,data_required,planetary_value,planetary_histories,False,2,396
+P6-008,P6,Valeur ajoutée ORI-C sur les planètes,8,Mesurer le gain incrémental de chaque couche.,data_required,planetary_value,planetary_histories,False,2,397
+P6-009,P6,Valeur ajoutée ORI-C sur les planètes,9,Comparer à un modèle géochimique standard de même complexité.,data_required,planetary_value,planetary_histories,False,2,398
+P6-010,P6,Valeur ajoutée ORI-C sur les planètes,10,"Tester hors échantillon sur Mars, Vesta et groupes météoritiques.",data_required,planetary_value,planetary_histories,True,1,399
+P6-011,P6,Valeur ajoutée ORI-C sur les planètes,11,Tester sur populations synthétiques d’exoplanètes.,data_required,planetary_value,planetary_histories,False,2,400
+P6-012,P6,Valeur ajoutée ORI-C sur les planètes,12,Préenregistrer les prédictions avant d’ajouter de nouvelles données.,human_review,planetary_value,planetary_histories,True,1,401
+A1-001,A1,Reproductibilité numérique,1,Reproduire tous les 25 calculs dans un conteneur propre.,data_required,astronomy_repro,orbital_initial_conditions,False,2,409
+A1-002,A1,Reproductibilité numérique,2,Répéter sur plusieurs systèmes d’exploitation.,data_required,astronomy_repro,orbital_initial_conditions,False,2,410
+A1-003,A1,Reproductibilité numérique,3,Répéter en simple et double précision lorsque possible.,data_required,astronomy_repro,orbital_initial_conditions,False,2,411
+A1-004,A1,Reproductibilité numérique,4,Tester plusieurs compilateurs.,data_required,astronomy_repro,orbital_initial_conditions,False,2,412
+A1-005,A1,Reproductibilité numérique,5,Tester plusieurs versions de REBOUND.,external_code,astronomy_repro,orbital_initial_conditions,False,2,413
+A1-006,A1,Reproductibilité numérique,6,"Comparer WHFast, IAS15, Mercurius et un intégrateur indépendant.",external_code,astronomy_repro,orbital_initial_conditions,False,2,414
+A1-007,A1,Reproductibilité numérique,7,Tester une grille plus fine de pas temporels.,data_required,astronomy_repro,orbital_initial_conditions,False,2,415
+A1-008,A1,Reproductibilité numérique,8,Tester les critères sur énergie et moment angulaire adaptés à la relativité.,data_required,astronomy_repro,orbital_initial_conditions,False,2,416
+A1-009,A1,Reproductibilité numérique,9,Tester l’aller-retour sur plusieurs horizons.,data_required,astronomy_repro,orbital_initial_conditions,False,2,417
+A1-010,A1,Reproductibilité numérique,10,"Publier la convergence de chaque observable, pas seulement de l’excentricité.",human_review,astronomy_repro,orbital_initial_conditions,False,2,418
+A2-001,A2,Conditions initiales et références,1,Utiliser plusieurs éphémérides JPL.,external_code,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,422
+A2-002,A2,Conditions initiales et références,2,Propager les covariances des conditions initiales.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,423
+A2-003,A2,Conditions initiales et références,3,Générer des ensembles d’états initiaux cohérents avec les incertitudes.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,424
+A2-004,A2,Conditions initiales et références,4,Comparer coordonnées cartésiennes et éléments orbitaux.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,425
+A2-005,A2,Conditions initiales et références,5,Tester les transformations de repère.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,426
+A2-006,A2,Conditions initiales et références,6,Tester plusieurs époques initiales.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,427
+A2-007,A2,Conditions initiales et références,7,"Comparer aux solutions La2004, La2010 et autres références indépendantes.",external_code,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,428
+A2-008,A2,Conditions initiales et références,8,Valider sur des horizons croissants.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,429
+A2-009,A2,Conditions initiales et références,9,Mesurer le temps de divergence chaotique.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,430
+A2-010,A2,Conditions initiales et références,10,Ne jamais interpréter au-delà de l’horizon de fiabilité.,data_required,astronomy_initial_conditions,orbital_initial_conditions;ephemerides,False,2,431
+A3-001,A3,Physique manquante,1,la Lune résolue,data_required,astronomy_physics,orbital_initial_conditions,False,2,437
+A3-002,A3,Physique manquante,2,la rotation terrestre,data_required,astronomy_physics,orbital_initial_conditions,False,2,438
+A3-003,A3,Physique manquante,3,l’obliquité dynamique,data_required,astronomy_physics,orbital_initial_conditions,False,2,439
+A3-004,A3,Physique manquante,4,le J2 solaire,data_required,astronomy_physics,orbital_initial_conditions,False,2,440
+A3-005,A3,Physique manquante,5,les marées,data_required,astronomy_physics,orbital_initial_conditions,False,2,441
+A3-006,A3,Physique manquante,6,la relativité cohérente dans tous les diagnostics,data_required,astronomy_physics,orbital_initial_conditions,False,2,442
+A3-007,A3,Physique manquante,7,les principaux astéroïdes,data_required,astronomy_physics,orbital_initial_conditions,False,2,443
+A3-008,A3,Physique manquante,8,la perte de masse solaire,data_required,astronomy_physics,orbital_initial_conditions,False,2,444
+A3-009,A3,Physique manquante,9,les effets de figures planétaires lorsque pertinents,data_required,astronomy_physics,orbital_initial_conditions,False,2,445
+A3-010,A3,Physique manquante,10,les interactions spin-orbite,data_required,astronomy_physics,orbital_initial_conditions,False,2,446
+A3-011,A3,Physique manquante,11,test d’ablation,data_required,astronomy_physics,orbital_initial_conditions,False,2,450
+A3-012,A3,Physique manquante,12,gain contre référence,data_required,astronomy_physics,orbital_initial_conditions,False,2,451
+A3-013,A3,Physique manquante,13,coût numérique,data_required,astronomy_physics,orbital_initial_conditions,False,2,452
+A3-014,A3,Physique manquante,14,effet sur le spectre,data_required,astronomy_physics,orbital_initial_conditions,False,2,453
+A3-015,A3,Physique manquante,15,effet sur l’incertitude,data_required,astronomy_physics,orbital_initial_conditions,False,2,454
+A3-016,A3,Physique manquante,16,interaction avec les autres ajouts,data_required,astronomy_physics,orbital_initial_conditions,False,2,455
+A4-001,A4,Interventions et causalité,1,Perturber masses de Jupiter et Saturne sur une grille fine.,data_required,astronomy_causality,orbital_initial_conditions,False,2,459
+A4-002,A4,Interventions et causalité,2,Perturber demi-grands axes.,data_required,astronomy_causality,orbital_initial_conditions,False,2,460
+A4-003,A4,Interventions et causalité,3,Perturber excentricités et inclinaisons.,data_required,astronomy_causality,orbital_initial_conditions,False,2,461
+A4-004,A4,Interventions et causalité,4,Perturber phases orbitales.,data_required,astronomy_causality,orbital_initial_conditions,False,2,462
+A4-005,A4,Interventions et causalité,5,Retirer chaque planète à tour de rôle dans un modèle exploratoire.,data_required,astronomy_causality,orbital_initial_conditions,False,2,463
+A4-006,A4,Interventions et causalité,6,Ajouter des perturbations combinées.,data_required,astronomy_causality,orbital_initial_conditions,False,2,464
+A4-007,A4,Interventions et causalité,7,Tester des scénarios de migration historique.,data_required,astronomy_causality,orbital_initial_conditions,False,2,465
+A4-008,A4,Interventions et causalité,8,Mesurer la réponse spectrale de la Terre.,data_required,astronomy_causality,orbital_initial_conditions,False,2,466
+A4-009,A4,Interventions et causalité,9,Mesurer la stabilité des résonances.,data_required,astronomy_causality,orbital_initial_conditions,False,2,467
+A4-010,A4,Interventions et causalité,10,Construire des surfaces de réponse causale.,data_required,astronomy_causality,orbital_initial_conditions,False,2,468
+A4-011,A4,Interventions et causalité,11,Comparer à des ensembles d’états initiaux quasi identiques.,data_required,astronomy_causality,orbital_initial_conditions,False,2,469
+A4-012,A4,Interventions et causalité,12,Séparer effet de l’intervention et divergence chaotique.,data_required,astronomy_causality,orbital_initial_conditions,False,2,470
+A5-001,A5,Spectres et transfert de fréquences,1,Tester plusieurs méthodes spectrales.,data_required,astronomy_spectra,orbital_timeseries,False,2,474
+A5-002,A5,Spectres et transfert de fréquences,2,"Comparer fenêtres, résolution et detrending.",data_required,astronomy_spectra,orbital_timeseries,False,2,475
+A5-003,A5,Spectres et transfert de fréquences,3,Quantifier l’incertitude des pics.,data_required,astronomy_spectra,orbital_timeseries,False,2,476
+A5-004,A5,Spectres et transfert de fréquences,4,"Tester 405 ka, 2,4 Ma et autres bandes.",data_required,astronomy_spectra,orbital_timeseries,False,2,477
+A5-005,A5,Spectres et transfert de fréquences,5,Mesurer stabilité des phases.,data_required,astronomy_spectra,orbital_timeseries,False,2,478
+A5-006,A5,Spectres et transfert de fréquences,6,Mesurer transfert entre planètes et variables orbitales.,data_required,astronomy_spectra,orbital_timeseries,False,2,479
+A5-007,A5,Spectres et transfert de fréquences,7,Tester la robustesse aux horizons d’analyse.,data_required,astronomy_spectra,orbital_timeseries,False,2,480
+A5-008,A5,Spectres et transfert de fréquences,8,Comparer spectres aux solutions de référence.,data_required,astronomy_spectra,orbital_timeseries,False,2,481
+A5-009,A5,Spectres et transfert de fréquences,9,Utiliser des signaux synthétiques pour mesurer les faux pics.,data_required,astronomy_spectra,orbital_timeseries,False,2,482
+A5-010,A5,Spectres et transfert de fréquences,10,Préenregistrer les bandes avant l’analyse confirmatoire.,human_review,astronomy_spectra,orbital_timeseries,True,1,483
+A6-001,A6,Validation indépendante,1,Réimplémenter le calcul dans un second code N-corps.,data_required,astronomy_validation,orbital_timeseries;orbital_reference,False,2,487
+A6-002,A6,Validation indépendante,2,Faire reproduire les résultats par une autre équipe.,external_code,astronomy_validation,orbital_timeseries;orbital_reference,False,3,488
+A6-003,A6,Validation indépendante,3,Masquer les critères pendant l’exécution.,data_required,astronomy_validation,orbital_timeseries;orbital_reference,False,2,489
+A6-004,A6,Validation indépendante,4,Archiver les sorties brutes.,data_required,astronomy_validation,orbital_timeseries;orbital_reference,False,2,490
+A6-005,A6,Validation indépendante,5,Faire auditer les transformations et figures.,human_review,astronomy_validation,orbital_timeseries;orbital_reference,False,2,491
+A6-006,A6,Validation indépendante,6,Publier les deux échecs préenregistrés avec les réussites.,human_review,astronomy_validation,orbital_timeseries;orbital_reference,True,1,492
+C1-001,C1,Réplication du résultat négatif,1,Reproduire tous les tests avec l’environnement verrouillé.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,502
+C1-002,C1,Réplication du résultat négatif,2,Répliquer sur toute l’étendue LR04.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,503
+C1-003,C1,Réplication du résultat négatif,3,Répliquer avec incertitudes d’âge et de mesure.,data_required,climate_chronology,paleoclimate_timeseries,False,1,504
+C1-004,C1,Réplication du résultat négatif,4,Répliquer avec autres piles benthiques.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,505
+C1-005,C1,Réplication du résultat négatif,5,Répliquer avec niveau marin indépendant.,data_required,climate_proxy_robustness,paleoclimate_timeseries,False,1,506
+C1-006,C1,Réplication du résultat négatif,6,"Répliquer avec CO2, température et poussières.",data_required,climate_proxy_robustness,paleoclimate_timeseries,False,1,507
+C1-007,C1,Réplication du résultat négatif,7,Répliquer sous plusieurs conventions d’insolation.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,508
+C1-008,C1,Réplication du résultat négatif,8,Répliquer par validation croisée temporelle.,data_required,paleoclimate_replication,paleoclimate_timeseries,True,1,509
+C1-009,C1,Réplication du résultat négatif,9,Répliquer avec modèles nuls supplémentaires.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,510
+C1-010,C1,Réplication du résultat négatif,10,Faire confirmer le verdict par une équipe indépendante.,data_required,paleoclimate_replication,paleoclimate_timeseries,False,1,511
+C2-001,C2,Réparer le test prospectif avant toute nouvelle exécution,1,Cartographier entièrement les régions mono et multistables.,data_required,climate_hysteresis,paleoclimate_timeseries,False,1,515
+C2-002,C2,Réparer le test prospectif avant toute nouvelle exécution,2,Choisir des points réellement discriminants.,data_required,paleoclimate_prospective,paleoclimate_timeseries,False,1,516
+C2-003,C2,Réparer le test prospectif avant toute nouvelle exécution,3,Apparier les variables motrices du témoin de complexité égale.,data_required,paleoclimate_prospective,paleoclimate_timeseries,False,1,517
+C2-004,C2,Réparer le test prospectif avant toute nouvelle exécution,4,Publier leurs plages d’exploitation.,human_review,paleoclimate_prospective,paleoclimate_timeseries,False,1,518
+C2-005,C2,Réparer le test prospectif avant toute nouvelle exécution,5,Définir une normalisation indépendante du point testé.,data_required,climate_identifiability,paleoclimate_timeseries,False,1,519
+C2-006,C2,Réparer le test prospectif avant toute nouvelle exécution,6,Simuler la puissance avant préenregistrement.,human_review,paleoclimate_prospective,paleoclimate_timeseries,True,1,520
+C2-007,C2,Réparer le test prospectif avant toute nouvelle exécution,7,Fixer les seuils de matérialité.,data_required,climate_hysteresis,paleoclimate_timeseries,False,1,521
+C2-008,C2,Réparer le test prospectif avant toute nouvelle exécution,8,Fixer la durée d’observation au-delà de toutes les constantes de temps.,data_required,paleoclimate_prospective,paleoclimate_timeseries,False,1,522
+C2-009,C2,Réparer le test prospectif avant toute nouvelle exécution,9,Geler le protocole.,data_required,paleoclimate_prospective,paleoclimate_timeseries,False,1,523
+C2-010,C2,Réparer le test prospectif avant toute nouvelle exécution,10,Exécuter une seule fois sur données confirmatoires.,data_required,paleoclimate_prospective,paleoclimate_timeseries,False,1,524
+C3-001,C3,Familles alternatives de mémoire,1,mémoire du volume de glace,data_required,memory_families,paleoclimate_timeseries,False,2,530
+C3-002,C3,Familles alternatives de mémoire,2,géométrie et hauteur des calottes,data_required,memory_families,paleoclimate_timeseries,False,2,531
+C3-003,C3,Familles alternatives de mémoire,3,érosion du régolithe,data_required,memory_families,paleoclimate_timeseries,False,2,532
+C3-004,C3,Familles alternatives de mémoire,4,altération continentale,data_required,memory_families,paleoclimate_timeseries,False,2,533
+C3-005,C3,Familles alternatives de mémoire,5,carbone océanique,data_required,memory_families,paleoclimate_timeseries,False,2,534
+C3-006,C3,Familles alternatives de mémoire,6,circulation océanique,data_required,memory_families,paleoclimate_timeseries,False,2,535
+C3-007,C3,Familles alternatives de mémoire,7,sédiments marins,data_required,memory_families,paleoclimate_timeseries,False,2,536
+C3-008,C3,Familles alternatives de mémoire,8,poussières et fertilisation,data_required,climate_proxy_robustness,paleoclimate_timeseries,False,2,537
+C3-009,C3,Familles alternatives de mémoire,9,méthane et pergélisol pour périodes adaptées,data_required,climate_spectra,paleoclimate_timeseries,False,2,538
+C3-010,C3,Familles alternatives de mémoire,10,isostasie et topographie,data_required,memory_families,paleoclimate_timeseries,False,2,539
+C3-011,C3,Familles alternatives de mémoire,11,végétation et albédo,data_required,memory_families,paleoclimate_timeseries,False,2,540
+C3-012,C3,Familles alternatives de mémoire,12,seuils de plateformes glaciaires,data_required,climate_hysteresis,paleoclimate_timeseries,False,2,541
+C3-013,C3,Familles alternatives de mémoire,13,couplages état-dépendants,data_required,memory_families,paleoclimate_timeseries,False,2,542
+C3-014,C3,Familles alternatives de mémoire,14,délais distribués,data_required,memory_families,paleoclimate_timeseries,False,2,543
+C3-015,C3,Familles alternatives de mémoire,15,événements stochastiques rares,data_required,memory_families,paleoclimate_timeseries,False,2,544
+C3-016,C3,Familles alternatives de mémoire,16,interactions entre mémoires rapides et lentes,data_required,memory_families,paleoclimate_timeseries,False,2,545
+C3-017,C3,Familles alternatives de mémoire,17,un témoin instantané,data_required,memory_families,paleoclimate_timeseries,False,2,549
+C3-018,C3,Familles alternatives de mémoire,18,un témoin de complexité égale,data_required,memory_families,paleoclimate_timeseries,False,2,550
+C3-019,C3,Familles alternatives de mémoire,19,une ablation,data_required,memory_families,paleoclimate_timeseries,False,2,551
+C3-020,C3,Familles alternatives de mémoire,20,une prédiction hors échantillon,data_required,memory_families,paleoclimate_timeseries,True,1,552
+C3-021,C3,Familles alternatives de mémoire,21,une fenêtre longue,data_required,memory_families,paleoclimate_timeseries,False,2,553
+C3-022,C3,Familles alternatives de mémoire,22,une variable mesurée directement lorsque possible,data_required,memory_families,paleoclimate_timeseries,False,2,554
+C4-001,C4,Familles de modèles,1,régression et filtres linéaires,data_required,climate_models,paleoclimate_timeseries,False,2,558
+C4-002,C4,Familles de modèles,2,modèles d’espace d’état,data_required,climate_models,paleoclimate_timeseries,False,2,559
+C4-003,C4,Familles de modèles,3,modèles à retards distribués,data_required,climate_models,paleoclimate_timeseries,False,2,560
+C4-004,C4,Familles de modèles,4,systèmes dynamiques non linéaires,data_required,climate_models,paleoclimate_timeseries,False,2,561
+C4-005,C4,Familles de modèles,5,modèles à seuils,data_required,climate_hysteresis,paleoclimate_timeseries,False,2,562
+C4-006,C4,Familles de modèles,6,modèles à attracteurs multiples,data_required,climate_models,paleoclimate_timeseries,False,2,563
+C4-007,C4,Familles de modèles,7,modèles stochastiques,data_required,climate_models,paleoclimate_timeseries,False,2,564
+C4-008,C4,Familles de modèles,8,modèles de viabilité,data_required,climate_models,paleoclimate_timeseries,False,2,565
+C4-009,C4,Familles de modèles,9,réseaux causaux dynamiques,data_required,climate_models,paleoclimate_timeseries,False,2,566
+C4-010,C4,Familles de modèles,10,modèles hybrides événementiels,data_required,climate_models,paleoclimate_timeseries,False,2,567
+C4-011,C4,Familles de modèles,11,modèles conceptuels glaciaires,data_required,climate_models,paleoclimate_timeseries,False,2,568
+C4-012,C4,Familles de modèles,12,modèles de bilan énergétique,data_required,climate_models,paleoclimate_timeseries,False,2,569
+C4-013,C4,Familles de modèles,13,EMIC,data_required,climate_models,paleoclimate_timeseries,False,2,570
+C4-014,C4,Familles de modèles,14,modèles de calotte simplifiés,data_required,climate_models,paleoclimate_timeseries,False,2,571
+C4-015,C4,Familles de modèles,15,émulateurs de modèles complexes,data_required,climate_models,paleoclimate_timeseries,False,2,572
+C5-001,C5,Données et chronologies,1,Propager l’incertitude des modèles d’âge.,data_required,climate_chronology,paleoclimate_timeseries,False,2,578
+C5-002,C5,Données et chronologies,2,Tester plusieurs alignements chronologiques.,data_required,climate_chronology,paleoclimate_timeseries,False,2,579
+C5-003,C5,Données et chronologies,3,Travailler sur données brutes et piles.,data_required,climate_chronology,paleoclimate_timeseries,False,2,580
+C5-004,C5,Données et chronologies,4,Tester la sensibilité aux résolutions.,data_required,climate_chronology,paleoclimate_timeseries,False,2,581
+C5-005,C5,Données et chronologies,5,Tester les biais de préservation.,data_required,climate_chronology,paleoclimate_timeseries,False,2,582
+C5-006,C5,Données et chronologies,6,Tester l’autocorrélation et la taille efficace.,data_required,climate_chronology,paleoclimate_timeseries,False,2,583
+C5-007,C5,Données et chronologies,7,Tester les ruptures de proxy.,data_required,climate_chronology,paleoclimate_timeseries,False,2,584
+C5-008,C5,Données et chronologies,8,Utiliser des proxys multiples dans un modèle hiérarchique.,data_required,climate_chronology,paleoclimate_timeseries,False,2,585
+C5-009,C5,Données et chronologies,9,Réserver des carottes ou périodes entières pour validation.,data_required,climate_chronology,paleoclimate_timeseries,True,1,586
+C5-010,C5,Données et chronologies,10,Préenregistrer les transformations.,human_review,climate_chronology,paleoclimate_timeseries,True,1,587
+C6-001,C6,Critères discriminants,1,RMSE hors échantillon,data_required,climate_discrimination,paleoclimate_timeseries,True,1,593
+C6-002,C6,Critères discriminants,2,log-vraisemblance prédictive,data_required,climate_discrimination,paleoclimate_timeseries,False,2,594
+C6-003,C6,Critères discriminants,3,calibration probabiliste,data_required,climate_discrimination,paleoclimate_timeseries,False,2,595
+C6-004,C6,Critères discriminants,4,corrélation et phase,data_required,climate_discrimination,paleoclimate_timeseries,False,2,596
+C6-005,C6,Critères discriminants,5,"spectre 41, 100 et 405 ka",data_required,climate_spectra,paleoclimate_timeseries,False,2,597
+C6-006,C6,Critères discriminants,6,chronologie des terminaisons,data_required,climate_chronology,paleoclimate_timeseries,False,2,598
+C6-007,C6,Critères discriminants,7,stabilité des paramètres,data_required,climate_identifiability,paleoclimate_timeseries,False,2,599
+C6-008,C6,Critères discriminants,8,identifiabilité,data_required,climate_identifiability,paleoclimate_timeseries,False,2,600
+C6-009,C6,Critères discriminants,9,persistance après convergence des forçages,data_required,climate_discrimination,paleoclimate_timeseries,False,2,601
+C6-010,C6,Critères discriminants,10,hystérésis,data_required,climate_hysteresis,paleoclimate_timeseries,False,2,602
+C6-011,C6,Critères discriminants,11,pertes de régimes ou de chemins de retour,data_required,climate_path_dependence,paleoclimate_timeseries,False,2,603
+C6-012,C6,Critères discriminants,12,valeur de `Pacc`,data_required,climate_discrimination,paleoclimate_timeseries,False,2,604
+C6-013,C6,Critères discriminants,13,performance sur périodes jamais ajustées,data_required,climate_spectra,paleoclimate_timeseries,False,2,605
+C6-014,C6,Critères discriminants,14,performance sur un autre jeu de proxys,data_required,climate_proxy_robustness,paleoclimate_timeseries,False,2,606
+C6-015,C6,Critères discriminants,15,avantage contre témoin de complexité égale,data_required,climate_discrimination,paleoclimate_timeseries,False,2,607
+C7-001,C7,Recherche de mécanismes nouveaux,1,Utiliser l’échec de M2 pour localiser les résidus structurés.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,611
+C7-002,C7,Recherche de mécanismes nouveaux,2,Chercher les périodes où M2 capte la signature de 100 ka mais rate l’amplitude.,data_required,climate_spectra,paleoclimate_timeseries,False,2,612
+C7-003,C7,Recherche de mécanismes nouveaux,3,"Tester si le mécanisme correct est additif, multiplicatif ou conditionnel.",data_required,climate_mechanisms,paleoclimate_timeseries,False,2,613
+C7-004,C7,Recherche de mécanismes nouveaux,4,Tester si la mémoire dépend du régime climatique.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,614
+C7-005,C7,Recherche de mécanismes nouveaux,5,Tester des changements d’architecture plutôt qu’un noyau fixe.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,615
+C7-006,C7,Recherche de mécanismes nouveaux,6,Tester des ruptures de connectivité entre bassins.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,616
+C7-007,C7,Recherche de mécanismes nouveaux,7,Tester si une variable lente modifie l’opérateur de réponse.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,617
+C7-008,C7,Recherche de mécanismes nouveaux,8,Générer des prédictions qui divergent de tous les témoins standards.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,618
+C7-009,C7,Recherche de mécanismes nouveaux,9,Rechercher les données capables de trancher.,data_required,climate_mechanisms,paleoclimate_timeseries,False,2,619
+C7-010,C7,Recherche de mécanismes nouveaux,10,Abandonner toute famille qui échoue sur deux validations confirmatoires indépendantes.,data_required,climate_mechanisms,paleoclimate_timeseries,True,1,620
+CL1-001,CL1,Mémoire distribuée du climat,1,"Quantifier les noyaux de mémoire océanique, cryosphérique, carbonée, écologique et géologique.",data_required,modern_climate_memory,modern_climate_timeseries,False,2,630
+CL1-002,CL1,Mémoire distribuée du climat,2,Estimer leurs constantes de temps et incertitudes.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,631
+CL1-003,CL1,Mémoire distribuée du climat,3,Tester leur dépendance à l’état.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,632
+CL1-004,CL1,Mémoire distribuée du climat,4,Tester les couplages entre compartiments.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,633
+CL1-005,CL1,Mémoire distribuée du climat,5,Comparer un modèle multi-mémoires à une intégrale unique du forçage.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,634
+CL1-006,CL1,Mémoire distribuée du climat,6,Valider sur simulations historiques.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,635
+CL1-007,CL1,Mémoire distribuée du climat,7,Valider sur expériences d’arrêt des émissions et de retrait du forçage.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,636
+CL1-008,CL1,Mémoire distribuée du climat,8,Tester sur plusieurs modèles climatiques.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,637
+CL1-009,CL1,Mémoire distribuée du climat,9,Vérifier la généralisation entre scénarios.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,638
+CL1-010,CL1,Mémoire distribuée du climat,10,Mesurer la part irréversible transférée entre compartiments.,data_required,modern_climate_memory,modern_climate_timeseries,False,2,639
+CL2-001,CL2,Diagnostic `D-H-L`,1,mesurer `D`,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,645
+CL2-002,CL2,Diagnostic `D-H-L`,2,mesurer `H`,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,646
+CL2-003,CL2,Diagnostic `D-H-L`,3,mesurer `L`,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,647
+CL2-004,CL2,Diagnostic `D-H-L`,4,tester leur indépendance,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,648
+CL2-005,CL2,Diagnostic `D-H-L`,5,quantifier les incertitudes,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,649
+CL2-006,CL2,Diagnostic `D-H-L`,6,comparer modèles et observations,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,650
+CL2-007,CL2,Diagnostic `D-H-L`,7,identifier les cas où un terme est élevé et les deux autres faibles,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,651
+CL2-008,CL2,Diagnostic `D-H-L`,8,publier les horizons temporels,human_review,modern_climate_dhl,modern_climate_timeseries,False,2,652
+CL2-009,CL2,Diagnostic `D-H-L`,9,distinguer retour spontané et restauration active,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,653
+CL2-010,CL2,Diagnostic `D-H-L`,10,mesurer le coût de restauration,data_required,modern_climate_dhl,modern_climate_timeseries,False,2,654
+CL3-001,CL3,Domaine des possibles climatiques,1,Définir `Pth` et `Pacc` pour chaque cas.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,658
+CL3-002,CL3,Domaine des possibles climatiques,2,"Déclarer `T`, `C` et `ε`.",data_required,modern_climate_pacc,modern_climate_ensemble,False,2,659
+CL3-003,CL3,Domaine des possibles climatiques,3,Cartographier les états climatiques accessibles.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,660
+CL3-004,CL3,Domaine des possibles climatiques,4,Cartographier les chemins de récupération.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,661
+CL3-005,CL3,Domaine des possibles climatiques,5,"mesurer les coûts énergétiques, temporels et matériels.",data_required,modern_climate_pacc,modern_climate_ensemble,False,2,662
+CL3-006,CL3,Domaine des possibles climatiques,6,tester les changements après différentes trajectoires d’émissions.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,663
+CL3-007,CL3,Domaine des possibles climatiques,7,comparer même réchauffement final avec vitesses et histoires différentes.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,664
+CL3-008,CL3,Domaine des possibles climatiques,8,tester les overshoots.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,665
+CL3-009,CL3,Domaine des possibles climatiques,9,tester les interventions de restauration.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,666
+CL3-010,CL3,Domaine des possibles climatiques,10,distinguer bassin réduit et attracteur supprimé.,data_required,modern_climate_pacc,modern_climate_ensemble,False,2,667
+CL4-001,CL4,Validation sur données et ensembles de modèles,1,Utiliser réanalyses et observations.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,671
+CL4-002,CL4,Validation sur données et ensembles de modèles,2,Utiliser ensembles climatiques multi-modèles.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,672
+CL4-003,CL4,Validation sur données et ensembles de modèles,3,Utiliser expériences idéalisées.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,673
+CL4-004,CL4,Validation sur données et ensembles de modèles,4,Utiliser paléoclimats comme contraintes externes.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,674
+CL4-005,CL4,Validation sur données et ensembles de modèles,5,Réserver des modèles entiers pour validation.,data_required,modern_climate_validation,modern_climate_ensemble,True,1,675
+CL4-006,CL4,Validation sur données et ensembles de modèles,6,Tester robustesse aux définitions de seuil.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,676
+CL4-007,CL4,Validation sur données et ensembles de modèles,7,Tester robustesse aux scénarios.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,677
+CL4-008,CL4,Validation sur données et ensembles de modèles,8,comparer aux cadres classiques de résilience.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,678
+CL4-009,CL4,Validation sur données et ensembles de modèles,9,mesurer la valeur prédictive ajoutée d’ORI-C.,data_required,modern_climate_validation,modern_climate_ensemble,False,2,679
+CL4-010,CL4,Validation sur données et ensembles de modèles,10,publier les cas où ORI-C ne change aucune conclusion.,human_review,modern_climate_validation,modern_climate_ensemble,False,2,680
+V1-001,V1,Préparation expérimentale,1,Geler le schéma des lignées.,data_required,prebiotic_design,prebiotic_design,False,2,688
+V1-002,V1,Préparation expérimentale,2,Vérifier le validateur sur données synthétiques positives et négatives.,data_required,prebiotic_design,prebiotic_design,False,2,689
+V1-003,V1,Préparation expérimentale,3,Ajouter les incertitudes et limites de détection.,data_required,prebiotic_design,prebiotic_design,False,2,690
+V1-004,V1,Préparation expérimentale,4,Définir les cycles et générations.,data_required,prebiotic_design,prebiotic_design,False,2,691
+V1-005,V1,Préparation expérimentale,5,"Définir les événements de fusion, division et disparition.",data_required,prebiotic_design,prebiotic_design,False,2,692
+V1-006,V1,Préparation expérimentale,6,Définir les critères de transmission.,data_required,prebiotic_design,prebiotic_design,False,2,693
+V1-007,V1,Préparation expérimentale,7,Définir les critères fonctionnels.,data_required,prebiotic_design,prebiotic_design,False,2,694
+V1-008,V1,Préparation expérimentale,8,Préenregistrer les six conditions minimales.,human_review,prebiotic_design,prebiotic_design,True,1,695
+V1-009,V1,Préparation expérimentale,9,Préenregistrer les huit témoins.,human_review,prebiotic_design,prebiotic_design,True,1,696
+V1-010,V1,Préparation expérimentale,10,Faire auditer le protocole par chimistes prébiotiques et biologistes de l’évolution.,human_review,prebiotic_design,prebiotic_design,False,2,697
+V2-001,V2,Formation des briques,1,plusieurs compositions initiales,data_required,prebiotic_components,prebiotic_lineages,False,2,703
+V2-002,V2,Formation des briques,2,plusieurs atmosphères et gaz,data_required,prebiotic_components,prebiotic_lineages,False,2,704
+V2-003,V2,Formation des briques,3,plusieurs sources d’énergie,data_required,prebiotic_components,prebiotic_lineages,False,2,705
+V2-004,V2,Formation des briques,4,plusieurs surfaces minérales,data_required,prebiotic_components,prebiotic_lineages,False,2,706
+V2-005,V2,Formation des briques,5,plusieurs températures et pressions,data_required,prebiotic_components,prebiotic_lineages,False,2,707
+V2-006,V2,Formation des briques,6,plusieurs séquences temporelles,data_required,prebiotic_components,prebiotic_lineages,False,2,708
+V2-007,V2,Formation des briques,7,rendements et sous-produits,data_required,prebiotic_components,prebiotic_lineages,False,2,709
+V2-008,V2,Formation des briques,8,stabilité et dégradation,data_required,prebiotic_components,prebiotic_lineages,False,2,710
+V2-009,V2,Formation des briques,9,répétabilité inter-laboratoires,laboratory,prebiotic_components,prebiotic_lineages,False,2,711
+V2-010,V2,Formation des briques,10,bilan de masse complet,data_required,prebiotic_components,prebiotic_lineages,False,2,712
+V2-011,V2,Polymérisation,11,distributions de longueurs,data_required,prebiotic_components,prebiotic_lineages,False,2,716
+V2-012,V2,Polymérisation,12,distributions de séquences,data_required,prebiotic_components,prebiotic_lineages,False,2,717
+V2-013,V2,Polymérisation,13,fidélité de liaison,data_required,prebiotic_components,prebiotic_lineages,False,2,718
+V2-014,V2,Polymérisation,14,vitesse de croissance,data_required,prebiotic_components,prebiotic_lineages,False,2,719
+V2-015,V2,Polymérisation,15,vitesse de dégradation,data_required,prebiotic_components,prebiotic_lineages,False,2,720
+V2-016,V2,Polymérisation,16,cycles humide-sec,data_required,prebiotic_components,prebiotic_lineages,False,2,721
+V2-017,V2,Polymérisation,17,gel-dégel,data_required,prebiotic_components,prebiotic_lineages,False,2,722
+V2-018,V2,Polymérisation,18,gradients hydrothermaux,data_required,prebiotic_components,prebiotic_lineages,False,2,723
+V2-019,V2,Polymérisation,19,surfaces minérales,data_required,prebiotic_components,prebiotic_lineages,False,2,724
+V2-020,V2,Polymérisation,20,alternance d’environnements,data_required,prebiotic_components,prebiotic_lineages,False,2,725
+V2-021,V2,Copie par matrice,21,fidélité,data_required,prebiotic_components,prebiotic_lineages,False,2,729
+V2-022,V2,Copie par matrice,22,taux d’erreur,data_required,prebiotic_components,prebiotic_lineages,False,2,730
+V2-023,V2,Copie par matrice,23,vitesse,data_required,prebiotic_components,prebiotic_lineages,False,2,731
+V2-024,V2,Copie par matrice,24,dépendance à la séquence,data_required,prebiotic_components,prebiotic_lineages,False,2,732
+V2-025,V2,Copie par matrice,25,blocages,data_required,prebiotic_components,prebiotic_lineages,False,2,733
+V2-026,V2,Copie par matrice,26,copies partielles,data_required,prebiotic_components,prebiotic_lineages,False,2,734
+V2-027,V2,Copie par matrice,27,compétition entre matrices,data_required,prebiotic_components,prebiotic_lineages,False,2,735
+V2-028,V2,Copie par matrice,28,effet du compartiment,data_required,prebiotic_components,prebiotic_lineages,False,2,736
+V2-029,V2,Copie par matrice,29,effet de l’énergie renouvelée,data_required,prebiotic_components,prebiotic_lineages,False,2,737
+V2-030,V2,Copie par matrice,30,persistance sur plusieurs cycles,data_required,prebiotic_components,prebiotic_lineages,False,2,738
+V2-031,V2,Compartimentation,31,types de lipides,data_required,prebiotic_components,prebiotic_lineages,False,2,742
+V2-032,V2,Compartimentation,32,tailles de vésicules,data_required,prebiotic_components,prebiotic_lineages,False,2,743
+V2-033,V2,Compartimentation,33,perméabilité,data_required,prebiotic_components,prebiotic_lineages,False,2,744
+V2-034,V2,Compartimentation,34,encapsulation,data_required,prebiotic_components,prebiotic_lineages,False,2,745
+V2-035,V2,Compartimentation,35,croissance,data_required,prebiotic_components,prebiotic_lineages,False,2,746
+V2-036,V2,Compartimentation,36,division,data_required,prebiotic_components,prebiotic_lineages,False,2,747
+V2-037,V2,Compartimentation,37,fusion,data_required,prebiotic_components,prebiotic_lineages,False,2,748
+V2-038,V2,Compartimentation,38,fuite,data_required,prebiotic_components,prebiotic_lineages,False,2,749
+V2-039,V2,Compartimentation,39,stabilité sous cycles,data_required,prebiotic_components,prebiotic_lineages,False,2,750
+V2-040,V2,Compartimentation,40,partage du contenu aux descendants,data_required,prebiotic_components,prebiotic_lineages,False,2,751
+V3-001,V3,"Couplage, verrou central",1,copie à l’intérieur et à l’extérieur des compartiments,data_required,prebiotic_coupling,prebiotic_lineages,False,2,755
+V3-002,V3,"Couplage, verrou central",2,matrice copiable contre polymère non copiable apparié,data_required,prebiotic_coupling,prebiotic_lineages,False,2,756
+V3-003,V3,"Couplage, verrou central",3,même longueur,data_required,prebiotic_coupling,prebiotic_lineages,False,2,757
+V3-004,V3,"Couplage, verrou central",4,même charge,data_required,prebiotic_coupling,prebiotic_lineages,False,2,758
+V3-005,V3,"Couplage, verrou central",5,même concentration,data_required,prebiotic_coupling,prebiotic_lineages,False,2,759
+V3-006,V3,"Couplage, verrou central",6,même encombrement,data_required,prebiotic_coupling,prebiotic_lineages,False,2,760
+V3-007,V3,"Couplage, verrou central",7,même apport énergétique,data_required,prebiotic_coupling,prebiotic_lineages,False,2,761
+V3-008,V3,"Couplage, verrou central",8,même nombre d’espèces chimiques,laboratory,prebiotic_coupling,prebiotic_lineages,False,2,762
+V3-009,V3,"Couplage, verrou central",9,copie sans division,data_required,prebiotic_coupling,prebiotic_lineages,False,2,763
+V3-010,V3,"Couplage, verrou central",10,division sans copie,data_required,prebiotic_coupling,prebiotic_lineages,False,2,764
+V3-011,V3,"Couplage, verrou central",11,copie et division sans variation,data_required,prebiotic_coupling,prebiotic_lineages,False,2,765
+V3-012,V3,"Couplage, verrou central",12,"copie, division et variation",data_required,prebiotic_coupling,prebiotic_lineages,False,2,766
+V3-013,V3,"Couplage, verrou central",13,transmission sur plusieurs générations,data_required,prebiotic_coupling,prebiotic_lineages,False,2,767
+V3-014,V3,"Couplage, verrou central",14,effet fonctionnel des variantes,data_required,prebiotic_coupling,prebiotic_lineages,False,2,768
+V3-015,V3,"Couplage, verrou central",15,maintien sans réinitialisation complète,data_required,prebiotic_coupling,prebiotic_lineages,False,2,769
+V3-016,V3,"Couplage, verrou central",16,ablation de la membrane,data_required,prebiotic_coupling,prebiotic_lineages,False,2,770
+V3-017,V3,"Couplage, verrou central",17,ablation de la matrice,data_required,prebiotic_coupling,prebiotic_lineages,False,2,771
+V3-018,V3,"Couplage, verrou central",18,ablation du flux énergétique,data_required,prebiotic_coupling,prebiotic_lineages,False,2,772
+V3-019,V3,"Couplage, verrou central",19,ablation de la variation,data_required,prebiotic_coupling,prebiotic_lineages,False,2,773
+V3-020,V3,"Couplage, verrou central",20,permutation de l’ordre des environnements,data_required,prebiotic_coupling,prebiotic_lineages,False,2,774
+V4-001,V4,Matrice environnementale complète,1,humide-sec,data_required,prebiotic_matrix,prebiotic_lineages,False,2,780
+V4-002,V4,Matrice environnementale complète,2,gel-dégel,data_required,prebiotic_matrix,prebiotic_lineages,False,2,781
+V4-003,V4,Matrice environnementale complète,3,gradients hydrothermaux,data_required,prebiotic_matrix,prebiotic_lineages,False,2,782
+V4-004,V4,Matrice environnementale complète,4,irradiation UV,data_required,prebiotic_matrix,prebiotic_lineages,False,2,783
+V4-005,V4,Matrice environnementale complète,5,surfaces minérales,data_required,prebiotic_matrix,prebiotic_lineages,False,2,784
+V4-006,V4,Matrice environnementale complète,6,cycles de salinité,data_required,prebiotic_matrix,prebiotic_lineages,False,2,785
+V4-007,V4,Matrice environnementale complète,7,cycles de pH,data_required,prebiotic_matrix,prebiotic_lineages,False,2,786
+V4-008,V4,Matrice environnementale complète,8,cycles redox,data_required,prebiotic_matrix,prebiotic_lineages,False,2,787
+V4-009,V4,Matrice environnementale complète,9,chocs thermiques,data_required,prebiotic_matrix,prebiotic_lineages,False,2,788
+V4-010,V4,Matrice environnementale complète,10,alternances combinées,data_required,prebiotic_matrix,prebiotic_lineages,False,2,789
+V4-011,V4,Matrice environnementale complète,11,état initial identique,data_required,prebiotic_matrix,prebiotic_lineages,False,2,793
+V4-012,V4,Matrice environnementale complète,12,ordre différent,data_required,prebiotic_matrix,prebiotic_lineages,False,2,794
+V4-013,V4,Matrice environnementale complète,13,état final environnemental identique,data_required,prebiotic_matrix,prebiotic_lineages,False,2,795
+V4-014,V4,Matrice environnementale complète,14,mesure des lignées,data_required,prebiotic_matrix,prebiotic_lineages,False,2,796
+V4-015,V4,Matrice environnementale complète,15,mesure de transmission,data_required,prebiotic_matrix,prebiotic_lineages,False,2,797
+V4-016,V4,Matrice environnementale complète,16,mesure de fonction,data_required,prebiotic_matrix,prebiotic_lineages,False,2,798
+V4-017,V4,Matrice environnementale complète,17,retrait du forçage,data_required,prebiotic_matrix,prebiotic_lineages,False,2,799
+V4-018,V4,Matrice environnementale complète,18,durée longue devant toutes les mémoires,data_required,prebiotic_matrix,prebiotic_lineages,False,2,800
+V4-019,V4,Matrice environnementale complète,19,réplication biologique et technique,data_required,prebiotic_matrix,prebiotic_lineages,True,2,801
+V4-020,V4,Matrice environnementale complète,20,comparaison à trajectoire aléatoire,data_required,prebiotic_matrix,prebiotic_lineages,False,2,802
+V5-001,V5,Cartographie de l’espace prébiotique,1,Construire `Pth` chimique.,data_required,prebiotic_space,prebiotic_lineages,False,2,806
+V5-002,V5,Cartographie de l’espace prébiotique,2,"Estimer `Pacc(T,C,ε)` par expérience à haut débit.",data_required,prebiotic_space,prebiotic_lineages,False,2,807
+V5-003,V5,Cartographie de l’espace prébiotique,3,Cartographier les produits accessibles.,data_required,prebiotic_space,prebiotic_lineages,False,2,808
+V5-004,V5,Cartographie de l’espace prébiotique,4,Cartographier les lignées viables.,data_required,prebiotic_space,prebiotic_lineages,False,2,809
+V5-005,V5,Cartographie de l’espace prébiotique,5,Cartographier les trajectoires fermées.,data_required,prebiotic_space,prebiotic_lineages,False,2,810
+V5-006,V5,Cartographie de l’espace prébiotique,6,Mesurer les coûts énergétiques.,data_required,prebiotic_space,prebiotic_lineages,False,2,811
+V5-007,V5,Cartographie de l’espace prébiotique,7,Identifier les goulets d’étranglement.,data_required,prebiotic_space,prebiotic_lineages,False,2,812
+V5-008,V5,Cartographie de l’espace prébiotique,8,Tester la robustesse des résultats aux seuils.,data_required,prebiotic_space,prebiotic_lineages,False,2,813
+V5-009,V5,Cartographie de l’espace prébiotique,9,Reproduire dans un second système chimique.,data_required,prebiotic_space,prebiotic_lineages,False,2,814
+V5-010,V5,Cartographie de l’espace prébiotique,10,Faire une réplication inter-laboratoires.,laboratory,prebiotic_space,prebiotic_lineages,True,2,815
+V6-001,V6,Critère de transition matière-hérédité,1,copies avec variations,data_required,prebiotic_transition,prebiotic_lineages,False,2,821
+V6-002,V6,Critère de transition matière-hérédité,2,association au compartiment,data_required,prebiotic_transition,prebiotic_lineages,False,2,822
+V6-003,V6,Critère de transition matière-hérédité,3,croissance et division,data_required,prebiotic_transition,prebiotic_lineages,False,2,823
+V6-004,V6,Critère de transition matière-hérédité,4,transmission aux descendants,data_required,prebiotic_transition,prebiotic_lineages,False,2,824
+V6-005,V6,Critère de transition matière-hérédité,5,effet des variantes sur persistance ou reproduction,data_required,prebiotic_transition,prebiotic_lineages,False,2,825
+V6-006,V6,Critère de transition matière-hérédité,6,maintien sur plusieurs cycles sans reconstruction complète externe,data_required,prebiotic_transition,prebiotic_lineages,False,2,826
+V6-007,V6,Critère de transition matière-hérédité,7,avantage contre témoin de complexité égale,data_required,prebiotic_transition,prebiotic_lineages,False,2,830
+V6-008,V6,Critère de transition matière-hérédité,8,ablation qui supprime l’effet,data_required,prebiotic_transition,prebiotic_lineages,False,2,831
+V6-009,V6,Critère de transition matière-hérédité,9,persistance après retrait d’une contrainte temporaire,data_required,prebiotic_transition,prebiotic_lineages,False,2,832
+V6-010,V6,Critère de transition matière-hérédité,10,reproduction dans un second laboratoire,laboratory,prebiotic_transition,prebiotic_lineages,False,3,833
+B1-001,B1,"Acte 1, cellule eucaryote",1,Coder les six dimensions sur plusieurs types cellulaires.,data_required,cell_architecture,cell_architecture,False,2,841
+B1-002,B1,"Acte 1, cellule eucaryote",2,"Inclure bactéries, archées et eucaryotes.",data_required,cell_architecture,cell_architecture,False,2,842
+B1-003,B1,"Acte 1, cellule eucaryote",3,Tester l’accord entre codeurs.,human_review,cell_architecture,cell_architecture,False,2,843
+B1-004,B1,"Acte 1, cellule eucaryote",4,Perturber chaque organite ou fonction dans des données publiques.,data_required,cell_architecture,cell_architecture,False,2,844
+B1-005,B1,"Acte 1, cellule eucaryote",5,"Mesurer survie, réparation, reproduction et évolution.",data_required,cell_architecture,cell_architecture,False,2,845
+B1-006,B1,"Acte 1, cellule eucaryote",6,Construire des graphes de dépendances fonctionnelles.,data_required,cell_architecture,cell_architecture,False,2,846
+B1-007,B1,"Acte 1, cellule eucaryote",7,Tester la redondance et la compensation.,data_required,cell_architecture,cell_architecture,False,2,847
+B1-008,B1,"Acte 1, cellule eucaryote",8,Mesurer les chemins de récupération.,data_required,cell_architecture,cell_architecture,False,2,848
+B1-009,B1,"Acte 1, cellule eucaryote",9,Tester si le vecteur `Π` prédit mieux la viabilité qu’un ensemble classique de variables.,data_required,cell_architecture,cell_architecture,False,2,849
+B1-010,B1,"Acte 1, cellule eucaryote",10,Valider sur types cellulaires masqués.,data_required,cell_architecture,cell_architecture,False,2,850
+B2-001,B2,"Acte 2, endosymbiose mitochondriale",1,Compiler phylogénies des gènes mitochondriaux et nucléaires.,data_required,endosymbiosis,endosymbiosis_events,False,2,854
+B2-002,B2,"Acte 2, endosymbiose mitochondriale",2,Compiler transferts de gènes vers le noyau.,data_required,endosymbiosis,endosymbiosis_events,False,2,855
+B2-003,B2,"Acte 2, endosymbiose mitochondriale",3,Compiler réduction génomique.,data_required,endosymbiosis,endosymbiosis_events,False,2,856
+B2-004,B2,"Acte 2, endosymbiose mitochondriale",4,Compiler systèmes d’import protéique.,data_required,endosymbiosis,endosymbiosis_events,False,2,857
+B2-005,B2,"Acte 2, endosymbiose mitochondriale",5,Compiler dépendances métaboliques.,data_required,endosymbiosis,endosymbiosis_events,False,2,858
+B2-006,B2,"Acte 2, endosymbiose mitochondriale",6,Comparer plusieurs scénarios d’endosymbiose.,data_required,endosymbiosis,endosymbiosis_events,False,2,859
+B2-007,B2,"Acte 2, endosymbiose mitochondriale",7,Tester la relation `INTG` sur critères explicites.,data_required,endosymbiosis,endosymbiosis_events,False,2,860
+B2-008,B2,"Acte 2, endosymbiose mitochondriale",8,Tester les étapes de fermeture d’alternatives.,data_required,endosymbiosis,endosymbiosis_events,False,2,861
+B2-009,B2,"Acte 2, endosymbiose mitochondriale",9,Rechercher des transitions analogues dans plastes et symbioses récentes.,data_required,endosymbiosis,endosymbiosis_events,False,2,862
+B2-010,B2,"Acte 2, endosymbiose mitochondriale",10,Tester la capacité du cadre à prédire quelles symbioses deviennent obligatoires.,data_required,endosymbiosis,endosymbiosis_events,False,2,863
+B2-011,B2,"Acte 2, endosymbiose mitochondriale",11,Comparer à des modèles standards de dépendance symbiotique.,data_required,endosymbiosis,endosymbiosis_events,False,2,864
+B2-012,B2,"Acte 2, endosymbiose mitochondriale",12,Valider sur cas non utilisés pour construire les critères.,data_required,endosymbiosis,endosymbiosis_events,False,2,865
+B3-001,B3,Valeur ajoutée biologique générale,1,Prédire persistance et récupération à partir des six dimensions.,data_required,biology_value,biology_cases,False,2,869
+B3-002,B3,Valeur ajoutée biologique générale,2,Comparer à des modèles de réseaux biologiques.,data_required,biology_value,biology_cases,False,2,870
+B3-003,B3,Valeur ajoutée biologique générale,3,Comparer à des modèles de fitness.,data_required,biology_value,biology_cases,False,2,871
+B3-004,B3,Valeur ajoutée biologique générale,4,Comparer à des modèles de résilience.,data_required,biology_value,biology_cases,False,2,872
+B3-005,B3,Valeur ajoutée biologique générale,5,Tester les données hors domaine.,data_required,biology_value,biology_cases,False,2,873
+B3-006,B3,Valeur ajoutée biologique générale,6,Mesurer calibration et faux positifs.,data_required,biology_value,biology_cases,False,2,874
+B3-007,B3,Valeur ajoutée biologique générale,7,Tester si les notions `D-H-L` ajoutent une information indépendante.,data_required,biology_value,biology_cases,False,2,875
+B3-008,B3,Valeur ajoutée biologique générale,8,Tester si `Pacc` prédit les transitions observées.,data_required,biology_value,biology_cases,False,2,876
+B3-009,B3,Valeur ajoutée biologique générale,9,Publier les domaines où le cadre reste descriptif.,human_review,biology_value,biology_cases,False,2,877
+B3-010,B3,Valeur ajoutée biologique générale,10,Réserver le statut prédictif aux cas confirmés hors échantillon.,data_required,biology_value,biology_cases,True,1,878
+R1-001,R1,Conception générale,1,Utiliser plusieurs espèces bactériennes.,laboratory,antibiotic_design,antibiotic_design,False,2,886
+R1-002,R1,Conception générale,2,Utiliser plusieurs familles d’antibiotiques.,laboratory,antibiotic_design,antibiotic_design,False,2,887
+R1-003,R1,Conception générale,3,"Inclure milieux riches, pauvres et structurés.",data_required,antibiotic_design,antibiotic_design,False,2,888
+R1-004,R1,Conception générale,4,Inclure populations planctoniques et biofilms.,data_required,antibiotic_design,antibiotic_design,False,2,889
+R1-005,R1,Conception générale,5,Prévoir au moins 12 à 24 lignées indépendantes par condition.,data_required,antibiotic_design,antibiotic_design,False,2,890
+R1-006,R1,Conception générale,6,Randomiser les traitements.,data_required,antibiotic_design,antibiotic_design,False,2,891
+R1-007,R1,Conception générale,7,Aveugler l’analyse lorsque possible.,data_required,antibiotic_design,antibiotic_design,True,2,892
+R1-008,R1,Conception générale,8,Préenregistrer les critères.,human_review,antibiotic_design,antibiotic_design,True,1,893
+R1-009,R1,Conception générale,9,"Séparer résistance, tolérance et persistance.",data_required,antibiotic_design,antibiotic_design,False,2,894
+R1-010,R1,Conception générale,10,Suivre les coûts de fitness.,data_required,antibiotic_design,antibiotic_design,False,2,895
+R2-001,R2,Histoires d’exposition,1,exposition constante,data_required,antibiotic_histories,antibiotic_cycles,False,2,901
+R2-002,R2,Histoires d’exposition,2,augmentation progressive,data_required,antibiotic_histories,antibiotic_cycles,False,2,902
+R2-003,R2,Histoires d’exposition,3,diminution progressive,data_required,antibiotic_histories,antibiotic_cycles,False,2,903
+R2-004,R2,Histoires d’exposition,4,impulsions courtes,data_required,antibiotic_histories,antibiotic_cycles,False,2,904
+R2-005,R2,Histoires d’exposition,5,impulsions longues,data_required,antibiotic_histories,antibiotic_cycles,False,2,905
+R2-006,R2,Histoires d’exposition,6,alternance de deux antibiotiques,laboratory,antibiotic_histories,antibiotic_cycles,False,2,906
+R2-007,R2,Histoires d’exposition,7,ordre A puis B,data_required,antibiotic_histories,antibiotic_cycles,False,2,907
+R2-008,R2,Histoires d’exposition,8,ordre B puis A,data_required,antibiotic_histories,antibiotic_cycles,False,2,908
+R2-009,R2,Histoires d’exposition,9,combinaison simultanée,data_required,antibiotic_histories,antibiotic_cycles,False,2,909
+R2-010,R2,Histoires d’exposition,10,périodes sans antibiotique,laboratory,antibiotic_histories,antibiotic_cycles,False,2,910
+R2-011,R2,Histoires d’exposition,11,stress environnemental avant antibiotique,laboratory,antibiotic_histories,antibiotic_cycles,False,2,911
+R2-012,R2,Histoires d’exposition,12,stress après antibiotique,laboratory,antibiotic_histories,antibiotic_cycles,False,2,912
+R2-013,R2,Histoires d’exposition,13,trajectoires aléatoires appariées,data_required,antibiotic_histories,antibiotic_cycles,False,2,913
+R2-014,R2,Histoires d’exposition,14,même dose cumulée avec ordres différents,data_required,antibiotic_histories,antibiotic_cycles,False,2,914
+R2-015,R2,Histoires d’exposition,15,même MIC finale obtenue par histoires différentes,data_required,antibiotic_histories,antibiotic_cycles,False,2,915
+R3-001,R3,Mesures,1,MIC,data_required,antibiotic_measurements,antibiotic_measurements,False,2,921
+R3-002,R3,Mesures,2,courbe dose-réponse,data_required,antibiotic_measurements,antibiotic_measurements,False,2,922
+R3-003,R3,Mesures,3,temps de latence,data_required,antibiotic_measurements,antibiotic_measurements,False,2,923
+R3-004,R3,Mesures,4,taux de croissance,data_required,antibiotic_measurements,antibiotic_measurements,False,2,924
+R3-005,R3,Mesures,5,survie après choc,data_required,antibiotic_measurements,antibiotic_measurements,False,2,925
+R3-006,R3,Mesures,6,fraction persistante,data_required,antibiotic_measurements,antibiotic_measurements,False,2,926
+R3-007,R3,Mesures,7,fitness sans antibiotique,laboratory,antibiotic_measurements,antibiotic_measurements,False,2,927
+R3-008,R3,Mesures,8,mutations,data_required,antibiotic_measurements,antibiotic_measurements,False,2,928
+R3-009,R3,Mesures,9,fréquences alléliques,data_required,antibiotic_measurements,antibiotic_measurements,False,2,929
+R3-010,R3,Mesures,10,expression génique,data_required,antibiotic_measurements,antibiotic_measurements,False,2,930
+R3-011,R3,Mesures,11,métabolisme,data_required,antibiotic_measurements,antibiotic_measurements,False,2,931
+R3-012,R3,Mesures,12,morphologie,data_required,antibiotic_measurements,antibiotic_measurements,False,2,932
+R3-013,R3,Mesures,13,hétérogénéité cellule par cellule,data_required,antibiotic_measurements,antibiotic_measurements,False,2,933
+R3-014,R3,Mesures,14,stabilité après retrait,data_required,antibiotic_measurements,antibiotic_measurements,False,2,934
+R3-015,R3,Mesures,15,transmissibilité aux descendants,data_required,antibiotic_measurements,antibiotic_measurements,False,2,935
+R4-001,R4,Tests ORI-C,1,dépendance au chemin à état final égal,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,939
+R4-002,R4,Tests ORI-C,2,hystérésis des seuils de résistance,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,940
+R4-003,R4,Tests ORI-C,3,durée `D`,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,941
+R4-004,R4,Tests ORI-C,4,asymétrie `H`,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,942
+R4-005,R4,Tests ORI-C,5,pertes `L`,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,943
+R4-006,R4,Tests ORI-C,6,changements d’état contre changements architecturaux,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,944
+R4-007,R4,Tests ORI-C,7,modification du domaine de viabilité,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,945
+R4-008,R4,Tests ORI-C,8,états devenus inaccessibles,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,946
+R4-009,R4,Tests ORI-C,9,coût des chemins de retour,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,947
+R4-010,R4,Tests ORI-C,10,ablation génétique des mécanismes candidats,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,948
+R4-011,R4,Tests ORI-C,11,réversion ou remplacement d’allèles,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,949
+R4-012,R4,Tests ORI-C,12,transfert dans un fond génétique naïf,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,950
+R4-013,R4,Tests ORI-C,13,témoin de complexité égale dans les modèles prédictifs,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,951
+R4-014,R4,Tests ORI-C,14,prédiction de la prochaine mutation ou du prochain phénotype,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,False,2,952
+R4-015,R4,Tests ORI-C,15,validation sur lignées masquées,data_required,antibiotic_oric,antibiotic_cycles;antibiotic_measurements,True,1,953
+R5-001,R5,Comparaisons concurrentes,1,modèles de fitness landscape,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,959
+R5-002,R5,Comparaisons concurrentes,2,chaînes de Markov,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,960
+R5-003,R5,Comparaisons concurrentes,3,modèles de population classiques,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,961
+R5-004,R5,Comparaisons concurrentes,4,apprentissage supervisé sans histoire,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,962
+R5-005,R5,Comparaisons concurrentes,5,modèles récurrents avec histoire,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,963
+R5-006,R5,Comparaisons concurrentes,6,modèles causaux dynamiques,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,964
+R5-007,R5,Comparaisons concurrentes,7,modèles de collateral sensitivity,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,965
+R5-008,R5,Comparaisons concurrentes,8,modèles génétiques mécanistes,data_required,antibiotic_competitors,antibiotic_cycles;antibiotic_measurements,False,2,966
+R6-001,R6,Réplication,1,seconde espèce,laboratory,antibiotic_replication,antibiotic_measurements,False,2,972
+R6-002,R6,Réplication,2,second antibiotique,laboratory,antibiotic_replication,antibiotic_measurements,False,2,973
+R6-003,R6,Réplication,3,second laboratoire,laboratory,antibiotic_replication,antibiotic_measurements,False,3,974
+R6-004,R6,Réplication,4,répétition à partir de stocks indépendants,laboratory,antibiotic_replication,antibiotic_measurements,False,2,975
+R6-005,R6,Réplication,5,analyse bioinformatique indépendante,data_required,antibiotic_replication,antibiotic_measurements,False,2,976
+R6-006,R6,Réplication,6,validation des mutations par reconstruction,data_required,antibiotic_replication,antibiotic_measurements,True,1,977
+R6-007,R6,Réplication,7,dépôt des lignées et séquences,data_required,antibiotic_replication,antibiotic_measurements,False,2,978
+R6-008,R6,Réplication,8,publication des trajectoires complètes,data_required,antibiotic_replication,antibiotic_measurements,False,2,979
+T1-001,T1,Benchmark multi-domaines,1,transition de phase,data_required,cross_domain_benchmark,benchmark_cases,False,1,989
+T1-002,T1,Benchmark multi-domaines,2,différenciation planétaire,data_required,cross_domain_benchmark,benchmark_cases,False,1,990
+T1-003,T1,Benchmark multi-domaines,3,dynamique orbitale,data_required,cross_domain_benchmark,benchmark_cases,False,1,991
+T1-004,T1,Benchmark multi-domaines,4,mémoire climatique,data_required,cross_domain_benchmark,benchmark_cases,False,1,992
+T1-005,T1,Benchmark multi-domaines,5,protocellules,laboratory,cross_domain_benchmark,benchmark_cases,False,1,993
+T1-006,T1,Benchmark multi-domaines,6,évolution bactérienne,data_required,cross_domain_benchmark,benchmark_cases,False,1,994
+T1-007,T1,Benchmark multi-domaines,7,masquer une partie de l’histoire,data_required,cross_domain_benchmark,benchmark_cases,False,1,998
+T1-008,T1,Benchmark multi-domaines,8,masquer une partie des états futurs,data_required,cross_domain_benchmark,benchmark_cases,False,1,999
+T1-009,T1,Benchmark multi-domaines,9,demander la reconstruction,data_required,cross_domain_benchmark,benchmark_cases,False,1,1000
+T1-010,T1,Benchmark multi-domaines,10,demander la prédiction,data_required,cross_domain_benchmark,benchmark_cases,False,1,1001
+T1-011,T1,Benchmark multi-domaines,11,demander la détection de seuil,data_required,cross_domain_benchmark,benchmark_cases,False,1,1002
+T1-012,T1,Benchmark multi-domaines,12,demander la détection de perte,data_required,cross_domain_benchmark,benchmark_cases,False,1,1003
+T1-013,T1,Benchmark multi-domaines,13,demander l’estimation de `Pacc`,data_required,cross_domain_benchmark,benchmark_cases,False,1,1004
+T1-014,T1,Benchmark multi-domaines,14,comparer ORI-C aux cadres concurrents,data_required,cross_domain_benchmark,benchmark_cases,False,1,1005
+T1-015,T1,Benchmark multi-domaines,15,mesurer performance et calibration,data_required,cross_domain_benchmark,benchmark_cases,False,1,1006
+T1-016,T1,Benchmark multi-domaines,16,mesurer coût de données et complexité,data_required,cross_domain_benchmark,benchmark_cases,False,1,1007
+T2-001,T2,Généralité réelle,1,Tester les mêmes définitions dans les trois branches.,data_required,generality,benchmark_cases,False,2,1011
+T2-002,T2,Généralité réelle,2,Mesurer les adaptations nécessaires.,data_required,generality,benchmark_cases,False,2,1012
+T2-003,T2,Généralité réelle,3,Identifier les notions réellement invariantes.,data_required,generality,benchmark_cases,False,2,1013
+T2-004,T2,Généralité réelle,4,Identifier les notions seulement analogiques.,data_required,generality,benchmark_cases,False,2,1014
+T2-005,T2,Généralité réelle,5,Retirer les notions qui ne produisent aucune mesure.,data_required,generality,benchmark_cases,False,2,1015
+T2-006,T2,Généralité réelle,6,Vérifier qu’un résultat d’une branche ne modifie pas le statut d’une autre.,data_required,generality,benchmark_cases,False,2,1016
+T2-007,T2,Généralité réelle,7,Tester la portabilité des schémas de données.,data_required,generality,benchmark_cases,False,2,1017
+T2-008,T2,Généralité réelle,8,Tester l’accord de codage entre disciplines.,data_required,generality,benchmark_cases,False,2,1018
+T2-009,T2,Généralité réelle,9,Faire auditer le langage par experts externes.,human_review,generality,benchmark_cases,False,2,1019
+T2-010,T2,Généralité réelle,10,Réviser le Codebook à partir des échecs.,data_required,generality,benchmark_cases,False,2,1020
+T3-001,T3,Valeur prédictive,1,Définir au moins une prédiction nouvelle par branche.,data_required,predictive_value,benchmark_cases,False,1,1024
+T3-002,T3,Valeur prédictive,2,Geler ces prédictions avant collecte des données.,data_required,predictive_value,benchmark_cases,False,1,1025
+T3-003,T3,Valeur prédictive,3,Fixer un témoin de complexité égale.,data_required,predictive_value,benchmark_cases,False,1,1026
+T3-004,T3,Valeur prédictive,4,Fixer un seuil d’amélioration minimal.,data_required,predictive_value,benchmark_cases,False,1,1027
+T3-005,T3,Valeur prédictive,5,Utiliser des données jamais examinées.,data_required,predictive_value,benchmark_cases,False,1,1028
+T3-006,T3,Valeur prédictive,6,Répliquer la prédiction.,data_required,predictive_value,benchmark_cases,False,1,1029
+T3-007,T3,Valeur prédictive,7,Calculer la puissance statistique.,data_required,predictive_value,benchmark_cases,False,1,1030
+T3-008,T3,Valeur prédictive,8,Corriger les comparaisons multiples.,data_required,predictive_value,benchmark_cases,False,1,1031
+T3-009,T3,Valeur prédictive,9,Publier les échecs.,human_review,predictive_value,benchmark_cases,False,1,1032
+T3-010,T3,Valeur prédictive,10,Refuser le statut prédictif sans réplication.,data_required,predictive_value,benchmark_cases,True,1,1033
+T4-001,T4,Test de compression explicative,1,Mesurer le nombre de concepts et paramètres nécessaires.,data_required,compression,benchmark_cases,False,2,1037
+T4-002,T4,Test de compression explicative,2,Comparer à des descriptions disciplinaires séparées.,data_required,compression,benchmark_cases,False,2,1038
+T4-003,T4,Test de compression explicative,3,Vérifier si ORI-C réduit la complexité sans perdre de précision.,data_required,compression,benchmark_cases,False,2,1039
+T4-004,T4,Test de compression explicative,4,Mesurer les erreurs introduites par la compression.,data_required,compression,benchmark_cases,False,2,1040
+T4-005,T4,Test de compression explicative,5,Faire évaluer la clarté par des lecteurs indépendants.,data_required,compression,benchmark_cases,False,2,1041
+T4-006,T4,Test de compression explicative,6,Distinguer utilité pédagogique et valeur scientifique.,data_required,compression,benchmark_cases,False,2,1042
+T5-001,T5,Red team,1,trouver des contre-exemples,data_required,red_team,benchmark_cases,False,2,1048
+T5-002,T5,Red team,2,produire des codages alternatifs,data_required,red_team,benchmark_cases,False,2,1049
+T5-003,T5,Red team,3,construire des témoins plus forts,data_required,red_team,benchmark_cases,False,2,1050
+T5-004,T5,Red team,4,rechercher les fuites de données,data_required,red_team,benchmark_cases,False,2,1051
+T5-005,T5,Red team,5,tester les choix de métriques,data_required,red_team,benchmark_cases,False,2,1052
+T5-006,T5,Red team,6,chercher les hypothèses non identifiables,data_required,red_team,benchmark_cases,False,2,1053
+T5-007,T5,Red team,7,reproduire les analyses depuis zéro,data_required,red_team,benchmark_cases,False,2,1054
+T5-008,T5,Red team,8,proposer des expériences qui maximisent le risque de réfutation,data_required,red_team,benchmark_cases,False,2,1055
+T5-009,T5,Red team,9,publier un rapport contradictoire,human_review,red_team,benchmark_cases,False,2,1056
+T5-010,T5,Red team,10,intégrer les critiques sans changer rétroactivement les critères,data_required,red_team,benchmark_cases,False,2,1057

@@ -1,0 +1,35 @@
+{
+  "M0": {
+    "forcing_gain": -0.7264160190100077,
+    "forcing_offset": 0.003258778385064609,
+    "tau_ice_kyr": 10.653212988733236
+  },
+  "M1": {
+    "forcing_gain": -0.6937330449533881,
+    "forcing_offset": -0.10962525194858061,
+    "tau_fast_kyr": 1.000000410046821,
+    "tau_memory_gain_kyr": 12.326538112967558,
+    "regolith_scale": 0.08677676341140211,
+    "tau_regolith_kyr": 20.000000834390153
+  },
+  "M2": {
+    "forcing_gain": -2.448731736059922,
+    "forcing_offset": 0.4847613688361352,
+    "tau_fast_kyr": 1.0001839789724203,
+    "tau_memory_gain_kyr": 42.47482397224203,
+    "regolith_scale": 0.04353881413357894,
+    "tau_regolith_kyr": 330.03395618360474,
+    "carbon_feedback_gain": -19.999999731889854,
+    "tau_carbon_kyr": 24.76083711907617
+  },
+  "M1P": {
+    "forcing_gain": -1.048061538256588,
+    "forcing_offset": 2.7160762984496425,
+    "tau_fast_kyr": 1.0000112786162771,
+    "tau_memory_gain_kyr": 13.525195874323549,
+    "regolith_scale": 0.002942457277508513,
+    "tau_regolith_kyr": 20.000005226599576,
+    "slow_forcing_gain": -3.629999830474086,
+    "tau_slow_forcing_kyr": 2496.5069436873246
+  }
+}

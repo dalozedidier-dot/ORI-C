@@ -1,0 +1,14 @@
+Niveau;Nombre d'entrées;Couverture;Remarque;c4;Composante cosmologique;Part approximative (%);c7;c8;c9;c10;c11;c12;c13
+Constituants fondamentaux;18;18 lignes, soit 17 espèces conventionnelles si W+ et W− sont regroupés;Catalogue du Modèle standard confirmé;;Matière ordinaire;5;;;;;;;
+Particules composites;56;Sélection structurante;Registre détaillé externe PDG;;Matière noire;27;;;;;;;
+Nuclides et états nucléaires;5843;Import complet NUBASE2020;États observés et estimés clairement distingués;;Énergie noire;68;;;;;;;
+Éléments chimiques;118;Exhaustif;118 éléments reconnus;;Source;https://science.nasa.gov/universe/overview/building-blocks/;;;;;;;
+Molécules et macromolécules;70;Sélection structurante et catalogues dynamiques;352 molécules interstellaires recensées au 16 juillet 2026;;;;;;;;;;
+États et phases;53;Inventaire des familles principales;Ouvert aux nouvelles phases;;;;;;;;;;
+Matériaux et minéraux;77;Inventaire structurant;Registre IMA externe pour les espèces minérales;;Champ ORI-C;Définition;;;;;;;
+Réservoirs astronomiques;46;Inventaire des grands réservoirs;Dépend de l'échelle et des observations;;Présence;La matière existe dans le système ou le réservoir considéré.;;;;;;;
+Matière biologique;43;Inventaire hiérarchique;Les espèces biologiques ne sont pas énumérées individuellement;;Accessibilité;Une interaction, un flux ou une interface peut atteindre cette matière.;;;;;;;
+Inconnus et hypothèses;16;Candidats séparés des entités confirmées;Aucune hypothèse n'est présentée comme découverte;;Mobilisabilité;La matière accessible peut être déplacée, dissoute, transportée ou transformée dans les conditions réelles.;;;;;;;
+Transformations;52;Inventaire des processus structurants;Inclut accessibilité, mobilisation et opérativité;;Opérativité;La matière mobilisée est incorporée dans une architecture et contribue effectivement à sa persistance ou à sa transformation.;;;;;;;
+Index maître;550;550 entrées filtrables;Pointe vers les feuilles détaillées;;;;;;;;;;
+Total des entrées détaillées;6392;Somme hors index maître et hiérarchie;;;;;;;;;;;

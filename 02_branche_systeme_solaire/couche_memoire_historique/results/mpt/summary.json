@@ -1,0 +1,92 @@
+{
+  "test": "MPT",
+  "status": "not_passed",
+  "overall_pass": false,
+  "calibration_window_kyr_bp": [
+    2600,
+    1200
+  ],
+  "prediction_window_kyr_bp": [
+    1200,
+    0
+  ],
+  "models": {
+    "M0": "réponse fixe",
+    "M1": "mémoire classique du régolithe",
+    "M2": "M1 enrichi d'une mémoire carbone ORI-C",
+    "M1P": "témoin à nombre de paramètres égal : M1 plus un filtre lent du forçage externe, sans mémoire de la réponse passée"
+  },
+  "comparisons": {
+    "M1": {
+      "rmse_gain": 0.03574022838234592,
+      "delta_bic_effective": 5.462551773180927,
+      "delta_bic_naive": -73.16676162540466,
+      "blockwise_wilcoxon_p": 0.00011962652206420898,
+      "rmse_gain_ci_low": 0.02716382997254089,
+      "rmse_gain_ci_high": 0.04571757288721386,
+      "probability_gain_below_threshold": 0.99515
+    },
+    "M1P": {
+      "rmse_gain": -0.3156178480340115,
+      "delta_bic_effective": 9.365333051982631,
+      "delta_bic_naive": 658.3353640803844,
+      "blockwise_wilcoxon_p": 0.9999980330467224,
+      "rmse_gain_ci_low": -0.3892683887600891,
+      "rmse_gain_ci_high": -0.25079994516970205,
+      "probability_gain_below_threshold": 1.0
+    }
+  },
+  "rmse_improvement_M2_vs_M1": 0.03574022838234592,
+  "rmse_improvement_M2_vs_M1P": -0.3156178480340115,
+  "delta_bic_M2_vs_M1": 5.462551773180927,
+  "delta_bic_M2_vs_M1P": 9.365333051982631,
+  "observed_power_ratio_100k_to_41k": 2.6036246418251188,
+  "M2_power_ratio_100k_to_41k": 0.004694799642179714,
+  "M2_prediction_correlation": 0.25954545378860794,
+  "M2_residual_lag1_autocorrelation": 0.9702618136620325,
+  "prediction_sample_size": 1200,
+  "prediction_effective_sample_size": 18.11222415118197,
+  "carbon_ablation_rmse": 1.810076846205213,
+  "carbon_ablation_gain_vs_M1": 0.1452984420054494,
+  "carbon_coupling_helps_prediction": false,
+  "carbon_coupling_rmse_effect": -0.23202108845582403,
+  "passed_criteria": 1,
+  "total_criteria": 10,
+  "passed_criteria_vs_M1": 1,
+  "passed_criteria_vs_M1P": 0,
+  "optimizer_converged": {
+    "M0": true,
+    "M1": true,
+    "M2": true,
+    "M1P": true
+  },
+  "optimizer_restart_spread": {
+    "M0": 4.2922145379562897e-10,
+    "M1": 2.2054847714547457e-09,
+    "M2": 5.891565305095587e-05,
+    "M1P": 0.003920502871647458
+  },
+  "compiled_kernel": true,
+  "parameter_boundary_hits": {
+    "M0": [],
+    "M1": [
+      "tau_fast_kyr=borne_basse",
+      "tau_regolith_kyr=borne_basse"
+    ],
+    "M2": [
+      "tau_fast_kyr=borne_basse",
+      "regolith_scale=borne_basse",
+      "carbon_feedback_gain=borne_basse",
+      "tau_carbon_kyr=borne_basse"
+    ],
+    "M1P": [
+      "tau_fast_kyr=borne_basse",
+      "regolith_scale=borne_basse",
+      "tau_regolith_kyr=borne_basse"
+    ]
+  },
+  "important_caveat": "La chronologie LR04 est accordée orbitalement à une insolation du 21 juin à 65°N. Employer La2004 contre cette chronologie crée une dépendance méthodologique : ce test n'est pas une validation indépendante du forçage astronomique.",
+  "normalization_note": "Les échelles de R et C sont fixées par définition. Cela supprime les symétries exactes alpha/R* et beta/gamma du protocole initial.",
+  "control_note": "M2 est comparé à deux témoins. M1 n'a que six paramètres : un avantage de M2 sur M1 peut venir de trois degrés de liberté supplémentaires. M1P en possède neuf comme M2, avec un état lent piloté par le forçage externe au lieu de la réponse passée. Seul l'écart M2 contre M1P mesure l'inscription revendiquée par ORI-C.",
+  "statistical_note": "Les résidus sur grille de 1 ka sont fortement autocorrélés. Le BIC rapporté utilise la taille d'échantillon efficace ; bic_naive conserve le compte brut à titre de comparaison. L'intervalle de confiance du gain provient d'un bootstrap par blocs mobiles."
+}

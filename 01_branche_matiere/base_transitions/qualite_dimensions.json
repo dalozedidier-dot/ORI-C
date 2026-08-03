@@ -1,0 +1,20 @@
+{
+  "lignes": 40,
+  "cellules_dimensions": 240,
+  "cellules_renseignees": 240,
+  "manquants_par_dimension": {
+    "dimension_n": 0,
+    "dimension_G": 0,
+    "dimension_I": 0,
+    "dimension_E": 0,
+    "dimension_Pi": 0,
+    "dimension_H": 0
+  },
+  "nature": "codage qualitatif interprétatif sourcé au niveau du régime",
+  "limite": "validation inter-codeurs et sources transition par transition encore requises",
+  "information_propre_mesuree_bits": 0.0,
+  "part_expliquee_par_le_regime": 1.0,
+  "gain_conditionnel_sur_la_fermeture_de_domaine_bits": 0.0,
+  "verdict": "Remplissage formel. Les six dimensions se réduisent à huit valeurs, une par régime, augmentées d un suffixe qui recopie une colonne déjà présente : transition (40/40), état postérieur (40/40), date (40/40), état antérieur (37/40). Information propre nulle, gain prédictif nul. La complétude de 240/240 est atteinte sans qu aucune mesure ait été faite.",
+  "mesure_par": "mesurer_dimensions.py, WP-S1.1.6 et S1.1.7"
+}

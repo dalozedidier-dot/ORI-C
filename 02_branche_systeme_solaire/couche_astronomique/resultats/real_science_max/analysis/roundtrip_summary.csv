@@ -1,0 +1,3 @@
+job,all_bodies_bound,completed_years,computation_seconds,earth_combined_relative_state_error,kind,max_combined_relative_state_error,return_abs_angmom_rel_error,return_abs_energy_rel_error,turn_abs_angmom_rel_error,turn_abs_energy_rel_error
+roundtrip_100kyr_dt10,True,100000.0,26.30009318500015,3.1740712491669786e-06,roundtrip,2.7628025558976285e-05,2.4800876087589636e-13,6.815484952732874e-13,1.8788069227563184e-13,1.7043604346340322e-13
+roundtrip_100kyr_dt5,True,100000.0,50.265937795000355,5.069216774775751e-07,roundtrip,7.539589433650647e-06,3.2141185760868687e-13,9.519762932829582e-13,6.731220147198447e-14,8.003253935307911e-14

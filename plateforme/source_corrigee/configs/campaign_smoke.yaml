@@ -1,0 +1,11 @@
+name: ORI-C-smoke
+selection:
+  work_packages: [S1, S2, V1, R1]
+  max_priority: 1
+execution:
+  seed: 7
+  allow_missing_data: true
+  include_noncomputational: false
+paths:
+  data_dir: ../data
+  output_dir: ../results/smoke

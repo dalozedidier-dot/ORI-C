@@ -1,0 +1,164 @@
+{
+  "mecanismes": {
+    "volume_de_glace": "y",
+    "erosion_du_regolithe": "|dy|",
+    "alteration_continentale": "cumul(y)",
+    "isostasie": "retard(y)",
+    "seuil_de_calotte": "max(y,0)",
+    "delais_distribues": "moyenne(y)",
+    "couplage_etat_dependant": "y*|dy|"
+  },
+  "fenetre_calibration_ka": [
+    2600,
+    1200
+  ],
+  "fenetre_prediction_ka": [
+    1200,
+    0
+  ],
+  "resultats": [
+    {
+      "mecanisme": "erosion_du_regolithe",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.7165313231951642,
+      "complet": 1.8880912527230593,
+      "gain_sur_ablation": 0.09981970105332816,
+      "gain_sur_apparie": -0.09994570283084148
+    },
+    {
+      "mecanisme": "alteration_continentale",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.7604279860267291,
+      "complet": 2.158836594335819,
+      "gain_sur_ablation": -0.029262843129795213,
+      "gain_sur_apparie": -0.22631349391820055
+    },
+    {
+      "mecanisme": "seuil_de_calotte",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.6829245232309986,
+      "complet": 2.101492325064623,
+      "gain_sur_ablation": -0.0019229667435369802,
+      "gain_sur_apparie": -0.24871454189165187
+    },
+    {
+      "mecanisme": "delais_distribues",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.6373122765768253,
+      "complet": 2.0748466948792808,
+      "gain_sur_ablation": 0.010780800254626244,
+      "gain_sur_apparie": -0.26722722632802887
+    },
+    {
+      "mecanisme": "isostasie",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.6373122765768253,
+      "complet": 2.0748466948792808,
+      "gain_sur_ablation": 0.010780800254626244,
+      "gain_sur_apparie": -0.26722722632802887
+    },
+    {
+      "mecanisme": "volume_de_glace",
+      "ablation": 2.0974589811978466,
+      "apparie": 1.5949552499984083,
+      "complet": 2.036451463548768,
+      "gain_sur_ablation": 0.029086393677285494,
+      "gain_sur_apparie": -0.2768079001281072
+    },
+    {
+      "mecanisme": "couplage_etat_dependant",
+      "ablation": 2.0974589811978466,
+      "apparie": NaN,
+      "complet": 20566.212204024345,
+      "gain_sur_ablation": -9804.298882307154,
+      "gain_sur_apparie": NaN
+    }
+  ],
+  "plages_d_exploitation": {
+    "volume_de_glace": {
+      "complet": {
+        "mediane": -0.0014084713508621133,
+        "etendue": 7.779756433296884
+      },
+      "apparie": {
+        "mediane": 0.01653790486607816,
+        "etendue": 6.765445955131935
+      },
+      "rapport_des_etendues": 0.8696218208292792
+    },
+    "erosion_du_regolithe": {
+      "complet": {
+        "mediane": -0.01967263763704344,
+        "etendue": 0.6021943396712816
+      },
+      "apparie": {
+        "mediane": 0.10698478650326962,
+        "etendue": 0.602194335020546
+      },
+      "rapport_des_etendues": 0.9999999922770187
+    },
+    "alteration_continentale": {
+      "complet": {
+        "mediane": -0.016933678186883017,
+        "etendue": 0.47934985560494203
+      },
+      "apparie": {
+        "mediane": 0.08893772087582812,
+        "etendue": 0.4793498517070607
+      },
+      "rapport_des_etendues": 0.9999999918683998
+    },
+    "isostasie": {
+      "complet": {
+        "mediane": -0.0029831602432700277,
+        "etendue": 1.4715376164789014
+      },
+      "apparie": {
+        "mediane": 0.011542662733843242,
+        "etendue": 1.4694441834477536
+      },
+      "rapport_des_etendues": 0.9985773839501589
+    },
+    "seuil_de_calotte": {
+      "complet": {
+        "mediane": -0.482498111511432,
+        "etendue": 3.1625389381097118
+      },
+      "apparie": {
+        "mediane": 0.04228159750822541,
+        "etendue": 2.0804632907540386
+      },
+      "rapport_des_etendues": 0.6578459052894877
+    },
+    "delais_distribues": {
+      "complet": {
+        "mediane": -0.0029831602432700277,
+        "etendue": 1.4715376164789014
+      },
+      "apparie": {
+        "mediane": 0.011542662733843242,
+        "etendue": 1.4694441834477536
+      },
+      "rapport_des_etendues": 0.9985773839501589
+    },
+    "couplage_etat_dependant": {
+      "complet": {
+        "mediane": 0.08865587137810498,
+        "etendue": 347695765.54863364
+      },
+      "apparie": {
+        "mediane": NaN,
+        "etendue": NaN
+      },
+      "rapport_des_etendues": NaN
+    }
+  },
+  "mecanismes_battant_leur_temoin_apparie": [],
+  "mecanismes_battant_leur_ablation": [
+    "delais_distribues",
+    "erosion_du_regolithe",
+    "isostasie",
+    "volume_de_glace"
+  ],
+  "lecture": "Un mécanisme n'est retenu que s'il bat à la fois son ablation et son témoin apparié. Les plages d'exploitation sont publiées pour que l'appariement soit vérifiable, conformément au §6.1 du PROTOCOLE_DONNEES."
+}

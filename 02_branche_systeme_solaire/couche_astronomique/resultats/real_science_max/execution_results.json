@@ -1,0 +1,521 @@
+[
+  {
+    "name": "baseline_20myr_dt10",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 20000000.0,
+      "computation_seconds": 2973.7482820819996,
+      "earth_eccentricity_max": 0.0656632997312662,
+      "earth_eccentricity_mean": 0.02784692459527121,
+      "earth_eccentricity_min": 0.0003776650108828501,
+      "earth_eccentricity_std": 0.013239080892703066,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 2.898953790540547e-12,
+      "max_abs_energy_rel_error": 1.1084408861111295e-11,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 20001,
+      "row_count": 160008
+    }
+  },
+  {
+    "name": "baseline_2myr_dt4p8828125",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 613.4436342159997,
+      "earth_eccentricity_max": 0.05771305099241633,
+      "earth_eccentricity_mean": 0.02950519150294485,
+      "earth_eccentricity_min": 0.000618116501465885,
+      "earth_eccentricity_std": 0.013518384108461854,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 7.888490246751591e-13,
+      "max_abs_energy_rel_error": 2.2115593148374088e-12,
+      "max_abs_output_time_error_years": 0.0,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "baseline_2myr_dt5",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 597.809234198,
+      "earth_eccentricity_max": 0.05771373356585444,
+      "earth_eccentricity_mean": 0.029505192105489905,
+      "earth_eccentricity_min": 0.0006165802788217816,
+      "earth_eccentricity_std": 0.013518396536032342,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.3526472783036137e-12,
+      "max_abs_energy_rel_error": 3.5797439484724435e-12,
+      "max_abs_output_time_error_years": 0.004999994214813341,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "baseline_2myr_elements_dt5",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 595.7856541249994,
+      "earth_eccentricity_max": 0.05782582287471604,
+      "earth_eccentricity_mean": 0.029016795992027403,
+      "earth_eccentricity_min": 0.0009841593208628806,
+      "earth_eccentricity_std": 0.013366802668830042,
+      "earth_initial_eccentricity": 0.016711229999999987,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.1420312303913967e-12,
+      "max_abs_energy_rel_error": 2.5026798783161876e-12,
+      "max_abs_output_time_error_years": 0.004999994214813341,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "baseline_2myr_no_gr_dt5",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 596.9415288079999,
+      "earth_eccentricity_max": 0.06379880594522745,
+      "earth_eccentricity_mean": 0.02998404042106203,
+      "earth_eccentricity_min": 0.0009257421631320923,
+      "earth_eccentricity_std": 0.013526521646314807,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.1375918225566935e-12,
+      "max_abs_energy_rel_error": 3.407742522268667e-12,
+      "max_abs_output_time_error_years": 0.004999994214813341,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r00",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1579.9560671089994,
+      "earth_eccentricity_max": 0.0625139651689035,
+      "earth_eccentricity_mean": 0.027783318413755715,
+      "earth_eccentricity_min": 0.000444086734166399,
+      "earth_eccentricity_std": 0.013161200207407369,
+      "earth_initial_eccentricity": 0.01670236221923436,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.650320262075241e-12,
+      "max_abs_energy_rel_error": 6.751302378386246e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r01",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1573.4286912240004,
+      "earth_eccentricity_max": 0.06251390822269415,
+      "earth_eccentricity_mean": 0.027783318410280873,
+      "earth_eccentricity_min": 0.00044407742536773384,
+      "earth_eccentricity_std": 0.013161200250839729,
+      "earth_initial_eccentricity": 0.016702362219234518,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.5189755719642212e-12,
+      "max_abs_energy_rel_error": 5.563924752971893e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r02",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1578.6116080290003,
+      "earth_eccentricity_max": 0.06251390829846748,
+      "earth_eccentricity_mean": 0.02778331841781325,
+      "earth_eccentricity_min": 0.0004440746743870631,
+      "earth_eccentricity_std": 0.013161200234551675,
+      "earth_initial_eccentricity": 0.016702362219235087,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 4.327659171203274e-12,
+      "max_abs_energy_rel_error": 1.272810893584405e-11,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r03",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1571.3411242739994,
+      "earth_eccentricity_max": 0.06251394663363506,
+      "earth_eccentricity_mean": 0.027783318399480898,
+      "earth_eccentricity_min": 0.0004440827008445582,
+      "earth_eccentricity_std": 0.013161200239778065,
+      "earth_initial_eccentricity": 0.016702362219234414,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 2.327815227238902e-12,
+      "max_abs_energy_rel_error": 5.1978101291829156e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r04",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1570.3684301830008,
+      "earth_eccentricity_max": 0.06251395358331024,
+      "earth_eccentricity_mean": 0.02778331840887937,
+      "earth_eccentricity_min": 0.00044408987335663115,
+      "earth_eccentricity_std": 0.013161200233954283,
+      "earth_initial_eccentricity": 0.01670236221923383,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.8183665005529867e-12,
+      "max_abs_energy_rel_error": 7.844558606664467e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r05",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1571.7337701230008,
+      "earth_eccentricity_max": 0.06251392498332113,
+      "earth_eccentricity_mean": 0.02778331840989637,
+      "earth_eccentricity_min": 0.0004440805364067702,
+      "earth_eccentricity_std": 0.013161200236718545,
+      "earth_initial_eccentricity": 0.01670236221923426,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 2.7543340722968165e-12,
+      "max_abs_energy_rel_error": 3.892438319831944e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r06",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1573.1505649969995,
+      "earth_eccentricity_max": 0.06251396865321221,
+      "earth_eccentricity_mean": 0.0277833184083355,
+      "earth_eccentricity_min": 0.00044408833038319816,
+      "earth_eccentricity_std": 0.013161200218550282,
+      "earth_initial_eccentricity": 0.016702362219234275,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 3.734187325278854e-12,
+      "max_abs_energy_rel_error": 1.3251353459634007e-11,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "ensemble_10myr_r07",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 10000000.0,
+      "computation_seconds": 1483.757957799,
+      "earth_eccentricity_max": 0.06251392556651876,
+      "earth_eccentricity_mean": 0.0277833184076331,
+      "earth_eccentricity_min": 0.0004440769048336131,
+      "earth_eccentricity_std": 0.013161200232050328,
+      "earth_initial_eccentricity": 0.01670236221923425,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 2.0459161004244495e-12,
+      "max_abs_energy_rel_error": 5.609713540767911e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 10001,
+      "row_count": 80008
+    }
+  },
+  {
+    "name": "full_la2010_bodies_2myr_dt5",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 14,
+      "completed_years": 2000000.0,
+      "computation_seconds": 1167.1917601059995,
+      "earth_eccentricity_max": 0.0577131944461386,
+      "earth_eccentricity_mean": 0.029504928138447947,
+      "earth_eccentricity_min": 0.0006247784783768845,
+      "earth_eccentricity_std": 0.013518290167496274,
+      "earth_initial_eccentricity": 0.01670236221923459,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.0502758463755311e-12,
+      "max_abs_energy_rel_error": 1.8732272630483243e-12,
+      "max_abs_output_time_error_years": 0.004999994214813341,
+      "output_count": 2001,
+      "row_count": 28014
+    }
+  },
+  {
+    "name": "ias15_grfull_20kyr",
+    "ok": true,
+    "reused_existing_result": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 20000.0,
+      "computation_seconds": 883.975325159,
+      "earth_eccentricity_max": 0.019721177613570135,
+      "earth_eccentricity_mean": 0.01892292744193925,
+      "earth_eccentricity_min": 0.016702362219234237,
+      "earth_eccentricity_std": 0.0008324283180872817,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 5.276233334369168e-10,
+      "max_abs_energy_rel_error": 2.152464436336892e-15,
+      "max_abs_output_time_error_years": 0.0,
+      "output_count": 201,
+      "row_count": 1608
+    }
+  },
+  {
+    "name": "ias15_grpot_20kyr",
+    "ok": true,
+    "reused_existing_result": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 20000.0,
+      "computation_seconds": 89.3466606460006,
+      "earth_eccentricity_max": 0.019720737527754616,
+      "earth_eccentricity_mean": 0.018922865412558523,
+      "earth_eccentricity_min": 0.016702362219234237,
+      "earth_eccentricity_std": 0.0008323907634038627,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 3.123536031182574e-16,
+      "max_abs_energy_rel_error": 2.152464383579145e-15,
+      "max_abs_output_time_error_years": 0.0,
+      "output_count": 201,
+      "row_count": 1608
+    }
+  },
+  {
+    "name": "jupiter_a_minus_0p5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 313.34865342600006,
+      "earth_eccentricity_max": 0.06574565238112179,
+      "earth_eccentricity_mean": 0.030923232150719075,
+      "earth_eccentricity_min": 0.0017676114059706899,
+      "earth_eccentricity_std": 0.01391681472237076,
+      "earth_initial_eccentricity": 0.016702362219234587,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.467353818760825e-12,
+      "max_abs_energy_rel_error": 3.125273170415199e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "jupiter_a_plus_0p5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 313.850406775,
+      "earth_eccentricity_max": 0.06223738943072984,
+      "earth_eccentricity_mean": 0.03010908474966228,
+      "earth_eccentricity_min": 0.0010456406423988705,
+      "earth_eccentricity_std": 0.013611735945089045,
+      "earth_initial_eccentricity": 0.016702362219234768,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 6.033214510315929e-13,
+      "max_abs_energy_rel_error": 2.1913053977908446e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "jupiter_mass_minus_5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 317.78175129600004,
+      "earth_eccentricity_max": 0.06562926133879522,
+      "earth_eccentricity_mean": 0.030394932402400543,
+      "earth_eccentricity_min": 0.0002637100238583813,
+      "earth_eccentricity_std": 0.013821811555185533,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.9368625226206208e-12,
+      "max_abs_energy_rel_error": 5.651048962584331e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "jupiter_mass_plus_5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 314.6383430730002,
+      "earth_eccentricity_max": 0.05711651818866285,
+      "earth_eccentricity_mean": 0.026865639803339666,
+      "earth_eccentricity_min": 0.0009008415905947836,
+      "earth_eccentricity_std": 0.01283334242061907,
+      "earth_initial_eccentricity": 0.01670236221923459,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.2269015477162388e-12,
+      "max_abs_energy_rel_error": 2.724991000246482e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "roundtrip_100kyr_dt10",
+    "ok": true,
+    "reused_existing_result": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "completed_years": 100000.0,
+      "computation_seconds": 26.30009318500015,
+      "earth_combined_relative_state_error": 3.1740712491669786e-06,
+      "kind": "roundtrip",
+      "max_combined_relative_state_error": 2.7628025558976285e-05,
+      "return_abs_angmom_rel_error": 2.4800876087589636e-13,
+      "return_abs_energy_rel_error": 6.815484952732874e-13,
+      "turn_abs_angmom_rel_error": 1.8788069227563184e-13,
+      "turn_abs_energy_rel_error": 1.7043604346340322e-13
+    }
+  },
+  {
+    "name": "roundtrip_100kyr_dt5",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "completed_years": 100000.0,
+      "computation_seconds": 50.265937795000355,
+      "earth_combined_relative_state_error": 5.069216774775751e-07,
+      "kind": "roundtrip",
+      "max_combined_relative_state_error": 7.539589433650647e-06,
+      "return_abs_angmom_rel_error": 3.2141185760868687e-13,
+      "return_abs_energy_rel_error": 9.519762932829582e-13,
+      "turn_abs_angmom_rel_error": 6.731220147198447e-14,
+      "turn_abs_energy_rel_error": 8.003253935307911e-14
+    }
+  },
+  {
+    "name": "saturn_mass_minus_5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 313.43519012700017,
+      "earth_eccentricity_max": 0.05842191134499267,
+      "earth_eccentricity_mean": 0.028481634639538136,
+      "earth_eccentricity_min": 0.0007548102810689405,
+      "earth_eccentricity_std": 0.012949700222339681,
+      "earth_initial_eccentricity": 0.016702362219234417,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 6.86364010681581e-13,
+      "max_abs_energy_rel_error": 2.295603528960093e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "saturn_mass_plus_5pct_2myr",
+    "ok": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 2000000.0,
+      "computation_seconds": 311.56209494700033,
+      "earth_eccentricity_max": 0.06174247062775383,
+      "earth_eccentricity_mean": 0.030684101751968233,
+      "earth_eccentricity_min": 0.00015221684263798222,
+      "earth_eccentricity_std": 0.013892265528762318,
+      "earth_initial_eccentricity": 0.01670236221923477,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.7291852617863052e-12,
+      "max_abs_energy_rel_error": 4.8182384135215016e-12,
+      "max_abs_output_time_error_years": 0.009999999163028406,
+      "output_count": 2001,
+      "row_count": 16008
+    }
+  },
+  {
+    "name": "whfast_grpot_20kyr",
+    "ok": true,
+    "reused_existing_result": true,
+    "summary": {
+      "all_bodies_bound": true,
+      "body_count": 8,
+      "completed_years": 20000.0,
+      "computation_seconds": 5.454339408999658,
+      "earth_eccentricity_max": 0.019720737795662305,
+      "earth_eccentricity_mean": 0.018922860957091742,
+      "earth_eccentricity_min": 0.016702362219234237,
+      "earth_eccentricity_std": 0.0008324106365291151,
+      "earth_initial_eccentricity": 0.016702362219234237,
+      "kind": "nbody",
+      "max_abs_angmom_rel_error": 1.364985245626785e-13,
+      "max_abs_energy_rel_error": 4.1914351905695714e-13,
+      "max_abs_output_time_error_years": 0.004999999945297873,
+      "output_count": 201,
+      "row_count": 1608
+    }
+  }
+]

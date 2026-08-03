@@ -1,0 +1,25 @@
+criterion,value,threshold,passed,bounds,reference_model
+forecast_rmse_gain_at_least_5pct,0.06038914803188522,0.05,True,bornes livrées,M1
+forecast_delta_bic_at_most_minus_10 (naif),-128.22451357852083,-10.0,True,bornes livrées,M1
+forecast_delta_bic_at_most_minus_10 (n_eff),6.515676375970372,-10.0,False,bornes livrées,M1
+100k_regime_within_factor_2_and_closer_than_reference,0.018625225025704528,1.3018123209125594,False,bornes livrées,M1
+chronology_correlation_and_termination_timing,0.0934906247265145,0.4,False,bornes livrées,M1
+blockwise_wilcoxon_M2_better,5.960464477539063e-08,0.05,True,bornes livrées,M1
+forecast_rmse_gain_at_least_5pct,-0.18386883476373805,0.05,False,bornes livrées,M1P
+forecast_delta_bic_at_most_minus_10 (naif),405.0905973013205,-10.0,False,bornes livrées,M1P
+forecast_delta_bic_at_most_minus_10 (n_eff),5.314703622602821,-10.0,False,bornes livrées,M1P
+100k_regime_within_factor_2_and_closer_than_reference,0.018625225025704528,1.3018123209125594,False,bornes livrées,M1P
+chronology_correlation_and_termination_timing,0.0934906247265145,0.4,False,bornes livrées,M1P
+blockwise_wilcoxon_M2_better,0.9999999403953552,0.05,False,bornes livrées,M1P
+forecast_rmse_gain_at_least_5pct,0.035741361544417094,0.05,False,bornes élargies,M1
+forecast_delta_bic_at_most_minus_10 (naif),-66.07950518165262,-10.0,True,bornes élargies,M1
+forecast_delta_bic_at_most_minus_10 (n_eff),8.358981609936109,-10.0,False,bornes élargies,M1
+100k_regime_within_factor_2_and_closer_than_reference,0.004694662409914815,1.3018123209125594,False,bornes élargies,M1
+chronology_correlation_and_termination_timing,0.2595458575630887,0.4,False,bornes élargies,M1
+blockwise_wilcoxon_M2_better,0.00011962652206420898,0.05,True,bornes élargies,M1
+forecast_rmse_gain_at_least_5pct,-0.31568283027747013,0.05,False,bornes élargies,M1P
+forecast_delta_bic_at_most_minus_10 (naif),658.4539042271776,-10.0,False,bornes élargies,M1P
+forecast_delta_bic_at_most_minus_10 (n_eff),9.343167206416737,-10.0,False,bornes élargies,M1P
+100k_regime_within_factor_2_and_closer_than_reference,0.004694662409914815,1.3018123209125594,False,bornes élargies,M1P
+chronology_correlation_and_termination_timing,0.2595458575630887,0.4,False,bornes élargies,M1P
+blockwise_wilcoxon_M2_better,0.9999980330467224,0.05,False,bornes élargies,M1P

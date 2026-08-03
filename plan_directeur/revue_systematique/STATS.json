@@ -1,0 +1,41 @@
+{
+  "total_publications": 336,
+  "domains": {
+    "astrochemistry_stellar": 10,
+    "causal_discovery_system_id": 31,
+    "causal_emergence": 41,
+    "climate_tipping": 3,
+    "evolution_fitness_landscapes": 1,
+    "exoplanet_climate": 10,
+    "living_systems": 8,
+    "matter_chronology": 41,
+    "microbiology_antibiotics": 8,
+    "nonequilibrium_memory": 12,
+    "orbital_dynamics": 30,
+    "other_cross_domain": 21,
+    "paleoclimate": 15,
+    "planetary_differentiation": 7,
+    "planetary_systems": 59,
+    "prebiotic_chemistry": 12,
+    "protoplanetary_disks": 7,
+    "statistics_reproducibility": 12,
+    "temporal_networks": 7,
+    "topological_data_analysis": 1
+  },
+  "tiers": {
+    "B — citation/identifiant vérifié dans ORI-C": 229,
+    "A — titre/résumé vérifié": 75,
+    "C — candidat bibliographique extrait": 32
+  },
+  "identifier_types": {
+    "doi": 141,
+    "arxiv": 80,
+    "none": 88,
+    "url": 27
+  },
+  "datasets": 32,
+  "codes": 35,
+  "methods": 25,
+  "hypotheses": 28,
+  "tests": 20
+}

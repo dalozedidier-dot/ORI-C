@@ -1,0 +1,150 @@
+{
+  "affectations_uniques": 29,
+  "changements": [
+    {
+      "test_id": "C1-003",
+      "ancien": "paleoclimate_replication",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C1-005",
+      "ancien": "paleoclimate_replication",
+      "nouveau": "climate_proxy_robustness"
+    },
+    {
+      "test_id": "C1-006",
+      "ancien": "paleoclimate_replication",
+      "nouveau": "climate_proxy_robustness"
+    },
+    {
+      "test_id": "C2-001",
+      "ancien": "paleoclimate_prospective",
+      "nouveau": "climate_hysteresis"
+    },
+    {
+      "test_id": "C2-005",
+      "ancien": "paleoclimate_prospective",
+      "nouveau": "climate_identifiability"
+    },
+    {
+      "test_id": "C2-007",
+      "ancien": "paleoclimate_prospective",
+      "nouveau": "climate_hysteresis"
+    },
+    {
+      "test_id": "C3-008",
+      "ancien": "memory_families",
+      "nouveau": "climate_proxy_robustness"
+    },
+    {
+      "test_id": "C3-009",
+      "ancien": "memory_families",
+      "nouveau": "climate_spectra"
+    },
+    {
+      "test_id": "C3-012",
+      "ancien": "memory_families",
+      "nouveau": "climate_hysteresis"
+    },
+    {
+      "test_id": "C4-005",
+      "ancien": "climate_models",
+      "nouveau": "climate_hysteresis"
+    },
+    {
+      "test_id": "C5-001",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-002",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-003",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-004",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-005",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-006",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-007",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-008",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-009",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C5-010",
+      "ancien": "climate_data",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C6-005",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_spectra"
+    },
+    {
+      "test_id": "C6-006",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_chronology"
+    },
+    {
+      "test_id": "C6-007",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_identifiability"
+    },
+    {
+      "test_id": "C6-008",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_identifiability"
+    },
+    {
+      "test_id": "C6-010",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_hysteresis"
+    },
+    {
+      "test_id": "C6-011",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_path_dependence"
+    },
+    {
+      "test_id": "C6-013",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_spectra"
+    },
+    {
+      "test_id": "C6-014",
+      "ancien": "climate_discrimination",
+      "nouveau": "climate_proxy_robustness"
+    },
+    {
+      "test_id": "C7-002",
+      "ancien": "climate_mechanisms",
+      "nouveau": "climate_spectra"
+    }
+  ]
+}

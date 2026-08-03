@@ -1,0 +1,17 @@
+{
+  "mpt": {
+    "seed": 729,
+    "split_age_kyr": 1200,
+    "max_iterations": 8,
+    "population_size": 4,
+    "restarts": 1,
+    "bootstrap_draws": 200
+  },
+  "exoplanet": {
+    "seed": 729,
+    "ensemble_size": 4,
+    "step_myr": 0.1,
+    "final_hold_myr": 10.0,
+    "persistence_hold_myr": 60.0
+  }
+}

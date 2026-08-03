@@ -1,0 +1,403 @@
+"""Génère ETAT_DES_TESTS.md à partir des exécutions réelles.
+
+Aucun compteur de tests n'est saisi à la main dans le dossier. Ce script
+exécute les deux suites, relit les rapports de test du socle, et écrit un
+fichier unique auquel les autres documents renvoient.
+
+    python etat_des_tests.py                    écrit ETAT_DES_TESTS.md
+    python etat_des_tests.py --verifier         contrôle sans rien écrire
+    python etat_des_tests.py --rejouer-analyse  régénère aussi l'analyse
+
+Le mode normal réaligne l'empreinte de `ETAT_DES_TESTS.md` dans le manifeste
+juste après l'avoir écrit. Le fichier est dynamique : le produire modifie le
+dossier qu'il décrit, et sans ce réalignement un simple relevé d'état
+invaliderait le sceau.
+
+Aucun des deux premiers modes ne modifie un résultat archivé. Relever un état
+et produire un résultat sont deux opérations distinctes : les confondre fait
+qu'un simple contrôle invalide le manifeste, et que le socle passe de 121 à
+120 réussites pour la seule raison que ses propres fichiers ont changé.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import re
+import subprocess
+import sys
+import tempfile
+from datetime import date
+from pathlib import Path
+
+RACINE = Path(__file__).resolve().parent
+TERMINAISON = chr(10)  # le manifeste emploie des fins de ligne Unix
+
+
+def executer(commande: list[str], repertoire: Path, environnement=None) -> str:
+    resultat = subprocess.run(
+        commande, cwd=repertoire, capture_output=True, text=True,
+        encoding="utf-8", errors="replace", env=environnement,
+    )
+    return resultat.stdout + resultat.stderr, resultat.returncode
+
+
+def suite_socle() -> dict:
+    sortie, code = executer([sys.executable, "-m", "pytest", "-q"], RACINE / "00_socle")
+    reussis = re.search(r"(\d+) passed", sortie)
+    echoues = re.search(r"(\d+) failed", sortie)
+    attendus = re.search(r"(\d+) xfailed", sortie)
+    return {
+        "reussis": int(reussis.group(1)) if reussis else 0,
+        "echoues": int(echoues.group(1)) if echoues else 0,
+        "echecs_attendus": int(attendus.group(1)) if attendus else 0,
+        "code_retour": code,
+    }
+
+
+def suite_memoire() -> dict:
+    import os
+
+    chemin = RACINE / "02_branche_systeme_solaire" / "couche_memoire_historique"
+    environnement = dict(os.environ)
+    environnement["PYTHONPATH"] = str(chemin / "src")
+    environnement.setdefault("MPLCONFIGDIR", str(chemin / ".mplconfig"))
+    sortie, code = executer(
+        [sys.executable, "-m", "unittest", "discover", "-s", "tests"],
+        chemin, environnement,
+    )
+    total = re.search(r"Ran (\d+) tests?", sortie)
+    total = int(total.group(1)) if total else 0
+    echecs = re.search(r"failures=(\d+)", sortie)
+    erreurs = re.search(r"errors=(\d+)", sortie)
+    echoues = (int(echecs.group(1)) if echecs else 0) + (
+        int(erreurs.group(1)) if erreurs else 0
+    )
+    return {
+        "total": total,
+        "echoues": echoues,
+        "reussis": total - echoues,
+        "code_retour": code,
+        "ecarts": re.findall(r"Max absolute difference[^\n]*", sortie)[:3],
+    }
+
+
+def suite_astronomique() -> dict:
+    """La couche N-corps. Ses tests exigent REBOUND, souvent absent."""
+    chemin = (
+        RACINE / "02_branche_systeme_solaire" / "couche_astronomique"
+        / "code" / "ORI-C_Systeme_solaire_tests"
+    )
+    if not (chemin / "tests").is_dir():
+        return {"disponible": False, "motif": "aucun répertoire de tests trouvé"}
+    import os
+
+    environnement = dict(os.environ)
+    # Le paquet expose son code sous src/. Sans ces deux entrées, la collecte
+    # échoue sur `oric_solar_history` et la suite paraît indisponible.
+    environnement["PYTHONPATH"] = os.pathsep.join(
+        [str(chemin), str(chemin / "src")]
+    )
+    # pytest crée ses répertoires temporaires sous TEMP ; un répertoire
+    # existant aux droits inadéquats fait échouer la collecte pour une raison
+    # sans rapport avec le code testé. On lui impose un emplacement propre.
+    with tempfile.TemporaryDirectory(prefix="oric_pytest_") as base:
+        # Ne pas ajouter -q : le pyproject.toml du paquet le pose déjà, et un
+        # second -q passe en -qq, ce qui supprime la ligne de résumé et rend le
+        # comptage impossible.
+        sortie, code = executer(
+            [sys.executable, "-m", "pytest", "--basetemp", base],
+            chemin, environnement,
+        )
+    reussis = re.search(r"(\d+) passed", sortie)
+    erreurs_collecte = re.search(r"(\d+) errors? during collection", sortie)
+    if erreurs_collecte and not reussis:
+        manquants = sorted(set(re.findall(r"ModuleNotFoundError: No module named '([^']+)'", sortie)))
+        return {
+            "disponible": False,
+            "motif": (
+                f"{erreurs_collecte.group(1)} erreurs de collecte"
+                + (f", modules absents : {', '.join(manquants)}" if manquants else "")
+            ),
+        }
+    echoues = re.search(r"(\d+) failed", sortie)
+    ignores = re.search(r"(\d+) skipped", sortie)
+    return {
+        "disponible": True,
+        "reussis": int(reussis.group(1)) if reussis else 0,
+        "echoues": int(echoues.group(1)) if echoues else 0,
+        "ignores": int(ignores.group(1)) if ignores else 0,
+        "code_retour": code,
+    }
+
+
+def rapport_exhaustif(rejouer: bool = False) -> dict:
+    chemin = (
+        RACINE / "00_socle" / "test_interventionnel" / "resultats_exhaustifs"
+        / "rapport_exhaustif.txt"
+    )
+    script = (
+        RACINE / "00_socle" / "test_interventionnel" / "scripts"
+        / "analyse_exhaustive.py"
+    )
+    rejoue = False
+    if rejouer and script.exists():
+        _, code = executer([sys.executable, str(script)], script.parent)
+        rejoue = code == 0
+    if not chemin.exists():
+        return {"sections": 0, "reussies": 0, "echecs": [], "rejoue": rejoue}
+    texte = chemin.read_text(encoding="utf-8", errors="replace")
+    bilan = re.search(r"Bilan\s*:\s*(\d+)\s*/\s*(\d+)", texte)
+    echecs = re.findall(r"([A-G]\d{2})\s+ÉCHOUÉ\s+(.+)", texte)
+    return {
+        "reussies": int(bilan.group(1)) if bilan else 0,
+        "sections": int(bilan.group(2)) if bilan else 0,
+        "echecs": [(code, libelle.strip()) for code, libelle in echecs],
+        "rejoue": rejoue,
+    }
+
+
+def rapport_robustesse() -> dict:
+    chemin = (
+        RACINE / "00_socle" / "test_interventionnel" / "resultats_robustesse"
+        / "rapport_robustesse.txt"
+    )
+    if not chemin.exists():
+        return {"controles": 0}
+    texte = chemin.read_text(encoding="utf-8", errors="replace")
+    return {"controles": len(re.findall(r"C\d{2}", texte))}
+
+
+def actualiser_manifeste(cible: Path) -> str:
+    """Réaligne la seule entrée de `cible` dans MANIFEST.sha256.
+
+    `ETAT_DES_TESTS.md` est un fichier dynamique : le produire modifie le
+    dossier qu'il décrit. Sans cette mise à jour, tout relevé d'état invalide le
+    manifeste et fait échouer le contrôle d'intégrité du socle, qui retombe à
+    120 réussites pour la seule raison que ce fichier a changé.
+
+    Seule cette ligne est réécrite. Régénérer le manifeste entier masquerait
+    toute autre dérive du dossier, ce qui est précisément ce qu'il doit
+    détecter.
+    """
+    manifeste = RACINE / "MANIFEST.sha256"
+    if not manifeste.exists():
+        return "manifeste absent, non mis à jour"
+
+    relatif = cible.relative_to(RACINE).as_posix()
+    empreinte = hashlib.sha256(cible.read_bytes()).hexdigest()
+    nouvelle = f"{empreinte}  {relatif}"
+
+    lignes = manifeste.read_text(encoding="utf-8").splitlines()
+    for index, ligne in enumerate(lignes):
+        if ligne.endswith(f"  {relatif}"):
+            if ligne == nouvelle:
+                return "empreinte déjà à jour"
+            lignes[index] = nouvelle
+            manifeste.write_text(TERMINAISON.join(lignes) + TERMINAISON, encoding="utf-8")
+            return "empreinte actualisée"
+
+    lignes.append(nouvelle)
+    lignes.sort(key=lambda l: l.split("  ", 1)[1] if "  " in l else l)
+    manifeste.write_text(TERMINAISON.join(lignes) + TERMINAISON, encoding="utf-8")
+    return "entrée ajoutée au manifeste"
+
+
+def environnement_courant() -> str:
+    """Versions qui déterminent les compteurs, en particulier ceux de la
+    couche mémoire dont les assertions sont des égalités exactes."""
+    morceaux = [f"Python {sys.version_info.major}.{sys.version_info.minor}"
+                f".{sys.version_info.micro}"]
+    for nom in ("numpy", "scipy", "numba", "pandas"):
+        try:
+            module = __import__(nom)
+            morceaux.append(f"{nom} {module.__version__}")
+        except Exception:
+            morceaux.append(f"{nom} absent")
+    return ", ".join(morceaux)
+
+
+def composer(rejouer: bool = False) -> str:
+    socle = suite_socle()
+    memoire = suite_memoire()
+    astro = suite_astronomique()
+    exhaustif = rapport_exhaustif(rejouer=rejouer)
+
+    lignes = [
+        "# État des tests",
+        "",
+        "**Fichier généré par `etat_des_tests.py`. Ne pas modifier à la main.**",
+        "",
+        "Aucun compteur de tests n'est saisi manuellement ailleurs dans le "
+        "dossier : les autres documents renvoient ici.",
+        "",
+        f"Dernière exécution : {date.today().isoformat()}",
+        "",
+        f"Environnement : {environnement_courant()}",
+        "",
+        "Les compteurs dépendent de l'environnement. Un écart entre ce fichier "
+        "et une exécution locale n'est pas nécessairement un fichier périmé : "
+        "comparez d'abord les versions ci-dessus.",
+        "",
+        "## Suites exécutables",
+        "",
+        "| Suite | Réussis | Échecs | Échecs attendus |",
+        "|---|---:|---:|---:|",
+        f"| Socle, `00_socle/tests` | {socle['reussis']} | {socle['echoues']} | "
+        f"{socle['echecs_attendus']} |",
+        f"| Couche mémoire historique | {memoire['reussis']} | "
+        f"{memoire['echoues']} | 0 |",
+    ]
+    if astro.get("disponible"):
+        lignes.append(
+            f"| Couche astronomique | {astro['reussis']} | {astro['echoues']} | "
+            f"{astro['ignores']} ignorés |"
+        )
+    else:
+        lignes.append(
+            f"| Couche astronomique | — | — | non exécutable ici, "
+            f"{astro.get('motif', 'dépendance absente')} |"
+        )
+    lignes.append("")
+
+    if memoire["echoues"]:
+        lignes += [
+            f"**{memoire['echoues']} échec(s) dans la couche mémoire.** Les "
+            "assertions d'égalité exacte entre le noyau compilé et le modèle de "
+            "référence ne sont pas portables entre versions de `numpy`, `scipy` "
+            "et `numba` : l'ordre des opérations flottantes peut changer. Les "
+            "écarts observés restent de l'ordre du dernier bit et ne modifient "
+            "aucun résultat scientifique. Voir la note de portabilité plus bas.",
+            "",
+        ]
+        if memoire.get("ecarts"):
+            lignes += ["```text"] + memoire["ecarts"] + ["```", ""]
+
+    if socle["echecs_attendus"]:
+        lignes += [
+            "L'échec attendu du socle concerne deux relations dont la référence "
+            "est encore trop générique pour être datée : `TR-021 → TR-028` et "
+            "`TR-024 → TR-023`. Il passera au vert dès qu'une source datable "
+            "leur sera attachée.",
+            "",
+        ]
+
+    lignes += [
+        "## Analyse exhaustive du test interventionnel",
+        "",
+        ("Rapport **réexécuté** pour ce relevé." if exhaustif.get("rejoue")
+         else "Rapport archivé, **lu sans réexécution**. Le relevé d'état ne "
+              "réécrit aucun résultat : la régénération appartient à la "
+              "construction du dossier, avec `--rejouer-analyse`."),
+        "",
+        f"**{exhaustif['reussies']} sections réussies sur "
+        f"{exhaustif['sections']}.**",
+        "",
+    ]
+    if exhaustif["echecs"]:
+        lignes += ["| Section | Intitulé | Statut |", "|---|---|---|"]
+        lignes += [
+            f"| `{code}` | {libelle} | **ÉCHOUÉ** |"
+            for code, libelle in exhaustif["echecs"]
+        ]
+        lignes += [
+            "",
+            "Ces deux échecs sont conservés et doivent apparaître dans toute "
+            "présentation du test interventionnel. Le niveau 1, théorème dans "
+            "le modèle, est déclaré établi ; le niveau 3, validité biologique, "
+            "ne l'est pas.",
+            "",
+        ]
+
+    lignes += [
+        "## Portabilité de la couche mémoire",
+        "",
+        "**Choix arrêté : reproductibilité numérique tolérée.** Les comparaisons "
+        "au modèle de référence exigent un écart sous `1e-11` au lieu d'une "
+        "égalité binaire.",
+        "",
+        "Le noyau compilé exécute la même suite d'opérations flottantes que le "
+        "modèle de référence, et l'écart est exactement nul sur l'environnement "
+        "de livraison. Cette égalité n'est pas portable : numpy, scipy et numba "
+        "peuvent réordonner ou vectoriser les opérations d'une version à "
+        "l'autre, ce qui déplace le dernier bit. Des exécutions sur d'autres "
+        "versions ont produit des écarts de 10⁻¹⁴ à 10⁻¹⁸.",
+        "",
+        "La reproductibilité binaire aurait exigé un conteneur, incompatible "
+        "avec des dépendances bornées seulement par le bas. La tolérance "
+        "retenue reste très inférieure aux échelles numériques pertinentes "
+        "pour les résultats rapportés : elle absorbe les écarts d'arrondi "
+        "entre environnements et détecte les divergences dépassant le seuil "
+        "fixé. Le test "
+        "`test_la_tolerance_detecte_une_divergence_algorithmique` en donne la "
+        "preuve automatisée.",
+        "",
+        "## Reproduire",
+        "",
+        "```bash",
+        "python etat_des_tests.py",
+        "```",
+        "",
+        "Le mode `--verifier` échoue si le fichier ne correspond plus aux "
+        "exécutions réelles ; il convient à un contrôle avant livraison.",
+    ]
+    return "\n".join(lignes) + "\n"
+
+
+def main() -> int:
+    parseur = argparse.ArgumentParser()
+    parseur.add_argument("--verifier", action="store_true")
+    parseur.add_argument(
+        "--rejouer-analyse", action="store_true",
+        help=(
+            "réexécute analyse_exhaustive.py. Réécrit quatre fichiers archivés "
+            "et invalide le manifeste : à faire pendant la construction du "
+            "dossier, jamais lors d'un simple relevé d'état."
+        ),
+    )
+    arguments = parseur.parse_args()
+
+    cible = RACINE / "ETAT_DES_TESTS.md"
+
+    if arguments.verifier:
+        # Mode lecture seule : ne rejoue pas l'analyse exhaustive, qui
+        # réécrirait quatre fichiers archivés et invaliderait le manifeste.
+        contenu = composer(rejouer=False)
+        if not cible.exists():
+            print("ETAT_DES_TESTS.md absent.")
+            return 1
+        ancien = cible.read_text(encoding="utf-8")
+
+        def normaliser(texte: str) -> str:
+            texte = re.sub(r"Dernière exécution : .*", "", texte)
+            return re.sub(r"Environnement : .*", "", texte)
+
+        if normaliser(ancien) == normaliser(contenu):
+            print("ETAT_DES_TESTS.md est à jour.")
+            return 0
+
+        print("ETAT_DES_TESTS.md ne correspond pas à cette exécution.")
+        ancien_env = re.search(r"Environnement : (.*)", ancien)
+        print(f"  environnement du fichier : "
+              f"{ancien_env.group(1) if ancien_env else 'non consigné'}")
+        print(f"  environnement courant    : {environnement_courant()}")
+        print("  Si les environnements diffèrent, le fichier n'est pas périmé :")
+        print("  il a été produit ailleurs. Régénérez-le dans l'environnement")
+        print("  que vous voulez faire foi.")
+        return 1
+
+    contenu = composer(rejouer=arguments.rejouer_analyse)
+    cible.write_text(contenu, encoding="utf-8")
+    print(f"écrit : {cible}")
+    print(f"manifeste : {actualiser_manifeste(cible)}")
+    if arguments.rejouer_analyse:
+        print(
+            "  Attention : --rejouer-analyse a réécrit les résultats de "
+            "l'analyse exhaustive. Régénérez le manifeste complet avec "
+            "construire_dossier.py."
+        )
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

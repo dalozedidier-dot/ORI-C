@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="920" height="430" font-family="'Liberation Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="920" height="430" fill="#ffffff"/>
+
+<defs>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="1.4" stdDeviation="1.8" flood-color="#1c2836" flood-opacity="0.16"/>
+  </filter>
+  <marker id="mFil" markerWidth="11" markerHeight="11" refX="8.2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0.5,0.6 L8.6,4 L0.5,7.4 Z" fill="#33556f"/>
+  </marker>
+  <marker id="mCon" markerWidth="12" markerHeight="12" refX="8.4" refY="4.2" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M1,1 L8.8,4.2 L1,7.4" fill="none" stroke="#c7922f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="mEnv" markerWidth="11" markerHeight="11" refX="8.2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0.5,0.6 L8.6,4 L0.5,7.4 Z" fill="#2e7d74"/>
+  </marker>
+  <marker id="mLec" markerWidth="12" markerHeight="12" refX="8.4" refY="4.2" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M1,1 L8.8,4.2 L1,7.4" fill="none" stroke="#3d7c54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="mCoeA" markerWidth="11" markerHeight="11" refX="8.2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0.5,0.6 L8.6,4 L0.5,7.4 Z" fill="#b0533e"/>
+  </marker>
+  <marker id="mCoeB" markerWidth="11" markerHeight="11" refX="2.6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M8.6,0.6 L0.5,4 L8.6,7.4 Z" fill="#b0533e"/>
+  </marker>
+  <marker id="mTra" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M4.5,0.8 L8.2,4.5 L4.5,8.2 L0.8,4.5 Z" fill="#7e5aa6"/>
+  </marker>
+</defs>
+
+<text x="34" y="42" font-size="19" font-weight="700" fill="#23303e">Nature réelle des relations après reclassement</text>
+<text x="34" y="63" font-size="12.5" fill="#5a6b7a">La plupart des liens décrivaient un contexte ou une condition, non un transfert de matière — 47 relations</text>
+<text x="272" y="127" text-anchor="end" font-size="13" fill="#23303e">Conditions d'ouverture</text>
+<rect x="288" y="108" width="560.0" height="30" rx="4" fill="#c7922f" opacity="0.9"/>
+<text x="858.0" y="128" font-size="14" font-weight="700" fill="#23303e">23</text>
+<text x="272" y="177" text-anchor="end" font-size="13" fill="#23303e">Filiations matérielles</text>
+<rect x="288" y="158" width="316.5" height="30" rx="4" fill="#33556f" opacity="0.9"/>
+<text x="614.5" y="178" font-size="14" font-weight="700" fill="#23303e">13</text>
+<text x="272" y="227" text-anchor="end" font-size="13" fill="#23303e">Transformations environnementales</text>
+<rect x="288" y="208" width="121.7" height="30" rx="4" fill="#2e7d74" opacity="0.9"/>
+<text x="419.7" y="228" font-size="14" font-weight="700" fill="#23303e">5</text>
+<text x="272" y="277" text-anchor="end" font-size="13" fill="#23303e">Dépendances non généalogiques</text>
+<rect x="288" y="258" width="73.0" height="30" rx="4" fill="#8892a0" opacity="0.9"/>
+<text x="371.0" y="278" font-size="14" font-weight="700" fill="#23303e">3</text>
+<text x="272" y="327" text-anchor="end" font-size="13" fill="#23303e">Contraintes d'inventaire</text>
+<rect x="288" y="308" width="48.7" height="30" rx="4" fill="#a8792e" opacity="0.9"/>
+<text x="346.7" y="328" font-size="14" font-weight="700" fill="#23303e">2</text>
+<text x="272" y="377" text-anchor="end" font-size="13" fill="#23303e">Transmission de trace historique</text>
+<rect x="288" y="358" width="24.3" height="30" rx="4" fill="#7e5aa6" opacity="0.9"/>
+<text x="322.3" y="378" font-size="14" font-weight="700" fill="#23303e">1</text>
+<line x1="288" y1="98" x2="288" y2="396" stroke="#cbd3dc" stroke-width="1"/>
+</svg>

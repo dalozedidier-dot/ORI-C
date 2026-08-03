@@ -1,0 +1,22 @@
+{
+  "body_summary.csv": {
+    "bytes": 1218,
+    "sha256": "458ab2f154ae58210b8a2fd496641cceceff92af4b6561863a668f2dc599e8ae"
+  },
+  "diagnostics.csv.gz": {
+    "bytes": 6628,
+    "sha256": "61cbed82afd9a8a0205c396b5c01fed7fe3efdf7faf0b3c80bac26d1195bfdec"
+  },
+  "earth.csv.gz": {
+    "bytes": 20278,
+    "sha256": "cd7d5c46192d4549bb7faed94085f8bb99aac9f1749e94dee27d3a4071414f71"
+  },
+  "metadata.json": {
+    "bytes": 1537,
+    "sha256": "b578484c0c60eecfa4ddb123459326c8c19ee5e9ae51ac75cdc381f30ee9dcf7"
+  },
+  "orbital_sample.csv.gz": {
+    "bytes": 1520,
+    "sha256": "0ab4f432cf99afb58df3be0aa1b853abc5fd6c8a65b36e5877071d9db1008820"
+  }
+}

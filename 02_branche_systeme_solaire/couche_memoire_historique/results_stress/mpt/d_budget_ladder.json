@@ -1,0 +1,21 @@
+{
+  "seeds": [
+    729,
+    766,
+    803,
+    840
+  ],
+  "levels": [
+    "livre",
+    "faible",
+    "moyen",
+    "eleve",
+    "maximal"
+  ],
+  "gain_vs_M1_at_delivered_budget": 0.05998444759560695,
+  "gain_vs_M1_at_maximal_budget": 0.03573691391200107,
+  "gain_vs_M1P_at_maximal_budget": -0.3156430276014077,
+  "levels_where_gain_vs_M1_above_5pct": 5,
+  "levels_where_gain_vs_M1P_above_5pct": 0,
+  "total_levels": 10
+}

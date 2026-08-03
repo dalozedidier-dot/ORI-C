@@ -1,0 +1,31 @@
+{
+  "transitions": 40,
+  "masquees_par_tirage": 8,
+  "repetitions": 500,
+  "cas_sans_voisin_visible": 223,
+  "par_predicteur": {
+    "oric": {
+      "erreur_absolue_moyenne": 0.617625,
+      "erreur_absolue_mediane": 0.0,
+      "taux_exact": 0.55025
+    },
+    "chronologique": {
+      "erreur_absolue_moyenne": 0.205625,
+      "erreur_absolue_mediane": 0.0,
+      "taux_exact": 0.58875
+    },
+    "majoritaire": {
+      "erreur_absolue_moyenne": 3.11075,
+      "erreur_absolue_mediane": 3.0,
+      "taux_exact": 0.0005
+    }
+  },
+  "oric_moins_chronologique": {
+    "erreur_moyenne": 0.412,
+    "ic_2.5": -0.5,
+    "ic_97.5": 2.0125000000000455,
+    "fraction_de_cas_ou_oric_fait_mieux": 0.183,
+    "fraction_de_cas_egaux": 0.41775
+  },
+  "lecture": "L'erreur est mesurée en numéros de régime. Le prédicteur chronologique n'utilise que l'ordre des identifiants ; le prédicteur ORI-C utilise les liens typés de la carte. Si le second ne bat pas le premier, la carte n'ajoute rien à la chronologie pour cette tâche."
+}

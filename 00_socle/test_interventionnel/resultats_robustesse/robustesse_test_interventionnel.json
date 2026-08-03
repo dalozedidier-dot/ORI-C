@@ -1,0 +1,845 @@
+{
+  "statut": "campagne_de_robustesse",
+  "parametres": {
+    "mu_max": 1.0,
+    "K_s": 1.0,
+    "dilution": 0.25,
+    "S_in": 10.0,
+    "decay": 0.05,
+    "leak_free": 0.25,
+    "leak_membrane": 0.02,
+    "S0": 1.0,
+    "P0": 0.1,
+    "t_end": 500.0,
+    "n_points": 2001
+  },
+  "facteur_retention_exact": 4.4439094848338945,
+  "facteur_retention_courant": 4.443909484823528,
+  "biais_relatif_courant": -2.3328149572171933e-12,
+  "facteur_retention_fenetre_historique": 4.418075430276165,
+  "biais_relatif_fenetre_historique": -0.00581336200611098,
+  "controles": {
+    "C01": {
+      "etats": {
+        "libre": {
+          "leak": 0.25,
+          "S_etoile": 0.4285714285714286,
+          "P_etoile": 7.976190476190476,
+          "P_numerique_t4000": 7.976190476190475,
+          "ecart_relatif_S": 2.5905203907920316e-16,
+          "ecart_relatif_P": 1.113537123206127e-16,
+          "residu_champ_S": 0.0,
+          "residu_champ_P": 0.0
+        },
+        "compartiment": {
+          "leak": 0.02,
+          "S_etoile": 0.07526881720430109,
+          "P_etoile": 35.445468509984636,
+          "P_numerique_t4000": 35.44546850998463,
+          "ecart_relatif_S": 0.0,
+          "ecart_relatif_P": 2.0046081082549308e-16,
+          "residu_champ_S": -8.881784197001252e-16,
+          "residu_champ_P": 4.91904690730136e-16
+        }
+      },
+      "facteur_retention_exact": 4.4439094848338945,
+      "ecart_relatif_max": 2.5905203907920316e-16,
+      "reussi": true,
+      "titre": "Solution stationnaire en forme close"
+    },
+    "C02": {
+      "facteur_retention_exact": 4.4439094848338945,
+      "serie": [
+        {
+          "t_end": 40,
+          "plateau_libre": 7.976200088784806,
+          "plateau_compartiment": 32.571824285709674,
+          "facteur_retention": 4.083626780063898,
+          "biais_relatif_vs_exact": -0.08107336704304263,
+          "cv_compartiment": 0.0070824541263288035,
+          "derive_compartiment": 0.024426901642702115,
+          "critere_stabilite_historique": false
+        },
+        {
+          "t_end": 80,
+          "plateau_libre": 7.976190476871538,
+          "plateau_compartiment": 35.239411173068866,
+          "facteur_retention": 4.418075430276165,
+          "biais_relatif_vs_exact": -0.00581336200611098,
+          "cv_compartiment": 0.0009372961064987774,
+          "derive_compartiment": 0.0032385959735949004,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 120,
+          "plateau_libre": 7.97619047633499,
+          "plateau_compartiment": 35.43059016075177,
+          "facteur_retention": 4.442044139476456,
+          "biais_relatif_vs_exact": -0.0004197532294040259,
+          "cv_compartiment": 0.00010068439988776197,
+          "derive_compartiment": 0.0003495595963861518,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 160,
+          "plateau_libre": 7.976190476455643,
+          "plateau_compartiment": 35.44438768771124,
+          "facteur_retention": 4.443773978610095,
+          "biais_relatif_vs_exact": -3.0492570620880413e-05,
+          "cv_compartiment": 9.704642701809365e-06,
+          "derive_compartiment": 3.386765023522587e-05,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 240,
+          "plateau_libre": 7.976190476192349,
+          "plateau_compartiment": 35.44546268233909,
+          "facteur_retention": 4.443908754202663,
+          "biais_relatif_vs_exact": -1.6441181656945114e-07,
+          "cv_compartiment": 7.737324887757566e-08,
+          "derive_compartiment": 2.7345760883070244e-07,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 320,
+          "plateau_libre": 7.976190476357409,
+          "plateau_compartiment": 35.445468469701446,
+          "facteur_retention": 4.443909479690459,
+          "biais_relatif_vs_exact": -1.157412390366263e-09,
+          "cv_compartiment": 6.718170808855141e-10,
+          "derive_compartiment": 2.3412569850957933e-09,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 500,
+          "plateau_libre": 7.976190476181728,
+          "plateau_compartiment": 35.44546850986307,
+          "facteur_retention": 4.443909484823528,
+          "biais_relatif_vs_exact": -2.3328149572171933e-12,
+          "cv_compartiment": 2.0856306424419082e-11,
+          "derive_compartiment": 5.248585225537556e-11,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 800,
+          "plateau_libre": 7.97619047619242,
+          "plateau_compartiment": 35.44546851014196,
+          "facteur_retention": 4.443909484852536,
+          "biais_relatif_vs_exact": 4.194749856243528e-12,
+          "cv_compartiment": 1.099478353454448e-12,
+          "derive_compartiment": 2.414149544760698e-12,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 1200,
+          "plateau_libre": 7.976190476142804,
+          "plateau_compartiment": 35.44546851293534,
+          "facteur_retention": 4.443909485230394,
+          "biais_relatif_vs_exact": 8.922317686651322e-11,
+          "cv_compartiment": 3.3905773717517355e-11,
+          "derive_compartiment": 5.431144885486208e-11,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 2000,
+          "plateau_libre": 7.976190476272397,
+          "plateau_compartiment": 35.44546850997676,
+          "facteur_retention": 4.443909484787265,
+          "biais_relatif_vs_exact": -1.0492870566646903e-11,
+          "cv_compartiment": 1.8032238599985409e-13,
+          "derive_compartiment": 5.161865878757593e-13,
+          "critere_stabilite_historique": true
+        },
+        {
+          "t_end": 4000,
+          "plateau_libre": 7.9761904762224685,
+          "plateau_compartiment": 35.44546850998615,
+          "facteur_retention": 4.44390948481626,
+          "biais_relatif_vs_exact": -3.968303716205224e-12,
+          "cv_compartiment": 9.007697148223813e-14,
+          "derive_compartiment": 2.7202532029018246e-13,
+          "critere_stabilite_historique": true
+        }
+      ],
+      "fenetre_historique": 80.0,
+      "facteur_fenetre_historique": 4.418075430276165,
+      "biais_relatif_fenetre_historique": -0.00581336200611098,
+      "critere_historique_satisfait_a_tort": true,
+      "fenetre_courante": 500.0,
+      "facteur_fenetre_courante": 4.443909484823528,
+      "biais_relatif_fenetre_courante": -2.3328149572171933e-12,
+      "t_end_minimal_pour_1e-6": 240,
+      "diagnostic": "Le critère de stabilité historique (cv < 1e-2 et dérive < 1e-2) était satisfait à t_end = 80 alors que le compartiment sélectif n'avait pas atteint son état stationnaire : le seuil était trop permissif d'environ trois ordres de grandeur. L'horizon corrigé de 500 unités ramène le biais sous 1e-9.",
+      "reussi": true,
+      "titre": "Convergence temporelle"
+    },
+    "C03": {
+      "equilibres": {
+        "libre": {
+          "lambda_max_reel": -0.3042204624740501,
+          "lambda_min_reel": -3.854112870859283,
+          "partie_imaginaire_max": 0.0,
+          "oscillant": false,
+          "stable": true,
+          "tau_lent": 3.287089868536702,
+          "t_requis_1e9": 68.1192371756193,
+          "nombre_de_tau_fenetre_historique": 24.337636997924008,
+          "residu_attendu_fenetre_historique": 2.6933856953278032e-11,
+          "nombre_de_tau_fenetre_courante": 152.11023123702503,
+          "residu_attendu_fenetre_courante": 8.696929162948657e-67
+        },
+        "compartiment": {
+          "lambda_max_reel": -0.06959047290787643,
+          "lambda_min_reel": -30.837195241377835,
+          "partie_imaginaire_max": 0.0,
+          "oscillant": false,
+          "stable": true,
+          "tau_lent": 14.369783078264115,
+          "t_requis_1e9": 297.78883475012134,
+          "nombre_de_tau_fenetre_historique": 5.567237832630114,
+          "residu_attendu_fenetre_historique": 0.0038210201668604413,
+          "nombre_de_tau_fenetre_courante": 34.79523645393821,
+          "residu_attendu_fenetre_courante": 7.737858997036003e-16
+        }
+      },
+      "explication": "Le mode lent du compartiment sélectif a un temps de relaxation tau = 14.37 unités, contre 3.29 en phase libre. La fenêtre historique de 80 unités ne couvrait que 5.6 tau, d'où un résidu transitoire de l'ordre de 3.8e-03, compatible avec le biais mesuré. L'horizon courant de 500 unités couvre 34.8 tau.",
+      "t_end_recommande": 297.78883475012134,
+      "t_end_courant": 500.0,
+      "horizon_courant_suffisant": true,
+      "reussi": true,
+      "titre": "Stabilité linéaire"
+    },
+    "C04": {
+      "facteur_retention_exact": 4.4439094848338945,
+      "configurations": [
+        {
+          "methode": "LSODA",
+          "rtol": 1e-06,
+          "atol": 1e-09,
+          "facteur_retention": 4.443909484992966,
+          "ecart_relatif_vs_exact": 3.579547858315988e-11
+        },
+        {
+          "methode": "LSODA",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        },
+        {
+          "methode": "LSODA",
+          "rtol": 1e-12,
+          "atol": 1e-14,
+          "facteur_retention": 4.443909484833895,
+          "ecart_relatif_vs_exact": 1.9986420126946484e-16
+        },
+        {
+          "methode": "Radau",
+          "rtol": 1e-06,
+          "atol": 1e-09,
+          "facteur_retention": 4.443909484802961,
+          "ecart_relatif_vs_exact": -6.960870401812921e-12
+        },
+        {
+          "methode": "Radau",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "facteur_retention": 4.443909484833856,
+          "ecart_relatif_vs_exact": -8.594160654586988e-15
+        },
+        {
+          "methode": "Radau",
+          "rtol": 1e-12,
+          "atol": 1e-14,
+          "facteur_retention": 4.4439094848338945,
+          "ecart_relatif_vs_exact": 0.0
+        },
+        {
+          "methode": "BDF",
+          "rtol": 1e-06,
+          "atol": 1e-09,
+          "facteur_retention": 4.443909508495323,
+          "ecart_relatif_vs_exact": 5.324462267499051e-09
+        },
+        {
+          "methode": "BDF",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "facteur_retention": 4.4439094847882235,
+          "ecart_relatif_vs_exact": -1.0277217093477151e-11
+        },
+        {
+          "methode": "BDF",
+          "rtol": 1e-12,
+          "atol": 1e-14,
+          "facteur_retention": 4.443909484833907,
+          "ecart_relatif_vs_exact": 2.7980988177725077e-15
+        },
+        {
+          "methode": "DOP853",
+          "rtol": 1e-06,
+          "atol": 1e-09,
+          "facteur_retention": 4.4439094709398566,
+          "ecart_relatif_vs_exact": -3.126534860261814e-09
+        },
+        {
+          "methode": "DOP853",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "facteur_retention": 4.443909484827081,
+          "ecart_relatif_vs_exact": -1.5331582879380648e-12
+        },
+        {
+          "methode": "DOP853",
+          "rtol": 1e-12,
+          "atol": 1e-14,
+          "facteur_retention": 4.443909484833861,
+          "ecart_relatif_vs_exact": -7.594839648239663e-15
+        },
+        {
+          "methode": "RK45",
+          "rtol": 1e-06,
+          "atol": 1e-09,
+          "facteur_retention": 4.443909562691623,
+          "ecart_relatif_vs_exact": 1.7520097682059098e-08
+        },
+        {
+          "methode": "RK45",
+          "rtol": 1e-09,
+          "atol": 1e-11,
+          "facteur_retention": 4.443909484972224,
+          "ecart_relatif_vs_exact": 3.11278500267128e-11
+        },
+        {
+          "methode": "RK45",
+          "rtol": 1e-12,
+          "atol": 1e-14,
+          "facteur_retention": 4.443909484834009,
+          "ecart_relatif_vs_exact": 2.5782481963760963e-14
+        }
+      ],
+      "nombre_configurations": 15,
+      "nombre_echecs": 0,
+      "ecart_relatif_max": 1.7520097682059098e-08,
+      "dispersion_relative": 2.0646632542320912e-08,
+      "reussi": true,
+      "titre": "Invariance au solveur"
+    },
+    "C05": {
+      "serie": [
+        {
+          "n_points": 201,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        },
+        {
+          "n_points": 501,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        },
+        {
+          "n_points": 2001,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        },
+        {
+          "n_points": 8001,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        },
+        {
+          "n_points": 40001,
+          "facteur_retention": 4.443909484840703,
+          "ecart_relatif_vs_exact": 1.5321589669317173e-12
+        }
+      ],
+      "ecart_relatif_max": 1.5321589669317173e-12,
+      "reussi": true,
+      "titre": "Invariance à la discrétisation"
+    },
+    "C06": {
+      "trajectoires": {
+        "libre": {
+          "variation_S_plus_P": 7.3047619047619055,
+          "integrale_apport": 2384.052352354449,
+          "integrale_pertes": 2376.7475858166067,
+          "residu_absolu": -4.63308026432685e-06,
+          "residu_relatif": 1.9433634751146717e-09,
+          "P_toujours_positif": true,
+          "S_toujours_positif": true,
+          "S_borne_par_S_in": true
+        },
+        "compartiment": {
+          "variation_S_plus_P": 34.420737327188945,
+          "integrale_apport": 2474.66417701544,
+          "integrale_pertes": 2440.243435077584,
+          "residu_absolu": -4.610667346582886e-06,
+          "residu_relatif": 1.863148700905173e-09,
+          "P_toujours_positif": true,
+          "S_toujours_positif": true,
+          "S_borne_par_S_in": true
+        }
+      },
+      "residu_relatif_max": 1.9433634751146717e-09,
+      "reussi": true,
+      "titre": "Bilan de matière"
+    },
+    "C07": {
+      "nombre_conditions_initiales": 42,
+      "ecart_relatif_max": 2.3807423694147e-13,
+      "conditions_non_convergentes": [],
+      "note": "P0 = 0 est exclu : c'est l'équilibre trivial de lavage, non un contre-exemple.",
+      "reussi": true,
+      "titre": "Invariance aux conditions initiales"
+    },
+    "C08": {
+      "verifications_numeriques": [
+        {
+          "leak": 0.0,
+          "P_etoile": 49.73684210526316,
+          "tau_lent": 20.089210598093718,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.1143114649698079e-14,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.06022679425837321,
+          "P_etoile": 22.399540346825322,
+          "tau_lent": 9.144153448866861,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.12260454545454547,
+          "P_etoile": 14.181822478939663,
+          "tau_lent": 5.840604722444991,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.2525589303054538e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.18283133971291868,
+          "P_etoile": 10.411512557159423,
+          "tau_lent": 4.307462029701278,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.24520909090909093,
+          "P_etoile": 8.113858760653986,
+          "tau_lent": 3.3463898240543166,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.3054358851674641,
+          "P_etoile": 6.645758314611461,
+          "tau_lent": 2.6892900144625997,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 2.6729182063312874e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.3678136363636364,
+          "P_etoile": 5.554113216259802,
+          "tau_lent": 2.108186336236395,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.4280404306220096,
+          "P_etoile": 4.750718880858601,
+          "tau_lent": 1.2950898770865298,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.49041818181818186,
+          "P_etoile": 4.0820743872790395,
+          "tau_lent": 1.798242304511129,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 0.0,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.550644976076555,
+          "P_etoile": 3.53618307299078,
+          "tau_lent": 2.457104605172496,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.255843378817114e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.6130227272727273,
+          "P_etoile": 3.028720014798077,
+          "tau_lent": 3.367443796671681,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.4662603597568585e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.6732495215311005,
+          "P_etoile": 2.553280907958235,
+          "tau_lent": 4.488754464408229,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.7392884913911978e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.7356272727272728,
+          "P_etoile": 2.015977465905613,
+          "tau_lent": 5.836934935222298,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 2.2028480841702753e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.795854066985646,
+          "P_etoile": 1.3337528345932776,
+          "tau_lent": 7.099971809217329,
+          "horizon_utilise": 2000.0,
+          "ecart_relatif": 1.6648107442841377e-16,
+          "statut": "verifie"
+        },
+        {
+          "leak": 0.8582318181818182,
+          "P_etoile": 0.028345425289645485,
+          "tau_lent": 1150.2150647392227,
+          "horizon_utilise": 34506.45194217668,
+          "ecart_relatif": 1.5875128528509433e-13,
+          "statut": "verifie"
+        }
+      ],
+      "n_points_verifies_numeriquement": 15,
+      "n_points_hors_portee_numerique": 0,
+      "note_hors_portee": "Au voisinage du seuil de lavage, le mode lent tend vers zéro et le temps de relaxation diverge : ces points restent établis analytiquement mais ne sont pas intégrables en temps fini.",
+      "seuil_lavage": 0.859090909090909,
+      "nombre_points": 400,
+      "strictement_decroissant": true,
+      "difference_positive_max": -0.016878739395465026,
+      "facteur_min_sous_leak_free": 1.0017370059312798,
+      "tous_facteurs_superieurs_a_1_sous_leak_free": true,
+      "ecart_numerique_max": 1.5875128528509433e-13,
+      "courbe": [
+        {
+          "leak": 0.0,
+          "P_etoile": 49.73684210526316
+        },
+        {
+          "leak": 0.02150956937799043,
+          "P_etoile": 34.69110170409592
+        },
+        {
+          "leak": 0.04301913875598086,
+          "P_etoile": 26.600549722001283
+        },
+        {
+          "leak": 0.0645287081339713,
+          "P_etoile": 21.54625261678035
+        },
+        {
+          "leak": 0.08603827751196172,
+          "P_etoile": 18.087815970049565
+        },
+        {
+          "leak": 0.10754784688995216,
+          "P_etoile": 15.571442519406798
+        },
+        {
+          "leak": 0.1290574162679426,
+          "P_etoile": 13.657473981216938
+        },
+        {
+          "leak": 0.15056698564593302,
+          "P_etoile": 12.151941937514223
+        },
+        {
+          "leak": 0.17207655502392344,
+          "P_etoile": 10.936010855521054
+        },
+        {
+          "leak": 0.1935861244019139,
+          "P_etoile": 9.932803490909407
+        },
+        {
+          "leak": 0.2150956937799043,
+          "P_etoile": 9.090376464540007
+        },
+        {
+          "leak": 0.23660526315789474,
+          "P_etoile": 8.372361516877495
+        },
+        {
+          "leak": 0.2581148325358852,
+          "P_etoile": 7.752526366856837
+        },
+        {
+          "leak": 0.2796244019138756,
+          "P_etoile": 7.211464677878996
+        },
+        {
+          "leak": 0.30113397129186603,
+          "P_etoile": 6.7345020623345695
+        },
+        {
+          "leak": 0.32264354066985645,
+          "P_etoile": 6.310326659445991
+        },
+        {
+          "leak": 0.3441531100478469,
+          "P_etoile": 5.9300673483912885
+        },
+        {
+          "leak": 0.36566267942583736,
+          "P_etoile": 5.586657263908249
+        },
+        {
+          "leak": 0.3871722488038278,
+          "P_etoile": 5.274384124267709
+        },
+        {
+          "leak": 0.4086818181818182,
+          "P_etoile": 4.988565761204411
+        },
+        {
+          "leak": 0.4301913875598086,
+          "P_etoile": 4.725311228619679
+        },
+        {
+          "leak": 0.45170095693779905,
+          "P_etoile": 4.481341336328236
+        },
+        {
+          "leak": 0.47321052631578947,
+          "P_etoile": 4.253850893913565
+        },
+        {
+          "leak": 0.49472009569377995,
+          "P_etoile": 4.040400323026814
+        },
+        {
+          "leak": 0.5162296650717704,
+          "P_etoile": 3.8388277370060475
+        },
+        {
+          "leak": 0.5377392344497608,
+          "P_etoile": 3.647174753734308
+        },
+        {
+          "leak": 0.5592488038277512,
+          "P_etoile": 3.463620576316323
+        },
+        {
+          "leak": 0.5807583732057416,
+          "P_etoile": 3.286419434737491
+        },
+        {
+          "leak": 0.6022679425837321,
+          "P_etoile": 3.113836372494197
+        },
+        {
+          "leak": 0.6237775119617225,
+          "P_etoile": 2.944075478012001
+        },
+        {
+          "leak": 0.6452870813397129,
+          "P_etoile": 2.7751926896520582
+        },
+        {
+          "leak": 0.6667966507177033,
+          "P_etoile": 2.6049815893246335
+        },
+        {
+          "leak": 0.6883062200956938,
+          "P_etoile": 2.430813835420842
+        },
+        {
+          "leak": 0.7098157894736843,
+          "P_etoile": 2.2494034326021257
+        },
+        {
+          "leak": 0.7313253588516747,
+          "P_etoile": 2.0564403698265776
+        },
+        {
+          "leak": 0.7528349282296651,
+          "P_etoile": 1.8459921021523622
+        },
+        {
+          "leak": 0.7743444976076556,
+          "P_etoile": 1.6094723097856256
+        },
+        {
+          "leak": 0.795854066985646,
+          "P_etoile": 1.3337528345932776
+        },
+        {
+          "leak": 0.8173636363636364,
+          "P_etoile": 0.9974448143034639
+        },
+        {
+          "leak": 0.8388732057416268,
+          "P_etoile": 0.5628671622456354
+        }
+      ],
+      "reussi": true,
+      "titre": "Balayage de l'intervention"
+    },
+    "C09": {
+      "facteur_analytique": 1.0,
+      "facteur_numerique": 1.0,
+      "ecart_a_1": 0.0,
+      "reussi": true,
+      "titre": "Contrôle négatif, intervention nulle"
+    },
+    "C10": {
+      "leak_augmente": 0.5,
+      "facteur_analytique": 0.5002261420171867,
+      "facteur_numerique": 0.5002261420104251,
+      "reussi": true,
+      "titre": "Contrôle de signe, intervention inverse"
+    },
+    "C11": {
+      "plateau_de_reference": 35.445468509984636,
+      "essais": [
+        {
+          "intervention_placebo": "P0 x 100",
+          "plateau": 35.445468509984636,
+          "ecart_relatif": 0.0
+        },
+        {
+          "intervention_placebo": "P0 / 1000",
+          "plateau": 35.44546850998464,
+          "ecart_relatif": 2.0046081082549308e-16
+        },
+        {
+          "intervention_placebo": "S0 = S_in",
+          "plateau": 35.445468509984686,
+          "ecart_relatif": 1.4032256757784514e-15
+        },
+        {
+          "intervention_placebo": "n_points x 10",
+          "plateau": 35.445468509984636,
+          "ecart_relatif": 0.0
+        }
+      ],
+      "ecart_relatif_max": 1.4032256757784514e-15,
+      "reussi": true,
+      "titre": "Placebo, variables sans effet stationnaire"
+    },
+    "C12": {
+      "seuil_lavage": 0.859090909090909,
+      "formule": "leak_crit = mu_max S_in / (K_s + S_in) - delta",
+      "points": [
+        {
+          "leak": 0.7731818181818181,
+          "leak_sur_seuil": 0.9,
+          "P_etoile_analytique": 1.6231143866602133,
+          "P_numerique_t6000": 1.6231143866602133,
+          "extinction": false
+        },
+        {
+          "leak": 0.8504999999999999,
+          "leak_sur_seuil": 0.99,
+          "P_etoile_analytique": 0.263672610693669,
+          "P_numerique_t6000": 0.26367261069360354,
+          "extinction": false
+        },
+        {
+          "leak": 0.859090909090909,
+          "leak_sur_seuil": 1.0,
+          "P_etoile_analytique": 9.769962616701378e-16,
+          "P_numerique_t6000": 0.0049991400921738285,
+          "extinction": false
+        },
+        {
+          "leak": 0.8676818181818181,
+          "leak_sur_seuil": 1.01,
+          "P_etoile_analytique": 0.0,
+          "P_numerique_t6000": -1.970122024579131e-16,
+          "extinction": true
+        },
+        {
+          "leak": 0.945,
+          "leak_sur_seuil": 1.1,
+          "P_etoile_analytique": 0.0,
+          "P_numerique_t6000": -1.5779116457695973e-24,
+          "extinction": true
+        },
+        {
+          "leak": 1.718181818181818,
+          "leak_sur_seuil": 2.0,
+          "P_etoile_analytique": 0.0,
+          "P_numerique_t6000": 2.883269913807033e-32,
+          "extinction": true
+        }
+      ],
+      "domaine_de_validite": "0 <= leak < 0.859091",
+      "marge_du_dossier": 3.436363636363636,
+      "reussi": true,
+      "titre": "Seuil de lavage"
+    },
+    "C13": {
+      "n_tirages": 200000,
+      "graine": 20260731,
+      "n_viables": 115120,
+      "n_sauvetage_qualitatif": 33295,
+      "n_deux_systemes_laves": 51585,
+      "contre_exemples_facteur_inferieur_ou_egal_1": 0,
+      "facteur_min": 1.0000075733631801,
+      "facteur_median": 1.9974234574501954,
+      "facteur_p99": 60.80036371974072,
+      "facteur_max": 30665.71836287798,
+      "conclusion": "Aucun contre-exemple : sur le domaine viable, réduire la perte de P augmente strictement son état stationnaire. L'affirmation causale du modèle n'est pas un artefact du jeu de paramètres publié.",
+      "reussi": true,
+      "titre": "Sensibilité globale"
+    },
+    "C14": {
+      "cinetiques_alternatives": {
+        "monod": {
+          "P_libre": 7.976190476190476,
+          "P_compartiment": 35.445468509984636,
+          "facteur_retention": 4.4439094848338945,
+          "effet_positif": true
+        },
+        "masse_action": {
+          "P_libre": 8.083333333333334,
+          "P_compartiment": 35.46428571428571,
+          "facteur_retention": 4.387334315169365,
+          "effet_positif": true
+        },
+        "haldane": {
+          "P_libre": 7.974868794556142,
+          "P_compartiment": 35.445438043968146,
+          "facteur_retention": 4.444642157393755,
+          "effet_positif": true
+        }
+      },
+      "effet_positif_pour_toutes_les_cinetiques": true,
+      "stochastique": {
+        "n_replicas": 400,
+        "sigma_bruit_multiplicatif": 0.05,
+        "pas_de_temps": 0.01,
+        "facteur_moyen": 4.449966362029506,
+        "facteur_median": 4.443673866311574,
+        "ic95_bootstrap": [
+          4.419841660584204,
+          4.481048266652151
+        ],
+        "fraction_replicas_avec_effet_positif": 1.0,
+        "borne_inferieure_ic_superieure_a_1": true
+      },
+      "reussi": true,
+      "titre": "Robustesse structurelle et stochastique"
+    }
+  },
+  "controles_reussis": 14,
+  "controles_totaux": 14,
+  "tous_reussis": true,
+  "portee": "Contrôle de robustesse interne d'un modèle déterministe défini. Aucune portée probante empirique sur le vivant."
+}

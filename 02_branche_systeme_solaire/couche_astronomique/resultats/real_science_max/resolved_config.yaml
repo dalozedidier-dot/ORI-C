@@ -1,0 +1,162 @@
+suite:
+  name: real_science_max
+  output_dir: runs/real_science_max
+  max_workers: 9
+  seed: 20260729
+  reference:
+    la2010a_1k: data/reference/la2010/La2010a_ecc3L.dat
+    horizons_earth_100yr: data/reference/horizons/earth_elements_j2000_to_minus6kyr.csv
+    la2010_ensemble_5k:
+    - data/reference/la2010/La2010a_ecc3.dat
+    - data/reference/la2010/La2010b_ecc3.dat
+    - data/reference/la2010/La2010c_ecc3.dat
+    - data/reference/la2010/La2010d_ecc3.dat
+defaults:
+  kind: nbody
+  duration_years: 2000000
+  output_step_years: 1000
+  integrator: whfast
+  timestep_years: 0.01
+  exact_finish_time: false
+  initial_conditions: horizons_j2000
+  time_direction: backward
+  general_relativity: gr_potential
+  safe_mode: 0
+  corrector: 11
+  coordinates: jacobi
+  kernel: default
+  ejection_radius_au: 500
+  include_bodies:
+  - Mercury
+  - Venus
+  - Earth
+  - Mars
+  - Jupiter
+  - Saturn
+  - Uranus
+  - Neptune
+acceptance:
+  all_bodies_bound: true
+  max_abs_energy_rel_error: 1.0e-08
+  max_abs_angmom_rel_error: 1.0e-10
+  initial_eccentricity_abs_error_vs_la2010: 1.0e-08
+  horizons_correlation_min_6kyr: 0.99
+  horizons_rmse_max_6kyr: 0.0002
+  reference_correlation_min:
+    100000: 0.95
+    500000: 0.8
+    1000000: 0.6
+  whfast_step_rmse_max_2myr: 0.0001
+  whfast_vs_ias15_rmse_max_20kyr: 1.0e-06
+  roundtrip_max_relative_state_error_100kyr: 1.0e-05
+  peak_405k_relative_period_error_max: 0.05
+  peak_2p4myr_relative_period_error_max: 0.2
+  counterfactual_effect_to_ensemble_floor_min: 3.0
+jobs:
+- name: baseline_20myr_dt10
+  duration_years: 20000000
+- name: baseline_2myr_dt5
+  timestep_years: 0.005
+- name: baseline_2myr_dt4p8828125
+  timestep_years: 0.0048828125
+- name: baseline_2myr_no_gr_dt5
+  timestep_years: 0.005
+  general_relativity: none
+- name: baseline_2myr_elements_dt5
+  timestep_years: 0.005
+  initial_conditions: elements_j2000
+- name: full_la2010_bodies_2myr_dt5
+  timestep_years: 0.005
+  include_bodies:
+  - Mercury
+  - Venus
+  - Earth
+  - Mars
+  - Jupiter
+  - Saturn
+  - Uranus
+  - Neptune
+  - Pluto
+  - Ceres
+  - Pallas
+  - Vesta
+  - Iris
+  - Bamberga
+- name: whfast_grpot_20kyr
+  duration_years: 20000
+  output_step_years: 100
+  timestep_years: 0.005
+- name: ias15_grpot_20kyr
+  duration_years: 20000
+  output_step_years: 100
+  integrator: ias15
+  exact_finish_time: true
+- name: ias15_grfull_20kyr
+  duration_years: 20000
+  output_step_years: 100
+  integrator: ias15
+  exact_finish_time: true
+  general_relativity: gr_full
+- name: jupiter_mass_minus_5pct_2myr
+  modifications:
+    Jupiter:
+      mass_scale: 0.95
+- name: jupiter_mass_plus_5pct_2myr
+  modifications:
+    Jupiter:
+      mass_scale: 1.05
+- name: saturn_mass_minus_5pct_2myr
+  modifications:
+    Saturn:
+      mass_scale: 0.95
+- name: saturn_mass_plus_5pct_2myr
+  modifications:
+    Saturn:
+      mass_scale: 1.05
+- name: jupiter_a_minus_0p5pct_2myr
+  modifications:
+    Jupiter:
+      a_scale: 0.995
+- name: jupiter_a_plus_0p5pct_2myr
+  modifications:
+    Jupiter:
+      a_scale: 1.005
+- name: ensemble_10myr_r00
+  duration_years: 10000000
+  realization: 0
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r01
+  duration_years: 10000000
+  realization: 1
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r02
+  duration_years: 10000000
+  realization: 2
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r03
+  duration_years: 10000000
+  realization: 3
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r04
+  duration_years: 10000000
+  realization: 4
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r05
+  duration_years: 10000000
+  realization: 5
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r06
+  duration_years: 10000000
+  realization: 6
+  initial_angle_sigma_rad: 1.0e-10
+- name: ensemble_10myr_r07
+  duration_years: 10000000
+  realization: 7
+  initial_angle_sigma_rad: 1.0e-10
+- name: roundtrip_100kyr_dt10
+  kind: roundtrip
+  duration_years: 100000
+- name: roundtrip_100kyr_dt5
+  kind: roundtrip
+  duration_years: 100000
+  timestep_years: 0.005

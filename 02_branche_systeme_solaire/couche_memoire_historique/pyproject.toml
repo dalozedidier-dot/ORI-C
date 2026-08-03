@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oric-memory-tests"
+version = "0.1.0"
+description = "Tests reproductibles de mémoire historique ORI-C pour la MPT et un analogue exoplanétaire contrôlé"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "scipy>=1.14",
+  "numba>=0.60",
+]
+
+[project.scripts]
+oric-memory-tests = "oric_memory_tests.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

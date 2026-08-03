@@ -1,0 +1,68 @@
+experiment:
+  name: rebound_science_2myr
+  backend: rebound
+  duration_years: 2000000
+  output_step_years: 1000
+  seed: 20260729
+  output_dir: runs/rebound_science_2myr
+  ensemble_size: 8
+  initial_angle_sigma_rad: 1.0e-10
+
+rebound:
+  integrator: whfast
+  timestep_years: 0.01
+  exact_finish_time: false
+  initial_conditions: horizons_j2000
+  time_direction: backward
+  general_relativity: gr_potential
+  include_bodies: [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]
+  ejection_radius_au: 500.0
+
+scenarios:
+  - name: baseline
+    modifications: {}
+  - name: jupiter_mass_minus_5pct
+    modifications:
+      Jupiter: {mass_scale: 0.95}
+  - name: jupiter_mass_plus_5pct
+    modifications:
+      Jupiter: {mass_scale: 1.05}
+  - name: saturn_mass_minus_5pct
+    modifications:
+      Saturn: {mass_scale: 0.95}
+  - name: saturn_mass_plus_5pct
+    modifications:
+      Saturn: {mass_scale: 1.05}
+  - name: jupiter_a_minus_0_5pct
+    modifications:
+      Jupiter: {a_scale: 0.995}
+  - name: jupiter_a_plus_0_5pct
+    modifications:
+      Jupiter: {a_scale: 1.005}
+
+spectrum:
+  target_body: Earth
+  variable: eccentricity
+  min_period_years: 18000
+  max_period_years: 1000000
+  peak_count: 12
+  red_noise_surrogates: 500
+  confidence: 0.95
+
+insolation:
+  latitude_deg: 65.0
+  solar_longitude_deg: 90.0
+  solar_constant_w_m2: 1361.0
+  obliquity_deg: 23.44
+
+climate:
+  response_time_years: 3000
+  ice_response_time_years: 12000
+  reference_temperature_c: 8.0
+  forcing_sensitivity_k_per_w_m2: 0.035
+  ice_cooling_k: 10.0
+  freeze_on_c: 5.5
+  melt_off_c: 7.0
+
+archive:
+  enabled: false

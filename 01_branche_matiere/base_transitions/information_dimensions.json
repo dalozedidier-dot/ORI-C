@@ -1,0 +1,139 @@
+{
+  "transitions": 40,
+  "entropie_du_regime_bits": 3.0,
+  "A_decomposition": {
+    "dimension_n": {
+      "valeurs_brutes_distinctes": 40,
+      "valeurs_de_base_distinctes": 8,
+      "suffixes_non_vides": 40,
+      "suffixe_reprend_une_colonne_existante": {
+        "transition": 40,
+        "etat_posterieur": 40
+      }
+    },
+    "dimension_G": {
+      "valeurs_brutes_distinctes": 40,
+      "valeurs_de_base_distinctes": 8,
+      "suffixes_non_vides": 40,
+      "suffixe_reprend_une_colonne_existante": {
+        "transition": 40,
+        "etat_posterieur": 40
+      }
+    },
+    "dimension_I": {
+      "valeurs_brutes_distinctes": 8,
+      "valeurs_de_base_distinctes": 8,
+      "suffixes_non_vides": 0,
+      "suffixe_reprend_une_colonne_existante": {}
+    },
+    "dimension_E": {
+      "valeurs_brutes_distinctes": 37,
+      "valeurs_de_base_distinctes": 8,
+      "suffixes_non_vides": 40,
+      "suffixe_reprend_une_colonne_existante": {
+        "date": 40
+      }
+    },
+    "dimension_Pi": {
+      "valeurs_brutes_distinctes": 8,
+      "valeurs_de_base_distinctes": 8,
+      "suffixes_non_vides": 0,
+      "suffixe_reprend_une_colonne_existante": {}
+    },
+    "dimension_H": {
+      "valeurs_brutes_distinctes": 30,
+      "valeurs_de_base_distinctes": 1,
+      "suffixes_non_vides": 40,
+      "suffixe_reprend_une_colonne_existante": {
+        "etat_anterieur": 37
+      }
+    }
+  },
+  "B_redondance_avec_le_regime": {
+    "dimension_n": {
+      "entropie_du_codage_bits": 3.0,
+      "information_mutuelle_avec_le_regime_bits": 3.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": 0.0
+    },
+    "dimension_G": {
+      "entropie_du_codage_bits": 3.0,
+      "information_mutuelle_avec_le_regime_bits": 3.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": 0.0
+    },
+    "dimension_I": {
+      "entropie_du_codage_bits": 3.0,
+      "information_mutuelle_avec_le_regime_bits": 3.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": 0.0
+    },
+    "dimension_E": {
+      "entropie_du_codage_bits": 3.0,
+      "information_mutuelle_avec_le_regime_bits": 3.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": 0.0
+    },
+    "dimension_Pi": {
+      "entropie_du_codage_bits": 3.0,
+      "information_mutuelle_avec_le_regime_bits": 3.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": 0.0
+    },
+    "dimension_H": {
+      "entropie_du_codage_bits": -0.0,
+      "information_mutuelle_avec_le_regime_bits": 0.0,
+      "part_expliquee_par_le_regime": 1.0,
+      "information_propre_bits": -0.0
+    }
+  },
+  "B_information_mutuelle_entre_dimensions_bits": {
+    "dimension_n / dimension_G": 3.0,
+    "dimension_n / dimension_I": 3.0,
+    "dimension_n / dimension_E": 3.0,
+    "dimension_n / dimension_Pi": 3.0,
+    "dimension_n / dimension_H": 0.0,
+    "dimension_G / dimension_I": 3.0,
+    "dimension_G / dimension_E": 3.0,
+    "dimension_G / dimension_Pi": 3.0,
+    "dimension_G / dimension_H": 0.0,
+    "dimension_I / dimension_E": 3.0,
+    "dimension_I / dimension_Pi": 3.0,
+    "dimension_I / dimension_H": 0.0,
+    "dimension_E / dimension_Pi": 3.0,
+    "dimension_E / dimension_H": 0.0,
+    "dimension_Pi / dimension_H": 0.0
+  },
+  "C_apport_predictif": {
+    "cible": "fermeture de domaine",
+    "entropie_de_la_cible_bits": 0.5435644431995964,
+    "positifs": 5,
+    "sur": 40,
+    "information_mutuelle_regime_cible_bits": 0.15147258331000196,
+    "dimension_n": {
+      "information_mutuelle_avec_la_cible_bits": 0.15147258331000196,
+      "gain_conditionnel_au_regime_bits": 0.0
+    },
+    "dimension_G": {
+      "information_mutuelle_avec_la_cible_bits": 0.15147258331000196,
+      "gain_conditionnel_au_regime_bits": 0.0
+    },
+    "dimension_I": {
+      "information_mutuelle_avec_la_cible_bits": 0.15147258331000196,
+      "gain_conditionnel_au_regime_bits": 0.0
+    },
+    "dimension_E": {
+      "information_mutuelle_avec_la_cible_bits": 0.15147258331000196,
+      "gain_conditionnel_au_regime_bits": 0.0
+    },
+    "dimension_Pi": {
+      "information_mutuelle_avec_la_cible_bits": 0.15147258331000196,
+      "gain_conditionnel_au_regime_bits": 0.0
+    },
+    "dimension_H": {
+      "information_mutuelle_avec_la_cible_bits": 0.0,
+      "gain_conditionnel_au_regime_bits": 0.0
+    }
+  },
+  "lecture": "Une dimension dont la part expliquée par le régime vaut 1,0 ne porte aucune information propre : elle est le régime réécrit. Un gain conditionnel nul signifie qu'elle n'améliore aucune prédiction une fois le régime connu."
+}

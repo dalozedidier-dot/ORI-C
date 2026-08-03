@@ -1,0 +1,121 @@
+{
+  "campagne2": {
+    "technique": {
+      "pass": 235,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 370,
+      "error": 0,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 626,
+      "supports": 6,
+      "does_not_support": 2,
+      "inconclusive": 1,
+      "not_applicable": 48
+    }
+  },
+  "corrigee": {
+    "technique": {
+      "pass": 175,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 430,
+      "error": 0,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 630,
+      "supports": 2,
+      "does_not_support": 1,
+      "inconclusive": 2,
+      "not_applicable": 48
+    }
+  },
+  "full": {
+    "technique": {
+      "pass": 175,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 0,
+      "error": 430,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 630,
+      "supports": 0,
+      "does_not_support": 0,
+      "inconclusive": 5,
+      "not_applicable": 48
+    }
+  },
+  "horizon": {
+    "technique": {
+      "pass": 235,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 370,
+      "error": 0,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 630,
+      "supports": 2,
+      "does_not_support": 1,
+      "inconclusive": 2,
+      "not_applicable": 48
+    }
+  },
+  "initial": {
+    "technique": {
+      "pass": 93,
+      "fail": 0,
+      "skip": 0,
+      "blocked": 0,
+      "error": 542,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 635,
+      "supports": 0,
+      "does_not_support": 0,
+      "inconclusive": 0,
+      "not_applicable": 48
+    }
+  },
+  "orbitales": {
+    "technique": {
+      "pass": 235,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 370,
+      "error": 0,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 630,
+      "supports": 2,
+      "does_not_support": 1,
+      "inconclusive": 2,
+      "not_applicable": 48
+    }
+  },
+  "technique": {
+    "technique": {
+      "pass": 175,
+      "fail": 30,
+      "skip": 0,
+      "blocked": 0,
+      "error": 430,
+      "not_run": 48
+    },
+    "scientifique": {
+      "undetermined": 635,
+      "supports": 0,
+      "does_not_support": 0,
+      "inconclusive": 0,
+      "not_applicable": 48
+    }
+  }
+}

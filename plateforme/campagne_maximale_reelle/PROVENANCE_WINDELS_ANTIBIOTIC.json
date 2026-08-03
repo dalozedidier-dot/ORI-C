@@ -1,0 +1,36 @@
+{
+  "source": "Windels et al., Antibiotic dose and nutrient availability differentially drive the evolution of antibiotic resistance and persistence",
+  "repository": "Zenodo 7550302",
+  "dataset_doi": "10.5281/zenodo.7550302",
+  "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11102087/",
+  "accessed_at": "2026-08-01",
+  "path_base": "plateforme/campagne_maximale_reelle",
+  "raw_files": {
+    "sources_brutes/Zenodo_7550302/evol_dynamics.csv": "32fa65dd9b49dde88fbfe2d6274289270633d5be5497deee69e6c4c19f12ac65",
+    "sources_brutes/Zenodo_7550302/phenotypes_after_evol.csv": "ab3fb7a930981e7ed2391c17e9db1302273be7e36700ddcd0d84e513c15579dd"
+  },
+  "outputs": {
+    "data/antibiotic_cycles.csv": {
+      "sha256": "56b3ba50a713758e5a4b348272d2978e989ad5f4f659b54e44c65f312a3a1013",
+      "rows": 942
+    },
+    "data/antibiotic_measurements.csv": {
+      "sha256": "42881becef0780c7f85cfe42fa55d02f4707b1db3bdb3905f6912e08c1945227",
+      "rows": 1068
+    }
+  },
+  "experimental_context": {
+    "organism": "Escherichia coli",
+    "antibiotic": "amikacin",
+    "treatment_hours": 5,
+    "recovery_hours": 19,
+    "reported_cycles": "11-16",
+    "parallel_populations_per_condition": 24
+  },
+  "rules": [
+    "aucune imputation, interpolation, simulation ou augmentation",
+    "survie longitudinale conservee telle que publiee",
+    "phenotypes finaux non joints aux trajectoires faute d'identifiant population dans le depot",
+    "cellules non mesurees conservees vides"
+  ]
+}

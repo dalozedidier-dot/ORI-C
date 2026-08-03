@@ -1,0 +1,252 @@
+{
+  "statut": "valide",
+  "erreurs": [],
+  "enregistrements": 31,
+  "elements": [
+    "C",
+    "H",
+    "N",
+    "S"
+  ],
+  "corps": [
+    "Terre",
+    "Venus"
+  ],
+  "records_sans_inventaire_accessible_calculable": 28,
+  "par_element": {
+    "N": {
+      "reservoir_de_reference": "N-TER-BSE",
+      "masse_de_reference_kg": 2.7e+19,
+      "scenarios_du_noyau": {
+        "chondritique CC": {
+          "noyau_kg": 1.8e+20,
+          "rapport_noyau_sur_reference": 6.67,
+          "part_accessible": 0.13043
+        },
+        "chondritique EC": {
+          "noyau_kg": 3e+20,
+          "rapport_noyau_sur_reference": 11.11,
+          "part_accessible": 0.08257
+        },
+        "ab initio Zhang-Yin": {
+          "noyau_kg": 1.8e+18,
+          "rapport_noyau_sur_reference": 0.07,
+          "part_accessible": 0.9375
+        }
+      },
+      "etendue_de_la_part_accessible": [
+        0.08257,
+        0.9375
+      ],
+      "facteur_d_indetermination": 11.4
+    },
+    "C": {
+      "reservoir_de_reference": "C-TER-BSE",
+      "masse_de_reference_kg": 5.66e+20,
+      "scenarios_du_noyau": {
+        "borne experimentale basse": {
+          "noyau_kg": 1.932e+21,
+          "rapport_noyau_sur_reference": 3.41,
+          "part_accessible": 0.22659
+        },
+        "accretion multi-etapes, min": {
+          "noyau_kg": 3.671e+21,
+          "rapport_noyau_sur_reference": 6.49,
+          "part_accessible": 0.1336
+        },
+        "accretion multi-etapes, max": {
+          "noyau_kg": 2.647e+22,
+          "rapport_noyau_sur_reference": 46.76,
+          "part_accessible": 0.02094
+        }
+      },
+      "etendue_de_la_part_accessible": [
+        0.02094,
+        0.22659
+      ],
+      "facteur_d_indetermination": 10.8
+    },
+    "H": {
+      "reservoir_de_reference": "H-TER-OCE",
+      "masse_de_reference_kg": 1.567e+20,
+      "scenarios_du_noyau": {
+        "accretion multi-etapes, min": {
+          "noyau_kg": 3.478e+21,
+          "rapport_noyau_sur_reference": 22.2,
+          "part_accessible": 0.04311
+        },
+        "accretion multi-etapes, max": {
+          "noyau_kg": 9.467e+21,
+          "rapport_noyau_sur_reference": 60.43,
+          "part_accessible": 0.01628
+        }
+      },
+      "etendue_de_la_part_accessible": [
+        0.01628,
+        0.04311
+      ],
+      "facteur_d_indetermination": 2.6
+    },
+    "S": {
+      "reservoir_de_reference": "S-TER-BSE",
+      "masse_de_reference_kg": 1.011e+21,
+      "scenarios_du_noyau": {
+        "tendance de volatilite": {
+          "noyau_kg": 3.478e+22,
+          "rapport_noyau_sur_reference": 34.41,
+          "part_accessible": 0.02824
+        }
+      },
+      "etendue_de_la_part_accessible": [
+        0.02824,
+        0.02824
+      ],
+      "facteur_d_indetermination": 1.0
+    }
+  },
+  "prediction_par_les_coefficients_de_partage": {
+    "C": {
+      "D_publies": [
+        14.0,
+        34.0,
+        640.0
+      ],
+      "rapport_de_masses_attendu": [
+        6.69,
+        305.83
+      ],
+      "rapport_de_masses_observe": [
+        3.41,
+        46.76
+      ],
+      "borne_superieure_ouverte": false,
+      "recouvrement": true
+    },
+    "H": {
+      "D_publies": [
+        29.0
+      ],
+      "rapport_de_masses_attendu": [
+        13.86,
+        null
+      ],
+      "rapport_de_masses_observe": [
+        22.2,
+        60.43
+      ],
+      "borne_superieure_ouverte": true,
+      "recouvrement": true
+    },
+    "N": {
+      "D_publies": [
+        18.0,
+        24.0,
+        31.0
+      ],
+      "rapport_de_masses_attendu": [
+        8.6,
+        14.81
+      ],
+      "rapport_de_masses_observe": [
+        0.07,
+        11.11
+      ],
+      "borne_superieure_ouverte": false,
+      "recouvrement": true
+    },
+    "S": {
+      "D_publies": [
+        8.0,
+        55.0
+      ],
+      "rapport_de_masses_attendu": [
+        3.82,
+        26.28
+      ],
+      "rapport_de_masses_observe": [
+        34.41,
+        34.41
+      ],
+      "borne_superieure_ouverte": false,
+      "recouvrement": false
+    }
+  },
+  "elements_ou_la_prediction_recouvre_l_observation": [
+    "C",
+    "H",
+    "N"
+  ],
+  "elements_en_desaccord": [
+    "S"
+  ],
+  "bouclage_des_budgets": {
+    "C": [
+      {
+        "borne": "borne basse",
+        "noyau_plus_silicate_kg": 4.237e+21,
+        "total_publie_independamment_kg": 4.181e+21,
+        "ecart_relatif": 0.0135,
+        "boucle_a_5_pourcent": true
+      },
+      {
+        "borne": "borne haute",
+        "noyau_plus_silicate_kg": 2.703e+22,
+        "total_publie_independamment_kg": 2.628e+22,
+        "ecart_relatif": 0.0288,
+        "boucle_a_5_pourcent": true
+      }
+    ],
+    "H": [
+      {
+        "borne": "borne basse",
+        "noyau_plus_silicate_kg": 3.634e+21,
+        "total_publie_independamment_kg": 3.542e+21,
+        "ecart_relatif": 0.026,
+        "boucle_a_5_pourcent": true
+      },
+      {
+        "borne": "borne haute",
+        "noyau_plus_silicate_kg": 9.623e+21,
+        "total_publie_independamment_kg": 9.357e+21,
+        "ecart_relatif": 0.0285,
+        "boucle_a_5_pourcent": true
+      }
+    ],
+    "S": [
+      {
+        "borne": "estimation unique",
+        "noyau_plus_silicate_kg": 3.579e+22,
+        "total_publie_independamment_kg": 3.524e+22,
+        "ecart_relatif": 0.0156,
+        "boucle_a_5_pourcent": true
+      }
+    ]
+  },
+  "bouclage_ecart_maximal": 0.0288,
+  "bouclage_integralement_verifie": true,
+  "classement_par_sequestration_maximale": [
+    [
+      "H",
+      60.43
+    ],
+    [
+      "C",
+      46.76
+    ],
+    [
+      "S",
+      34.41
+    ],
+    [
+      "N",
+      11.11
+    ]
+  ],
+  "comparaison_Terre_Venus_azote": {
+    "azote_de_surface_Terre_kg": 6.32e+18,
+    "azote_atmospherique_Venus_kg": 1.1e+19,
+    "rapport_brut": 1.74,
+    "rapport_normalise_par_masse_planetaire": 2.14
+  },
+  "portee": "Quatre elements, un episode, deux corps pour le seul azote. Les fractions mobilisables et les probabilites de transfert restent non contraintes hors des reservoirs de surface : elles ne sont pas imputees. Ce tableau mesure une repartition, il ne valide pas ORI-C."
+}

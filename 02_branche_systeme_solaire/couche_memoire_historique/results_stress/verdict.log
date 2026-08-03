@@ -1,0 +1,29 @@
+bornes livrées / témoin M1 : 2/5 critères réussis
+bornes livrées / témoin M1P : 0/5 critères réussis
+bornes élargies / témoin M1 : 1/5 critères réussis
+bornes élargies / témoin M1P : 0/5 critères réussis
+                                            criterion         value  threshold  passed          bounds reference_model
+                     forecast_rmse_gain_at_least_5pct  6.038915e-02   0.050000    True  bornes livrées              M1
+           forecast_delta_bic_at_most_minus_10 (naif) -1.282245e+02 -10.000000    True  bornes livrées              M1
+          forecast_delta_bic_at_most_minus_10 (n_eff)  6.515676e+00 -10.000000   False  bornes livrées              M1
+100k_regime_within_factor_2_and_closer_than_reference  1.862523e-02   1.301812   False  bornes livrées              M1
+        chronology_correlation_and_termination_timing  9.349062e-02   0.400000   False  bornes livrées              M1
+                         blockwise_wilcoxon_M2_better  5.960464e-08   0.050000    True  bornes livrées              M1
+                     forecast_rmse_gain_at_least_5pct -1.838688e-01   0.050000   False  bornes livrées             M1P
+           forecast_delta_bic_at_most_minus_10 (naif)  4.050906e+02 -10.000000   False  bornes livrées             M1P
+          forecast_delta_bic_at_most_minus_10 (n_eff)  5.314704e+00 -10.000000   False  bornes livrées             M1P
+100k_regime_within_factor_2_and_closer_than_reference  1.862523e-02   1.301812   False  bornes livrées             M1P
+        chronology_correlation_and_termination_timing  9.349062e-02   0.400000   False  bornes livrées             M1P
+                         blockwise_wilcoxon_M2_better  9.999999e-01   0.050000   False  bornes livrées             M1P
+                     forecast_rmse_gain_at_least_5pct  3.574136e-02   0.050000   False bornes élargies              M1
+           forecast_delta_bic_at_most_minus_10 (naif) -6.607951e+01 -10.000000    True bornes élargies              M1
+          forecast_delta_bic_at_most_minus_10 (n_eff)  8.358982e+00 -10.000000   False bornes élargies              M1
+100k_regime_within_factor_2_and_closer_than_reference  4.694662e-03   1.301812   False bornes élargies              M1
+        chronology_correlation_and_termination_timing  2.595459e-01   0.400000   False bornes élargies              M1
+                         blockwise_wilcoxon_M2_better  1.196265e-04   0.050000    True bornes élargies              M1
+                     forecast_rmse_gain_at_least_5pct -3.156828e-01   0.050000   False bornes élargies             M1P
+           forecast_delta_bic_at_most_minus_10 (naif)  6.584539e+02 -10.000000   False bornes élargies             M1P
+          forecast_delta_bic_at_most_minus_10 (n_eff)  9.343167e+00 -10.000000   False bornes élargies             M1P
+100k_regime_within_factor_2_and_closer_than_reference  4.694662e-03   1.301812   False bornes élargies             M1P
+        chronology_correlation_and_termination_timing  2.595459e-01   0.400000   False bornes élargies             M1P
+                         blockwise_wilcoxon_M2_better  9.999980e-01   0.050000   False bornes élargies             M1P

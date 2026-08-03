@@ -1,0 +1,41 @@
+id;transition;regime_num;regime_nom;fenetre_ou_ancrage_principal;domaine_ouvert;domaine_ferme;statut_methodologique
+TR-001;Passage au régime électrofaible brisé;1;Physique fondamentale;"~10⁻¹² s; physique des particules";Particules élémentaires massives;;"Inféré; mécanisme standard"
+TR-002;Asymétrie matière-antimatière;1;Physique fondamentale;"Univers primordial; date et mécanisme inconnus";Survie d'une matière baryonique durable;;"Asymétrie observée; mécanisme hypothétique"
+TR-003;Confinement des quarks;1;Physique fondamentale;"~10⁻⁵ s; QCD et abondance des hadrons";Hadrons, dont protons et neutrons;;"Inféré; appuyé expérimentalement"
+TR-004;Nucléosynthèse primordiale;1;Physique fondamentale;"~10 s à 20 min; abondances légères";Noyaux légers;;Inféré à partir d'archives
+TR-005;Recombinaison cosmologique (He puis H);1;Physique fondamentale;"L’hélium se neutralise avant l’hydrogène; transparence cosmique vers 380 000 ans";Atomes neutres, chimie primordiale et transparence cosmique;"Régime opaque couplé matière-rayonnement ; chimie ionisée du plasma primordial.";Inféré à partir d’archives et de modèles
+TR-006;Effondrement des premiers nuages stellaires;2;Atomes et étoiles;"Quelques centaines de Ma; galaxies très anciennes";Premières étoiles;;Reconstruit et modélisé
+TR-007;Nucléosynthèse stellaire;2;Atomes et étoiles;Premières étoiles puis processus continu;Éléments jusqu'aux groupes du fer;;Observé et modélisé
+TR-008;Étoiles AGB, processus s et poussières;2;Atomes et étoiles;Après les premières générations stellaires;Carbone, noyaux lourds et grains;;"Observé; histoire inférée"
+TR-009;Explosions stellaires et enrichissement;2;Atomes et étoiles;Premières étoiles massives puis processus continu;Dispersion des éléments et nouvelles générations;;Observé
+TR-010;Matière neutronique et fusions d'étoiles à neutrons;2;Atomes et étoiles;"Après les premières étoiles massives; encore actif";Phases denses et nucléosynthèse r;;"Observé; phases internes hypothétiques"
+TR-011;Formation de HeH+;3;Molécules;"Post-recombinaison; détection actuelle dans NGC 7027";Première liaison moléculaire cosmique candidate;;"Existence observée; présence primordiale inférée"
+TR-012;Formation de H₂ et HD;3;Molécules;"Après la recombinaison; avant les premières étoiles";Refroidissement moléculaire du gaz primordial;;Inféré et modélisé
+TR-013;Chimie carbonée simple du milieu interstellaire;3;Molécules;"Après l'enrichissement stellaire; toujours active";Réseaux de molécules C, N et O;;Observé
+TR-014;Manteaux de glace sur les grains;3;Molécules;"Nuages froids enrichis; récurrence locale";Chimie de surface et stockage des volatils;;Observé
+TR-015;Molécules organiques complexes et cages carbonées;3;Molécules;"Régions enrichies; récurrence astrophysique";Chimie carbonée étendue;;Observé pour plusieurs espèces
+TR-016;Condensation de grains présolaires;4;Solides cosmiques;"Premières générations enrichies; processus continu";Phases solides et surfaces réactives;;Observé dans météorites et spectres
+TR-017;Formation des CAI;4;Solides cosmiques;"4,567 Ga avant aujourd'hui; datations isotopiques";Chronomètre des premiers solides du Système solaire;;"Objet observé; âge inféré"
+TR-018;Formation des chondres et remaniement thermique des solides réfractaires;4;Solides cosmiques;Premiers millions d'années du Système solaire;Solides ignés, textures thermiques et héritages remaniés;;"Architecture observée; mécanisme partiellement établi"
+TR-019;Concentration collective des galets;4;Solides cosmiques;Premiers millions d'années des disques;Franchissement du seuil vers les planétésimaux;;"Physiquement plausible; observations compatibles"
+TR-020;Accrétion d'embryons planétaires;4;Solides cosmiques;Quelques à dizaines de Ma dans les disques;Gravité propre et histoire collisionnelle;;Inféré à partir d'archives
+TR-021;Différenciation métal-silicate;5;Architectures planétaires;Premiers millions à dizaines de Ma des corps;Noyaux, manteaux et croûtes;;Inféré à partir d'archives
+TR-022;Océans magmatiques et cristallisation fractionnée;5;Architectures planétaires;Jeunesse des planètes différenciées;Réservoirs géochimiques distincts;"Réseaux de réactions propres au liquide silicaté de haute température ; régime globalement fondu.";Inféré à partir d'archives
+TR-023;Hydrosphères liquides durables;5;Architectures planétaires;"Terre: possible dès 4,4 Ga; preuves robustes ~3,7 Ga";Transport, dissolution et cycles aqueux;;"Observé aujourd'hui; ancienneté inférée"
+TR-024;Atmosphères secondaires;5;Architectures planétaires;"Après dégazage et apports volatils; durée variable";Climats, photochimies et cycles volatils;;"Observé; histoire inférée"
+TR-025;Recyclage tectonique global;5;Architectures planétaires;"Indices de mobilité vers 3,35 Ga; origine débattue";Couplage durable surface-manteau;;"Inféré; chronologie controversée"
+TR-026;Altération aqueuse et argiles;6;Diversification minérale;Dès que l'eau interagit durablement avec les roches;Surfaces ioniques, adsorption et catalyse;;"Observé; ancienneté inférée"
+TR-027;Précipitation chimique à grande échelle;6;Diversification minérale;"Océans et atmosphères planétaires; processus récurrent";Carbonates, évaporites, oxydes et BIF;;Inféré à partir d'archives
+TR-028;Phases de haute pression et de choc;6;Diversification minérale;"Impacts, enfouissement et subduction; récurrent";Nouveaux réseaux cristallins;;Observé naturellement et expérimentalement
+TR-029;Oxygénation durable de la surface;6;Diversification minérale;"Terre: ~2,5 à 2,3 Ga; archives redox";Domaines minéralogiques oxydés;"Habitats de surface strictement anaérobies ; voies de synthèse organique abiotique en atmosphère réductrice.";Inféré à partir de plusieurs archives
+TR-030;Biominéralisation contrôlée;6;Diversification minérale;"Après l'apparition du vivant; multiples lignées";Composites organo-minéraux;;"Observé; histoire reconstruite"
+TR-031;Synthèse couplée de précurseurs biologiques;7;Voies prébiotiques;"Aucune date historique établie; laboratoire";Inventaires compatibles de monomères;;Produit expérimentalement
+TR-032;Concentration, activation et polymérisation;7;Voies prébiotiques;"Aucune date historique établie; laboratoire";Chaînes catalytiques ou informationnelles;;"Produit partiellement; contexte naturel ouvert"
+TR-033;Auto-assemblage de compartiments;7;Voies prébiotiques;"Aucune date historique établie; laboratoire";Milieux internes sélectionnables;;Produit expérimentalement
+TR-034;Réseaux autocatalytiques et protométabolismes;7;Voies prébiotiques;"Aucune date historique établie; scénarios candidats";Entretien réactionnel par flux;;"Produit partiellement; histoire hypothétique"
+TR-035;Catalyse ARN et copie dirigée par matrice;7;Voies prébiotiques;"Aucune date historique établie; laboratoire";Couplage entre séquence et catalyse;;"Produit partiellement; autonomie hypothétique"
+TR-036;Établissement du code et de la traduction;8;Vivant;"Avant LUCA; date et enchaînement inconnus";Production de protéines à partir de séquences;"Réassignations majeures du code ; architectures de traduction alternatives, rendues très coûteuses.";"Reconstruit; origine ouverte"
+TR-037;LUCA;8;Vivant;"~4,2 Ga proposé; modèle phylogénétique";Ancêtre commun des cellules actuelles;;Reconstruit phylogénétiquement
+TR-038;Photosynthèse oxygénique;8;Vivant;"Antérieure à la Grande Oxygénation; date débattue";Utilisation de l'eau et transformation redox planétaire;;Reconstruit par génomique et archives
+TR-039;Endosymbiose mitochondriale;8;Vivant;"Paléoprotérozoïque; fenêtre encore discutée";Cellule eucaryote compartimentée;;Reconstruit
+TR-040;Multicellularités complexes indépendantes;8;Vivant;Apparitions multiples, surtout Protérozoïque-Phanérozoïque;Différenciation, tissus et coopération somatique;Autonomie de reproduction et de dispersion des cellules devenues somatiques.;"Observé; histoire reconstruite"

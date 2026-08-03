@@ -1,0 +1,183 @@
+{
+  "transitions": 40,
+  "champs_du_WP_M1": 22,
+  "cellules_attendues": 880,
+  "cellules_remplies": 482,
+  "taux_global": 0.5477272727272727,
+  "par_champ": {
+    "id": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "transition": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "regime_num": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "regime_nom": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "etat_anterieur": {
+      "remplis": 37,
+      "sur": 40,
+      "taux": 0.925,
+      "renseignable_depuis_le_dossier": true
+    },
+    "etat_posterieur": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "dimension_n": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "dimension_G": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "dimension_I": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "dimension_E": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "dimension_Pi": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "dimension_H": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "date": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "date_incertitude": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "preuves_directes": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "preuves_indirectes": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "modeles_concurrents": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "seuil_ou_plage": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "vitesse_de_variation": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "etats_devenus_accessibles": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "etats_fermes": {
+      "remplis": 5,
+      "sur": 40,
+      "taux": 0.125,
+      "renseignable_depuis_le_dossier": true
+    },
+    "pertes": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "mecanismes_de_persistance": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "contre_exemples": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "niveau_de_preuve": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    },
+    "evaluateurs": {
+      "remplis": 0,
+      "sur": 40,
+      "taux": 0.0,
+      "renseignable_depuis_le_dossier": false
+    },
+    "source_du_remplissage": {
+      "remplis": 40,
+      "sur": 40,
+      "taux": 1.0,
+      "renseignable_depuis_le_dossier": true
+    }
+  },
+  "champs_entierement_vides": [
+    "contre_exemples",
+    "date_incertitude",
+    "mecanismes_de_persistance",
+    "modeles_concurrents",
+    "pertes",
+    "preuves_directes",
+    "preuves_indirectes",
+    "seuil_ou_plage",
+    "vitesse_de_variation"
+  ],
+  "lecture": "Les champs entièrement vides ne sont pas une négligence : aucune source du dossier ne les renseigne. Les remplir demande la littérature primaire et des évaluateurs indépendants, ce que le WP-M1.15 exige explicitement."
+}

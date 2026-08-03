@@ -1,0 +1,25 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements.lock.txt
+      - run: python -m pip install --no-build-isolation --no-deps -e .
+      - run: python -m compileall -q src tests
+      - run: python -m ruff check .
+      - run: python -m pytest
+      - run: python -m oric_solar_history run --config configs/smoke_surrogate.yaml
+      - run: python -m oric_solar_history run --config configs/rebound_quickcheck.yaml

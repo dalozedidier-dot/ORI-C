@@ -1,0 +1,91 @@
+{
+  "dataset": "LR04 real benthic d18O stack",
+  "null": "Gaussian AR(1) fitted independently to each window",
+  "draws_per_test": 5000,
+  "seed": 20260802,
+  "complete_0_2600_ka": {
+    "41_ka": {
+      "observed_power_fraction": 0.2035829411916151,
+      "null_mean": 0.029561695668551335,
+      "null_ci_97.5": 0.04939277502886778,
+      "p_raw": 0.0001999600079984003,
+      "p_bonferroni_2_bands": 0.0003999200159968006
+    },
+    "100_ka": {
+      "observed_power_fraction": 0.2347493555608336,
+      "null_mean": 0.08728434099603712,
+      "null_ci_97.5": 0.15760964428077626,
+      "p_raw": 0.0003999200159968006,
+      "p_bonferroni_2_bands": 0.0007998400319936012
+    }
+  },
+  "window_stability": [
+    {
+      "age_ka": [
+        0,
+        1200
+      ],
+      "bands": {
+        "41_ka": {
+          "observed_power_fraction": 0.1956207948912494,
+          "null_mean": 0.04093272658363378,
+          "null_ci_97.5": 0.0808887412609491,
+          "p_raw": 0.0001999600079984003,
+          "p_bonferroni_2_bands": 0.0003999200159968006
+        },
+        "100_ka": {
+          "observed_power_fraction": 0.42643524803728045,
+          "null_mean": 0.12177140102499862,
+          "null_ci_97.5": 0.25001823863731526,
+          "p_raw": 0.0001999600079984003,
+          "p_bonferroni_2_bands": 0.0003999200159968006
+        }
+      }
+    },
+    {
+      "age_ka": [
+        700,
+        1900
+      ],
+      "bands": {
+        "41_ka": {
+          "observed_power_fraction": 0.32556663972855826,
+          "null_mean": 0.038596143828179975,
+          "null_ci_97.5": 0.07495576202217112,
+          "p_raw": 0.0001999600079984003,
+          "p_bonferroni_2_bands": 0.0003999200159968006
+        },
+        "100_ka": {
+          "observed_power_fraction": 0.09978110771850411,
+          "null_mean": 0.11602492239679364,
+          "null_ci_97.5": 0.23857157247120156,
+          "p_raw": 0.5682863427314537,
+          "p_bonferroni_2_bands": 1.0
+        }
+      }
+    },
+    {
+      "age_ka": [
+        1400,
+        2600
+      ],
+      "bands": {
+        "41_ka": {
+          "observed_power_fraction": 0.4343718022898235,
+          "null_mean": 0.036458056881507654,
+          "null_ci_97.5": 0.0726131384218393,
+          "p_raw": 0.0001999600079984003,
+          "p_bonferroni_2_bands": 0.0003999200159968006
+        },
+        "100_ka": {
+          "observed_power_fraction": 0.11786572290262379,
+          "null_mean": 0.11008346722992605,
+          "null_ci_97.5": 0.23016887248006304,
+          "p_raw": 0.3727254549090182,
+          "p_bonferroni_2_bands": 0.7454509098180364
+        }
+      }
+    }
+  ],
+  "scope": "Ce test etablit si une bande excede un bruit rouge AR(1). Il ne demontre ni un mecanisme ORI-C ni une causalite astronomique."
+}

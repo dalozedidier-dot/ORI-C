@@ -1,0 +1,53 @@
+experiment:
+  name: smoke_surrogate
+  backend: surrogate
+  duration_years: 1200000
+  output_step_years: 1000
+  seed: 20260729
+  output_dir: runs/smoke_surrogate
+
+scenarios:
+  - name: baseline
+    modifications: {}
+  - name: jupiter_mass_minus_10pct
+    modifications:
+      Jupiter:
+        mass_scale: 0.90
+  - name: jupiter_mass_plus_10pct
+    modifications:
+      Jupiter:
+        mass_scale: 1.10
+  - name: saturn_a_plus_1pct
+    modifications:
+      Saturn:
+        a_scale: 1.01
+
+spectrum:
+  target_body: Earth
+  variable: eccentricity
+  min_period_years: 18000
+  max_period_years: 800000
+  peak_count: 8
+  red_noise_surrogates: 64
+  confidence: 0.95
+
+insolation:
+  latitude_deg: 65.0
+  solar_longitude_deg: 90.0
+  solar_constant_w_m2: 1361.0
+  obliquity_deg: 23.44
+
+climate:
+  response_time_years: 3000
+  ice_response_time_years: 12000
+  reference_temperature_c: 8.0
+  forcing_sensitivity_k_per_w_m2: 0.035
+  ice_cooling_k: 10.0
+  freeze_on_c: 5.5
+  melt_off_c: 7.0
+
+archive:
+  enabled: true
+  sampling_step_years: 5000
+  age_jitter_years: 1200
+  noise_std: 0.25

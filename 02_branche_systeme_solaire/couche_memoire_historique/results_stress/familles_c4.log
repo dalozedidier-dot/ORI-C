@@ -1,0 +1,37 @@
+[C4] modèles ORI-C ...
+     M0 fait
+     M1 fait
+     M2 fait
+     M1P fait
+[C4] lineaire_AR1 en 2 s — RMSE 2.0947
+C:\Users\didou\Downloads\ORI-C_tests_memoire_historique (1)\ORI-C_tests_memoire_historique\stress\k_familles_wp_c4.py:72: RuntimeWarning: overflow encountered in scalar multiply
+  y[t] = a1 * y[t - 1] + a2 * y[t - 2] + b * forcage[t] + c
+C:\Users\didou\Downloads\ORI-C_tests_memoire_historique (1)\ORI-C_tests_memoire_historique\stress\k_familles_wp_c4.py:72: RuntimeWarning: overflow encountered in scalar add
+  y[t] = a1 * y[t - 1] + a2 * y[t - 2] + b * forcage[t] + c
+C:\Users\didou\Downloads\ORI-C_tests_memoire_historique (1)\ORI-C_tests_memoire_historique\stress\k_familles_wp_c4.py:136: RuntimeWarning: overflow encountered in square
+  return float(np.mean((predit[masque] - observe[masque]) ** 2))
+C:\Users\didou\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\_core\_methods.py:190: RuntimeWarning: overflow encountered in square
+  x = um.square(x, out=x)
+C:\Users\didou\Downloads\ORI-C_tests_memoire_historique (1)\ORI-C_tests_memoire_historique\stress\k_familles_wp_c4.py:72: RuntimeWarning: invalid value encountered in scalar add
+  y[t] = a1 * y[t - 1] + a2 * y[t - 2] + b * forcage[t] + c
+C:\Users\didou\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\_core\_methods.py:132: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+[C4] lineaire_ARX2 en 6 s — RMSE 2.0929
+[C4] retards_distribues en 35 s — RMSE 2.0150
+[C4] espace_etat en 49 s — RMSE 2.0865
+[C4] seuils en 9 s — RMSE 2.0946
+[C4] bilan_energetique en 2 s — RMSE 2.0950
+[C4] persistance en 0 s — RMSE 1.7200
+
+           famille  parametres     rmse  correlation     n_eff         bic  gain_sur_M1P
+         ORI-C M1P           9 1.553311     0.174616 18.545881 1120.743912      0.000000
+       persistance           0 1.720012          NaN 16.336244 1301.594899     -0.107320
+retards_distribues           7 2.014966     0.090295 17.606037 1731.075872     -0.297207
+          ORI-C M2           9 2.042004     0.259521 18.110892 1777.247002     -0.314614
+       espace_etat           7 2.086472     0.157913 17.784295 1814.769359     -0.343241
+     lineaire_ARX2           4 2.092867     0.100168 17.696133 1800.844319     -0.347359
+          ORI-C M0           3 2.094493     0.086052 17.616268 1795.617680     -0.348405
+            seuils           5 2.094610     0.088285 17.898897 1809.931889     -0.348481
+      lineaire_AR1           3 2.094720     0.085662 17.642461 1795.877719     -0.348551
+ bilan_energetique           3 2.094992     0.086830 17.657712 1796.190136     -0.348727
+          ORI-C M1           6 2.117790     0.085697 17.574548 1843.436268     -0.363404

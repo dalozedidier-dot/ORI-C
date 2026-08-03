@@ -1,0 +1,55 @@
+{
+  "corps": [
+    "Sun",
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune",
+    "Pluto",
+    "Ceres",
+    "Pallas",
+    "Vesta",
+    "Iris",
+    "Bamberga"
+  ],
+  "duree_ka": 20.0,
+  "pas_jours": 8.0,
+  "points_echantillonnes": 201,
+  "duree_de_calcul_s": 24.285620199982077,
+  "criteres_fixes_avant_execution": {
+    "conservation_energie_relative_max": 1e-08,
+    "periode_dominante_excentricite_ka": [
+      395.0,
+      415.0
+    ],
+    "correlation_minimale_avec_La2004": 0.5
+  },
+  "conservation": {
+    "derive_energie_relative_max": 7.044400851302486e-05,
+    "critere": 1e-08,
+    "reussi": false
+  },
+  "excentricite_terrestre": {
+    "moyenne": 0.021876215677345923,
+    "min": 0.01664322610704702,
+    "max": 0.026109002835402562,
+    "periode_dominante_ka": 0.4901767917063171,
+    "critere": [
+      395.0,
+      415.0
+    ],
+    "reussi": false
+  },
+  "comparaison_La2004": {
+    "periode_dominante_de_La2004_ka": 10.5,
+    "correlation": 0.8562092887970537,
+    "critere": 0.5,
+    "reussi": true,
+    "rmse": 0.004077577561920576,
+    "points_compares": 21
+  }
+}

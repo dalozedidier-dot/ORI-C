@@ -1,0 +1,14 @@
+{
+  "imported": [
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\ephemerides.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\prebiotic_lineages_raw.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\relations.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\orbital_initial_conditions.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\orbital_reference.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\orbital_timeseries.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\matter_transitions.csv",
+    "C:\\Users\\didou\\Documents\\univers\\oric_v11_work\\current\\ORI-C_dossier_unique\\plateforme\\campagne_maximale_reelle\\data\\paleoclimate_timeseries.csv"
+  ],
+  "skipped": [],
+  "errors": []
+}

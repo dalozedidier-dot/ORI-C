@@ -1,0 +1,55 @@
+AUDIT DE LA CARTE RELATIONNELLE ORI-C
+=====================================
+Transitions : 40
+Liens typés : 47
+Composantes faiblement connexes : 1
+Cycles hors FEED : 0
+Cycles avec FEED : 1
+Liens explicitement non causaux : 4
+Liens contributifs non suffisants : 1
+Liens avec référence clé jointe : 47/47
+
+Répartition des codes :
+  ENBL: 19
+  MATR: 13
+  ENVR: 4
+  STAB: 2
+  CATL: 1
+  CNST: 2
+  CONT: 1
+  DEPG: 1
+  INCO: 1
+  DESC: 2
+  FEED: 1
+
+Statuts scientifiques normalisés :
+  Établi: 16
+  Fortement inféré: 12
+  Plausible: 17
+  Hypothétique: 2
+
+Modes de preuve principaux :
+  Observation + reconstruction: 18
+  Expérimentation + hypothèse: 7
+  Reconstruction: 6
+  Reconstruction + simulation: 5
+  Observation + expérimentation: 3
+  Simulation + reconstruction: 2
+  Observation: 2
+  Simulation: 1
+  Observation + simulation: 1
+  Simulation + observation: 1
+  Simulation + hypothèse: 1
+
+Empreintes SHA-256 :
+  noeuds_poc.csv: 3e58d8a15605ba7955019bca9cbc8d055dae78408517694eba57b928d1562525
+  relations_oric_47_provisoires.csv: fc0a0dc9128c4413884446080152737ea2c0df1a7e0204467d2618d38c983da7
+  matrice_relations_oric_47.csv: 18b9dba5a05743b5e6736e0aec379c14437e3baf5c1884939f6eb7a90518ddfc
+
+Statut : cohérence structurelle vérifiée uniquement.
+La carte mélange volontairement plusieurs classes de liens historiques, mais les liens
+d'incorporation, d'ascendance et de dépendance fonctionnelle générale sont déclarés
+non causaux historiquement. Le niveau de preuve est un
+classement interne prudent et ne remplace pas une revue bibliographique relation par relation.
+Les cas TRAPPIST-1d, TRAPPIST-1e et 55 Cancri e sont traités comme cas d’étude,
+sans être ajoutés aux transitions fondamentales de la carte.

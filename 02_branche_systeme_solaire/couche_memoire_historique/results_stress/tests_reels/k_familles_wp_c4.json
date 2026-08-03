@@ -1,0 +1,119 @@
+{
+  "fenetre_calibration_ka": [
+    2600,
+    1200
+  ],
+  "fenetre_prediction_ka": [
+    1200,
+    0
+  ],
+  "familles": [
+    {
+      "famille": "ORI-C M1P",
+      "parametres": 9,
+      "rmse": 1.5533110936671264,
+      "correlation": 0.17461627545205835,
+      "n_eff": 18.54588054596558,
+      "bic": 1120.7439122866372,
+      "gain_sur_M1P": 0.0
+    },
+    {
+      "famille": "persistance",
+      "parametres": 0,
+      "rmse": 1.720011897699832,
+      "correlation": NaN,
+      "n_eff": 16.336244399470598,
+      "bic": 1301.594899365076,
+      "gain_sur_M1P": -0.10731965072054628
+    },
+    {
+      "famille": "retards_distribues",
+      "parametres": 7,
+      "rmse": 2.0149658002309163,
+      "correlation": 0.09029518679512476,
+      "n_eff": 17.60603684363529,
+      "bic": 1731.075872245219,
+      "gain_sur_M1P": -0.2972068560161345
+    },
+    {
+      "famille": "ORI-C M2",
+      "parametres": 9,
+      "rmse": 2.042004239934863,
+      "correlation": 0.25952088607499496,
+      "n_eff": 18.110892181824735,
+      "bic": 1777.247002171849,
+      "gain_sur_M1P": -0.3146138260778193
+    },
+    {
+      "famille": "espace_etat",
+      "parametres": 7,
+      "rmse": 2.0864718070841684,
+      "correlation": 0.15791265947273325,
+      "n_eff": 17.784295492604457,
+      "bic": 1814.7693592030296,
+      "gain_sur_M1P": -0.3432414251019944
+    },
+    {
+      "famille": "lineaire_ARX2",
+      "parametres": 4,
+      "rmse": 2.092867227473936,
+      "correlation": 0.10016780373548075,
+      "n_eff": 17.696132942967054,
+      "bic": 1800.8443193056223,
+      "gain_sur_M1P": -0.3473587074775868
+    },
+    {
+      "famille": "ORI-C M0",
+      "parametres": 3,
+      "rmse": 2.094492827988389,
+      "correlation": 0.08605153132200188,
+      "n_eff": 17.616268260176792,
+      "bic": 1795.6176797568287,
+      "gain_sur_M1P": -0.34840524639762704
+    },
+    {
+      "famille": "seuils",
+      "parametres": 5,
+      "rmse": 2.094609822629685,
+      "correlation": 0.08828524651193281,
+      "n_eff": 17.898897340089835,
+      "bic": 1809.931889412491,
+      "gain_sur_M1P": -0.34848056591460774
+    },
+    {
+      "famille": "lineaire_AR1",
+      "parametres": 3,
+      "rmse": 2.0947197775666404,
+      "correlation": 0.08566248794913883,
+      "n_eff": 17.642461010697122,
+      "bic": 1795.8777185944919,
+      "gain_sur_M1P": -0.348551353368199
+    },
+    {
+      "famille": "bilan_energetique",
+      "parametres": 3,
+      "rmse": 2.0949924731279093,
+      "correlation": 0.08682974086582562,
+      "n_eff": 17.657712109941343,
+      "bic": 1796.190135919983,
+      "gain_sur_M1P": -0.3487269109640858
+    },
+    {
+      "famille": "ORI-C M1",
+      "parametres": 6,
+      "rmse": 2.1177903406960645,
+      "correlation": 0.08569667974166055,
+      "n_eff": 17.574548413148463,
+      "bic": 1843.436268203262,
+      "gain_sur_M1P": -0.3634038598773477
+    }
+  ],
+  "meilleure_famille": "ORI-C M1P",
+  "rmse_meilleure": 1.5533110936671264,
+  "rang_de_M2_sur": [
+    4,
+    11
+  ],
+  "M2_bat_une_famille_concurrente": true,
+  "lecture": "Toutes les familles prédisent en roue libre sur la même fenêtre, avec le même budget. Le rang de M2 dans ce classement dit ce que la comparaison interne aux quatre modèles ORI-C ne pouvait pas dire."
+}

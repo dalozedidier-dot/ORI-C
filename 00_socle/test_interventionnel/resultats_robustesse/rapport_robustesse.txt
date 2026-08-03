@@ -1,0 +1,38 @@
+CAMPAGNE DE ROBUSTESSE — TEST INTERVENTIONNEL ORI-C
+========================================================================
+
+Facteur de rétention exact (état stationnaire)   : 4.4439094848
+Facteur mesuré, horizon courant t_end = 500      : 4.4439094848
+Biais relatif de la valeur courante              : -2.33e-12
+
+Rappel du défaut corrigé, fenêtre t_end = 80    : 4.4180754303
+Biais relatif de la fenêtre historique           : -0.5813%
+
+Horizon minimal pour un biais < 1e-6             : 240 unités
+Horizon requis pour un biais < 1e-9              : 297.8 unités
+Temps de relaxation du compartiment sélectif     : 14.370 unités
+Domaine de validité de l'affirmation causale     : 0 <= leak < 0.859091
+Tirages de sensibilité globale sans contre-exemple : 115120 / 200000
+
+------------------------------------------------------------------------
+
+  C01  RÉUSSI   Solution stationnaire en forme close
+  C02  RÉUSSI   Convergence temporelle
+  C03  RÉUSSI   Stabilité linéaire
+  C04  RÉUSSI   Invariance au solveur
+  C05  RÉUSSI   Invariance à la discrétisation
+  C06  RÉUSSI   Bilan de matière
+  C07  RÉUSSI   Invariance aux conditions initiales
+  C08  RÉUSSI   Balayage de l'intervention
+  C09  RÉUSSI   Contrôle négatif, intervention nulle
+  C10  RÉUSSI   Contrôle de signe, intervention inverse
+  C11  RÉUSSI   Placebo, variables sans effet stationnaire
+  C12  RÉUSSI   Seuil de lavage
+  C13  RÉUSSI   Sensibilité globale
+  C14  RÉUSSI   Robustesse structurelle et stochastique
+
+------------------------------------------------------------------------
+Bilan : 14 / 14 contrôles réussis.
+
+Portée : cohérence interne d'un modèle déterministe défini, sans portée
+probante générale sur le vivant.

@@ -1,0 +1,136 @@
+{
+  "noeuds": 53,
+  "hyperaretes": 53,
+  "noeuds_joignables_depuis_la_racine": 53,
+  "noeuds_inatteignables": [],
+  "profondeur_maximale": 12,
+  "test_A_monotonie": {
+    "arcs_examines": 117,
+    "baisses_de_capacite": 20,
+    "baisses_sur_arete_de_retour": 8,
+    "baisses_inattendues": 12,
+    "violations": [
+      {
+        "arete": "H002",
+        "processus": "Vaporisation et recondensation interne",
+        "type": "transformation",
+        "de": "N001 niveau 2",
+        "vers": "N004 niveau 1"
+      },
+      {
+        "arete": "H002",
+        "processus": "Vaporisation et recondensation interne",
+        "type": "transformation",
+        "de": "N002 niveau 3",
+        "vers": "N004 niveau 1"
+      },
+      {
+        "arete": "H002",
+        "processus": "Vaporisation et recondensation interne",
+        "type": "transformation",
+        "de": "N003 niveau 2",
+        "vers": "N004 niveau 1"
+      },
+      {
+        "arete": "H014",
+        "processus": "Fusion rapide de precurseurs solides",
+        "type": "transformation",
+        "de": "N009 niveau 4",
+        "vers": "N015 niveau 3"
+      },
+      {
+        "arete": "H041",
+        "processus": "Nucleosynthese hydrostatique et explosive",
+        "type": "transformation",
+        "de": "N042 niveau 6",
+        "vers": "N043 niveau 1"
+      },
+      {
+        "arete": "H042",
+        "processus": "Ejection par vents et explosions",
+        "type": "transmission",
+        "de": "N042 niveau 6",
+        "vers": "N044 niveau 1"
+      },
+      {
+        "arete": "H044",
+        "processus": "Condensation stellaire de grains",
+        "type": "transformation",
+        "de": "N042 niveau 6",
+        "vers": "N046 niveau 3"
+      },
+      {
+        "arete": "H045",
+        "processus": "Chimie gazeuse glaces et surfaces",
+        "type": "transformation",
+        "de": "N046 niveau 3",
+        "vers": "N047 niveau 2"
+      },
+      {
+        "arete": "H046",
+        "processus": "Transmission au nuage protosolaire",
+        "type": "transmission",
+        "de": "N046 niveau 3",
+        "vers": "N001 niveau 2"
+      },
+      {
+        "arete": "H046",
+        "processus": "Transmission au nuage protosolaire",
+        "type": "transmission",
+        "de": "N046 niveau 3",
+        "vers": "N003 niveau 2"
+      },
+      {
+        "arete": "H049",
+        "processus": "Impacts geants entre embryons",
+        "type": "transformation",
+        "de": "N033 niveau 5",
+        "vers": "N050 niveau 4"
+      },
+      {
+        "arete": "H053",
+        "processus": "Alteration aqueuse produisant des especes solubles",
+        "type": "transformation",
+        "de": "N053 niveau 9",
+        "vers": "N054 niveau 8"
+      }
+    ],
+    "verdict": "REFUTEE"
+  },
+  "test_A_bis_exploratoire": {
+    "regle": "le niveau ne peut baisser que sur une arete de retour ou d emission de constituants par un systeme assemble",
+    "roles_declares": {
+      "progression": 37,
+      "retour": 11,
+      "emission": 5
+    },
+    "violations_restantes": [
+      {
+        "arete": "H053",
+        "processus": "Alteration aqueuse produisant des especes solubles",
+        "de": "N053 niveau 9",
+        "vers": "N054 niveau 8"
+      }
+    ],
+    "verdict": "REFUTEE MEME REVISEE",
+    "avertissement": "regle etablie apres lecture des violations de l execution 1 : exploratoire, non preenregistree",
+    "corrections_posterieures_aux_echecs": [
+      "N029 inventaire accessible : niveau 10 ramene a 8",
+      "N054 especes solubles : niveau 10 ramene a 8"
+    ],
+    "consequence": "deux niveaux ont ete corriges apres avoir vu les violations, et une troisieme violation est apparue. La poursuite serait du bricolage. Elle est arretee.",
+    "conclusion": "La monotonie est refutee et ne peut pas etre retablie par un reetiquetage. La raison est structurelle : une production pointe toujours vers le bas. Une etoile de niveau 6 produit des elements de niveau 1 ; un systeme hydrothermal de niveau 9 produit des especes mobiles de niveau 8. L echelle ordonne des OBJETS, pas des PROCESSUS : elle ne peut pas etre un invariant le long des aretes. Elle reste un codage valide, et le test B montre qu il porte de l information. Il n est simplement pas monotone."
+  },
+  "test_B_information": {
+    "entropie_du_niveau_bits": 3.191,
+    "gain_observe_bits": 1.8465,
+    "gain_moyen_sous_permutation_bits": 1.2515,
+    "gain_net_du_bruit_bits": 0.595,
+    "p_par_permutation": 5e-05,
+    "spearman_niveau_profondeur": 0.7406,
+    "part_de_l_entropie_expliquee": 0.5787,
+    "tirages": 20000
+  },
+  "lecture": "Un rho proche de 1 signifierait que l'echelle recopie la profondeur et n'ajoute rien : ce fut l'echec des six dimensions. Un gain observe proche du gain sous permutation signifierait que le gain n'est que de la memorisation a petit effectif.",
+  "portee": "L'echelle est un codage propose, pas une mesure. Ces tests controlent sa coherence interne et sa non-redondance avec la position dans le graphe. Ils ne valident pas ORI-C."
+}

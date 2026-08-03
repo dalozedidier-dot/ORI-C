@@ -1,0 +1,40 @@
+{
+  "paquet": "C:\\ORI-C\\pkg",
+  "correctifs": [
+    {
+      "code": "C1",
+      "fichier": "criteria.py",
+      "motif": "borne d'inégalité lue des deux côtés",
+      "etat": "appliqué"
+    },
+    {
+      "code": "C2a",
+      "fichier": "climate.py",
+      "motif": "clés rmse, oos_gain, failed_validations publiées",
+      "etat": "appliqué"
+    },
+    {
+      "code": "C2b",
+      "fichier": "climate.py",
+      "motif": "clés cv_gain et holdout_fraction publiées",
+      "etat": "appliqué"
+    },
+    {
+      "code": "C6",
+      "fichier": "engines.py",
+      "motif": "donnée manquante classée blocked et non error",
+      "etat": "appliqué"
+    },
+    {
+      "code": "C6-import",
+      "fichier": "engines.py",
+      "etat": "appliqué"
+    }
+  ],
+  "empreintes_apres_correctif": {
+    "criteria.py": "928dcee401252beb3aece5b51f0fc10bd6c29b723b6693016d5db78df34bc96c",
+    "engines.py": "9a82ab5d2f03acc6e3a82de4701929d59e01c14ce9290a6bc2a2fccad2099781",
+    "domains/climate.py": "4801e09f568452c844de4922dc2f32c6907a2f3620186220f68afc8180b02998"
+  },
+  "note": "Le wheel distribué n'est pas modifié. Ces correctifs portent sur la copie extraite et doivent être remontés à l'auteur du paquet."
+}

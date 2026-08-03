@@ -1,0 +1,168 @@
+{
+  "WP_T2_generalite_reelle": {
+    "notions_examinees": 15,
+    "par_notion": {
+      "six dimensions n G I E Pi H": {
+        "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
+          "socle"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "chaîne ORI-C": {
+        "branches_ou_une_mesure_existe": [],
+        "nombre_de_branches": 0,
+        "produit_une_mesure": false,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "vecteur de persistance Pi": {
+        "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
+          "branche 2 système solaire",
+          "socle"
+        ],
+        "nombre_de_branches": 3,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "signature de transition S": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "liens typés de la carte": {
+        "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
+          "branche 2 système solaire",
+          "socle"
+        ],
+        "nombre_de_branches": 3,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "niveaux de preuve": {
+        "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
+          "socle"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "mémoire distribuée m(t)": {
+        "branches_ou_une_mesure_existe": [
+          "branche 2 système solaire",
+          "socle"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "diagnostic D-H-L": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "Pth et Pacc(T,C,epsilon)": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "séparation X m A": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "critère d'altération architecturale": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "témoin de complexité égale": {
+        "branches_ou_une_mesure_existe": [
+          "branche 2 système solaire",
+          "branche 3 vivant"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "dépendance au chemin": {
+        "branches_ou_une_mesure_existe": [
+          "branche 2 système solaire",
+          "socle"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      },
+      "seuil et bifurcation": {
+        "branches_ou_une_mesure_existe": [
+          "socle"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": false
+      },
+      "fenêtre longue devant les constantes de temps": {
+        "branches_ou_une_mesure_existe": [
+          "branche 2 système solaire",
+          "socle"
+        ],
+        "nombre_de_branches": 2,
+        "produit_une_mesure": true,
+        "traverse_deux_branches_ou_plus": true
+      }
+    },
+    "notions_sans_aucune_mesure": [
+      "chaîne ORI-C"
+    ],
+    "notions_traversant_au_moins_deux_branches": [
+      "dépendance au chemin",
+      "fenêtre longue devant les constantes de temps",
+      "liens typés de la carte",
+      "mémoire distribuée m(t)",
+      "niveaux de preuve",
+      "six dimensions n G I E Pi H",
+      "témoin de complexité égale",
+      "vecteur de persistance Pi"
+    ],
+    "lecture": "Une notion présente dans une seule branche reste analogique tant qu'elle n'a pas été instanciée ailleurs. Une notion sans aucune mesure relève du WP-T2.5 : à retirer ou à rendre mesurable."
+  },
+  "WP_T4_compression_explicative": {
+    "sections_du_codebook": 15,
+    "sous_sections": 15,
+    "codes_de_relation": 13,
+    "lignes_du_codebook": 532,
+    "hypotheses_enregistrees": 28,
+    "statuts": {
+      "Validé dans le modèle réduit": 1,
+      "Non testé": 6,
+      "Établi": 3,
+      "Réfuté": 11,
+      "Sans verdict": 1,
+      "Non concluant": 5,
+      "Non évalué": 1
+    },
+    "hypotheses_a_statut_positif": 4,
+    "rapport_concepts_sur_resultats_positifs": 3.75,
+    "lecture": "Le rapport entre le nombre de concepts introduits et le nombre de résultats positifs obtenus est la mesure la plus directe de la compression explicative demandée au WP-T4.3. Un rapport élevé signifie que le cadre coûte plus qu'il ne rend, en l'état."
+  }
+}

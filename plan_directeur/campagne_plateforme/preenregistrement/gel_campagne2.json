@@ -1,0 +1,26 @@
+{
+  "campagne": 2,
+  "date_de_gel": "2026-08-01",
+  "controles_positifs": [
+    "A1-003",
+    "A5-001",
+    "A5-002",
+    "A5-004"
+  ],
+  "confirmatoires": [
+    "A2-009",
+    "A5-007",
+    "C3-020",
+    "C5-009",
+    "C6-001"
+  ],
+  "gels_refuses": [
+    {
+      "test_id": "A6-002",
+      "mode": "external_code"
+    }
+  ],
+  "confirmatoires_non_geles": 24,
+  "empreinte_de_la_grille": "bac1c0db8db7f4fd2b81902ead0b3f2c34ae4f1557fe779e2dda9b73c2eaf8c3",
+  "regle": "Les contrôles positifs emploient des valeurs publiées extérieures ; les réussir ne soutient aucune hypothèse ORI-C. Les confirmatoires portent sur des quantités non mesurées avant l'écriture de ce fichier."
+}

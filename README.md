@@ -1,0 +1,131 @@
+# ORI-C — dossier unique
+
+Didier Daloze | Juillet 2026
+
+Ce dossier rassemble **l'état intégré du programme ORI-C consacré à la
+chronologie des architectures matérielles, à l'architecture du Système solaire
+et au vivant**, sous une forme unique : un socle commun et trois branches
+autonomes.
+
+D'autres développements d'ORI-C, notamment ses dimensions cognitives et ses
+autres branches formelles, ne figurent pas ici.
+
+Le socle ne contient aucun résultat **empirique** propre à une branche. Il
+porte en revanche un résultat formel commun, le test interventionnel. Il
+rassemble ce que les trois branches partagent : le vocabulaire, la
+chaîne relationnelle, les règles d'emploi des liens typés, les niveaux de
+preuve et la carte des transitions. Ce n'est pas une quatrième branche.
+
+Les branches ne fusionnent pas leurs résultats. Elles ont des objets, des
+méthodes et des niveaux de validation différents, et le dossier les maintient
+séparés.
+
+```text
+                         SOCLE COMMUN ORI-C
+       architecture, histoire, inscription, persistance, possibles
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+        BRANCHE 1            BRANCHE 2           BRANCHE 3
+        MATIÈRE           SYSTÈME SOLAIRE          VIVANT
+      Régimes 1 à 4        Régimes 5 et 6       Régimes 7 et 8
+              │                   │                   │
+              └── héritage ──────►│── conditions ────►│
+                                  │◄── rétroactions ──┘
+```
+
+## Contenu
+
+| Dossier | Contenu | Rôle |
+|---|---|---|
+| `00_socle/` | vocabulaire, carte des 40 transitions et 47 relations, test interventionnel, suite de tests | langage transversal |
+| `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
+| `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
+| `plan_directeur/` | plan de campagne, registre des 21 hypothèses, avancement | transversal |
+| `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
+
+## Par où commencer
+
+0. **`documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf`** — le document scientifique complet. Il réunit le socle, les trois branches, les résultats, les réfutations, l'arbre généalogique et les limites.
+1. `documentation/POINT_D_ENTREE.md` — la carte des documents faisant autorité et des fichiers machine lisibles.
+2. `ORI-C_Architecture_generale_du_programme.pdf` — l'architecture générale du programme.
+3. `ARCHITECTURE.md` — ce qui relie les branches, ce qui les sépare, et pourquoi le socle n'en est pas une.
+4. `ETAT_DES_PREUVES.md` — le tableau transversal des niveaux de validation, y compris les résultats négatifs.
+5. `00_socle/CODEBOOK.md` — les définitions communes, à lire avant toute branche.
+6. `AUTORITE_DES_DOCUMENTS.md` — le fichier qui tranche lorsque deux documents se contredisent.
+7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
+
+## Ce que le dossier établit, en une phrase par branche
+
+**Branche 1, matière.** Une chronologie descriptive en huit régimes, un
+inventaire de 40 transitions et une grille d'analyse. S'y ajoute désormais un
+hypergraphe mécanistique de 53 nœuds et 53 hyperarêtes, généalogiquement clos
+depuis le socle baryonique, et une première campagne mesurée d'inventaire
+accessible sur quatre éléments. Un attribut de branche y résiste enfin à un
+témoin apparié : l'échelle des dix capacités porte 0,595 bit net de permutation
+là où les six dimensions en portaient 0,000. Sa monotonie, elle, est réfutée.
+
+**Branche 2, Système solaire.** Une validation astronomique et numérique solide
+de la couche dynamique réduite, 13 critères préenregistrés réussis sur 15. Et un
+résultat **négatif** sur la couche suivante : la déclinaison paléoclimatique
+testée ne surpasse pas un témoin classique de complexité égale.
+
+**Branche 3, vivant.** Une preuve de concept méthodologique en trois actes. La
+grille s'applique sans contradiction manifeste à la cellule eucaryote, à
+l'endosymbiose mitochondriale et à la résistance aux antibiotiques. Elle ne
+démontre ni universalité, ni supériorité explicative, ni pouvoir prédictif.
+
+## Portée du résultat négatif de la branche 2
+
+Il ferme une implémentation particulière de la mémoire climatique. Il ne remet
+pas en cause la couche astronomique, qui est validée séparément et dont les
+résultats sont conservés dans un dossier distinct. Il ne réfute pas les deux
+autres branches, qui portent sur d'autres objets et d'autres mécanismes.
+
+Cette séparation est le motif principal de l'organisation du dossier : un
+échec localisé doit rester localisé, et une réussite localisée ne doit pas
+s'étendre par contagion de vocabulaire.
+
+## Vérification
+
+```bash
+cd ORI-C
+python verifier_dossier.py
+```
+
+Le script recalcule les empreintes SHA-256 de `MANIFEST.sha256` et signale
+tout fichier modifié, absent ou non listé. Les suites de tests de chaque
+couche s'exécutent séparément ; voir le `README.md` de chaque branche.
+
+## Reconstruction et contrôles
+
+Les scripts de construction conservés à la racine reconstruisent les composants historiques et les campagnes dont ils dépendent. L'archive complète livrée, son manifeste et ses fichiers de clôture constituent l'état canonique à contrôler. La généalogie dispose de ses propres scripts de validation dans `00_socle/genealogie/` et `01_branche_matiere/genealogie/`.
+
+Deux suites de tests s'exécutent séparément :
+
+```bash
+cd 00_socle && python -m pytest -q
+cd 02_branche_systeme_solaire/couche_memoire_historique
+PYTHONPATH="$PWD/src" python -m unittest discover -s tests
+```
+
+Les compteurs sont générés par `etat_des_tests.py` et consignés dans
+`ETAT_DES_TESTS.md`. Aucun autre fichier du dossier ne cite un nombre de tests.
+
+La reconstruction se vérifie sans rien écraser :
+
+```bash
+python construire_dossier.py --sources <rep> --verifier-reconstruction
+```
+
+## État du dossier
+
+Cette archive constitue un dossier scientifique unique. Le socle, les trois branches, les généalogies, les données, le code, les résultats positifs, les résultats négatifs et les limites sont conservés dans une même arborescence. Les identifiants de transition restent stables parce qu’ils décrivent le contenu, et non une étape de publication.
+
+
+## Inventaire complet et recherche d’architectures
+
+- `01_branche_matiere/inventaire_hierarchique/documents/INVENTAIRE_DE_LA_MATIERE_DANS_LE_CADRE_ORI-C.pdf` : document de lecture.
+- `01_branche_matiere/inventaire_hierarchique/analyses/INVENTAIRE_ORI-C_ANALYSE_ARCHITECTURES.xlsx` : criblage des familles et relations.
+- `audit/coherence_et_extensions/` : anomalies, architectures manquantes et liens causaux candidats.
+- `TRI_ET_CORRECTIONS.md` : corrections appliquées lors de la reconstruction.

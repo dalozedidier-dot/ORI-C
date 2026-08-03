@@ -1,0 +1,2 @@
+system_id;event_id;debut;fin;type_evenement;intensite;ordre;etat_avant;etat_apres;reversible
+chemostat_libre;EV-001;10;60;intervention sur la perte;0.25;1;P=0.1;P=7.98;oui

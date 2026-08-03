@@ -1,0 +1,12 @@
+name: ORI-C-priorite-1
+selection:
+  all: true
+  max_priority: 1
+execution:
+  seed: 20260801
+  allow_missing_data: true
+  include_noncomputational: true
+paths:
+  data_dir: ../data
+  output_dir: ../results/priority1
+  criteria_file: ../preregistration/criteria.csv

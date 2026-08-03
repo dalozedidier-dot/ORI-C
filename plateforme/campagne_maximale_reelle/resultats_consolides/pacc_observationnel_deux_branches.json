@@ -1,0 +1,142 @@
+{
+  "definition": "number of empirically reached future state classes divided by five declared classes",
+  "same_estimator": true,
+  "antibiotics": {
+    "state_edges_log10_survival": [
+      -Infinity,
+      -3.7716008520334063,
+      -1.7884414219474112,
+      -0.5686541530336495,
+      -0.11486793389093479,
+      Infinity
+    ],
+    "horizon": "next observed cycle",
+    "states": {
+      "0": {
+        "transitions": 151,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "1": {
+        "transitions": 172,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "2": {
+        "transitions": 141,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "3": {
+        "transitions": 140,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "4": {
+        "transitions": 135,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      }
+    }
+  },
+  "paleoclimate": {
+    "state_edges_d18o_permil": [
+      -Infinity,
+      3.558,
+      3.75,
+      3.97,
+      4.24,
+      Infinity
+    ],
+    "horizon": "10 ka",
+    "states": {
+      "0": {
+        "transitions": 517,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "1": {
+        "transitions": 526,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "2": {
+        "transitions": 509,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "3": {
+        "transitions": 520,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      },
+      "4": {
+        "transitions": 519,
+        "reachable_states": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pacc_observed": 1.0
+      }
+    }
+  },
+  "status": "observational_proxy_not_causal_pacc",
+  "limitation": "No matched intervention set I; observed reachability cannot identify counterfactual accessibility."
+}

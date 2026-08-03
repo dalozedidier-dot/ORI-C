@@ -1,0 +1,372 @@
+# État des preuves
+
+Ce tableau est le seul lieu du dossier où les trois branches sont regardées
+ensemble. Il compare des **statuts**, jamais des résultats.
+
+## Échelle employée
+
+| Niveau | Définition |
+|---|---|
+| **Établi** | mesuré directement ou reproduit par des modèles largement validés |
+| **Validé dans le modèle réduit** | test numérique explicite réussi, sans transposition automatique au réel |
+| **Fortement appuyé** | plusieurs observations indépendantes convergent, mécanisme ou chronologie partiellement ouverts |
+| **Plausible** | mécanisme possible, causalité ou portée incertaines |
+| **Preuve de concept** | la méthode s'applique sans contradiction, sans démonstration de supériorité |
+| **Non testé** | aucune procédure exécutée |
+| **Réfuté** | test exécuté, critère préenregistré non atteint |
+
+## Socle
+
+| Élément | Statut | Où |
+|---|---|---|
+| Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
+| Mémoire distribuée, `D-H-L`, `Pth`/`Pacc`, `X`/`m`/`A`, altération architecturale | Preuve de concept | `00_socle/CODEBOOK.md` §13 |
+| Carte des 40 transitions, 47 relations | Cohérence structurelle vérifiée | `00_socle/carte_relationnelle/` |
+| Suite de tests de la carte | voir `ETAT_DES_TESTS.md` | `00_socle/tests/` |
+| Représentation des fermetures | attribut de nœud, 5 transitions ; `CLOS` et `INTG` définis, non instanciés | `ARCHITECTURE.md` |
+| Test interventionnel du chémostat | Validé dans le modèle réduit | `00_socle/test_interventionnel/` |
+
+Le test interventionnel établit qu'une réduction du terme de perte augmente
+strictement l'équilibre positif, sur 115 120 tirages où les deux systèmes sont
+viables, avec un facteur de rétention supérieur à 1 dans 100 % des cas. Il
+identifie aussi le seuil de lavage au-delà duquel l'affirmation causale perd
+son sens.
+
+L'analyse exhaustive conclut **11 sections réussies sur 11**, après la
+correction de deux défauts documentée dans
+`00_socle/test_interventionnel/resultats_exhaustifs/CORRECTION_ANALYSE_EXHAUSTIVE.md`.
+
+Les trois niveaux de conclusion du rapport restent distincts et ne changent
+pas : niveau 1, théorème dans le modèle, **établi** ; niveau 2, robustesse
+structurelle, **établi avec réserve** ; niveau 3, validité biologique, **non
+établi**.
+
+L'exhaustivité porte sur le système d'équations défini et son domaine
+admissible. Elle ne constitue ni une preuve sur toutes les structures
+mathématiques possibles, ni une validation empirique dans le vivant.
+
+## Branche 1 — Matière
+
+| Élément | Statut | Remarque |
+|---|---|---|
+| Chronologie en huit régimes | Fortement appuyé à Établi selon les régimes | s'appuie sur la littérature, pas sur un calcul propre |
+| Inventaire des 40 transitions | Établi à Hypothétique selon l'entrée | chaque entrée porte son propre niveau |
+| Voies prébiotiques | Plausible | mécanismes candidats, non séquence historique démontrée |
+| Apport spécifique d'ORI-C | **Non testé** | la branche fournit un langage, pas une démonstration |
+
+La branche est explicite sur ce point : « L'article théorique ouvre le
+programme ; la base de données et les tests viendront ensuite. »
+
+### Couche généalogie annotée
+
+Complémentaire de l'hypergraphe, elle ne s'y substitue pas et n'y est pas
+contenue. 39 transitions, 25 champs, dont treize que l'hypergraphe n'a pas et
+quatre axes de certitude indépendants.
+
+| Élément | Statut | Remarque |
+|---|---|---|
+| Clôture, entrées externes déclarées | **Cohérence structurelle vérifiée** | 53 produits, 77 relations, 0 anomalie |
+| Séparation parent matériel / condition permissive | **Établi comme règle machine** | le validateur rejette toute confusion |
+| Séparation actinides / aluminium 26 | **Corrigé** | capture neutronique d'un côté, capture protonique de l'autre |
+| Quatre axes de certitude | **Établi comme règle** | mécanisme, milieu naturel, transition historique, rôle causal |
+| Correspondance entre représentations | **Publiée** | 24 lignes, l'équivalence n'est plus implicite |
+| Possibilités ouvertes et fermées | Preuve de concept | **seul endroit du dossier où le terme final de la chaîne ORI-C est instancié** |
+| Mesure d'information sur la version antérieure | **Retirée** | saturée par mémorisation, archivée comme non probante |
+
+La version antérieure est conservée **pour traçabilité et ne doit pas être
+citée**. Elle porte le défaut corrigé depuis : la gravité et le flux ultraviolet
+y figurent comme parents matériels, alors que ce sont des conditions. Un test
+verrouille ce constat et vérifie que le défaut n'est pas remonté dans la version
+courante.
+
+### Inventaire hiérarchique de la matière
+
+Registre de ce qui existe, distinct de la généalogie qui dit d'où cela vient.
+6 392 entrées détaillées, 550 entrées d'index, dix sources institutionnelles
+datées.
+
+| Élément | Statut | Remarque |
+|---|---|---|
+| Constituants fondamentaux, nuclides, éléments | **Établi, exhaustif** | registres fermés ou évalués : 18, 5 843, 118 |
+| Molécules, phases, matériaux, réservoirs, biologique | Structurant | **ouvert, non clos**, le fichier ne prétend pas l'inverse |
+| Séparation confirmé / hypothétique | **Établi comme règle** | aucun candidat de matière noire ne porte « confirmé » |
+| Chaîne présence → accessibilité → mobilisabilité → opérativité | Définition opérationnelle | quatre degrés, aucun encore mesuré |
+| Sourçage | **Établi** | 100 % des lignes contrôlées portent une URL |
+
+Les effectifs annoncés ont été recomptés feuille par feuille : **treize sur
+treize concordent**, le total détaillé tombe exactement sur 6 392, la hiérarchie
+est close avec une racine unique et aucun parent orphelin.
+
+Cette couche éclaire une limite constatée ailleurs. Les vingt-huit
+enregistrements d'inventaire accessible sans valeur chiffrée mesurent une
+**présence** par réservoir. Passer à la mobilisabilité exige des flux et des
+horizons, que des coefficients de partage à l'équilibre ne fournissent pas.
+
+### Couche hypergraphe mécanistique
+
+La représentation linéaire de la branche a été remplacée par un hypergraphe :
+53 nœuds, 53 hyperarêtes multi-entrées et multi-sorties, du socle baryonique
+jusqu'aux interfaces réactives. La base historique
+`base_transitions/transitions_matiere.csv` reste intacte comme objet audité.
+
+| Élément | Statut | Remarque |
+|---|---|---|
+| Clôture généalogique | **Cohérence structurelle vérifiée** | racine unique `N036`, 53/53 nœuds joignables |
+| Filtre NC–CC paramétré | Fortement appuyé | 3 mécanismes concurrents conservés, aucun tranché |
+| Échelle des dix capacités, monotonie | **Réfuté** | critère préenregistré non atteint, 11 arcs sur 117 |
+| Échelle des dix capacités, information | **Établi dans le graphe** | gain net 0,595 bit, p = 5·10⁻⁵, ρ = 0,74 |
+| Inventaire accessible, azote carbone hydrogène soufre | Fortement appuyé | 31 enregistrements sourcés, répartition mesurée |
+| Bouclage des budgets publiés | **Établi** | noyau + silicate reconstitue le total, écart max 2,88 % |
+| Coefficients de partage métal-silicate | Fortement appuyé | 9 valeurs expérimentales, N C H S, bornes déclarées |
+| Prédiction de la répartition par les coefficients | **Établi pour C, H, N — désaccord pour S** | épreuve indépendante, sans circularité |
+| Facteurs de mobilisation à horizon donné | **Non testé** | exigent des flux, pas des coefficients d'équilibre |
+
+Deux résultats méritent d'être lus ensemble, parce qu'ils vont en sens
+contraire.
+
+Le contrôle de clôture a révélé que la chaîne poussière
+`N008 → N009 → N010 → N008` tournait sur elle-même sans aucune alimentation
+matérielle : les condensats, glaces, organiques et grains présolaires n'y
+entraient jamais. Quatre nœuds étaient inatteignables depuis le socle
+cosmique. L'hyperarête `H047` rétablit la jonction, et le contrôle est
+désormais exécuté à chaque validation.
+
+La monotonie de l'échelle des capacités est **réfutée, et ne peut pas être
+rétablie par un réétiquetage**. La raison est structurelle : une production
+pointe toujours vers le bas. Une étoile de niveau 6 produit des éléments de
+niveau 1 ; un système hydrothermal de niveau 9 produit des espèces mobiles de
+niveau 8. L'échelle ordonne des **objets**, pas des **processus**. Deux niveaux
+ont été corrigés après lecture des violations avant que la poursuite ne soit
+arrêtée : ces corrections sont consignées, et un accord obtenu ainsi ne
+compterait pas comme preuve.
+
+Ce qui subsiste est le test B. Les six dimensions portaient 0,000 bit propre.
+L'échelle des capacités porte 0,595 bit **net du tirage par permutation**, avec
+un rho de 0,74 : corrélée à la profondeur dans le graphe sans lui être
+redondante. C'est, à ce jour, le seul attribut de branche dont l'apport propre
+survive à un témoin apparié. Sa portée reste interne au graphe : il mesure un
+codage, pas le monde.
+
+L'inventaire accessible donne un résultat du même ordre. La part d'azote
+mobilisable en surface varie de 8 % à 94 % du total terrestre selon que l'on
+retient la voie chondritique ou le calcul ab initio pour le noyau. Ce n'est pas
+une barre d'erreur, c'est un désaccord publié non tranché, conservé comme tel.
+
+Une épreuve indépendante a été conduite sur cette répartition. Les coefficients
+de partage métal-silicate mesurés en laboratoire prédisent un rapport de masses
+noyau sur silicate égal à `D` fois le rapport des masses de réservoirs. Les
+deux côtés viennent de sources indépendantes — expériences à haute pression
+d'un côté, budgets géochimiques de l'autre — donc un accord n'est pas une
+tautologie.
+
+| Élément | Attendu par `D` | Observé | |
+|---|---|---|---|
+| C | 6,7 à 305,8 | 3,4 à 46,8 | recouvre |
+| H | 13,9 et au-delà | 22,2 à 60,4 | recouvre |
+| N | 8,6 à 14,8 | 0,07 à 11,1 | recouvre |
+| **S** | 3,8 à 26,3 | **34,4** | **désaccord** |
+
+Trois éléments sur quatre recouvrent. Le désaccord sur le soufre n'est pas un
+artefact du contrôle : la source des coefficients conclut elle-même à un noyau
+pauvre en soufre, contre l'estimation classique de 1,8 wt% tirée de la tendance
+de volatilité. Le contrôle retrouve donc une tension publiée sans l'avoir
+cherchée, ce qui vaut pour lui une première validation.
+
+Une erreur du contrôle lui-même a été corrigée au passage : `D_H ≥ 29` est une
+borne inférieure publiée. La traiter comme une valeur ponctuelle fabriquait un
+désaccord inexistant sur l'hydrogène. Le type de chaque valeur — point ou
+borne — est désormais déclaré dans `coefficients_partage.csv` et vérifié.
+
+## Branche 2 — Filtrages historiques de l'architecture planétaire
+
+| Élément | Statut | Nature de la preuve |
+|---|---|---|
+| Tri des matériaux du disque par provenance | **Établi** | anomalies isotopiques, dichotomie carbonée / non carbonée |
+| Contrôle du destin thermique par la date d'accrétion | **Établi** | radiochronologie, excès de magnésium 26 |
+| Rôle de la température et du redox dans la différenciation | **Établi** | pétrologie expérimentale, partage métal-silicate |
+| Perte précoce des volatils par dégazage | **Établi** | teneurs en eau des achondrites |
+| Apports postérieurs à la ségrégation du noyau | **Établi** | isotopes du molybdène, éléments fortement sidérophiles |
+| Apport spécifique d'ORI-C sur cette chaîne | **Non testé** | aucun test comparatif proposé |
+
+C'est le seul endroit du programme où la dépendance au chemin est **matériellement
+enregistrée** plutôt que modélisée ou postulée. Plusieurs étapes de l'histoire
+d'une planète restent lisibles dans sa matière et causalement actives dans son
+architecture présente.
+
+La portée doit rester exacte. Ces résultats appartiennent à la cosmochimie, à la
+radiochronologie et à la pétrologie expérimentale. ORI-C ne les produit pas, il
+les organise. Ils établissent la **prémisse** du cadre, non sa valeur ajoutée :
+aucun test ne mesure ici ce qu'ORI-C apporte par rapport aux disciplines qui ont
+mis cette chaîne au jour.
+
+Détail : `02_branche_systeme_solaire/FILTRAGES_HISTORIQUES.md`.
+
+## Branche 2 — Système solaire, couche astronomique
+
+| Critère préenregistré | Observé | Seuil | Statut |
+|---|---:|---:|:--:|
+| Tous les corps restent liés | oui | oui | RÉUSSI |
+| Conservation de l'énergie | 1,325 × 10⁻¹¹ | ≤ 10⁻⁸ | RÉUSSI |
+| Moment angulaire newtonien | 5,276 × 10⁻¹⁰ | ≤ 10⁻¹⁰ | **ÉCHEC** |
+| Excentricité initiale contre La2010 | 2,192 × 10⁻¹⁰ | ≤ 10⁻⁸ | RÉUSSI |
+| Corrélation Horizons à 6 ka | 1,000000 | ≥ 0,99 | RÉUSSI |
+| RMSE Horizons à 6 ka | 4,826 × 10⁻⁷ | ≤ 2 × 10⁻⁴ | RÉUSSI |
+| Corrélation La2010 à 100 ka | 0,999971 | ≥ 0,95 | RÉUSSI |
+| Corrélation La2010 à 500 ka | 0,998760 | ≥ 0,80 | RÉUSSI |
+| Corrélation La2010 à 1 Ma | 0,997270 | ≥ 0,60 | RÉUSSI |
+| Convergence du pas sur 2 Ma | 8,427 × 10⁻⁷ | ≤ 10⁻⁴ | RÉUSSI |
+| WHFast contre IAS15 à 20 ka | 3,131 × 10⁻⁷ | ≤ 10⁻⁶ | RÉUSSI |
+| Aller-retour à 100 ka | 2,763 × 10⁻⁵ | ≤ 10⁻⁵ | **ÉCHEC** |
+| Pic spectral de 405 ka | 0,007861 | ≤ 0,05 | RÉUSSI |
+| Pic spectral de 2,4 Ma | 0,166625 | ≤ 0,20 | RÉUSSI |
+| Contrefactuels au-dessus du plancher | 6,27 × 10⁶ | ≥ 3 | RÉUSSI |
+
+**13 réussis sur 15.** Statut : *validé dans le modèle réduit*.
+
+Les deux échecs sont documentés à leur source. Le premier concerne un
+diagnostic newtonien dans le seul contrôle relativiste complet ; tous les jobs
+de production restent sous 4,33 × 10⁻¹². Le second est corrigé au pas raffiné
+de 0,005 an, qui atteint 7,54 × 10⁻⁶, mais le seuil préenregistré porte sur le
+maximum des deux essais et l'échec est conservé.
+
+Portée : le modèle réduit ne résout ni la Lune, ni la rotation terrestre, ni le
+J₂ solaire, ni les marées, ni l'obliquité dynamique. Une ressemblance orbitale,
+même forte, ne valide pas le cadre général.
+
+## Branche 2 — Système solaire, couche mémoire historique
+
+| Test | Contre M1 (moins complexe) | Contre M1P (complexité égale) |
+|---|---:|---:|
+| Critères préenregistrés réussis | 1 / 5 | **0 / 5** |
+| Gain de RMSE hors échantillon | +0,036 | **−0,316** |
+| Intervalle de confiance à 95 % | [0,027 ; 0,046] | [−0,389 ; −0,251] |
+| ΔBIC sur taille d'échantillon efficace | +5,5 | +9,3 |
+
+**Statut : réfuté** pour la déclinaison paléoclimatique examinée.
+
+Trois résultats indépendants convergent. Le gain sur M1 disparaît contre un
+témoin de complexité égale. Il est reproduit dans 82 % des tirages d'un nul à
+forçage aléatoire. Et une fois retirée une symétrie exacte non identifiée dans
+la première version, le couplage carbone dégrade la prédiction de 0,232.
+
+Le test exoplanétaire réussit son volet structurel et son ablation, mais échoue
+au test de persistance : l'écart entre les deux histoires décroît avec un temps
+caractéristique de 7,0 Ma et s'annule sur un palier long. Ce qui était détecté
+est un retard de relaxation, non une inscription durable.
+
+Deux résultats vont dans l'autre sens et sont conservés comme tels. L'échec
+spectral est un échec de calibration et non une incapacité structurelle : les
+trois classes de modèles atteignent le rapport 100/41 ka observé tout en
+améliorant leur RMSE. Et l'EMIC réduit possède bien une région bistable, en
+4 points sur 54 du balayage, simplement pas là où le forçage final est placé.
+
+Détail complet : `couche_memoire_historique/RAPPORT_CORRIGE.md` et
+`STRESS_REPORT.md`.
+
+### Tests sur données réelles, deux batteries
+
+Neuf tests exploitant des données présentes mais jamais utilisées :
+l'étendue complète de LR04 (5,32 Ma au lieu de 2,6), sa colonne d'erreur
+publiée, et les quatre solutions La2010.
+
+| Test | Résultat | Statut |
+|---|---|---|
+| T1 plancher d'incertitude | gain de M2 sur M1 à 0,38 fois l'erreur publiée ; déficit contre M1P à 2,4 fois | **Réfuté** sur le critère préenregistré |
+| T2 enregistrement complet | gain −1,44 contre M1P, IC [−1,79 ; −0,81] ; seul modèle produisant le rapport 100/41 | **Réfuté** en RMSE, dissociation signature / amplitude documentée |
+| T3 plancher orbital | dispersion relative 5,2 × 10⁻⁴ | Établi ; ferme une objection |
+| T4 chronologie spectrale | critère préenregistré inapplicable à l'observation | **Aucun verdict**, défaut de protocole |
+| G1 validation croisée | 0 bloc sur 5 favorable à M2 contre M1P | **Réfuté**, verdict non lié au découpage |
+| G2 renversement temporel | après correction d'un masque confondant, aucun modèle n'ajuste mieux le sens vrai | **Non concluant**, aucun IC calculé |
+| G3 convention d'insolation | 0 convention sur 4 favorable ; étendue 0,006 | **Réfuté**, verdict non lié à la convention |
+| G4 distribution nulle | p unilatérale 0,923 ; nulle large, faible puissance | **Non concluant** |
+
+Détail : `couche_memoire_historique/results_stress/tests_reels/`
+`RAPPORT_TESTS_REELS.md` et `RAPPORT_TESTS_REELS_2.md`.
+
+### Campagne plateforme — `oric-full` 0.2.0
+
+| Élément | Résultat | Statut |
+|---|---|---|
+| Couverture du plan | 683 entrées, 51 WP, 235 réussites techniques | outil vérifié |
+| Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
+| Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |
+| Écart La2004 / La2010 sous horizon | 2,31 × 10⁻⁵ contre 1,79 × 10⁻² hors horizon | **Établi** |
+| AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat du socle |
+| Hypothèses ORI-C soutenues | **aucune** | 0 `supports` défendable sur 683 |
+
+Détail : `plan_directeur/campagne_plateforme/README.md`.
+
+### Campagne du plan directeur
+
+| Groupe | Résultat | Statut |
+|---|---|---|
+| WP-C2, prospectif réparé | témoin corrigé multistable lui aussi ; appariement échoué | **Non concluant** |
+| WP-C3, 7 familles de mémoire | 0 sur 7 bat son témoin apparié | **Réfuté** |
+| WP-C4, 11 familles de modèles | `persistance` à 0 paramètre bat M2 de 16 % | **Réfuté** |
+| WP-C6, critères discriminants | paramètres de M2 **non identifiables**, dispersion 1,233 | **Réfuté** |
+| WP-C7, mécanismes nouveaux | le signal manquant est la bande de 100 ka, absente du prédit des quatre | localisation, pas de verdict |
+| WP-S2, portée du chémostat | six cinétiques tiennent ; item 14 positif, 10 cas sur 600 | **Établi**, exploratoire |
+| WP-S3 et WP-M5, carte | non distinguable d'un graphe nul ; prédicteur au niveau du hasard | **Réfuté** |
+
+Trois motifs d'arrêt du §XIII du plan sont atteints par la forme actuelle de
+M2 : avantage nul contre témoin apparié, paramètres non identifiables, et
+dépendance à un choix de fenêtre non préenregistré.
+
+**Deux défauts de protocole ont été trouvés et documentés** : le critère de
+T4, inapplicable à l'observation elle-même, et le masque de G2, qui
+confondait segment et direction. Le second a été corrigé et la correction a
+changé la réponse ; le premier n'a pas été converti en verdict.
+
+## Application climatique — article séparé
+
+| Élément | Statut | Où |
+|---|---|---|
+| Le climat comme architecture historique | **Hors chaîne de preuve** | `02_branche_systeme_solaire/application_climat/` |
+
+Cet article est une étude de cas autonome. Il n'exécute aucun test de ce
+dossier et n'en reçoit aucun statut. Ses repères empiriques et leurs niveaux
+de confiance relèvent de la littérature qu'il cite. Sa seule contribution au
+programme est conceptuelle : cinq distinctions transversales, portées dans le
+socle au `00_socle/CODEBOOK.md` §13, où elles ont le statut *Preuve de
+concept* comme le reste du vocabulaire.
+
+## Branche 3 — Vivant
+
+| Élément | Statut |
+|---|---|
+| Acte 1, cellule eucaryote comme architecture | Preuve de concept |
+| Acte 2, endosymbiose mitochondriale | Preuve de concept, faits sous-jacents fortement appuyés |
+| Acte 3, résistance aux antibiotiques | **Non testé**, protocole proposé |
+| Universalité, supériorité explicative, pouvoir prédictif | **Non testé** |
+
+Le document est explicite : « Il ne démontre pas son universalité, sa
+supériorité explicative ou son pouvoir prédictif. »
+
+### Régime 7 — programme prébiotique
+
+| Élément | Statut | Où |
+|---|---|---|
+| Programme prébiotique dirigé | **Non testé** | `03_branche_vivant/programme_prebiotique/` |
+| Schéma de lignées et validateur | Exécutable, sans donnée | `…/valider_lignees.py` |
+
+Aucune donnée n'a été collectée. Le programme dit ce qu'il faudrait mesurer
+et à quelles conditions un résultat compterait ; il ne rapporte rien. Le
+gabarit livré porte le marqueur `GABARIT_SYNTHETIQUE` et le validateur le
+signale à chaque exécution.
+
+## Lecture d'ensemble
+
+Une seule couche du programme a été soumise à un test comparatif avec témoin
+apparié : la couche mémoire de la branche 2. Elle a échoué. Ce fait ne réfute
+pas le reste, parce que le reste n'a pas été soumis au même test.
+
+C'est la principale conclusion transversale disponible aujourd'hui, et elle
+oriente le travail à venir : la question ouverte n'est pas de savoir si le
+vocabulaire ORI-C peut décrire un domaine, mais s'il produit, quelque part, une
+prédiction qu'un modèle classique de complexité égale ne produit pas.
+
+Une nuance doit toutefois être maintenue. La dépendance au chemin elle-même
+n'est pas en cause : elle est établie, matériellement enregistrée dans
+l'architecture planétaire, et documentée par des disciplines constituées. Ce
+qui reste à démontrer n'est pas son existence, mais l'apport propre du cadre
+qui l'organise.

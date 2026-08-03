@@ -1,0 +1,6 @@
+reservoir;corps;masse_kg;fraction_du_corps;source
+terre totale;Terre;5.9722e24;1.0;S21
+noyau;Terre;1.932e24;0.323;S21
+terre silicatee totale;Terre;4.043e24;0.677;S21
+hydrosphere;Terre;1.4e21;0.000234;S21
+venus totale;Venus;4.8675e24;1.0;S21

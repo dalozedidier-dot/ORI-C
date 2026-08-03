@@ -1,0 +1,4 @@
+system_id;temps;composition;configuration;interactions;environnement;contrainte;reponse;seuil;persistance;inscription;histoire;possibles
+chemostat_libre;0;"S=10;P=0.1";reacteur homogene;croissance monod;"D=0.25;S_in=10";;;;lavage a l>0.859;;inoculation;2 regimes
+chemostat_libre;10;"S=0.43;P=7.98";reacteur homogene;croissance monod;"D=0.25;S_in=10";l=0.25;P decroit;;equilibre interieur;;perte appliquee;2 regimes
+chemostat_libre;60;"S=0.43;P=7.98";reacteur homogene;croissance monod;"D=0.25;S_in=10";l=0.25;stationnaire;l_crit=0.859;equilibre interieur;aucune;perte maintenue;2 regimes

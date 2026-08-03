@@ -1,0 +1,33 @@
+nom,domaine,contenu_acces,url,mode_acces,hypotheses_oric,apport
+NASA Exoplanet Archive,exoplanètes,"API TAP, tables et téléchargement en masse",https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html,ouvert,H-C-011;H-C-012;H-C-013;H-C-016,Données observées de systèmes et paramètres planétaires
+JPL Horizons API,dynamique orbitale,API vecteurs/éléments orbitaux,https://ssd-api.jpl.nasa.gov/doc/horizons.html,ouvert,H-A-001,Conditions initiales et validation indépendante
+IMCCE La2010 / Insola,orbites paléoclimatiques,solutions orbitales et insolation,https://www.imcce.fr/services/ephemerides/,ouvert,H-A-001;H-C-010,Référence orbitale et incertitude entre solutions
+NOAA LR04,paléoclimat,pile benthique d18O,https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=noaa-ocean-5847,ouvert,H-C-001;H-C-002;H-C-003;H-C-004;H-C-005;H-C-006;H-C-007;H-C-008;H-C-009;H-C-014;H-C-015;H-C-017,Cible paléoclimatique
+NASA GISTEMP,climat moderne,reconstruction de température et incertitudes,https://data.giss.nasa.gov/gistemp/,ouvert,H-CL-001,"Application moderne, hors chaîne de preuve actuelle"
+NOAA Paleoclimatology,paléoclimat,archives multiproxys,https://www.ncei.noaa.gov/products/paleoclimatology,ouvert,H-C-004;H-C-005;H-C-006,Validation multi-archives
+PANGAEA,sciences de la Terre,dépôt de données géoscientifiques,https://www.pangaea.de/,ouvert,H-M-001;H-C-*,Jeux indépendants pour réplication
+Neotoma Paleoecology Database,paléoécologie,API et bases multiproxys,https://www.neotomadb.org/,ouvert,H-C-004;H-C-005,Réponses biologiques et environnementales historiques
+EarthChem Library,géochimie,données géochimiques et pétrologiques,https://www.earthchem.org/,ouvert/variable,H-M-001,Transitions matière et différenciation
+GEOROC,géochimie,compositions de roches et minéraux,https://georoc.eu/,ouvert,H-M-001,Variables de composition et environnements
+PetDB,pétrologie,données de roches océaniques,https://www.earthchem.org/petdb/,ouvert,H-M-001,"Réservoirs, différenciation, cycles"
+Meteoritical Bulletin Database,météorites,classification et métadonnées,https://www.lpi.usra.edu/meteor/,ouvert,H-M-001,Provenance et corps parents
+Astromaterials Data System,matériaux extraterrestres,données et littérature astromatériaux,https://www.astromat.org/,ouvert,H-M-001,"Météorites, échantillons, cosmochimie"
+NASA Planetary Data System,planétologie,archives missions planétaires,https://pds.nasa.gov/,ouvert,H-M-001;H-A-001,Contraintes planétaires et surfaces
+ALMA Science Archive,astrochimie/disques,données interférométriques,https://almascience.nrao.edu/aq/,ouvert après période propriétaire,H-M-001,"Molécules, poussières, structures de disques"
+KIDA,astrochimie,réseau de réactions et coefficients,https://kida.astrochem-tools.org/,ouvert,H-M-001,Chimie des nuages et disques
+UMIST Database for Astrochemistry,astrochimie,réactions gaz-phase,https://umistdatabase.net/,ouvert,H-M-001,Modèles chimiques comparatifs
+NIST Chemical Kinetics Database,cinétique chimique,coefficients de réactions,https://kinetics.nist.gov/kinetics/,ouvert,H-V-001;H-M-001,Contraindre les réseaux réactionnels
+Rhea,réactions biochimiques,base de réactions annotées,https://www.rhea-db.org/,ouvert,H-V-001;H-V-002,Réseaux métaboliques et transformations
+ChEBI,entités chimiques,ontologie et structures chimiques,https://www.ebi.ac.uk/chebi/,ouvert,H-V-001,Normalisation des constituants
+BRENDA,enzymes,cinétique et fonctions enzymatiques,https://www.brenda-enzymes.org/,accès variable,H-V-001;H-V-002,Paramètres métaboliques et enzymes
+CARD,résistance antimicrobienne,gènes et mutations de résistance,https://card.mcmaster.ca/,ouvert avec conditions,H-V-002,Annotations génomiques de résistance
+BV-BRC,génomique microbienne,"génomes, phénotypes, AMR",https://www.bv-brc.org/,ouvert,H-V-002,Validation inter-souches
+NCBI SRA,séquençage,lectures brutes publiques,https://www.ncbi.nlm.nih.gov/sra,ouvert,H-V-002,Réplication à partir de données brutes
+NCBI GEO,expression génique,transcriptomique et séries fonctionnelles,https://www.ncbi.nlm.nih.gov/geo/,ouvert,H-V-002,Mémoire d’expression et réponses
+BacDive,phénotypes bactériens,caractéristiques de souches,https://bacdive.dsmz.de/,ouvert avec inscription/API,H-V-002,Covariables de souches et milieux
+WHO GLASS,surveillance AMR,résistance agrégée internationale,https://www.who.int/initiatives/glass,accès/format variable,H-V-002,"Validation populationnelle, non substitut aux lignées"
+E. coli LTEE data,évolution expérimentale,génomique et phénotypes longitudinales,https://lenski.mmg.msu.edu/ecoli/index.html,ouvert,H-V-002;H-T-001,Dépendance au chemin et réplication
+Open Reaction Database,chimie,réactions structurées,https://open-reaction-database.org/,ouvert,H-V-001,Construction de réseaux prébiotiques candidats
+PubChem,chimie,"composés, bioessais et propriétés",https://pubchem.ncbi.nlm.nih.gov/,ouvert,H-V-001,Propriétés et identifiants chimiques
+Zenodo,transversal,données et codes avec DOI,https://zenodo.org/,ouvert,toutes,Publication reproductible des données ORI-C
+OSF,transversal,préenregistrements et données,https://osf.io/,ouvert,toutes,Préenregistrement et réplication

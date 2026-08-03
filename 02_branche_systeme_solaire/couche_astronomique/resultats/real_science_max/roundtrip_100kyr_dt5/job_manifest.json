@@ -1,0 +1,10 @@
+{
+  "metadata.json": {
+    "bytes": 1403,
+    "sha256": "02b8e33ad96766f8e8406f14681cd5b58b79852f312bf62bfa26259c13d2de7e"
+  },
+  "roundtrip_errors.csv": {
+    "bytes": 1116,
+    "sha256": "468129da895bdc5fe09fbb43b9917e9b6e8928eb8087d33b5b91f90be4a7ba21"
+  }
+}

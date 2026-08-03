@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Tests ORI-C de mémoire historique"
+message: "Merci de citer ce paquet et les jeux LR04 et La2004."
+type: software
+authors:
+  - family-names: Daloze
+    given-names: Didier
+version: 0.1.0
+date-released: 2026-07-29
+

@@ -1,0 +1,192 @@
+{
+  "protocol": "leave-one-target-node-out",
+  "seed": 20260802,
+  "permutations": 1000,
+  "observed": {
+    "auc_chronologie": 0.9145262859973112,
+    "auc_chronologie_plus_regime": 0.9099271209226633,
+    "difference": -0.004599165074647971,
+    "positifs": 42,
+    "negatifs": 673,
+    "folds": 34,
+    "details_folds": [
+      {
+        "target": "TR-004",
+        "positives": 3,
+        "candidates": 3
+      },
+      {
+        "target": "TR-005",
+        "positives": 1,
+        "candidates": 4
+      },
+      {
+        "target": "TR-007",
+        "positives": 1,
+        "candidates": 6
+      },
+      {
+        "target": "TR-008",
+        "positives": 1,
+        "candidates": 7
+      },
+      {
+        "target": "TR-009",
+        "positives": 1,
+        "candidates": 8
+      },
+      {
+        "target": "TR-010",
+        "positives": 1,
+        "candidates": 9
+      },
+      {
+        "target": "TR-011",
+        "positives": 1,
+        "candidates": 10
+      },
+      {
+        "target": "TR-012",
+        "positives": 1,
+        "candidates": 11
+      },
+      {
+        "target": "TR-013",
+        "positives": 1,
+        "candidates": 12
+      },
+      {
+        "target": "TR-014",
+        "positives": 2,
+        "candidates": 13
+      },
+      {
+        "target": "TR-015",
+        "positives": 1,
+        "candidates": 14
+      },
+      {
+        "target": "TR-016",
+        "positives": 2,
+        "candidates": 15
+      },
+      {
+        "target": "TR-017",
+        "positives": 1,
+        "candidates": 16
+      },
+      {
+        "target": "TR-018",
+        "positives": 1,
+        "candidates": 17
+      },
+      {
+        "target": "TR-019",
+        "positives": 2,
+        "candidates": 18
+      },
+      {
+        "target": "TR-020",
+        "positives": 1,
+        "candidates": 19
+      },
+      {
+        "target": "TR-021",
+        "positives": 1,
+        "candidates": 20
+      },
+      {
+        "target": "TR-022",
+        "positives": 1,
+        "candidates": 21
+      },
+      {
+        "target": "TR-023",
+        "positives": 1,
+        "candidates": 22
+      },
+      {
+        "target": "TR-024",
+        "positives": 1,
+        "candidates": 23
+      },
+      {
+        "target": "TR-025",
+        "positives": 2,
+        "candidates": 24
+      },
+      {
+        "target": "TR-026",
+        "positives": 1,
+        "candidates": 25
+      },
+      {
+        "target": "TR-027",
+        "positives": 1,
+        "candidates": 26
+      },
+      {
+        "target": "TR-028",
+        "positives": 1,
+        "candidates": 27
+      },
+      {
+        "target": "TR-031",
+        "positives": 1,
+        "candidates": 30
+      },
+      {
+        "target": "TR-032",
+        "positives": 1,
+        "candidates": 31
+      },
+      {
+        "target": "TR-033",
+        "positives": 1,
+        "candidates": 32
+      },
+      {
+        "target": "TR-034",
+        "positives": 2,
+        "candidates": 33
+      },
+      {
+        "target": "TR-035",
+        "positives": 1,
+        "candidates": 34
+      },
+      {
+        "target": "TR-036",
+        "positives": 1,
+        "candidates": 35
+      },
+      {
+        "target": "TR-037",
+        "positives": 1,
+        "candidates": 36
+      },
+      {
+        "target": "TR-038",
+        "positives": 1,
+        "candidates": 37
+      },
+      {
+        "target": "TR-039",
+        "positives": 1,
+        "candidates": 38
+      },
+      {
+        "target": "TR-040",
+        "positives": 2,
+        "candidates": 39
+      }
+    ]
+  },
+  "permutation_regime": {
+    "mean_difference": -0.005970883747258169,
+    "ci_2.5": -0.013410988466709073,
+    "ci_97.5": 0.0018467416684355632,
+    "p_one_sided": 0.3386613386613387
+  },
+  "interpretation_rule": "Les attributs ORI-C disponibles apportent une information hors chronologie seulement si la difference d'AUC est positive et depasse la distribution obtenue en permutant les regimes."
+}

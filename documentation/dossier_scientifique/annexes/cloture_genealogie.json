@@ -1,0 +1,12 @@
+{
+  "transitions": 22,
+  "produits_distincts": 30,
+  "relations_parent_produit": 38,
+  "cloture_genealogique": true,
+  "anomalies": [],
+  "certitudes_synthetiques": {
+    "établi": 18,
+    "fortement inféré": 4
+  },
+  "possibilites_fermees_declarees": 11
+}

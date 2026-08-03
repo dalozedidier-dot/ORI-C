@@ -1,0 +1,345 @@
+{
+  "fenetre_calibration_ka": [
+    2600,
+    1200
+  ],
+  "fenetre_prediction_ka": [
+    1200,
+    0
+  ],
+  "C6_8_identifiabilite": {
+    "M0": {
+      "graines": 4,
+      "rmse_entrainement_min": 0.9679602962841887,
+      "rmse_entrainement_max": 0.9679602963633319,
+      "dispersion_relative_max": 0.003052274208732694,
+      "dispersion_relative_mediane": 9.857119835730515e-05,
+      "parametres_identifiables": true
+    },
+    "M1": {
+      "graines": 4,
+      "rmse_entrainement_min": 0.9601901229049702,
+      "rmse_entrainement_max": 0.9601901253849956,
+      "dispersion_relative_max": 0.0010456506132543169,
+      "dispersion_relative_mediane": 0.00015408766192146544,
+      "parametres_identifiables": true
+    },
+    "M2": {
+      "graines": 4,
+      "rmse_entrainement_min": 0.85456289791387,
+      "rmse_entrainement_max": 0.8715905148692503,
+      "dispersion_relative_max": 1.2332203760628162,
+      "dispersion_relative_mediane": 0.9440601601212318,
+      "parametres_identifiables": false
+    },
+    "M1P": {
+      "graines": 4,
+      "rmse_entrainement_min": 0.8685799131385524,
+      "rmse_entrainement_max": 0.8719840007460092,
+      "dispersion_relative_max": 1.6804227256233557,
+      "dispersion_relative_mediane": 0.40325604750259114,
+      "parametres_identifiables": false
+    }
+  },
+  "C6_2_a_4_vraisemblance_calibration_phase": {
+    "M0": {
+      "rmse": 2.094492827988389,
+      "correlation": 0.08605153132200188,
+      "n_eff": 17.616268260176792,
+      "log_vraisemblance_predictive": -32.48487563297527,
+      "couverture_a_90_pourcent": 0.7275,
+      "ecart_de_calibration": 0.1725,
+      "decalage_de_phase_ka": 82
+    },
+    "M1": {
+      "rmse": 2.1177903406960645,
+      "correlation": 0.08569667974166055,
+      "n_eff": 17.574548413148463,
+      "log_vraisemblance_predictive": -32.45271548504507,
+      "couverture_a_90_pourcent": 0.7241666666666666,
+      "ecart_de_calibration": 0.1758333333333334,
+      "decalage_de_phase_ka": 81
+    },
+    "M2": {
+      "rmse": 2.042004239934863,
+      "correlation": 0.25952088607499496,
+      "n_eff": 18.110892181824735,
+      "log_vraisemblance_predictive": -32.81241724252082,
+      "couverture_a_90_pourcent": 0.7291666666666666,
+      "ecart_de_calibration": 0.1708333333333334,
+      "decalage_de_phase_ka": 82
+    },
+    "M1P": {
+      "rmse": 1.5533110936671264,
+      "correlation": 0.17461627545205835,
+      "n_eff": 18.54588054596558,
+      "log_vraisemblance_predictive": -33.94992702663286,
+      "couverture_a_90_pourcent": 0.885,
+      "ecart_de_calibration": 0.015000000000000013,
+      "decalage_de_phase_ka": 81
+    }
+  },
+  "C6_5_bandes_spectrales": {
+    "LR04": {
+      "41_ka": 0.34122048797690024,
+      "part_41_ka": 0.15130075153491093,
+      "points_de_frequence_41_ka": 3,
+      "resolue_41_ka": true,
+      "100_ka": 0.8884100707922495,
+      "part_100_ka": 0.393930365022954,
+      "points_de_frequence_100_ka": 6,
+      "resolue_100_ka": true,
+      "405_ka": 0.0006290849275541038,
+      "part_405_ka": 0.0002789428702905566,
+      "points_de_frequence_405_ka": 1,
+      "resolue_405_ka": false,
+      "duree_de_la_fenetre_ka": 1200.0
+    },
+    "M0": {
+      "41_ka": 0.018074446969474838,
+      "part_41_ka": 0.24410016674750876,
+      "points_de_frequence_41_ka": 3,
+      "resolue_41_ka": true,
+      "100_ka": 0.00031581243323370217,
+      "part_100_ka": 0.004265130089096334,
+      "points_de_frequence_100_ka": 6,
+      "resolue_100_ka": true,
+      "405_ka": 0.00023995283236940735,
+      "part_405_ka": 0.003240626199619274,
+      "points_de_frequence_405_ka": 1,
+      "resolue_405_ka": false,
+      "duree_de_la_fenetre_ka": 1200.0
+    },
+    "M1": {
+      "41_ka": 0.02625554025401444,
+      "part_41_ka": 0.27546605341807207,
+      "points_de_frequence_41_ka": 3,
+      "resolue_41_ka": true,
+      "100_ka": 0.0005418193548483686,
+      "part_100_ka": 0.005684622670172839,
+      "points_de_frequence_100_ka": 6,
+      "resolue_100_ka": true,
+      "405_ka": 3.956253174782665e-05,
+      "part_405_ka": 0.00041507942241389136,
+      "points_de_frequence_405_ka": 1,
+      "resolue_405_ka": false,
+      "duree_de_la_fenetre_ka": 1200.0
+    },
+    "M2": {
+      "41_ka": 0.15879016300742316,
+      "part_41_ka": 0.6023727102710466,
+      "points_de_frequence_41_ka": 3,
+      "resolue_41_ka": true,
+      "100_ka": 0.0007485587076556443,
+      "part_100_ka": 0.002839667955416377,
+      "points_de_frequence_100_ka": 6,
+      "resolue_100_ka": true,
+      "405_ka": 3.839394328235157e-05,
+      "part_405_ka": 0.00014564796228530726,
+      "points_de_frequence_405_ka": 1,
+      "resolue_405_ka": false,
+      "duree_de_la_fenetre_ka": 1200.0
+    },
+    "M1P": {
+      "41_ka": 0.022894933257922148,
+      "part_41_ka": 0.2571208373325375,
+      "points_de_frequence_41_ka": 3,
+      "resolue_41_ka": true,
+      "100_ka": 0.0005024283585466174,
+      "part_100_ka": 0.005642506086119201,
+      "points_de_frequence_100_ka": 6,
+      "resolue_100_ka": true,
+      "405_ka": 0.0004899471935000219,
+      "part_405_ka": 0.0055023367494579645,
+      "points_de_frequence_405_ka": 1,
+      "resolue_405_ka": false,
+      "duree_de_la_fenetre_ka": 1200.0
+    }
+  },
+  "C6_5_bandes_sur_fenetre_complete": {
+    "avertissement": "Fenêtre de 2600 ka : elle inclut la calibration. Ces valeurs ne sont pas hors échantillon et servent seulement à savoir si la bande de 405 ka est résolvable.",
+    "par_serie": {
+      "LR04": {
+        "41_ka": 0.3219246296282473,
+        "part_41_ka": 0.21332624371096015,
+        "points_de_frequence_41_ka": 6,
+        "resolue_41_ka": true,
+        "100_ka": 0.41645229309112997,
+        "part_100_ka": 0.27596584788351747,
+        "points_de_frequence_100_ka": 11,
+        "resolue_100_ka": true,
+        "405_ka": 0.0027781317707412196,
+        "part_405_ka": 0.001840953939655634,
+        "points_de_frequence_405_ka": 2,
+        "resolue_405_ka": false,
+        "duree_de_la_fenetre_ka": 2601.0
+      },
+      "M0": {
+        "41_ka": 0.018087900219674897,
+        "part_41_ka": 0.24658406648445752,
+        "points_de_frequence_41_ka": 6,
+        "resolue_41_ka": true,
+        "100_ka": 0.0002638664504433385,
+        "part_100_ka": 0.003597170570875001,
+        "points_de_frequence_100_ka": 11,
+        "resolue_100_ka": true,
+        "405_ka": 0.0001258652918773577,
+        "part_405_ka": 0.001715863926903609,
+        "points_de_frequence_405_ka": 2,
+        "resolue_405_ka": false,
+        "duree_de_la_fenetre_ka": 2601.0
+      },
+      "M1": {
+        "41_ka": 0.026891475122104797,
+        "part_41_ka": 0.29141320376848695,
+        "points_de_frequence_41_ka": 6,
+        "resolue_41_ka": true,
+        "100_ka": 0.00047534972581459524,
+        "part_100_ka": 0.005151193301264346,
+        "points_de_frequence_100_ka": 11,
+        "resolue_100_ka": true,
+        "405_ka": 2.630197772262043e-05,
+        "part_405_ka": 0.0002850250333532567,
+        "points_de_frequence_405_ka": 2,
+        "resolue_405_ka": false,
+        "duree_de_la_fenetre_ka": 2601.0
+      },
+      "M2": {
+        "41_ka": 0.16312098291346558,
+        "part_41_ka": 0.5849972032422904,
+        "points_de_frequence_41_ka": 6,
+        "resolue_41_ka": true,
+        "100_ka": 0.0012617549829403584,
+        "part_100_ka": 0.004525004220877593,
+        "points_de_frequence_100_ka": 11,
+        "resolue_100_ka": true,
+        "405_ka": 7.1269824816935e-05,
+        "part_405_ka": 0.00025559340955904236,
+        "points_de_frequence_405_ka": 2,
+        "resolue_405_ka": false,
+        "duree_de_la_fenetre_ka": 2601.0
+      },
+      "M1P": {
+        "41_ka": 0.025287562909343007,
+        "part_41_ka": 0.24683205093741162,
+        "points_de_frequence_41_ka": 6,
+        "resolue_41_ka": true,
+        "100_ka": 0.0011826443216517552,
+        "part_100_ka": 0.011543798209788451,
+        "points_de_frequence_100_ka": 11,
+        "resolue_100_ka": true,
+        "405_ka": 0.0002727939294479872,
+        "part_405_ka": 0.002662743156796823,
+        "points_de_frequence_405_ka": 2,
+        "resolue_405_ka": false,
+        "duree_de_la_fenetre_ka": 2601.0
+      }
+    }
+  },
+  "C6_6_terminaisons": {
+    "dates_ka": {
+      "LR04": [
+        15.0,
+        132.0,
+        218.0,
+        335.0,
+        428.0,
+        581.0,
+        793.0,
+        865.0
+      ],
+      "M0": [
+        95.0,
+        210.0,
+        589.0,
+        704.0,
+        875.0,
+        969.0,
+        1041.0,
+        1084.0
+      ],
+      "M1": [
+        95.0,
+        210.0,
+        589.0,
+        704.0,
+        948.0,
+        991.0,
+        1084.0,
+        1157.0
+      ],
+      "M2": [
+        94.0,
+        137.0,
+        210.0,
+        301.0,
+        588.0,
+        874.0,
+        1040.0,
+        1083.0
+      ],
+      "M1P": [
+        95.0,
+        210.0,
+        496.0,
+        589.0,
+        704.0,
+        875.0,
+        969.0,
+        1083.0
+      ]
+    },
+    "appariement": {
+      "M0": {
+        "appariees": 3,
+        "sur": 8,
+        "ecart_median": 58.5,
+        "tolerance_ka": 20.0
+      },
+      "M1": {
+        "appariees": 2,
+        "sur": 8,
+        "ecart_median": 81.5,
+        "tolerance_ka": 20.0
+      },
+      "M2": {
+        "appariees": 4,
+        "sur": 8,
+        "ecart_median": 21.5,
+        "tolerance_ka": 20.0
+      },
+      "M1P": {
+        "appariees": 3,
+        "sur": 8,
+        "ecart_median": 52.5,
+        "tolerance_ka": 20.0
+      }
+    }
+  },
+  "C6_7_stabilite_des_parametres": {
+    "M0": {
+      "sous_fenetres": 4,
+      "derive_relative_max": 1.7107972178275768,
+      "derive_relative_mediane": 0.7957785541523567,
+      "parametres_stables": false
+    },
+    "M1": {
+      "sous_fenetres": 4,
+      "derive_relative_max": 0.997018640300063,
+      "derive_relative_mediane": 0.9370282132028189,
+      "parametres_stables": false
+    },
+    "M2": {
+      "sous_fenetres": 4,
+      "derive_relative_max": 0.9995976935880673,
+      "derive_relative_mediane": 0.9139198872110204,
+      "parametres_stables": false
+    },
+    "M1P": {
+      "sous_fenetres": 4,
+      "derive_relative_max": 1.307740064619382,
+      "derive_relative_mediane": 0.9831897740539908,
+      "parametres_stables": false
+    }
+  }
+}

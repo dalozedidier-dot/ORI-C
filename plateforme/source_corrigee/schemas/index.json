@@ -1,0 +1,374 @@
+{
+  "states": {
+    "filename": "states.csv",
+    "required_columns": [
+      "system_id",
+      "time",
+      "state_json"
+    ],
+    "description": "États ORI-C"
+  },
+  "relations": {
+    "filename": "relations.csv",
+    "required_columns": [
+      "source",
+      "target",
+      "relation_type"
+    ],
+    "description": "Relations typées"
+  },
+  "matter_transitions": {
+    "filename": "matter_transitions.csv",
+    "required_columns": [
+      "transition_id",
+      "before_state",
+      "after_state",
+      "n",
+      "G",
+      "I",
+      "E",
+      "Pi",
+      "H",
+      "evidence_level"
+    ],
+    "description": "40 transitions matérielles"
+  },
+  "nucleosynthesis_yields": {
+    "filename": "nucleosynthesis_yields.csv",
+    "required_columns": [
+      "source_id",
+      "mass_solar",
+      "metallicity",
+      "element",
+      "yield_mass",
+      "uncertainty"
+    ],
+    "description": "Rendements de nucléosynthèse"
+  },
+  "reaction_network": {
+    "filename": "reaction_network.csv",
+    "required_columns": [
+      "reaction_id",
+      "reactants",
+      "products",
+      "rate",
+      "temperature_min",
+      "temperature_max"
+    ],
+    "description": "Réseau chimique"
+  },
+  "molecular_inventory": {
+    "filename": "molecular_inventory.csv",
+    "required_columns": [
+      "environment_id",
+      "species",
+      "abundance",
+      "uncertainty"
+    ],
+    "description": "Inventaire moléculaire"
+  },
+  "thermochemical_phases": {
+    "filename": "thermochemical_phases.csv",
+    "required_columns": [
+      "phase",
+      "temperature",
+      "pressure",
+      "gibbs_energy",
+      "composition"
+    ],
+    "description": "Phases thermochimiques"
+  },
+  "isotope_tracers": {
+    "filename": "isotope_tracers.csv",
+    "required_columns": [
+      "sample_id",
+      "group",
+      "tracer",
+      "value",
+      "uncertainty"
+    ],
+    "description": "Traceurs isotopiques"
+  },
+  "chronometers": {
+    "filename": "chronometers.csv",
+    "required_columns": [
+      "sample_id",
+      "system",
+      "age_myr",
+      "uncertainty_myr"
+    ],
+    "description": "Chronomètres isotopiques"
+  },
+  "body_properties": {
+    "filename": "body_properties.csv",
+    "required_columns": [
+      "body_id",
+      "radius_km",
+      "density",
+      "porosity",
+      "formation_time_myr",
+      "al26_ratio"
+    ],
+    "description": "Propriétés de corps"
+  },
+  "partition_experiments": {
+    "filename": "partition_experiments.csv",
+    "required_columns": [
+      "experiment_id",
+      "element",
+      "pressure_gpa",
+      "temperature_k",
+      "delta_iw",
+      "logD",
+      "uncertainty"
+    ],
+    "description": "Partage métal-silicate"
+  },
+  "volatile_inventory": {
+    "filename": "volatile_inventory.csv",
+    "required_columns": [
+      "sample_id",
+      "volatile",
+      "initial_mass",
+      "core_mass",
+      "mantle_mass",
+      "atmosphere_mass",
+      "lost_mass"
+    ],
+    "description": "Budget des volatils"
+  },
+  "late_accretion_tracers": {
+    "filename": "late_accretion_tracers.csv",
+    "required_columns": [
+      "sample_id",
+      "tracer",
+      "final_value",
+      "uncertainty",
+      "candidate_source"
+    ],
+    "description": "Traceurs d'accrétion tardive"
+  },
+  "planetary_histories": {
+    "filename": "planetary_histories.csv",
+    "required_columns": [
+      "body_id",
+      "initial_composition",
+      "provenance",
+      "accretion_time",
+      "thermal_history",
+      "redox_history",
+      "losses",
+      "late_inputs",
+      "final_partition"
+    ],
+    "description": "Histoires planétaires"
+  },
+  "orbital_initial_conditions": {
+    "filename": "orbital_initial_conditions.csv",
+    "required_columns": [
+      "body",
+      "epoch",
+      "x",
+      "y",
+      "z",
+      "vx",
+      "vy",
+      "vz",
+      "mass"
+    ],
+    "description": "Conditions initiales orbitales"
+  },
+  "ephemerides": {
+    "filename": "ephemerides.csv",
+    "required_columns": [
+      "time",
+      "body",
+      "x",
+      "y",
+      "z",
+      "vx",
+      "vy",
+      "vz"
+    ],
+    "description": "Éphémérides"
+  },
+  "orbital_timeseries": {
+    "filename": "orbital_timeseries.csv",
+    "required_columns": [
+      "time",
+      "eccentricity",
+      "obliquity",
+      "precession"
+    ],
+    "description": "Séries orbitales"
+  },
+  "orbital_reference": {
+    "filename": "orbital_reference.csv",
+    "required_columns": [
+      "time",
+      "observable",
+      "value",
+      "uncertainty"
+    ],
+    "description": "Référence orbitale"
+  },
+  "paleoclimate_timeseries": {
+    "filename": "paleoclimate_timeseries.csv",
+    "required_columns": [
+      "time_kyr",
+      "target",
+      "forcing_1",
+      "forcing_2"
+    ],
+    "description": "Paléoclimat"
+  },
+  "modern_climate_timeseries": {
+    "filename": "modern_climate_timeseries.csv",
+    "required_columns": [
+      "time",
+      "variable",
+      "value",
+      "region"
+    ],
+    "description": "Climat moderne"
+  },
+  "modern_climate_ensemble": {
+    "filename": "modern_climate_ensemble.csv",
+    "required_columns": [
+      "model",
+      "scenario",
+      "member",
+      "time",
+      "variable",
+      "value",
+      "region"
+    ],
+    "description": "Ensembles climatiques"
+  },
+  "prebiotic_design": {
+    "filename": "prebiotic_design.csv",
+    "required_columns": [
+      "condition_id",
+      "temperature",
+      "ph",
+      "wet_dry_cycles",
+      "uv_flux",
+      "mineral",
+      "replicate"
+    ],
+    "description": "Plan prébiotique"
+  },
+  "prebiotic_lineages": {
+    "filename": "prebiotic_lineages.csv",
+    "required_columns": [
+      "lineage_id",
+      "parent_id",
+      "generation",
+      "condition_id",
+      "yield",
+      "polymer_length",
+      "compartment_stability",
+      "copy_fidelity"
+    ],
+    "description": "Lignées prébiotiques"
+  },
+  "cell_architecture": {
+    "filename": "cell_architecture.csv",
+    "required_columns": [
+      "taxon",
+      "component",
+      "origin",
+      "function",
+      "dependency",
+      "evidence_level"
+    ],
+    "description": "Architecture cellulaire"
+  },
+  "endosymbiosis_events": {
+    "filename": "endosymbiosis_events.csv",
+    "required_columns": [
+      "event_id",
+      "host",
+      "symbiont",
+      "gene_transfer",
+      "metabolic_integration",
+      "dependency",
+      "evidence_level"
+    ],
+    "description": "Endosymbioses"
+  },
+  "biology_cases": {
+    "filename": "biology_cases.csv",
+    "required_columns": [
+      "case_id",
+      "domain",
+      "history",
+      "state",
+      "future_outcome",
+      "oric_features"
+    ],
+    "description": "Cas biologiques"
+  },
+  "antibiotic_design": {
+    "filename": "antibiotic_design.csv",
+    "required_columns": [
+      "arm_id",
+      "species",
+      "antibiotic",
+      "schedule",
+      "dose",
+      "replicates"
+    ],
+    "description": "Plan antibiotique"
+  },
+  "antibiotic_cycles": {
+    "filename": "antibiotic_cycles.csv",
+    "required_columns": [
+      "lineage_id",
+      "cycle",
+      "antibiotic",
+      "dose",
+      "duration",
+      "recovery_duration"
+    ],
+    "description": "Histoires d'exposition"
+  },
+  "antibiotic_measurements": {
+    "filename": "antibiotic_measurements.csv",
+    "required_columns": [
+      "lineage_id",
+      "cycle",
+      "mic",
+      "lag_time",
+      "growth_rate",
+      "survival",
+      "persister_fraction",
+      "fitness"
+    ],
+    "description": "Mesures antibiotiques"
+  },
+  "antibiotic_lineages": {
+    "filename": "antibiotic_lineages.csv",
+    "required_columns": [
+      "lineage_id",
+      "parent_id",
+      "cycle",
+      "mutation",
+      "allele_frequency",
+      "phenotype"
+    ],
+    "description": "Lignées antibiotiques"
+  },
+  "benchmark_cases": {
+    "filename": "benchmark_cases.csv",
+    "required_columns": [
+      "case_id",
+      "domain",
+      "history_json",
+      "state_json",
+      "future_json",
+      "split"
+    ],
+    "description": "Benchmark multi-domaines"
+  }
+}

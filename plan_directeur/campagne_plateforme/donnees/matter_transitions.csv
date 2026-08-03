@@ -1,0 +1,41 @@
+transition_id,before_state,after_state,n,G,I,E,Pi,H,evidence_level,evidence_level_texte
+TR-001,,Passage au régime électrofaible brisé,,,,,,,2,Inféré; mécanisme standard
+TR-002,,Asymétrie matière-antimatière,,,,,,,4,Asymétrie observée; mécanisme hypothétique
+TR-003,,Confinement des quarks,,,,,,,2,Inféré; appuyé expérimentalement
+TR-004,TR-001 Passage au régime électrofaible brisé ; TR-002 Asymétrie matière-antimatière ; TR-003 Confinement des quarks,Nucléosynthèse primordiale,,,,,,,2,Inféré à partir d'archives
+TR-005,TR-004 Nucléosynthèse primordiale,Recombinaison cosmologique (He puis H),,,,,,,2,Inféré à partir d’archives et de modèles
+TR-006,TR-012 Formation de H₂ et HD,Effondrement des premiers nuages stellaires,,,,,,,3,Reconstruit et modélisé
+TR-007,TR-006 Effondrement des premiers nuages stellaires,Nucléosynthèse stellaire,,,,,,,4,Observé et modélisé
+TR-008,TR-006 Effondrement des premiers nuages stellaires,"Étoiles AGB, processus s et poussières",,,,,,,4,Observé; histoire inférée
+TR-009,TR-007 Nucléosynthèse stellaire,Explosions stellaires et enrichissement,,,,,,,4,Observé
+TR-010,TR-006 Effondrement des premiers nuages stellaires,Matière neutronique et fusions d'étoiles à neutrons,,,,,,,4,Observé; phases internes hypothétiques
+TR-011,TR-005 Recombinaison cosmologique (He puis H),Formation de HeH+,,,,,,,4,Existence observée; présence primordiale inférée
+TR-012,TR-005 Recombinaison cosmologique (He puis H),Formation de H₂ et HD,,,,,,,2,Inféré et modélisé
+TR-013,TR-009 Explosions stellaires et enrichissement,Chimie carbonée simple du milieu interstellaire,,,,,,,4,Observé
+TR-014,"TR-008 Étoiles AGB, processus s et poussières ; TR-013 Chimie carbonée simple du milieu interstellaire",Manteaux de glace sur les grains,,,,,,,4,Observé
+TR-015,TR-014 Manteaux de glace sur les grains,Molécules organiques complexes et cages carbonées,,,,,,,4,Observé pour plusieurs espèces
+TR-016,"TR-008 Étoiles AGB, processus s et poussières ; TR-009 Explosions stellaires et enrichissement",Condensation de grains présolaires,,,,,,,4,Observé dans météorites et spectres
+TR-017,TR-016 Condensation de grains présolaires,Formation des CAI,,,,,,,4,Objet observé; âge inféré
+TR-018,TR-017 Formation des CAI,Formation des chondres et remaniement thermique des solides réfractaires,,,,,,,4,Architecture observée; mécanisme partiellement établi
+TR-019,TR-016 Condensation de grains présolaires ; TR-018 Formation des chondres et remaniement thermique des solides réfractaires,Concentration collective des galets,,,,,,,1,Physiquement plausible; observations compatibles
+TR-020,TR-019 Concentration collective des galets,Accrétion d'embryons planétaires,,,,,,,2,Inféré à partir d'archives
+TR-021,TR-020 Accrétion d'embryons planétaires,Différenciation métal-silicate,,,,,,,2,Inféré à partir d'archives
+TR-022,TR-020 Accrétion d'embryons planétaires,Océans magmatiques et cristallisation fractionnée,,,,,,,2,Inféré à partir d'archives
+TR-023,TR-022 Océans magmatiques et cristallisation fractionnée ; TR-024 Atmosphères secondaires,Hydrosphères liquides durables,,,,,,,4,Observé aujourd'hui; ancienneté inférée
+TR-024,TR-022 Océans magmatiques et cristallisation fractionnée,Atmosphères secondaires,,,,,,,4,Observé; histoire inférée
+TR-025,TR-021 Différenciation métal-silicate ; TR-023 Hydrosphères liquides durables,Recyclage tectonique global,,,,,,,2,Inféré; chronologie controversée
+TR-026,TR-023 Hydrosphères liquides durables,Altération aqueuse et argiles,,,,,,,4,Observé; ancienneté inférée
+TR-027,TR-023 Hydrosphères liquides durables,Précipitation chimique à grande échelle,,,,,,,2,Inféré à partir d'archives
+TR-028,TR-021 Différenciation métal-silicate,Phases de haute pression et de choc,,,,,,,4,Observé naturellement et expérimentalement
+TR-029,TR-038 Photosynthèse oxygénique,Oxygénation durable de la surface,,,,,,,2,Inféré à partir de plusieurs archives
+TR-030,TR-036 Établissement du code et de la traduction,Biominéralisation contrôlée,,,,,,,4,Observé; histoire reconstruite
+TR-031,TR-026 Altération aqueuse et argiles,Synthèse couplée de précurseurs biologiques,,,,,,,3,Produit expérimentalement
+TR-032,TR-031 Synthèse couplée de précurseurs biologiques,"Concentration, activation et polymérisation",,,,,,,3,Produit partiellement; contexte naturel ouvert
+TR-033,TR-031 Synthèse couplée de précurseurs biologiques,Auto-assemblage de compartiments,,,,,,,3,Produit expérimentalement
+TR-034,"TR-032 Concentration, activation et polymérisation ; TR-033 Auto-assemblage de compartiments",Réseaux autocatalytiques et protométabolismes,,,,,,,3,Produit partiellement; histoire hypothétique
+TR-035,"TR-032 Concentration, activation et polymérisation",Catalyse ARN et copie dirigée par matrice,,,,,,,3,Produit partiellement; autonomie hypothétique
+TR-036,TR-035 Catalyse ARN et copie dirigée par matrice,Établissement du code et de la traduction,,,,,,,3,Reconstruit; origine ouverte
+TR-037,TR-036 Établissement du code et de la traduction,LUCA,,,,,,,3,Reconstruit phylogénétiquement
+TR-038,TR-037 LUCA,Photosynthèse oxygénique,,,,,,,3,Reconstruit par génomique et archives
+TR-039,TR-037 LUCA,Endosymbiose mitochondriale,,,,,,,3,Reconstruit
+TR-040,TR-029 Oxygénation durable de la surface ; TR-039 Endosymbiose mitochondriale,Multicellularités complexes indépendantes,,,,,,,4,Observé; histoire reconstruite

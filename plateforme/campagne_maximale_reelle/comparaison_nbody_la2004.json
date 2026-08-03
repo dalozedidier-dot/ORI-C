@@ -1,0 +1,10 @@
+{
+  "source": "intégration N-corps du dossier, baseline_20myr_dt10",
+  "points": 20001,
+  "fenetre_commune_ka": 20000.0,
+  "points_compares": 20001,
+  "correlation_avec_La2004": 0.49566503153750324,
+  "rmse_avec_La2004": 0.01323477240701565,
+  "periode_dominante_nbody_ka": 408.1836734693877,
+  "periode_dominante_La2004_ka": 408.1836734693877
+}

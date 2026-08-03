@@ -1,0 +1,52 @@
+{
+  "job": {
+    "coordinates": "jacobi",
+    "corrector": 11,
+    "duration_years": 100000,
+    "ejection_radius_au": 500,
+    "exact_finish_time": false,
+    "general_relativity": "gr_potential",
+    "include_bodies": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "initial_conditions": "horizons_j2000",
+    "integrator": "whfast",
+    "kernel": "default",
+    "kind": "roundtrip",
+    "name": "roundtrip_100kyr_dt5",
+    "output_step_years": 1000,
+    "safe_mode": 0,
+    "seed": 20260729,
+    "time_direction": "backward",
+    "timestep_years": 0.005
+  },
+  "platform": "Linux-6.12.13-x86_64-with-glibc2.39",
+  "python": "3.12.13",
+  "summary": {
+    "all_bodies_bound": true,
+    "completed_years": 100000.0,
+    "computation_seconds": 50.265937795000355,
+    "earth_combined_relative_state_error": 5.069216774775751e-07,
+    "kind": "roundtrip",
+    "max_combined_relative_state_error": 7.539589433650647e-06,
+    "return_abs_angmom_rel_error": 3.2141185760868687e-13,
+    "return_abs_energy_rel_error": 9.519762932829582e-13,
+    "turn_abs_angmom_rel_error": 6.731220147198447e-14,
+    "turn_abs_energy_rel_error": 8.003253935307911e-14
+  },
+  "versions": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "rebound": "4.6.0",
+    "reboundx": "4.6.2",
+    "scipy": "1.17.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "test": "exoplanet_controlled_history",
+  "status": "structural_pass",
+  "structural_pass": true,
+  "physical_relevance_pass": false,
+  "persistence_pass": false,
+  "same_final_forcing_pass": true,
+  "structural_variables_passed": 4,
+  "ablation_variables_passed": 4,
+  "material_variables_passed": 0,
+  "persistent_variables_passed": 0,
+  "variables_tested": 4,
+  "ensemble_size": 40,
+  "final_hold_myr": 10.0,
+  "persistence_hold_myr": 300.0,
+  "seed": 729,
+  "interpretation": "Ce calcul teste la logique de dépendance au chemin, son ablation et sa persistance. Il ne mesure pas une supériorité prédictive face à un GCM.",
+  "persistence_note": "Le test structurel seul ne distingue pas une inscription durable d'un retard de relaxation. Avec un palier final de l'ordre des constantes de temps lentes du modèle, deux histoires différentes sont encore en train de converger. Le critère de persistance exige qu'un écart matériel subsiste après un palier beaucoup plus long.",
+  "scope_limit": "Les deux trajectoires orbitales sont prescrites et non produites par un calcul N-corps-spin validé. L'EMIC est un modèle réduit non calibré sur ROCKE-3D, WACCM6 ou GEOCLIM."
+}

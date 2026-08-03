@@ -1,0 +1,219 @@
+[B] étape convergence ...
+  pas 0.08 Ma : 0.4 s
+  pas 0.04 Ma : 0.3 s
+  pas 0.02 Ma : 0.3 s
+  pas 0.01 Ma : 0.6 s
+  pas 0.005 Ma : 1.2 s
+  pas 0.0025 Ma : 2.6 s
+[B] convergence terminé en 5.5 s
+[B] étape ensemble ...
+  ensemble n=20 terminé
+  ensemble n=60 terminé
+  ensemble n=200 terminé
+[B] ensemble terminé en 2.5 s
+[B] étape relaxation ...
+  palier 10 Ma : 0.3 s
+  palier 15 Ma : 0.4 s
+  palier 20 Ma : 0.4 s
+  palier 30 Ma : 0.4 s
+  palier 40 Ma : 0.5 s
+  palier 60 Ma : 0.5 s
+  palier 80 Ma : 0.6 s
+  palier 120 Ma : 0.8 s
+  palier 150 Ma : 0.9 s
+  palier 200 Ma : 1.1 s
+  palier 300 Ma : 1.5 s
+  palier 450 Ma : 2.5 s
+  palier 600 Ma : 3.0 s
+[B] relaxation terminé en 12.9 s
+[B] étape multistability ...
+[B] multistability terminé en 2.9 s
+[B] étape materiality ...
+  érosion=0.03 bedrock=0.5 : 17 s cumulées
+  érosion=0.03 bedrock=1.5 : 33 s cumulées
+  érosion=0.03 bedrock=4.0 : 50 s cumulées
+  érosion=0.11 bedrock=0.5 : 66 s cumulées
+  érosion=0.11 bedrock=1.5 : 85 s cumulées
+  érosion=0.11 bedrock=4.0 : 102 s cumulées
+  érosion=0.5 bedrock=0.5 : 120 s cumulées
+  érosion=0.5 bedrock=1.5 : 137 s cumulées
+  érosion=0.5 bedrock=4.0 : 154 s cumulées
+[B] materiality terminé en 153.9 s
+{
+  "convergence": {
+    "temperature_k": {
+      "delta_M2_at_delivered_step": 0.0025204296876411014,
+      "delta_M2_at_finest_step": 0.002558029212943458,
+      "relative_change_delivered_to_finest": 0.014698630145467198,
+      "delta_classic_at_finest_step": 1.2244543601269697e-08,
+      "ratio_M2_to_classic_at_finest_step": 205841.04803871544
+    },
+    "ice_fraction": {
+      "delta_M2_at_delivered_step": 3.529192785567403e-05,
+      "delta_M2_at_finest_step": 3.5503052019270065e-05,
+      "relative_change_delivered_to_finest": 0.0059466482904467,
+      "delta_classic_at_finest_step": 5.020750482032099e-11,
+      "ratio_M2_to_classic_at_finest_step": 702921.3656797772
+    },
+    "co2_ppm": {
+      "delta_M2_at_delivered_step": 0.686630060623088,
+      "delta_M2_at_finest_step": 0.6964843546895167,
+      "relative_change_delivered_to_finest": 0.014148622291482345,
+      "delta_classic_at_finest_step": 2.633996814438433e-06,
+      "ratio_M2_to_classic_at_finest_step": 260679.91307327274
+    },
+    "productivity": {
+      "delta_M2_at_delivered_step": 0.0003756113554703455,
+      "delta_M2_at_finest_step": 0.000380283342030302,
+      "relative_change_delivered_to_finest": 0.012285540920654396,
+      "delta_classic_at_finest_step": 1.7185790013307667e-09,
+      "ratio_M2_to_classic_at_finest_step": 218559.26040030405
+    }
+  },
+  "ensemble": {
+    "temperature_k": {
+      "median_delta_M2_min": 0.0025204296876411014,
+      "median_delta_M2_max": 0.0027688488178803095,
+      "structural_pass_fraction": 1.0,
+      "materiality_pass_fraction": 0.0,
+      "holm_p_max": 2.8722928255227045e-34
+    },
+    "ice_fraction": {
+      "median_delta_M2_min": 3.529192785567403e-05,
+      "median_delta_M2_max": 3.651676356014599e-05,
+      "structural_pass_fraction": 1.0,
+      "materiality_pass_fraction": 0.0,
+      "holm_p_max": 2.8722928255227045e-34
+    },
+    "co2_ppm": {
+      "median_delta_M2_min": 0.686630060623088,
+      "median_delta_M2_max": 0.7519379125004946,
+      "structural_pass_fraction": 1.0,
+      "materiality_pass_fraction": 0.0,
+      "holm_p_max": 2.8722928255227045e-34
+    },
+    "productivity": {
+      "median_delta_M2_min": 0.0003756113554703455,
+      "median_delta_M2_max": 0.00041281572800500044,
+      "structural_pass_fraction": 1.0,
+      "materiality_pass_fraction": 0.0,
+      "holm_p_max": 2.8722928255227045e-34
+    },
+    "sizes": [
+      20,
+      60,
+      200
+    ],
+    "seeds": [
+      729,
+      1301,
+      2027,
+      4099,
+      8191
+    ]
+  },
+  "relaxation": {
+    "temperature_k": {
+      "delta_M2_at_10myr_hold": 0.0025204296876411014,
+      "delta_M2_at_longest_hold": 0.0,
+      "longest_hold_myr": 600.0,
+      "retained_fraction": 0.0,
+      "efolding_myr": 7.024011067403678,
+      "ever_material": false
+    },
+    "ice_fraction": {
+      "delta_M2_at_10myr_hold": 3.529192785567403e-05,
+      "delta_M2_at_longest_hold": 0.0,
+      "longest_hold_myr": 600.0,
+      "retained_fraction": 0.0,
+      "efolding_myr": 7.797236239145111,
+      "ever_material": false
+    },
+    "co2_ppm": {
+      "delta_M2_at_10myr_hold": 0.686630060623088,
+      "delta_M2_at_longest_hold": 0.0,
+      "longest_hold_myr": 600.0,
+      "retained_fraction": 0.0,
+      "efolding_myr": 7.281812283229533,
+      "ever_material": false
+    },
+    "productivity": {
+      "delta_M2_at_10myr_hold": 0.0003756113554703455,
+      "delta_M2_at_longest_hold": 5.551115123125783e-17,
+      "longest_hold_myr": 600.0,
+      "retained_fraction": 1.4778879930758756e-13,
+      "efolding_myr": 17.6608740286107,
+      "ever_material": false
+    }
+  },
+  "multistability": {
+    "probe_count": 1000,
+    "duration_myr": 800.0,
+    "temperature_k": {
+      "initial_spread": 11.975125094813675,
+      "final_spread": 3.019806626980426e-14,
+      "final_std": 7.666875783290881e-15,
+      "final_mean": -3.122572198464006,
+      "materiality_threshold": 0.1,
+      "spread_above_threshold": false
+    },
+    "ice_fraction": {
+      "initial_spread": 0.998343761952354,
+      "final_spread": 2.220446049250313e-15,
+      "final_std": 8.29062342336439e-16,
+      "final_mean": 0.9997772843549867,
+      "materiality_threshold": 0.01,
+      "spread_above_threshold": false
+    },
+    "co2_ppm": {
+      "initial_spread": 779.8690704742995,
+      "final_spread": 6.707523425575346e-12,
+      "final_std": 1.8517165761298622e-12,
+      "final_mean": 427.37123121568203,
+      "materiality_threshold": 1.0,
+      "spread_above_threshold": false
+    },
+    "productivity": {
+      "initial_spread": null,
+      "final_spread": 4.718447854656915e-15,
+      "final_std": 1.1935555884634203e-15,
+      "final_mean": 0.2636134525977725,
+      "materiality_threshold": 0.01,
+      "spread_above_threshold": false
+    }
+  },
+  "materiality": {
+    "grid_points": 1521,
+    "temperature_k": {
+      "threshold": 0.1,
+      "max_delta_10myr_hold": 0.23632048174196396,
+      "max_delta_200myr_hold": 0.041421085638954525,
+      "fraction_material_at_10myr": 0.19197896120973043,
+      "fraction_material_at_200myr": 0.0,
+      "fraction_material_at_both": 0.0
+    },
+    "ice_fraction": {
+      "threshold": 0.01,
+      "max_delta_10myr_hold": 0.0003089437890417268,
+      "max_delta_200myr_hold": 6.441282492158917e-05,
+      "fraction_material_at_10myr": 0.0,
+      "fraction_material_at_200myr": 0.0,
+      "fraction_material_at_both": 0.0
+    },
+    "co2_ppm": {
+      "threshold": 1.0,
+      "max_delta_10myr_hold": 58.17920490707698,
+      "max_delta_200myr_hold": 10.81548703281831,
+      "fraction_material_at_10myr": 0.7218934911242604,
+      "fraction_material_at_200myr": 0.3307034845496384,
+      "fraction_material_at_both": 0.3307034845496384
+    },
+    "productivity": {
+      "threshold": 0.01,
+      "max_delta_10myr_hold": 0.03424186596385706,
+      "max_delta_200myr_hold": 0.006205970676016137,
+      "fraction_material_at_10myr": 0.3530571992110454,
+      "fraction_material_at_200myr": 0.0,
+      "fraction_material_at_both": 0.0
+    },
+    "best_tempe
