@@ -9,5 +9,6 @@ dist/
 venv/
 
 # Les données brutes volumineuses seront archivées sur OSF/Zenodo.
-plateforme/campagne_maximale_reelle/sources_brutes/
+plateforme/campagne_maximale_reelle/sources_brutes/*
+!plateforme/campagne_maximale_reelle/sources_brutes/README.md
 

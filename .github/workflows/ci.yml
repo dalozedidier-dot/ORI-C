@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - name: Finaliser le téléchargement Git LFS
+        run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'

@@ -4,18 +4,18 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 250,
-      "sha256": "19712ec42a2cb8dd228715cd8012292155847c9a0a5c57b0dec4df3afd544822"
+      "size": 279,
+      "sha256": "74ad1be9cce46af05bcefe9e260db7c2e5deb3d7215c63f156624eddd3f9efce"
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 447,
-      "sha256": "d3dfba50b5891fb32121eef632387b85a11489d2a4a58bcd553f5bd316074baf"
+      "size": 559,
+      "sha256": "c0618f278308b0c11f7e4f390eaacb9aa9c113d0d8792c2b14271c8c21d9698c"
     },
     {
       "path": ".gitignore",
-      "size": 212,
-      "sha256": "b2e40c1c58bf6e42a0bab38f3d42a4a1e3f7ae62033457eb90b5935a33951a28"
+      "size": 275,
+      "sha256": "721488139093f989cd90819665bffdbe24acbc06b0b254e00bc20fff123785ad"
     },
     {
       "path": "00_socle/CODEBOOK.md",
