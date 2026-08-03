@@ -29,8 +29,6 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTHONHASHSEED: '0'
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
-      OUT: ${{ runner.temp }}/oric-paleoclimat
       MEMORY: ${{ github.workspace }}/02_branche_systeme_solaire/couche_memoire_historique
       BLOC: ${{ inputs.bloc }}
 
@@ -43,6 +41,12 @@ jobs:
 
       - name: Finaliser Git LFS
         run: git lfs pull
+
+      - name: Préparer l'espace temporaire
+        run: |
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"
+          echo "OUT=$RUNNER_TEMP/oric-paleoclimat" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/matplotlib" "$RUNNER_TEMP/oric-paleoclimat/logs" "$RUNNER_TEMP/oric-paleoclimat/resultats"
 
       - name: Installer Python
         uses: actions/setup-python@v6

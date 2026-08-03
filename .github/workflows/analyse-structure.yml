@@ -38,8 +38,6 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
-      OUT: ${{ runner.temp }}/oric-structure
 
     steps:
       - name: Récupérer le dépôt et Git LFS
@@ -63,8 +61,11 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
 
-      - name: Préparer les artefacts
-        run: mkdir -p "$OUT/logs" "$OUT/resultats"
+      - name: Préparer l'espace temporaire
+        run: |
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"
+          echo "OUT=$RUNNER_TEMP/oric-structure" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/matplotlib" "$RUNNER_TEMP/oric-structure/logs" "$RUNNER_TEMP/oric-structure/resultats"
 
       - name: Vérifier l'état initial
         run: |

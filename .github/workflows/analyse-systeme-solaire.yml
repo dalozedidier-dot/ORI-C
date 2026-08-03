@@ -34,8 +34,6 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
-      OUT: ${{ runner.temp }}/oric-memoire
       MEMORY: ${{ github.workspace }}/02_branche_systeme_solaire/couche_memoire_historique
 
     steps:
@@ -47,6 +45,12 @@ jobs:
 
       - name: Finaliser Git LFS
         run: git lfs pull
+
+      - name: Préparer l'espace temporaire mémoire
+        run: |
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"
+          echo "OUT=$RUNNER_TEMP/oric-memoire" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/matplotlib" "$RUNNER_TEMP/oric-memoire/logs" "$RUNNER_TEMP/oric-memoire/resultats"
 
       - name: Installer Python
         uses: actions/setup-python@v6
@@ -97,8 +101,6 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
-      OUT: ${{ runner.temp }}/oric-astronomie
       ASTRO_ROOT: ${{ github.workspace }}/02_branche_systeme_solaire/couche_astronomique
       ASTRO_CODE: ${{ github.workspace }}/02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
 
@@ -111,6 +113,12 @@ jobs:
 
       - name: Finaliser Git LFS
         run: git lfs pull
+
+      - name: Préparer l'espace temporaire astronomie
+        run: |
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"
+          echo "OUT=$RUNNER_TEMP/oric-astronomie" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/matplotlib" "$RUNNER_TEMP/oric-astronomie/logs" "$RUNNER_TEMP/oric-astronomie/resultats"
 
       - name: Installer Python
         uses: actions/setup-python@v6

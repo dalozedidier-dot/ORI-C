@@ -39,9 +39,7 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
       PYTHONHASHSEED: '0'
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
       DATA: ${{ github.workspace }}/plateforme/campagne_maximale_reelle/data
-      OUT: ${{ runner.temp }}/oric-donnees-reelles
 
     steps:
       - name: Récupérer le dépôt et Git LFS
@@ -66,8 +64,11 @@ jobs:
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
           python -m pip install --no-build-isolation --no-deps -e plateforme/source_corrigee
 
-      - name: Préparer les artefacts
-        run: mkdir -p "$OUT/logs" "$OUT/resultats"
+      - name: Préparer l'espace temporaire
+        run: |
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"
+          echo "OUT=$RUNNER_TEMP/oric-donnees-reelles" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/matplotlib" "$RUNNER_TEMP/oric-donnees-reelles/logs" "$RUNNER_TEMP/oric-donnees-reelles/resultats"
 
       - name: Auditer la plateforme et valider les données
         run: |
