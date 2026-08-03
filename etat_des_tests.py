@@ -46,10 +46,12 @@ def suite_socle() -> dict:
     sortie, code = executer([sys.executable, "-m", "pytest", "-q"], RACINE / "00_socle")
     reussis = re.search(r"(\d+) passed", sortie)
     echoues = re.search(r"(\d+) failed", sortie)
+    ignores = re.search(r"(\d+) skipped", sortie)
     attendus = re.search(r"(\d+) xfailed", sortie)
     return {
         "reussis": int(reussis.group(1)) if reussis else 0,
         "echoues": int(echoues.group(1)) if echoues else 0,
+        "ignores": int(ignores.group(1)) if ignores else 0,
         "echecs_attendus": int(attendus.group(1)) if attendus else 0,
         "code_retour": code,
     }
@@ -241,21 +243,21 @@ def composer(rejouer: bool = False) -> str:
         "",
         "## Suites exécutables",
         "",
-        "| Suite | Réussis | Échecs | Échecs attendus |",
-        "|---|---:|---:|---:|",
+        "| Suite | Réussis | Échecs | Ignorés | Xfail attendus |",
+        "|---|---:|---:|---:|---:|",
         f"| Socle, `00_socle/tests` | {socle['reussis']} | {socle['echoues']} | "
-        f"{socle['echecs_attendus']} |",
+        f"{socle['ignores']} | {socle['echecs_attendus']} |",
         f"| Couche mémoire historique | {memoire['reussis']} | "
-        f"{memoire['echoues']} | 0 |",
+        f"{memoire['echoues']} | 0 | 0 |",
     ]
     if astro.get("disponible"):
         lignes.append(
             f"| Couche astronomique | {astro['reussis']} | {astro['echoues']} | "
-            f"{astro['ignores']} ignorés |"
+            f"{astro['ignores']} | 0 |"
         )
     else:
         lignes.append(
-            f"| Couche astronomique | — | — | non exécutable ici, "
+            f"| Couche astronomique | — | — | — | non exécutable ici, "
             f"{astro.get('motif', 'dépendance absente')} |"
         )
     lignes.append("")
@@ -275,10 +277,10 @@ def composer(rejouer: bool = False) -> str:
 
     if socle["echecs_attendus"]:
         lignes += [
-            "L'échec attendu du socle concerne deux relations dont la référence "
+            "Le `xfail` attendu du socle concerne deux relations dont la référence "
             "est encore trop générique pour être datée : `TR-021 → TR-028` et "
             "`TR-024 → TR-023`. Il passera au vert dès qu'une source datable "
-            "leur sera attachée.",
+            "leur sera attachée. Il ne compte pas comme un échec réel.",
             "",
         ]
 

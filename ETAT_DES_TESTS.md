@@ -6,19 +6,19 @@ Aucun compteur de tests n'est saisi manuellement ailleurs dans le dossier : les 
 
 Dernière exécution : 2026-08-03
 
-Environnement : Python 3.12.10, numpy 2.4.6, scipy 1.18.0, numba 0.66.0, pandas 3.0.5
+Environnement : Python 3.13.5, numpy 2.3.5, scipy 1.17.0, numba 0.65.1, pandas 2.2.3
 
 Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une exécution locale n'est pas nécessairement un fichier périmé : comparez d'abord les versions ci-dessus.
 
 ## Suites exécutables
 
-| Suite | Réussis | Échecs | Échecs attendus |
-|---|---:|---:|---:|
-| Socle, `00_socle/tests` | 151 | 1 | 1 |
-| Couche mémoire historique | 32 | 0 | 0 |
-| Couche astronomique | 10 | 0 | 2 ignorés |
+| Suite | Réussis | Échecs | Ignorés | Xfail attendus |
+|---|---:|---:|---:|---:|
+| Socle, `00_socle/tests` | 152 | 0 | 1 | 1 |
+| Couche mémoire historique | 32 | 0 | 0 | 0 |
+| Couche astronomique | 10 | 0 | 2 | 0 |
 
-L'échec attendu du socle concerne deux relations dont la référence est encore trop générique pour être datée : `TR-021 → TR-028` et `TR-024 → TR-023`. Il passera au vert dès qu'une source datable leur sera attachée.
+Le `xfail` attendu du socle concerne deux relations dont la référence est encore trop générique pour être datée : `TR-021 → TR-028` et `TR-024 → TR-023`. Il passera au vert dès qu'une source datable leur sera attachée. Il ne compte pas comme un échec réel.
 
 ## Analyse exhaustive du test interventionnel
 

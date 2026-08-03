@@ -3,7 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reproduire les contrôles, tests, graphes et résultats du programme ORI-C.">
+  <meta name="description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dalozedidier-dot.github.io/ORI-C/reproductibilite.html">
+  <meta property="og:title" content="Reproductibilité | ORI-C">
+  <meta property="og:description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalozedidier-dot.github.io/ORI-C/reproductibilite.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Reproductibilité | ORI-C">
+  <meta name="twitter:description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
   <meta name="theme-color" content="#07111f">
   <title>Reproductibilité | ORI-C</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -12,7 +21,7 @@
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Organisation, histoire, futurs accessibles</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="site-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a></nav></div></header>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="site-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a></nav></div></header>
 
   <main id="contenu">
     <section class="page-hero">
@@ -22,12 +31,13 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid four">
-          <article class="metric"><strong>986</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
-          <article class="metric"><strong>151</strong><span>tests du socle réussis</span><small>environnement publié</small></article>
+          <article class="metric"><strong>989</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
+          <article class="metric"><strong>152</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
           <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests optionnels ignorés</small></article>
         </div>
-        <p class="data-note">Les compteurs dépendent de l'environnement. Le fichier <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">ETAT_DES_TESTS.md</a> indique les versions qui font foi et documente l'échec attendu restant.</p>
+        <p class="data-note">La dernière validation de référence compte 152 tests du socle réussis, 0 échec, 1 test ignoré et 1 <code>xfail</code> attendu. Le fichier <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">ETAT_DES_TESTS.md</a> publie l’environnement et sépare clairement ces catégories.</p>
+        <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
       </div>
     </section>
 
@@ -74,12 +84,12 @@ python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Cl�
 
     <section class="section">
       <div class="wrap two-column align-start">
-        <div><p class="eyebrow">Lecture honnête</p><h2>Un échec attendu n'est pas caché</h2></div>
-        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité attend une référence identifiable pour TR-021 vers TR-028 et TR-024 vers TR-023. Le dossier les conserve comme échec attendu au lieu de les faire passer artificiellement au vert.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
+        <div><p class="eyebrow">Lecture honnête</p><h2>Un <code>xfail</code> attendu n’est pas un échec réel</h2></div>
+        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité regroupe TR-021 vers TR-028 et TR-024 vers TR-023 dans un <code>xfail</code> explicite. La suite termine avec 152 réussites et 0 échec. Le marqueur restera attendu tant qu’une référence datable ne sera pas attachée à ces relations.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Code, données et contrôles publics.</p></div><div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div><div><a href="methode.html">Méthode</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Code, données et contrôles publics.</p><p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p></div><div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div><div><a href="methode.html">Méthode</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div></footer>
 </body>
 </html>

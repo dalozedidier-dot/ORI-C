@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dalozedidier-dot.github.io/ORI-C/sitemap.xml

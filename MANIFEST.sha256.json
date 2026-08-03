@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 845,
-      "sha256": "6849d4d8cbc838a6f94f28c788a51c233c5147a83b0b67ded3fab7adbf1cba99"
+      "size": 1631,
+      "sha256": "19a3fd02dfee1e9eff6a5123eae60c383b0e2026a0a2bbb2efea759c9c4cde55"
     },
     {
       "path": ".gitignore",
@@ -3109,8 +3109,8 @@
     },
     {
       "path": "ETAT_DES_TESTS.md",
-      "size": 2507,
-      "sha256": "9f26232cd1087a856c1238c68e3dc2fc250a0bc49343fd4aea744e5825488b6e"
+      "size": 2565,
+      "sha256": "7b7cbb731c29504cd9707ae1b79ed6a8554f7f8f122621bb2c2de4391e7ee44b"
     },
     {
       "path": "EXTERNAL_DATA_MANIFEST.csv",
@@ -3379,8 +3379,8 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 16464,
-      "sha256": "de450c1f9edfa9d598c4f5b0b44c3bb32603d73da63d954261545a21eb49342d"
+      "size": 16656,
+      "sha256": "cca411a4257cba138ea1df79f4628b16d6652766947d6444c48e4bc5878f8a4d"
     },
     {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
@@ -4893,9 +4893,14 @@
       "sha256": "c31addfc28db38994aeceff7460cafaf9ba4f9522b322d0e79607af1b1d744d7"
     },
     {
+      "path": "site/404.html",
+      "size": 2121,
+      "sha256": "b9c0333dae888c24a9f85ab24fb398811f4c96b9c0766854dfbe590bb409c4ad"
+    },
+    {
       "path": "site/assets/app.js",
-      "size": 1098,
-      "sha256": "3e8dad277476c5a603429615777469ba154efc3b7c41132a59e0ca4582e1df16"
+      "size": 3431,
+      "sha256": "b21c7c56601fc667e41011cb88ffb408055bbbed31363f7e28d2188f584d3f02"
     },
     {
       "path": "site/assets/favicon.svg",
@@ -4904,28 +4909,38 @@
     },
     {
       "path": "site/assets/styles.css",
-      "size": 19838,
-      "sha256": "dd0102e209902038f39e85528c95bf73f0a737eb4fa13275706dbd781941db18"
+      "size": 20859,
+      "sha256": "8211488549e43208c32001ea455fc89457e5b4af1b9ccda1ea5e9e1dc0bbd138"
     },
     {
       "path": "site/index.html",
-      "size": 11269,
-      "sha256": "8df77d90e2249436e4256dd6908a17faa956d60d9710d5274374a6dcffe5cf1d"
+      "size": 12969,
+      "sha256": "e683e9cf21d3ec239c5c5c2c89648f078bbbeb7487672aaa590fee5c2c9f9199"
     },
     {
       "path": "site/methode.html",
-      "size": 8482,
-      "sha256": "dc907f32e20582cd71832b89afa6aa9f3f9ae664512f09a3081928ee56e2c4cf"
+      "size": 10279,
+      "sha256": "eb9ab57a159e6507f141a42e46e70ed3d0f017e792f718ee9f3a5075f35df5f3"
     },
     {
       "path": "site/preuves.html",
-      "size": 20990,
-      "sha256": "79315f63f7dde50536599cfe6c26146104ece5d83f14e51432920c3cecc3667e"
+      "size": 32937,
+      "sha256": "ae83f328bbd3d80446a6b78c0d0531d15e749ec5250986dbc4a42e2859930076"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 7077,
-      "sha256": "6f59d50890a4bee1325dc163a5f514b1a05ff69e3735485588bec02480fc3557"
+      "size": 8576,
+      "sha256": "de32bc8e924b8f267c8d55a23929b789b9a0b8ac9b776f9bbab4c36484997184"
+    },
+    {
+      "path": "site/robots.txt",
+      "size": 85,
+      "sha256": "2e9d4b67b43fbd21d7b1307336f97c83b671e7941a2e63366c2bac4553af5dfe"
+    },
+    {
+      "path": "site/sitemap.xml",
+      "size": 419,
+      "sha256": "ce1cd07e0abd6128e1bc7a131b5982ec10c62e707aef3be9122a925017a70ef8"
     },
     {
       "path": "verifier_dossier.py",

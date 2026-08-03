@@ -3,7 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Registre public des preuves, résultats négatifs et limites du programme ORI-C.">
+  <meta name="description" content="Registre public détaillé des preuves, réfutations, résultats non concluants, limites et programmes non testés du programme ORI-C.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dalozedidier-dot.github.io/ORI-C/preuves.html">
+  <meta property="og:title" content="État des preuves | ORI-C">
+  <meta property="og:description" content="Registre public détaillé des preuves, réfutations, résultats non concluants, limites et programmes non testés du programme ORI-C.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalozedidier-dot.github.io/ORI-C/preuves.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="État des preuves | ORI-C">
+  <meta name="twitter:description" content="Registre public détaillé des preuves, réfutations, résultats non concluants, limites et programmes non testés du programme ORI-C.">
   <meta name="theme-color" content="#07111f">
   <title>État des preuves | ORI-C</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -14,7 +23,7 @@
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Organisation, histoire, futurs accessibles</small></span></a>
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
       <nav id="navigation" class="site-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
@@ -50,6 +59,8 @@
           <div><span class="status concept">Preuve de concept</span><p>Application sans contradiction, sans preuve de supériorité.</p></div>
           <div><span class="status refuted">Réfuté</span><p>Critère préenregistré non atteint par l'implémentation testée.</p></div>
           <div><span class="status untested">Non testé</span><p>Protocole ou hypothèse sans exécution décisive.</p></div>
+          <div><span class="status inconclusive">Non concluant</span><p>Le test exécuté ne permet pas de trancher dans un sens ou dans l’autre.</p></div>
+          <div><span class="status outside">Hors chaîne</span><p>Étude séparée qui ne reçoit aucun verdict du dossier.</p></div>
         </div>
       </div>
     </section>
@@ -57,15 +68,18 @@
     <section class="section evidence-section">
       <div class="wrap">
         <div class="filter-bar" aria-label="Filtrer les preuves">
-          <button class="filter-button active" data-filter="all" type="button">Tout</button>
-          <button class="filter-button" data-filter="established" type="button">Établi</button>
-          <button class="filter-button" data-filter="model" type="button">Modèle réduit</button>
-          <button class="filter-button" data-filter="structural" type="button">Structure</button>
-          <button class="filter-button" data-filter="supported" type="button">Appuyé</button>
-          <button class="filter-button" data-filter="concept" type="button">Concept</button>
-          <button class="filter-button" data-filter="refuted" type="button">Réfuté</button>
-          <button class="filter-button" data-filter="untested" type="button">Non testé</button>
+          <button class="filter-button active" data-filter="all" type="button" aria-pressed="true">Tout</button>
+          <button class="filter-button" data-filter="established" type="button" aria-pressed="false">Établi</button>
+          <button class="filter-button" data-filter="model" type="button" aria-pressed="false">Modèle réduit</button>
+          <button class="filter-button" data-filter="structural" type="button" aria-pressed="false">Structure</button>
+          <button class="filter-button" data-filter="supported" type="button" aria-pressed="false">Appuyé</button>
+          <button class="filter-button" data-filter="concept" type="button" aria-pressed="false">Concept</button>
+          <button class="filter-button" data-filter="refuted" type="button" aria-pressed="false">Réfuté</button>
+          <button class="filter-button" data-filter="untested" type="button" aria-pressed="false">Non testé</button>
+          <button class="filter-button" data-filter="inconclusive" type="button" aria-pressed="false">Non concluant</button>
+          <button class="filter-button" data-filter="outside" type="button" aria-pressed="false">Hors chaîne</button>
         </div>
+        <p id="filter-summary" class="filter-summary" aria-live="polite"></p>
 
         <div class="evidence-group" id="socle">
           <div class="group-heading"><p class="eyebrow">Socle commun</p><h2>Règles et test transversal</h2></div>
@@ -75,7 +89,7 @@
               <h3>Test interventionnel du chémostat</h3>
               <p class="claim">Une réduction du terme de perte augmente strictement l'équilibre positif lorsque les deux systèmes sont viables.</p>
               <dl><div><dt>Résultat</dt><dd>115 120 tirages viables, facteur de rétention supérieur à 1 dans 100 % des cas.</dd></div><div><dt>Contrôle</dt><dd>11 sections exhaustives réussies sur 11, seuil de lavage identifié.</dd></div><div><dt>Portée</dt><dd>Théorème dans le système d'équations défini. Validité biologique non établie.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/00_socle/test_interventionnel">Données et scripts</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/test_interventionnel/PORTEE_WP_S2.md">Portée</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/test_interventionnel/resultats/metriques_test_interventionnel_ori_c.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/test_interventionnel/resultats_exhaustifs/analyse_exhaustive.json">Analyse exhaustive</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/test_interventionnel/PORTEE_WP_S2.md">Portée</a></div>
             </article>
 
             <article class="evidence-card" data-status="structural">
@@ -83,7 +97,7 @@
               <h3>Carte des transitions et relations typées</h3>
               <p class="claim">Le dossier conserve une carte de 40 transitions et 47 relations en distinguant filiation matérielle, condition, stabilisation, contrainte, inscription et rétroaction.</p>
               <dl><div><dt>Résultat</dt><dd>Structure testée, liens typés, niveaux de preuve séparés.</dd></div><div><dt>Limite</dt><dd>La topologie reste dominée par la chronologie et ne prédit pas les liens masqués au-delà du hasard.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/00_socle/carte_relationnelle">Carte et analyses</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/CODEBOOK.md">Codebook</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/carte_relationnelle/resultats_analyse/analyse_graphe.json">Analyse machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/carte_relationnelle/resultats/matrice_relations_oric_47.csv">Matrice des relations</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/CODEBOOK.md">Règles de codage</a></div>
             </article>
           </div>
         </div>
@@ -96,7 +110,7 @@
               <h3>Généalogie annotée</h3>
               <p class="claim">Une transition réunit parents matériels, conditions, mécanisme, produits, propriétés, ouvertures, fermetures et quatre axes de preuve.</p>
               <dl><div><dt>Résultat</dt><dd>39 transitions, 25 champs, 53 produits, 77 relations et 0 anomalie de clôture.</dd></div><div><dt>Apport</dt><dd>La confusion entre parent matériel et condition permissive est rejetée par le validateur.</dd></div><div><dt>Limite</dt><dd>La clôture formelle ne démontre pas la séquence historique.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/genealogie">Généalogie détaillée</a><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/00_socle/genealogie">Arbre global</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie/cloture_genealogie.json">Clôture machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie/genealogie_matiere.csv">Généalogie CSV</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/genealogie/correspondance_GM_GA.csv">Correspondance des représentations</a></div>
             </article>
 
             <article class="evidence-card" data-status="established structural">
@@ -104,7 +118,7 @@
               <h3>Inventaire hiérarchique de la matière</h3>
               <p class="claim">Le registre sépare ce qui existe de la généalogie qui explique son origine.</p>
               <dl><div><dt>Résultat</dt><dd>6 392 entrées détaillées, 550 entrées d'index, 5 843 nuclides et 118 éléments.</dd></div><div><dt>Contrôle</dt><dd>13 comptages sur 13 concordent, racine unique, aucun parent orphelin et une URL sur chaque ligne contrôlée.</dd></div><div><dt>Limite</dt><dd>Molécules, phases, matériaux, réservoirs et objets biologiques forment un inventaire ouvert.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/inventaire_hierarchique">Inventaire et tests</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/README_INVENTAIRE_COMPLET.md">Périmètre et comptages</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tables/01_Index_maitre.csv">Index maître</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tests/test_inventaire_hierarchique.py">Tests</a></div>
             </article>
 
             <article class="evidence-card" id="hypergraphe" data-status="structural">
@@ -112,7 +126,7 @@
               <h3>Hypergraphe mécanistique clos</h3>
               <p class="claim">Les transformations multi-entrées et multi-sorties rendent visibles mélanges, recyclages et dépendances que la chronologie linéaire masque.</p>
               <dl><div><dt>Résultat</dt><dd>53 nœuds, 53 hyperarêtes, racine unique N036 et 53 nœuds sur 53 joignables.</dd></div><div><dt>Découverte de méthode</dt><dd>Le contrôle a détecté une boucle de poussière sans alimentation externe. L'hyperarête H047 rétablit la filiation.</dd></div><div><dt>Limite</dt><dd>La qualité des preuves reste évaluée relation par relation.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/hypergraphe_transformations">Hypergraphe et tests</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json">Validation machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/noeuds.csv">Nœuds</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/hyperaretes.csv">Hyperarêtes</a></div>
             </article>
 
             <article class="evidence-card" data-status="established refuted">
@@ -120,7 +134,7 @@
               <h3>Échelle des capacités : information oui, monotonie non</h3>
               <p class="claim">L'échelle porte une information propre sur le graphe sans constituer une marche monotone le long des processus.</p>
               <dl><div><dt>Résultat positif</dt><dd>Gain net de 0,595 bit, p = 5 × 10⁻⁵ et corrélation de rang ρ = 0,74 avec la profondeur.</dd></div><div><dt>Résultat négatif</dt><dd>La monotonie est réfutée : une étoile produit des éléments situés plus bas sur l'échelle.</dd></div><div><dt>Portée</dt><dd>Mesure d'un codage interne, pas mesure naturelle universelle.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/hypergraphe_transformations">Protocoles et résultats</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/test_hierarchie_resultats.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/tester_hierarchie.py">Script du test</a></div>
             </article>
 
             <article class="evidence-card" data-status="established supported">
@@ -128,7 +142,7 @@
               <h3>Inventaire accessible et contrôle indépendant</h3>
               <p class="claim">La composition totale ne détermine pas la fraction réellement disponible pour les transformations ultérieures.</p>
               <dl><div><dt>Données</dt><dd>31 enregistrements sourcés pour l'azote, le carbone, l'hydrogène et le soufre.</dd></div><div><dt>Contrôle</dt><dd>Les budgets noyau plus silicate ferment avec un écart maximal de 2,88 %.</dd></div><div><dt>Épreuve indépendante</dt><dd>Les coefficients de partage recouvrent les répartitions observées pour C, H et N. Le soufre reste en désaccord.</dd></div><div><dt>Limite</dt><dd>La mobilisabilité exige des flux et des horizons. Elle n'est pas encore mesurée.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/hypergraphe_transformations">Données et calculs</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/coefficients_partage.csv">Coefficients expérimentaux</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/PROTOCOLE_INVENTAIRE_ACCESSIBLE.md">Protocole</a></div>
             </article>
           </div>
         </div>
@@ -149,7 +163,7 @@
               <h3>Couche astronomique N-corps</h3>
               <p class="claim">Le modèle réduit reproduit des références indépendantes et réagit causalement à des modifications de l'architecture planétaire.</p>
               <dl><div><dt>Campagne</dt><dd>25 calculs N-corps, trajectoire principale de 20 Ma, départ JPL Horizons DE441.</dd></div><div><dt>Résultat</dt><dd>13 critères réussis sur 15. Accord à 1 Ma avec La2010 : r = 0,99727.</dd></div><div><dt>Interventions</dt><dd>Les modifications de Jupiter et Saturne produisent des écarts 6,27 à 13,83 millions de fois supérieurs à la dispersion témoin.</dd></div><div><dt>Limite</dt><dd>Pas de Lune résolue, de rotation terrestre, de marées ou de prédiction climatique hors échantillon.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/02_branche_systeme_solaire/couche_astronomique">Code, données et reproduction</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/analysis/SCIENTIFIC_VALIDATION_REPORT.md">Rapport de validation</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/execution_results.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/REPRODUCTION.md">Reproduction</a></div>
             </article>
 
             <article class="evidence-card" id="memoire" data-status="refuted">
@@ -157,7 +171,7 @@
               <h3>Mémoire climatique sur la transition du Pléistocène moyen</h3>
               <p class="claim">Le modèle historique testé ne prédit pas mieux LR04 qu'un témoin classique de complexité égale.</p>
               <dl><div><dt>Verdict corrigé</dt><dd>1 critère sur 5 contre M1, 0 sur 5 contre M1P.</dd></div><div><dt>Performance</dt><dd>M2 perd 31,6 %, intervalle de confiance à 95 % de −0,389 à −0,251.</dd></div><div><dt>Portée</dt><dd>Cette implémentation de la mémoire climatique est fermée. La couche astronomique reste indépendante.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/RAPPORT_CORRIGE.md">Rapport corrigé</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/RAPPORT_CORRIGE.md">Rapport corrigé</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/STRESS_REPORT.md">Tests de stress</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json">Résultat machine</a></div>
             </article>
 
             <article class="evidence-card" data-status="concept refuted">
@@ -165,7 +179,45 @@
               <h3>Test exoplanétaire à deux histoires</h3>
               <p class="claim">Deux chemins spin-orbitaux contrôlés produisent un écart transitoire, mais aucune inscription matérielle durable.</p>
               <dl><div><dt>Réussi</dt><dd>Dépendance au chemin structurelle et ablation sur 4 variables sur 4.</dd></div><div><dt>Échec</dt><dd>L'écart décroît avec un temps caractéristique de 7,0 Ma et s'annule sur palier long.</dd></div><div><dt>Conclusion</dt><dd>Retard de relaxation, pas mémoire persistante.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/02_branche_systeme_solaire/couche_memoire_historique">Tests et résultats</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/summary.json">Résumé machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json">Persistance et stress</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/path_deltas.csv">Écarts entre chemins</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="outside concept">
+              <div class="evidence-top"><span class="status outside">Hors chaîne de preuve</span><span class="evidence-id">P-05</span></div>
+              <h3>Application climatique séparée</h3>
+              <p class="claim">L'article sur le climat comme architecture historique est une étude de cas autonome. Il n'exécute aucun test du dossier et n'en reçoit aucun verdict.</p>
+              <dl><div><dt>Contribution</dt><dd>Cinq distinctions conceptuelles ont été reprises dans le codebook du socle.</dd></div><div><dt>Limite</dt><dd>Les repères empiriques relèvent de la littérature citée par l'article, pas d'une validation ORI-C.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/application_climat/README.md">Statut de l'application</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/CODEBOOK.md#13-m%C3%A9moire-distribu%C3%A9e-et-alt%C3%A9ration-architecturale">Apports conceptuels</a></div>
+            </article>
+          </div>
+        </div>
+
+
+        <div class="evidence-group" id="campagnes-critiques">
+          <div class="group-heading"><p class="eyebrow">Épreuves critiques</p><h2>Tests réels, campagne plateforme et plan directeur</h2><p>Ces campagnes sont présentées séparément pour que les réfutations, les contrôles positifs et les résultats non concluants restent visibles.</p></div>
+          <div class="evidence-grid">
+            <article class="evidence-card" id="tests-reels" data-status="established refuted inconclusive">
+              <div class="evidence-top"><span class="status refuted">Batteries critiques</span><span class="evidence-id">T-01</span></div>
+              <h3>Huit tests sur données réelles inutilisées auparavant</h3>
+              <p class="claim">LR04 complet, sa colonne d'erreur publiée et les quatre solutions La2010 ont été employés pour tester la robustesse du verdict.</p>
+              <dl><div><dt>Réfutés</dt><dd>T1, T2, G1 et G3 n'atteignent pas leurs critères préenregistrés.</dd></div><div><dt>Établi</dt><dd>T3 mesure une dispersion orbitale relative de 5,2 × 10⁻⁴ et ferme l'objection correspondante.</dd></div><div><dt>Sans verdict</dt><dd>T4 possède un critère inapplicable à l'observation elle-même.</dd></div><div><dt>Non concluants</dt><dd>G2 ne calcule aucun intervalle de confiance et G4 reste peu puissant avec p = 0,923.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_TESTS_REELS.md">Batterie T</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_TESTS_REELS_2.md">Batterie G</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/f_tests_reels.json">Résultats T</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/g_tests_reels_2.json">Résultats G</a></div>
+            </article>
+
+            <article class="evidence-card" id="campagne-plateforme" data-status="established structural refuted">
+              <div class="evidence-top"><span class="status structural">Outil vérifié</span><span class="evidence-id">T-02</span></div>
+              <h3>Campagne plateforme <code>oric-full 0.2.0</code></h3>
+              <p class="claim">La campagne vérifie l'outillage et conserve un verdict scientifique nul au lieu de transformer les réussites techniques en preuves.</p>
+              <dl><div><dt>Couverture</dt><dd>683 entrées, 51 groupes de travail et 235 réussites techniques.</dd></div><div><dt>Contrôles positifs</dt><dd>Périodes de Milankovitch retrouvées et horizon de divergence La2010 établi.</dd></div><div><dt>Contrôle de la carte</dt><dd>AUC de 0,4938, indépendante du dossier et au niveau du hasard.</dd></div><div><dt>Verdict ORI-C</dt><dd>Aucune hypothèse soutenue, soit 0 <code>supports</code> défendable sur 683.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/README.md">Bilan de campagne</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/resultats/results.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_plateforme/preenregistrement/catalogue_frozen.json">Catalogue préenregistré</a></div>
+            </article>
+
+            <article class="evidence-card" id="plan-directeur" data-status="established refuted inconclusive">
+              <div class="evidence-top"><span class="status refuted">Arrêts documentés</span><span class="evidence-id">T-03</span></div>
+              <h3>Campagne du plan directeur</h3>
+              <p class="claim">Plusieurs familles de mémoire et de modèles ont été soumises à des témoins appariés, à l'identifiabilité et à des tests hors du chemin initial.</p>
+              <dl><div><dt>Réfutés</dt><dd>WP-C3, WP-C4, WP-C6, WP-S3 et WP-M5.</dd></div><div><dt>Non concluant</dt><dd>WP-C2, dont le témoin corrigé est lui aussi multistable.</dd></div><div><dt>Localisation</dt><dd>WP-C7 situe le signal manquant dans la bande de 100 ka sans produire de verdict.</dd></div><div><dt>Résultat positif local</dt><dd>WP-S2 tient sur six cinétiques et trouve 10 cas positifs sur 600, avec un statut exploratoire.</dd></div><div><dt>Motifs d'arrêt</dt><dd>Avantage nul contre témoin apparié, paramètres non identifiables et dépendance à une fenêtre non préenregistrée.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/prospectif_c2/RAPPORT_WP_C2.md">WP-C2</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_WP_C3.md">WP-C3</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_WP_C4.md">WP-C4</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_WP_C6.md">WP-C6</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/RAPPORT_WP_C7.md">WP-C7</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/test_interventionnel/PORTEE_WP_S2.md">WP-S2</a></div>
             </article>
           </div>
         </div>
@@ -178,7 +230,7 @@
               <h3>Cellule et endosymbiose mitochondriale</h3>
               <p class="claim">Les six dimensions et les liens typés décrivent sans contradiction manifeste une cellule eucaryote et une intégration endosymbiotique.</p>
               <dl><div><dt>Base scientifique</dt><dd>Les faits biologiques sous-jacents sont fortement appuyés.</dd></div><div><dt>Apport ORI-C</dt><dd>Décomposition architecturale et historique commune.</dd></div><div><dt>Limite</dt><dd>Aucune preuve d'universalité, de supériorité explicative ou de pouvoir prédictif.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant">Documents de la branche</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/README.md">Statut de la branche</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ARCHITECTURE.md">Articulation interbranches</a></div>
             </article>
 
             <article class="evidence-card" data-status="untested">
@@ -194,7 +246,7 @@
               <h3>Programme prébiotique</h3>
               <p class="claim">Le verrou proposé porte sur le couplage entre compartimentation, copie par matrice, variation héritable et persistance.</p>
               <dl><div><dt>Disponible</dt><dd>Schéma de lignées, validateur exécutable et six conditions minimales.</dd></div><div><dt>Absent</dt><dd>Aucune donnée collectée. Une production chimique sans lignée ne compte pas comme hérédité.</dd></div></dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/programme_prebiotique">Programme et validateur</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/programme_prebiotique/PROGRAMME_PREBIOTIQUE.md">Programme</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/programme_prebiotique/valider_lignees.py">Validateur</a></div>
             </article>
 
             <article class="evidence-card" data-status="untested">
@@ -211,7 +263,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-grid"><div><strong>ORI-C</strong><p>État des preuves, août 2026.</p></div><div><a href="index.html">Accueil</a><a href="methode.html">Méthode</a></div><div><a href="reproductibilite.html">Reproductibilité</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div>
+    <div class="wrap footer-grid"><div><strong>ORI-C</strong><p>État des preuves, août 2026.</p><p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p></div><div><a href="index.html">Accueil</a><a href="methode.html">Méthode</a></div><div><a href="reproductibilite.html">Reproductibilité</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div>
   </footer>
 </body>
 </html>
