@@ -42,7 +42,14 @@ for r in old:
         "reference_cle": r["reference_cle"],
     })
 with (HERE / "reclassement_relations.csv").open("w", encoding="utf-8", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=cross[0].keys(), delimiter=";"); w.writeheader(); w.writerows(cross)
+    w = csv.DictWriter(
+        f,
+        fieldnames=cross[0].keys(),
+        delimiter=";",
+        lineterminator="\n",
+    )
+    w.writeheader()
+    w.writerows(cross)
 
 # Clôture généalogique. Un nœud consommé sans jamais être produit est une racine :
 # soit un apport externe déclaré, soit un trou. Les arêtes à point partagé (règle 4

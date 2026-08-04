@@ -3,7 +3,7 @@
   "errors": [],
   "nodes": 53,
   "hyperedges": 53,
-  "sources": 27,
+  "sources": 31,
   "multi_input_edges": 29,
   "multi_output_edges": 13,
   "recycling_or_transport_edges_with_shared_endpoint": 5,

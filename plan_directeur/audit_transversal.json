@@ -56,60 +56,56 @@
       },
       "mémoire distribuée m(t)": {
         "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
           "branche 2 système solaire",
           "socle"
         ],
-        "nombre_de_branches": 2,
+        "nombre_de_branches": 3,
         "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": true
       },
       "diagnostic D-H-L": {
-        "branches_ou_une_mesure_existe": [
-          "socle"
-        ],
-        "nombre_de_branches": 1,
-        "produit_une_mesure": true,
+        "branches_ou_une_mesure_existe": [],
+        "nombre_de_branches": 0,
+        "produit_une_mesure": false,
         "traverse_deux_branches_ou_plus": false
       },
       "Pth et Pacc(T,C,epsilon)": {
-        "branches_ou_une_mesure_existe": [
-          "socle"
-        ],
-        "nombre_de_branches": 1,
-        "produit_une_mesure": true,
+        "branches_ou_une_mesure_existe": [],
+        "nombre_de_branches": 0,
+        "produit_une_mesure": false,
         "traverse_deux_branches_ou_plus": false
       },
       "séparation X m A": {
-        "branches_ou_une_mesure_existe": [
-          "socle"
-        ],
-        "nombre_de_branches": 1,
-        "produit_une_mesure": true,
+        "branches_ou_une_mesure_existe": [],
+        "nombre_de_branches": 0,
+        "produit_une_mesure": false,
         "traverse_deux_branches_ou_plus": false
       },
       "critère d'altération architecturale": {
-        "branches_ou_une_mesure_existe": [
-          "socle"
-        ],
-        "nombre_de_branches": 1,
-        "produit_une_mesure": true,
+        "branches_ou_une_mesure_existe": [],
+        "nombre_de_branches": 0,
+        "produit_une_mesure": false,
         "traverse_deux_branches_ou_plus": false
       },
       "témoin de complexité égale": {
         "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
           "branche 2 système solaire",
-          "branche 3 vivant"
+          "branche 3 vivant",
+          "socle"
         ],
-        "nombre_de_branches": 2,
+        "nombre_de_branches": 4,
         "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": true
       },
       "dépendance au chemin": {
         "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
           "branche 2 système solaire",
           "socle"
         ],
-        "nombre_de_branches": 2,
+        "nombre_de_branches": 3,
         "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": true
       },
@@ -123,16 +119,21 @@
       },
       "fenêtre longue devant les constantes de temps": {
         "branches_ou_une_mesure_existe": [
+          "branche 1 matière",
           "branche 2 système solaire",
           "socle"
         ],
-        "nombre_de_branches": 2,
+        "nombre_de_branches": 3,
         "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": true
       }
     },
     "notions_sans_aucune_mesure": [
-      "chaîne ORI-C"
+      "Pth et Pacc(T,C,epsilon)",
+      "chaîne ORI-C",
+      "critère d'altération architecturale",
+      "diagnostic D-H-L",
+      "séparation X m A"
     ],
     "notions_traversant_au_moins_deux_branches": [
       "dépendance au chemin",
@@ -150,7 +151,7 @@
     "sections_du_codebook": 15,
     "sous_sections": 15,
     "codes_de_relation": 13,
-    "lignes_du_codebook": 532,
+    "lignes_du_codebook": 534,
     "hypotheses_enregistrees": 28,
     "statuts": {
       "Validé dans le modèle réduit": 1,
