@@ -1,0 +1,120 @@
+diff --git a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/index.html b/site/index.html
+index 6758a41..2c9bbb1 100644
+--- a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/index.html
++++ b/site/index.html
+@@ -97,13 +97,13 @@
+           <article class="feature-card">
+             <span class="status model">Résultat causal dans le modèle</span>
+             <h3>L'architecture planétaire modifie les trajectoires</h3>
+-            <p>Le modèle N-corps réussit 13 critères sur 15. Le plus petit effet des interventions reste 4 964 fois supérieur au plus grand écart numérique sélectionné.</p>
++            <p>Le modèle N-corps réussit 13 critères sur 15. À 1 Ma, la corrélation avec La2010 atteint 0,9973. Cet excellent accord de phase ne signifie toutefois pas que le modèle réduit atteint la précision interne des solutions La2010.</p>
+             <a href="preuves.html#astronomie">Voir la couche astronomique</a>
+           </article>
+           <article class="feature-card">
+             <span class="status refuted">Implémentation réfutée</span>
+             <h3>Ajouter une mémoire ne suffit pas</h3>
+-            <p>Le modèle M2 perd 31,6 % contre un témoin de même complexité. Sept familles de mémoire sur sept échouent également à battre leur témoin apparié.</p>
++            <p>Le modèle M2 perd 31,6 % contre un témoin de même complexité et ne réussit qu'un critère sur dix. Le couplage carbone dégrade lui-même la RMSE de 0,232.</p>
+             <a href="preuves.html#memoire">Lire le verdict paléoclimatique</a>
+           </article>
+           <article class="feature-card">
+@@ -125,10 +125,10 @@
+             <a href="preuves.html#campagne-maximale">Voir la localisation du signal manquant</a>
+           </article>
+           <article class="feature-card">
+-            <span class="status concept">Limite des données atteinte</span>
+-            <h3>Les prochains verrous demandent de nouvelles observations</h3>
+-            <p>Il manque des flux opératoires pour C, H et S, des simulations climatiques interventionnelles, un jeu antibiotique externe et de véritables lignées prébiotiques.</p>
+-            <a href="preuves.html#campagne-maximale">Voir ce qui reste calculable</a>
++            <span class="status refuted">Persistance non démontrée</span>
++            <h3>La dépendance au chemin se détend vers un attracteur unique</h3>
++            <p>Dans le test exoplanétaire, l'écart entre deux histoires décroît avec un temps caractéristique de 7,02 Ma et devient nul après un palier de 600 Ma. Le résultat mesure un retard de relaxation, pas une mémoire durable.</p>
++            <a href="preuves.html#systeme-solaire">Voir le test exoplanétaire</a>
+           </article>
+         </div>
+       </div>
+diff --git a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/preuves.html b/site/preuves.html
+index a4c0838..7b7151b 100644
+--- a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/preuves.html
++++ b/site/preuves.html
+@@ -236,7 +236,7 @@
+               <div class="evidence-top"><span class="status model">Validé dans le modèle réduit</span><span class="evidence-id">P-02</span></div>
+               <h3>Couche astronomique N-corps</h3>
+               <p class="claim">Le modèle réduit reproduit des références indépendantes et réagit causalement à des modifications de l'architecture planétaire.</p>
+-              <dl><div><dt>Campagne</dt><dd>25 calculs N-corps, trajectoire principale de 20 Ma, départ JPL Horizons DE441.</dd></div><div><dt>Résultat</dt><dd>13 critères réussis sur 15. Accord à 1 Ma avec La2010 : r = 0,99727.</dd></div><div><dt>Interventions</dt><dd>Les modifications de Jupiter et Saturne produisent des écarts 6,27 à 13,83 millions de fois supérieurs à la dispersion témoin.</dd></div><div><dt>Limite</dt><dd>Pas de Lune résolue, de rotation terrestre, de marées ou de prédiction climatique hors échantillon.</dd></div></dl>
++              <dl><div><dt>Campagne</dt><dd>25 calculs N-corps, trajectoire principale de 20 Ma, départ JPL Horizons DE441.</dd></div><div><dt>Résultat</dt><dd>13 critères réussis sur 15. Accord à 1 Ma avec La2010 : r = 0,99727.</dd></div><div><dt>Interventions</dt><dd>Les modifications de Jupiter et Saturne produisent des écarts 6,27 à 13,83 millions de fois supérieurs à la dispersion témoin.</dd></div><div><dt>Précision</dt><dd>À 1 Ma, la RMSE reste 2 858 fois supérieure à la dispersion moyenne entre La2010a et La2010d. L'accord de phase est excellent, mais le modèle réduit n'atteint pas la précision interne de La2010.</dd></div><div><dt>Limite</dt><dd>Pas de Lune résolue, de rotation terrestre, de marées ou de prédiction climatique hors échantillon.</dd></div></dl>
+               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/analysis/SCIENTIFIC_VALIDATION_REPORT.md">Rapport de validation</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/execution_results.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_astronomique/REPRODUCTION.md">Reproduction</a></div>
+             </article>
+ 
+@@ -244,7 +244,7 @@
+               <div class="evidence-top"><span class="status refuted">Réfuté</span><span class="evidence-id">P-03</span></div>
+               <h3>Mémoire climatique sur la transition du Pléistocène moyen</h3>
+               <p class="claim">Le modèle historique testé ne prédit pas mieux LR04 qu'un témoin classique de complexité égale.</p>
+-              <dl><div><dt>Verdict corrigé</dt><dd>1 critère sur 5 contre M1, 0 sur 5 contre M1P.</dd></div><div><dt>Performance</dt><dd>M2 perd 31,6 %, intervalle de confiance à 95 % de −0,389 à −0,251.</dd></div><div><dt>Signal manquant</dt><dd>La bande de 100 ka reste largement dans les résidus, tandis que la composante de 41 ka est mieux absorbée.</dd></div><div><dt>Portée</dt><dd>Cette implémentation de la mémoire climatique est fermée. La couche astronomique reste indépendante.</dd></div></dl>
++              <dl><div><dt>Verdict corrigé</dt><dd>1 critère sur 10 au total : 1 sur 5 contre M1 et 0 sur 5 contre M1P.</dd></div><div><dt>Performance</dt><dd>M2 perd 31,6 %, intervalle de confiance à 95 % de −0,389 à −0,251. Retirer le couplage carbone améliore la RMSE de 0,232.</dd></div><div><dt>Signal manquant</dt><dd>Le rapport de puissance 100 ka sur 41 ka vaut 0,0047 dans M2 contre 2,604 dans LR04.</dd></div><div><dt>Dépendance méthodologique</dt><dd>La chronologie LR04 est accordée orbitalement à l'insolation du 21 juin à 65° N. Ce test ne constitue donc pas une validation indépendante du forçage astronomique.</dd></div><div><dt>Portée</dt><dd>Cette implémentation de la mémoire climatique est fermée. La couche astronomique reste indépendante.</dd></div></dl>
+               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/RAPPORT_CORRIGE.md">Rapport corrigé</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/STRESS_REPORT.md">Tests de stress</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json">Résultat machine</a></div>
+             </article>
+ 
+@@ -252,7 +252,7 @@
+               <div class="evidence-top"><span class="status refuted">Persistance non réussie</span><span class="evidence-id">P-04</span></div>
+               <h3>Test exoplanétaire à deux histoires</h3>
+               <p class="claim">Deux chemins spin-orbitaux contrôlés produisent un écart transitoire, mais aucune inscription matérielle durable.</p>
+-              <dl><div><dt>Réussi</dt><dd>Dépendance au chemin structurelle et ablation sur 4 variables sur 4.</dd></div><div><dt>Échec</dt><dd>L'écart décroît avec un temps caractéristique de 7,0 Ma et s'annule sur palier long.</dd></div><div><dt>Conclusion</dt><dd>Retard de relaxation, pas mémoire persistante.</dd></div></dl>
++              <dl><div><dt>Réussi</dt><dd>Dépendance au chemin structurelle et ablation sur 4 variables sur 4.</dd></div><div><dt>Échec matériel</dt><dd>0 variable sur 4 dépasse le seuil de matérialité et 0 sur 4 reste persistante.</dd></div><div><dt>Relaxation</dt><dd>L'écart décroît avec un temps caractéristique de 7,02 Ma et devient nul après un palier de 600 Ma.</dd></div><div><dt>Conclusion</dt><dd>Retard de relaxation vers un attracteur unique, pas mémoire persistante.</dd></div></dl>
+               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/summary.json">Résumé machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json">Persistance et stress</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/path_deltas.csv">Écarts entre chemins</a></div>
+             </article>
+ 
+diff --git a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/reproductibilite.html b/site/reproductibilite.html
+index b1edd29..43cada5 100644
+--- a/mnt/data/site_update_work/base/ORI-C-v0.9.2-research/site/reproductibilite.html
++++ b/site/reproductibilite.html
+@@ -31,12 +31,12 @@
+     <section class="section compact">
+       <div class="wrap">
+         <div class="metric-grid four">
+-          <article class="metric"><strong>1 013</strong><span>fichiers manifestés</span><small>contrôle d'intégrité</small></article>
+-          <article class="metric"><strong>152</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
++          <article class="metric"><strong>1 018</strong><span>contenus manifestés</span><small>0 objet LFS manquant</small></article>
++          <article class="metric"><strong>153</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
+           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
+-          <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests optionnels ignorés</small></article>
++          <article class="metric"><strong>12</strong><span>tests astronomiques réussis</span><small>artefact scientifique complet</small></article>
+         </div>
+-        <p class="data-note">La dernière validation de référence compte 152 tests du socle réussis, 0 échec, 1 test ignoré et 1 <code>xfail</code> attendu. Le fichier <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">ETAT_DES_TESTS.md</a> publie l’environnement et sépare clairement ces catégories.</p>
++        <p class="data-note">La validation GitHub Actions du 4 août 2026 réussit sous Python 3.12 et Python 3.13. Elle compte 153 tests du socle réussis, 0 échec, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 13 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire et 21 tests de robustesse. L'artefact astronomique complet publie 12 tests réussis.</p>
+         <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
+       </div>
+     </section>
+@@ -47,7 +47,7 @@
+         <div class="terminal" aria-label="Commandes de vérification"><div class="terminal-bar"><span></span><span></span><span></span></div><pre><code>git clone https://github.com/dalozedidier-dot/ORI-C.git
+ cd ORI-C
+ python verifier_dossier.py
+-python scripts/valider_tout.py</code></pre></div>
++python scripts/valider_tout.py --strict-lfs</code></pre></div>
+       </div>
+     </section>
+ 
+@@ -87,12 +87,12 @@ python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code>
+       <div class="wrap">
+         <div class="section-heading"><p class="eyebrow">Campagnes de référence</p><h2>Cinq artefacts contrôlés jusqu'au bout</h2><p>Les workflows de structure, données réelles, mémoire, astronomie et paléoclimat ont produit leurs journaux et leurs résultats. Leur réussite technique conserve les verdicts négatifs et non concluants au lieu de les transformer en preuves.</p></div>
+         <div class="metric-grid four">
+-          <article class="metric"><strong>1 013</strong><span>fichiers conformes</span><small>0 modifié, 0 absent</small></article>
++          <article class="metric"><strong>1 018</strong><span>contenus conformes</span><small>0 LFS manquant, 0 modifié</small></article>
+           <article class="metric"><strong>211</strong><span>réussites techniques</span><small>campagne réelle consolidée</small></article>
+           <article class="metric"><strong>440</strong><span>blocages documentés</span><small>données ou critères absents</small></article>
+           <article class="metric"><strong>21</strong><span>tests de robustesse</span><small>matière, Système solaire et vivant</small></article>
+         </div>
+-        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
++        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. Les 1 018 contenus sont conformes et Git LFS est entièrement hydraté dans la CI. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
+       </div>
+     </section>
+ 
+@@ -113,7 +113,7 @@ python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code>
+     <section class="section">
+       <div class="wrap two-column align-start">
+         <div><p class="eyebrow">Lecture honnête</p><h2>Un <code>xfail</code> attendu n’est pas un échec réel</h2></div>
+-        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité regroupe TR-021 vers TR-028 et TR-024 vers TR-023 dans un <code>xfail</code> explicite. La suite termine avec 152 réussites et 0 échec. Le marqueur restera attendu tant qu’une référence datable ne sera pas attachée à ces relations.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
++        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité regroupe TR-021 vers TR-028 et TR-024 vers TR-023 dans un <code>xfail</code> explicite. La suite termine avec 153 réussites et 0 échec. Le marqueur restera attendu tant qu’une référence datable ne sera pas attachée à ces relations.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
+       </div>
+     </section>
+   </main>

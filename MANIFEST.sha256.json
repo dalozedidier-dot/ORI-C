@@ -6071,8 +6071,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 16966,
-      "sha256": "2f1bb3ee6ebf29412299e6e17347124b3e6ceb7948ed898d0aa9bcf964ac25ef",
+      "size": 17102,
+      "sha256": "28520b7d439a2dfde4d02c60ca041b3d9608bc6d8821ffe7259db63cc5938603",
       "storage": "inline"
     },
     {
@@ -6083,14 +6083,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 48707,
-      "sha256": "607e3138c71a65281f1dee7c74778021e4d6385a576d963eabca47dd8bba1fdf",
+      "size": 49396,
+      "sha256": "4457f3445750f92ee20ef7b5f97e15e89b449fa3d3a5fb43a94b74f9fe9cc391",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12012,
-      "sha256": "bf5b3b1bf5d776e3b1e5c227892514507fd4d73ca0592dd7567924c870c29cd5",
+      "size": 12188,
+      "sha256": "75c6fa2e4906b3b0fe22753f27597372c3ce8b4bdf38572409f798930f3976be",
       "storage": "inline"
     },
     {
