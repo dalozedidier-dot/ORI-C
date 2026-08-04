@@ -1,0 +1,494 @@
+{
+  "version": "0.9.3-research",
+  "executions": {
+    "matiere": {
+      "returncode": 0,
+      "stdout_tail": "{\"baseline\": 46, \"R1\": 53, \"R2\": 53, \"minimal_seed_sets\": [{\"seeds\": [\"N029\"], \"seed_count\": 1, \"reached\": 7}, {\"seeds\": [\"N030\"], \"seed_count\": 1, \"reached\": 7}, {\"seeds\": [\"N053\"], \"seed_count\": 1, \"reached\": 7}, {\"seeds\": [\"N054\"], \"seed_count\": 1, \"reached\": 7}]}\n",
+      "stderr_tail": ""
+    },
+    "transfert_climatique": {
+      "returncode": 0,
+      "stdout_tail": "57, \"eccentricity_correlation_nbody_vs_la2004\": 0.9852844529755538, \"insolation_rmse_hybrid_vs_la2004_wm2\": 1.6063599113322486, \"insolation_correlation_hybrid_vs_la2004\": 0.9977586555246217, \"split\": {\"train_age_kyr\": [800.0, 2600.0], \"test_age_kyr\": [0.0, 799.0]}}, \"best_model\": {\"model\": \"etat_plus_nbody_hybride\", \"feature_count\": 8, \"train_rmse\": 0.05409891340318961, \"test_rmse\": 0.09712469900079589, \"test_correlation\": 0.9768612138951019}, \"nbody_hybrid_improvement_vs_state_only_percent\": 2.226078436804781, \"la2004_improvement_vs_state_only_percent\": 2.170418908981697, \"nbody_hybrid_gap_vs_la2004_percent\": -0.05689437407618002, \"rolling_origin_validation\": {\"folds\": 3, \"nbody_gain_vs_state_percent\": [5.088094962393634, 0.8950707608934577, 3.3672050167045313], \"la2004_gain_vs_state_percent\": [5.058545619241089, 0.8332561572447201, 3.313836314475332], \"nbody_positive_folds\": 3, \"mean_nbody_gain_percent\": 3.1167902466638746}, \"forecast_type\": \"one-step prediction with observed lagged climate state\", \"independence_limit\": \"LR04 chronology is orbitally tuned and is not an independent validation of astronomical forcing\", \"status\": \"benchmark intermédiaire hors échantillon, non GCM\"}\n",
+      "stderr_tail": ""
+    },
+    "hysteresis": {
+      "returncode": 0,
+      "stdout_tail": "gap\":0.000000891,\"irreversible_after_full_return\":false,\"basin_count\":2,\"basin_centers\":[0.0836248614,0.9421982092]},{\"obliquity_deg\":40.0,\"mode\":\"classic\",\"max_ice_gap\":9.801187639e-17,\"loop_area\":2.3810116e-18,\"hysteresis_material\":false,\"forward_transition_eccentricity\":null,\"reverse_transition_eccentricity\":null,\"transition_separation\":null,\"same_low_endpoint_gap\":9.801187639e-17,\"irreversible_after_full_return\":false,\"basin_count\":1,\"basin_centers\":[0.0047041678]},{\"obliquity_deg\":40.0,\"mode\":\"M2\",\"max_ice_gap\":0.0021504317,\"loop_area\":0.0000229568,\"hysteresis_material\":false,\"forward_transition_eccentricity\":null,\"reverse_transition_eccentricity\":null,\"transition_separation\":null,\"same_low_endpoint_gap\":0.0021504317,\"irreversible_after_full_return\":false,\"basin_count\":2,\"basin_centers\":[0.0108706352,0.8798208545]},{\"obliquity_deg\":40.0,\"mode\":\"M2P_corrige\",\"max_ice_gap\":0.0000447471,\"loop_area\":0.0000002239,\"hysteresis_material\":false,\"forward_transition_eccentricity\":null,\"reverse_transition_eccentricity\":null,\"transition_separation\":null,\"same_low_endpoint_gap\":0.0000447471,\"irreversible_after_full_return\":false,\"basin_count\":2,\"basin_centers\":[0.0422945708,0.8614296585]}]\n",
+      "stderr_tail": ""
+    },
+    "antibiotique_externe": {
+      "returncode": 0,
+      "stdout_tail": "{\n  \"dataset\": \"Card et al. 2019, Ara+5 LTEE, tetracycline\",\n  \"doi_dataset\": \"10.5061/dryad.g41hg96\",\n  \"rows\": 130,\n  \"train_rows\": 90,\n  \"test_rows\": 40,\n  \"train_generations_k\": [\n    0,\n    0.5,\n    1,\n    1.5,\n    2\n  ],\n  \"test_generations_k\": [\n    5,\n    10\n  ],\n  \"best_model\": \"moyenne_apprentissage\",\n  \"best_rmse_test\": 0.9196080754026027,\n  \"state_only_rmse\": 0.9292090756370613,\n  \"history_plus_state_rmse\": 2.2244368924162647,\n  \"history_gain_vs_state_percent\": -139.39035366084877,\n  \"history_beats_state\": false,\n  \"history_minus_state_rmse\": 1.2952278167792035,\n  \"group_bootstrap\": {\n    \"resamples\": 10000,\n    \"unit\": \"strain block\",\n    \"groups\": [\n      \"10A\",\n      \"10B\",\n      \"5A\",\n      \"5B\"\n    ],\n    \"difference_history_minus_state_rmse_ci95\": [\n      0.5177068716933617,\n      1.791826333894151\n    ],\n    \"probability_history_better\": 0.0,\n    \"history_worse_in_all_test_groups\": true\n  },\n  \"status\": \"retrospectif_externe_non_confirmatoire\",\n  \"interpretation\": \"jeu indépendant des données Windels; test temporel strict mais conception postérieure à l'accès aux données\"\n}\n",
+      "stderr_tail": ""
+    },
+    "prebiotique": {
+      "returncode": 0,
+      "stdout_tail": "      2,\n        3,\n        4,\n        5,\n        6,\n        7,\n        8\n      ],\n      \"branch_rounds\": {\n        \"52-2\": [\n          1,\n          2,\n          3,\n          4,\n          5,\n          6,\n          7,\n          8\n        ],\n        \"71-89\": [\n          1,\n          2,\n          3,\n          4,\n          5,\n          6,\n          7,\n          8\n        ]\n      },\n      \"tracked_sequence_series\": 10,\n      \"grain\": \"branche-cycle-sequence\",\n      \"data_type\": \"population_frequency_trajectory\"\n    }\n  ],\n  \"rejected_population_trajectories\": [],\n  \"population_trajectory_available\": true,\n  \"criterion_testable\": false,\n  \"status\": \"trajectoires_population_reelles_sans_lignees\",\n  \"conclusion\": \"Deux trajectoires expérimentales de populations d’ARN catalytique sur huit cycles sont intégrées. Elles mesurent une dynamique de composition réelle, mais ne relient pas des compartiments parents à leurs descendants. La continuité héréditaire prébiotique reste donc non testable avec ces données.\",\n  \"scientific_boundary\": \"Une trajectoire de fréquences de séquences n’est pas une lignée de compartiments, une preuve de transmission fonctionnelle ou une démonstration d’hérédité.\"\n}\n",
+      "stderr_tail": ""
+    }
+  },
+  "verdicts": {
+    "matiere": {
+      "declared_roots": [
+        "N036"
+      ],
+      "node_count": 53,
+      "edge_count": 53,
+      "baseline_reachable": 46,
+      "baseline_unreachable": [
+        "N029",
+        "N030",
+        "N031",
+        "N032",
+        "N035",
+        "N053",
+        "N054"
+      ],
+      "blocked_labels": {
+        "N029": "Inventaire accessible",
+        "N030": "Interfaces eau roche gaz",
+        "N031": "Systeme serpentinise",
+        "N032": "Chimie organique organisee",
+        "N035": "Matiere disponible pour organisation active",
+        "N053": "Systeme hydrothermal",
+        "N054": "Phosphates solubles carbonates et sels"
+      },
+      "blocking_dependencies": {
+        "N029": [
+          {
+            "edge_id": "H030",
+            "processus": "Formation de l inventaire accessible",
+            "entrees_manquantes": [
+              "N054"
+            ],
+            "source_id": "S10",
+            "statut_preuve": "definition_operationnelle"
+          }
+        ],
+        "N030": [
+          {
+            "edge_id": "H031",
+            "processus": "Circulation entre reservoirs et interfaces",
+            "entrees_manquantes": [
+              "N029"
+            ],
+            "source_id": "S14",
+            "statut_preuve": "observe_modele"
+          }
+        ],
+        "N031": [
+          {
+            "edge_id": "H032",
+            "processus": "Serpentinisation",
+            "entrees_manquantes": [
+              "N030"
+            ],
+            "source_id": "S14",
+            "statut_preuve": "observe"
+          }
+        ],
+        "N032": [
+          {
+            "edge_id": "H033",
+            "processus": "Organisation chimique aux interfaces",
+            "entrees_manquantes": [
+              "N029",
+              "N030",
+              "N031"
+            ],
+            "source_id": "S14",
+            "statut_preuve": "hypothese_testable"
+          }
+        ],
+        "N035": [
+          {
+            "edge_id": "H033",
+            "processus": "Organisation chimique aux interfaces",
+            "entrees_manquantes": [
+              "N029",
+              "N030",
+              "N031"
+            ],
+            "source_id": "S14",
+            "statut_preuve": "hypothese_testable"
+          }
+        ],
+        "N053": [
+          {
+            "edge_id": "H052",
+            "processus": "Circulation hydrothermale entretenue",
+            "entrees_manquantes": [
+              "N030"
+            ],
+            "source_id": "S14",
+            "statut_preuve": "observe"
+          }
+        ],
+        "N054": [
+          {
+            "edge_id": "H053",
+            "processus": "Alteration aqueuse produisant des especes solubles",
+            "entrees_manquantes": [
+              "N053"
+            ],
+            "source_id": "S26",
+            "statut_preuve": "observe"
+          }
+        ]
+      },
+      "strongly_connected_components": [
+        [
+          "N029",
+          "N030",
+          "N053",
+          "N054"
+        ],
+        [
+          "N031"
+        ],
+        [
+          "N032"
+        ],
+        [
+          "N035"
+        ]
+      ],
+      "minimal_external_seed_sets": [
+        {
+          "seeds": [
+            "N029"
+          ],
+          "seed_count": 1,
+          "reached": 7
+        },
+        {
+          "seeds": [
+            "N030"
+          ],
+          "seed_count": 1,
+          "reached": 7
+        },
+        {
+          "seeds": [
+            "N053"
+          ],
+          "seed_count": 1,
+          "reached": 7
+        },
+        {
+          "seeds": [
+            "N054"
+          ],
+          "seed_count": 1,
+          "reached": 7
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "R0",
+          "type": "canonique",
+          "description": "Hypergraphe inchangé",
+          "reachable": 46,
+          "unreachable": [
+            "N029",
+            "N030",
+            "N031",
+            "N032",
+            "N035",
+            "N053",
+            "N054"
+          ],
+          "strictly_closed": false,
+          "scientific_status": "résultat courant"
+        },
+        {
+          "scenario_id": "R1",
+          "type": "recodage d'une hyperarête",
+          "description": "H052 devient N051|N028 -> N053|N030, sans présupposer l'interface qu'elle entretient.",
+          "reachable": 53,
+          "unreachable": [],
+          "strictly_closed": true,
+          "scientific_status": "réparation structurelle candidate, non preuve historique"
+        },
+        {
+          "scenario_id": "R2",
+          "type": "hyperarête alternative",
+          "description": "Ajout séparé de HC01 : N051|N028 -> N053|N030, source S14 à réévaluer.",
+          "reachable": 53,
+          "unreachable": [],
+          "strictly_closed": true,
+          "scientific_status": "hypothèse testable, non canonique"
+        }
+      ],
+      "interpretation": {
+        "structural": "Le verrou est concentré dans une boucle N029-N030-N053-N054. N031, N032 et N035 sont bloqués en aval.",
+        "candidate_repair": "Un seul recodage de H052 suffit mathématiquement à rendre les 53 nœuds accessibles.",
+        "limit": "La fermeture mathématique n'établit ni l'occurrence naturelle de HC01, ni une séquence historique unique."
+      }
+    },
+    "transfert_climatique": {
+      "orbital_transfer": {
+        "rows": 2601,
+        "age_max_kyr": 2600.0,
+        "eccentricity_rmse_nbody_vs_la2004": 0.0022973034956975057,
+        "eccentricity_correlation_nbody_vs_la2004": 0.9852844529755538,
+        "insolation_rmse_hybrid_vs_la2004_wm2": 1.6063599113322486,
+        "insolation_correlation_hybrid_vs_la2004": 0.9977586555246217,
+        "split": {
+          "train_age_kyr": [
+            800.0,
+            2600.0
+          ],
+          "test_age_kyr": [
+            0.0,
+            799.0
+          ]
+        }
+      },
+      "best_model": {
+        "model": "etat_plus_nbody_hybride",
+        "feature_count": 8,
+        "train_rmse": 0.05409891340318961,
+        "test_rmse": 0.09712469900079589,
+        "test_correlation": 0.9768612138951019
+      },
+      "nbody_hybrid_improvement_vs_state_only_percent": 2.226078436804781,
+      "la2004_improvement_vs_state_only_percent": 2.170418908981697,
+      "nbody_hybrid_gap_vs_la2004_percent": -0.05689437407618002,
+      "rolling_origin_validation": {
+        "folds": 3,
+        "nbody_gain_vs_state_percent": [
+          5.088094962393634,
+          0.8950707608934577,
+          3.3672050167045313
+        ],
+        "la2004_gain_vs_state_percent": [
+          5.058545619241089,
+          0.8332561572447201,
+          3.313836314475332
+        ],
+        "nbody_positive_folds": 3,
+        "mean_nbody_gain_percent": 3.1167902466638746
+      },
+      "forecast_type": "one-step prediction with observed lagged climate state",
+      "independence_limit": "LR04 chronology is orbitally tuned and is not an independent validation of astronomical forcing",
+      "status": "benchmark intermédiaire hors échantillon, non GCM"
+    },
+    "hysteresis": {
+      "status": "qualification exploratoire, non confirmatoire",
+      "calibration_source": "WP-C2",
+      "sweep_duration_per_step_myr": 60.0,
+      "basin_hold_myr": 400.0,
+      "material_gap_threshold": 0.05,
+      "results": [
+        {
+          "obliquity_deg": 30.0,
+          "mode": "classic",
+          "max_ice_gap": 0.8534610005308542,
+          "loop_area": 0.017059461635546645,
+          "hysteresis_material": true,
+          "forward_transition_eccentricity": 0.06463692144338794,
+          "reverse_transition_eccentricity": 0.04534366712330007,
+          "transition_separation": 0.01929325432008787,
+          "same_low_endpoint_gap": 0.0,
+          "irreversible_after_full_return": false,
+          "basin_count": 1,
+          "basin_centers": [
+            0.007687937142143742
+          ]
+        },
+        {
+          "obliquity_deg": 30.0,
+          "mode": "M2",
+          "max_ice_gap": 0.9267992476971011,
+          "loop_area": 0.027456795594456684,
+          "hysteresis_material": true,
+          "forward_transition_eccentricity": 0.11446095865665183,
+          "reverse_transition_eccentricity": 0.08511425576425734,
+          "transition_separation": 0.029346702892394494,
+          "same_low_endpoint_gap": 1.0348623038503035e-06,
+          "irreversible_after_full_return": false,
+          "basin_count": 2,
+          "basin_centers": [
+            0.022015398318880493,
+            0.946124532218876
+          ]
+        },
+        {
+          "obliquity_deg": 30.0,
+          "mode": "M2P_corrige",
+          "max_ice_gap": 0.8585733477938278,
+          "loop_area": 0.016788543184645566,
+          "hysteresis_material": true,
+          "forward_transition_eccentricity": 0.11432260808735224,
+          "reverse_transition_eccentricity": 0.09528986285690338,
+          "transition_separation": 0.019032745230448858,
+          "same_low_endpoint_gap": 8.910068418632733e-07,
+          "irreversible_after_full_return": false,
+          "basin_count": 2,
+          "basin_centers": [
+            0.08362486136607647,
+            0.9421982091599082
+          ]
+        },
+        {
+          "obliquity_deg": 40.0,
+          "mode": "classic",
+          "max_ice_gap": 9.80118763926896e-17,
+          "loop_area": 2.381011599965308e-18,
+          "hysteresis_material": false,
+          "forward_transition_eccentricity": null,
+          "reverse_transition_eccentricity": null,
+          "transition_separation": null,
+          "same_low_endpoint_gap": 9.80118763926896e-17,
+          "irreversible_after_full_return": false,
+          "basin_count": 1,
+          "basin_centers": [
+            0.004704167759529566
+          ]
+        },
+        {
+          "obliquity_deg": 40.0,
+          "mode": "M2",
+          "max_ice_gap": 0.0021504317201443066,
+          "loop_area": 2.2956845218378253e-05,
+          "hysteresis_material": false,
+          "forward_transition_eccentricity": null,
+          "reverse_transition_eccentricity": null,
+          "transition_separation": null,
+          "same_low_endpoint_gap": 0.0021504317201443066,
+          "irreversible_after_full_return": false,
+          "basin_count": 2,
+          "basin_centers": [
+            0.010870635216183987,
+            0.8798208544649626
+          ]
+        },
+        {
+          "obliquity_deg": 40.0,
+          "mode": "M2P_corrige",
+          "max_ice_gap": 4.474707378313014e-05,
+          "loop_area": 2.238613138576508e-07,
+          "hysteresis_material": false,
+          "forward_transition_eccentricity": null,
+          "reverse_transition_eccentricity": null,
+          "transition_separation": null,
+          "same_low_endpoint_gap": 4.474707378313014e-05,
+          "irreversible_after_full_return": false,
+          "basin_count": 2,
+          "basin_centers": [
+            0.04229457081379209,
+            0.8614296585322296
+          ]
+        }
+      ],
+      "interpretation": {
+        "hysteresis": "Un écart avant-retour supérieur au seuil indique une boucle d'hystérèse dans l'EMIC réduit.",
+        "same_forcing_different_final_state": "Deux bassins au même forçage établissent plusieurs états finaux possibles dans le modèle.",
+        "irreversibility": "Aucun mode ne conserve un écart matériel après le retour complet au faible forçage. Aucun seuil irréversible de bout de cycle n'est donc détecté dans cette campagne.",
+        "memory": "Une boucle d'hystérèse ou plusieurs bassins établissent une dépendance au chemin dans le modèle, pas une mémoire climatique réelle.",
+        "prospective_limit": "Les zones testées ont été sélectionnées après cartographie. Une validation devra utiliser de nouveaux points gelés à l'avance."
+      }
+    },
+    "antibiotique_externe": {
+      "dataset": "Card et al. 2019, Ara+5 LTEE, tetracycline",
+      "doi_dataset": "10.5061/dryad.g41hg96",
+      "rows": 130,
+      "train_rows": 90,
+      "test_rows": 40,
+      "train_generations_k": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2
+      ],
+      "test_generations_k": [
+        5,
+        10
+      ],
+      "best_model": "moyenne_apprentissage",
+      "best_rmse_test": 0.9196080754026027,
+      "state_only_rmse": 0.9292090756370613,
+      "history_plus_state_rmse": 2.2244368924162647,
+      "history_gain_vs_state_percent": -139.39035366084877,
+      "history_beats_state": false,
+      "history_minus_state_rmse": 1.2952278167792035,
+      "group_bootstrap": {
+        "resamples": 10000,
+        "unit": "strain block",
+        "groups": [
+          "10A",
+          "10B",
+          "5A",
+          "5B"
+        ],
+        "difference_history_minus_state_rmse_ci95": [
+          0.5177068716933617,
+          1.791826333894151
+        ],
+        "probability_history_better": 0.0,
+        "history_worse_in_all_test_groups": true
+      },
+      "status": "retrospectif_externe_non_confirmatoire",
+      "interpretation": "jeu indépendant des données Windels; test temporel strict mais conception postérieure à l'accès aux données"
+    },
+    "prebiotique": {
+      "real_lineage_files": 0,
+      "accepted_lineages": [],
+      "rejected_lineages": [],
+      "real_population_trajectory_files": 1,
+      "accepted_population_trajectories": [
+        {
+          "file": "papastavrou_rna_huit_cycles.csv",
+          "rows": 80,
+          "branches": [
+            "52-2",
+            "71-89"
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "branch_rounds": {
+            "52-2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "71-89": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "tracked_sequence_series": 10,
+          "grain": "branche-cycle-sequence",
+          "data_type": "population_frequency_trajectory"
+        }
+      ],
+      "rejected_population_trajectories": [],
+      "population_trajectory_available": true,
+      "criterion_testable": false,
+      "status": "trajectoires_population_reelles_sans_lignees",
+      "conclusion": "Deux trajectoires expérimentales de populations d’ARN catalytique sur huit cycles sont intégrées. Elles mesurent une dynamique de composition réelle, mais ne relient pas des compartiments parents à leurs descendants. La continuité héréditaire prébiotique reste donc non testable avec ces données.",
+      "scientific_boundary": "Une trajectoire de fréquences de séquences n’est pas une lignée de compartiments, une preuve de transmission fonctionnelle ou une démonstration d’hérédité."
+    }
+  }
+}

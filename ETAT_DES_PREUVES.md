@@ -259,7 +259,7 @@ la première version, le couplage carbone dégrade la prédiction de 0,232.
 
 Le test exoplanétaire réussit son volet structurel et son ablation, mais échoue
 au test de persistance : l'écart entre les deux histoires décroît avec un temps
-caractéristique de 7,0 Ma et s'annule sur un palier long. Ce qui était détecté
+caractéristique de 7,02 Ma et s'annule sur un palier long. Ce qui était détecté
 est un retard de relaxation, non une inscription durable.
 
 Deux résultats vont dans l'autre sens et sont conservés comme tels. L'échec
@@ -339,7 +339,7 @@ donnée absente et ne crée aucun nouveau verdict confirmatoire.
 | Exoplanète | palier final porté à 600 Ma | fractions retenues nulles ou inférieures à 1,5 × 10⁻¹³ | **Relaxation vers un attracteur unique** |
 | Antibiotiques | validation groupée, ablation, dernière transition, doses et permutation | histoire 0,6240 contre 0,6335, mais gain apparié non significatif, p = 0,2266 ; 0,6221 sans pente, p = 0,0078 ; dernière transition 0,8687 contre 0,7767 pour l'état seul ; permutation p = 0,0649 | **Exploratoire non robuste** |
 | ARN catalytique | dynamique de composition sur huit cycles | diversité croissante pour 71-89, p exact 0,0117 ; aucune tendance de concentration maximale | **Dynamique de composition, pas hérédité** |
-| Prébiotique | validateur appliqué au gabarit livré | schéma valide et marqueur synthétique détecté ; aucune lignée réelle | **Infrastructure testée, programme non exécuté** |
+| Prébiotique | audit du gabarit et des données Papastavrou | deux trajectoires réelles de populations d’ARN sur huit cycles ; aucune lignée parent-descendant de compartiments | **Trajectoires réelles, continuité héréditaire non testable** |
 
 Le rapport narratif et les quatre sorties machine sont dans
 `plan_directeur/campagne_maximale_trois_branches/resultats/`. La suite de
@@ -396,13 +396,11 @@ supériorité explicative ou son pouvoir prédictif. »
 
 | Élément | Statut | Où |
 |---|---|---|
-| Programme prébiotique dirigé | **Non testé** | `03_branche_vivant/programme_prebiotique/` |
-| Schéma de lignées et validateur | Exécutable, sans donnée | `…/valider_lignees.py` |
+| Programme prébiotique dirigé | **Critère héréditaire non testé** | `03_branche_vivant/programme_prebiotique/` |
+| Trajectoires de populations ARN | **Données expérimentales réelles** | deux branches, huit cycles, dix séries de séquences |
+| Schéma de lignées et validateur | Exécutable, sans table parent-descendant | `…/valider_lignees.py` |
 
-Aucune donnée n'a été collectée. Le programme dit ce qu'il faudrait mesurer
-et à quelles conditions un résultat compterait ; il ne rapporte rien. Le
-gabarit livré porte le marqueur `GABARIT_SYNTHETIQUE` et le validateur le
-signale à chaque exécution.
+Les données Papastavrou décrivent une dynamique de fréquences de séquences. Elles ne relient pas des compartiments parents à leurs descendants et ne mesurent pas la transmission d’une différence fonctionnelle. Le gabarit de lignées porte toujours le marqueur `GABARIT_SYNTHETIQUE`, que le validateur signale à chaque exécution. Le critère minimal du programme reste donc non testable.
 
 ## Lecture d'ensemble
 
@@ -428,3 +426,16 @@ n'est pas en cause : elle est établie, matériellement enregistrée dans
 l'architecture planétaire, et documentée par des disciplines constituées. Ce
 qui reste à démontrer n'est pas son existence, mais l'apport propre du cadre
 qui l'organise.
+
+
+## Campagne ciblée v0.9.3
+
+| Travail | Résultat | Statut |
+|---|---|---|
+| Fermeture matière | noyau cyclique localisé ; une réparation candidate atteint 53/53 | diagnostic établi ; réparation **non canonique et non sourcée au niveau exact de l’hyperarête** |
+| Transfert orbital-climat | gain N-corps positif dans 3 fenêtres sur 3, 3,12 % en moyenne | prédiction à un pas avec état observé, **pas GCM et validation astronomique non indépendante de LR04** |
+| Hystérèse et bassins | deux bassins dans M2 et M2P ; boucles à 30 degrés ; aucun écart durable après retour complet | instrument qualifié, irréversibilité **non détectée**, apport ORI-C **non établi** |
+| Antibiotique externe Card 2019 | histoire moins bonne dans les 4 groupes de test ; écart RMSE 1,295, IC 95 % de 0,518 à 1,792 | externe rétrospectif, **non confirmatoire** |
+| Prébiotique | deux trajectoires réelles de populations d’ARN sur huit cycles ; zéro table parent-descendant de compartiments | dynamique expérimentale disponible, continuité héréditaire **non testable** |
+
+La fermeture candidate de la matière n'est pas injectée dans l'hypergraphe canonique. La source S14 soutient les interactions eau-roche et la circulation hydrothermale, mais pas la direction causale exacte de la réparation R1. Le benchmark climatique ne contient pas encore une Terre-Lune résolue, une rotation-obliquité couplée, des marées ou un GCM. Il prédit un pas à partir d'un état climatique observé, et LR04 est accordée orbitalement. La série Card 2019 est indépendante des données Windels, mais le protocole ayant été construit après accès aux données, elle ne compte pas comme réplication prospective. Les données Papastavrou fournissent des trajectoires de populations, pas des lignées de compartiments.

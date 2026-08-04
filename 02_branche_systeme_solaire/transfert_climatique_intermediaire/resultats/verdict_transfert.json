@@ -1,0 +1,48 @@
+{
+  "orbital_transfer": {
+    "rows": 2601,
+    "age_max_kyr": 2600.0,
+    "eccentricity_rmse_nbody_vs_la2004": 0.0022973034956975057,
+    "eccentricity_correlation_nbody_vs_la2004": 0.9852844529755538,
+    "insolation_rmse_hybrid_vs_la2004_wm2": 1.6063599113322486,
+    "insolation_correlation_hybrid_vs_la2004": 0.9977586555246217,
+    "split": {
+      "train_age_kyr": [
+        800.0,
+        2600.0
+      ],
+      "test_age_kyr": [
+        0.0,
+        799.0
+      ]
+    }
+  },
+  "best_model": {
+    "model": "etat_plus_nbody_hybride",
+    "feature_count": 8,
+    "train_rmse": 0.05409891340318961,
+    "test_rmse": 0.09712469900079589,
+    "test_correlation": 0.9768612138951019
+  },
+  "nbody_hybrid_improvement_vs_state_only_percent": 2.226078436804781,
+  "la2004_improvement_vs_state_only_percent": 2.170418908981697,
+  "nbody_hybrid_gap_vs_la2004_percent": -0.05689437407618002,
+  "rolling_origin_validation": {
+    "folds": 3,
+    "nbody_gain_vs_state_percent": [
+      5.088094962393634,
+      0.8950707608934577,
+      3.3672050167045313
+    ],
+    "la2004_gain_vs_state_percent": [
+      5.058545619241089,
+      0.8332561572447201,
+      3.313836314475332
+    ],
+    "nbody_positive_folds": 3,
+    "mean_nbody_gain_percent": 3.1167902466638746
+  },
+  "forecast_type": "one-step prediction with observed lagged climate state",
+  "independence_limit": "LR04 chronology is orbitally tuned and is not an independent validation of astronomical forcing",
+  "status": "benchmark intermédiaire hors échantillon, non GCM"
+}

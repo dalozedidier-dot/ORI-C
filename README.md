@@ -1,6 +1,6 @@
 # ORI-C — dossier unique
 
-Didier Daloze | Version 0.9.2-research | 4 août 2026
+Didier Daloze | Version 0.9.3-research | 4 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -57,6 +57,7 @@ séparés.
 6. `AUTORITE_DES_DOCUMENTS.md` — le fichier qui tranche lorsque deux documents se contredisent.
 7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
 8. `plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` — la campagne de robustesse maximale disponible avec les données du dépôt.
+9. `plan_directeur/campagne_priorites_v093/resultats/RAPPORT_PRIORITES_V093.md` — les travaux ciblés sur les verrous matière, climat, mémoire et vivant.
 
 ## Ce que le dossier établit, en une phrase par branche
 
@@ -83,6 +84,15 @@ l'ablation de la pente et s'inverse sur la dernière transition. Les données AR
 montrent une dynamique de composition, pas une hérédité. Universalité,
 supériorité explicative et pouvoir prédictif restent non établis.
 
+
+## Nouveaux travaux v0.9.3
+
+- **Matière.** Le noyau du verrou 46/53 est isolé sur `N029`, `N030`, `N053` et `N054`. Une réparation candidate ferme 53/53, mais reste hors graphe canonique car la littérature disponible ne démontre pas l'hyperarête exacte proposée.
+- **Transfert climatique.** Le signal d'excentricité N-corps est injecté dans un modèle intermédiaire. Il améliore la RMSE dans trois fenêtres temporelles sur trois, de 3,12 % en moyenne, mais il s'agit d'une prédiction à un pas utilisant l'état climatique observé. Ce test ne remplace ni Terre-Lune complet, ni marées, ni GCM.
+- **Mémoire.** M2 et son témoin apparié M2P possèdent chacun deux bassins dans les régimes testés. Des boucles d'hystérèse apparaissent à 30 degrés, mais aucun état matériellement différent ne subsiste après le retour complet au faible forçage.
+- **Vivant.** Le jeu Card 2019 fournit une réplication externe temporelle. Le modèle état + histoire est moins bon dans chacun des quatre groupes de test et le bootstrap groupé conserve un écart défavorable. Le protocole prospectif suivant est gelé avant acquisition du prochain jeu.
+- **Prébiotique.** Deux trajectoires expérimentales de populations d'ARN catalytique sur huit cycles sont intégrées. Elles ne contiennent aucune filiation parent-descendant de compartiments, donc la continuité héréditaire reste non testable.
+
 ## Portée du résultat négatif de la branche 2
 
 Il ferme une implémentation particulière de la mémoire climatique. Il ne remet
@@ -104,6 +114,7 @@ git lfs pull
 python verifier_dossier.py
 python scripts/valider_tout.py --strict-lfs
 python plan_directeur/campagne_maximale_trois_branches/run_all.py
+python plan_directeur/campagne_priorites_v093/run_all.py
 ```
 
 Dans un ZIP source automatique de GitHub, les objets volumineux peuvent rester
@@ -147,8 +158,7 @@ python construire_dossier.py --sources <rep> --verifier-reconstruction
 
 - `DATA_AVAILABILITY.md` distingue le dépôt Git, le ZIP source GitHub et
   l'archive canonique hydratée.
-- `LICENSE` fixe un statut conservatoire tous droits réservés tant qu'une
-  politique ouverte n'a pas été choisie explicitement par l'auteur.
+- `LICENSE` fixe définitivement le régime général « tous droits réservés » pour cette version.
 - `CITATION.cff` contient le dépôt réel et la version courante.
 - `documentation/ALIASES_DOCUMENTAIRES.md` identifie le dossier scientifique
   canonique et ses copies de livraison.

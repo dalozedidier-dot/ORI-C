@@ -69,9 +69,9 @@
       ],
       "main_results": {
         "antibiotic_prediction_rows": 358,
-        "group_cv_mae_equal_complexity": 0.6334607097403688,
-        "group_cv_mae_history": 0.6240441170130248,
-        "group_cv_mae_history_without_slope": 0.6220976658252412,
+        "group_cv_mae_equal_complexity": 0.6334607097403668,
+        "group_cv_mae_history": 0.6240441170130244,
+        "group_cv_mae_history_without_slope": 0.622097665825241,
         "paired_history_vs_equal_complexity_p": 0.2265625,
         "slope_ablation_p": 0.0078125,
         "ordered_history_null_p": 0.06493506493506493,

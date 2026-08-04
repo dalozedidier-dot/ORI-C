@@ -421,8 +421,12 @@ results_rows=[
 ('Climat','M2 contre M1P','0 critère sur 5, gain RMSE -31,6 %','Réfuté'),
 ('Exoplanètes','Dépendance au chemin','4 variables sur 4, ablation 4 sur 4','Validation structurelle'),
 ('Exoplanètes','Persistance','0 variable matérielle après palier long','Non réussi'),
-('Vivant','Programme prébiotique','aucune donnée collectée','Non testé'),
-('Généalogie','Clôture du graphe','39 transitions, 77 relations parent-produit, aucune anomalie formelle','Cohérence structurelle vérifiée')]
+('Matière','Fermeture stricte v0.9.3','46/53 nœuds ; noyau N029-N030-N053-N054 ; réparation candidate 53/53 non canonique','Verrou localisé, source causale insuffisante'),
+('Climat','Transfert orbital intermédiaire','gain positif dans 3 fenêtres sur 3, 3,12 % en moyenne','Hors échantillon à un pas, non GCM'),
+('Mémoire','Bassins et hystérèse','deux bassins pour M2 et M2P ; aucun écart matériel après retour complet','Exploratoire, non confirmatoire'),
+('Vivant','Benchmark externe Card 2019','histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable','Externe rétrospectif, non confirmatoire'),
+('Vivant','Programme prébiotique','deux trajectoires ARN sur huit cycles, aucune lignée parent-descendant','Critère héréditaire non testé'),
+('Généalogie','Clôture du graphe linéaire','39 transitions, 77 relations parent-produit, aucune anomalie formelle','Cohérence structurelle vérifiée, distincte de l’hypergraphe strict')]
 pd.DataFrame(results_rows,columns=['domaine','test_ou_objet','resultat','statut']).to_csv(ANNEX/'resultats_scientifiques_consolides.csv',index=False,encoding='utf-8-sig')
 
 # ---------- DOCX Helpers ----------
@@ -796,9 +800,11 @@ add_table(['Objet','Statut','Portée'],[
 ('Cellule eucaryote comme architecture','Preuve de concept','Application descriptive des dimensions'),
 ('Endosymbiose mitochondriale','Preuve de concept','Faits biologiques fortement appuyés, représentation ORI-C non testée'),
 ('Résistance aux antibiotiques','Non testé dans la branche canonique','Protocole expérimental proposé'),
-('Programme prébiotique','Non testé','Aucune donnée collectée'),
+('Programme prébiotique','Critère héréditaire non testé','Trajectoires ARN réelles, aucune lignée de compartiments'),
 ('Universalité et pouvoir prédictif','Non testé','Aucune validation transversale')],font_size=8)
 add_figure(branch_figs['3 vivant'],'Figure 7. Branche du vivant de l’arbre global.',width_cm=16.4)
+
+add_para('Les données Papastavrou ajoutent deux trajectoires expérimentales de populations d’ARN catalytique suivies pendant huit cycles. Elles mesurent une dynamique de composition, sans relier des compartiments parents à leurs descendants. Le critère de continuité héréditaire reste non testé.')
 
 add_para('6.2 Le verrou prébiotique',style='Heading 2')
 add_para('Le programme ne situe pas le verrou dans une brique isolée comme l’ARN, la membrane ou une réaction métabolique. Il le situe dans le couplage entre compartimentation, copie par matrice, variation héritable, apport énergétique et persistance sur plusieurs cycles. Une molécule produite n’est pas une hérédité. Une fonction transitoire sans information transmise reste un état. Une information transmise sans effet fonctionnel reste une trace.')
@@ -874,6 +880,15 @@ add_table(['Élément','Origine scientifique','Apport ORI-C actuel'],[
 ('Clôture généalogique','Calcul produit dans le dossier','Validation formelle de la généalogie encodée')],font_size=8)
 add_para('ORI-C n’a pas encore découvert une loi physique ou biologique universelle. Sa découverte actuelle est une architecture de représentation et de test. Elle devient scientifiquement forte lorsqu’elle produit un résultat discriminant que les descriptions classiques de complexité égale ne produisent pas.')
 
+add_para('8.4 Campagne ciblée v0.9.3',style='Heading 2')
+add_table(['Priorité exécutée','Résultat','Portée'],[
+('Verrou matière','Le noyau cyclique est localisé sur N029, N030, N053 et N054. Un recodage candidat ferme 53 nœuds sur 53.','La source disponible ne démontre pas la direction causale exacte. La réparation reste hors hypergraphe canonique.'),
+('Transfert orbital-climat','Le signal N-corps améliore la RMSE dans trois fenêtres temporelles sur trois, de 3,12 % en moyenne.','Prédiction à un pas utilisant l’état climatique observé. LR04 est accordée orbitalement. Aucun GCM.'),
+('Mémoire durable','M2 et son témoin apparié présentent deux bassins et une boucle d’hystérèse à 30 degrés.','Aucun état matériellement différent ne subsiste après le retour complet. Résultat exploratoire.'),
+('Réplication vivant','Dans Card 2019, le modèle historique est moins bon dans les quatre groupes de test.','Jeu externe aux données Windels, mais analyse rétrospective et non confirmatoire.'),
+('Prébiotique','Deux trajectoires réelles de populations d’ARN catalytique sont intégrées sur huit cycles.','Aucune filiation parent-descendant de compartiments. La continuité héréditaire reste non testable.')],font_size=7.4)
+add_para('Cette campagne transforme les priorités en objets exécutables, mais aucun résultat ne reçoit un statut plus large que son protocole. La fermeture candidate n’est pas injectée dans le graphe canonique, le transfert climatique n’est pas un GCM, l’hystérèse reste interne au modèle et les deux benchmarks biologiques ne constituent pas une confirmation prospective.')
+
 # 9 limits corrections
 add_para('9. Limites, corrections intégrées et points non démontrés',style='Heading 1')
 add_para('9.1 La clôture est formelle',style='Heading 2')
@@ -903,7 +918,7 @@ add_table(['Colonne proposée','Question'],[
 add_para('Cette séparation empêche d’attribuer à une voie historique un statut élevé simplement parce que le mécanisme existe en laboratoire. Une synthèse de type Strecker peut être établie expérimentalement sans démontrer qu’elle a produit les premiers monomères biologiques sur la Terre primitive.')
 
 add_para('9.7 Reproductibilité technique',style='Heading 2')
-add_para('L’audit approfondi de l’archive a confirmé l’intégrité générale de l’archive et l’absence d’indicateurs manifestes de code malveillant dans l’analyse statique. Il a aussi identifié trois priorités techniques, divergence entre la source corrigée et le wheel distribué, incohérence entre l’environnement publié et le verrou de dépendances, puis scripts de suppression récursive insuffisamment protégés. Ces points n’annulent pas les résultats scientifiques déjà recalculés, mais ils empêchent de présenter la livraison logicielle comme parfaitement figée.')
+add_para('La version 0.9.3-research aligne la source, le verrou de dépendances, les manifestes et les workflows de publication. Elle ajoute une CI séparée sous Python 3.12 et 3.13, un contrôle strict de Git LFS, une comparaison inter-environnements avec tolérances numériques explicites et une archive canonique déterministe. Les piles numériques natives sont exécutées dans des processus séparés pour éviter les blocages d’orchestration. La publication reste conditionnée au passage effectif des workflows après dépôt et création du tag.')
 
 # 10 program
 add_para('10. Programme de validation prioritaire',style='Heading 1')
@@ -922,7 +937,7 @@ add_table(['Priorité','Action','Critère de réussite'],[
 add_para('Le test décisif pour ORI-C reste le même. Il faut montrer que l’histoire, l’accessibilité ou l’architecture apportent une prédiction hors échantillon qu’un modèle classique de complexité égale, connaissant la composition et l’état présent, ne produit pas. Tant que ce résultat manque, le cadre doit être présenté comme un programme falsifiable en consolidation.')
 
 add_para('Conclusion générale',style='Heading 1')
-add_para('La totalité du dossier montre une progression en trois mouvements. Le socle a construit un langage commun, des modèles, des données et des procédures de réfutation. Le programme a obtenu un théorème local dans le chémostat, une validation N-corps dans un modèle réduit, une première mesure de l’inventaire accessible et plusieurs résultats négatifs qui éliminent des implémentations fragiles. La généalogie explicite les produits matériels et raccorde les trois branches dans un graphe formellement clos.')
+add_para('La totalité du dossier montre une progression en trois mouvements. Le socle a construit un langage commun, des modèles, des données et des procédures de réfutation. Le programme a obtenu un théorème local dans le chémostat, une validation N-corps dans un modèle réduit, une première mesure de l’inventaire accessible et plusieurs résultats négatifs qui éliminent des implémentations fragiles. La campagne v0.9.3 localise le verrou de fermeture stricte de la matière, construit un transfert orbital-climat intermédiaire, teste les bassins et l’hystérèse, exécute un benchmark antibiotique externe et intègre des trajectoires d’ARN réelles. Le graphe généalogique linéaire reste formellement clos selon ses règles, tandis que l’hypergraphe mécanistique strict demeure ouvert à 46 nœuds sur 53.')
 add_para('L’architecture scientifique propre à ORI-C se situe dans l’articulation entre matière transmise, conditions permissives, organisation, mémoire, persistance, accessibilité et fermeture des possibilités. Elle ne constitue pas encore une loi générale démontrée. Elle constitue une méthode structurée permettant de dire exactement ce qui est connu, ce qui est seulement organisé, ce qui est réfuté et ce qui doit encore être testé.')
 add_callout('Verdict scientifique consolidé',
             'ORI-C possède désormais un socle conceptuel cohérent, plusieurs objets calculables, des résultats disciplinaires et numériques réels, une généalogie formellement close et une capacité croissante à produire ses propres réfutations. Il ne possède pas encore une prédiction transversale positive, reproduite et supérieure à un témoin apparié. La prochaine avancée dépend moins de l’élargissement du vocabulaire que d’un test discriminant réussi.',NAVY,'#EEF3FB')
@@ -975,6 +990,9 @@ source_rows=[
 ('Astronomie','couche_astronomique/STATUT_SCIENTIFIQUE.md et VALIDATION_FINALE.md'),
 ('Mémoire historique','couche_memoire_historique/REPORT.md, RAPPORT_CORRIGE.md et STRESS_REPORT.md'),
 ('Vivant et prébiotique','03_branche_vivant/README.md et PROGRAMME_PREBIOTIQUE.md'),
+('Campagne ciblée v0.9.3','plan_directeur/campagne_priorites_v093/ et rapports des quatre paquets'),
+('Benchmark externe','03_branche_vivant/benchmark_externe_card2019/ et DOI 10.5061/dryad.g41hg96'),
+('Trajectoires ARN','03_branche_vivant/programme_prebiotique/donnees_reelles/ et DOI 10.5061/dryad.rxwdbrvgs'),
 ('Arbre généalogique','00_socle/genealogie/arbre_genealogique.csv et cloture_arbre.json'),
 ('Généalogie détaillée de la matière','01_branche_matiere/genealogie/genealogie_matiere.csv et cloture_genealogie.json')]
 add_table(['Domaine','Fichiers'],source_rows,font_size=8)

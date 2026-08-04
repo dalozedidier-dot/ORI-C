@@ -34,12 +34,38 @@ RACINE = Path(__file__).resolve().parent
 TERMINAISON = chr(10)  # le manifeste emploie des fins de ligne Unix
 
 
-def executer(commande: list[str], repertoire: Path, environnement=None) -> str:
-    resultat = subprocess.run(
-        commande, cwd=repertoire, capture_output=True, text=True,
-        encoding="utf-8", errors="replace", env=environnement,
-    )
-    return resultat.stdout + resultat.stderr, resultat.returncode
+def executer(
+    commande: list[str],
+    repertoire: Path,
+    environnement=None,
+    delai: int = 300,
+) -> tuple[str, int]:
+    """Exécute une suite sans pipe hérité par les bibliothèques natives.
+
+    Certaines piles numériques lancent ou initialisent des processus qui
+    héritent des descripteurs stdout/stderr. Avec ``capture_output=True``, le
+    parent peut alors attendre indéfiniment la fin du pipe même après la fin
+    visible de pytest. La sortie est donc redirigée vers un fichier temporaire.
+    """
+    with tempfile.TemporaryFile(mode="w+b") as journal:
+        try:
+            resultat = subprocess.run(
+                commande,
+                cwd=repertoire,
+                stdout=journal,
+                stderr=subprocess.STDOUT,
+                env=environnement,
+                timeout=delai,
+                start_new_session=True,
+            )
+            code = resultat.returncode
+        except subprocess.TimeoutExpired:
+            code = 124
+        journal.seek(0)
+        sortie = journal.read().decode("utf-8", errors="replace")
+    if code == 124:
+        sortie += f"\nDÉLAI DÉPASSÉ après {delai} secondes.\n"
+    return sortie, code
 
 
 def suite_socle() -> dict:
@@ -157,6 +183,53 @@ def suite_trois_branches() -> dict:
         "code_retour": code,
     }
 
+
+def suite_priorites_v093() -> dict:
+    """Tests de la campagne ciblée v0.9.3, isolés par paquet.
+
+    Les suites sont lancées dans des processus séparés. Cette séparation évite
+    les blocages observés lorsque plusieurs piles numériques natives sont
+    chargées successivement dans un même processus pytest.
+    """
+    import os
+
+    targets = [
+        "plan_directeur/campagne_priorites_v093/tests",
+        "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests",
+        "02_branche_systeme_solaire/transfert_climatique_intermediaire/tests",
+        "02_branche_systeme_solaire/couche_memoire_historique/tests/test_hysteresis_c3.py",
+        "03_branche_vivant/benchmark_externe_card2019/tests",
+        "03_branche_vivant/programme_prebiotique/tests",
+    ]
+    environnement = dict(os.environ)
+    environnement["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    environnement.setdefault("OPENBLAS_NUM_THREADS", "1")
+    environnement.setdefault("OMP_NUM_THREADS", "1")
+
+    reussis = echoues = ignores = 0
+    code_retour = 0
+    for cible in targets:
+        sortie, code = executer(
+            [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", cible],
+            RACINE,
+            environnement,
+        )
+        passe = re.search(r"(\d+) passed", sortie)
+        echec = re.search(r"(\d+) failed", sortie)
+        ignore = re.search(r"(\d+) skipped", sortie)
+        reussis += int(passe.group(1)) if passe else 0
+        echoues += int(echec.group(1)) if echec else 0
+        ignores += int(ignore.group(1)) if ignore else 0
+        if code:
+            code_retour = code
+
+    return {
+        "reussis": reussis,
+        "echoues": echoues,
+        "ignores": ignores,
+        "code_retour": code_retour,
+    }
+
 def rapport_exhaustif(rejouer: bool = False) -> dict:
     chemin = (
         RACINE / "00_socle" / "test_interventionnel" / "resultats_exhaustifs"
@@ -257,6 +330,11 @@ def environnement_courant() -> str:
 
 
 def composer(rejouer: bool = False) -> str:
+    # Le benchmark externe vivant est exécuté avant les autres piles numériques.
+    # Après certains enchaînements BLAS/Numba/REBOUND, son sous-processus peut
+    # rester bloqué malgré une exécution isolée parfaitement reproductible.
+    # L'ordre fait donc partie du protocole de relevé.
+    priorites = suite_priorites_v093()
     socle = suite_socle()
     memoire = suite_memoire()
     astro = suite_astronomique()
@@ -290,6 +368,8 @@ def composer(rejouer: bool = False) -> str:
         f"{memoire['echoues']} | 0 | 0 |",
         f"| Campagne maximale, trois branches | {trois_branches['reussis']} | "
         f"{trois_branches['echoues']} | {trois_branches['ignores']} | 0 |",
+        f"| Priorités v0.9.3 | {priorites['reussis']} | {priorites['echoues']} | "
+        f"{priorites['ignores']} | 0 |",
     ]
     if astro.get("disponible"):
         lignes.append(

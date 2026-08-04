@@ -1,0 +1,54 @@
+edge_id;processus;entrees;sorties;type;branche;capacite_acquise;statut_preuve;source_id;incertitude_ou_scenario;role_genealogique
+H001;Heritage du nuage protosolaire;N001;N002|N003;transmission;disque;archives stellaires et volatiles conservees;observe_infere;S04;fraction de survie variable;progression
+H002;Vaporisation et recondensation interne;N001|N002|N003;N004|N005|N007;transformation;disque;reinitialisation thermique partielle;modele_appuye;S01;melange heritage-chimie locale;retour
+H003;Formation des inclusions refractaires;N004|N005;N006;transformation;disque;archive des premiers traitements thermiques;observe_infere;S05;chronologie relative depend de 26Al;progression
+H004;Transport radial des inclusions;N006;N006;transport;disque;presence de refractaires en regions externes;observe_modele;S01;trajectoires multiples;retour
+H005;Coagulation fractale;N008;N009;assemblage;disque;surface collective et porosite;experience_modele;S01;depend de vitesse et composition;progression
+H006;Compaction collisionnelle;N009;N010;transformation;disque;resistance et densite accrues;experience_modele;S01;rebond possible;progression
+H007;Fragmentation et rebond;N010;N008|N009;recyclage;disque;redistribution des tailles;experience_modele;S01;barriere a la croissance;retour
+H008;Croissance vers les galets;N009|N010;N011;assemblage;disque;couplage aerodynamique et derive;observe_modele;S01;barrieres fragmentation-derive;progression
+H009;Derive et tri aerodynamique;N011;N011;transport;disque;selection par taille et Stokes;observe_modele;S01;pertes vers l etoile possibles;retour
+H010;Piegeage aux maxima de pression et lignes de condensation;N007|N011;N012;concentration;disque;enrichissement local en solides;observe_modele;S01;efficacite et permeabilite variables;progression
+H011;Instabilite de streaming;N011|N012;N013;collectif;disque;retroaction collective gaz-solides;modele;S02;seuil poussiere-gaz dependant du disque;progression
+H012;Effondrement gravitationnel des filaments;N013;N014;transition;disque;gravite propre;modele_appuye;S02;distribution de tailles incertaine;progression
+H013;Accretion de planetesimaux en embryons;N014;N033;assemblage;planetaire;capture gravitationnelle et accretion rapide;modele_appuye;S12;voies galets et planetesimaux concurrentes;progression
+H014;Fusion rapide de precurseurs solides;N008|N009;N015;transformation;disque;chondres comme archives thermiques;observe_infere;S06;plusieurs mecanismes possibles;retour
+H015;Production collisionnelle de chondres;N014|N033;N015|N023;recyclage;planetaire;composants fondus produits par corps avances;modele_appuye;S07;ne vaut pas pour tous les chondres;retour
+H016;Reincorporation des chondres;N015|N008|N009;N016;assemblage;disque;corps chondritiques multigenerationnels;observe_infere;S07;temps de flottaison variable;progression
+H017;Separation isotopique NC-CC;N007|N011;N017|N018;filtrage;disque;reservoirs durablement distincts;observe;S08;mecanisme exact ouvert;progression
+H018;Reservoir CI distinct;N018;N019;separation;disque;troisieme signature possible;observe_hypothese;S08;statut revise par travaux recents;progression
+H019;Fuite de poussiere entre reservoirs;N017|N018;N017|N018;transport;disque;permeabilite temporelle du filtre;modele;S09;taille et fragmentation decisives;retour
+H020;Accretion precoce riche en 26Al;N014;N025;transformation;planetaire;fusion et differentiation;observe_infere;S05;heterogeneite initiale possible;progression
+H021;Accretion tardive et conservation primitive;N014|N003;N020;transformation;planetaire;glaces organiques et mineraux primitifs conserves;observe_infere;S03;date et taille du corps determinantes;progression
+H022;Alteration aqueuse du corps parent;N020|N003;N021|N022;transformation;planetaire;reacteur geochimique eau-roche-organique;observe;S03;temperature et rapport eau-roche variables;progression
+H023;Rupture collisionnelle du corps parent;N020|N021|N022;N023;fragmentation;planetaire;transmission de produits deja transformes;observe_infere;S03;chronologie propre a chaque famille;retour
+H024;Reassemblage asteroidale;N023;N024;assemblage;planetaire;archive multigenerationnelle;observe_infere;S03;Ryugu et Bennu cas distincts;progression
+H025;Separation metal-silicate;N025;N026|N027;partitionnement;planetaire;reservoirs internes differencies;observe_experience;S10;depend de P T et redox;progression
+H026;Degazage et redistribution;N027;N027|N028;transport;planetaire;transfert interieur-surface;observe_modele;S10;solubilite et pertes atmospheriques;retour
+H027;Capture et apport externe de volatils;N018|N019|N023;N028;transmission;planetaire;inventaire de surface accru;scenario_concurrent;S12;contribution externe non fixee;progression
+H028;Accretion majoritairement interne;N017;N034;assemblage;planetaire;provenance interne conservee;scenario_concurrent;S13;resultat recent a confirmer;progression
+H029;Accretion mixte NC-CC;N017|N018;N034;assemblage;planetaire;composition finale issue de voies multiples;observe_infere;S11;proportions element-dependantes;progression
+H030;Formation de l inventaire accessible;N026|N027|N028|N052|N054;N029;selection;planetaire;quantite chimiquement mobilisable;definition_operationnelle;S10;exige speciation et horizon temporel;progression
+H031;Circulation entre reservoirs et interfaces;N027|N028|N029;N030;transport;interface;concentration gradients et renouvellement;observe_modele;S14;flux depend du regime tectonique;progression
+H032;Serpentinisation;N030;N031;transformation;interface;H2 gradients redox alcalins et catalyse;observe;S14;habitabilite ne signifie pas vie;progression
+H033;Organisation chimique aux interfaces;N029|N030|N031;N032|N035;transition;interface;activation concentration separation et cycles;hypothese_testable;S14;jonction vers le vivant non demontree;progression
+H034;Survie de l inventaire baryonique;N036;N036;contrainte;cosmique;quantite nette de matiere disponible;observe_infere;S15;mecanisme de baryogenese inconnu;retour
+H035;Confinement des quarks;N036;N037;transformation;cosmique;hadrons durables;observe_experience;S15;transition QCD reconstruite;progression
+H036;Nucleosynthese primordiale;N036|N037;N038;assemblage;cosmique;noyaux legers;observe_infere;S15;abondances dependent des parametres cosmologiques;progression
+H037;Recombinaison electronique;N038;N039;transformation;cosmique;chimie electronique et transparence;observe_infere;S15;ne cree pas de nouveaux noyaux;progression
+H038;Formation de H2 et HD;N039;N040;transformation;cosmique;refroidissement moleculaire;observe_infere;S16;reseau reactionnel dependant du milieu;progression
+H039;Refroidissement ouvrant l effondrement;N040|N039;N041;condition;stellaire;effondrement gravitationnel rendu possible;modele_appuye;S16;H2 et HD ne sont pas parents materiels des etoiles;progression
+H040;Formation des premieres etoiles;N041;N042;transition;stellaire;interieurs stellaires et fusion;modele_appuye;S17;halo densite et dynamique aussi necessaires;progression
+H041;Nucleosynthese hydrostatique et explosive;N042;N043;transformation;stellaire;elements lourds;observe_modele;S17;voies multiples a decomposer ulterieurement;emission
+H042;Ejection par vents et explosions;N042|N043;N044;transmission;stellaire;matiere enrichie exportee;observe;S17;rendements depend de masse et metallicite;emission
+H043;Enrichissement du milieu interstellaire;N044;N045;transmission;interstellaire;reservoir reutilisable;observe_infere;S17;melange incomplet;progression
+H044;Condensation stellaire de grains;N042|N043|N044;N046;transformation;interstellaire;solides presolaires isotopiquement tracables;observe;S04;survie selective;emission
+H045;Chimie gazeuse glaces et surfaces;N045|N046;N047;transformation;interstellaire;concentration stockage et organiques complexes;observe_modele;S18;irradiation et desorption importantes;emission
+H046;Transmission au nuage protosolaire;N045|N046|N047;N001|N002|N003;transmission;interstellaire;heritage multicomposant;observe_infere;S04;effacement thermique partiel dans le disque;emission
+H047;Alimentation de la population de poussiere;N048|N003|N005|N007;N008;assemblage;disque;population de monomeres disponible pour coagulation;observe_modele;S01;proportions heritage/condensation locale non tranchees;progression
+H048;Destruction selective et tri des grains presolaires;N002;N048;filtrage;disque;archive residuelle a l echelle du ppm;observe;S04;taux de survie dependant de la phase mineral;progression
+H049;Impacts geants entre embryons;N033;N034|N050;transformation;planetaire;refonte et redistribution des reservoirs internes;modele_appuye;S12;nombre geometrie et energie non contraints;retour
+H050;Cristallisation de l ocean magmatique et formation de croute;N050|N027;N051;transformation;planetaire;concentration des incompatibles pres de la surface;observe_infere;S12;duree et regime tectonique ouverts;progression
+H051;Apport tardif apres segregation du noyau;N023|N018;N052|N027;transmission;planetaire;siderophiles reintroduits hors equilibre metal-silicate;observe_infere;S25;masse de l ordre de 0.5 a 0.8 pourcent de la Terre selon les etudes;progression
+H052;Circulation hydrothermale entretenue;N051|N028;N053|N030;transport;interface;gradients renouveles sur des durees longues;observe;S14;recodage candidat : l interface est produite et entretenue par la circulation;progression
+H053;Alteration aqueuse produisant des especes solubles;N020|N053;N054;transformation;interface;especes mobilisables et non seulement presentes;observe;S26;la speciation decide de l accessibilite pas l abondance;progression

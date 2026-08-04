@@ -31,12 +31,12 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid four">
-          <article class="metric"><strong>1 019</strong><span>contenus manifestés</span><small>0 objet LFS manquant</small></article>
+          <article class="metric"><strong>1 073</strong><span>contenus manifestés</span><small>0 objet LFS manquant</small></article>
           <article class="metric"><strong>153</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
-          <article class="metric"><strong>12</strong><span>tests astronomiques réussis</span><small>artefact scientifique complet</small></article>
+          <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests REBOUND optionnels ignorés localement</small></article>
         </div>
-        <p class="data-note">La validation GitHub Actions s'exécute sous Python 3.12 et Python 3.13. Elle compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 13 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire et 21 tests de robustesse. L'artefact astronomique complet publie 12 tests réussis. La campagne cumulative compare désormais les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>. Les autres fichiers restent comparés octet par octet.</p>
+        <p class="data-note">La matrice GitHub Actions est configurée sous Python 3.12 et Python 3.13. L'exécution de référence sous Python 3.13 compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 15 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire, 21 tests de robustesse, 11 tests des priorités v0.9.3 et 10 tests astronomiques, avec 2 tests REBOUND optionnels ignorés dans l'environnement local. La campagne cumulative compare désormais les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>. Les autres fichiers restent comparés octet par octet.</p>
         <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
       </div>
     </section>
@@ -66,19 +66,22 @@ cat REPRODUCTION.md</code></pre><p>La reproduction complète suit le protocole e
 python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Clôture de l'arbre global et de la généalogie matérielle.</p></article>
           <article><h3>Campagne maximale</h3><pre><code>python plan_directeur/campagne_maximale_trois_branches/run_all.py
 python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code></pre><p>Robustesse matière, Système solaire et vivant, avec structures identiques et contrôle explicite des écarts d'arrondi.</p></article>
+          <article><h3>Priorités v0.9.3</h3><pre><code>python plan_directeur/campagne_priorites_v093/run_all.py
+python -m pytest -q plan_directeur/campagne_priorites_v093/tests</code></pre><p>Fermeture matière, transfert climatique, hystérèse, benchmark antibiotique externe et audit prébiotique.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Analyses automatisées</p><h2>Quatre workflows spécialisés et une campagne cumulative</h2><p>Chaque campagne publie ses logs, son environnement Python et ses résultats comme artefacts. Le succès technique d'un workflow ne change pas automatiquement un verdict scientifique.</p></div>
+        <div class="section-heading"><p class="eyebrow">Analyses automatisées</p><h2>Cinq workflows spécialisés et deux campagnes cumulatives</h2><p>Chaque campagne publie ses logs, son environnement Python et ses résultats comme artefacts. Le succès technique d'un workflow ne change pas automatiquement un verdict scientifique.</p></div>
         <div class="document-grid">
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Carte, généalogies, inventaire, hypergraphe et audit transversal</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Données réelles</strong><span>GISTEMP, exoplanètes, antibiotiques, proxy Pacc et campagne complète</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Mémoire historique et 25 calculs astronomiques</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-paleoclimat-approfondie.yml"><strong>Paléoclimat approfondi</strong><span>Tests réels, témoins, mécanismes et spectres nuls</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml"><strong>Campagne maximale trois branches</strong><span>Validation cumulative, quatre workflows réutilisables et 21 tests de robustesse</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/release.yml"><strong>Publication stable</strong><span>Validation, archive canonique hydratée, SHA-256 et release sur tag</span></a>
         </div>
       </div>
     </section>
@@ -87,12 +90,24 @@ python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code>
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">Campagnes de référence</p><h2>Cinq artefacts contrôlés jusqu'au bout</h2><p>Les workflows de structure, données réelles, mémoire, astronomie et paléoclimat ont produit leurs journaux et leurs résultats. Leur réussite technique conserve les verdicts négatifs et non concluants au lieu de les transformer en preuves.</p></div>
         <div class="metric-grid four">
-          <article class="metric"><strong>1 019</strong><span>contenus conformes</span><small>0 LFS manquant, 0 modifié</small></article>
+          <article class="metric"><strong>1 073</strong><span>contenus conformes</span><small>0 LFS manquant, 0 modifié</small></article>
           <article class="metric"><strong>211</strong><span>réussites techniques</span><small>campagne réelle consolidée</small></article>
           <article class="metric"><strong>440</strong><span>blocages documentés</span><small>données ou critères absents</small></article>
           <article class="metric"><strong>21</strong><span>tests de robustesse</span><small>matière, Système solaire et vivant</small></article>
         </div>
-        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. Les 1 019 contenus sont conformes et Git LFS est entièrement hydraté dans la CI. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
+        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. Les 1 073 contenus de l'archive canonique sont conformes et aucun pointeur Git LFS ne subsiste. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Publication v0.9.3</p><h2>Une version stable préparée automatiquement</h2></div>
+        <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/PUBLICATION_STABLE.md"><strong>Procédure de publication</strong><span>Tag, archive hydratée et SHA-256</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/.zenodo.json"><strong>Métadonnées Zenodo</strong><span>Prêtes pour l'activation d'un DOI</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/LICENSING.md"><strong>Licence définitive</strong><span>Tous droits réservés et droits tiers séparés</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/scripts/verifier_reproductibilite_resultats.py"><strong>Tolérance inter-environnements</strong><span>Structure stricte, flottants sous seuil explicite</span></a>
+        </div>
       </div>
     </section>
 

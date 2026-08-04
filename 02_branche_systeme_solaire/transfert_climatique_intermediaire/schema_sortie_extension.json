@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sortie temporelle d'une extension Terre-Lune-climat",
+  "type": "object",
+  "required": ["time_kyr", "eccentricity", "obliquity_deg", "precession_angle_rad"],
+  "properties": {
+    "time_kyr": {"type": "array", "items": {"type": "number"}},
+    "eccentricity": {"type": "array", "items": {"type": "number"}},
+    "obliquity_deg": {"type": "array", "items": {"type": "number"}},
+    "precession_angle_rad": {"type": "array", "items": {"type": "number"}},
+    "earth_moon_resolved": {"type": "boolean"},
+    "tides_enabled": {"type": "boolean"},
+    "climate_model": {"type": "string"}
+  }
+}

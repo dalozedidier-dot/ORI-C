@@ -1,8 +1,7 @@
 # Programme prébiotique dirigé — régime 7
 
-**Statut : programme de recherche. Aucun résultat. Aucune donnée collectée.**
-Ce document dit ce qu'il faudrait mesurer et à quelles conditions un résultat
-compterait. Il ne rapporte rien.
+**Statut : programme de recherche. Trajectoires de populations disponibles, critère héréditaire non testé.**
+Deux trajectoires expérimentales de populations d’ARN catalytique sur huit cycles sont maintenant intégrées. Elles décrivent des fréquences de séquences, sans filiation parent-descendant de compartiments. Ce document précise ce qu’il faudrait encore mesurer et à quelles conditions un résultat sur la continuité héréditaire compterait.
 
 ## 1. Le verrou
 
@@ -64,6 +63,8 @@ préparation → assemblage → copie → croissance → division → transmissi
 Une mesure finale isolée ne dit pas comment l'état a été atteint. C'est le §4
 du `PROTOCOLE_DONNEES.md` appliqué ici : la série doit couvrir l'approche, le
 franchissement et le régime transitoire, pas un avant-après.
+
+Une première donnée de ce type est intégrée dans `donnees_reelles/trajectoires_population/` : deux branches d’ARN catalytique, huit cycles et dix séries de séquences suivies. Elle établit une dynamique expérimentale de composition. Elle ne contient ni compartiments individualisés, ni relations parent-descendant, ni transmission fonctionnelle mesurée.
 
 ### 4.2 Les lignées
 
@@ -187,8 +188,7 @@ huit. C'est l'erreur exacte que la branche 2 a commise et corrigée.
 
 ## 9. Ce que ce programme ne prétend pas
 
-- Il **n'apporte aucun résultat**. Son statut dans `ETAT_DES_PREUVES.md` est
-  *Non testé*.
+- Il apporte une trajectoire expérimentale de composition, mais **aucun résultat sur le verrou héréditaire**. Son critère central reste *Non testé* dans `ETAT_DES_PREUVES.md`.
 - Il ne prétend pas que l'intégration soit réalisable avec les techniques
   actuelles. Il dit à quelles conditions un résultat compterait.
 - Il ne transfère aucun statut depuis la branche 1 ni vers la branche 3, et

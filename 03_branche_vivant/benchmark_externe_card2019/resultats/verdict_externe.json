@@ -1,0 +1,43 @@
+{
+  "dataset": "Card et al. 2019, Ara+5 LTEE, tetracycline",
+  "doi_dataset": "10.5061/dryad.g41hg96",
+  "rows": 130,
+  "train_rows": 90,
+  "test_rows": 40,
+  "train_generations_k": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "test_generations_k": [
+    5,
+    10
+  ],
+  "best_model": "moyenne_apprentissage",
+  "best_rmse_test": 0.9196080754026027,
+  "state_only_rmse": 0.9292090756370613,
+  "history_plus_state_rmse": 2.2244368924162647,
+  "history_gain_vs_state_percent": -139.39035366084877,
+  "history_beats_state": false,
+  "history_minus_state_rmse": 1.2952278167792035,
+  "group_bootstrap": {
+    "resamples": 10000,
+    "unit": "strain block",
+    "groups": [
+      "10A",
+      "10B",
+      "5A",
+      "5B"
+    ],
+    "difference_history_minus_state_rmse_ci95": [
+      0.5177068716933617,
+      1.791826333894151
+    ],
+    "probability_history_better": 0.0,
+    "history_worse_in_all_test_groups": true
+  },
+  "status": "retrospectif_externe_non_confirmatoire",
+  "interpretation": "jeu indépendant des données Windels; test temporel strict mais conception postérieure à l'accès aux données"
+}

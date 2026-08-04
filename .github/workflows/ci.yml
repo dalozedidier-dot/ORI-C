@@ -1,12 +1,18 @@
-name: validation ORI-C
+name: Validation ORI-C
 
 on:
   workflow_dispatch:
   push:
   pull_request:
 
+env:
+  PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
 jobs:
-  tests:
+  portable:
+    name: Contrôles portables Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -16,37 +22,111 @@ jobs:
       - uses: actions/checkout@v6
         with:
           lfs: true
-      - name: Finaliser le téléchargement Git LFS
+          fetch-depth: 1
+      - name: Hydrater Git LFS
         run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
           cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
-      - name: Compiler tous les modules Python
-        run: python -m compileall -q .
-      - name: Vérifier l'intégrité canonique et Git LFS
-        run: python verifier_dossier.py
-      - name: Valider les suites canoniques
-        env:
-          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-          OPENBLAS_NUM_THREADS: '1'
-          OMP_NUM_THREADS: '1'
-        run: python scripts/valider_tout.py --strict-lfs
-      - name: Tester la campagne maximale sur les trois branches
-        env:
-          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-          OPENBLAS_NUM_THREADS: '1'
-          OMP_NUM_THREADS: '1'
-        run: python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests
-      - name: Vérifier la reproductibilité de la campagne maximale
-        if: matrix.python-version == '3.12'
-        env:
-          OPENBLAS_NUM_THREADS: '1'
-          OMP_NUM_THREADS: '1'
+      - name: Installer les dépendances
         run: |
-          cp -R plan_directeur/campagne_maximale_trois_branches/resultats             "$RUNNER_TEMP/campagne-reference"
-          python plan_directeur/campagne_maximale_trois_branches/run_all.py
-          python scripts/verifier_reproductibilite_resultats.py             --reference "$RUNNER_TEMP/campagne-reference"             --candidate plan_directeur/campagne_maximale_trois_branches/resultats
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Compiler et vérifier l'intégrité
+        run: |
+          python -m compileall -q .
+          python verifier_dossier.py
+          python scripts/valider_tout.py --strict-lfs
+      - name: Exécuter les suites portables du socle et de la matière
+        run: |
+          python -m pytest -q plateforme/source_corrigee/tests
+          (cd 00_socle && python -m pytest -q)
+          python -m pytest -q \
+            01_branche_matiere/hypergraphe_transformations/tests \
+            01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests
+          python -m pytest -q 01_branche_matiere/inventaire_hierarchique/tests
+      - name: Exécuter les priorités v0.9.3
+        run: |
+          python plan_directeur/campagne_priorites_v093/run_all.py
+          python -m pytest -q plan_directeur/campagne_priorites_v093/tests
+          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests
+          python -m pytest -q 02_branche_systeme_solaire/transfert_climatique_intermediaire/tests
+          python -m pytest -q 02_branche_systeme_solaire/couche_memoire_historique/tests/test_hysteresis_c3.py
+          python -m pytest -q 03_branche_vivant/benchmark_externe_card2019/tests
+          python -m pytest -q 03_branche_vivant/programme_prebiotique/tests
+      - name: Vérifier la publication stable
+        run: python scripts/valider_publication_stable.py
+
+  memoire:
+    name: Mémoire historique Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Tests mémoire
+        working-directory: 02_branche_systeme_solaire/couche_memoire_historique
+        run: PYTHONPATH="$PWD/src" python -m unittest discover -s tests
+      - name: Test d'hystérèse et de bassins
+        run: python -m pytest -q 02_branche_systeme_solaire/couche_memoire_historique/tests/test_hysteresis_c3.py
+
+  astronomie:
+    name: Couche astronomique Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Tests astronomiques
+        working-directory: 02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
+        run: PYTHONPATH="$PWD:$PWD/src" python -m pytest -q
+
+  campagne-maximale:
+    name: Campagne maximale et reproductibilité
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Conserver la référence
+        run: cp -R plan_directeur/campagne_maximale_trois_branches/resultats "$RUNNER_TEMP/campagne-reference"
+      - name: Recalculer les trois branches
+        run: python plan_directeur/campagne_maximale_trois_branches/run_all.py
+      - name: Tester la campagne
+        run: python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests
+      - name: Comparer les sorties
+        run: |
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/campagne-reference" \
+            --candidate plan_directeur/campagne_maximale_trois_branches/resultats

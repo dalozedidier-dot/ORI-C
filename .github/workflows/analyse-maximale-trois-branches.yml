@@ -133,6 +133,14 @@ jobs:
             --reference "$RUNNER_TEMP/campagne-reference" \
             --candidate plan_directeur/campagne_maximale_trois_branches/resultats \
             | tee "$OUT/logs/reproductibilite_sorties.log"
+      - name: Exécuter les priorités v0.9.3
+        run: |
+          set -euo pipefail
+          python plan_directeur/campagne_priorites_v093/run_all.py \
+            | tee "$OUT/logs/priorites_v093.log"
+          python -m pytest -q plan_directeur/campagne_priorites_v093/tests \
+            | tee "$OUT/logs/tests_priorites_v093.log"
+
       - name: Rassembler résultats et environnement
         if: always()
         run: |

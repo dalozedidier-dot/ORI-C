@@ -1,0 +1,19 @@
+{
+  "title": "Historical contingency in the evolution of antibiotic resistance after decades of relaxed selection",
+  "authors": [
+    "Kyle J. Card",
+    "Thomas LaBar",
+    "Jasper B. Gomez",
+    "Richard E. Lenski"
+  ],
+  "year": 2019,
+  "dataset_doi": "10.5061/dryad.g41hg96",
+  "article_doi": "10.1371/journal.pbio.3000397",
+  "source_file": "MICs of strains from Ara+5 population.csv",
+  "repository": "KyleCard/Historical-contingency-in-the-evolution-of-ABR",
+  "retrieved": "2026-08-04",
+  "use": "independent retrospective temporal benchmark",
+  "license": "CC0-1.0",
+  "license_source": "Dryad datasets are distributed under the CC0 Public Domain Dedication",
+  "citation_required_by_project": true
+}

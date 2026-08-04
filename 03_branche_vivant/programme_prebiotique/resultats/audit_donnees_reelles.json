@@ -1,0 +1,57 @@
+{
+  "real_lineage_files": 0,
+  "accepted_lineages": [],
+  "rejected_lineages": [],
+  "real_population_trajectory_files": 1,
+  "accepted_population_trajectories": [
+    {
+      "file": "papastavrou_rna_huit_cycles.csv",
+      "rows": 80,
+      "branches": [
+        "52-2",
+        "71-89"
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "branch_rounds": {
+        "52-2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "71-89": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "tracked_sequence_series": 10,
+      "grain": "branche-cycle-sequence",
+      "data_type": "population_frequency_trajectory"
+    }
+  ],
+  "rejected_population_trajectories": [],
+  "population_trajectory_available": true,
+  "criterion_testable": false,
+  "status": "trajectoires_population_reelles_sans_lignees",
+  "conclusion": "Deux trajectoires expérimentales de populations d’ARN catalytique sur huit cycles sont intégrées. Elles mesurent une dynamique de composition réelle, mais ne relient pas des compartiments parents à leurs descendants. La continuité héréditaire prébiotique reste donc non testable avec ces données.",
+  "scientific_boundary": "Une trajectoire de fréquences de séquences n’est pas une lignée de compartiments, une preuve de transmission fonctionnelle ou une démonstration d’hérédité."
+}

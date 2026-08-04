@@ -1,4 +1,4 @@
-domaine,test_ou_objet,resultat,statut
+﻿domaine,test_ou_objet,resultat,statut
 Socle,Test interventionnel,"11/11 dans le modèle réduit, six cinétiques robustes",Validé dans le modèle réduit
 Socle,Effet contre-intuitif,"10 cas sur 600, compétition et retard",Exploratoire
 Carte,Prédiction de liens,"AUC structurelle 0,491, chronologie 0,922",Résultat négatif
@@ -9,5 +9,9 @@ Astronomie,N-corps,13 critères sur 15,Validé dans le modèle réduit
 Climat,M2 contre M1P,"0 critère sur 5, gain RMSE -31,6 %",Réfuté
 Exoplanètes,Dépendance au chemin,"4 variables sur 4, ablation 4 sur 4",Validation structurelle
 Exoplanètes,Persistance,0 variable matérielle après palier long,Non réussi
-Vivant,Programme prébiotique,aucune donnée collectée,Non testé
-Généalogie,Clôture du graphe,"39 transitions, 77 relations parent-produit, aucune anomalie formelle",Cohérence structurelle vérifiée
+Matière,Fermeture stricte v0.9.3,46/53 nœuds ; noyau N029-N030-N053-N054 ; réparation candidate 53/53 non canonique,"Verrou localisé, source causale insuffisante"
+Climat,Transfert orbital intermédiaire,"gain positif dans 3 fenêtres sur 3, 3,12 % en moyenne","Hors échantillon à un pas, non GCM"
+Mémoire,Bassins et hystérèse,deux bassins pour M2 et M2P ; aucun écart matériel après retour complet,"Exploratoire, non confirmatoire"
+Vivant,Benchmark externe Card 2019,histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable,"Externe rétrospectif, non confirmatoire"
+Vivant,Programme prébiotique,"deux trajectoires ARN sur huit cycles, aucune lignée parent-descendant",Critère héréditaire non testé
+Généalogie,Clôture du graphe linéaire,"39 transitions, 77 relations parent-produit, aucune anomalie formelle","Cohérence structurelle vérifiée, distincte de l’hypergraphe strict"

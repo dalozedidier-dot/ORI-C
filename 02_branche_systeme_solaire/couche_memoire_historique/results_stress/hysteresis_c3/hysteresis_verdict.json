@@ -1,0 +1,116 @@
+{
+  "status": "qualification exploratoire, non confirmatoire",
+  "calibration_source": "WP-C2",
+  "sweep_duration_per_step_myr": 60.0,
+  "basin_hold_myr": 400.0,
+  "material_gap_threshold": 0.05,
+  "results": [
+    {
+      "obliquity_deg": 30.0,
+      "mode": "classic",
+      "max_ice_gap": 0.8534610005308542,
+      "loop_area": 0.017059461635546645,
+      "hysteresis_material": true,
+      "forward_transition_eccentricity": 0.06463692144338794,
+      "reverse_transition_eccentricity": 0.04534366712330007,
+      "transition_separation": 0.01929325432008787,
+      "same_low_endpoint_gap": 0.0,
+      "irreversible_after_full_return": false,
+      "basin_count": 1,
+      "basin_centers": [
+        0.007687937142143742
+      ]
+    },
+    {
+      "obliquity_deg": 30.0,
+      "mode": "M2",
+      "max_ice_gap": 0.9267992476971011,
+      "loop_area": 0.027456795594456684,
+      "hysteresis_material": true,
+      "forward_transition_eccentricity": 0.11446095865665183,
+      "reverse_transition_eccentricity": 0.08511425576425734,
+      "transition_separation": 0.029346702892394494,
+      "same_low_endpoint_gap": 1.0348623038503035e-06,
+      "irreversible_after_full_return": false,
+      "basin_count": 2,
+      "basin_centers": [
+        0.022015398318880493,
+        0.946124532218876
+      ]
+    },
+    {
+      "obliquity_deg": 30.0,
+      "mode": "M2P_corrige",
+      "max_ice_gap": 0.8585733477938278,
+      "loop_area": 0.016788543184645566,
+      "hysteresis_material": true,
+      "forward_transition_eccentricity": 0.11432260808735224,
+      "reverse_transition_eccentricity": 0.09528986285690338,
+      "transition_separation": 0.019032745230448858,
+      "same_low_endpoint_gap": 8.910068418632733e-07,
+      "irreversible_after_full_return": false,
+      "basin_count": 2,
+      "basin_centers": [
+        0.08362486136607647,
+        0.9421982091599082
+      ]
+    },
+    {
+      "obliquity_deg": 40.0,
+      "mode": "classic",
+      "max_ice_gap": 9.80118763926896e-17,
+      "loop_area": 2.381011599965308e-18,
+      "hysteresis_material": false,
+      "forward_transition_eccentricity": null,
+      "reverse_transition_eccentricity": null,
+      "transition_separation": null,
+      "same_low_endpoint_gap": 9.80118763926896e-17,
+      "irreversible_after_full_return": false,
+      "basin_count": 1,
+      "basin_centers": [
+        0.004704167759529566
+      ]
+    },
+    {
+      "obliquity_deg": 40.0,
+      "mode": "M2",
+      "max_ice_gap": 0.0021504317201443066,
+      "loop_area": 2.2956845218378253e-05,
+      "hysteresis_material": false,
+      "forward_transition_eccentricity": null,
+      "reverse_transition_eccentricity": null,
+      "transition_separation": null,
+      "same_low_endpoint_gap": 0.0021504317201443066,
+      "irreversible_after_full_return": false,
+      "basin_count": 2,
+      "basin_centers": [
+        0.010870635216183987,
+        0.8798208544649626
+      ]
+    },
+    {
+      "obliquity_deg": 40.0,
+      "mode": "M2P_corrige",
+      "max_ice_gap": 4.474707378313014e-05,
+      "loop_area": 2.238613138576508e-07,
+      "hysteresis_material": false,
+      "forward_transition_eccentricity": null,
+      "reverse_transition_eccentricity": null,
+      "transition_separation": null,
+      "same_low_endpoint_gap": 4.474707378313014e-05,
+      "irreversible_after_full_return": false,
+      "basin_count": 2,
+      "basin_centers": [
+        0.04229457081379209,
+        0.8614296585322296
+      ]
+    }
+  ],
+  "interpretation": {
+    "hysteresis": "Un écart avant-retour supérieur au seuil indique une boucle d'hystérèse dans l'EMIC réduit.",
+    "same_forcing_different_final_state": "Deux bassins au même forçage établissent plusieurs états finaux possibles dans le modèle.",
+    "irreversibility": "Aucun mode ne conserve un écart matériel après le retour complet au faible forçage. Aucun seuil irréversible de bout de cycle n'est donc détecté dans cette campagne.",
+    "memory": "Une boucle d'hystérèse ou plusieurs bassins établissent une dépendance au chemin dans le modèle, pas une mémoire climatique réelle.",
+    "prospective_limit": "Les zones testées ont été sélectionnées après cartographie. Une validation devra utiliser de nouveaux points gelés à l'avance."
+  }
+}
