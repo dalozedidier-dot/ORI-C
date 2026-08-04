@@ -1,6 +1,7 @@
 """Intégrité du dossier unique ORI-C."""
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -26,11 +27,19 @@ def test_le_verificateur_accepte_un_arbre_source_coherent() -> None:
 
 def test_le_mode_strict_refuse_uniquement_les_objets_lfs_non_hydrates() -> None:
     resultat = lancer_verificateur()
-    if "objets LFS non hydratés" in resultat.stdout:
+    correspondance = re.search(
+        r"(\d+) objets LFS non hydratés",
+        resultat.stdout,
+    )
+    assert correspondance is not None, resultat.stdout + resultat.stderr
+
+    nombre_non_hydrates = int(correspondance.group(1))
+    if nombre_non_hydrates > 0:
         assert resultat.returncode == 2, resultat.stdout + resultat.stderr
         assert "Archive non autonome" in resultat.stdout
     else:
         assert resultat.returncode == 0, resultat.stdout + resultat.stderr
+        assert "Archive non autonome" not in resultat.stdout
 
 
 def test_les_quatre_composantes_sont_presentes() -> None:

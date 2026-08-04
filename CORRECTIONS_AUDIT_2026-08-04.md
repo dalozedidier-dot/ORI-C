@@ -1,6 +1,6 @@
 # Corrections issues de l’audit du 4 août 2026
 
-Version : `0.9.0-research`
+Version : `0.9.2-research`
 
 ## Corrections appliquées
 
@@ -22,7 +22,13 @@ Version : `0.9.0-research`
 - ajout d’une CI Python 3.12 et 3.13 avec compilation complète et contrôle LFS strict ;
 - correction de deux lignes finales vides dans les CSV signalés ;
 - passage des six scripts shell en mode exécutable ;
-- ajout de la version `0.9.0-research` et mise à jour des instructions de publication.
+- ajout de la version `0.9.2-research` et mise à jour des instructions de publication.
+
+## Correctif CI 0.9.2
+
+- correction du test d’intégrité strict : la présence du libellé « objets LFS non hydratés » ne suffit plus à conclure à une erreur ;
+- lecture explicite du compteur numérique, avec succès lorsque ce compteur vaut zéro et code 2 uniquement lorsqu’il est supérieur à zéro ;
+- comportement désormais valide dans les deux contextes : archive source avec pointeurs LFS et dépôt GitHub Actions après `git lfs pull`.
 
 ## Validation finale
 

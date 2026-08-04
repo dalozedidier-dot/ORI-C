@@ -1,6 +1,6 @@
 # ORI-C — dossier unique
 
-Didier Daloze | Version 0.9.0-research | 4 août 2026
+Didier Daloze | Version 0.9.2-research | 4 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 

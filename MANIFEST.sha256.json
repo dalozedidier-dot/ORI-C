@@ -497,8 +497,8 @@
     },
     {
       "path": "00_socle/tests/test_integrite_dossier.py",
-      "size": 1655,
-      "sha256": "203893c5811c9bc41a2afb5af2b290a6fd55a325dac474ac0b22d3785d39be36",
+      "size": 1939,
+      "sha256": "2e4de32b3fb49cf01c113ad7ced6d707874197c8d4bf6d2cb336e7d1859be9e8",
       "storage": "inline"
     },
     {
@@ -3726,7 +3726,7 @@
     {
       "path": "CITATION.cff",
       "size": 740,
-      "sha256": "9bf21a95492f51848e6dc53305cb123a3e761284515dcdfcbed83f02ecf6c1cd",
+      "sha256": "686fab4dbdfed1e2254e2095d76e598586d60b161841198a1281460b002feaf7",
       "storage": "inline"
     },
     {
@@ -3743,8 +3743,8 @@
     },
     {
       "path": "CORRECTIONS_AUDIT_2026-08-04.md",
-      "size": 3170,
-      "sha256": "084ab08f0ae488e1d4e23d02d8ed9530c9acfd0323216ba13769d458280b8d41",
+      "size": 3628,
+      "sha256": "e494a7fd495f5e7dd3775b224f9ac744e6d9a25774f8f6939cf0f8891c17216a",
       "storage": "inline"
     },
     {
@@ -3786,7 +3786,7 @@
     {
       "path": "GITHUB_PUBLICATION.md",
       "size": 1512,
-      "sha256": "3033aab4a6b1506b20c56b0e703348700ef1e54442ba5e3a81fd5bd24e2abb36",
+      "sha256": "1ae046562cbc08625120b81433859eadf3b01f7e3534429bd62e7ed365c3da94",
       "storage": "inline"
     },
     {
@@ -3840,7 +3840,7 @@
     {
       "path": "README.md",
       "size": 8935,
-      "sha256": "99bada65b7ffe13d5932c63c90a23eab3878646c13341c60cbc8b90b8919de67",
+      "sha256": "67c2980b650aff6cc90bf0808d22fbca3f43e358d4632d986912fe08e6152e58",
       "storage": "inline"
     },
     {
@@ -3870,7 +3870,7 @@
     {
       "path": "VERSION",
       "size": 15,
-      "sha256": "1d5f118f97ffbc8091e66524f3f0fa1fd67e4d6b674379a17b26d1033511a319",
+      "sha256": "ddc9403329ff84703f3d6a4fd7cee2cbe177d615c071b4661ea01e40befa4eb3",
       "storage": "inline"
     },
     {
