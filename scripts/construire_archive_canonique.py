@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
 EXCLUDED_PARTS = {
     ".git", "__pycache__", ".pytest_cache", ".pytest-tmp",
-    ".mplconfig", ".claude", "node_modules",
+    ".mplconfig", ".claude", "node_modules", "dist",
 }
 FIXED_DATE = (2026, 8, 4, 0, 0, 0)
 

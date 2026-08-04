@@ -24,7 +24,7 @@ from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
 MANIFESTE = RACINE / "MANIFEST.sha256"
-EXCLUS = {"__pycache__", ".pytest_cache", ".pytest-tmp", ".git", ".claude", ".mplconfig", "node_modules"}
+EXCLUS = {"__pycache__", ".pytest_cache", ".pytest-tmp", ".git", ".claude", ".mplconfig", "node_modules", "dist"}
 EXCLUS_SUFFIXES = {".pyc", ".pyo"}
 
 STRUCTURE_ATTENDUE = [

@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 EXCLUDED_PARTS = {
     ".git", "__pycache__", ".pytest_cache", ".pytest-tmp",
-    ".mplconfig", ".claude", "node_modules",
+    ".mplconfig", ".claude", "node_modules", "dist",
 }
 EXCLUDED_FILES = {"MANIFEST.sha256", "MANIFEST.sha256.json"}
 LFS_PATTERN = re.compile(
