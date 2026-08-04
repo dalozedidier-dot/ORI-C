@@ -11,6 +11,13 @@ on:
         options:
           - ciblee
           - complete
+  workflow_call:
+    inputs:
+      campagne:
+        description: Niveau d'exécution
+        required: false
+        default: complete
+        type: string
   push:
     branches: [main]
     paths:
@@ -119,7 +126,7 @@ jobs:
             "$OUT/resultats/"
 
       - name: Exécuter les 683 entrées sur données réelles
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.campagne == 'complete' }}
+        if: ${{ inputs.campagne == 'complete' }}
         run: |
           python -m oric_full run \
             --all \
@@ -165,7 +172,7 @@ jobs:
 
       - name: Publier les analyses sur données réelles
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: analyses-donnees-reelles-${{ github.sha }}
           path: ${{ runner.temp }}/oric-donnees-reelles

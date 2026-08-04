@@ -4,7 +4,7 @@
 
 Aucun compteur de tests n'est saisi manuellement ailleurs dans le dossier : les autres documents renvoient ici.
 
-Dernière exécution : 2026-08-03
+Dernière exécution : 2026-08-04
 
 Environnement : Python 3.13.5, numpy 2.3.5, scipy 1.17.0, numba 0.65.1, pandas 2.2.3
 
@@ -16,6 +16,7 @@ Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une e
 |---|---:|---:|---:|---:|
 | Socle, `00_socle/tests` | 152 | 0 | 1 | 1 |
 | Couche mémoire historique | 32 | 0 | 0 | 0 |
+| Campagne maximale, trois branches | 21 | 0 | 0 | 0 |
 | Couche astronomique | 10 | 0 | 2 | 0 |
 
 Le `xfail` attendu du socle concerne deux relations dont la référence est encore trop générique pour être datée : `TR-021 → TR-028` et `TR-024 → TR-023`. Il passera au vert dès qu'une source datable leur sera attachée. Il ne compte pas comme un échec réel.

@@ -116,7 +116,8 @@ jusqu'aux interfaces réactives. La base historique
 
 | Élément | Statut | Remarque |
 |---|---|---|
-| Clôture généalogique | **Cohérence structurelle vérifiée** | racine unique `N036`, 53/53 nœuds joignables |
+| Connectivité de la projection paire à paire | **Cohérence structurelle vérifiée** | racine unique `N036`, 53/53 nœuds reliés dans la projection |
+| Fermeture hypergraphique stricte | **Écart structurel détecté** | 46/53 nœuds atteignables ; noyau cyclique de 4 nœuds et 3 nœuds bloqués en aval |
 | Filtre NC–CC paramétré | Fortement appuyé | 3 mécanismes concurrents conservés, aucun tranché |
 | Échelle des dix capacités, monotonie | **Réfuté** | critère préenregistré non atteint, 11 arcs sur 117 |
 | Échelle des dix capacités, information | **Établi dans le graphe** | gain net 0,595 bit, p = 5·10⁻⁵, ρ = 0,74 |
@@ -129,12 +130,14 @@ jusqu'aux interfaces réactives. La base historique
 Deux résultats méritent d'être lus ensemble, parce qu'ils vont en sens
 contraire.
 
-Le contrôle de clôture a révélé que la chaîne poussière
-`N008 → N009 → N010 → N008` tournait sur elle-même sans aucune alimentation
-matérielle : les condensats, glaces, organiques et grains présolaires n'y
-entraient jamais. Quatre nœuds étaient inatteignables depuis le socle
-cosmique. L'hyperarête `H047` rétablit la jonction, et le contrôle est
-désormais exécuté à chaque validation.
+Le premier contrôle de connectivité a révélé que la chaîne poussière
+`N008 → N009 → N010 → N008` tournait sur elle-même sans alimentation
+matérielle. L'hyperarête `H047` a rétabli cette jonction dans la projection.
+
+Le contrôle hypergraphique strict ajouté ensuite change la conclusion de
+clôture. Une hyperarête multi-entrée ne peut produire ses sorties que lorsque
+toutes ses entrées sont disponibles. Avec cette règle, seuls 46 nœuds sur 53
+sont atteignables. `N029`, `N030`, `N053` et `N054` forment le noyau cyclique. `N031`, `N032` et `N035` sont bloqués en aval. Un seul apport déclaré sur le noyau suffit à fermer mathématiquement la représentation, sans démontrer qu'un tel apport existe dans la nature. L'hypergraphe reste connecté dans sa projection, mais il n'est pas strictement clos.
 
 La monotonie de l'échelle des capacités est **réfutée, et ne peut pas être
 rétablie par un réétiquetage**. La raison est structurelle : une production
@@ -318,6 +321,31 @@ confirmatoires. Elles servent à éprouver les définitions et à préparer de
 nouveaux protocoles. Les résultats machine sont dans
 `plateforme/campagne_maximale_reelle/resultats_consolides/`.
 
+### Campagne maximale de robustesse sur les trois branches
+
+Cette campagne utilise uniquement les données et résultats déjà présents dans
+le dépôt. Elle ajoute des retraits unitaires, des ablations, des validations
+croisées, des permutations et des contrôles de portée. Elle ne remplace aucune
+donnée absente et ne crée aucun nouveau verdict confirmatoire.
+
+| Secteur | Analyse maximale disponible | Résultat | Statut |
+|---|---|---|---|
+| Matière, hypergraphe | fermeture stricte puis retrait individuel de 53 hyperarêtes et 53 nœuds | 46/53 nœuds atteignables et 34 hyperarêtes critiques pour cet ensemble accessible | **Écart de clôture et fragilité quantifiés**, sans transposition au réel |
+| Matière, partage métal-silicate | retrait unitaire de chaque coefficient | carbone robuste, hydrogène non évaluable, azote dépendant de `D-N-37GPA`, désaccord du soufre robuste | **Résultat différencié par élément** |
+| Matière, base des transitions | audit des 23 champs sur 40 transitions | remplissage global 54,8 %, 10 champs entièrement vides | **Limite de données localisée** |
+| Système solaire | séparation interventions et écarts numériques retenus | rapport minimal 4 964 entre effet interventionnel et plus grand écart numérique sélectionné | **Causalité renforcée dans le modèle réduit** |
+| Spectre orbital | réponses des bandes de 95 et 125 ka sur six interventions | rapports de puissance 0,439 à 1,081 et 0,704 à 1,156 ; 405 ka et 2,4 Ma non résolues sur 2 Ma | **Sélectivité mesurée, portée temporelle limitée** |
+| Paléoclimat | part descriptive de la bande de 100 ka reproduite sur la fenêtre de prédiction | environ 98,6 à 99,3 % de la part observée reste inexpliquée selon le modèle | **Verrou localisé, mécanisme non identifié** |
+| Exoplanète | palier final porté à 600 Ma | fractions retenues nulles ou inférieures à 1,5 × 10⁻¹³ | **Relaxation vers un attracteur unique** |
+| Antibiotiques | validation groupée, ablation, dernière transition, doses et permutation | histoire 0,6240 contre 0,6335, mais gain apparié non significatif, p = 0,2266 ; 0,6221 sans pente, p = 0,0078 ; dernière transition 0,8687 contre 0,7767 pour l'état seul ; permutation p = 0,0649 | **Exploratoire non robuste** |
+| ARN catalytique | dynamique de composition sur huit cycles | diversité croissante pour 71-89, p exact 0,0117 ; aucune tendance de concentration maximale | **Dynamique de composition, pas hérédité** |
+| Prébiotique | validateur appliqué au gabarit livré | schéma valide et marqueur synthétique détecté ; aucune lignée réelle | **Infrastructure testée, programme non exécuté** |
+
+Le rapport narratif et les quatre sorties machine sont dans
+`plan_directeur/campagne_maximale_trois_branches/resultats/`. La suite de
+régression associée comporte 21 tests. Leur réussite verrouille les calculs et
+leurs limites, sans valider ORI-C comme théorie générale.
+
 ### Campagne du plan directeur
 
 | Groupe | Résultat | Statut |
@@ -378,12 +406,17 @@ signale à chaque exécution.
 
 ## Lecture d'ensemble
 
-Plusieurs couches sont désormais soumises à des témoins appariés ou à des
-ablations. La couche mémoire paléoclimatique et la mémoire GISTEMP perdent
-contre leurs témoins de complexité égale. Le benchmark antibiotique reste non
-concluant. La couche astronomique répond nettement aux interventions dans le
-modèle réduit. Ces verdicts restent séparés et ne valident ni ne réfutent le
-cadre général.
+Plusieurs couches sont désormais soumises à des témoins appariés, à des
+ablations, à des retraits unitaires ou à des permutations. La couche mémoire
+paléoclimatique et la mémoire GISTEMP perdent contre leurs témoins de complexité
+égale. Le benchmark antibiotique donne un léger gain moyen en validation
+groupée, mais ce gain disparaît ou s'inverse dans l'ablation de la pente et la
+prédiction de la dernière transition. La couche astronomique répond nettement
+aux interventions dans le modèle réduit, avec une séparation minimale d'un
+facteur 4 964 par rapport aux écarts numériques sélectionnés. La branche
+matière montre à la fois une clôture formelle et une forte fragilité à certains
+retraits. Ces verdicts restent séparés et ne valident ni ne réfutent le cadre
+général.
 
 C'est la principale conclusion transversale disponible aujourd'hui, et elle
 oriente le travail à venir : la question ouverte n'est pas de savoir si le

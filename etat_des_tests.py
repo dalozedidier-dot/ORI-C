@@ -133,6 +133,30 @@ def suite_astronomique() -> dict:
     }
 
 
+
+def suite_trois_branches() -> dict:
+    """Tests de régression de la campagne maximale sur les trois branches."""
+    import os
+
+    chemin = RACINE / "plan_directeur" / "campagne_maximale_trois_branches"
+    environnement = dict(os.environ)
+    environnement["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    environnement.setdefault("OPENBLAS_NUM_THREADS", "1")
+    environnement.setdefault("OMP_NUM_THREADS", "1")
+    sortie, code = executer(
+        [sys.executable, "-m", "pytest", "-q", "tests"],
+        chemin, environnement,
+    )
+    reussis = re.search(r"(\d+) passed", sortie)
+    echoues = re.search(r"(\d+) failed", sortie)
+    ignores = re.search(r"(\d+) skipped", sortie)
+    return {
+        "reussis": int(reussis.group(1)) if reussis else 0,
+        "echoues": int(echoues.group(1)) if echoues else 0,
+        "ignores": int(ignores.group(1)) if ignores else 0,
+        "code_retour": code,
+    }
+
 def rapport_exhaustif(rejouer: bool = False) -> dict:
     chemin = (
         RACINE / "00_socle" / "test_interventionnel" / "resultats_exhaustifs"
@@ -223,6 +247,7 @@ def composer(rejouer: bool = False) -> str:
     socle = suite_socle()
     memoire = suite_memoire()
     astro = suite_astronomique()
+    trois_branches = suite_trois_branches()
     exhaustif = rapport_exhaustif(rejouer=rejouer)
 
     lignes = [
@@ -249,6 +274,8 @@ def composer(rejouer: bool = False) -> str:
         f"{socle['ignores']} | {socle['echecs_attendus']} |",
         f"| Couche mémoire historique | {memoire['reussis']} | "
         f"{memoire['echoues']} | 0 | 0 |",
+        f"| Campagne maximale, trois branches | {trois_branches['reussis']} | "
+        f"{trois_branches['echoues']} | {trois_branches['ignores']} | 0 |",
     ]
     if astro.get("disponible"):
         lignes.append(

@@ -9,28 +9,33 @@
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 6400,
-      "sha256": "2e43392c043c37349595444abc5f2ee26ee65fe5e3abececce76b0341070083f"
+      "size": 6513,
+      "sha256": "acc86bed1affe23f2627d26ada43d26b92b24c0cb7282ef2e0c3e7ea28ced294"
+    },
+    {
+      "path": ".github/workflows/analyse-maximale-trois-branches.yml",
+      "size": 4784,
+      "sha256": "0bbccf98f3a1a5f60a0b5c51b5ac7763321e0ec4b077e068769e24990eca9bf5"
     },
     {
       "path": ".github/workflows/analyse-paleoclimat-approfondie.yml",
-      "size": 4738,
-      "sha256": "f40d70398d6ab145e0831d418b907f7dc2d590a2f50a6fa0d28e0701415103b6"
+      "size": 4903,
+      "sha256": "4f9ba3a5190840a79aaa73f2c93e673d18881e834b6be338ed2e720f51d0d7d4"
     },
     {
       "path": ".github/workflows/analyse-structure.yml",
-      "size": 7451,
-      "sha256": "a8408fa4bf7372b8ba634be153762ccbd97fc7bd92180c8b7cc316515b1b964a"
+      "size": 7576,
+      "sha256": "173cc29260535dbebc834047cc4f7c954c1be7549f6119c89b57798cebfb083c"
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 6823,
-      "sha256": "3d3d55f96eb4df57674496ae0448d9117ac705fa0af4649345ed5e276cc79092"
+      "size": 6951,
+      "sha256": "ef1692bd3fc1e4ec25e2df6ea8af5e4a6c1b7fbf257ab51d7e6337966c6363a3"
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 559,
-      "sha256": "c0618f278308b0c11f7e4f390eaacb9aa9c113d0d8792c2b14271c8c21d9698c"
+      "size": 1339,
+      "sha256": "79997b23ded15b3eceb16e753fd8d6375dfe142e5f522b3d21d4eb5995d1dbee"
     },
     {
       "path": ".github/workflows/pages.yml",
@@ -654,8 +659,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/README.md",
-      "size": 2920,
-      "sha256": "057fd9fbca85e5cec2325eeeacdcf47d664b09c9d459e0dd2a305a52622dc103"
+      "size": 3270,
+      "sha256": "87d014f723183c0ebdbaae1f2d5206f431fb56f8c58735eaf7300a4d2f3bcc88"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/analyser_inventaire.py",
@@ -669,8 +674,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/construire_et_valider.py",
-      "size": 5529,
-      "sha256": "f246d8b00b066b2d252b910aa15ed7a9f9b653c752706b793f4b0c7965a55ab5"
+      "size": 7600,
+      "sha256": "d746887db0fb2b5d209ce33304130d92603b287015a119b83eb5674f4ae0cc7c"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/filtre_nc_cc.csv",
@@ -739,13 +744,13 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/tests/test_hypergraphe.py",
-      "size": 7403,
-      "sha256": "69e484c85c612b0d3ed1948df83b0e9c327aeee456c89abf06a1d51c86f8be9f"
+      "size": 8034,
+      "sha256": "8cfde3a963e3158b4dea7b80fbedd2a127670774ffa1af4c7370a0f7eed493ee"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json",
-      "size": 1768,
-      "sha256": "6cc51265d038455f87749efa54b8a07fc9a2c94eae83a2e9765be25bf65d78ab"
+      "size": 4819,
+      "sha256": "b412a5fd1af96b60971d9566a521162d8e3b618a4bdc9dbc73b47530cd9c455d"
     },
     {
       "path": "01_branche_matiere/inventaire_hierarchique/Inventaire_hierarchique_matiere.xlsx",
@@ -3089,8 +3094,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "size": 11544,
-      "sha256": "05a4f5271ccf3ae9fb10edd19ebeb0f1d54cfb25614d64d6f8f0a5ff4693b26b"
+      "size": 11728,
+      "sha256": "85ed4a109e48b33fcbcc65ce57e64ab2ed3b32fc091c6b30bf87c02c54bde409"
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
@@ -3109,8 +3114,8 @@
     },
     {
       "path": "CONTROLES_INTEGRITE.md",
-      "size": 4152,
-      "sha256": "3cf558371d114c0cccc65617d18e8ebdf77e936a00196fea974884ddaf8c2c08"
+      "size": 4795,
+      "sha256": "693c0c112ef0fc24ca823c049409faa917fa96457e9118c166f4c800fde4421a"
     },
     {
       "path": "DATA_AVAILABILITY.md",
@@ -3124,13 +3129,13 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 24001,
-      "sha256": "7774097ef0dc4c165b5df98889596ef4a5060e41dd2979aba9c4e8fa641521be"
+      "size": 27986,
+      "sha256": "d2df23b58725b6d754c407d9cbb665f16088fe7761a532dd950389a00bf1c676"
     },
     {
       "path": "ETAT_DES_TESTS.md",
-      "size": 2565,
-      "sha256": "7b7cbb731c29504cd9707ae1b79ed6a8554f7f8f122621bb2c2de4391e7ee44b"
+      "size": 2620,
+      "sha256": "789e9fe536c993b178fe541a893b4f88d290c1bb7c61f7e6eafed73a0b0718b3"
     },
     {
       "path": "EXTERNAL_DATA_MANIFEST.csv",
@@ -3169,8 +3174,8 @@
     },
     {
       "path": "Makefile",
-      "size": 154,
-      "sha256": "ea8bcc6ce1e0a5325d194d0c9e39f80d11e12e57073452d324d616b3d319b106"
+      "size": 377,
+      "sha256": "22592611f00e5b793646acacf914ce99406ac259cd8e78532fcb32b64de37138"
     },
     {
       "path": "ORI-C_Architecture_generale_du_programme.pdf",
@@ -3184,8 +3189,8 @@
     },
     {
       "path": "README.md",
-      "size": 7460,
-      "sha256": "8bd6413ae3d8ad98f87cc7807787b157fd8e0858d1a626e879ede254c6396c1c"
+      "size": 7988,
+      "sha256": "4f2e45e9881553f5983cc02960aba04e75cddd2da6404e4fe48d9a53ccf15cea"
     },
     {
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
@@ -3194,8 +3199,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 1959,
-      "sha256": "36c9ff26a4d111a984c9c5506cddf4c9f1383806054c9c98ad5f54565bad6085"
+      "size": 4348,
+      "sha256": "b47e26e77ac44230de5d5391b7d55fb4a60fbbd3a7d7fd266a579fad15763433"
     },
     {
       "path": "TRI_ET_CORRECTIONS.md",
@@ -3254,8 +3259,8 @@
     },
     {
       "path": "documentation/POINT_D_ENTREE.md",
-      "size": 2608,
-      "sha256": "8e28bf3736d8145b38db4ffaefec2b1e01ea25ba5771b838aaf531caa68dcfe0"
+      "size": 3636,
+      "sha256": "4e4524820ab08f5cbe7179138fe38baacec1474d9942382cbbadf1d9e4623c50"
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
@@ -3399,8 +3404,8 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 16656,
-      "sha256": "cca411a4257cba138ea1df79f4628b16d6652766947d6444c48e4bc5878f8a4d"
+      "size": 17769,
+      "sha256": "3f8c95589d115e82e230c4f4a0ff52b52eb292973b2eb3632a19d49b6cb7d6ec"
     },
     {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
@@ -3409,8 +3414,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 8612,
-      "sha256": "1834acbe7b5a23d29df2485684a43177b45945643abb997b1a0cd3e5834999cc"
+      "size": 10435,
+      "sha256": "7c66185600257a8646868909e3bcf82537cbaa22e4c673310df03cf059fee3d0"
     },
     {
       "path": "plan_directeur/GRILLE_ETAPE_2.md",
@@ -3436,6 +3441,91 @@
       "path": "plan_directeur/audit_transversal.py",
       "size": 7784,
       "sha256": "17bda858ce097edabf34bbc8cdf775ee83587d2c18f0f6e519906f6b6aa2d250"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/README.md",
+      "size": 2228,
+      "sha256": "1bae37ec046c3477e3f592f78b98e0030b633da3ba85060b48a6c51f6e298229"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/__init__.py",
+      "size": 80,
+      "sha256": "0c102faf883d034a336d062914edb7701ed10a84f97c985c158dca6c5b0bfc3d"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/analyse_matiere.py",
+      "size": 13547,
+      "sha256": "dc12f0d49e7880ace3f2f2344ec5cb2de561cf32b346312660e3d8924e097727"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/analyse_systeme_solaire.py",
+      "size": 10974,
+      "sha256": "a0ba0d2accb447761205285114a9ce887092efd261ed5d30aefc3faef1e3300c"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/analyse_vivant.py",
+      "size": 22139,
+      "sha256": "028513497c547ecb193c5446d08be117155185e476a95c023c2b9e364ddc7268"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/common.py",
+      "size": 961,
+      "sha256": "d46d4882846f5a7add3b373edbd94889c1f10d99f8ec1ba8390e39c339d42fd8"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md",
+      "size": 6438,
+      "sha256": "22022bc6378b484077453eb36ba2bf2e1dae28bc7c7ec47679a9a261bfe534ef"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/matiere_robustesse.json",
+      "size": 41909,
+      "sha256": "771f99031efa1c38f877ad9387bbd5ac1a753011c7dda70c9a03b4edd7366125"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json",
+      "size": 3375,
+      "sha256": "049712a3c38de1c45553a53581087290015c53b6f64c8ec189e78aa0fa26e892"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+      "size": 9963,
+      "sha256": "c3fe5269fe4ffe5f869bcc091197298ce22cca3b2bb014f5a95391f1737ca3df"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "size": 22716,
+      "sha256": "f618615f72e10eb0797e061ce7625b621607dd0a5a9317d8e9c844536a50486b"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/run_all.py",
+      "size": 15398,
+      "sha256": "8dce8dec20eed766f9e86fae07d40d8382b41b7aa402f0a457348e32d183ef0a"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/tests/conftest.py",
+      "size": 528,
+      "sha256": "b0911de983d87c6ae36a0e13d4d3866ff939572326ac97bc809b54c1b1d58670"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/tests/test_matiere.py",
+      "size": 2041,
+      "sha256": "30926944b08e74531e97793a536b18910c1125f84a082ffb77bc344344474045"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/tests/test_synthese.py",
+      "size": 930,
+      "sha256": "3ac89049e19a839cf7c84b6cc9c35853bf801f89b4958da57e09267bde9cabd6"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/tests/test_systeme_solaire.py",
+      "size": 1964,
+      "sha256": "64097976fe2f78e534e969149adf9d931fbb9d1ce430e083c4a6a9ed2cacce68"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/tests/test_vivant.py",
+      "size": 3201,
+      "sha256": "a887e3f8908a948a4554c477736cba27c354085b73c93aa9119f180d6b769a0a"
     },
     {
       "path": "plan_directeur/campagne_plateforme/README.md",
@@ -4944,8 +5034,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 16823,
-      "sha256": "c2dbce78ed430bcabdd14a968993a266f71c01b24753fb2bd864ec41d63b2679"
+      "size": 16966,
+      "sha256": "2f1bb3ee6ebf29412299e6e17347124b3e6ceb7948ed898d0aa9bcf964ac25ef"
     },
     {
       "path": "site/methode.html",
@@ -4954,13 +5044,13 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 42728,
-      "sha256": "bccfeb6608eae845779ae2ef1c18949bb5aa0f17683caef7a594b167660aa3e9"
+      "size": 48707,
+      "sha256": "607e3138c71a65281f1dee7c74778021e4d6385a576d963eabca47dd8bba1fdf"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 11405,
-      "sha256": "c42b5d98967f7ab09092506e7be643c4d0ca37f3743742d4a32270e6738a751c"
+      "size": 12012,
+      "sha256": "bf5b3b1bf5d776e3b1e5c227892514507fd4d73ca0592dd7567924c870c29cd5"
     },
     {
       "path": "site/robots.txt",

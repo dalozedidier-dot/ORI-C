@@ -1,6 +1,9 @@
 {
-  "status": "valid",
+  "status": "valid_with_strict_closure_gap",
   "errors": [],
+  "warnings": [
+    "La projection paire à paire est connectée, mais la fermeture hypergraphique stricte laisse 7 nœuds inatteignables."
+  ],
   "nodes": 53,
   "hyperedges": 53,
   "sources": 31,
@@ -53,13 +56,143 @@
     "all_edges_sourced": true,
     "competing_scenarios_explicit": true,
     "four_relation_families_represented": true,
-    "genealogically_closed": true,
-    "cosmic_continuity_complete": true
+    "single_declared_root": true,
+    "pairwise_projection_connected": true,
+    "strict_hypergraph_closed": false
   },
   "declared_roots": [
     "N036"
   ],
-  "nodes_reachable_from_root": 53,
-  "unreachable_nodes": [],
-  "scope": "Hypergraphe mécanistique initial. Il organise des relations sourcées et des scénarios; il ne valide pas ORI-C ni ne remplace une mesure quantitative d'inventaire accessible."
+  "pairwise_projection": {
+    "nodes_reachable_from_root": 53,
+    "unreachable_nodes": [],
+    "scope": "Projection de chaque hyperarête en liens paire à paire. Elle ne vérifie pas la disponibilité simultanée de toutes les entrées."
+  },
+  "strict_hypergraph_closure": {
+    "nodes_reachable_from_root": 46,
+    "unreachable_nodes": [
+      "N029",
+      "N030",
+      "N031",
+      "N032",
+      "N035",
+      "N053",
+      "N054"
+    ],
+    "blocking_dependencies": {
+      "N029": [
+        {
+          "edge_id": "H030",
+          "processus": "Formation de l inventaire accessible",
+          "entrees": [
+            "N026",
+            "N027",
+            "N028",
+            "N052",
+            "N054"
+          ],
+          "entrees_manquantes": [
+            "N054"
+          ]
+        }
+      ],
+      "N030": [
+        {
+          "edge_id": "H031",
+          "processus": "Circulation entre reservoirs et interfaces",
+          "entrees": [
+            "N027",
+            "N028",
+            "N029"
+          ],
+          "entrees_manquantes": [
+            "N029"
+          ]
+        }
+      ],
+      "N031": [
+        {
+          "edge_id": "H032",
+          "processus": "Serpentinisation",
+          "entrees": [
+            "N030"
+          ],
+          "entrees_manquantes": [
+            "N030"
+          ]
+        }
+      ],
+      "N032": [
+        {
+          "edge_id": "H033",
+          "processus": "Organisation chimique aux interfaces",
+          "entrees": [
+            "N029",
+            "N030",
+            "N031"
+          ],
+          "entrees_manquantes": [
+            "N029",
+            "N030",
+            "N031"
+          ]
+        }
+      ],
+      "N035": [
+        {
+          "edge_id": "H033",
+          "processus": "Organisation chimique aux interfaces",
+          "entrees": [
+            "N029",
+            "N030",
+            "N031"
+          ],
+          "entrees_manquantes": [
+            "N029",
+            "N030",
+            "N031"
+          ]
+        }
+      ],
+      "N053": [
+        {
+          "edge_id": "H052",
+          "processus": "Circulation hydrothermale entretenue",
+          "entrees": [
+            "N051",
+            "N028",
+            "N030"
+          ],
+          "entrees_manquantes": [
+            "N030"
+          ]
+        }
+      ],
+      "N054": [
+        {
+          "edge_id": "H053",
+          "processus": "Alteration aqueuse produisant des especes solubles",
+          "entrees": [
+            "N020",
+            "N053"
+          ],
+          "entrees_manquantes": [
+            "N053"
+          ]
+        }
+      ]
+    },
+    "scope": "Fermeture par point fixe exigeant toutes les entrées de chaque hyperarête."
+  },
+  "nodes_reachable_from_root": 46,
+  "unreachable_nodes": [
+    "N029",
+    "N030",
+    "N031",
+    "N032",
+    "N035",
+    "N053",
+    "N054"
+  ],
+  "scope": "Hypergraphe mécanistique initial. La connectivité de sa projection et sa fermeture hypergraphique stricte sont distinctes. Il ne valide pas ORI-C ni ne remplace une mesure quantitative d'inventaire accessible."
 }

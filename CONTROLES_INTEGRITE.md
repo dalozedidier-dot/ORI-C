@@ -42,8 +42,8 @@ Le xfail concerne deux relations dont la référence reste générique et non da
 
 ## Couche hypergraphe de la branche 1, ajout du 2026-08-02
 
-- hypergraphe : 53 nœuds, 53 hyperarêtes, clôture généalogique vérifiée,
-  racine unique `N036`, 53/53 nœuds joignables ;
+- hypergraphe : 53 nœuds, 53 hyperarêtes, connectivité de la projection paire à paire vérifiée,
+  racine unique `N036`, 53/53 nœuds reliés dans cette projection ;
 - inventaire accessible : 31 enregistrements sourcés, 4 éléments, 2 corps,
   bouclage des budgets publiés à 2,88 % au pire ;
 - suite hypergraphe : 13 tests réussis, 1 xfail déclaré ;
@@ -75,3 +75,13 @@ rétablissable par réétiquetage. Le test est conservé en échec déclaré pou
 énoncer ce qui a été réfuté au lieu de le faire disparaître.
 
 La campagne consolidée reste scientifiquement prudente : une réussite technique n'est pas une validation d'une hypothèse ORI-C.
+
+## Correction de la fermeture hypergraphique stricte, ajout du 2026-08-04
+
+Le contrôle antérieur projetait chaque hyperarête multi-entrée en liens paire à
+paire. Cette projection reste connectée, mais elle ne vérifie pas que toutes les
+entrées d'un processus sont disponibles simultanément. Le contrôle strict par
+point fixe atteint 46 nœuds sur 53. Sept nœuds, `N029`, `N030`, `N031`, `N032`,
+`N035`, `N053` et `N054`, restent enfermés dans une dépendance circulaire. La
+formulation « hypergraphe clos » est donc retirée. Le résultat négatif est
+verrouillé par la suite de tests.

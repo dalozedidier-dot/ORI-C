@@ -11,6 +11,13 @@ on:
         options:
           - rapide
           - complete
+  workflow_call:
+    inputs:
+      profondeur:
+        description: Niveau d analyse structurelle
+        required: false
+        default: complete
+        type: string
   push:
     branches: [main]
     paths:
@@ -82,7 +89,7 @@ jobs:
             | tee "$OUT/logs/analyse_graphe.log"
 
       - name: Exécuter les benchmarks structurels complets
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.profondeur == 'complete' }}
+        if: ${{ inputs.profondeur == 'complete' }}
         run: |
           run_scientific_analysis() {
             local script="$1"
@@ -203,7 +210,7 @@ jobs:
 
       - name: Publier les résultats structurels
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: analyses-structurelles-${{ github.sha }}
           path: ${{ runner.temp }}/oric-structure

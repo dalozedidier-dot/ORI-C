@@ -20,4 +20,22 @@ jobs:
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
-      - run: python scripts/valider_tout.py
+      - name: Valider les suites canoniques
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python scripts/valider_tout.py
+      - name: Tester la campagne maximale sur les trois branches
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests
+      - name: Vérifier la reproductibilité de la campagne maximale
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          python plan_directeur/campagne_maximale_trois_branches/run_all.py
+          git diff --exit-code -- plan_directeur/campagne_maximale_trois_branches/resultats

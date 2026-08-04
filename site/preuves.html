@@ -118,6 +118,43 @@
           </div>
         </div>
 
+        <div class="evidence-group" id="campagne-maximale">
+          <div class="group-heading"><p class="eyebrow">Nouvelle campagne cumulative</p><h2>Tests maximaux disponibles sur les trois branches</h2><p>Ces analyses utilisent seulement les données déjà présentes. Elles mesurent la robustesse, sans remplacer les observations manquantes.</p></div>
+          <div class="evidence-grid">
+            <article class="evidence-card" data-status="structural inconclusive">
+              <div class="evidence-top"><span class="status structural">Fragilité structurelle</span><span class="evidence-id">X-01</span></div>
+              <h3>Matière : retraits unitaires et coefficients</h3>
+              <p class="claim">La clôture actuelle est vérifiée, mais une grande partie de la joignabilité dépend de liens individuels.</p>
+              <dl><div><dt>Fermeture</dt><dd>Projection : 53/53. Fermeture stricte : 46/53, avec un noyau cyclique de 4 nœuds et 3 nœuds bloqués en aval.</dd></div><div><dt>Ablations</dt><dd>34 hyperarêtes sur 53 sont critiques pour l'ensemble strictement atteignable.</dd></div><div><dt>Partage</dt><dd>Carbone robuste, hydrogène non évaluable, azote fragile à une mesure et désaccord du soufre robuste.</dd></div><div><dt>Données</dt><dd>La base des transitions est remplie à 54,8 % et 10 champs restent entièrement vides.</dd></div><div><dt>Portée</dt><dd>Fragilité de la représentation, pas unicité physique des chemins naturels.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/matiere_robustesse.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md">Rapport complet</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="model refuted">
+              <div class="evidence-top"><span class="status model">Causalité localisée</span><span class="evidence-id">X-02</span></div>
+              <h3>Système solaire : effets, bandes et relaxation</h3>
+              <p class="claim">Les effets des interventions dépassent nettement les contrôles numériques, mais la réponse est asymétrique et la couche climatique reste incomplète.</p>
+              <dl><div><dt>Séparation numérique</dt><dd>Rapport minimal de 4 964 entre intervention et plus grand écart numérique sélectionné.</dd></div><div><dt>Bandes résolues</dt><dd>95 ka : 0,439 à 1,081. 125 ka : 0,704 à 1,156.</dd></div><div><dt>100 ka climatique</dt><dd>Environ 98,6 à 99,3 % de la part observée reste descriptivement inexpliquée.</dd></div><div><dt>Palier long</dt><dd>Après 600 Ma, aucune mémoire exoplanétaire matériellement persistante.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json">Résultat machine</a><a href="#astronomie">Couche astronomique</a><a href="#memoire">Couche mémoire</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="inconclusive untested">
+              <div class="evidence-top"><span class="status inconclusive">Aucun appui confirmatoire robuste</span><span class="evidence-id">X-03</span></div>
+              <h3>Vivant : antibiotiques, ARN et prébiotique</h3>
+              <p class="claim">Le léger avantage historique dépend du protocole et ne résiste pas à l'ensemble des contrôles.</p>
+              <dl><div><dt>Validation groupée</dt><dd>MAE 0,6240 pour l'histoire contre 0,6335 pour le témoin.</dd></div><div><dt>Ablation et futur</dt><dd>0,6221 sans pente ; dernière transition 0,8687 contre 0,7767 pour l'état seul.</dd></div><div><dt>Permutation</dt><dd>gain apparié p = 0,2266 ; ablation de la pente p = 0,0078 ; distribution nulle à 1 000 permutations p = 0,0649.</dd></div><div><dt>ARN</dt><dd>Diversité croissante pour 71-89, p exact = 0,0117, mais aucune donnée de filiation.</dd></div><div><dt>Prébiotique</dt><dd>Gabarit validé et identifié comme synthétique, aucune lignée réelle.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json">Résultat machine</a><a href="#vivant">Statut de la branche</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="structural concept">
+              <div class="evidence-top"><span class="status structural">21 tests de régression</span><span class="evidence-id">X-04</span></div>
+              <h3>Un workflow cumulatif sans fusion des verdicts</h3>
+              <p class="claim">Le nouveau workflow peut lancer la validation, les quatre campagnes existantes et la post-analyse des trois branches.</p>
+              <dl><div><dt>Modes</dt><dd><code>ciblee</code> pour la nouvelle campagne, <code>maximum</code> pour la batterie cumulative.</dd></div><div><dt>Reproductibilité</dt><dd>Les sorties canoniques sont recalculées puis comparées au dépôt.</dd></div><div><dt>Limite</dt><dd>Les 21 tests verrouillent le code et les assertions, pas 21 preuves indépendantes.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml">Lancer le workflow</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json">Synthèse machine</a></div>
+            </article>
+          </div>
+        </div>
+
         <div class="evidence-group" id="socle">
           <div class="group-heading"><p class="eyebrow">Socle commun</p><h2>Règles et test transversal</h2></div>
           <div class="evidence-grid">
@@ -158,11 +195,11 @@
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/chaine_filtres_azote.json">Chaîne quantitative de l'azote</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/README_INVENTAIRE_COMPLET.md">Périmètre et comptages</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/inventaire_hierarchique/tests/test_inventaire_hierarchique.py">Tests</a></div>
             </article>
 
-            <article class="evidence-card" id="hypergraphe" data-status="structural">
-              <div class="evidence-top"><span class="status structural">Cohérence structurelle</span><span class="evidence-id">M-03</span></div>
-              <h3>Hypergraphe mécanistique clos</h3>
-              <p class="claim">Les transformations multi-entrées et multi-sorties rendent visibles mélanges, recyclages et dépendances que la chronologie linéaire masque.</p>
-              <dl><div><dt>Résultat</dt><dd>53 nœuds, 53 hyperarêtes, racine unique N036 et 53 nœuds sur 53 joignables.</dd></div><div><dt>Découverte de méthode</dt><dd>Le contrôle a détecté une boucle de poussière sans alimentation externe. L'hyperarête H047 rétablit la filiation.</dd></div><div><dt>Limite</dt><dd>La qualité des preuves reste évaluée relation par relation.</dd></div></dl>
+            <article class="evidence-card" id="hypergraphe" data-status="structural inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Écart structurel détecté</span><span class="evidence-id">M-03</span></div>
+              <h3>Hypergraphe : projection connectée, fermeture stricte ouverte</h3>
+              <p class="claim">Les transformations multi-entrées exigent de distinguer une succession de liens de la disponibilité simultanée de toutes les entrées.</p>
+              <dl><div><dt>Projection</dt><dd>53 nœuds sur 53 reliés depuis la racine N036.</dd></div><div><dt>Fermeture stricte</dt><dd>46 nœuds sur 53 atteignables. Sept nœuds restent dans une dépendance circulaire.</dd></div><div><dt>Découverte de méthode</dt><dd>Le contrôle strict empêche de remplacer A|B → C par deux réactions fictives A → C et B → C.</dd></div><div><dt>Limite</dt><dd>Le résultat porte sur la représentation publiée et la qualité des preuves reste évaluée relation par relation.</dd></div></dl>
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json">Validation machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/noeuds.csv">Nœuds</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/hypergraphe_transformations/hyperaretes.csv">Hyperarêtes</a></div>
             </article>
 

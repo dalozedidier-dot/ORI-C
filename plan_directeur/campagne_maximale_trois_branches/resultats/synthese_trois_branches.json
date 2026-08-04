@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "campaign": "maximum_possible_with_repository_data",
+  "branches": {
+    "matiere": {
+      "tests_executed": [
+        "suppression de chaque hyperarête",
+        "suppression de chaque nœud",
+        "ablation de chaque famille de processus",
+        "retrait un par un des coefficients de partage",
+        "audit de complétude des 40 transitions"
+      ],
+      "main_results": {
+        "strict_nodes_reachable": 46,
+        "strict_nodes_total": 53,
+        "strict_unreachable_nodes": [
+          "N029",
+          "N030",
+          "N031",
+          "N032",
+          "N035",
+          "N053",
+          "N054"
+        ],
+        "strict_cycle_kernel_nodes": [
+          "N029",
+          "N030",
+          "N053",
+          "N054"
+        ],
+        "critical_hyperedges": 34,
+        "hyperedges": 53,
+        "fragile_partition_overlap_elements": [
+          "N"
+        ],
+        "empty_transition_fields": 10
+      },
+      "evidence_level": "structural_and_descriptive"
+    },
+    "systeme_solaire_et_terre": {
+      "tests_executed": [
+        "symétrie des interventions appariées",
+        "sélectivité des bandes 95 et 125 ka",
+        "séparation effet interventionnel et erreur numérique",
+        "perte de phase selon l'horizon",
+        "localisation de la bande paléoclimatique de 100 ka",
+        "persistance exoplanétaire sur palier long"
+      ],
+      "main_results": {
+        "astronomical_criteria_passed": 13,
+        "astronomical_criteria_total": 15,
+        "minimum_intervention_to_numerical_ratio": 4964.415695208393,
+        "unresolved_long_bands_in_2myr_interventions": [
+          "2.4 Myr",
+          "405 kyr"
+        ]
+      },
+      "evidence_level": "validated_in_reduced_astronomical_model_and_negative_climate_tests"
+    },
+    "vivant": {
+      "tests_executed": [
+        "validation croisée groupée par lignée",
+        "ablation de la pente historique",
+        "prédiction de la dernière transition",
+        "exclusion successive de chaque dose",
+        "permutation de l'ordre historique",
+        "dynamique de composition ARN sur huit cycles",
+        "validation du schéma prébiotique synthétique"
+      ],
+      "main_results": {
+        "antibiotic_prediction_rows": 358,
+        "group_cv_mae_equal_complexity": 0.6334607097403668,
+        "group_cv_mae_history": 0.6240441170130244,
+        "group_cv_mae_history_without_slope": 0.622097665825241,
+        "paired_history_vs_equal_complexity_p": 0.2265625,
+        "slope_ablation_p": 0.0078125,
+        "ordered_history_null_p": 0.06493506493506493,
+        "rna_observations": 80,
+        "prebiotic_real_lineage_data": false
+      },
+      "evidence_level": "exploratory_only"
+    }
+  },
+  "global_verdict": "La campagne renforce la causalité architecturale dans le modèle astronomique, quantifie la fragilité de certaines représentations matérielles et ne trouve aucun appui biologique confirmatoire robuste. Elle ne valide pas ORI-C comme théorie générale.",
+  "next_data_bottlenecks": [
+    "flux, temps de résidence et stocks opératoires pour C, H et S",
+    "simulations climatiques interventionnelles et ensembles GCM indépendants",
+    "jeu antibiotique final externe avec séquences d'exposition manipulées",
+    "données réelles de lignées prébiotiques avec témoins appariés"
+  ]
+}

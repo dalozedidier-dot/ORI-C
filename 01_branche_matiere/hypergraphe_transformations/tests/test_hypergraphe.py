@@ -25,7 +25,7 @@ def test_structure_non_lineaire_et_scenarios():
     assert any(e["type"] == "recyclage" for e in edges)
     assert sum("scenario" in e["statut_preuve"] or "hypothese" in e["statut_preuve"] for e in edges) >= 4
 
-def test_continuite_cosmos_interface():
+def test_continuite_de_la_projection_paire_a_paire():
     edges = lire("hyperaretes.csv")
     adj = {}
     for e in edges:
@@ -39,20 +39,30 @@ def test_continuite_cosmos_interface():
 
 def test_validation_exportee():
     d=json.loads((ROOT/"validation_hypergraphe.json").read_text(encoding="utf-8"))
-    assert d["status"] == "valid"
-    assert all(d["tests"].values())
+    assert d["status"] == "valid_with_strict_closure_gap"
+    for key in (
+        "not_a_linear_tree", "all_endpoints_exist", "all_edges_sourced",
+        "competing_scenarios_explicit", "four_relation_families_represented",
+        "single_declared_root", "pairwise_projection_connected",
+    ):
+        assert d["tests"][key]
+    assert d["tests"]["strict_hypergraph_closed"] is False
 
-def test_cloture_genealogique():
-    """Une seule racine declaree, et tout le graphe joignable depuis elle.
+def test_fermeture_stricte_distinguee_de_la_projection():
+    """La projection connectee ne doit plus masquer une boucle multi-entrees.
 
-    Sans ce controle, la chaine poussiere N008->N009->N010->N008 tournait sur
-    elle-meme sans aucune alimentation materielle, et quatre noeuds etaient
-    inatteignables depuis le socle cosmique.
+    La chaîne N029/N030/N053/N054 s'auto-entretient dans la projection, car
+    chaque entrée y est traitée comme suffisante. La fermeture stricte exige
+    toutes les entrées et laisse sept nœuds inatteignables.
     """
     d=json.loads((ROOT/"validation_hypergraphe.json").read_text(encoding="utf-8"))
     assert d["declared_roots"] == ["N036"]
-    assert d["unreachable_nodes"] == []
-    assert d["nodes_reachable_from_root"] == d["nodes"]
+    assert d["pairwise_projection"]["nodes_reachable_from_root"] == 53
+    assert d["pairwise_projection"]["unreachable_nodes"] == []
+    assert d["strict_hypergraph_closure"]["nodes_reachable_from_root"] == 46
+    assert d["strict_hypergraph_closure"]["unreachable_nodes"] == [
+        "N029", "N030", "N031", "N032", "N035", "N053", "N054"
+    ]
 
 def test_echelle_des_capacites_complete():
     for n in lire("noeuds.csv"):

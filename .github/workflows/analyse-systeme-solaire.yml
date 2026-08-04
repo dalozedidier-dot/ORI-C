@@ -11,6 +11,13 @@ on:
         options:
           - rapide
           - complete
+  workflow_call:
+    inputs:
+      profondeur:
+        description: Calcul astronomique à exécuter
+        required: false
+        default: complete
+        type: string
   push:
     branches: [main]
     paths:
@@ -90,7 +97,7 @@ jobs:
 
       - name: Publier les résultats mémoire
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: analyse-memoire-${{ github.sha }}
           path: ${{ runner.temp }}/oric-memoire
@@ -155,7 +162,7 @@ jobs:
             | tee "$OUT/logs/rebound_quickcheck.log"
 
       - name: Refaire les 25 calculs astronomiques
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.profondeur == 'complete' }}
+        if: ${{ inputs.profondeur == 'complete' }}
         working-directory: 02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
         run: |
           python scripts/run_real_science_suite.py \
@@ -180,7 +187,7 @@ jobs:
 
       - name: Publier les résultats astronomiques
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v6
         with:
           name: analyse-astronomique-${{ github.sha }}
           path: ${{ runner.temp }}/oric-astronomie

@@ -1,0 +1,665 @@
+{
+  "status": "completed",
+  "branch": "vivant",
+  "antibiotic_history_robustness": {
+    "longitudinal_lineages": 203,
+    "prediction_rows": 358,
+    "dose_levels": [
+      12.5,
+      25.0,
+      50.0,
+      100.0
+    ],
+    "group_cross_validation": {
+      "folds": 10,
+      "rows": 358,
+      "lineages": 148,
+      "models": {
+        "state_only": {
+          "mae": 0.6319321181066796,
+          "median_absolute_error": 0.4306059841622015,
+          "p90_absolute_error": 1.4561187037620913
+        },
+        "equal_complexity": {
+          "mae": 0.6334607097403668,
+          "median_absolute_error": 0.41914848192830045,
+          "p90_absolute_error": 1.4947758068384793
+        },
+        "history": {
+          "mae": 0.6240441170130244,
+          "median_absolute_error": 0.42874623038099,
+          "p90_absolute_error": 1.4368246955019972
+        },
+        "history_no_slope": {
+          "mae": 0.622097665825241,
+          "median_absolute_error": 0.4216944481198407,
+          "p90_absolute_error": 1.4286954378559984
+        },
+        "history_slope_only": {
+          "mae": 0.633513809387981,
+          "median_absolute_error": 0.42477216796337697,
+          "p90_absolute_error": 1.4607746595839335
+        }
+      },
+      "paired_fold_mae": [
+        {
+          "state_only": 0.47775764973098106,
+          "equal_complexity": 0.4708601600561912,
+          "history": 0.43561700043412943,
+          "history_no_slope": 0.4330198464701971,
+          "history_slope_only": 0.4775518731075721
+        },
+        {
+          "state_only": 0.6697910923457725,
+          "equal_complexity": 0.679304264013271,
+          "history": 0.6707507922625103,
+          "history_no_slope": 0.6696863755987735,
+          "history_slope_only": 0.6731784008451163
+        },
+        {
+          "state_only": 0.6808961284575958,
+          "equal_complexity": 0.6697974014623858,
+          "history": 0.6789970170306062,
+          "history_no_slope": 0.6773609866513247,
+          "history_slope_only": 0.6808742487235875
+        },
+        {
+          "state_only": 0.7280460084881418,
+          "equal_complexity": 0.7323831499027151,
+          "history": 0.71185675907524,
+          "history_no_slope": 0.7091358918752126,
+          "history_slope_only": 0.7352358759342692
+        },
+        {
+          "state_only": 0.690714034211049,
+          "equal_complexity": 0.6999561429844587,
+          "history": 0.7383197940154385,
+          "history_no_slope": 0.7386749035141184,
+          "history_slope_only": 0.6912541260176149
+        },
+        {
+          "state_only": 0.5920275092073787,
+          "equal_complexity": 0.5819302802519639,
+          "history": 0.5455557490386373,
+          "history_no_slope": 0.5443376505445043,
+          "history_slope_only": 0.5919219337852734
+        },
+        {
+          "state_only": 0.6192011088939795,
+          "equal_complexity": 0.6078270165629946,
+          "history": 0.5915777843576135,
+          "history_no_slope": 0.5910597920593121,
+          "history_slope_only": 0.619153021117356
+        },
+        {
+          "state_only": 0.6118587849467901,
+          "equal_complexity": 0.6445805550237629,
+          "history": 0.6428845416517271,
+          "history_no_slope": 0.6407098862753156,
+          "history_slope_only": 0.6163877449396188
+        },
+        {
+          "state_only": 0.6902050379864829,
+          "equal_complexity": 0.7025075723691223,
+          "history": 0.6716705656233886,
+          "history_no_slope": 0.6718201886145853,
+          "history_slope_only": 0.6904358503434237
+        },
+        {
+          "state_only": 0.5424788578595642,
+          "equal_complexity": 0.5354981887341953,
+          "history": 0.541641885656436,
+          "history_no_slope": 0.5332900983670997,
+          "history_slope_only": 0.5426454833402503
+        }
+      ]
+    },
+    "primary_paired_comparison": {
+      "definition": "MAE(equal_complexity) - MAE(history); positif favorise history",
+      "mean": 0.009577284221533384,
+      "median": 0.012401351978070907,
+      "min": -0.03836365103097972,
+      "max": 0.036374531213326566,
+      "fraction_favoring_right": 0.7,
+      "exact_two_sided_sign_flip_p": 0.2265625,
+      "sign_flip_combinations": 1024,
+      "warning": "Les plis partagent une grande partie de leurs données d'apprentissage. Le test exact de changement de signe est un diagnostic apparié, pas une réplication indépendante."
+    },
+    "slope_ablation": {
+      "definition": "MAE(history_no_slope) - MAE(history); positif favorise history",
+      "mean": -0.0019776269175283746,
+      "median": -0.0014270644367072594,
+      "min": -0.008351787289336277,
+      "max": 0.0003551094986798953,
+      "fraction_favoring_right": 0.2,
+      "exact_two_sided_sign_flip_p": 0.0078125,
+      "sign_flip_combinations": 1024,
+      "warning": "Les plis partagent une grande partie de leurs données d'apprentissage. Le test exact de changement de signe est un diagnostic apparié, pas une réplication indépendante."
+    },
+    "final_transition_holdout": {
+      "train_rows": 210,
+      "test_rows": 148,
+      "test_lineages": 148,
+      "note": "Les mêmes lignées peuvent apparaître dans l'apprentissage par leurs cycles antérieurs. Ce test mesure une extrapolation temporelle, pas une généralisation à une lignée inconnue.",
+      "models": {
+        "state_only": {
+          "ridge": 0.0,
+          "mae": 0.776672004116642,
+          "median_absolute_error": 0.6233911500053607
+        },
+        "equal_complexity": {
+          "ridge": 0.1,
+          "mae": 0.8561068562182624,
+          "median_absolute_error": 0.5394389795509289
+        },
+        "history": {
+          "ridge": 1.0,
+          "mae": 0.8686532268683349,
+          "median_absolute_error": 0.6897718192539696
+        }
+      }
+    },
+    "leave_one_dose_out": {
+      "12.5": {
+        "test_rows": 48,
+        "test_lineages": 42,
+        "models": {
+          "equal_complexity": {
+            "mae": 0.4432420130029593,
+            "ridge": 1.0
+          },
+          "history": {
+            "mae": 0.4650843923113408,
+            "ridge": 10.0
+          }
+        },
+        "equal_complexity_minus_history": -0.02184237930838151
+      },
+      "25.0": {
+        "test_rows": 156,
+        "test_lineages": 49,
+        "models": {
+          "equal_complexity": {
+            "mae": 0.5209306246697398,
+            "ridge": 1.0
+          },
+          "history": {
+            "mae": 0.5266815705755116,
+            "ridge": 1.0
+          }
+        },
+        "equal_complexity_minus_history": -0.005750945905771743
+      },
+      "50.0": {
+        "test_rows": 92,
+        "test_lineages": 36,
+        "models": {
+          "equal_complexity": {
+            "mae": 0.7487366274458213,
+            "ridge": 0.0
+          },
+          "history": {
+            "mae": 0.7091277567638793,
+            "ridge": 10.0
+          }
+        },
+        "equal_complexity_minus_history": 0.039608870681941966
+      },
+      "100.0": {
+        "test_rows": 62,
+        "test_lineages": 21,
+        "models": {
+          "equal_complexity": {
+            "mae": 0.9399963633579324,
+            "ridge": 1.0
+          },
+          "history": {
+            "mae": 0.9394517069302674,
+            "ridge": 10.0
+          }
+        },
+        "equal_complexity_minus_history": 0.0005446564276649912
+      }
+    },
+    "ordered_history_null": {
+      "draws": 1000,
+      "observed_equal_complexity_minus_history": 0.018097014897734964,
+      "null_mean": 0.01526794374033875,
+      "null_ci_2.5": 0.00973314430994175,
+      "null_ci_97.5": 0.01867346753168028,
+      "one_sided_fraction_null_at_least_observed": 0.06493506493506493,
+      "scope": "La permutation conserve la dose, l'état courant, la moyenne et la dispersion de l'histoire, mais détruit l'association entre la pente historique et la cible. Elle teste surtout l'apport de l'ordre temporel résumé par la pente."
+    },
+    "limitations": [
+      "Un seul antibiotique, l'amikacine.",
+      "Les séquences d'exposition ne sont pas manipulées indépendamment des lignées.",
+      "Aucun jeu final externe n'est disponible.",
+      "Les lignes MIC et persisters de fin d'expérience ne sont pas reliées individuellement aux lignées longitudinales."
+    ]
+  },
+  "catalytic_rna_frequency_dynamics": {
+    "observations": 80,
+    "branches": [
+      "52-2",
+      "71-89"
+    ],
+    "rounds_per_branch": 8,
+    "branch_dynamics": {
+      "52-2": {
+        "tracked_sequences": [
+          "Seq0",
+          "Seq2",
+          "Seq28",
+          "Seq5"
+        ],
+        "round_metrics": [
+          {
+            "round": 1,
+            "tracked_frequency_total": 0.05570171,
+            "shannon_tracked_composition": 0.733414444272256,
+            "effective_tracked_diversity": 2.0821779646390484,
+            "largest_tracked_share": 0.7383995931184159
+          },
+          {
+            "round": 2,
+            "tracked_frequency_total": 0.01710338,
+            "shannon_tracked_composition": 1.1355150258480244,
+            "effective_tracked_diversity": 3.1127762903901766,
+            "largest_tracked_share": 0.42455877142412785
+          },
+          {
+            "round": 3,
+            "tracked_frequency_total": 0.00708741,
+            "shannon_tracked_composition": 1.2230559826639071,
+            "effective_tracked_diversity": 3.3975547532626726,
+            "largest_tracked_share": 0.4115960555407405
+          },
+          {
+            "round": 4,
+            "tracked_frequency_total": 0.00725457,
+            "shannon_tracked_composition": 1.194005016405093,
+            "effective_tracked_diversity": 3.3002724194214483,
+            "largest_tracked_share": 0.47271444069048885
+          },
+          {
+            "round": 5,
+            "tracked_frequency_total": 0.01172349,
+            "shannon_tracked_composition": 1.2617866803384779,
+            "effective_tracked_diversity": 3.531725918946583,
+            "largest_tracked_share": 0.4259166852191626
+          },
+          {
+            "round": 6,
+            "tracked_frequency_total": 0.017977629999999998,
+            "shannon_tracked_composition": 0.8966885880128911,
+            "effective_tracked_diversity": 2.4514718223849576,
+            "largest_tracked_share": 0.6845885692385483
+          },
+          {
+            "round": 7,
+            "tracked_frequency_total": 0.02440497,
+            "shannon_tracked_composition": 0.6310870558465949,
+            "effective_tracked_diversity": 1.879652756601466,
+            "largest_tracked_share": 0.798343124371798
+          },
+          {
+            "round": 8,
+            "tracked_frequency_total": 0.00922961,
+            "shannon_tracked_composition": 0.596382523296999,
+            "effective_tracked_diversity": 1.8155392359655966,
+            "largest_tracked_share": 0.8015084060973324
+          }
+        ],
+        "consecutive_composition_change": [
+          {
+            "from_round": 1,
+            "to_round": 2,
+            "jensen_shannon_divergence": 0.08035916898853689
+          },
+          {
+            "from_round": 2,
+            "to_round": 3,
+            "jensen_shannon_divergence": 0.06379457418018872
+          },
+          {
+            "from_round": 3,
+            "to_round": 4,
+            "jensen_shannon_divergence": 0.044508842110635244
+          },
+          {
+            "from_round": 4,
+            "to_round": 5,
+            "jensen_shannon_divergence": 0.019404086342483612
+          },
+          {
+            "from_round": 5,
+            "to_round": 6,
+            "jensen_shannon_divergence": 0.038749027625225176
+          },
+          {
+            "from_round": 6,
+            "to_round": 7,
+            "jensen_shannon_divergence": 0.012590000189366214
+          },
+          {
+            "from_round": 7,
+            "to_round": 8,
+            "jensen_shannon_divergence": 0.0009600819191823711
+          }
+        ],
+        "entropy_trend_exact_permutation": {
+          "observed_slope_per_round": -0.052293854962542984,
+          "exact_two_sided_p": 0.24057539682539683,
+          "permutations": 40320
+        },
+        "largest_share_trend_exact_permutation": {
+          "observed_slope_per_round": 0.03670075287158175,
+          "exact_two_sided_p": 0.1914186507936508,
+          "permutations": 40320
+        }
+      },
+      "71-89": {
+        "tracked_sequences": [
+          "Seq0",
+          "Seq15",
+          "Seq2",
+          "Seq3",
+          "Seq35",
+          "Seq5"
+        ],
+        "round_metrics": [
+          {
+            "round": 1,
+            "tracked_frequency_total": 0.23893259,
+            "shannon_tracked_composition": 0.31828914987056084,
+            "effective_tracked_diversity": 1.3747737194053182,
+            "largest_tracked_share": 0.9040142661158111
+          },
+          {
+            "round": 2,
+            "tracked_frequency_total": 0.08859194999999999,
+            "shannon_tracked_composition": 0.686458416373649,
+            "effective_tracked_diversity": 1.9866671116095238,
+            "largest_tracked_share": 0.6017945197052329
+          },
+          {
+            "round": 3,
+            "tracked_frequency_total": 0.052473019999999995,
+            "shannon_tracked_composition": 0.628471694367279,
+            "effective_tracked_diversity": 1.8747432081078559,
+            "largest_tracked_share": 0.7411267733398993
+          },
+          {
+            "round": 4,
+            "tracked_frequency_total": 0.06247164,
+            "shannon_tracked_composition": 0.3762010814284594,
+            "effective_tracked_diversity": 1.4567400276879972,
+            "largest_tracked_share": 0.9135021907540765
+          },
+          {
+            "round": 5,
+            "tracked_frequency_total": 0.06156358999999999,
+            "shannon_tracked_composition": 0.5129127783042278,
+            "effective_tracked_diversity": 1.6701488902690167,
+            "largest_tracked_share": 0.879435068682642
+          },
+          {
+            "round": 6,
+            "tracked_frequency_total": 0.09556756000000001,
+            "shannon_tracked_composition": 0.7814676592180085,
+            "effective_tracked_diversity": 2.1846762739986687,
+            "largest_tracked_share": 0.7817599402977328
+          },
+          {
+            "round": 7,
+            "tracked_frequency_total": 0.12414549,
+            "shannon_tracked_composition": 1.1055041401934314,
+            "effective_tracked_diversity": 3.0207469649577914,
+            "largest_tracked_share": 0.6169511272620536
+          },
+          {
+            "round": 8,
+            "tracked_frequency_total": 0.15845403,
+            "shannon_tracked_composition": 1.4635142514850603,
+            "effective_tracked_diversity": 4.321118373408262,
+            "largest_tracked_share": 0.31525711274115276
+          }
+        ],
+        "consecutive_composition_change": [
+          {
+            "from_round": 1,
+            "to_round": 2,
+            "jensen_shannon_divergence": 0.06493473555597326
+          },
+          {
+            "from_round": 2,
+            "to_round": 3,
+            "jensen_shannon_divergence": 0.06666971074916782
+          },
+          {
+            "from_round": 3,
+            "to_round": 4,
+            "jensen_shannon_divergence": 0.03951933004513226
+          },
+          {
+            "from_round": 4,
+            "to_round": 5,
+            "jensen_shannon_divergence": 0.012007260501784153
+          },
+          {
+            "from_round": 5,
+            "to_round": 6,
+            "jensen_shannon_divergence": 0.013065339817317728
+          },
+          {
+            "from_round": 6,
+            "to_round": 7,
+            "jensen_shannon_divergence": 0.02620178423314298
+          },
+          {
+            "from_round": 7,
+            "to_round": 8,
+            "jensen_shannon_divergence": 0.06964947157384983
+          }
+        ],
+        "entropy_trend_exact_permutation": {
+          "observed_slope_per_round": 0.127470284783671,
+          "exact_two_sided_p": 0.011706349206349206,
+          "permutations": 40320
+        },
+        "largest_share_trend_exact_permutation": {
+          "observed_slope_per_round": -0.047115293536148045,
+          "exact_two_sided_p": 0.14097222222222222,
+          "permutations": 40320
+        }
+      }
+    },
+    "sequence_trends": [
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq0",
+        "spearman_rho_frequency_vs_round": -0.7380952380952381,
+        "p_raw": 0.03655276105286081,
+        "first_frequency": 0.04113012,
+        "last_frequency": 0.00024088,
+        "fold_change_last_over_first": 0.005856535307944641,
+        "q_bh": 0.04061417894762312
+      },
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq2",
+        "spearman_rho_frequency_vs_round": 0.9285714285714287,
+        "p_raw": 0.0008629681828999767,
+        "first_frequency": 0.00011433,
+        "last_frequency": 0.00739761,
+        "fold_change_last_over_first": 64.70401469430595,
+        "q_bh": 0.0012328116898571095
+      },
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq28",
+        "spearman_rho_frequency_vs_round": 0.023809523809523815,
+        "p_raw": 0.9553740118158806,
+        "first_frequency": 0.00365221,
+        "last_frequency": 0.00154964,
+        "fold_change_last_over_first": 0.4243019979683534,
+        "q_bh": 0.9553740118158804
+      },
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq5",
+        "spearman_rho_frequency_vs_round": -0.9761904761904763,
+        "p_raw": 3.314396026200098e-05,
+        "first_frequency": 0.01080505,
+        "last_frequency": 4.148e-05,
+        "fold_change_last_over_first": 0.0038389456781782595,
+        "q_bh": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq0",
+        "spearman_rho_frequency_vs_round": -0.9761904761904763,
+        "p_raw": 3.314396026200098e-05,
+        "first_frequency": 0.21599847,
+        "last_frequency": 0.00047822,
+        "fold_change_last_over_first": 0.0022139971639613927,
+        "q_bh": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq15",
+        "spearman_rho_frequency_vs_round": 0.9285714285714287,
+        "p_raw": 0.0008629681828999767,
+        "first_frequency": 2.96e-06,
+        "last_frequency": 0.01640764,
+        "fold_change_last_over_first": 5543.121621621622,
+        "q_bh": 0.0012328116898571095
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq2",
+        "spearman_rho_frequency_vs_round": 0.7380952380952381,
+        "p_raw": 0.03655276105286081,
+        "first_frequency": 0.02286893,
+        "last_frequency": 0.04563683,
+        "fold_change_last_over_first": 1.9955822156961434,
+        "q_bh": 0.04061417894762312
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq3",
+        "spearman_rho_frequency_vs_round": 0.9761904761904763,
+        "p_raw": 3.314396026200098e-05,
+        "first_frequency": 5.93e-06,
+        "last_frequency": 0.04995376,
+        "fold_change_last_over_first": 8423.905564924115,
+        "q_bh": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq35",
+        "spearman_rho_frequency_vs_round": 1.0,
+        "p_raw": 0.0,
+        "first_frequency": 1.037e-05,
+        "last_frequency": 0.00756462,
+        "fold_change_last_over_first": 729.4715525554484,
+        "q_bh": 0.0
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq5",
+        "spearman_rho_frequency_vs_round": 1.0,
+        "p_raw": 0.0,
+        "first_frequency": 4.593e-05,
+        "last_frequency": 0.03841296,
+        "fold_change_last_over_first": 836.3370346178968,
+        "q_bh": 0.0
+      }
+    ],
+    "significant_sequence_trends_q_0.05": [
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq0",
+        "rho": -0.7380952380952381,
+        "q": 0.04061417894762312
+      },
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq2",
+        "rho": 0.9285714285714287,
+        "q": 0.0012328116898571095
+      },
+      {
+        "branch": "52-2",
+        "sequence_id": "Seq5",
+        "rho": -0.9761904761904763,
+        "q": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq0",
+        "rho": -0.9761904761904763,
+        "q": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq15",
+        "rho": 0.9285714285714287,
+        "q": 0.0012328116898571095
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq2",
+        "rho": 0.7380952380952381,
+        "q": 0.04061417894762312
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq3",
+        "rho": 0.9761904761904763,
+        "q": 6.628792052400196e-05
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq35",
+        "rho": 1.0,
+        "q": 0.0
+      },
+      {
+        "branch": "71-89",
+        "sequence_id": "Seq5",
+        "rho": 1.0,
+        "q": 0.0
+      }
+    ],
+    "scope": "Les métriques sont calculées sur les seules séquences suivies dans les tables sources. Leur fréquence totale ne vaut pas nécessairement 1. La normalisation interne décrit la composition du sous-ensemble suivi, pas toute la population moléculaire.",
+    "not_demonstrated": [
+      "filiation entre compartiments",
+      "transmission héréditaire de variantes",
+      "couplage entre copie, compartimentation et persistance",
+      "origine historique du vivant"
+    ]
+  },
+  "prebiotic_lineage_schema": {
+    "returncode": 0,
+    "schema_valid": true,
+    "synthetic_marker_detected": true,
+    "warning": "Le gabarit est volontairement synthétique. Sa validation démontre seulement que le protocole sait lire et contrôler une future table de lignées.",
+    "stdout_tail": [
+      "",
+      "  4/6 conditions atteintes",
+      "",
+      "Variable principale, §7 — proportion de descendants conservant",
+      "une information héritée ET une différence fonctionnelle :",
+      "  0.000  (3 variantes transmises sur 4 descendants)",
+      "  variante V-A : moyenne 1.295 contre 1.003 (n = 2 / 3, p = 0.2000)",
+      "",
+      "Les six conditions sont requises simultanément. Le critère n'est pas atteint.",
+      "",
+      "ATTENTION : cette table porte le marqueur `GABARIT_SYNTHETIQUE`.",
+      "Elle est synthétique et ne constitue aucune mesure. Aucun résultat ne peut en être tiré."
+    ],
+    "stderr": ""
+  },
+  "overall_limit": "La branche vivant dispose de données exploratoires pour l'antibiotique et de fréquences de séquences ARN, mais d'aucune donnée de lignées prébiotiques conforme au protocole."
+}

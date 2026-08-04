@@ -43,7 +43,7 @@ séparés.
 | `00_socle/` | vocabulaire, carte des 40 transitions et 47 relations, test interventionnel, suite de tests | langage transversal |
 | `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
 | `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
-| `plan_directeur/` | plan de campagne, registre des 21 hypothèses, avancement | transversal |
+| `plan_directeur/` | plan de campagne, registre des 28 hypothèses, avancement | transversal |
 | `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
 
 ## Par où commencer
@@ -56,26 +56,32 @@ séparés.
 5. `00_socle/CODEBOOK.md` — les définitions communes, à lire avant toute branche.
 6. `AUTORITE_DES_DOCUMENTS.md` — le fichier qui tranche lorsque deux documents se contredisent.
 7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
+8. `plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` — la campagne de robustesse maximale disponible avec les données du dépôt.
 
 ## Ce que le dossier établit, en une phrase par branche
 
 **Branche 1, matière.** Une chronologie descriptive en huit régimes, un
-inventaire de 40 transitions et une grille d'analyse. S'y ajoute désormais un
-hypergraphe mécanistique de 53 nœuds et 53 hyperarêtes, généalogiquement clos
-depuis le socle baryonique, et une première campagne mesurée d'inventaire
-accessible sur quatre éléments. Un attribut de branche y résiste enfin à un
-témoin apparié : l'échelle des dix capacités porte 0,595 bit net de permutation
-là où les six dimensions en portaient 0,000. Sa monotonie, elle, est réfutée.
+inventaire de 40 transitions et une grille d'analyse. L'hypergraphe de 53
+nœuds possède une projection connectée, mais sa fermeture stricte n'atteint
+que 46 nœuds sur 53. Un noyau cyclique de quatre nœuds bloque trois nœuds
+supplémentaires. Sur cet ensemble accessible, 34 hyperarêtes sont critiques
+pour la joignabilité. Le contrôle métal-silicate est robuste pour le
+carbone, fragile pour l'azote, non évaluable en retrait unitaire pour
+l'hydrogène et durablement en désaccord pour le soufre. L'échelle des dix
+capacités porte 0,595 bit net de permutation, tandis que sa monotonie est
+réfutée.
 
-**Branche 2, Système solaire.** Une validation astronomique et numérique solide
-de la couche dynamique réduite, 13 critères préenregistrés réussis sur 15. Et un
-résultat **négatif** sur la couche suivante : la déclinaison paléoclimatique
-testée ne surpasse pas un témoin classique de complexité égale.
+**Branche 2, Système solaire.** La couche dynamique réduite réussit 13 critères
+préenregistrés sur 15. Les effets des interventions restent au minimum 4 964 fois plus
+grands que les écarts numériques sélectionnés. La couche paléoclimatique reste
+négative face au témoin apparié et le verrou est localisé dans la bande de 100
+ka, sans mécanisme identifié.
 
-**Branche 3, vivant.** Une preuve de concept méthodologique en trois actes. La
-grille s'applique sans contradiction manifeste à la cellule eucaryote, à
-l'endosymbiose mitochondriale et à la résistance aux antibiotiques. Elle ne
-démontre ni universalité, ni supériorité explicative, ni pouvoir prédictif.
+**Branche 3, vivant.** La grille reste une preuve de concept. Sur l'amikacine,
+un léger gain historique apparaît en validation groupée, mais il disparaît à
+l'ablation de la pente et s'inverse sur la dernière transition. Les données ARN
+montrent une dynamique de composition, pas une hérédité. Universalité,
+supériorité explicative et pouvoir prédictif restent non établis.
 
 ## Portée du résultat négatif de la branche 2
 
@@ -93,6 +99,8 @@ s'étendre par contagion de vocabulaire.
 ```bash
 cd ORI-C
 python verifier_dossier.py
+python scripts/valider_tout.py
+python plan_directeur/campagne_maximale_trois_branches/run_all.py
 ```
 
 Le script recalcule les empreintes SHA-256 de `MANIFEST.sha256` et signale

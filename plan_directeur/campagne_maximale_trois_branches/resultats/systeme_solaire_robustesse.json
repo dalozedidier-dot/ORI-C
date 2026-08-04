@@ -1,0 +1,276 @@
+{
+  "status": "completed",
+  "branch": "systeme_solaire_et_terre",
+  "astronomical_acceptance": {
+    "criteria": 15,
+    "passed": 13,
+    "failed": 2,
+    "failed_tests": [
+      {
+        "test": "angular_momentum_conservation",
+        "observed": 5.276233334369168e-10,
+        "operator": "<=",
+        "threshold": 1e-10,
+        "meaning": "Maximum newtonien sur tous les jobs, y compris le contrôle 1PN gr_full."
+      },
+      {
+        "test": "roundtrip_reversibility_100kyr",
+        "observed": 2.7628025558976285e-05,
+        "operator": "<=",
+        "threshold": 1e-05,
+        "meaning": "Maximum des allers-retours aux pas 0,01 et 0,005 an."
+      }
+    ]
+  },
+  "paired_intervention_symmetry": {
+    "jupiter_semimajor_axis": {
+      "minus_job": "jupiter_a_minus_0p5pct_2myr",
+      "plus_job": "jupiter_a_plus_0p5pct_2myr",
+      "minus_rmse": 0.00858871934743876,
+      "plus_rmse": 0.009571109591753888,
+      "rmse_relative_asymmetry": 0.10819377733178182,
+      "minus_mean_eccentricity_delta": 0.0014180549554367455,
+      "plus_mean_eccentricity_delta": 0.000603907554379949,
+      "mean_delta_changes_sign": false,
+      "mean_delta_magnitude_asymmetry": 0.805304150897046,
+      "minimum_effect_to_ensemble_floor": 6274389.677402444,
+      "interpretation": "Exploratoire : une réponse antisymétrique serait compatible avec un régime local quasi linéaire. L'absence d'antisymétrie signale seulement qu'une approximation linéaire simple est insuffisante sur l'intervalle testé."
+    },
+    "jupiter_mass": {
+      "minus_job": "jupiter_mass_minus_5pct_2myr",
+      "plus_job": "jupiter_mass_plus_5pct_2myr",
+      "minus_rmse": 0.018703420842196932,
+      "plus_rmse": 0.018928950135853776,
+      "rmse_relative_asymmetry": 0.011985919983005335,
+      "minus_mean_eccentricity_delta": 0.0008897552071182105,
+      "plus_mean_eccentricity_delta": -0.0026395373919426666,
+      "mean_delta_changes_sign": true,
+      "mean_delta_magnitude_asymmetry": 0.991576717266266,
+      "minimum_effect_to_ensemble_floor": 13663567.97994451,
+      "interpretation": "Exploratoire : une réponse antisymétrique serait compatible avec un régime local quasi linéaire. L'absence d'antisymétrie signale seulement qu'une approximation linéaire simple est insuffisante sur l'intervalle testé."
+    },
+    "saturn_mass": {
+      "minus_job": "saturn_mass_minus_5pct_2myr",
+      "plus_job": "saturn_mass_plus_5pct_2myr",
+      "minus_rmse": 0.009242500160022621,
+      "plus_rmse": 0.009895843241730954,
+      "rmse_relative_asymmetry": 0.068275823878097,
+      "minus_mean_eccentricity_delta": -0.0010235425557441925,
+      "plus_mean_eccentricity_delta": 0.001178924556685907,
+      "mean_delta_changes_sign": true,
+      "mean_delta_magnitude_asymmetry": 0.14109813496399795,
+      "minimum_effect_to_ensemble_floor": 6752001.695657906,
+      "interpretation": "Exploratoire : une réponse antisymétrique serait compatible avec un régime local quasi linéaire. L'absence d'antisymétrie signale seulement qu'une approximation linéaire simple est insuffisante sur l'intervalle testé."
+    }
+  },
+  "band_selectivity": {
+    "resolved_bands_in_2myr_interventions": {
+      "125 kyr": {
+        "evaluated_interventions": 6,
+        "strongest_suppression": {
+          "job": "jupiter_a_minus_0p5pct_2myr",
+          "power_ratio_vs_baseline": 0.7039163697293576
+        },
+        "strongest_amplification": {
+          "job": "jupiter_a_plus_0p5pct_2myr",
+          "power_ratio_vs_baseline": 1.1558511289780213
+        },
+        "range": [
+          0.7039163697293576,
+          1.1558511289780213
+        ]
+      },
+      "95 kyr": {
+        "evaluated_interventions": 6,
+        "strongest_suppression": {
+          "job": "jupiter_a_minus_0p5pct_2myr",
+          "power_ratio_vs_baseline": 0.4390922446663201
+        },
+        "strongest_amplification": {
+          "job": "saturn_mass_minus_5pct_2myr",
+          "power_ratio_vs_baseline": 1.0808033028044195
+        },
+        "range": [
+          0.4390922446663201,
+          1.0808033028044195
+        ]
+      }
+    },
+    "unresolved_bands_in_2myr_interventions": [
+      "2.4 Myr",
+      "405 kyr"
+    ],
+    "warning": "Les interventions de 2 Ma ne permettent pas de quantifier proprement les bandes de 405 ka et 2,4 Ma dans ces sorties. Les valeurs absentes ne sont pas des effets nuls."
+  },
+  "numerical_effect_separation": {
+    "selected_numerical_comparisons": [
+      "whfast_dt10_vs_dt5",
+      "whfast_dt5_vs_dt4p8828125",
+      "whfast_vs_ias15"
+    ],
+    "largest_selected_numerical_rmse": 1.7300564406257339e-06,
+    "intervention_to_numerical_ratios": [
+      {
+        "job": "jupiter_a_minus_0p5pct_2myr",
+        "intervention_rmse": 0.00858871934743876,
+        "ratio_to_largest_selected_numerical_rmse": 4964.415695208393
+      },
+      {
+        "job": "jupiter_a_plus_0p5pct_2myr",
+        "intervention_rmse": 0.009571109591753888,
+        "ratio_to_largest_selected_numerical_rmse": 5532.252802279774
+      },
+      {
+        "job": "jupiter_mass_minus_5pct_2myr",
+        "intervention_rmse": 0.018703420842196932,
+        "ratio_to_largest_selected_numerical_rmse": 10810.873219507337
+      },
+      {
+        "job": "jupiter_mass_plus_5pct_2myr",
+        "intervention_rmse": 0.018928950135853776,
+        "ratio_to_largest_selected_numerical_rmse": 10941.232720134538
+      },
+      {
+        "job": "saturn_mass_minus_5pct_2myr",
+        "intervention_rmse": 0.009242500160022621,
+        "ratio_to_largest_selected_numerical_rmse": 5342.311350651517
+      },
+      {
+        "job": "saturn_mass_plus_5pct_2myr",
+        "intervention_rmse": 0.009895843241730954,
+        "ratio_to_largest_selected_numerical_rmse": 5719.953990721705
+      }
+    ],
+    "minimum_ratio": 4964.415695208393,
+    "scope": "Ce rapport sépare les effets des interventions des écarts de pas et d'intégrateur retenus. Il ne couvre pas toutes les erreurs physiques du modèle réduit."
+  },
+  "phase_horizon": {
+    "metrics": [
+      {
+        "horizon_years": 50000.0,
+        "correlation": 0.999950459751944,
+        "rmse": 7.966537341952911e-05
+      },
+      {
+        "horizon_years": 100000.0,
+        "correlation": 0.999971224841701,
+        "rmse": 0.00011431257679352886
+      },
+      {
+        "horizon_years": 250000.0,
+        "correlation": 0.9998816226224284,
+        "rmse": 0.0003873817002779676
+      },
+      {
+        "horizon_years": 500000.0,
+        "correlation": 0.9987600581192526,
+        "rmse": 0.0006775603140419984
+      },
+      {
+        "horizon_years": 1000000.0,
+        "correlation": 0.997269675397316,
+        "rmse": 0.0009472261732928609
+      },
+      {
+        "horizon_years": 2000000.0,
+        "correlation": 0.99142365216861,
+        "rmse": 0.0017766228539014938
+      },
+      {
+        "horizon_years": 5000000.0,
+        "correlation": 0.9423329705800475,
+        "rmse": 0.004405678581283186
+      },
+      {
+        "horizon_years": 10000000.0,
+        "correlation": 0.8267402709588388,
+        "rmse": 0.007725309414623284
+      },
+      {
+        "horizon_years": 20000000.0,
+        "correlation": 0.49500620682612256,
+        "rmse": 0.013243648172099486
+      }
+    ],
+    "first_sampled_horizon_below_correlation": {
+      "0.99": 5000000.0,
+      "0.95": 5000000.0,
+      "0.9": 10000000.0,
+      "0.5": 20000000.0
+    },
+    "interpretation": "La baisse de corrélation point par point mesure une perte de phase dans une dynamique chaotique. Elle ne signifie pas que les bandes spectrales disparaissent."
+  },
+  "paleoclimate_and_path_dependence": {
+    "prediction_window_100ka_observed_power_share": 0.393930365022954,
+    "prediction_window_100ka_model_power_share": {
+      "M0": 0.004265130089096334,
+      "M1": 0.005684622670172839,
+      "M2": 0.002839667955416377,
+      "M1P": 0.005642506086119201
+    },
+    "approximate_unexplained_fraction_of_observed_100ka_share": {
+      "M0": 0.9891728831595711,
+      "M1": 0.9855694732498176,
+      "M2": 0.9927914468963293,
+      "M1P": 0.9856763870289856
+    },
+    "100ka_null_test_by_window": [
+      {
+        "age_ka": [
+          0,
+          1200
+        ],
+        "p_corrected": 0.0003999200159968006,
+        "significant_at_0.05": true
+      },
+      {
+        "age_ka": [
+          700,
+          1900
+        ],
+        "p_corrected": 1.0,
+        "significant_at_0.05": false
+      },
+      {
+        "age_ka": [
+          1400,
+          2600
+        ],
+        "p_corrected": 0.7454509098180364,
+        "significant_at_0.05": false
+      }
+    ],
+    "41ka_resolved": true,
+    "100ka_resolved": true,
+    "405ka_resolved": false,
+    "exoplanet_long_hold": {
+      "temperature_k": {
+        "longest_hold_myr": 600.0,
+        "retained_fraction": 0.0,
+        "ever_material": false
+      },
+      "ice_fraction": {
+        "longest_hold_myr": 600.0,
+        "retained_fraction": 0.0,
+        "ever_material": false
+      },
+      "co2_ppm": {
+        "longest_hold_myr": 600.0,
+        "retained_fraction": 0.0,
+        "ever_material": false
+      },
+      "productivity": {
+        "longest_hold_myr": 600.0,
+        "retained_fraction": 1.4778879930758756e-13,
+        "ever_material": false
+      }
+    },
+    "conclusion": "La bande de 100 ka est forte dans la fenêtre récente mais instable dans les fenêtres plus anciennes. Les quatre modèles testés n'en reproduisent qu'une faible part sur la fenêtre de prédiction. Le test exoplanétaire converge vers un attracteur unique sur palier long."
+  },
+  "limitations": [
+    "Aucun nouveau calcul N-corps long n'est produit par ce script.",
+    "Les interventions spectrales disponibles durent 2 Ma et ne résolvent pas toutes les longues périodes.",
+    "Le modèle réduit n'inclut pas une Lune résolue, la rotation terrestre, les marées ni un GCM.",
+    "Les tests paléoclimatiques portent sur LR04 et ne démontrent pas un mécanisme causal unique."
+  ]
+}

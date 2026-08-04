@@ -18,13 +18,19 @@ Cette couche corrige la représentation linéaire sans effacer `base_transitions
 
 ## Clôture généalogique
 
-`construire_et_valider.py` vérifie qu'une seule racine est déclarée et que tous
-les nœuds sont joignables depuis elle, les arêtes à point partagé (règle 4) ne
-comptant pas comme production. Ce contrôle a révélé que la chaîne poussière
-`N008 → N009 → N010 → N008` tournait sur elle-même sans alimentation
-matérielle : condensats, glaces, organiques et grains présolaires n'y entraient
-jamais. L'hyperarête `H047` rétablit la jonction. Sans elle, quatre nœuds sont
-inatteignables depuis le socle cosmique.
+`construire_et_valider.py` publie désormais deux contrôles distincts. La
+projection paire à paire vérifie qu'une succession de liens relie les 53 nœuds.
+La fermeture hypergraphique stricte exige que toutes les entrées d'un processus
+multi-entrée soient déjà disponibles avant de produire ses sorties.
+
+La projection avait d'abord révélé que la chaîne poussière
+`N008 → N009 → N010 → N008` tournait sans alimentation matérielle.
+L'hyperarête `H047` a corrigé ce défaut. Le contrôle strict a ensuite trouvé un
+second verrou que la projection masquait : `N029`, `N030`, `N031`, `N032`,
+`N035`, `N053` et `N054` restent enfermés dans une dépendance circulaire. La
+projection atteint donc 53 nœuds sur 53, tandis que la fermeture stricte en
+atteint 46 sur 53. Le dépôt conserve ce résultat négatif au lieu de déclarer
+l'hypergraphe entièrement clos.
 
 ## Ce que les épreuves ont donné
 

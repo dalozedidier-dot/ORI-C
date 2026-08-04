@@ -78,8 +78,14 @@ sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
 5. **Antibiotiques** : le modèle historique présente un faible avantage moyen, mais son intervalle de confiance traverse zéro. Le résultat est exploratoire et non concluant.
 6. **Proxy `Pacc`** : toutes les classes atteignent toutes les classes futures, soit `Pacc = 1`. L'estimateur est saturé et ne mesure pas une accessibilité causale.
 7. **Campagne réelle consolidée** : 211 réussites techniques, 440 blocages et 32 non-exécutions, avec zéro soutien confirmatoire à ORI-C.
+8. **Robustesse de la branche matière** : la projection paire à paire atteint 53 nœuds, mais la fermeture hypergraphique stricte n'en atteint que 46. Sur cet ensemble accessible, 34 hyperarêtes sur 53 sont critiques. Le recouvrement du carbone résiste aux retraits unitaires, celui de l'azote dépend d'une mesure publiée, l'hydrogène reste non évaluable et le désaccord du soufre est robuste.
+9. **Séparation astronomique** : le plus petit effet des six interventions reste 4 964 fois supérieur au plus grand écart numérique sélectionné. Les perturbations appariées montrent une réponse souvent asymétrique et parfois non antisymétrique.
+10. **Verrou des 100 ka** : selon le modèle, environ 98,6 à 99,3 % de la part observée de la bande de 100 ka reste descriptivement inexpliquée sur la fenêtre de prédiction.
+11. **Robustesse antibiotique** : le modèle historique gagne légèrement en validation groupée, mais la version sans pente fait mieux et le test de dernière transition inverse le classement. Le gain face au témoin n’est pas significatif dans le test apparié exact, p = 0,2266. Retirer la pente améliore le résultat, p = 0,0078, et la distribution nulle à 1 000 permutations donne p = 0,0649.
+12. **ARN catalytique** : la branche 71-89 montre une hausse de diversité du sous-ensemble suivi, p exact = 0,0117. Les données décrivent une composition au fil des cycles, pas une filiation prébiotique.
+13. **Campagne maximale trois branches** : 21 tests de régression verrouillent les calculs, les ablations et leurs limites dans `plan_directeur/campagne_maximale_trois_branches/`.
 
-## Quatre défauts de mes propres bancs, trouvés et corrigés
+## Défauts de mes propres bancs, trouvés et corrigés
 
 Tous sont documentés avec leur première exécution conservée.
 
@@ -104,8 +110,11 @@ WP-CL1 à CL4, WP-B2. Environ **190 items**.
 **Humains ou laboratoires** — WP-S3.5-7, WP-V2 à V6, WP-R1 à R6, WP-B1, WP-B3,
 WP-T5, Niveaux 3 et 4. Environ **250 items**.
 
-**Exécutable et non fait** — WP-C3 partiellement en cours, WP-T1 benchmark
-multi-domaines, WP-T3 valeur prédictive, S1.1. Environ **70 items**.
+**Exécutable et non fait** — WP-C3 reste partiellement en cours, WP-T1 et
+WP-T3 demandent encore des extensions qui ne sont pas couvertes par la campagne
+maximale actuelle, et S1.1 reste ouvert. Le précédent ordre de grandeur de 70
+items doit être recompté après intégration des nouveaux contrôles, plutôt que
+conservé artificiellement.
 
 ## Sur le seuil scientifique du §XIV
 

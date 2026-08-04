@@ -89,11 +89,15 @@ premiers nuages, il n'est pas la matière dont les étoiles sont faites. Un
 agent de refroidissement, un flux, la gravité ou un choc sont des conditions.
 Le validateur refuse qu'une condition figure comme parent.
 
-**Clôture généalogique.** Une seule racine est déclarée, `N036`, l'inventaire
-baryonique net, et tous les nœuds doivent être joignables depuis elle. Les
-arêtes à point partagé — transport, survie, recyclage — ne comptent pas comme
-production, sinon tout auto-cycle se déclarerait clos. Ce contrôle a révélé
-que la chaîne poussière tournait sur elle-même sans alimentation matérielle.
+**Connectivité et fermeture.** Une seule racine est déclarée, `N036`,
+l'inventaire baryonique net. La projection paire à paire relie les 53 nœuds,
+mais elle ne suffit pas à établir la fermeture d'un hypergraphe multi-entrée.
+La fermeture stricte exige toutes les entrées de chaque processus et n'atteint
+que 46 nœuds sur 53. Un noyau cyclique de quatre nœuds bloque trois nœuds
+en aval.
+Les arêtes à point partagé, transport, survie ou recyclage, ne comptent pas
+comme production, sinon tout auto-cycle se déclarerait clos. Les deux contrôles
+restent publiés séparément.
 
 **Objets contre processus.** Chaque nœud porte un niveau sur l'échelle des dix
 capacités physiques, des constituants jusqu'à la matière disponible pour une
