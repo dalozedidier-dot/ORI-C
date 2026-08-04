@@ -4,7 +4,7 @@ Ce rapport est généré par `stress/make_report.py` à partir des artefacts des
 
 ## 0. Contrôle du harnais
 
-Le simulateur MPT compilé reproduit `simulate_mpt` bit à bit (oui) et l'EMIC compilé reproduit `simulate_reduced_climate` à moins de 1e-12 en écart relatif (oui), pour un gain de vitesse de 129×. Toute la campagne repose sur ce noyau.
+Le simulateur MPT compilé reproduit `simulate_mpt` à l'identique (oui) et l'EMIC compilé reproduit `simulate_reduced_climate` à moins de 1e-12 en écart relatif (oui), pour un gain de vitesse de 129×. Toute la campagne repose sur ce noyau.
 ## 1. Les cinq critères MPT préenregistrés, recalculés
 
 Aucun seuil n'est modifié. Seules changent la qualité de l'optimisation, la correction d'autocorrélation du BIC et l'ajout d'un témoin à nombre de paramètres égal.

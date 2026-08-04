@@ -2813,8 +2813,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/STRESS_REPORT.md",
-      "size": 12218,
-      "sha256": "9676615c5d616db7306d0a08e1fa1f5eecc51305285b6f43b57954815b23cf81",
+      "size": 12222,
+      "sha256": "1067cc28a560164a0361452a09cfda9ff6ec7a89249a5f8078ef4652a0a4704e",
       "storage": "inline"
     },
     {
@@ -2843,8 +2843,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/mpt_lr04_la2004.csv",
-      "size": 263715,
-      "sha256": "4a5eb79df725eed7ffdec5a3c8fcc217fef4756e06087a895b820d3533b4cc4a",
+      "size": 263707,
+      "sha256": "3cdf14fec8ff2309ce3bcd859788056aa26212347ee12bf3b66f42bbd85ece5d",
       "storage": "inline"
     },
     {
@@ -2897,8 +2897,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/environment.json",
-      "size": 572,
-      "sha256": "21765597ee967b3145713b8c58e512c56eb8d02cf6a9800d70212ed713040a05",
+      "size": 577,
+      "sha256": "da10c4ab43203f1a4149126e4e435bad6ec2c172e4d8cf18643a325ba5cb79eb",
       "storage": "inline"
     },
     {
@@ -2909,20 +2909,20 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/ensemble_final_states.csv",
-      "size": 89024,
-      "sha256": "6124401edd87897456e2046010c3a3df8dae1fa0c4e30dbe8aebcf6ae465ac6a",
+      "size": 89014,
+      "sha256": "e6b83646bd837684a5b466184be4841d4e3ac78e7a95f29e9f73d93a0adc1704",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/figures/controlled_forcings.png",
-      "size": 124559,
-      "sha256": "016fbc39f3aafbc8413a97dbe41fb54f3efcc47771796fe97b5fb05581e24ba4",
+      "size": 131727,
+      "sha256": "e26f221fa8115d161242e2dcd9199a4b73d8754650199464cd112d6a9473b071",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/figures/final_path_deltas.png",
-      "size": 46916,
-      "sha256": "a1c7936dcbe041e9da2c84f6e5190f16e0de134da15a816fed8954cc244a1314",
+      "size": 53242,
+      "sha256": "9e8b9d0daece361a05410b4ef975aecc1c34e08c2482ab2cbeb30cad72c10eac",
       "storage": "inline"
     },
     {
@@ -2934,13 +2934,13 @@
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/path_deltas.csv",
       "size": 28894,
-      "sha256": "1e2c704e1be366f815ecc34736134d19167a46607266a4191442fc64966cddd0",
+      "sha256": "7f3ea5dcac674eba2fb6793e6da7116ea6a6a4806046685784e0a8776e82d175",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/exoplanet/sample_trajectories_replicate_0.csv",
-      "size": 2773026,
-      "sha256": "1bf0ddec38219eee6a5a69e74aa98889824da007887419a766315fbd95f3ee9d",
+      "size": 2773081,
+      "sha256": "49e6a79d2c0e0c1188abd06876230499074215fdbfe0849e23e63285d3fb01d5",
       "storage": "inline"
     },
     {
@@ -2957,68 +2957,68 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/acceptance_tests.csv",
-      "size": 833,
-      "sha256": "abab6314d796285f271e8d88da1a77a5f73d9df5ff48cff321d28df11159422a",
+      "size": 832,
+      "sha256": "8dc4d07ae69c59295b7caab2472e7e6d719e15959e288306589fd59964dbf248",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/block_scores.csv",
-      "size": 2525,
-      "sha256": "319227b8ad1d2b99296c3e7cb9d8ecf9939734e014a1b5963dc270bfa3bd2614",
+      "size": 2523,
+      "sha256": "6f5c0ad0ceb72686b65acf9dc398ecc558ffbbe2905ab81c5bbb5729e9331a36",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/data_quality.json",
       "size": 464,
-      "sha256": "37a88be6da99cb0cd530584ba11acfc6bc3249c2b6ba2c6c94bd0114435f09ca",
+      "sha256": "5e89a9480e818b1bf2a2e220a1f7a94679aabd49394ed19911db71797e4b97b0",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/figures/mpt_power_ratio.png",
-      "size": 48527,
-      "sha256": "2e91039254b3a35d3b3b1950f010ccccda48f5714db3cbf1d416a420b3fae9c2",
+      "size": 53765,
+      "sha256": "a2ac85b6762baae522b534f8075087d93b5bf79a77bb7419e0d7cd182ca1f3fa",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/figures/mpt_predictions.png",
-      "size": 624644,
-      "sha256": "6f7cc39352d5429ffcbc7891e0b82e2ab526dc5a4f7d8459738cd3c06fccfdcc",
+      "size": 645485,
+      "sha256": "888e02363f47b1e9106b5a39509826633cbd39235b0f065aa2ab63df2a912e2b",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/metrics.csv",
-      "size": 3243,
-      "sha256": "07bb5c941e0f0ad9bca847c8e2114655a1520ffecbbd34dbea521d03f3f5483f",
+      "size": 3250,
+      "sha256": "9b38857af5aa8bae84f97108e3eef643ea6fde2b35749062aa5d1cbe22b434ab",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/optimization.json",
-      "size": 2188,
-      "sha256": "79d6e2ec0ce8f43451381f662b699612671e1d5a1a8ad28342c74a691089113b",
+      "size": 2185,
+      "sha256": "a1343fed8b97ad62340c6dbc4bd1f2504c935edf710905357754644627bf240a",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/parameters.json",
-      "size": 1136,
-      "sha256": "913f997932dfe3fdcafede7ba12b3870e65ff24a9aa363bc8a0adff827355161",
+      "size": 1137,
+      "sha256": "562406cb989e62f8f2d18b5c77afa7bd5c3c61ae4e5701054a8e37317ba70850",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/predictions.csv",
-      "size": 862846,
-      "sha256": "79751ef9fb07729f5d4a33bb371ec4b1e640a44a0c9dc98afb333fa761e267a0",
+      "size": 862789,
+      "sha256": "60f92dcf8b4f07b50d75b9c54e50921d26ff22deb5653f3ac88dd6aedd12d34f",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
       "size": 3781,
-      "sha256": "7b4cbc88fd986f4a3c5b938b8f391572d52f8db443582aac23a85ae158fcdd3e",
+      "sha256": "04c6d500a77a6287d92a8e80de446d357495ea9fb85e9a97e52104b44a09df7a",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results/run_summary.json",
       "size": 5278,
-      "sha256": "0fabc75df75c9e6e629e9496bf5194faae9ce75770d3e1ce1650b112618aaee9",
+      "sha256": "c6d6fc0c41aeb71e3d3a447b32b646a5141a6588274da958a0c3388d1d097104",
       "storage": "inline"
     },
     {
@@ -3137,38 +3137,38 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_final_regime_scan.png",
-      "size": 88038,
-      "sha256": "f0151db254f61cb09af13dca53d76d57da2bc81901fb0d32175e5a6c972e972a",
+      "size": 100583,
+      "sha256": "915ba25afd79d05f4c02beccb3420c773000171cf7fac3cc0001307bd9bc4d6e",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_forcing_robustness.png",
-      "size": 77404,
-      "sha256": "aec26d359cb8c2d28ca76e4d95b9fc709660a3d0c258b7ff1581f21279d4f5f1",
+      "size": 90584,
+      "sha256": "92f4f14de7581d5e3d7870c2d6538d71f65c6f12b708e87e1e48b24e748849af",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_relaxation.png",
-      "size": 172963,
-      "sha256": "4c98edd477af8aa7a0c30880c9eb3afd3becffd42322efae7d49389a0fca3e7e",
+      "size": 191919,
+      "sha256": "35475c0f092f91554139143ce7a077979115bc105e620d708a2208a1a8691a36",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_spectral_capacity.png",
-      "size": 48357,
-      "sha256": "325662d2f6ee14016288afe770cce7d0855681ed630096f76bd8258cb52ff57b",
+      "size": 52870,
+      "sha256": "f1cfa6350878697c77de095ddd1d37a338bec6e603bc967e48e37b33a8b94915",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_split_sensitivity.png",
-      "size": 90041,
-      "sha256": "065f49e984f23f817edf89a727dc603a581639b7634bfecc11609f19b77af542",
+      "size": 99577,
+      "sha256": "7a68682c8d3a62daf63fe44101057c1ea541c67ce7d7bcc3104ab99a89740c41",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/figures/stress_surrogate_null.png",
-      "size": 69674,
-      "sha256": "3e296f2a7fc0e174668a3cb1f3c9829f1af4b3a0b939106b8f8c70379c08e1d5",
+      "size": 78772,
+      "sha256": "d57aca97db0647a38d8642915edfce790cee3342b0cfe04fb004e454eb21ab99",
       "storage": "inline"
     },
     {
@@ -3305,8 +3305,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/prospectif_c2/prospectif_c2.json",
-      "size": 13235,
-      "sha256": "72e3e0fde4a83af1e977fd82ed17b83d8bc813037837b203f17ec17944d21242",
+      "size": 13236,
+      "sha256": "79946f9cb67c0d53007c8d882471bd916685c5b722c55a2a5c6315a403a172e3",
       "storage": "inline"
     },
     {
@@ -3353,98 +3353,98 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/f_tests_reels.json",
-      "size": 3304,
-      "sha256": "db2340aecd9b5619167d29ff73e8088028874c4fe8ad3e0f326fcc84d0253d7b",
+      "size": 3300,
+      "sha256": "0ef011ee2f5cef5f71eb48cc3917887705026f148ff80fd11573024f22a2bfdb",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/g1_validation_croisee.csv",
-      "size": 788,
-      "sha256": "484cdb6152482940dce74bcd1c7e3d3fb35000fd6a66103ca848c7f12c9e0bd6",
+      "size": 787,
+      "sha256": "2bb504b506048d5ac5208eae098611857fcf6ee057a6e892d9a6e0a441a569a2",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/g3_convention_insolation.csv",
-      "size": 593,
-      "sha256": "3211fc77df2751fc64fb16a0794764a4f66fa4a3cecf577abd5b6862343ebf5b",
+      "size": 591,
+      "sha256": "ef023c8e03f5ddfabf35e8a8a17287ab618cda4bc638fe2740689e3cfbd81c63",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/g_tests_reels_2.json",
-      "size": 4798,
-      "sha256": "ae2d0be1ff449147dae1efec96c60febd6d934d205e4289dac46fa50834a8500",
+      "size": 5933,
+      "sha256": "44fc89702acae4f8f039b43e1f404ef6b6b0875bdec479fcddcbddf659a4445c",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/h_g2_corrige.json",
       "size": 1095,
-      "sha256": "97903a5518afd4f82ea3d5be24593a9497166ab61051348c19a86ba2e90ef436",
+      "sha256": "777aa3c24e8ec51fb484336208e47ca01616fa477c09a62545151b1e483e4878",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/i_criteres_discriminants.csv",
-      "size": 573,
-      "sha256": "a6bef0003b2a7a6dfcac44e2ad0596199eb9fe0e4701c6409c7a09f86b1e4fe3",
+      "size": 574,
+      "sha256": "f1382cf0633b7f08f7fa44e79ba238577802d169a73239ef309deb1fecb6b610",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/i_criteres_discriminants.json",
-      "size": 10185,
-      "sha256": "e89a4bbd3432bdef5ef3cac4eca295282fe9d204fce22af14e004197a7fee948",
+      "size": 10179,
+      "sha256": "6f12d002d6faeeb863c72ec5c7b1ec37849758a1a4c7ebcfef20f2f7749fa1b3",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/j_fenetres_wp_c7.csv",
-      "size": 12677,
-      "sha256": "0ace9999e688b1199e8782b6517c018c5fc59a7219bf1ed63eaf908166f4a144",
+      "size": 12707,
+      "sha256": "010c743cd56cc9700f39825f1499a29a59c593282e354f0046ded7d22a90f950",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/j_mecanismes_wp_c7.json",
-      "size": 9570,
-      "sha256": "a0bb72c9f5cde3f4c7cc51e1001117b969b6e4cb620f4e262d919595bfb1a172",
+      "size": 9563,
+      "sha256": "03b71fec0af57f0a3c943bcb237df3b3340eeb9785a6a54f63abf47b0088eb5c",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/k_familles_wp_c4.csv",
-      "size": 1234,
-      "sha256": "6a99b86646cd2fc20ca5030be9c07baae234e03e5a428fbea7a5b1f4476ee59a",
+      "size": 1239,
+      "sha256": "53e35f030e6d40642dd6bd4d79acb60d42322eee6491d52945855e1caf8e7f90",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/k_familles_wp_c4.json",
-      "size": 3256,
-      "sha256": "11c8692476fcc53c5cc2e102bfd46961802039c167e4a732621d129bfc77e904",
+      "size": 3260,
+      "sha256": "67253f73d5be62c34c4fac5707a85b31e7144e6592ccbe9ace1e1a4c9712f645",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/l_familles_memoire_wp_c3.csv",
-      "size": 851,
-      "sha256": "0bff09fb95a8e0ac9b74c674c4ad565cba49e5e5353e9945e22e08b61a5bd050",
+      "size": 881,
+      "sha256": "e76e1e4fe4b4c65f6713065437e833d9c15ff04843bc18aac2d16caa06a16932",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/l_familles_memoire_wp_c3.json",
-      "size": 4681,
-      "sha256": "7fa73a34c6dd2ea59b652746e88029d87abd9f4fd73e31575487212b1fae3fff",
+      "size": 4798,
+      "sha256": "2f5b98df070d7191f20a2bbe5ed67a5e76d61993f575f9ac9a84e666695c6635",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/n_nulls_spectraux_lr04.json",
-      "size": 2759,
-      "sha256": "92dadd1e324a148105d7cc3cb0508720eac17d764c46fc267c1451f09095b877",
+      "size": 2757,
+      "sha256": "b731f3709e564a4d8b7ff76f33eb15e49f4b99201721ec3446b42af83cf0521b",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/t2_enregistrement_complet.csv",
-      "size": 365,
-      "sha256": "6622042e16bf0a9884030d73fc3112403f4247c406848bf5b569a13f6a4aef50",
+      "size": 363,
+      "sha256": "e159ea82c3165845a9f5e2b90ca26ff5ffa0264a26dc8bcc33911ce561922715",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/tests_reels/t4_chronologie_spectrale.csv",
-      "size": 9564,
-      "sha256": "3256a092f1bcd4cf0726c9739580d6e1549bc9a6ef647a7ef02b0f5e8262782c",
+      "size": 9574,
+      "sha256": "93cc1e60a10eec65d3adc1f3ac629a4669da2d6fe53fad21dfdfb9b73ea238d8",
       "storage": "inline"
     },
     {
@@ -4205,8 +4205,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json",
-      "size": 3375,
-      "sha256": "049712a3c38de1c45553a53581087290015c53b6f64c8ec189e78aa0fa26e892",
+      "size": 3376,
+      "sha256": "7a05b07f640ad86794b4f496915c7cd7a215fedcc476dee321ecb8d05e22ce5a",
       "storage": "inline"
     },
     {
@@ -4217,8 +4217,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
-      "size": 22716,
-      "sha256": "f618615f72e10eb0797e061ce7625b621607dd0a5a9317d8e9c844536a50486b",
+      "size": 22719,
+      "sha256": "40b5ab062343561e5125d3c6996654631fd687a0e15bd82870101251fa9c833c",
       "storage": "inline"
     },
     {

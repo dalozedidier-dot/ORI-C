@@ -337,7 +337,7 @@
         "multistable": true,
         "plages_d_exploitation": {
           "ice": {
-            "mediane": 0.02311177709057345,
+            "mediane": 0.023111777090573448,
             "etendue": 0.4084751272671169
           },
           "productivite": {

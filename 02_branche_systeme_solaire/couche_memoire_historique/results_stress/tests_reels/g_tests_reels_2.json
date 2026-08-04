@@ -8,47 +8,47 @@
         "age_fin_ka": 2081.0,
         "points": 520,
         "rmse_M0": 1.0397672759626355,
-        "rmse_M1": 0.9261654161926441,
-        "rmse_M2": 3.299054290802984,
-        "rmse_M1P": 0.6154195629275365,
-        "gain_relatif_M2_sur_M1": -2.562057309767626,
-        "gain_relatif_M2_sur_M1P": -4.360658792043365
+        "rmse_M1": 0.9261654161926444,
+        "rmse_M2": 3.2990538688163586,
+        "rmse_M1P": 0.6154195629275454,
+        "gain_relatif_M2_sur_M1": -2.562056854139918,
+        "gain_relatif_M2_sur_M1P": -4.360658106353962
       },
       {
         "bloc": 1,
         "age_debut_ka": 2080.0,
         "age_fin_ka": 1561.0,
         "points": 520,
-        "rmse_M0": 0.6942129020782293,
-        "rmse_M1": 0.7492345911119414,
-        "rmse_M2": 0.5589290347533259,
-        "rmse_M1P": 0.5175157182254364,
-        "gain_relatif_M2_sur_M1": 0.25399996024767413,
-        "gain_relatif_M2_sur_M1P": -0.08002330184268791
+        "rmse_M0": 0.694212902078229,
+        "rmse_M1": 0.7492345911121513,
+        "rmse_M2": 0.5589290228280595,
+        "rmse_M1P": 0.517515718224393,
+        "gain_relatif_M2_sur_M1": 0.253999976164482,
+        "gain_relatif_M2_sur_M1P": -0.080023278801572
       },
       {
         "bloc": 2,
         "age_debut_ka": 1560.0,
         "age_fin_ka": 1041.0,
         "points": 520,
-        "rmse_M0": 0.7691992386433049,
-        "rmse_M1": 0.783507243041851,
-        "rmse_M2": 0.7548090602094266,
-        "rmse_M1P": 0.7031624648082837,
-        "gain_relatif_M2_sur_M1": 0.03662784624811888,
-        "gain_relatif_M2_sur_M1P": -0.07344902207660398
+        "rmse_M0": 0.7691992386433055,
+        "rmse_M1": 0.7835072422200213,
+        "rmse_M2": 0.7548090602093965,
+        "rmse_M1P": 0.7031624648002662,
+        "gain_relatif_M2_sur_M1": 0.03662784523766516,
+        "gain_relatif_M2_sur_M1P": -0.07344902208880066
       },
       {
         "bloc": 3,
         "age_debut_ka": 1040.0,
         "age_fin_ka": 521.0,
         "points": 520,
-        "rmse_M0": 1.264551408330661,
-        "rmse_M1": 1.2703988659971193,
-        "rmse_M2": 1.228655420162886,
-        "rmse_M1P": 1.0405467123371925,
-        "gain_relatif_M2_sur_M1": 0.03285853518254622,
-        "gain_relatif_M2_sur_M1P": -0.18077872487163882
+        "rmse_M0": 1.2645514155626916,
+        "rmse_M1": 1.2703988653092402,
+        "rmse_M2": 1.2286554200321114,
+        "rmse_M1P": 1.0405467122607739,
+        "gain_relatif_M2_sur_M1": 0.03285853476181089,
+        "gain_relatif_M2_sur_M1P": -0.18077872483267732
       },
       {
         "bloc": 4,
@@ -56,53 +56,121 @@
         "age_fin_ka": 0.0,
         "points": 521,
         "rmse_M0": 1.5673224037077602,
-        "rmse_M1": 1.5759003986503475,
-        "rmse_M2": 1.520148772205124,
-        "rmse_M1P": 1.3554234446373177,
-        "gain_relatif_M2_sur_M1": 0.03537763331551358,
-        "gain_relatif_M2_sur_M1P": -0.12153052849981005
+        "rmse_M1": 1.5759003978492339,
+        "rmse_M2": 1.5201487721830333,
+        "rmse_M1P": 1.3554234446373246,
+        "gain_relatif_M2_sur_M1": 0.03537763283916262,
+        "gain_relatif_M2_sur_M1P": -0.12153052848350643
       }
     ],
     "gain_M2_sur_M1P": {
-      "moyen": -0.9632880738668211,
-      "median": -0.12153052849981005,
-      "min": -4.360658792043365,
-      "max": -0.07344902207660398,
+      "moyen": -0.9632879321121036,
+      "median": -0.12153052848350643,
+      "min": -4.360658106353962,
+      "max": -0.07344902208880066,
       "blocs_favorables_a_M2": 0
     },
     "gain_M2_sur_M1": {
-      "moyen": -0.44063866695475457,
+      "moyen": -0.4406385730273595,
       "blocs_favorables_a_M2": 4
     },
     "lecture": "Un verdict qui change de signe selon le bloc n'est pas un verdict. Le compte de blocs favorables est la quantité décisive."
   },
   "G2_renversement_temporel": {
     "rmse_ajustement": {
-      "avant": {"M0": 0.9728572794355551, "M1": 0.9665797999218452, "M2": 0.8721806354194508, "M1P": 0.8704802343012266},
-      "arriere": {"M0": 0.9863750833916731, "M1": 0.9517216723055375, "M2": 0.9437646652627681, "M1P": 0.9437325704438893}
+      "avant": {
+        "M0": 0.9728572794355551,
+        "M1": 0.9665797999219253,
+        "M2": 0.8721806354200919,
+        "M1P": 0.870480234296725
+      },
+      "arriere": {
+        "M0": 0.9863750833916731,
+        "M1": 0.9517216723058329,
+        "M2": 0.9437646652623811,
+        "M1P": 0.9437325703508171
+      }
     },
-    "asymetrie_temporelle": {"M0": 0.013517803956118013, "M1": -0.01485812761630767, "M2": 0.07158402984331735, "M1P": 0.07325233614266269},
-    "asymetrie_relative": {"M0": 0.013894950720789124, "M1": -0.015371858192680062, "M2": 0.0820747754952058, "M1P": 0.08415163636824634},
-    "M2_plus_directionnel_que_M1P": false
+    "asymetrie_temporelle": {
+      "M0": 0.013517803956118013,
+      "M1": -0.014858127616092398,
+      "M2": 0.07158402984228918,
+      "M1P": 0.0732523360540921
+    },
+    "asymetrie_relative": {
+      "M0": 0.013894950720789124,
+      "M1": -0.01537185819245607,
+      "M2": 0.08207477549396659,
+      "M1P": 0.0841516362669324
+    },
+    "M2_plus_directionnel_que_M1P": false,
+    "lecture": "L'asymétrie est mesurée sur l'ajustement, pas sur la prédiction : la question est de savoir si la structure du modèle capte une information de direction, pas s'il prédit mieux. Une asymétrie de M2 non supérieure à celle de M1P signifie que sa mémoire ne porte pas d'information directionnelle propre."
   },
   "G3_convention_insolation": {
     "par_convention": [
-      {"convention": "60N_solstice", "rmse_M0": 2.0959109167734495, "rmse_M1": 2.120356283502476, "rmse_M2": 2.046856847045633, "rmse_M1P": 1.5626447106458574, "gain_M2_sur_M1P": -0.30986706901509664, "gain_M2_sur_M1": 0.03466371997418938},
-      {"convention": "65N_solstice", "rmse_M0": 2.094492827988389, "rmse_M1": 2.1177903406960645, "rmse_M2": 2.042004239934863, "rmse_M1P": 1.5533110936671264, "gain_M2_sur_M1P": -0.3146138260778193, "gain_M2_sur_M1": 0.03578545963916924},
-      {"convention": "70N_solstice", "rmse_M0": 2.092101534158394, "rmse_M1": 2.1128300266999105, "rmse_M2": 2.0350024130362194, "rmse_M1P": 1.5468420220337336, "gain_M2_sur_M1P": -0.31558516257572955, "gain_M2_sur_M1": 0.03683571923921025},
-      {"convention": "65N_moyenne_annuelle", "rmse_M0": 2.093359211724162, "rmse_M1": 2.118157297253812, "rmse_M2": 2.048760170102845, "rmse_M1P": 1.5621330614309272, "gain_M2_sur_M1P": -0.3115145058297166, "gain_M2_sur_M1": 0.03276297149458174}
+      {
+        "convention": "60N_solstice",
+        "rmse_M0": 2.0959109167734495,
+        "rmse_M1": 2.1203562797047866,
+        "rmse_M2": 2.046856846847634,
+        "rmse_M1P": 1.5626447105852688,
+        "gain_M2_sur_M1P": -0.3098670689391765,
+        "gain_M2_sur_M1": 0.03466371833859261
+      },
+      {
+        "convention": "65N_solstice",
+        "rmse_M0": 2.094492835575562,
+        "rmse_M1": 2.1177903400395954,
+        "rmse_M2": 2.0420042413291295,
+        "rmse_M1P": 1.553311093677419,
+        "gain_M2_sur_M1P": -0.3146138269667176,
+        "gain_M2_sur_M1": 0.03578545868192462
+      },
+      {
+        "convention": "70N_solstice",
+        "rmse_M0": 2.092101534158394,
+        "rmse_M1": 2.112830026848998,
+        "rmse_M2": 2.0350023215223967,
+        "rmse_M1P": 1.54684202203621,
+        "gain_M2_sur_M1P": -0.3155851034119108,
+        "gain_M2_sur_M1": 0.0368357626205601
+      },
+      {
+        "convention": "65N_moyenne_annuelle",
+        "rmse_M0": 2.093359211724162,
+        "rmse_M1": 2.1181572972628846,
+        "rmse_M2": 2.0487601733770155,
+        "rmse_M1P": 1.5621330616664395,
+        "gain_M2_sur_M1P": -0.31151450772794975,
+        "gain_M2_sur_M1": 0.03276296995296102
+      }
     ],
     "verdict_stable": true,
-    "conventions_favorables_a_M2": 0
+    "conventions_favorables_a_M2": 0,
+    "lecture": "Si le signe du gain change avec la latitude ou la saison, le résultat mesure la convention et non le modèle."
   },
   "G4_distribution_nulle": {
     "nb_surrogates": 12,
-    "gain_observe": -0.3146138260778193,
-    "nulle_moyenne": -0.046087892302642534,
-    "nulle_ecart_type": 0.30475860893116313,
-    "nulle_min": -0.958014586681132,
-    "nulle_max": 0.23121268003765316,
+    "gain_observe": -0.3146138269667176,
+    "nulle_moyenne": -0.06919837082504893,
+    "nulle_ecart_type": 0.29154229705703666,
+    "nulle_min": -0.9580145915354201,
+    "nulle_max": 0.19052240774302076,
     "p_unilaterale_gain_superieur": 0.9230769230769231,
-    "gains_nuls": [-0.054023651676309736, -0.001194991180784033, -0.024077940763046923, 0.08028111277834893, 0.10502317446498921, 0.23121268003765316, -0.09539808133819805, 0.19052240666015252, -0.07176583336759657, 0.0633267001266955, -0.958014586681132, -0.01894569669248236]
+    "gains_nuls": [
+      -0.05402379947888303,
+      -0.0011949903829318043,
+      -0.024077942271578,
+      0.0634814426650595,
+      0.10612020223346519,
+      -0.03040978181173304,
+      -0.09539808157932295,
+      0.19052240774302076,
+      -0.07176583335951658,
+      0.06332670042356048,
+      -0.9580145915354201,
+      -0.018946182546307533
+    ],
+    "lecture": "La cible est remplacée par une série de même spectre et de phases aléatoires. Si le gain observé tombe dans cette distribution, il ne provient pas de la structure temporelle de l'archive."
   }
 }

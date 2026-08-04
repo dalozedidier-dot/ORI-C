@@ -19,7 +19,7 @@
   "M1": {
     "success": true,
     "message": "Optimization terminated successfully.",
-    "objective_training_rmse": 0.9601901231322472,
+    "objective_training_rmse": 0.9601901231322544,
     "function_evaluations": 21290,
     "iterations": 165,
     "seed": 2748,
@@ -27,16 +27,16 @@
     "population_size": 18,
     "restarts": 4,
     "tolerance": 1e-08,
-    "restart_training_rmse_min": 0.9601901231322472,
-    "restart_training_rmse_max": 0.9601901252499319,
-    "restart_training_rmse_relative_spread": 2.2054847714547457e-09,
+    "restart_training_rmse_min": 0.9601901231322544,
+    "restart_training_rmse_max": 0.9601901252499383,
+    "restart_training_rmse_relative_spread": 2.2054839620774e-09,
     "restarts_converged": 4,
     "compiled_kernel": true
   },
   "M2": {
     "success": true,
     "message": "Optimization terminated successfully.",
-    "objective_training_rmse": 0.8545451570491723,
+    "objective_training_rmse": 0.8545451570491799,
     "function_evaluations": 129563,
     "iterations": 505,
     "seed": 2749,
@@ -44,9 +44,9 @@
     "population_size": 18,
     "restarts": 4,
     "tolerance": 1e-08,
-    "restart_training_rmse_min": 0.8545451570491723,
-    "restart_training_rmse_max": 0.8545955031351614,
-    "restart_training_rmse_relative_spread": 5.891565305095587e-05,
+    "restart_training_rmse_min": 0.8545451570491799,
+    "restart_training_rmse_max": 0.8545955031351615,
+    "restart_training_rmse_relative_spread": 5.891565304225073e-05,
     "restarts_converged": 4,
     "compiled_kernel": true
   },
@@ -62,8 +62,8 @@
     "restarts": 4,
     "tolerance": 1e-08,
     "restart_training_rmse_min": 0.8685786596409675,
-    "restart_training_rmse_max": 0.8719839247703416,
-    "restart_training_rmse_relative_spread": 0.003920502871647458,
+    "restart_training_rmse_max": 0.8719839247631099,
+    "restart_training_rmse_relative_spread": 0.003920502863321604,
     "restarts_converged": 3,
     "compiled_kernel": true
   }
