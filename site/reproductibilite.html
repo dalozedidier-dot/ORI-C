@@ -36,7 +36,7 @@
           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
           <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests REBOUND optionnels ignorés localement</small></article>
         </div>
-        <p class="data-note">La matrice GitHub Actions est configurée sous Python 3.12 et Python 3.13. L'exécution de référence sous Python 3.13 compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 15 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire, 21 tests de robustesse, 11 tests des priorités v0.9.3 et 10 tests astronomiques, avec 2 tests REBOUND optionnels ignorés dans l'environnement local. La campagne cumulative compare désormais les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>. Les autres fichiers restent comparés octet par octet.</p>
+        <p class="data-note">La matrice GitHub Actions a été validée sous Python 3.12 et Python 3.13 sur le dépôt synchronisé. L'exécution de référence sous Python 3.13 compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 15 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire, 21 tests de robustesse, 11 tests des priorités v0.9.3 et 10 tests astronomiques, avec 2 tests REBOUND optionnels ignorés dans l'environnement local. La campagne cumulative compare les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>. L’audit transversal est régénéré par le workflow structurel et toute divergence avec le fichier canonique fait désormais échouer la validation.</p>
         <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
       </div>
     </section>
@@ -76,7 +76,7 @@ python -m pytest -q plan_directeur/campagne_priorites_v093/tests</code></pre><p>
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">Analyses automatisées</p><h2>Cinq workflows spécialisés et deux campagnes cumulatives</h2><p>Chaque campagne publie ses logs, son environnement Python et ses résultats comme artefacts. Le succès technique d'un workflow ne change pas automatiquement un verdict scientifique.</p></div>
         <div class="document-grid">
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Carte, généalogies, inventaire, hypergraphe et audit transversal</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Carte, généalogies, inventaire, hypergraphe et audit transversal synchronisé sur 15 notions</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Données réelles</strong><span>GISTEMP, exoplanètes, antibiotiques, proxy Pacc et campagne complète</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Mémoire historique et 25 calculs astronomiques</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-paleoclimat-approfondie.yml"><strong>Paléoclimat approfondi</strong><span>Tests réels, témoins, mécanismes et spectres nuls</span></a>
@@ -101,7 +101,7 @@ python -m pytest -q plan_directeur/campagne_priorites_v093/tests</code></pre><p>
 
     <section class="section alt">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Publication v0.9.3</p><h2>Une version stable préparée automatiquement</h2></div>
+        <div class="section-heading"><p class="eyebrow">Publication v0.9.3</p><h2>Une version stable validée automatiquement</h2><p>Les contrôles d’intégrité, la matrice Python 3.12/3.13, les campagnes cumulatives et la construction déterministe de l’archive canonique ont été exécutés avec succès. La création d’une Release et d’un DOI reste une action de publication depuis les comptes de l’auteur.</p></div>
         <div class="document-grid">
           <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/PUBLICATION_STABLE.md"><strong>Procédure de publication</strong><span>Tag, archive hydratée et SHA-256</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/.zenodo.json"><strong>Métadonnées Zenodo</strong><span>Prêtes pour l'activation d'un DOI</span></a>
