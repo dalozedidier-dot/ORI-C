@@ -57,7 +57,7 @@
         "statut_preuve": "observe"
       }
     ],
-    "N032": [
+    "N035": [
       {
         "edge_id": "H033",
         "processus": "Organisation chimique aux interfaces",
@@ -70,7 +70,7 @@
         "statut_preuve": "hypothese_testable"
       }
     ],
-    "N035": [
+    "N032": [
       {
         "edge_id": "H033",
         "processus": "Organisation chimique aux interfaces",

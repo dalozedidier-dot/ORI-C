@@ -39,9 +39,10 @@
         "branches_ou_une_mesure_existe": [
           "branche 1 matière",
           "branche 2 système solaire",
+          "branche 3 vivant",
           "socle"
         ],
-        "nombre_de_branches": 3,
+        "nombre_de_branches": 4,
         "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": true
       },

@@ -149,6 +149,10 @@ jobs:
           python plan_directeur/audit_transversal.py \
             | tee "$OUT/logs/audit_transversal.log"
 
+      - name: Vérifier la synchronisation de l'audit transversal
+        run: |
+          git diff --exit-code -- plan_directeur/audit_transversal.json
+
       - name: Rassembler les sorties contrôlables
         if: always()
         run: |
