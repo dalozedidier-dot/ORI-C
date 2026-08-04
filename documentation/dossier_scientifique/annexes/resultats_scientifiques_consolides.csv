@@ -10,6 +10,7 @@ Climat,M2 contre M1P,"0 critère sur 5, gain RMSE -31,6 %",Réfuté
 Exoplanètes,Dépendance au chemin,"4 variables sur 4, ablation 4 sur 4",Validation structurelle
 Exoplanètes,Persistance,0 variable matérielle après palier long,Non réussi
 Matière,Fermeture stricte v0.9.3,46/53 nœuds ; noyau N029-N030-N053-N054 ; réparation candidate 53/53 non canonique,"Verrou localisé, source causale insuffisante"
+Matière,Calibrage structurel v0.9.4,"31 nœuds stables, 15 sensibles, 7 dans le verrou canonique ; 40 hyperarêtes à effet d’ablation","Tri structurel et documentaire, causalité générale non démontrée"
 Climat,Transfert orbital intermédiaire,"gain positif dans 3 fenêtres sur 3, 3,12 % en moyenne","Hors échantillon à un pas, non GCM"
 Mémoire,Bassins et hystérèse,deux bassins pour M2 et M2P ; aucun écart matériel après retour complet,"Exploratoire, non confirmatoire"
 Vivant,Benchmark externe Card 2019,histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable,"Externe rétrospectif, non confirmatoire"

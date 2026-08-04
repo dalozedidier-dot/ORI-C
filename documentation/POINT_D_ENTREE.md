@@ -51,3 +51,13 @@ python plan_directeur/campagne_maximale_trois_branches/run_all.py
 python 00_socle/genealogie/arbre_genealogique.py
 python 01_branche_matiere/genealogie/construire_genealogie.py
 ```
+## Calibrage de l’architecture matérielle v0.9.4
+
+- Protocole : `01_branche_matiere/hypergraphe_transformations/calibrage_v094/PROTOCOLE_CALIBRAGE.md`
+- Synthèse machine : `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json`
+- Rapport : `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/RAPPORT_CALIBRAGE.md`
+- Table complète : `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/calibrage_hyperaretes.csv`
+- Référence gelée : `protocoles_geles/v0.9.3_architecture_matiere/FROZEN.json`
+
+Le calibrage affine la priorité des relations. Il ne transforme pas la criticité d’une hyperarête dans le graphe en preuve causale naturelle.
+

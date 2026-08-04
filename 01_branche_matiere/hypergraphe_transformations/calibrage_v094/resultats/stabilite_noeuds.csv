@@ -1,0 +1,54 @@
+node_id;label;frequence_projection;frequence_fermeture_stricte;classe_stabilite
+N001;Matiere interstellaire heritee;1.000000;1.000000;noyau_stable
+N002;Grains presolaires;1.000000;1.000000;noyau_stable
+N003;Glaces et organiques interstellaires;1.000000;1.000000;noyau_stable
+N004;Gaz nebulaire et matiere vaporisee;1.000000;1.000000;noyau_stable
+N005;Condensats refractaires;1.000000;1.000000;noyau_stable
+N006;CAI et AOA;1.000000;1.000000;noyau_stable
+N007;Nouveaux grains nebulaires;1.000000;1.000000;noyau_stable
+N008;Monomeres de poussiere;1.000000;1.000000;noyau_stable
+N009;Agregats fractals;1.000000;1.000000;noyau_stable
+N010;Agregats compactes et poreux;1.000000;1.000000;noyau_stable
+N011;Galets;1.000000;1.000000;noyau_stable
+N012;Concentrations locales de solides;1.000000;1.000000;noyau_stable
+N013;Filaments de streaming;0.701500;0.701500;dependance_sensible
+N014;Planetesimaux primitifs;0.701500;0.701500;dependance_sensible
+N015;Chondres;1.000000;1.000000;noyau_stable
+N016;Corps chondritiques reassembles;1.000000;1.000000;noyau_stable
+N017;Reservoir NC;1.000000;1.000000;noyau_stable
+N018;Reservoir CC;1.000000;1.000000;noyau_stable
+N019;Reservoir CI;1.000000;1.000000;noyau_stable
+N020;Corps parent aqueux;1.000000;0.701500;dependance_sensible
+N021;Mineraux hydrates carbonates sulfures;1.000000;0.701500;dependance_sensible
+N022;Organique modifie par eau;1.000000;0.701500;dependance_sensible
+N023;Debris collisionnels;1.000000;0.701500;dependance_sensible
+N024;Asteroide reassemble;1.000000;0.701500;dependance_sensible
+N025;Corps differencie;0.701500;0.701500;dependance_sensible
+N026;Noyau planetaire;0.701500;0.701500;dependance_sensible
+N027;Manteau et croute;1.000000;0.701500;dependance_sensible
+N028;Atmosphere et hydrosphere;1.000000;0.701500;dependance_sensible
+N029;Inventaire accessible;0.701500;0.000000;verrou_canonique
+N030;Interfaces eau roche gaz;1.000000;0.000000;verrou_canonique
+N031;Systeme serpentinise;1.000000;0.000000;verrou_canonique
+N032;Chimie organique organisee;0.355250;0.000000;verrou_canonique
+N033;Embryons planetaires;0.701500;0.701500;dependance_sensible
+N034;Planete differenciee;1.000000;1.000000;noyau_stable
+N035;Matiere disponible pour organisation active;0.355250;0.000000;verrou_canonique
+N036;Inventaire baryonique net;1.000000;1.000000;noyau_stable
+N037;Protons et neutrons;1.000000;1.000000;noyau_stable
+N038;Noyaux legers primordiaux;1.000000;1.000000;noyau_stable
+N039;Atomes neutres primordiaux;1.000000;1.000000;noyau_stable
+N040;Molecules primordiales H2 et HD;1.000000;1.000000;noyau_stable
+N041;Nuage auto-gravitant refroidi;1.000000;1.000000;noyau_stable
+N042;Premieres etoiles;1.000000;1.000000;noyau_stable
+N043;Elements lourds stellaires;1.000000;1.000000;noyau_stable
+N044;Ejecta et vents stellaires;1.000000;1.000000;noyau_stable
+N045;Milieu interstellaire enrichi;1.000000;1.000000;noyau_stable
+N046;Poussieres stellaires;1.000000;1.000000;noyau_stable
+N047;Molecules complexes et glaces de nuages;1.000000;1.000000;noyau_stable
+N048;Grains presolaires survivants;1.000000;1.000000;noyau_stable
+N050;Disque de debris post-impact;0.701500;0.701500;dependance_sensible
+N051;Croute primitive;1.000000;0.701500;dependance_sensible
+N052;Vernis tardif siderophile;1.000000;0.701500;dependance_sensible
+N053;Systeme hydrothermal;1.000000;0.000000;verrou_canonique
+N054;Phosphates solubles carbonates et sels;1.000000;0.000000;verrou_canonique

@@ -422,6 +422,7 @@ results_rows=[
 ('Exoplanètes','Dépendance au chemin','4 variables sur 4, ablation 4 sur 4','Validation structurelle'),
 ('Exoplanètes','Persistance','0 variable matérielle après palier long','Non réussi'),
 ('Matière','Fermeture stricte v0.9.3','46/53 nœuds ; noyau N029-N030-N053-N054 ; réparation candidate 53/53 non canonique','Verrou localisé, source causale insuffisante'),
+('Matière','Calibrage structurel v0.9.4','31 nœuds stables, 15 sensibles, 7 dans le verrou canonique ; 40 hyperarêtes à effet d’ablation','Tri structurel et documentaire, causalité générale non démontrée'),
 ('Climat','Transfert orbital intermédiaire','gain positif dans 3 fenêtres sur 3, 3,12 % en moyenne','Hors échantillon à un pas, non GCM'),
 ('Mémoire','Bassins et hystérèse','deux bassins pour M2 et M2P ; aucun écart matériel après retour complet','Exploratoire, non confirmatoire'),
 ('Vivant','Benchmark externe Card 2019','histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable','Externe rétrospectif, non confirmatoire'),
@@ -889,6 +890,16 @@ add_table(['Priorité exécutée','Résultat','Portée'],[
 ('Prébiotique','Deux trajectoires réelles de populations d’ARN catalytique sont intégrées sur huit cycles.','Aucune filiation parent-descendant de compartiments. La continuité héréditaire reste non testable.')],font_size=7.4)
 add_para('Cette campagne transforme les priorités en objets exécutables, mais aucun résultat ne reçoit un statut plus large que son protocole. La fermeture candidate n’est pas injectée dans le graphe canonique, le transfert climatique n’est pas un GCM, l’hystérèse reste interne au modèle et les deux benchmarks biologiques ne constituent pas une confirmation prospective.')
 
+add_para('8.5 Calibrage structurel et documentaire v0.9.4',style='Heading 2')
+add_table(['Objet calibré','Résultat','Interprétation et limite'],[
+('Graphe canonique','Les 53 nœuds et 53 hyperarêtes de la v0.9.3 sont gelés et contrôlés par empreinte.','Le calibrage n’ajoute ni ne retire de relation canonique.'),
+('Ablations','40 hyperarêtes sur 53 produisent une perte mesurable dans la projection ou la fermeture stricte.','Une importance structurelle dans le graphe ne démontre pas une nécessité causale dans la nature.'),
+('Stress documentaire','Sur 4 000 tirages déterministes, 31 nœuds sont stables, 15 sensibles, 0 fragile et 7 déjà bloqués par le verrou canonique.','Les fréquences mesurent la dépendance au codage documentaire actuel, pas une probabilité de vérité.'),
+('Tri des relations','35 priorités d’ablation, 4 relations du cycle de verrou, 10 cycles d’entretien, 3 relations redondantes et 1 priorité documentaire à fort effet aval.','H011, l’instabilité de streaming, devient la première cible documentaire hors module des interfaces.'),
+('Seuils documentaires','Le profil complet atteint 53 nœuds en projection et 46 en fermeture stricte. Le profil équilibré atteint 44 et 31.','La contraction localise la dépendance aux relations moins documentées. Elle ne les réfute pas.'),
+('Benchmark externe MESA','Deux trajectoires stellaires, 12 transitions et 14 nœuds atteignent une fermeture stricte de 14 sur 14.','Transfert du schéma de représentation, sans validation observationnelle de MESA ni loi universelle ORI-C.')],font_size=7.2)
+add_para('Le calibrage apporte un tri plus fin entre soutien documentaire, rôle structurel, redondance, dépendance cyclique et effet en aval. Il conserve explicitement comme non mesurées la nécessité empirique, la suffisance, la temporalité quantitative, la réversibilité physique et l’effet d’une intervention directe. Il sert donc à choisir les prochains tests, pas à transformer le graphe en preuve causale générale.')
+
 # 9 limits corrections
 add_para('9. Limites, corrections intégrées et points non démontrés',style='Heading 1')
 add_para('9.1 La clôture est formelle',style='Heading 2')
@@ -918,26 +929,27 @@ add_table(['Colonne proposée','Question'],[
 add_para('Cette séparation empêche d’attribuer à une voie historique un statut élevé simplement parce que le mécanisme existe en laboratoire. Une synthèse de type Strecker peut être établie expérimentalement sans démontrer qu’elle a produit les premiers monomères biologiques sur la Terre primitive.')
 
 add_para('9.7 Reproductibilité technique',style='Heading 2')
-add_para('La version 0.9.3-research aligne la source, le verrou de dépendances, les manifestes et les workflows de publication. Elle ajoute une CI séparée sous Python 3.12 et 3.13, un contrôle strict de Git LFS, une comparaison inter-environnements avec tolérances numériques explicites et une archive canonique déterministe. Les piles numériques natives sont exécutées dans des processus séparés pour éviter les blocages d’orchestration. La publication reste conditionnée au passage effectif des workflows après dépôt et création du tag.')
+add_para('La version 0.9.4-research aligne la source, le verrou de dépendances, les manifestes, le calibrage matière et les workflows de publication. Elle ajoute une CI séparée sous Python 3.12 et 3.13, un contrôle strict de Git LFS, une comparaison inter-environnements avec tolérances numériques explicites et une archive canonique déterministe. Les piles numériques natives sont exécutées dans des processus séparés pour éviter les blocages d’orchestration. La publication reste conditionnée au passage effectif des workflows après dépôt et création du tag.')
 
 # 10 program
 add_para('10. Programme de validation prioritaire',style='Heading 1')
 add_para('Le plan directeur contient huit cent quatre items répartis en cinquante-huit groupes de travail. Le présent dossier réduit ce programme à une séquence de priorités qui conditionne directement la valeur scientifique du cadre.')
 add_table(['Priorité','Action','Critère de réussite'],[
 ('1','Revoir bibliographiquement le ²⁶Al, le flux neutronique et la correspondance GM-GA','Corrections intégrées puis validées par une revue indépendante'),
-('2','Sourcer chaque transition à la littérature primaire','Référence identifiable pour mécanisme, milieu, histoire et rôle causal'),
-('3','Réviser les quatre axes de certitude transition par transition','Aucun transfert implicite du laboratoire vers l’histoire réelle'),
-('4','Appliquer le protocole d’information généalogique','Validation hors échantillon et permutation contre chronologie'),
-('5','Mesurer l’inventaire accessible réel','Flux, spéciation, probabilités et horizons, pas seulement répartition'),
-('6','Tester deux histoires à inventaire total voisin','Différence prédite par la distribution des réservoirs et vérifiée sur données'),
-('7','Préenregistrer une prédiction ORI-C minimale','Témoin de complexité égale, seuil, ablation et arrêt définis avant le résultat'),
-('8','Durcir le programme prébiotique','Lignées, témoin non copiable apparié et persistance sur plusieurs cycles'),
-('9','Répliquer à l’extérieur','Au moins un résultat positif et un résultat négatif reproduits indépendamment'),
-('10','Réparer la chaîne logicielle','Source, wheel, verrou, conteneur et manifeste issus de la même révision')],font_size=7.5)
+('2','Calibrer et documenter les relations prioritaires, notamment H011 et le cycle H030-H031-H052-H053','Séparation explicite entre soutien documentaire, rôle structurel et causalité empirique'),
+('3','Sourcer chaque transition à la littérature primaire','Référence identifiable pour mécanisme, milieu, histoire et rôle causal'),
+('4','Réviser les quatre axes de certitude transition par transition','Aucun transfert implicite du laboratoire vers l’histoire réelle'),
+('5','Appliquer le protocole d’information généalogique','Validation hors échantillon et permutation contre chronologie'),
+('6','Mesurer l’inventaire accessible réel','Flux, spéciation, probabilités et horizons, pas seulement répartition'),
+('7','Tester deux histoires à inventaire total voisin','Différence prédite par la distribution des réservoirs et vérifiée sur données'),
+('8','Préenregistrer une prédiction ORI-C minimale','Témoin de complexité égale, seuil, ablation et arrêt définis avant le résultat'),
+('9','Durcir le programme prébiotique','Lignées, témoin non copiable apparié et persistance sur plusieurs cycles'),
+('10','Répliquer à l’extérieur','Au moins un résultat positif et un résultat négatif reproduits indépendamment'),
+('11','Réparer la chaîne logicielle','Source, wheel, verrou, conteneur et manifeste issus de la même révision')],font_size=7.5)
 add_para('Le test décisif pour ORI-C reste le même. Il faut montrer que l’histoire, l’accessibilité ou l’architecture apportent une prédiction hors échantillon qu’un modèle classique de complexité égale, connaissant la composition et l’état présent, ne produit pas. Tant que ce résultat manque, le cadre doit être présenté comme un programme falsifiable en consolidation.')
 
 add_para('Conclusion générale',style='Heading 1')
-add_para('La totalité du dossier montre une progression en trois mouvements. Le socle a construit un langage commun, des modèles, des données et des procédures de réfutation. Le programme a obtenu un théorème local dans le chémostat, une validation N-corps dans un modèle réduit, une première mesure de l’inventaire accessible et plusieurs résultats négatifs qui éliminent des implémentations fragiles. La campagne v0.9.3 localise le verrou de fermeture stricte de la matière, construit un transfert orbital-climat intermédiaire, teste les bassins et l’hystérèse, exécute un benchmark antibiotique externe et intègre des trajectoires d’ARN réelles. Le graphe généalogique linéaire reste formellement clos selon ses règles, tandis que l’hypergraphe mécanistique strict demeure ouvert à 46 nœuds sur 53.')
+add_para('La totalité du dossier montre une progression en trois mouvements. Le socle a construit un langage commun, des modèles, des données et des procédures de réfutation. Le programme a obtenu un théorème local dans le chémostat, une validation N-corps dans un modèle réduit, une première mesure de l’inventaire accessible et plusieurs résultats négatifs qui éliminent des implémentations fragiles. La campagne v0.9.3 localise le verrou de fermeture stricte de la matière, construit un transfert orbital-climat intermédiaire, teste les bassins et l’hystérèse, exécute un benchmark antibiotique externe et intègre des trajectoires d’ARN réelles. Le calibrage v0.9.4 gèle ensuite cette architecture, mesure les effets d’ablation, distingue 31 nœuds stables de 15 nœuds sensibles et transfère le schéma à deux trajectoires stellaires MESA. Le graphe généalogique linéaire reste formellement clos selon ses règles, tandis que l’hypergraphe mécanistique strict demeure ouvert à 46 nœuds sur 53.')
 add_para('L’architecture scientifique propre à ORI-C se situe dans l’articulation entre matière transmise, conditions permissives, organisation, mémoire, persistance, accessibilité et fermeture des possibilités. Elle ne constitue pas encore une loi générale démontrée. Elle constitue une méthode structurée permettant de dire exactement ce qui est connu, ce qui est seulement organisé, ce qui est réfuté et ce qui doit encore être testé.')
 add_callout('Verdict scientifique consolidé',
             'ORI-C possède désormais un socle conceptuel cohérent, plusieurs objets calculables, des résultats disciplinaires et numériques réels, une généalogie formellement close et une capacité croissante à produire ses propres réfutations. Il ne possède pas encore une prédiction transversale positive, reproduite et supérieure à un témoin apparié. La prochaine avancée dépend moins de l’élargissement du vocabulaire que d’un test discriminant réussi.',NAVY,'#EEF3FB')
@@ -990,7 +1002,8 @@ source_rows=[
 ('Astronomie','couche_astronomique/STATUT_SCIENTIFIQUE.md et VALIDATION_FINALE.md'),
 ('Mémoire historique','couche_memoire_historique/REPORT.md, RAPPORT_CORRIGE.md et STRESS_REPORT.md'),
 ('Vivant et prébiotique','03_branche_vivant/README.md et PROGRAMME_PREBIOTIQUE.md'),
-('Campagne ciblée v0.9.3','plan_directeur/campagne_priorites_v093/ et rapports des quatre paquets'),
+('Campagne ciblée v0.9.3','plan_directeur/campagne_priorites_v093/ et rapports des cinq paquets'),
+('Calibrage matière v0.9.4','01_branche_matiere/hypergraphe_transformations/calibrage_v094/ et protocole gelé v0.9.3'),
 ('Benchmark externe','03_branche_vivant/benchmark_externe_card2019/ et DOI 10.5061/dryad.g41hg96'),
 ('Trajectoires ARN','03_branche_vivant/programme_prebiotique/donnees_reelles/ et DOI 10.5061/dryad.rxwdbrvgs'),
 ('Arbre généalogique','00_socle/genealogie/arbre_genealogique.csv et cloture_arbre.json'),

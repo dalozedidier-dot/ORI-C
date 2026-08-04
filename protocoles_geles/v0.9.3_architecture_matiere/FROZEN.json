@@ -1,0 +1,37 @@
+{
+  "freeze_id": "ORI-C-MATIERE-v0.9.3",
+  "frozen_on": "2026-08-04",
+  "nodes": 53,
+  "hyperedges": 53,
+  "pairwise_reachable": 53,
+  "strict_reachable": 46,
+  "canonical_graph_must_not_be_modified_by_calibration": true,
+  "files": [
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/noeuds.csv",
+      "size": 4614,
+      "sha256": "0d66302aa8fbaf1d360f32f56ab5f13c495959c2531773c240fcb07b0d885d2c"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/hyperaretes.csv",
+      "size": 9513,
+      "sha256": "33076393a7e086b57ade22377abc1329f869f66897d8cae7481f4d531a1c8a26"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/sources.csv",
+      "size": 6426,
+      "sha256": "ecafb746a3bebb96b7e287a951e1e01ef19096faa4acb5f1225815b41200df20"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json",
+      "size": 4819,
+      "sha256": "b412a5fd1af96b60971d9566a521162d8e3b618a4bdc9dbc73b47530cd9c455d"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
+      "size": 4506,
+      "sha256": "3ed3d9130c71f4a07624df9df1c621991cceae6cf7736851a136883617548b91"
+    }
+  ],
+  "purpose": "Référence immuable pour mesurer les effets du calibrage v0.9.4 sans réécrire le résultat v0.9.3."
+}

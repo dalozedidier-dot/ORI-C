@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/analyse-maximale-trois-branches.yml",
-      "size": 5402,
-      "sha256": "9fe0f1880631adaf1b3eeaaea37b0ccf6c5d6b074bfd98086baa561cd2114774",
+      "size": 5823,
+      "sha256": "9265a4e43c4f95156319112e2c1f577ba86b7ab24b2578a95b114769d5210b94",
       "storage": "inline"
     },
     {
@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/analyse-structure.yml",
-      "size": 7730,
-      "sha256": "334cdd290612cf3a936a851b54aafd83079bc622a1895b66a4d4a2d576e4f030",
+      "size": 8390,
+      "sha256": "09510785a1fea8b3fe0cdc62bb2377ce4a92f69a3adbc6ab597e82f4ffecf34a",
       "storage": "inline"
     },
     {
@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 5227,
-      "sha256": "fd2b4798db5c4f2135eb262d3b7b1626045e98491ab9982e2e7f334e15cd9011",
+      "size": 5605,
+      "sha256": "28b6ee5aa2797e4f121556f0f95815fe29e24ee41acce04d0e696243d9b80603",
       "storage": "inline"
     },
     {
@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/release.yml",
-      "size": 4393,
-      "sha256": "7916328be2881e3326269a9775b4b13f1ed8be0cfbfb38d55f4fa72309e467b1",
+      "size": 4699,
+      "sha256": "6f16bbc20f0ccdd32f188db75cfb9ac3be9d81530072d1d64212e928560771e7",
       "storage": "inline"
     },
     {
@@ -65,8 +65,8 @@
     },
     {
       "path": ".zenodo.json",
-      "size": 740,
-      "sha256": "4374fdb9e964cb1dc4e344ddaf678fc92b8acdb36b6853941d527b0b9f065af9",
+      "size": 792,
+      "sha256": "2fad5e59f06596174ec5210d5d5e3593ae2a962b1c6159287cfe59faee9f93b4",
       "storage": "inline"
     },
     {
@@ -533,8 +533,8 @@
     },
     {
       "path": "01_branche_matiere/README.md",
-      "size": 2400,
-      "sha256": "149ce909cf15263e35ba468d704f636738d7edf3ae3f7cfa733f37761fa239b1",
+      "size": 3132,
+      "sha256": "05d1198768d168692b1f0789d49ee3afeb9f8a816aba9764aaefb94baeaaf224",
       "storage": "inline"
     },
     {
@@ -811,6 +811,120 @@
       "path": "01_branche_matiere/hypergraphe_transformations/analyser_inventaire.py",
       "size": 11252,
       "sha256": "54f2eef42d5ddd2b6d416e10a81c2d4894990dee0aace4b8af11d3b4e3359ebb",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/PROTOCOLE_CALIBRAGE.md",
+      "size": 1557,
+      "sha256": "91d4435ad4c4a4aa14dd419ee46a9731b09fde0c92ad9c49d8b5b6a9817bf805",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/README.md",
+      "size": 1016,
+      "sha256": "ae5fbd2b7ec82bfcc3568328961362d40703bc7f6bc5c584636568adc2301e1d",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/__init__.py",
+      "size": 47,
+      "sha256": "dcdb8535fd71b68a30ad4e1ab5374bbc952a4adb074c83a6b9e8312ee5de9e72",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/PROVENANCE.md",
+      "size": 832,
+      "sha256": "81dfec4ffcf49a40a540894532405dee2f8b1b22405854f4605814c4c767016b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/__init__.py",
+      "size": 55,
+      "sha256": "d7cc87d36b6371f9ad1262c2994ce0d4b085066123ef980b76a4ce0f621ec13d",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/sources.csv",
+      "size": 699,
+      "sha256": "0fb3bd228567d5d3b810a6c598c2a83c7a66924c12f3aeb4e0d6ba812b764e31",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/tester_transfert.py",
+      "size": 2857,
+      "sha256": "a10d927f68b030f51e2eff06818586dec45d6316740fa1b304aaa7c2f7991699",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/trajectoires_mesa.csv",
+      "size": 1529,
+      "sha256": "ad7ab9dd5b83cfab429fad141b51fb61036023cb25051564d8a0b0af2efc401a",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py",
+      "size": 25559,
+      "sha256": "8e4b5f3a26a9d5fc68bdaadd658c5d37df9dcd3fc2d4091d7fbcdd71a371f72a",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/RAPPORT_CALIBRAGE.md",
+      "size": 3778,
+      "sha256": "c7c2da4383c30691dbdc5216ee7439a39753d295300deca23df35da014e7a469",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json",
+      "size": 3404,
+      "sha256": "1741c975d270aa95d7d4d036ad5918f20316630baee0851ec82556438a589559",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/ablation_sources.csv",
+      "size": 3315,
+      "sha256": "8e3d5bfdacaa697e5bf4360292ce5f6b7473e0fcf59db5fe53ae434c9b4333ae",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/benchmark_stellaire_mesa.json",
+      "size": 731,
+      "sha256": "53e86da83e7e917e59e540c303b1be0fc620ba93fd6f5c343b7eb195a903a5cf",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/calibrage_hyperaretes.csv",
+      "size": 13018,
+      "sha256": "8c8b489a94a449f07b675866c87fd732016c66f36a596b3cef58e379394af0d0",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/modules_cycliques.csv",
+      "size": 659,
+      "sha256": "1f1b8cea46b6bdb09c469825680d24718f0458a5e9652ba3815ba1a281601fc1",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/monte_carlo_resume.json",
+      "size": 1130,
+      "sha256": "e4dcb44ffa5ac51eea68b16deaaee6779d7fcfaff624e2092cf383cd275513d6",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/profils_seuils.csv",
+      "size": 1559,
+      "sha256": "3540605150619abe1012ef72244141727303ccba4e25c6ca0f49c1162b567de7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/stabilite_noeuds.csv",
+      "size": 3416,
+      "sha256": "9b54af7420f22a693c1c476d686e86af4a0618e652160621de36ef9c68f504d8",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests/test_calibrage.py",
+      "size": 1935,
+      "sha256": "add5bc514513701910b3ab563e6e00868f03bc21291aa0bd915acbc80208ccb6",
       "storage": "inline"
     },
     {
@@ -3983,14 +4097,14 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 15501,
-      "sha256": "ccffeb8ba6abb365a7c73c5b6d76481510c83939799e5401a53ade2bc6195ef1",
+      "size": 16650,
+      "sha256": "3278f581d938e54e41ecd2f0ac900b85332f1176502b56833386ab2f39078346",
       "storage": "inline"
     },
     {
       "path": "CITATION.cff",
       "size": 740,
-      "sha256": "1f864dabee97c1932e1fa48cfa5d682b48fbaf1b5687853e2cf886052a5de1b1",
+      "sha256": "9572da5f50792216788c29b91b75699707e5ada65be6fd30d30fdf92a2495ee4",
       "storage": "inline"
     },
     {
@@ -4013,8 +4127,8 @@
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "size": 3622,
-      "sha256": "e633ac54ae789d16ed062174255a2e6c40a9710b268b667394706eed2efb8f47",
+      "size": 3982,
+      "sha256": "2fbca6da3a5c91d344e284bbc812729cd3c04eba97d09a1e7ce10d95166c2534",
       "storage": "inline"
     },
     {
@@ -4025,20 +4139,20 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 30187,
-      "sha256": "1a1837124162bc7adad7e1e601f39c4adc8dfc3a4df980da784969305e465377",
+      "size": 31182,
+      "sha256": "eb96176976c105df3ff7d56d0a12c4f83010568755be20f76c1bceb85714a0cf",
       "storage": "inline"
     },
     {
       "path": "ETAT_DES_TESTS.md",
-      "size": 2760,
-      "sha256": "93cfab511a27c84e8929dda40479f625702177f10f03dbd1f8b12d61d095edad",
+      "size": 2806,
+      "sha256": "100bd1a96eeadad1e489d20e756e41dd2407cedbc0d5c8f6a349d2f109b79c2e",
       "storage": "inline"
     },
     {
       "path": "EXTERNAL_DATA_MANIFEST.csv",
-      "size": 6009,
-      "sha256": "29f7fd7cf246c988ee1730581faa333ba59d01c95b904a136acf549a040dc810",
+      "size": 6299,
+      "sha256": "de3317e5ca97df9cb5da6874f9ff9e6f5841db66a3f3fc26f0d6cb2605ebd4ef",
       "storage": "inline"
     },
     {
@@ -4050,7 +4164,7 @@
     {
       "path": "GITHUB_PUBLICATION.md",
       "size": 1512,
-      "sha256": "0c93dd622d10d0caa2e312bbc24812e09a4e5111a66f51e09d0bbd6a45dceb77",
+      "sha256": "20bb9e61ec4310a230e4995d7318eb17d1d27723d34b002253fd41e1c7cc499f",
       "storage": "inline"
     },
     {
@@ -4074,7 +4188,7 @@
     {
       "path": "LICENSING.md",
       "size": 679,
-      "sha256": "59c423ea5070d130312e09e01cd307b8f2ab0bf4da3ea6161bdc6b310f87de40",
+      "sha256": "0d80cc3fcd8600a1b5ecf6bb717b37fd7c67dea4c26399d10e37ae79f756fd74",
       "storage": "inline"
     },
     {
@@ -4098,7 +4212,7 @@
     {
       "path": "PUBLICATION_STABLE.md",
       "size": 806,
-      "sha256": "40301fff0fc5c4f4c57578a5a2a7a066d0ad7a64610629c82c98d33f95ce9683",
+      "sha256": "6c15c230e167d75ca4e932d5e60f37c73a7e73414f66ff5a86500c3c8ace0d0b",
       "storage": "inline"
     },
     {
@@ -4109,14 +4223,20 @@
     },
     {
       "path": "README.md",
-      "size": 10518,
-      "sha256": "ca483d376093ab27ac1bea80c175685b6965b9e515b3285faea9640ec03af84c",
+      "size": 12152,
+      "sha256": "7a536f12d451352e2cc049596757ec231767e7ab112c227c30105435cc28838d",
       "storage": "inline"
     },
     {
       "path": "RELEASE_NOTES_v0.9.3-research.md",
       "size": 1416,
       "sha256": "841e2abc98ddbf98e6ba42a8f8f548f37d6fa9600eb0308024439c1d8cd93246",
+      "storage": "inline"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.9.4-research.md",
+      "size": 1121,
+      "sha256": "c524fa15c4c19b28f754f99d89d689ab5f946b58e71467e671e4cbe35129cb45",
       "storage": "inline"
     },
     {
@@ -4127,8 +4247,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 4348,
-      "sha256": "b47e26e77ac44230de5d5391b7d55fb4a60fbbd3a7d7fd266a579fad15763433",
+      "size": 4949,
+      "sha256": "79c74a3f1dc1df10ed39dda458eb9de0275ce26329616520a6d5e49ecaa2ba7b",
       "storage": "inline"
     },
     {
@@ -4146,7 +4266,7 @@
     {
       "path": "VERSION",
       "size": 15,
-      "sha256": "1aafe0566e926887970a1034e766e9251f9569a79e6faeaafdf3193143d6bb52",
+      "sha256": "5cb49d40f73a35ea11fa12725dd6502f69b12ce982eeb17db3b32c4adf045737",
       "storage": "inline"
     },
     {
@@ -4211,20 +4331,20 @@
     },
     {
       "path": "documentation/POINT_D_ENTREE.md",
-      "size": 3636,
-      "sha256": "4e4524820ab08f5cbe7179138fe38baacec1474d9942382cbbadf1d9e4623c50",
+      "size": 4368,
+      "sha256": "30ef04f81e717dba24a1d40e59b5884bffc1002e54f310c5783cbeb4580e62cc",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
-      "size": 713347,
-      "sha256": "d1184efc7583cb71dc84687dc1a97940a663908d047c2ad25205ca32b3063320",
+      "size": 714741,
+      "sha256": "9adff07d2d389c2c6431d6e43b2dfaa6262869b7fa53d7b7741244a76763c290",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf",
-      "size": 1418684,
-      "sha256": "1b5a5f9f2b4fdb8265396ccd30f825937f8d846aa6ec1b2ec44cf329bd72ad17",
+      "size": 1436568,
+      "sha256": "0a3a4ef26c4d7ee440d87de96595b750ed2f93fc304b972fc2813615267b3c2b",
       "storage": "inline"
     },
     {
@@ -4301,8 +4421,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/annexes/resultats_scientifiques_consolides.csv",
-      "size": 1874,
-      "sha256": "3d7b6f35d29fe60c294bd8970ae0a700af67686d63c39b41c760e5bf672b5832",
+      "size": 2085,
+      "sha256": "8e675e91c019b66e5087b404ae8013f53991cfbe866f020b9be555c0b9b529dc",
       "storage": "inline"
     },
     {
@@ -4379,8 +4499,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/generer_dossier_scientifique.py",
-      "size": 84335,
-      "sha256": "0ddb2e1e43f45d16774921224fca91dc56760c8e290c6728c931e4a5093b8377",
+      "size": 87133,
+      "sha256": "6050a9902888d826f3bb65411014c5b426b36613ea1553fda666f27c6d87391b",
       "storage": "inline"
     },
     {
@@ -4391,8 +4511,8 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 21352,
-      "sha256": "e1fc86dd0bfa20dbadb149cc862870d42bf0a28bb55525508b5fc218b78b828f",
+      "size": 24128,
+      "sha256": "bfabb4d5d2e01620a42a0d62f2b47400bd024169f6a4599826e3dbcaf2f117d5",
       "storage": "inline"
     },
     {
@@ -4403,8 +4523,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 10435,
-      "sha256": "7c66185600257a8646868909e3bcf82537cbaa22e4c673310df03cf059fee3d0",
+      "size": 11135,
+      "sha256": "ed149111073b140cdb7f95803c7ecbd973ddc378fb7119574d6bf1b6e620145f",
       "storage": "inline"
     },
     {
@@ -4415,8 +4535,8 @@
     },
     {
       "path": "plan_directeur/PLAN_DIRECTEUR_TESTS.md",
-      "size": 46886,
-      "sha256": "3e02055aeece97d8b51243caf42fbc35af10979bcc6b3ebbf80d0f496a49b5c1",
+      "size": 47696,
+      "sha256": "0374e99fa0e94e57bb8f7b3f6d1ce7603a0072614c0a9fb9e088e3d219b6d027",
       "storage": "inline"
     },
     {
@@ -6352,6 +6472,18 @@
       "storage": "inline"
     },
     {
+      "path": "protocoles_geles/v0.9.3_architecture_matiere/FROZEN.json",
+      "size": 1379,
+      "sha256": "6bb08fe3abc43c5c7bdedc720ec6826e955201c20ade212c643c19cdba805ebd",
+      "storage": "inline"
+    },
+    {
+      "path": "protocoles_geles/v0.9.3_architecture_matiere/README.md",
+      "size": 401,
+      "sha256": "cf45996994cd526596a543bb502a6abd2385849103c6db8fd82088f186077a2d",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/construire_archive_canonique.py",
       "size": 3879,
       "sha256": "114f524be241c46a8b381c720a204a02005238bd8ff55a2871d9d42ebfa11ff3",
@@ -6359,8 +6491,8 @@
     },
     {
       "path": "scripts/valider_publication_stable.py",
-      "size": 1449,
-      "sha256": "d11874f272f888ee2b336452b2be23e78ab510de9f039a8ce096cac867eb5a73",
+      "size": 1466,
+      "sha256": "4c8a73b41e8aa26d911debdc4cbffe4048eb63ee838289a298f25161ca45ec26",
       "storage": "inline"
     },
     {
@@ -6401,8 +6533,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 20789,
-      "sha256": "e60f44f0555517d515060fa0ea8ecbb0c6811dc2b43b0939ca342b3a068c8417",
+      "size": 23312,
+      "sha256": "5864a2597e2cbbdb97190b2af3f2e1fc0a9f20d66ee21a97ef09557b4ae8f930",
       "storage": "inline"
     },
     {
@@ -6413,14 +6545,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 57316,
-      "sha256": "96b500cbfc4c6ff350c1f5e93ba626af0439b167a0dcca910b865a6378aaf76d",
+      "size": 62949,
+      "sha256": "404f602db161567ae2b9be752daf430161e99a2b8f8e16f947364878e21f08f2",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 14613,
-      "sha256": "aceef3d16d2c30e719e03c4dea2772f8b210525c68e76d76536a850d31a82a49",
+      "size": 15174,
+      "sha256": "2482a24379df7c1ddb4b4e0de9084cd7eb108ec079d97d9cefd51bf0fe86cdd1",
       "storage": "inline"
     },
     {
@@ -6437,8 +6569,8 @@
     },
     {
       "path": "verifier_dossier.py",
-      "size": 10281,
-      "sha256": "4becee511afa865981e2ba0f694a70f53701b5fe5521d6eeb64fbf55bc48bd4d",
+      "size": 10617,
+      "sha256": "d39c3aa7e92b9c0005da7080eedfa82ae55a1cf0afb6ca2b87abb8584c50f145",
       "storage": "inline"
     }
   ]

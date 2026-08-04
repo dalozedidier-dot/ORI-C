@@ -49,3 +49,9 @@ transmission, ni autonomie, ni hérédité prébiotique.
 Les 21 tests de régression de cette campagne vérifient que les scripts
 reproduisent les résultats publiés et conservent les limites annoncées. Ils ne
 sont pas 21 preuves scientifiques indépendantes.
+## Portée du calibrage v0.9.4
+
+Le calibrage permet de trier les relations documentaires faibles, les voies uniques, les relations redondantes, les hyperarêtes critiques par ablation et les cycles d’entretien mutuel. Il ne mesure pas encore la nécessité empirique, la suffisance, la temporalité quantitative, la réversibilité physique ni l’effet d’une intervention directe.
+
+Le noyau stable obtenu est conditionnel aux conventions de stress publiées. Il ne doit pas être présenté comme une probabilité de vérité ou comme une validation universelle de l’architecture matérielle.
+

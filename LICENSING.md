@@ -1,6 +1,6 @@
 # Politique de licence
 
-La version `0.9.3-research` adopte définitivement, pour les contenus originaux sans licence locale, le régime **tous droits réservés** décrit dans `LICENSE`.
+La version `0.9.4-research` adopte définitivement, pour les contenus originaux sans licence locale, le régime **tous droits réservés** décrit dans `LICENSE`.
 
 Les jeux de données tiers intégrés à titre de reproductibilité conservent leur attribution, leur DOI et leurs conditions propres dans les fichiers `SOURCE.json` ou les manifestes de données. Leur présence ne transfère aucun droit à ORI-C.
 

@@ -23,7 +23,10 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
+import os
 import re
+import signal
 import subprocess
 import sys
 import tempfile
@@ -48,19 +51,27 @@ def executer(
     visible de pytest. La sortie est donc redirigée vers un fichier temporaire.
     """
     with tempfile.TemporaryFile(mode="w+b") as journal:
+        processus = subprocess.Popen(
+            commande,
+            cwd=repertoire,
+            stdout=journal,
+            stderr=subprocess.STDOUT,
+            env=environnement,
+            start_new_session=True,
+        )
         try:
-            resultat = subprocess.run(
-                commande,
-                cwd=repertoire,
-                stdout=journal,
-                stderr=subprocess.STDOUT,
-                env=environnement,
-                timeout=delai,
-                start_new_session=True,
-            )
-            code = resultat.returncode
+            code = processus.wait(timeout=delai)
         except subprocess.TimeoutExpired:
             code = 124
+            try:
+                os.killpg(processus.pid, signal.SIGTERM)
+                processus.wait(timeout=5)
+            except (ProcessLookupError, subprocess.TimeoutExpired):
+                try:
+                    os.killpg(processus.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                processus.wait()
         journal.seek(0)
         sortie = journal.read().decode("utf-8", errors="replace")
     if code == 124:
@@ -230,6 +241,67 @@ def suite_priorites_v093() -> dict:
         "code_retour": code_retour,
     }
 
+
+
+def suite_calibrage_v094() -> dict:
+    """Tests du calibrage structurel et du benchmark stellaire v0.9.4."""
+    import os
+
+    cible = "01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests"
+    environnement = dict(os.environ)
+    environnement["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    sortie, code = executer(
+        [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", cible],
+        RACINE, environnement,
+    )
+    reussis = re.search(r"(\d+) passed", sortie)
+    echoues = re.search(r"(\d+) failed", sortie)
+    ignores = re.search(r"(\d+) skipped", sortie)
+    return {
+        "reussis": int(reussis.group(1)) if reussis else 0,
+        "echoues": int(echoues.group(1)) if echoues else 0,
+        "ignores": int(ignores.group(1)) if ignores else 0,
+        "code_retour": code,
+    }
+
+
+
+SUITES_ISOLEES = {
+    "priorites": suite_priorites_v093,
+    "calibrage": suite_calibrage_v094,
+    "socle": suite_socle,
+    "memoire": suite_memoire,
+    "astronomie": suite_astronomique,
+    "trois-branches": suite_trois_branches,
+}
+
+
+def lancer_suite_isolee(nom: str) -> dict:
+    """Exécute une seule suite dans un interpréteur entièrement neuf.
+
+    L'isolation évite qu'un état natif BLAS, Numba ou REBOUND hérité d'une
+    suite précédente bloque le relevé cumulatif. Le groupe de processus est
+    détruit en cas de dépassement du délai.
+    """
+    sortie, code = executer(
+        [sys.executable, str(Path(__file__).resolve()), "--suite", nom],
+        RACINE,
+        delai=600,
+    )
+    try:
+        resultat = json.loads(sortie.strip())
+    except json.JSONDecodeError:
+        return {
+            "reussis": 0,
+            "echoues": 1,
+            "ignores": 0,
+            "code_retour": code or 1,
+            "motif": f"sortie de worker illisible pour {nom}: {sortie[-500:]}",
+        }
+    resultat.setdefault("code_retour_worker", code)
+    return resultat
+
+
 def rapport_exhaustif(rejouer: bool = False) -> dict:
     chemin = (
         RACINE / "00_socle" / "test_interventionnel" / "resultats_exhaustifs"
@@ -334,11 +406,12 @@ def composer(rejouer: bool = False) -> str:
     # Après certains enchaînements BLAS/Numba/REBOUND, son sous-processus peut
     # rester bloqué malgré une exécution isolée parfaitement reproductible.
     # L'ordre fait donc partie du protocole de relevé.
-    priorites = suite_priorites_v093()
-    socle = suite_socle()
-    memoire = suite_memoire()
-    astro = suite_astronomique()
-    trois_branches = suite_trois_branches()
+    priorites = lancer_suite_isolee("priorites")
+    calibrage = lancer_suite_isolee("calibrage")
+    socle = lancer_suite_isolee("socle")
+    memoire = lancer_suite_isolee("memoire")
+    astro = lancer_suite_isolee("astronomie")
+    trois_branches = lancer_suite_isolee("trois-branches")
     exhaustif = rapport_exhaustif(rejouer=rejouer)
 
     lignes = [
@@ -370,6 +443,8 @@ def composer(rejouer: bool = False) -> str:
         f"{trois_branches['echoues']} | {trois_branches['ignores']} | 0 |",
         f"| Priorités v0.9.3 | {priorites['reussis']} | {priorites['echoues']} | "
         f"{priorites['ignores']} | 0 |",
+        f"| Calibrage matière v0.9.4 | {calibrage['reussis']} | {calibrage['echoues']} | "
+        f"{calibrage['ignores']} | 0 |",
     ]
     if astro.get("disponible"):
         lignes.append(
@@ -473,6 +548,11 @@ def main() -> int:
     parseur = argparse.ArgumentParser()
     parseur.add_argument("--verifier", action="store_true")
     parseur.add_argument(
+        "--suite",
+        choices=sorted(SUITES_ISOLEES),
+        help=argparse.SUPPRESS,
+    )
+    parseur.add_argument(
         "--rejouer-analyse", action="store_true",
         help=(
             "réexécute analyse_exhaustive.py. Réécrit quatre fichiers archivés "
@@ -481,6 +561,10 @@ def main() -> int:
         ),
     )
     arguments = parseur.parse_args()
+
+    if arguments.suite:
+        print(json.dumps(SUITES_ISOLEES[arguments.suite](), ensure_ascii=False))
+        return 0
 
     cible = RACINE / "ETAT_DES_TESTS.md"
 

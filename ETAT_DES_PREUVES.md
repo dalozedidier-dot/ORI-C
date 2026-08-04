@@ -439,3 +439,13 @@ qui l'organise.
 | Prébiotique | deux trajectoires réelles de populations d’ARN sur huit cycles ; zéro table parent-descendant de compartiments | dynamique expérimentale disponible, continuité héréditaire **non testable** |
 
 La fermeture candidate de la matière n'est pas injectée dans l'hypergraphe canonique. La source S14 soutient les interactions eau-roche et la circulation hydrothermale, mais pas la direction causale exacte de la réparation R1. Le benchmark climatique ne contient pas encore une Terre-Lune résolue, une rotation-obliquité couplée, des marées ou un GCM. Il prédit un pas à partir d'un état climatique observé, et LR04 est accordée orbitalement. La série Card 2019 est indépendante des données Windels, mais le protocole ayant été construit après accès aux données, elle ne compte pas comme réplication prospective. Les données Papastavrou fournissent des trajectoires de populations, pas des lignées de compartiments.
+## Calibrage de l’architecture matérielle v0.9.4
+
+**Statut : résultat structurel et documentaire, non validation causale générale.**
+
+Le graphe v0.9.3 reste inchangé. Les 53 hyperarêtes sont évaluées séparément selon leur documentation et leur fonction structurelle. Quarante relations provoquent une perte mesurable lors d’une ablation de projection ou de fermeture stricte. Six relations ont un plancher documentaire inférieur à 0,65.
+
+Le stress paramétrique ne retire que ces six relations. Il identifie 31 nœuds stables, 15 nœuds sensibles et conserve les sept nœuds du verrou hydrothermal dans une classe séparée. Ce résultat mesure la dépendance au codage courant. Il ne représente pas une probabilité naturelle d’apparition.
+
+Le test externe sur deux trajectoires MESA atteint 14 nœuds sur 14 en fermeture stricte. Il soutient la portabilité du schéma de représentation, sans démontrer une loi universelle ni valider empiriquement chaque relation ORI-C.
+

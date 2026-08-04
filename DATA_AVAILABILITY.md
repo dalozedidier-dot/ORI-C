@@ -8,6 +8,7 @@ Toutes les routes actives enregistrées dans les fichiers de provenance sont rel
 - Benchmark antibiotique externe, Card et al. 2019 : `03_branche_vivant/benchmark_externe_card2019/SOURCE.json`, Dryad `10.5061/dryad.g41hg96`, données `CC0-1.0`.
 - ARN catalytique, Papastavrou, Horning et Joyce : provenance canonique dans `plateforme/campagne_maximale_reelle/PROVENANCE_PAPASTAVROU_RNA.json` et copie de travail pour le programme prébiotique dans `03_branche_vivant/programme_prebiotique/donnees_reelles/trajectoires_population/`. Le jeu Dryad `10.5061/dryad.rxwdbrvgs` est distribué sous CC0.
 - Données orbitales : La2004, La2010 et JPL Horizons DE441, décrites dans `data/provenance_reelle.json`.
+- Benchmark stellaire MESA : étapes et critères d’arrêt transcrits depuis la documentation officielle `1M_pre_ms_to_wd` et `12M_pre_ms_to_core_collapse`, avec références dans `01_branche_matiere/hypergraphe_transformations/calibrage_v094/benchmark_externe_stellaire/sources.csv`. Le paquet ne redistribue pas les sorties numériques complètes de MESA.
 
 La campagne d'inventaire accessible de la branche 1 ne consomme aucun fichier
 brut : elle transcrit des valeurs publiées, chacune rattachée à une entrée du

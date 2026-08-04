@@ -141,6 +141,14 @@ jobs:
           python -m pytest -q plan_directeur/campagne_priorites_v093/tests \
             | tee "$OUT/logs/tests_priorites_v093.log"
 
+      - name: Exécuter le calibrage matière v0.9.4
+        run: |
+          set -euo pipefail
+          python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py \
+            | tee "$OUT/logs/calibrage_matiere_v094.log"
+          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests \
+            | tee "$OUT/logs/tests_calibrage_matiere_v094.log"
+
       - name: Rassembler résultats et environnement
         if: always()
         run: |

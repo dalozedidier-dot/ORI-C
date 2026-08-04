@@ -1,0 +1,4 @@
+source_id;reference;url;type;date_acces;portee
+MESA1;MESA test suite 1M_pre_ms_to_wd;https://docs.mesastar.org/en/26.4.1/test_suite/1M_pre_ms_to_wd.html;documentation_officielle_modele;2026-08-04;trajectoire 1 Msun de la pré-séquence principale à la naine blanche
+MESA12;MESA test suite 12M_pre_ms_to_core_collapse;https://docs.mesastar.org/en/stable/test_suite/12M_pre_ms_to_core_collapse.html;documentation_officielle_modele;2026-08-04;trajectoire 12 Msun de la pré-séquence principale à l'effondrement du cœur
+MIST1;Choi et al. MESA Isochrones and Stellar Tracks I;https://arxiv.org/abs/1604.08592;article_modele;2026-08-04;contexte indépendant sur les trajectoires évolutives continues

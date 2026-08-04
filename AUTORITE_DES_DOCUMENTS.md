@@ -238,8 +238,7 @@ seuil de `10⁻⁶`. Le verdict est identique.
 
 ## Points ouverts
 
-- Le document principal existe en PDF ; sa version DOCX n'est pas dans le
-  dossier.
+- Le dossier scientifique principal est livré en DOCX et en PDF.
 - Le PDF de la branche 3 reste à produire.
 - Les figures de la carte doivent être régénérées après ajout de `CLOS` et
   `INTG` au générateur.
@@ -255,3 +254,17 @@ seuil de `10⁻⁶`. Le verdict est identique.
 | Inventaire source | `01_branche_matiere/inventaire_hierarchique/Inventaire_hierarchique_matiere_ORI-C.xlsx` | registre source |
 | Analyse architecturale | `01_branche_matiere/inventaire_hierarchique/analyses/INVENTAIRE_ORI-C_ANALYSE_ARCHITECTURES.xlsx` | criblage, non canonique |
 | Audit et liens candidats | `audit/coherence_et_extensions/` | programme de correction et de recherche |
+
+## Calibrage matière v0.9.4
+
+Le graphe canonique de la matière reste défini par `noeuds.csv`, `hyperaretes.csv` et `sources.csv` dans `01_branche_matiere/hypergraphe_transformations/`. La campagne `calibrage_v094/` ne modifie aucun de ces trois fichiers. Leur état v0.9.3 est gelé dans `protocoles_geles/v0.9.3_architecture_matiere/FROZEN.json`.
+
+Les fichiers faisant autorité pour le calibrage sont :
+
+- `calibrage_v094/PROTOCOLE_CALIBRAGE.md` pour les conventions et les limites ;
+- `calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json` pour les compteurs consolidés ;
+- `calibrage_v094/resultats/calibrage_hyperaretes.csv` pour le tri relation par relation ;
+- `calibrage_v094/resultats/RAPPORT_CALIBRAGE.md` pour l’interprétation scientifique ;
+- `calibrage_v094/benchmark_externe_stellaire/PROVENANCE.md` pour la portée du test MESA.
+
+Les coefficients documentaires sont des conventions de stress. Ils ne représentent ni des probabilités de vérité, ni des estimations de force causale naturelle. Une hyperarête critique sous ablation est indispensable à la représentation actuelle, ce qui reste distinct d’une nécessité empirique démontrée.

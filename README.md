@@ -1,6 +1,6 @@
 # ORI-C — dossier unique
 
-Didier Daloze | Version 0.9.3-research | 4 août 2026
+Didier Daloze | Version 0.9.4-research | 4 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -58,6 +58,7 @@ séparés.
 7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
 8. `plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` — la campagne de robustesse maximale disponible avec les données du dépôt.
 9. `plan_directeur/campagne_priorites_v093/resultats/RAPPORT_PRIORITES_V093.md` — les travaux ciblés sur les verrous matière, climat, mémoire et vivant.
+10. `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/RAPPORT_CALIBRAGE.md` — le tri documentaire et structurel des 53 relations matérielles.
 
 ## Ce que le dossier établit, en une phrase par branche
 
@@ -65,8 +66,7 @@ séparés.
 inventaire de 40 transitions et une grille d'analyse. L'hypergraphe de 53
 nœuds possède une projection connectée, mais sa fermeture stricte n'atteint
 que 46 nœuds sur 53. Un noyau cyclique de quatre nœuds bloque trois nœuds
-supplémentaires. Sur cet ensemble accessible, 34 hyperarêtes sont critiques
-pour la joignabilité. Le contrôle métal-silicate est robuste pour le
+supplémentaires. Le calibrage v0.9.4 distingue 31 nœuds stables, 15 nœuds sensibles aux six relations les moins documentées et 7 nœuds bloqués par le verrou canonique. Quarante hyperarêtes produisent une perte mesurable lors d’une ablation de projection ou de fermeture stricte. Le contrôle métal-silicate est robuste pour le
 carbone, fragile pour l'azote, non évaluable en retrait unitaire pour
 l'hydrogène et durablement en désaccord pour le soufre. L'échelle des dix
 capacités porte 0,595 bit net de permutation, tandis que sa monotonie est
@@ -93,6 +93,14 @@ supériorité explicative et pouvoir prédictif restent non établis.
 - **Vivant.** Le jeu Card 2019 fournit une réplication externe temporelle. Le modèle état + histoire est moins bon dans chacun des quatre groupes de test et le bootstrap groupé conserve un écart défavorable. Le protocole prospectif suivant est gelé avant acquisition du prochain jeu.
 - **Prébiotique.** Deux trajectoires expérimentales de populations d'ARN catalytique sur huit cycles sont intégrées. Elles ne contiennent aucune filiation parent-descendant de compartiments, donc la continuité héréditaire reste non testable.
 
+## Nouveaux travaux v0.9.4
+
+- **Graphe gelé.** Les fichiers canoniques v0.9.3 sont scellés par empreinte. Le calibrage ne modifie ni les 53 nœuds ni les 53 hyperarêtes.
+- **Tri documentaire et structurel.** Les statuts de preuve et les types de source sont séparés des effets d’ablation, des voies alternatives, des cycles et de la portée en aval. Aucun score causal unique n’est déclaré.
+- **Stabilité.** Sous stress limité aux six relations dont le plancher documentaire est inférieur à 0,65, 31 nœuds restent dans le noyau stable, 15 deviennent sensibles et les 7 nœuds du verrou hydrothermal restent classés séparément.
+- **Priorité.** `H011`, l’instabilité de streaming, est la relation documentaire la plus urgente hors du verrou des interfaces, car elle contrôle un ensemble important de nœuds planétaires.
+- **Transfert externe.** Le même schéma de relations, seuils et fermeture stricte représente deux trajectoires MESA indépendantes, une étoile de 1 masse solaire vers une naine blanche et une étoile de 12 masses solaires vers l’effondrement du cœur. Le test valide la portabilité de la représentation, pas une loi universelle ORI-C.
+
 ## Portée du résultat négatif de la branche 2
 
 Il ferme une implémentation particulière de la mémoire climatique. Il ne remet
@@ -115,6 +123,7 @@ python verifier_dossier.py
 python scripts/valider_tout.py --strict-lfs
 python plan_directeur/campagne_maximale_trois_branches/run_all.py
 python plan_directeur/campagne_priorites_v093/run_all.py
+python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
 ```
 
 Dans un ZIP source automatique de GitHub, les objets volumineux peuvent rester

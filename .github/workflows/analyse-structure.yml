@@ -134,6 +134,17 @@ jobs:
           fi
           echo "Code scientifique attendu: $code" >> "$OUT/logs/test_hierarchie.log"
 
+      - name: Calibrer les 53 relations matérielles
+        run: |
+          python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py \
+            | tee "$OUT/logs/calibrage_matiere_v094.log"
+          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests \
+            | tee "$OUT/logs/tests_calibrage_matiere_v094.log"
+
+      - name: Vérifier la synchronisation du calibrage
+        run: |
+          git diff --exit-code -- 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
+
       - name: Étendre l'analyse de l'inventaire hiérarchique
         working-directory: 01_branche_matiere/inventaire_hierarchique
         run: |
@@ -175,6 +186,7 @@ jobs:
               '01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json',
               '01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json',
               '01_branche_matiere/hypergraphe_transformations/test_hierarchie_resultats.json',
+              '01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats',
               '01_branche_matiere/inventaire_hierarchique/manques_detectes.json',
               '01_branche_matiere/inventaire_hierarchique/carte_causale.json',
               '01_branche_matiere/inventaire_hierarchique/chaine_filtres_azote.json',

@@ -140,3 +140,16 @@ Le plan fixe douze conditions. État :
 `Pacc` sur un système réel, et une réplication externe.
 
 Le programme n'a franchi ni le premier seuil ni, a fortiori, le seuil fort.
+## Phase v0.9.4 - calibrage de la branche matière
+
+- [x] geler le graphe v0.9.3 par empreintes
+- [x] séparer documentation et criticité structurelle
+- [x] exécuter 53 ablations unitaires
+- [x] exécuter 31 ablations de sources
+- [x] tester cinq seuils documentaires
+- [x] exécuter 4 000 tirages de stress paramétrique déterministes
+- [x] identifier le noyau stable, les nœuds sensibles et le verrou canonique
+- [x] transférer le schéma à deux trajectoires stellaires MESA
+- [ ] obtenir une évaluation indépendante de la nécessité et de la suffisance des relations prioritaires
+- [ ] tester une intervention ou un contrefactuel naturel sur `H011` et sur le cycle `H030-H031-H052-H053`
+

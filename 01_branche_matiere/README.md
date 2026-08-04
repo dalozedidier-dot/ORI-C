@@ -59,3 +59,11 @@ Ces codages ne sont pas des mesures numériques et ne constituent pas une
 validation d'ORI-C. Les références établissent le contexte scientifique de
 chaque régime ; l'affectation aux six dimensions reste interprétative et doit
 encore être soumise à plusieurs codeurs indépendants.
+## Calibrage structurel v0.9.4
+
+Le dossier `hypergraphe_transformations/calibrage_v094/` conserve le graphe v0.9.3 inchangé et calibre les 53 hyperarêtes selon deux axes distincts : solidité documentaire et fonction structurelle.
+
+Résultat courant : 31 nœuds appartiennent au noyau stable sous stress des six relations les moins documentées, 15 nœuds sont sensibles et 7 nœuds restent bloqués par le verrou canonique `N029-N030-N053-N054`. Quarante hyperarêtes causent une perte mesurable lors d’une ablation de projection ou de fermeture stricte.
+
+Le benchmark MESA montre que le schéma de représentation se transfère à deux trajectoires stellaires indépendantes. Il ne démontre pas une loi causale universelle.
+

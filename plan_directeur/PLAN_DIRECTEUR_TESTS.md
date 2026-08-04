@@ -1202,3 +1202,15 @@ La totalité des possibilités théoriques est infinie. Une campagne finie peut 
 **domaines × mécanismes × données × modèles × témoins × interventions × histoires × fenêtres temporelles × métriques × réplications.**
 
 Le programme ci-dessus transforme cette combinatoire en plan contrôlé. Il évite de multiplier des essais isolés et concentre les ressources sur les tests capables de distinguer ORI-C d’une reformulation descriptive des connaissances existantes.
+
+## Lot v0.9.4 — calibrage de l’architecture matérielle
+
+Le lot conserve la structure v0.9.3 comme référence gelée et exécute quatre familles de contrôle : ablation des 53 hyperarêtes, ablation des sources, profils de seuils documentaires et stress déterministe des six relations les moins documentées. Un benchmark externe vérifie le transfert du schéma vers deux trajectoires stellaires MESA.
+
+Critères de réussite :
+
+- aucune modification des fichiers canoniques gelés ;
+- reproduction des références 53 nœuds en projection et 46 en fermeture stricte ;
+- conservation séparée des scores documentaires et des métriques structurelles ;
+- déclaration explicite des dimensions non mesurées ;
+- fermeture stricte complète du benchmark externe sans interprétation causale universelle.

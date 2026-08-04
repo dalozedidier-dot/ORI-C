@@ -47,6 +47,11 @@ jobs:
             01_branche_matiere/hypergraphe_transformations/tests \
             01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests
           python -m pytest -q 01_branche_matiere/inventaire_hierarchique/tests
+      - name: Calibrer l architecture matérielle v0.9.4
+        run: |
+          python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
+          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests
+          git diff --exit-code -- 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
       - name: Exécuter les priorités v0.9.3
         run: |
           python plan_directeur/campagne_priorites_v093/run_all.py

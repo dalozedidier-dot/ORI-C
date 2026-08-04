@@ -1,8 +1,8 @@
-# Publication stable v0.9.3-research
+# Publication stable v0.9.4-research
 
 ## Automatisation
 
-Le tag `v0.9.3-research` déclenche `.github/workflows/release.yml`. Le workflow hydrate Git LFS, exécute les validations, construit l’archive canonique, calcule son SHA-256 et joint les deux fichiers à une release GitHub.
+Le tag `v0.9.4-research` déclenche `.github/workflows/release.yml`. Le workflow hydrate Git LFS, exécute les validations, construit l’archive canonique, calcule son SHA-256 et joint les deux fichiers à une release GitHub.
 
 ## DOI
 

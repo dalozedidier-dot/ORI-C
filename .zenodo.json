@@ -1,13 +1,28 @@
 {
   "title": "ORI-C : architecture, mémoire et futurs accessibles",
-  "description": "Version de recherche structurée en un socle commun et trois branches : matière, Système solaire et vivant. Le dépôt conserve les protocoles, le code, les résultats positifs, les résultats négatifs et leurs limites.",
-  "creators": [{"name": "Daloze, Didier"}],
-  "version": "0.9.3-research",
+  "description": "Version de recherche ajoutant le calibrage documentaire et structurel des 53 relations matérielles, les tests de stabilité et un benchmark stellaire externe, tout en conservant le graphe v0.9.3 gelé.",
+  "creators": [
+    {
+      "name": "Daloze, Didier"
+    }
+  ],
+  "version": "0.9.4-research",
   "publication_date": "2026-08-04",
   "license": "other-closed",
   "upload_type": "software",
-  "keywords": ["ORI-C", "architecture historique", "reproductibilité", "matière", "système solaire", "vivant"],
+  "keywords": [
+    "ORI-C",
+    "architecture historique",
+    "reproductibilité",
+    "matière",
+    "système solaire",
+    "vivant"
+  ],
   "related_identifiers": [
-    {"identifier": "https://github.com/dalozedidier-dot/ORI-C", "relation": "isSupplementTo", "scheme": "url"}
+    {
+      "identifier": "https://github.com/dalozedidier-dot/ORI-C",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
   ]
 }
