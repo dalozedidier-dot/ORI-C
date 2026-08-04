@@ -223,7 +223,7 @@ def main() -> None:
     (OUT / "diagnostic_fermeture.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     with (OUT / "scenarios_reparation.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["scenario_id", "type", "reachable", "strictly_closed", "scientific_status", "description"])
+        writer = csv.DictWriter(handle, fieldnames=["scenario_id", "type", "reachable", "strictly_closed", "scientific_status", "description"], lineterminator="\n")
         writer.writeheader()
         for scenario in scenarios:
             writer.writerow({key: scenario[key] for key in writer.fieldnames})
@@ -263,7 +263,7 @@ def main() -> None:
             row["sorties"] = "N053|N030"
             row["incertitude_ou_scenario"] = "recodage candidat : l interface est produite et entretenue par la circulation"
     with (OUT / "hyperaretes_candidat_R1.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter=";")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter=";", lineterminator="\n")
         writer.writeheader(); writer.writerows(candidate_rows)
 
     print(json.dumps({"baseline": len(baseline), "R1": len(r1_closure), "R2": len(r2_closure), "minimal_seed_sets": seed_sets}, ensure_ascii=False))
