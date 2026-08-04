@@ -1,23 +1,30 @@
-"""Vérifie l'intégrité du dossier unique ORI-C.
+"""Vérifie l'intégrité du dossier ORI-C.
 
-Trois contrôles :
+Le manifeste représente le contenu scientifique attendu. Pour un objet géré
+par Git LFS, son SHA-256 attendu est l'OID déclaré dans le pointeur LFS. Le
+script distingue donc trois situations :
 
-1. chaque entrée du manifeste existe et son empreinte est inchangée ;
-2. aucun fichier du dossier n'échappe au manifeste ;
-3. la structure attendue est présente, socle et trois branches.
+1. le contenu réel est présent et son empreinte correspond au manifeste ;
+2. un pointeur Git LFS valide est présent, mais l'objet n'est pas hydraté ;
+3. le fichier est absent, non listé ou réellement modifié.
 
-Le script ne modifie rien. Code de sortie 0 si tout est conforme.
+Par défaut, un objet LFS non hydraté empêche de déclarer l'archive canonique.
+L'option ``--allow-lfs-pointers`` sert uniquement à contrôler un arbre source
+GitHub ou une copie de travail avant hydratation.
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
+import re
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
 MANIFESTE = RACINE / "MANIFEST.sha256"
-EXCLUS = {"__pycache__", ".pytest_cache", ".git", ".claude", ".mplconfig"}
+EXCLUS = {"__pycache__", ".pytest_cache", ".pytest-tmp", ".git", ".claude", ".mplconfig", "node_modules"}
 EXCLUS_SUFFIXES = {".pyc", ".pyo"}
 
 STRUCTURE_ATTENDUE = [
@@ -26,6 +33,7 @@ STRUCTURE_ATTENDUE = [
     "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf",
     "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
     "README.md",
+    "VERSION",
     "AUTORITE_DES_DOCUMENTS.md",
     "ETAT_DES_TESTS.md",
     "00_socle/carte_relationnelle/REGENERATION_REQUISE.md",
@@ -87,13 +95,51 @@ STRUCTURE_ATTENDUE = [
     "03_branche_vivant/article",
 ]
 
+LFS_PATTERN = re.compile(
+    rb"\Aversion https://git-lfs\.github\.com/spec/v1\n"
+    rb"oid sha256:([0-9a-f]{64})\n"
+    rb"size ([0-9]+)\n?\Z"
+)
+
+
+@dataclass(frozen=True)
+class PointeurLFS:
+    oid: str
+    taille: int
+
+
+def lire_pointeur_lfs(chemin: Path) -> PointeurLFS | None:
+    """Retourne les métadonnées LFS lorsque ``chemin`` est un pointeur valide."""
+    try:
+        if chemin.stat().st_size > 1024:
+            return None
+        donnees = chemin.read_bytes()
+    except OSError:
+        return None
+    correspondance = LFS_PATTERN.fullmatch(donnees.replace(b"\r\n", b"\n"))
+    if not correspondance:
+        return None
+    return PointeurLFS(
+        oid=correspondance.group(1).decode("ascii"),
+        taille=int(correspondance.group(2)),
+    )
+
+
+def empreinte(chemin: Path) -> str:
+    valeur = hashlib.sha256()
+    with chemin.open("rb") as flux:
+        for bloc in iter(lambda: flux.read(1024 * 1024), b""):
+            valeur.update(bloc)
+    return valeur.hexdigest()
+
 
 def fichiers_du_dossier() -> list[Path]:
     resultat = []
     for chemin in sorted(RACINE.rglob("*")):
         if chemin.is_dir():
             continue
-        if any(partie in EXCLUS for partie in chemin.parts):
+        relatif = chemin.relative_to(RACINE)
+        if any(partie in EXCLUS for partie in relatif.parts):
             continue
         if chemin.suffix in EXCLUS_SUFFIXES:
             continue
@@ -104,20 +150,18 @@ def fichiers_du_dossier() -> list[Path]:
 
 
 def lire_manifeste() -> dict[str, str]:
-    entrees = {}
+    entrees: dict[str, str] = {}
     for ligne in MANIFESTE.read_text(encoding="utf-8").splitlines():
         if not ligne.strip():
             continue
-        empreinte, _, relatif = ligne.partition("  ")
-        entrees[relatif] = empreinte
+        valeur, separateur, relatif = ligne.partition("  ")
+        if not separateur or not re.fullmatch(r"[0-9a-f]{64}", valeur):
+            raise ValueError(f"Ligne de manifeste invalide : {ligne!r}")
+        entrees[relatif] = valeur
     return entrees
 
 
-def main() -> int:
-    if not MANIFESTE.exists():
-        print("MANIFEST.sha256 absent.")
-        return 1
-
+def analyser() -> dict[str, list[str] | int]:
     attendus = lire_manifeste()
     presents = {
         chemin.relative_to(RACINE).as_posix(): chemin
@@ -126,35 +170,106 @@ def main() -> int:
 
     absents = sorted(set(attendus) - set(presents))
     non_listes = sorted(set(presents) - set(attendus))
-    modifies = []
-    for relatif, empreinte in attendus.items():
+    modifies: list[str] = []
+    lfs_non_hydrates: list[str] = []
+
+    for relatif, attendu in attendus.items():
         chemin = presents.get(relatif)
         if chemin is None:
             continue
-        if hashlib.sha256(chemin.read_bytes()).hexdigest() != empreinte:
+        pointeur = lire_pointeur_lfs(chemin)
+        if pointeur is not None:
+            if pointeur.oid == attendu:
+                lfs_non_hydrates.append(relatif)
+            else:
+                modifies.append(relatif)
+            continue
+        if empreinte(chemin) != attendu:
             modifies.append(relatif)
 
     manquants_structure = [
         entree for entree in STRUCTURE_ATTENDUE
         if not (RACINE / entree).exists()
     ]
+    conformes = len(attendus) - len(absents) - len(modifies) - len(lfs_non_hydrates)
+    return {
+        "conformes": conformes,
+        "absents": absents,
+        "modifies": modifies,
+        "non_listes": non_listes,
+        "lfs_non_hydrates": sorted(lfs_non_hydrates),
+        "manquants_structure": manquants_structure,
+    }
 
-    for titre, liste in (
-        ("Absents", absents),
-        ("Modifiés", modifies),
-        ("Non listés", non_listes),
-        ("Structure manquante", manquants_structure),
-    ):
-        for entree in liste:
-            print(f"  {titre:<20} {entree}")
 
-    conformes = len(attendus) - len(absents) - len(modifies)
-    print(
-        f"\n{conformes} fichiers conformes, {len(modifies)} modifiés, "
-        f"{len(absents)} absents, {len(non_listes)} non listés, "
-        f"{len(manquants_structure)} entrées de structure manquantes."
+def main(argv: list[str] | None = None) -> int:
+    analyseur = argparse.ArgumentParser(description=__doc__)
+    analyseur.add_argument(
+        "--allow-lfs-pointers",
+        action="store_true",
+        help=(
+            "autoriser les pointeurs LFS valides pour contrôler un arbre source ; "
+            "cette option ne certifie pas une archive canonique autonome"
+        ),
     )
-    return 0 if not (absents or modifies or non_listes or manquants_structure) else 1
+    analyseur.add_argument(
+        "--verbose",
+        action="store_true",
+        help="afficher toutes les entrées au lieu de limiter chaque catégorie à 20",
+    )
+    args = analyseur.parse_args(argv)
+
+    if not MANIFESTE.exists():
+        print("MANIFEST.sha256 absent.")
+        return 1
+
+    try:
+        resultat = analyser()
+    except (OSError, ValueError) as exc:
+        print(f"Manifeste illisible : {exc}")
+        return 1
+
+    groupes = (
+        ("Absents", resultat["absents"]),
+        ("Modifiés", resultat["modifies"]),
+        ("Non listés", resultat["non_listes"]),
+        ("LFS non hydratés", resultat["lfs_non_hydrates"]),
+        ("Structure manquante", resultat["manquants_structure"]),
+    )
+    for titre, liste in groupes:
+        visibles = liste if args.verbose else liste[:20]
+        for entree in visibles:
+            print(f"  {titre:<20} {entree}")
+        if not args.verbose and len(liste) > len(visibles):
+            print(f"  {titre:<20} ... et {len(liste) - len(visibles)} autres")
+
+    print(
+        f"\n{resultat['conformes']} contenus conformes, "
+        f"{len(resultat['lfs_non_hydrates'])} objets LFS non hydratés, "
+        f"{len(resultat['modifies'])} modifiés, "
+        f"{len(resultat['absents'])} absents, "
+        f"{len(resultat['non_listes'])} non listés, "
+        f"{len(resultat['manquants_structure'])} entrées de structure manquantes."
+    )
+
+    problemes = any(
+        resultat[cle]
+        for cle in ("absents", "modifies", "non_listes", "manquants_structure")
+    )
+    if problemes:
+        return 1
+    if resultat["lfs_non_hydrates"] and not args.allow_lfs_pointers:
+        print(
+            "\nArchive non autonome : exécuter `git lfs pull`, puis relancer "
+            "le vérificateur sans option."
+        )
+        return 2
+    if resultat["lfs_non_hydrates"]:
+        print(
+            "\nArbre source cohérent, mais non certifié comme archive canonique "
+            "autonome car des objets Git LFS restent à hydrater."
+        )
+    return 0
 
 
 if __name__ == "__main__":

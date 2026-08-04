@@ -1,9 +1,22 @@
 cff-version: 1.2.0
 message: "Pour citer ORI-C, utilisez les informations suivantes."
-title: "ORI-C — architecture, mémoire et futurs accessibles"
+title: "ORI-C : architecture, mémoire et futurs accessibles"
 type: software
 authors:
   - family-names: Daloze
     given-names: Didier
-date-released: 2026-08-03
-repository-code: "À compléter lors de la création du dépôt"
+version: "0.9.0-research"
+date-released: 2026-08-04
+repository-code: "https://github.com/dalozedidier-dot/ORI-C"
+url: "https://dalozedidier-dot.github.io/ORI-C/"
+abstract: >-
+  Programme de recherche structuré en un socle commun et trois branches :
+  matière, Système solaire et vivant. Le dépôt conserve les protocoles, le
+  code, les résultats positifs, les résultats négatifs et leurs limites.
+keywords:
+  - ORI-C
+  - architecture historique
+  - reproductibilité
+  - matière
+  - système solaire
+  - vivant

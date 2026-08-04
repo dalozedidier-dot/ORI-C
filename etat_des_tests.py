@@ -1,8 +1,8 @@
 """Génère ETAT_DES_TESTS.md à partir des exécutions réelles.
 
-Aucun compteur de tests n'est saisi à la main dans le dossier. Ce script
-exécute les deux suites, relit les rapports de test du socle, et écrit un
-fichier unique auquel les autres documents renvoient.
+Ce script produit l'unique compteur courant. Des instantanés historiques
+peuvent conserver leurs nombres d'origine pour la traçabilité, mais ils ne
+font pas autorité.
 
     python etat_des_tests.py                    écrit ETAT_DES_TESTS.md
     python etat_des_tests.py --verifier         contrôle sans rien écrire
@@ -195,38 +195,51 @@ def rapport_robustesse() -> dict:
 
 
 def actualiser_manifeste(cible: Path) -> str:
-    """Réaligne la seule entrée de `cible` dans MANIFEST.sha256.
+    """Réaligne uniquement ``cible`` dans les deux formats du manifeste.
 
-    `ETAT_DES_TESTS.md` est un fichier dynamique : le produire modifie le
-    dossier qu'il décrit. Sans cette mise à jour, tout relevé d'état invalide le
-    manifeste et fait échouer le contrôle d'intégrité du socle, qui retombe à
-    120 réussites pour la seule raison que ce fichier a changé.
-
-    Seule cette ligne est réécrite. Régénérer le manifeste entier masquerait
-    toute autre dérive du dossier, ce qui est précisément ce qu'il doit
-    détecter.
+    Le reste du manifeste n'est pas régénéré afin qu'une dérive indépendante
+    reste détectable. Le manifeste texte et le manifeste JSON sont modifiés de
+    façon cohérente.
     """
+    import json
+
     manifeste = RACINE / "MANIFEST.sha256"
-    if not manifeste.exists():
-        return "manifeste absent, non mis à jour"
+    manifeste_json = RACINE / "MANIFEST.sha256.json"
+    if not manifeste.exists() or not manifeste_json.exists():
+        return "manifeste incomplet, non mis à jour"
 
     relatif = cible.relative_to(RACINE).as_posix()
     empreinte = hashlib.sha256(cible.read_bytes()).hexdigest()
+    taille = cible.stat().st_size
     nouvelle = f"{empreinte}  {relatif}"
 
     lignes = manifeste.read_text(encoding="utf-8").splitlines()
+    trouve = False
     for index, ligne in enumerate(lignes):
         if ligne.endswith(f"  {relatif}"):
-            if ligne == nouvelle:
-                return "empreinte déjà à jour"
             lignes[index] = nouvelle
-            manifeste.write_text(TERMINAISON.join(lignes) + TERMINAISON, encoding="utf-8")
-            return "empreinte actualisée"
+            trouve = True
+            break
+    if not trouve:
+        lignes.append(nouvelle)
+    lignes.sort(key=lambda ligne: ligne.split("  ", 1)[1] if "  " in ligne else ligne)
+    manifeste.write_text(TERMINAISON.join(lignes) + TERMINAISON, encoding="utf-8", newline="\n")
 
-    lignes.append(nouvelle)
-    lignes.sort(key=lambda l: l.split("  ", 1)[1] if "  " in l else l)
-    manifeste.write_text(TERMINAISON.join(lignes) + TERMINAISON, encoding="utf-8")
-    return "entrée ajoutée au manifeste"
+    document = json.loads(manifeste_json.read_text(encoding="utf-8"))
+    entrees = document.setdefault("files", [])
+    for entree in entrees:
+        if entree.get("path") == relatif:
+            entree.update({"size": taille, "sha256": empreinte, "storage": "inline"})
+            break
+    else:
+        entrees.append({"path": relatif, "size": taille, "sha256": empreinte, "storage": "inline"})
+        entrees.sort(key=lambda entree: entree["path"])
+    manifeste_json.write_text(
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    return "empreinte actualisée dans les deux manifestes"
 
 
 def environnement_courant() -> str:
@@ -255,8 +268,9 @@ def composer(rejouer: bool = False) -> str:
         "",
         "**Fichier généré par `etat_des_tests.py`. Ne pas modifier à la main.**",
         "",
-        "Aucun compteur de tests n'est saisi manuellement ailleurs dans le "
-        "dossier : les autres documents renvoient ici.",
+        "Ce fichier est l'unique compteur courant. Des instantanés historiques",
+        "conservent leurs anciens nombres pour la traçabilité, mais ils ne font",
+        "pas autorité.",
         "",
         f"Dernière exécution : {date.today().isoformat()}",
         "",
@@ -287,6 +301,7 @@ def composer(rejouer: bool = False) -> str:
             f"| Couche astronomique | — | — | — | non exécutable ici, "
             f"{astro.get('motif', 'dépendance absente')} |"
         )
+
     lignes.append("")
 
     if memoire["echoues"]:
@@ -352,8 +367,9 @@ def composer(rejouer: bool = False) -> str:
         "l'autre, ce qui déplace le dernier bit. Des exécutions sur d'autres "
         "versions ont produit des écarts de 10⁻¹⁴ à 10⁻¹⁸.",
         "",
-        "La reproductibilité binaire aurait exigé un conteneur, incompatible "
-        "avec des dépendances bornées seulement par le bas. La tolérance "
+        "La reproductibilité binaire exigerait aussi de figer le système, "
+        "BLAS, LAPACK et les options de compilation. Le verrou Python exact "
+        "ne suffit pas à garantir cette identité. La tolérance "
         "retenue reste très inférieure aux échelles numériques pertinentes "
         "pour les résultats rapportés : elle absorbe les écarts d'arrondi "
         "entre environnements et détecte les divergences dépassant le seuil "

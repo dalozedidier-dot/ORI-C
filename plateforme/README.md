@@ -4,14 +4,15 @@ Ce répertoire contient la plateforme complète nécessaire à la reproduction :
 
 - `source_corrigee/` : source complète v0.2.0, avec les correctifs appliqués ;
 - `wheel_corrige/` : wheel reconstruite depuis cette source ;
-- `requirements-lock.txt` : dépendances déclarées par la livraison ;
+- `requirements.txt` : dépendances minimales déclarées ;
+- `source_corrigee/requirements-lock.txt` : environnement exact utilisé par les workflows canoniques ;
 - `catalogue_tests.csv` : 683 descriptions de tests ;
 - `criteria.csv` : grille des critères ;
 - `donnees/` : données de travail livrées avec la plateforme ;
 - `commande_reproduction.bat` et `.sh` : commandes de reproduction hors ligne.
 
 La présence de 683 descriptions ne signifie pas qu'il existe 683 moteurs
-scientifiques distincts. La plateforme expose maintenant 56 moteurs, dont six
+scientifiques distincts. La plateforme expose maintenant 59 moteurs, dont six
 moteurs paléoclimatiques spécialisés (chronologie, robustesse des proxys,
 hystérésis, spectres, identifiabilité et dépendance au chemin). Vingt-neuf
 descriptions ont été réaffectées à ces moteurs. Un succès

@@ -25,12 +25,15 @@ Trois actes :
 |---|---|
 | Acte 1 | Preuve de concept |
 | Acte 2 | Preuve de concept ; faits biologiques sous-jacents fortement appuyés |
-| Acte 3 | **Non testé**, protocole expérimental proposé |
-| Programme prébiotique, régime 7 | **Non testé**, programme dirigé, aucune donnée collectée |
-| Universalité, supériorité explicative, pouvoir prédictif | **Non testé** |
+| Acte 3 | **Analyse exploratoire exécutée**, résultat non confirmatoire ; protocole externe confirmatoire non exécuté |
+| Programme prébiotique, régime 7 | **Validateur exécuté sur le schéma**, aucune vraie table de lignées prébiotiques disponible |
+| Universalité, supériorité explicative, pouvoir prédictif | **Non établis** |
 
-Le document est explicite : « Il ne démontre pas son universalité, sa
-supériorité explicative ou son pouvoir prédictif. »
+L'analyse antibiotique actuelle porte sur les données Windels déjà présentes
+dans le dépôt. Le léger gain historique n'est pas robuste à l'ablation de la
+pente et ne constitue pas un test confirmatoire externe. Le document reste
+explicite : il ne démontre ni universalité, ni supériorité explicative, ni
+pouvoir prédictif.
 
 Les identifiants comme `TR-039` pour l'endosymbiose mitochondriale sont
 internes. La littérature valide les événements biologiques, pas l'identifiant

@@ -11,7 +11,9 @@ Quand deux fichiers se contredisent, celui-ci tranche.
 
 Il donne une lecture continue du programme. Il **ne remplace pas** les articles
 de branche, ne transforme pas le socle en quatrième branche et ne propage aucun
-niveau de preuve d'un domaine à l'autre. Sur tout chiffre de test ou de statut,
+niveau de preuve d'un domaine à l'autre. Les copies racine du dossier
+scientifique sont des alias de livraison décrits dans
+`documentation/ALIASES_DOCUMENTAIRES.md`. Sur tout chiffre de test ou de statut,
 les fichiers générés priment sur lui, conformément à la règle générale
 ci-dessous.
 
@@ -44,6 +46,10 @@ ci-dessous.
 Les fichiers de `00_socle/sources/` décrivent l'état du dossier consolidé
 d'origine. Ils emploient encore ses anciens chemins et ses anciens compteurs.
 Ils sont conservés comme archives et **ne font pas autorité**.
+
+`CONTROLES_INTEGRITE.md` et `audit/validation_archive.json` sont également des
+instantanés historiques. Leurs compteurs sont conservés pour la traçabilité,
+mais `ETAT_DES_TESTS.md` reste l'unique état courant.
 
 ## Branche 1 — Matière
 

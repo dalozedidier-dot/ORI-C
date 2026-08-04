@@ -1,6 +1,11 @@
 # Contrôles d’intégrité et de reproductibilité
 
-Date : 2026-08-01
+> **Instantané historique.** Ce fichier conserve les exécutions des 1er et
+> 2 août 2026. Il ne donne pas les compteurs actuels. Pour l'état courant,
+> utiliser `ETAT_DES_TESTS.md`, qui prime conformément à
+> `AUTORITE_DES_DOCUMENTS.md`.
+
+Date de l'instantané initial : 2026-08-01
 
 ## Contrôles rejoués depuis une extraction isolée
 

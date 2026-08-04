@@ -1,6 +1,12 @@
-# Campagne maximale — données réelles uniquement
+# Campagne maximale, données réelles uniquement
 
-Date d'exécution : 2026-08-01. Catalogue : 683 entrées, 56 moteurs.
+> **Instantané historique du 1er août 2026.** Ce bilan décrit la campagne au
+> moment où le catalogue comptait 56 moteurs. L'état courant en compte 59 et
+> est décrit par `BILAN_CANONIQUE.md`, `ETAT_DES_PREUVES.md` et les résultats
+> machine lisibles. Les nombres ci-dessous sont conservés pour la traçabilité
+> de cette exécution et ne doivent pas être utilisés comme compteurs actuels.
+
+Date d'exécution : 2026-08-01. Catalogue de cet instantané : 683 entrées, 56 moteurs.
 
 ## Règle de la campagne
 

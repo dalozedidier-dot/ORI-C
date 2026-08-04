@@ -1,76 +1,85 @@
-# Environnement d'exécution
+# Environnements d'exécution
 
-Généré par `enregistrer_environnement.py`, Étape 0.7 du plan
-directeur. Ce fichier décrit la machine sur laquelle les résultats du
-dossier ont été produits. **Il n'est pas une exigence de
-reproduction** : un environnement différent n'invalide rien, il
-explique un écart.
+ORI-C distingue l'environnement canonique de reproduction, les environnements
+de compatibilité et les instantanés de provenance. Une différence de version
+n'invalide pas automatiquement un résultat, mais elle doit rester visible.
 
-## Plateforme
+## 1. Environnement canonique de reproduction
 
 | Élément | Valeur |
 |---|---|
-| Python | 3.12.10 (CPython) |
-| Compilateur | MSC v.1943 64 bit (AMD64) |
-| Système | Windows 11 |
-| Version du système | 10.0.26200 |
-| Architecture | AMD64 |
-| Processeur | Intel64 Family 6 Model 186 Stepping 2, GenuineIntel |
-| Algèbre linéaire | openblas |
+| Python | 3.12 |
+| Dépendances exactes | `plateforme/source_corrigee/requirements-lock.txt` |
+| Système CI | Ubuntu, GitHub Actions |
+| Threads numériques | `OPENBLAS_NUM_THREADS=1`, `OMP_NUM_THREADS=1` |
+| Plugins pytest externes | désactivés avec `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` |
+| Données volumineuses | Git LFS hydraté avant validation |
 
-## Bibliothèques suivies
+Cet environnement est celui des workflows canoniques. Le fichier
+`plateforme/requirements.txt` contient seulement des bornes minimales et ne
+constitue pas un verrou.
 
-| Bibliothèque | Version |
+## 2. Matrice de compatibilité
+
+La CI contrôle Python 3.12 et 3.13. Les résultats scientifiques canoniques
+restent rattachés à Python 3.12 tant qu'une nouvelle version n'est pas gelée.
+La portabilité numérique est évaluée avec les tolérances documentées dans les
+tests, sans confondre reproductibilité numérique et égalité binaire.
+
+## 3. Instantané de provenance Windows
+
+L'environnement ayant servi à une partie des résultats livrés était :
+
+| Élément | Valeur |
 |---|---|
-| `numpy` | 2.4.6 |
-| `scipy` | 1.18.0 |
-| `pandas` | 3.0.5 |
-| `matplotlib` | 3.11.1 |
-| `networkx` | 3.6.1 |
-| `sympy` | 1.14.0 |
-| `numba` | 0.66.0 |
-| `llvmlite` | 0.48.0 |
-| `pytest` | 9.1.1 |
-| `rebound` | absent |
-| `python-docx` | 1.2.0 |
+| Python | 3.12.10, CPython |
+| Système | Windows 11, AMD64 |
+| Processeur | Intel64 Family 6 Model 186 Stepping 2 |
+| Algèbre linéaire | OpenBLAS |
+| numpy | 2.4.6 |
+| scipy | 1.18.0 |
+| pandas | 3.0.5 |
+| matplotlib | 3.11.1 |
+| networkx | 3.6.1 |
+| sympy | 1.14.0 |
+| numba | 0.66.0 |
+| llvmlite | 0.48.0 |
+| pytest | 9.1.1 |
+| python-docx | 1.2.0 |
 
-## Exécution des suites de sous-projets
+Cet instantané est une information de provenance. Il ne remplace pas le verrou
+canonique et ne signifie pas que toutes les campagnes ont été recalculées avec
+cet ensemble exact.
 
-Trois suites ont leur propre racine de paquet et ne se collectent pas depuis
-la racine du dossier. Elles se lancent ainsi :
+## 4. Métadonnées à conserver avec chaque campagne
+
+Chaque nouvel artefact de calcul doit enregistrer :
+
+- la version Python ;
+- le système et l'architecture ;
+- `pip freeze` ;
+- les informations BLAS et LAPACK disponibles ;
+- les graines aléatoires ;
+- l'identifiant du commit ;
+- l'empreinte des jeux de données ;
+- la commande exacte.
+
+Le script `enregistrer_environnement.py` fournit le socle de cet enregistrement.
+
+## 5. Exécution des suites particulières
 
 ```bash
-cd 02_branche_systeme_solaire/couche_memoire_historique && PYTHONPATH=src python -m pytest -q
+cd 02_branche_systeme_solaire/couche_memoire_historique
+PYTHONPATH=src python -m pytest -q
 ```
 
-Deux conditions supplémentaires, découvertes le 2026-08-02 :
-
-**Dépendances.** `scikit-learn` et `statsmodels` sont requis par la
-plateforme et n'étaient pas suivis ici. Sans eux, cinq modules de test
-échouent à la collecte avec `ModuleNotFoundError`.
-
-**Longueur des chemins Windows.** Les suites de la plateforme et de la couche
-astronomique écrivent des jeux de données dans le répertoire temporaire de
-`pytest`. Si le chemin de base dépasse la limite historique de 260 caractères,
-l'écriture échoue en `PermissionError` puis en `FileNotFoundError` — deux
-symptômes trompeurs pour une seule cause. Il faut un chemin de base court :
+Sous Windows, utiliser un répertoire temporaire court pour les suites qui
+écrivent de nombreux fichiers :
 
 ```bash
 PYTHONPATH=src python -m pytest tests -q --basetemp=C:/oric_tmp/pf
 ```
 
-Sans cela, ces deux suites paraissent cassées alors qu'elles ne le sont pas.
-C'est une contrainte de plateforme, pas un défaut du code.
-
-## Portée
-
-Le plan directeur demande en outre l'exécution sous trois systèmes
-d'exploitation, sur deux architectures matérielles et dans une image
-de conteneur — Étape 0.8 à 0.10. **Rien de cela n'est fait.** Le
-dossier n'a été exécuté que sur la plateforme ci-dessus.
-
-Un écart déjà constaté et documenté relève de cette catégorie :
-l'écart maximal du contrôle d'attractivité globale vaut `2,00 × 10⁻¹⁶`
-dans une exécution et `2,00 × 10⁻¹⁵` dans une autre, selon la version
-de la bibliothèque d'algèbre linéaire. Voir
-`AUTORITE_DES_DOCUMENTS.md`.
+`scikit-learn` et `statsmodels` sont requis par la plateforme. Une absence de
+ces modules ou un chemin Windows trop long peut produire des erreurs de
+collecte sans rapport avec le code scientifique.

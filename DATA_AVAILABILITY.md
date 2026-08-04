@@ -30,6 +30,19 @@ dans `masses_reservoirs.csv`, jamais dans la saisie. Les colonnes non
 contraintes restent vides : le validateur refuse tout inventaire accessible
 chiffré dont les deux facteurs ne sont pas renseignés.
 
-Les fichiers bruts volumineux sont inclus dans cette archive canonique mais exclus d’un futur dépôt Git par `.gitignore`. Les fichiers transformés et leurs empreintes restent présents pour permettre l’audit.
+## Trois formes de livraison à distinguer
+
+1. **Dépôt Git avec Git LFS hydraté.** Les fichiers volumineux sont récupérés
+   par `git lfs pull` et le contrôle strict peut réussir.
+2. **ZIP source automatique de GitHub.** Il contient des pointeurs Git LFS à
+   la place des objets volumineux. Il permet l'inspection du code et des
+   métadonnées, mais ne constitue pas une archive scientifique autonome.
+3. **Archive scientifique canonique hydratée.** Elle est construite avec
+   `python scripts/construire_archive_canonique.py`, contient les objets réels,
+   un manifeste vérifié et son propre SHA-256.
+
+Les fichiers transformés et leurs empreintes restent présents pour permettre
+l'audit. Les données tierces conservent les conditions de leur source et ne
+reçoivent aucune nouvelle licence du projet ORI-C.
 
 Les scripts d’import reproduisent les transformations sans imputation, interpolation, simulation ni augmentation. Les trois fichiers générés artificiellement présents dans une source antérieure ne sont pas repris dans l’archive canonique.

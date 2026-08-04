@@ -1,4 +1,7 @@
 {
+  "status": "historical_snapshot",
+  "superseded_by": "../ETAT_DES_TESTS.md",
+  "note": "Instantané du 1er août 2026 conservé pour traçabilité. Ne pas l'utiliser comme état courant.",
   "date": "2026-08-01",
   "archive": "ORI-C",
   "tests": {

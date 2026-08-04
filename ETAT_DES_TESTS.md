@@ -2,7 +2,9 @@
 
 **Fichier généré par `etat_des_tests.py`. Ne pas modifier à la main.**
 
-Aucun compteur de tests n'est saisi manuellement ailleurs dans le dossier : les autres documents renvoient ici.
+Ce fichier est l'unique compteur courant. Des instantanés historiques
+conservent leurs anciens nombres pour la traçabilité, mais ils ne font
+pas autorité.
 
 Dernière exécution : 2026-08-04
 
@@ -14,7 +16,7 @@ Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une e
 
 | Suite | Réussis | Échecs | Ignorés | Xfail attendus |
 |---|---:|---:|---:|---:|
-| Socle, `00_socle/tests` | 152 | 0 | 1 | 1 |
+| Socle, `00_socle/tests` | 153 | 0 | 1 | 1 |
 | Couche mémoire historique | 32 | 0 | 0 | 0 |
 | Campagne maximale, trois branches | 21 | 0 | 0 | 0 |
 | Couche astronomique | 10 | 0 | 2 | 0 |
@@ -33,7 +35,7 @@ Rapport archivé, **lu sans réexécution**. Le relevé d'état ne réécrit auc
 
 Le noyau compilé exécute la même suite d'opérations flottantes que le modèle de référence, et l'écart est exactement nul sur l'environnement de livraison. Cette égalité n'est pas portable : numpy, scipy et numba peuvent réordonner ou vectoriser les opérations d'une version à l'autre, ce qui déplace le dernier bit. Des exécutions sur d'autres versions ont produit des écarts de 10⁻¹⁴ à 10⁻¹⁸.
 
-La reproductibilité binaire aurait exigé un conteneur, incompatible avec des dépendances bornées seulement par le bas. La tolérance retenue reste très inférieure aux échelles numériques pertinentes pour les résultats rapportés : elle absorbe les écarts d'arrondi entre environnements et détecte les divergences dépassant le seuil fixé. Le test `test_la_tolerance_detecte_une_divergence_algorithmique` en donne la preuve automatisée.
+La reproductibilité binaire exigerait aussi de figer le système, BLAS, LAPACK et les options de compilation. Le verrou Python exact ne suffit pas à garantir cette identité. La tolérance retenue reste très inférieure aux échelles numériques pertinentes pour les résultats rapportés : elle absorbe les écarts d'arrondi entre environnements et détecte les divergences dépassant le seuil fixé. Le test `test_la_tolerance_detecte_une_divergence_algorithmique` en donne la preuve automatisée.
 
 ## Reproduire
 

@@ -1,28 +1,40 @@
-"""Construit et vérifie un manifeste SHA-256 portable du dossier ORI-C."""
+"""Construit et vérifie le manifeste SHA-256 portable du dossier ORI-C.
+
+Un pointeur Git LFS valide est inscrit avec l'OID et la taille du contenu réel,
+pas avec l'empreinte du petit fichier pointeur. Le manifeste reste ainsi celui
+de l'archive scientifique attendue même lorsqu'il est reconstruit depuis un
+arbre source non hydraté.
+"""
 
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-# .mplconfig et .claude sont des caches regeneres a l execution. Ils
-# etaient exclus par verifier_dossier.py et construire_dossier.py mais pas
-# ici : le manifeste inscrivait un fichier que le verificateur ne balayait
-# pas, et le signalait ensuite comme absent. Les trois listes sont alignees.
-EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".pytest-tmp",
-                  ".mplconfig", ".claude", "node_modules"}
+EXCLUDED_PARTS = {
+    ".git", "__pycache__", ".pytest_cache", ".pytest-tmp",
+    ".mplconfig", ".claude", "node_modules",
+}
 EXCLUDED_FILES = {"MANIFEST.sha256", "MANIFEST.sha256.json"}
+LFS_PATTERN = re.compile(
+    rb"\Aversion https://git-lfs\.github\.com/spec/v1\n"
+    rb"oid sha256:([0-9a-f]{64})\n"
+    rb"size ([0-9]+)\n?\Z"
+)
 
 
 def files() -> list[Path]:
     return sorted(
-        (path for path in ROOT.rglob("*")
-         if path.is_file()
-         and path.name not in EXCLUDED_FILES
-         and not any(part in EXCLUDED_PARTS for part in path.relative_to(ROOT).parts)),
+        (
+            path for path in ROOT.rglob("*")
+            if path.is_file()
+            and path.name not in EXCLUDED_FILES
+            and not any(part in EXCLUDED_PARTS for part in path.relative_to(ROOT).parts)
+        ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
     )
 
@@ -35,30 +47,69 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
+def lfs_metadata(path: Path) -> tuple[str, int] | None:
+    if path.stat().st_size > 1024:
+        return None
+    data = path.read_bytes()
+    match = LFS_PATTERN.fullmatch(data.replace(b"\r\n", b"\n"))
+    if not match:
+        return None
+    return match.group(1).decode("ascii"), int(match.group(2))
+
+
+def entry(path: Path) -> dict[str, object]:
+    lfs = lfs_metadata(path)
+    if lfs is None:
+        sha256, size = digest(path), path.stat().st_size
+        storage = "inline"
+    else:
+        sha256, size = lfs
+        storage = "git-lfs"
+    return {
+        "path": path.relative_to(ROOT).as_posix(),
+        "size": size,
+        "sha256": sha256,
+        "storage": storage,
+    }
+
+
 def build() -> list[dict[str, object]]:
-    entries = [
-        {"path": path.relative_to(ROOT).as_posix(), "size": path.stat().st_size, "sha256": digest(path)}
-        for path in files()
-    ]
+    entries = [entry(path) for path in files()]
     (ROOT / "MANIFEST.sha256").write_text(
-        "".join(f"{entry['sha256']}  {entry['path']}\n" for entry in entries), encoding="utf-8"
+        "".join(f"{item['sha256']}  {item['path']}\n" for item in entries),
+        encoding="utf-8",
+        newline="\n",
     )
     (ROOT / "MANIFEST.sha256.json").write_text(
-        json.dumps({"algorithm": "sha256", "path_base": ".", "files": entries}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(
+            {
+                "algorithm": "sha256",
+                "path_base": ".",
+                "lfs_policy": "OID and declared content size are recorded for valid Git LFS pointers",
+                "files": entries,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     return entries
 
 
 def verify() -> None:
     document = json.loads((ROOT / "MANIFEST.sha256.json").read_text(encoding="utf-8"))
-    expected = {entry["path"]: entry for entry in document["files"]}
+    expected = {item["path"]: item for item in document["files"]}
     actual = {path.relative_to(ROOT).as_posix(): path for path in files()}
     if set(expected) != set(actual):
         raise SystemExit("La liste de fichiers diffère du manifeste")
     for name, path in actual.items():
-        if path.stat().st_size != expected[name]["size"] or digest(path) != expected[name]["sha256"]:
-            raise SystemExit(f"Empreinte invalide: {name}")
+        current = entry(path)
+        if (
+            current["size"] != expected[name]["size"]
+            or current["sha256"] != expected[name]["sha256"]
+        ):
+            raise SystemExit(f"Empreinte invalide : {name}")
 
 
 if __name__ == "__main__":
@@ -66,7 +117,9 @@ if __name__ == "__main__":
     parser.add_argument("command", choices=("build", "verify"))
     args = parser.parse_args()
     if args.command == "build":
-        print(f"{len(build())} fichiers inscrits")
+        entries = build()
+        lfs_count = sum(item["storage"] == "git-lfs" for item in entries)
+        print(f"{len(entries)} fichiers inscrits, dont {lfs_count} pointeurs Git LFS")
     else:
         verify()
         print("Manifeste valide")

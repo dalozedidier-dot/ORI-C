@@ -1,6 +1,6 @@
 # ORI-C — dossier unique
 
-Didier Daloze | Juillet 2026
+Didier Daloze | Version 0.9.0-research | 4 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -96,16 +96,29 @@ s'étendre par contagion de vocabulaire.
 
 ## Vérification
 
+Après un clonage Git complet :
+
 ```bash
 cd ORI-C
+git lfs pull
 python verifier_dossier.py
-python scripts/valider_tout.py
+python scripts/valider_tout.py --strict-lfs
 python plan_directeur/campagne_maximale_trois_branches/run_all.py
 ```
 
-Le script recalcule les empreintes SHA-256 de `MANIFEST.sha256` et signale
-tout fichier modifié, absent ou non listé. Les suites de tests de chaque
-couche s'exécutent séparément ; voir le `README.md` de chaque branche.
+Dans un ZIP source automatique de GitHub, les objets volumineux peuvent rester
+sous forme de pointeurs. Le contrôle suivant vérifie alors l'arbre source sans
+le déclarer autonome :
+
+```bash
+python verifier_dossier.py --allow-lfs-pointers
+python scripts/valider_tout.py
+```
+
+Le vérificateur distingue les fichiers réellement modifiés des objets Git LFS
+non hydratés. Une archive canonique doit afficher zéro objet LFS non hydraté.
+Sa construction est automatisée par
+`python scripts/construire_archive_canonique.py`.
 
 ## Reconstruction et contrôles
 
@@ -119,14 +132,26 @@ cd 02_branche_systeme_solaire/couche_memoire_historique
 PYTHONPATH="$PWD/src" python -m unittest discover -s tests
 ```
 
-Les compteurs sont générés par `etat_des_tests.py` et consignés dans
-`ETAT_DES_TESTS.md`. Aucun autre fichier du dossier ne cite un nombre de tests.
+Les compteurs courants sont générés par `etat_des_tests.py` et consignés
+dans `ETAT_DES_TESTS.md`. Certains instantanés historiques conservent les
+nombres de leur exécution, mais ils sont clairement marqués et ne font pas
+autorité.
 
 La reconstruction se vérifie sans rien écraser :
 
 ```bash
 python construire_dossier.py --sources <rep> --verifier-reconstruction
 ```
+
+## Livraison, licence et citation
+
+- `DATA_AVAILABILITY.md` distingue le dépôt Git, le ZIP source GitHub et
+  l'archive canonique hydratée.
+- `LICENSE` fixe un statut conservatoire tous droits réservés tant qu'une
+  politique ouverte n'a pas été choisie explicitement par l'auteur.
+- `CITATION.cff` contient le dépôt réel et la version courante.
+- `documentation/ALIASES_DOCUMENTAIRES.md` identifie le dossier scientifique
+  canonique et ses copies de livraison.
 
 ## État du dossier
 
