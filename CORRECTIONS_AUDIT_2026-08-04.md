@@ -42,8 +42,9 @@ Version : `0.9.2-research`
 - 3 tests ignorés ;
 - 2 `xfail` attendus et documentés ;
 - 21 tests sur 21 réussis pour la campagne maximale sur les trois branches ;
-- cinq sorties canoniques identiques sur deux exécutions successives ;
-- résultats de campagne identiques à ceux présents avant les corrections.
+- cinq sorties canoniques stables sur deux exécutions successives dans le même environnement ;
+- comparaison inter-environnements corrigée : structures et valeurs non numériques strictement identiques, flottants comparés avec des tolérances explicites ;
+- résultats scientifiques de campagne inchangés par rapport à ceux présents avant les corrections.
 
 ## Limite matérielle restante
 

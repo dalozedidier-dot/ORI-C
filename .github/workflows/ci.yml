@@ -47,5 +47,6 @@ jobs:
           OPENBLAS_NUM_THREADS: '1'
           OMP_NUM_THREADS: '1'
         run: |
+          cp -R plan_directeur/campagne_maximale_trois_branches/resultats             "$RUNNER_TEMP/campagne-reference"
           python plan_directeur/campagne_maximale_trois_branches/run_all.py
-          git diff --exit-code -- plan_directeur/campagne_maximale_trois_branches/resultats
+          python scripts/verifier_reproductibilite_resultats.py             --reference "$RUNNER_TEMP/campagne-reference"             --candidate plan_directeur/campagne_maximale_trois_branches/resultats

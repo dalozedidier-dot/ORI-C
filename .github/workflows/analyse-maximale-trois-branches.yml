@@ -117,6 +117,8 @@ jobs:
       - name: Exécuter les analyses sur les trois branches
         run: |
           set -euo pipefail
+          cp -R plan_directeur/campagne_maximale_trois_branches/resultats \
+            "$RUNNER_TEMP/campagne-reference"
           python plan_directeur/campagne_maximale_trois_branches/run_all.py \
             | tee "$OUT/logs/campagne_trois_branches.log"
       - name: Exécuter les tests de régression scientifique
@@ -126,8 +128,11 @@ jobs:
             | tee "$OUT/logs/tests_trois_branches.log"
       - name: Vérifier la reproductibilité des sorties canoniques
         run: |
-          git diff --exit-code -- plan_directeur/campagne_maximale_trois_branches/resultats \
-            | tee "$OUT/logs/diff_sorties.log"
+          set -euo pipefail
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/campagne-reference" \
+            --candidate plan_directeur/campagne_maximale_trois_branches/resultats \
+            | tee "$OUT/logs/reproductibilite_sorties.log"
       - name: Rassembler résultats et environnement
         if: always()
         run: |

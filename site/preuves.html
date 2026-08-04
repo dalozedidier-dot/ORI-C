@@ -149,7 +149,7 @@
               <div class="evidence-top"><span class="status structural">21 tests de régression</span><span class="evidence-id">X-04</span></div>
               <h3>Un workflow cumulatif sans fusion des verdicts</h3>
               <p class="claim">Le nouveau workflow peut lancer la validation, les quatre campagnes existantes et la post-analyse des trois branches.</p>
-              <dl><div><dt>Modes</dt><dd><code>ciblee</code> pour la nouvelle campagne, <code>maximum</code> pour la batterie cumulative.</dd></div><div><dt>Reproductibilité</dt><dd>Les sorties canoniques sont recalculées puis comparées au dépôt.</dd></div><div><dt>Limite</dt><dd>Les 21 tests verrouillent le code et les assertions, pas 21 preuves indépendantes.</dd></div></dl>
+              <dl><div><dt>Modes</dt><dd><code>ciblee</code> pour la nouvelle campagne, <code>maximum</code> pour la batterie cumulative.</dd></div><div><dt>Reproductibilité</dt><dd>Les sorties canoniques sont recalculées. Les structures JSON doivent rester identiques et les seuls écarts admis sont des arrondis flottants sous tolérance explicite.</dd></div><div><dt>Limite</dt><dd>Les 21 tests verrouillent le code et les assertions, pas 21 preuves indépendantes.</dd></div></dl>
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml">Lancer le workflow</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json">Synthèse machine</a></div>
             </article>
           </div>

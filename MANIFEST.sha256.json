@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/analyse-maximale-trois-branches.yml",
-      "size": 4784,
-      "sha256": "0bbccf98f3a1a5f60a0b5c51b5ac7763321e0ec4b077e068769e24990eca9bf5",
+      "size": 5062,
+      "sha256": "8d61b6ec944343787fc0c4b5e8d966d72abf8f3b6d64b4300d98d2021d85aa4d",
       "storage": "inline"
     },
     {
@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 1777,
-      "sha256": "097271cbf6694a6bef1a5384ce46d9e27c54d79087dbf31f7256ba5299d053ca",
+      "size": 2009,
+      "sha256": "2dbf150465613a4add241096969d2d477264cf8ab3d41a6e130edbea44f056e5",
       "storage": "inline"
     },
     {
@@ -3743,8 +3743,8 @@
     },
     {
       "path": "CORRECTIONS_AUDIT_2026-08-04.md",
-      "size": 3628,
-      "sha256": "e494a7fd495f5e7dd3775b224f9ac744e6d9a25774f8f6939cf0f8891c17216a",
+      "size": 3842,
+      "sha256": "309c3710f09cd198120929982d78e39ae24ff61909415996884e86d88e7e328b",
       "storage": "inline"
     },
     {
@@ -6046,6 +6046,12 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/verifier_reproductibilite_resultats.py",
+      "size": 8627,
+      "sha256": "b9094fd688c097bd4e3fcc023436a7b46b29412d235b1e7e37aa33bfe9d0ba0f",
+      "storage": "inline"
+    },
+    {
       "path": "site/404.html",
       "size": 2121,
       "sha256": "b9c0333dae888c24a9f85ab24fb398811f4c96b9c0766854dfbe590bb409c4ad",
@@ -6083,14 +6089,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 49396,
-      "sha256": "4457f3445750f92ee20ef7b5f97e15e89b449fa3d3a5fb43a94b74f9fe9cc391",
+      "size": 49497,
+      "sha256": "0746f709f1da36ccdfb8e7fba815373db0bc7a80dfdb0f0c2f4c68f86be2f9cb",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12188,
-      "sha256": "75c6fa2e4906b3b0fe22753f27597372c3ce8b4bdf38572409f798930f3976be",
+      "size": 12449,
+      "sha256": "2adc780bc95c8ab7a44c9c518a7fa7478ec8e674acb53792cae541a22f5076b4",
       "storage": "inline"
     },
     {

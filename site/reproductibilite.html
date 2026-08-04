@@ -31,12 +31,12 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid four">
-          <article class="metric"><strong>1 018</strong><span>contenus manifestés</span><small>0 objet LFS manquant</small></article>
+          <article class="metric"><strong>1 019</strong><span>contenus manifestés</span><small>0 objet LFS manquant</small></article>
           <article class="metric"><strong>153</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
           <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
           <article class="metric"><strong>12</strong><span>tests astronomiques réussis</span><small>artefact scientifique complet</small></article>
         </div>
-        <p class="data-note">La validation GitHub Actions du 4 août 2026 réussit sous Python 3.12 et Python 3.13. Elle compte 153 tests du socle réussis, 0 échec, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 13 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire et 21 tests de robustesse. L'artefact astronomique complet publie 12 tests réussis.</p>
+        <p class="data-note">La validation GitHub Actions s'exécute sous Python 3.12 et Python 3.13. Elle compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 13 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire et 21 tests de robustesse. L'artefact astronomique complet publie 12 tests réussis. La campagne cumulative compare désormais les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>. Les autres fichiers restent comparés octet par octet.</p>
         <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
       </div>
     </section>
@@ -65,7 +65,7 @@ cat REPRODUCTION.md</code></pre><p>La reproduction complète suit le protocole e
           <article><h3>Généalogies</h3><pre><code>python 00_socle/genealogie/arbre_genealogique.py
 python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Clôture de l'arbre global et de la généalogie matérielle.</p></article>
           <article><h3>Campagne maximale</h3><pre><code>python plan_directeur/campagne_maximale_trois_branches/run_all.py
-python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code></pre><p>Robustesse matière, Système solaire et vivant, avec sorties déterministes.</p></article>
+python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code></pre><p>Robustesse matière, Système solaire et vivant, avec structures identiques et contrôle explicite des écarts d'arrondi.</p></article>
         </div>
       </div>
     </section>
@@ -87,12 +87,12 @@ python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code>
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">Campagnes de référence</p><h2>Cinq artefacts contrôlés jusqu'au bout</h2><p>Les workflows de structure, données réelles, mémoire, astronomie et paléoclimat ont produit leurs journaux et leurs résultats. Leur réussite technique conserve les verdicts négatifs et non concluants au lieu de les transformer en preuves.</p></div>
         <div class="metric-grid four">
-          <article class="metric"><strong>1 018</strong><span>contenus conformes</span><small>0 LFS manquant, 0 modifié</small></article>
+          <article class="metric"><strong>1 019</strong><span>contenus conformes</span><small>0 LFS manquant, 0 modifié</small></article>
           <article class="metric"><strong>211</strong><span>réussites techniques</span><small>campagne réelle consolidée</small></article>
           <article class="metric"><strong>440</strong><span>blocages documentés</span><small>données ou critères absents</small></article>
           <article class="metric"><strong>21</strong><span>tests de robustesse</span><small>matière, Système solaire et vivant</small></article>
         </div>
-        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. Les 1 018 contenus sont conformes et Git LFS est entièrement hydraté dans la CI. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
+        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. Les 1 019 contenus sont conformes et Git LFS est entièrement hydraté dans la CI. La campagne maximale ajoute les retraits de matière, la séparation des effets astronomiques, la localisation des 100 ka, les contrôles antibiotiques et la dynamique ARN. Elle ne transforme aucun de ces tests en validation transversale.</p>
       </div>
     </section>
 
