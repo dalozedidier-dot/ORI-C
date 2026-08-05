@@ -1,0 +1,110 @@
+*** Begin Patch
+*** Update File: plan_directeur/campagne_recherche_suivante/fetch_external_data.py
+@@
+ import json
+ import shutil
++import subprocess
+ import time
+ import urllib.error
+ import urllib.request
+@@
+ DEST = ROOT / "donnees_externes"
++
++
++class DownloadFailure(RuntimeError):
++    """Échec de téléchargement conservant l'URL réellement tentée."""
++
++    def __init__(self, url: str, retries: int, last_error: Exception | None) -> None:
++        self.url = url
++        super().__init__(f"échec après {retries} tentatives pour {url}: {last_error}")
+@@
+-def download(url: str, target: Path, retries: int = 4) -> None:
++def download_with_curl(url: str, temporary: Path, timeout: int = 300) -> None:
++    """Suit les redirections Dryad sans normaliser l'URL S3 présignée."""
++    curl = shutil.which("curl")
++    if curl is None:
++        raise OSError("curl est requis pour préserver les URL Dryad présignées")
++
++    command = [
++        curl,
++        "--fail",
++        "--location",
++        "--path-as-is",
++        "--silent",
++        "--show-error",
++        "--connect-timeout",
++        "30",
++        "--max-time",
++        str(timeout),
++        "--user-agent",
++        "ORI-C scientific-research acquisition/1.2",
++        "--header",
++        "Accept: */*",
++        "--output",
++        str(temporary),
++        url,
++    ]
++    completed = subprocess.run(
++        command,
++        capture_output=True,
++        text=True,
++        timeout=timeout + 30,
++        check=False,
++    )
++    if completed.returncode != 0:
++        detail = (completed.stderr or completed.stdout).strip()
++        raise OSError(f"curl code {completed.returncode}: {detail}")
++
++
++def download_with_urllib(url: str, temporary: Path, timeout: int = 300) -> None:
++    request = urllib.request.Request(
++        url,
++        headers={
++            "User-Agent": "ORI-C scientific-research acquisition/1.2",
++            "Accept": "*/*",
++        },
++    )
++    with urllib.request.urlopen(request, timeout=timeout) as source, temporary.open("wb") as destination:
++        shutil.copyfileobj(source, destination)
++
++
++def download(url: str, target: Path, retries: int = 4) -> None:
+     target.parent.mkdir(parents=True, exist_ok=True)
+     temporary = target.with_suffix(target.suffix + ".part")
+     last_error: Exception | None = None
++    use_path_preserving_client = "datadryad.org/downloads/file_stream/" in url
++
+     for attempt in range(1, retries + 1):
+         try:
+-            request = urllib.request.Request(
+-                url,
+-                headers={
+-                    "User-Agent": "ORI-C scientific-research acquisition/1.1",
+-                    "Accept": "*/*",
+-                    "Referer": "https://datadryad.org/",
+-                },
+-            )
+-            with urllib.request.urlopen(request, timeout=300) as source, temporary.open("wb") as destination:
+-                shutil.copyfileobj(source, destination)
++            if use_path_preserving_client:
++                download_with_curl(url, temporary)
++            else:
++                download_with_urllib(url, temporary)
+             if temporary.stat().st_size == 0:
+                 raise OSError("réponse vide")
+             temporary.replace(target)
+             return
+-        except (OSError, urllib.error.URLError, TimeoutError) as exc:
++        except (OSError, urllib.error.URLError, TimeoutError, subprocess.SubprocessError) as exc:
+             last_error = exc
+             temporary.unlink(missing_ok=True)
+             if attempt < retries:
+                 time.sleep(2**attempt)
+-    raise RuntimeError(f"échec après {retries} tentatives: {last_error}")
++    raise DownloadFailure(url, retries, last_error)
+@@
+-                    "url": dataset.get("download_url"),
++                    "url": getattr(exc, "url", dataset.get("download_url")),
+                 }
+             )
+*** End Patch
