@@ -26,7 +26,58 @@
       "purpose": "Lignées parent-descendant, réponse à la sélection et ablations alimentation/resuspension.",
       "redistribute": false,
       "required_for_current_tests": true,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "file_downloads": [
+        {
+          "name": "FR1_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581950"
+        },
+        {
+          "name": "FR2_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581948"
+        },
+        {
+          "name": "FR3_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581960"
+        },
+        {
+          "name": "FU1_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581946"
+        },
+        {
+          "name": "FU2_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581958"
+        },
+        {
+          "name": "FU3_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581959"
+        },
+        {
+          "name": "UR1_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581949"
+        },
+        {
+          "name": "UR2_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581951"
+        },
+        {
+          "name": "UR3_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581956"
+        },
+        {
+          "name": "UU1_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581954"
+        },
+        {
+          "name": "UU2_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581957"
+        },
+        {
+          "name": "UU3_log.xlsx",
+          "url": "https://datadryad.org/downloads/file_stream/4581962"
+        }
+      ],
+      "download_strategy": "individual_public_files"
     },
     {
       "id": "histoire_antibiotique_donofrio_2026",
@@ -43,7 +94,22 @@
       "purpose": "Test externe de l'effet de la trajectoire LTEE au-delà de l'environnement présent.",
       "redistribute": false,
       "required_for_current_tests": true,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "file_downloads": [
+        {
+          "name": "Figure_2_C-limited_Fitness.csv",
+          "url": "https://datadryad.org/downloads/file_stream/4645836"
+        },
+        {
+          "name": "Figure_2_N-limited_Fitness.csv",
+          "url": "https://datadryad.org/downloads/file_stream/4645837"
+        },
+        {
+          "name": "Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+          "url": "https://datadryad.org/downloads/file_stream/4645841"
+        }
+      ],
+      "download_strategy": "individual_public_files"
     },
     {
       "id": "speleothemes_noaa_0_22ka",

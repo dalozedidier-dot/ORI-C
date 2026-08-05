@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/recherche-suivante.yml",
-      "size": 2665,
-      "sha256": "7bf876c92e4bbc9737da41c83bb14736525aaeb3505dcb76ea173cdaf9c4ca80",
+      "size": 3710,
+      "sha256": "c0697b518bb2d46230541f278db86c7193d6078438b1db6fa50e5cb957d76422",
       "storage": "inline"
     },
     {
@@ -5039,8 +5039,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/fetch_external_data.py",
-      "size": 5448,
-      "sha256": "e9c079f8c17ababc638804c91431602ab672f70fd9cfb39ccb47471eaafc762c",
+      "size": 7998,
+      "sha256": "c0d8ad5aa559f715d0eba94e03c7dbdb7269b10a47cb1ba02f2842db19688587",
       "storage": "inline"
     },
     {
@@ -5063,8 +5063,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/sources_externes.json",
-      "size": 2738,
-      "sha256": "60883d919e1ba8c9a18adb6199d5d0fa71c18334a385402d78bcd8a790a4cd84",
+      "size": 4864,
+      "sha256": "7a7848af7304bbbde41f09306b5d93812938cea6dc0a0d27d68f0edd094b1cb7",
       "storage": "inline"
     },
     {

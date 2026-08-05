@@ -25,6 +25,17 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def combined_sha256(files: list[dict[str, object]]) -> str:
+    """Empreinte déterministe d'un jeu téléchargé fichier par fichier."""
+    digest = hashlib.sha256()
+    for item in sorted(files, key=lambda value: str(value["name"])):
+        digest.update(str(item["name"]).encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(str(item["sha256"]).encode("ascii"))
+        digest.update(b"\n")
+    return digest.hexdigest()
+
+
 def download(url: str, target: Path, retries: int = 4) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     temporary = target.with_suffix(target.suffix + ".part")
@@ -34,8 +45,9 @@ def download(url: str, target: Path, retries: int = 4) -> None:
             request = urllib.request.Request(
                 url,
                 headers={
-                    "User-Agent": "ORI-C scientific-research acquisition/1.0",
+                    "User-Agent": "ORI-C scientific-research acquisition/1.1",
                     "Accept": "*/*",
+                    "Referer": "https://datadryad.org/",
                 },
             )
             with urllib.request.urlopen(request, timeout=300) as source, temporary.open("wb") as destination:
@@ -66,6 +78,42 @@ def extract(raw: Path, folder: Path) -> list[str]:
     return [copied.name]
 
 
+def acquire_individual_files(
+    dataset: dict[str, object],
+    folder: Path,
+    force: bool,
+) -> tuple[list[str], list[dict[str, object]], str]:
+    """Télécharge les fichiers publics un par un lorsque l'archive globale exige une authentification."""
+    extracted_root = folder / "extracted"
+    extracted_root.mkdir(parents=True, exist_ok=True)
+    records: list[dict[str, object]] = []
+    downloaded_count = 0
+
+    for item in dataset.get("file_downloads", []):
+        name = str(item["name"])
+        url = str(item["url"])
+        target = (extracted_root / name).resolve()
+        if extracted_root.resolve() not in target.parents:
+            raise ValueError(f"chemin de fichier interdit: {name}")
+        if force or not target.exists():
+            download(url, target)
+            downloaded_count += 1
+        records.append(
+            {
+                "name": name,
+                "url": url,
+                "sha256": sha256(target),
+                "size_bytes": target.stat().st_size,
+            }
+        )
+
+    if not records:
+        raise ValueError("aucun fichier individuel déclaré")
+    status = "downloaded" if downloaded_count == len(records) else ("cached" if downloaded_count == 0 else "mixed")
+    extracted = sorted(str(path.relative_to(extracted_root)) for path in extracted_root.rglob("*") if path.is_file())
+    return extracted, records, status
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--only", action="append", help="Identifiant d'un jeu à télécharger")
@@ -82,26 +130,40 @@ def main(argv: list[str] | None = None) -> int:
             continue
         folder = DEST / dataset["id"]
         folder.mkdir(parents=True, exist_ok=True)
-        raw = folder / dataset["archive_name"]
-        status = "cached"
         try:
-            if args.force or not raw.exists():
-                download(dataset["download_url"], raw)
-                status = "downloaded"
-            extracted = extract(raw, folder)
+            if dataset.get("file_downloads"):
+                extracted, file_records, status = acquire_individual_files(dataset, folder, args.force)
+                dataset_hash = combined_sha256(file_records)
+                dataset_size = sum(int(item["size_bytes"]) for item in file_records)
+                provenance = {
+                    **dataset,
+                    "download_status": status,
+                    "sha256": dataset_hash,
+                    "size_bytes": dataset_size,
+                    "file_provenance": file_records,
+                    "extracted_files": extracted,
+                }
+            else:
+                raw = folder / dataset["archive_name"]
+                status = "cached"
+                if args.force or not raw.exists():
+                    download(dataset["download_url"], raw)
+                    status = "downloaded"
+                extracted = extract(raw, folder)
+                provenance = {
+                    **dataset,
+                    "download_status": status,
+                    "sha256": sha256(raw),
+                    "size_bytes": raw.stat().st_size,
+                    "extracted_files": extracted,
+                }
+
             missing = [
                 name
                 for name in dataset.get("expected_files", [])
                 if not any(Path(item).name == name for item in extracted)
             ]
-            provenance = {
-                **dataset,
-                "download_status": status,
-                "sha256": sha256(raw),
-                "size_bytes": raw.stat().st_size,
-                "extracted_files": extracted,
-                "missing_expected": missing,
-            }
+            provenance["missing_expected"] = missing
             (folder / "SOURCE.json").write_text(
                 json.dumps(provenance, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
@@ -117,14 +179,14 @@ def main(argv: list[str] | None = None) -> int:
                     "size_bytes": provenance["size_bytes"],
                 }
             )
-        except Exception as exc:  # Le rapport doit survivre à une source indisponible.
+        except Exception as exc:
             report.append(
                 {
                     "id": dataset["id"],
                     "required": bool(dataset.get("required_for_current_tests", False)),
                     "status": "download_failed",
                     "error": str(exc),
-                    "url": dataset["download_url"],
+                    "url": dataset.get("download_url"),
                 }
             )
 
