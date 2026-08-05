@@ -178,6 +178,67 @@
           </div>
         </div>
 
+        <div class="evidence-group" id="recherche-suivante">
+          <div class="group-heading"><p class="eyebrow">Campagne de recherche suivante</p><h2>Nouveaux tests, protocoles gelés et données attendues</h2><p>Chaque bloc conserve un statut propre. Les résultats exécutés sont séparés des protocoles non encore exécutés et des données externes absentes.</p></div>
+          <div class="evidence-grid">
+            <article class="evidence-card" data-status="model supported">
+              <div class="evidence-top"><span class="status model">Validé dans les simulations publiées</span><span class="evidence-id">N-01</span></div>
+              <h3>H011 possède un seuil mécanistique sous turbulence</h3>
+              <p class="claim">À taille de particules fixée, une turbulence plus forte augmente le seuil critique de solides dans la série publiée utilisée.</p>
+              <dl><div><dt>Données</dt><dd>Trois points comparables à <code>tau_s = 0,01</code>.</dd></div><div><dt>Résultat</dt><dd>Monotonie vérifiée, pente log-log de 0,523 et rapport extrême de 3,33.</dd></div><div><dt>Limite</dt><dd>Contraste de simulations contrôlées. Intervention naturelle non mesurée.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/PLAN_RECHERCHE.md">Plan du test</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="structural inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Ancré, non fermé</span><span class="evidence-id">N-02</span></div>
+              <h3>Le cycle H030-H031-H052-H053 n’est pas une trajectoire démontrée</h3>
+              <p class="claim">Quatre ancrages séparés ne suffisent pas à établir une fermeture empirique dans un système unique.</p>
+              <dl><div><dt>Ancrage</dt><dd>Les quatre relations disposent d’une source ou d’une définition distincte.</dd></div><div><dt>Intervention directe</dt><dd>H052 seulement.</dd></div><div><dt>Fermeture</dt><dd>Zéro trajectoire quantitative unique reliant les quatre segments.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/tests_causaux/resultats/CYCLE_INTERFACES_RESULTAT.json">Audit machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/DECISIONS_SCIENTIFIQUES.md">Règles de décision</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="model established">
+              <div class="evidence-top"><span class="status model">Mesuré dans le modèle réduit</span><span class="evidence-id">N-03</span></div>
+              <h3>Pacc est défini par des interventions astronomiques</h3>
+              <p class="claim">L’accessibilité est mesurée par le dépassement d’une enveloppe de référence, et non par la simple connectivité d’un graphe.</p>
+              <dl><div><dt>Interventions</dt><dd>6 sur 6 dépassent l’enveloppe sur au moins deux métriques.</dd></div><div><dt>Dimensions</dt><dd>17 couples intervention-métrique sur 18 la dépassent, soit 0,944.</dd></div><div><dt>Limite</dt><dd>Mesure propre aux six interventions calculées. Ce n’est ni une fréquence naturelle ni une probabilité universelle.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/tests_suivants/resultats/PACC_ASTRONOMIQUE.json">Résultat machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/tests_suivants/mesurer_pacc_astronomique.py">Script</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="untested structural">
+              <div class="evidence-top"><span class="status untested">Protocole gelé</span><span class="evidence-id">N-04</span></div>
+              <h3>WP-C2b est défini avant la nouvelle exécution</h3>
+              <p class="claim">Le protocole répare l’appariement par régime sans sélectionner les points après lecture du résultat.</p>
+              <dl><div><dt>Points</dt><dd>Quatre points non saturés, répartis entre régimes faible et intermédiaire de glace.</dd></div><div><dt>Validation</dt><dd>Huit graines réservées et seuil de matérialité fixé à 0,05.</dd></div><div><dt>Statut</dt><dd>Non exécuté. Aucun verdict positif ou négatif n’est encore attribué.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/tests_suivants/resultats/PROTOCOLE_C2B.json">Protocole machine</a><a href="methode.html#tests-suivants">Règles méthodologiques</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="untested">
+              <div class="evidence-top"><span class="status untested">En attente des données</span><span class="evidence-id">N-05</span></div>
+              <h3>Le contrôle indépendant par spéléothèmes est préparé</h3>
+              <p class="claim">La compilation externe doit contrôler la présence d’âges radiométriques, de valeurs isotopiques et de plusieurs sites sans accordage orbital.</p>
+              <dl><div><dt>Portée</dt><dd>Fenêtre 0-22 ka, utile pour un audit de chronologie et de proxy.</dd></div><div><dt>Limite</dt><dd>Elle ne couvre pas plusieurs cycles de 100 ka.</dd></div><div><dt>État local</dt><dd><code>waiting_for_external_data</code>.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/tests_suivants/resultats/AUDIT_SPELEOTHEMES.json">État machine</a><a href="reproductibilite.html#recherche-suivante">Acquisition</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="untested concept">
+              <div class="evidence-top"><span class="status untested">En attente des données</span><span class="evidence-id">N-06</span></div>
+              <h3>Les lignées de vésicules disposent d’un test parent-descendant</h3>
+              <p class="claim">Le protocole distingue réponse moyenne à la sélection, corrélation de lignée, permutation intra-génération et ablations des mécanismes.</p>
+              <dl><div><dt>Régimes</dt><dd>FR, FU, UR et UU, avec trois répétitions attendues par régime.</dd></div><div><dt>Critère</dt><dd>Une hausse moyenne sans signal de filiation ne compte pas comme inscription.</dd></div><div><dt>État local</dt><dd>Les ensembles complets de répétitions n’étaient pas encore acquis.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/lignees_vesicules/PROTOCOLE.md">Protocole</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json">État machine</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="untested">
+              <div class="evidence-top"><span class="status untested">En attente des données</span><span class="evidence-id">N-07</span></div>
+              <h3>Le nouveau benchmark antibiotique impose un témoin d’histoire permutée</h3>
+              <p class="claim">L’ascendance doit battre l’état présent et un modèle de même complexité dont l’histoire est permutée.</p>
+              <dl><div><dt>Évaluation</dt><dd>Exclusion groupée par souche, métrique principale RMSE de <code>log2(MIC)</code>.</dd></div><div><dt>Contrôle</dt><dd>Une souche n’apparaît jamais simultanément dans l’apprentissage et le test.</dd></div><div><dt>État local</dt><dd>Le fichier externe requis n’était pas encore acquis.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/benchmark_histoire_antibiotique_2026/PROTOCOLE.md">Protocole</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json">État machine</a></div>
+            </article>
+          </div>
+        </div>
+
         <div class="evidence-group" id="socle">
           <div class="group-heading"><p class="eyebrow">Socle commun</p><h2>Règles et test transversal</h2></div>
           <div class="evidence-grid">
