@@ -18,6 +18,28 @@ DATA = ROOT / "donnees_externes/histoire_antibiotique_donofrio_2026/extracted"
 OUT = HERE / "resultats"
 
 
+
+
+def canonicalize_numbers(value: object, significant_digits: int = 13) -> object:
+    """Stabilise les nombres sérialisés entre versions de Python/NumPy.
+
+    Les calculs et les décisions utilisent les valeurs complètes. Seule la
+    représentation persistée est ramenée à 13 chiffres significatifs, bien
+    au-delà de la précision utile de ces mesures et suffisante pour absorber
+    les écarts d'arrondi de l'ordre de 10⁻¹⁶ observés entre Python 3.12 et 3.13.
+    """
+    if isinstance(value, float):
+        if not np.isfinite(value):
+            return value
+        return float(format(value, f".{significant_digits}g"))
+    if isinstance(value, dict):
+        return {key: canonicalize_numbers(item, significant_digits) for key, item in value.items()}
+    if isinstance(value, list):
+        return [canonicalize_numbers(item, significant_digits) for item in value]
+    if isinstance(value, tuple):
+        return [canonicalize_numbers(item, significant_digits) for item in value]
+    return value
+
 def source_reference(path: Path) -> str:
     """Chemin stable, indépendant du dossier local d’extraction."""
     return path.resolve().relative_to(ROOT.resolve()).as_posix()
@@ -129,6 +151,7 @@ def main() -> dict[str, object]:
             "Le jeu est externe mais public avant l'analyse ORI-C. Le test est confirmatoire dans sa "
             "structure, sans être une collecte prospective aveugle."
         )
+    result = canonicalize_numbers(result)
     OUT.mkdir(exist_ok=True)
     (OUT / "RESULTAT.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"

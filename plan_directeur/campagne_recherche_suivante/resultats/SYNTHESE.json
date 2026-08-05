@@ -276,64 +276,64 @@
       "stats": {
         "FR_drift": {
           "n": 1920,
-          "parent_offspring_r": 0.06690393379475486,
-          "offspring_mean": 0.4893020833333333,
+          "parent_offspring_r": 0.06690393379475,
+          "offspring_mean": 0.4893020833333,
           "coded_lineage_fraction": 1.0
         },
         "FR_selection": {
           "n": 1920,
-          "parent_offspring_r": 0.0739995249584005,
-          "offspring_mean": 0.5437197916666666,
+          "parent_offspring_r": 0.0739995249584,
+          "offspring_mean": 0.5437197916667,
           "coded_lineage_fraction": 1.0
         },
         "FU_drift": {
           "n": 1104,
-          "parent_offspring_r": 0.07820001718266686,
-          "offspring_mean": 0.07529076086956522,
+          "parent_offspring_r": 0.07820001718267,
+          "offspring_mean": 0.07529076086957,
           "coded_lineage_fraction": 1.0
         },
         "FU_selection": {
           "n": 1056,
-          "parent_offspring_r": 0.06103300460982823,
-          "offspring_mean": 0.08248674242424242,
+          "parent_offspring_r": 0.06103300460983,
+          "offspring_mean": 0.08248674242424,
           "coded_lineage_fraction": 1.0
         },
         "UR_drift": {
           "n": 1440,
-          "parent_offspring_r": -0.06941470029147188,
-          "offspring_mean": 0.5514104166666667,
+          "parent_offspring_r": -0.06941470029147,
+          "offspring_mean": 0.5514104166667,
           "coded_lineage_fraction": 1.0
         },
         "UR_selection": {
           "n": 1440,
-          "parent_offspring_r": 0.025529538435400463,
-          "offspring_mean": 0.5604152777777778,
+          "parent_offspring_r": 0.0255295384354,
+          "offspring_mean": 0.5604152777778,
           "coded_lineage_fraction": 1.0
         },
         "UU_drift": {
           "n": 1440,
-          "parent_offspring_r": 0.7230421932936663,
-          "offspring_mean": 0.10528541666666666,
+          "parent_offspring_r": 0.7230421932937,
+          "offspring_mean": 0.1052854166667,
           "coded_lineage_fraction": 1.0
         },
         "UU_selection": {
           "n": 1440,
-          "parent_offspring_r": 0.663904733093481,
-          "offspring_mean": 0.11433194444444444,
+          "parent_offspring_r": 0.6639047330935,
+          "offspring_mean": 0.1143319444444,
           "coded_lineage_fraction": 1.0
         }
       },
       "selection_response": {
-        "FR": 0.054417708333333314,
-        "FU": 0.007195981554677197,
-        "UR": 0.009004861111111095,
-        "UU": 0.009046527777777785
+        "FR": 0.05441770833333,
+        "FU": 0.007195981554677,
+        "UR": 0.009004861111111,
+        "UU": 0.009046527777778
       },
-      "mechanism_ablation_contrast": 0.046001918185477955,
+      "mechanism_ablation_contrast": 0.04600191818548,
       "lineage_permutation_test": {
-        "observed_parent_offspring_r": 0.7642621398380935,
-        "null_mean_r": 0.7466668339764724,
-        "permutation_p_one_sided": 0.0004997501249375312,
+        "observed_parent_offspring_r": 0.7642621398381,
+        "null_mean_r": 0.7466668339765,
+        "permutation_p_one_sided": 0.0004997501249375,
         "permutations": 2000
       },
       "decision_components": {
@@ -358,12 +358,12 @@
         "history": "Ancestor",
         "antibiotic": "Antibiotic"
       },
-      "rmse_state_only": 1.1308981248799626,
-      "rmse_state_plus_history": 0.8042295741181249,
-      "history_gain_percent": 28.885762879526517,
-      "same_complexity_shuffled_history_rmse_mean": 1.1414869511179608,
-      "history_vs_shuffled_gain_percent": 29.545443044226612,
-      "permutation_p_history_better_than_shuffled": 0.004975124378109453,
+      "rmse_state_only": 1.13089812488,
+      "rmse_state_plus_history": 0.8042295741181,
+      "history_gain_percent": 28.88576287953,
+      "same_complexity_shuffled_history_rmse_mean": 1.141486951118,
+      "history_vs_shuffled_gain_percent": 29.54544304423,
+      "permutation_p_history_better_than_shuffled": 0.004975124378109,
       "permutations": 200,
       "decision_components": {
         "history_beats_state": true,

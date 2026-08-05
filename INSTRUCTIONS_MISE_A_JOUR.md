@@ -6,37 +6,56 @@ Aucun fichier à supprimer pour cette mise à jour.
 
 ## Problème corrigé
 
-Git normalisait les fins de ligne de quatre CSV externes lors de leur ajout au dépôt. Le contenu scientifique restait lisible, mais les octets ne correspondaient plus aux empreintes SHA-256 enregistrées, ce qui faisait échouer les contrôles d’intégrité avec quatre fichiers signalés comme modifiés.
+Le workflow passait sous Python 3.12 mais échouait sous Python 3.13 à l'étape
+`git diff --exit-code`. Les calculs produisaient les mêmes verdicts, mais quelques
+nombres à virgule flottante différaient d'environ 10⁻¹⁶ selon la version de
+Python, NumPy et scikit-learn. Git interprétait ces écarts de dernier bit comme
+des modifications des résultats scientifiques.
 
-Les CSV contenus dans `donnees_externes` sont désormais déclarés `-text` dans `.gitattributes`. Git doit donc conserver exactement les octets distribués par Dryad et NOAA, fins de ligne comprises.
+Les deux analyses concernées sérialisent désormais leurs nombres avec une
+représentation canonique à 13 chiffres significatifs. Les calculs, comparaisons,
+tests statistiques et décisions sont toujours effectués avec la précision
+complète. Seule l'écriture des fichiers JSON est stabilisée.
 
-## Fichiers remplacés par cette correction
+## Fichiers remplacés
 
-- `.gitattributes`
+- `03_branche_vivant/lignees_vesicules/analyser_lignees.py`
+- `03_branche_vivant/lignees_vesicules/tests/test_parser.py`
+- `03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json`
+- `03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py`
+- `03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_analysis.py`
+- `03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json`
+- `plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json`
 - `INSTRUCTIONS_MISE_A_JOUR.md`
 - `MANIFEST.sha256`
 - `MANIFEST.sha256.json`
 
-Les quatre CSV externes et leurs données scientifiques ne sont pas modifiés.
-
 ## Installation
 
 1. Décompresser le ZIP.
-2. Copier tout le contenu du dossier `ORI-C-main` dans le dépôt en remplaçant les fichiers existants.
-3. Ajouter et publier également `.gitattributes` dans le même commit que les fichiers du ZIP.
-4. Relancer les workflows GitHub.
+2. Copier tout le contenu du dossier `ORI-C-main` dans le dépôt en remplaçant les
+   fichiers existants.
+3. Aucun ancien fichier ne doit être supprimé pour cette mise à jour.
+4. Publier tous les fichiers remplacés dans le même commit.
+5. Relancer les workflows GitHub.
 
 ## Contrôle attendu
 
-Après `git lfs pull`, la commande suivante ne doit plus signaler les quatre CSV comme modifiés :
+Les jobs `Contrôles portables Python 3.12` et `Contrôles portables Python 3.13`
+doivent tous deux passer l'étape :
 
 ```bash
-python verifier_dossier.py
+git diff --exit-code -- \
+  plan_directeur/campagne_recherche_suivante/resultats \
+  01_branche_matiere/tests_causaux/resultats \
+  02_branche_systeme_solaire/tests_suivants/resultats \
+  03_branche_vivant/lignees_vesicules/resultats \
+  03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats
 ```
 
-Les fichiers concernés étaient :
+Les verdicts scientifiques restent inchangés :
 
-- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_C-limited_Fitness.csv`
-- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_N-limited_Fitness.csv`
-- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv`
-- `donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv`
+- vésicules : `all_pre_registered_components_supported`
+- antibiotique : `history_supported_against_both_controls`
+- erreurs d'exécution : `0`
+- blocs en attente de données : `0`

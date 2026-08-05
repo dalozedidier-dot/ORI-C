@@ -16,6 +16,28 @@ GEN_RE = re.compile(r"G(\d+)", re.IGNORECASE)
 CANONICAL_WELLS = [f"{row}{column}" for row in "ABCDEFGH" for column in range(1, 13)]
 
 
+
+
+def canonicalize_numbers(value: object, significant_digits: int = 13) -> object:
+    """Stabilise les nombres sérialisés entre versions de Python/NumPy.
+
+    Les calculs et les décisions utilisent les valeurs complètes. Seule la
+    représentation persistée est ramenée à 13 chiffres significatifs, bien
+    au-delà de la précision utile de ces mesures et suffisante pour absorber
+    les écarts d'arrondi de l'ordre de 10⁻¹⁶ observés entre Python 3.12 et 3.13.
+    """
+    if isinstance(value, float):
+        if not np.isfinite(value):
+            return value
+        return float(format(value, f".{significant_digits}g"))
+    if isinstance(value, dict):
+        return {key: canonicalize_numbers(item, significant_digits) for key, item in value.items()}
+    if isinstance(value, list):
+        return [canonicalize_numbers(item, significant_digits) for item in value]
+    if isinstance(value, tuple):
+        return [canonicalize_numbers(item, significant_digits) for item in value]
+    return value
+
 def locate(name: str) -> Path | None:
     matches = sorted(DATA.rglob(name))
     return matches[0] if matches else None
@@ -356,6 +378,7 @@ def main() -> dict[str, object]:
             if all(result["decision_components"].values())
             else "one_or_more_components_not_supported"
         )
+    result = canonicalize_numbers(result)
     OUT.mkdir(exist_ok=True)
     (OUT / "RESULTAT.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"

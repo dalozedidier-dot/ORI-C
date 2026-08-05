@@ -53,3 +53,18 @@ def test_source_reference_is_portable():
     reference = module.source_reference(source)
     assert reference == "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
     assert not Path(reference).is_absolute()
+
+def test_canonical_numbers_absorb_python_312_313_micro_rounding():
+    module = load()
+    python_312 = {
+        "rmse": 0.8042295741181249,
+        "history_gain": 28.885762879526517,
+        "shuffled_gain": 29.545443044226612,
+    }
+    python_313 = {
+        "rmse": 0.804229574118125,
+        "history_gain": 28.885762879526503,
+        "shuffled_gain": 29.545443044226598,
+    }
+    assert module.canonicalize_numbers(python_312) == module.canonicalize_numbers(python_313)
+

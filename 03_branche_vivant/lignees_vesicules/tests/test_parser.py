@@ -103,3 +103,32 @@ def test_transfer_parser_prefers_explicit_pairs_over_single_well_column(tmp_path
     assert first["donor"] == "A2"
     assert first["parent"] == 1.0
     assert first["offspring"] == 100.0
+
+def test_canonical_numbers_absorb_python_312_313_micro_rounding():
+    module = load()
+    python_312 = [
+        0.06690393379475486,
+        0.0739995249584005,
+        0.07820001718266686,
+        0.06103300460982823,
+        -0.06941470029147188,
+        0.025529538435400463,
+        0.7230421932936663,
+        0.663904733093481,
+        0.7642621398380935,
+        0.7466668339764724,
+    ]
+    python_313 = [
+        0.06690393379475482,
+        0.07399952495840054,
+        0.07820001718266696,
+        0.06103300460982825,
+        -0.06941470029147194,
+        0.025529538435400456,
+        0.7230421932936661,
+        0.6639047330934812,
+        0.7642621398380934,
+        0.7466668339764723,
+    ]
+    assert module.canonicalize_numbers(python_312) == module.canonicalize_numbers(python_313)
+

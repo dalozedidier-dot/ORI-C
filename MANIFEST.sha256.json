@@ -4145,20 +4145,20 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py",
-      "size": 5849,
-      "sha256": "124c5bb537ab5bd39fe765256dcfdfbe873cadbfdcb8bbc9c686e5d981711220",
+      "size": 6915,
+      "sha256": "17f3078721495c572f8206ff5d47481ed271a0e615d8a72793d678ad581e8be5",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
-      "size": 1109,
-      "sha256": "fa87539f7fe5f96375d7d940a45db49d1309462a9829c78a9da734f0dfabd67d",
+      "size": 1086,
+      "sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_analysis.py",
-      "size": 1838,
-      "sha256": "fe6ef5274a48e785e688d732105fbcaf9260535294dc66dcc25fe700f88e9d6a",
+      "size": 2320,
+      "sha256": "d60ac55b7bab11d22116ea0de5205e6c9b8f6f97cbabe217e72ca0ddc382e916",
       "storage": "inline"
     },
     {
@@ -4169,20 +4169,20 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
-      "size": 15648,
-      "sha256": "909070f2f6c52fe2d9df98276bcba9cf8ab62ad47fb4109b67db55c31f3e71da",
+      "size": 16714,
+      "sha256": "bcdb2a645160f6eeaaf9a3715f2d952da6f3e582707f476e76baec966ea26f1e",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "size": 2354,
-      "sha256": "ee29c14957399a75007e2826dfe6028b6a074628c321a5dd014bdb532bb18394",
+      "size": 2277,
+      "sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/tests/test_parser.py",
-      "size": 4614,
-      "sha256": "da55d735333fd09efdbe1d2a8174dbe5704d0bd3218f306dfd624f47424dfc6b",
+      "size": 5421,
+      "sha256": "afa4d2764bdb4e999428de8d3ae584eaf74194c00cefd5763cb3ece4c2749af9",
       "storage": "inline"
     },
     {
@@ -4337,8 +4337,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 1739,
-      "sha256": "f4cfea06a9b31cd58930901826bda145ae68e1f6aca0a2341cc2ec271be2f6a9",
+      "size": 2429,
+      "sha256": "886bae8eea4558cf2c5444b375bce77fe5c8d3e9abe18acbabe8e006a38fe6b2",
       "storage": "inline"
     },
     {
@@ -5195,8 +5195,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
-      "size": 13611,
-      "sha256": "b78087c1a12e7145414f024709081b3be02a92a961daba6f0521b4070b7fddb4",
+      "size": 13511,
+      "sha256": "2d1127094140b4be06d5b2dc890ab28a8d2dd8eff95bcf1004405f63eae8b1ce",
       "storage": "inline"
     },
     {
