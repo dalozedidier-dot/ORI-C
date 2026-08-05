@@ -1,0 +1,16 @@
+{
+  "not_integrated_from_original_bundle": {
+    "HadCRUT NetCDF": "Doublon binaire du CSV HadCRUT utilisé.",
+    "HMM_raw_results.zip": "La matrice résumée suffit aux métriques retenues; les sorties brutes n'ajoutent pas de variable canonique.",
+    "FA_uncertainties_FK.csv": "Le fichier d'abondances correspondant manque dans le lot.",
+    "TableS3.xlsx": "Standards et calibration SIMS; conservé en source mais non mélangé aux échantillons naturels.",
+    "Dataset_Fig2.xlsx": "Séries sans métadonnées explicites suffisantes dans le fichier pour nommer honnêtement les variables.",
+    "210210_MurchisonSteppedHeating_ICPMSData.csv": "Mesures brutes conservées, mais pas converties en bilan volatil fermé sans protocole de normalisation."
+  },
+  "canonical_tables_still_absent": [
+    "thermochemical_phases.csv",
+    "late_accretion_tracers.csv",
+    "planetary_histories.csv",
+    "volatile_inventory.csv"
+  ]
+}
