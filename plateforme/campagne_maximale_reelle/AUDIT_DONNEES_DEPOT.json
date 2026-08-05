@@ -1,0 +1,342 @@
+{
+  "blocked_root_causes": {
+    "GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L": 8,
+    "GISTEMP ne contient ni forçage externe ni expérience multi-mémoires": 10,
+    "fichier absent:endosymbiosis_events.csv": 12,
+    "fichier absent:isotope_tracers.csv": 10,
+    "fichier absent:late_accretion_tracers.csv": 10,
+    "fichier absent:modern_climate_ensemble.csv": 20,
+    "fichier absent:nucleosynthesis_yields.csv": 10,
+    "fichier absent:planetary_histories.csv": 11,
+    "fichier absent:reaction_network.csv": 15,
+    "fichier absent:thermochemical_phases.csv": 15,
+    "fichier absent:volatile_inventory.csv": 9,
+    "portée partielle:antibiotic_design": 4,
+    "portée partielle:benchmark_cases": 16,
+    "portée partielle:biology_cases": 6,
+    "portée partielle:cell_architecture": 8,
+    "portée partielle:partition_experiments": 13,
+    "portée partielle:prebiotic_design": 3,
+    "portée partielle:prebiotic_lineages": 63,
+    "simulation/génération interdite:astronomy_causality": 12,
+    "simulation/génération interdite:astronomy_physics": 16,
+    "simulation/génération interdite:astronomy_repro": 9,
+    "simulation/génération interdite:astronomy_validation": 4,
+    "simulation/génération interdite:core_formal": 48,
+    "simulation/génération interdite:intervention": 15,
+    "simulation/génération interdite:planetesimal_thermal": 10
+  },
+  "campaign_counts": {
+    "blocked": 357,
+    "error": 0,
+    "fail": 0,
+    "not_run": 48,
+    "pass": 278,
+    "skip": 0
+  },
+  "coverage_registry": {
+    "datasets": {
+      "antibiotic_design": {
+        "limitations": "Audit du nombre de lignées, séparation MIC/survie/persistance et mesures de fitness Donofrio. Randomisation, aveuglement, biofilms et plusieurs espèces ne sont pas documentés.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "conditions_with_12_or_more": 9,
+          "design_rows": 10,
+          "fitness_rows": 72,
+          "measurement_coverage": {
+            "fitness": 0.0,
+            "growth_rate": 0.0,
+            "lag_time": 0.0,
+            "mic": 0.11797752808988764,
+            "persister_fraction": 0.11797752808988764,
+            "survival": 0.8820224719101124
+          },
+          "replicates_max": 33,
+          "replicates_min": 4,
+          "sources": [
+            "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_C-limited_Fitness.csv",
+            "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_N-limited_Fitness.csv"
+          ]
+        },
+        "supported_test_ids": [
+          "R1-005",
+          "R1-009",
+          "R1-010"
+        ]
+      },
+      "benchmark_cases": {
+        "limitations": "Benchmark exploratoire dérivé de données réelles dans cinq domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "benchmark_domains": {
+            "antibiotic": 288,
+            "antibiotic_longitudinal": 739,
+            "matter_transition": 40,
+            "modern_climate": 1152,
+            "orbital": 1020,
+            "paleoclimate": 517,
+            "rna_evolution": 70,
+            "vesicle": 13680
+          },
+          "benchmark_rows": 17506,
+          "benchmark_splits": {
+            "test": 6552,
+            "train": 6405,
+            "validation": 4549
+          },
+          "biology_domains": {
+            "antibiotic": 288,
+            "antibiotic_longitudinal": 739,
+            "rna_evolution": 70,
+            "vesicle": 13680
+          },
+          "biology_rows": 14777
+        },
+        "supported_test_ids": [
+          "T1-001",
+          "T1-003",
+          "T1-004",
+          "T1-006",
+          "T1-007",
+          "T1-008",
+          "T1-010",
+          "T1-015",
+          "T1-016",
+          "T2-001",
+          "T2-002",
+          "T2-003",
+          "T2-004",
+          "T2-006",
+          "T2-007",
+          "T3-003",
+          "T3-004",
+          "T3-005",
+          "T3-007",
+          "T3-008",
+          "T4-001",
+          "T4-002",
+          "T4-003",
+          "T4-004",
+          "T5-001",
+          "T5-002",
+          "T5-003",
+          "T5-004",
+          "T5-005",
+          "T5-006",
+          "T5-007",
+          "T5-010"
+        ]
+      },
+      "biology_cases": {
+        "limitations": "Cas dérivés de deux domaines biologiques réels, avec séparation train/validation/test. Les six dimensions complètes et Pacc ne sont pas mesurés.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "domains": {
+            "antibiotic": 288,
+            "antibiotic_longitudinal": 739,
+            "rna_evolution": 70,
+            "vesicle": 13680
+          },
+          "rows": 14777
+        },
+        "supported_test_ids": [
+          "B3-005",
+          "B3-006",
+          "B3-007"
+        ]
+      },
+      "cell_architecture": {
+        "limitations": "Inventaire qualitatif couvrant archées, bactéries et plusieurs cellules eucaryotes. Pas de perturbations publiques, survie, récupération ou validation masquée.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "cell_types": [
+            "Archée",
+            "Bactérie",
+            "Cellule animale",
+            "Cellule fongique",
+            "Cellule végétale",
+            "Protiste"
+          ],
+          "rows": 13,
+          "source": "01_branche_matiere/inventaire_hierarchique/tables/11_Biologique.csv",
+          "source_sha256": "f08cb815e74a0068959722334c747fec6007c4417b85820db40efe6a1c5bd2e5"
+        },
+        "supported_test_ids": [
+          "B1-002"
+        ]
+      },
+      "partition_experiments": {
+        "limitations": "Neuf coefficients pour H, C, N et S. Trois lignes seulement possèdent simultanément P, T, ΔIW et logD; aucune trajectoire d'accrétion, planète ou validation aveugle n'est déduite.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "complete_regression_rows": 3,
+          "elements": [
+            "C",
+            "H",
+            "N",
+            "S"
+          ],
+          "rows": 9,
+          "source": "01_branche_matiere/hypergraphe_transformations/coefficients_partage.csv",
+          "source_sha256": "10a7a9c3acfa91a5e91b3cfb14cbb7c7f265ff252664b62d9b637c1e5292321b"
+        },
+        "supported_test_ids": [
+          "P3-001",
+          "P3-002"
+        ]
+      },
+      "prebiotic_design": {
+        "limitations": "Plan réel des transferts de vésicules. Température, pH, UV, minéral et cycles humide-sec ne sont pas renseignés dans ces fichiers et restent absents.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "rows": 32,
+          "source": "donnees_externes/vesicules_sokolskyi_baum_2026/raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip"
+        },
+        "supported_test_ids": [
+          "V1-001",
+          "V1-004",
+          "V1-006",
+          "V1-007"
+        ]
+      },
+      "prebiotic_lineages": {
+        "limitations": "Turbidité A400, cartes de transfert, sélection/dérive, alimentation/résuspension, durées de génération, séries temporelles et mesures auxiliaires. Aucune longueur de polymère, fidélité de copie, fusion/division directe ou autonomie métabolique n'est inventée.",
+        "scope_mode": "allow_list",
+        "summary": {
+          "coded_lineage_fraction": 1.0,
+          "conditions": [
+            "FR",
+            "FU",
+            "UR",
+            "UU"
+          ],
+          "figure3_measurements": 448,
+          "generation_durations_h": [
+            0.5,
+            1.5,
+            5.0,
+            24.0
+          ],
+          "lineage_nodes": 21439,
+          "log_auxiliary_measurements": 19392,
+          "log_auxiliary_types": {
+            "food_vesicle_turbidity_A400": 10944,
+            "nile_red_fluorescence": 6336,
+            "pre_amphiphile_turbidity_A400": 2112
+          },
+          "log_files": 16,
+          "parent_offspring_pairs": 13680,
+          "source": "donnees_externes/vesicules_sokolskyi_baum_2026/raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip",
+          "source_sha256": "2cf96ae6906c5d41a889d8deced000237cb1da2e083a1df526dc730130687863",
+          "timecourse_rows": 59328,
+          "timecourse_series": 576
+        },
+        "supported_test_ids": [
+          "V2-007",
+          "V2-008",
+          "V2-014",
+          "V2-029",
+          "V2-032",
+          "V2-035",
+          "V2-039",
+          "V2-040",
+          "V3-013",
+          "V3-014",
+          "V3-015",
+          "V3-018",
+          "V4-011",
+          "V4-015",
+          "V4-016",
+          "V4-019",
+          "V4-020",
+          "V6-004",
+          "V6-005",
+          "V6-006",
+          "V6-007",
+          "V6-008"
+        ]
+      }
+    },
+    "rule": "Une table partielle ne débloque que les protocoles réellement couverts. Les autres restent bloqués même si le fichier existe.",
+    "schema_version": 1
+  },
+  "data_summary": {
+    "antibiotic_design_rows": 10,
+    "antibiotic_independent_fitness_rows": 72,
+    "benchmark_cases": 17506,
+    "benchmark_domains": {
+      "antibiotic": 288,
+      "antibiotic_longitudinal": 739,
+      "matter_transition": 40,
+      "modern_climate": 1152,
+      "orbital": 1020,
+      "paleoclimate": 517,
+      "rna_evolution": 70,
+      "vesicle": 13680
+    },
+    "biology_cases": 14777,
+    "cell_architecture_rows": 13,
+    "partition_experiments": 9,
+    "prebiotic_figure3_measurements": 448,
+    "prebiotic_lineage_nodes": 21439,
+    "prebiotic_log_auxiliary_measurements": 19392,
+    "prebiotic_parent_offspring_pairs": 13680,
+    "prebiotic_timecourse_rows": 59328,
+    "prebiotic_timecourse_series": 576
+  },
+  "interpretation": "Une réussite technique signifie que le moteur a exécuté une analyse couverte par les données. Elle ne constitue pas automatiquement une confirmation scientifique.",
+  "scientific_counts": {
+    "does_not_support": 0,
+    "inconclusive": 0,
+    "not_applicable": 48,
+    "supports": 0,
+    "undetermined": 635
+  },
+  "unresolved_external_data": {
+    "endosymbiosis_events.csv": {
+      "candidate": "Jeu phylogénomique et métabolique construit depuis des sources publiées.",
+      "reason": "Le dépôt mentionne mitochondrie et chloroplaste, mais ne fournit pas des événements documentés avec transfert génique, intégration métabolique, dépendance et niveau de preuve.",
+      "tests": 12
+    },
+    "isotope_tracers.csv": {
+      "candidate": "Compilation isotopique Ti-Cr-Mo-W-Ni-Ru-Pd avec provenance ligne par ligne.",
+      "reason": "Aucune table échantillon-traceur-valeur-incertitude permettant le clustering des groupes météoritiques n'est présente.",
+      "tests": 10
+    },
+    "late_accretion_tracers.csv": {
+      "candidate": "Compilation Mo-Ru-W-Os-Ir-Au et modèles de mélange documentés.",
+      "reason": "Aucune table d'observations finales associées à des sources candidates d'accrétion tardive n'est présente.",
+      "tests": 10
+    },
+    "modern_climate_ensemble.csv": {
+      "candidate": "NASA GISTEMP KeySeries.zip pour les deux audits observationnels; CMIP/expériences dédiées restent nécessaires pour les trajectoires et restaurations.",
+      "reason": "Le dépôt contient GISTEMP observationnel, mais pas l'archive d'incertitude à 200 membres ni un ensemble multi-modèles/scénarios. L'ancien bilan annonçait 338 400 lignes sans que le fichier soit présent dans l'archive actuelle.",
+      "tests": 20
+    },
+    "nucleosynthesis_yields.csv": {
+      "candidate": "Tables de rendements NuGrid ou équivalent.",
+      "reason": "Les trajectoires MESA présentes décrivent des transitions stellaires, pas des rendements élémentaires par masse, métallicité et incertitude.",
+      "tests": 10
+    },
+    "planetary_histories.csv": {
+      "candidate": "Cas planétaires/météoritiques harmonisés avec couches historiques et partition finale.",
+      "reason": "Les éléments orbitaux J2000 et DE441 sont des états dynamiques, pas des histoires géochimiques complètes d'accrétion, redox, pertes et apports tardifs.",
+      "tests": 11
+    },
+    "reaction_network.csv + molecular_inventory.csv": {
+      "candidate": "KIDA/UMIST et un inventaire astronomique quantitatif.",
+      "reason": "L'inventaire hiérarchique contient des molécules qualitatives, mais aucun réseau versionné avec réactifs, produits, taux et plages de température, ni abondances observationnelles assorties d'incertitudes.",
+      "tests": 15
+    },
+    "thermochemical_phases.csv": {
+      "candidate": "Base thermodynamique quantitative Perple_X/JANAF ou équivalent avec licence et provenance.",
+      "reason": "La table 08_Phases.csv est un inventaire qualitatif. Elle ne contient pas les triplets température-pression-énergie de Gibbs nécessaires aux calculs de condensation.",
+      "tests": 15
+    },
+    "volatile_inventory.csv": {
+      "candidate": "Inventaires volatils quantitatifs de corps différenciés et météorites.",
+      "reason": "Les inventaires généraux du dépôt ne donnent pas, par échantillon, les masses initiale, noyau, manteau, atmosphère et pertes nécessaires à la fermeture de masse.",
+      "tests": 9
+    }
+  }
+}

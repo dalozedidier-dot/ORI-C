@@ -51,26 +51,18 @@ def run_campaign(specs: list[TestSpec], options: RunOptions) -> CampaignResult:
     started = datetime.now(timezone.utc)
     data = DataRegistry(options.data_dir)
     criteria = CriteriaRegistry.load(options.criteria_file)
+    coverage_payload = data.load_real_data_coverage() if options.real_data_only else {}
+    coverage_datasets = coverage_payload.get("datasets", {}) if coverage_payload else {}
     engine_cache: dict[str, EngineEvaluation] = {}
     results: list[TestResult] = []
 
     for spec in specs:
         t0 = time.perf_counter()
-        if options.real_data_only and spec.engine in GENERATIVE_OR_SIMULATION_ENGINES:
-            result = TestResult(
-                spec.test_id,
-                spec.wp,
-                Outcome.BLOCKED,
-                message="Moteur exclu par le mode données réelles strict: génération ou simulation requise.",
-                details={
-                    "mode": spec.mode.value,
-                    "engine": spec.engine,
-                    "description": spec.description,
-                    "real_data_only": True,
-                },
-                scientific_verdict=ScientificVerdict.UNDETERMINED,
-            )
-        elif spec.mode in NONCOMPUTATIONAL:
+
+        # Les protocoles humains, de laboratoire ou de réplication externe ne
+        # deviennent jamais des blocages informatiques, même s'ils partagent un
+        # moteur capable de générer un plan en mode non strict.
+        if spec.mode in NONCOMPUTATIONAL:
             outcome = Outcome.NOT_RUN if options.include_noncomputational else Outcome.SKIP
             message = (
                 "Protocole enregistré. Exécution humaine, expérimentale ou externe requise. "
@@ -89,47 +81,122 @@ def run_campaign(specs: list[TestSpec], options: RunOptions) -> CampaignResult:
                 scientific_verdict=ScientificVerdict.NOT_APPLICABLE,
             )
         else:
-            if spec.engine not in engine_cache:
-                engine_cache[spec.engine] = evaluate_engine(
-                    spec.engine,
-                    data,
-                    oric_root=options.oric_root,
-                    output_dir=options.output_dir / "generated",
-                    seed=options.seed,
+            uncovered: list[dict] = []
+            if options.real_data_only and coverage_datasets:
+                for dataset_name in spec.required_datasets:
+                    scope = coverage_datasets.get(dataset_name)
+                    if not scope or scope.get("scope_mode") != "allow_list":
+                        continue
+                    allowed = set(scope.get("supported_test_ids", []))
+                    if spec.test_id not in allowed:
+                        uncovered.append(
+                            {
+                                "dataset": dataset_name,
+                                "limitations": scope.get("limitations", ""),
+                                "supported_test_ids": sorted(allowed),
+                            }
+                        )
+
+            if uncovered:
+                result = TestResult(
+                    spec.test_id,
+                    spec.wp,
+                    Outcome.BLOCKED,
+                    message="Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",
+                    details={
+                        "mode": spec.mode.value,
+                        "engine": spec.engine,
+                        "description": spec.description,
+                        "real_data_only": True,
+                        "coverage_gaps": uncovered,
+                        "scientific_scope": "blocage de portée, pas absence du fichier",
+                    },
+                    scientific_verdict=ScientificVerdict.UNDETERMINED,
                 )
-            evaluation = engine_cache[spec.engine]
-            outcome = evaluation.outcome
-            if outcome == Outcome.BLOCKED and options.allow_missing_data:
-                outcome = Outcome.SKIP
-            details = dict(evaluation.details or {})
-            details.update(
-                {
-                    "mode": spec.mode.value,
-                    "engine": spec.engine,
-                    "description": spec.description,
-                    "execution_scope": (
-                        "Le statut technique porte sur le moteur partagé. Le verdict scientifique "
-                        "individuel exige un critère gelé propre au test."
-                    ),
-                }
-            )
-            scientific_verdict, criterion_metric, criterion_id = evaluate_criterion(
-                criteria.get(spec.test_id), details, evaluation.metric
-            )
-            if criterion_metric is not None:
-                details["criterion_metric"] = criterion_metric
-            result = TestResult(
-                spec.test_id,
-                spec.wp,
-                outcome,
-                evaluation.metric,
-                evaluation.threshold,
-                evaluation.message,
-                details,
-                list(evaluation.artifacts),
-                scientific_verdict=scientific_verdict,
-                criterion_id=criterion_id,
-            )
+            else:
+                # Un fichier de plan ne suffit pas à lever le verrou strict :
+                # il doit provenir du registre de couverture réelle et couvrir
+                # explicitement le test courant. Cette condition empêche les
+                # gabarits synthétiques des fixtures de devenir des données.
+                prebiotic_scope = coverage_datasets.get("prebiotic_design", {})
+                antibiotic_scope = coverage_datasets.get("antibiotic_design", {})
+                real_design_available = (
+                    spec.engine == "prebiotic_design"
+                    and data.exists("prebiotic_design")
+                    and spec.test_id in set(prebiotic_scope.get("supported_test_ids", []))
+                ) or (
+                    spec.engine == "antibiotic_design"
+                    and data.exists("antibiotic_design")
+                    and spec.test_id in set(antibiotic_scope.get("supported_test_ids", []))
+                )
+                if (
+                    options.real_data_only
+                    and spec.engine in GENERATIVE_OR_SIMULATION_ENGINES
+                    and not real_design_available
+                ):
+                    result = TestResult(
+                        spec.test_id,
+                        spec.wp,
+                        Outcome.BLOCKED,
+                        message="Moteur exclu par le mode données réelles strict: génération ou simulation requise.",
+                        details={
+                            "mode": spec.mode.value,
+                            "engine": spec.engine,
+                            "description": spec.description,
+                            "real_data_only": True,
+                        },
+                        scientific_verdict=ScientificVerdict.UNDETERMINED,
+                    )
+                else:
+                    if spec.engine not in engine_cache:
+                        engine_cache[spec.engine] = evaluate_engine(
+                            spec.engine,
+                            data,
+                            oric_root=options.oric_root,
+                            output_dir=options.output_dir / "generated",
+                            seed=options.seed,
+                        )
+                    evaluation = engine_cache[spec.engine]
+                    outcome = evaluation.outcome
+                    if outcome == Outcome.BLOCKED and options.allow_missing_data:
+                        outcome = Outcome.SKIP
+                    details = dict(evaluation.details or {})
+                    details.update(
+                        {
+                            "mode": spec.mode.value,
+                            "engine": spec.engine,
+                            "description": spec.description,
+                            "execution_scope": (
+                                "Le statut technique porte sur le moteur partagé. Le verdict scientifique "
+                                "individuel exige un critère gelé propre au test."
+                            ),
+                        }
+                    )
+                    if options.real_data_only:
+                        scopes = {
+                            name: coverage_datasets[name]
+                            for name in spec.required_datasets
+                            if name in coverage_datasets
+                        }
+                        if scopes:
+                            details["real_data_scope"] = scopes
+                    scientific_verdict, criterion_metric, criterion_id = evaluate_criterion(
+                        criteria.get(spec.test_id), details, evaluation.metric
+                    )
+                    if criterion_metric is not None:
+                        details["criterion_metric"] = criterion_metric
+                    result = TestResult(
+                        spec.test_id,
+                        spec.wp,
+                        outcome,
+                        evaluation.metric,
+                        evaluation.threshold,
+                        evaluation.message,
+                        details,
+                        list(evaluation.artifacts),
+                        scientific_verdict=scientific_verdict,
+                        criterion_id=criterion_id,
+                    )
         result.duration_s = time.perf_counter() - t0
         results.append(result)
 
@@ -152,5 +219,7 @@ def run_campaign(specs: list[TestSpec], options: RunOptions) -> CampaignResult:
                 "le verdict scientifique reste undetermined."
             ),
             "real_data_only": options.real_data_only,
+            "real_data_coverage_registry": bool(coverage_payload),
+            "scoped_real_datasets": sorted(coverage_datasets),
         },
     )

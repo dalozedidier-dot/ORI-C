@@ -87,6 +87,22 @@ class DataRegistry:
     def validate_many(self, names: Iterable[str]) -> dict[str, pd.DataFrame]:
         return {name: self.validate(name) for name in names}
 
+
+    def load_real_data_coverage(self) -> dict:
+        """Charge le registre de portée des tables réelles partielles.
+
+        L'absence du fichier conserve le comportement historique. Lorsqu'il
+        existe, une table ne peut débloquer que les tests explicitement listés.
+        """
+        path = self.data_dir / "REAL_DATA_COVERAGE.json"
+        if not path.exists():
+            return {}
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        datasets = payload.get("datasets", {})
+        if not isinstance(datasets, dict):
+            raise DatasetValidationError("REAL_DATA_COVERAGE.json: champ datasets invalide")
+        return payload
+
     def write_schema_index(self, path: Path) -> None:
         payload = {
             name: {

@@ -92,7 +92,14 @@ def partition_meta_regression(frame: pd.DataFrame) -> PlanetaryAnalysis:
         f[col] = pd.to_numeric(f[col], errors="coerce")
     f = f.dropna(subset=["logD", "pressure_gpa", "temperature_k", "delta_iw"])
     if len(f) < 8:
-        return PlanetaryAnalysis({"r2": float("nan")}, {"reason": "Données insuffisantes"})
+        return PlanetaryAnalysis(
+            {"r2": float("nan"), "rmse": float("nan"), "n": float(len(f))},
+            {
+                "reason": "Données insuffisantes pour la méta-régression",
+                "minimum_required": 8,
+                "interpretation_limit": "La compilation et l'harmonisation restent auditables; aucun ajustement n'est revendiqué.",
+            },
+        )
     model = ols("logD ~ pressure_gpa + temperature_k + delta_iw + C(element)", data=f).fit()
     return PlanetaryAnalysis(
         {"r2": float(model.rsquared), "rmse": float(np.sqrt(np.mean(model.resid**2))), "n": float(len(f))},

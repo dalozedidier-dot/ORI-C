@@ -144,8 +144,14 @@ def numeric_matrix(path: Path, sheet: str) -> pd.DataFrame:
         recognized = _infer_missing_generation_columns(raw, plate, recognized)
         selected = sorted(recognized.items())
     else:
-        # FU2 et FU3 n'ont aucun en-tête, mais leurs colonnes sont déjà dans
-        # l'ordre générationnel après la colonne des puits.
+        selected = []
+
+    # Plusieurs classeurs réels à génération courte (FR-30min, FR-90min,
+    # FR-5hr) n'étiquettent que G0, voire aucun en-tête, alors que les colonnes
+    # numériques suivantes sont ordonnées génération par génération. Lorsque
+    # moins de deux générations sont identifiables par leur nom, utiliser cet
+    # ordre explicite sans inventer de colonne ni de valeur.
+    if len(selected) < 2:
         numeric_columns = [
             column
             for column in range(1, raw.shape[1])

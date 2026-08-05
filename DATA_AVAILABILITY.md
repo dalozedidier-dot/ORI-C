@@ -58,3 +58,17 @@ Les données restent tierces. Leur intégration ne les transforme pas en product
 ### Résilience de l'acquisition active
 
 Le workflow contrôle les données intégrées en mode hors ligne par défaut. Un rafraîchissement distant reste possible sur demande avec `telecharger_donnees`, mais un refus HTTP du fournisseur n'est plus nécessaire à l'exécution reproductible. Le client conserve la résolution par DOI, la validation de format, le repli vers l'archive complète et le remplacement atomique pour les rafraîchissements volontaires.
+
+## Intégration maximale des données déjà présentes
+
+Avant la campagne complète, `plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py` raccorde désormais les jeux réels dispersés dans les trois branches. Il n'utilise jamais les gabarits synthétiques de `examples/data` et ne remplit aucune valeur absente.
+
+Les tables produites, leurs volumes, leur provenance et leur portée sont documentés dans :
+
+- `plateforme/campagne_maximale_reelle/DONNEES_UTILISEES_MAXIMUM.md`
+- `plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md`
+- `plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json`
+- `plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json`
+- `plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md`
+
+Le registre de portée empêche une table partielle de valider des protocoles qu'elle ne mesure pas. Les données GISTEMP observationnelles ne sont notamment pas requalifiées en ensemble climatique multi-modèles, et les états orbitaux ne sont pas requalifiés en histoires géochimiques planétaires.

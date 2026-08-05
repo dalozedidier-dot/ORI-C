@@ -25,5 +25,12 @@ def test_real_only_blocks_generators(tmp_path: Path):
     generate_all(data_dir, seed=9)
     specs = [spec for spec in Registry.load().all() if spec.engine in {"core_formal", "prebiotic_design"}]
     campaign = run_campaign(specs, RunOptions(data_dir=data_dir, real_data_only=True))
-    assert campaign.counts["blocked"] == len(specs)
-    assert all(result.details.get("real_data_only") for result in campaign.results)
+    computational = [spec for spec in specs if spec.mode.value not in {"laboratory", "human_review", "external_replication"}]
+    noncomputational = len(specs) - len(computational)
+    assert campaign.counts["blocked"] == len(computational)
+    assert campaign.counts["not_run"] == noncomputational
+    assert all(
+        result.details.get("real_data_only")
+        for result in campaign.results
+        if result.outcome.value == "blocked"
+    )

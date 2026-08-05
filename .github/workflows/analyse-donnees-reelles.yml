@@ -81,6 +81,12 @@ jobs:
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
           python -m pip install --no-build-isolation --no-deps -e plateforme/source_corrigee
 
+      - name: Intégrer toutes les données réelles déjà présentes
+        run: |
+          python plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py \
+            --data-dir "$DATA" \
+            | tee "$OUT/logs/integration_donnees_existantes.log"
+
       - name: Auditer la plateforme et valider les données
         run: |
           python -m oric_full audit --output "$OUT/resultats/platform_audit.json" \
@@ -136,12 +142,24 @@ jobs:
             --oric-root "$GITHUB_WORKSPACE" \
             | tee "$OUT/logs/campagne_complete.log"
 
+      - name: Produire le bilan transparent des 683 entrées
+        if: ${{ inputs.campagne == 'complete' }}
+        run: |
+          python plateforme/campagne_maximale_reelle/resumer_integration_maximale.py \
+            --results-json "$OUT/resultats/campagne_complete/results.json" \
+            --data-dir "$DATA" \
+            --output-dir "$OUT/resultats" \
+            | tee "$OUT/logs/bilan_integration_maximale.log"
+
       - name: Rassembler provenance, bilan et métadonnées
         if: always()
         run: |
           cp plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md "$OUT/resultats/" || true
           cp plateforme/campagne_maximale_reelle/EXCLUSIONS.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md "$OUT/resultats/" || true
           cp plateforme/campagne_maximale_reelle/PROVENANCE_*.json "$OUT/resultats/" 2>/dev/null || true
+          cp "$DATA/REAL_DATA_COVERAGE.json" "$OUT/resultats/" || true
           python - <<'PY'
           import json
           import os

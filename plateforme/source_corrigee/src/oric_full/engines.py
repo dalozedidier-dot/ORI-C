@@ -205,8 +205,19 @@ def evaluate_engine(
             return _pass("Population thermique simulée", result.metrics["differentiate_fraction"], result.details | result.metrics)
 
         if engine == "metal_silicate":
-            result = partition_meta_regression(data.validate("partition_experiments"))
-            return _pass("Méta-régression métal-silicate exécutée", result.metrics["r2"], result.details | result.metrics)
+            frame = data.validate("partition_experiments")
+            result = partition_meta_regression(frame)
+            details = result.details | result.metrics
+            complete = int(pd.to_numeric(frame["logD"], errors="coerce").notna().sum())
+            details["compiled_rows"] = int(len(frame))
+            details["logD_rows"] = complete
+            if math.isfinite(float(result.metrics.get("r2", float("nan")))):
+                return _pass("Méta-régression métal-silicate exécutée", result.metrics["r2"], details)
+            return _pass(
+                "Expériences métal-silicate compilées et harmonisées; méta-régression non revendiquée faute d'effectif complet",
+                float(len(frame)),
+                details,
+            )
 
         if engine == "volatile_budget":
             result = volatile_closure(data.validate("volatile_inventory"))
@@ -313,6 +324,30 @@ def evaluate_engine(
             return _pass("GISTEMP audité comme reconstruction observationnelle avec incertitude", result.metrics["observation_rows"], result.details | result.metrics)
 
         if engine == "prebiotic_design":
+            if data.exists("prebiotic_design"):
+                design = data.validate("prebiotic_design")
+                details = {
+                    "rows": int(len(design)),
+                    "conditions": int(design["condition_id"].nunique()),
+                    "replicates": int(pd.to_numeric(design["replicate"], errors="coerce").nunique()),
+                    "measured_factors": {},
+                    "unmeasured_required_factors": [],
+                }
+                for column in ["temperature", "ph", "wet_dry_cycles", "uv_flux", "mineral"]:
+                    measured = int(design[column].notna().sum())
+                    details["measured_factors"][column] = measured
+                    if measured == 0:
+                        details["unmeasured_required_factors"].append(column)
+                for column in ["experiment_condition", "arm", "generation_duration_h", "fed", "resuspended", "source_file"]:
+                    if column in design.columns:
+                        details[f"{column}_values"] = sorted(
+                            design[column].dropna().astype(str).unique().tolist()
+                        )[:100]
+                details["interpretation_limit"] = (
+                    "Audit du plan expérimental réellement publié. Les facteurs non publiés restent absents; "
+                    "aucun plan factoriel n'est généré en mode réel strict."
+                )
+                return _pass("Plan réel des lignées de vésicules audité", float(len(design)), details)
             design = generate_factorial_design({"temperature": [25, 50, 80], "ph": [5, 7, 9], "wet_dry_cycles": [0, 10], "uv_flux": [0, 1], "mineral": ["none", "clay"]}, replicates=3)
             artifact = ()
             if output_dir:
@@ -337,7 +372,68 @@ def evaluate_engine(
                 result = transition_to_heredity(frame)
             else:
                 result = analyze_prebiotic_coupling(frame)
-            return _pass("Lignées prébiotiques analysées", next(iter(result.metrics.values()), None), result.details | result.metrics)
+            details = result.details | result.metrics
+            details.update({
+                "lineage_rows": int(len(frame)),
+                "conditions": sorted(frame.get("condition", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()),
+                "arms": sorted(frame.get("arm", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()),
+                "generation_durations_h": sorted(pd.to_numeric(frame.get("generation_duration_h", pd.Series(dtype=float)), errors="coerce").dropna().unique().tolist()),
+            })
+            auxiliaries = {
+                "parent_offspring_pairs": "prebiotic_parent_offspring_pairs.csv",
+                "timecourse_rows": "prebiotic_timecourses.csv",
+                "timecourse_series": "prebiotic_timecourse_summary.csv",
+                "auxiliary_measurements": "prebiotic_auxiliary_measurements.csv",
+                "log_auxiliary_measurements": "prebiotic_log_auxiliary_measurements.csv",
+            }
+            auxiliary_frames: dict[str, pd.DataFrame] = {}
+            for key, filename in auxiliaries.items():
+                path = data.data_dir / filename
+                if path.exists():
+                    try:
+                        auxiliary_frames[key] = pd.read_csv(path)
+                        details[key] = int(len(auxiliary_frames[key]))
+                    except Exception as exc:
+                        details[f"{key}_read_error"] = repr(exc)
+            pairs_frame = auxiliary_frames.get("parent_offspring_pairs")
+            if pairs_frame is not None and len(pairs_frame):
+                pairs_frame["parent"] = pd.to_numeric(pairs_frame["parent"], errors="coerce")
+                pairs_frame["offspring"] = pd.to_numeric(pairs_frame["offspring"], errors="coerce")
+                details["parent_offspring_correlation"] = float(pairs_frame["parent"].corr(pairs_frame["offspring"]))
+                details["coded_lineage_fraction"] = float((pairs_frame["mapping_mode"] == "coded_lineage").mean())
+                arm_means = pairs_frame.groupby(["condition", "arm"])["offspring"].mean().unstack("arm")
+                if {"selection", "drift"}.issubset(arm_means.columns):
+                    details["selection_response_by_condition"] = (
+                        arm_means["selection"] - arm_means["drift"]
+                    ).dropna().astype(float).to_dict()
+            timecourse = auxiliary_frames.get("timecourse_series")
+            if timecourse is not None and len(timecourse):
+                for column in ["linear_slope_per_hour", "peak_gain", "post_peak_loss"]:
+                    timecourse[column] = pd.to_numeric(timecourse[column], errors="coerce")
+                details["timecourse_medians_by_condition"] = {
+                    str(condition): {key: float(value) for key, value in row.items() if pd.notna(value)}
+                    for condition, row in timecourse.groupby("condition")[[
+                        "linear_slope_per_hour", "peak_gain", "post_peak_loss"
+                    ]].median().to_dict("index").items()
+                }
+            fig3 = auxiliary_frames.get("auxiliary_measurements")
+            if fig3 is not None and len(fig3):
+                details["fig3_panel_counts"] = fig3.groupby("panel").size().astype(int).to_dict()
+                details["fig3_panel_medians"] = pd.to_numeric(fig3["value"], errors="coerce").groupby(fig3["panel"]).median().astype(float).to_dict()
+            log_aux = auxiliary_frames.get("log_auxiliary_measurements")
+            if log_aux is not None and len(log_aux):
+                log_aux["value"] = pd.to_numeric(log_aux["value"], errors="coerce")
+                details["log_auxiliary_counts"] = log_aux.groupby("measurement").size().astype(int).to_dict()
+                details["log_auxiliary_medians"] = {
+                    f"{measurement}:{arm}": float(value)
+                    for (measurement, arm), value in log_aux.groupby(["measurement", "arm"])["value"].median().dropna().items()
+                }
+            details["interpretation_limit"] = (
+                str(details.get("interpretation_limit", "")) + " "
+                "Les fichiers auxiliaires sont comptés séparément et ne remplissent jamais les colonnes "
+                "moléculaires absentes du schéma minimal."
+            ).strip()
+            return _pass("Lignées et mesures réelles de vésicules analysées", next(iter(result.metrics.values()), None), details)
 
         if engine == "cell_architecture":
             result = analyze_cell_architecture(data.validate("cell_architecture"))
@@ -349,9 +445,37 @@ def evaluate_engine(
 
         if engine == "biology_value":
             result = biological_history_value(data.validate("biology_cases"))
-            return _pass("Valeur de l'histoire en biologie estimée", result.metrics["history_resolution_fraction"], result.details | result.metrics)
+            metric = result.metrics.get("history_balanced_accuracy_gain", result.metrics["history_resolution_fraction"])
+            return _pass("Valeur prédictive exploratoire de l'histoire en biologie estimée", metric, result.details | result.metrics)
 
         if engine == "antibiotic_design":
+            if data.exists("antibiotic_design"):
+                design = data.validate("antibiotic_design")
+                reps = pd.to_numeric(design["replicates"], errors="coerce")
+                details = {
+                    "arms": int(len(design)),
+                    "species": sorted(design["species"].dropna().astype(str).unique().tolist()),
+                    "antibiotics": sorted(design["antibiotic"].dropna().astype(str).unique().tolist()),
+                    "replicates_min": int(reps.min()) if reps.notna().any() else 0,
+                    "replicates_max": int(reps.max()) if reps.notna().any() else 0,
+                    "arms_with_12_or_more_lineages": int((reps >= 12).sum()),
+                }
+                measurements = data.validate("antibiotic_measurements") if data.exists("antibiotic_measurements") else None
+                if measurements is not None:
+                    details["measurement_coverage"] = {
+                        column: float(pd.to_numeric(measurements[column], errors="coerce").notna().mean())
+                        for column in ["mic", "lag_time", "growth_rate", "survival", "persister_fraction", "fitness"]
+                    }
+                fitness_path = data.data_dir / "antibiotic_fitness_real.csv"
+                if fitness_path.exists():
+                    fitness = pd.read_csv(fitness_path)
+                    details["independent_fitness_rows"] = int(len(fitness))
+                    details["fitness_limitations"] = sorted(fitness.get("limitation", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
+                details["interpretation_limit"] = (
+                    "Audit des plans et mesures publiés; aucune randomisation, espèce, biofilm ou mesure "
+                    "manquante n'est ajoutée par génération."
+                )
+                return _pass("Plan antibiotique réel et couverture des mesures audités", float(len(design)), details)
             design, cycles = generate_exposure_histories(["A", "B"], [0.25, 0.5, 1.0, 2.0], cycles=12, replicates=6)
             artifacts = []
             if output_dir:

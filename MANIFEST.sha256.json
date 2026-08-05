@@ -11,8 +11,8 @@
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 6513,
-      "sha256": "acc86bed1affe23f2627d26ada43d26b92b24c0cb7282ef2e0c3e7ea28ced294",
+      "size": 7499,
+      "sha256": "db5bd7f296682b4a550f16df35faf782651165c7529a3d043f0cc57a4280f3d8",
       "storage": "inline"
     },
     {
@@ -4169,8 +4169,8 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
-      "size": 16714,
-      "sha256": "bcdb2a645160f6eeaaf9a3715f2d952da6f3e582707f476e76baec966ea26f1e",
+      "size": 17003,
+      "sha256": "f037e2f829990b6ab63815dd12d419ada334a011190f8462474b0b164d1065f6",
       "storage": "inline"
     },
     {
@@ -4295,8 +4295,8 @@
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "size": 5134,
-      "sha256": "bfdb0a19eef5ce9734e92f9cd575f422b90dcb08bad3eeb6fed17705d4762140",
+      "size": 6223,
+      "sha256": "af3a2a7ac640d81c620171614fdb25bdbf8b4328c99a0755fa6553465ff94f27",
       "storage": "inline"
     },
     {
@@ -4337,8 +4337,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 2694,
-      "sha256": "f58537a5277bdd0b88ff9f242d958c9e24179a911fe45cc7ee0e4eaec448aaac",
+      "size": 5367,
+      "sha256": "ef4b3f245664686c1a63509dd39c7f12d1ee38489d0a8796fbd35b51e1eea7b5",
       "storage": "inline"
     },
     {
@@ -5380,6 +5380,18 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
+      "size": 13351,
+      "sha256": "d405da7398b4719bdfd2211fc9bbfce0b75a0a234a5e877446b53756a7dc96ed",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md",
+      "size": 6189,
+      "sha256": "e921eb9ed5e0128716a4b3d1c69d88d300b7a78f116c455a1de33ec0df21421a",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/BILAN.md",
       "size": 4830,
       "sha256": "5456f2ae201b260a9714dbe44577755870253147d6f0c9a5972dbf56894364af",
@@ -5387,8 +5399,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md",
-      "size": 2028,
-      "sha256": "5aa4c5b8fb10559858187da3c1c952e3ca3053f5b505ab6ebaeb7c3c300eed02",
+      "size": 4453,
+      "sha256": "e15b9c4c13b717b94627719a01c8fea86d96bdaff11f74392b8bed5b6a54d536",
       "storage": "inline"
     },
     {
@@ -5398,9 +5410,21 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/DONNEES_UTILISEES_MAXIMUM.md",
+      "size": 1811,
+      "sha256": "eabceb3a11eb6b40d61003b46f7c9d418da58fc49039cc945a10ce0e25b03f78",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/EXCLUSIONS.md",
       "size": 2530,
       "sha256": "1d49a27484947832b2cb2481b1388ed9a331d631e01392940d48d7c015dfc165",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md",
+      "size": 5459,
+      "sha256": "3305fab3788912ab869720668e6ccde54704de424987ce3e1202b6a3fa2d04de",
       "storage": "inline"
     },
     {
@@ -5419,6 +5443,12 @@
       "path": "plateforme/campagne_maximale_reelle/PROVENANCE_GISTEMP.json",
       "size": 1207,
       "sha256": "b99b8e9889873522642fbf6a76043e0bd9994c45cee5d7ecedab825a1a6a124e",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json",
+      "size": 4282,
+      "sha256": "154881fd133ea9d4bda06a3c44c219b7008b77a17296695e2b3272159aacf6b0",
       "storage": "inline"
     },
     {
@@ -5446,15 +5476,51 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json",
+      "size": 7050,
+      "sha256": "4f55fb7b062d2cb5440a42deec08af0e830910133e7b4387da927ac5ad40b08b",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/antibiotic_cycles.csv",
       "size": 42725,
       "sha256": "0bec85374e4669b13110368d201676799a362c1d9761e2a0afdf4a1fc07ca579",
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/antibiotic_design.csv",
+      "size": 1252,
+      "sha256": "4540c923c5cf8043f12761185f5e166d7353cf1eec171286dac3d06f845ef7d9",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/antibiotic_fitness_real.csv",
+      "size": 6891,
+      "sha256": "ab26822c8efc8dacd38b8e67052201069d49d32d411a8d1aec2a51356e3b5e25",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/antibiotic_measurements.csv",
       "size": 38193,
       "sha256": "a537b7b3c15224b28744ce216492c6e2689dce3df139896bc19a996a37fc7cf2",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/benchmark_cases.csv",
+      "size": 5506428,
+      "sha256": "1829227181bf359a96113866a76936dd0ce6bbff4b33402ce0f5410b269936bb",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/biology_cases.csv",
+      "size": 4278110,
+      "sha256": "0834b14fa3d7aebdf68f212a4dbc3f25cbc9d6cc76cba74e4b76e121bf0765fd",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/cell_architecture.csv",
+      "size": 3161,
+      "sha256": "c60eb54d46da5eff478a6ca4e709ca3a4da52ac49fb2a3e70b4a07921857a1a7",
       "storage": "inline"
     },
     {
@@ -5518,9 +5584,57 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/partition_experiments.csv",
+      "size": 1683,
+      "sha256": "20e7b35942dab95303fbe7bab11a4b1bfa126387b35fc8395c822c8687f08058",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_auxiliary_measurements.csv",
+      "size": 26784,
+      "sha256": "afca34e984a3cea9ecd4bf702a072cfbd6e185f205756c9669eee3f06b88988c",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_design.csv",
+      "size": 2901,
+      "sha256": "0dc21af952fd670004f6fb8d794436da9be9047f05e64026ef4e8cf724bc854e",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv",
+      "size": 2685427,
+      "sha256": "45239f4b8d33827deda589d8a43e695dc0558ed578c0740dc7660daafbd74fba",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_log_auxiliary_measurements.csv",
+      "size": 1466773,
+      "sha256": "ca4c37a9575d094b7300e8a35c6388201043b7ecda31f4ce19466b15c7b76350",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_parent_offspring_pairs.csv",
+      "size": 1049123,
+      "sha256": "3d4f649d25a8e32d8f730cf73a376b3e1fa002a47af6ecc52dc5c2501cb47643",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/prebiotic_rna_evolution.csv",
       "size": 7695,
       "sha256": "9afd63ef76360bf9a561a059c7bce89132a91b5ba9dbea1fce3ff66a0e410729",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_timecourse_summary.csv",
+      "size": 57393,
+      "sha256": "d0c126b52860a7f7374faf0e68afd883782485736963b0e1c02fd7d6a7a7d19c",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/prebiotic_timecourses.csv",
+      "size": 2799709,
+      "sha256": "d6efa7b5ee8a78989a41b7f097722a1de9be28f1420676188401cbc5b57d48fc",
       "storage": "inline"
     },
     {
@@ -5539,6 +5653,12 @@
       "path": "plateforme/campagne_maximale_reelle/degradation_phase_vs_spectre.json",
       "size": 2290,
       "sha256": "6985113ce366d3e55673162cc264b70c39ca1ba44157a77ef789d51defaa3896",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py",
+      "size": 48631,
+      "sha256": "7733e9512dbad17f371e3bf8722b9fa38f0959a6d7a64914e536f6774b0bf3a9",
       "storage": "inline"
     },
     {
@@ -5728,6 +5848,24 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/REPORT.md",
+      "size": 43782,
+      "sha256": "61d8834c7c616cd33a910bfc7f61c76777a48229872e9469478d04d94b9fbf6b",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.csv",
+      "size": 92597,
+      "sha256": "17d14a0f4fc4eedec04726507c79a6804c835d415a12b487175a5773cb0ec3ed",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json",
+      "size": 3200921,
+      "sha256": "3861b5e294bbd237a04a85a39bbd0e000e03fcbabc681706fd02506afa0166af",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/resultats_reels_etendus/REPORT.md",
       "size": 18254,
       "sha256": "a0e33bba41f2e4f19e952ebfa6297ec893594c693824da7264e405bf50f88eee",
@@ -5743,6 +5881,12 @@
       "path": "plateforme/campagne_maximale_reelle/resultats_reels_etendus/results.json",
       "size": 2814976,
       "sha256": "2c6c5346fd01c4e8799edddea27f3e1555425675b63851337befd68f1fc509c6",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resumer_integration_maximale.py",
+      "size": 9418,
+      "sha256": "4fb70048a61be91be9365e15e6df8c06a56b4c42840f77a1f7e9bbda873dfffd",
       "storage": "inline"
     },
     {
@@ -6629,8 +6773,8 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/data_registry.py",
-      "size": 8771,
-      "sha256": "4c0c1e34f457b1a04b4b0e8741a2b6143c41f1aa9f90b94cff3aa5aa1a61c41e",
+      "size": 9442,
+      "sha256": "610e3041a3d9e3a7f96fc5e3a35401f666d3642f44a40e3cb99701cf4329c485",
       "storage": "inline"
     },
     {
@@ -6653,14 +6797,14 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/benchmark.py",
-      "size": 3202,
-      "sha256": "a6688ff07500530f9acfcd10cdb5463395eeac85290faec8a0c1ce1b23e0db25",
+      "size": 6291,
+      "sha256": "54975631fa2e482fa36388d0bebf81116984b9b2ccb64a8a0ebcc395beeefed7",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/biology.py",
-      "size": 3116,
-      "sha256": "4bf03bb7358305d6f40fda67e2c4db5620a4cf2ce78821062036e80fb5b1407d",
+      "size": 8534,
+      "sha256": "3ec3202d1d3e7b1920e2a853f8d1450c5ea56e93ce9ecf4661668475b3eda4ab",
       "storage": "inline"
     },
     {
@@ -6677,20 +6821,20 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/planetary.py",
-      "size": 8162,
-      "sha256": "8afe5e2f37b75cb46ef5f9df0ad90c5e73aa7431afbfc8daa9ef62cb4c91e502",
+      "size": 8468,
+      "sha256": "7a2019223b4bf9a519f08ff1052829236f9a32bf86eb2edf013966a49718a9de",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/prebiotic.py",
-      "size": 5059,
-      "sha256": "f17cb17b965e8005125628b2f293fcebe892cdbef6a1be0841cad1c76f36919e",
+      "size": 7780,
+      "sha256": "6236bad390f990e54fe1e053d78517d1574cd43366ee6096a67d59f199f20f09",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/engines.py",
-      "size": 22853,
-      "sha256": "c5f44731998cb50bc08943cd3be612c9c32fbd0a11327f98250db3da4efbf7f7",
+      "size": 31337,
+      "sha256": "a0f398526b4d9ac77a71cd38860b25c504dbfee2eeff13c00d4302d128ec849d",
       "storage": "inline"
     },
     {
@@ -6767,8 +6911,8 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/runner.py",
-      "size": 6005,
-      "sha256": "dc45b42f2ea7de194ea7c1b9730e90672ecb88646bccf2f57c740ad8722ddc38",
+      "size": 10037,
+      "sha256": "15aac426b29bc48df6756ae45a4d5d7ec8d69f782eac49148ace5d7a333d5638",
       "storage": "inline"
     },
     {
@@ -6826,9 +6970,15 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/source_corrigee/tests/test_real_data_scope.py",
+      "size": 2198,
+      "sha256": "775a993f76c560b114194e6e5106c24b79910f80a281ea4bb7fa3095142629b0",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/source_corrigee/tests/test_runner.py",
-      "size": 1209,
-      "sha256": "dcd345933986deb2fb28400861176bb82c9c67a02d892e045a29d92795d37382",
+      "size": 1523,
+      "sha256": "dfa8521085b8b6a92be1bf5fdddb687758c7adf8fb21b93b538df95ff896c505",
       "storage": "inline"
     },
     {

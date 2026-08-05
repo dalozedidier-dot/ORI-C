@@ -51,35 +51,89 @@ def lineage_graph(frame: pd.DataFrame) -> nx.DiGraph:
 
 def analyze_prebiotic_coupling(frame: pd.DataFrame) -> PrebioticAnalysis:
     f = frame.copy()
-    metrics_cols = ["yield", "polymer_length", "compartment_stability", "copy_fidelity"]
-    for col in metrics_cols:
+    declared_metrics = ["yield", "polymer_length", "compartment_stability", "copy_fidelity"]
+    measured_metrics: list[str] = []
+    for col in declared_metrics:
         f[col] = pd.to_numeric(f[col], errors="coerce")
-    corr = f[metrics_cols].corr(method="spearman")
-    # geometric mean pénalise les systèmes bons sur un seul axe et nuls sur un autre
-    normalized = f[metrics_cols].rank(pct=True).clip(1e-6, 1.0)
-    coupling = np.exp(np.log(normalized).mean(axis=1))
+        if f[col].notna().any():
+            measured_metrics.append(col)
+    if not measured_metrics:
+        return PrebioticAnalysis(
+            {"lineage_depth": 0.0, "measured_metric_count": 0.0},
+            {"reason": "Aucune métrique numérique mesurée"},
+        )
+    normalized = f[measured_metrics].rank(pct=True).clip(1e-6, 1.0)
+    coupling = np.exp(np.log(normalized).mean(axis=1, skipna=True))
     graph = lineage_graph(f)
     longest = nx.dag_longest_path_length(graph) if nx.is_directed_acyclic_graph(graph) and len(graph) else 0
+    if len(measured_metrics) >= 2:
+        corr = f[measured_metrics].corr(method="spearman")
+        off_diagonal = corr.where(~np.eye(len(corr), dtype=bool)).stack()
+        min_corr = float(off_diagonal.min()) if len(off_diagonal) else float("nan")
+        corr_details = corr.to_dict()
+    else:
+        min_corr = float("nan")
+        corr_details = {}
+    finite_coupling = coupling.replace([np.inf, -np.inf], np.nan).dropna()
     return PrebioticAnalysis(
         {
-            "median_coupling_score": float(np.median(coupling)),
-            "max_coupling_score": float(np.max(coupling)),
+            "median_coupling_score": float(finite_coupling.median()) if len(finite_coupling) else float("nan"),
+            "max_coupling_score": float(finite_coupling.max()) if len(finite_coupling) else float("nan"),
             "lineage_depth": float(longest),
-            "metric_min_correlation": float(corr.where(~np.eye(len(corr), dtype=bool)).min().min()),
+            "metric_min_correlation": min_corr,
+            "measured_metric_count": float(len(measured_metrics)),
         },
-        {"correlation": corr.to_dict(), "coupling_scores": coupling.tolist()},
+        {
+            "correlation": corr_details,
+            "measured_metrics": measured_metrics,
+            "unmeasured_metrics": [name for name in declared_metrics if name not in measured_metrics],
+            "interpretation_limit": (
+                "Le score utilise uniquement les colonnes réellement mesurées. Les colonnes absentes "
+                "restent absentes et ne sont jamais remplacées par zéro ou par une valeur supposée."
+            ),
+        },
     )
 
 
 def transition_to_heredity(frame: pd.DataFrame, fidelity_threshold: float = 0.9, generations: int = 3) -> PrebioticAnalysis:
     f = frame.copy()
     f["copy_fidelity"] = pd.to_numeric(f["copy_fidelity"], errors="coerce")
+    f["compartment_stability"] = pd.to_numeric(f["compartment_stability"], errors="coerce")
     f["generation"] = pd.to_numeric(f["generation"], errors="coerce")
-    viable = f[(f["copy_fidelity"] >= fidelity_threshold) & (f["compartment_stability"] > 0)]
-    sustained = viable.groupby("lineage_id")["generation"].nunique() >= generations
+    graph = lineage_graph(f)
+    depth = nx.dag_longest_path_length(graph) if nx.is_directed_acyclic_graph(graph) and len(graph) else 0
+    parent_nodes = set(graph.nodes)
+    transmitted = {node for node in parent_nodes if graph.out_degree(node) > 0}
+    leaves = {node for node in parent_nodes if graph.out_degree(node) == 0}
+    measurable_fidelity = int(f["copy_fidelity"].notna().sum())
+    measurable_stability = int(f["compartment_stability"].notna().sum())
+    if measurable_fidelity and measurable_stability:
+        viable = f[(f["copy_fidelity"] >= fidelity_threshold) & (f["compartment_stability"] > 0)]
+        sustained = viable.groupby("condition_id")["generation"].nunique() >= generations
+        candidate_count = float(sustained.sum())
+        candidate_fraction = float(sustained.mean()) if len(sustained) else 0.0
+    else:
+        candidate_count = float("nan")
+        candidate_fraction = float("nan")
     return PrebioticAnalysis(
-        {"candidate_hereditary_lineages": float(sustained.sum()), "candidate_fraction": float(sustained.mean()) if len(sustained) else 0.0},
-        {"fidelity_threshold": fidelity_threshold, "generations": generations},
+        {
+            "candidate_hereditary_lineages": candidate_count,
+            "candidate_fraction": candidate_fraction,
+            "lineage_depth": float(depth),
+            "transmitted_node_fraction": float(len(transmitted) / max(len(parent_nodes), 1)),
+            "terminal_node_fraction": float(len(leaves) / max(len(parent_nodes), 1)),
+            "measured_copy_fidelity_rows": float(measurable_fidelity),
+            "measured_compartment_stability_rows": float(measurable_stability),
+        },
+        {
+            "fidelity_threshold": fidelity_threshold,
+            "generations": generations,
+            "interpretation_limit": (
+                "La profondeur et la transmission sont mesurées par les cartes de transfert. "
+                "Le statut héréditaire fondé sur fidélité de copie et stabilité compartimentale "
+                "reste indéterminé lorsque ces variables ne sont pas publiées."
+            ),
+        },
     )
 
 

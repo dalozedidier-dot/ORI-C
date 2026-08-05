@@ -1,0 +1,10 @@
+experiment_id,element,pressure_gpa,temperature_k,delta_iw,logD,uncertainty,D_original,pressure_min_gpa,pressure_max_gpa,temperature_min_k,temperature_max_k,oxygen_fugacity_original,condition_original,source_id,value_type,source_status
+D-N-30GPA,N,30.5,3000.0,-3.1,1.4913616938342726,,31.0,30.5,30.5,3000.0,3000.0,IW-3.1,"statistique de coordination locale, systeme biphase",S28,point,calcul_appuye_experience
+D-N-37GPA,N,37.1,4000.0,-2.2,1.255272505103306,,18.0,37.1,37.1,4000.0,4000.0,IW-2.2,"statistique de coordination locale, systeme biphase",S28,point,calcul_appuye_experience
+D-N-131GPA,N,131.0,5000.0,-2.1,1.380211241711606,,24.0,131.0,131.0,5000.0,5000.0,IW-2.1,"statistique de coordination locale, systeme biphase",S28,point,calcul_appuye_experience
+D-H-MIN,H,45.0,3850.0,,1.462397997898956,,29.0,30.0,60.0,3100.0,4600.0,,"borne inferieure, fer fondu et silicate fondu",S29,borne_inferieure,experience
+D-S-MIN,S,68.5,3600.0,,0.9030899869919435,,8.0,46.0,91.0,3100.0,4100.0,,borne basse en cellule a enclumes de diamant,S30,point,experience
+D-S-MAX,S,68.5,3600.0,,1.7403626894942439,,55.0,46.0,91.0,3100.0,4100.0,,borne haute en cellule a enclumes de diamant,S30,point,experience
+D-C-BSE,C,1.5,1798.0,,1.5314789170422551,0.13353890837021742,34.0,1.5,1.5,1573.0,2023.0,,"NBO/T de 2.6, valeur retenue pour la Terre silicatee, +/-9",S31,point,experience
+D-C-MIN,C,1.5,1798.0,,1.146128035678238,0.10473535052001304,14.0,1.5,1.5,1573.0,2023.0,,"NBO/T de 3.11, silicate le plus depolymerise, +/-3",S31,point,experience
+D-C-MAX,C,1.5,1798.0,,2.806179973983887,0.03459249310263157,640.0,1.5,1.5,1573.0,2023.0,,"NBO/T de 1.04, silicate le plus polymerise, +/-49",S31,point,experience
