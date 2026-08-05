@@ -13,8 +13,14 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
 HERE = Path(__file__).resolve().parent
-DATA = HERE.parents[1] / "donnees_externes/histoire_antibiotique_donofrio_2026/extracted"
+ROOT = HERE.parents[1]
+DATA = ROOT / "donnees_externes/histoire_antibiotique_donofrio_2026/extracted"
 OUT = HERE / "resultats"
+
+
+def source_reference(path: Path) -> str:
+    """Chemin stable, indépendant du dossier local d’extraction."""
+    return path.resolve().relative_to(ROOT.resolve()).as_posix()
 
 
 def locate(name: str) -> Path | None:
@@ -90,7 +96,7 @@ def main() -> dict[str, object]:
         )
         result = {
             "status": "analysed",
-            "source_file": str(path),
+            "source_file": source_reference(path),
             "rows": int(len(data)),
             "group_count": int(groups.nunique()),
             "grouped_folds": min(5, int(groups.nunique())),

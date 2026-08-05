@@ -1,15 +1,75 @@
 {
-  "status": "waiting_for_external_data",
-  "missing_complete_replicate_sets": [
-    "FR",
-    "FU",
-    "UR",
-    "UU"
-  ],
-  "found_files": {
-    "FR": [],
-    "FU": [],
-    "UR": [],
-    "UU": []
-  }
+  "status": "analysed",
+  "pairs": 11760,
+  "stats": {
+    "FR_drift": {
+      "n": 1920,
+      "parent_offspring_r": 0.06690393379475486,
+      "offspring_mean": 0.4893020833333333,
+      "coded_lineage_fraction": 1.0
+    },
+    "FR_selection": {
+      "n": 1920,
+      "parent_offspring_r": 0.0739995249584005,
+      "offspring_mean": 0.5437197916666666,
+      "coded_lineage_fraction": 1.0
+    },
+    "FU_drift": {
+      "n": 1104,
+      "parent_offspring_r": 0.07820001718266686,
+      "offspring_mean": 0.07529076086956522,
+      "coded_lineage_fraction": 1.0
+    },
+    "FU_selection": {
+      "n": 1056,
+      "parent_offspring_r": 0.06103300460982823,
+      "offspring_mean": 0.08248674242424242,
+      "coded_lineage_fraction": 1.0
+    },
+    "UR_drift": {
+      "n": 1440,
+      "parent_offspring_r": -0.06941470029147188,
+      "offspring_mean": 0.5514104166666667,
+      "coded_lineage_fraction": 1.0
+    },
+    "UR_selection": {
+      "n": 1440,
+      "parent_offspring_r": 0.025529538435400463,
+      "offspring_mean": 0.5604152777777778,
+      "coded_lineage_fraction": 1.0
+    },
+    "UU_drift": {
+      "n": 1440,
+      "parent_offspring_r": 0.7230421932936663,
+      "offspring_mean": 0.10528541666666666,
+      "coded_lineage_fraction": 1.0
+    },
+    "UU_selection": {
+      "n": 1440,
+      "parent_offspring_r": 0.663904733093481,
+      "offspring_mean": 0.11433194444444444,
+      "coded_lineage_fraction": 1.0
+    }
+  },
+  "selection_response": {
+    "FR": 0.054417708333333314,
+    "FU": 0.007195981554677197,
+    "UR": 0.009004861111111095,
+    "UU": 0.009046527777777785
+  },
+  "mechanism_ablation_contrast": 0.046001918185477955,
+  "lineage_permutation_test": {
+    "observed_parent_offspring_r": 0.7642621398380935,
+    "null_mean_r": 0.7466668339764724,
+    "permutation_p_one_sided": 0.0004997501249375312,
+    "permutations": 2000
+  },
+  "decision_components": {
+    "selection_response_FR_positive": true,
+    "FR_exceeds_ablation_mean": true,
+    "lineage_signal_above_permuted": true,
+    "coded_lineage_majority": true
+  },
+  "interpretation": "La réponse à la sélection, la filiation et l'ablation sont testées séparément. Un succès global exige les quatre composantes, sans confondre moyenne de population et transmission parent-descendant.",
+  "global_verdict": "all_pre_registered_components_supported"
 }

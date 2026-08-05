@@ -1,6 +1,28 @@
 {
-  "status": "waiting_for_external_data",
-  "missing": [
-    "Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
-  ]
+  "status": "analysed",
+  "source_file": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+  "rows": 288,
+  "group_count": 24,
+  "grouped_folds": 5,
+  "columns": {
+    "outcome": "MIC (ug/mL)",
+    "strain_group": "Strain",
+    "present_limitation": "Limitation",
+    "history": "Ancestor",
+    "antibiotic": "Antibiotic"
+  },
+  "rmse_state_only": 1.1308981248799626,
+  "rmse_state_plus_history": 0.8042295741181249,
+  "history_gain_percent": 28.885762879526517,
+  "same_complexity_shuffled_history_rmse_mean": 1.1414869511179608,
+  "history_vs_shuffled_gain_percent": 29.545443044226612,
+  "permutation_p_history_better_than_shuffled": 0.004975124378109453,
+  "permutations": 200,
+  "decision_components": {
+    "history_beats_state": true,
+    "history_beats_same_complexity_shuffled_control": true,
+    "permutation_support": true
+  },
+  "verdict": "history_supported_against_both_controls",
+  "limit": "Le jeu est externe mais public avant l'analyse ORI-C. Le test est confirmatoire dans sa structure, sans être une collecte prospective aveugle."
 }

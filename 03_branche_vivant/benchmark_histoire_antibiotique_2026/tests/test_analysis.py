@@ -45,3 +45,11 @@ def test_grouped_model_can_use_history_signal():
     history = module.predictions(data, y, groups, ["limitation", "antibiotic", "ancestor"])
     assert module.rmse(y, history) < module.rmse(y, state)
     assert np.isfinite(history).all()
+
+
+def test_source_reference_is_portable():
+    module = load()
+    source = module.ROOT / "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
+    reference = module.source_reference(source)
+    assert reference == "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
+    assert not Path(reference).is_absolute()

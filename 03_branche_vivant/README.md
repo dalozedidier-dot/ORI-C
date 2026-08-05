@@ -85,8 +85,8 @@ modifie le domaine de possibilités des architectures qui l'entourent.
 
 Deux bancs externes sont ajoutés sans modifier les verdicts antérieurs.
 
-`lignees_vesicules/` télécharge douze classeurs expérimentaux et reconstruit les filiations à partir des cartes donneur-receveur. Le test sépare réponse à la sélection, signal parent-descendant, permutation de la filiation et ablation du mécanisme.
+`lignees_vesicules/` utilise les douze classeurs expérimentaux intégrés et reconstruit les filiations à partir des cartes donneur-receveur. Le test sépare réponse à la sélection, signal parent-descendant, permutation de la filiation et ablation du mécanisme.
 
 `benchmark_histoire_antibiotique_2026/` évalue la MIC avec séparation groupée par souche. Le modèle historique doit battre le modèle d'état présent et un témoin de même complexité où l'ascendance est permutée.
 
-Sans les jeux externes, les deux bancs retournent `waiting_for_external_data`. Ce statut n'est pas un résultat.
+Les jeux externes requis sont intégrés avec leur provenance. S’ils sont retirés ou invalides, les deux bancs retournent `waiting_for_external_data`. Ce statut n’est pas un résultat.

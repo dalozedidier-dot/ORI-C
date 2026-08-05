@@ -51,11 +51,10 @@ Les scripts d’import reproduisent les transformations sans imputation, interpo
 
 ## Données de la recherche active
 
-Les nouveaux bancs externes utilisent trois dépôts publics enregistrés dans `plan_directeur/campagne_recherche_suivante/sources_externes.json`. Les fichiers sont téléchargés au moment de l'exécution, contrôlés par SHA-256 et accompagnés d'un `SOURCE.json`.
+Les trois jeux publics enregistrés dans `plan_directeur/campagne_recherche_suivante/sources_externes.json` sont intégrés au dossier source pour rendre la campagne reproductible sans dépendre d'un téléchargement pendant GitHub Actions. Chaque jeu conserve son DOI, sa licence, ses empreintes SHA-256 et un fichier `SOURCE.json`.
 
-Les données brutes tierces ne sont pas intégrées au dossier source. Les scripts, protocoles, parseurs, règles de décision et rapports d'acquisition sont conservés. Le workflow `Recherche suivante ORI-C` réalise l'acquisition avant les analyses.
-
+Les données restent tierces. Leur intégration ne les transforme pas en productions ORI-C. Les deux jeux Dryad sont conservés avec l'archive complète fournie par le dépôt et les seuls fichiers nécessaires aux analyses. Le fichier NOAA conserve son préambule, ses métadonnées et les références originales.
 
 ### Résilience de l'acquisition active
 
-Depuis la correction du 5 août 2026, les fichiers Dryad requis ne dépendent plus uniquement d'identifiants enregistrés une fois. Le client résout la version publique courante depuis le DOI, vérifie le contenu téléchargé, utilise l'archive complète en repli et protège le cache antérieur par remplacement atomique. Les identifiants fixes du registre sont conservés uniquement comme solution de secours lorsque l'API de métadonnées est indisponible.
+Le workflow contrôle les données intégrées en mode hors ligne par défaut. Un rafraîchissement distant reste possible sur demande avec `telecharger_donnees`, mais un refus HTTP du fournisseur n'est plus nécessaire à l'exécution reproductible. Le client conserve la résolution par DOI, la validation de format, le repli vers l'archive complète et le remplacement atomique pour les rafraîchissements volontaires.

@@ -50,3 +50,37 @@ def test_speleothem_audit_with_fixture(tmp_path, monkeypatch):
     assert result["source_encoding"] == "cp1252"
     assert result["rows_age_isotope"] == 3
     assert result["independent_site_count"] == 2
+
+
+def test_speleothem_audit_reads_noaa_two_table_layout(tmp_path):
+    module = load("auditer_speleothemes")
+    source = tmp_path / "speleothem-d18o-0-22k.csv"
+    source.write_text(
+        "# NOAA preamble,,,,\n"
+        "Core Index,Site Name,Core Name,Latitude,Longitude\n"
+        "1,Cave A,A1,45.0,5.0\n"
+        "2,Cave B,B1,-20.0,130.0\n"
+        "DATA,,,,\n"
+        "Column 1,Core Index,,,\n"
+        "Core Index,age_calBP,d18OcarbPDB,,\n"
+        "1,100,-4.0,,\n"
+        "1,5000,-3.5,,\n"
+        "2,21000,-2.0,,\n",
+        encoding="cp1252",
+    )
+    result = module.audit(source)
+    assert result["status"] == "audited"
+    assert result["source_schema"] == "noaa_two_table_compilation"
+    assert result["metadata_rows"] == 2
+    assert result["rows_age_isotope"] == 3
+    assert result["independent_site_count"] == 2
+    assert result["detected_columns"]["latitude"] == "Latitude"
+    assert result["age_unit"] == "cal_yr_BP"
+
+
+def test_speleothem_source_reference_is_portable():
+    module = load("auditer_speleothemes")
+    source = module.ROOT / "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv"
+    reference = module.source_reference(source)
+    assert reference == "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv"
+    assert not Path(reference).is_absolute()

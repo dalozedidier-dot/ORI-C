@@ -33,7 +33,17 @@ def test_external_data_are_not_claimed_as_oric_outputs():
         )
     )
     assert "tierces" in registry["policy"]
-    assert all(dataset["redistribute"] is False for dataset in registry["datasets"])
+    assert "ne sont pas assimilées" in registry["policy"]
+    for dataset in registry["datasets"]:
+        assert dataset.get("bundled_in_source") is True
+        assert dataset.get("redistribute") is True
+        assert dataset.get("license")
+        source = ROOT / "donnees_externes" / dataset["id"] / "SOURCE.json"
+        assert source.exists()
+        provenance = json.loads(source.read_text(encoding="utf-8"))
+        assert provenance["id"] == dataset["id"]
+        assert provenance.get("doi") == dataset["doi"]
+        assert len(provenance.get("sha256", "")) == 64
 
 
 def test_acquisition_helpers_extract_and_hash(tmp_path):

@@ -9,13 +9,13 @@ Cette campagne répond aux verrous observés dans les résultats déjà archivé
 - `Pacc` est mesuré à deux niveaux dans la couche astronomique : fraction d'interventions et fraction de dimensions de réponse.
 - `WP-C2b` est gelé avec appariement par régime, points non saturés et graines de validation nouvelles.
 
-## Ce qui dépend de données externes
+## Données externes intégrées et exécutées
 
-- lignées de vésicules avec cartes donneur-receveur, trois répétitions pour chacun des quatre régimes expérimentaux.
-- jeu antibiotique externe avec MIC, souche, environnement présent, ascendance et antibiotique.
-- compilation de spéléothèmes pour auditer une chronologie radiométrique indépendante.
+- les douze classeurs de vésicules avec cartes donneur-receveur sont présents et analysés ;
+- le jeu antibiotique externe avec MIC, souche, environnement présent, ascendance et antibiotique est présent et analysé ;
+- la compilation NOAA de spéléothèmes est présente et son format à deux tables est audité.
 
-Les données tierces sont téléchargées à l'exécution. Une source absente produit un statut d'attente. Elle ne produit jamais une réussite par défaut.
+Les données tierces restent séparées des productions ORI-C par leur DOI, leur licence, leurs empreintes SHA-256 et un fichier `SOURCE.json`. Une source absente ou invalide produit toujours un statut d'attente ou un échec technique. Elle ne produit jamais une réussite par défaut.
 
 ## Règles communes
 

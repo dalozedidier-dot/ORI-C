@@ -1,0 +1,106 @@
+{
+  "schema": 2,
+  "id": "vesicules_sokolskyi_baum_2026",
+  "provider": "Dryad",
+  "doi": "10.5061/dryad.fbg79cp99",
+  "license": "CC0-1.0",
+  "acquisition_method": "manual_full_archive_supplied_by_user",
+  "archive_provenance": {
+    "name": "doi_10_5061_dryad_fbg79cp99__v20260309.zip",
+    "local_path": "raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip",
+    "sha256": "2cf96ae6906c5d41a889d8deced000237cb1da2e083a1df526dc730130687863",
+    "size_bytes": 1494941
+  },
+  "sha256": "2073f75786b7e02dc9e504f20e2675efed6a2606cbbda267b6dae7686bb96d49",
+  "size_bytes": 852379,
+  "file_provenance": [
+    {
+      "name": "FR1_log.xlsx",
+      "local_path": "extracted/FR1_log.xlsx",
+      "sha256": "40abcad0cf41b02c7fa2ea1d0ba36a8666fb0e5942b7edd62abbc2e59d706610",
+      "size_bytes": 74939
+    },
+    {
+      "name": "FR2_log.xlsx",
+      "local_path": "extracted/FR2_log.xlsx",
+      "sha256": "fddf328c71d8b8f5afd3f4836c6923c6fcce3693ae2a6efeeb63cf8be870666b",
+      "size_bytes": 56484
+    },
+    {
+      "name": "FR3_log.xlsx",
+      "local_path": "extracted/FR3_log.xlsx",
+      "sha256": "8263937ca6f465b0e0d859316d2aa4be6cb7105b79ee38c24c44f2ab97e3599a",
+      "size_bytes": 158376
+    },
+    {
+      "name": "FU1_log.xlsx",
+      "local_path": "extracted/FU1_log.xlsx",
+      "sha256": "f3a4f3a86c4c230804d60a9768159feb504a2fa7d6aab07985fea147dd2e3215",
+      "size_bytes": 44659
+    },
+    {
+      "name": "FU2_log.xlsx",
+      "local_path": "extracted/FU2_log.xlsx",
+      "sha256": "c170c3f0cbb8c0caea0c3b63201fbed2614e3971234b2817f9e97522620065f4",
+      "size_bytes": 44669
+    },
+    {
+      "name": "FU3_log.xlsx",
+      "local_path": "extracted/FU3_log.xlsx",
+      "sha256": "dc2871350002bcefb1685327f9dfa827eee0e0df7f120932da56be33f953ee31",
+      "size_bytes": 44636
+    },
+    {
+      "name": "UR1_log.xlsx",
+      "local_path": "extracted/UR1_log.xlsx",
+      "sha256": "b9d92cd4e88dc426d835284b9cc605b5ad39580ea9e2f5c96d7f3d9d5e2a7fdb",
+      "size_bytes": 89765
+    },
+    {
+      "name": "UR2_log.xlsx",
+      "local_path": "extracted/UR2_log.xlsx",
+      "sha256": "6fb6164505e34f21dbeebe9998a67f7aeea30a0700423386f7fd63606aba9da5",
+      "size_bytes": 57089
+    },
+    {
+      "name": "UR3_log.xlsx",
+      "local_path": "extracted/UR3_log.xlsx",
+      "sha256": "db23a66e1307bbf211b6fb84acb894fcaabaa4d3edbc7f40acf91bf749fed372",
+      "size_bytes": 54423
+    },
+    {
+      "name": "UU1_log.xlsx",
+      "local_path": "extracted/UU1_log.xlsx",
+      "sha256": "97d77eea9ae541baf273d07d329a76e460b6600df220ce109495c24ee4c7f7b3",
+      "size_bytes": 84792
+    },
+    {
+      "name": "UU2_log.xlsx",
+      "local_path": "extracted/UU2_log.xlsx",
+      "sha256": "5303fc2ec96035fd6a6f12926a807a737f4d91836a0a2a11378580159c0cfff5",
+      "size_bytes": 86495
+    },
+    {
+      "name": "UU3_log.xlsx",
+      "local_path": "extracted/UU3_log.xlsx",
+      "sha256": "cab3f313517a1bdaa2736a40d654c04016f11d4462f178f6f131fad500e97d76",
+      "size_bytes": 56052
+    }
+  ],
+  "extracted_files": [
+    "FR1_log.xlsx",
+    "FR2_log.xlsx",
+    "FR3_log.xlsx",
+    "FU1_log.xlsx",
+    "FU2_log.xlsx",
+    "FU3_log.xlsx",
+    "UR1_log.xlsx",
+    "UR2_log.xlsx",
+    "UR3_log.xlsx",
+    "UU1_log.xlsx",
+    "UU2_log.xlsx",
+    "UU3_log.xlsx"
+  ],
+  "missing_expected": [],
+  "download_status": "bundled_verified"
+}

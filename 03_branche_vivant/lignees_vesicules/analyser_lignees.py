@@ -12,6 +12,8 @@ DATA = HERE.parents[1] / "donnees_externes/vesicules_sokolskyi_baum_2026/extract
 OUT = HERE / "resultats"
 ARMS = (("drdata", "drcode", "drift"), ("seldata", "selcode", "selection"))
 WELL_RE = re.compile(r"\b([A-H](?:1[0-2]|[1-9]))\b", re.IGNORECASE)
+GEN_RE = re.compile(r"G(\d+)", re.IGNORECASE)
+CANONICAL_WELLS = [f"{row}{column}" for row in "ABCDEFGH" for column in range(1, 13)]
 
 
 def locate(name: str) -> Path | None:
@@ -20,26 +22,148 @@ def locate(name: str) -> Path | None:
 
 
 def well_labels(count: int) -> list[str]:
-    canonical = [f"{row}{column}" for row in "ABCDEFGH" for column in range(1, 13)]
-    return canonical[:count]
+    return CANONICAL_WELLS[:count]
+
+
+def normalized_well(value: object) -> str | None:
+    if value is None or (isinstance(value, float) and np.isnan(value)):
+        return None
+    text = str(value).strip().upper().rstrip("'")
+    return text if text in CANONICAL_WELLS else None
+
+
+def header_generation(value: object, arm_letter: str) -> int | None:
+    if value is None or (isinstance(value, float) and np.isnan(value)):
+        return None
+    text = re.sub(r"\s+", "", str(value).upper())
+    if "PM" in text or "-F" in text or not text.endswith(arm_letter):
+        return None
+    matches = GEN_RE.findall(text)
+    return int(matches[-1]) if matches else None
+
+
+def _first_plate_rows(raw: pd.DataFrame) -> tuple[pd.DataFrame, list[str]] | None:
+    """Retourne le premier bloc A1-H12, sans les blocs de calcul ajoutés plus bas."""
+    if raw.shape[1] == 0:
+        return None
+    first_position: dict[str, int] = {}
+    for position, value in enumerate(raw.iloc[:, 0]):
+        label = normalized_well(value)
+        if label is not None and label not in first_position:
+            first_position[label] = position
+    if not all(label in first_position for label in CANONICAL_WELLS):
+        return None
+    positions = [first_position[label] for label in CANONICAL_WELLS]
+    return raw.iloc[positions].copy(), CANONICAL_WELLS.copy()
+
+
+def _infer_missing_generation_columns(
+    raw: pd.DataFrame,
+    plate: pd.DataFrame,
+    recognized: dict[int, int],
+) -> dict[int, int]:
+    """Complète les rares en-têtes absents à partir de la continuité de la plaque.
+
+    Le fichier UR3 contient notamment une colonne G8 non étiquetée. L'inférence
+    reste limitée aux générations encadrées par deux générations explicitement
+    nommées et aux colonnes numériques remplies pour la plaque entière.
+    """
+    if len(recognized) < 2:
+        return recognized
+    result = dict(recognized)
+    minimum, maximum = min(result), max(result)
+    numeric_density: dict[int, int] = {
+        column: int(pd.to_numeric(plate.iloc[:, column], errors="coerce").notna().sum())
+        for column in range(1, raw.shape[1])
+    }
+    for generation in range(minimum, maximum + 1):
+        if generation in result:
+            continue
+        previous = max((value for value in result if value < generation), default=None)
+        following = min((value for value in result if value > generation), default=None)
+        if previous is None or following is None:
+            continue
+        left, right = result[previous], result[following]
+        expected = left + (right - left) * (generation - previous) / (following - previous)
+        candidates = [
+            column
+            for column in range(left + 1, right)
+            if column not in result.values() and numeric_density.get(column, 0) >= 90
+        ]
+        if candidates:
+            result[generation] = min(candidates, key=lambda column: abs(column - expected))
+    return result
 
 
 def numeric_matrix(path: Path, sheet: str) -> pd.DataFrame:
-    raw = pd.read_excel(path, sheet_name=sheet, header=None)
-    numeric = raw.apply(pd.to_numeric, errors="coerce")
-    numeric = numeric.dropna(axis=0, how="all").dropna(axis=1, how="all")
-    numeric.index = well_labels(len(numeric))
-    numeric.columns = [f"g{index}" for index in range(numeric.shape[1])]
-    return numeric
+    raw = pd.read_excel(path, sheet_name=sheet, header=None, dtype=object)
+    plate_result = _first_plate_rows(raw)
+
+    if plate_result is None:
+        # Petit format synthétique utilisé par les tests unitaires.
+        numeric = raw.apply(pd.to_numeric, errors="coerce")
+        numeric = numeric.dropna(axis=0, how="all").dropna(axis=1, how="all")
+        if len(numeric) > len(CANONICAL_WELLS):
+            numeric = numeric.iloc[: len(CANONICAL_WELLS)]
+        numeric.index = well_labels(len(numeric))
+        numeric.columns = [f"g{index}" for index in range(numeric.shape[1])]
+        return numeric
+
+    plate, labels = plate_result
+    arm_letter = "D" if sheet.lower().startswith("dr") else "S"
+    headers = raw.iloc[0].tolist() if len(raw) else []
+    recognized: dict[int, int] = {}
+    for column in range(1, raw.shape[1]):
+        generation = header_generation(headers[column] if column < len(headers) else None, arm_letter)
+        if generation is not None and generation not in recognized:
+            recognized[generation] = column
+
+    if recognized:
+        recognized = _infer_missing_generation_columns(raw, plate, recognized)
+        selected = sorted(recognized.items())
+    else:
+        # FU2 et FU3 n'ont aucun en-tête, mais leurs colonnes sont déjà dans
+        # l'ordre générationnel après la colonne des puits.
+        numeric_columns = [
+            column
+            for column in range(1, raw.shape[1])
+            if pd.to_numeric(plate.iloc[:, column], errors="coerce").notna().sum() >= 90
+        ]
+        selected = list(enumerate(numeric_columns))
+
+    if len(selected) < 2:
+        raise ValueError(f"moins de deux générations exploitables dans {path.name}:{sheet}")
+
+    values = pd.DataFrame(
+        {
+            f"g{generation}": pd.to_numeric(plate.iloc[:, column], errors="coerce").to_numpy()
+            for generation, column in selected
+        },
+        index=labels,
+    )
+    values = values.dropna(axis=1, how="all")
+    if values.shape[1] < 2:
+        raise ValueError(f"moins de deux générations numériques dans {path.name}:{sheet}")
+    return values
 
 
-def code_matrix(path: Path, sheet: str, rows: int, columns: int) -> pd.DataFrame:
-    raw = pd.read_excel(path, sheet_name=sheet, header=None, dtype=str)
+def code_matrix(path: Path, sheet: str) -> pd.DataFrame:
+    raw = pd.read_excel(path, sheet_name=sheet, header=None, dtype=object)
     raw = raw.dropna(axis=0, how="all").dropna(axis=1, how="all")
-    raw = raw.iloc[:rows, : max(columns, 1)].copy()
-    raw.index = well_labels(len(raw))
-    raw.columns = [f"c{index}" for index in range(raw.shape[1])]
-    return raw
+    if raw.empty:
+        return raw
+
+    first_row = raw.iloc[0].tolist()
+    has_generation_header = any(GEN_RE.search(str(value)) for value in first_row if pd.notna(value))
+    if has_generation_header:
+        headers = [str(value) if pd.notna(value) else "" for value in first_row]
+        data = raw.iloc[1:].reset_index(drop=True).copy()
+    else:
+        headers = [""] * raw.shape[1]
+        data = raw.reset_index(drop=True).copy()
+    data.columns = [f"c{index}" for index in range(data.shape[1])]
+    data.attrs["generation_headers"] = headers
+    return data
 
 
 def tokens(value: object) -> list[str]:
@@ -48,44 +172,75 @@ def tokens(value: object) -> list[str]:
     return [match.upper() for match in WELL_RE.findall(str(value))]
 
 
+def _code_generation(value: object) -> int | None:
+    matches = GEN_RE.findall(str(value)) if value is not None else []
+    return int(matches[-1]) if matches else None
+
+
 def map_transfer(
     code: pd.DataFrame,
-    transition: int,
+    offspring_generation: int,
     recipient_labels: list[str],
 ) -> list[tuple[str, str]]:
-    """Reconstruit donor-recipient en acceptant les formats Dryad courants.
+    """Reconstruit les couples donneur-receveur d'une génération à la suivante.
 
-    Une cellule avec un seul puits est lue comme donneur pour le puits de sa ligne.
-    Une cellule avec deux puits est lue comme donneur puis receveur. Les colonnes
-    peuvent coder soit chaque transition, soit les paires donor/recipient.
+    Dans les fichiers Dryad réels, chaque génération possède une colonne de
+    puits sélectionnés et une colonne contenant les couples explicites. La
+    colonne de couples est prioritaire. Les formats simplifiés à un seul puits
+    par cellule restent acceptés pour les tests et les anciens fichiers.
     """
-    candidate_columns: list[int] = []
-    for value in (transition, transition + 1, 2 * transition, 2 * transition + 1):
-        if 0 <= value < code.shape[1] and value not in candidate_columns:
-            candidate_columns.append(value)
-    mappings: list[tuple[str, str]] = []
+    if code.empty:
+        return []
+
+    headers = code.attrs.get("generation_headers", [])
+    candidate_columns = [
+        index for index, header in enumerate(headers) if _code_generation(header) == offspring_generation
+    ]
+    if not candidate_columns:
+        transition = max(offspring_generation - 1, 0)
+        for value in (2 * transition + 1, transition + 1, 2 * transition, transition):
+            if 0 <= value < code.shape[1] and value not in candidate_columns:
+                candidate_columns.append(value)
+
+    def candidate_score(column: int) -> tuple[int, int]:
+        counts = [len(tokens(value)) for value in code.iloc[:, column]]
+        return sum(count >= 2 for count in counts), sum(count >= 1 for count in counts)
+
+    candidate_columns.sort(key=candidate_score, reverse=True)
     for column in candidate_columns:
         current: list[tuple[str, str]] = []
-        for row_index, recipient_default in enumerate(recipient_labels[: len(code)]):
+        for row_index in range(len(code)):
             found = tokens(code.iat[row_index, column])
             if len(found) >= 2:
                 current.append((found[0], found[1]))
-            elif len(found) == 1:
-                current.append((found[0], recipient_default))
+            elif len(found) == 1 and row_index < len(recipient_labels):
+                current.append((found[0], recipient_labels[row_index]))
         if len(current) >= 8:
-            mappings = current
-            break
-    return mappings
+            return current
+    return []
+
+
+def _generation(column: object) -> int:
+    match = re.fullmatch(r"g(\d+)", str(column))
+    if match is None:
+        raise ValueError(f"colonne générationnelle invalide: {column}")
+    return int(match.group(1))
 
 
 def pairs(path: Path, condition: str) -> pd.DataFrame:
     rows: list[dict[str, object]] = []
     for data_sheet, code_sheet, arm in ARMS:
         data = numeric_matrix(path, data_sheet)
-        code = code_matrix(path, code_sheet, len(data), data.shape[1])
+        code = code_matrix(path, code_sheet)
         labels = list(data.index)
-        for transition in range(data.shape[1] - 1):
-            mappings = map_transfer(code, transition, labels)
+        columns = list(data.columns)
+        for left_column, right_column in zip(columns, columns[1:]):
+            parent_generation = _generation(left_column)
+            offspring_generation = _generation(right_column)
+            if offspring_generation != parent_generation + 1:
+                # Une génération absente ne peut pas être transformée en filiation directe.
+                continue
+            mappings = map_transfer(code, offspring_generation, labels)
             mapping_mode = "coded_lineage"
             if not mappings:
                 mappings = [(label, label) for label in labels]
@@ -93,15 +248,15 @@ def pairs(path: Path, condition: str) -> pd.DataFrame:
             for donor, recipient in mappings:
                 if donor not in data.index or recipient not in data.index:
                     continue
-                parent = data.iloc[data.index.get_loc(donor), transition]
-                offspring = data.iloc[data.index.get_loc(recipient), transition + 1]
+                parent = data.at[donor, left_column]
+                offspring = data.at[recipient, right_column]
                 if pd.isna(parent) or pd.isna(offspring):
                     continue
                 rows.append(
                     {
                         "condition": condition,
                         "arm": arm,
-                        "transition": transition,
+                        "transition": parent_generation,
                         "donor": donor,
                         "recipient": recipient,
                         "parent": float(parent),
@@ -113,23 +268,34 @@ def pairs(path: Path, condition: str) -> pd.DataFrame:
 
 
 def lineage_permutation_test(data: pd.DataFrame, repeats: int = 2000) -> dict[str, float]:
+    """Permute la descendance dans chaque condition, bras et transition.
+
+    Le calcul est identique à la version par ``groupby.transform``, mais évite
+    de recopier les 11 000 lignes et de reconstruire les groupes 2 000 fois.
+    """
     rng = np.random.default_rng(20260805)
-    observed = float(data["parent"].corr(data["offspring"]))
-    null_values: list[float] = []
-    for _ in range(repeats):
-        shuffled = data.copy()
-        shuffled["offspring"] = shuffled.groupby(
-            ["condition", "arm", "transition"], observed=False
-        )["offspring"].transform(lambda values: rng.permutation(values.to_numpy()))
-        value = shuffled["parent"].corr(shuffled["offspring"])
-        if pd.notna(value):
-            null_values.append(float(value))
-    p_value = (1 + sum(value >= observed for value in null_values)) / (1 + len(null_values))
+    valid = data[["parent", "offspring"]].notna().all(axis=1).to_numpy()
+    parent = data.loc[valid, "parent"].to_numpy(dtype=float)
+    offspring = data.loc[valid, "offspring"].to_numpy(dtype=float)
+    groups_frame = data.loc[valid, ["condition", "arm", "transition"]].reset_index(drop=True)
+    group_indices = [
+        group.index.to_numpy(dtype=int)
+        for _, group in groups_frame.groupby(["condition", "arm", "transition"], observed=False, sort=False)
+    ]
+    observed = float(np.corrcoef(parent, offspring)[0, 1])
+    null_values = np.empty(repeats, dtype=float)
+    for repeat in range(repeats):
+        shuffled = offspring.copy()
+        for indices in group_indices:
+            shuffled[indices] = rng.permutation(offspring[indices])
+        null_values[repeat] = float(np.corrcoef(parent, shuffled)[0, 1])
+    finite = null_values[np.isfinite(null_values)]
+    p_value = (1 + int(np.sum(finite >= observed))) / (1 + len(finite))
     return {
         "observed_parent_offspring_r": observed,
-        "null_mean_r": float(np.mean(null_values)),
+        "null_mean_r": float(np.mean(finite)),
         "permutation_p_one_sided": float(p_value),
-        "permutations": len(null_values),
+        "permutations": int(len(finite)),
     }
 
 

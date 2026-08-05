@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       telecharger_donnees:
-        description: Télécharger les jeux externes requis
+        description: Rafraîchir les jeux externes depuis les fournisseurs
         required: true
-        default: true
+        default: false
         type: boolean
       retelcharger:
         description: Forcer un nouveau téléchargement
@@ -14,9 +14,9 @@ on:
         default: false
         type: boolean
       exiger_donnees_externes:
-        description: Échouer si Dryad reste indisponible
+        description: Échouer si un jeu requis intégré est absent ou invalide
         required: true
-        default: false
+        default: true
         type: boolean
 
 permissions:
@@ -41,14 +41,6 @@ jobs:
       - name: Hydrater Git LFS
         run: git lfs pull
 
-      - name: Restaurer le cache des données externes
-        uses: actions/cache@v4
-        with:
-          path: donnees_externes
-          key: donnees-externes-v3-${{ runner.os }}-${{ hashFiles('plan_directeur/campagne_recherche_suivante/sources_externes.json') }}
-          restore-keys: |
-            donnees-externes-v3-${{ runner.os }}-
-
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -63,13 +55,15 @@ jobs:
       - name: Tester le client d'acquisition
         run: python -m pytest -q plan_directeur/campagne_recherche_suivante/tests/test_external_acquisition.py
 
-      - name: Acquérir les données externes
-        if: ${{ inputs.telecharger_donnees }}
+      - name: Contrôler les données externes intégrées
         shell: bash
         run: |
-          args=()
-          if [ "${{ inputs.retelcharger }}" = "true" ]; then
-            args+=(--force)
+          args=(--offline)
+          if [ "${{ inputs.telecharger_donnees }}" = "true" ]; then
+            args=()
+            if [ "${{ inputs.retelcharger }}" = "true" ]; then
+              args+=(--force)
+            fi
           fi
           if [ "${{ inputs.exiger_donnees_externes }}" != "true" ]; then
             args+=(--allow-unavailable-required)
@@ -88,7 +82,7 @@ jobs:
           python scripts/valider_recherche_suivante.py
 
       - name: Résumer la disponibilité des jeux externes
-        if: ${{ always() && inputs.telecharger_donnees }}
+        if: ${{ always() }}
         env:
           STRICT_EXTERNAL_DATA: ${{ inputs.exiger_donnees_externes }}
         run: |
@@ -112,7 +106,7 @@ jobs:
               print("Tous les jeux externes requis sont disponibles.")
               raise SystemExit(0)
 
-          print("Jeux externes requis indisponibles chez le fournisseur :")
+          print("Jeux externes requis absents ou invalides :")
           for item in unavailable:
               print(f"- {item.get('id')}: {item.get('status')}")
               for attempt in item.get("attempt_errors", []):

@@ -247,34 +247,133 @@
       "protocol_sha256": "be8bd71dd17b91543170a48204a3723dd248583e41dbf572ab45ddc7e19b32c9"
     },
     "speleothemes": {
-      "status": "waiting_for_external_data",
-      "missing": [
-        "speleothem-d18o-0-22k.csv"
-      ],
-      "use_decision": "not_executed"
+      "status": "audited",
+      "rows_total": 27981,
+      "metadata_rows": 60,
+      "source_encoding": "cp1252",
+      "source_schema": "noaa_two_table_compilation",
+      "rows_age_isotope": 27721,
+      "detected_columns": {
+        "age": "age_calBP",
+        "d18O": "d18OcarbPDB",
+        "site": "Site Name",
+        "latitude": "Latitude",
+        "longitude": "Longitude"
+      },
+      "age_unit": "cal_yr_BP",
+      "age_min": -56.0,
+      "age_max": 21996.0,
+      "independent_site_count": 36,
+      "d18O_min": -13.97,
+      "d18O_max": 1.09,
+      "use_decision": "chronology_quality_and_external_proxy_audit_only",
+      "limit": "La compilation 0-22 ka prépare un contrôle indépendant de chronologie et de proxy. Sa durée ne suffit pas à tester la bande orbitale de 100 ka.",
+      "source_file": "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv"
     },
     "vesicules": {
-      "status": "waiting_for_external_data",
-      "missing_complete_replicate_sets": [
-        "FR",
-        "FU",
-        "UR",
-        "UU"
-      ],
-      "found_files": {
-        "FR": [],
-        "FU": [],
-        "UR": [],
-        "UU": []
-      }
+      "status": "analysed",
+      "pairs": 11760,
+      "stats": {
+        "FR_drift": {
+          "n": 1920,
+          "parent_offspring_r": 0.06690393379475486,
+          "offspring_mean": 0.4893020833333333,
+          "coded_lineage_fraction": 1.0
+        },
+        "FR_selection": {
+          "n": 1920,
+          "parent_offspring_r": 0.0739995249584005,
+          "offspring_mean": 0.5437197916666666,
+          "coded_lineage_fraction": 1.0
+        },
+        "FU_drift": {
+          "n": 1104,
+          "parent_offspring_r": 0.07820001718266686,
+          "offspring_mean": 0.07529076086956522,
+          "coded_lineage_fraction": 1.0
+        },
+        "FU_selection": {
+          "n": 1056,
+          "parent_offspring_r": 0.06103300460982823,
+          "offspring_mean": 0.08248674242424242,
+          "coded_lineage_fraction": 1.0
+        },
+        "UR_drift": {
+          "n": 1440,
+          "parent_offspring_r": -0.06941470029147188,
+          "offspring_mean": 0.5514104166666667,
+          "coded_lineage_fraction": 1.0
+        },
+        "UR_selection": {
+          "n": 1440,
+          "parent_offspring_r": 0.025529538435400463,
+          "offspring_mean": 0.5604152777777778,
+          "coded_lineage_fraction": 1.0
+        },
+        "UU_drift": {
+          "n": 1440,
+          "parent_offspring_r": 0.7230421932936663,
+          "offspring_mean": 0.10528541666666666,
+          "coded_lineage_fraction": 1.0
+        },
+        "UU_selection": {
+          "n": 1440,
+          "parent_offspring_r": 0.663904733093481,
+          "offspring_mean": 0.11433194444444444,
+          "coded_lineage_fraction": 1.0
+        }
+      },
+      "selection_response": {
+        "FR": 0.054417708333333314,
+        "FU": 0.007195981554677197,
+        "UR": 0.009004861111111095,
+        "UU": 0.009046527777777785
+      },
+      "mechanism_ablation_contrast": 0.046001918185477955,
+      "lineage_permutation_test": {
+        "observed_parent_offspring_r": 0.7642621398380935,
+        "null_mean_r": 0.7466668339764724,
+        "permutation_p_one_sided": 0.0004997501249375312,
+        "permutations": 2000
+      },
+      "decision_components": {
+        "selection_response_FR_positive": true,
+        "FR_exceeds_ablation_mean": true,
+        "lineage_signal_above_permuted": true,
+        "coded_lineage_majority": true
+      },
+      "interpretation": "La réponse à la sélection, la filiation et l'ablation sont testées séparément. Un succès global exige les quatre composantes, sans confondre moyenne de population et transmission parent-descendant.",
+      "global_verdict": "all_pre_registered_components_supported"
     },
     "antibiotique_2026": {
-      "status": "waiting_for_external_data",
-      "missing": [
-        "Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
-      ]
+      "status": "analysed",
+      "source_file": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+      "rows": 288,
+      "group_count": 24,
+      "grouped_folds": 5,
+      "columns": {
+        "outcome": "MIC (ug/mL)",
+        "strain_group": "Strain",
+        "present_limitation": "Limitation",
+        "history": "Ancestor",
+        "antibiotic": "Antibiotic"
+      },
+      "rmse_state_only": 1.1308981248799626,
+      "rmse_state_plus_history": 0.8042295741181249,
+      "history_gain_percent": 28.885762879526517,
+      "same_complexity_shuffled_history_rmse_mean": 1.1414869511179608,
+      "history_vs_shuffled_gain_percent": 29.545443044226612,
+      "permutation_p_history_better_than_shuffled": 0.004975124378109453,
+      "permutations": 200,
+      "decision_components": {
+        "history_beats_state": true,
+        "history_beats_same_complexity_shuffled_control": true,
+        "permutation_support": true
+      },
+      "verdict": "history_supported_against_both_controls",
+      "limit": "Le jeu est externe mais public avant l'analyse ORI-C. Le test est confirmatoire dans sa structure, sans être une collecte prospective aveugle."
     }
   },
   "execution_errors": 0,
-  "waiting_for_external_data": 3
+  "waiting_for_external_data": 0
 }

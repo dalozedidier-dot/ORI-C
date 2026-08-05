@@ -1,0 +1,23 @@
+{
+  "schema": 2,
+  "id": "speleothemes_noaa_0_22ka",
+  "provider": "NOAA/NCEI",
+  "doi": "10.25921/edce-mr22",
+  "acquisition_method": "manual_direct_file_supplied_by_user",
+  "license": "NOAA/NCEI public information; cite original references listed in the file",
+  "sha256": "bc56ecf45225f85dc7ba83bc7c03655ba03c3c144a572cb9343c4b7d58811025",
+  "size_bytes": 640117,
+  "file_provenance": [
+    {
+      "name": "speleothem-d18o-0-22k.csv",
+      "local_path": "extracted/speleothem-d18o-0-22k.csv",
+      "sha256": "bc56ecf45225f85dc7ba83bc7c03655ba03c3c144a572cb9343c4b7d58811025",
+      "size_bytes": 640117
+    }
+  ],
+  "extracted_files": [
+    "speleothem-d18o-0-22k.csv"
+  ],
+  "missing_expected": [],
+  "download_status": "bundled_verified"
+}

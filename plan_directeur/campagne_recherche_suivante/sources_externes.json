@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "policy": "Les données tierces sont téléchargées à l'exécution, conservées avec leur provenance et ne sont pas assimilées à des données produites par ORI-C.",
+  "policy": "Les données tierces redistribuables peuvent être intégrées à l'archive pour assurer la reproductibilité. Elles restent identifiées par leur DOI, leur licence, leurs empreintes et leur fichier SOURCE.json, et ne sont pas assimilées à des données produites par ORI-C.",
   "datasets": [
     {
       "id": "vesicules_sokolskyi_baum_2026",
@@ -24,9 +24,9 @@
         "UU3_log.xlsx"
       ],
       "purpose": "Lignées parent-descendant, réponse à la sélection et ablations alimentation/resuspension.",
-      "redistribute": false,
+      "redistribute": true,
       "required_for_current_tests": true,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "license": "CC0-1.0 (Dryad)",
       "file_downloads": [
         {
           "name": "FR1_log.xlsx",
@@ -80,7 +80,9 @@
       "download_strategy": "dryad_authenticated_api_then_public_file_stream_then_archive",
       "provider": "dryad",
       "file_downloads_role": "fallback_only_if_api_resolution_fails",
-      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET"
+      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET",
+      "bundled_in_source": true,
+      "bundled_archive_name": "doi_10_5061_dryad_fbg79cp99__v20260309.zip"
     },
     {
       "id": "histoire_antibiotique_donofrio_2026",
@@ -95,9 +97,9 @@
         "Figure_2_N-limited_Fitness.csv"
       ],
       "purpose": "Test externe de l'effet de la trajectoire LTEE au-delà de l'environnement présent.",
-      "redistribute": false,
+      "redistribute": true,
       "required_for_current_tests": true,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "license": "CC0-1.0 (Dryad)",
       "file_downloads": [
         {
           "name": "Figure_2_C-limited_Fitness.csv",
@@ -115,7 +117,9 @@
       "download_strategy": "dryad_authenticated_api_then_public_file_stream_then_archive",
       "provider": "dryad",
       "file_downloads_role": "fallback_only_if_api_resolution_fails",
-      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET"
+      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET",
+      "bundled_in_source": true,
+      "bundled_archive_name": "doi_10_5061_dryad_1zcrjdg68__v20260310.zip"
     },
     {
       "id": "speleothemes_noaa_0_22ka",
@@ -128,11 +132,13 @@
         "speleothem-d18o-0-22k.csv"
       ],
       "purpose": "Chronologie radiométrique indépendante pour un futur test orbital-climat.",
-      "redistribute": false,
+      "redistribute": true,
       "required_for_current_tests": false,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "license": "NOAA/NCEI public information; cite original references in the source file",
       "provider": "noaa",
-      "download_strategy": "direct_file"
+      "download_strategy": "direct_file",
+      "bundled_in_source": true,
+      "bundled_file_name": "speleothem-d18o-0-22k.csv"
     }
   ]
 }

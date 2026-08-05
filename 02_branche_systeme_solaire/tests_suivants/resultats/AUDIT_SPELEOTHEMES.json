@@ -1,7 +1,24 @@
 {
-  "status": "waiting_for_external_data",
-  "missing": [
-    "speleothem-d18o-0-22k.csv"
-  ],
-  "use_decision": "not_executed"
+  "status": "audited",
+  "rows_total": 27981,
+  "metadata_rows": 60,
+  "source_encoding": "cp1252",
+  "source_schema": "noaa_two_table_compilation",
+  "rows_age_isotope": 27721,
+  "detected_columns": {
+    "age": "age_calBP",
+    "d18O": "d18OcarbPDB",
+    "site": "Site Name",
+    "latitude": "Latitude",
+    "longitude": "Longitude"
+  },
+  "age_unit": "cal_yr_BP",
+  "age_min": -56.0,
+  "age_max": 21996.0,
+  "independent_site_count": 36,
+  "d18O_min": -13.97,
+  "d18O_max": 1.09,
+  "use_decision": "chronology_quality_and_external_proxy_audit_only",
+  "limit": "La compilation 0-22 ka prépare un contrôle indépendant de chronologie et de proxy. Sa durée ne suffit pas à tester la bande orbitale de 100 ka.",
+  "source_file": "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv"
 }

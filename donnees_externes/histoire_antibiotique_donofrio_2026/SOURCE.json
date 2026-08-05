@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "id": "histoire_antibiotique_donofrio_2026",
+  "provider": "Dryad",
+  "doi": "10.5061/dryad.1zcrjdg68",
+  "license": "CC0-1.0",
+  "acquisition_method": "manual_full_archive_supplied_by_user",
+  "archive_provenance": {
+    "name": "doi_10_5061_dryad_1zcrjdg68__v20260310.zip",
+    "local_path": "raw/doi_10_5061_dryad_1zcrjdg68__v20260310.zip",
+    "sha256": "dfdf9be1d21b01f997d2f9fc3c1ba92187ca58845bdd78ec2e3a16490fb2c00b",
+    "size_bytes": 38793
+  },
+  "sha256": "0bf85e9e77fff1ab5c98b0ab764b10beec80c7e63370653237e4d7beeb386be0",
+  "size_bytes": 19656,
+  "file_provenance": [
+    {
+      "name": "Figure_2_C-limited_Fitness.csv",
+      "local_path": "extracted/Figure_2_C-limited_Fitness.csv",
+      "sha256": "b64f982c5f08903c01fc66c43d27cf5cfdd32744d00893be9e051db35a5c47d6",
+      "size_bytes": 5311
+    },
+    {
+      "name": "Figure_2_N-limited_Fitness.csv",
+      "local_path": "extracted/Figure_2_N-limited_Fitness.csv",
+      "sha256": "3887ef43e71660b887d6663cc424519e0a29af1cc37c0eb62d79ffb01a49a9d6",
+      "size_bytes": 5036
+    },
+    {
+      "name": "Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+      "local_path": "extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+      "sha256": "ea4bbf2784a515354d246769820c5f547f1e5856f45da3e68c8898a0c91afbb4",
+      "size_bytes": 9309
+    }
+  ],
+  "extracted_files": [
+    "Figure_2_C-limited_Fitness.csv",
+    "Figure_2_N-limited_Fitness.csv",
+    "Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
+  ],
+  "missing_expected": [],
+  "download_status": "bundled_verified"
+}

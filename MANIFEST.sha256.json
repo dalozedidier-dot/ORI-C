@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/recherche-suivante.yml",
-      "size": 5380,
-      "sha256": "8d8a1f9fc95f439a69bdf7df2a29042365141d398f2a210e19a75c2a0633c8be",
+      "size": 5110,
+      "sha256": "e1ed3af4c64be98b686ce778418ff511c249534cce2f4e9a879e362ece295566",
       "storage": "inline"
     },
     {
@@ -3959,8 +3959,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py",
-      "size": 4229,
-      "sha256": "77fa2c4195f78e42aa1aaa51939935b5c7f52c8b44c546c84c40bfe68f2c679e",
+      "size": 7445,
+      "sha256": "fd3e859e8ff16cff5a4385a6d353ad0d2c8a8a4042854cc9b52c3e1a4d9ab725",
       "storage": "inline"
     },
     {
@@ -3977,8 +3977,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/resultats/AUDIT_SPELEOTHEMES.json",
-      "size": 130,
-      "sha256": "5639eda4554bb3c05b4b13d87c6ecf7457e3cc9c2059ca837f3d8d8ec28493f8",
+      "size": 817,
+      "sha256": "fa381f0596ced3910f49f1b2996bf90b51b7b3978dde170efc879b2cc92a7614",
       "storage": "inline"
     },
     {
@@ -3995,8 +3995,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/tests/test_suivants.py",
-      "size": 1739,
-      "sha256": "91e2ba7f854c42b6af45882ac72e1e437e774e662caa74c80bcfeb0c3c2bb84c",
+      "size": 3084,
+      "sha256": "c8a592c02933b01364803d9adfe73112949e38d20ba46d652deb5dd17611844c",
       "storage": "inline"
     },
     {
@@ -4061,8 +4061,8 @@
     },
     {
       "path": "03_branche_vivant/README.md",
-      "size": 4035,
-      "sha256": "2c7b7f5ccdbc2cc59fcc6ba571f3d0ec2d1281a3b59e6be5baa2814ba8f9ad2b",
+      "size": 4122,
+      "sha256": "df844878ae27ccdb3852a9c5475d3f0d45955f5da1f4533d30340846d3b90902",
       "storage": "inline"
     },
     {
@@ -4145,20 +4145,20 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py",
-      "size": 5645,
-      "sha256": "9d3a8fd9e2f4c2fd5e94c8b9aad0e108841ff964c803bfaa62a3c80959b0f828",
+      "size": 5849,
+      "sha256": "124c5bb537ab5bd39fe765256dcfdfbe873cadbfdcb8bbc9c686e5d981711220",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
-      "size": 107,
-      "sha256": "8ac958df959c942f67ed5b5cb10e883eb10eef07375ea16cc0a6e2f0ec5d8637",
+      "size": 1109,
+      "sha256": "fa87539f7fe5f96375d7d940a45db49d1309462a9829c78a9da734f0dfabd67d",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_analysis.py",
-      "size": 1427,
-      "sha256": "f9ce00dacf634e2724f7f143fac980db8f1b4b33655eab3629f3e8ef53ef9221",
+      "size": 1838,
+      "sha256": "fe6ef5274a48e785e688d732105fbcaf9260535294dc66dcc25fe700f88e9d6a",
       "storage": "inline"
     },
     {
@@ -4169,20 +4169,20 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
-      "size": 8594,
-      "sha256": "b138ef166d6dfb5f2472e72783e97e0b66986c46a33e1a1a4e0f580b266cc538",
+      "size": 15648,
+      "sha256": "909070f2f6c52fe2d9df98276bcba9cf8ab62ad47fb4109b67db55c31f3e71da",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "size": 206,
-      "sha256": "75fd20088d2670ef7ab38306516da2534d7bdfc7e967a2d45cf6f94a779c7950",
+      "size": 2354,
+      "sha256": "ee29c14957399a75007e2826dfe6028b6a074628c321a5dd014bdb532bb18394",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/tests/test_parser.py",
-      "size": 2071,
-      "sha256": "3c2d10d32ac697b5e0a2845fb5b9dc58d317dd691ed392e4489a05641ab45d0d",
+      "size": 4614,
+      "sha256": "da55d735333fd09efdbe1d2a8174dbe5704d0bd3218f306dfd624f47424dfc6b",
       "storage": "inline"
     },
     {
@@ -4288,9 +4288,15 @@
       "storage": "inline"
     },
     {
+      "path": "CORRECTION_DONNEES_EXTERNES_2026-08-05.md",
+      "size": 1634,
+      "sha256": "b90c030fb41e7e89095de23ead4df14e5ed2356a8c4d8ba4ef89128bd4eb32c7",
+      "storage": "inline"
+    },
+    {
       "path": "DATA_AVAILABILITY.md",
-      "size": 5044,
-      "sha256": "059d8dded3988321b990a575f553a5ddf89762d80049a6dbefc4e4a3773378e6",
+      "size": 5134,
+      "sha256": "bfdb0a19eef5ce9734e92f9cd575f422b90dcb08bad3eeb6fed17705d4762140",
       "storage": "inline"
     },
     {
@@ -4330,6 +4336,12 @@
       "storage": "inline"
     },
     {
+      "path": "INSTRUCTIONS_MISE_A_JOUR.md",
+      "size": 1604,
+      "sha256": "cda187534490430fa055a5c3e0eca294a9099f524a3c395fed5a453b1b35f266",
+      "storage": "inline"
+    },
+    {
       "path": "LE_POSSIBLE_A_UNE_HISTOIRE.docx",
       "size": 711197,
       "sha256": "6913c7fbf049ecd3a4fc2bc4af20a7b36451b9d0d7a80b0e9f3cfcc97d1d2f16",
@@ -4361,8 +4373,8 @@
     },
     {
       "path": "MISE_A_JOUR_RECHERCHE.md",
-      "size": 3077,
-      "sha256": "248c114be5815de417c7a569f1a457c592b2927efb83ae1f27aaaef3257b8ab6",
+      "size": 3359,
+      "sha256": "0588685373e6626f4f66abb719be9778280b59f0c4dbc78b06fdf8d58f4de328",
       "storage": "inline"
     },
     {
@@ -4673,20 +4685,146 @@
     },
     {
       "path": "donnees_externes/.gitignore",
-      "size": 50,
-      "sha256": "b66ea569c1a23aa8077397c64046b6f5b0f5ef2904aed053bf2f42ba92c5490e",
+      "size": 250,
+      "sha256": "df0bd3763779d69943134dba9dd349f2e2b20e082305ba309ac088bd0f398214",
       "storage": "inline"
     },
     {
       "path": "donnees_externes/ACQUISITION_REPORT.json",
-      "size": 515,
-      "sha256": "16d97dc79fbfaabd0e382ec6e26a8b298e8c66ec731ffc6090c7d153871c1f50",
+      "size": 761,
+      "sha256": "519d04ba1aab84dfabcce3924417b838a20bb147df0c0558544635d76a0ffcd3",
       "storage": "inline"
     },
     {
       "path": "donnees_externes/README.md",
-      "size": 1711,
-      "sha256": "06f6b335ffe2ccfb05207724a92eab56e072fa7cfbc5d5f58b4e8c38e9c9d0a4",
+      "size": 1517,
+      "sha256": "3122fdb8d6926a103dcdb56e5d0ff4abf00130091761ff9f63b8a1805e548c70",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
+      "size": 1533,
+      "sha256": "44910659200ba2a899b210402523ce68fa21f6cbf1a27c537bea92184b267172",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_C-limited_Fitness.csv",
+      "size": 5311,
+      "sha256": "b64f982c5f08903c01fc66c43d27cf5cfdd32744d00893be9e051db35a5c47d6",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_N-limited_Fitness.csv",
+      "size": 5036,
+      "sha256": "3887ef43e71660b887d6663cc424519e0a29af1cc37c0eb62d79ffb01a49a9d6",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+      "size": 9309,
+      "sha256": "ea4bbf2784a515354d246769820c5f547f1e5856f45da3e68c8898a0c91afbb4",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/histoire_antibiotique_donofrio_2026/raw/doi_10_5061_dryad_1zcrjdg68__v20260310.zip",
+      "size": 38793,
+      "sha256": "dfdf9be1d21b01f997d2f9fc3c1ba92187ca58845bdd78ec2e3a16490fb2c00b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/speleothemes_noaa_0_22ka/SOURCE.json",
+      "size": 749,
+      "sha256": "e95457f617e565a9adc9317a79adebec7c3048f2421730c3a6333b85e5bd21cf",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv",
+      "size": 640117,
+      "sha256": "bc56ecf45225f85dc7ba83bc7c03655ba03c3c144a572cb9343c4b7d58811025",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "size": 3325,
+      "sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FR1_log.xlsx",
+      "size": 74939,
+      "sha256": "40abcad0cf41b02c7fa2ea1d0ba36a8666fb0e5942b7edd62abbc2e59d706610",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FR2_log.xlsx",
+      "size": 56484,
+      "sha256": "fddf328c71d8b8f5afd3f4836c6923c6fcce3693ae2a6efeeb63cf8be870666b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FR3_log.xlsx",
+      "size": 158376,
+      "sha256": "8263937ca6f465b0e0d859316d2aa4be6cb7105b79ee38c24c44f2ab97e3599a",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FU1_log.xlsx",
+      "size": 44659,
+      "sha256": "f3a4f3a86c4c230804d60a9768159feb504a2fa7d6aab07985fea147dd2e3215",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FU2_log.xlsx",
+      "size": 44669,
+      "sha256": "c170c3f0cbb8c0caea0c3b63201fbed2614e3971234b2817f9e97522620065f4",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/FU3_log.xlsx",
+      "size": 44636,
+      "sha256": "dc2871350002bcefb1685327f9dfa827eee0e0df7f120932da56be33f953ee31",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UR1_log.xlsx",
+      "size": 89765,
+      "sha256": "b9d92cd4e88dc426d835284b9cc605b5ad39580ea9e2f5c96d7f3d9d5e2a7fdb",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UR2_log.xlsx",
+      "size": 57089,
+      "sha256": "6fb6164505e34f21dbeebe9998a67f7aeea30a0700423386f7fd63606aba9da5",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UR3_log.xlsx",
+      "size": 54423,
+      "sha256": "db23a66e1307bbf211b6fb84acb894fcaabaa4d3edbc7f40acf91bf749fed372",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UU1_log.xlsx",
+      "size": 84792,
+      "sha256": "97d77eea9ae541baf273d07d329a76e460b6600df220ce109495c24ee4c7f7b3",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UU2_log.xlsx",
+      "size": 86495,
+      "sha256": "5303fc2ec96035fd6a6f12926a807a737f4d91836a0a2a11378580159c0cfff5",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/extracted/UU3_log.xlsx",
+      "size": 56052,
+      "sha256": "cab3f313517a1bdaa2736a40d654c04016f11d4462f178f6f131fad500e97d76",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/vesicules_sokolskyi_baum_2026/raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip",
+      "size": 1494941,
+      "sha256": "2cf96ae6906c5d41a889d8deced000237cb1da2e083a1df526dc730130687863",
       "storage": "inline"
     },
     {
@@ -5021,14 +5159,14 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/DECISIONS_SCIENTIFIQUES.md",
-      "size": 1667,
-      "sha256": "3a332e305f95b45a36b21e1033b3f553297651e88365dc8fe36e23308d470ec7",
+      "size": 1811,
+      "sha256": "8b4f42c242eceaf6857612a9b32039b50402d9720943c0a86380676c89d67656",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/MATRICE_TESTS.csv",
-      "size": 2152,
-      "sha256": "b950da4db8a50fdcb00ee8bb4267d5d7ad4feacdef5ca8bd3ece3b32bdc624f7",
+      "size": 2173,
+      "sha256": "6af7c7d8cc45b83905be9deb7eaf1a3eb50f9e4a43904d43ce1e145e3dcbb9cb",
       "storage": "inline"
     },
     {
@@ -5051,14 +5189,14 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/resultats/RAPPORT.md",
-      "size": 517,
-      "sha256": "02c58085c4e734b6098afb4a1065bbab8eb9e22ac546e5fe206c4c9632ddd617",
+      "size": 465,
+      "sha256": "e27c1d9abf80d7cc52f34f916cefd8a5a441ea4ec3599d2566da6e13fdfda009",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
-      "size": 9378,
-      "sha256": "08617757cafa9e416a27443143806eb9445a0f7dda1290bb4b73109146bda95a",
+      "size": 13611,
+      "sha256": "b78087c1a12e7145414f024709081b3be02a92a961daba6f0521b4070b7fddb4",
       "storage": "inline"
     },
     {
@@ -5069,14 +5207,14 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/sources_externes.json",
-      "size": 5410,
-      "sha256": "3834bd3a12f9f7e6eb35ac9f59b80a699bf4d9d37fd160209316f0c964c4574a",
+      "size": 5733,
+      "sha256": "a7bfdc9bd049f17df8a8e544a89a74cffa1e0fe30abc2733db5afa3c6f997412",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/tests/test_campaign.py",
-      "size": 2127,
-      "sha256": "f09b301547d68ac458e3c2c4bc67b4fe75256ea9275c702f7e18c7f519dffeda",
+      "size": 2620,
+      "sha256": "644a72a33bb18b2f150391ad87a15efa0e917f2373007db39c765caccbffd6d7",
       "storage": "inline"
     },
     {

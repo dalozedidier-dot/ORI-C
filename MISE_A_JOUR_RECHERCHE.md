@@ -12,13 +12,15 @@ Cette mise à jour poursuit les tests scientifiques sans modifier les métadonn�
 6. les lignées de vésicules Dryad sont acquises et analysées par cartes donneur-receveur, sélection, permutation et ablations.
 7. un jeu antibiotique externe Dryad est analysé avec séparation groupée par souche et témoin d'histoire permutée de même complexité.
 
-## État local avant acquisition réseau
+## État après intégration des données
 
 - `H011` : seuil monotone, rapport 3,33 dans les simulations publiées, intervention naturelle non mesurée.
 - cycle des interfaces : quatre relations ancrées, aucune trajectoire quantitative unique.
 - `Pacc` astronomique : 6 interventions sur 6 et 17 dimensions sur 18 au-dessus de l'enveloppe de référence.
 - `WP-C2b` : protocole gelé avec quatre points non saturés et huit graines réservées.
-- spéléothèmes, vésicules et antibiotique : `waiting_for_external_data` dans la construction locale.
+- spéléothèmes : audit exécuté sur 27 721 couples âge-isotope répartis dans la compilation NOAA.
+- vésicules : les quatre composantes préenregistrées sont soutenues sur les 12 classeurs réels.
+- antibiotique : l’histoire améliore la prédiction contre le modèle d’état et le témoin d’histoire permutée.
 
 ## Exécution complète
 
@@ -28,16 +30,17 @@ python plan_directeur/campagne_recherche_suivante/run_all.py
 python scripts/valider_recherche_suivante.py
 ```
 
-Dans GitHub Actions, lancer `Recherche suivante ORI-C`. Le workflow télécharge les jeux externes, calcule leur provenance, exécute les analyses et publie les rapports sous forme d'artefact. Les données brutes tierces ne sont pas redistribuées.
+Dans GitHub Actions, lancer `Recherche suivante ORI-C` avec les valeurs par défaut. Le workflow contrôle les jeux intégrés hors ligne, exécute les analyses et publie les rapports sous forme d'artefact. Le rafraîchissement réseau reste facultatif.
 
 ## Validation de la mise à jour
 
-- 13 nouveaux tests réussis.
-- 5 tests du calibrage matière réussis.
-- 2 tests du transfert climatique réussis.
-- 2 tests du benchmark Card 2019 réussis.
-- 2 tests du programme prébiotique existant réussis.
-- 1 136 contenus conformes après reconstruction du manifeste.
+- 28 tests ciblés réussis.
+- 0 erreur d'exécution dans `run_all.py`.
+- 0 bloc en attente de données externes.
+- workflow YAML valide.
+- 1 161 fichiers inscrits dans le manifeste.
+- 0 fichier modifié, absent ou non listé.
+- 69 objets Git LFS restent sous forme de pointeurs dans l'archive source, comme dans la version fournie.
 
 
 ## Maintenance de l'acquisition, 5 août 2026
