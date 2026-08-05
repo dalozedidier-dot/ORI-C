@@ -1,0 +1,7 @@
+{
+  "status": "waiting_for_external_data",
+  "missing": [
+    "speleothem-d18o-0-22k.csv"
+  ],
+  "use_decision": "not_executed"
+}

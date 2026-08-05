@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "policy": "Les données tierces sont téléchargées à l'exécution, conservées avec leur provenance et ne sont pas assimilées à des données produites par ORI-C.",
+  "datasets": [
+    {
+      "id": "vesicules_sokolskyi_baum_2026",
+      "branch": "vivant_prebiotique",
+      "doi": "10.5061/dryad.fbg79cp99",
+      "landing_page": "https://datadryad.org/dataset/doi:10.5061/dryad.fbg79cp99",
+      "download_url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.fbg79cp99/download",
+      "archive_name": "vesicules_sokolskyi_baum_2026.zip",
+      "expected_files": [
+        "FR1_log.xlsx",
+        "FR2_log.xlsx",
+        "FR3_log.xlsx",
+        "FU1_log.xlsx",
+        "FU2_log.xlsx",
+        "FU3_log.xlsx",
+        "UR1_log.xlsx",
+        "UR2_log.xlsx",
+        "UR3_log.xlsx",
+        "UU1_log.xlsx",
+        "UU2_log.xlsx",
+        "UU3_log.xlsx"
+      ],
+      "purpose": "Lignées parent-descendant, réponse à la sélection et ablations alimentation/resuspension.",
+      "redistribute": false,
+      "required_for_current_tests": true,
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+    },
+    {
+      "id": "histoire_antibiotique_donofrio_2026",
+      "branch": "vivant_antibiotique",
+      "doi": "10.5061/dryad.1zcrjdg68",
+      "landing_page": "https://datadryad.org/dataset/doi:10.5061/dryad.1zcrjdg68",
+      "download_url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.1zcrjdg68/download",
+      "archive_name": "histoire_antibiotique_donofrio_2026.zip",
+      "expected_files": [
+        "Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+        "Figure_2_C-limited_Fitness.csv",
+        "Figure_2_N-limited_Fitness.csv"
+      ],
+      "purpose": "Test externe de l'effet de la trajectoire LTEE au-delà de l'environnement présent.",
+      "redistribute": false,
+      "required_for_current_tests": true,
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+    },
+    {
+      "id": "speleothemes_noaa_0_22ka",
+      "branch": "systeme_solaire_climat",
+      "doi": "10.25921/edce-mr22",
+      "landing_page": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=noaa-cave-12295",
+      "download_url": "https://www.ncei.noaa.gov/pub/data/paleo/syntrace/speleothem/speleothem-d18o-0-22k.csv",
+      "archive_name": "speleothem-d18o-0-22k.csv",
+      "expected_files": [
+        "speleothem-d18o-0-22k.csv"
+      ],
+      "purpose": "Chronologie radiométrique indépendante pour un futur test orbital-climat.",
+      "redistribute": false,
+      "required_for_current_tests": false,
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+    }
+  ]
+}

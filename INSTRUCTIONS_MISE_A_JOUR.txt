@@ -1,0 +1,13 @@
+MISE À JOUR RECHERCHE ORI-C
+
+Copier le contenu de cette archive à la racine du dépôt ORI-C en remplaçant les fichiers existants.
+Aucun fichier n'est supprimé par cette mise à jour.
+Les métadonnées DOI, Zenodo, licence et version ne sont pas modifiées.
+
+Après copie :
+  python plan_directeur/campagne_recherche_suivante/run_all.py
+  python scripts/valider_recherche_suivante.py
+  python verifier_dossier.py
+
+Pour récupérer les données externes :
+  python plan_directeur/campagne_recherche_suivante/fetch_external_data.py

@@ -1,0 +1,119 @@
+{
+  "definition": "Pacc_interventions est la fraction des interventions admissibles qui dépassent l'enveloppe de référence sur au moins deux métriques. Pacc_dimensions est la fraction des couples intervention-métrique qui dépassent cette enveloppe.",
+  "baseline": "baseline_2myr_dt5",
+  "reference_variants": [
+    "baseline_2myr_dt4p8828125",
+    "baseline_2myr_elements_dt5",
+    "full_la2010_bodies_2myr_dt5"
+  ],
+  "reference_envelope": {
+    "earth_eccentricity_mean": 0.0004883961134625019,
+    "earth_eccentricity_std": 0.00015159386720229977,
+    "earth_eccentricity_max": 0.00011208930886159874
+  },
+  "metrics": [
+    "earth_eccentricity_mean",
+    "earth_eccentricity_std",
+    "earth_eccentricity_max"
+  ],
+  "interventions": 6,
+  "accessible_interventions": 6,
+  "accessible_dimension_cells": 17,
+  "total_dimension_cells": 18,
+  "Pacc_interventions": 1.0,
+  "Pacc_dimensions": 0.9444444444444444,
+  "detail": [
+    {
+      "intervention": "jupiter_a_minus_0p5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 2.9034630009152282,
+        "earth_eccentricity_std": 2.6281946208729856,
+        "earth_eccentricity_max": 71.65642198030399
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": true,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 3,
+      "intervention_accessible": true
+    },
+    {
+      "intervention": "jupiter_a_plus_0p5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 1.2364812649532737,
+        "earth_eccentricity_std": 0.6157202186295766,
+        "earth_eccentricity_max": 40.357603332722285
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": false,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 2,
+      "intervention_accessible": true
+    },
+    {
+      "intervention": "jupiter_mass_minus_5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 1.8217595766739265,
+        "earth_eccentricity_std": 2.0014993004188484,
+        "earth_eccentricity_max": 70.61804424822002
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": true,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 3,
+      "intervention_accessible": true
+    },
+    {
+      "intervention": "jupiter_mass_plus_5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 5.40453175074846,
+        "earth_eccentricity_std": 4.51900942997303,
+        "earth_eccentricity_max": 5.328031578185587
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": true,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 3,
+      "intervention_accessible": true
+    },
+    {
+      "intervention": "saturn_mass_minus_5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 2.0957526846297374,
+        "earth_eccentricity_std": 3.7514467055170777,
+        "earth_eccentricity_max": 6.317977926089691
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": true,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 3,
+      "intervention_accessible": true
+    },
+    {
+      "intervention": "saturn_mass_plus_5pct_2myr",
+      "effect_over_reference_envelope": {
+        "earth_eccentricity_mean": 2.4138391235761594,
+        "earth_eccentricity_std": 2.466254074982157,
+        "earth_eccentricity_max": 35.94220628903897
+      },
+      "accessible_dimensions": {
+        "earth_eccentricity_mean": true,
+        "earth_eccentricity_std": true,
+        "earth_eccentricity_max": true
+      },
+      "accessible_dimension_count": 3,
+      "intervention_accessible": true
+    }
+  ],
+  "status": "measured_with_non_saturated_dimension_score",
+  "limit": "Cette mesure porte sur le domaine d'interventions déjà calculé. Elle ne constitue pas une fréquence naturelle ni une probabilité universelle."
+}

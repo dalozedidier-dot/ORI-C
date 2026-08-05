@@ -1,0 +1,41 @@
+{
+  "required_edges": [
+    "H030",
+    "H031",
+    "H052",
+    "H053"
+  ],
+  "documented_required_edges": [
+    "H030",
+    "H031",
+    "H052",
+    "H053"
+  ],
+  "missing_required_edges": [],
+  "direct_intervention_edges": [
+    "H052"
+  ],
+  "quantitative_edges": [
+    "H031",
+    "H052",
+    "H053"
+  ],
+  "systems": {
+    "Bennu et basaltes hydrothermalises": [
+      "H053"
+    ],
+    "definition ORI-C": [
+      "H030"
+    ],
+    "serpentinisation experimentale": [
+      "H052"
+    ],
+    "systemes hydrothermaux": [
+      "H031"
+    ]
+  },
+  "single_system_closed_trajectories": 0,
+  "closed_systems": [],
+  "cycle_status": "anchored_but_not_closed",
+  "interpretation": "Les quatre relations du cycle possèdent un ancrage séparé, mais aucune trajectoire unique ne relie encore quantitativement les quatre segments."
+}

@@ -266,9 +266,40 @@ def suite_calibrage_v094() -> dict:
 
 
 
+def suite_recherche_suivante() -> dict:
+    """Tests des nouveaux protocoles, parseurs et mesures interventionnelles."""
+    import os
+
+    targets = [
+        "01_branche_matiere/tests_causaux/tests",
+        "02_branche_systeme_solaire/tests_suivants/tests",
+        "03_branche_vivant/lignees_vesicules/tests",
+        "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests",
+        "plan_directeur/campagne_recherche_suivante/tests",
+    ]
+    environment = dict(os.environ)
+    environment["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    environment.setdefault("OPENBLAS_NUM_THREADS", "1")
+    environment.setdefault("OMP_NUM_THREADS", "1")
+    output, code = executer(
+        [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", *targets],
+        RACINE, environment,
+    )
+    passed = re.search(r"(\d+) passed", output)
+    failed = re.search(r"(\d+) failed", output)
+    skipped = re.search(r"(\d+) skipped", output)
+    return {
+        "reussis": int(passed.group(1)) if passed else 0,
+        "echoues": int(failed.group(1)) if failed else 0,
+        "ignores": int(skipped.group(1)) if skipped else 0,
+        "code_retour": code,
+    }
+
+
 SUITES_ISOLEES = {
     "priorites": suite_priorites_v093,
     "calibrage": suite_calibrage_v094,
+    "recherche-suivante": suite_recherche_suivante,
     "socle": suite_socle,
     "memoire": suite_memoire,
     "astronomie": suite_astronomique,
@@ -408,6 +439,7 @@ def composer(rejouer: bool = False) -> str:
     # L'ordre fait donc partie du protocole de relevé.
     priorites = lancer_suite_isolee("priorites")
     calibrage = lancer_suite_isolee("calibrage")
+    recherche_suivante = lancer_suite_isolee("recherche-suivante")
     socle = lancer_suite_isolee("socle")
     memoire = lancer_suite_isolee("memoire")
     astro = lancer_suite_isolee("astronomie")
@@ -445,6 +477,8 @@ def composer(rejouer: bool = False) -> str:
         f"{priorites['ignores']} | 0 |",
         f"| Calibrage matière v0.9.4 | {calibrage['reussis']} | {calibrage['echoues']} | "
         f"{calibrage['ignores']} | 0 |",
+        f"| Recherche suivante | {recherche_suivante['reussis']} | "
+        f"{recherche_suivante['echoues']} | {recherche_suivante['ignores']} | 0 |",
     ]
     if astro.get("disponible"):
         lignes.append(

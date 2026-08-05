@@ -55,3 +55,14 @@ Le calibrage permet de trier les relations documentaires faibles, les voies uniq
 
 Le noyau stable obtenu est conditionnel aux conventions de stress publiées. Il ne doit pas être présenté comme une probabilité de vérité ou comme une validation universelle de l’architecture matérielle.
 
+## Portée des tests de recherche suivants
+
+La campagne de recherche suivante ajoute des tests ciblés, sans étendre automatiquement les conclusions existantes.
+
+- le seuil de `H011` est soutenu dans les simulations publiées, sans intervention naturelle ;
+- le cycle des interfaces reste non fermé dans une trajectoire unique ;
+- `Pacc` est mesuré uniquement dans le domaine des six interventions astronomiques calculées ;
+- `WP-C2b` est un protocole gelé, pas un résultat ;
+- les deux bancs vivants et l'audit de spéléothèmes dépendent de données externes téléchargées à l'exécution.
+
+Aucun statut d'attente ou d'erreur technique ne compte comme confirmation scientifique.

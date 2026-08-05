@@ -67,3 +67,10 @@ Résultat courant : 31 nœuds appartiennent au noyau stable sous stress des six 
 
 Le benchmark MESA montre que le schéma de représentation se transfère à deux trajectoires stellaires indépendantes. Il ne démontre pas une loi causale universelle.
 
+## Tests causaux suivants
+
+Le dossier `tests_causaux/` traite les deux priorités documentaires et structurelles les plus immédiates.
+
+`H011` est testée comme relation à seuil. Les données publiées à `tau_s = 0.01` montrent une augmentation monotone de l'abondance critique de solides avec la turbulence, avec un rapport de 3,33 entre les extrêmes testés. Ce résultat soutient le mécanisme dans les simulations concernées, sans constituer une intervention naturelle.
+
+Le cycle `H030-H031-H052-H053` possède un ancrage pour chacun de ses quatre segments. Aucun système unique ne relie encore quantitativement toute la boucle. La fermeture empirique reste donc ouverte.

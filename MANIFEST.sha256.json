@@ -41,14 +41,20 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 5605,
-      "sha256": "28b6ee5aa2797e4f121556f0f95815fe29e24ee41acce04d0e696243d9b80603",
+      "size": 6508,
+      "sha256": "4f68fd88283857469f3970feb8b74fefa463f5ec5af5bc2c46558779e5379d21",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/pages.yml",
       "size": 1631,
       "sha256": "cb945aa7d3e3264bdc754d89b5f5bf521bf3f629c2eaeae8125e56c6ddfe5385",
+      "storage": "inline"
+    },
+    {
+      "path": ".github/workflows/recherche-suivante.yml",
+      "size": 2665,
+      "sha256": "7bf876c92e4bbc9737da41c83bb14736525aaeb3505dcb76ea173cdaf9c4ca80",
       "storage": "inline"
     },
     {
@@ -533,8 +539,8 @@
     },
     {
       "path": "01_branche_matiere/README.md",
-      "size": 3132,
-      "sha256": "05d1198768d168692b1f0789d49ee3afeb9f8a816aba9764aaefb94baeaaf224",
+      "size": 3813,
+      "sha256": "eb00a790865975d9f3a9a378b1a6ee641e59fc409e6e2069e6718cfa52eb5a5b",
       "storage": "inline"
     },
     {
@@ -1312,6 +1318,54 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/tests_causaux/PROTOCOLE.md",
+      "size": 699,
+      "sha256": "d0c85441fcd33a7bb5299d84bc6f5c9ca25393e55cbaa2021db5440c1e3c187e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/analyser_cycle_interfaces.py",
+      "size": 1899,
+      "sha256": "25bddfab7d024a93c3ae489e398a1a1659871104f63d79648850e33866794ae8",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/analyser_h011.py",
+      "size": 1185,
+      "sha256": "45b4a194ef0f30b1e45e047acc32b7ec39469ac3d612dd91f2dd68ee73917dbd",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/donnees/ancrages_cycle_interfaces.csv",
+      "size": 893,
+      "sha256": "ffdc704153f3bc84ec307b5393109a078204bd5396054e1fac5291d9e9833585",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/donnees/seuils_instabilite_streaming.csv",
+      "size": 556,
+      "sha256": "5f02ab4e75b29bcde62c277790067783031efe5216887ee439578cda35874982",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/resultats/CYCLE_INTERFACES_RESULTAT.json",
+      "size": 831,
+      "sha256": "4597e0f101fcc56f75c0a92ba5c0af5559099ae60fcb93bba87338f3377e66c3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json",
+      "size": 447,
+      "sha256": "6f84a5030fa72c35cad2a32df3c1c247938d2a35bf9d66b340335d2c7ff5e7c7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/tests_causaux/tests/test_tests_causaux.py",
+      "size": 1014,
+      "sha256": "d1f38a018b4513e4f55b7eb7b8a591a7af59b2ebd9154e4b48042eaea29da9c8",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/FILTRAGES_HISTORIQUES.md",
       "size": 17605,
       "sha256": "6d9b56cce44c2bb6ee7cd6ff9a47446ce21c4ca215b33607d6b5a99ab723f2dd",
@@ -1319,8 +1373,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/README.md",
-      "size": 6785,
-      "sha256": "935894f9cfdf63d6f99d17c713159e3c19693d4ba0e9cd5c0c0555e92a7431f8",
+      "size": 7583,
+      "sha256": "e3ba3e96189dc37dc0c9245b9d6676fd2748fddd9ad043acc7e7e7116c123969",
       "storage": "inline"
     },
     {
@@ -3898,6 +3952,54 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/tests_suivants/PROTOCOLE.md",
+      "size": 506,
+      "sha256": "3c36f9d56a5fec37aac40692ca69b0acf39e2e5e5e1c49ae81285af7673c4740",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py",
+      "size": 3696,
+      "sha256": "0833480c2b83f52186fa676468bfee527680873e4a8ffcf891a2b4adc93233c4",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/mesurer_pacc_astronomique.py",
+      "size": 3960,
+      "sha256": "3b7c41ed3145c2ab2818c46801d04274a1de66afe514741f780adfa454b86269",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/preenregistrer_c2b.py",
+      "size": 3199,
+      "sha256": "12ff83d2be248fd077467284a2063eb252bbc7827f20f88044e6252822641339",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/resultats/AUDIT_SPELEOTHEMES.json",
+      "size": 130,
+      "sha256": "5639eda4554bb3c05b4b13d87c6ecf7457e3cc9c2059ca837f3d8d8ec28493f8",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/resultats/PACC_ASTRONOMIQUE.json",
+      "size": 4255,
+      "sha256": "d0030d6cb9e5346c119f1c2b4bff2f5329959a631590ce0b55bcb8c0fcb25487",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/resultats/PROTOCOLE_C2B.json",
+      "size": 2088,
+      "sha256": "137beabe734bd17af6fa92d9f9698e91f397a68983b9db731d8f1f5c3d7853e2",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/tests/test_suivants.py",
+      "size": 1595,
+      "sha256": "88173821346b3408e4c6d290befab85c9eaef80f09e506e5baba662b4f879771",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/transfert_climatique_intermediaire/INTERFACES_EXTENSION.md",
       "size": 737,
       "sha256": "f4fedc6639b3f46deb3933ee9ba57d3bca475d15f2e427b693b14e19febfcc9f",
@@ -3959,8 +4061,8 @@
     },
     {
       "path": "03_branche_vivant/README.md",
-      "size": 3336,
-      "sha256": "e51c539b3f14d76df3e9c529e32370333a78b5778234010718e62b201127a881",
+      "size": 4035,
+      "sha256": "2c7b7f5ccdbc2cc59fcc6ba571f3d0ec2d1281a3b59e6be5baa2814ba8f9ad2b",
       "storage": "inline"
     },
     {
@@ -4033,6 +4135,54 @@
       "path": "03_branche_vivant/benchmark_externe_card2019/tests/test_benchmark_externe.py",
       "size": 689,
       "sha256": "2271cfadcbae91b45bfdd6a2a32e2acc326ec0a2433070a0dac3b8007a67a8b9",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/PROTOCOLE.md",
+      "size": 655,
+      "sha256": "024602d40612112977be3152df808ae1884166d2ee53d0dd7ced617acd06696a",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py",
+      "size": 5645,
+      "sha256": "9d3a8fd9e2f4c2fd5e94c8b9aad0e108841ff964c803bfaa62a3c80959b0f828",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "size": 107,
+      "sha256": "8ac958df959c942f67ed5b5cb10e883eb10eef07375ea16cc0a6e2f0ec5d8637",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_analysis.py",
+      "size": 1427,
+      "sha256": "f9ce00dacf634e2724f7f143fac980db8f1b4b33655eab3629f3e8ef53ef9221",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE.md",
+      "size": 601,
+      "sha256": "a35da254d93a0c9b7bdc9fe3bda6448aa2bdd79ab26660e64920d7ca508a20a5",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
+      "size": 8594,
+      "sha256": "b138ef166d6dfb5f2472e72783e97e0b66986c46a33e1a1a4e0f580b266cc538",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "size": 206,
+      "sha256": "75fd20088d2670ef7ab38306516da2534d7bdfc7e967a2d45cf6f94a779c7950",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/tests/test_parser.py",
+      "size": 2071,
+      "sha256": "3c2d10d32ac697b5e0a2845fb5b9dc58d317dd691ed392e4489a05641ab45d0d",
       "storage": "inline"
     },
     {
@@ -4133,8 +4283,8 @@
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "size": 3982,
-      "sha256": "2fbca6da3a5c91d344e284bbc812729cd3c04eba97d09a1e7ce10d95166c2534",
+      "size": 4539,
+      "sha256": "15d934e379a7a36aa522b91519bdfb894ac2b797a84805fa5f702fae7cfd5b45",
       "storage": "inline"
     },
     {
@@ -4145,14 +4295,14 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 31182,
-      "sha256": "eb96176976c105df3ff7d56d0a12c4f83010568755be20f76c1bceb85714a0cf",
+      "size": 32400,
+      "sha256": "e92a283a89cfd30c9607c96a02430eb50581623823fc84dc2d67b2e4f6614f5c",
       "storage": "inline"
     },
     {
       "path": "ETAT_DES_TESTS.md",
-      "size": 2806,
-      "sha256": "100bd1a96eeadad1e489d20e756e41dd2407cedbc0d5c8f6a349d2f109b79c2e",
+      "size": 2846,
+      "sha256": "a7177b2b5b55fec4bcc579ba1a3f5a36f6fa1dcae380221693d2b36b5f14c4e2",
       "storage": "inline"
     },
     {
@@ -4204,6 +4354,12 @@
       "storage": "inline"
     },
     {
+      "path": "MISE_A_JOUR_RECHERCHE.md",
+      "size": 2346,
+      "sha256": "d26b700c8448cf247f9fa6fef3ce678894556f1df4b7f9b3736838f6528f026f",
+      "storage": "inline"
+    },
+    {
       "path": "Makefile",
       "size": 377,
       "sha256": "22592611f00e5b793646acacf914ce99406ac259cd8e78532fcb32b64de37138",
@@ -4229,8 +4385,8 @@
     },
     {
       "path": "README.md",
-      "size": 12152,
-      "sha256": "7a536f12d451352e2cc049596757ec231767e7ab112c227c30105435cc28838d",
+      "size": 13301,
+      "sha256": "f6b2e37e438605f4cffebec99d53ca37b324fa1ca6c5188362e3acec5df3f1c6",
       "storage": "inline"
     },
     {
@@ -4253,8 +4409,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 4949,
-      "sha256": "79c74a3f1dc1df10ed39dda458eb9de0275ce26329616520a6d5e49ecaa2ba7b",
+      "size": 5640,
+      "sha256": "58f21d9a98148de2e099cd9214e58cc34f408f81cda1f82d7dd68b08cce85c1f",
       "storage": "inline"
     },
     {
@@ -4337,8 +4493,8 @@
     },
     {
       "path": "documentation/POINT_D_ENTREE.md",
-      "size": 4368,
-      "sha256": "30ef04f81e717dba24a1d40e59b5884bffc1002e54f310c5783cbeb4580e62cc",
+      "size": 4797,
+      "sha256": "2f650c9af2bb9467914cf5247b2cf422478f6588cd315847f36c1092355f32db",
       "storage": "inline"
     },
     {
@@ -4510,6 +4666,24 @@
       "storage": "inline"
     },
     {
+      "path": "donnees_externes/.gitignore",
+      "size": 50,
+      "sha256": "b66ea569c1a23aa8077397c64046b6f5b0f5ef2904aed053bf2f42ba92c5490e",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/ACQUISITION_REPORT.json",
+      "size": 515,
+      "sha256": "16d97dc79fbfaabd0e382ec6e26a8b298e8c66ec731ffc6090c7d153871c1f50",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/README.md",
+      "size": 1127,
+      "sha256": "52eb15cfd4a19b906e064afbad3d9a57e68b8bf850ca982707e0289e7a812b63",
+      "storage": "inline"
+    },
+    {
       "path": "enregistrer_environnement.py",
       "size": 5562,
       "sha256": "dd1062fd9944ee5593fc1ac26cc36e3b3500af7710c27aad94255d299027a35f",
@@ -4517,20 +4691,20 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 24128,
-      "sha256": "bfabb4d5d2e01620a42a0d62f2b47400bd024169f6a4599826e3dbcaf2f117d5",
+      "size": 25570,
+      "sha256": "4a70d440908ac0fa1c8b279de00e3f0dcb9516ca54a04e68bc22f56d1727378b",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
       "size": 3787,
-      "sha256": "e56a01ce86021a24633e277d29599a7c1b9e684a14eb4cde9bc46fa78f93fb42",
+      "sha256": "292c69225543b4c6cb2b7ed1e4476c1e555da18e1bbbde8fe526c5f040d6984a",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 11135,
-      "sha256": "ed149111073b140cdb7f95803c7ecbd973ddc378fb7119574d6bf1b6e620145f",
+      "size": 12506,
+      "sha256": "6c547f8675189d7bf5aaa484e36582f727ff19a73e0ee4d4e587b20909223b5e",
       "storage": "inline"
     },
     {
@@ -4547,8 +4721,8 @@
     },
     {
       "path": "plan_directeur/REGISTRE_HYPOTHESES.csv",
-      "size": 15964,
-      "sha256": "8629fc924f0c6638a0e5aee755a670fef1ccad5ed42f3e888121d8fb7a76b90b",
+      "size": 21403,
+      "sha256": "a55281adb73f9accb917504e8bb195f0b0ec7924de3d89c5ffe3253d132bc066",
       "storage": "inline"
     },
     {
@@ -4837,6 +5011,66 @@
       "path": "plan_directeur/campagne_priorites_v093/tests/test_campagne_priorites.py",
       "size": 699,
       "sha256": "6995a356bb8754f24b6524e6949794d19a69fd0d1b5de5c167f91cf94dc30ad7",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/DECISIONS_SCIENTIFIQUES.md",
+      "size": 1667,
+      "sha256": "3a332e305f95b45a36b21e1033b3f553297651e88365dc8fe36e23308d470ec7",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/MATRICE_TESTS.csv",
+      "size": 2152,
+      "sha256": "b950da4db8a50fdcb00ee8bb4267d5d7ad4feacdef5ca8bd3ece3b32bdc624f7",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/PLAN_RECHERCHE.md",
+      "size": 2969,
+      "sha256": "53b346a1c04d13e82883989b47593d37eba0b5a320ee413922d7cb3c90f65c68",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/README.md",
+      "size": 1534,
+      "sha256": "622896ff3a2c4f40d01c2eefdd5344cce697df75b90a70df434993f864a50455",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/fetch_external_data.py",
+      "size": 5448,
+      "sha256": "e9c079f8c17ababc638804c91431602ab672f70fd9cfb39ccb47471eaafc762c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/resultats/RAPPORT.md",
+      "size": 517,
+      "sha256": "02c58085c4e734b6098afb4a1065bbab8eb9e22ac546e5fe206c4c9632ddd617",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
+      "size": 9378,
+      "sha256": "08617757cafa9e416a27443143806eb9445a0f7dda1290bb4b73109146bda95a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/run_all.py",
+      "size": 3229,
+      "sha256": "23c38e6a6500064728fca5ca7d409339e714607ce6bf602b8b52a7d8ddc6850a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/sources_externes.json",
+      "size": 2738,
+      "sha256": "60883d919e1ba8c9a18adb6199d5d0fa71c18334a385402d78bcd8a790a4cd84",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_recherche_suivante/tests/test_campaign.py",
+      "size": 1935,
+      "sha256": "7ab9aa74d63100eb14e503de9511329bd9a3c35addfa7effa1f9d7ebccad05b4",
       "storage": "inline"
     },
     {
@@ -5423,8 +5657,8 @@
     },
     {
       "path": "plateforme/requirements.txt",
-      "size": 178,
-      "sha256": "19813a84e9236462b7ae117ecb954f70a2414153c1f198d5cf8a20baafdf0373",
+      "size": 192,
+      "sha256": "227bb4116d2d5fda75e3148dbe9691363591f107b55de208901cc5cd8c502b4e",
       "storage": "inline"
     },
     {
@@ -6047,20 +6281,20 @@
     },
     {
       "path": "plateforme/source_corrigee/pyproject.toml",
-      "size": 1064,
-      "sha256": "c8026a3164eea291ab207ab521af974c087f66b359e7b5773ceba783a8708ff7",
+      "size": 1083,
+      "sha256": "ceb3bf823a8efddde83abe06e7f582a6d68d3bf59ca80ce22e538020b5aed287",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/requirements-lock.txt",
-      "size": 316,
-      "sha256": "de9a9c0694932b7ed1920b58481ad1d4a48dc50d5dd060a61e8eda63e0cddc05",
+      "size": 332,
+      "sha256": "52e594d1fcca1568961cf0dc75a245682b324b82d3d641b058141c54248c1688",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/requirements.txt",
-      "size": 178,
-      "sha256": "19813a84e9236462b7ae117ecb954f70a2414153c1f198d5cf8a20baafdf0373",
+      "size": 192,
+      "sha256": "227bb4116d2d5fda75e3148dbe9691363591f107b55de208901cc5cd8c502b4e",
       "storage": "inline"
     },
     {
@@ -6499,6 +6733,12 @@
       "path": "scripts/valider_publication_stable.py",
       "size": 1466,
       "sha256": "4c8a73b41e8aa26d911debdc4cbffe4048eb63ee838289a298f25161ca45ec26",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/valider_recherche_suivante.py",
+      "size": 3196,
+      "sha256": "9fecc0a5c2b61341c4b342caae84744b774600b0ecc7132c3301616c2d852346",
       "storage": "inline"
     },
     {

@@ -1,0 +1,75 @@
+{
+  "id": "WP-C2b",
+  "status": "frozen_before_new_execution",
+  "selection_rule": "Points non saturés du scan historique, attractor_ice_mean entre 0.05 et 0.85. Aucun nouveau point ne peut être choisi après lecture des résultats C2b.",
+  "regime_bins": {
+    "low_ice": [
+      0.05,
+      0.35
+    ],
+    "intermediate_ice": [
+      0.35,
+      0.65
+    ],
+    "high_ice": [
+      0.65,
+      0.85
+    ]
+  },
+  "candidate_points": [
+    {
+      "obliquity_deg": 12.0,
+      "eccentricity": 0.3,
+      "ice_mean": 0.1931766614301261,
+      "regime": "low_ice"
+    },
+    {
+      "obliquity_deg": 23.5,
+      "eccentricity": 0.18,
+      "ice_mean": 0.3441191918844858,
+      "regime": "low_ice"
+    },
+    {
+      "obliquity_deg": 30.0,
+      "eccentricity": 0.1,
+      "ice_mean": 0.4224162025063659,
+      "regime": "intermediate_ice"
+    },
+    {
+      "obliquity_deg": 40.0,
+      "eccentricity": 0.0,
+      "ice_mean": 0.2715254679283003,
+      "regime": "low_ice"
+    }
+  ],
+  "calibration": "Une référence distincte par régime, ajustée uniquement sur les graines de calibration.",
+  "holdout_seeds": [
+    41001,
+    41003,
+    41011,
+    41017,
+    41023,
+    41039,
+    41047,
+    41051
+  ],
+  "primary_endpoint": "Différence M2 moins témoin apparié de l'étendue finale de glace après retour au forçage final.",
+  "secondary_endpoints": [
+    "température finale",
+    "CO2 final",
+    "productivité finale",
+    "temps de relaxation"
+  ],
+  "materiality_threshold": 0.05,
+  "observation_myr": 400,
+  "success_rule": "Effet supérieur au seuil dans au moins 6 graines sur 8 et supérieur au témoin de complexité égale dans chaque régime représenté.",
+  "failure_rules": [
+    "témoin non apparié",
+    "gain inférieur au seuil",
+    "effet absent dans plus de deux graines",
+    "effet uniquement transitoire",
+    "sélection a posteriori d'un point ou d'un régime"
+  ],
+  "source_map_sha256": "530f8d186123a0bf58bb4f6fabc3c1914a1e74ba595c63802c458f28aae65307",
+  "protocol_sha256": "be8bd71dd17b91543170a48204a3723dd248583e41dbf572ab45ddc7e19b32c9"
+}

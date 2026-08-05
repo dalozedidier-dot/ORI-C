@@ -5,13 +5,13 @@ document dit lesquels sont exécutés, lesquels sont bloqués et pourquoi.
 
 Il ne fixe aucun statut : `ETAT_DES_PREUVES.md` et
 `REGISTRE_HYPOTHESES.csv` s'en chargent. **Cocher un item ne valide rien** —
-sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
+sur 35 hypothèses enregistrées, les résultats réfutés et non concluants restent explicitement conservés.
 
 ## Niveau 1 du plan — immédiat, faible coût, forte valeur
 
 | Item | État | Où |
 |---|---|---|
-| 1. registre complet des hypothèses | **fait**, 28 hypothèses | `REGISTRE_HYPOTHESES.csv` |
+| 1. registre complet des hypothèses | **fait**, 35 hypothèses | `REGISTRE_HYPOTHESES.csv` |
 | 2. base de données des 40 transitions | **fait** comme schéma, 8 champs sur 23 remplis | `01_branche_matiere/base_transitions/` |
 | 3. tests synthétiques du socle | **fait**, 4 volets | `00_socle/banc_synthetique/` |
 | 4. régénération et audit de la carte | **partiel** — audit fait, figures bloquées | `…/carte_relationnelle/ANALYSE_GRAPHE.md` |
@@ -31,7 +31,7 @@ sur 28 hypothèses enregistrées, 11 sont réfutées et 5 non concluantes.
 | Groupe | Items | Traités | Résultat principal |
 |---|---:|---:|---|
 | Étape 0 | 10 | 8 | environnement enregistré ; `rebound` installé et campagne astronomique exécutée |
-| Étape 1 | — | **fait** | 28 hypothèses, 16 champs |
+| Étape 1 | — | **fait** | 35 hypothèses, 18 champs |
 | Étape 2, grille universelle | 30 | **30/59 cases** | `GRILLE_ETAPE_2.md` |
 | S1.2 à S1.5 | 42 | ~12 | banc synthétique, 4 volets sur 4 |
 | WP-S2 | 20 | 14 | **item 14 positif** : 10 cas sur 600 |
@@ -122,7 +122,7 @@ Le plan fixe douze conditions. État :
 
 | Condition | État |
 |---|---|
-| 1. identifiant et statut pour chaque affirmation majeure | **fait**, 28 |
+| 1. identifiant et statut pour chaque affirmation majeure | **fait**, 35 |
 | 2. base de données de la branche matière | **fait** comme schéma, à remplir |
 | 3. une prédiction propre réussissant hors échantillon par branche | **aucune** |
 | 4. chaque réussite bat un témoin apparié | sans objet, aucune réussite |
@@ -153,3 +153,16 @@ Le programme n'a franchi ni le premier seuil ni, a fortiori, le seuil fort.
 - [ ] obtenir une évaluation indépendante de la nécessité et de la suffisance des relations prioritaires
 - [ ] tester une intervention ou un contrefactuel naturel sur `H011` et sur le cycle `H030-H031-H052-H053`
 
+## Campagne de recherche suivante
+
+| Axe | État | Résultat ou verrou |
+|---|---|---|
+| `H011` sous variation de turbulence | **exécuté** | seuil critique monotone, rapport 3,33 dans les simulations publiées ; intervention naturelle non mesurée |
+| cycle `H030-H031-H052-H053` | **exécuté** | quatre segments documentés, aucune trajectoire quantitative unique |
+| `Pacc` astronomique interventionnel | **exécuté** | 6 interventions sur 6 dépassent l'enveloppe sur au moins deux métriques ; 17 dimensions sur 18 dépassent l'enveloppe |
+| `WP-C2b` | **protocole gelé** | quatre points non saturés, trois classes de régime, huit graines de validation |
+| spéléothèmes NOAA | **acquisition automatisée** | audit de chronologie et de proxy ; portée limitée à 0-22 ka |
+| lignées de vésicules | **acquisition et analyse automatisées** | trois répétitions par régime, filiation reconstruite par cartes donneur-receveur |
+| histoire antibiotique 2026 | **acquisition et analyse automatisées** | souche exclue de l'apprentissage, témoin d'état et histoire permutée de même complexité |
+
+Les trois derniers blocs restent en attente lors d'une exécution sans accès aux jeux externes. Le workflow `Recherche suivante ORI-C` télécharge les sources, écrit leur provenance et exécute les analyses complètes.

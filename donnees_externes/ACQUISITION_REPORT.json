@@ -1,0 +1,20 @@
+[
+  {
+    "id": "vesicules_sokolskyi_baum_2026",
+    "required": true,
+    "status": "scheduled_for_workflow",
+    "reason": "construction locale sans accès réseau"
+  },
+  {
+    "id": "histoire_antibiotique_donofrio_2026",
+    "required": true,
+    "status": "scheduled_for_workflow",
+    "reason": "construction locale sans accès réseau"
+  },
+  {
+    "id": "speleothemes_noaa_0_22ka",
+    "required": false,
+    "status": "scheduled_for_workflow",
+    "reason": "construction locale sans accès réseau"
+  }
+]

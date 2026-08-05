@@ -45,7 +45,7 @@ La chaîne présence → accessibilité → mobilisabilité possède désormais 
 | Sections du CODEBOOK | 15 |
 | Sous-sections | 15 |
 | Codes de relation | 13 |
-| Hypothèses enregistrées | 28 |
+| Hypothèses enregistrées | 35 |
 | Hypothèses à statut positif | **4** |
 | **Concepts par résultat positif** | **3,75** |
 

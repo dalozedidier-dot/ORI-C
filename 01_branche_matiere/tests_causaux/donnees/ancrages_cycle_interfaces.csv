@@ -1,0 +1,6 @@
+edge_id,processus,systeme,entree_observee,sortie_observee,intervention_directe,quantitatif,source_doi,lecture
+H030,inventaire accessible,definition ORI-C,true,true,false,false,10.1146/annurev-earth-040722-094945,definition operationnelle sans trajectoire complete
+H031,circulation reservoirs-interfaces,systemes hydrothermaux,true,true,false,true,10.1038/s41550-024-02373-x,transport observe ou modele selon le systeme
+H052,circulation hydrothermale entretenue,serpentinisation experimentale,true,true,true,true,10.1002/gdj3.105,temperature pression et duree varient entre experiences
+H053,alteration aqueuse vers especes solubles,Bennu et basaltes hydrothermalises,true,true,false,true,10.17632/wb5bgz7fbz.1,phosphate et alteration documentes sans fermeture de toute la boucle
+H032,serpentinisation,experiences eau-roche,true,true,true,true,10.1002/gdj3.105,H2 et produits reduits mesurables

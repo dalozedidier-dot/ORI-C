@@ -61,3 +61,9 @@ python 01_branche_matiere/genealogie/construire_genealogie.py
 
 Le calibrage affine la priorité des relations. Il ne transforme pas la criticité d’une hyperarête dans le graphe en preuve causale naturelle.
 
+## Campagne de recherche suivante
+
+- `plan_directeur/campagne_recherche_suivante/README.md` : point d'entrée de la recherche active.
+- `plan_directeur/campagne_recherche_suivante/MATRICE_TESTS.csv` : questions, données, témoins et seuils.
+- `plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json` : état machine lisible local.
+- `scripts/valider_recherche_suivante.py` : contrôle des invariants de la campagne.

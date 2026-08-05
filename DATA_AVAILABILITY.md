@@ -48,3 +48,9 @@ l'audit. Les données tierces conservent les conditions de leur source et ne
 reçoivent aucune nouvelle licence du projet ORI-C.
 
 Les scripts d’import reproduisent les transformations sans imputation, interpolation, simulation ni augmentation. Les trois fichiers générés artificiellement présents dans une source antérieure ne sont pas repris dans l’archive canonique.
+
+## Données de la recherche active
+
+Les nouveaux bancs externes utilisent trois dépôts publics enregistrés dans `plan_directeur/campagne_recherche_suivante/sources_externes.json`. Les fichiers sont téléchargés au moment de l'exécution, contrôlés par SHA-256 et accompagnés d'un `SOURCE.json`.
+
+Les données brutes tierces ne sont pas intégrées au dossier source. Les scripts, protocoles, parseurs, règles de décision et rapports d'acquisition sont conservés. Le workflow `Recherche suivante ORI-C` réalise l'acquisition avant les analyses.

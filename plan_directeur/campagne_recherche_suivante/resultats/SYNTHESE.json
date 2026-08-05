@@ -1,0 +1,280 @@
+{
+  "schema": 1,
+  "modules": {
+    "matiere_h011": {
+      "rows": 4,
+      "turbulence_points": 3,
+      "zcrit_monotonic_with_turbulence": true,
+      "log_log_slope": 0.5228787452815578,
+      "threshold_ratio_high_low_turbulence": 3.3333333333333335,
+      "h011_status": "mechanistic_threshold_supported_in_simulations",
+      "natural_intervention_status": "not_measured",
+      "interpretation": "H011 acquiert un seuil opératoire testable. Le résultat reste un contraste de simulations et non une ablation naturelle."
+    },
+    "matiere_cycle": {
+      "required_edges": [
+        "H030",
+        "H031",
+        "H052",
+        "H053"
+      ],
+      "documented_required_edges": [
+        "H030",
+        "H031",
+        "H052",
+        "H053"
+      ],
+      "missing_required_edges": [],
+      "direct_intervention_edges": [
+        "H052"
+      ],
+      "quantitative_edges": [
+        "H031",
+        "H052",
+        "H053"
+      ],
+      "systems": {
+        "Bennu et basaltes hydrothermalises": [
+          "H053"
+        ],
+        "definition ORI-C": [
+          "H030"
+        ],
+        "serpentinisation experimentale": [
+          "H052"
+        ],
+        "systemes hydrothermaux": [
+          "H031"
+        ]
+      },
+      "single_system_closed_trajectories": 0,
+      "closed_systems": [],
+      "cycle_status": "anchored_but_not_closed",
+      "interpretation": "Les quatre relations du cycle possèdent un ancrage séparé, mais aucune trajectoire unique ne relie encore quantitativement les quatre segments."
+    },
+    "pacc_astronomique": {
+      "definition": "Pacc_interventions est la fraction des interventions admissibles qui dépassent l'enveloppe de référence sur au moins deux métriques. Pacc_dimensions est la fraction des couples intervention-métrique qui dépassent cette enveloppe.",
+      "baseline": "baseline_2myr_dt5",
+      "reference_variants": [
+        "baseline_2myr_dt4p8828125",
+        "baseline_2myr_elements_dt5",
+        "full_la2010_bodies_2myr_dt5"
+      ],
+      "reference_envelope": {
+        "earth_eccentricity_mean": 0.0004883961134625019,
+        "earth_eccentricity_std": 0.00015159386720229977,
+        "earth_eccentricity_max": 0.00011208930886159874
+      },
+      "metrics": [
+        "earth_eccentricity_mean",
+        "earth_eccentricity_std",
+        "earth_eccentricity_max"
+      ],
+      "interventions": 6,
+      "accessible_interventions": 6,
+      "accessible_dimension_cells": 17,
+      "total_dimension_cells": 18,
+      "Pacc_interventions": 1.0,
+      "Pacc_dimensions": 0.9444444444444444,
+      "detail": [
+        {
+          "intervention": "jupiter_a_minus_0p5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 2.9034630009152282,
+            "earth_eccentricity_std": 2.6281946208729856,
+            "earth_eccentricity_max": 71.65642198030399
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": true,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 3,
+          "intervention_accessible": true
+        },
+        {
+          "intervention": "jupiter_a_plus_0p5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 1.2364812649532737,
+            "earth_eccentricity_std": 0.6157202186295766,
+            "earth_eccentricity_max": 40.357603332722285
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": false,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 2,
+          "intervention_accessible": true
+        },
+        {
+          "intervention": "jupiter_mass_minus_5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 1.8217595766739265,
+            "earth_eccentricity_std": 2.0014993004188484,
+            "earth_eccentricity_max": 70.61804424822002
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": true,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 3,
+          "intervention_accessible": true
+        },
+        {
+          "intervention": "jupiter_mass_plus_5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 5.40453175074846,
+            "earth_eccentricity_std": 4.51900942997303,
+            "earth_eccentricity_max": 5.328031578185587
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": true,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 3,
+          "intervention_accessible": true
+        },
+        {
+          "intervention": "saturn_mass_minus_5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 2.0957526846297374,
+            "earth_eccentricity_std": 3.7514467055170777,
+            "earth_eccentricity_max": 6.317977926089691
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": true,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 3,
+          "intervention_accessible": true
+        },
+        {
+          "intervention": "saturn_mass_plus_5pct_2myr",
+          "effect_over_reference_envelope": {
+            "earth_eccentricity_mean": 2.4138391235761594,
+            "earth_eccentricity_std": 2.466254074982157,
+            "earth_eccentricity_max": 35.94220628903897
+          },
+          "accessible_dimensions": {
+            "earth_eccentricity_mean": true,
+            "earth_eccentricity_std": true,
+            "earth_eccentricity_max": true
+          },
+          "accessible_dimension_count": 3,
+          "intervention_accessible": true
+        }
+      ],
+      "status": "measured_with_non_saturated_dimension_score",
+      "limit": "Cette mesure porte sur le domaine d'interventions déjà calculé. Elle ne constitue pas une fréquence naturelle ni une probabilité universelle."
+    },
+    "memoire_c2b": {
+      "id": "WP-C2b",
+      "status": "frozen_before_new_execution",
+      "selection_rule": "Points non saturés du scan historique, attractor_ice_mean entre 0.05 et 0.85. Aucun nouveau point ne peut être choisi après lecture des résultats C2b.",
+      "regime_bins": {
+        "low_ice": [
+          0.05,
+          0.35
+        ],
+        "intermediate_ice": [
+          0.35,
+          0.65
+        ],
+        "high_ice": [
+          0.65,
+          0.85
+        ]
+      },
+      "candidate_points": [
+        {
+          "obliquity_deg": 12.0,
+          "eccentricity": 0.3,
+          "ice_mean": 0.1931766614301261,
+          "regime": "low_ice"
+        },
+        {
+          "obliquity_deg": 23.5,
+          "eccentricity": 0.18,
+          "ice_mean": 0.3441191918844858,
+          "regime": "low_ice"
+        },
+        {
+          "obliquity_deg": 30.0,
+          "eccentricity": 0.1,
+          "ice_mean": 0.4224162025063659,
+          "regime": "intermediate_ice"
+        },
+        {
+          "obliquity_deg": 40.0,
+          "eccentricity": 0.0,
+          "ice_mean": 0.2715254679283003,
+          "regime": "low_ice"
+        }
+      ],
+      "calibration": "Une référence distincte par régime, ajustée uniquement sur les graines de calibration.",
+      "holdout_seeds": [
+        41001,
+        41003,
+        41011,
+        41017,
+        41023,
+        41039,
+        41047,
+        41051
+      ],
+      "primary_endpoint": "Différence M2 moins témoin apparié de l'étendue finale de glace après retour au forçage final.",
+      "secondary_endpoints": [
+        "température finale",
+        "CO2 final",
+        "productivité finale",
+        "temps de relaxation"
+      ],
+      "materiality_threshold": 0.05,
+      "observation_myr": 400,
+      "success_rule": "Effet supérieur au seuil dans au moins 6 graines sur 8 et supérieur au témoin de complexité égale dans chaque régime représenté.",
+      "failure_rules": [
+        "témoin non apparié",
+        "gain inférieur au seuil",
+        "effet absent dans plus de deux graines",
+        "effet uniquement transitoire",
+        "sélection a posteriori d'un point ou d'un régime"
+      ],
+      "source_map_sha256": "530f8d186123a0bf58bb4f6fabc3c1914a1e74ba595c63802c458f28aae65307",
+      "protocol_sha256": "be8bd71dd17b91543170a48204a3723dd248583e41dbf572ab45ddc7e19b32c9"
+    },
+    "speleothemes": {
+      "status": "waiting_for_external_data",
+      "missing": [
+        "speleothem-d18o-0-22k.csv"
+      ],
+      "use_decision": "not_executed"
+    },
+    "vesicules": {
+      "status": "waiting_for_external_data",
+      "missing_complete_replicate_sets": [
+        "FR",
+        "FU",
+        "UR",
+        "UU"
+      ],
+      "found_files": {
+        "FR": [],
+        "FU": [],
+        "UR": [],
+        "UU": []
+      }
+    },
+    "antibiotique_2026": {
+      "status": "waiting_for_external_data",
+      "missing": [
+        "Figure_3_N-lim_Expt_MIC_Raw_Data.csv"
+      ]
+    }
+  },
+  "execution_errors": 0,
+  "waiting_for_external_data": 3
+}

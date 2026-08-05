@@ -148,3 +148,13 @@ python -m oric_memory_tests --root "$PWD" run-all --config configs/primary.json
 ```
 
 La couche astronomique se reproduit selon `couche_astronomique/REPRODUCTION.md`.
+
+## Tests de recherche suivants
+
+Le dossier `tests_suivants/` ajoute trois objets distincts.
+
+La mesure interventionnelle de `Pacc` compare les six interventions Jupiter-Saturne à une enveloppe conservatrice de variantes de référence. Les six interventions franchissent le seuil sur au moins deux métriques et 17 couples intervention-métrique sur 18 franchissent l'enveloppe. Cette valeur décrit le domaine d'interventions calculé, pas une probabilité naturelle.
+
+`WP-C2b` est gelé avant nouvelle exécution. Il utilise quatre points non saturés, une calibration séparée par régime et huit graines réservées.
+
+La compilation NOAA de spéléothèmes est destinée à un audit externe de chronologie et de proxy. Sa portée 0-22 ka ne suffit pas à elle seule pour la bande de 100 ka.

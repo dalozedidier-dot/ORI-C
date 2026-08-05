@@ -1,0 +1,5 @@
+source_id,tau_s,alpha_D,z_critical,criterion,source_doi,scope
+LY2021_optimum,0.1,0,0.004,strong_clumping,10.3847/1538-4357/ac0e9f,minimum reported for optimum particle sizes
+LIM2024_a1,0.01,0.0001,0.06,planetesimal_formation,10.3847/1538-4357/ad862d,3D stratified self-gravity and forced turbulence
+LIM2024_a2,0.01,0.000316227766,0.10,planetesimal_formation,10.3847/1538-4357/ad862d,3D stratified self-gravity and forced turbulence
+LIM2024_a3,0.01,0.001,0.20,planetesimal_formation,10.3847/1538-4357/ad862d,3D stratified self-gravity and forced turbulence

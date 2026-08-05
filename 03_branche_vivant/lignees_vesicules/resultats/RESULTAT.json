@@ -1,0 +1,15 @@
+{
+  "status": "waiting_for_external_data",
+  "missing_complete_replicate_sets": [
+    "FR",
+    "FU",
+    "UR",
+    "UU"
+  ],
+  "found_files": {
+    "FR": [],
+    "FU": [],
+    "UR": [],
+    "UU": []
+  }
+}

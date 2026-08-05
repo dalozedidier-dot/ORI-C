@@ -43,7 +43,7 @@ séparés.
 | `00_socle/` | vocabulaire, carte des 40 transitions et 47 relations, test interventionnel, suite de tests | langage transversal |
 | `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
 | `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
-| `plan_directeur/` | plan de campagne, registre des 28 hypothèses, avancement | transversal |
+| `plan_directeur/` | plan de campagne, registre des 35 hypothèses, avancement | transversal |
 | `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
 
 ## Par où commencer
@@ -183,3 +183,34 @@ Cette archive constitue un dossier scientifique unique. Le socle, les trois bran
 - `01_branche_matiere/inventaire_hierarchique/analyses/INVENTAIRE_ORI-C_ANALYSE_ARCHITECTURES.xlsx` : criblage des familles et relations.
 - `audit/coherence_et_extensions/` : anomalies, architectures manquantes et liens causaux candidats.
 - `TRI_ET_CORRECTIONS.md` : corrections appliquées lors de la reconstruction.
+
+## Recherche active suivante
+
+Le dossier contient maintenant une campagne consacrée aux verrous qui ne peuvent plus être franchis par de simples variantes sur les mêmes données.
+
+```text
+plan_directeur/campagne_recherche_suivante/
+```
+
+Elle ajoute :
+
+- un test à seuil de `H011` sous intervention sur la turbulence ;
+- un audit de fermeture empirique du cycle `H030-H031-H052-H053` ;
+- une mesure interventionnelle de `Pacc` dans la couche astronomique ;
+- le protocole gelé `WP-C2b`, réparé par calibration selon le régime ;
+- une acquisition automatisée de données externes pour des lignées de vésicules, un benchmark antibiotique et un audit de spéléothèmes ;
+- des témoins de complexité égale, des permutations de l'histoire et des tests de filiation parent-descendant.
+
+Exécution sans données tierces :
+
+```bash
+python plan_directeur/campagne_recherche_suivante/run_all.py
+python scripts/valider_recherche_suivante.py
+```
+
+Exécution complète avec acquisition des sources :
+
+```bash
+python plan_directeur/campagne_recherche_suivante/fetch_external_data.py
+python plan_directeur/campagne_recherche_suivante/run_all.py
+```

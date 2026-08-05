@@ -449,3 +449,16 @@ Le stress paramétrique ne retire que ces six relations. Il identifie 31 nœuds 
 
 Le test externe sur deux trajectoires MESA atteint 14 nœuds sur 14 en fermeture stricte. Il soutient la portabilité du schéma de représentation, sans démontrer une loi universelle ni valider empiriquement chaque relation ORI-C.
 
+## Recherche active suivante
+
+| Élément | Statut | Portée actuelle |
+|---|---|---|
+| Seuil causal de `H011` | **Validé dans les simulations publiées** | seuil monotone sous turbulence à taille fixée ; aucune intervention naturelle |
+| Fermeture du cycle des interfaces | **Non établie** | quatre segments ancrés, aucune trajectoire quantitative unique |
+| `Pacc` astronomique | **Mesuré dans le modèle réduit** | 6/6 interventions et 17/18 dimensions au-dessus de l'enveloppe de référence |
+| `WP-C2b` | **Non exécuté, protocole gelé** | appariement par régime et graines de validation réservées |
+| Lignées de vésicules | **En attente des données lors de l'exécution locale** | acquisition et analyse automatisées dans le workflow dédié |
+| Histoire antibiotique 2026 | **En attente des données lors de l'exécution locale** | deux témoins, dont un de complexité égale par permutation |
+| Spéléothèmes NOAA | **En attente des données lors de l'exécution locale** | audit de chronologie, sans prétention sur 100 ka |
+
+Ces statuts complètent les résultats archivés. Ils ne requalifient ni les tests négatifs de la couche mémoire ni les limites des branches matière et vivant.
