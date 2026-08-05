@@ -247,3 +247,233 @@ def test_resolve_dryad_files_uses_current_version_file_ids(monkeypatch):
     assert urls == {"expected.csv": "https://datadryad.org/downloads/file_stream/987654"}
     assert resolution["version_number"] == 2
     assert resolution["resolved_file_ids"] == {"expected.csv": "987654"}
+
+
+def test_dryad_auth_headers_uses_client_credentials(monkeypatch):
+    module = load_module()
+    monkeypatch.delenv("DRYAD_API_TOKEN", raising=False)
+    monkeypatch.setenv("DRYAD_API_CLIENT_ID", "client-id")
+    monkeypatch.setenv("DRYAD_API_CLIENT_SECRET", "client-secret")
+    monkeypatch.setattr(
+        module,
+        "_oauth_token_request",
+        lambda client_id, client_secret, timeout: "issued-token",
+    )
+
+    headers, mode = module.dryad_auth_headers(timeout=10)
+
+    assert mode == "client_credentials"
+    assert headers == {"Authorization": "Bearer issued-token", "Accept": "*/*"}
+
+
+def test_authenticated_dryad_download_uses_api_endpoint(tmp_path, monkeypatch):
+    module = load_module()
+    dataset = {
+        "id": "dryad_fixture",
+        "provider": "dryad",
+        "doi": "10.5061/dryad.fixture",
+        "landing_page": "https://datadryad.org/dataset/doi:10.5061/dryad.fixture",
+        "expected_files": ["expected.csv"],
+    }
+    monkeypatch.setattr(
+        module,
+        "resolve_dryad_files",
+        lambda dataset, timeout: (
+            {"expected.csv": "https://datadryad.org/downloads/file_stream/987654"},
+            {"provider": "dryad", "resolved_file_ids": {"expected.csv": "987654"}},
+        ),
+    )
+    monkeypatch.setattr(
+        module,
+        "dryad_auth_headers",
+        lambda timeout: ({"Authorization": "Bearer test-token", "Accept": "*/*"}, "client_credentials"),
+    )
+    calls = []
+
+    def fake_download(url, target, retries, timeout, headers=None):
+        calls.append((url, headers))
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text("a,b\n1,2\n", encoding="utf-8")
+        return {
+            "requested_url": url,
+            "final_url": url,
+            "http_status": 200,
+            "content_type": "text/csv",
+            "redirects": [],
+            "sha256": module.sha256(target),
+            "size_bytes": target.stat().st_size,
+            "attempts": 1,
+        }
+
+    monkeypatch.setattr(module, "download", fake_download)
+    records, metadata = module.acquire_individual_files(
+        dataset,
+        tmp_path / "staging",
+        retries=1,
+        timeout=10,
+    )
+
+    assert calls == [
+        (
+            "https://datadryad.org/api/v2/files/987654/download",
+            {"Authorization": "Bearer test-token", "Accept": "*/*"},
+        )
+    ]
+    assert metadata["dryad_authentication"] == "client_credentials"
+    assert metadata["transport"] == "authenticated_api"
+    assert records[0]["name"] == "expected.csv"
+
+
+
+def test_public_dryad_download_uses_file_stream_without_credentials(tmp_path, monkeypatch):
+    module = load_module()
+    dataset = {
+        "id": "dryad_fixture",
+        "provider": "dryad",
+        "doi": "10.5061/dryad.fixture",
+        "landing_page": "https://datadryad.org/dataset/doi:10.5061/dryad.fixture",
+        "expected_files": ["expected.csv"],
+    }
+    monkeypatch.setattr(
+        module,
+        "resolve_dryad_files",
+        lambda dataset, timeout: (
+            {"expected.csv": "https://datadryad.org/downloads/file_stream/987654"},
+            {"provider": "dryad", "resolved_file_ids": {"expected.csv": "987654"}},
+        ),
+    )
+    monkeypatch.setattr(module, "dryad_auth_headers", lambda timeout: (None, "none"))
+    calls = []
+
+    def fake_download(url, target, retries, timeout, headers=None):
+        calls.append((url, headers))
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text("a,b\n1,2\n", encoding="utf-8")
+        return {
+            "requested_url": url,
+            "final_url": url,
+            "http_status": 200,
+            "content_type": "text/csv",
+            "redirects": [],
+            "sha256": module.sha256(target),
+            "size_bytes": target.stat().st_size,
+            "attempts": 1,
+        }
+
+    monkeypatch.setattr(module, "download", fake_download)
+    records, metadata = module.acquire_individual_files(
+        dataset,
+        tmp_path / "staging",
+        retries=1,
+        timeout=10,
+    )
+
+    assert calls == [
+        ("https://datadryad.org/downloads/file_stream/987654", None)
+    ]
+    assert metadata["dryad_authentication"] == "none"
+    assert metadata["transport"] == "public_file_stream"
+    assert records[0]["name"] == "expected.csv"
+
+
+
+def test_download_forwards_authorization_header(tmp_path):
+    module = load_module()
+    observed = {"authorization": ""}
+
+    class Handler(BaseHTTPRequestHandler):
+        def log_message(self, format, *args):
+            return
+
+        def do_GET(self):
+            observed["authorization"] = self.headers.get("Authorization", "")
+            if observed["authorization"] != "Bearer fixture-token":
+                self.send_response(401)
+                self.end_headers()
+                return
+            payload = b"a,b\n1,2\n"
+            self.send_response(200)
+            self.send_header("Content-Type", "text/csv")
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+
+    with LocalServer(Handler) as base:
+        target = tmp_path / "expected.csv"
+        receipt = module.download(
+            f"{base}/api/v2/files/1/download",
+            target,
+            retries=1,
+            timeout=10,
+            headers={"Authorization": "Bearer fixture-token"},
+        )
+
+    assert observed["authorization"] == "Bearer fixture-token"
+    assert target.read_text(encoding="utf-8") == "a,b\n1,2\n"
+    assert receipt["http_status"] == 200
+
+
+def test_authorization_is_removed_on_cross_origin_redirect(tmp_path):
+    module = load_module()
+    observed = {"start": "", "final": ""}
+
+    class Handler(BaseHTTPRequestHandler):
+        def log_message(self, format, *args):
+            return
+
+        def do_GET(self):
+            if self.path == "/start":
+                observed["start"] = self.headers.get("Authorization", "")
+                host, port = self.server.server_address
+                self.send_response(302)
+                self.send_header("Location", f"http://localhost:{port}/final")
+                self.end_headers()
+                return
+            if self.path == "/final":
+                observed["final"] = self.headers.get("Authorization", "")
+                payload = b"a,b\n1,2\n"
+                self.send_response(200)
+                self.send_header("Content-Type", "text/csv")
+                self.send_header("Content-Length", str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+                return
+            self.send_response(404)
+            self.end_headers()
+
+    with LocalServer(Handler) as base:
+        target = tmp_path / "expected.csv"
+        module.download(
+            f"{base}/start",
+            target,
+            retries=1,
+            timeout=10,
+            headers={"Authorization": "Bearer fixture-token"},
+        )
+
+    assert observed["start"] == "Bearer fixture-token"
+    assert observed["final"] == ""
+    assert target.read_text(encoding="utf-8") == "a,b\n1,2\n"
+
+
+def test_blocking_failures_can_tolerate_external_unavailability():
+    module = load_module()
+    report = [
+        {"id": "required", "required": True, "status": "download_failed"},
+        {"id": "optional", "required": False, "status": "download_failed"},
+    ]
+
+    strict = module.blocking_failures(report)
+    tolerant = module.blocking_failures(
+        report,
+        allow_unavailable_required=True,
+    )
+    strict_all = module.blocking_failures(
+        report,
+        allow_unavailable_required=True,
+        strict_optional=True,
+    )
+
+    assert [item["id"] for item in strict] == ["required"]
+    assert tolerant == []
+    assert [item["id"] for item in strict_all] == ["required", "optional"]

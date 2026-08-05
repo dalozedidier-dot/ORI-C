@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/recherche-suivante.yml",
-      "size": 3837,
-      "sha256": "25444a885c1604f2a39261a3b4b52ce0da371de6f251a9039338d31fded33eac",
+      "size": 5380,
+      "sha256": "8d8a1f9fc95f439a69bdf7df2a29042365141d398f2a210e19a75c2a0633c8be",
       "storage": "inline"
     },
     {
@@ -4283,8 +4283,8 @@
     },
     {
       "path": "CORRECTION_ACQUISITION_DRYAD_2026-08-05.md",
-      "size": 3091,
-      "sha256": "fc161814b3b3e75fd66bdff4ad04cbbbcbab91eecfbbdf51a5f982ad63132a65",
+      "size": 2597,
+      "sha256": "e0f7bd95170cb8f17665eb544410effbf197669650dcc86a6cb7fa62deb75092",
       "storage": "inline"
     },
     {
@@ -5045,8 +5045,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/fetch_external_data.py",
-      "size": 32914,
-      "sha256": "41807a8466ca83c88542bdf25172166b812aade4354427fc5a6af01d3cd23352",
+      "size": 38531,
+      "sha256": "c9effac07b8dbdfdd03a53382a1e7df66adb4924ded4ce892d227afe64c025d9",
       "storage": "inline"
     },
     {
@@ -5069,8 +5069,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/sources_externes.json",
-      "size": 5164,
-      "sha256": "084f61d0542d3f94d28030cb6d27e1b6079be9cf9a0c7b03a4660bbc4f72c683",
+      "size": 5410,
+      "sha256": "3834bd3a12f9f7e6eb35ac9f59b80a699bf4d9d37fd160209316f0c964c4574a",
       "storage": "inline"
     },
     {
@@ -5081,8 +5081,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/tests/test_external_acquisition.py",
-      "size": 8696,
-      "sha256": "facb7a45f4cfcf86f9219ad07cb6ab66c15bf4ea9a657d6acd38a2044920badf",
+      "size": 16509,
+      "sha256": "dfb029d95ca37b31357a6ef5c4445b3ecbe98254dd278d238bf64a8da2ac480a",
       "storage": "inline"
     },
     {

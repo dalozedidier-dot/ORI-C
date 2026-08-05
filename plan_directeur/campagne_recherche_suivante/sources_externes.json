@@ -77,9 +77,10 @@
           "url": "https://datadryad.org/downloads/file_stream/4581962"
         }
       ],
-      "download_strategy": "dryad_api_resolved_individual_then_archive",
+      "download_strategy": "dryad_authenticated_api_then_public_file_stream_then_archive",
       "provider": "dryad",
-      "file_downloads_role": "fallback_only_if_api_resolution_fails"
+      "file_downloads_role": "fallback_only_if_api_resolution_fails",
+      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET"
     },
     {
       "id": "histoire_antibiotique_donofrio_2026",
@@ -111,9 +112,10 @@
           "url": "https://datadryad.org/downloads/file_stream/4645841"
         }
       ],
-      "download_strategy": "dryad_api_resolved_individual_then_archive",
+      "download_strategy": "dryad_authenticated_api_then_public_file_stream_then_archive",
       "provider": "dryad",
-      "file_downloads_role": "fallback_only_if_api_resolution_fails"
+      "file_downloads_role": "fallback_only_if_api_resolution_fails",
+      "authentication": "optionnelle: DRYAD_API_TOKEN ou DRYAD_API_CLIENT_ID + DRYAD_API_CLIENT_SECRET"
     },
     {
       "id": "speleothemes_noaa_0_22ka",

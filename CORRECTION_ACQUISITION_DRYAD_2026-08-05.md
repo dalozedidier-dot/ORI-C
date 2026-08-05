@@ -1,46 +1,53 @@
 # Correction de l'acquisition Dryad, 5 août 2026
 
-## Problèmes identifiés
+## Erreur réellement observée
 
-Deux problèmes distincts étaient présents.
+Les journaux GitHub `84149852086` montrent que les analyses ORI-C s'exécutent sans erreur interne, mais que deux jeux Dryad restent indisponibles :
 
-1. Les liens individuels Dryad étaient enregistrés comme identifiants fixes. Une nouvelle version du dépôt ou une redirection vers une URL de stockage signée pouvait rendre ces liens fragiles et produire un HTTP 403.
-2. Le fichier temporaire `fix_dryad_403.patch` avait été ajouté à la racine du dépôt sans être inscrit au manifeste. Les contrôles portables Python 3.12 et 3.13 échouaient donc avant les suites scientifiques avec un contenu non listé.
+- HTTP 403 sur les liens publics `/downloads/file_stream/...` depuis le runner GitHub ;
+- HTTP 401 sur les routes de téléchargement de l'API Dryad sans jeton Bearer ;
+- aucun cache valide n'était encore disponible pour ces deux jeux.
 
-Le fichier patch a été supprimé. La correction est intégrée au code source et au manifeste du dossier complet.
+Le jeu NOAA est téléchargé correctement. Le blocage ne vient donc ni du client général, ni des tests scientifiques, ni du format des données.
 
-## Nouvelle stratégie
+## Correction intégrée
 
-Le client `plan_directeur/campagne_recherche_suivante/fetch_external_data.py` applique désormais la séquence suivante pour chaque jeu Dryad.
+Le client d'acquisition applique désormais trois voies clairement séparées :
 
-1. Résoudre la version publique courante à partir du DOI via l'API Dryad.
-2. Résoudre les identifiants actuels des fichiers attendus par leur nom.
-3. Télécharger chaque fichier en conservant exactement le chemin des redirections vers les URL signées.
-4. Valider le contenu réel avant utilisation. Un classeur XLSX doit posséder sa structure interne, un CSV doit avoir un en-tête tabulaire, une page HTML ou XML déguisée en fichier de données est refusée.
-5. Si les fichiers individuels échouent, télécharger l'archive complète du jeu et en extraire uniquement les fichiers attendus.
-6. Effectuer l'acquisition dans une zone temporaire. Le cache actif n'est remplacé qu'après validation complète.
-7. Si un rafraîchissement échoue mais qu'un cache complet antérieur est valide, conserver ce cache et inscrire l'avertissement dans le rapport.
+1. téléchargement par l'API Dryad authentifiée lorsqu'un jeton est disponible ;
+2. téléchargement public pour les environnements où Dryad l'autorise encore ;
+3. conservation et réutilisation d'un cache précédemment validé.
 
-Les identifiants individuels conservés dans `sources_externes.json` ne servent plus que de repli lorsque la résolution par API est indisponible.
+Les identifiants courants des fichiers sont toujours résolus depuis le DOI. Les en-têtes d'authentification sont retirés avant toute redirection vers un autre domaine afin de ne jamais transmettre le jeton au stockage objet.
 
-## Sécurité et traçabilité
+Les variables reconnues sont :
 
-- protection contre les traversées de chemin dans les archives ZIP ;
-- refus des liens symboliques contenus dans les archives ;
-- écriture atomique de `SOURCE.json` et `ACQUISITION_REPORT.json` ;
-- empreinte SHA-256 de chaque fichier et du jeu combiné ;
-- conservation de l'URL demandée, de l'URL finale, des redirections, du statut HTTP, du type de contenu, de l'ETag et de la date de modification lorsqu'ils sont disponibles ;
-- distinction entre téléchargement, rafraîchissement, cache local et cache conservé après échec du réseau.
+- `DRYAD_API_TOKEN` ;
+- ou `DRYAD_API_CLIENT_ID` avec `DRYAD_API_CLIENT_SECRET`.
 
-## Tests ajoutés
+## Comportement du workflow
 
-Six tests couvrent directement la correction.
+Le workflow `recherche-suivante.yml` ne confond plus une panne ou un refus du fournisseur externe avec une erreur du programme ORI-C.
 
-- conservation exacte d'un chemin signé après redirection ;
-- refus d'une traversée de chemin dans une archive ZIP ;
-- refus d'une page HTML présentée comme fichier XLSX ;
-- repli automatique des fichiers individuels vers l'archive complète ;
-- conservation d'un cache complet lorsque le rafraîchissement échoue ;
-- résolution des identifiants actuels depuis la version Dryad la plus récente.
+Par défaut :
 
-La campagne de recherche suivante compte désormais 19 tests réussis dans l'environnement de reconstruction locale, dont ces six tests d'acquisition.
+- l'acquisition est tentée ;
+- le rapport HTTP complet est conservé ;
+- les analyses dépendantes restent explicitement en attente si les données manquent ;
+- les autres contrôles et résultats ne sont plus déclarés en échec à cause d'un HTTP 403 externe.
+
+L'entrée `exiger_donnees_externes` permet de réactiver le mode strict. Dans ce mode, l'absence d'un jeu requis fait échouer l'exécution.
+
+Le dossier `donnees_externes` est aussi conservé par le cache GitHub Actions. Dès qu'une acquisition authentifiée réussit, les exécutions suivantes peuvent réutiliser les fichiers validés sans dépendre d'un nouveau téléchargement Dryad.
+
+## Contrôles couverts
+
+Les tests vérifient notamment :
+
+- la résolution de la version Dryad courante ;
+- l'utilisation de `/api/v2/files/<id>/download` avec Bearer ;
+- la suppression du Bearer lors d'une redirection vers un autre domaine ;
+- le repli vers les liens publics sans identifiants secrets ;
+- la validation réelle des CSV, XLSX et ZIP ;
+- la conservation d'un cache complet lors d'un échec réseau ;
+- le mode CI tolérant et le mode strict.

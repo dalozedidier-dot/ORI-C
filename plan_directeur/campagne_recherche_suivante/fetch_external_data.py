@@ -16,6 +16,7 @@ import argparse
 import hashlib
 import http.client
 import json
+import os
 import shutil
 import ssl
 import stat
@@ -31,10 +32,11 @@ DEST = ROOT / "donnees_externes"
 REDIRECT_STATUSES = {301, 302, 303, 307, 308}
 RETRYABLE_STATUSES = {403, 408, 409, 425, 429, 500, 502, 503, 504}
 DEFAULT_HEADERS = {
-    "User-Agent": "ORI-C scientific-research acquisition/2.0",
+    "User-Agent": "ORI-C scientific-research acquisition/2.1",
     "Accept": "*/*",
     "Accept-Encoding": "identity",
 }
+DRYAD_ORIGIN = "https://datadryad.org"
 
 
 class AcquisitionError(RuntimeError):
@@ -148,7 +150,25 @@ def _follow_request(
                 url=current,
                 status=response.status,
             )
-        current = urljoin(current, location)
+        next_url = urljoin(current, location)
+        previous_parts = urlsplit(current)
+        next_parts = urlsplit(next_url)
+        previous_origin = (
+            previous_parts.scheme.lower(),
+            previous_parts.hostname,
+            previous_parts.port,
+        )
+        next_origin = (
+            next_parts.scheme.lower(),
+            next_parts.hostname,
+            next_parts.port,
+        )
+        if previous_origin != next_origin:
+            # Ne jamais transmettre les secrets Dryad ni les cookies de session
+            # au stockage objet visé par une redirection présignée.
+            request_headers.pop("Authorization", None)
+            request_headers.pop("Cookie", None)
+        current = next_url
         redirects.append(current)
 
     raise AcquisitionError(
@@ -222,10 +242,18 @@ def fetch_json(url: str, *, timeout: int = 120) -> tuple[dict[str, object], dict
     return document, receipt
 
 
-def download_once(url: str, temporary: Path, *, timeout: int) -> dict[str, object]:
+def download_once(
+    url: str,
+    temporary: Path,
+    *,
+    timeout: int,
+    headers: dict[str, str] | None = None,
+) -> dict[str, object]:
     connection: http.client.HTTPConnection | None = None
     try:
-        connection, response, final_url, redirects = _follow_request(url, timeout=timeout)
+        connection, response, final_url, redirects = _follow_request(
+            url, timeout=timeout, headers=headers
+        )
         if not 200 <= response.status < 300:
             excerpt = _body_excerpt(response)
             raise AcquisitionError(
@@ -276,6 +304,7 @@ def download(
     *,
     retries: int = 4,
     timeout: int = 300,
+    headers: dict[str, str] | None = None,
 ) -> dict[str, object]:
     """Télécharge atomiquement un fichier et retourne sa provenance HTTP."""
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -285,7 +314,7 @@ def download(
     for attempt in range(1, retries + 1):
         temporary.unlink(missing_ok=True)
         try:
-            receipt = download_once(url, temporary, timeout=timeout)
+            receipt = download_once(url, temporary, timeout=timeout, headers=headers)
             temporary.replace(target)
             receipt["attempts"] = attempt
             return receipt
@@ -304,6 +333,65 @@ def download(
         status=last_error.status,
         details=last_error.details,
     ) from last_error
+
+
+
+def _oauth_token_request(client_id: str, client_secret: str, *, timeout: int) -> str:
+    """Obtient un jeton Dryad par le flux officiel client_credentials."""
+    payload = json.dumps(
+        {
+            "grant_type": "client_credentials",
+            "client_id": client_id,
+            "client_secret": client_secret,
+        }
+    ).encode("utf-8")
+    connection, target = _connection(f"{DRYAD_ORIGIN}/oauth/token", timeout)
+    try:
+        connection.request(
+            "POST",
+            target,
+            body=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "User-Agent": DEFAULT_HEADERS["User-Agent"],
+            },
+        )
+        response = connection.getresponse()
+        body = response.read(1024 * 1024)
+        if not 200 <= response.status < 300:
+            raise AcquisitionError(
+                f"HTTP {response.status} pendant l'authentification Dryad",
+                url=f"{DRYAD_ORIGIN}/oauth/token",
+                status=response.status,
+                details=body.decode("utf-8", errors="replace")[:2048],
+            )
+        document = json.loads(body.decode("utf-8"))
+        token = document.get("access_token")
+        if not isinstance(token, str) or not token:
+            raise AcquisitionError("réponse OAuth Dryad sans access_token")
+        return token
+    finally:
+        connection.close()
+
+
+def dryad_auth_headers(*, timeout: int) -> tuple[dict[str, str] | None, str]:
+    """Retourne les en-têtes officiels Dryad ou signale l'absence de secrets.
+
+    Variables reconnues :
+    - DRYAD_API_TOKEN, pour un jeton déjà émis ;
+    - DRYAD_API_CLIENT_ID et DRYAD_API_CLIENT_SECRET, pour renouveler le jeton.
+    """
+    token = os.environ.get("DRYAD_API_TOKEN", "").strip()
+    if token:
+        return {"Authorization": f"Bearer {token}", "Accept": "*/*"}, "bearer_token"
+
+    client_id = os.environ.get("DRYAD_API_CLIENT_ID", "").strip()
+    client_secret = os.environ.get("DRYAD_API_CLIENT_SECRET", "").strip()
+    if client_id and client_secret:
+        token = _oauth_token_request(client_id, client_secret, timeout=timeout)
+        return {"Authorization": f"Bearer {token}", "Accept": "*/*"}, "client_credentials"
+    return None, "none"
 
 
 def validate_payload(path: Path, expected_name: str | None = None) -> None:
@@ -434,7 +522,7 @@ def resolve_dryad_files(
 ) -> tuple[dict[str, str], dict[str, object]]:
     """Résout les identifiants de fichiers depuis le DOI public courant."""
     doi = str(dataset["doi"])
-    origin = "https://datadryad.org"
+    origin = DRYAD_ORIGIN
     encoded = quote(f"doi:{doi}", safe="")
     dataset_url = f"{origin}/api/v2/datasets/{encoded}"
     metadata, dataset_receipt = fetch_json(dataset_url, timeout=timeout)
@@ -564,15 +652,15 @@ def acquire_individual_files(
     expected = [str(name) for name in dataset.get("expected_files", [])]
     resolution_error: dict[str, object] | None = None
     try:
-        urls, resolution = resolve_dryad_files(dataset, timeout=timeout)
-        method = "dryad_api_resolved_individual_files"
+        public_urls, resolution = resolve_dryad_files(dataset, timeout=timeout)
+        method = "dryad_api_resolved_files"
     except AcquisitionError as exc:
         resolution_error = exc.as_dict()
-        urls = legacy_file_urls(dataset)
+        public_urls = legacy_file_urls(dataset)
         resolution = {"provider": "dryad", "resolution_fallback": "registry_file_ids"}
-        method = "dryad_registry_individual_files"
+        method = "dryad_registry_file_ids"
 
-    missing_urls = [name for name in expected if name not in urls]
+    missing_urls = [name for name in expected if name not in public_urls]
     if missing_urls:
         raise AcquisitionError(
             "aucune URL individuelle disponible pour: " + ", ".join(missing_urls),
@@ -580,22 +668,47 @@ def acquire_individual_files(
             details=json.dumps(resolution_error, ensure_ascii=False) if resolution_error else None,
         )
 
+    auth_headers, auth_mode = dryad_auth_headers(timeout=timeout)
+    file_ids = resolution.get("resolved_file_ids", {})
     records: list[dict[str, object]] = []
     extracted_root = staging / "extracted"
     for name in expected:
         target = extracted_root / name
-        receipt = download(urls[name], target, retries=retries, timeout=timeout)
+        file_id = str(file_ids.get(name, "")) if isinstance(file_ids, dict) else ""
+        if not file_id:
+            file_id = public_urls[name].rstrip("/").split("/")[-1]
+
+        receipt: dict[str, object]
+        if auth_headers and file_id.isdigit():
+            api_url = f"{DRYAD_ORIGIN}/api/v2/files/{file_id}/download"
+            receipt = download(
+                api_url,
+                target,
+                retries=retries,
+                timeout=timeout,
+                headers=auth_headers,
+            )
+            receipt["transport"] = "authenticated_api"
+        else:
+            receipt = download(
+                public_urls[name],
+                target,
+                retries=retries,
+                timeout=timeout,
+            )
+            receipt["transport"] = "public_file_stream"
         validate_payload(target, name)
         records.append(provenance_record(name, target, receipt, local_path=f"extracted/{name}"))
 
     metadata: dict[str, object] = {
         "acquisition_method": method,
         "resolution": resolution,
+        "dryad_authentication": auth_mode,
+        "transport": "authenticated_api" if auth_headers else "public_file_stream",
     }
     if resolution_error:
         metadata["resolution_warning"] = resolution_error
     return records, metadata
-
 
 def _copy_expected_from_tree(source: Path, destination: Path, expected: list[str]) -> list[dict[str, object]]:
     by_name: dict[str, list[Path]] = {}
@@ -629,7 +742,17 @@ def acquire_archive(
 ) -> tuple[list[dict[str, object]], dict[str, object]]:
     archive_name = str(dataset["archive_name"])
     raw = staging / "raw" / archive_name
-    receipt = download(str(dataset["download_url"]), raw, retries=retries, timeout=timeout)
+    headers = None
+    auth_mode = "none"
+    if str(dataset.get("provider", "")).lower() == "dryad":
+        headers, auth_mode = dryad_auth_headers(timeout=timeout)
+    receipt = download(
+        str(dataset["download_url"]),
+        raw,
+        retries=retries,
+        timeout=timeout,
+        headers=headers,
+    )
     validate_payload(raw, archive_name)
 
     unpacked = staging / "archive-content"
@@ -649,6 +772,7 @@ def acquire_archive(
             archive_name, raw, receipt, local_path=f"raw/{archive_name}"
         ),
         "archive_members": archive_members,
+        "dryad_authentication": auth_mode if str(dataset.get("provider", "")).lower() == "dryad" else "not_applicable",
     }
 
 
@@ -848,12 +972,48 @@ def acquire_dataset(
     }
 
 
+
+def blocking_failures(
+    report: list[dict[str, object]],
+    *,
+    strict_optional: bool = False,
+    allow_unavailable_required: bool = False,
+) -> list[dict[str, object]]:
+    """Retourne les échecs qui doivent réellement arrêter l'exécution.
+
+    Une indisponibilité d'un fournisseur externe peut être tolérée dans une
+    exécution CI ordinaire. Le rapport reste complet et les analyses dépendantes
+    demeurent explicitement en attente. Le mode strict reste disponible.
+    """
+    return [
+        item
+        for item in report
+        if item.get("status") != "ok"
+        and (
+            strict_optional
+            or (
+                bool(item.get("required"))
+                and not allow_unavailable_required
+            )
+        )
+    ]
+
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only", action="append", help="Identifiant d'un jeu à télécharger")
     parser.add_argument("--force", action="store_true", help="Rafraîchir même si un cache complet existe")
     parser.add_argument("--offline", action="store_true", help="Contrôler uniquement le cache local")
     parser.add_argument("--strict-optional", action="store_true", help="Échouer aussi pour un jeu optionnel")
+    parser.add_argument(
+        "--allow-unavailable-required",
+        action="store_true",
+        help=(
+            "Conserver les échecs des jeux requis dans le rapport sans arrêter "
+            "l'exécution, utile lorsque le fournisseur externe bloque le runner CI"
+        ),
+    )
     parser.add_argument("--retries", type=int, default=4, help="Nombre de tentatives HTTP par URL")
     parser.add_argument("--timeout", type=int, default=300, help="Délai maximal par requête, en secondes")
     args = parser.parse_args(argv)
@@ -891,12 +1051,11 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result, indent=2, ensure_ascii=False))
 
     write_json_atomic(DEST / "ACQUISITION_REPORT.json", report)
-    blocking = [
-        item
-        for item in report
-        if item.get("status") != "ok"
-        and (bool(item.get("required")) or args.strict_optional)
-    ]
+    blocking = blocking_failures(
+        report,
+        strict_optional=args.strict_optional,
+        allow_unavailable_required=args.allow_unavailable_required,
+    )
     return 1 if blocking else 0
 
 
