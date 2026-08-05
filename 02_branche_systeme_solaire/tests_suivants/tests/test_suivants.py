@@ -39,12 +39,14 @@ def test_speleothem_audit_with_fixture(tmp_path, monkeypatch):
     pd.DataFrame(
         {
             "site": ["A", "A", "B"],
+            "note": ["site témoin", "mesure “ancienne”", "contrôle"],
             "age_ka": [0.1, 5.0, 21.0],
             "d18O": [-4.0, -3.5, -2.0],
             "latitude": [45.0, 45.0, -20.0],
         }
-    ).to_csv(source, index=False)
+    ).to_csv(source, index=False, encoding="cp1252")
     result = module.audit(source)
     assert result["status"] == "audited"
+    assert result["source_encoding"] == "cp1252"
     assert result["rows_age_isotope"] == 3
     assert result["independent_site_count"] == 2

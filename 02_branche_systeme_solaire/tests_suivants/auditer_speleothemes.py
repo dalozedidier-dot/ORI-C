@@ -25,8 +25,19 @@ def choose_column(columns: list[str], patterns: tuple[str, ...]) -> str | None:
     return None
 
 
+def read_csv_robust(path: Path) -> tuple[pd.DataFrame, str]:
+    """Lit une compilation NOAA ancienne sans supposer qu'elle est en UTF-8."""
+    errors: list[str] = []
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return pd.read_csv(path, low_memory=False, encoding=encoding), encoding
+        except UnicodeDecodeError as exc:
+            errors.append(f"{encoding}: {exc}")
+    raise UnicodeError("aucun encodage accepté: " + " | ".join(errors))
+
+
 def audit(path: Path) -> dict[str, object]:
-    data = pd.read_csv(path, low_memory=False)
+    data, source_encoding = read_csv_robust(path)
     columns = [str(column) for column in data.columns]
     age_column = choose_column(columns, ("ageka", "ageyr", "age", "yearbp"))
     isotope_column = choose_column(columns, ("d18o", "delta18o", "oxygenisotope"))
@@ -46,6 +57,7 @@ def audit(path: Path) -> dict[str, object]:
     result = {
         "status": "audited" if len(age_numeric) else "schema_not_recognized",
         "rows_total": int(len(data)),
+        "source_encoding": source_encoding,
         "rows_age_isotope": int(len(age_numeric)),
         "detected_columns": {
             "age": age_column,

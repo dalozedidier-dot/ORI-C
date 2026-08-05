@@ -3959,8 +3959,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py",
-      "size": 3696,
-      "sha256": "0833480c2b83f52186fa676468bfee527680873e4a8ffcf891a2b4adc93233c4",
+      "size": 4229,
+      "sha256": "77fa2c4195f78e42aa1aaa51939935b5c7f52c8b44c546c84c40bfe68f2c679e",
       "storage": "inline"
     },
     {
@@ -3995,8 +3995,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/tests/test_suivants.py",
-      "size": 1595,
-      "sha256": "88173821346b3408e4c6d290befab85c9eaef80f09e506e5baba662b4f879771",
+      "size": 1739,
+      "sha256": "91e2ba7f854c42b6af45882ac72e1e437e774e662caa74c80bcfeb0c3c2bb84c",
       "storage": "inline"
     },
     {
