@@ -128,6 +128,13 @@ jobs:
           python figures.py | tee "$OUT/logs/figures.log"
           python make_report.py | tee "$OUT/logs/rapport.log"
 
+      - name: Finaliser et vérifier le manifeste mémoire
+        run: |
+          cd "$MEMORY"
+          export PYTHONPATH="$MEMORY/src"
+          python -m oric_memory_tests.cli --root "$MEMORY" manifest
+          python -m oric_memory_tests.cli --root "$MEMORY" verify-manifest
+
       - name: Rassembler les sorties paléoclimatiques
         if: always()
         run: |

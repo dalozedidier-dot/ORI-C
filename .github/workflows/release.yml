@@ -75,6 +75,12 @@ jobs:
           python -m pytest -q 02_branche_systeme_solaire/couche_memoire_historique/tests/test_hysteresis_c3.py
           python -m pytest -q 03_branche_vivant/benchmark_externe_card2019/tests
           python -m pytest -q 03_branche_vivant/programme_prebiotique/tests
+      - name: Finaliser le manifeste de la couche mémoire
+        working-directory: 02_branche_systeme_solaire/couche_memoire_historique
+        run: |
+          export PYTHONPATH="$PWD/src"
+          python -m oric_memory_tests.cli --root "$PWD" manifest
+          python -m oric_memory_tests.cli --root "$PWD" verify-manifest
       - name: Reconstruire les manifestes après les calculs
         run: |
           python build_manifest.py build

@@ -29,17 +29,90 @@ def load_config(root: Path, config_path: str) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+MANIFEST_EXCLUDED_NAMES = {"MANIFEST.sha256"}
+MANIFEST_EXCLUDED_PARTS = {
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    ".pytest-tmp",
+    ".mplconfig",
+    "dist",
+}
+
+
+def manifest_files(root: Path) -> list[Path]:
+    return sorted(
+        path
+        for path in root.rglob("*")
+        if path.is_file()
+        and path.name not in MANIFEST_EXCLUDED_NAMES
+        and not any(part in MANIFEST_EXCLUDED_PARTS for part in path.relative_to(root).parts)
+    )
+
+
+def manifest_entries(root: Path) -> dict[str, str]:
+    return {
+        path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in manifest_files(root)
+    }
+
+
 def write_manifest(root: Path) -> Path:
-    excluded_names = {"MANIFEST.sha256"}
-    lines = []
-    for path in sorted(item for item in root.rglob("*") if item.is_file()):
-        if path.name in excluded_names or "__pycache__" in path.parts:
-            continue
-        digest = hashlib.sha256(path.read_bytes()).hexdigest()
-        lines.append(f"{digest}  {path.relative_to(root).as_posix()}")
+    entries = manifest_entries(root)
     manifest = root / "MANIFEST.sha256"
-    manifest.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    manifest.write_text(
+        "".join(f"{digest}  {path}\n" for path, digest in entries.items()),
+        encoding="utf-8",
+        newline="\n",
+    )
     return manifest
+
+
+def read_manifest(root: Path) -> dict[str, str]:
+    manifest = root / "MANIFEST.sha256"
+    entries: dict[str, str] = {}
+    for line_number, line in enumerate(
+        manifest.read_text(encoding="utf-8").splitlines(), start=1
+    ):
+        if not line.strip():
+            continue
+        digest, separator, relative = line.partition("  ")
+        if (
+            not separator
+            or len(digest) != 64
+            or any(character not in "0123456789abcdef" for character in digest)
+            or not relative
+        ):
+            raise ValueError(
+                f"Ligne invalide dans MANIFEST.sha256 à la ligne {line_number}"
+            )
+        if relative in entries:
+            raise ValueError(f"Entrée dupliquée dans MANIFEST.sha256 : {relative}")
+        entries[relative] = digest
+    return entries
+
+
+def verify_manifest(root: Path) -> int:
+    expected = read_manifest(root)
+    actual = manifest_entries(root)
+
+    missing = sorted(set(expected) - set(actual))
+    unlisted = sorted(set(actual) - set(expected))
+    modified = sorted(
+        path for path in set(expected) & set(actual) if expected[path] != actual[path]
+    )
+
+    if missing or unlisted or modified:
+        details = []
+        if missing:
+            details.append("absents=" + ", ".join(missing))
+        if unlisted:
+            details.append("non_listés=" + ", ".join(unlisted))
+        if modified:
+            details.append("modifiés=" + ", ".join(modified))
+        raise ValueError("Manifeste invalide : " + " ; ".join(details))
+
+    return len(actual)
 
 
 def run_all(root: Path, config: dict) -> dict:
@@ -95,6 +168,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     subparsers.add_parser("report")
     subparsers.add_parser("manifest")
+    subparsers.add_parser("verify-manifest")
     return parser
 
 
@@ -113,6 +187,13 @@ def main() -> None:
         return
     if arguments.command == "manifest":
         print(write_manifest(root))
+        return
+    if arguments.command == "verify-manifest":
+        try:
+            count = verify_manifest(root)
+        except (OSError, ValueError) as exc:
+            raise SystemExit(str(exc)) from exc
+        print(f"Manifeste valide : {count} fichiers")
         return
 
     config = load_config(root, arguments.config)
