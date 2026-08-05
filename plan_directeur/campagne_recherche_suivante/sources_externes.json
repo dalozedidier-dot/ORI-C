@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "policy": "Les données tierces sont téléchargées à l'exécution, conservées avec leur provenance et ne sont pas assimilées à des données produites par ORI-C.",
   "datasets": [
     {
@@ -77,7 +77,9 @@
           "url": "https://datadryad.org/downloads/file_stream/4581962"
         }
       ],
-      "download_strategy": "individual_public_files"
+      "download_strategy": "dryad_api_resolved_individual_then_archive",
+      "provider": "dryad",
+      "file_downloads_role": "fallback_only_if_api_resolution_fails"
     },
     {
       "id": "histoire_antibiotique_donofrio_2026",
@@ -109,7 +111,9 @@
           "url": "https://datadryad.org/downloads/file_stream/4645841"
         }
       ],
-      "download_strategy": "individual_public_files"
+      "download_strategy": "dryad_api_resolved_individual_then_archive",
+      "provider": "dryad",
+      "file_downloads_role": "fallback_only_if_api_resolution_fails"
     },
     {
       "id": "speleothemes_noaa_0_22ka",
@@ -124,7 +128,9 @@
       "purpose": "Chronologie radiométrique indépendante pour un futur test orbital-climat.",
       "redistribute": false,
       "required_for_current_tests": false,
-      "license": "Conditions du dépôt source à vérifier dans la page de provenance"
+      "license": "Conditions du dépôt source à vérifier dans la page de provenance",
+      "provider": "noaa",
+      "download_strategy": "direct_file"
     }
   ]
 }

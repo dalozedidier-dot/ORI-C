@@ -38,3 +38,10 @@ Dans GitHub Actions, lancer `Recherche suivante ORI-C`. Le workflow télécharge
 - 2 tests du benchmark Card 2019 réussis.
 - 2 tests du programme prébiotique existant réussis.
 - 1 136 contenus conformes après reconstruction du manifeste.
+
+
+## Maintenance de l'acquisition, 5 août 2026
+
+La mise à jour intègre directement la correction Dryad au dossier complet. Les liens individuels sont désormais résolus depuis le DOI et la version publique courante. Le client conserve le chemin exact des redirections signées, valide les formats, tente l'archive complète en repli et remplace le cache de façon atomique. Un cache complet antérieur est conservé si un rafraîchissement réseau échoue.
+
+Le fichier temporaire `fix_dryad_403.patch`, responsable de l'échec des contrôles d'intégrité Python 3.12 et 3.13, a été supprimé. Six tests de régression couvrent la nouvelle acquisition. Le détail se trouve dans `CORRECTION_ACQUISITION_DRYAD_2026-08-05.md`.

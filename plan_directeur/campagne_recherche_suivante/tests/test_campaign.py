@@ -12,9 +12,12 @@ def test_registry_is_complete_and_https():
             encoding="utf-8"
         )
     )
+    assert registry["schema"] >= 2
     assert len(registry["datasets"]) >= 3
     assert all(dataset["download_url"].startswith("https://") for dataset in registry["datasets"])
     assert all("doi" in dataset for dataset in registry["datasets"])
+    assert all("provider" in dataset for dataset in registry["datasets"])
+    assert all("download_strategy" in dataset for dataset in registry["datasets"])
     assert sum(bool(dataset.get("required_for_current_tests")) for dataset in registry["datasets"]) >= 2
 
 

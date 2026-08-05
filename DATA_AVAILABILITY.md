@@ -54,3 +54,8 @@ Les scripts d’import reproduisent les transformations sans imputation, interpo
 Les nouveaux bancs externes utilisent trois dépôts publics enregistrés dans `plan_directeur/campagne_recherche_suivante/sources_externes.json`. Les fichiers sont téléchargés au moment de l'exécution, contrôlés par SHA-256 et accompagnés d'un `SOURCE.json`.
 
 Les données brutes tierces ne sont pas intégrées au dossier source. Les scripts, protocoles, parseurs, règles de décision et rapports d'acquisition sont conservés. Le workflow `Recherche suivante ORI-C` réalise l'acquisition avant les analyses.
+
+
+### Résilience de l'acquisition active
+
+Depuis la correction du 5 août 2026, les fichiers Dryad requis ne dépendent plus uniquement d'identifiants enregistrés une fois. Le client résout la version publique courante depuis le DOI, vérifie le contenu téléchargé, utilise l'archive complète en repli et protège le cache antérieur par remplacement atomique. Les identifiants fixes du registre sont conservés uniquement comme solution de secours lorsque l'API de métadonnées est indisponible.

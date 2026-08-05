@@ -24,6 +24,20 @@ python plan_directeur/campagne_recherche_suivante/fetch_external_data.py
 python plan_directeur/campagne_recherche_suivante/run_all.py
 ```
 
+Pour forcer un rafraîchissement des sources :
+
+```bash
+python plan_directeur/campagne_recherche_suivante/fetch_external_data.py --force
+```
+
+Pour contrôler uniquement un cache local sans accès réseau :
+
+```bash
+python plan_directeur/campagne_recherche_suivante/fetch_external_data.py --offline
+```
+
+Pour Dryad, le client résout d'abord la version publique et les identifiants actuels depuis le DOI. Il télécharge les fichiers attendus dans une zone temporaire, valide leur format réel, puis remplace le cache uniquement lorsque le jeu est complet. Si les fichiers individuels échouent, il tente l'archive complète. Un cache complet antérieur reste disponible si un rafraîchissement réseau échoue.
+
 Le workflow GitHub `Recherche suivante ORI-C` réalise ces opérations et conserve les rapports comme artefact. Les données brutes tierces ne sont pas redistribuées par l'artefact.
 
 ## Fichiers directeurs

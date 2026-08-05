@@ -21,7 +21,7 @@ Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une e
 | Campagne maximale, trois branches | 21 | 0 | 0 | 0 |
 | Priorités v0.9.3 | 11 | 0 | 0 | 0 |
 | Calibrage matière v0.9.4 | 5 | 0 | 0 | 0 |
-| Recherche suivante | 13 | 0 | 0 | 0 |
+| Recherche suivante | 19 | 0 | 0 | 0 |
 | Couche astronomique | 10 | 0 | 2 | 0 |
 
 Le `xfail` attendu du socle concerne deux relations dont la référence est encore trop générique pour être datée : `TR-021 → TR-028` et `TR-024 → TR-023`. Il passera au vert dès qu'une source datable leur sera attachée. Il ne compte pas comme un échec réel.

@@ -18,3 +18,14 @@ Cette version conserve l’architecture matérielle v0.9.3 comme référence gel
 ## Limites
 
 Le calibrage ne transforme pas une relation critique dans le graphe en causalité démontrée. La nécessité empirique, la suffisance, la temporalité quantitative, la réversibilité physique et les interventions directes restent à mesurer.
+
+
+## Maintenance du 5 août 2026
+
+- acquisition Dryad résolue depuis le DOI et la version publique courante ;
+- conservation exacte des chemins de redirection vers les URL signées ;
+- repli automatique vers l'archive complète ;
+- validation des formats XLSX et CSV avant analyse ;
+- remplacement atomique du cache et conservation d'un cache antérieur valide ;
+- six tests de régression ajoutés ;
+- suppression du fichier temporaire `fix_dryad_403.patch` qui invalidait le manifeste.

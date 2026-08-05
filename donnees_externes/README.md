@@ -8,7 +8,7 @@ Ce dossier reçoit les jeux tiers nécessaires aux nouveaux tests. Les fichiers 
 python plan_directeur/campagne_recherche_suivante/fetch_external_data.py
 ```
 
-Le script télécharge chaque source depuis son dépôt public, extrait les archives, calcule une empreinte SHA-256 et écrit un fichier `SOURCE.json`. Le registre canonique des sources est :
+Le script résout chaque source depuis son dépôt public, télécharge dans une zone temporaire, valide le format réel des fichiers, calcule les empreintes SHA-256 et écrit un fichier `SOURCE.json`. Pour Dryad, les identifiants courants sont résolus depuis le DOI et l'archive complète sert de repli lorsque les fichiers individuels sont indisponibles. Le cache actif n'est remplacé qu'après validation complète. Le registre canonique des sources est :
 
 ```text
 plan_directeur/campagne_recherche_suivante/sources_externes.json
@@ -21,3 +21,11 @@ plan_directeur/campagne_recherche_suivante/sources_externes.json
 - NOAA `10.25921/edce-mr22` : compilation de spéléothèmes 0-22 ka pour audit indépendant de chronologie et de proxy.
 
 La compilation NOAA ne couvre pas une période de 100 ka. Elle ne peut donc pas être utilisée seule pour valider la bande de 100 ka.
+
+## Contrôle du cache
+
+```bash
+python plan_directeur/campagne_recherche_suivante/fetch_external_data.py --offline
+```
+
+Le rapport `ACQUISITION_REPORT.json` distingue un téléchargement réussi, un cache valide, un cache conservé après échec de rafraîchissement et une absence réelle de données utilisables.
