@@ -238,23 +238,28 @@ def climate_pacc(ensemble: pd.DataFrame, variable: str, lower: float, upper: flo
 
 
 def observational_climate_audit(timeseries: pd.DataFrame, ensemble: pd.DataFrame) -> ClimateAnalysis:
-    """Décrit GISTEMP et son incertitude sans les présenter comme simulations climatiques."""
-    models = ensemble["model"].dropna().astype(str).unique()
-    scenarios = ensemble["scenario"].dropna().astype(str).unique()
-    members = ensemble["member"].dropna().astype(str).nunique()
+    """Sépare reconstructions observationnelles et expériences de modèles."""
+    scenario = ensemble["scenario"].astype(str)
+    observational = ensemble[scenario == "observational_uncertainty"].copy()
+    modeled = ensemble[scenario != "observational_uncertainty"].copy()
+    model_scenarios = sorted(modeled["scenario"].dropna().astype(str).unique().tolist())
+    climate_models = sorted(modeled["model"].dropna().astype(str).unique().tolist())
     return ClimateAnalysis(
         {
             "observation_rows": float(len(timeseries)),
-            "uncertainty_rows": float(len(ensemble)),
-            "regions": float(timeseries["region"].nunique()),
-            "uncertainty_members": float(members),
-            "climate_models": 0.0,
-            "emission_scenarios": 0.0,
+            "observation_uncertainty_rows": float(len(observational)),
+            "observation_regions": float(timeseries["region"].nunique()),
+            "uncertainty_members": float(observational[["model", "member"]].astype(str).drop_duplicates().shape[0]),
+            "modeled_rows": float(len(modeled)),
+            "climate_models": float(len(climate_models)),
+            "model_scenarios": float(len(model_scenarios)),
         },
         {
-            "ensemble_kind": "reconstructions d'incertitude observationnelle",
-            "labels_model": models.tolist(),
-            "labels_scenario": scenarios.tolist(),
-            "scientific_scope": "Température observée et incertitude uniquement; aucune expérience d'arrêt/retrait, hystérésis, overshoot ou comparaison multi-modèles.",
+            "observation_sources": sorted(observational["model"].dropna().astype(str).unique().tolist()),
+            "climate_model_labels": climate_models,
+            "scenario_labels": model_scenarios,
+            "variables": sorted(ensemble["variable"].dropna().astype(str).unique().tolist()),
+            "scientific_scope": "Les reconstructions d'incertitude observationnelle restent séparées des trajectoires CMIP6 et des expériences idéalisées.",
         },
     )
+

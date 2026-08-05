@@ -24,6 +24,8 @@ from typing import Any, Iterable
 import numpy as np
 import pandas as pd
 
+from integrer_lot_scientifique_2026_08_05 import integrate as integrate_scientific_bundle
+
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 DEFAULT_DATA = HERE / "data"
@@ -957,7 +959,25 @@ def main() -> int:
         "rows": summaries["benchmark_cases"]["biology_rows"],
         "domains": summaries["benchmark_cases"]["biology_domains"],
     }
+    lot_summaries, lot_coverage = integrate_scientific_bundle(data_dir)
+    summaries.update(lot_summaries)
+    if "partition_experiments_extension" in lot_summaries:
+        summaries["partition_experiments"].update(lot_summaries["partition_experiments_extension"])
+
     coverage = coverage_registry(summaries)
+    summary_map = {
+        "modern_climate_ensemble": summaries.get("modern_climate_ensemble", {}),
+        "reaction_network": summaries.get("astrochemistry", {}),
+        "molecular_inventory": summaries.get("astrochemistry", {}).get("molecular_inventory", {}),
+        "nucleosynthesis_yields": summaries.get("nucleosynthesis_yields", {}),
+        "isotope_tracers": summaries.get("isotope_tracers", {}),
+        "partition_experiments": summaries.get("partition_experiments", {}),
+        "endosymbiosis_events": summaries.get("endosymbiosis_events", {}),
+    }
+    for dataset_name, item in lot_coverage.items():
+        item["summary"] = summary_map.get(dataset_name, {})
+        coverage["datasets"][dataset_name] = item
+
     (data_dir / "REAL_DATA_COVERAGE.json").write_text(
         json.dumps(coverage, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
@@ -966,6 +986,9 @@ def main() -> int:
         "generated_tables": summaries,
         "coverage_file": "REAL_DATA_COVERAGE.json",
         "excluded": ["plateforme/source_corrigee/examples/data/**"],
+        "external_scientific_bundle": lot_summaries,
+        "external_source_manifest": "donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json",
+        "external_triage": "plateforme/campagne_maximale_reelle/TRI_LOT_SCIENTIFIQUE_2026_08_05.json",
     }
     (HERE / "PROVENANCE_INTEGRATION_DEPOT.json").write_text(
         json.dumps(provenance, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"

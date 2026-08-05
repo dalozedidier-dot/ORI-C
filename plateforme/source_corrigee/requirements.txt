@@ -12,3 +12,4 @@ rich>=13.7
 jsonschema>=4.21
 pytest>=8
 openpyxl>=3.1
+h5py>=3.15

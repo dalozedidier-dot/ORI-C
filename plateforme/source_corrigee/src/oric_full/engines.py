@@ -311,17 +311,31 @@ def evaluate_engine(
 
         if engine in {"modern_climate_pacc", "modern_climate_validation"}:
             frame = data.validate("modern_climate_ensemble")
-            if frame["model"].nunique() < 2 or frame["scenario"].nunique() < 2:
-                return _blocked("Ensemble GISTEMP = incertitude observationnelle; modèles et scénarios climatiques absents")
-            variable = str(frame["variable"].iloc[0])
-            values = pd.to_numeric(frame["value"], errors="coerce")
-            result = climate_pacc(frame, variable, float(values.quantile(0.1)), float(values.quantile(0.9)), float(pd.to_numeric(frame["time"], errors="coerce").max()))
-            return _pass("Domaine accessible climatique estimé", result.metrics["pacc"], result.details | result.metrics)
+            modeled = frame[frame["scenario"].astype(str) != "observational_uncertainty"].copy()
+            if modeled["model"].nunique() < 2 or modeled["scenario"].nunique() < 2:
+                return _blocked("Ensembles multi-modèles et multi-scénarios absents")
+            candidates = []
+            for variable_name, group in modeled.groupby("variable"):
+                score = group["model"].nunique() * group["scenario"].nunique()
+                candidates.append((score, len(group), str(variable_name)))
+            preferred = "near_surface_air_temperature_C"
+            available_variables = {item[2] for item in candidates}
+            variable = preferred if preferred in available_variables else max(candidates)[2]
+            selected = modeled[modeled["variable"].astype(str) == variable]
+            values = pd.to_numeric(selected["value"], errors="coerce")
+            result = climate_pacc(selected, variable, float(values.quantile(0.1)), float(values.quantile(0.9)), float(pd.to_numeric(selected["time"], errors="coerce").max()))
+            details = result.details | result.metrics | {
+                "selected_variable": variable,
+                "available_scenarios": sorted(modeled["scenario"].astype(str).unique().tolist()),
+                "available_variables": sorted(modeled["variable"].astype(str).unique().tolist()),
+                "climate_models": int(modeled["model"].nunique()),
+            }
+            return _pass("Domaine accessible climatique estimé sur ensembles multi-modèles", result.metrics["pacc"], details)
 
         if engine == "modern_climate_observational_audit":
             frames = _frames(data, ("modern_climate_timeseries", "modern_climate_ensemble"))
             result = observational_climate_audit(frames["modern_climate_timeseries"], frames["modern_climate_ensemble"])
-            return _pass("GISTEMP audité comme reconstruction observationnelle avec incertitude", result.metrics["observation_rows"], result.details | result.metrics)
+            return _pass("Observations, incertitudes et ensembles climatiques audités séparément", result.metrics["observation_rows"], result.details | result.metrics)
 
         if engine == "prebiotic_design":
             if data.exists("prebiotic_design"):
@@ -441,7 +455,7 @@ def evaluate_engine(
 
         if engine == "endosymbiosis":
             result = analyze_endosymbiosis(data.validate("endosymbiosis_events"))
-            return _pass("Endosymbioses analysées", result.metrics["median_integration"], result.details | result.metrics)
+            return _pass("Réduction génomique des endosymbiotes analysée", result.metrics.get("median_genome_retention", result.metrics.get("median_integration_proxy")), result.details | result.metrics)
 
         if engine == "biology_value":
             result = biological_history_value(data.validate("biology_cases"))

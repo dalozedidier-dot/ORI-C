@@ -8,16 +8,31 @@ Aucun gabarit de `examples/data` n'est utilisé. Aucune valeur absente n'est imp
 
 ```json
 {
-  "complete_regression_rows": 3,
+  "complete_regression_rows": 35,
   "elements": [
     "C",
     "H",
     "N",
     "S"
   ],
+  "new_carbon_rows": 32,
   "rows": 9,
   "source": "01_branche_matiere/hypergraphe_transformations/coefficients_partage.csv",
-  "source_sha256": "10a7a9c3acfa91a5e91b3cfb14cbb7c7f265ff252664b62d9b637c1e5292321b"
+  "source_sha256": "10a7a9c3acfa91a5e91b3cfb14cbb7c7f265ff252664b62d9b637c1e5292321b",
+  "sources": [
+    "Blanchard 21",
+    "Dasugpta 2013 101",
+    "Fichtner 2021 41",
+    "Fischer 2020 121",
+    "Kuwahara 2019 61",
+    "Kuwahara 2021 81",
+    "S28",
+    "S29",
+    "S30",
+    "S31",
+    "this study"
+  ],
+  "total_rows": 41
 }
 ```
 
@@ -202,12 +217,207 @@ Aucun gabarit de `examples/data` n'est utilisé. Aucune valeur absente n'est imp
 }
 ```
 
+### modern_climate_ensemble
+
+```json
+{
+  "models": 83,
+  "regions": [
+    "North_Atlantic",
+    "global"
+  ],
+  "rows": 142745,
+  "scenarios": [
+    "amip_control",
+    "historical-ssp126",
+    "historical-ssp245",
+    "historical-ssp585",
+    "idealized_4xCO2",
+    "idealized_plus2K",
+    "idealized_plus4K",
+    "observational_uncertainty"
+  ],
+  "source_rows": {
+    "CMIP6_NASST": 50198,
+    "CMIP6_global_TAS": 24849,
+    "HadCRUT5_200_members": 35400,
+    "NASA_GISTEMP_KeySeries": 28200,
+    "idealized_radiative_response": 4098
+  },
+  "variables": [
+    "NASST_anomaly",
+    "near_surface_air_temperature_C",
+    "surface_temperature_response_C",
+    "temperature_anomaly_C"
+  ]
+}
+```
+
+### astrochemistry
+
+```json
+{
+  "molecular_inventory": {
+    "amino_acid_auxiliary_environments": 69,
+    "amino_acid_auxiliary_rows": 1387,
+    "environments": 1,
+    "rows": 19,
+    "scope": "Conditions initiales du modèle UMIST Rate22, pas un inventaire observationnel du ciel.",
+    "species": 19,
+    "uncertainty_coverage": 0.0
+  },
+  "networks": {
+    "KIDA_UVA_2024": 7667,
+    "UMIST_RATE22": 8767
+  },
+  "rate_uncertainty_coverage": 0.46653279785809904,
+  "reaction_rows": 16434,
+  "species_in_reactions": 643
+}
+```
+
+### nucleosynthesis_yields
+
+```json
+{
+  "element_rows": 1383,
+  "isotope_rows": 56507,
+  "masses_solar": [
+    15.0,
+    20.0,
+    25.0
+  ],
+  "metallicity_values": [
+    0.013000000000000001,
+    0.02
+  ],
+  "model_families": [
+    "LC18",
+    "La22",
+    "Pi16",
+    "Ra02",
+    "Ri18",
+    "Si18"
+  ],
+  "models": 18,
+  "uncertainty": "Non publiée dans ce conteneur; laissée vide."
+}
+```
+
+### isotope_tracers
+
+```json
+{
+  "dh_groups": 85,
+  "dh_rows": 362,
+  "dh_uncertainty_coverage": 0.6298342541436464,
+  "ivuna_mn_cr_rows_auxiliary": 9,
+  "lunar_ca_rows_auxiliary": 13,
+  "scope": "Le clustering canonique utilise seulement la compilation homogène D/H. Ca lunaire et Mn-Cr Ivuna sont conservés séparément."
+}
+```
+
+### partition_experiments_extension
+
+```json
+{
+  "complete_regression_rows": 35,
+  "new_carbon_rows": 32,
+  "sources": [
+    "Blanchard 21",
+    "Dasugpta 2013 101",
+    "Fichtner 2021 41",
+    "Fischer 2020 121",
+    "Kuwahara 2019 61",
+    "Kuwahara 2021 81",
+    "S28",
+    "S29",
+    "S30",
+    "S31",
+    "this study"
+  ],
+  "total_rows": 41
+}
+```
+
+### endosymbiosis_events
+
+```json
+{
+  "aphid_pgn_rows_auxiliary": 253,
+  "genomes": 85,
+  "hmm_rows": 15810,
+  "limitations": "Le fichier HMM mesure la rétention de fonctions dans 85 génomes réduits. Les transferts nucléaires et la dépendance directe à l'hôte restent absents.",
+  "median_retention_proxy": 0.8172043010752689,
+  "symbionts": 79
+}
+```
+
+### auxiliary_tables
+
+```json
+{
+  "core_bulk_h_c_models": {
+    "columns": [
+      "This study_H_core",
+      "This_study_C_core",
+      "Tagawa_H_core",
+      "Blanchard_C_core",
+      "Tagawa_H_core.1",
+      "Fischer_C_core",
+      "Unnamed: 6",
+      "This study_H2O_bulk",
+      "This study_C_bulk",
+      "Tagawa__H2O_bulk",
+      "Blanchard_C_bulk",
+      "Tagawa__H2O_bulk.1",
+      "Fischer_C_bulk",
+      "Unnamed: 13",
+      "Unnamed: 14",
+      "Unnamed: 15",
+      "Unnamed: 16",
+      "Unnamed: 17",
+      "Unnamed: 18",
+      "Unnamed: 19",
+      "Fischer_Tagawa",
+      "C/H_core",
+      "Unnamed: 22",
+      "Unnamed: 23",
+      "C/H_bulk_25",
+      "H_bulk_26",
+      "Unnamed: 26",
+      "Unnamed: 27",
+      "BSE_29",
+      "Unnamed: 29",
+      "Unnamed: 30",
+      "Unnamed: 31"
+    ],
+    "rows": 3
+  },
+  "meteorite_thermal_properties": {
+    "meteorites": 61,
+    "rows": 61
+  },
+  "murchison_degassing": {
+    "rows": 3648,
+    "scenarios": 3,
+    "species": 38
+  }
+}
+```
+
 ## Portée réelle dans le catalogue
 
-- **partition_experiments** : 2 tests couverts. Neuf coefficients pour H, C, N et S. Trois lignes seulement possèdent simultanément P, T, ΔIW et logD; aucune trajectoire d'accrétion, planète ou validation aveugle n'est déduite.
+- **partition_experiments** : 5 tests couverts. Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents.
 - **prebiotic_design** : 4 tests couverts. Plan réel des transferts de vésicules. Température, pH, UV, minéral et cycles humide-sec ne sont pas renseignés dans ces fichiers et restent absents.
 - **prebiotic_lineages** : 22 tests couverts. Turbidité A400, cartes de transfert, sélection/dérive, alimentation/résuspension, durées de génération, séries temporelles et mesures auxiliaires. Aucune longueur de polymère, fidélité de copie, fusion/division directe ou autonomie métabolique n'est inventée.
 - **cell_architecture** : 1 tests couverts. Inventaire qualitatif couvrant archées, bactéries et plusieurs cellules eucaryotes. Pas de perturbations publiques, survie, récupération ou validation masquée.
 - **biology_cases** : 3 tests couverts. Cas dérivés de deux domaines biologiques réels, avec séparation train/validation/test. Les six dimensions complètes et Pacc ne sont pas mesurés.
 - **antibiotic_design** : 3 tests couverts. Audit du nombre de lignées, séparation MIC/survie/persistance et mesures de fitness Donofrio. Randomisation, aveuglement, biofilms et plusieurs espèces ne sont pas documentés.
 - **benchmark_cases** : 32 tests couverts. Benchmark exploratoire dérivé de données réelles dans cinq domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.
+- **modern_climate_ensemble** : 11 tests couverts. Observations avec incertitude, trajectoires CMIP6 multi-modèles/scénarios et expériences idéalisées. Aucun coût matériel, overshoot explicite, retrait ou restauration n'est fourni.
+- **reaction_network** : 3 tests couverts. Deux réseaux gazeux indépendants avec taux, températures et incertitudes KIDA. Pas de chimie de surface, glaces, ordre d'irradiation ni inventaire radioastronomique.
+- **molecular_inventory** : 3 tests couverts. Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.
+- **nucleosynthesis_yields** : 1 tests couverts. Dix-huit modèles CCSN, six familles et trois masses : utilisables pour l'effet de masse. Pas de BBN, AGB, fusions compactes, rotation/binarité contrôlée ni incertitudes publiées dans le conteneur.
+- **isotope_tracers** : 1 tests couverts. Compilation D/H, mesures Cr d'Ivuna et Ca lunaires avec provenance. Elle compile des traceurs disponibles, mais ne suffit pas à tester la dichotomie carbonée/non carbonée.
+- **endosymbiosis_events** : 1 tests couverts. Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.

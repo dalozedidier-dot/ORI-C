@@ -30,14 +30,33 @@ def audit_transitions(frame: pd.DataFrame) -> MatterAnalysis:
 
 def analyze_nucleosynthesis(frame: pd.DataFrame) -> MatterAnalysis:
     frame = frame.copy()
-    frame["yield_mass"] = pd.to_numeric(frame["yield_mass"], errors="coerce")
-    frame["uncertainty"] = pd.to_numeric(frame["uncertainty"], errors="coerce")
+    for column in ["yield_mass", "uncertainty", "mass_solar", "metallicity"]:
+        frame[column] = pd.to_numeric(frame[column], errors="coerce")
     grouped = frame.groupby("element", dropna=False)["yield_mass"].agg(["mean", "std", "count"])
     diversity = int((grouped["mean"] > 0).sum())
     cv = (grouped["std"] / grouped["mean"].abs().replace(0, np.nan)).replace([np.inf, -np.inf], np.nan)
+    mass_summary = (
+        frame.dropna(subset=["mass_solar", "yield_mass"])
+        .groupby(["mass_solar", "element"], dropna=False)["yield_mass"]
+        .mean()
+        .reset_index()
+    )
+    mass_pivot = mass_summary.pivot_table(index="element", columns="mass_solar", values="yield_mass")
+    mass_effect = (mass_pivot.max(axis=1) - mass_pivot.min(axis=1)) / mass_pivot.mean(axis=1).abs().replace(0, np.nan)
+    families = sorted(frame.get("model_family", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
     return MatterAnalysis(
-        {"elements_with_positive_yield": float(diversity), "median_between_source_cv": float(cv.median(skipna=True) or 0.0)},
-        {"element_summary": grouped.reset_index().to_dict(orient="records")},
+        {
+            "elements_with_positive_yield": float(diversity),
+            "median_between_source_cv": float(cv.median(skipna=True) or 0.0),
+            "mass_levels": float(frame["mass_solar"].nunique()),
+            "model_families": float(len(families)),
+            "median_relative_mass_effect": float(mass_effect.median(skipna=True) or 0.0),
+        },
+        {
+            "element_summary": grouped.reset_index().to_dict(orient="records"),
+            "mass_summary": mass_summary.to_dict(orient="records"),
+            "families": families,
+        },
     )
 
 
@@ -69,21 +88,40 @@ def accessible_species(frame: pd.DataFrame, initial_species: set[str], temperatu
 
 def analyze_astrochemistry(network: pd.DataFrame, inventory: pd.DataFrame | None = None) -> MatterAnalysis:
     graph = build_reaction_graph(network)
-    species = sorted(graph.nodes)
-    initial = set(species[: min(3, len(species))])
-    temps = np.linspace(float(network.temperature_min.min()), float(network.temperature_max.max()), 8)
-    counts = [len(accessible_species(network, initial, t)) for t in temps]
+    species = set(graph.nodes)
+    temperatures = np.array([10.0, 30.0, 100.0, 300.0, 1000.0, 3000.0, 10000.0])
+    tmin = pd.to_numeric(network["temperature_min"], errors="coerce")
+    tmax = pd.to_numeric(network["temperature_max"], errors="coerce")
+    active_counts = [int(((tmin <= temperature) & (tmax >= temperature)).sum()) for temperature in temperatures]
+    uncertainty = (
+        pd.to_numeric(network["uncertainty_factor"], errors="coerce")
+        if "uncertainty_factor" in network.columns
+        else pd.Series(np.nan, index=network.index, dtype=float)
+    )
+    source_counts = (
+        network.get("source_network", pd.Series(["unspecified"] * len(network)))
+        .fillna("unspecified").astype(str).value_counts().sort_index().astype(int).to_dict()
+    )
     metrics = {
         "species": float(graph.number_of_nodes()),
+        "reaction_rows": float(len(network)),
         "reactions_edges": float(graph.number_of_edges()),
-        "accessible_species_max": float(max(counts, default=0)),
-        "accessible_species_variation": float(np.ptp(counts) if counts else 0.0),
+        "independent_networks": float(len(source_counts)),
+        "rate_uncertainty_coverage": float(uncertainty.notna().mean()),
+        "active_reactions_max": float(max(active_counts, default=0)),
+        "accessible_species_max": float(graph.number_of_nodes()),
     }
-    details = {"temperatures": temps.tolist(), "accessible_counts": counts}
+    details = {
+        "temperatures_k": temperatures.tolist(),
+        "active_reaction_counts": active_counts,
+        "network_rows": source_counts,
+        "interpretation_limit": "Audit structurel du réseau. Aucune fermeture chimique dynamique ni accessibilité moléculaire n'est déduite de ce seul calcul.",
+    }
     if inventory is not None and not inventory.empty:
-        observed = set(inventory["species"].astype(str))
-        predicted = set(graph.nodes)
-        metrics["observed_coverage"] = len(observed & predicted) / max(len(observed), 1)
+        inventory_species = set(inventory["species"].astype(str))
+        metrics["inventory_network_overlap"] = len(inventory_species & species) / max(len(inventory_species), 1)
+        details["inventory_species"] = sorted(inventory_species)
+        details["inventory_kind"] = sorted(inventory.get("inventory_kind", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
     return MatterAnalysis(metrics, details)
 
 

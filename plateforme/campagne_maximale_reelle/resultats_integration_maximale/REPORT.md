@@ -1,8 +1,8 @@
 # Rapport d’exécution ORI-C complet
 
-- Exécution : `oric-20260805T205040Z-8e643b7b`
-- Début : 2026-08-05T20:50:40.433046+00:00
-- Fin : 2026-08-05T20:50:49.546017+00:00
+- Exécution : `oric-20260805T224502Z-c2df3ddb`
+- Début : 2026-08-05T22:45:02.002408+00:00
+- Fin : 2026-08-05T22:45:12.118041+00:00
 - Entrées sélectionnées : 683
 
 ## Lecture obligatoire
@@ -11,10 +11,10 @@ Le **statut technique** indique si le moteur informatique s’est exécuté corr
 
 ## Statuts techniques
 
-- pass: 278
+- pass: 298
 - fail: 0
 - skip: 0
-- blocked: 357
+- blocked: 337
 - error: 0
 - not_run: 48
 
@@ -128,22 +128,21 @@ Scientifique : not_applicable=1, undetermined=9
 
 ### WP-B2
 
-Technique : blocked=12
+Technique : blocked=11, pass=1
 
 Scientifique : undetermined=12
 
-- `B2-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-010` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-011` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
-- `B2-012` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv
+- `B2-001` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-002` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-006` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-007` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-010` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-011` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `B2-012` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-B3
 
@@ -234,7 +233,7 @@ Scientifique : not_applicable=1, undetermined=9
 - `CL2-002` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-003` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-004` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
-- `CL2-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL2-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 - `CL2-006` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-007` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
 - `CL2-009` — **blocked** — GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
@@ -242,36 +241,25 @@ Scientifique : not_applicable=1, undetermined=9
 
 ### WP-CL3
 
-Technique : blocked=10
+Technique : blocked=5, pass=5
 
 Scientifique : undetermined=10
 
-- `CL3-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL3-010` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL3-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL3-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL3-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL3-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL3-010` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-CL4
 
-Technique : blocked=9, not_run=1
+Technique : blocked=3, not_run=1, pass=6
 
 Scientifique : not_applicable=1, undetermined=9
 
-- `CL4-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
-- `CL4-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv
+- `CL4-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL4-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `CL4-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-M1
 
@@ -282,42 +270,38 @@ Scientifique : not_applicable=1, undetermined=14
 
 ### WP-M2
 
-Technique : blocked=10
+Technique : blocked=9, pass=1
 
 Scientifique : undetermined=10
 
-- `M2-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
-- `M2-010` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv
+- `M2-001` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-002` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-003` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-006` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-007` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M2-010` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-M3
 
-Technique : blocked=15
+Technique : blocked=12, pass=3
 
 Scientifique : undetermined=15
 
-- `M3-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-010` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-011` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-012` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-013` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-014` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
-- `M3-015` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv
+- `M3-002` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-003` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-006` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-007` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-010` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-012` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-013` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `M3-014` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-M4
 
@@ -350,20 +334,19 @@ Scientifique : not_applicable=1, undetermined=9
 
 ### WP-P1
 
-Technique : blocked=10
+Technique : blocked=9, pass=1
 
 Scientifique : undetermined=10
 
-- `P1-001` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-002` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-003` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-004` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-005` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-006` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-007` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-008` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-009` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
-- `P1-010` — **blocked** — Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv
+- `P1-002` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-003` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-006` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-007` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-009` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
+- `P1-010` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 
 ### WP-P2
 
@@ -384,13 +367,10 @@ Scientifique : undetermined=10
 
 ### WP-P3
 
-Technique : blocked=13, pass=2
+Technique : blocked=10, pass=5
 
 Scientifique : undetermined=15
 
-- `P3-003` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
-- `P3-004` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
-- `P3-005` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 - `P3-006` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 - `P3-007` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.
 - `P3-008` — **blocked** — Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.

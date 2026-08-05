@@ -12,50 +12,25 @@ HERE = Path(__file__).resolve().parent
 DEFAULT_DATA = HERE / "data"
 
 UNRESOLVED = {
-    "modern_climate_ensemble.csv": {
-        "tests": 20,
-        "reason": "Le dépôt contient GISTEMP observationnel, mais pas l'archive d'incertitude à 200 membres ni un ensemble multi-modèles/scénarios. L'ancien bilan annonçait 338 400 lignes sans que le fichier soit présent dans l'archive actuelle.",
-        "candidate": "NASA GISTEMP KeySeries.zip pour les deux audits observationnels; CMIP/expériences dédiées restent nécessaires pour les trajectoires et restaurations.",
-    },
-    "reaction_network.csv + molecular_inventory.csv": {
-        "tests": 15,
-        "reason": "L'inventaire hiérarchique contient des molécules qualitatives, mais aucun réseau versionné avec réactifs, produits, taux et plages de température, ni abondances observationnelles assorties d'incertitudes.",
-        "candidate": "KIDA/UMIST et un inventaire astronomique quantitatif.",
-    },
     "thermochemical_phases.csv": {
         "tests": 15,
-        "reason": "La table 08_Phases.csv est un inventaire qualitatif. Elle ne contient pas les triplets température-pression-énergie de Gibbs nécessaires aux calculs de condensation.",
+        "reason": "Les fichiers reçus ne contiennent pas une grille homogène phase-température-pression-énergie de Gibbs permettant les calculs de condensation.",
         "candidate": "Base thermodynamique quantitative Perple_X/JANAF ou équivalent avec licence et provenance.",
-    },
-    "endosymbiosis_events.csv": {
-        "tests": 12,
-        "reason": "Le dépôt mentionne mitochondrie et chloroplaste, mais ne fournit pas des événements documentés avec transfert génique, intégration métabolique, dépendance et niveau de preuve.",
-        "candidate": "Jeu phylogénomique et métabolique construit depuis des sources publiées.",
     },
     "planetary_histories.csv": {
         "tests": 11,
-        "reason": "Les éléments orbitaux J2000 et DE441 sont des états dynamiques, pas des histoires géochimiques complètes d'accrétion, redox, pertes et apports tardifs.",
-        "candidate": "Cas planétaires/météoritiques harmonisés avec couches historiques et partition finale.",
-    },
-    "nucleosynthesis_yields.csv": {
-        "tests": 10,
-        "reason": "Les trajectoires MESA présentes décrivent des transitions stellaires, pas des rendements élémentaires par masse, métallicité et incertitude.",
-        "candidate": "Tables de rendements NuGrid ou équivalent.",
-    },
-    "isotope_tracers.csv": {
-        "tests": 10,
-        "reason": "Aucune table échantillon-traceur-valeur-incertitude permettant le clustering des groupes météoritiques n'est présente.",
-        "candidate": "Compilation isotopique Ti-Cr-Mo-W-Ni-Ru-Pd avec provenance ligne par ligne.",
+        "reason": "Les états orbitaux et les mesures noyau/bulk reçues ne constituent pas des histoires géochimiques complètes d'accrétion, redox, pertes et apports tardifs.",
+        "candidate": "Cas planétaires ou météoritiques harmonisés avec étapes historiques et composition finale.",
     },
     "late_accretion_tracers.csv": {
         "tests": 10,
-        "reason": "Aucune table d'observations finales associées à des sources candidates d'accrétion tardive n'est présente.",
+        "reason": "Les isotopes reçus ne relient pas encore des observations finales à plusieurs sources candidates d'accrétion tardive dans un modèle de mélange commun.",
         "candidate": "Compilation Mo-Ru-W-Os-Ir-Au et modèles de mélange documentés.",
     },
     "volatile_inventory.csv": {
         "tests": 9,
-        "reason": "Les inventaires généraux du dépôt ne donnent pas, par échantillon, les masses initiale, noyau, manteau, atmosphère et pertes nécessaires à la fermeture de masse.",
-        "candidate": "Inventaires volatils quantitatifs de corps différenciés et météorites.",
+        "reason": "Le dégazage de Murchison et les modèles H-C noyau/bulk sont utiles mais ne ferment pas, par échantillon, les masses initiale, noyau, manteau, atmosphère et pertes.",
+        "candidate": "Inventaires volatils quantitatifs fermés de corps différenciés et météorites.",
     },
 }
 
@@ -102,6 +77,15 @@ def build(results_json: Path, data_dir: Path) -> dict:
         "antibiotic_independent_fitness_rows": rows(data_dir / "antibiotic_fitness_real.csv"),
         "benchmark_cases": rows(data_dir / "benchmark_cases.csv"),
         "biology_cases": rows(data_dir / "biology_cases.csv"),
+        "modern_climate_ensemble_rows": rows(data_dir / "modern_climate_ensemble.csv"),
+        "reaction_network_rows": rows(data_dir / "reaction_network.csv"),
+        "molecular_inventory_rows": rows(data_dir / "molecular_inventory.csv"),
+        "nucleosynthesis_element_yields": rows(data_dir / "nucleosynthesis_yields.csv"),
+        "nucleosynthesis_isotope_yields": rows(data_dir / "nucleosynthesis_isotope_yields.csv"),
+        "isotope_tracer_rows": rows(data_dir / "isotope_tracers.csv"),
+        "endosymbiosis_events": rows(data_dir / "endosymbiosis_events.csv"),
+        "endosymbiont_hmm_rows": rows(data_dir / "endosymbiont_hmm_presence_absence.csv"),
+        "murchison_degassing_rows": rows(data_dir / "murchison_degassing_profiles.csv"),
     }
     benchmark = pd.read_csv(data_dir / "benchmark_cases.csv")
     data_summary["benchmark_domains"] = benchmark.groupby("domain").size().astype(int).to_dict()

@@ -5,14 +5,14 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 707,
-      "sha256": "03c524a034a28ec16d50e79d32356a6e69250141d6bfa8ed2300eb401361ac4a",
+      "size": 750,
+      "sha256": "2b3325049ad1b9e588d05384c22381578865f23a6841fcbbe764ba7a103f8d90",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 7499,
-      "sha256": "db5bd7f296682b4a550f16df35faf782651165c7529a3d043f0cc57a4280f3d8",
+      "size": 7849,
+      "sha256": "29598b32269fb86a7f53633c4f4ca63746fa5ca173c8eedec2f232e0269a1126",
       "storage": "inline"
     },
     {
@@ -4295,8 +4295,8 @@
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "size": 6223,
-      "sha256": "af3a2a7ac640d81c620171614fdb25bdbf8b4328c99a0755fa6553465ff94f27",
+      "size": 7402,
+      "sha256": "91d73784e260633cf675d296f4fe2b6a9d44058340df754d143ab9de397d3e8e",
       "storage": "inline"
     },
     {
@@ -4337,8 +4337,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 5367,
-      "sha256": "ef4b3f245664686c1a63509dd39c7f12d1ee38489d0a8796fbd35b51e1eea7b5",
+      "size": 7828,
+      "sha256": "e32b0d403b223f972c4b1d2667bb52b9389cdbef14e5edbd56a741575ec627d6",
       "storage": "inline"
     },
     {
@@ -5381,14 +5381,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
-      "size": 13351,
-      "sha256": "d405da7398b4719bdfd2211fc9bbfce0b75a0a234a5e877446b53756a7dc96ed",
+      "size": 17999,
+      "sha256": "a41eb2b4593fda744da9345eec2abd9a7b145fe22ba94a02d380a1c81e5f4eec",
       "storage": "inline"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md",
-      "size": 6189,
-      "sha256": "e921eb9ed5e0128716a4b3d1c69d88d300b7a78f116c455a1de33ec0df21421a",
+      "size": 4741,
+      "sha256": "311c1999bf44e77424f0f47f12769053225ed2cd31ef70bec9169f4cfbddf95a",
       "storage": "inline"
     },
     {
@@ -5399,8 +5399,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md",
-      "size": 4453,
-      "sha256": "e15b9c4c13b717b94627719a01c8fea86d96bdaff11f74392b8bed5b6a54d536",
+      "size": 5070,
+      "sha256": "02a4502d051135c2a722c405b49a374c024f3c3e6bf1fb0e5f814274067d0573",
       "storage": "inline"
     },
     {
@@ -5411,8 +5411,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/DONNEES_UTILISEES_MAXIMUM.md",
-      "size": 1811,
-      "sha256": "eabceb3a11eb6b40d61003b46f7c9d418da58fc49039cc945a10ce0e25b03f78",
+      "size": 2079,
+      "sha256": "e006278302e0cbd8c269576f8b0d3078136e1acf84ac40aaaea4296348170317",
       "storage": "inline"
     },
     {
@@ -5423,8 +5423,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md",
-      "size": 5459,
-      "sha256": "3305fab3788912ab869720668e6ccde54704de424987ce3e1202b6a3fa2d04de",
+      "size": 10795,
+      "sha256": "8be443a9e00e2de26fd1c7fcf4822ffaa7267d96d48cdba92da2fc8c2dabcaf7",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/LOT_SCIENTIFIQUE_2026_08_05.md",
+      "size": 1218,
+      "sha256": "898eddb1ef1d1b019ebe8d128c8207fa855f02befeac3f2e0946009bf456ec54",
       "storage": "inline"
     },
     {
@@ -5447,8 +5453,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json",
-      "size": 4282,
-      "sha256": "154881fd133ea9d4bda06a3c44c219b7008b77a17296695e2b3272159aacf6b0",
+      "size": 13201,
+      "sha256": "b2c86a543353a8404462e0640031172c624119beeafa02147342f58cd155a0c0",
       "storage": "inline"
     },
     {
@@ -5470,6 +5476,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/TRI_LOT_SCIENTIFIQUE_2026_08_05.json",
+      "size": 932,
+      "sha256": "956ba9f80f2c7455ebb50e917ff9f2ac22cdf3a57197cb45020920425bc2460f",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/comparaison_nbody_la2004.json",
       "size": 346,
       "sha256": "bc0e9007027a6555365332badf781540abe8d2c726e9ae6b7513fef6382bd1b8",
@@ -5477,8 +5489,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json",
-      "size": 7050,
-      "sha256": "4f55fb7b062d2cb5440a42deec08af0e830910133e7b4387da927ac5ad40b08b",
+      "size": 12791,
+      "sha256": "9204b81d4b26c81d45e220c3b18c75b98fd8a0c2eb967582b5fa159b81fa4997",
       "storage": "inline"
     },
     {
@@ -5506,6 +5518,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/aphid_pgn_gene_counts.csv",
+      "size": 3760,
+      "sha256": "465ec035aed8ebcd64ac68006c0d647bd68e772ca1a5ed7e6a229d1006452958",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/benchmark_cases.csv",
       "size": 5506428,
       "sha256": "1829227181bf359a96113866a76936dd0ce6bbff4b33402ce0f5410b269936bb",
@@ -5521,6 +5539,24 @@
       "path": "plateforme/campagne_maximale_reelle/data/cell_architecture.csv",
       "size": 3161,
       "sha256": "c60eb54d46da5eff478a6ca4e709ca3a4da52ac49fb2a3e70b4a07921857a1a7",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/core_bulk_h_c_models.csv",
+      "size": 973,
+      "sha256": "da112c2cd826e301539eafc35ad3edb34ad6ce154a3772038d47fdb174225d5d",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/endosymbiont_hmm_presence_absence.csv",
+      "size": 1592892,
+      "sha256": "9184d23564402f36a32fde35db9eb978a07125046721d4e5c25d1ff3ab4d4637",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv",
+      "size": 20166,
+      "sha256": "dbac251d108e7f8e86c46fd9155f19c5796d1017dd6448b082327f4a198d0540",
       "storage": "inline"
     },
     {
@@ -5542,15 +5578,75 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/isotope_tracers.csv",
+      "size": 57975,
+      "sha256": "17b074f11ddf5dfb5919faf93473c8cd915712a7375015f00103a0f1709fcb22",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/ivuna_mn_cr_isotopes.csv",
+      "size": 865,
+      "sha256": "2be16e79e9acdd813f4aa49562f9668567ca98af351633c38c7ea0ca9f626a89",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/lunar_calcium_isotopes.csv",
+      "size": 1379,
+      "sha256": "f81e2d7cf5e422a84462e583e4432454e7626191774e7ceccefadedda7478923",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/matter_transitions.csv",
       "size": 29234,
       "sha256": "0c75b8684a0c7dec500ae4365cb949078036565d7c8eed29a9a670089645a4db",
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/meteorite_thermal_properties.csv",
+      "size": 10935,
+      "sha256": "ae7fdd9427025bd5a973e8b5590bbc38f13dc8965dc8d67f2bdc567f3e96dc69",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv",
+      "size": 14498199,
+      "sha256": "34410d2d9ac65b6965e994b1e6b819ad883021b625c93f7b8affac26f7c5682b",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv",
       "size": 203864,
       "sha256": "9dacdee2ef82e2fadb8dd34d820ac0f724d12976559b7273b9c4c13bd0d368e9",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/molecular_inventory.csv",
+      "size": 1945,
+      "sha256": "fc349bd98f71d447cdcac05d8ab119935635cb56815fd416a03887cdd8c023ac",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/molecular_inventory_amino_acids_auxiliary.csv",
+      "size": 120825,
+      "sha256": "8c74d798a87892e586e0b0c55c5c6faa01e38f83aa9714e80e525829058017c1",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/murchison_degassing_profiles.csv",
+      "size": 241647,
+      "sha256": "db14e0e5f895b8db0b3f7b8426d3ce05287ab45f41e0720d3f19475f393a4d01",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/nucleosynthesis_isotope_yields.csv",
+      "size": 10062765,
+      "sha256": "3ac45bfba3576c29c6387a52c272b062c9942ecd6727925f2bfc2e2bade08317",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv",
+      "size": 242070,
+      "sha256": "5c367e37fb0e9a3ec4070f4c66391a32132710d9bf68d2024840b415f5964996",
       "storage": "inline"
     },
     {
@@ -5585,8 +5681,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/data/partition_experiments.csv",
-      "size": 1683,
-      "sha256": "20e7b35942dab95303fbe7bab11a4b1bfa126387b35fc8395c822c8687f08058",
+      "size": 5956,
+      "sha256": "3f393df5d37d8e31848ebf7a8ddb0d514d3fc5d5da8e4099b4579a1921234af1",
       "storage": "inline"
     },
     {
@@ -5644,6 +5740,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/data/reaction_network.csv",
+      "size": 1690494,
+      "sha256": "638a5c9ef1a2da69feda64b4a0ac3d85bb009050100c9367abba618a8b0243c1",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/data/relations.csv",
       "size": 921,
       "sha256": "8b1d36acdce610f68a061fec6d35e4a678893ebfef2418f8e9ee6d143fcb990d",
@@ -5657,8 +5759,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py",
-      "size": 48631,
-      "sha256": "7733e9512dbad17f371e3bf8722b9fa38f0959a6d7a64914e536f6774b0bf3a9",
+      "size": 49980,
+      "sha256": "5757f75e02b61d0bc19cd09100cb23d0b15efd74448381934ab440084d41350a",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/integrer_lot_scientifique_2026_08_05.py",
+      "size": 42374,
+      "sha256": "38ab083e1c792b43c673cccef07aae988875bbe9058c18bb2b43dfd70ca4e1cc",
       "storage": "inline"
     },
     {
@@ -5849,20 +5957,20 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/REPORT.md",
-      "size": 43782,
-      "sha256": "61d8834c7c616cd33a910bfc7f61c76777a48229872e9469478d04d94b9fbf6b",
+      "size": 41379,
+      "sha256": "7a4927ac4cca7775893bf9a1f4532346acba2377b4551332b32ae2c62d469a89",
       "storage": "inline"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.csv",
-      "size": 92597,
-      "sha256": "17d14a0f4fc4eedec04726507c79a6804c835d415a12b487175a5773cb0ec3ed",
+      "size": 92045,
+      "sha256": "f1d0ccfb07bcf6fabc1ccde05173a91366ae6aa0c29b629c648e3722fec9b19b",
       "storage": "inline"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json",
-      "size": 3200921,
-      "sha256": "3861b5e294bbd237a04a85a39bbd0e000e03fcbabc681706fd02506afa0166af",
+      "size": 3341164,
+      "sha256": "d5b5c0ae622be65200d1b02bd5a80394ac2a7e01d2a3fe4fe047cc7e65e718e1",
       "storage": "inline"
     },
     {
@@ -5885,8 +5993,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resumer_integration_maximale.py",
-      "size": 9418,
-      "sha256": "4fb70048a61be91be9365e15e6df8c06a56b4c42840f77a1f7e9bbda873dfffd",
+      "size": 8348,
+      "sha256": "42e127054da8d6a4435105584314e319883f665146ac6ecbeefb20fffa10dd7c",
       "storage": "inline"
     },
     {
@@ -6593,14 +6701,14 @@
     },
     {
       "path": "plateforme/source_corrigee/requirements-lock.txt",
-      "size": 332,
-      "sha256": "52e594d1fcca1568961cf0dc75a245682b324b82d3d641b058141c54248c1688",
+      "size": 345,
+      "sha256": "93c3fedfa927cddeefaf0e9722b1ca34e2bb0d86ba1ab4f3520abafbc647ae98",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/requirements.txt",
-      "size": 192,
-      "sha256": "227bb4116d2d5fda75e3148dbe9691363591f107b55de208901cc5cd8c502b4e",
+      "size": 203,
+      "sha256": "5037d1d972d2e919cc9a2f50266d9d3c7cb5da10324ed7ba391c18df1642c9c2",
       "storage": "inline"
     },
     {
@@ -6803,20 +6911,20 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/biology.py",
-      "size": 8534,
-      "sha256": "3ec3202d1d3e7b1920e2a853f8d1450c5ea56e93ce9ecf4661668475b3eda4ab",
+      "size": 9388,
+      "sha256": "1868202fbcc597b7c04ac563c1fd2224736fe1aa3335a90a57041dfcc145df78",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/climate.py",
-      "size": 12645,
-      "sha256": "9c08541f65b1b74c73915a4d272d9355bb42b8f52442c1631ecc66990b0157f8",
+      "size": 13107,
+      "sha256": "8b96952ac77c274f0d24cb6407c139292c7497dca99d8d6a7f09a672ee1ca4d2",
       "storage": "inline"
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/domains/matter.py",
-      "size": 5988,
-      "sha256": "4970c55f543e28b1ebc1e901cd49765798ce2119865f15b24992a6e52f39233c",
+      "size": 8000,
+      "sha256": "72b88210d0c14963830a8f9395c4ecec908e154f19b5192977cd0902d9d95984",
       "storage": "inline"
     },
     {
@@ -6833,8 +6941,8 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/engines.py",
-      "size": 31337,
-      "sha256": "a0f398526b4d9ac77a71cd38860b25c504dbfee2eeff13c00d4302d128ec849d",
+      "size": 32370,
+      "sha256": "bddb5e58ab440eaa1d134a4775b9cfe79152f61a25f0c1a07fba118f150a8e4a",
       "storage": "inline"
     },
     {
@@ -6949,6 +7057,12 @@
       "path": "plateforme/source_corrigee/tests/test_data_and_engines.py",
       "size": 1817,
       "sha256": "b181102ebc2bc1585758c249730b3346f444e6d5816d3a726a9db18dba328155",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/source_corrigee/tests/test_external_scientific_bundle.py",
+      "size": 2363,
+      "sha256": "400edc789d40752a968283c271bcf0fda93c85ef3ed6767aea545a2d7c3ba68d",
       "storage": "inline"
     },
     {

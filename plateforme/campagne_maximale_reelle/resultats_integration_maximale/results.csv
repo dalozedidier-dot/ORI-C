@@ -1,684 +1,684 @@
 test_id,wp,technical_outcome,scientific_verdict,criterion_id,metric,threshold,message,duration_s
-S1-001,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.9724000341957435e-05
-S1-002,S1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",8.47200135467574e-06
-S1-003,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4876997485989705e-05
-S1-004,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.097997589269653e-06
-S1-005,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.8050017135683447e-06
-S1-006,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.986998879350722e-06
-S1-007,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0360021153464913e-06
-S1-008,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0309998944867402e-06
-S1-009,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0709994714707136e-06
-S1-010,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2280000848695636e-06
-S1-011,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.296997990924865e-06
-S1-012,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2649983293376863e-06
-S1-013,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.700999175431207e-06
-S1-014,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.7220012270845473e-06
-S1-015,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7179991118609905e-06
-S1-016,S1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.672997652553022e-06
-S1-017,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.5650006136856973e-06
-S1-018,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.007000148296356e-06
-S1-019,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8550017557572573e-06
-S1-020,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8409991753287613e-06
-S1-021,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.986001734621823e-06
-S1-022,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9190010789316148e-06
-S1-023,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0189982024021447e-06
-S1-024,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0459992811083794e-06
-S1-025,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8399987311568111e-06
-S1-026,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8649989215191454e-06
-S1-027,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8800019461195916e-06
-S1-028,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.763000909704715e-06
-S1-029,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8499995348975062e-06
-S1-030,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.810700268833898e-05
-S1-031,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.249998942716047e-06
-S1-032,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8450009520165622e-06
-S1-033,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.877000613603741e-06
-S1-034,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8790015019476414e-06
-S1-035,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7430029402021319e-06
-S1-036,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.191001840401441e-06
-S1-037,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7000020307023078e-06
-S1-038,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5929981600493193e-06
-S1-039,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6189987945836037e-06
-S1-040,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.63400181918405e-06
-S1-041,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7370002751704305e-06
-S1-042,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.743999746395275e-06
-S1-043,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6420017345808446e-06
-S1-044,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6310004866681993e-06
-S1-045,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6589983715675771e-06
-S1-046,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5780024114064872e-06
-S1-047,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6810008673928678e-06
-S1-048,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7368998669553548e-05
-S1-049,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1000014385208488e-06
-S1-050,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.073000359814614e-06
-S2-001,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0989973563700914e-06
-S2-002,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8370010366197675e-06
-S2-003,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.5370027287863195e-06
-S2-004,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.986998540814966e-06
-S2-005,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.639000402064994e-06
-S2-006,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8700011423788965e-06
-S2-007,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7210004443768412e-06
-S2-008,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9380022422410548e-06
-S2-009,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7279999156016856e-06
-S2-010,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6499980119988322e-06
-S2-011,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8939972505904734e-06
-S2-012,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6570011212024838e-06
-S2-013,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6670019249431789e-06
-S2-014,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6189987945836037e-06
-S2-015,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8399987311568111e-06
-S2-016,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3560020306613296e-06
-S2-017,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7169986676890403e-06
-S2-018,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.30099942907691e-06
-S2-019,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.2169984984211624e-06
-S2-020,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8639984773471951e-06
-S3-001,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,0.012018441000691382
-S3-002,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.557100040372461e-05
-S3-003,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,6.30300201009959e-06
-S3-004,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,4.3620020733214915e-06
-S3-005,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.183002940611914e-06
-S3-006,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.663000486791134e-06
-S3-007,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.811000402085483e-06
-S3-008,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,6.204001692822203e-06
-S3-009,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,4.328001523390412e-06
-S3-010,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.5530028981156647e-06
-S3-011,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.4859986044466496e-06
-S3-012,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.727000148501247e-06
-S3-013,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.4430013329256326e-06
-S3-014,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.3039978006854653e-06
-S3-015,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,4.270001227268949e-06
-S3-016,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.2989992178045213e-06
-S3-017,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.130000550299883e-06
-S3-018,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.9099970813840628e-06
-S3-019,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.6439996620174497e-06
-S3-020,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.650999133242294e-06
-M1-001,M1,pass,undetermined,,0.0,,Base des transitions validée,0.00657665299877408
-M1-002,M1,pass,undetermined,,0.0,,Base des transitions validée,9.562001650920138e-06
-M1-003,M1,pass,undetermined,,0.0,,Base des transitions validée,4.953999450663105e-06
-M1-004,M1,pass,undetermined,,0.0,,Base des transitions validée,4.296001861803234e-06
-M1-005,M1,pass,undetermined,,0.0,,Base des transitions validée,3.564000508049503e-06
-M1-006,M1,pass,undetermined,,0.0,,Base des transitions validée,4.426998202688992e-06
-M1-007,M1,pass,undetermined,,0.0,,Base des transitions validée,4.263998562237248e-06
-M1-008,M1,pass,undetermined,,0.0,,Base des transitions validée,3.740002284757793e-06
-M1-009,M1,pass,undetermined,,0.0,,Base des transitions validée,3.331002517370507e-06
-M1-010,M1,pass,undetermined,,0.0,,Base des transitions validée,3.5960001696366817e-06
-M1-011,M1,pass,undetermined,,0.0,,Base des transitions validée,5.336001777322963e-06
-M1-012,M1,pass,undetermined,,0.0,,Base des transitions validée,3.9480000850744545e-06
-M1-013,M1,pass,undetermined,,0.0,,Base des transitions validée,3.1429990485776216e-06
-M1-014,M1,pass,undetermined,,0.0,,Base des transitions validée,3.344997821841389e-06
-M1-015,M1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.617999366018921e-06
-M2-001,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,0.00011202200039406307
-M2-002,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,5.24200004292652e-06
-M2-003,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.7089994293637574e-06
-M2-004,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.3239994081668556e-06
-M2-005,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.4949989640153944e-06
-M2-006,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.384000592632219e-06
-M2-007,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.3700016501825303e-06
-M2-008,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.3280011848546565e-06
-M2-009,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,3.134999133180827e-06
-M2-010,M2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv,2.9889997676946223e-06
-M3-001,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,4.460199852474034e-05
-M3-002,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,4.403002094477415e-06
-M3-003,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.7489990063477308e-06
-M3-004,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.8139987736940384e-06
-M3-005,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,4.0620034269522876e-06
-M3-006,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,4.606001311913133e-06
-M3-007,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,4.451001586858183e-06
-M3-008,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.6290002753958106e-06
-M3-009,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.9529986679553986e-06
-M3-010,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.545999788912013e-06
-M3-011,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.5369994293432683e-06
-M3-012,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.463002940407023e-06
-M3-013,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.21200059261173e-06
-M3-014,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.4479999158065766e-06
-M3-015,M3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/reaction_network.csv,3.731998731382191e-06
-M4-001,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.1775001843925565e-05
-M4-002,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,4.307999915909022e-06
-M4-003,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,5.538997356779873e-06
-M4-004,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.4430013329256326e-06
-M4-005,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.3329997677356005e-06
-M4-006,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.287001163698733e-06
-M4-007,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.392000508029014e-06
-M4-008,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.121000190731138e-06
-M4-009,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.2419993658550084e-06
-M4-010,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.416000254219398e-06
-M4-011,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.2150019251275808e-06
-M4-012,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.721997927641496e-06
-M4-013,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.2759999157860875e-06
-M4-014,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.678000211948529e-06
-M4-015,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,4.2860010580625385e-06
-M5-001,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,0.006415019997803029
-M5-002,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,9.47599983192049e-06
-M5-003,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,4.770001396536827e-06
-M5-004,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,4.203000571578741e-06
-M5-005,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,4.018998879473656e-06
-M5-006,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.5470002330839634e-06
-M5-007,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.3670003176666796e-06
-M5-008,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.4609984140843153e-06
-M5-009,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.9900002118665725e-06
-M5-010,M5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.481000360101461e-06
-P1-001,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,0.00010944799942080863
-P1-002,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,5.514000804396346e-06
-P1-003,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,4.501998773775995e-06
-P1-004,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.8569996831938624e-06
-P1-005,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.4129989217035472e-06
-P1-006,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.2940006349235773e-06
-P1-007,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.544999344740063e-06
-P1-008,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.312001354061067e-06
-P1-009,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,3.364200165378861e-05
-P1-010,P1,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/isotope_tracers.csv,4.1050006984733045e-06
-P2-001,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.478999471757561e-06
-P2-002,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.0279989005066454e-06
-P2-003,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.5529989216011018e-06
-P2-004,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.178000042680651e-06
-P2-005,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.1319978006649762e-06
-P2-006,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.986998879350722e-06
-P2-007,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.6080015231855214e-06
-P2-008,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.720000338740647e-06
-P2-009,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.420001692371443e-06
-P2-010,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3649990907870233e-06
-P3-001,P3,pass,undetermined,,9.0,,Expériences métal-silicate compilées et harmonisées; méta-régression non revendiquée faute d'effectif complet,0.005640515999402851
-P3-002,P3,pass,undetermined,,9.0,,Expériences métal-silicate compilées et harmonisées; méta-régression non revendiquée faute d'effectif complet,1.3024000509176403e-05
-P3-003,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",9.624000085750595e-06
-P3-004,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.582998710451648e-06
-P3-005,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.827997716143727e-06
-P3-006,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.4039985621348023e-06
-P3-007,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.4229997254442424e-06
-P3-008,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.5390003176871687e-06
-P3-009,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.9289989217650145e-06
-P3-010,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.8030011637602e-06
-P3-011,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.393000952200964e-06
-P3-012,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.7599999157246202e-06
-P3-013,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.4436997995944694e-05
-P3-014,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.2900024962145835e-06
-P3-015,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.977998519781977e-06
-P4-001,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,0.00010989399743266404
-P4-002,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,5.510002665687352e-06
-P4-003,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.9379992813337594e-06
-P4-004,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.484001354081556e-06
-P4-005,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.3479991543572396e-06
-P4-006,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.9899965738877654e-06
-P4-007,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.6269990485161543e-06
-P4-008,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.224999090889469e-06
-P4-009,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.0139999580569565e-06
-P4-010,P4,pass,undetermined,,6333.0,,Démographie observationnelle des exoplanètes auditée,0.11870842299686046
-P5-001,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,0.00016576299822190776
-P5-002,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,5.911999323870987e-06
-P5-003,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.679000994656235e-06
-P5-004,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.92199945054017e-06
-P5-005,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.103003448108211e-06
-P5-006,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.4479999158065766e-06
-P5-007,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.3579999580979347e-06
-P5-008,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.3200012694578618e-06
-P5-009,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.78799847769551e-06
-P5-010,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.955003194278106e-06
-P6-001,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.5521999961929396e-05
-P6-002,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.916000423487276e-06
-P6-003,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,4.002002242486924e-06
-P6-004,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.815999662037939e-06
-P6-005,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.2290008675772697e-06
-P6-006,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.511002432787791e-06
-P6-007,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.914999979315326e-06
-P6-008,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.891000233124942e-06
-P6-009,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.510998794808984e-06
-P6-010,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,5.631001840811223e-06
-P6-011,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,2.988002961501479e-06
-P6-012,P6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.061000021873042e-06
-A1-001,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.836001608055085e-06
-A1-002,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.168002538383007e-06
-A1-003,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4699984351173043e-06
-A1-004,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9309991330374032e-06
-A1-005,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2749991330783814e-06
-A1-006,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.635002601891756e-06
-A1-007,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2649983293376863e-06
-A1-008,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.6079978852067143e-06
-A1-009,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.000997483264655e-06
-A1-010,A1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8189966795034707e-06
-A2-001,A2,pass,undetermined,,1.0,,Conditions initiales auditées,0.010059585998533294
-A2-002,A2,pass,undetermined,,1.0,,Conditions initiales auditées,1.1881998943863437e-05
-A2-003,A2,pass,undetermined,,1.0,,Conditions initiales auditées,5.469999450724572e-06
-A2-004,A2,pass,undetermined,,1.0,,Conditions initiales auditées,5.4580013966187835e-06
-A2-005,A2,pass,undetermined,,1.0,,Conditions initiales auditées,4.4910011638421565e-06
-A2-006,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.445999027462676e-06
-A2-007,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.692999598570168e-06
-A2-008,A2,pass,undetermined,,1.0,,Conditions initiales auditées,4.501998773775995e-06
-A2-009,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.402998117962852e-06
-A2-010,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.602002834668383e-06
-A3-001,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.925001121591777e-06
-A3-002,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.525001036701724e-06
-A3-003,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.952997990883887e-06
-A3-004,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.8560025384649634e-06
-A3-005,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.983000402105972e-06
-A3-006,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.8439972084015608e-06
-A3-007,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9459985196590424e-06
-A3-008,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2050007828511298e-06
-A3-009,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.5149965949822217e-06
-A3-010,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.677999873412773e-06
-A3-011,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.976997737074271e-06
-A3-012,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0469997252803296e-06
-A3-013,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.053999196505174e-06
-A3-014,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.549997589085251e-06
-A3-015,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3030006559565663e-06
-A3-016,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.449000021442771e-06
-A4-001,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.249999281251803e-06
-A4-002,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4099972506519407e-06
-A4-003,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1380001271609217e-06
-A4-004,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3950015020091087e-06
-A4-005,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.5759982236195356e-06
-A4-006,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3760003386996686e-06
-A4-007,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3889988369774073e-06
-A4-008,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.006000042660162e-06
-A4-009,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.077998942695558e-06
-A4-010,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7110032786149532e-06
-A4-011,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7590027709957212e-06
-A4-012,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.082000719383359e-06
-A5-001,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,0.24492917699899408
-A5-002,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,1.3098000636091456e-05
-A5-003,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,5.1150018407497555e-06
-A5-004,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,5.265999789116904e-06
-A5-005,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,4.1959974623750895e-06
-A5-006,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,4.044999514007941e-06
-A5-007,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.515997377689928e-06
-A5-008,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.965000360039994e-06
-A5-009,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.7900026654824615e-06
-A5-010,A5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.10999995842576e-06
-A6-001,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.6339988582767546e-06
-A6-002,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.9279981390573084e-06
-A6-003,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.368000423302874e-06
-A6-004,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.369000867474824e-06
-A6-005,A6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.2740023268852383e-06
-A6-006,A6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.4170000213198364e-06
-C1-001,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.012913353002659278
-C1-002,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.1382999218767509e-05
-C1-003,C1,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,0.0031160959988483228
-C1-004,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.1111998901469633e-05
-C1-005,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,0.024703412000235403
-C1-006,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,1.0697000107029453e-05
-C1-007,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.6300017351750284e-06
-C1-008,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.53300162917003e-06
-C1-009,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.379002348287031e-06
-C1-010,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.8719990698155016e-06
-C2-001,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,0.0031822609998926055
-C2-002,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.009484130001510493
-C2-003,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.1988999176537618e-05
-C2-004,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.289999535307288e-06
-C2-005,C2,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,0.004933516000164673
-C2-006,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.374000804498792e-06
-C2-007,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,1.0037998436018825e-05
-C2-008,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,7.317998097278178e-06
-C2-009,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.173998943064362e-06
-C2-010,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.934997948817909e-06
-C3-001,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0396824970011949
-C3-002,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.105699993786402e-05
-C3-003,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.9629998102318496e-06
-C3-004,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.298002750147134e-06
-C3-005,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7999998312443495e-06
-C3-006,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.359000402269885e-06
-C3-007,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.020999767817557e-06
-C3-008,C3,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,5.660000169882551e-06
-C3-009,C3,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,0.006397197001206223
-C3-010,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0887000826187432e-05
-C3-011,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.845998773816973e-06
-C3-012,C3,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,5.335998139344156e-06
-C3-013,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.4240005081519485e-06
-C3-014,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.690999387297779e-06
-C3-015,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0089999705087394e-05
-C3-016,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.016001862008125e-06
-C3-017,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.109003152232617e-06
-C3-018,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.27189983788412e-05
-C3-019,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.273999704513699e-06
-C3-020,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.487999831326306e-06
-C3-021,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.858996933558956e-06
-C3-022,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.057001544628292e-06
-C4-001,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.011281620998488506
-C4-002,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,9.121999028138816e-06
-C4-003,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.351000825408846e-06
-C4-004,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.049998096888885e-06
-C4-005,C4,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,4.728000931208953e-06
-C4-006,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.373002982698381e-06
-C4-007,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.0430019251070917e-06
-C4-008,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,2.9860020731575787e-06
-C4-009,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.34899959852919e-06
-C4-010,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.3090000215452164e-06
-C4-011,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.2430001485627145e-06
-C4-012,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.034998710267246e-06
-C4-013,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.416000254219398e-06
-C4-014,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.0949995561968535e-06
-C4-015,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.064000338781625e-06
-C5-001,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,4.270998033462092e-06
-C5-002,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.0030023481231183e-06
-C5-003,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.5009979910682887e-06
-C5-004,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.975997969973832e-06
-C5-005,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.606000973377377e-06
-C5-006,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.216999175492674e-06
-C5-007,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,4.380002792458981e-06
-C5-008,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.7190002331044525e-06
-C5-009,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.2370007829740644e-06
-C5-010,C5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.743000656366348e-06
-C6-001,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.010458846001711208
-C6-002,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.1857999197673053e-05
-C6-003,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.666999302571639e-06
-C6-004,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.257999535184354e-06
-C6-005,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,5.859998054802418e-06
-C6-006,C6,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,5.276000592857599e-06
-C6-007,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,5.208999937167391e-06
-C6-008,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,3.0430019251070917e-06
-C6-009,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.5719967854674906e-06
-C6-010,C6,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,3.711000317707658e-06
-C6-011,C6,pass,undetermined,,0.7812914506862445,,Moteur spécialisé exécuté: climate_path_dependence,0.02122805600083666
-C6-012,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.3505999959306791e-05
-C6-013,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,7.971997547429055e-06
-C6-014,C6,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,6.475998816313222e-06
-C6-015,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.382000042824075e-06
-C7-001,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.011172234000696335
-C7-002,C7,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,1.2108001101296395e-05
-C7-003,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.06499782204628e-06
-C7-004,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.835000825347379e-06
-C7-005,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.598001057980582e-06
-C7-006,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.5150005714967847e-06
-C7-007,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.2079988159239292e-06
-C7-008,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.76499883714132e-06
-C7-009,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.4379991120658815e-06
-C7-010,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.295001417631283e-06
-CL1-001,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,0.016920541998842964
-CL1-002,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,9.726998541736975e-06
-CL1-003,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,4.934998287353665e-06
-CL1-004,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.5230004868935794e-06
-CL1-005,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.6279998312238604e-06
-CL1-006,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.959000994451344e-06
-CL1-007,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.1340023269876838e-06
-CL1-008,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.9099974199198186e-06
-CL1-009,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.5189987102057785e-06
-CL1-010,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.8079994081053883e-06
-CL2-001,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,0.01532766699892818
-CL2-002,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,9.953997505363077e-06
-CL2-003,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,4.393998096929863e-06
-CL2-004,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.396999090909958e-06
-CL2-005,CL2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,0.011900134999450529
-CL2-006,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,1.0697000107029453e-05
-CL2-007,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,4.436999006429687e-06
-CL2-008,CL2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.1539976741187274e-06
-CL2-009,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,7.303002348635346e-06
-CL2-010,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,5.14100247528404e-06
-CL3-001,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,4.949800131726079e-05
-CL3-002,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,5.042998964199796e-06
-CL3-003,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,4.870002157986164e-06
-CL3-004,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.9719998312648386e-06
-CL3-005,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.839999408228323e-06
-CL3-006,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.7819991121068597e-06
-CL3-007,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.97700205212459e-06
-CL3-008,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.2759999157860875e-06
-CL3-009,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.3569995139259845e-06
-CL3-010,CL3,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.0040027922950685e-06
-CL4-001,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,4.698998964158818e-06
-CL4-002,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.7221001801081002e-05
-CL4-003,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.90399873140268e-06
-CL4-004,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.2329990062862635e-06
-CL4-005,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,2.967997716041282e-06
-CL4-006,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.1180024961940944e-06
-CL4-007,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.083001502091065e-06
-CL4-008,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.473000106168911e-06
-CL4-009,CL4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,3.03599881590344e-06
-CL4-010,CL4,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.148998075630516e-06
-V1-001,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,0.005053151999163674
-V1-002,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.369099845760502e-05
-V1-003,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.82700124848634e-06
-V1-004,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,9.582499842508696e-05
-V1-005,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.314999725669622e-06
-V1-006,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,2.400700032012537e-05
-V1-007,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,1.7882997781271115e-05
-V1-008,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.7760000850539654e-06
-V1-009,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.9220024114474654e-06
-V1-010,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7099991964641958e-06
-V2-001,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.2758999218931422e-05
-V2-002,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",7.482001819880679e-06
-V2-003,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.621001037070528e-06
-V2-004,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9249974836129695e-06
-V2-005,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.236001015873626e-06
-V2-006,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,0.0067589549980766606
-V2-007,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,0.33854733900079736
-V2-008,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,3.555200237315148e-05
-V2-009,V2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",7.23399716662243e-06
-V2-010,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.7153000953840092e-05
-V2-011,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.214999979827553e-06
-V2-012,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,8.817001798888668e-06
-V2-013,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.843998224008828e-06
-V2-014,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.81399945076555e-06
-V2-015,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.4679985623806715e-06
-V2-016,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9910013331100345e-06
-V2-017,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.844998329645023e-06
-V2-018,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.575998900691047e-06
-V2-019,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.55500082555227e-06
-V2-020,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.637000529328361e-06
-V2-021,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.457000613911077e-06
-V2-022,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.412999260239303e-06
-V2-023,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.874996764352545e-06
-V2-024,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,5.189998773857951e-06
-V2-025,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.09800122724846e-06
-V2-026,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.4190019252710044e-06
-V2-027,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.426001057960093e-06
-V2-028,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.625002475222573e-06
-V2-029,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.926001904299483e-06
-V2-030,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.344001015648246e-06
-V2-031,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.333000106271356e-06
-V2-032,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,6.345999281620607e-06
-V2-033,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.2960022003389895e-06
-V2-034,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.902998625766486e-06
-V2-035,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,4.8679976316634566e-06
-V2-036,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.165001882938668e-06
-V2-037,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.247600008966401e-05
-V2-038,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.424000846687704e-06
-V2-039,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,6.105001375544816e-06
-V2-040,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.705001967726275e-06
-V3-001,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.1530005293898284e-06
-V3-002,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.819001333089545e-06
-V3-003,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.659999831346795e-06
-V3-004,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.545000021811575e-06
-V3-005,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",9.629999112803489e-06
-V3-006,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.007998308632523e-06
-V3-007,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.318001396721229e-06
-V3-008,V3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.1239982238039374e-06
-V3-009,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",7.025002560112625e-06
-V3-010,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",0.0001375540014123544
-V3-011,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.680002115899697e-06
-V3-012,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.544999683275819e-06
-V3-013,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,0.621795885002939
-V3-014,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,2.7632002456812188e-05
-V3-015,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,7.147002179408446e-06
-V3-016,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.314300243393518e-05
-V3-017,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.481997843366116e-06
-V3-018,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.8149998949375e-06
-V3-019,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.107001925352961e-06
-V3-020,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.94499909109436e-06
-V4-001,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.8910005716606975e-06
-V4-002,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.880999767920002e-06
-V4-003,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.181998519925401e-06
-V4-004,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.435998562257737e-06
-V4-005,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.385998181533068e-06
-V4-006,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.158999217906967e-06
-V4-007,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.7849968066439033e-06
-V4-008,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.963999915868044e-06
-V4-009,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.043999069835991e-06
-V4-010,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.956000000471249e-06
-V4-011,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,0.8658601620008994
-V4-012,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",0.00014775399904465303
-V4-013,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.614999387646094e-06
-V4-014,V4,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.1029998859157786e-05
-V4-015,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,8.756000170251355e-06
-V4-016,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.937999958405271e-06
-V4-017,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.53700010641478e-06
-V4-018,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.4639971242286265e-06
-V4-019,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.541998689295724e-06
-V4-020,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,4.942001396557316e-06
-V5-001,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.936002369504422e-06
-V5-002,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.973000613972545e-06
-V5-003,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.685000021709129e-06
-V5-004,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.852001438848674e-06
-V5-005,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.413999704411253e-06
-V5-006,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.110999725526199e-06
-V5-007,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.7050012906547636e-06
-V5-008,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.450001142686233e-06
-V5-009,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.469002305995673e-06
-V5-010,V5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.704997991211712e-06
-V6-001,V6,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.828001354122534e-06
-V6-002,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.068999260198325e-06
-V6-003,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.576002538669854e-06
-V6-004,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,0.6511023459970602
-V6-005,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,0.00011760000052163377
-V6-006,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,7.5459975050762296e-06
-V6-007,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,5.532998329726979e-06
-V6-008,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,5.376998160500079e-06
-V6-009,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.2906002666568384e-05
-V6-010,V6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",7.195001671789214e-06
-B1-001,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.941001290921122e-06
-B1-002,B1,pass,undetermined,,13.0,,Architecture cellulaire analysée,0.006091185998229776
-B1-003,B1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",7.534003088949248e-06
-B1-004,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",9.497998689766973e-06
-B1-005,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.377001459943131e-06
-B1-006,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.322002496337518e-06
-B1-007,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.0570008675567806e-06
-B1-008,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.8700014809146523e-06
-B1-009,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.592998498585075e-06
-B1-010,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.5950030249077827e-06
-B2-001,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,0.00011843300308100879
-B2-002,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,5.893998604733497e-06
-B2-003,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.872999513987452e-06
-B2-004,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.239001671317965e-06
-B2-005,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.279001248301938e-06
-B2-006,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.906999725382775e-06
-B2-007,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.9860020731575787e-06
-B2-008,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,2.9959992389194667e-06
-B2-009,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.0890005291439593e-06
-B2-010,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.7179997889325023e-06
-B2-011,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.5900011425837874e-06
-B2-012,B2,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv,3.178000042680651e-06
-B3-001,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.393001629272476e-06
-B3-002,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.1130002753343433e-06
-B3-003,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.7139976737089455e-06
-B3-004,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.793000021483749e-06
-B3-005,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,2.151813928001502
-B3-006,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,1.569300002302043e-05
-B3-007,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,6.084002961870283e-06
-B3-008,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.725000952836126e-06
-B3-009,B3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.001998943043873e-06
-B3-010,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.330999556463212e-06
-R1-001,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.131000994471833e-06
-R1-002,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7550009943079203e-06
-R1-003,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.267000233288854e-06
-R1-004,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.4769982448779047e-06
-R1-005,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,0.03230238700052723
-R1-006,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.263199737877585e-05
-R1-007,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.842997779836878e-06
-R1-008,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.894998371833935e-06
-R1-009,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,6.55919975542929e-05
-R1-010,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,2.332199801458046e-05
-R2-001,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,0.0025660760002210736
-R2-002,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,9.20000093174167e-06
-R2-003,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,5.473000783240423e-06
-R2-004,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.4240005081519485e-06
-R2-005,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.1959974623750895e-06
-R2-006,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.569999873638153e-06
-R2-007,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.6770001063123345e-06
-R2-008,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.430999640841037e-06
-R2-009,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.0660012271255255e-06
-R2-010,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.092001523124054e-06
-R2-011,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.79700179817155e-06
-R2-012,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3270000636111945e-06
-R2-013,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.8040016079321504e-06
-R2-014,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.393000952200964e-06
-R2-015,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.287001502234489e-06
-R3-001,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,0.012236668000696227
-R3-002,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,1.0146999557036906e-05
-R3-003,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,4.257999535184354e-06
-R3-004,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.7150020943954587e-06
-R3-005,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.860001015709713e-06
-R3-006,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.441000444581732e-06
-R3-007,R3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.57600287720561e-06
-R3-008,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.975001163780689e-06
-R3-009,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.5140001273248345e-06
-R3-010,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.410998033359647e-06
-R3-011,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.977998858317733e-06
-R3-012,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.818997356574982e-06
-R3-013,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,5.579000571742654e-06
-R3-014,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.7199970392975956e-06
-R3-015,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.5039993235841393e-06
-R4-001,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,0.028239991999726044
-R4-002,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,1.1436000932008028e-05
-R4-003,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.943001840729266e-06
-R4-004,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.546000127447769e-06
-R4-005,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.7429999792948365e-06
-R4-006,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.1429993871133775e-06
-R4-007,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.6240016925148666e-06
-R4-008,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.11600194638595e-06
-R4-009,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.520999598549679e-06
-R4-010,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.3370015444234014e-06
-R4-011,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.175999492872506e-06
-R4-012,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.7520003388635814e-06
-R4-013,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.3139986044261605e-06
-R4-014,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.4849981602746993e-06
-R4-015,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.5340017348062247e-06
-R5-001,R5,pass,undetermined,,,,Modèles concurrents comparés,0.011061249999329448
-R5-002,R5,pass,undetermined,,,,Modèles concurrents comparés,1.1284999345662072e-05
-R5-003,R5,pass,undetermined,,,,Modèles concurrents comparés,4.950001311954111e-06
-R5-004,R5,pass,undetermined,,,,Modèles concurrents comparés,3.853001544484869e-06
-R5-005,R5,pass,undetermined,,,,Modèles concurrents comparés,3.7700010580010712e-06
-R5-006,R5,pass,undetermined,,,,Modèles concurrents comparés,3.6519995774142444e-06
-R5-007,R5,pass,undetermined,,,,Modèles concurrents comparés,3.6869969335384667e-06
-R5-008,R5,pass,undetermined,,,,Modèles concurrents comparés,3.4559998312033713e-06
-R6-001,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.961999366059899e-06
-R6-002,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7700003809295595e-06
-R6-003,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3969984138384461e-06
-R6-004,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.6169979062397033e-06
-R6-005,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,0.002704087000893196
-R6-006,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,9.485996997682378e-06
-R6-007,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,4.482000804273412e-06
-R6-008,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,4.388999514048919e-06
-T1-001,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.8357638060006138
-T1-002,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.417699892655946e-05
-T1-003,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,1.2325999705353752e-05
-T1-004,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.740996807115152e-06
-T1-005,T1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.717000021832064e-06
-T1-006,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.598998879780993e-06
-T1-007,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.539001671830192e-06
-T1-008,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.799000064143911e-06
-T1-009,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.586000381503254e-06
-T1-010,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.6159988162107766e-06
-T1-011,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9959999159909785e-06
-T1-012,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.5060008889995515e-06
-T1-013,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.404999683378264e-06
-T1-014,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.0529997679404914e-06
-T1-015,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,4.907000402454287e-06
-T1-016,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,4.805999196833e-06
-T2-001,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.8715373230006662
-T2-002,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,2.733599831117317e-05
-T2-003,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,8.114999218378216e-06
-T2-004,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,8.01599890110083e-06
-T2-005,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.4584999007638544e-05
-T2-006,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.925002137199044e-06
-T2-007,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.033999281702563e-06
-T2-008,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.689999958733097e-06
-T2-009,T2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.215999408392236e-06
-T2-010,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.17600084701553e-06
-T3-001,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",7.050999556668103e-06
-T3-002,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.721998943248764e-06
-T3-003,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.8262207539992232
-T3-004,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,3.322100019431673e-05
-T3-005,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.253001967910677e-06
-T3-006,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3682998542208225e-05
-T3-007,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.760998414596543e-06
-T3-008,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.6960016081575304e-06
-T3-009,T3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.797999281436205e-06
-T3-010,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.583999493159354e-06
-T4-001,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,0.12474178399861557
-T4-002,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,1.954300023498945e-05
-T4-003,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,8.486997103318572e-06
-T4-004,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,6.85600025462918e-06
-T4-005,T4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.642099960008636e-05
-T4-006,T4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.0458999895490706e-05
-T5-001,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,0.10624399899825221
-T5-002,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,2.0806000975426286e-05
-T5-003,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,8.630999218439683e-06
-T5-004,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,6.723003025399521e-06
-T5-005,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,6.054997356841341e-06
-T5-006,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,5.924001015955582e-06
-T5-007,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,5.427998985396698e-06
-T5-008,T5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.700999928289093e-05
-T5-009,T5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.4799995773937553e-06
-T5-010,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,6.583999493159354e-06
+S1-001,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.8059999749530107e-05
+S1-002,S1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.390000635292381e-06
+S1-003,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3820997739676386e-05
+S1-004,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.868000931106508e-06
+S1-005,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.744000084931031e-06
+S1-006,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.578999894671142e-06
+S1-007,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0219995349179953e-06
+S1-008,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9330000213813037e-06
+S1-009,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.077002136502415e-06
+S1-010,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.815002178773284e-06
+S1-011,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7220008885487914e-06
+S1-012,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9740000425372273e-06
+S1-013,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0930019672960043e-06
+S1-014,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.044998836936429e-06
+S1-015,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0260013116057962e-06
+S1-016,S1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.554999809945002e-06
+S1-017,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2120002540759742e-06
+S1-018,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8560021999292076e-06
+S1-019,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8240025383420289e-06
+S1-020,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7660022422205657e-06
+S1-021,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7292000848101452e-05
+S1-022,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.614600114407949e-05
+S1-023,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.971999154193327e-06
+S1-024,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6759986465331167e-06
+S1-025,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6209996829275042e-06
+S1-026,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.676999090705067e-06
+S1-027,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7140009731519967e-06
+S1-028,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8179998733103275e-06
+S1-029,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0170009520370513e-06
+S1-030,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7900019884109497e-06
+S1-031,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8780010577756912e-06
+S1-032,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6599988157395273e-06
+S1-033,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.729997165966779e-06
+S1-034,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5620025806128979e-06
+S1-035,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5689984138589352e-06
+S1-036,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.176999259972945e-06
+S1-037,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.667998731136322e-06
+S1-038,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6890007827896625e-06
+S1-039,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6179983504116535e-06
+S1-040,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.600998075446114e-06
+S1-041,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8270002328790724e-06
+S1-042,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.710999640636146e-06
+S1-043,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7290003597736359e-06
+S1-044,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7514998035039753e-05
+S1-045,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.020999090746045e-06
+S1-046,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6160011000465602e-06
+S1-047,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6029989637900144e-06
+S1-048,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.601001713424921e-06
+S1-049,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5830009942874312e-06
+S1-050,S1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.586002326803282e-06
+S2-001,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.959000655915588e-06
+S2-002,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.710999640636146e-06
+S2-003,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.877000613603741e-06
+S2-004,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8974998965859413e-05
+S2-005,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.920998329296708e-06
+S2-006,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6650010365992785e-06
+S2-007,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.586002326803282e-06
+S2-008,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8179998733103275e-06
+S2-009,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7710008251015097e-06
+S2-010,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.791999238776043e-06
+S2-011,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9379986042622477e-06
+S2-012,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6160011000465602e-06
+S2-013,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6320009308401495e-06
+S2-014,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.610998879186809e-06
+S2-015,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.5689984138589352e-06
+S2-016,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.45800004247576e-06
+S2-017,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.5759978850837797e-06
+S2-018,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.3870012480765581e-06
+S2-019,S2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.2550008250400424e-06
+S2-020,S2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6550002328585833e-06
+S3-001,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,0.011727498000254855
+S3-002,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,1.3581000530393794e-05
+S3-003,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,6.407000910257921e-06
+S3-004,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,4.053999873576686e-06
+S3-005,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.697001713793725e-06
+S3-006,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.0789993868675083e-06
+S3-007,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.567997969686985e-06
+S3-008,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,5.08399898535572e-06
+S3-009,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.7760000850539654e-06
+S3-010,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.3190008252859116e-06
+S3-011,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.24900247505866e-06
+S3-012,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,2.943997969850898e-06
+S3-013,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.1720010156277567e-06
+S3-014,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.3270007406827062e-06
+S3-015,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.827000909950584e-06
+S3-016,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.2810021366458386e-06
+S3-017,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.2480020308867097e-06
+S3-018,S3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8460013961885124e-06
+S3-019,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.540000761859119e-06
+S3-020,S3,pass,undetermined,,0.49382716049382713,,Carte relationnelle auditée,3.159002517350018e-06
+M1-001,M1,pass,undetermined,,0.0,,Base des transitions validée,0.005080787999759195
+M1-002,M1,pass,undetermined,,0.0,,Base des transitions validée,7.988001016201451e-06
+M1-003,M1,pass,undetermined,,0.0,,Base des transitions validée,4.522997187450528e-06
+M1-004,M1,pass,undetermined,,0.0,,Base des transitions validée,3.711997123900801e-06
+M1-005,M1,pass,undetermined,,0.0,,Base des transitions validée,3.5630000638775527e-06
+M1-006,M1,pass,undetermined,,0.0,,Base des transitions validée,3.2229982025455683e-06
+M1-007,M1,pass,undetermined,,0.0,,Base des transitions validée,3.34899959852919e-06
+M1-008,M1,pass,undetermined,,0.0,,Base des transitions validée,3.4760014386847615e-06
+M1-009,M1,pass,undetermined,,0.0,,Base des transitions validée,2.9940019885543734e-06
+M1-010,M1,pass,undetermined,,0.0,,Base des transitions validée,3.3380019885953516e-06
+M1-011,M1,pass,undetermined,,0.0,,Base des transitions validée,4.931000148644671e-06
+M1-012,M1,pass,undetermined,,0.0,,Base des transitions validée,3.2289972295984626e-06
+M1-013,M1,pass,undetermined,,0.0,,Base des transitions validée,2.982997102662921e-06
+M1-014,M1,pass,undetermined,,0.0,,Base des transitions validée,3.221000952180475e-06
+M1-015,M1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.327001079218462e-06
+M2-001,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",9.942003089236096e-06
+M2-002,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.935999070061371e-06
+M2-003,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.064000338781625e-06
+M2-004,M2,pass,undetermined,,84.0,,Rendements de nucléosynthèse analysés,0.05091117200208828
+M2-005,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3095002941554412e-05
+M2-006,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.925000783056021e-06
+M2-007,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.626002242323011e-06
+M2-008,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.7619971660897136e-06
+M2-009,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.63900074060075e-06
+M2-010,M2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.6380002964287996e-06
+M3-001,M3,pass,undetermined,,642.0,,Réseau astro-chimique analysé,0.3201568420008698
+M3-002,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.559000156703405e-05
+M3-003,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.860001354245469e-06
+M3-004,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.963996616424993e-06
+M3-005,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.0859995351638645e-06
+M3-006,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.843001079279929e-06
+M3-007,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.101999365957454e-06
+M3-008,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.082001396454871e-06
+M3-009,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.285997420083731e-06
+M3-010,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.183999408269301e-06
+M3-011,M3,pass,undetermined,,642.0,,Réseau astro-chimique analysé,9.18200021260418e-06
+M3-012,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.137997504789382e-06
+M3-013,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.800000169780105e-06
+M3-014,M3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.2530006137676537e-06
+M3-015,M3,pass,undetermined,,642.0,,Réseau astro-chimique analysé,5.6059980124700814e-06
+M4-001,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,0.00012970000170753337
+M4-002,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,5.182999302633107e-06
+M4-003,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.62699938705191e-06
+M4-004,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.050001396331936e-06
+M4-005,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.177003236487508e-06
+M4-006,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.9279981390573084e-06
+M4-007,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.7530004444997758e-06
+M4-008,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.9699986043851823e-06
+M4-009,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.753997250692919e-06
+M4-010,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.854998456314206e-06
+M4-011,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.9900002118665725e-06
+M4-012,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.340999683132395e-06
+M4-013,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,2.6039997464977205e-06
+M4-014,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.1750023481436074e-06
+M4-015,M4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv,3.203000233042985e-06
+M5-001,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,0.005039431998739019
+M5-002,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,7.948001439217478e-06
+M5-003,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.999000909971073e-06
+M5-004,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,4.022000211989507e-06
+M5-005,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.6989986256230623e-06
+M5-006,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,2.9040020308457315e-06
+M5-007,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.240998921683058e-06
+M5-008,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,3.412002115510404e-06
+M5-009,M5,pass,undetermined,,,,Benchmark masqué de la branche matière exécuté,5.306999810272828e-06
+M5-010,M5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.337999366223812e-06
+P1-001,P1,pass,undetermined,,0.7911022603712499,,Clustering isotopique exécuté,0.03801048600143986
+P1-002,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.325899913557805e-05
+P1-003,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.144996976014227e-06
+P1-004,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.837998519884422e-06
+P1-005,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.6029993023257703e-06
+P1-006,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.135999577352777e-06
+P1-007,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.3769974834285676e-06
+P1-008,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.688000677153468e-06
+P1-009,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.8860013117082417e-06
+P1-010,P1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.911001502070576e-06
+P2-001,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,7.146998541429639e-06
+P2-002,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.7369969757273793e-06
+P2-003,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.887001755880192e-06
+P2-004,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.526001480873674e-06
+P2-005,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0850020518992096e-06
+P2-006,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.310000127181411e-06
+P2-007,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4569999368395656e-06
+P2-008,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.950000634882599e-06
+P2-009,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.8190009945537895e-06
+P2-010,P2,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.950000634882599e-06
+P3-001,P3,pass,undetermined,,0.6323591115834022,,Méta-régression métal-silicate exécutée,0.01627488400117727
+P3-002,P3,pass,undetermined,,0.6323591115834022,,Méta-régression métal-silicate exécutée,1.1465999705251306e-05
+P3-003,P3,pass,undetermined,,0.6323591115834022,,Méta-régression métal-silicate exécutée,5.922000127611682e-06
+P3-004,P3,pass,undetermined,,0.6323591115834022,,Méta-régression métal-silicate exécutée,4.501001967582852e-06
+P3-005,P3,pass,undetermined,,0.6323591115834022,,Méta-régression métal-silicate exécutée,4.384997737361118e-06
+P3-006,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.19600245449692e-06
+P3-007,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.118999640922993e-06
+P3-008,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.48799949279055e-06
+P3-009,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.4279983083251864e-06
+P3-010,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.082997864112258e-06
+P3-011,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.8909998945891857e-06
+P3-012,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.911001502070576e-06
+P3-013,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.715001755859703e-06
+P3-014,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.978002157760784e-06
+P3-015,P3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.8280010155867785e-06
+P4-001,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,0.00011292699855403043
+P4-002,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,4.90899765281938e-06
+P4-003,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.4179975045844913e-06
+P4-004,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.9760012694168836e-06
+P4-005,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.854001650121063e-06
+P4-006,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.659999492811039e-06
+P4-007,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,3.1650015444029123e-06
+P4-008,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,2.8649992600549012e-06
+P4-009,P4,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/volatile_inventory.csv,5.0023001676891e-05
+P4-010,P4,pass,undetermined,,6333.0,,Démographie observationnelle des exoplanètes auditée,0.06492188799893484
+P5-001,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,0.00014367200128617696
+P5-002,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,6.9590023485943675e-06
+P5-003,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.80900052934885e-06
+P5-004,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.683999239001423e-06
+P5-005,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.4529984986875206e-06
+P5-006,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.225999535061419e-06
+P5-007,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.842000296572223e-06
+P5-008,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.018998879473656e-06
+P5-009,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,4.465000529307872e-06
+P5-010,P5,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv,3.707002178998664e-06
+P6-001,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.882199962390587e-05
+P6-002,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,4.21599906985648e-06
+P6-003,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.2710013329051435e-06
+P6-004,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.568999090930447e-06
+P6-005,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.496999852359295e-06
+P6-006,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.373999788891524e-06
+P6-007,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,4.1860002966132015e-06
+P6-008,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.2510033634025604e-06
+P6-009,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.54400253854692e-06
+P6-010,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.3389987947884947e-06
+P6-011,P6,blocked,undetermined,,,,Jeu de données absent: plateforme/campagne_maximale_reelle/data/planetary_histories.csv,3.6950004869140685e-06
+P6-012,P6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.499998562503606e-06
+A1-001,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.547997377812862e-06
+A1-002,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4609980755485594e-06
+A1-003,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1099986042827368e-06
+A1-004,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.9949984562117606e-06
+A1-005,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.3769974834285676e-06
+A1-006,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2510030248668045e-06
+A1-007,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.1710002329200506e-06
+A1-008,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2039967007003725e-06
+A1-009,A1,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.2410022211261094e-06
+A1-010,A1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.611999661894515e-06
+A2-001,A2,pass,undetermined,,1.0,,Conditions initiales auditées,0.004226280998409493
+A2-002,A2,pass,undetermined,,1.0,,Conditions initiales auditées,9.065999620361254e-06
+A2-003,A2,pass,undetermined,,1.0,,Conditions initiales auditées,5.0910020945593715e-06
+A2-004,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.7659992813132703e-06
+A2-005,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.6290002753958106e-06
+A2-006,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.974997525801882e-06
+A2-007,A2,pass,undetermined,,1.0,,Conditions initiales auditées,4.892997822025791e-06
+A2-008,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.168999683111906e-06
+A2-009,A2,pass,undetermined,,1.0,,Conditions initiales auditées,4.141998942941427e-06
+A2-010,A2,pass,undetermined,,1.0,,Conditions initiales auditées,3.249999281251803e-06
+A3-001,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.5240012696012855e-06
+A3-002,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.249998942716047e-06
+A3-003,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8120008462574333e-06
+A3-004,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.002001565415412e-06
+A3-005,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8270002328790724e-06
+A3-006,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.5999979698099196e-06
+A3-007,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.688000677153468e-06
+A3-008,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.0810002752114087e-06
+A3-009,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8760001694317907e-06
+A3-010,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8370010366197675e-06
+A3-011,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8520004232414067e-06
+A3-012,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7839993233792484e-06
+A3-013,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.630000042496249e-06
+A3-014,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6459998732898384e-06
+A3-015,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8889986677095294e-06
+A3-016,A3,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6450030670966953e-06
+A4-001,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.149001375073567e-06
+A4-002,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.6640005924273282e-06
+A4-003,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7749989638105035e-06
+A4-004,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7470010789111257e-06
+A4-005,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.4140026653185487e-06
+A4-006,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8329992599319667e-06
+A4-007,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7860002117231488e-06
+A4-008,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7140009731519967e-06
+A4-009,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.8020000425167382e-06
+A4-010,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7339989426545799e-06
+A4-011,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.7240017768926919e-06
+A4-012,A4,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,1.996999344555661e-06
+A5-001,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,0.19581920900236582
+A5-002,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,9.264000254916027e-06
+A5-003,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,4.720997822005302e-06
+A5-004,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,4.102999810129404e-06
+A5-005,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.5010016290470958e-06
+A5-006,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.62699938705191e-06
+A5-007,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.4279983083251864e-06
+A5-008,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.913002728950232e-06
+A5-009,A5,pass,undetermined,,3.0,,Spectres orbitaux calculés,3.1510026019532233e-06
+A5-010,A5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.531998224090785e-06
+A6-001,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,4.154000635026023e-06
+A6-002,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,3.163000656059012e-06
+A6-003,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.3370012058876455e-06
+A6-004,A6,blocked,undetermined,,,,Moteur exclu par le mode données réelles strict: génération ou simulation requise.,2.7659989427775145e-06
+A6-005,A6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7730017134454101e-06
+A6-006,A6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.362997863907367e-06
+C1-001,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.011953032000747044
+C1-002,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,9.131999831879511e-06
+C1-003,C1,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,0.0026398930021969136
+C1-004,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,8.283997885882854e-06
+C1-005,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,0.023239145000843564
+C1-006,C1,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,9.659001079853624e-06
+C1-007,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.9929992605466396e-06
+C1-008,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.099998477613553e-06
+C1-009,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.64600055036135e-06
+C1-010,C1,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.4869990486185998e-06
+C2-001,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,0.0031244189995049965
+C2-002,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.009202025001286529
+C2-003,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,9.749001037562266e-06
+C2-004,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.770001735072583e-06
+C2-005,C2,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,0.0035161279993189964
+C2-006,C2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.8580004659015685e-06
+C2-007,C2,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,1.0750998626463115e-05
+C2-008,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,6.646998372161761e-06
+C2-009,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.09900167142041e-06
+C2-010,C2,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.320998075651005e-06
+C3-001,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0348973470026976
+C3-002,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,9.497998689766973e-06
+C3-003,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.4939988583792e-06
+C3-004,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.498000296531245e-06
+C3-005,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.5850025597028434e-06
+C3-006,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.967998054577038e-06
+C3-007,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.571000317810103e-06
+C3-008,C3,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,5.37899904884398e-06
+C3-009,C3,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,0.004385762997117126
+C3-010,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0071998985949904e-05
+C3-011,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.92899926030077e-06
+C3-012,C3,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,5.570000212173909e-06
+C3-013,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.930003342451528e-06
+C3-014,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.944998752558604e-06
+C3-015,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7630015867762268e-06
+C3-016,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.148998414166272e-06
+C3-017,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.183999408269301e-06
+C3-018,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.591998392948881e-06
+C3-019,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.4909971873275936e-06
+C3-020,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.6199999158270657e-06
+C3-021,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.06099934480153e-06
+C3-022,C3,pass,undetermined,,0.3360184643472742,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.6849996831733733e-06
+C4-001,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.010606922998704249
+C4-002,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.0513998859096318e-05
+C4-003,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.647001671604812e-06
+C4-004,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.213001375319436e-06
+C4-005,C4,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,5.6680000852793455e-06
+C4-006,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.288001946406439e-06
+C4-007,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.956000000471249e-06
+C4-008,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.50700065609999e-06
+C4-009,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7280005926731974e-06
+C4-010,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.163997800787911e-06
+C4-011,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.612000000430271e-06
+C4-012,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.03999729314819e-06
+C4-013,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.839999408228323e-06
+C4-014,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.486999387154356e-06
+C4-015,C4,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7869976949878037e-06
+C5-001,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,5.865000275662169e-06
+C5-002,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.4609984140843153e-06
+C5-003,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.4279983083251864e-06
+C5-004,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.2239986467175186e-06
+C5-005,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.954999556299299e-06
+C5-006,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.38800236932002e-06
+C5-007,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.925000783056021e-06
+C5-008,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.320998075651005e-06
+C5-009,C5,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,3.3319993235636503e-06
+C5-010,C5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.360998668242246e-06
+C6-001,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.011408304999349639
+C6-002,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,9.59299723035656e-06
+C6-003,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.044999852543697e-06
+C6-004,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.8520011003129184e-06
+C6-005,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,6.117999873822555e-06
+C6-006,C6,pass,undetermined,,1.0,,Moteur spécialisé exécuté: climate_chronology,1.774999691406265e-05
+C6-007,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,4.727000487037003e-06
+C6-008,C6,pass,undetermined,,1.458970335461693,,Moteur spécialisé exécuté: climate_identifiability,3.0560004233848304e-06
+C6-009,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.9710030250716954e-06
+C6-010,C6,pass,undetermined,,,,Moteur spécialisé exécuté: climate_hysteresis,4.893998266197741e-06
+C6-011,C6,pass,undetermined,,0.7812914506862445,,Moteur spécialisé exécuté: climate_path_dependence,0.02354417199967429
+C6-012,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,1.101899761124514e-05
+C6-013,C6,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,6.584999937331304e-06
+C6-014,C6,pass,undetermined,,0.32891846680018955,,Moteur spécialisé exécuté: climate_proxy_robustness,6.26600012765266e-06
+C6-015,C6,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.7149987949524075e-06
+C7-001,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,0.009718724999402184
+C7-002,C7,pass,undetermined,,1.153089518143292,,Moteur spécialisé exécuté: climate_spectra,1.048600097419694e-05
+C7-003,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.630998202832416e-06
+C7-004,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.237997927702963e-06
+C7-005,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.892000677296892e-06
+C7-006,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,4.025001544505358e-06
+C7-007,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7570025597233325e-06
+C7-008,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.7289973988663405e-06
+C7-009,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,5.516001692740247e-06
+C7-010,C7,pass,undetermined,,0.32891846680018955,,Analyse climatique exécutée sans interprétation automatique du verdict scientifique,3.549001121427864e-06
+CL1-001,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,0.016416959999332903
+CL1-002,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,9.06400236999616e-06
+CL1-003,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,4.7149987949524075e-06
+CL1-004,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.688001015689224e-06
+CL1-005,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.6909987102262676e-06
+CL1-006,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.3239994081668556e-06
+CL1-007,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.067998477490619e-06
+CL1-008,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.091998223681003e-06
+CL1-009,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,2.720000338740647e-06
+CL1-010,CL1,blocked,undetermined,,,,GISTEMP ne contient ni forçage externe ni expérience multi-mémoires,3.559001925168559e-06
+CL2-001,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,0.01710643100159359
+CL2-002,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,8.265000360552222e-06
+CL2-003,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.941997420042753e-06
+CL2-004,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.48799949279055e-06
+CL2-005,CL2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.090599759365432e-05
+CL2-006,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,5.278998287394643e-06
+CL2-007,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.3239994081668556e-06
+CL2-008,CL2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.993998689111322e-06
+CL2-009,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.60799822374247e-06
+CL2-010,CL2,blocked,undetermined,,,,GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L,3.444001777097583e-06
+CL3-001,CL3,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,0.579278934001195
+CL3-002,CL3,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,3.609999839682132e-05
+CL3-003,CL3,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,6.38699930277653e-06
+CL3-004,CL3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3484001101460308e-05
+CL3-005,CL3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.551999493036419e-06
+CL3-006,CL3,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,5.998997949063778e-06
+CL3-007,CL3,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,4.977999196853489e-06
+CL3-008,CL3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.1239982238039374e-06
+CL3-009,CL3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.251000063959509e-06
+CL3-010,CL3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.970999725628644e-06
+CL4-001,CL4,pass,undetermined,,3802.0,,"Observations, incertitudes et ensembles climatiques audités séparément",0.5453274570027133
+CL4-002,CL4,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,0.5472451669993461
+CL4-003,CL4,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,3.1150000722846016e-05
+CL4-004,CL4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.253200025530532e-05
+CL4-005,CL4,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,6.852998922113329e-06
+CL4-006,CL4,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,5.195000994717702e-06
+CL4-007,CL4,pass,undetermined,,0.43434343434343436,,Domaine accessible climatique estimé sur ensembles multi-modèles,4.413999704411253e-06
+CL4-008,CL4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.344998160377145e-06
+CL4-009,CL4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.260000423528254e-06
+CL4-010,CL4,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.7810023059137166e-06
+V1-001,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,0.004595058999257162
+V1-002,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.0095001925947145e-05
+V1-003,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.182998964097351e-06
+V1-004,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,7.379100134130567e-05
+V1-005,V1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.3629992180503905e-06
+V1-006,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,2.3067997972248122e-05
+V1-007,V1,pass,undetermined,,32.0,,Plan réel des lignées de vésicules audité,1.773899930412881e-05
+V1-008,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.4190015867352486e-06
+V1-009,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.853000867413357e-06
+V1-010,V1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.7380007193423808e-06
+V2-001,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.4796998584643006e-05
+V2-002,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.457998097175732e-06
+V2-003,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.835997970076278e-06
+V2-004,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.613000783137977e-06
+V2-005,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.183999408269301e-06
+V2-006,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,0.005228038997302065
+V2-007,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,0.2780748980003409
+V2-008,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,9.822699939832091e-05
+V2-009,V2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",8.055998478084803e-06
+V2-010,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.2414999218890443e-05
+V2-011,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.410999048966914e-06
+V2-012,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,7.820999599061906e-06
+V2-013,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.0720009312499315e-06
+V2-014,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.546000465983525e-06
+V2-015,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.297999112168327e-06
+V2-016,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.7450998711865395e-05
+V2-017,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.293000867823139e-06
+V2-018,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.062000127509236e-06
+V2-019,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.3289983295835555e-06
+V2-020,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.868001269642264e-06
+V2-021,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.437999450601637e-06
+V2-022,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.514997610589489e-06
+V2-023,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.0910020945593715e-06
+V2-024,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.37299968325533e-06
+V2-025,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.945002390537411e-06
+V2-026,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.680001438828185e-06
+V2-027,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.522000381257385e-06
+V2-028,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.795001586899161e-06
+V2-029,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.894002242712304e-06
+V2-030,V2,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.7719983083661646e-06
+V2-031,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.230998456478119e-06
+V2-032,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,4.359000740805641e-06
+V2-033,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.768000508192927e-06
+V2-034,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.785000783158466e-06
+V2-035,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,6.353002390824258e-06
+V2-036,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.51099913334474e-06
+V2-037,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.064001015853137e-06
+V2-038,V2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.659999831346795e-06
+V2-039,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,5.292000423651189e-06
+V2-040,V2,pass,undetermined,,0.0,,Lignées et mesures réelles de vésicules analysées,4.564997652778402e-06
+V3-001,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.635003278963268e-06
+V3-002,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.011999408248812e-06
+V3-003,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.941997758578509e-06
+V3-004,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.644000000553206e-06
+V3-005,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.571000317810103e-06
+V3-006,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.003999492852017e-06
+V3-007,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.083998646819964e-06
+V3-008,V3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.8909995560534298e-06
+V3-009,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.049001629231498e-06
+V3-010,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.821998689090833e-06
+V3-011,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.7950012483634055e-06
+V3-012,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.7749996408820152e-06
+V3-013,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,0.6744798450017697
+V3-014,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,2.755799869191833e-05
+V3-015,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,7.2879993240348995e-06
+V3-016,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.5338999219238758e-05
+V3-017,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.451999070122838e-06
+V3-018,V3,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,6.387999746948481e-06
+V3-019,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.830999387195334e-06
+V3-020,V3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.920999344903976e-06
+V4-001,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.418998625827953e-06
+V4-002,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.86300268676132e-06
+V4-003,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.260997568257153e-06
+V4-004,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.916997568216175e-06
+V4-005,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.296001861803234e-06
+V4-006,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.617999366018921e-06
+V4-007,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9580012273509055e-06
+V4-008,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.281999281374738e-06
+V4-009,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.09600033890456e-06
+V4-010,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.320001607993618e-06
+V4-011,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,0.5166462579982181
+V4-012,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",0.00010657299935701303
+V4-013,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",7.533999450970441e-06
+V4-014,V4,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,1.332699685008265e-05
+V4-015,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,8.525999874109402e-06
+V4-016,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.824997060699388e-06
+V4-017,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.293000867823139e-06
+V4-018,V4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9629998102318496e-06
+V4-019,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.24200004292652e-06
+V4-020,V4,pass,undetermined,,0.4998833900834927,,Lignées et mesures réelles de vésicules analysées,5.67600000067614e-06
+V5-001,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.328998668119311e-06
+V5-002,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.437999789137393e-06
+V5-003,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.6719978854525834e-06
+V5-004,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,5.633999535348266e-06
+V5-005,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.219000740908086e-06
+V5-006,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9959999159909785e-06
+V5-007,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.293997335480526e-06
+V5-008,V5,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,4.527999408310279e-06
+V5-009,V5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.4240005081519485e-06
+V5-010,V5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.288001946406439e-06
+V6-001,V6,pass,undetermined,,80.0,,Évolution expérimentale de l'ARN catalytique analysée,3.987999662058428e-06
+V6-002,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.835997970076278e-06
+V6-003,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.57500243303366e-06
+V6-004,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,0.5833559490019979
+V6-005,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,4.8801000957610086e-05
+V6-006,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,6.9309971877373755e-06
+V6-007,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,6.024001777404919e-06
+V6-008,V6,pass,undetermined,,,,Lignées et mesures réelles de vésicules analysées,5.976999091217294e-06
+V6-009,V6,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.4416000340133905e-05
+V6-010,V6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.756999598816037e-06
+B1-001,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.56200063531287e-06
+B1-002,B1,pass,undetermined,,13.0,,Architecture cellulaire analysée,0.007744331000139937
+B1-003,B1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.673999450867996e-06
+B1-004,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.78500213730149e-06
+B1-005,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.998000465799123e-06
+B1-006,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.831999492831528e-06
+B1-007,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.09300230583176e-06
+B1-008,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.3949982025660574e-06
+B1-009,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.893000782933086e-06
+B1-010,B1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.0890005291439593e-06
+B2-001,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.9860027502290905e-06
+B2-002,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.0579976737499237e-06
+B2-003,B2,pass,undetermined,,0.8172043010752689,,Réduction génomique des endosymbiotes analysée,0.006378523001330905
+B2-004,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.0220999683951959e-05
+B2-005,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.5289995139464736e-06
+B2-006,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.6189994716551155e-06
+B2-007,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.225999535061419e-06
+B2-008,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.6669989640358835e-06
+B2-009,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.2340030884370208e-06
+B2-010,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.9339971661102027e-06
+B2-011,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.77800063486211e-06
+B2-012,B2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.986998879350722e-06
+B3-001,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.492998752743006e-06
+B3-002,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.3129981602542102e-06
+B3-003,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",2.663000486791134e-06
+B3-004,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.0100018193479627e-06
+B3-005,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,1.9107882030002656
+B3-006,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,1.312200038228184e-05
+B3-007,B3,pass,undetermined,,0.05504660339941103,,Valeur prédictive exploratoire de l'histoire en biologie estimée,5.342997610569e-06
+B3-008,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",8.57600025483407e-06
+B3-009,B3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.761997843161225e-06
+B3-010,B3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.379002348287031e-06
+R1-001,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.34500112128444e-06
+R1-002,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.496999513823539e-06
+R1-003,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.873000529594719e-06
+R1-004,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",3.545999788912013e-06
+R1-005,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,0.007986140000866726
+R1-006,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.1344996892148629e-05
+R1-007,R1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.483001248445362e-06
+R1-008,R1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.2430001485627145e-06
+R1-009,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,5.8256999182049185e-05
+R1-010,R1,pass,undetermined,,10.0,,Plan antibiotique réel et couverture des mesures audités,2.2757998522138223e-05
+R2-001,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,0.002467492999130627
+R2-002,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,7.891998393461108e-06
+R2-003,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.805999196833e-06
+R2-004,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.878998541040346e-06
+R2-005,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.3959986467380077e-06
+R2-006,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.72500323667191e-06
+R2-007,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,4.522000381257385e-06
+R2-008,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.855999239021912e-06
+R2-009,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.606000973377377e-06
+R2-010,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",2.172000677092001e-06
+R2-011,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.743999746395275e-06
+R2-012,R2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.667998731136322e-06
+R2-013,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.7469981180038303e-06
+R2-014,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.6380006349645555e-06
+R2-015,R2,pass,undetermined,,1.0,,Histoires d'exposition validées,3.2009993446990848e-06
+R3-001,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,0.01181471499876352
+R3-002,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,9.455001418245956e-06
+R3-003,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,4.623998393071815e-06
+R3-004,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.835000825347379e-06
+R3-005,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.7229983718134463e-06
+R3-006,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.516001015668735e-06
+R3-007,R3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.36099832970649e-06
+R3-008,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.7520003388635814e-06
+R3-009,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.7429999792948365e-06
+R3-010,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.278000804129988e-06
+R3-011,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.2850002753548324e-06
+R3-012,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.3389987947884947e-06
+R3-013,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.788998583331704e-06
+R3-014,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.3420001273043454e-06
+R3-015,R3,pass,undetermined,,1.0,,Mesures antibiotiques analysées,3.6800011002924293e-06
+R4-001,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,0.024655960998643422
+R4-002,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,9.292998583987355e-06
+R4-003,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.711000656243414e-06
+R4-004,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.3579966586548835e-06
+R4-005,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.382000042824075e-06
+R4-006,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.1480016079731286e-06
+R4-007,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.545999788912013e-06
+R4-008,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.875000402331352e-06
+R4-009,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.863999154418707e-06
+R4-010,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.4679978853091598e-06
+R4-011,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.96000177715905e-06
+R4-012,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,4.010998964076862e-06
+R4-013,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.5289995139464736e-06
+R4-014,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.3899996196851134e-06
+R4-015,R4,pass,undetermined,,,,Dépendance au chemin antibiotique testée,3.531000402290374e-06
+R5-001,R5,pass,undetermined,,,,Modèles concurrents comparés,0.010617416999593843
+R5-002,R5,pass,undetermined,,,,Modèles concurrents comparés,8.659997547511011e-06
+R5-003,R5,pass,undetermined,,,,Modèles concurrents comparés,4.5389970182441175e-06
+R5-004,R5,pass,undetermined,,,,Modèles concurrents comparés,3.9719998312648386e-06
+R5-005,R5,pass,undetermined,,,,Modèles concurrents comparés,3.778000973397866e-06
+R5-006,R5,pass,undetermined,,,,Modèles concurrents comparés,3.1180024961940944e-06
+R5-007,R5,pass,undetermined,,,,Modèles concurrents comparés,3.297998773632571e-06
+R5-008,R5,pass,undetermined,,,,Modèles concurrents comparés,3.340999683132395e-06
+R6-001,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",6.051999662304297e-06
+R6-002,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.6359990695491433e-06
+R6-003,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.6430021787527949e-06
+R6-004,R6,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",1.4139986888039857e-06
+R6-005,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,0.0024706149997655302
+R6-006,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,8.464998245472088e-06
+R6-007,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,4.25500184064731e-06
+R6-008,R6,pass,undetermined,,329.0,,Structure de réplication contrôlée,5.222899926593527e-05
+T1-001,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.791696664000483
+T1-002,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",4.7736997657921165e-05
+T1-003,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,1.322599928244017e-05
+T1-004,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,8.866001735441387e-06
+T1-005,T1,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",7.577000360470265e-06
+T1-006,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.873000529594719e-06
+T1-007,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.929997082101181e-06
+T1-008,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.52399830869399e-06
+T1-009,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",9.374998626299202e-06
+T1-010,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.317001291085035e-06
+T1-011,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.966998626012355e-06
+T1-012,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.758000042987987e-06
+T1-013,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.9919984778389335e-06
+T1-014,T1,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.249999958323315e-06
+T1-015,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.8059995353687555e-06
+T1-016,T1,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.188001523492858e-06
+T2-001,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.7548953969999275
+T2-002,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,2.1777999791083857e-05
+T2-003,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.982001650612801e-06
+T2-004,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.352998414309695e-06
+T2-005,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3028999092057347e-05
+T2-006,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.831000402802601e-06
+T2-007,T2,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,5.633002729155123e-06
+T2-008,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.40399957774207e-06
+T2-009,T2,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",4.864999937126413e-06
+T2-010,T2,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.756999598816037e-06
+T3-001,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.722999048884958e-06
+T3-002,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",5.095000233268365e-06
+T3-003,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,0.7432886360002158
+T3-004,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,2.3558000975754112e-05
+T3-005,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,7.5309981184545904e-06
+T3-006,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3918001059209928e-05
+T3-007,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.605001544812694e-06
+T3-008,T3,pass,undetermined,,0.06379731379731379,,Benchmark multi-domaines exécuté,6.309001037152484e-06
+T3-009,T3,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",5.179001163924113e-06
+T3-010,T3,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",6.713999027851969e-06
+T4-001,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,0.11094703200069489
+T4-002,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,1.6969002899713814e-05
+T4-003,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,6.850001227576286e-06
+T4-004,T4,pass,undetermined,,0.2777777777777778,,Compression explicative mesurée,5.493999196914956e-06
+T4-005,T4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.3685999874724075e-05
+T4-006,T4,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",7.378999725915492e-06
+T5-001,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,0.0969939249989693
+T5-002,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,1.912900188472122e-05
+T5-003,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,7.795999408699572e-06
+T5-004,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,5.428999429568648e-06
+T5-005,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,4.564000846585259e-06
+T5-006,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,5.485002475325018e-06
+T5-007,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,4.764999175677076e-06
+T5-008,T5,blocked,undetermined,,,,"Donnée réelle présente, mais le protocole demandé n'est pas couvert par ses mesures.",1.4811001165071502e-05
+T5-009,T5,not_run,not_applicable,,,,"Protocole enregistré. Exécution humaine, expérimentale ou externe requise. Aucun résultat n'est simulé ni inventé.",3.0989976949058473e-06
+T5-010,T5,pass,undetermined,,0.1767394036330401,,Contrôles red-team automatiques exécutés,5.730998964281753e-06

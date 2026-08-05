@@ -8,6 +8,7 @@
 *.gz filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.bundle filter=lfs diff=lfs merge=lfs -text
+*.hdf5 filter=lfs diff=lfs merge=lfs -text
 *.log binary
 *.sha256 binary
 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/hyperaretes_candidat_R1.csv text eol=lf

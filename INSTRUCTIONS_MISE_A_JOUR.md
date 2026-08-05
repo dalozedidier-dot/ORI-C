@@ -4,102 +4,121 @@
 
 **Aucun fichier à supprimer.**
 
-La copie du ZIP complet peut remplacer directement le contenu existant. Tous les fichiers ajoutés et remplacés doivent être publiés dans le même commit.
+Copier le contenu complet du ZIP en remplaçant les fichiers existants. Tous les fichiers ajoutés et remplacés doivent être publiés dans le même commit.
 
-## Objet de cette mise à jour
+## Résultat attendu
 
-Cette version cesse de limiter l'analyse aux trois jeux du workflow `Recherche suivante`. Elle raccorde à la campagne maximale tout jeu réel déjà présent dans les trois branches dès que sa structure permet une conversion sans invention ni imputation.
+La campagne maximale passe de 278 à **298 réussites techniques** et de 357 à **337 blocages**. Elle conserve 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur. Le lot débloque 20 analyses supplémentaires sans modifier le statut scientifique confirmatoire : 0 soutien, 0 rejet et 635 résultats indéterminés.
 
-La campagne complète passe de :
+## Corrections de reproductibilité incluses
 
-- 211 à **278 réussites techniques**
-- 440 à **357 blocages**
-- 32 à **48 protocoles explicitement non exécutables informatiquement**
-- 0 échec et 0 erreur dans les deux versions
+- `partition_experiments.csv` est régénéré avec 41 expériences, dont 32 expériences de partage du carbone et 35 lignes complètes pour la méta-régression.
+- Les modèles HDF5 sont parcourus dans un ordre canonique.
+- Les rendements de nucléosynthèse sont calculés en pleine précision, puis sérialisés à 12 chiffres significatifs. Cette étape élimine uniquement les écarts d’octets de l’ordre de 10⁻¹³ à 10⁻¹⁵ produits par différentes configurations BLAS ; elle ne change aucun test couvert ni aucun verdict.
 
-Les 67 réussites supplémentaires restent exploratoires. Le nombre de verdicts scientifiques confirmatoires demeure nul.
+## Publication Git LFS obligatoire
+
+Le fichier suivant pèse 100 443 546 octets et est suivi par Git LFS :
+
+`donnees_externes/lot_scientifique_maximal_2026_08_05/raw/SIMPLE_CCSNe_v3p1.hdf5`
+
+La règle `*.hdf5 filter=lfs diff=lfs merge=lfs -text` est ajoutée à `.gitattributes`. Publier la mise à jour depuis un clone Git ou GitHub Desktop avec Git LFS actif :
+
+```bash
+git lfs install
+git add .
+git commit -m "Intégrer le lot scientifique maximal"
+git push
+```
+
+Ne pas publier cette mise à jour par simple copie de fichiers dans l’interface web : utiliser un clone Git ou GitHub Desktop afin que le filtre LFS soit appliqué.
 
 ## Fichiers ajoutés
 
-- `plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py`
-- `plateforme/campagne_maximale_reelle/resumer_integration_maximale.py`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/210210_MurchisonSteppedHeating_ICPMSData.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/AA_abundances.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/AA_uncertainties.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/CMIP6_NASST_historical-ssp585-ssp245.zip`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Ca isotope data for analyzed lunar samples_Fu et al 2023.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig2.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig4_FigS1_FigS2_DC_1.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig5_bulk_core.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/HMM_summarized_results.zip`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/HadCRUT.5.1.0.0.analysis.ensemble_series.global.monthly.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/KeySeries.zip`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Measurement_data.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murch-100airZn-GAS.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murch-50airZn-GAS.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murchison-vacc-Zn-GAS.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Rodriguez_Supplementary_TableS1.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/SIMPLE_CCSNe_v3p1.hdf5`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/TableS3.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/TableS4.xlsx`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/aphid_PGN_count.csv`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/globalmean.zip`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/kida.uva.2024 (1).zip`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/original_ensembles.tar.gz`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_dipole.specs`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_final.rates`
+- `donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_revised_CtoO_0.44.specs`
+- `plateforme/campagne_maximale_reelle/LOT_SCIENTIFIQUE_2026_08_05.md`
+- `plateforme/campagne_maximale_reelle/TRI_LOT_SCIENTIFIQUE_2026_08_05.json`
+- `plateforme/campagne_maximale_reelle/data/aphid_pgn_gene_counts.csv`
+- `plateforme/campagne_maximale_reelle/data/core_bulk_h_c_models.csv`
+- `plateforme/campagne_maximale_reelle/data/endosymbiont_hmm_presence_absence.csv`
+- `plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv`
+- `plateforme/campagne_maximale_reelle/data/isotope_tracers.csv`
+- `plateforme/campagne_maximale_reelle/data/ivuna_mn_cr_isotopes.csv`
+- `plateforme/campagne_maximale_reelle/data/lunar_calcium_isotopes.csv`
+- `plateforme/campagne_maximale_reelle/data/meteorite_thermal_properties.csv`
+- `plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv`
+- `plateforme/campagne_maximale_reelle/data/molecular_inventory.csv`
+- `plateforme/campagne_maximale_reelle/data/molecular_inventory_amino_acids_auxiliary.csv`
+- `plateforme/campagne_maximale_reelle/data/murchison_degassing_profiles.csv`
+- `plateforme/campagne_maximale_reelle/data/nucleosynthesis_isotope_yields.csv`
+- `plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv`
+- `plateforme/campagne_maximale_reelle/data/reaction_network.csv`
+- `plateforme/campagne_maximale_reelle/integrer_lot_scientifique_2026_08_05.py`
+- `plateforme/source_corrigee/tests/test_external_scientific_bundle.py`
+
+## Fichiers remplacés
+
+- `.gitattributes`
+- `.github/workflows/analyse-donnees-reelles.yml`
+- `DATA_AVAILABILITY.md`
 - `plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json`
 - `plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md`
+- `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`
 - `plateforme/campagne_maximale_reelle/DONNEES_UTILISEES_MAXIMUM.md`
 - `plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md`
 - `plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json`
 - `plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json`
 - `plateforme/campagne_maximale_reelle/data/partition_experiments.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_design.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_parent_offspring_pairs.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_timecourses.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_timecourse_summary.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_auxiliary_measurements.csv`
-- `plateforme/campagne_maximale_reelle/data/prebiotic_log_auxiliary_measurements.csv`
-- `plateforme/campagne_maximale_reelle/data/cell_architecture.csv`
-- `plateforme/campagne_maximale_reelle/data/antibiotic_design.csv`
-- `plateforme/campagne_maximale_reelle/data/antibiotic_fitness_real.csv`
-- `plateforme/campagne_maximale_reelle/data/benchmark_cases.csv`
-- `plateforme/campagne_maximale_reelle/data/biology_cases.csv`
+- `plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py`
 - `plateforme/campagne_maximale_reelle/resultats_integration_maximale/REPORT.md`
 - `plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.csv`
 - `plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json`
-- `plateforme/source_corrigee/tests/test_real_data_scope.py`
-
-## Fichiers remplacés
-
-- `.github/workflows/analyse-donnees-reelles.yml`
-- `03_branche_vivant/lignees_vesicules/analyser_lignees.py`
-- `DATA_AVAILABILITY.md`
-- `INSTRUCTIONS_MISE_A_JOUR.md`
-- `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`
-- `plateforme/source_corrigee/src/oric_full/data_registry.py`
-- `plateforme/source_corrigee/src/oric_full/domains/benchmark.py`
+- `plateforme/campagne_maximale_reelle/resumer_integration_maximale.py`
+- `plateforme/source_corrigee/requirements-lock.txt`
+- `plateforme/source_corrigee/requirements.txt`
 - `plateforme/source_corrigee/src/oric_full/domains/biology.py`
-- `plateforme/source_corrigee/src/oric_full/domains/planetary.py`
-- `plateforme/source_corrigee/src/oric_full/domains/prebiotic.py`
+- `plateforme/source_corrigee/src/oric_full/domains/climate.py`
+- `plateforme/source_corrigee/src/oric_full/domains/matter.py`
 - `plateforme/source_corrigee/src/oric_full/engines.py`
-- `plateforme/source_corrigee/src/oric_full/runner.py`
-- `plateforme/source_corrigee/tests/test_runner.py`
 - `MANIFEST.sha256`
 - `MANIFEST.sha256.json`
+- `INSTRUCTIONS_MISE_A_JOUR.md`
 
-## Données désormais exploitées
+## Fichiers écartés du calcul
 
-- 21 439 nœuds de lignées de vésicules
-- 13 680 transferts parent-descendant
-- 59 328 mesures temporelles réparties en 576 séries
-- 448 mesures brutes de la Figure 3
-- 19 392 mesures supplémentaires : Nile Red, turbidité pré-amphiphiles et vésicules alimentaires
-- 9 expériences de partage métal-silicate
-- 13 entrées d'architecture cellulaire
-- 10 conditions antibiotiques et 72 mesures de fitness indépendantes
-- 17 506 cas de benchmark dans huit domaines
-- 14 777 cas biologiques dans quatre domaines
+Le lot original contenait aussi un doublon NetCDF HadCRUT, les sorties HMM brutes et un fichier d'incertitudes d'acides gras sans abondances correspondantes. Ils ne sont pas inclus dans le ZIP final. `TableS3.xlsx`, `Dataset_Fig2.xlsx` et les mesures ICP-MS brutes sont conservés pour la provenance, mais ne débloquent aucun test.
 
-## Problèmes explicitement conservés
+## Exécution GitHub
 
-La mise à jour ne transforme pas un fichier partiel en validation générale. Les 357 blocages restants sont documentés dans `AUDIT_DONNEES_DEPOT.md`.
+1. Ouvrir `Campagne maximale ORI-C - trois branches`.
+2. Choisir `niveau = maximum`.
+3. Vérifier l'étape `Intégrer toutes les données réelles déjà présentes`.
+4. Télécharger l'artefact `analyses-donnees-reelles-*`.
 
-Les principaux jeux encore réellement absents sont les rendements de nucléosynthèse, le réseau astro-chimique quantitatif, les phases thermochimiques quantitatives, les traceurs isotopiques, les inventaires volatils, les traceurs d'accrétion tardive, les histoires planétaires, les événements d'endosymbiose et l'ensemble climatique requis.
-
-L'ancien bilan mentionnait 338 400 lignes d'incertitude GISTEMP, mais le fichier n'est pas présent dans l'archive actuelle. Cette incohérence est maintenant signalée.
-
-## Exécution GitHub recommandée
-
-1. Copier le contenu complet du ZIP dans le dépôt.
-2. Publier tous les fichiers ajoutés et remplacés dans le même commit.
-3. Ouvrir `Campagne maximale ORI-C - trois branches`.
-4. Choisir `maximum`.
-5. Télécharger l'artefact `analyses-donnees-reelles-*` produit par la branche réutilisable.
-
-Le journal doit contenir l'étape :
-
-`Intégrer toutes les données réelles déjà présentes`
-
-puis :
-
-`Produire le bilan transparent des 683 entrées`
-
-Le bilan attendu est : 278 réussites, 357 blocages, 48 non exécutés, 0 échec et 0 erreur.
+Le bilan attendu est : **298 réussites, 337 blocages, 48 non exécutés, 0 échec et 0 erreur**.

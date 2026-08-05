@@ -157,6 +157,9 @@ jobs:
           cp plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md "$OUT/resultats/" || true
           cp plateforme/campagne_maximale_reelle/EXCLUSIONS.md "$OUT/resultats/" || true
           cp plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/LOT_SCIENTIFIQUE_2026_08_05.md "$OUT/resultats/" || true
+          cp plateforme/campagne_maximale_reelle/TRI_LOT_SCIENTIFIQUE_2026_08_05.json "$OUT/resultats/" || true
+          cp donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json "$OUT/resultats/SOURCE_LOT_SCIENTIFIQUE.json" || true
           cp plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md "$OUT/resultats/" || true
           cp plateforme/campagne_maximale_reelle/PROVENANCE_*.json "$OUT/resultats/" 2>/dev/null || true
           cp "$DATA/REAL_DATA_COVERAGE.json" "$OUT/resultats/" || true

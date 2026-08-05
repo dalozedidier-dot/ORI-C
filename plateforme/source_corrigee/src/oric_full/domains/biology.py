@@ -44,16 +44,26 @@ def analyze_cell_architecture(frame: pd.DataFrame) -> BiologyAnalysis:
 
 def analyze_endosymbiosis(frame: pd.DataFrame) -> BiologyAnalysis:
     f = frame.copy()
-    for col in ["gene_transfer", "metabolic_integration", "dependency", "evidence_level"]:
-        f[col] = pd.to_numeric(f[col], errors="coerce")
-    integration = f[["gene_transfer", "metabolic_integration", "dependency"]].mean(axis=1)
+    for col in ["gene_transfer", "metabolic_integration", "dependency", "evidence_level", "genome_retention_proxy"]:
+        if col in f.columns:
+            f[col] = pd.to_numeric(f[col], errors="coerce")
+    integration = f[["gene_transfer", "metabolic_integration", "dependency"]].mean(axis=1, skipna=True)
+    retention = f.get("genome_retention_proxy", pd.Series(np.nan, index=f.index, dtype=float))
+    evidence = f["evidence_level"]
+    correlation = integration.corr(evidence) if integration.notna().sum() > 1 and evidence.notna().sum() > 1 else np.nan
     return BiologyAnalysis(
         {
             "events": float(len(f)),
-            "median_integration": float(integration.median(skipna=True) or 0.0),
-            "integration_evidence_correlation": float(integration.corr(f["evidence_level"]) or 0.0),
+            "median_integration_proxy": float(integration.median(skipna=True) or 0.0),
+            "median_genome_retention": float(retention.median(skipna=True) or 0.0),
+            "genome_retention_range": float(retention.max(skipna=True) - retention.min(skipna=True)) if retention.notna().any() else 0.0,
+            "integration_evidence_correlation": float(correlation) if pd.notna(correlation) else 0.0,
         },
-        {"integration_scores": dict(zip(f["event_id"].astype(str), integration.fillna(0).tolist()))},
+        {
+            "integration_scores": dict(zip(f["event_id"].astype(str), integration.fillna(0).tolist())),
+            "genome_retention_scores": dict(zip(f["event_id"].astype(str), retention.fillna(0).tolist())),
+            "interpretation_limit": "Les scores sont des proxys de rétention HMM. Ils ne mesurent pas un transfert nucléaire ni une dépendance hôte-symbiote directe.",
+        },
     )
 
 

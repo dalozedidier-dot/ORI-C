@@ -2,51 +2,59 @@
 
 Date de réexécution : 5 août 2026. Catalogue : 683 entrées.
 
-## Changement de méthode
+## Méthode
 
-La campagne commence désormais par `integrer_donnees_existantes.py`. Cette étape parcourt les jeux réels déjà présents dans les trois branches, les convertit vers les schémas de la plateforme sans inventer de valeur et écrit `REAL_DATA_COVERAGE.json`. Une table partielle ne débloque que les protocoles explicitement couverts par ses mesures.
+La campagne commence par `integrer_donnees_existantes.py`. Cette étape raccorde les données réelles déjà réparties dans le dépôt, puis le lot scientifique reçu le 5 août 2026. Aucune valeur absente n'est inventée. Une table partielle ne débloque que les identifiants inscrits dans `REAL_DATA_COVERAGE.json`.
 
 Les gabarits de `plateforme/source_corrigee/examples/data/` restent exclus.
 
-## Données nouvellement raccordées
+## Apport du nouveau lot scientifique
 
-| Jeu raccordé | Volume réellement utilisé |
-|---|---:|
-| Lignées de vésicules | 21 439 nœuds |
-| Transferts parent-descendant | 13 680 paires |
-| Séries temporelles de turbidité | 59 328 mesures, 576 séries |
-| Mesures Figure 3 | 448 valeurs |
-| Mesures auxiliaires des classeurs log | 19 392 valeurs |
-| Expériences de partage métal-silicate | 9 lignes, dont 3 complètes pour P-T-redox-logD |
-| Architecture cellulaire | 13 lignes |
-| Plans antibiotiques réels | 10 conditions |
-| Fitness antibiotique indépendante | 72 mesures |
-| Benchmark multi-domaines | 17 506 cas dans 8 domaines |
-| Cas biologiques | 14 777 cas dans 4 domaines |
+| Bloc | Volume intégré | Portée réelle |
+|---|---:|---|
+| Ensembles climatiques | 142 745 lignes, 83 modèles ou sources, 8 scénarios | observations et incertitudes, CMIP6 multi-modèles, scénarios SSP, expériences idéalisées |
+| Réseaux réactionnels | 16 434 réactions, 2 réseaux | construction versionnée, incertitudes de taux, réplication KIDA/UMIST |
+| Conditions initiales astro-chimiques | 19 espèces | inventaire initial Rate22, distinct d'un inventaire radioastronomique |
+| Nucléosynthèse CCSN | 1 383 rendements élémentaires et 56 507 isotopiques | effet de trois masses stellaires dans six familles CCSN |
+| Traceurs isotopiques | 362 mesures D/H, 13 Ca lunaires et 9 Mn-Cr auxiliaires | compilation de traceurs disponibles, sans prétendre tester la dichotomie complète CC/NC |
+| Partage métal-silicate | 41 expériences, dont 35 complètes | compilation, harmonisation et méta-régression exploratoire |
+| Endosymbiotes | 85 génomes et 15 810 résultats HMM | réduction génomique uniquement |
+| Dégazage de Murchison | 3 648 mesures | table auxiliaire, sans bilan volatil fermé |
+| Propriétés thermiques de météorites | 61 échantillons | table auxiliaire |
 
-Le benchmark exploite les transitions matérielles, La2004, LR04, GISTEMP, les vésicules, l'évolution expérimentale de l'ARN, Windels et Donofrio. Ses cibles binaires sont dérivées avant ajustement. Il reste exploratoire.
+La compilation d'acides aminés comprend 1 387 mesures dans 69 environnements. Elle est conservée séparément et n'est pas présentée comme un inventaire interstellaire observé.
 
 ## Résultat des 683 entrées
 
-| Statut technique | Avant intégration | Après intégration |
-|---|---:|---:|
-| Réussites | 211 | **278** |
-| Blocages | 440 | **357** |
-| Protocoles non exécutés informatiquement | 32 | **48** |
-| Échecs | 0 | **0** |
-| Erreurs | 0 | **0** |
+| Statut technique | Avant toute intégration | Après données du dépôt | Après nouveau lot |
+|---|---:|---:|---:|
+| Réussites | 211 | 278 | **298** |
+| Blocages | 440 | 357 | **337** |
+| Protocoles non exécutés informatiquement | 32 | 48 | **48** |
+| Échecs | 0 | 0 | **0** |
+| Erreurs | 0 | 0 | **0** |
 
-L'intégration produit 67 réussites techniques supplémentaires. Seize anciens blocages ont été reclassés correctement comme protocoles humains, de laboratoire ou de réplication externe.
+Le nouveau lot débloque **20 analyses supplémentaires**. Aucune entrée n'est reclassée en réussite par la seule présence d'un fichier.
 
-## Résultats exploratoires calculés
+## Analyses nouvellement exécutées
 
-Dans le benchmark biologique, l'ajout de l'histoire à l'état présent améliore l'exactitude équilibrée de 0,6241 à 0,6791, soit un gain de 0,0550. L'ajout des variables ORI-C disponibles porte cette valeur à 0,6802. Le score de Brier passe de 0,2262 à 0,1981 avec l'histoire.
+- M2-004 : effet des masses stellaires sur les rendements CCSN, avec trois masses et six familles de modèles
+- M3-001, M3-011 et M3-015 : réseau astro-chimique versionné, couverture des incertitudes et réplication par un second réseau
+- P1-001 : compilation et analyse exploratoire des traceurs isotopiques disponibles
+- P3-003 à P3-005 : méta-régression, interactions et comparaison de lois de partage sur la compilation étendue
+- CL3-001 à CL3-003, CL3-006 et CL3-007 : domaine accessible et trajectoires climatiques multi-scénarios
+- CL4-001 à CL4-003, CL4-005 à CL4-007 : observations, ensembles multi-modèles, expériences idéalisées et robustesse
+- B2-003 : réduction génomique de 85 endosymbiotes
 
-Dans le benchmark multi-domaines, l'exactitude passe de 0,6103 avec l'état seul à 0,6741 avec l'histoire, soit un gain de 0,0638. L'exactitude équilibrée gagne 0,0637 et le score de Brier s'améliore de 0,0277. Les effets varient selon les domaines et deviennent négatifs dans certains cas, notamment le paléoclimat de cette construction. Ces différences sont conservées comme contre-exemples internes.
+## Résultats exploratoires du nouveau lot
 
-Pour les vésicules, les quatre conditions FR, FU, UR et UU, les bras sélection et dérive, les durées de 0,5 h, 1,5 h, 5 h et 24 h, les cartes de transfert, les séries temporelles, Nile Red, les turbidités avant amphiphiles et les turbidités des vésicules alimentaires sont maintenant intégrés. Aucun paramètre moléculaire absent n'est imputé.
+Les rendements CCSN couvrent 84 éléments valides. La variation relative médiane entre les trois masses est de 0,457. Ce résultat décrit les modèles fournis et ne compare ni AGB, ni BBN, ni fusions compactes.
 
-Pour le partage métal-silicate, les neuf coefficients sont compilés et harmonisés. Trois lignes seulement possèdent simultanément pression, température, redox et logD. La méta-régression reste donc non revendiquée.
+Les réseaux KIDA 2024 et UMIST Rate22 totalisent 16 434 réactions et 642 espèces dans le graphe. Les deux réseaux sont distingués et 46,7 % des lignes possèdent un facteur d'incertitude exploitable. Les 19 conditions initiales Rate22 recouvrent entièrement les espèces correspondantes du réseau. Aucun inventaire radioastronomique n'est revendiqué.
+
+La méta-régression métal-silicate utilise 35 lignes complètes et produit un R² exploratoire de 0,632. Ce nombre ne valide pas encore des trajectoires d'accrétion ou des histoires planétaires.
+
+Les 85 génomes endosymbiotiques présentent une rétention génomique médiane de 0,817, avec une étendue de 0,640. Il s'agit de proxys HMM de réduction génomique, pas de mesures directes du transfert nucléaire ou de la dépendance à l'hôte.
 
 ## Statut scientifique
 
@@ -57,15 +65,15 @@ Pour le partage métal-silicate, les neuf coefficients sont compilés et harmoni
 | Indéterminé | 635 |
 | Non applicable | 48 |
 
-Les 278 réussites sont des réussites techniques ou exploratoires. Elles ne constituent pas automatiquement des confirmations d'ORI-C. Aucun critère confirmatoire gelé propre à ces 635 entrées n'autorise encore un verdict de soutien ou de rejet.
+Les 298 réussites restent techniques ou exploratoires. Aucun critère confirmatoire gelé n'autorise encore un verdict global de soutien ou de rejet.
 
-## Pourquoi 357 entrées restent bloquées
+## Blocages restants
 
-Les causes racines sont détaillées dans `AUDIT_DONNEES_DEPOT.md` et `AUDIT_DONNEES_DEPOT.json` :
+Les causes détaillées sont dans `AUDIT_DONNEES_DEPOT.md` et `AUDIT_DONNEES_DEPOT.json`. Les quatre tables quantitatives encore entièrement absentes sont :
 
-- 113 entrées demandent des mesures que les tables réelles partielles ne couvrent pas
-- 114 entrées nécessitent une génération ou une simulation interdite en mode réel strict
-- 112 entrées dépendent encore de jeux quantitatifs réellement absents
-- 18 entrées climatiques demandent des forçages, retraits, restaurations ou trajectoires que GISTEMP observationnel ne contient pas
+- `thermochemical_phases.csv`
+- `planetary_histories.csv`
+- `late_accretion_tracers.csv`
+- `volatile_inventory.csv`
 
-L'ancien bilan indiquait 338 400 lignes d'incertitude GISTEMP. Le fichier correspondant n'est pas présent dans l'archive actuelle. Cette incohérence est désormais signalée au lieu d'être comptée comme donnée active.
+Les autres blocages viennent de la portée partielle des données, de simulations interdites en mode réel strict ou de protocoles humains et expérimentaux non exécutables par le logiciel.
