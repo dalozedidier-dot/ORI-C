@@ -12,3 +12,7 @@
 *.sha256 binary
 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/hyperaretes_candidat_R1.csv text eol=lf
 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/scenarios_reparation.csv text eol=lf
+
+# Conserver à l'identique les données tierces : leurs empreintes de provenance
+# portent sur les octets distribués par les dépôts sources, fins de ligne incluses.
+donnees_externes/**/*.csv -text

@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 506,
-      "sha256": "377f387cf01740230deb6b3ab1bcbee63ef389a5c290aaa8272861872856d0d1",
+      "size": 707,
+      "sha256": "03c524a034a28ec16d50e79d32356a6e69250141d6bfa8ed2300eb401361ac4a",
       "storage": "inline"
     },
     {
@@ -4337,8 +4337,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 1604,
-      "sha256": "cda187534490430fa055a5c3e0eca294a9099f524a3c395fed5a453b1b35f266",
+      "size": 1739,
+      "sha256": "f4cfea06a9b31cd58930901826bda145ae68e1f6aca0a2341cc2ec271be2f6a9",
       "storage": "inline"
     },
     {

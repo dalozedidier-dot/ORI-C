@@ -4,39 +4,39 @@
 
 Aucun fichier à supprimer pour cette mise à jour.
 
-## Installation
+## Problème corrigé
 
-1. Décompresser le ZIP.
-2. Copier le contenu du dossier `ORI-C-main` dans le dépôt en remplaçant les fichiers existants.
-3. Vérifier que les trois sous-dossiers de `donnees_externes` ont bien été copiés.
-4. Publier également les nouveaux fichiers de données, désormais explicitement autorisés par `donnees_externes/.gitignore`.
-5. Relancer le workflow `Recherche suivante ORI-C` avec les valeurs par défaut.
+Git normalisait les fins de ligne de quatre CSV externes lors de leur ajout au dépôt. Le contenu scientifique restait lisible, mais les octets ne correspondaient plus aux empreintes SHA-256 enregistrées, ce qui faisait échouer les contrôles d’intégrité avec quatre fichiers signalés comme modifiés.
 
-## Contrôle avant publication
+Les CSV contenus dans `donnees_externes` sont désormais déclarés `-text` dans `.gitattributes`. Git doit donc conserver exactement les octets distribués par Dryad et NOAA, fins de ligne comprises.
 
-```bash
-python plan_directeur/campagne_recherche_suivante/fetch_external_data.py --offline
-python plan_directeur/campagne_recherche_suivante/run_all.py
-python scripts/valider_recherche_suivante.py
-```
+## Fichiers remplacés par cette correction
 
-## Fichiers principaux remplacés
-
-- `.github/workflows/recherche-suivante.yml`
-- `02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py`
-- `02_branche_systeme_solaire/tests_suivants/tests/test_suivants.py`
-- `03_branche_vivant/lignees_vesicules/analyser_lignees.py`
-- `03_branche_vivant/lignees_vesicules/tests/test_parser.py`
-- `donnees_externes/.gitignore`
-- `donnees_externes/README.md`
-- `plan_directeur/campagne_recherche_suivante/sources_externes.json`
+- `.gitattributes`
+- `INSTRUCTIONS_MISE_A_JOUR.md`
 - `MANIFEST.sha256`
 - `MANIFEST.sha256.json`
 
-## Nouveaux contenus
+Les quatre CSV externes et leurs données scientifiques ne sont pas modifiés.
 
-- les 12 classeurs Dryad nécessaires au test des vésicules ;
-- les 3 CSV Dryad nécessaires au test antibiotique ;
-- le CSV NOAA complet ;
-- un `SOURCE.json` vérifiable pour chacun des trois jeux ;
-- les deux archives Dryad originales dans les sous-dossiers `raw`.
+## Installation
+
+1. Décompresser le ZIP.
+2. Copier tout le contenu du dossier `ORI-C-main` dans le dépôt en remplaçant les fichiers existants.
+3. Ajouter et publier également `.gitattributes` dans le même commit que les fichiers du ZIP.
+4. Relancer les workflows GitHub.
+
+## Contrôle attendu
+
+Après `git lfs pull`, la commande suivante ne doit plus signaler les quatre CSV comme modifiés :
+
+```bash
+python verifier_dossier.py
+```
+
+Les fichiers concernés étaient :
+
+- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_C-limited_Fitness.csv`
+- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_2_N-limited_Fitness.csv`
+- `donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv`
+- `donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv`
