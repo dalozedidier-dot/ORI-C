@@ -1,29 +1,23 @@
-name: Recherche suivante ORI-C
+name: Recherche suivante ORI-C — données réelles incluses
 
 on:
   workflow_dispatch:
     inputs:
-      telecharger_donnees:
-        description: Rafraîchir les jeux externes depuis les fournisseurs
+      mode_donnees:
+        description: Action sur les 3 jeux réels ; leur test est toujours exécuté
         required: true
-        default: false
-        type: boolean
-      retelcharger:
-        description: Forcer un nouveau téléchargement
-        required: true
-        default: false
-        type: boolean
-      exiger_donnees_externes:
-        description: Échouer si un jeu requis intégré est absent ou invalide
-        required: true
-        default: true
-        type: boolean
-
+        default: Tester les données intégrées
+        type: choice
+        options:
+          - Tester les données intégrées
+          - Rafraîchir puis tester
+          - Retélécharger puis tester
 permissions:
   contents: read
 
 jobs:
   recherche:
+    name: Tester les données réelles et la campagne
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
@@ -55,24 +49,34 @@ jobs:
       - name: Tester le client d'acquisition
         run: python -m pytest -q plan_directeur/campagne_recherche_suivante/tests/test_external_acquisition.py
 
-      - name: Contrôler les données externes intégrées
+      - name: Préparer et contrôler les 3 jeux de données réelles
         shell: bash
         run: |
-          args=(--offline)
-          if [ "${{ inputs.telecharger_donnees }}" = "true" ]; then
-            args=()
-            if [ "${{ inputs.retelcharger }}" = "true" ]; then
-              args+=(--force)
-            fi
-          fi
-          if [ "${{ inputs.exiger_donnees_externes }}" != "true" ]; then
-            args+=(--allow-unavailable-required)
-          fi
+          case "${{ inputs.mode_donnees }}" in
+            "Tester les données intégrées")
+              args=(--offline)
+              ;;
+            "Rafraîchir puis tester")
+              args=()
+              ;;
+            "Retélécharger puis tester")
+              args=(--force)
+              ;;
+            *)
+              echo "Mode de données inconnu : ${{ inputs.mode_donnees }}" >&2
+              exit 2
+              ;;
+          esac
           python plan_directeur/campagne_recherche_suivante/fetch_external_data.py "${args[@]}"
 
-      - name: Exécuter les nouveaux tests
+      - name: Analyser les nouvelles données Dryad et NOAA avec toute la campagne
+        run: python plan_directeur/campagne_recherche_suivante/run_all.py
+
+      - name: Tester explicitement les résultats produits sur les 3 jeux réels
+        run: python scripts/valider_donnees_reelles.py
+
+      - name: Exécuter les tests logiciels et valider la campagne
         run: |
-          python plan_directeur/campagne_recherche_suivante/run_all.py
           python -m pytest -q \
             01_branche_matiere/tests_causaux/tests \
             02_branche_systeme_solaire/tests_suivants/tests \
@@ -83,30 +87,23 @@ jobs:
 
       - name: Résumer la disponibilité des jeux externes
         if: ${{ always() }}
-        env:
-          STRICT_EXTERNAL_DATA: ${{ inputs.exiger_donnees_externes }}
         run: |
           python - <<'PY'
           import json
-          import os
           from pathlib import Path
 
-          strict = os.environ.get("STRICT_EXTERNAL_DATA", "false").lower() == "true"
           report_path = Path("donnees_externes/ACQUISITION_REPORT.json")
           if not report_path.exists():
               print("Rapport d'acquisition absent.")
-              raise SystemExit(1 if strict else 0)
+              raise SystemExit(1)
 
           report = json.loads(report_path.read_text(encoding="utf-8"))
-          unavailable = [
-              item for item in report
-              if item.get("required") and item.get("status") != "ok"
-          ]
+          unavailable = [item for item in report if item.get("status") != "ok"]
           if not unavailable:
-              print("Tous les jeux externes requis sont disponibles.")
+              print("Les trois jeux externes sont disponibles et ont été testés.")
               raise SystemExit(0)
 
-          print("Jeux externes requis absents ou invalides :")
+          print("Jeux externes absents ou invalides :")
           for item in unavailable:
               print(f"- {item.get('id')}: {item.get('status')}")
               for attempt in item.get("attempt_errors", []):
@@ -116,15 +113,10 @@ jobs:
                       f"{attempt.get('error', '')} "
                       f"{attempt.get('url', '')}"
                   )
-          print(
-              "Les analyses dépendantes restent explicitement en attente. "
-              "Le reste de la campagne et ses contrôles ne sont pas invalidés "
-              "par un refus HTTP du fournisseur externe."
-          )
-          raise SystemExit(1 if strict else 0)
+          raise SystemExit(1)
           PY
 
-      - name: Publier les rapports et la provenance
+      - name: Publier les tests des données réelles, les rapports et la provenance
         if: always()
         uses: actions/upload-artifact@v6
         with:
@@ -137,5 +129,5 @@ jobs:
             03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats
             donnees_externes/**/SOURCE.json
             donnees_externes/ACQUISITION_REPORT.json
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 30

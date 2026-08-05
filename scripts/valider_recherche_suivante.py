@@ -28,6 +28,7 @@ def main() -> int:
         ROOT / "02_branche_systeme_solaire/tests_suivants/resultats/PACC_ASTRONOMIQUE.json",
         ROOT / "02_branche_systeme_solaire/tests_suivants/resultats/PROTOCOLE_C2B.json",
         CAMPAIGN / "resultats/SYNTHESE.json",
+        CAMPAIGN / "resultats/VALIDATION_DONNEES_REELLES.json",
     ]
     for path in required:
         if not path.exists():
@@ -57,6 +58,10 @@ def main() -> int:
             errors.append("WP-C2b n'est plus gelé avant exécution")
         if len(c2b.get("protocol_sha256", "")) != 64:
             errors.append("empreinte de WP-C2b invalide")
+
+        real_data = load(CAMPAIGN / "resultats/VALIDATION_DONNEES_REELLES.json")
+        if real_data.get("status") != "validated":
+            errors.append("les trois jeux de données réelles ne sont pas validés")
 
         registry = load(CAMPAIGN / "sources_externes.json")
         if sum(bool(item.get("required_for_current_tests")) for item in registry["datasets"]) < 2:

@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "status": "validated",
+  "datasets": [
+    {
+      "id": "vesicules_sokolskyi_baum_2026",
+      "status": "verified",
+      "files_verified": 12,
+      "dataset_sha256": "2073f75786b7e02dc9e504f20e2675efed6a2606cbbda267b6dae7686bb96d49",
+      "acquisition_method": "manual_full_archive_supplied_by_user"
+    },
+    {
+      "id": "histoire_antibiotique_donofrio_2026",
+      "status": "verified",
+      "files_verified": 3,
+      "dataset_sha256": "0bf85e9e77fff1ab5c98b0ab764b10beec80c7e63370653237e4d7beeb386be0",
+      "acquisition_method": "manual_full_archive_supplied_by_user"
+    },
+    {
+      "id": "speleothemes_noaa_0_22ka",
+      "status": "verified",
+      "files_verified": 1,
+      "dataset_sha256": "bc56ecf45225f85dc7ba83bc7c03655ba03c3c144a572cb9343c4b7d58811025",
+      "acquisition_method": "manual_direct_file_supplied_by_user"
+    }
+  ],
+  "results": {
+    "vesicules": {
+      "status": "analysed",
+      "pairs": 11760,
+      "verdict": "all_pre_registered_components_supported"
+    },
+    "antibiotique": {
+      "status": "analysed",
+      "rows": 288,
+      "verdict": "history_supported_against_both_controls"
+    },
+    "speleothemes_noaa": {
+      "status": "audited",
+      "rows_age_isotope": 27721,
+      "sites": 36,
+      "schema": "noaa_two_table_compilation"
+    },
+    "campagne": {
+      "execution_errors": 0,
+      "waiting_for_external_data": 0
+    }
+  },
+  "errors": []
+}
