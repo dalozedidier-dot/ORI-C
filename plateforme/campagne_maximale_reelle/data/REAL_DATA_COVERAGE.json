@@ -29,7 +29,7 @@
       ]
     },
     "benchmark_cases": {
-      "limitations": "Benchmark exploratoire dérivé de données réelles dans cinq domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
+      "limitations": "Benchmark exploratoire dérivé de données réelles dans 8 domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
       "scope_mode": "allow_list",
       "summary": {
         "benchmark_domains": {
@@ -133,11 +133,9 @@
       "limitations": "Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.",
       "scope_mode": "allow_list",
       "summary": {
-        "aphid_pgn_rows_auxiliary": 253,
         "genomes": 85,
         "hmm_rows": 15810,
-        "limitations": "Le fichier HMM mesure la rétention de fonctions dans 85 génomes réduits. Les transferts nucléaires et la dépendance directe à l'hôte restent absents.",
-        "median_retention_proxy": 0.8172043010752689,
+        "source_mode": "committed_canonical_tables",
         "symbionts": 79
       },
       "supported_test_ids": [
@@ -151,9 +149,7 @@
         "dh_groups": 85,
         "dh_rows": 362,
         "dh_uncertainty_coverage": 0.6298342541436464,
-        "ivuna_mn_cr_rows_auxiliary": 9,
-        "lunar_ca_rows_auxiliary": 13,
-        "scope": "Le clustering canonique utilise seulement la compilation homogène D/H. Ca lunaire et Mn-Cr Ivuna sont conservés séparément."
+        "source_mode": "committed_canonical_table"
       },
       "supported_test_ids": [
         "P1-001"
@@ -179,13 +175,7 @@
           "idealized_plus4K",
           "observational_uncertainty"
         ],
-        "source_rows": {
-          "CMIP6_NASST": 50198,
-          "CMIP6_global_TAS": 24849,
-          "HadCRUT5_200_members": 35400,
-          "NASA_GISTEMP_KeySeries": 28200,
-          "idealized_radiative_response": 4098
-        },
+        "source_mode": "committed_canonical_table",
         "variables": [
           "NASST_anomaly",
           "near_surface_air_temperature_C",
@@ -211,13 +201,10 @@
       "limitations": "Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.",
       "scope_mode": "allow_list",
       "summary": {
-        "amino_acid_auxiliary_environments": 69,
-        "amino_acid_auxiliary_rows": 1387,
         "environments": 1,
         "rows": 19,
-        "scope": "Conditions initiales du modèle UMIST Rate22, pas un inventaire observationnel du ciel.",
-        "species": 19,
-        "uncertainty_coverage": 0.0
+        "scope": "Table canonique versionnée; aucune archive brute n'est reconstruite pendant le workflow.",
+        "species": 19
       },
       "supported_test_ids": [
         "M3-001",
@@ -231,15 +218,6 @@
       "summary": {
         "element_rows": 1383,
         "isotope_rows": 56507,
-        "masses_solar": [
-          15.0,
-          20.0,
-          25.0
-        ],
-        "metallicity_values": [
-          0.013000000000000001,
-          0.02
-        ],
         "model_families": [
           "LC18",
           "La22",
@@ -249,7 +227,7 @@
           "Si18"
         ],
         "models": 18,
-        "uncertainty": "Non publiée dans ce conteneur; laissée vide."
+        "source_mode": "committed_canonical_tables"
       },
       "supported_test_ids": [
         "M2-004"
@@ -266,8 +244,10 @@
           "N",
           "S"
         ],
+        "extension_source": "donnees_externes/partage_carbone_2026/raw/Dataset_Fig4_FigS1_FigS2_DC_1.csv",
+        "extension_source_sha256": "6040c58d3c19f069c2397f4a71b5de3da0ebb791ae3064e4baa8e407b3a2c583",
         "new_carbon_rows": 32,
-        "rows": 9,
+        "rows": 41,
         "source": "01_branche_matiere/hypergraphe_transformations/coefficients_partage.csv",
         "source_sha256": "10a7a9c3acfa91a5e91b3cfb14cbb7c7f265ff252664b62d9b637c1e5292321b",
         "sources": [
@@ -369,13 +349,10 @@
       "scope_mode": "allow_list",
       "summary": {
         "molecular_inventory": {
-          "amino_acid_auxiliary_environments": 69,
-          "amino_acid_auxiliary_rows": 1387,
           "environments": 1,
           "rows": 19,
-          "scope": "Conditions initiales du modèle UMIST Rate22, pas un inventaire observationnel du ciel.",
-          "species": 19,
-          "uncertainty_coverage": 0.0
+          "scope": "Table canonique versionnée; aucune archive brute n'est reconstruite pendant le workflow.",
+          "species": 19
         },
         "networks": {
           "KIDA_UVA_2024": 7667,
@@ -383,7 +360,8 @@
         },
         "rate_uncertainty_coverage": 0.46653279785809904,
         "reaction_rows": 16434,
-        "species_in_reactions": 643
+        "source_mode": "committed_canonical_tables",
+        "species_in_reactions": 642
       },
       "supported_test_ids": [
         "M3-001",

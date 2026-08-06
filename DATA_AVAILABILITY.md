@@ -75,9 +75,9 @@ Le registre de portée empêche une table partielle de valider des protocoles qu
 
 ## Lot scientifique maximal du 5 août 2026
 
-Le lot fourni par l'utilisateur est intégré sous `donnees_externes/lot_scientifique_maximal_2026_08_05/`. Le fichier `SOURCE.json` conserve, pour chaque fichier retenu, le nom d'origine, la taille, l'empreinte SHA-256 et l'adresse directe de la source lorsque celle-ci est connue.
+Le lot fourni par l'utilisateur est documenté sous `donnees_externes/lot_scientifique_maximal_2026_08_05/`. Le fichier `SOURCE.json` conserve le nom d'origine, la taille, l'empreinte SHA-256 et l'adresse directe des 29 fichiers reçus. Les archives brutes volumineuses ne sont pas dupliquées dans le dépôt. Les tables canoniques dérivées et leur registre de portée sont versionnés.
 
-Les données brutes alimentent les ensembles climatiques, les réseaux KIDA et UMIST, les rendements de nucléosynthèse CCSN, les traceurs isotopiques, les expériences de partage du carbone et la réduction génomique des endosymbiotes. Les abondances d'acides aminés, le dégazage de Murchison, les propriétés thermiques des météorites et les modèles H-C restent des tables auxiliaires lorsque leur structure ne ferme pas un contrat canonique.
+La petite source brute nécessaire à la reconstruction des 32 expériences de partage du carbone est conservée séparément dans `donnees_externes/partage_carbone_2026/`. Les ensembles climatiques, réseaux KIDA et UMIST, rendements CCSN, traceurs isotopiques et proxys endosymbiotiques sont conservés dans les tables canoniques de `plateforme/campagne_maximale_reelle/data/`. Les abondances d'acides aminés, le dégazage de Murchison, les propriétés thermiques des météorites et les modèles H-C restent des tables auxiliaires lorsque leur structure ne ferme pas un contrat canonique.
 
 Le tri complet est documenté dans :
 
@@ -85,4 +85,4 @@ Le tri complet est documenté dans :
 - `plateforme/campagne_maximale_reelle/TRI_LOT_SCIENTIFIQUE_2026_08_05.json`
 - `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`
 
-Le fichier `SIMPLE_CCSNe_v3p1.hdf5` pèse 100 443 546 octets et est suivi avec Git LFS. La règle correspondante est inscrite dans `.gitattributes`.
+Le fichier brut `SIMPLE_CCSNe_v3p1.hdf5` n'est pas redistribué dans cette archive. Son empreinte et son lien direct sont conservés dans `SOURCE.json`, tandis que les rendements élémentaires et isotopiques dérivés restent versionnés dans les tables canoniques.

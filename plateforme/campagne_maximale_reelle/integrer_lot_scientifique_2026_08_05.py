@@ -29,6 +29,7 @@ from scipy.io import netcdf_file
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 RAW = ROOT / "donnees_externes/lot_scientifique_maximal_2026_08_05/raw"
+CARBON_RAW = ROOT / "donnees_externes/partage_carbone_2026/raw/Dataset_Fig4_FigS1_FigS2_DC_1.csv"
 
 SOURCE_URLS = {
     "KeySeries.zip": "https://data.giss.nasa.gov/gistemp/uncertainty/v2.0/KeySeries.zip",
@@ -630,7 +631,7 @@ def build_isotope_tracers(data_dir: Path) -> dict[str, Any]:
 
 
 def extend_partition_experiments(data_dir: Path) -> dict[str, Any]:
-    path = RAW / "Dataset_Fig4_FigS1_FigS2_DC_1.csv"
+    path = CARBON_RAW
     source = pd.read_csv(path, encoding="utf-8-sig")
     rows: list[dict[str, Any]] = []
     block_starts = list(range(0, 121, 20))
@@ -665,9 +666,12 @@ def extend_partition_experiments(data_dir: Path) -> dict[str, Any]:
     complete = combined[["pressure_gpa", "temperature_k", "delta_iw", "logD"]].notna().all(axis=1)
     return {
         "new_carbon_rows": int(len(extension)),
+        "rows": int(len(combined)),
         "total_rows": int(len(combined)),
         "complete_regression_rows": int(complete.sum()),
         "sources": sorted(combined.get("source_id", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()),
+        "extension_source": str(path.relative_to(ROOT)),
+        "extension_source_sha256": sha256(path),
     }
 
 
@@ -761,6 +765,151 @@ def build_auxiliary_tables(data_dir: Path) -> dict[str, Any]:
     return summaries
 
 
+
+def summarize_committed_tables(data_dir: Path) -> dict[str, Any]:
+    """Résume les tables canoniques déjà versionnées quand les archives brutes ne le sont pas.
+
+    Les fichiers dérivés restent soumis au registre de portée. Cette voie de
+    repli ne reconstruit aucune valeur et ne débloque jamais un protocole hors
+    de la liste explicite de :func:`scientific_coverage`.
+    """
+    summaries: dict[str, Any] = {}
+
+    climate_path = data_dir / "modern_climate_ensemble.csv"
+    if climate_path.exists():
+        climate = pd.read_csv(climate_path)
+        summaries["modern_climate_ensemble"] = {
+            "rows": int(len(climate)),
+            "models": int(climate["model"].nunique()) if "model" in climate else 0,
+            "scenarios": sorted(climate["scenario"].dropna().astype(str).unique().tolist()) if "scenario" in climate else [],
+            "variables": sorted(climate["variable"].dropna().astype(str).unique().tolist()) if "variable" in climate else [],
+            "regions": sorted(climate["region"].dropna().astype(str).unique().tolist()) if "region" in climate else [],
+            "source_mode": "committed_canonical_table",
+        }
+
+    reaction_path = data_dir / "reaction_network.csv"
+    inventory_path = data_dir / "molecular_inventory.csv"
+    if reaction_path.exists() or inventory_path.exists():
+        reaction = pd.read_csv(reaction_path) if reaction_path.exists() else pd.DataFrame()
+        inventory = pd.read_csv(inventory_path) if inventory_path.exists() else pd.DataFrame()
+        network_counts = reaction.groupby("source_network").size().astype(int).to_dict() if "source_network" in reaction else {}
+        summaries["astrochemistry"] = {
+            "reaction_rows": int(len(reaction)),
+            "networks": network_counts,
+            "species_in_reactions": int(len({
+                species.strip()
+                for column in ("reactants", "products")
+                for value in reaction.get(column, pd.Series(dtype=str)).dropna().astype(str)
+                for species in value.split("+")
+                if species.strip()
+            })),
+            "rate_uncertainty_coverage": float(reaction.get("uncertainty_factor", pd.Series(dtype=float)).notna().mean()) if len(reaction) else 0.0,
+            "molecular_inventory": {
+                "rows": int(len(inventory)),
+                "species": int(inventory.get("species", pd.Series(dtype=str)).dropna().astype(str).nunique()),
+                "environments": int(inventory.get("environment_id", pd.Series(dtype=str)).dropna().astype(str).nunique()),
+                "scope": "Table canonique versionnée; aucune archive brute n'est reconstruite pendant le workflow.",
+            },
+            "source_mode": "committed_canonical_tables",
+        }
+
+    yield_path = data_dir / "nucleosynthesis_yields.csv"
+    isotope_yield_path = data_dir / "nucleosynthesis_isotope_yields.csv"
+    if yield_path.exists():
+        yields = pd.read_csv(yield_path)
+        isotope_yields = pd.read_csv(isotope_yield_path) if isotope_yield_path.exists() else pd.DataFrame()
+        summaries["nucleosynthesis_yields"] = {
+            "element_rows": int(len(yields)),
+            "isotope_rows": int(len(isotope_yields)),
+            "models": int(yields.get("source_id", pd.Series(dtype=str)).dropna().astype(str).nunique()),
+            "model_families": sorted(yields.get("model_family", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()),
+            "source_mode": "committed_canonical_tables",
+        }
+
+    tracer_path = data_dir / "isotope_tracers.csv"
+    if tracer_path.exists():
+        tracers = pd.read_csv(tracer_path)
+        summaries["isotope_tracers"] = {
+            "dh_rows": int(len(tracers)),
+            "dh_groups": int(tracers.get("group", pd.Series(dtype=str)).dropna().astype(str).nunique()),
+            "dh_uncertainty_coverage": float(tracers.get("uncertainty", pd.Series(dtype=float)).notna().mean()) if len(tracers) else 0.0,
+            "source_mode": "committed_canonical_table",
+        }
+
+    endo_path = data_dir / "endosymbiosis_events.csv"
+    hmm_path = data_dir / "endosymbiont_hmm_presence_absence.csv"
+    if endo_path.exists():
+        endo = pd.read_csv(endo_path)
+        hmm = pd.read_csv(hmm_path) if hmm_path.exists() else pd.DataFrame()
+        summaries["endosymbiosis_events"] = {
+            "genomes": int(len(endo)),
+            "hmm_rows": int(len(hmm)),
+            "symbionts": int(endo.get("symbiont", pd.Series(dtype=str)).dropna().astype(str).nunique()),
+            "source_mode": "committed_canonical_tables",
+        }
+    return summaries
+
+
+def scientific_coverage(data_dir: Path) -> dict[str, Any]:
+    """Retourne la portée stricte des tables canoniques réellement présentes."""
+    definitions: dict[str, dict[str, Any]] = {
+        "modern_climate_ensemble": {
+            "required": ["modern_climate_ensemble.csv"],
+            "supported_test_ids": ["CL3-001", "CL3-002", "CL3-003", "CL3-006", "CL3-007", "CL4-001", "CL4-002", "CL4-003", "CL4-005", "CL4-006", "CL4-007"],
+            "limitations": "Observations avec incertitude, trajectoires CMIP6 multi-modèles/scénarios et expériences idéalisées. Aucun coût matériel, overshoot explicite, retrait ou restauration n'est fourni.",
+        },
+        "reaction_network": {
+            "required": ["reaction_network.csv"],
+            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
+            "limitations": "Deux réseaux gazeux indépendants avec taux, températures et incertitudes KIDA. Pas de chimie de surface, glaces, ordre d'irradiation ni inventaire radioastronomique.",
+        },
+        "molecular_inventory": {
+            "required": ["molecular_inventory.csv"],
+            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
+            "limitations": "Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.",
+        },
+        "nucleosynthesis_yields": {
+            "required": ["nucleosynthesis_yields.csv", "nucleosynthesis_isotope_yields.csv"],
+            "supported_test_ids": ["M2-004"],
+            "limitations": "Dix-huit modèles CCSN, six familles et trois masses : utilisables pour l'effet de masse. Pas de BBN, AGB, fusions compactes, rotation/binarité contrôlée ni incertitudes publiées dans le conteneur.",
+        },
+        "isotope_tracers": {
+            "required": ["isotope_tracers.csv"],
+            "supported_test_ids": ["P1-001"],
+            "limitations": "Compilation D/H, mesures Cr d'Ivuna et Ca lunaires avec provenance. Elle compile des traceurs disponibles, mais ne suffit pas à tester la dichotomie carbonée/non carbonée.",
+        },
+        "endosymbiosis_events": {
+            "required": ["endosymbiosis_events.csv", "endosymbiont_hmm_presence_absence.csv"],
+            "supported_test_ids": ["B2-003"],
+            "limitations": "Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.",
+        },
+    }
+    coverage: dict[str, Any] = {}
+    for dataset, item in definitions.items():
+        if all((data_dir / name).exists() and (data_dir / name).stat().st_size > 0 for name in item["required"]):
+            coverage[dataset] = {
+                "supported_test_ids": item["supported_test_ids"],
+                "limitations": item["limitations"],
+                "scope_mode": "allow_list",
+            }
+
+    partition_path = data_dir / "partition_experiments.csv"
+    if partition_path.exists():
+        partition = pd.read_csv(partition_path)
+        columns = ["pressure_gpa", "temperature_k", "delta_iw", "logD"]
+        complete = int(partition[columns].notna().all(axis=1).sum()) if all(c in partition for c in columns) else 0
+        supported = ["P3-001", "P3-002"]
+        limitation = "Compilation documentaire partielle; les protocoles quantitatifs restent bloqués."
+        if complete >= 8:
+            supported += ["P3-003", "P3-004", "P3-005"]
+            limitation = "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents."
+        coverage["partition_experiments"] = {
+            "supported_test_ids": supported,
+            "limitations": limitation,
+            "scope_mode": "allow_list",
+        }
+    return coverage
+
 def source_manifest() -> dict[str, Any]:
     files = []
     for path in sorted(RAW.iterdir()):
@@ -781,7 +930,10 @@ def source_manifest() -> dict[str, Any]:
 
 def integrate(data_dir: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     if not RAW.exists():
-        return {}, {}
+        summaries = summarize_committed_tables(data_dir)
+        if CARBON_RAW.exists():
+            summaries["partition_experiments_extension"] = extend_partition_experiments(data_dir)
+        return summaries, scientific_coverage(data_dir)
     summaries: dict[str, Any] = {}
     summaries["modern_climate_ensemble"] = build_climate_ensemble(data_dir)
     summaries["astrochemistry"] = build_astrochemistry(data_dir)
@@ -806,36 +958,5 @@ def integrate(data_dir: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     }
     (HERE / "TRI_LOT_SCIENTIFIQUE_2026_08_05.json").write_text(json.dumps(rejected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    coverage = {
-        "modern_climate_ensemble": {
-            "supported_test_ids": ["CL3-001", "CL3-002", "CL3-003", "CL3-006", "CL3-007", "CL4-001", "CL4-002", "CL4-003", "CL4-005", "CL4-006", "CL4-007"],
-            "limitations": "Observations avec incertitude, trajectoires CMIP6 multi-modèles/scénarios et expériences idéalisées. Aucun coût matériel, overshoot explicite, retrait ou restauration n'est fourni.",
-        },
-        "reaction_network": {
-            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
-            "limitations": "Deux réseaux gazeux indépendants avec taux, températures et incertitudes KIDA. Pas de chimie de surface, glaces, ordre d'irradiation ni inventaire radioastronomique.",
-        },
-        "molecular_inventory": {
-            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
-            "limitations": "Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.",
-        },
-        "nucleosynthesis_yields": {
-            "supported_test_ids": ["M2-004"],
-            "limitations": "Dix-huit modèles CCSN, six familles et trois masses : utilisables pour l'effet de masse. Pas de BBN, AGB, fusions compactes, rotation/binarité contrôlée ni incertitudes publiées dans le conteneur.",
-        },
-        "isotope_tracers": {
-            "supported_test_ids": ["P1-001"],
-            "limitations": "Compilation D/H, mesures Cr d'Ivuna et Ca lunaires avec provenance. Elle compile des traceurs disponibles, mais ne suffit pas à tester la dichotomie carbonée/non carbonée.",
-        },
-        "partition_experiments": {
-            "supported_test_ids": ["P3-001", "P3-002", "P3-003", "P3-004", "P3-005"],
-            "limitations": "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents.",
-        },
-        "endosymbiosis_events": {
-            "supported_test_ids": ["B2-003"],
-            "limitations": "Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.",
-        },
-    }
-    for item in coverage.values():
-        item["scope_mode"] = "allow_list"
+    coverage = scientific_coverage(data_dir)
     return summaries, coverage

@@ -11,8 +11,8 @@
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 7849,
-      "sha256": "29598b32269fb86a7f53633c4f4ca63746fa5ca173c8eedec2f232e0269a1126",
+      "size": 7657,
+      "sha256": "bc542418779fb18f667a456bb88c46b6f0b0b9c94c316cf67cfa37f24ee8330e",
       "storage": "inline"
     },
     {
@@ -4258,6 +4258,12 @@
       "storage": "inline"
     },
     {
+      "path": "AVANCEES_ET_DECOUVERTES_2026-08-06.md",
+      "size": 8118,
+      "sha256": "962caaf0b36e11cca5a06878fefca85f9101a20b051f7a0be91111ed7962ddd3",
+      "storage": "inline"
+    },
+    {
       "path": "CITATION.cff",
       "size": 740,
       "sha256": "9572da5f50792216788c29b91b75699707e5ada65be6fd30d30fdf92a2495ee4",
@@ -4295,8 +4301,8 @@
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "size": 7402,
-      "sha256": "91d73784e260633cf675d296f4fe2b6a9d44058340df754d143ab9de397d3e8e",
+      "size": 7768,
+      "sha256": "f812dfc8b061802c5fc5db8ee7209f4d3f75922e4186e14fd8e90f7e5241e5ec",
       "storage": "inline"
     },
     {
@@ -4337,8 +4343,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 7828,
-      "sha256": "e32b0d403b223f972c4b1d2667bb52b9389cdbef14e5edbd56a741575ec627d6",
+      "size": 2979,
+      "sha256": "1d68f6445f7a2e629cfdd21c0f9798acb1e28b3f26feb62947a622b649faaa75",
       "storage": "inline"
     },
     {
@@ -4403,8 +4409,8 @@
     },
     {
       "path": "README.md",
-      "size": 13301,
-      "sha256": "f6b2e37e438605f4cffebec99d53ca37b324fa1ca6c5188362e3acec5df3f1c6",
+      "size": 15344,
+      "sha256": "36785b1426efffa58a570f5a7128f280e25f5308cfb3ecf7708e93e676655373",
       "storage": "inline"
     },
     {
@@ -4729,6 +4735,24 @@
       "path": "donnees_externes/histoire_antibiotique_donofrio_2026/raw/doi_10_5061_dryad_1zcrjdg68__v20260310.zip",
       "size": 38793,
       "sha256": "dfdf9be1d21b01f997d2f9fc3c1ba92187ca58845bdd78ec2e3a16490fb2c00b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json",
+      "size": 8178,
+      "sha256": "61a8a3cf27f98ca350d22ef30b89b83bceed551814a4b50352b9a67d65c2d70b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/partage_carbone_2026/SOURCE.json",
+      "size": 563,
+      "sha256": "a136ae9cd3656bd687b664fbb6e561f52019e5e87c1f0065f797e421ab59dd4c",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/partage_carbone_2026/raw/Dataset_Fig4_FigS1_FigS2_DC_1.csv",
+      "size": 5825,
+      "sha256": "6040c58d3c19f069c2397f4a71b5de3da0ebb791ae3064e4baa8e407b3a2c583",
       "storage": "inline"
     },
     {
@@ -5381,8 +5405,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
-      "size": 17999,
-      "sha256": "a41eb2b4593fda744da9345eec2abd9a7b145fe22ba94a02d380a1c81e5f4eec",
+      "size": 17177,
+      "sha256": "acd731dadbbac7eb93dc48cba2f023e77094705553dcdc6d8f0ef43b7bc574bd",
       "storage": "inline"
     },
     {
@@ -5399,8 +5423,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md",
-      "size": 5070,
-      "sha256": "02a4502d051135c2a722c405b49a374c024f3c3e6bf1fb0e5f814274067d0573",
+      "size": 1324,
+      "sha256": "bb2c990454e61b4e3f36cdaa005ae050f11fe8a44de379465eb5f888ad4cb324",
       "storage": "inline"
     },
     {
@@ -5423,14 +5447,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md",
-      "size": 10795,
-      "sha256": "8be443a9e00e2de26fd1c7fcf4822ffaa7267d96d48cdba92da2fc8c2dabcaf7",
+      "size": 9472,
+      "sha256": "6adb05e85cd81b18e1c92349e713d3ac089db2bc26d7298095ca955ff3ac8324",
       "storage": "inline"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/LOT_SCIENTIFIQUE_2026_08_05.md",
-      "size": 1218,
-      "sha256": "898eddb1ef1d1b019ebe8d128c8207fa855f02befeac3f2e0946009bf456ec54",
+      "size": 1466,
+      "sha256": "070734a6283ca35ccc620b1b44c8a7ed483eee51ef2309eda5706c291425c40f",
       "storage": "inline"
     },
     {
@@ -5453,8 +5477,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json",
-      "size": 13201,
-      "sha256": "b2c86a543353a8404462e0640031172c624119beeafa02147342f58cd155a0c0",
+      "size": 9870,
+      "sha256": "c3c34a1b0e510d57e016ff6888cc1d0d6f7abc7973cf9de6d58dbc67541a16fb",
       "storage": "inline"
     },
     {
@@ -5489,8 +5513,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json",
-      "size": 12791,
-      "sha256": "9204b81d4b26c81d45e220c3b18c75b98fd8a0c2eb967582b5fa159b81fa4997",
+      "size": 12013,
+      "sha256": "955ea9ac909a4348a68afaf0cccabfaa1d7d4120b736a1a7150ede7a62b7abc2",
       "storage": "inline"
     },
     {
@@ -5759,14 +5783,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py",
-      "size": 49980,
-      "sha256": "5757f75e02b61d0bc19cd09100cb23d0b15efd74448381934ab440084d41350a",
+      "size": 50614,
+      "sha256": "8e90638febd9db88a71ae91a19e59fbf40455013f9870c196b7602b31f1c60eb",
       "storage": "inline"
     },
     {
       "path": "plateforme/campagne_maximale_reelle/integrer_lot_scientifique_2026_08_05.py",
-      "size": 42374,
-      "sha256": "38ab083e1c792b43c673cccef07aae988875bbe9058c18bb2b43dfd70ca4e1cc",
+      "size": 49004,
+      "sha256": "f1d94fe07f682721e96d947b078c44b6255989c143f13f924945ae4990ef3e0f",
       "storage": "inline"
     },
     {
@@ -5825,8 +5849,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/REPORT.md",
-      "size": 59875,
-      "sha256": "0f592a47159178ec3b021ea2da95fd6ce6181860106c67afc6dbb72c7508e498",
+      "size": 707,
+      "sha256": "09bceb71383fc0e3ba33457f61587e1d1dccb3b118740d413bc2e27c7bb30f33",
       "storage": "inline"
     },
     {
@@ -5993,8 +6017,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resumer_integration_maximale.py",
-      "size": 8348,
-      "sha256": "42e127054da8d6a4435105584314e319883f665146ac6ecbeefb20fffa10dd7c",
+      "size": 10969,
+      "sha256": "b1c3452eb399ad825f9a8edb9c214c34125b0b113dd63096a864f5eb83f7c7ed",
       "storage": "inline"
     },
     {
@@ -7061,8 +7085,8 @@
     },
     {
       "path": "plateforme/source_corrigee/tests/test_external_scientific_bundle.py",
-      "size": 2363,
-      "sha256": "400edc789d40752a968283c271bcf0fda93c85ef3ed6767aea545a2d7c3ba68d",
+      "size": 6205,
+      "sha256": "daef8e1c4073f0d837a6fff01439ae3433e98c6ea6172b81543b80e00963ff51",
       "storage": "inline"
     },
     {

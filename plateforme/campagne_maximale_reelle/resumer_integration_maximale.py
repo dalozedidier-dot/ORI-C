@@ -150,6 +150,50 @@ def markdown(payload: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+
+def canonical_markdown(payload: dict) -> str:
+    counts = payload["campaign_counts"]
+    scientific = payload["scientific_counts"]
+    data = payload["data_summary"]
+    return "\n".join([
+        "# Campagne réelle consolidée - bilan canonique",
+        "",
+        "Ce bilan est généré à partir du fichier `results.json` de la même exécution. Il ne doit pas être remplacé par une copie statique plus ancienne.",
+        "",
+        "## Résultat technique des 683 entrées",
+        "",
+        f"- Réussites techniques : **{counts.get('pass', 0)}**",
+        f"- Blocages : **{counts.get('blocked', 0)}**",
+        f"- Protocoles non exécutables informatiquement : **{counts.get('not_run', 0)}**",
+        f"- Échecs : **{counts.get('fail', 0)}**",
+        f"- Erreurs : **{counts.get('error', 0)}**",
+        "",
+        "## Statut scientifique",
+        "",
+        f"- Soutient : **{scientific.get('supports', 0)}**",
+        f"- Ne soutient pas : **{scientific.get('does_not_support', 0)}**",
+        f"- Indéterminé : **{scientific.get('undetermined', 0)}**",
+        f"- Non applicable : **{scientific.get('not_applicable', 0)}**",
+        "",
+        "Une réussite technique indique qu'un moteur a exécuté une analyse couverte par les données. Elle ne constitue pas automatiquement une confirmation scientifique.",
+        "",
+        "## Volumes canoniques utilisés",
+        "",
+        f"- Expériences de partage métal-silicate : **{data.get('partition_experiments', 0)}**",
+        f"- Cas du benchmark transversal : **{data.get('benchmark_cases', 0)}**",
+        f"- Lignées prébiotiques : **{data.get('prebiotic_lineage_nodes', 0)}** nœuds",
+        f"- Relations parent-descendant : **{data.get('prebiotic_parent_offspring_pairs', 0)}**",
+        f"- Ensemble climatique : **{data.get('modern_climate_ensemble_rows', 0)}** lignes",
+        f"- Réseau réactionnel : **{data.get('reaction_network_rows', 0)}** réactions",
+        f"- Rendements de nucléosynthèse : **{data.get('nucleosynthesis_element_yields', 0)}** élémentaires et **{data.get('nucleosynthesis_isotope_yields', 0)}** isotopiques",
+        f"- Événements endosymbiotiques : **{data.get('endosymbiosis_events', 0)}**",
+        "",
+        "## Portée",
+        "",
+        "Les causes détaillées des blocages et les données encore absentes figurent dans `AUDIT_DONNEES_DEPOT.md`. Le registre `REAL_DATA_COVERAGE.json` maintient une liste d'autorisation stricte par protocole.",
+        "",
+    ])
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-json", type=Path, required=True)
@@ -162,6 +206,7 @@ def main() -> int:
         json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     (args.output_dir / "AUDIT_DONNEES_DEPOT.md").write_text(markdown(payload), encoding="utf-8")
+    (args.output_dir / "BILAN_CANONIQUE.md").write_text(canonical_markdown(payload), encoding="utf-8")
     print(json.dumps(payload["campaign_counts"], ensure_ascii=False))
     return 0
 

@@ -1,6 +1,6 @@
 # ORI-C — dossier unique
 
-Didier Daloze | Version 0.9.4-research | 4 août 2026
+Didier Daloze | Version 0.9.4-research | 6 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -36,6 +36,19 @@ séparés.
                                   │◄── rétroactions ──┘
 ```
 
+
+## Résultats de la campagne maximale du 5 août 2026
+
+La campagne maximale ne valide pas ORI-C comme théorie générale. Elle établit néanmoins un résultat central dans le modèle astronomique réduit : **modifier l’architecture du système modifie causalement les trajectoires futures**, avec des effets interventionnels au moins 4 964 fois supérieurs aux écarts numériques sélectionnés. La couche astronomique réussit 13 critères préenregistrés sur 15.
+
+La campagne clarifie aussi une distinction décisive : une dépendance au chemin peut n’être qu’un retard de relaxation. Dans le test exoplanétaire, les écarts initiaux disparaissent après un palier commun suffisamment long. Une mémoire durable exige donc un effet qui persiste après relaxation sous le même forçage, généralement dans un domaine possédant plusieurs attracteurs accessibles.
+
+Les autres branches resserrent les limites du cadre. La fermeture stricte de la matière atteint 46 nœuds sur 53 et localise un noyau cyclique de quatre nœuds. La mémoire paléoclimatique actuelle échoue face à un témoin de même complexité. Le vivant montre un petit signal exploratoire, sans avantage robuste de l’histoire dans les tests les plus exigeants.
+
+Après correction du registre de portée et de la reconstruction des expériences de partage, la campagne stricte des 683 entrées produit **298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Les verdicts confirmatoires restent à 0 soutien, 0 rejet, 635 indéterminés et 48 non applicables.
+
+Le résumé détaillé, avec les résultats positifs, négatifs et les découvertes méthodologiques, se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
+
 ## Contenu
 
 | Dossier | Contenu | Rôle |
@@ -57,6 +70,7 @@ séparés.
 6. `AUTORITE_DES_DOCUMENTS.md` — le fichier qui tranche lorsque deux documents se contredisent.
 7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
 8. `plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` — la campagne de robustesse maximale disponible avec les données du dépôt.
+   Pour les 683 entrées en données réelles, le résultat machine courant est `plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json`. Le dossier `resultats_consolides/` est conservé comme état historique.
 9. `plan_directeur/campagne_priorites_v093/resultats/RAPPORT_PRIORITES_V093.md` — les travaux ciblés sur les verrous matière, climat, mémoire et vivant.
 10. `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/RAPPORT_CALIBRAGE.md` — le tri documentaire et structurel des 53 relations matérielles.
 

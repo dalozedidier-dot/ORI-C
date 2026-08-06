@@ -1,5 +1,8 @@
 # Tri du lot scientifique reçu le 5 août 2026
 
+Le dépôt conserve les tables canoniques utiles et un manifeste des 29 fichiers reçus. Les archives brutes volumineuses ne sont pas dupliquées. La seule source brute conservée pour la reconstruction courante est le CSV de partage du carbone.
+
+
 ## Intégré dans les tables canoniques
 
 - `KeySeries.zip`, HadCRUT5 CSV, CMIP6 NASST, ensembles CMIP6 globaux et `globalmean.zip`

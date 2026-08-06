@@ -854,10 +854,22 @@ def build_benchmarks_and_biology(data_dir: Path, pairs_frame: pd.DataFrame) -> d
 
 
 def coverage_registry(summaries: dict[str, Any]) -> dict[str, Any]:
+    partition_summary = summaries.get("partition_experiments", {})
+    complete_partition = int(partition_summary.get("complete_regression_rows", 0) or 0)
+    partition_ids = ["P3-001", "P3-002"]
+    partition_limitations = "Compilation documentaire partielle; les protocoles quantitatifs restent bloqués."
+    if complete_partition >= 8:
+        partition_ids += ["P3-003", "P3-004", "P3-005"]
+        partition_limitations = (
+            "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. "
+            "Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents."
+        )
+    benchmark_domains = summaries.get("benchmark_cases", {}).get("benchmark_domains", {})
+    domain_count = len(benchmark_domains)
     datasets = {
         "partition_experiments": {
-            "supported_test_ids": ["P3-001", "P3-002"],
-            "limitations": "Neuf coefficients pour H, C, N et S. Trois lignes seulement possèdent simultanément P, T, ΔIW et logD; aucune trajectoire d'accrétion, planète ou validation aveugle n'est déduite.",
+            "supported_test_ids": partition_ids,
+            "limitations": partition_limitations,
         },
         "prebiotic_design": {
             "supported_test_ids": ["V1-001", "V1-004", "V1-006", "V1-007"],
@@ -892,7 +904,7 @@ def coverage_registry(summaries: dict[str, Any]) -> dict[str, Any]:
                 "T4-001", "T4-002", "T4-003", "T4-004",
                 "T5-001", "T5-002", "T5-003", "T5-004", "T5-005", "T5-006", "T5-007", "T5-010",
             ],
-            "limitations": "Benchmark exploratoire dérivé de données réelles dans cinq domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
+            "limitations": f"Benchmark exploratoire dérivé de données réelles dans {domain_count} domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
         },
     }
     for name, item in datasets.items():
