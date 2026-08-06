@@ -7391,26 +7391,26 @@
     },
     {
       "path": "site/index.html",
-      "size": 26942,
-      "sha256": "6db6097f200e47325218a8d9c19ae1b3c9b9a6245214fe981ba55eb6bd56ce5c",
+      "size": 14376,
+      "sha256": "2efccfa0051fa0ab712cebdc2d250b12a608ddbef669b213c31d8378120d4639",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
-      "size": 12715,
-      "sha256": "a85293d88f58141874275445485c117673871c07e44ccea088dd5395f8c31446",
+      "size": 12075,
+      "sha256": "48a2c6afa09f1451ff691c2b692b7d9953c55eea32d01c54a31a78903dc9dc01",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 71446,
-      "sha256": "fffb2fb40b3ef609b3a16a3ea3c5e839eb0894bef2937f665e495bec231578e6",
+      "size": 21492,
+      "sha256": "b427e20920a1460772ef67f27d26e5a50f48a8a5b65c32f4e861d3df35f12739",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 15803,
-      "sha256": "15d1464312a55aa255a3139880f70a975d9bd50b3241678e6887745f6ba55823",
+      "size": 12721,
+      "sha256": "711b2d4e11885db3baafe088328bef049962997ebeee833efe417d214ceadd6f",
       "storage": "inline"
     },
     {
@@ -7421,8 +7421,8 @@
     },
     {
       "path": "site/sitemap.xml",
-      "size": 419,
-      "sha256": "ce1cd07e0abd6128e1bc7a131b5982ec10c62e707aef3be9122a925017a70ef8",
+      "size": 535,
+      "sha256": "410500574bbebff09978dd47743b322111f934eb3b3da7ce914b0eedffc7ebc4",
       "storage": "inline"
     },
     {

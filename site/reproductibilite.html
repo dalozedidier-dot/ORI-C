@@ -3,142 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
+  <meta name="description" content="Données, scripts, workflows, manifestes SHA-256 et commandes pour reproduire les résultats du programme ORI-C.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://dalozedidier-dot.github.io/ORI-C/reproductibilite.html">
-  <meta property="og:title" content="Reproductibilité | ORI-C">
-  <meta property="og:description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
+  <meta property="og:title" content="ORI-C | Reproductibilité">
+  <meta property="og:description" content="Données, scripts, workflows, manifestes SHA-256 et commandes pour reproduire les résultats du programme ORI-C.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dalozedidier-dot.github.io/ORI-C/reproductibilite.html">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Reproductibilité | ORI-C">
-  <meta name="twitter:description" content="Commandes, tests, manifestes, données et état du déploiement permettant de contrôler le programme ORI-C.">
+  <meta name="twitter:title" content="ORI-C | Reproductibilité">
+  <meta name="twitter:description" content="Données, scripts, workflows, manifestes SHA-256 et commandes pour reproduire les résultats du programme ORI-C.">
   <meta name="theme-color" content="#07111f">
-  <title>Reproductibilité | ORI-C</title>
+  <title>ORI-C | Reproductibilité</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script defer src="assets/app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="site-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a></nav></div></header>
-
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil ORI-C">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a>
+      </nav>
+    </div>
+  </header>
   <main id="contenu">
     <section class="page-hero">
-      <div class="wrap narrow"><p class="eyebrow">Code, données et contrôles</p><h1>Reproductibilité</h1><p>Le dépôt conserve les données, les scripts, les résultats positifs, les résultats négatifs, les empreintes SHA-256 et les limites d'environnement.</p><a class="ci-badge" href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml"><img src="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml/badge.svg" alt="État de la validation GitHub Actions"></a></div>
+      <div class="wrap narrow">
+        <p class="eyebrow">Code, données et contrôles</p>
+        <h1>Reproductibilité</h1>
+        <p>Le dépôt conserve les scripts, les tables canoniques, les résultats, la provenance et les empreintes SHA-256 nécessaires pour vérifier chaque couche du programme.</p>
+        <a class="ci-badge" href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml"><img src="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml/badge.svg" alt="État de la validation GitHub Actions"></a>
+      </div>
     </section>
 
     <section class="section compact">
       <div class="wrap">
-        <div class="metric-grid four">
-          <article class="metric"><strong>1 136</strong><span>contenus manifestés</span><small>avant acquisition des données tierces</small></article>
-          <article class="metric"><strong>153</strong><span>tests du socle réussis</span><small>0 échec réel</small></article>
-          <article class="metric"><strong>32</strong><span>tests mémoire réussis</span><small>suite logicielle</small></article>
-          <article class="metric"><strong>10</strong><span>tests astronomiques réussis</span><small>2 tests REBOUND optionnels ignorés localement</small></article>
+        <div class="metric-grid">
+          <article class="metric"><strong>1 238</strong><span>fichiers manifestés</span><small>SHA-256 portable</small></article>
+          <article class="metric"><strong>683</strong><span>entrées du catalogue</span><small>mode données réelles</small></article>
+          <article class="metric"><strong>298</strong><span>réussites techniques</span><small>337 blocages documentés</small></article>
+          <article class="metric"><strong>0</strong><span>échec ou erreur</span><small>campagne stricte finale</small></article>
         </div>
-        <p class="data-note">La matrice GitHub Actions a été validée sous Python 3.12 et Python 3.13 sur le dépôt synchronisé. L'exécution de référence sous Python 3.13 compte 153 tests du socle réussis, 0 échec réel, 1 test ignoré et 1 <code>xfail</code> attendu. Les suites séparées réussissent également 15 tests d'hypergraphe, 19 tests d'inventaire, 32 tests de mémoire, 21 tests de robustesse, 11 tests des priorités v0.9.3, 5 tests du calibrage matière v0.9.4, 10 tests astronomiques et 13 nouveaux tests de la campagne suivante. Les trois blocs dépendant de sources tierces restent explicitement en attente dans l’exécution locale. La campagne cumulative compare les structures JSON exactement et les flottants avec une tolérance relative de 10<sup>-8</sup> et absolue de 10<sup>-10</sup>.</p>
-        <p class="build-panel">Déploiement affiché : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · construit le <time data-build-date>jour du déploiement</time>. Cette information est injectée par le workflow GitHub Pages.</p>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap two-column align-start">
-        <div><p class="eyebrow">Contrôle global</p><h2>Vérifier le dossier en une commande</h2><p>Le script vérifie chaque empreinte, détecte les fichiers absents ou non listés et contrôle la présence des éléments canoniques.</p></div>
-        <div class="terminal" aria-label="Commandes de vérification"><div class="terminal-bar"><span></span><span></span><span></span></div><pre><code>git clone https://github.com/dalozedidier-dot/ORI-C.git
-cd ORI-C
-python verifier_dossier.py
-python scripts/valider_tout.py --strict-lfs</code></pre></div>
+        <div>
+          <p class="eyebrow">Contrôle global</p>
+          <h2>Vérifier le dépôt et le manifeste</h2>
+          <p>Le manifeste recense tous les fichiers suivis, y compris les objets Git LFS selon leur OID et leur taille déclarée.</p>
+        </div>
+        <div>
+          <pre><code>python build_manifest.py verify
+python verifier_dossier.py --allow-lfs-pointers</code></pre>
+          <p class="data-note">Le premier contrôle compare la liste, la taille et l’empreinte de chaque fichier. Le second vérifie aussi la structure du dossier et les objets LFS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="donnees">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Données intégrées</p><h2>Les tables canoniques couvrent plusieurs domaines scientifiques</h2></div>
+          <p>Chaque table possède un registre de portée qui indique exactement quels protocoles elle peut alimenter.</p>
+        </div>
+        <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv"><strong>Climat moderne</strong><span>142 745 lignes, 83 modèles ou sources, 8 scénarios</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/reaction_network.csv"><strong>Réseaux réactionnels</strong><span>16 434 réactions KIDA et UMIST</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/nucleosynthesis_isotope_yields.csv"><strong>Nucléosynthèse</strong><span>56 507 rendements isotopiques, 18 modèles CCSN</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/isotope_tracers.csv"><strong>Traceurs isotopiques</strong><span>D/H, calcium lunaire et Mn-Cr</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/partition_experiments.csv"><strong>Partage métal-silicate</strong><span>41 expériences, dont 32 expériences de carbone</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/endosymbiosis_events.csv"><strong>Endosymbiose</strong><span>85 génomes et 15 810 résultats HMM</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/lignees_vesicules"><strong>Vésicules</strong><span>21 439 nœuds et 13 680 relations parent-descendant</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/benchmark_histoire_antibiotique_2026"><strong>Antibiotiques</strong><span>Séries transversales et longitudinales</span></a>
+        </div>
+        <p class="data-note">La provenance, les empreintes et les limites de chaque jeu sont regroupées dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json"><code>REAL_DATA_COVERAGE.json</code></a> et dans les fichiers <code>SOURCE.json</code> associés.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Campagne réelle stricte</p><h2>Reproduire les 683 entrées</h2></div>
+        <pre><code>python plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py   --data-dir plateforme/campagne_maximale_reelle/data
+
+python -m oric_full run   --all   --real-data-only   --data-dir plateforme/campagne_maximale_reelle/data   --output-dir resultats/campagne_complete   --oric-root .</code></pre>
+        <p class="data-note">Le rapport courant se trouve dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json"><code>resultats_integration_maximale/results.json</code></a>. Le dossier <code>resultats_consolides</code> est conservé comme état historique.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Suites séparées</p><h2>Reproduire sans mélanger les verdicts</h2></div>
-        <div class="command-grid">
-          <article><h3>Socle</h3><pre><code>cd 00_socle
-python -m pytest -q</code></pre><p>Carte, généalogie, test interventionnel et règles transversales.</p></article>
-          <article><h3>Mémoire historique</h3><pre><code>cd 02_branche_systeme_solaire/couche_memoire_historique
-export PYTHONPATH="$PWD/src"
-python -m unittest discover -s tests</code></pre><p>Tests MPT, exoplanète, ablations et stress.</p></article>
-          <article><h3>Couche astronomique</h3><pre><code>cd 02_branche_systeme_solaire/couche_astronomique
-cat REPRODUCTION.md</code></pre><p>La reproduction complète suit le protocole et les données de référence de la couche.</p></article>
-          <article><h3>Généalogies</h3><pre><code>python 00_socle/genealogie/arbre_genealogique.py
-python 01_branche_matiere/genealogie/construire_genealogie.py</code></pre><p>Clôture de l'arbre global et de la généalogie matérielle.</p></article>
-          <article><h3>Campagne maximale</h3><pre><code>python plan_directeur/campagne_maximale_trois_branches/run_all.py
-python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code></pre><p>Robustesse matière, Système solaire et vivant, avec structures identiques et contrôle explicite des écarts d'arrondi.</p></article>
-          <article><h3>Priorités v0.9.3</h3><pre><code>python plan_directeur/campagne_priorites_v093/run_all.py
-python -m pytest -q plan_directeur/campagne_priorites_v093/tests</code></pre><p>Fermeture matière, transfert climatique, hystérèse, benchmark antibiotique externe et audit prébiotique.</p></article>
-          <article><h3>Calibrage matière v0.9.4</h3><pre><code>python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
-python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests</code></pre><p>Ablations, seuils documentaires, stabilité des nœuds, cycles et transfert vers deux trajectoires stellaires MESA.</p></article>
-          <article id="recherche-suivante"><h3>Recherche suivante</h3><pre><code>python plan_directeur/campagne_recherche_suivante/fetch_external_data.py
-python plan_directeur/campagne_recherche_suivante/run_all.py
-python scripts/valider_recherche_suivante.py</code></pre><p>H011, cycle des interfaces, Pacc interventionnel, WP-C2b, spéléothèmes, lignées de vésicules et histoire antibiotique. Sans réseau, les trois blocs externes restent en attente.</p></article>
+        <div class="section-heading"><p class="eyebrow">Suites spécialisées</p><h2>Reproduire chaque branche séparément</h2></div>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Socle</h3><pre><code>cd 00_socle
+python -m pytest -q</code></pre><p>Codebook, carte relationnelle, généalogie et intégrité du dossier.</p></article>
+          <article class="feature-card"><h3>Campagne maximale</h3><pre><code>python plan_directeur/campagne_maximale_trois_branches/run_all.py
+python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code></pre><p>Robustesse matière, Système solaire et vivant.</p></article>
+          <article class="feature-card"><h3>Calibrage matière</h3><pre><code>python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
+python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests</code></pre><p>Fermeture, ablations, dépendance aux sources et transfert stellaire.</p></article>
+          <article class="feature-card"><h3>Recherche suivante</h3><pre><code>python plan_directeur/campagne_recherche_suivante/run_all.py
+python scripts/valider_recherche_suivante.py</code></pre><p>H011, Pacc, spéléothèmes, vésicules et histoire antibiotique.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Analyses automatisées</p><h2>Six workflows spécialisés et deux campagnes cumulatives</h2><p>Chaque campagne publie ses logs, son environnement Python et ses résultats comme artefacts. Le succès technique d'un workflow ne change pas automatiquement un verdict scientifique.</p></div>
+        <div class="section-heading"><p class="eyebrow">GitHub Actions</p><h2>Workflows à lancer</h2></div>
         <div class="document-grid">
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Carte, généalogies, inventaire, hypergraphe, calibrage v0.9.4 et audit transversal synchronisé sur 15 notions</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Données réelles</strong><span>GISTEMP, exoplanètes, antibiotiques, proxy Pacc et campagne complète</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Mémoire historique et 25 calculs astronomiques</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-paleoclimat-approfondie.yml"><strong>Paléoclimat approfondi</strong><span>Tests réels, témoins, mécanismes et spectres nuls</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml"><strong>Campagne maximale trois branches</strong><span>Validation cumulative, quatre workflows réutilisables et 21 tests de robustesse</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/recherche-suivante.yml"><strong>Recherche suivante ORI-C</strong><span>Acquisition externe, nouveaux tests causaux, protocoles gelés et 13 tests locaux</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/release.yml"><strong>Publication stable</strong><span>Validation, archive canonique hydratée, SHA-256 et release sur tag</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml"><strong>Campagne maximale ORI-C, trois branches</strong><span>Validation cumulative et analyses transversales</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Analyse des données réelles</strong><span>Intégration des tables et exécution des 683 entrées</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Couche mémoire et calculs astronomiques</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-paleoclimat-approfondie.yml"><strong>Paléoclimat approfondi</strong><span>Modèles appariés, spectres et contrôles</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml"><strong>Analyses structurelles</strong><span>Graphe, généalogies, inventaire et calibrage</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/pages.yml"><strong>GitHub Pages ORI-C</strong><span>Construction et publication de ce site</span></a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Campagnes de référence</p><h2>Cinq artefacts contrôlés jusqu'au bout</h2><p>Les workflows de structure, données réelles, mémoire, astronomie et paléoclimat ont produit leurs journaux et leurs résultats. Leur réussite technique conserve les verdicts négatifs et non concluants au lieu de les transformer en preuves.</p></div>
-        <div class="metric-grid four">
-          <article class="metric"><strong>1 136</strong><span>contenus conformes</span><small>état local de la recherche suivante</small></article>
-          <article class="metric"><strong>211</strong><span>réussites techniques</span><small>campagne réelle consolidée</small></article>
-          <article class="metric"><strong>440</strong><span>blocages documentés</span><small>données ou critères absents</small></article>
-          <article class="metric"><strong>21</strong><span>tests de robustesse</span><small>matière, Système solaire et vivant</small></article>
-        </div>
-        <p class="data-note">Le paquet astronomique est valide, les 25 calculs sont intègres et la campagne scientifique conserve 13 critères réussis sur 15. L’état local étendu compte 1 136 contenus conformes. La recherche suivante ajoute le seuil H011, l’audit du cycle des interfaces, une mesure interventionnelle non saturée de Pacc et le protocole WP-C2b. Les analyses de spéléothèmes, de vésicules et d’histoire antibiotique restent en attente tant que leurs données externes ne sont pas acquises.</p>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Recherche en cours</p><h2>Les nouvelles données sont acquises sans être redistribuées</h2><p>Le workflow télécharge les sources tierces, enregistre leur provenance et leurs empreintes, exécute les analyses puis publie uniquement les rapports et fichiers de contrôle comme artefact.</p></div>
+        <div class="section-heading"><p class="eyebrow">Documents faisant autorité</p><h2>Retrouver le résultat exact</h2></div>
         <div class="document-grid">
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/PLAN_RECHERCHE.md"><strong>Plan de recherche</strong><span>Questions, métriques, témoins et limites</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/MATRICE_TESTS.csv"><strong>Matrice des tests</strong><span>Données, règle de succès et règle d’échec</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/sources_externes.json"><strong>Sources externes</strong><span>Provenance et acquisition automatisée</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json"><strong>Synthèse machine</strong><span>Statut explicite de chaque bloc</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/AVANCEES_ET_DECOUVERTES_2026-08-06.md"><strong>Avancées et découvertes</strong><span>Synthèse scientifique de la campagne maximale</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md"><strong>Bilan canonique</strong><span>Compteurs stricts et portée des résultats</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_PREUVES.md"><strong>État des preuves</strong><span>Statuts par couche et par branche</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md"><strong>État des tests</strong><span>Suites, compteurs et environnements</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/MANIFEST.sha256"><strong>MANIFEST.sha256</strong><span>Empreinte de chaque fichier suivi</span></a>
+          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/MANIFEST.sha256.json"><strong>MANIFEST.sha256.json</strong><span>Taille, stockage et empreinte machine lisible</span></a>
         </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Traçabilité</p><h2>Documents faisant autorité</h2></div>
-        <div class="document-grid">
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/SCIENTIFIC_SCOPE.md"><strong>Portée scientifique</strong><span>Ce que les résultats permettent et ne permettent pas d’affirmer</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/documentation/POINT_D_ENTREE.md"><strong>Point d'entrée canonique</strong><span>Carte des documents et fichiers machine lisibles</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_PREUVES.md"><strong>État des preuves</strong><span>Statut transversal des couches et résultats</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md"><strong>État des tests</strong><span>Compteurs générés et environnement</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/AUTORITE_DES_DOCUMENTS.md"><strong>Autorité des documents</strong><span>Règles en cas de contradiction</span></a>
-          <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/MANIFEST.sha256"><strong>Manifeste SHA-256</strong><span>Empreintes de tous les fichiers contrôlés</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap two-column align-start">
-        <div><p class="eyebrow">Lecture honnête</p><h2>Un <code>xfail</code> attendu n’est pas un échec réel</h2></div>
-        <div class="warning-panel"><h3>Deux relations restent insuffisamment sourcées</h3><p>Le test de databilité regroupe TR-021 vers TR-028 et TR-024 vers TR-023 dans un <code>xfail</code> explicite. La suite termine avec 153 réussites et 0 échec. Le marqueur restera attendu tant qu’une référence datable ne sera pas attachée à ces relations.</p><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ETAT_DES_TESTS.md">Voir le détail</a></div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer"><div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Code, données et contrôles publics.</p><p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p></div><div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div><div><a href="methode.html">Méthode</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>ORI-C</strong>
+        <p>Le possible a une histoire.</p>
+        <p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+      </div>
+      <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
+      <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>
+    </div>
+  </footer>
 </body>
 </html>

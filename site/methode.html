@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Méthode ORI-C : chaîne d’analyse, dimensions, liens typés, axes de preuve et séparation stricte des branches.">
+  <meta name="description" content="Méthode ORI-C pour relier flux, contraintes, architectures, seuils, persistance, histoire, mémoire et futurs accessibles.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://dalozedidier-dot.github.io/ORI-C/methode.html">
-  <meta property="og:title" content="Méthode | ORI-C">
-  <meta property="og:description" content="Méthode ORI-C : chaîne d’analyse, dimensions, liens typés, axes de preuve et séparation stricte des branches.">
+  <meta property="og:title" content="ORI-C | Méthode">
+  <meta property="og:description" content="Méthode ORI-C pour relier flux, contraintes, architectures, seuils, persistance, histoire, mémoire et futurs accessibles.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dalozedidier-dot.github.io/ORI-C/methode.html">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Méthode | ORI-C">
-  <meta name="twitter:description" content="Méthode ORI-C : chaîne d’analyse, dimensions, liens typés, axes de preuve et séparation stricte des branches.">
+  <meta name="twitter:title" content="ORI-C | Méthode">
+  <meta name="twitter:description" content="Méthode ORI-C pour relier flux, contraintes, architectures, seuils, persistance, histoire, mémoire et futurs accessibles.">
   <meta name="theme-color" content="#07111f">
-  <title>Méthode | ORI-C</title>
+  <title>ORI-C | Méthode</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script defer src="assets/app.js"></script>
@@ -23,141 +23,144 @@
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">O</span><span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span></a>
+      <a class="brand" href="index.html" aria-label="Accueil ORI-C">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span>
+      </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
-      <nav id="navigation" class="site-nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a aria-current="page" href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a></nav>
+      <nav id="navigation" class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a aria-current="page" href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a>
+      </nav>
     </div>
   </header>
-
   <main id="contenu">
     <section class="page-hero">
-      <div class="wrap narrow"><p class="eyebrow">Grammaire causale</p><h1>Comment ORI-C organise une preuve</h1><p>Le cadre décrit l'influence du passé par des états, des architectures, des transformations, des inscriptions et des possibilités accessibles. Il ne remplace pas les mécanismes propres à chaque discipline.</p><div class="source-strip"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/CODEBOOK.md">Codebook canonique</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ARCHITECTURE.md">Architecture du programme</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/00_socle/PROTOCOLE_DONNEES.md">Protocole de données</a></div></div>
-    </section>
-
-    <section class="section" id="socle">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Chaîne centrale</p><h2>De l'histoire aux futurs accessibles</h2></div>
-        <div class="process-flow" role="list" aria-label="Chaîne relationnelle ORI-C">
-          <div role="listitem"><span>H</span><strong>Histoire</strong><small>transformations antérieures</small></div>
-          <b aria-hidden="true">→</b>
-          <div role="listitem"><span>A</span><strong>Architecture</strong><small>organisation présente</small></div>
-          <b aria-hidden="true">→</b>
-          <div role="listitem"><span>Θ</span><strong>Contraintes</strong><small>seuils et barrières</small></div>
-          <b aria-hidden="true">→</b>
-          <div role="listitem"><span>R</span><strong>Réponse</strong><small>transformation possible</small></div>
-          <b aria-hidden="true">→</b>
-          <div role="listitem"><span>m</span><strong>Inscription</strong><small>trace conservée</small></div>
-          <b aria-hidden="true">→</b>
-          <div role="listitem"><span>P</span><strong>Possibilités</strong><small>chemins ouverts ou fermés</small></div>
-        </div>
-        <p class="callout"><strong>Statut exact :</strong> cette chaîne est un schéma d’organisation, pas une quantité mesurée. L’audit transversal n’en trouve encore aucune instanciation complète dans les sorties générées. Elle ordonne l’analyse, puis chaque branche doit définir et tester ses propres variables.</p>
+      <div class="wrap narrow">
+        <p class="eyebrow">Grammaire des organisations</p>
+        <h1>Comment ORI-C organise une preuve</h1>
+        <p>Le cadre suit ce que les transformations construisent, ce que ces constructions rendent accessible et la manière dont une histoire continue d’agir à travers l’architecture présente.</p>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section" id="chaine">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Description d'une architecture</p><h2>Six dimensions, sans score universel</h2><p>Les dimensions organisent la description. Leur premier codage n'a pas porté d'information propre dans le graphe et ne doit pas être présenté comme une mesure naturelle.</p></div>
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Chaîne relationnelle</p><h2>De la transformation aux futurs accessibles</h2></div>
+          <p>Chaque terme possède un rôle distinct. La chaîne évite de confondre un constituant, une condition, un mécanisme, une organisation et une trace historique.</p>
+        </div>
         <div class="dimension-grid">
-          <article><span>n</span><h3>Composition</h3><p>Constituants et inventaire matériel.</p></article>
-          <article><span>G</span><h3>Configuration</h3><p>Géométrie, frontières et compartiments.</p></article>
-          <article><span>I</span><h3>Interactions</h3><p>Couplages internes et externes.</p></article>
-          <article><span>E</span><h3>Environnement</h3><p>Flux, gradients et conditions.</p></article>
-          <article><span>Π</span><h3>Persistance</h3><p>Maintien, reconstruction ou reproduction.</p></article>
-          <article><span>H</span><h3>Histoire</h3><p>Traces, héritages et dépendances au chemin.</p></article>
+          <article><span>01</span><h3>Flux</h3><p>Ce qui traverse ou alimente le système.</p></article>
+          <article><span>02</span><h3>Contraintes</h3><p>Ce qui canalise, limite ou sélectionne les transformations.</p></article>
+          <article><span>03</span><h3>Espace accessible</h3><p>Les états et transformations atteignables dans les conditions présentes.</p></article>
+          <article><span>04</span><h3>Seuil</h3><p>La condition à franchir pour qu’une transformation devienne effective.</p></article>
+          <article><span>05</span><h3>Organisation</h3><p>L’architecture produite par les transformations antérieures.</p></article>
+          <article><span>06</span><h3>Persistance</h3><p>La capacité à maintenir certaines conditions au cours du temps.</p></article>
+          <article><span>07</span><h3>Histoire</h3><p>La succession de transformations qui a construit l’état présent.</p></article>
+          <article><span>08</span><h3>Inscription</h3><p>La trace matérielle de cette histoire dans l’architecture actuelle.</p></article>
+          <article><span>09</span><h3>Possibles</h3><p>Les trajectoires futures rendues accessibles ou inaccessibles.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap two-column">
+    <section class="section alt" id="dimensions">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Description d’un système</p><h2>Six dimensions gardées séparées</h2></div>
+        <div class="dimension-grid">
+          <article><span class="number">N</span><h3>Constituants</h3><p>Les objets, espèces, corps ou compartiments présents.</p></article>
+          <article><span class="number">G</span><h3>Architecture</h3><p>Les relations et la disposition qui organisent ces constituants.</p></article>
+          <article><span class="number">I</span><h3>Interfaces</h3><p>Les frontières et voies de transfert entre parties du système.</p></article>
+          <article><span class="number">Θ</span><h3>Contraintes</h3><p>Les conditions physiques, chimiques ou biologiques qui filtrent les réponses.</p></article>
+          <article><span class="number">P</span><h3>Persistance</h3><p>Les mécanismes qui maintiennent l’organisation dans le temps.</p></article>
+          <article><span class="number">T</span><h3>Histoire</h3><p>La trajectoire de transformations et d’inscriptions qui a produit l’état actuel.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="possibles">
+      <div class="wrap two-column align-start">
         <div>
-          <p class="eyebrow">Typologie causale</p>
-          <h2>Ne pas confondre matière, condition et trace</h2>
-          <p>Un lien est accepté seulement si sa fonction est explicite. Une condition de formation ne devient pas un parent matériel par commodité narrative.</p>
+          <p class="eyebrow">Accessibilité</p>
+          <h2>Le possible est défini par une architecture, pas par une liste abstraite</h2>
         </div>
-        <div class="code-list">
-          <div><code>MATR</code><span>fournit réellement des constituants</span></div>
-          <div><code>ENBL</code><span>rend une transformation possible</span></div>
-          <div><code>ENVR</code><span>modifie le milieu</span></div>
-          <div><code>STAB</code><span>stabilise une architecture</span></div>
-          <div><code>CATL</code><span>réduit une barrière</span></div>
-          <div><code>CNST</code><span>contraint le domaine accessible</span></div>
-          <div><code>CONT</code><span>contribue ou favorise sans suffire</span></div>
-          <div><code>DEPG</code><span>décrit une dépendance fonctionnelle, non une causalité historique</span></div>
-          <div><code>INCO</code><span>incorpore une trace historique sans établir la cause de la transition</span></div>
-          <div><code>DESC</code><span>décrit une ascendance générale, non une causalité historique</span></div>
-          <div><code>FEED</code><span>forme une rétroaction</span></div>
-          <div><code>CLOS</code><span>ferme ou contracte des trajectoires</span></div>
-          <div><code>INTG</code><span>intègre durablement des architectures</span></div>
+        <div class="warning-panel">
+          <h3>Question testable</h3>
+          <p>Une intervention admissible sur l’architecture ouvre-t-elle une réponse qui dépasse l’enveloppe produite par les variations numériques et les états initiaux proches ?</p>
+          <p>Cette comparaison transforme l’idée de « futur accessible » en mesure interventionnelle.</p>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section alt" id="inscription">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Quatre axes de preuve</p><h2>Une certitude unique ne suffit pas</h2></div>
-        <div class="axis-grid">
-          <article><span>01</span><h3>Mécanisme</h3><p>Le processus proposé fonctionne-t-il réellement ?</p></article>
-          <article><span>02</span><h3>Milieu naturel</h3><p>Le mécanisme existe-t-il dans le contexte concerné ?</p></article>
-          <article><span>03</span><h3>Transition historique</h3><p>A-t-il produit l'événement passé décrit ?</p></article>
-          <article><span>04</span><h3>Rôle causal</h3><p>Sa contribution est-elle nécessaire, suffisante ou seulement permissive ?</p></article>
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Mémoire et histoire</p><h2>Quatre conditions pour reconnaître une inscription durable</h2></div>
+          <p>Une différence initiale n’est pas automatiquement une mémoire. Le protocole suit sa présence, son opérativité et sa persistance après relaxation.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="tests-suivants">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Règles renforcées</p><h2>Présence, accessibilité, opérativité et inscription durable</h2><p>Les nouveaux tests refusent de transformer une succession narrative en continuité causale automatique.</p></div>
-        <div class="axis-grid">
-          <article><span>01</span><h3>Présence</h3><p>Le constituant ou l’état existe dans le système observé.</p></article>
-          <article><span>02</span><h3>Accessibilité</h3><p>Une intervention admissible ouvre effectivement une réponse au-delà de l’enveloppe de référence.</p></article>
+        <div class="dimension-grid">
+          <article><span>01</span><h3>Présence</h3><p>La structure ou la trace historique existe dans le système observé.</p></article>
+          <article><span>02</span><h3>Accessibilité</h3><p>Une intervention sur cette structure modifie une réponse au-delà du bruit de référence.</p></article>
           <article><span>03</span><h3>Opérativité</h3><p>Le mécanisme produit l’effet attendu sous des conditions et des seuils déclarés.</p></article>
-          <article><span>04</span><h3>Inscription durable</h3><p>L’effet persiste au-delà de la relaxation et modifie les transformations suivantes.</p></article>
-        </div>
-        <p class="callout"><strong>Conséquence :</strong> une relation peut être documentée et structurellement critique sans être causalement nécessaire dans la nature. Une dépendance au chemin peut exister sans laisser d’inscription durable.</p>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap two-column align-start">
-        <div><p class="eyebrow">Protocoles de la campagne suivante</p><h2>Un témoin apparié et un statut explicite pour chaque test</h2></div>
-        <div class="code-list">
-          <div><code>PAIR</code><span>le modèle historique est comparé à un témoin de complexité égale</span></div>
-          <div><code>PERM</code><span>l’histoire permutée conserve la complexité sans conserver l’ordre causal proposé</span></div>
-          <div><code>HOLD</code><span>les points, régimes, graines ou groupes de test sont réservés avant l’exécution</span></div>
-          <div><code>WAIT</code><span>une donnée externe absente produit <code>waiting_for_external_data</code>, jamais une réussite</span></div>
-          <div><code>ERR</code><span>une erreur technique produit <code>execution_error</code>, distinct d’un verdict scientifique</span></div>
-          <div><code>LIMIT</code><span>chaque résultat reste limité au domaine d’interventions réellement calculé</span></div>
+          <article><span>04</span><h3>Persistance</h3><p>L’effet survit à la relaxation sous un même forçage final et influence les transformations suivantes.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap two-column align-start">
-        <div>
-          <p class="eyebrow">Séparation indispensable</p>
-          <h2>Ce qui appartient aux disciplines et ce qui appartient à ORI-C</h2>
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Témoins</p><h2>Comparer des modèles de même complexité</h2><p>Un modèle historique doit être comparé à un témoin qui possède une complexité équivalente sans porter la même hypothèse d’histoire.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>État présent</h3><p>Mesure ce que l’on prédit sans information historique.</p></article>
+          <article class="feature-card"><h3>Histoire réelle</h3><p>Ajoute des variables décrivant la trajectoire passée.</p></article>
+          <article class="feature-card"><h3>Histoire ablatée</h3><p>Retire une composante précise, comme une pente ou un ordre temporel.</p></article>
+          <article class="feature-card"><h3>Histoire permutée</h3><p>Détruit l’ordre ou la filiation pour tester ce qui dépend réellement de la trajectoire.</p></article>
+          <article class="feature-card"><h3>Témoin apparié</h3><p>Conserve le même nombre de paramètres avec une autre structure.</p></article>
+          <article class="feature-card"><h3>Hors échantillon</h3><p>Évalue la capacité de prédire une période, une lignée ou un système non utilisé pour l’ajustement.</p></article>
         </div>
-        <div class="table-scroll">
-          <table class="comparison-table">
-            <caption class="sr-only">Origine des connaissances et apport actuel du programme ORI-C</caption>
-            <thead><tr><th>Élément</th><th>Origine</th><th>Apport ORI-C actuel</th></tr></thead>
-            <tbody>
-              <tr><td>Nucléosynthèse, chimie interstellaire</td><td>Physique et astrophysique</td><td>Généalogie et typage</td></tr>
-              <tr><td>Accrétion, différenciation, volatils</td><td>Sciences planétaires</td><td>Histoire des réservoirs et accessibilité</td></tr>
-              <tr><td>Endosymbiose, résistance</td><td>Biologie</td><td>Décomposition architecturale et protocole</td></tr>
-              <tr><td>Test interventionnel, N-corps, clôture</td><td>Calculs du dossier</td><td>Résultats propres et reproductibles</td></tr>
-            </tbody>
-          </table>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Niveaux de preuve</p><h2>Un vocabulaire commun, des verdicts séparés</h2></div>
+        <div class="dimension-grid">
+          <article><span class="status established">Établi</span><h3>Fait disciplinaire</h3><p>Résultat indépendant d’ORI-C, utilisé comme base scientifique.</p></article>
+          <article><span class="status model">Validé dans un modèle</span><h3>Mécanisme reproduit</h3><p>Le protocole fonctionne dans le domaine et les hypothèses du modèle testé.</p></article>
+          <article><span class="status supported">Appuyé</span><h3>Signal empirique</h3><p>Les données soutiennent la relation avec des témoins adaptés.</p></article>
+          <article><span class="status structural">Structurel</span><h3>Organisation vérifiée</h3><p>Le graphe, la fermeture, la provenance ou la cohérence sont mesurés.</p></article>
+          <article><span class="status inconclusive">Exploratoire</span><h3>Direction mesurée</h3><p>Le signal guide les prochains tests sans constituer un verdict confirmatoire.</p></article>
+          <article><span class="status untested">À tester</span><h3>Protocole défini</h3><p>Les données ou l’intervention nécessaires restent à réunir.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Séparation des branches</p><h2>Une même grammaire ne signifie pas un même mécanisme</h2></div>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Matière</h3><p>Le cadre représente des transformations, des conditions d’accès et des dépendances dans un hypergraphe.</p></article>
+          <article class="feature-card"><h3>Système solaire</h3><p>Le cadre utilise des interventions dynamiques, des comparaisons orbitales et des tests de relaxation.</p></article>
+          <article class="feature-card"><h3>Vivant</h3><p>Le cadre suit filiation, réponse, sélection, transmission et modification des trajectoires.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section cta-section">
-      <div class="wrap cta-panel"><div><p class="eyebrow">Lire les statuts avant les résultats</p><h2>Une réussite locale ne valide pas les autres branches. Un échec local ne les réfute pas.</h2></div><div class="cta-actions"><a class="button primary" href="preuves.html">Voir les preuves</a><a class="button secondary" href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ARCHITECTURE.md">Lire l'architecture complète</a></div></div>
+      <div class="wrap cta-panel">
+        <div><p class="eyebrow">Passer du cadre aux résultats</p><h2>Les mêmes définitions conduisent à des tests différents selon la branche</h2></div>
+        <div class="cta-actions"><a class="button primary" href="preuves.html">Voir les preuves</a><a class="button secondary" href="reproductibilite.html">Voir les protocoles</a></div>
+      </div>
     </section>
   </main>
-
-  <footer class="site-footer"><div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Méthode et niveaux de preuve.</p><p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p></div><div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div><div><a href="reproductibilite.html">Reproductibilité</a><a href="https://github.com/dalozedidier-dot/ORI-C">Dépôt</a></div></div></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>ORI-C</strong>
+        <p>Le possible a une histoire.</p>
+        <p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+      </div>
+      <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
+      <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>
+    </div>
+  </footer>
 </body>
 </html>
