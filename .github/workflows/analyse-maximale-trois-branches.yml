@@ -87,7 +87,7 @@ jobs:
     name: Robustesse matière, Système solaire et vivant
     needs: validation
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
@@ -103,7 +103,7 @@ jobs:
       - name: Préparer l'artefact
         run: |
           echo "OUT=$RUNNER_TEMP/oric-trois-branches" >> "$GITHUB_ENV"
-          mkdir -p "$RUNNER_TEMP/oric-trois-branches/logs" "$RUNNER_TEMP/oric-trois-branches/resultats"
+          mkdir -p "$RUNNER_TEMP/oric-trois-branches/logs" "$RUNNER_TEMP/oric-trois-branches/resultats" "$RUNNER_TEMP/oric-trois-branches/puissance"
       - name: Installer Python
         uses: actions/setup-python@v6
         with:
@@ -117,42 +117,40 @@ jobs:
       - name: Exécuter les analyses sur les trois branches
         run: |
           set -euo pipefail
-          cp -R plan_directeur/campagne_maximale_trois_branches/resultats \
-            "$RUNNER_TEMP/campagne-reference"
-          python plan_directeur/campagne_maximale_trois_branches/run_all.py \
-            | tee "$OUT/logs/campagne_trois_branches.log"
+          cp -R plan_directeur/campagne_maximale_trois_branches/resultats "$RUNNER_TEMP/campagne-reference"
+          python plan_directeur/campagne_maximale_trois_branches/run_all.py | tee "$OUT/logs/campagne_trois_branches.log"
       - name: Exécuter les tests de régression scientifique
         run: |
           set -euo pipefail
-          python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests \
-            | tee "$OUT/logs/tests_trois_branches.log"
+          python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests | tee "$OUT/logs/tests_trois_branches.log"
       - name: Vérifier la reproductibilité des sorties canoniques
         run: |
           set -euo pipefail
-          python scripts/verifier_reproductibilite_resultats.py \
-            --reference "$RUNNER_TEMP/campagne-reference" \
-            --candidate plan_directeur/campagne_maximale_trois_branches/resultats \
-            | tee "$OUT/logs/reproductibilite_sorties.log"
+          python scripts/verifier_reproductibilite_resultats.py --reference "$RUNNER_TEMP/campagne-reference" --candidate plan_directeur/campagne_maximale_trois_branches/resultats | tee "$OUT/logs/reproductibilite_sorties.log"
       - name: Exécuter les priorités v0.9.3
         run: |
           set -euo pipefail
-          python plan_directeur/campagne_priorites_v093/run_all.py \
-            | tee "$OUT/logs/priorites_v093.log"
-          python -m pytest -q plan_directeur/campagne_priorites_v093/tests \
-            | tee "$OUT/logs/tests_priorites_v093.log"
-
+          python plan_directeur/campagne_priorites_v093/run_all.py | tee "$OUT/logs/priorites_v093.log"
+          python -m pytest -q plan_directeur/campagne_priorites_v093/tests | tee "$OUT/logs/tests_priorites_v093.log"
       - name: Exécuter le calibrage matière v0.9.4
         run: |
           set -euo pipefail
-          python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py \
-            | tee "$OUT/logs/calibrage_matiere_v094.log"
-          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests \
-            | tee "$OUT/logs/tests_calibrage_matiere_v094.log"
-
+          python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py | tee "$OUT/logs/calibrage_matiere_v094.log"
+          python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests | tee "$OUT/logs/tests_calibrage_matiere_v094.log"
+      - name: Calculer les analyses de puissance enregistrées
+        run: |
+          set -euo pipefail
+          python methodologie_puissance/run_registered_power.py --mode full | tee "$OUT/logs/puissance_statistique.log"
       - name: Rassembler résultats et environnement
         if: always()
         run: |
           cp -R plan_directeur/campagne_maximale_trois_branches/resultats/. "$OUT/resultats/" 2>/dev/null || true
+          find . -path '*/resultats/*POWER*.json' -type f -print0 | while IFS= read -r -d '' file; do
+            destination="$OUT/puissance/${file#./}"
+            mkdir -p "$(dirname "$destination")"
+            cp "$file" "$destination"
+          done
+          cp methodologie_puissance/PROTOCOL_REGISTRY.json "$OUT/puissance/" || true
           cp plan_directeur/campagne_maximale_trois_branches/README.md "$OUT/" || true
           python -m pip freeze > "$OUT/pip-freeze.txt"
       - name: Publier la campagne sur les trois branches

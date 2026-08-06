@@ -1,0 +1,25 @@
+{
+  "protocols": [
+    {
+      "protocol_id": "DONOFRIO-HISTORY-2026-SENSITIVITY",
+      "plan": "03_branche_vivant/benchmark_histoire_antibiotique_2026/POWER_PLAN.json",
+      "command": "mde",
+      "output": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/POWER_MDE.json",
+      "enabled": true
+    },
+    {
+      "protocol_id": "MATTER-INDEPENDENT-RECODING",
+      "plan": "01_branche_matiere/base_transitions/POWER_PLAN.json",
+      "command": "scan-n",
+      "output": "01_branche_matiere/base_transitions/resultats/POWER_REQUIRED_N.json",
+      "enabled": true
+    },
+    {
+      "protocol_id": "PACC-ASTRONOMICAL-INTERVENTIONS-SENSITIVITY",
+      "plan": "02_branche_systeme_solaire/tests_suivants/PACC_POWER_PLAN.json",
+      "command": "mde",
+      "output": "02_branche_systeme_solaire/tests_suivants/resultats/PACC_POWER_MDE.json",
+      "enabled": true
+    }
+  ]
+}

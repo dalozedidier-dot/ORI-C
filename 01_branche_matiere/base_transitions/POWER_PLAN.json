@@ -1,0 +1,19 @@
+{
+  "protocol_id":"MATTER-INDEPENDENT-RECODING",
+  "analysis_frozen_before_data":true,
+  "independent_unit":"transition",
+  "primary_metric":"minimum_ordinal_Krippendorff_alpha",
+  "effect":{"type":"absolute_difference","sesoi":0.35,"justification":"The injected reliability margin is chosen so that the protocol can assess whether three blind coders can reach alpha >= 0.80 while retaining within-regime discrimination."},
+  "alpha":0.05,
+  "target_power":0.90,
+  "sample_size_grid":[20,30,40,60,80,120],
+  "noise_estimation":{"source":"prospective coder-error model","description":"Independent coder errors are generated at transition level; no fold or cell is treated as an independent experiment.","value":1.0},
+  "test_definition":"Simulate six ordinal dimensions for three blind coders, recompute ordinal Krippendorff alpha and require within-regime discrimination for every retained dimension.",
+  "controls":["blind_coders","within_regime_discrimination"],
+  "success_rule":["all_dimensions_pass"],
+  "simulation_model":"three_coder_ordinal_full_decision_pipeline",
+  "adapter":{"path":"methodologie_puissance/adapters/recoding_ordinal_pipeline.py","function":"simulate_and_evaluate"},
+  "preliminary_simulations":1000,
+  "confirmation_simulations":10000,
+  "seed":202608062
+}

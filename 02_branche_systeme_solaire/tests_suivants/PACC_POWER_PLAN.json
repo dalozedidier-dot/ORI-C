@@ -1,0 +1,22 @@
+{
+  "protocol_id":"PACC-ASTRONOMICAL-INTERVENTIONS-SENSITIVITY",
+  "analysis_frozen_before_data":true,
+  "interpretation":"Sensitivity analysis of the registered intervention/envelope decision layer; it does not replace fresh N-body integrations.",
+  "independent_unit":"admissible_intervention",
+  "primary_metric":"Pacc_interventions",
+  "effect":{"type":"ratio_to_numerical_noise","sesoi":3.0,"justification":"An intervention must exceed the registered numerical/reference envelope on at least two orbital metrics; three times the noise envelope is the planning SESOI."},
+  "alpha":0.05,
+  "target_power":0.90,
+  "available_n":6,
+  "effect_grid":[1.0,1.5,2.0,2.5,3.0,4.0,5.0],
+  "noise_estimation":{"source":"real_science_max reference variants","description":"Reference-envelope scale from timestep, initial representation and body-count variants.","value":1.0},
+  "test_definition":"Simulate baseline, three reference variants and admissible interventions; rebuild the envelope and apply the exact two-of-three metric accessibility rule.",
+  "controls":["reference_variants_envelope","non_saturated_dimension_score"],
+  "success_rule":["pacc_interventions_material","pacc_dimensions_non_saturated"],
+  "pacc_interventions_threshold":0.80,
+  "simulation_model":"registered_Pacc_summary_decision_pipeline",
+  "adapter":{"path":"methodologie_puissance/adapters/pacc_interventions_pipeline.py","function":"simulate_and_evaluate"},
+  "preliminary_simulations":1000,
+  "confirmation_simulations":10000,
+  "seed":202608063
+}

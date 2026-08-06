@@ -1,0 +1,21 @@
+{
+  "protocol_id": "DONOFRIO-HISTORY-2026-SENSITIVITY",
+  "analysis_frozen_before_data": true,
+  "interpretation": "Retrospective minimum detectable effect only; not an a priori proof for the already observed dataset.",
+  "independent_unit": "strain",
+  "primary_metric": "RMSE_log2_MIC",
+  "effect": {"type":"relative_improvement","sesoi":0.05,"baseline":1.13089812488,"justification":"A 5% reduction in held-out RMSE is the smallest improvement treated as scientifically useful for planning a future independent replication."},
+  "alpha": 0.05,
+  "target_power": 0.90,
+  "available_n": 24,
+  "effect_grid": [0.025,0.05,0.075,0.10,0.15,0.20,0.25,0.30],
+  "noise_estimation": {"source":"D'Onofrio grouped benchmark","description":"Group and observation noise calibrated on the order of the held-out log2(MIC) residuals; folds are never counted as independent units.","value":0.72},
+  "test_definition":"Simulate complete strain-by-antibiotic replicate tables, refit grouped five-fold ridge pipelines and compare history against state-only and shuffled-history controls.",
+  "controls":["state_only","same_complexity_shuffled_history"],
+  "success_rule":["history_beats_state","history_beats_shuffled_history"],
+  "simulation_model":"grouped_full_design_log2_MIC",
+  "adapter":{"path":"methodologie_puissance/adapters/antibiotic_grouped_pipeline.py","function":"simulate_and_evaluate"},
+  "preliminary_simulations":1000,
+  "confirmation_simulations":10000,
+  "seed":202608061
+}
