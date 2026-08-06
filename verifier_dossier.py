@@ -26,6 +26,7 @@ RACINE = Path(__file__).resolve().parent
 MANIFESTE = RACINE / "MANIFEST.sha256"
 EXCLUS = {"__pycache__", ".pytest_cache", ".pytest-tmp", ".git", ".claude", ".mplconfig", "node_modules", "dist"}
 EXCLUS_SUFFIXES = {".pyc", ".pyo"}
+EXCLUS_CHEMINS_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
 
 STRUCTURE_ATTENDUE = [
     "ORI-C_Architecture_generale_du_programme.pdf",
@@ -144,6 +145,8 @@ def fichiers_du_dossier() -> list[Path]:
             continue
         relatif = chemin.relative_to(RACINE)
         if any(partie in EXCLUS for partie in relatif.parts):
+            continue
+        if any(relatif.as_posix().startswith(prefixe) for prefixe in EXCLUS_CHEMINS_PREFIXES):
             continue
         if chemin.suffix in EXCLUS_SUFFIXES:
             continue

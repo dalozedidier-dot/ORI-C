@@ -20,6 +20,7 @@ EXCLUDED_PARTS = {
     ".mplconfig", ".claude", "node_modules", "dist",
 }
 EXCLUDED_FILES = {"MANIFEST.sha256", "MANIFEST.sha256.json"}
+EXCLUDED_PATH_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
 LFS_PATTERN = re.compile(
     rb"\Aversion https://git-lfs\.github\.com/spec/v1\n"
     rb"oid sha256:([0-9a-f]{64})\n"
@@ -34,6 +35,10 @@ def files() -> list[Path]:
             if path.is_file()
             and path.name not in EXCLUDED_FILES
             and not any(part in EXCLUDED_PARTS for part in path.relative_to(ROOT).parts)
+            and not any(
+                path.relative_to(ROOT).as_posix().startswith(prefix)
+                for prefix in EXCLUDED_PATH_PREFIXES
+            )
         ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
     )

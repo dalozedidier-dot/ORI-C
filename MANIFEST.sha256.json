@@ -972,7 +972,7 @@
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
       "size": 4506,
-      "sha256": "3ed3d9130c71f4a07624df9df1c621991cceae6cf7736851a136883617548b91",
+      "sha256": "ba68dc6f780e509ce8dafddd0387bdfc1af1fcfe4bf9602c9dade2b584ddc9c0",
       "storage": "inline"
     },
     {
@@ -2125,13 +2125,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_20myr_dt10/diagnostics.csv.gz",
       "size": 634329,
       "sha256": "e3765067b9cd449ce7d978b4d8d0a3b1f2f0c2dcb0c0f4cad120f7f1f4910995",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_20myr_dt10/earth.csv.gz",
       "size": 1962325,
       "sha256": "109fe1f93ba2539d84cb79b44b410992fd7470993f6955a51619c700b6e5cabf",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_20myr_dt10/job_manifest.json",
@@ -2149,7 +2149,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_20myr_dt10/orbital_sample.csv.gz",
       "size": 121076,
       "sha256": "64f937f02fb6f94ce172817ebb7bb3baf0ae5a43617178cb0a3022942fd2c674",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt4p8828125/body_summary.csv",
@@ -2161,13 +2161,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt4p8828125/diagnostics.csv.gz",
       "size": 53517,
       "sha256": "b2ead448411b98e119947f893985e5b5ffbc754729b6c1b5f95689093a688d92",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt4p8828125/earth.csv.gz",
       "size": 186852,
       "sha256": "c4d36fa29b1605e3ee53985bd6b112e9bcd5d40fab7482ee93ffed2e5efcc4dc",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt4p8828125/job_manifest.json",
@@ -2185,7 +2185,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt4p8828125/orbital_sample.csv.gz",
       "size": 13305,
       "sha256": "64f9a641b5d33000a8dd885302ef2db98e035953f1ee307d84c0fcf3ce083e29",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt5/body_summary.csv",
@@ -2197,13 +2197,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt5/diagnostics.csv.gz",
       "size": 64845,
       "sha256": "428d4c6eff72c5065c60ac262e344b8ac8a224b831e51ff4b77a480526f87d6d",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt5/earth.csv.gz",
       "size": 197833,
       "sha256": "232e237839d772a93bb222bf78cf585454c6c58a55d43cd2f1f45eb61bd9f322",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt5/job_manifest.json",
@@ -2221,7 +2221,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_dt5/orbital_sample.csv.gz",
       "size": 13445,
       "sha256": "144d2bd204f50e24a6dd15260c173e09e20ad703bc08fd97446e4bf3fe648c55",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_elements_dt5/body_summary.csv",
@@ -2233,13 +2233,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_elements_dt5/diagnostics.csv.gz",
       "size": 65428,
       "sha256": "3920cca65ecb184ed40625390e880a6e111d84e5f4e707f7511eb02bd572a8e2",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_elements_dt5/earth.csv.gz",
       "size": 197779,
       "sha256": "8efef48b8589929753339b4b0102954fe334623d2abceddbdd0cf5ab8fafa24f",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_elements_dt5/job_manifest.json",
@@ -2257,7 +2257,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_elements_dt5/orbital_sample.csv.gz",
       "size": 13454,
       "sha256": "8f6cd73576e6a31f9f09e0ee77edfd2aaa4376c99189f6af61de874ee3888554",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_no_gr_dt5/body_summary.csv",
@@ -2269,13 +2269,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_no_gr_dt5/diagnostics.csv.gz",
       "size": 65153,
       "sha256": "50ad453a95e4b8880806460911d2c11fe3173cc0c5fa1e21e4a3f1a3ed5503e5",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_no_gr_dt5/earth.csv.gz",
       "size": 197843,
       "sha256": "d2332d0e5711e0383df1150b5237c80b6ec2ba10513340c8dcfcbe244fe4a9b0",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_no_gr_dt5/job_manifest.json",
@@ -2293,7 +2293,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_2myr_no_gr_dt5/orbital_sample.csv.gz",
       "size": 13468,
       "sha256": "3c6a0fd3640ceb075230323b5c8d02d91f76cb5ae6a446edd0139012a0e13bde",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r00/body_summary.csv",
@@ -2305,13 +2305,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r00/diagnostics.csv.gz",
       "size": 321498,
       "sha256": "344fda851aa7adce2d5457d4762d41a59167a7215edd7af3af946af0215fa3d0",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r00/earth.csv.gz",
       "size": 985060,
       "sha256": "b45e7638345fdedd7d29da7ed48f8dc66f3b69787adce5a05c6611c2b2f39287",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r00/job_manifest.json",
@@ -2329,7 +2329,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r00/orbital_sample.csv.gz",
       "size": 61441,
       "sha256": "a24f297f96dbbac7ddd75fc0e2046bf54cc24ba82e998ca59ff6fbdb90cbf3a6",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r01/body_summary.csv",
@@ -2341,13 +2341,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r01/diagnostics.csv.gz",
       "size": 322029,
       "sha256": "16e863c0134c2db859840955a042e0562ba8b2b3c816b9e5bf23d35003ab0968",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r01/earth.csv.gz",
       "size": 983385,
       "sha256": "fa2384bbf1510926e539b992bad9280d44a5444ea469af0acf4d5a83c9c37212",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r01/job_manifest.json",
@@ -2365,7 +2365,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r01/orbital_sample.csv.gz",
       "size": 61401,
       "sha256": "6a07c410313ee91c5f3bfc459c6ea1c0233ac8a7db2e7030dccf1e2cd382636f",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r02/body_summary.csv",
@@ -2377,13 +2377,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r02/diagnostics.csv.gz",
       "size": 316586,
       "sha256": "ea28996ff903d07018686fcb30d6de669b9aefe4a3937ba521037f0db0f77289",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r02/earth.csv.gz",
       "size": 980455,
       "sha256": "e7873b1639be87b96f13aa0cc5ae4ab2d603e3a2fb83e5f7f6fac22fd6b1d6ba",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r02/job_manifest.json",
@@ -2401,7 +2401,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r02/orbital_sample.csv.gz",
       "size": 61407,
       "sha256": "4978f916196eaf7f0e89d41b111c28650cec55cf83f56230dbc986e1a6e13062",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r03/body_summary.csv",
@@ -2413,13 +2413,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r03/diagnostics.csv.gz",
       "size": 318007,
       "sha256": "b2c059b733d9b0705a11c91da1be9070636fc3f71549e23b3c20da48f37f1f9d",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r03/earth.csv.gz",
       "size": 977042,
       "sha256": "fcc9cfd72a62400daaa2cd4e0418ee7025d4eb9c068d6f2e66b934ca52ac957f",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r03/job_manifest.json",
@@ -2437,7 +2437,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r03/orbital_sample.csv.gz",
       "size": 61168,
       "sha256": "b4437d9072676464482b46aab223e2f76713c099896ad74aecc5d3606a176237",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r04/body_summary.csv",
@@ -2449,13 +2449,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r04/diagnostics.csv.gz",
       "size": 321342,
       "sha256": "ee9e94da1afc0a482685c0b50e609892f087e968551bd1c3d11600b8f9d0eea9",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r04/earth.csv.gz",
       "size": 984015,
       "sha256": "a18d3abb76e49749aed533f495c2fdde0b94688b8044e791e125046e104ccada",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r04/job_manifest.json",
@@ -2473,7 +2473,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r04/orbital_sample.csv.gz",
       "size": 61435,
       "sha256": "acd1aa99a99c672d389c09f34608380cd79c2427c0b0121a2dfb113ebd34f1b1",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r05/body_summary.csv",
@@ -2485,13 +2485,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r05/diagnostics.csv.gz",
       "size": 317869,
       "sha256": "04f429f90dfb5df6f2325a2da0448eaf6778cfc37a178ed308b5f60ccece5e12",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r05/earth.csv.gz",
       "size": 977519,
       "sha256": "661bce543405c06c17c827db720ac43cc2ac8f6baa6986ed80aa486895831436",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r05/job_manifest.json",
@@ -2509,7 +2509,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r05/orbital_sample.csv.gz",
       "size": 61153,
       "sha256": "dd8acce0d251ad782b38acae3df36d53bafd15496d9065fa721c34bf9631e29e",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r06/body_summary.csv",
@@ -2521,13 +2521,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r06/diagnostics.csv.gz",
       "size": 318670,
       "sha256": "0decb7140a70b449bee03aebf732d38251e0e086c47faa739ad6450e59489c76",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r06/earth.csv.gz",
       "size": 981713,
       "sha256": "24530edd49020a619c324032e08058cfecf5ee27ac511f5d82b98dc57ccffa74",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r06/job_manifest.json",
@@ -2545,7 +2545,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r06/orbital_sample.csv.gz",
       "size": 61427,
       "sha256": "5a56169199fd20ecaa8295c118ae4cdf6d9b3988ccfd8bacc2b2b593e32a5d27",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r07/body_summary.csv",
@@ -2557,13 +2557,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r07/diagnostics.csv.gz",
       "size": 321390,
       "sha256": "33667dd063627ab4f67ebf7d23c231543e1764f388eff074def56bfb5f1dd8a6",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r07/earth.csv.gz",
       "size": 984210,
       "sha256": "4cf49ecb6991bc3e38e9eb47dd7ac4754bd14b6c9659d5ed6d753ef16b19b1bf",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r07/job_manifest.json",
@@ -2581,7 +2581,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ensemble_10myr_r07/orbital_sample.csv.gz",
       "size": 61466,
       "sha256": "f129665530fc1265418c5b8c151e7793a65498c62406bcb5068518f4fb7dcce1",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/execution_results.json",
@@ -2599,13 +2599,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/full_la2010_bodies_2myr_dt5/diagnostics.csv.gz",
       "size": 65319,
       "sha256": "01949e743547fa9596fd6c59a002df2cedfa9e4a4a18feaac7c56d1bc7718a3e",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/full_la2010_bodies_2myr_dt5/earth.csv.gz",
       "size": 197656,
       "sha256": "1a0c3accc2faae4e91593465e3d38861ba32fbdbcb2828b9d302737ae6cebca8",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/full_la2010_bodies_2myr_dt5/job_manifest.json",
@@ -2623,7 +2623,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/full_la2010_bodies_2myr_dt5/orbital_sample.csv.gz",
       "size": 22519,
       "sha256": "c56a606c55a9b783a0f5bdc1cb72d63b69025a7fa13c4a3e285d47ee90301901",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grfull_20kyr/body_summary.csv",
@@ -2635,13 +2635,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grfull_20kyr/diagnostics.csv.gz",
       "size": 4129,
       "sha256": "389c8f176c003cd88e0802ed16db00464854e3dea39a3178c32344c4a96aa76e",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grfull_20kyr/earth.csv.gz",
       "size": 17948,
       "sha256": "60a34e40c944c3ab375a71437b74442616d399e9b0b7966517aa999c1019b139",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grfull_20kyr/job_manifest.json",
@@ -2659,7 +2659,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grfull_20kyr/orbital_sample.csv.gz",
       "size": 1504,
       "sha256": "62d5155cee27223a746d3cc2e1520837b3a082660262cdeb38fb8226485d450d",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grpot_20kyr/body_summary.csv",
@@ -2671,13 +2671,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grpot_20kyr/diagnostics.csv.gz",
       "size": 1895,
       "sha256": "b16d9b314dd01fc7b6ac50bf1fbb3838e3d9b662cd7cf29c44ea23f94349011f",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grpot_20kyr/earth.csv.gz",
       "size": 15962,
       "sha256": "6a63595953ab40e996cfc213311775b0f1e759e78b8197acaf62fd8300c4bf00",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grpot_20kyr/job_manifest.json",
@@ -2695,7 +2695,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/ias15_grpot_20kyr/orbital_sample.csv.gz",
       "size": 1490,
       "sha256": "0508dc6b0ed9d5aa363e4b34b3cc80bd56541d81705273ddf775d36f4283df98",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_minus_0p5pct_2myr/body_summary.csv",
@@ -2707,13 +2707,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_minus_0p5pct_2myr/diagnostics.csv.gz",
       "size": 63927,
       "sha256": "9010c184176000fb682ad5057ab5d8f928b2ec066844ee40e49bf1074379d507",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_minus_0p5pct_2myr/earth.csv.gz",
       "size": 196148,
       "sha256": "9b4773b00b6381c00d59dba5bdd07a9828211a1b6c189a5469e7ce356a48c0b4",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_minus_0p5pct_2myr/job_manifest.json",
@@ -2731,7 +2731,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_minus_0p5pct_2myr/orbital_sample.csv.gz",
       "size": 13415,
       "sha256": "48c03dc1c32399b3fd5cf0d8910c885a268df15448f2d43513aa21a73c9b5b51",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_plus_0p5pct_2myr/body_summary.csv",
@@ -2743,13 +2743,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_plus_0p5pct_2myr/diagnostics.csv.gz",
       "size": 63823,
       "sha256": "106d24fef385f925d646bfe26aae425dc3759432f67ce3aafa35117e8e74f741",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_plus_0p5pct_2myr/earth.csv.gz",
       "size": 196713,
       "sha256": "1cba7bfe854b8670d03e99e3a120eea79cf0527eae72a98524190ec8af2f1eed",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_plus_0p5pct_2myr/job_manifest.json",
@@ -2767,7 +2767,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_a_plus_0p5pct_2myr/orbital_sample.csv.gz",
       "size": 13456,
       "sha256": "ec801b969f3ddb438ac422afb3900aad80a618bb0fb04910a30e865a2bb4ee6b",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_minus_5pct_2myr/body_summary.csv",
@@ -2779,13 +2779,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_minus_5pct_2myr/diagnostics.csv.gz",
       "size": 64393,
       "sha256": "7e9f00ee364675caa144428cb3069ed19e09fa696e664a3e9881f3134db8e53a",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_minus_5pct_2myr/earth.csv.gz",
       "size": 196905,
       "sha256": "89619ec187f083b51a87bc365f2d0caacc434c32cb3b3792ab3fe02ff00cfa4e",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_minus_5pct_2myr/job_manifest.json",
@@ -2803,7 +2803,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_minus_5pct_2myr/orbital_sample.csv.gz",
       "size": 13409,
       "sha256": "fe78a7d0d73249d53e419e76556df31a20d265c8dc02747f9e99b263fd41f29d",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_plus_5pct_2myr/body_summary.csv",
@@ -2815,13 +2815,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_plus_5pct_2myr/diagnostics.csv.gz",
       "size": 64397,
       "sha256": "a5105adf852de50be46144daf37b31846a51fed58be7b5ad73f1a6b888f55983",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_plus_5pct_2myr/earth.csv.gz",
       "size": 197637,
       "sha256": "d66c98b6b3eea219112ae48a93bc6f8285eadf69b681d0389e2a614da9cc5456",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_plus_5pct_2myr/job_manifest.json",
@@ -2839,7 +2839,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/jupiter_mass_plus_5pct_2myr/orbital_sample.csv.gz",
       "size": 13440,
       "sha256": "32e7acf801c75183760333e2a54171cfd5ea0718eaaeb9e62252312616e88f83",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/resolved_config.yaml",
@@ -2893,13 +2893,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_minus_5pct_2myr/diagnostics.csv.gz",
       "size": 64306,
       "sha256": "10546810381bd2a67b645597d2d72cb1a73e3b93080e4ae572ddb16ae456391c",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_minus_5pct_2myr/earth.csv.gz",
       "size": 196547,
       "sha256": "36414e4be1a842a8981039feebfc4ada67120ac5eab2d1769faa54ababd293d1",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_minus_5pct_2myr/job_manifest.json",
@@ -2917,7 +2917,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_minus_5pct_2myr/orbital_sample.csv.gz",
       "size": 13364,
       "sha256": "3350eda8270430a47d6078c3933b41ef45828fc25d1d6cdfbbd7223a9fb0d07c",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_plus_5pct_2myr/body_summary.csv",
@@ -2929,13 +2929,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_plus_5pct_2myr/diagnostics.csv.gz",
       "size": 64138,
       "sha256": "f2f4f79d677eb0260ae35c23466a3a869b55311fad8ab0bcaa5b3da5ba50f899",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_plus_5pct_2myr/earth.csv.gz",
       "size": 196942,
       "sha256": "ce256520f849a987938012b2a3f9377aaf98bff2f50085be85e57c384cb2a302",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_plus_5pct_2myr/job_manifest.json",
@@ -2953,7 +2953,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/saturn_mass_plus_5pct_2myr/orbital_sample.csv.gz",
       "size": 13474,
       "sha256": "b8147632543b4bf8e292f00b16ee4e55504dd2fa5c13fb102c6b537292d8e8e7",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
@@ -2971,13 +2971,13 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/whfast_grpot_20kyr/diagnostics.csv.gz",
       "size": 6628,
       "sha256": "61cbed82afd9a8a0205c396b5c01fed7fe3efdf7faf0b3c80bac26d1195bfdec",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/whfast_grpot_20kyr/earth.csv.gz",
       "size": 20278,
       "sha256": "cd7d5c46192d4549bb7faed94085f8bb99aac9f1749e94dee27d3a4071414f71",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/whfast_grpot_20kyr/job_manifest.json",
@@ -2995,7 +2995,7 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/whfast_grpot_20kyr/orbital_sample.csv.gz",
       "size": 1520,
       "sha256": "0ab4f432cf99afb58df3be0aa1b853abc5fd6c8a65b36e5877071d9db1008820",
-      "storage": "git-lfs"
+      "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/scripts/verifier_paquet.py",
@@ -4104,7 +4104,7 @@
     {
       "path": "03_branche_vivant/benchmark_externe_card2019/resultats/benchmark_temporel.csv",
       "size": 270,
-      "sha256": "d0b86fc850911110fc36a8dbdf8fdaaf75fedff4e7eeafe65ddfc67524208ed5",
+      "sha256": "b1d2827874373be8e228492f45dd6fa11d6a9a11e1bf89b232ec737da9ebb3e2",
       "storage": "inline"
     },
     {
@@ -4116,7 +4116,7 @@
     {
       "path": "03_branche_vivant/benchmark_externe_card2019/resultats/predictions_hors_echantillon.csv",
       "size": 3858,
-      "sha256": "8bc9898c55fe566f9fda950905094d66c57af47240cdefc409d8ba099809bdd7",
+      "sha256": "5f75d7ed5f415b32fd38d86c80a57d202d99e71d62f2a1e56c5eec21f10963f1",
       "storage": "inline"
     },
     {
@@ -4499,8 +4499,8 @@
     },
     {
       "path": "build_manifest.py",
-      "size": 3894,
-      "sha256": "2a5d6a560aec72622a91ac472efecb6e55dca7a303c08b8eee4fb6961ea57163",
+      "size": 4143,
+      "sha256": "13f913d7c4400ece81f0d4816f4be21cb860f41d9dd67d9fae54170aa987f519",
       "storage": "inline"
     },
     {
@@ -4691,8 +4691,8 @@
     },
     {
       "path": "donnees_externes/.gitignore",
-      "size": 376,
-      "sha256": "ebbb3b9fca83fea1f33681261aa7373c73a4744f326707087e2b80036628a3f2",
+      "size": 423,
+      "sha256": "12a895e1c569cd27d6612f97d583c54a62ae05bc8e9f8a543863b8cb3037f1e0",
       "storage": "inline"
     },
     {
@@ -4741,162 +4741,6 @@
       "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json",
       "size": 8178,
       "sha256": "61a8a3cf27f98ca350d22ef30b89b83bceed551814a4b50352b9a67d65c2d70b",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/210210_MurchisonSteppedHeating_ICPMSData.csv",
-      "size": 4156,
-      "sha256": "b921603c112354b40d21336362d8363c87c9f8291f27d1b5f2274f40d0372633",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/AA_abundances.csv",
-      "size": 11088,
-      "sha256": "57091011dc2399fb3ef3ebd3224bd56ec22cb33667859b0909a4865de0c93110",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/AA_uncertainties.csv",
-      "size": 13992,
-      "sha256": "628539645e7329dcdf1ac352cefd5b7e2eb3ecfbf264c0ad4d8ba4f9755f36bf",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/CMIP6_NASST_historical-ssp585-ssp245.zip",
-      "size": 1844988,
-      "sha256": "d2c640c67f2d5ab1f26be5ef235d5978cbb49f91b210e2672dc67400bf6d7865",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Ca isotope data for analyzed lunar samples_Fu et al 2023.xlsx",
-      "size": 14841,
-      "sha256": "a433a4fcda76912672f198eb62a98551e8037ec89c7aeab3a53b5e54fefecea1",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig2.xlsx",
-      "size": 185219,
-      "sha256": "2d5763e11bbfa26f1b36bccdb567e82e39ce8d4d889e0e87e5f8cf1a79d313e7",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig4_FigS1_FigS2_DC_1.csv",
-      "size": 5825,
-      "sha256": "6040c58d3c19f069c2397f4a71b5de3da0ebb791ae3064e4baa8e407b3a2c583",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Dataset_Fig5_bulk_core.xlsx",
-      "size": 11176,
-      "sha256": "0dcde7aeea2e9ebcad2c2fe6aeec4742710c352656b08c4469b12303badb0f99",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/HMM_summarized_results.zip",
-      "size": 102842,
-      "sha256": "3461bbc8bfb84e278e139c8d7bf61d7290f734ba6d107edc06c9e2696bfad328",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/HadCRUT.5.1.0.0.analysis.ensemble_series.global.monthly.csv",
-      "size": 4910867,
-      "sha256": "adc4b4b1f9511bae0529c9ba94d6ddb680f06e1d8727162c89ee1976ec6829aa",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/KeySeries.zip",
-      "size": 39023007,
-      "sha256": "6eeeca3469c73dcf7e0b2c53f1305f3b3793ae0403d40c635a198a1d8dabf34c",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Measurement_data.csv",
-      "size": 11081,
-      "sha256": "91d40f825f50957f87781ab7a6a3ee1aa4e50d03f1b2f7eaa476d6c0b0dbcf63",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murch-100airZn-GAS.csv",
-      "size": 11673,
-      "sha256": "dc86242d600869dc8990ecc5d9cd044b0017d419b0c9a3fca41fd171c023756b",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murch-50airZn-GAS.csv",
-      "size": 11667,
-      "sha256": "7ec14e2814a8c6200547bfd1cd004947e856cf5c37b80527f31070a034ab9c4f",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Murchison-vacc-Zn-GAS.csv",
-      "size": 11667,
-      "sha256": "68b13ae0dc213560066ff30512380ae2abeb4c34929003a8058f59ab26613425",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/Rodriguez_Supplementary_TableS1.xlsx",
-      "size": 44987,
-      "sha256": "32a4c6f21595ef20bce1d7a472a05f957496c2e02da6978b8b81036944172eb4",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/SIMPLE_CCSNe_v3p1.hdf5",
-      "size": 100443546,
-      "sha256": "406950ed4203b778f249f4aa60817184d3dc5711a77ba93eafaffa24a36df16e",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/TableS3.xlsx",
-      "size": 621695,
-      "sha256": "f8923df25241f2d920ec7f41b962b8d5129920fd1a4a21c763406f6df2437c18",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/TableS4.xlsx",
-      "size": 110116,
-      "sha256": "05861bfb398608d8a3aacde1b56f158db815f097d3e2921c636b2f1f383a0b8b",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/aphid_PGN_count.csv",
-      "size": 727,
-      "sha256": "881e5fb137fef151c9c723c70480706ba784a2504afd85ece6bfe911cfccc232",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/globalmean.zip",
-      "size": 638263,
-      "sha256": "d9cb7c1141529c0a82c83f58dfd634d1d624daef316556e72866dcb7b61bf6d1",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/kida.uva.2024 (1).zip",
-      "size": 139550,
-      "sha256": "24ea30c02345f90adb59844c0e89a7d8696243465d5a884c70b4e6125c295194",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/original_ensembles.tar.gz",
-      "size": 42552626,
-      "sha256": "00095544ffef4f0765fd0c467eedf2a598bd302e2c9b555c5c7b8016e68317e3",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_dipole.specs",
-      "size": 36473,
-      "sha256": "b6b63797fb902574fafe5283778d80ac0e74ff78bc893bfc71e2b7628fe95edd",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_final.rates",
-      "size": 2694792,
-      "sha256": "2f83cdd0905e5dd50494f23bc5faf559a617d866b365cf9d1c5fef3621a1a219",
-      "storage": "inline"
-    },
-    {
-      "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/raw/rate22_revised_CtoO_0.44.specs",
-      "size": 17993,
-      "sha256": "e460bd58e6bcb40eefd67fb71d26b77399c0bee87dae53979a5ccd3eb8b4a3c1",
       "storage": "inline"
     },
     {
@@ -5322,7 +5166,7 @@
     {
       "path": "plan_directeur/campagne_priorites_v093/resultats/synthese_priorites_v093.json",
       "size": 20882,
-      "sha256": "d97bb0d665db8402c9fe3d20577294392b0b14fb022ff98c2c90580d6d1ff962",
+      "sha256": "ce1b1e3c6b3f10f817b5d2e3c5cd6aed70acb21af68db9cdf2485304b47e47b2",
       "storage": "inline"
     },
     {
@@ -7331,8 +7175,8 @@
     },
     {
       "path": "scripts/construire_archive_canonique.py",
-      "size": 3879,
-      "sha256": "114f524be241c46a8b381c720a204a02005238bd8ff55a2871d9d42ebfa11ff3",
+      "size": 4128,
+      "sha256": "82798ba47cbfeddbae79f03a67d544ec17310b796767a9fc08d1d20f604043e4",
       "storage": "inline"
     },
     {
@@ -7427,8 +7271,8 @@
     },
     {
       "path": "verifier_dossier.py",
-      "size": 10617,
-      "sha256": "d39c3aa7e92b9c0005da7080eedfa82ae55a1cf0afb6ca2b87abb8584c50f145",
+      "size": 10822,
+      "sha256": "ed79136caab430665975520b48260f5cbabe29a333f615abe281535cf1f1362e",
       "storage": "inline"
     }
   ]

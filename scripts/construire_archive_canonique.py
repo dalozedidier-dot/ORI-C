@@ -23,6 +23,7 @@ EXCLUDED_PARTS = {
     ".mplconfig", ".claude", "node_modules", "dist",
 }
 FIXED_DATE = (2026, 8, 4, 0, 0, 0)
+EXCLUDED_PATH_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
 
 
 def is_lfs_pointer(path: Path) -> bool:
@@ -40,6 +41,10 @@ def files() -> list[Path]:
             path for path in ROOT.rglob("*")
             if path.is_file()
             and not any(part in EXCLUDED_PARTS for part in path.relative_to(ROOT).parts)
+            and not any(
+                path.relative_to(ROOT).as_posix().startswith(prefix)
+                for prefix in EXCLUDED_PATH_PREFIXES
+            )
         ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
     )
