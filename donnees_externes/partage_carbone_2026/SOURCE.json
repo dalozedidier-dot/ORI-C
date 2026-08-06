@@ -1,0 +1,9 @@
+{
+  "dataset": "Partitionnement du carbone métal-silicate",
+  "filename": "Dataset_Fig4_FigS1_FigS2_DC_1.csv",
+  "source_url": "https://zenodo.org/records/17357322/files/Dataset_Fig4_FigS1_FigS2_DC_1.csv?download=1",
+  "bytes": 5825,
+  "sha256": "6040c58d3c19f069c2397f4a71b5de3da0ebb791ae3064e4baa8e407b3a2c583",
+  "role": "Source brute minimale conservée pour reconstruire les 32 expériences de partage du carbone ajoutées à partition_experiments.csv.",
+  "rule": "Aucune valeur absente n’est imputée. Le fichier est conservé sous son nom original."
+}
