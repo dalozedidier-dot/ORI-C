@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -49,11 +49,12 @@ jobs:
           )
           PY
       - name: Préparer le site statique
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
   deploy:
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -63,3 +64,5 @@ jobs:
       - name: Publier le site
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 900000

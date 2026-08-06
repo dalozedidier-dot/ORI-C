@@ -41,14 +41,14 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 6508,
-      "sha256": "4f68fd88283857469f3970feb8b74fefa463f5ec5af5bc2c46558779e5379d21",
+      "size": 6567,
+      "sha256": "7455a15e62e2323c044d10cd10b8ec55b8318543666017bf9f64236e8f1b2d97",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 1631,
-      "sha256": "cb945aa7d3e3264bdc754d89b5f5bf521bf3f629c2eaeae8125e56c6ddfe5385",
+      "size": 1696,
+      "sha256": "a8094ed044b9cc8e0bc25386d740c953b0d7ff7feecb1705142ad2d60b4aa0b2",
       "storage": "inline"
     },
     {
@@ -4253,8 +4253,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 18215,
-      "sha256": "15ff8acef4f9b9040b03fef9ae6dc7e70ecdcee58940efd210f88c22b07fd893",
+      "size": 18428,
+      "sha256": "4d88cdeb03ebdb8380f572f09bf28f1906fb416c4b679f86dec54c7fd7c77434",
       "storage": "inline"
     },
     {
@@ -4331,8 +4331,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 2297,
-      "sha256": "1544ca6ca646514ca5351c26f37fb49d3300067c8d6a3dd652c2d49b94594cd2",
+      "size": 3568,
+      "sha256": "d3f2e1b54f901b5b5a3c7a9b081a00a1f55cce4b5501fc14489de8a45ce35a0f",
       "storage": "inline"
     },
     {
@@ -4409,8 +4409,8 @@
     },
     {
       "path": "README.md",
-      "size": 15513,
-      "sha256": "3d91f8c131706a4ef6ccd41b202940ef4f417d530d9e467e2d39e435df788b36",
+      "size": 15650,
+      "sha256": "347199755ecde507cdfd28ea917d6a28a576696bc53d4354ac0e65ace2b50da1",
       "storage": "inline"
     },
     {
@@ -4861,6 +4861,48 @@
       "path": "etat_des_tests.py",
       "size": 25570,
       "sha256": "4a70d440908ac0fa1c8b279de00e3f0dcb9516ca54a04e68bc22f56d1727378b",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/README.md",
+      "size": 4105,
+      "sha256": "1786c6a7c3aa1191f64b652e16b6c52d11f9bad2e713e7900d691e4a1249b888",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/__init__.py",
+      "size": 357,
+      "sha256": "6984dfb724ebfe1b333b71c76c3a890ce349d09e37e248f55fdba138c3eecb95",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/examples/grouped_demo_adapter.py",
+      "size": 4183,
+      "sha256": "6cf2dcb90d3e6b39f35861b34d0051fe393f0957fccf3a5456a341ced8e95048",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/exemple_power_plan.json",
+      "size": 1369,
+      "sha256": "99474fa254321dbc94eb8f6875ea726a131fc81ce6be92c2223e30b480c1f798",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/power_monte_carlo.py",
+      "size": 19863,
+      "sha256": "c0dc88fe19a81755ec322a905f3ddc4120d903fb1db01f291e00ff0fc3b1f094",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/schema_power_plan.json",
+      "size": 3026,
+      "sha256": "fe844894838095e3fce59bb4675359c2cb2a15b391da8712eb2196361e07b627",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/tests/test_power_monte_carlo.py",
+      "size": 2046,
+      "sha256": "4fd0ef266b2d8d4ad4d5c9302245f7467f8565f8b9a5020610e3f78d8ad93235",
       "storage": "inline"
     },
     {
@@ -7199,8 +7241,8 @@
     },
     {
       "path": "scripts/valider_tout.py",
-      "size": 1174,
-      "sha256": "48bbd9bed62ee35c70c21af84c9e5911993cfa7fbf80e0f3292fb99e4537e7b2",
+      "size": 1263,
+      "sha256": "056bb51a08d660118b6f11fa1b62467d7d70c7dd411c786d2dad7bff49b77d79",
       "storage": "inline"
     },
     {
@@ -7271,8 +7313,8 @@
     },
     {
       "path": "verifier_dossier.py",
-      "size": 10822,
-      "sha256": "ed79136caab430665975520b48260f5cbabe29a333f615abe281535cf1f1362e",
+      "size": 10966,
+      "sha256": "c635e061ffdfb2f3d5b41a63a1d68e863b1d9506eedab3070b2fe1cf79f133a7",
       "storage": "inline"
     }
   ]

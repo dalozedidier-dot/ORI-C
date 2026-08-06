@@ -61,6 +61,7 @@ Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_20
 | `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
 | `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
 | `plan_directeur/` | plan de campagne, registre des 35 hypothèses, avancement | transversal |
+| `methodologie_puissance/` | plans de puissance a priori, simulation du pipeline complet et sorties JSON reproductibles | transversal |
 | `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
 
 ## Par où commencer

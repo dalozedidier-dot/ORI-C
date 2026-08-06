@@ -171,6 +171,7 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Grille de l'Étape 2 | `plan_directeur/GRILLE_ETAPE_2.md` | généré ; audit, ne fixe aucun statut |
 | Audit transversal | `plan_directeur/AUDIT_TRANSVERSAL.md` | généré, prime ; **exploratoire** |
 | Contrôles d’intégrité | `CONTROLES_INTEGRITE.md` | décrit les contrôles de structure et de livraison |
+| Puissance a priori | `methodologie_puissance/README.md`, le `POWER_PLAN.json` du protocole et sa sortie JSON | le plan gelé prime pour le SESOI, l’unité indépendante, les témoins et la règle de succès |
 | Campagne réelle consolidée | `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md` | prime pour les compteurs et l’interprétation de la réexécution finale |
 | Campagne de recherche suivante | `MISE_A_JOUR_RECHERCHE.md` et `plan_directeur/campagne_recherche_suivante/resultats/` | prime pour H011, Pacc, vésicules, D’Onofrio et spéléothèmes |
 | Campagne réelle corrigée | `plateforme/campagne_maximale_reelle/BILAN_CORRIGE.md` | autorité sur la correction La2004, le retrait du gabarit synthétique et la comparaison N-corps/La2004 ; ses compteurs précèdent les extensions exoplanètes, antibiotiques et ARN |

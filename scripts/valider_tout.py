@@ -20,6 +20,7 @@ def main(argv=None)->int:
     if not a.strict_lfs: verifier.append('--allow-lfs-pointers')
     run(*verifier)
     run(sys.executable,'-m','compileall','-q','.')
+    run(sys.executable,'methodologie_puissance/power_monte_carlo.py','validate-all','.')
     run(sys.executable,'scripts/valider_publication_stable.py')
     print('Contrôles rapides réussis. Les suites scientifiques sont séparées dans la CI.')
     return 0

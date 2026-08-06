@@ -1,0 +1,39 @@
+{
+  "protocol_id": "EXEMPLE-GROUPE-TEMPOREL",
+  "analysis_frozen_before_data": true,
+  "independent_unit": "groupe_experimental",
+  "primary_metric": "MAE",
+  "effect": {
+    "type": "relative_improvement",
+    "sesoi": 0.05,
+    "baseline": 0.8,
+    "justification": "Exemple pédagogique uniquement. Le SESOI réel doit être justifié par le protocole scientifique avant acquisition."
+  },
+  "alpha": 0.05,
+  "target_power": 0.9,
+  "available_n": 24,
+  "sample_size_grid": [12, 16, 20, 24, 32, 40],
+  "effect_grid": [0.02, 0.03, 0.04, 0.05, 0.075, 0.1],
+  "noise_estimation": {
+    "source": "jeu historique tenu hors du test futur",
+    "description": "La distribution du bruit doit être estimée au niveau des groupes indépendants et non à partir des folds.",
+    "value": 0.11
+  },
+  "test_definition": "Validation leave-one-group-out et tests de permutation appariés au niveau des groupes indépendants.",
+  "controls": [
+    "state_only",
+    "same_complexity_shuffled_history"
+  ],
+  "success_rule": [
+    "history_beats_state",
+    "history_beats_shuffled_history"
+  ],
+  "simulation_model": "grouped_temporal_full_pipeline_demo",
+  "adapter": {
+    "path": "methodologie_puissance/examples/grouped_demo_adapter.py",
+    "function": "simulate_and_evaluate"
+  },
+  "preliminary_simulations": 1000,
+  "confirmation_simulations": 10000,
+  "seed": 20260806
+}
