@@ -6,7 +6,7 @@ GISTEMP v4 est une reconstruction observationnelle de l’anomalie de températu
 
 Le jeu NASA Exoplanet Archive sert à une analyse démographique des solutions publiées `default_flag=1`. Il ne justifie aucune inférence automatique sur l’habitabilité, la composition interne ou la causalité.
 
-Les données Windels documentent des cycles réels d’exposition à l’amikacine et des mesures associées. Les données Papastavrou, Horning et Joyce documentent des fréquences de séquences d’ARN catalytique sur plusieurs cycles. Elles permettent des analyses descriptives et structurelles, sans reconstruire une généalogie absente des dépôts ni inférer une autonomie protocellulaire.
+Les données biologiques sont séparées par protocole. Windels documente des cycles d’exposition à l’amikacine. D’Onofrio fournit 288 mesures permettant de comparer état seul, état + histoire et histoire permutée de même complexité. Les douze classeurs de vésicules contiennent des cartes donneur-receveur et produisent 11 760 couples parent-descendant. Papastavrou, Horning et Joyce documentent des fréquences de séquences d’ARN catalytique sur plusieurs cycles, sans généalogie de compartiments. Aucun verdict obtenu sur l’un de ces jeux ne doit être étendu aux autres.
 
 La couche astronomique conserve l’intégration N-corps et ses validations séparées. La série orbitale réelle utilisée par la campagne est La2004 à 51 001 pas avec excentricité, obliquité et précession. La référence La2010 est conservée séparément et tronquée à son horizon de fiabilité déclaré.
 
@@ -39,12 +39,7 @@ erreurs dues aux simplifications physiques du modèle. Les bandes de 405 ka et
 part dite inexpliquée de la bande de 100 ka est un diagnostic descriptif de
 puissance relative, pas une fraction causale du climat.
 
-Dans la branche vivant, les validations croisées sur l'amikacine restent
-exploratoires. Elles ne disposent ni d'un antibiotique indépendant, ni de
-séquences d'exposition manipulées, ni d'un jeu final externe. Les fréquences
-d'ARN catalytique décrivent une dynamique de composition de séquences suivies.
-Elles ne contiennent aucune généalogie de compartiments et ne testent ni
-transmission, ni autonomie, ni hérédité prébiotique.
+Dans la branche vivant, la campagne maximale historique sur l’amikacine reste non concluante dans son protocole propre. Elle ne résume plus l’état courant de la branche. La campagne suivante ajoute un jeu antibiotique externe D’Onofrio où l’histoire bat l’état seul et un témoin d’histoire permutée, ainsi que des lignées de vésicules où les quatre composantes préenregistrées sont soutenues. Les fréquences ARN restent un troisième protocole distinct consacré à la dynamique de composition.
 
 Les 21 tests de régression de cette campagne vérifient que les scripts
 reproduisent les résultats publiés et conservent les limites annoncées. Ils ne
@@ -59,10 +54,12 @@ Le noyau stable obtenu est conditionnel aux conventions de stress publiées. Il 
 
 La campagne de recherche suivante ajoute des tests ciblés, sans étendre automatiquement les conclusions existantes.
 
-- le seuil de `H011` est soutenu dans les simulations publiées, sans intervention naturelle ;
-- le cycle des interfaces reste non fermé dans une trajectoire unique ;
-- `Pacc` est mesuré uniquement dans le domaine des six interventions astronomiques calculées ;
-- `WP-C2b` est un protocole gelé, pas un résultat ;
-- les deux bancs vivants et l'audit de spéléothèmes dépendent de données externes téléchargées à l'exécution.
+- le seuil de `H011` est soutenu dans les simulations publiées ;
+- le cycle des interfaces reste ancré mais non fermé dans une trajectoire unique ;
+- `Pacc` est mesuré dans le domaine des six interventions astronomiques calculées ;
+- `WP-C2b` est un protocole gelé avec points non saturés et graines réservées ;
+- le jeu D’Onofrio soutient l’histoire contre l’état seul et l’histoire permutée ;
+- les vésicules soutiennent les quatre composantes préenregistrées sur 11 760 couples parent-descendant ;
+- l’audit des spéléothèmes est exécuté sur 27 721 couples âge-isotope.
 
-Aucun statut d'attente ou d'erreur technique ne compte comme confirmation scientifique.
+Les données nécessaires à ces tests sont intégrées et les analyses s’exécutent hors ligne dans le dépôt.

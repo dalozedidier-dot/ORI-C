@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/release.yml",
-      "size": 5029,
-      "sha256": "e4884d3e8715f7cf53e186f456ffc307d1e35caf38ba414f72fc3579e6455b5b",
+      "size": 5101,
+      "sha256": "5db562bb99434a3ea2825c5ebd3df36c98b416329149f86eef8b9fe4eb6ce729",
       "storage": "inline"
     },
     {
@@ -972,7 +972,7 @@
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
       "size": 4506,
-      "sha256": "3ed3d9130c71f4a07624df9df1c621991cceae6cf7736851a136883617548b91",
+      "sha256": "ba68dc6f780e509ce8dafddd0387bdfc1af1fcfe4bf9602c9dade2b584ddc9c0",
       "storage": "inline"
     },
     {
@@ -4025,26 +4025,26 @@
     },
     {
       "path": "02_branche_systeme_solaire/transfert_climatique_intermediaire/resultats/benchmark_hors_echantillon.csv",
-      "size": 520,
-      "sha256": "86913d925e638f0d10e84e354fb0e5ebef43ae0819bdad87b9dcac49f1357ec5",
+      "size": 521,
+      "sha256": "3bc0528b94ee21d1f30c5af9e18c3cc4121924098729e2e6dd6c29a567db096b",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/transfert_climatique_intermediaire/resultats/predictions_hors_echantillon.csv",
-      "size": 318334,
-      "sha256": "893fc43dd5272335f0601fe6d9389551337d9837603ffff49a4719e700d901c1",
+      "size": 318193,
+      "sha256": "43e77a2745c3949695cf1cae57a9df8d8c79ce3f94be7e2e2004edd59710dba2",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/transfert_climatique_intermediaire/resultats/validation_temporelle_roulante.csv",
-      "size": 1525,
-      "sha256": "bddbf2ce414eb5e03cc9a6ebc5b23678a1ee0f05406acce7e39998adb8a0f589",
+      "size": 1527,
+      "sha256": "d53ce07e31fd92d83ccd1e434e999d5087e06892c9b78081716c0d5fcbc79d61",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/transfert_climatique_intermediaire/resultats/verdict_transfert.json",
-      "size": 1529,
-      "sha256": "bf85a63f7e4598298c971b77a47c1bc1309d9d5c88b3a01a91e9ef44d75eba38",
+      "size": 1531,
+      "sha256": "70cf58b8a6a10cb9f54f34e300d6a545f5874fedac3b1f952411e8d1a58aea95",
       "storage": "inline"
     },
     {
@@ -4253,14 +4253,14 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 16650,
-      "sha256": "3278f581d938e54e41ecd2f0ac900b85332f1176502b56833386ab2f39078346",
+      "size": 18215,
+      "sha256": "15ff8acef4f9b9040b03fef9ae6dc7e70ecdcee58940efd210f88c22b07fd893",
       "storage": "inline"
     },
     {
       "path": "AVANCEES_ET_DECOUVERTES_2026-08-06.md",
-      "size": 8118,
-      "sha256": "962caaf0b36e11cca5a06878fefca85f9101a20b051f7a0be91111ed7962ddd3",
+      "size": 5391,
+      "sha256": "d63d9f51892f38c2f94adc4686bda83215af8f0b14e9d6f6a237abd5e72706b1",
       "storage": "inline"
     },
     {
@@ -4313,8 +4313,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 32400,
-      "sha256": "e92a283a89cfd30c9607c96a02430eb50581623823fc84dc2d67b2e4f6614f5c",
+      "size": 33726,
+      "sha256": "0201a0681ae755b3884ce4c36e3e6c031bfb44e3816691e23565b0cfc4859ce3",
       "storage": "inline"
     },
     {
@@ -4331,8 +4331,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 1324,
-      "sha256": "3f8617d53315d929304f97b46bb522dcec03ed0612886ef6c3f32b1ddc0be083",
+      "size": 2297,
+      "sha256": "1544ca6ca646514ca5351c26f37fb49d3300067c8d6a3dd652c2d49b94594cd2",
       "storage": "inline"
     },
     {
@@ -4379,8 +4379,8 @@
     },
     {
       "path": "MISE_A_JOUR_RECHERCHE.md",
-      "size": 3359,
-      "sha256": "0588685373e6626f4f66abb719be9778280b59f0c4dbc78b06fdf8d58f4de328",
+      "size": 3407,
+      "sha256": "4810eb52058776dcf2747dc12fe1b1f8de82ce43dbc6b19e5f17e701abf70c44",
       "storage": "inline"
     },
     {
@@ -4409,8 +4409,8 @@
     },
     {
       "path": "README.md",
-      "size": 15344,
-      "sha256": "36785b1426efffa58a570f5a7128f280e25f5308cfb3ecf7708e93e676655373",
+      "size": 15513,
+      "sha256": "3d91f8c131706a4ef6ccd41b202940ef4f417d530d9e467e2d39e435df788b36",
       "storage": "inline"
     },
     {
@@ -4433,8 +4433,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 5640,
-      "sha256": "58f21d9a98148de2e099cd9214e58cc34f408f81cda1f82d7dd68b08cce85c1f",
+      "size": 6106,
+      "sha256": "ecc803c7b00af8f4afebbe2b4d1eaefedd5b6be1f91378b6332a50ca765f132c",
       "storage": "inline"
     },
     {
@@ -4955,8 +4955,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json",
-      "size": 3376,
-      "sha256": "7a05b07f640ad86794b4f496915c7cd7a215fedcc476dee321ecb8d05e22ce5a",
+      "size": 3375,
+      "sha256": "049712a3c38de1c45553a53581087290015c53b6f64c8ec189e78aa0fa26e892",
       "storage": "inline"
     },
     {
@@ -4967,8 +4967,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
-      "size": 22719,
-      "sha256": "40b5ab062343561e5125d3c6996654631fd687a0e15bd82870101251fa9c833c",
+      "size": 22716,
+      "sha256": "f618615f72e10eb0797e061ce7625b621607dd0a5a9317d8e9c844536a50486b",
       "storage": "inline"
     },
     {
@@ -5165,8 +5165,8 @@
     },
     {
       "path": "plan_directeur/campagne_priorites_v093/resultats/synthese_priorites_v093.json",
-      "size": 20882,
-      "sha256": "d97bb0d665db8402c9fe3d20577294392b0b14fb022ff98c2c90580d6d1ff962",
+      "size": 20884,
+      "sha256": "14608adf4c3bcb05646b4a2cd09fbfd03638f842dc74bcac11b7a9925f91d0c2",
       "storage": "inline"
     },
     {
@@ -7187,8 +7187,8 @@
     },
     {
       "path": "scripts/valider_publication_stable.py",
-      "size": 1466,
-      "sha256": "4c8a73b41e8aa26d911debdc4cbffe4048eb63ee838289a298f25161ca45ec26",
+      "size": 2203,
+      "sha256": "d26c1aea2bda2535cfc6b5db6383b4b2d002cb07b2b10a531719b19e01735f15",
       "storage": "inline"
     },
     {
@@ -7247,8 +7247,8 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 28324,
-      "sha256": "ebd4ad3df18ed6798cb1f3bc5eac21ad5c3920c1d8d59076b8edbd484354c7ce",
+      "size": 28833,
+      "sha256": "7513f6444f946bd71d167639e455fe6204ad36029a7e2308d54f0d40b1865873",
       "storage": "inline"
     },
     {

@@ -34,13 +34,13 @@ Dans GitHub Actions, lancer `Recherche suivante ORI-C` avec les valeurs par déf
 
 ## Validation de la mise à jour
 
-- 28 tests ciblés réussis.
+- 32 tests ciblés réussis.
 - 0 erreur d'exécution dans `run_all.py`.
 - 0 bloc en attente de données externes.
 - workflow YAML valide.
-- 1 161 fichiers inscrits dans le manifeste.
+- 1 212 fichiers inscrits dans le manifeste nettoyé.
 - 0 fichier modifié, absent ou non listé.
-- 69 objets Git LFS restent sous forme de pointeurs dans l'archive source, comme dans la version fournie.
+- 0 objet Git LFS non hydraté dans l’archive canonique ; les pointeurs restent possibles uniquement dans le ZIP source automatique de GitHub.
 
 
 ## Maintenance de l'acquisition, 5 août 2026

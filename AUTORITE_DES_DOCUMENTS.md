@@ -25,6 +25,17 @@ ci-dessous.
 3. Un **article** prime sur ses variantes et versions antérieures.
 4. En dernier ressort, `ETAT_DES_PREUVES.md` fixe le statut de chaque couche.
 
+## Règles de lecture et de mise à jour
+
+1. Un résultat négatif reste limité au protocole qui l’a produit. Il ne peut pas être étendu à une branche entière ni au programme.
+2. Les jeux Windels, Card 2019, D’Onofrio, Papastavrou et vésicules sont distincts. Aucun rapport ne peut utiliser le résultat de l’un pour qualifier les autres.
+3. `MISE_A_JOUR_RECHERCHE.md` et les fichiers machine de `campagne_recherche_suivante/` priment sur les synthèses antérieures lorsqu’ils décrivent D’Onofrio, les vésicules, H011, `Pacc` ou les spéléothèmes.
+4. Une campagne historique reste autorité sur son propre calcul, mais pas sur l’état courant global du dépôt.
+5. Toute mise à jour part de la dernière archive ou du dernier commit validé. Les tests susceptibles de régénérer des résultats sont exécutés avant la construction des manifestes.
+6. `MANIFEST.sha256` et `MANIFEST.sha256.json` sont toujours reconstruits en dernier, puis contrôlés avec `build_manifest.py verify` et `verifier_dossier.py`.
+7. Une livraison de correction contient uniquement les fichiers modifiés et les suppressions explicitement demandées. Les données tierces brutes exclues ne doivent jamais être réintroduites.
+8. Le contrôle de publication doit refuser les formulations périmées qui décrivent les vésicules ou D’Onofrio comme encore en attente.
+
 ## Socle
 
 | Rôle | Fichier | Statut |
@@ -161,6 +172,7 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Audit transversal | `plan_directeur/AUDIT_TRANSVERSAL.md` | généré, prime ; **exploratoire** |
 | Contrôles d’intégrité | `CONTROLES_INTEGRITE.md` | décrit les contrôles de structure et de livraison |
 | Campagne réelle consolidée | `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md` | prime pour les compteurs et l’interprétation de la réexécution finale |
+| Campagne de recherche suivante | `MISE_A_JOUR_RECHERCHE.md` et `plan_directeur/campagne_recherche_suivante/resultats/` | prime pour H011, Pacc, vésicules, D’Onofrio et spéléothèmes |
 | Campagne réelle corrigée | `plateforme/campagne_maximale_reelle/BILAN_CORRIGE.md` | autorité sur la correction La2004, le retrait du gabarit synthétique et la comparaison N-corps/La2004 ; ses compteurs précèdent les extensions exoplanètes, antibiotiques et ARN |
 | Information des six dimensions | `01_branche_matiere/base_transitions/information_dimensions.json` | généré, prime sur `qualite_dimensions.json` |
 | Campagne plateforme | `plan_directeur/campagne_plateforme/README.md` | généré ; **ne fixe aucun statut** |

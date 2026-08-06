@@ -37,17 +37,21 @@ séparés.
 ```
 
 
-## Résultats de la campagne maximale du 5 août 2026
+## Résultats établis dans l’état courant du dépôt
 
-La campagne maximale ne valide pas ORI-C comme théorie générale. Elle établit néanmoins un résultat central dans le modèle astronomique réduit : **modifier l’architecture du système modifie causalement les trajectoires futures**, avec des effets interventionnels au moins 4 964 fois supérieurs aux écarts numériques sélectionnés. La couche astronomique réussit 13 critères préenregistrés sur 15.
+ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.
 
-La campagne clarifie aussi une distinction décisive : une dépendance au chemin peut n’être qu’un retard de relaxation. Dans le test exoplanétaire, les écarts initiaux disparaissent après un palier commun suffisamment long. Une mémoire durable exige donc un effet qui persiste après relaxation sous le même forçage, généralement dans un domaine possédant plusieurs attracteurs accessibles.
+Le dépôt contient aussi deux résultats positifs sur données biologiques réelles. Dans le jeu D’Onofrio, l’histoire améliore la prédiction de la résistance antibiotique : la RMSE passe de 1,1309 pour l’état seul à 0,8042 avec l’histoire, et le modèle historique bat également le témoin d’histoire permutée de même complexité, avec p = 0,00498. Dans les expériences de vésicules, 11 760 couples parent-descendant sont analysés et les quatre composantes préenregistrées sont soutenues : réponse à la sélection, contraste d’ablation, signal de filiation supérieur au témoin permuté et codage complet des lignées.
 
-Les autres branches resserrent les limites du cadre. La fermeture stricte de la matière atteint 46 nœuds sur 53 et localise un noyau cyclique de quatre nœuds. La mémoire paléoclimatique actuelle échoue face à un témoin de même complexité. Le vivant montre un petit signal exploratoire, sans avantage robuste de l’histoire dans les tests les plus exigeants.
+La branche matière mesure une structure cumulative de 53 nœuds, une fermeture stricte de 46 nœuds, 34 hyperarêtes critiques pour cette fermeture et 40 relations ayant un effet mesurable sur au moins une métrique. Le test H011 établit en simulation un seuil critique qui augmente avec la turbulence, avec un rapport extrême de 3,33.
 
-Après correction du registre de portée et de la reconstruction des expériences de partage, la campagne stricte des 683 entrées produit **298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Les verdicts confirmatoires restent à 0 soutien, 0 rejet, 635 indéterminés et 48 non applicables.
+La couche mémoire distingue désormais une dépendance au chemin d’une mémoire persistante : sous un même forçage final prolongé, les écarts exoplanétaires se relaxent avec un temps caractéristique de 7,02 Ma. Une différence historique qui disparaît ainsi correspond à un retard de relaxation, pas à une inscription durable.
 
-Le résumé détaillé, avec les résultats positifs, négatifs et les découvertes méthodologiques, se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
+Les résultats négatifs restent attachés à leurs protocoles précis. L’échec de M2 concerne cette formulation paléoclimatique. Le résultat non concluant sur l’amikacine, le résultat négatif Card 2019 et l’absence de filiation dans les seules données ARN ne décrivent ni toute la branche vivant ni les résultats D’Onofrio et vésicules obtenus ensuite.
+
+La campagne stricte des 683 entrées produit **298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Ce compteur décrit la plateforme d’intégration et ne remplace pas les verdicts ciblés obtenus dans les campagnes de branche.
+
+Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
 
 ## Contenu
 
@@ -76,27 +80,11 @@ Le résumé détaillé, avec les résultats positifs, négatifs et les découver
 
 ## Ce que le dossier établit, en une phrase par branche
 
-**Branche 1, matière.** Une chronologie descriptive en huit régimes, un
-inventaire de 40 transitions et une grille d'analyse. L'hypergraphe de 53
-nœuds possède une projection connectée, mais sa fermeture stricte n'atteint
-que 46 nœuds sur 53. Un noyau cyclique de quatre nœuds bloque trois nœuds
-supplémentaires. Le calibrage v0.9.4 distingue 31 nœuds stables, 15 nœuds sensibles aux six relations les moins documentées et 7 nœuds bloqués par le verrou canonique. Quarante hyperarêtes produisent une perte mesurable lors d’une ablation de projection ou de fermeture stricte. Le contrôle métal-silicate est robuste pour le
-carbone, fragile pour l'azote, non évaluable en retrait unitaire pour
-l'hydrogène et durablement en désaccord pour le soufre. L'échelle des dix
-capacités porte 0,595 bit net de permutation, tandis que sa monotonie est
-réfutée.
+**Branche 1, matière.** L’hypergraphe relie 53 nœuds, en atteint 46 en fermeture stricte et localise un noyau cyclique précis. Trente-quatre hyperarêtes sont critiques pour la fermeture, quarante modifient au moins une métrique et l’échelle des capacités porte 0,595 bit d’information nette. H011 fournit un seuil quantitatif dont le rapport extrême vaut 3,33 sous variation de la turbulence.
 
-**Branche 2, Système solaire.** La couche dynamique réduite réussit 13 critères
-préenregistrés sur 15. Les effets des interventions restent au minimum 4 964 fois plus
-grands que les écarts numériques sélectionnés. La couche paléoclimatique reste
-négative face au témoin apparié et le verrou est localisé dans la bande de 100
-ka, sans mécanisme identifié.
+**Branche 2, Système solaire.** La couche dynamique réduite réussit 13 critères préenregistrés sur 15. Les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés. Le test de relaxation à 600 Ma distingue une dépendance temporaire au chemin d’une mémoire persistante, avec un temps caractéristique de 7,02 Ma.
 
-**Branche 3, vivant.** La grille reste une preuve de concept. Sur l'amikacine,
-un léger gain historique apparaît en validation groupée, mais il disparaît à
-l'ablation de la pente et s'inverse sur la dernière transition. Les données ARN
-montrent une dynamique de composition, pas une hérédité. Universalité,
-supériorité explicative et pouvoir prédictif restent non établis.
+**Branche 3, vivant.** Deux résultats positifs sont distingués des anciens tests. Le jeu D’Onofrio montre un gain prédictif de l’histoire contre l’état seul et contre une histoire permutée de même complexité, avec p = 0,00498. Les vésicules fournissent 11 760 couples parent-descendant et soutiennent les quatre composantes préenregistrées de sélection, filiation et ablation. Le benchmark intégré sur l’amikacine, le jeu Card 2019 et les trajectoires ARN restent des protocoles séparés et ne peuvent pas être généralisés à toute la branche.
 
 
 ## Nouveaux travaux v0.9.3
@@ -198,33 +186,20 @@ Cette archive constitue un dossier scientifique unique. Le socle, les trois bran
 - `audit/coherence_et_extensions/` : anomalies, architectures manquantes et liens causaux candidats.
 - `TRI_ET_CORRECTIONS.md` : corrections appliquées lors de la reconstruction.
 
-## Recherche active suivante
+## Recherche suivante exécutée
 
-Le dossier contient maintenant une campagne consacrée aux verrous qui ne peuvent plus être franchis par de simples variantes sur les mêmes données.
+La campagne `plan_directeur/campagne_recherche_suivante/` est intégrée et reproductible hors ligne. Elle produit notamment :
 
-```text
-plan_directeur/campagne_recherche_suivante/
-```
+- le seuil H011, monotone avec la turbulence dans les simulations publiées ;
+- une mesure interventionnelle de `Pacc` sur six interventions astronomiques ;
+- 11 760 couples parent-descendant dans les lignées de vésicules, avec quatre composantes préenregistrées soutenues ;
+- un gain prédictif de l’histoire dans le jeu antibiotique D’Onofrio contre l’état seul et l’histoire permutée ;
+- un audit de 27 721 couples âge-isotope dans les spéléothèmes NOAA ;
+- le protocole `WP-C2b` gelé avec points non saturés et graines réservées.
 
-Elle ajoute :
-
-- un test à seuil de `H011` sous intervention sur la turbulence ;
-- un audit de fermeture empirique du cycle `H030-H031-H052-H053` ;
-- une mesure interventionnelle de `Pacc` dans la couche astronomique ;
-- le protocole gelé `WP-C2b`, réparé par calibration selon le régime ;
-- une acquisition automatisée de données externes pour des lignées de vésicules, un benchmark antibiotique et un audit de spéléothèmes ;
-- des témoins de complexité égale, des permutations de l'histoire et des tests de filiation parent-descendant.
-
-Exécution sans données tierces :
+Exécution complète :
 
 ```bash
 python plan_directeur/campagne_recherche_suivante/run_all.py
 python scripts/valider_recherche_suivante.py
-```
-
-Exécution complète avec acquisition des sources :
-
-```bash
-python plan_directeur/campagne_recherche_suivante/fetch_external_data.py
-python plan_directeur/campagne_recherche_suivante/run_all.py
 ```

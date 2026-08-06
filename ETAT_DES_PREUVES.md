@@ -15,6 +15,23 @@ ensemble. Il compare des **statuts**, jamais des résultats.
 | **Non testé** | aucune procédure exécutée |
 | **Réfuté** | test exécuté, critère préenregistré non atteint |
 
+
+## Règle de lecture
+
+Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient pas un échec de la branche Système solaire. Un résultat sur l’amikacine ou Card 2019 ne résume pas la branche vivant. L’absence de filiation dans les données ARN ne s’applique pas aux expériences de vésicules, qui contiennent des cartes parent-descendant réelles. Les synthèses courantes doivent présenter les résultats D’Onofrio, vésicules, H011 et `Pacc` avant les états historiques qu’ils ont dépassés.
+
+## Résultats positifs actuels
+
+| Résultat | Mesure principale | Statut |
+|---|---|---|
+| Causalité architecturale astronomique | effet interventionnel minimal 4 964 fois supérieur aux écarts numériques sélectionnés ; 13/15 critères | **Validé dans le modèle réduit** |
+| Persistance dans le chémostat | relation démontrée symboliquement ; 11/11 sections réussies | **Établi dans le modèle** |
+| Histoire antibiotique D’Onofrio | RMSE 1,1309 → 0,8042 ; témoin permuté 1,1415 ; p = 0,00498 | **Soutenu contre les deux témoins** |
+| Lignées de vésicules | 11 760 couples ; quatre composantes préenregistrées soutenues ; permutation p = 0,00050 | **Soutenu dans le protocole préenregistré** |
+| Seuil H011 | seuil monotone avec la turbulence ; rapport extrême 3,33 | **Soutenu dans les simulations publiées** |
+| Organisation de l’hypergraphe matériel | 46/53 en fermeture stricte ; 34 relations critiques ; 0,595 bit, p = 0,00005 | **Structure et information mesurées** |
+| Distinction relaxation/mémoire | convergence sous forçage final commun ; temps caractéristique 7,02 Ma | **Critère opératoire établi dans le modèle** |
+
 ## Socle
 
 | Élément | Statut | Où |
@@ -52,7 +69,7 @@ mathématiques possibles, ni une validation empirique dans le vivant.
 | Chronologie en huit régimes | Fortement appuyé à Établi selon les régimes | s'appuie sur la littérature, pas sur un calcul propre |
 | Inventaire des 40 transitions | Établi à Hypothétique selon l'entrée | chaque entrée porte son propre niveau |
 | Voies prébiotiques | Plausible | mécanismes candidats, non séquence historique démontrée |
-| Apport spécifique d'ORI-C | **Non testé** | la branche fournit un langage, pas une démonstration |
+| Apport spécifique dans l’article initial | **Non testé dans cet article historique** | les campagnes hypergraphe, H011 et inventaire sont évaluées séparément ci-dessous |
 
 La branche est explicite sur ce point : « L'article théorique ouvre le
 programme ; la base de données et les tests viendront ensuite. »
@@ -296,12 +313,12 @@ Détail : `couche_memoire_historique/results_stress/tests_reels/`
 | Élément | Résultat | Statut |
 |---|---|---|
 | Couverture | 683 entrées, 51 WP, 59 moteurs et 33 jeux de données | outil vérifié |
-| Exécution technique | 211 réussites, 440 blocages, 32 non-exécutions, 0 échec et 0 erreur | **réexécution consolidée** |
-| Verdicts scientifiques | 651 indéterminés, 32 non applicables | aucune conversion automatique d'un succès technique en preuve |
+| Exécution technique | 298 réussites, 337 blocages, 48 non-exécutions, 0 échec et 0 erreur | **réexécution consolidée actuelle** |
+| Verdicts scientifiques | 635 indéterminés, 48 non applicables | aucune conversion automatique d'un succès technique en preuve |
 | Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
 | Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |
 | AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat négatif du socle |
-| Hypothèses ORI-C soutenues | **aucune** | 0 soutien confirmatoire sur 683 |
+| Hypothèses confirmatoires de la campagne plateforme des 683 entrées | **aucune** | compteur propre à cette campagne d’intégration, sans effacer les verdicts ciblés des autres protocoles |
 
 Les compteurs 235/370 conservés dans `plan_directeur/campagne_plateforme/README.md`
 appartiennent à une campagne historique. Le bilan actuel est
@@ -382,51 +399,25 @@ concept* comme le reste du vocabulaire.
 
 ## Branche 3 — Vivant
 
-| Élément | Statut |
-|---|---|
-| Acte 1, cellule eucaryote comme architecture | Preuve de concept |
-| Acte 2, endosymbiose mitochondriale | Preuve de concept, faits sous-jacents fortement appuyés |
-| Acte 3, résistance aux antibiotiques | **Exploratoire, non concluant** ; protocole confirmatoire encore non exécuté |
-| Universalité, supériorité explicative, pouvoir prédictif | **Non testé** |
+| Élément | Résultat | Statut |
+|---|---|---|
+| Histoire antibiotique D’Onofrio 2026 | 288 lignes, RMSE état seul 1,1309, état + histoire 0,8042, témoin permuté 1,1415, p = 0,00498 | **Histoire soutenue contre les deux témoins** |
+| Lignées de vésicules | 11 760 couples parent-descendant, réponse à la sélection, contraste d’ablation et permutation p = 0,00050 | **Quatre composantes préenregistrées soutenues** |
+| Benchmark intégré amikacine | MAE 0,6240 contre 0,6335, p = 0,2266 ; dernière transition défavorable | **Non concluant dans ce protocole précis** |
+| Benchmark externe Card 2019 | histoire moins bonne dans les quatre groupes | **Résultat négatif localisé** |
+| Trajectoires ARN Papastavrou | dynamique de composition sur huit cycles, sans table parent-descendant de compartiments | **Dynamique réelle, protocole distinct des vésicules** |
 
-Le document est explicite : « Il ne démontre pas son universalité, sa
-supériorité explicative ou son pouvoir prédictif. »
+Les résultats D’Onofrio, amikacine et Card 2019 utilisent des jeux, des découpages et des témoins différents. Ils ne doivent jamais être additionnés en un verdict moyen de branche. De même, l’absence de généalogie dans les données ARN ne concerne pas les vésicules, pour lesquelles les cartes donneur-receveur permettent une analyse parent-descendant réelle.
 
 ### Régime 7 — programme prébiotique
 
-| Élément | Statut | Où |
-|---|---|---|
-| Programme prébiotique dirigé | **Critère héréditaire non testé** | `03_branche_vivant/programme_prebiotique/` |
-| Trajectoires de populations ARN | **Données expérimentales réelles** | deux branches, huit cycles, dix séries de séquences |
-| Schéma de lignées et validateur | Exécutable, sans table parent-descendant | `…/valider_lignees.py` |
+Le programme comporte maintenant deux types de données complémentaires. Les trajectoires ARN décrivent l’évolution de populations de séquences. Les vésicules fournissent des lignées parent-descendant et permettent de tester séparément sélection, filiation et ablation. Ces deux niveaux doivent rester distincts dans les rapports.
 
-Les données Papastavrou décrivent une dynamique de fréquences de séquences. Elles ne relient pas des compartiments parents à leurs descendants et ne mesurent pas la transmission d’une différence fonctionnelle. Le gabarit de lignées porte toujours le marqueur `GABARIT_SYNTHETIQUE`, que le validateur signale à chaque exécution. Le critère minimal du programme reste donc non testable.
+## Lecture d’ensemble
 
-## Lecture d'ensemble
+ORI-C dispose aujourd’hui de plusieurs résultats convergents : une causalité architecturale mesurée dans le modèle astronomique, une relation de persistance démontrée dans le chémostat, un gain prédictif de l’histoire sur le jeu D’Onofrio, une transmission parent-descendant mesurable dans les vésicules, un seuil matériel H011 et une organisation cumulative quantifiée dans l’hypergraphe.
 
-Plusieurs couches sont désormais soumises à des témoins appariés, à des
-ablations, à des retraits unitaires ou à des permutations. La couche mémoire
-paléoclimatique et la mémoire GISTEMP perdent contre leurs témoins de complexité
-égale. Le benchmark antibiotique donne un léger gain moyen en validation
-groupée, mais ce gain disparaît ou s'inverse dans l'ablation de la pente et la
-prédiction de la dernière transition. La couche astronomique répond nettement
-aux interventions dans le modèle réduit, avec une séparation minimale d'un
-facteur 4 964 par rapport aux écarts numériques sélectionnés. La branche
-matière montre à la fois une clôture formelle et une forte fragilité à certains
-retraits. Ces verdicts restent séparés et ne valident ni ne réfutent le cadre
-général.
-
-C'est la principale conclusion transversale disponible aujourd'hui, et elle
-oriente le travail à venir : la question ouverte n'est pas de savoir si le
-vocabulaire ORI-C peut décrire un domaine, mais s'il produit, quelque part, une
-prédiction qu'un modèle classique de complexité égale ne produit pas.
-
-Une nuance doit toutefois être maintenue. La dépendance au chemin elle-même
-n'est pas en cause : elle est établie, matériellement enregistrée dans
-l'architecture planétaire, et documentée par des disciplines constituées. Ce
-qui reste à démontrer n'est pas son existence, mais l'apport propre du cadre
-qui l'organise.
-
+Les résultats négatifs restent utiles dans leur périmètre. M2 ferme une formulation climatique, Card 2019 ferme un benchmark rétrospectif et l’amikacine intégrée reste non concluante. Aucun de ces verdicts n’annule les résultats obtenus avec d’autres données et d’autres témoins.
 
 ## Campagne ciblée v0.9.3
 
@@ -449,16 +440,16 @@ Le stress paramétrique ne retire que ces six relations. Il identifie 31 nœuds 
 
 Le test externe sur deux trajectoires MESA atteint 14 nœuds sur 14 en fermeture stricte. Il soutient la portabilité du schéma de représentation, sans démontrer une loi universelle ni valider empiriquement chaque relation ORI-C.
 
-## Recherche active suivante
+## Campagne de recherche suivante exécutée
 
-| Élément | Statut | Portée actuelle |
+| Élément | Résultat | Statut |
 |---|---|---|
-| Seuil causal de `H011` | **Validé dans les simulations publiées** | seuil monotone sous turbulence à taille fixée ; aucune intervention naturelle |
-| Fermeture du cycle des interfaces | **Non établie** | quatre segments ancrés, aucune trajectoire quantitative unique |
-| `Pacc` astronomique | **Mesuré dans le modèle réduit** | 6/6 interventions et 17/18 dimensions au-dessus de l'enveloppe de référence |
-| `WP-C2b` | **Non exécuté, protocole gelé** | appariement par régime et graines de validation réservées |
-| Lignées de vésicules | **En attente des données lors de l'exécution locale** | acquisition et analyse automatisées dans le workflow dédié |
-| Histoire antibiotique 2026 | **En attente des données lors de l'exécution locale** | deux témoins, dont un de complexité égale par permutation |
-| Spéléothèmes NOAA | **En attente des données lors de l'exécution locale** | audit de chronologie, sans prétention sur 100 ka |
+| Seuil `H011` | seuil monotone sous turbulence à taille fixée, rapport 3,33 | **Soutenu dans les simulations publiées** |
+| Cycle des interfaces | quatre segments ancrés, aucune trajectoire quantitative unique | **Cycle ancré mais non fermé** |
+| `Pacc` astronomique | 6 interventions sur 6 et 17 dimensions sur 18 au-dessus de l’enveloppe de référence | **Mesuré dans le modèle réduit** |
+| `WP-C2b` | quatre points non saturés et huit graines réservées | **Protocole gelé** |
+| Lignées de vésicules | 11 760 couples ; quatre composantes préenregistrées soutenues | **Résultat positif** |
+| Histoire antibiotique D’Onofrio | gain de 28,89 % contre l’état seul et de 29,55 % contre l’histoire permutée ; p = 0,00498 | **Résultat positif contre deux témoins** |
+| Spéléothèmes NOAA | 27 721 couples âge-isotope audités | **Audit exécuté** |
 
-Ces statuts complètent les résultats archivés. Ils ne requalifient ni les tests négatifs de la couche mémoire ni les limites des branches matière et vivant.
+Cette campagne est entièrement exécutée avec les données intégrées. Aucun de ces trois jeux externes n’est encore en attente.

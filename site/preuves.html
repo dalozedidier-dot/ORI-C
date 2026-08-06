@@ -43,6 +43,12 @@
     </section>
 
     <section class="section compact">
+      <div class="wrap narrow">
+        <p class="data-note"><strong>Règle de lecture :</strong> chaque verdict reste attaché à son protocole. Les résultats D’Onofrio, amikacine, Card 2019, ARN et vésicules utilisent des données différentes et ne peuvent pas être fusionnés en un verdict unique sur toute la branche vivant.</p>
+      </div>
+    </section>
+
+    <section class="section compact">
       <div class="wrap">
         <div class="metric-grid">
           <article class="metric"><strong>13 / 15</strong><span>critères astronomiques</span><small>couche N-corps réduite</small></article>
@@ -186,27 +192,27 @@
           <div class="group-heading"><p class="eyebrow">Branche 3</p><h2>Vivant, filiation et histoire expérimentale</h2></div>
           <div class="evidence-grid">
             <article class="evidence-card" data-status="supported">
-              <div class="evidence-top"><span class="status supported">Lignées réelles</span><span class="evidence-id">V-01</span></div>
-              <h3>La filiation devient mesurable à l’échelle de milliers de relations</h3>
-              <p class="claim">Les expériences de vésicules sont converties en lignées, transferts parent-descendant et séries temporelles comparables.</p>
+              <div class="evidence-top"><span class="status supported">Filiation préenregistrée</span><span class="evidence-id">V-01</span></div>
+              <h3>Les vésicules transmettent une différence mesurable le long des lignées</h3>
+              <p class="claim">Les cartes donneur-receveur permettent de tester directement sélection, filiation et ablation sur 11 760 couples parent-descendant.</p>
               <dl>
-                <div><dt>Nœuds de lignées</dt><dd>21 439.</dd></div>
-                <div><dt>Relations parent-descendant</dt><dd>13 680.</dd></div>
-                <div><dt>Mesures temporelles</dt><dd>59 328.</dd></div>
+                <div><dt>Signal observé</dt><dd>Corrélation parent-descendant 0,7643.</dd></div>
+                <div><dt>Témoin permuté</dt><dd>Moyenne 0,7467, p = 0,00050.</dd></div>
+                <div><dt>Verdict</dt><dd>Quatre composantes préenregistrées sur quatre sont soutenues.</dd></div>
               </dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/lignees_vesicules">Analyse des vésicules</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json">Résultat des vésicules</a></div>
             </article>
 
-            <article class="evidence-card" data-status="inconclusive">
-              <div class="evidence-top"><span class="status inconclusive">Signal historique faible</span><span class="evidence-id">V-02</span></div>
-              <h3>Les résumés du passé apportent parfois une information supplémentaire</h3>
-              <p class="claim">Sur l’amikacine, le modèle historique obtient une MAE de 0,6240 contre 0,6335 pour le témoin de même complexité.</p>
+            <article class="evidence-card" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Histoire prédictive</span><span class="evidence-id">V-02</span></div>
+              <h3>L’histoire améliore la prédiction antibiotique contre deux témoins</h3>
+              <p class="claim">Sur le jeu externe D’Onofrio, l’état et l’histoire prédisent mieux la résistance que l’état seul et qu’une histoire permutée de même complexité.</p>
               <dl>
-                <div><dt>Comparaison appariée</dt><dd>p = 0,2266.</dd></div>
-                <div><dt>Ablation</dt><dd>La version sans pente temporelle obtient 0,6221.</dd></div>
-                <div><dt>Apport</dt><dd>Le protocole distingue désormais résumé du passé, ordre temporel et pouvoir prédictif.</dd></div>
+                <div><dt>État seul</dt><dd>RMSE 1,1309.</dd></div>
+                <div><dt>État + histoire</dt><dd>RMSE 0,8042, gain 28,89 %.</dd></div>
+                <div><dt>Témoin permuté</dt><dd>RMSE 1,1415, p = 0,00498.</dd></div>
               </dl>
-              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/benchmark_histoire_antibiotique_2026">Benchmark antibiotique</a></div>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json">Résultat antibiotique</a></div>
             </article>
 
             <article class="evidence-card" data-status="structural">
