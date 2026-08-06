@@ -7403,14 +7403,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 21492,
-      "sha256": "b427e20920a1460772ef67f27d26e5a50f48a8a5b65c32f4e861d3df35f12739",
+      "size": 28324,
+      "sha256": "ebd4ad3df18ed6798cb1f3bc5eac21ad5c3920c1d8d59076b8edbd484354c7ce",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12721,
-      "sha256": "711b2d4e11885db3baafe088328bef049962997ebeee833efe417d214ceadd6f",
+      "size": 12925,
+      "sha256": "3bb7c1ce99a4edcc47126ee66e634481abcc9f09d4c3310e258ace0621492da9",
       "storage": "inline"
     },
     {
