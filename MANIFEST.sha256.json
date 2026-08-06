@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/analyse-maximale-trois-branches.yml",
-      "size": 5823,
-      "sha256": "9265a4e43c4f95156319112e2c1f577ba86b7ab24b2578a95b114769d5210b94",
+      "size": 6293,
+      "sha256": "973953ace9dd0836caf46b1fe8bfa76b1249c460938882bda08f49e9b093941c",
       "storage": "inline"
     },
     {
@@ -583,6 +583,12 @@
       "path": "01_branche_matiere/base_transitions/CODAGE_INDEPENDANT_DIMENSIONS.csv",
       "size": 207,
       "sha256": "9c16a5ca5173899d6920f172ac6f34ea01caebfd220e50c76191f08b6738e0bc",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/base_transitions/POWER_PLAN.json",
+      "size": 1285,
+      "sha256": "0bab2cd369ba26694c5fbcd15518e0fd4fbcf35563052941c602d9240daa7cf7",
       "storage": "inline"
     },
     {
@@ -3952,6 +3958,12 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/tests_suivants/PACC_POWER_PLAN.json",
+      "size": 1523,
+      "sha256": "19afc2ee5fd9dee08423dbcc172ee53dc981afb7415ec16ac712d81915951aa2",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/tests_suivants/PROTOCOLE.md",
       "size": 506,
       "sha256": "3c36f9d56a5fec37aac40692ca69b0acf39e2e5e5e1c49ae81285af7673c4740",
@@ -4135,6 +4147,12 @@
       "path": "03_branche_vivant/benchmark_externe_card2019/tests/test_benchmark_externe.py",
       "size": 689,
       "sha256": "2271cfadcbae91b45bfdd6a2a32e2acc326ec0a2433070a0dac3b8007a67a8b9",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/POWER_PLAN.json",
+      "size": 1477,
+      "sha256": "cb8962c62bbeb73338b4536448e6bb9c80b63416cbf64db8ab5c26a6d347f900",
       "storage": "inline"
     },
     {
@@ -4864,6 +4882,12 @@
       "storage": "inline"
     },
     {
+      "path": "methodologie_puissance/PROTOCOL_REGISTRY.json",
+      "size": 896,
+      "sha256": "ad8e000cc851f9f0d1dc143e2b9660965f2b494611c838eb9f743a927619efb9",
+      "storage": "inline"
+    },
+    {
       "path": "methodologie_puissance/README.md",
       "size": 4105,
       "sha256": "1786c6a7c3aa1191f64b652e16b6c52d11f9bad2e713e7900d691e4a1249b888",
@@ -4873,6 +4897,24 @@
       "path": "methodologie_puissance/__init__.py",
       "size": 357,
       "sha256": "6984dfb724ebfe1b333b71c76c3a890ce349d09e37e248f55fdba138c3eecb95",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/adapters/antibiotic_grouped_pipeline.py",
+      "size": 2463,
+      "sha256": "948abee064a1577cc3534248a94e98527c252dede05a23e030823bbcf7a7303d",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/adapters/pacc_interventions_pipeline.py",
+      "size": 966,
+      "sha256": "63a80a2fb1ad4c4b3ee982e382d23d1e242c0d9637c493154e89aa4ff8cbfa01",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/adapters/recoding_ordinal_pipeline.py",
+      "size": 1439,
+      "sha256": "9ca1ccb21cfa41d6fe16bece11751fce60896023e8841da5e03d57d41e2dcb83",
       "storage": "inline"
     },
     {
@@ -4894,6 +4936,12 @@
       "storage": "inline"
     },
     {
+      "path": "methodologie_puissance/run_registered_power.py",
+      "size": 1411,
+      "sha256": "a05c1b5a1da763017d66f607072d6619d8806a82f2daad4a0b180853e3a56556",
+      "storage": "inline"
+    },
+    {
       "path": "methodologie_puissance/schema_power_plan.json",
       "size": 3026,
       "sha256": "fe844894838095e3fce59bb4675359c2cb2a15b391da8712eb2196361e07b627",
@@ -4903,6 +4951,12 @@
       "path": "methodologie_puissance/tests/test_power_monte_carlo.py",
       "size": 2046,
       "sha256": "4fd0ef266b2d8d4ad4d5c9302245f7467f8565f8b9a5020610e3f78d8ad93235",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/tests/test_registered_adapters.py",
+      "size": 1171,
+      "sha256": "4ff9ec9b484ffd9699362c18d12c03b7add0ef706509d5127a19f50963705d6f",
       "storage": "inline"
     },
     {
