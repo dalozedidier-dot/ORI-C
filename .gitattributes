@@ -18,5 +18,13 @@
 # portent sur les octets distribués par les dépôts sources, fins de ligne incluses.
 donnees_externes/**/*.csv -text
 
-# Tables canoniques générées par ORI-C : fins de ligne stables sur toutes les plateformes.
+# Tables canoniques ORI-C : LF par défaut.
 plateforme/campagne_maximale_reelle/data/*.csv text eol=lf
+
+# Copies canoniques dérivées du corpus externe du 7 août 2026.
+# Leurs SHA-256 de provenance portent sur les octets sources, CRLF inclus.
+# Elles doivent donc être conservées byte-for-byte et ne jamais être normalisées par Git.
+plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv -text
+plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv -text
+plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv -text
+plateforme/campagne_maximale_reelle/data/volatile_inventory.csv -text
