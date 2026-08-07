@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-07",
+  "fichiers_retires": [
+    {
+      "chemin": "04_acquisitions_externes_2026-08-07/astronomie/nasa_planetary_factsheet_ratio.html",
+      "octets": 256839,
+      "motif": "La redirection a renvoye la coquille de navigation de nasa.gov, pas la fiche. Zero balise de tableau, les 4 632 nombres du fichier sont des coordonnees SVG. Aucune donnee planetaire."
+    },
+    {
+      "chemin": "01_sources_primaires/matiere_astrochimie/zenodo_17357322_partage_carbone/Dataset_Fig2.xlsx",
+      "octets": 185219,
+      "motif": "2 900 lignes de couples x-y pour trois courbes dont les colonnes sont Unnamed 0, Unnamed 2, Unnamed 3... Aucune unite, aucun nom de variable. Impossible de nommer honnetement ce que le fichier mesure. Le tri du depot l ecartait deja."
+    },
+    {
+      "chemin": "01_sources_primaires/matiere_astrochimie/zenodo_18538333_acides_amines/FA_uncertainties_FK.csv",
+      "octets": 4001,
+      "motif": "Incertitudes sur les acides gras, sans le fichier d abondances correspondant. Le lot ne contient que AA_abundances.csv, qui porte les acides amines. Des incertitudes sans les valeurs ne sont pas exploitables."
+    }
+  ],
+  "lignes_retirees": [
+    {
+      "fichier": "05_tables_candidates/late_accretion_tracers.csv",
+      "lignes": 16609,
+      "motif": "Concentrations nulles ou negatives. Dans les compilations GEOROC un zero signale une valeur sous la limite de detection, pas une mesure. Le moteur late_accretion_mixture calcule des moyennes par famille de reservoir : ces zeros les tireraient vers le bas sans qu aucune mesure ne le justifie."
+    },
+    {
+      "fichier": "05_tables_candidates/thermochemical_phases.csv",
+      "lignes": 336,
+      "motif": "Series ou dG/dT > 0 sur une partie de la grille, ce qui implique une entropie negative et n a pas de sens physique. Phases concernees : ice. La colonne controle_thermodynamique devient inutile et est supprimee."
+    }
+  ]
+}

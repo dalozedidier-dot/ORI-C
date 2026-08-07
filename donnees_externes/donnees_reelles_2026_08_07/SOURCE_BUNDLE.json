@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "bundle_name": "DONNEES_REELLES_ORI-C_2026-08-07(1).zip",
+  "bundle_sha256": "619bbab8482073076aa6d68d6f6947098b584ce40a7f7c78b4d8b2d097840fb2",
+  "bundle_role": "Corpus externe de sources primaires, tables dérivées et acquisitions du 7 août 2026. Le bundle reste séparé du dépôt à cause de son volume et des licences hétérogènes.",
+  "selected_assets": [
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/05_tables_candidates/late_accretion_tracers.csv",
+      "target_path": "plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv",
+      "sha256": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a",
+      "size": 11962067,
+      "data_kind": "empirical_observation",
+      "provider": "GEOROC / DIGIS",
+      "license": "CC BY-SA 4.0",
+      "authorized_tests": [
+        "P5-001"
+      ],
+      "forbidden_inference": "candidate_source n'est pas un pôle de mélange; aucune histoire d'accrétion, date, masse ou fraction de mélange ne peut être inférée de cette table seule."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/05_tables_candidates/thermochemical_phases.csv",
+      "target_path": "plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv",
+      "sha256": "60eebfa981cb9b5d13001c65e87f0eaaf0d0221afac6f84cac39ee16c5c04d45",
+      "size": 7092658,
+      "data_kind": "computed_from_published_thermodynamic_parameters",
+      "provider": "CHNOSZ / OBIGT / Berman",
+      "license": "GPL-3",
+      "authorized_tests": [],
+      "forbidden_inference": "La grille ne constitue pas une séquence de condensation à l'équilibre et ne débloque aucun test M4 sans composition globale, bilans de matière et solveur d'équilibre."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/05_tables_candidates/volatile_inventory.csv",
+      "target_path": "plateforme/campagne_maximale_reelle/data/volatile_inventory.csv",
+      "sha256": "e93d43b9d287bba0ebf6da3bef9594f5ba95120b8c5398058616d094a9da3f9f",
+      "size": 4336,
+      "data_kind": "documentary_quantitative_compilation",
+      "provider": "Compilation de sources S19 à S24 déjà référencées dans ORI-C",
+      "license": "Selon les sources originales",
+      "authorized_tests": [],
+      "forbidden_inference": "Une cellule absente reste inconnue; aucune fermeture de masse exacte n'est calculable tant que tous les compartiments ne sont pas publiés."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/02_tables_derivees/modern_climate_timeseries.csv",
+      "target_path": "plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv",
+      "sha256": "e2f08d75975cdfe6ff3cd6cc0e382439588b2bcd645ac04e06575e7ea261057e",
+      "size": 536495,
+      "data_kind": "empirical_derived",
+      "provider": "NASA GISTEMP v4 + HadCRUT5",
+      "license": "Selon les sources originales",
+      "authorized_tests": [],
+      "forbidden_inference": "Les quatre variables sont des reconstructions de température; elles ne représentent pas quatre mémoires climatiques ni un forçage."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/04_acquisitions_externes_2026-08-07/paleoclimat/edc-co2-2008.txt",
+      "target_path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc-co2-2008.txt",
+      "sha256": "ae2ecff8e048c2357094c14742fb83eecc97c896707fc1f983614818427ae390",
+      "size": 107462,
+      "data_kind": "empirical_observation",
+      "provider": "NOAA Paleoclimatology / EPICA Dome C",
+      "license": "NOAA public information",
+      "authorized_tests": [],
+      "forbidden_inference": "Source longue conservée pour un futur protocole paléoclimatique préenregistré; son simple ajout ne valide aucune bande orbitale ni causalité."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/04_acquisitions_externes_2026-08-07/paleoclimat/edc3deuttemp2007.txt",
+      "target_path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc3deuttemp2007.txt",
+      "sha256": "b801fc2e422d427524619be25b50ee86fd63b36eb440eb5044d9bec12a4d1747",
+      "size": 357470,
+      "data_kind": "empirical_observation",
+      "provider": "NOAA Paleoclimatology / EPICA Dome C",
+      "license": "NOAA public information",
+      "authorized_tests": [],
+      "forbidden_inference": "Source longue conservée pour un futur protocole paléoclimatique préenregistré; pas de conclusion orbitale automatique."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/04_acquisitions_externes_2026-08-07/paleoclimat/lisiecki2005_LR04.txt",
+      "target_path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/lisiecki2005_LR04.txt",
+      "sha256": "973a52d988da04333c98c3fc0cb51babac2fa9bb1c05d42de3d6df726d96b6fc",
+      "size": 409959,
+      "data_kind": "empirical_compilation",
+      "provider": "NOAA Paleoclimatology / LR04 Lisiecki & Raymo 2005",
+      "license": "NOAA public information",
+      "authorized_tests": [],
+      "forbidden_inference": "La pile LR04 est une compilation chronologique; elle ne doit pas être utilisée comme validation indépendante d’un modèle qui réutilise sa chronologie sans contrôle explicite."
+    },
+    {
+      "source_path": "DONNEES_REELLES_ORI-C/04_acquisitions_externes_2026-08-07/paleoclimat/vostok_deutnat.txt",
+      "target_path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/vostok_deutnat.txt",
+      "sha256": "c69eca96499bece4b2f65d4e40240f52e0bfb4027383b3f2db68a1b3e36c75f6",
+      "size": 84230,
+      "data_kind": "empirical_observation",
+      "provider": "NOAA Paleoclimatology / Vostok Petit et al. 1999",
+      "license": "NOAA public information",
+      "authorized_tests": [],
+      "forbidden_inference": "Source longue conservée pour réplication future; aucune conclusion orbitale n’est produite par sa présence."
+    }
+  ],
+  "deliberately_absent": [
+    {
+      "path": "plateforme/campagne_maximale_reelle/data/planetary_histories.csv",
+      "reason": "Aucune source publique harmonisée ne fournit les sept couches historiques demandées avec une référence vérifiable par cellule."
+    }
+  ],
+  "source_notes": {
+    "candidate_notice_copy": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/NOTICE_TABLES_CANDIDATES.md",
+    "candidate_retractions_copy": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/RETRAITS.json",
+    "important_correction": "Le NOTICE source décrit des fermetures volatiles en omettant implicitement des compartiments non publiés. ORI-C conserve cette documentation pour traçabilité mais le moteur corrigé ne remplace plus les valeurs absentes par zéro et ne revendique aucune fermeture exacte sur ces 10 lignes."
+  }
+}
