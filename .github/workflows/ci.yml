@@ -38,6 +38,7 @@ jobs:
         run: |
           python -m compileall -q .
           python verifier_dossier.py
+          python scripts/verifier_fins_de_ligne.py
           python scripts/valider_tout.py --strict-lfs
       - name: Exécuter les suites portables du socle et de la matière
         run: |
@@ -110,6 +111,8 @@ jobs:
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
       - name: Contrôler l'intégrité après un clonage Windows
         run: python verifier_dossier.py
+      - name: Contrôler que le manifeste correspond au contenu indexé
+        run: python scripts/verifier_fins_de_ligne.py
       - name: Exécuter la suite du socle sans forcer l'encodage
         working-directory: 00_socle
         run: python -m pytest -q

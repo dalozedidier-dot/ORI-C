@@ -47,8 +47,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 7926,
-      "sha256": "bf0de5d1c3217a48693fb871041de3cd7467d913e930efe38becc0b6e731d0df",
+      "size": 8103,
+      "sha256": "efde228dd0a57e125f7fb2decaf5aebbe8f60feefb9f06e9cdfdb7262707a235",
       "storage": "inline"
     },
     {
@@ -7469,8 +7469,8 @@
     },
     {
       "path": "scripts/verifier_fins_de_ligne.py",
-      "size": 3977,
-      "sha256": "25bff1bc19f4f21bcd55b75a9e6f0f1ddce8a21826e93f3d2363cd8f8176f2bc",
+      "size": 4732,
+      "sha256": "5a22df9fc8465bdecf7e3c36452872e84f7a6dc404105a0f6885c673b69443f6",
       "storage": "inline"
     },
     {
