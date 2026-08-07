@@ -142,9 +142,11 @@ def main() -> int:
     }
 
     SORTIE.parent.mkdir(parents=True, exist_ok=True)
-    SORTIE.write_text(
-        json.dumps(rapport, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    # `newline=""` empêche Python de traduire "\n" en "\r\n" sous Windows. Les
+    # manifestes SHA-256 portent sur des octets en LF ; un fichier régénéré en
+    # CRLF y apparaîtrait modifié alors que son contenu est identique.
+    with SORTIE.open("w", encoding="utf-8", newline="") as flux:
+        flux.write(json.dumps(rapport, ensure_ascii=False, indent=2) + "\n")
 
     print(f"Dispositif : {n_plis} plis, {lignes} mesures, {lignees} lignées.")
     for temoin, valeurs in comparaisons.items():
