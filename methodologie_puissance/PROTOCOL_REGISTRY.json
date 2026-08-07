@@ -20,6 +20,22 @@
       "command": "mde",
       "output": "02_branche_systeme_solaire/tests_suivants/resultats/PACC_POWER_MDE.json",
       "enabled": true
+    },
+    {
+      "protocol_id": "VIVANT-ANTIBIOTIQUE-LONGITUDINAL-PUISSANCE",
+      "plan": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
+      "command": "analyse-directe",
+      "output": "plan_directeur/campagne_maximale_trois_branches/resultats/POWER_VIVANT_LONGITUDINAL.json",
+      "enabled": true,
+      "note": "Puissance atteinte du benchmark longitudinal. Voir PUISSANCE_VIVANT_2026-08-07.md."
+    },
+    {
+      "protocol_id": "WP-EXO-PACC-2026",
+      "plan": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/PROTOCOLE.json",
+      "command": "preenregistrement-prospectif",
+      "output": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/RESULTAT.json",
+      "enabled": false,
+      "note": "Gele le 2026-08-07, verification principale le 2028-08-07. Desactive jusqu a cette date : il n existe pas encore de donnees posterieures au gel."
     }
   ]
 }

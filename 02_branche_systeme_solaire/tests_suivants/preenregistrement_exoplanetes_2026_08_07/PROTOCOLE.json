@@ -1,0 +1,72 @@
+{
+  "protocol_id": "WP-EXO-PACC-2026",
+  "titre": "Bande accessible des rapports de période, test prospectif sur planètes non encore découvertes",
+  "statut": "gele_avant_acquisition",
+  "gele_le": "2026-08-07",
+  "analysis_frozen_before_data": true,
+  "branche": "02_branche_systeme_solaire",
+  "motivation": {
+    "texte": "protocoles_geles/PACC_DEFINITION.md déclare que l'application confirmatoire « architectures finales accessibles » n'est pas mesurée, faute d'un jeu comparatif laissé hors apprentissage. Ce protocole fournit ce jeu : il n'existe pas encore au moment du gel.",
+    "claim_ORI_C": "L'architecture d'un système contraint les états qui lui restent accessibles. Appliqué ici : la position qu'une planète encore inconnue viendra occuper dans un système déjà observé n'est pas libre ; elle tombe dans une bande de rapports de période restreinte."
+  },
+  "unite_independante": "planete_ajoutee_a_un_hote_deja_connu",
+  "hypothese": "Parmi les planètes découvertes après le 7 août 2026 et ajoutées à un système déjà connu à cette date, la proportion dont le rapport de période au voisin le plus contraignant tombe dans la bande gelée dépasse ce que produit l'appariement aléatoire.",
+  "hypothese_nulle": "Cette proportion ne dépasse pas le taux obtenu en appariant au hasard des planètes issues de systèmes différents.",
+  "bande_accessible": {
+    "definition": "Déciles 10 et 90 des rapports de période entre voisins immédiats, calculés sur l'instantané gelé.",
+    "borne_basse": 1.513,
+    "borne_haute": 19.1765,
+    "paires_ayant_servi_a_la_calibration": 1468,
+    "taux_dans_la_bande_sur_l_instantane": 0.7997,
+    "note": "La bande est ajustée sur les données vues, ce qui est légitime : elle est figée ici et le test porte exclusivement sur des systèmes non encore observés."
+  },
+  "temoin": {
+    "nom": "appariement_aleatoire_inter_systemes",
+    "definition": "Rapport formé entre deux planètes tirées au hasard dans des systèmes différents, 20 000 tirages, graine 20260807.",
+    "taux_attendu_sous_le_nul": 0.5808
+  },
+  "metrique_principale": "proportion d'événements dans la bande",
+  "test": "test binomial exact unilatéral contre le taux du témoin",
+  "alpha": 0.05,
+  "puissance": {
+    "effet_suppose": 0.7997,
+    "taux_nul": 0.5808,
+    "n_pour_puissance_80": 28,
+    "n_pour_puissance_90": 40,
+    "rythme_observe_evenements_par_an": 35,
+    "justification_du_rythme": "Sur 2021-2025, 174 planètes ont été ajoutées à des hôtes déjà connus au 1er janvier 2021, soit environ 35 par an.",
+    "n_attendu_a_12_mois": 35,
+    "n_attendu_a_24_mois": 70,
+    "puissance_attendue_a_24_mois": 0.98
+  },
+  "regle_de_decision": {
+    "date_de_verification_principale": "2028-08-07",
+    "lecture_intermediaire": "2027-08-07, rapportée mais non décisive",
+    "succes": "p unilatéral <= 0,05 à la date de vérification principale",
+    "echec": "p unilatéral > 0,05 avec au moins 28 événements exploitables",
+    "indetermine": "moins de 28 événements exploitables à la date de vérification",
+    "interdiction": "Aucune borne, aucun seuil, aucune date ne peut être modifié après lecture du moindre résultat. Toute modification ouvre un nouveau protocole avec un nouvel identifiant."
+  },
+  "reference": {
+    "fichier": "reference/NASA_Exoplanet_Archive_PS_2026-08-07.csv",
+    "source": "NASA Exoplanet Archive, table Planetary Systems, requête TAP",
+    "telecharge_le": "2026-08-07",
+    "octets": 5694229,
+    "sha256": "5aa82b0428639d85a08859604956385558bff42182caa8cc14d17668d62afde1",
+    "planetes_distinctes": 6336,
+    "systemes": 4749,
+    "systemes_multiples": 1056
+  },
+  "code_d_analyse": {
+    "fichier": "verifier_bande_accessible.py",
+    "octets": 6435,
+    "sha256": "522fc8a2f522fb7729a9759598c72740440c61ace90cec247677d6cb45bee4be",
+    "note": "Ce script est gelé avec le protocole. Son empreinte doit être vérifiée avant exécution."
+  },
+  "portee_et_limites": [
+    "Le test porte sur les planètes ajoutées à des hôtes déjà connus. Il ne dit rien des systèmes entièrement nouveaux.",
+    "Les biais de détection sont partagés par l'hypothèse et par le témoin, puisque le témoin est construit sur la même population observée.",
+    "Un succès soutient que l'architecture existante restreint la position accessible. Il ne mesure pas Pacc au sens complet de PACC_DEFINITION.md, qui exige aussi une partition déclarée des classes et un ensemble d'interventions.",
+    "Ce protocole est observationnel et non interventionnel. Il ne peut pas établir de causalité."
+  ]
+}

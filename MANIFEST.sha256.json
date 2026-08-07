@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 2705,
-      "sha256": "2defbbcba61c0efdcd930b83e1e93046b6566ce31901a92575a804ff5aa6c4f6",
+      "size": 2988,
+      "sha256": "b747106a04e0b8e2c6618cd445904218aca4e6a2cd17e45742a9aa821aef7d86",
       "storage": "inline"
     },
     {
@@ -3988,6 +3988,24 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/PROTOCOLE.json",
+      "size": 4696,
+      "sha256": "41bd8febe8e038f28d0d7141910ef9654bac88ce0b8ee10e101282909615bb9e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/reference/NASA_Exoplanet_Archive_PS_2026-08-07.csv",
+      "size": 5694229,
+      "sha256": "5aa82b0428639d85a08859604956385558bff42182caa8cc14d17668d62afde1",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/verifier_bande_accessible.py",
+      "size": 6435,
+      "sha256": "522fc8a2f522fb7729a9759598c72740440c61ace90cec247677d6cb45bee4be",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/tests_suivants/preenregistrer_c2b.py",
       "size": 3199,
       "sha256": "12ff83d2be248fd077467284a2063eb252bbc7827f20f88044e6252822641339",
@@ -4435,6 +4453,12 @@
       "path": "PUBLICATION_STABLE.md",
       "size": 806,
       "sha256": "6c15c230e167d75ca4e932d5e60f37c73a7e73414f66ff5a86500c3c8ace0d0b",
+      "storage": "inline"
+    },
+    {
+      "path": "PUISSANCE_VIVANT_2026-08-07.md",
+      "size": 3910,
+      "sha256": "c44204dc96fa0cf31f843755a43c06f3c509dc4f391574faba9393d17275537b",
       "storage": "inline"
     },
     {
@@ -4955,8 +4979,8 @@
     },
     {
       "path": "methodologie_puissance/PROTOCOL_REGISTRY.json",
-      "size": 896,
-      "sha256": "ad8e000cc851f9f0d1dc143e2b9660965f2b494611c838eb9f743a927619efb9",
+      "size": 1896,
+      "sha256": "e93d28bfe22733f97d412fc4b8492bc6014b44744e061103b6d08d66b72c9b6e",
       "storage": "inline"
     },
     {
@@ -5104,9 +5128,21 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
+      "size": 6539,
+      "sha256": "99d284850120fe293731afff50f998d1176cccb6af877c9329850445bf41a218",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_maximale_trois_branches/common.py",
       "size": 961,
       "sha256": "d46d4882846f5a7add3b373edbd94889c1f10d99f8ec1ba8390e39c339d42fd8",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_maximale_trois_branches/resultats/POWER_VIVANT_LONGITUDINAL.json",
+      "size": 2828,
+      "sha256": "134d821a77364ff0a91669c8951f0cc639d120fbb621533066c9efcf9becf987",
       "storage": "inline"
     },
     {

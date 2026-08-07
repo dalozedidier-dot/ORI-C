@@ -1,0 +1,77 @@
+{
+  "protocol_id": "VIVANT-ANTIBIOTIQUE-LONGITUDINAL-PUISSANCE",
+  "genere_par": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
+  "source": "resultats/vivant_robustesse.json",
+  "alpha": 0.05,
+  "unite_independante": "lignee",
+  "dispositif_actuel": {
+    "plis": 10,
+    "mesures": 358,
+    "lignees": 148,
+    "lignees_par_pli": 14.8
+  },
+  "comparaisons": {
+    "state_only": {
+      "mae_temoin": 0.6302976212127736,
+      "mae_histoire": 0.6228871889145727,
+      "gain_moyen_apparie": 0.007410432298200859,
+      "ecart_type_des_differences": 0.029793948649068914,
+      "taille_effet_dz": 0.24872273176964213,
+      "plis_favorables": 7,
+      "t_apparie": 0.7865303382511912,
+      "p_apparie": 0.4517689410684749,
+      "puissance_atteinte": 0.10870843523636783,
+      "n_requis": {
+        "0.80": {
+          "plis": 129,
+          "lignees_equivalentes": 1909,
+          "mesures_equivalentes": 4618,
+          "facteur_par_rapport_a_l_existant": 12.9
+        },
+        "0.90": {
+          "plis": 172,
+          "lignees_equivalentes": 2546,
+          "mesures_equivalentes": 6158,
+          "facteur_par_rapport_a_l_existant": 17.2
+        }
+      }
+    },
+    "equal_complexity": {
+      "mae_temoin": 0.6324644731361061,
+      "mae_histoire": 0.6228871889145727,
+      "gain_moyen_apparie": 0.009577284221533384,
+      "ecart_type_des_differences": 0.023462547797830947,
+      "taille_effet_dz": 0.40819455346698447,
+      "plis_favorables": 7,
+      "t_apparie": 1.2908245174310522,
+      "p_apparie": 0.22893520366429673,
+      "puissance_atteinte": 0.21168583653259146,
+      "n_requis": {
+        "0.80": {
+          "plis": 50,
+          "lignees_equivalentes": 740,
+          "mesures_equivalentes": 1790,
+          "facteur_par_rapport_a_l_existant": 5.0
+        },
+        "0.90": {
+          "plis": 66,
+          "lignees_equivalentes": 977,
+          "mesures_equivalentes": 2363,
+          "facteur_par_rapport_a_l_existant": 6.6
+        }
+      }
+    }
+  },
+  "test_de_signe_exact": {
+    "p_par_nombre_de_plis_favorables": {
+      "6": 0.75390625,
+      "7": 0.34375,
+      "8": 0.109375,
+      "9": 0.021484375,
+      "10": 0.001953125
+    },
+    "minimum_de_plis_favorables_pour_conclure": 9,
+    "lecture": "Avec dix plis, le test de signe bilatéral ne peut pas descendre sous alpha tant que moins de neuf plis sur dix sont favorables. La règle de décision est donc quasi inatteignable à cette taille, indépendamment de l'ampleur réelle de l'effet."
+  },
+  "conclusion": "Le dispositif actuel n'a pas la puissance de détecter l'effet qu'il mesure. Son résultat non concluant ne constitue donc pas une preuve d'absence d'effet : il constate que le protocole ne tranche pas."
+}
