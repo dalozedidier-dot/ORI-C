@@ -136,14 +136,23 @@ jobs:
 
       - name: Calibrer les 53 relations matérielles
         run: |
+          mkdir -p "$RUNNER_TEMP/calibrage-reference"
+          cp -R 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats \
+            "$RUNNER_TEMP/calibrage-reference/"
           python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py \
             | tee "$OUT/logs/calibrage_matiere_v094.log"
           python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests \
             | tee "$OUT/logs/tests_calibrage_matiere_v094.log"
 
+      # Comparaison à tolérance numérique plutôt qu'octet par octet : un
+      # `git diff` casserait au premier déplacement d'optimum dû à une version
+      # mineure de scipy, sans qu'aucun résultat n'ait changé.
       - name: Vérifier la synchronisation du calibrage
         run: |
-          git diff --exit-code -- 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/calibrage-reference/resultats" \
+            --candidate 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats \
+            | tee "$OUT/logs/reproductibilite_calibrage.log"
 
       - name: Étendre l'analyse de l'inventaire hiérarchique
         working-directory: 01_branche_matiere/inventaire_hierarchique
@@ -157,12 +166,19 @@ jobs:
 
       - name: Recalculer l'audit transversal
         run: |
+          mkdir -p "$RUNNER_TEMP/audit-reference"
+          cp plan_directeur/audit_transversal.json "$RUNNER_TEMP/audit-reference/"
           python plan_directeur/audit_transversal.py \
             | tee "$OUT/logs/audit_transversal.log"
 
       - name: Vérifier la synchronisation de l'audit transversal
         run: |
-          git diff --exit-code -- plan_directeur/audit_transversal.json
+          mkdir -p "$RUNNER_TEMP/audit-candidat"
+          cp plan_directeur/audit_transversal.json "$RUNNER_TEMP/audit-candidat/"
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/audit-reference" \
+            --candidate "$RUNNER_TEMP/audit-candidat" \
+            | tee "$OUT/logs/reproductibilite_audit_transversal.log"
 
       - name: Rassembler les sorties contrôlables
         if: always()

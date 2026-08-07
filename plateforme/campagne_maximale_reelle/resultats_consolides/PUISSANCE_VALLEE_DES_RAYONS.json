@@ -1,0 +1,38 @@
+{
+  "protocol_id": "VALLEE-DES-RAYONS-PUISSANCE",
+  "genere_par": "plateforme/campagne_maximale_reelle/analyser_puissance_vallee.py",
+  "source_de_la_detection": "vallee_des_rayons_exoplanetes.py, fonctions importées telles quelles",
+  "planetes_retenues": 3298,
+  "profondeur_du_creux_catalogue_entier": -0.002420072920381564,
+  "seuil_exige": 0.95,
+  "permutations_par_evaluation": 200,
+  "graine": 20260808,
+  "mesures": [
+    {
+      "taille": 200,
+      "tirages": 40,
+      "succes": 0,
+      "puissance": 0.0
+    },
+    {
+      "taille": 400,
+      "tirages": 40,
+      "succes": 0,
+      "puissance": 0.0
+    },
+    {
+      "taille": 800,
+      "tirages": 40,
+      "succes": 0,
+      "puissance": 0.0
+    },
+    {
+      "taille": 1600,
+      "tirages": 40,
+      "succes": 0,
+      "puissance": 0.0
+    }
+  ],
+  "critere_atteignable": false,
+  "conclusion": "Le critère n'est franchi à aucune taille disponible. Le verdict `reussi: false` du test d'origine ne mesure donc pas l'absence de vallée des rayons : il constate qu'un seuil inatteignable n'a pas été atteint."
+}

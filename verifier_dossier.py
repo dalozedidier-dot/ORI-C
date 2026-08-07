@@ -26,6 +26,11 @@ RACINE = Path(__file__).resolve().parent
 MANIFESTE = RACINE / "MANIFEST.sha256"
 EXCLUS = {"__pycache__", ".pytest_cache", ".pytest-tmp", ".git", ".claude", ".mplconfig", "node_modules", "dist"}
 EXCLUS_SUFFIXES = {".pyc", ".pyo"}
+# Artefacts de construction. `.gitignore` les exclut déjà, mais ce script ne le
+# consulte pas : sans cette règle, un simple `pip install -e` sur la source
+# fait apparaître une vingtaine de fichiers « non listés » et le contrôle
+# d'intégrité échoue alors qu'aucun contenu suivi n'a bougé.
+EXCLUS_MOTIFS_DOSSIER = (".egg-info",)
 EXCLUS_CHEMINS_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
 
 STRUCTURE_ATTENDUE = [
@@ -148,6 +153,12 @@ def fichiers_du_dossier() -> list[Path]:
             continue
         relatif = chemin.relative_to(RACINE)
         if any(partie in EXCLUS for partie in relatif.parts):
+            continue
+        if any(
+            partie.endswith(motif)
+            for partie in relatif.parts
+            for motif in EXCLUS_MOTIFS_DOSSIER
+        ):
             continue
         if any(relatif.as_posix().startswith(prefixe) for prefixe in EXCLUS_CHEMINS_PREFIXES):
             continue

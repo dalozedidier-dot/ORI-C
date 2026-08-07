@@ -208,3 +208,30 @@ délibérément — et **11 entrées** en attente de `planetary_histories.csv`.
 seulement que l'analyse a été exécutée. Le verdict scientifique des 651 entrées reste
 `undetermined`. Les limites ci-dessus — pression bornée à 5 GPa, pôles de mélange absents,
 incertitudes analytiques absentes — doivent être levées avant toute conclusion.
+
+---
+
+## Les pôles de mélange chondritiques restent absents, délibérément
+
+Transformer `late_accretion_tracers.csv` en véritable test de mélange demande les
+compositions en éléments fortement sidérophiles des pôles candidats : CI, CM, CO, CV, EH,
+EL, H, L et LL. La table actuelle ne contient que la famille de réservoir documentée par
+GEOROC dans `candidate_source`, ce qui n'est pas un pôle.
+
+**Ces compositions n'ont pas été ajoutées.** La recherche n'a produit aucun jeu public,
+harmonisé et directement téléchargeable couvrant les neuf classes. Les valeurs existent
+dans la littérature, notamment chez Horan et collaborateurs et chez Fischer-Gödde et
+collaborateurs, mais les écrire ici sans source vérifiable reviendrait à fabriquer de la
+donnée — exactement ce que la règle du dossier interdit, et ce qui a déjà motivé l'absence
+volontaire de `planetary_histories.csv`.
+
+Ce qu'il faudrait pour fermer ce manque, précisément :
+
+- une table par classe chondritique portant Os, Ir, Ru, Pt, Pd, Re et Au en ng/g ;
+- l'incertitude associée à chaque valeur ;
+- une référence par ligne, avec DOI ;
+- la méthode analytique, les mesures HSE anciennes n'étant pas comparables aux mesures
+  par dilution isotopique modernes.
+
+Tant que cette table n'existe pas, l'entrée `P5-001` reste un **audit de dispersion entre
+familles de réservoir**, et non un test de mélange. C'est ainsi qu'elle doit être lue.

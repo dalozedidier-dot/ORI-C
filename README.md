@@ -53,6 +53,21 @@ La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pa
 
 Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
 
+### Atteignabilité des critères — à lire avant tout résultat négatif
+
+Un critère peut échouer parce que l’effet n’existe pas, ou parce que le test ne peut pas le détecter. [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md) sépare les deux cas pour l’ensemble du dossier.
+
+Sur 22 critères discrets audités, **aucun n’est inatteignable par construction** et 20 sont franchissables dans des conditions usuelles. Trois critères font exception et leur échec ne constitue pas un résultat :
+
+- la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible : la profondeur du creux mesurée est négative, il n’y a pas de creux à mesurer ;
+- les **deux tests de signe** du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 et dont la puissance vaut 0,109 et 0,212, détaillé dans [`PUISSANCE_VIVANT_2026-08-07.md`](PUISSANCE_VIVANT_2026-08-07.md).
+
+### Premier test prospectif préenregistré
+
+[`02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/`](02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/) porte `WP-EXO-PACC-2026`, gelé le 7 août 2026 et vérifiable le 7 août 2028. Hypothèse, seuil, témoin, instantané de référence et code d’analyse sont scellés par empreinte SHA-256 avant que les données à tester n’existent. C’est le premier protocole du dossier dont la conclusion ne peut pas être ajustée après lecture.
+
+Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écarté après mesure** : la compilation ne gagne qu’environ six couples Os+Ir par an, ce qui repousserait toute conclusion à cinq ans. Le raisonnement est conservé dans [`protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md`](protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md).
+
 ## Contenu
 
 | Dossier | Contenu | Rôle |

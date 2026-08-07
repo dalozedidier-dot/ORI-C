@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/analyse-structure.yml",
-      "size": 8390,
-      "sha256": "09510785a1fea8b3fe0cdc62bb2377ce4a92f69a3adbc6ab597e82f4ffecf34a",
+      "size": 9436,
+      "sha256": "fa0b08b07a1d5d47bdced84313d60ada3ed1d3356142912b80d9e79b370b0441",
       "storage": "inline"
     },
     {
@@ -47,8 +47,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 8103,
-      "sha256": "efde228dd0a57e125f7fb2decaf5aebbe8f60feefb9f06e9cdfdb7262707a235",
+      "size": 9404,
+      "sha256": "c1e0c41bfc4946956d8cf6e48cc80b52ff65441a4fecc178d20f552d3b6a0d5d",
       "storage": "inline"
     },
     {
@@ -65,8 +65,8 @@
     },
     {
       "path": ".github/workflows/release.yml",
-      "size": 5156,
-      "sha256": "ed65b402d43ee9652fb2d0fd39c1346757821dc2ee14ad2cbbc040e531c99a02",
+      "size": 5642,
+      "sha256": "e22d55075d5116585e2494e46a4a5112c30dfadc4f6827481680e68ee0ac3ae0",
       "storage": "inline"
     },
     {
@@ -4294,9 +4294,21 @@
       "storage": "inline"
     },
     {
+      "path": "ATTEIGNABILITE_CRITERES.json",
+      "size": 9850,
+      "sha256": "d454dfe4215d1344c3e970c27c996f3c60ff69404079b8c0312bf40cfea7d73e",
+      "storage": "inline"
+    },
+    {
+      "path": "ATTEIGNABILITE_DES_CRITERES_2026-08-08.md",
+      "size": 5468,
+      "sha256": "6feba1afcfc9d7d80633d71753b4ac8fc983be25c4da9f37f76e9c1040680fc0",
+      "storage": "inline"
+    },
+    {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 18428,
-      "sha256": "4d88cdeb03ebdb8380f572f09bf28f1906fb416c4b679f86dec54c7fd7c77434",
+      "size": 19619,
+      "sha256": "6603d6cc7e4ba3050a5799a3f89465bf342d2dfed30cb5b2a3589f2e4d653e0f",
       "storage": "inline"
     },
     {
@@ -4361,8 +4373,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 33831,
-      "sha256": "a0522428f9cd48fd36922c17d07bbcd24fa2fc8a67acfab3e562f472e57a7045",
+      "size": 34918,
+      "sha256": "e76c8e628958e37e7bf7796f64884122429ec7e093fec324c67e1b95b3599460",
       "storage": "inline"
     },
     {
@@ -4469,8 +4481,8 @@
     },
     {
       "path": "README.md",
-      "size": 15859,
-      "sha256": "4967284725b8d6ab81e09688e2e0a97030775bc8b55e877ea818379f60a5ecfe",
+      "size": 17727,
+      "sha256": "2736d8e567d3486383477c37c4eece0df127e9a94fea6a8306f9468c6a0a2965",
       "storage": "inline"
     },
     {
@@ -4787,8 +4799,8 @@
     },
     {
       "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/NOTICE_TABLES_CANDIDATES.md",
-      "size": 9403,
-      "sha256": "d7ab7978cb171ec36cb35499c2a09999ff53d132b154bf842ae7087f64697357",
+      "size": 10846,
+      "sha256": "36710922d42df1884d48b57ff891f44af503ee171736d5a564809b2b82657d0c",
       "storage": "inline"
     },
     {
@@ -4973,8 +4985,8 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 25570,
-      "sha256": "4a70d440908ac0fa1c8b279de00e3f0dcb9516ca54a04e68bc22f56d1727378b",
+      "size": 26761,
+      "sha256": "165aaec04a2798521aadff376bc898638c8961e4b63a27ab19b228ba02a34582",
       "storage": "inline"
     },
     {
@@ -5716,6 +5728,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/analyser_puissance_vallee.py",
+      "size": 5215,
+      "sha256": "5e398d079819ce0883f0443d8890d4884c7a8eca115d358cbdf552eacdd23ca3",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/comparaison_nbody_la2004.json",
       "size": 346,
       "sha256": "bc0e9007027a6555365332badf781540abe8d2c726e9ae6b7513fef6382bd1b8",
@@ -6076,6 +6094,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/resultats_consolides/PUISSANCE_VALLEE_DES_RAYONS.json",
+      "size": 1086,
+      "sha256": "75e19f4e671e5af6073dfae3978f6c8fb93add2de0bc04e5342a2fd57982727a",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/REPORT.md",
       "size": 841,
       "sha256": "45644d8728e21fb1e398d6bb8745ca750e287deb45efea85c7a2efba542e96a5",
@@ -6214,6 +6238,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/COMPTEURS_SEPARES.json",
+      "size": 2854,
+      "sha256": "7f65b2ab9902fa3da0b7fe7a18c21ffe93dbb13de10280d9fe97ba3c59e05f3b",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/REPORT.md",
       "size": 73307,
       "sha256": "b3efc9062b00e8a3270096cc858f73a21c80016fe252576634985c600e24ea2b",
@@ -6265,6 +6295,12 @@
       "path": "plateforme/campagne_maximale_reelle/scripts/pacc_observationnel_deux_branches.py",
       "size": 3401,
       "sha256": "d19936297e45dbfe147e101c6e404e31befc05a7ceeb25ddf87edd3952a857ca",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/separer_compteurs.py",
+      "size": 4986,
+      "sha256": "3257af9960eccd802957104e54b57078242bdd0985cc5e2ebbd569bdd5c72e11",
       "storage": "inline"
     },
     {
@@ -7402,6 +7438,12 @@
       "storage": "inline"
     },
     {
+      "path": "protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md",
+      "size": 3398,
+      "sha256": "9c04533588565bbab20959027c7922675364db30e314ce268d060dc70e188892",
+      "storage": "inline"
+    },
+    {
       "path": "protocoles_geles/PACC_DEFINITION.md",
       "size": 832,
       "sha256": "b805283b1378624d1f38b79b49f78c94234def896ba1c9dc9e1cbb83f377c307",
@@ -7417,6 +7459,12 @@
       "path": "protocoles_geles/v0.9.3_architecture_matiere/README.md",
       "size": 401,
       "sha256": "cf45996994cd526596a543bb502a6abd2385849103c6db8fd82088f186077a2d",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/auditer_atteignabilite_criteres.py",
+      "size": 6614,
+      "sha256": "63fb67dad437de8f93e3e3a13be0f6f76a973a413e16ca44e7b085e7abdc1a0c",
       "storage": "inline"
     },
     {
@@ -7475,8 +7523,8 @@
     },
     {
       "path": "scripts/verifier_reproductibilite_resultats.py",
-      "size": 12865,
-      "sha256": "dc3780bb4e193a23a693eb8e7e07aaf06b9bcb7a0c7b91ebb85b54baeeb470a9",
+      "size": 13965,
+      "sha256": "8225ae52b473fc80a2f5f33552509e8c11cd0206e3a4bb28c54c7894ac5a3e2f",
       "storage": "inline"
     },
     {
@@ -7541,8 +7589,8 @@
     },
     {
       "path": "verifier_dossier.py",
-      "size": 10966,
-      "sha256": "c635e061ffdfb2f3d5b41a63a1d68e863b1d9506eedab3070b2fe1cf79f133a7",
+      "size": 11478,
+      "sha256": "f00ab2425e9072b9dcd9c75dddd9ef69b384fc71253cc70ebd3ac91958ad348b",
       "storage": "inline"
     }
   ]

@@ -3,6 +3,23 @@
 Ce tableau est le seul lieu du dossier où les trois branches sont regardées
 ensemble. Il compare des **statuts**, jamais des résultats.
 
+> **Avant de lire un échec comme un résultat négatif.**
+> Trois critères du dossier ne peuvent pas être satisfaits, quelle que soit
+> l’ampleur réelle de l’effet cherché : la **vallée des rayons**, dont le seuil
+> n’est franchi à aucune taille disponible, et les **deux tests de signe** du
+> benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 pour
+> une puissance mesurée de 0,109 et 0,212. Leur échec ne réfute rien.
+> Voir [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md)
+> et [`PUISSANCE_VIVANT_2026-08-07.md`](PUISSANCE_VIVANT_2026-08-07.md).
+>
+> Le balayage complet est rassurant par ailleurs : sur 22 critères discrets,
+> **aucun autre n’est vicié par construction**.
+>
+> **Premier test prospectif.** `WP-EXO-PACC-2026`, gelé le 7 août 2026 et
+> vérifiable le 7 août 2028, est le seul protocole du dossier dont la conclusion
+> ne peut plus être ajustée après lecture. Il est le seul candidat à un statut
+> confirmatoire ; tous les autres résultats restent rétrospectifs ou de modèle.
+
 ## Échelle employée
 
 | Niveau | Définition |

@@ -131,6 +131,19 @@ def _compare_values(
         errors.append(f"{location}: attendu {reference!r}, obtenu {candidate!r}")
 
 
+def _delimiteur(chemin: Path) -> str:
+    """Sépérateur du CSV, déduit de son en-tête.
+
+    Le dépôt mélange la virgule et le point-virgule. Lire un fichier à
+    point-virgule avec le séparateur par défaut le réduirait à une seule
+    colonne : la comparaison numérique ne s'appliquerait alors à rien et le
+    contrôle passerait pour vide alors qu'il ne vérifie plus rien.
+    """
+    with chemin.open(encoding="utf-8", errors="replace", newline="") as handle:
+        entete = handle.readline()
+    return max((";", ",", "\t"), key=entete.count)
+
+
 def _compare_csv(
     reference_path: Path,
     candidate_path: Path,
@@ -151,10 +164,11 @@ def _compare_csv(
     flottantes suffit à changer.
     """
     try:
+        delimiteur = _delimiteur(reference_path)
         with reference_path.open(encoding="utf-8", newline="") as handle:
-            reference_rows = list(csv.reader(handle))
+            reference_rows = list(csv.reader(handle, delimiter=delimiteur))
         with candidate_path.open(encoding="utf-8", newline="") as handle:
-            candidate_rows = list(csv.reader(handle))
+            candidate_rows = list(csv.reader(handle, delimiter=delimiteur))
     except (OSError, UnicodeError, csv.Error) as exc:
         errors.append(f"{location}: CSV illisible : {exc}")
         return
@@ -179,6 +193,15 @@ def _compare_csv(
             zip(reference_row, candidate_row)
         ):
             if reference_cell == candidate_cell:
+                # Une cellule identique reste comptée si elle est numérique,
+                # sans quoi un dossier de CSV parfaitement reproduit afficherait
+                # « 0 nombres comparés » et donnerait l'impression d'un contrôle
+                # vide.
+                try:
+                    float(reference_cell)
+                except ValueError:
+                    continue
+                state.numbers_compared += 1
                 continue
             try:
                 reference_value = float(reference_cell)

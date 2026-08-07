@@ -48,9 +48,16 @@ jobs:
             01_branche_matiere/hypergraphe_transformations/tests \
             01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests
           python -m pytest -q 01_branche_matiere/inventaire_hierarchique/tests
+          mkdir -p "$RUNNER_TEMP/calibrage-reference"
+          cp -R 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats \
+            "$RUNNER_TEMP/calibrage-reference/"
           python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
           python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests
-          git diff --exit-code -- 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
+          # Comparaison à tolérance numérique, comme dans ci.yml : un `git diff`
+          # comparerait des octets et casserait au premier déplacement d'optimum.
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/calibrage-reference/resultats" \
+            --candidate 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
       - name: Mémoire historique
         working-directory: 02_branche_systeme_solaire/couche_memoire_historique
         run: |

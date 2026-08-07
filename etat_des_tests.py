@@ -118,6 +118,11 @@ def suite_memoire() -> dict:
         "reussis": total - echoues,
         "code_retour": code,
         "ecarts": re.findall(r"Max absolute difference[^\n]*", sortie)[:3],
+        # Nom des tests réellement en échec. Sans cette liste, le rapport
+        # attribuait tout échec de la couche mémoire à la non-portabilité
+        # flottante, y compris quand la cause était ailleurs — un manifeste
+        # périmé, par exemple — et écrivait alors un diagnostic inventé.
+        "tests_echoues": re.findall(r"^(?:FAIL|ERROR):\s*(\S+)", sortie, re.M)[:10],
     }
 
 
@@ -494,17 +499,33 @@ def composer(rejouer: bool = False) -> str:
     lignes.append("")
 
     if memoire["echoues"]:
-        lignes += [
-            f"**{memoire['echoues']} échec(s) dans la couche mémoire.** Les "
-            "assertions d'égalité exacte entre le noyau compilé et le modèle de "
-            "référence ne sont pas portables entre versions de `numpy`, `scipy` "
-            "et `numba` : l'ordre des opérations flottantes peut changer. Les "
-            "écarts observés restent de l'ordre du dernier bit et ne modifient "
-            "aucun résultat scientifique. Voir la note de portabilité plus bas.",
-            "",
-        ]
+        lignes += [f"**{memoire['echoues']} échec(s) dans la couche mémoire.**", ""]
+        if memoire.get("tests_echoues"):
+            lignes += ["Tests concernés :", ""]
+            lignes += [f"- `{nom}`" for nom in memoire["tests_echoues"]]
+            lignes += [""]
         if memoire.get("ecarts"):
-            lignes += ["```text"] + memoire["ecarts"] + ["```", ""]
+            # Des écarts numériques sont rapportés : l'explication de
+            # portabilité s'applique et elle est étayée par les mesures.
+            lignes += [
+                "Ces échecs portent sur des comparaisons numériques. Les "
+                "assertions d'égalité exacte entre le noyau compilé et le modèle "
+                "de référence ne sont pas portables entre versions de `numpy`, "
+                "`scipy` et `numba` : l'ordre des opérations flottantes peut "
+                "changer. Écarts mesurés ci-dessous. Voir la note de portabilité "
+                "plus bas.",
+                "",
+                "```text",
+            ] + memoire["ecarts"] + ["```", ""]
+        else:
+            # Aucun écart numérique rapporté : la cause est ailleurs et ce
+            # fichier ne doit pas la deviner.
+            lignes += [
+                "Aucun écart numérique n'est rapporté par la suite. La cause "
+                "n'est donc pas la portabilité flottante et doit être lue dans "
+                "la sortie des tests nommés ci-dessus.",
+                "",
+            ]
 
     if socle["echecs_attendus"]:
         lignes += [

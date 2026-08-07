@@ -1,0 +1,213 @@
+{
+  "genere_par": "scripts/auditer_atteignabilite_criteres.py",
+  "alpha": 0.05,
+  "principe": "Un test à statistique discrète ne peut produire qu'un nombre fini de valeurs de p. Si le seuil de décision est plus exigeant que la plus petite valeur atteignable, le critère ne peut pas être satisfait et son résultat ne porte aucune information.",
+  "constats": 22,
+  "par_classe": {
+    "atteignable": 20,
+    "atteignable_fragile": 2
+  },
+  "detail": [
+    {
+      "famille": "test de permutation",
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
+      "classe": "atteignable",
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "00_socle/carte_relationnelle/resultats_analyse/analyse_graphe.json",
+      "emplacement": "/B_graphes_nuls/nul_respectant_l_ordre/tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 1000,
+      "p_minimal_atteignable": 0.000999000999000999,
+      "classe": "atteignable",
+      "lecture": "Avec 1000 tirages, la plus petite valeur de p vaut 9.99e-04.",
+      "fichier": "00_socle/carte_relationnelle/resultats_analyse/benchmark_hors_noeud.json",
+      "emplacement": "/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 2000000,
+      "p_minimal_atteignable": 4.99999750000125e-07,
+      "classe": "atteignable",
+      "lecture": "Avec 2000000 tirages, la plus petite valeur de p vaut 5.00e-07.",
+      "fichier": "00_socle/test_interventionnel/resultats_exhaustifs/analyse_exhaustive.json",
+      "emplacement": "/sections/B01/n_tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 200000,
+      "p_minimal_atteignable": 4.9999750001249995e-06,
+      "classe": "atteignable",
+      "lecture": "Avec 200000 tirages, la plus petite valeur de p vaut 5.00e-06.",
+      "fichier": "00_socle/test_interventionnel/resultats_robustesse/robustesse_test_interventionnel.json",
+      "emplacement": "/controles/C13/n_tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 20000,
+      "p_minimal_atteignable": 4.999750012499375e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
+      "fichier": "01_branche_matiere/hypergraphe_transformations/test_hierarchie_execution_1_prereglee.json",
+      "emplacement": "/test_B_information/tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 20000,
+      "p_minimal_atteignable": 4.999750012499375e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
+      "fichier": "01_branche_matiere/hypergraphe_transformations/test_hierarchie_resultats.json",
+      "emplacement": "/test_B_information/tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 20000,
+      "p_minimal_atteignable": 4.999750012499375e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/primary.json",
+      "emplacement": "/mpt/bootstrap_draws"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 200,
+      "p_minimal_atteignable": 0.004975124378109453,
+      "classe": "atteignable",
+      "lecture": "Avec 200 tirages, la plus petite valeur de p vaut 4.98e-03.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/smoke.json",
+      "emplacement": "/mpt/bootstrap_draws"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 20000,
+      "p_minimal_atteignable": 4.999750012499375e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/results/environment.json",
+      "emplacement": "/config/mpt/bootstrap_draws"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 200,
+      "p_minimal_atteignable": 0.004975124378109453,
+      "classe": "atteignable",
+      "lecture": "Avec 200 tirages, la plus petite valeur de p vaut 4.98e-03.",
+      "fichier": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "emplacement": "/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
+      "classe": "atteignable",
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "emplacement": "/lineage_permutation_test/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 20000,
+      "p_minimal_atteignable": 4.999750012499375e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
+      "fichier": "documentation/dossier_scientifique/annexes/test_hierarchie_resultats.json",
+      "emplacement": "/test_B_information/tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 40320,
+      "p_minimal_atteignable": 2.4800972198110166e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 40320 tirages, la plus petite valeur de p vaut 2.48e-05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/catalytic_rna_frequency_dynamics/branch_dynamics/52-2/entropy_trend_exact_permutation/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 40320,
+      "p_minimal_atteignable": 2.4800972198110166e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 40320 tirages, la plus petite valeur de p vaut 2.48e-05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/catalytic_rna_frequency_dynamics/branch_dynamics/52-2/largest_share_trend_exact_permutation/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 40320,
+      "p_minimal_atteignable": 2.4800972198110166e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 40320 tirages, la plus petite valeur de p vaut 2.48e-05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/catalytic_rna_frequency_dynamics/branch_dynamics/71-89/entropy_trend_exact_permutation/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 40320,
+      "p_minimal_atteignable": 2.4800972198110166e-05,
+      "classe": "atteignable",
+      "lecture": "Avec 40320 tirages, la plus petite valeur de p vaut 2.48e-05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/catalytic_rna_frequency_dynamics/branch_dynamics/71-89/largest_share_trend_exact_permutation/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
+      "classe": "atteignable",
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
+      "emplacement": "/modules/vesicules/lineage_permutation_test/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 200,
+      "p_minimal_atteignable": 0.004975124378109453,
+      "classe": "atteignable",
+      "lecture": "Avec 200 tirages, la plus petite valeur de p vaut 4.98e-03.",
+      "fichier": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
+      "emplacement": "/modules/antibiotique_2026/permutations"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
+      "classe": "atteignable",
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "plateforme/campagne_maximale_reelle/resultats_consolides/vallee_des_rayons.json",
+      "emplacement": "/creux/tirages"
+    },
+    {
+      "famille": "test de permutation",
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
+      "classe": "atteignable",
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "plateforme/campagne_maximale_reelle/vallee_des_rayons.json",
+      "emplacement": "/creux/tirages"
+    },
+    {
+      "famille": "test de signe exact",
+      "unites": 10,
+      "p_minimal_atteignable": 0.001953125,
+      "unites_favorables_requises": 9,
+      "classe": "atteignable_fragile",
+      "lecture": "Sur 10 unités, il faut au moins 9 unités favorables pour descendre à p <= 0.05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/antibiotic_history_robustness/primary_paired_comparison/sign_flip_combinations"
+    },
+    {
+      "famille": "test de signe exact",
+      "unites": 10,
+      "p_minimal_atteignable": 0.001953125,
+      "unites_favorables_requises": 9,
+      "classe": "atteignable_fragile",
+      "lecture": "Sur 10 unités, il faut au moins 9 unités favorables pour descendre à p <= 0.05.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/antibiotic_history_robustness/slope_ablation/sign_flip_combinations"
+    }
+  ],
+  "limite": "Ce balayage couvre les tests discrets dont la taille est inscrite dans les résultats. Il ne couvre pas les critères dont l'atteignabilité dépend de la distribution des données, comme le quantile de la vallée des rayons : ceux-là demandent une mesure empirique par sous-échantillonnage."
+}
