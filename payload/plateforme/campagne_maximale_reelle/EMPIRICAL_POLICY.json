@@ -1,0 +1,251 @@
+{
+  "datasets": {
+    "antibiotic_cycles": {
+      "data_kind": "empirical_experiment",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Histoires d’exposition expérimentales réelles; aucun test générique n’est autorisé sans critère ciblé.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "antibiotic_design": {
+      "data_kind": "empirical_derived",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Audit du nombre de lignées, séparation MIC/survie/persistance et mesures de fitness Donofrio. Randomisation, aveuglement, biofilms et plusieurs espèces ne sont pas documentés.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": [
+        "R1-005",
+        "R1-009",
+        "R1-010"
+      ]
+    },
+    "antibiotic_lineages": {
+      "data_kind": "empirical_experiment",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Lignées expérimentales réelles; aucun test générique n’est autorisé sans pipeline dédié.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "antibiotic_measurements": {
+      "data_kind": "empirical_experiment",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Mesures expérimentales réelles; aucun test générique n’est autorisé par simple présence.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "benchmark_cases": {
+      "data_kind": "derived_benchmark",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Benchmark exploratoire dérivé de données réelles dans 8 domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée. Utilisable pour développement exploratoire, pas comme preuve empirique confirmatoire.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "biology_cases": {
+      "data_kind": "derived_benchmark",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Cas dérivés de deux domaines biologiques réels, avec séparation train/validation/test. Les six dimensions complètes et Pacc ne sont pas mesurés. Les étiquettes sont dérivées; la matrice générique ne remplace pas les pipelines expérimentaux dédiés.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "body_properties": {
+      "data_kind": "documentary_model_inputs",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Propriétés de corps utilisées comme entrées de modèle; elles ne constituent pas un test causal empirique.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "cell_architecture": {
+      "data_kind": "documentary_compilation",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Inventaire qualitatif couvrant archées, bactéries et plusieurs cellules eucaryotes. Pas de perturbations publiques, survie, récupération ou validation masquée.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "chronometers": {
+      "data_kind": "empirical_compilation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Chronomètres publiés potentiellement empiriques, mais aucun test générique n’est autorisé avant audit source-échantillon-incertitude.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "endosymbiosis_events": {
+      "data_kind": "empirical_derived",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": [
+        "B2-003"
+      ]
+    },
+    "ephemerides": {
+      "data_kind": "ephemeris_solution",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Éphémérides calculées/assimilées; référence de modèle, pas observation brute indépendante pour la matrice générique.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "exoplanet_observations": {
+      "data_kind": "empirical_archive",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Catalogue observationnel réel NASA Exoplanet Archive; aucun test générique n’est autorisé sans protocole ciblé gelé.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "isotope_tracers": {
+      "data_kind": "empirical_observation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Compilation D/H, mesures Cr d'Ivuna et Ca lunaires avec provenance. Elle compile des traceurs disponibles, mais ne suffit pas à tester la dichotomie carbonée/non carbonée. P1-001 demande explicitement Ti, Cr, Mo, W, Ni, Ru, Pd; la table canonique actuelle ne couvre pas cet ensemble complet.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "late_accretion_tracers": {
+      "data_kind": "empirical_observation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "122 159 mesures GEOROC de Mo, W et HSE. candidate_source est une famille rocheuse/tectonique, pas un pôle de mélange; uncertainty est vide dans cette extraction. La table couvre seulement la compilation P5-001. Dates/masses d’apport, équilibration noyau, impact lunaire, CC/NC, modèles de mélange et validation croisée restent bloqués.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": [
+        "P5-001"
+      ]
+    },
+    "matter_transitions": {
+      "data_kind": "documentary_compilation",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Transitions historiques codées et documentaires; pas de test empirique générique autorisé.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "modern_climate_ensemble": {
+      "data_kind": "mixed_observation_and_external_model_output",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Observations avec incertitude, trajectoires CMIP6 multi-modèles/scénarios et expériences idéalisées. Aucun coût matériel, overshoot explicite, retrait ou restauration n'est fourni. Le jeu mélange observations et sorties de modèles climatiques; il est exclu du mode preuve empirique stricte.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "modern_climate_timeseries": {
+      "data_kind": "empirical_derived",
+      "eligible_for_empirical_proof": true,
+      "limitations": "7 193 points issus de GISTEMP LSAT/SST/combiné et HadCRUT5. Ce sont quatre reconstructions de température, pas quatre compartiments de mémoire ni un forçage. Elles ne débloquent donc aucun test CL1/CL2 de mémoire, D-H-L ou restauration.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "molecular_inventory": {
+      "data_kind": "model_initial_conditions",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "nucleosynthesis_yields": {
+      "data_kind": "external_model_output",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Dix-huit modèles CCSN, six familles et trois masses : utilisables pour l'effet de masse. Pas de BBN, AGB, fusions compactes, rotation/binarité contrôlée ni incertitudes publiées dans le conteneur. Les rendements sont des sorties de modèles stellaires, pas des observations directes.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "orbital_initial_conditions": {
+      "data_kind": "ephemeris_model_input",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Conditions initiales issues d’éphémérides et utilisées comme entrées de simulation; pas une preuve interventionnelle empirique.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "orbital_reference": {
+      "data_kind": "external_orbital_model_reference",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Référence orbitale calculée; contrôle de modèle, pas preuve empirique directe.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "orbital_timeseries": {
+      "data_kind": "external_or_nbody_model_output",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Séries orbitales issues de solutions ou d’intégrations numériques; sorties de modèle.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "paleoclimate_timeseries": {
+      "data_kind": "empirical_compilation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Séries paléoclimatiques publiées; aucun test générique n’est autorisé avant protocole long, chronologie et contrôles gelés.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "partition_experiments": {
+      "data_kind": "empirical_observation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents. Seules la compilation et l’harmonisation P-T-redox-composition sont admises en mode empirique strict; méta-analyse hiérarchique, interactions et lois concurrentes restent à implémenter.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": [
+        "P3-001",
+        "P3-002"
+      ]
+    },
+    "planetary_histories": {
+      "data_kind": "missing_composite_contract",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Contrat composite non rempli; le fichier doit rester absent jusqu’à provenance primaire par cellule.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "prebiotic_design": {
+      "data_kind": "empirical_derived",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Plan réel des transferts de vésicules. Température, pH, UV, minéral et cycles humide-sec ne sont pas renseignés dans ces fichiers et restent absents.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": [
+        "V1-001",
+        "V1-004"
+      ]
+    },
+    "prebiotic_lineages": {
+      "data_kind": "empirical_observation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Turbidité A400, cartes de transfert, sélection/dérive, alimentation/résuspension, durées de génération, séries temporelles et mesures auxiliaires. Aucune longueur de polymère, fidélité de copie, fusion/division directe ou autonomie métabolique n'est inventée. Les preuves vésicules restent portées par le pipeline dédié préenregistré; la matrice générique de 683 tests ne les convertit pas automatiquement en pass empiriques.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "prebiotic_rna_evolution": {
+      "data_kind": "empirical_observation",
+      "eligible_for_empirical_proof": true,
+      "limitations": "Mesures expérimentales réelles d’évolution ARN; aucun protocole générique n’est autorisé en dehors des analyses dédiées.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "reaction_network": {
+      "data_kind": "compiled_rate_database",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Deux réseaux gazeux indépendants avec taux, températures et incertitudes KIDA. Pas de chimie de surface, glaces, ordre d'irradiation ni inventaire radioastronomique. Les taux mélangent mesures, estimations et calculs; ce réseau sert à la modélisation, pas à une preuve empirique directe.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "relations": {
+      "data_kind": "documentary_relation_graph",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Relations typées construites par ORI-C; elles ne sont pas des observations indépendantes.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "states": {
+      "data_kind": "derived_oric_state",
+      "eligible_for_empirical_proof": false,
+      "limitations": "États ORI-C dérivés; aucune observation primaire autonome n’est attribuée à cette table.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "thermochemical_phases": {
+      "data_kind": "computed_from_published_thermodynamic_parameters",
+      "eligible_for_empirical_proof": false,
+      "limitations": "64 512 points calculés à partir de paramètres CHNOSZ/OBIGT et Berman publiés. La table est utile comme entrée thermodynamique mais ne constitue ni une séquence de condensation à l’équilibre ni une observation de phases formées. Aucun test M4 n’est débloqué par la table seule.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    },
+    "volatile_inventory": {
+      "data_kind": "documentary_quantitative_compilation",
+      "eligible_for_empirical_proof": false,
+      "limitations": "Dix scénarios C-H-N-S issus de valeurs publiées, mais aucun ne publie simultanément tous les compartiments initial+noyau+manteau+atmosphère+pertes. Les cellules vides restent inconnues et ne sont jamais traitées comme zéro; aucune fermeture exacte ni test P4 n’est donc revendiqué.",
+      "scope_mode": "allow_list",
+      "supported_test_ids": []
+    }
+  },
+  "rule": "Pare-feu empirique fail-closed. Les 33 contrats de données sont classés; seule une allow-list explicite peut autoriser un test.",
+  "schema_version": 2
+}

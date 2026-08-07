@@ -1,0 +1,250 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "APPLIQUER_MISE_A_JOUR.py",
+      "size": 15526,
+      "sha256": "d127d1fde8075b833b6b6d05d24274f2a4adf4fc569a95147cb1f3ac2913b9e2"
+    },
+    {
+      "path": "BASELINE_GIT_BLOBS.json",
+      "size": 3206,
+      "sha256": "b57a5e68da611c0032021093b5321485fe6de42a26ccea18fff80a024b8f6113"
+    },
+    {
+      "path": "PATCH_MANIFEST.json",
+      "size": 8818,
+      "sha256": "4452f7290069090e1db11c1dfd3e6a02ee5817e7742b156c5f3b903edf2e6dea"
+    },
+    {
+      "path": "README_APPLIQUER_MISE_A_JOUR.md",
+      "size": 1422,
+      "sha256": "cc9e20ff3eb107d7eacda72f99e2bd393e9a6894fbe094496e7c34c8e0cc76ed"
+    },
+    {
+      "path": "payload/.github/workflows/audit-empirique-strict.yml",
+      "size": 3447,
+      "sha256": "2e6ad1309475938b6b23c56bd332fbe49c573ccb6db38df957def2fc21073f19"
+    },
+    {
+      "path": "payload/DATA_AVAILABILITY.md",
+      "size": 8865,
+      "sha256": "290f9e715cd76f63e8cbc163aecdf1f82c8fb45440439d8e9e155f3e01fc7fd9"
+    },
+    {
+      "path": "payload/ERRATUM_SCIENTIFIQUE_v0.9.4_2026-08-07.md",
+      "size": 3525,
+      "sha256": "54a01cad54e75589461e9b3f0de6d9f3a5617861d4cb030b0dcfc0e3ff7bd397"
+    },
+    {
+      "path": "payload/INSTRUCTIONS_MISE_A_JOUR.md",
+      "size": 2704,
+      "sha256": "7a176518480960b12fc275a178d86a4a0494d5a0f833f5627f970d905e840bbf"
+    },
+    {
+      "path": "payload/MISE_A_JOUR_PREUVES_EMPIRIQUES_2026-08-07.md",
+      "size": 6522,
+      "sha256": "d032ef586adc0e3deb7a22919a3d2602b05db0c8bdc9e616e401994521c508e6"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/README.md",
+      "size": 942,
+      "sha256": "88f1c0260a1b97b13b797766beb84cce68231fba9d79ec96ea6b709ccda5b1f6"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/SOURCE_BUNDLE.json",
+      "size": 6714,
+      "sha256": "2e6e39ad62c8c18b979bce493853a74991e74e36b32affd851b4658e58dea3aa"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/documentation_source/NOTICE_TABLES_CANDIDATES.md",
+      "size": 9403,
+      "sha256": "d7ab7978cb171ec36cb35499c2a09999ff53d132b154bf842ae7087f64697357"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/documentation_source/RETRAITS.json",
+      "size": 1967,
+      "sha256": "54fa300dfdf435ae5f99cce8a92491c240628e3103d3c6a65f73baf69faf9a9f"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc-co2-2008.txt",
+      "size": 107462,
+      "sha256": "ae2ecff8e048c2357094c14742fb83eecc97c896707fc1f983614818427ae390"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc3deuttemp2007.txt",
+      "size": 357470,
+      "sha256": "b801fc2e422d427524619be25b50ee86fd63b36eb440eb5044d9bec12a4d1747"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/lisiecki2005_LR04.txt",
+      "size": 409959,
+      "sha256": "973a52d988da04333c98c3fc0cb51babac2fa9bb1c05d42de3d6df726d96b6fc"
+    },
+    {
+      "path": "payload/donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/vostok_deutnat.txt",
+      "size": 84230,
+      "sha256": "c69eca96499bece4b2f65d4e40240f52e0bfb4027383b3f2db68a1b3e36c75f6"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
+      "size": 28245,
+      "sha256": "97272a3f8f274462499f7c0739e53514051edea360833b8efda7f4d061de60e3"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md",
+      "size": 7148,
+      "sha256": "1a2d787d722a1a6e5d4b8204fb892d1500ebe31daca762979a879f12561a6b0d"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md",
+      "size": 1768,
+      "sha256": "7aeb082fa9026442ab7347bd1f9d2e7958f654f5aa5e3d147b77fc919cb36f53"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/EMPIRICAL_POLICY.json",
+      "size": 13879,
+      "sha256": "1a58d1b5aab3a8486d0f920969e976bd1220a2ead8da5b157c23ce8e9d52981e"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/INTEGRATION_MAXIMALE_DONNEES_EXISTANTES.md",
+      "size": 14366,
+      "sha256": "ad3444a7ee866715424125e90c3d6ffdb0bf95322b8ebad5741bbdec93255a7d"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/PROVENANCE_INTEGRATION_DEPOT.json",
+      "size": 9905,
+      "sha256": "4feb16ea4998e572c0055609dff8348e17c5857e06ac77eeb784e66970b6f353"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json",
+      "size": 20431,
+      "sha256": "578c254c0962416540a0c6518ff2a688e7bca17474d6ad0a47fe98d6ac1385cc"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv",
+      "size": 11962067,
+      "sha256": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv",
+      "size": 536495,
+      "sha256": "e2f08d75975cdfe6ff3cd6cc0e382439588b2bcd645ac04e06575e7ea261057e"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv",
+      "size": 7092658,
+      "sha256": "60eebfa981cb9b5d13001c65e87f0eaaf0d0221afac6f84cac39ee16c5c04d45"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/data/volatile_inventory.csv",
+      "size": 4336,
+      "sha256": "e93d43b9d287bba0ebf6da3bef9594f5ba95120b8c5398058616d094a9da3f9f"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py",
+      "size": 48344,
+      "sha256": "1a99dcf0c0788196cda33b5e645172913a908d4fac07449b3f3d2eea55c5c131"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/integrer_lot_scientifique_2026_08_05.py",
+      "size": 46483,
+      "sha256": "e04e20421a689053dc4d9d1312c79114494bbe458169d73aa9af7aab8c59f90e"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resultats_consolides/REPORT.md",
+      "size": 841,
+      "sha256": "45644d8728e21fb1e398d6bb8745ca750e287deb45efea85c7a2efba542e96a5"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resultats_empiriques/audit_donnees_2026_08_07.json",
+      "size": 8844,
+      "sha256": "5f5d3e9b87b2b28eed95d98064bdc36bc931a7dff834627b2fe1293dc9190986"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resultats_integration_maximale/REPORT.md",
+      "size": 73307,
+      "sha256": "b3efc9062b00e8a3270096cc858f73a21c80016fe252576634985c600e24ea2b"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.csv",
+      "size": 100027,
+      "sha256": "6556d6044338fccf39232012af4e6b95b7fec1c3855c23bb6e7cab22fac0b236"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json",
+      "size": 804916,
+      "sha256": "a885571636d72148ec6d842d3674db3aff78c6479b3dfd57e7dad76d94791d7c"
+    },
+    {
+      "path": "payload/plateforme/campagne_maximale_reelle/resumer_integration_maximale.py",
+      "size": 12965,
+      "sha256": "5543d5a64355078842cb81c180955152d7cfb8cca95152045119d10a70344ca1"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/src/oric_full/cli.py",
+      "size": 14861,
+      "sha256": "c61877271595ab13388b98bac6934dbc5229ba4e6f39da31a642788d6249aca3"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/src/oric_full/domains/matter.py",
+      "size": 11326,
+      "sha256": "657ef931ffa19d619c4d0d3eaa6e8fadd61a4054fea39cdabec96fc890b2aba0"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/src/oric_full/domains/planetary.py",
+      "size": 12775,
+      "sha256": "dc5e9906125c36130a98bd88561c95bffa0da6d848a28bf67954a14edf51722a"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/src/oric_full/engines.py",
+      "size": 34271,
+      "sha256": "d397cb0d9b1e7cb1c5cb825f329ac726e5e47d0f8c0da0c0d38a20014876f5c7"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/src/oric_full/runner.py",
+      "size": 12329,
+      "sha256": "29d7d925771fc5fa61185795d1d70f6e92691cec98cd75ad73ba9dfcccb00a6e"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/tests/test_empirical_firewall.py",
+      "size": 5252,
+      "sha256": "0fcf97ad316cec96253b4f0a46d918a86a35e2d4a9fe3e8960dd1b3f8ad1148a"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/tests/test_external_scientific_bundle.py",
+      "size": 7043,
+      "sha256": "b16175a0825ae20eaa7d578dfe854a95f9d4ccc123fefb38df0faae61b8f1e42"
+    },
+    {
+      "path": "payload/plateforme/source_corrigee/tests/test_real_data_scope.py",
+      "size": 2289,
+      "sha256": "9cda581f4e16e8303d3f4fad797833300ed247ed5f363c6d5347ac2faa73b151"
+    },
+    {
+      "path": "payload/scripts/auditer_donnees_reelles_2026_08_07.py",
+      "size": 7385,
+      "sha256": "724ab24d9a1fbafb7a79aee44fdab45ab75a325d32c9ef9e0e1771001c7aee2c"
+    },
+    {
+      "path": "payload/scripts/importer_bundle_donnees_reelles.py",
+      "size": 3061,
+      "sha256": "c3ea2683ee08191f97e46f60a1805bc14141583cd1ba4b442b54bf9a8b093eab"
+    },
+    {
+      "path": "payload/scripts/valider_barriere_empirique.py",
+      "size": 6950,
+      "sha256": "883a9a668c05fa5317f73b409fd1635175fec3a34800c9249ce93b0bf5b53b1c"
+    },
+    {
+      "path": "payload/scripts/valider_publication_stable.py",
+      "size": 2454,
+      "sha256": "eb8b4c4d95f42c6feee2348d994332dce2968d99a365bfa4f6d83e49db6eb7d1"
+    },
+    {
+      "path": "payload/scripts/valider_tout.py",
+      "size": 1595,
+      "sha256": "b11ff309e8bc95439caae7c23273e8a5daa995be6ad93a3be5012ea09adf5b42"
+    }
+  ]
+}

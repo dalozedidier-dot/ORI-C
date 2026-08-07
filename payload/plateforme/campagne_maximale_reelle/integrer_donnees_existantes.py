@@ -276,8 +276,8 @@ def build_vesicle_timecourses(data_dir: Path, work: Path) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for path in sorted(work.glob("*_inc.xlsx")):
         condition = path.stem.split("_")[0]
-        with pd.ExcelFile(path) as excel:
-            sheet_names = list(excel.sheet_names)
+        with pd.ExcelFile(path) as workbook:
+            sheet_names = list(workbook.sheet_names)
         for sheet in sheet_names:
             raw = pd.read_excel(path, sheet_name=sheet, header=None, dtype=object)
             header_row = None
@@ -357,8 +357,8 @@ def build_vesicle_timecourses(data_dir: Path, work: Path) -> dict[str, Any]:
 def build_vesicle_auxiliary(data_dir: Path, work: Path) -> dict[str, Any]:
     source = work / "Fig3-data.xlsx"
     rows: list[dict[str, Any]] = []
-    with pd.ExcelFile(source) as excel:
-        sheet_names = list(excel.sheet_names)
+    with pd.ExcelFile(source) as workbook:
+        sheet_names = list(workbook.sheet_names)
     for sheet in sheet_names:
         raw = pd.read_excel(source, sheet_name=sheet, header=None, dtype=object)
         top_headers = []
@@ -404,9 +404,9 @@ def build_vesicle_log_auxiliary(data_dir: Path, work: Path) -> dict[str, Any]:
     for path in sorted(work.glob("*_log.xlsx")):
         condition_match = re.match(r"^(FR|FU|UR|UU)", path.name, re.I)
         condition = condition_match.group(1).upper() if condition_match else ""
-        with pd.ExcelFile(path) as excel:
-            nr_sheets = [name for name in excel.sheet_names if name.lower() in {"drnr", "selnr"}]
-        for sheet in nr_sheets:
+        with pd.ExcelFile(path) as workbook:
+            sheet_names = list(workbook.sheet_names)
+        for sheet in [name for name in sheet_names if name.lower() in {"drnr", "selnr"}]:
             arm = "drift" if sheet.lower().startswith("dr") else "selection"
             try:
                 matrix = parser.numeric_matrix(path, sheet)
@@ -428,7 +428,7 @@ def build_vesicle_log_auxiliary(data_dir: Path, work: Path) -> dict[str, Any]:
                         "value": float(value),
                         "header_original": generation_column,
                     })
-        for sheet in [name for name in excel.sheet_names if name.lower() in {"drdata", "seldata"}]:
+        for sheet in [name for name in sheet_names if name.lower() in {"drdata", "seldata"}]:
             arm = "drift" if sheet.lower().startswith("dr") else "selection"
             raw = pd.read_excel(path, sheet_name=sheet, header=None, dtype=object)
             plate_result = parser._first_plate_rows(raw)
@@ -823,17 +823,25 @@ def benchmark_rows_from_matter() -> list[dict[str, Any]]:
 
 
 def build_benchmarks_and_biology(data_dir: Path, pairs_frame: pd.DataFrame) -> dict[str, Any]:
-    rows = []
-    rows.extend(benchmark_rows_from_orbit(data_dir))
-    rows.extend(benchmark_rows_from_climate(data_dir))
-    rows.extend(benchmark_rows_from_vesicles(pairs_frame))
-    rows.extend(benchmark_rows_from_antibiotics())
-    rows.extend(benchmark_rows_from_windels(data_dir))
-    rows.extend(benchmark_rows_from_rna(data_dir))
-    rows.extend(benchmark_rows_from_modern_climate(data_dir))
-    rows.extend(benchmark_rows_from_matter())
-    benchmark = pd.DataFrame(rows).drop_duplicates("case_id")
-    write_csv(data_dir / "benchmark_cases.csv", benchmark)
+    # Le benchmark transversal est une table dérivée et n'est plus admissible
+    # comme preuve empirique. S'il est déjà versionné, l'intégration des nouvelles
+    # observations ne le régénère pas silencieusement avec une population différente.
+    benchmark_path = data_dir / "benchmark_cases.csv"
+    benchmark_preserved = benchmark_path.exists() and benchmark_path.stat().st_size > 0
+    if benchmark_preserved:
+        benchmark = pd.read_csv(benchmark_path)
+    else:
+        rows = []
+        rows.extend(benchmark_rows_from_orbit(data_dir))
+        rows.extend(benchmark_rows_from_climate(data_dir))
+        rows.extend(benchmark_rows_from_vesicles(pairs_frame))
+        rows.extend(benchmark_rows_from_antibiotics())
+        rows.extend(benchmark_rows_from_windels(data_dir))
+        rows.extend(benchmark_rows_from_rna(data_dir))
+        rows.extend(benchmark_rows_from_modern_climate(data_dir))
+        rows.extend(benchmark_rows_from_matter())
+        benchmark = pd.DataFrame(rows).drop_duplicates("case_id")
+        write_csv(benchmark_path, benchmark)
 
     biological = benchmark[benchmark["domain"].isin(["vesicle", "antibiotic", "antibiotic_longitudinal", "rna_evolution"])].copy()
     biology = pd.DataFrame(
@@ -855,69 +863,28 @@ def build_benchmarks_and_biology(data_dir: Path, pairs_frame: pd.DataFrame) -> d
         "benchmark_splits": benchmark.groupby("split").size().astype(int).to_dict(),
         "biology_rows": len(biology),
         "biology_domains": biology.groupby("domain").size().astype(int).to_dict(),
+        "benchmark_preserved": benchmark_preserved,
     }
 
 
 def coverage_registry(summaries: dict[str, Any]) -> dict[str, Any]:
-    partition_summary = summaries.get("partition_experiments", {})
-    complete_partition = int(partition_summary.get("complete_regression_rows", 0) or 0)
-    partition_ids = ["P3-001", "P3-002"]
-    partition_limitations = "Compilation documentaire partielle; les protocoles quantitatifs restent bloqués."
-    if complete_partition >= 8:
-        partition_ids += ["P3-003", "P3-004", "P3-005"]
-        partition_limitations = (
-            "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. "
-            "Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents."
-        )
-    benchmark_domains = summaries.get("benchmark_cases", {}).get("benchmark_domains", {})
-    domain_count = len(benchmark_domains)
-    datasets = {
-        "partition_experiments": {
-            "supported_test_ids": partition_ids,
-            "limitations": partition_limitations,
-        },
-        "prebiotic_design": {
-            "supported_test_ids": ["V1-001", "V1-004", "V1-006", "V1-007"],
-            "limitations": "Plan réel des transferts de vésicules. Température, pH, UV, minéral et cycles humide-sec ne sont pas renseignés dans ces fichiers et restent absents.",
-        },
-        "prebiotic_lineages": {
-            "supported_test_ids": [
-                "V2-007", "V2-008", "V2-014", "V2-029", "V2-032", "V2-035", "V2-039", "V2-040",
-                "V3-013", "V3-014", "V3-015", "V3-018",
-                "V4-011", "V4-015", "V4-016", "V4-019", "V4-020",
-                "V6-004", "V6-005", "V6-006", "V6-007", "V6-008",
-            ],
-            "limitations": "Turbidité A400, cartes de transfert, sélection/dérive, alimentation/résuspension, durées de génération, séries temporelles et mesures auxiliaires. Aucune longueur de polymère, fidélité de copie, fusion/division directe ou autonomie métabolique n'est inventée.",
-        },
-        "cell_architecture": {
-            "supported_test_ids": ["B1-002"],
-            "limitations": "Inventaire qualitatif couvrant archées, bactéries et plusieurs cellules eucaryotes. Pas de perturbations publiques, survie, récupération ou validation masquée.",
-        },
-        "biology_cases": {
-            "supported_test_ids": ["B3-005", "B3-006", "B3-007"],
-            "limitations": "Cas dérivés de deux domaines biologiques réels, avec séparation train/validation/test. Les six dimensions complètes et Pacc ne sont pas mesurés.",
-        },
-        "antibiotic_design": {
-            "supported_test_ids": ["R1-005", "R1-009", "R1-010"],
-            "limitations": "Audit du nombre de lignées, séparation MIC/survie/persistance et mesures de fitness Donofrio. Randomisation, aveuglement, biofilms et plusieurs espèces ne sont pas documentés.",
-        },
-        "benchmark_cases": {
-            "supported_test_ids": [
-                "T1-001", "T1-003", "T1-004", "T1-006", "T1-007", "T1-008", "T1-010", "T1-015", "T1-016",
-                "T2-001", "T2-002", "T2-003", "T2-004", "T2-006", "T2-007",
-                "T3-003", "T3-004", "T3-005", "T3-007", "T3-008",
-                "T4-001", "T4-002", "T4-003", "T4-004",
-                "T5-001", "T5-002", "T5-003", "T5-004", "T5-005", "T5-006", "T5-007", "T5-010",
-            ],
-            "limitations": f"Benchmark exploratoire dérivé de données réelles dans {domain_count} domaines. Les cibles sont des directions binaires dérivées avant analyse. Aucune réplication externe ni prédiction confirmatoire n'est revendiquée.",
-        },
-    }
-    for name, item in datasets.items():
+    """Construit le registre d'exécution réelle depuis une politique gelée.
+
+    La disponibilité d'une table ou l'augmentation de son effectif ne peut plus
+    élargir automatiquement la liste des tests admis comme empiriques. Toute
+    extension de portée exige une modification explicite de EMPIRICAL_POLICY.json.
+    """
+    policy_path = HERE / "EMPIRICAL_POLICY.json"
+    policy = json.loads(policy_path.read_text(encoding="utf-8"))
+    datasets: dict[str, Any] = {}
+    for name, definition in policy.get("datasets", {}).items():
+        item = dict(definition)
         item["summary"] = summaries.get(name, {})
-        item["scope_mode"] = "allow_list"
+        datasets[name] = item
     return {
-        "schema_version": 1,
-        "rule": "Une table partielle ne débloque que les protocoles réellement couverts. Les autres restent bloqués même si le fichier existe.",
+        "schema_version": int(policy.get("schema_version", 2)),
+        "rule": policy.get("rule", "Pare-feu empirique fail-closed."),
+        "policy_file": "EMPIRICAL_POLICY.json",
         "datasets": datasets,
     }
 
@@ -991,9 +958,9 @@ def main() -> int:
         "partition_experiments": summaries.get("partition_experiments", {}),
         "endosymbiosis_events": summaries.get("endosymbiosis_events", {}),
     }
-    for dataset_name, item in lot_coverage.items():
-        item["summary"] = summary_map.get(dataset_name, {})
-        coverage["datasets"][dataset_name] = item
+    for dataset_name in lot_coverage:
+        if dataset_name in coverage["datasets"]:
+            coverage["datasets"][dataset_name]["summary"] = summary_map.get(dataset_name, {})
 
     (data_dir / "REAL_DATA_COVERAGE.json").write_text(
         json.dumps(coverage, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"

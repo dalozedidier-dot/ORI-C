@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "status": "ok",
+  "rule": "Audit de ressources réelles/externes. Aucun pass technique n'est converti ici en preuve scientifique.",
+  "assets": {
+    "thermochemical_phases": {
+      "sha256": "60eebfa981cb9b5d13001c65e87f0eaaf0d0221afac6f84cac39ee16c5c04d45",
+      "audit": {
+        "rows": 64512.0,
+        "complete_rows": 64512.0,
+        "complete_fraction": 1.0,
+        "phase_count": 1025.0,
+        "composition_count": 763.0,
+        "state_count": 5.0,
+        "reference_count": 58.0,
+        "pressure_model_count": 4.0,
+        "temperature_min_k": 298.15,
+        "temperature_max_k": 2000.0,
+        "pressure_min_bar": 1.0,
+        "pressure_max_bar": 50000.0,
+        "exact_grid_duplicate_rows": 0.0,
+        "pressure_non_decreasing_fraction": 1.0,
+        "temperature_non_increasing_fraction": 1.0
+      },
+      "limitations": "Grille calculée à partir de paramètres thermodynamiques publiés. Aucun équilibre de condensation, séquence de phases, C/O, redox, cinétique, transport ou bilan de matière n'est déduit de cette seule table.",
+      "empirical_test_ids_enabled": []
+    },
+    "late_accretion_tracers": {
+      "sha256": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a",
+      "audit": {
+        "rows": 122159.0,
+        "samples": 56614.0,
+        "tracers": 10.0,
+        "required_tracer_coverage_fraction": 1.0,
+        "samples_with_two_or_more_tracers": 29536.0,
+        "uncertainty_coverage": 0.0,
+        "candidate_source_families": 45.0,
+        "unit_inconsistency_count": 0.0
+      },
+      "tracer_counts": {
+        "AU": 7374,
+        "IR": 7515,
+        "MO": 33713,
+        "OS": 7980,
+        "PD": 9194,
+        "PT": 9039,
+        "RE": 7185,
+        "RH": 4596,
+        "RU": 6695,
+        "W": 28868
+      },
+      "limitations": "Audit de couverture d'une compilation géochimique mesurée. candidate_source décrit une famille rocheuse/tectonique GEOROC, pas un pôle de mélange d'accrétion. Aucune date, masse d'apport, histoire d'impact ou fraction de mélange n'est inférée.",
+      "empirical_test_ids_enabled": [
+        "P5-001"
+      ]
+    },
+    "volatile_inventory": {
+      "sha256": "e93d43b9d287bba0ebf6da3bef9594f5ba95120b8c5398058616d094a9da3f9f",
+      "audit": {
+        "rows": 10.0,
+        "rows_with_initial_mass": 6.0,
+        "complete_budget_rows": 0.0,
+        "incomplete_budget_rows": 10.0,
+        "negative_mass_cells": 0.0,
+        "median_exact_mass_balance_error": null,
+        "max_exact_mass_balance_error": null,
+        "median_known_retained_fraction_lower_bound": 0.7020413965907999
+      },
+      "row_audit": [
+        {
+          "sample_id": "Terre|C-TER-NOY-BAS",
+          "volatile": "C",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 0.09505327245053273
+        },
+        {
+          "sample_id": "Terre|C-TER-NOY-MAX",
+          "volatile": "C",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 1.0287671232876712
+        },
+        {
+          "sample_id": "Terre|C-TER-NOY-MIN",
+          "volatile": "C",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 0.16122526636225268
+        },
+        {
+          "sample_id": "Terre|H-TER-NOY-MAX",
+          "volatile": "H",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 1.0285027252324463
+        },
+        {
+          "sample_id": "Terre|H-TER-NOY-MIN",
+          "volatile": "H",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 0.388447151864914
+        },
+        {
+          "sample_id": "Terre|N-TER-NOY-CC",
+          "volatile": "N",
+          "initial_mass_published": false,
+          "known_retained_compartments": 3,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": null
+        },
+        {
+          "sample_id": "Terre|N-TER-NOY-EC",
+          "volatile": "N",
+          "initial_mass_published": false,
+          "known_retained_compartments": 3,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": null
+        },
+        {
+          "sample_id": "Terre|N-TER-NOY-ZY",
+          "volatile": "N",
+          "initial_mass_published": false,
+          "known_retained_compartments": 3,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": null
+        },
+        {
+          "sample_id": "Venus|sans_noyau_publie",
+          "volatile": "N",
+          "initial_mass_published": false,
+          "known_retained_compartments": 1,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": null
+        },
+        {
+          "sample_id": "Terre|S-TER-NOY",
+          "volatile": "S",
+          "initial_mass_published": true,
+          "known_retained_compartments": 2,
+          "lost_mass_published": false,
+          "exact_closure_computable": false,
+          "known_retained_fraction_lower_bound": 1.0156356413166858
+        }
+      ],
+      "limitations": "Les compartiments absents restent inconnus. Une somme partielle est seulement une borne inférieure de masse conservée; aucune fermeture n'est inférée tant que lost_mass et les autres compartiments requis ne sont pas tous publiés.",
+      "empirical_test_ids_enabled": []
+    },
+    "modern_climate_timeseries": {
+      "sha256": "e2f08d75975cdfe6ff3cd6cc0e382439588b2bcd645ac04e06575e7ea261057e",
+      "rows": 7193,
+      "variables": [
+        "hadcrut5_surface_temperature_anomaly_C",
+        "land_surface_air_temperature_anomaly_C",
+        "sea_surface_temperature_anomaly_C",
+        "surface_temperature_anomaly_C"
+      ],
+      "temperature_reconstructions_only": true,
+      "empirical_test_ids_enabled": [],
+      "limitations": "Plusieurs reconstructions de température ne constituent ni des compartiments de mémoire ni un forçage climatique."
+    },
+    "long_paleoclimate_sources": {
+      "epica_co2": {
+        "file": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc-co2-2008.txt",
+        "sha256": "ae2ecff8e048c2357094c14742fb83eecc97c896707fc1f983614818427ae390",
+        "numeric_age_rows": 1096,
+        "age_min": 137.0,
+        "age_max": 798512.0,
+        "age_unit": "yr_BP",
+        "empirical_test_ids_enabled": []
+      },
+      "epica_deuterium_temperature": {
+        "file": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc3deuttemp2007.txt",
+        "sha256": "b801fc2e422d427524619be25b50ee86fd63b36eb440eb5044d9bec12a4d1747",
+        "numeric_age_rows": 5800,
+        "age_min": -50.0,
+        "age_max": 801662.0,
+        "age_unit": "yr_BP",
+        "empirical_test_ids_enabled": []
+      },
+      "lr04_benthic_d18o": {
+        "file": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/lisiecki2005_LR04.txt",
+        "sha256": "973a52d988da04333c98c3fc0cb51babac2fa9bb1c05d42de3d6df726d96b6fc",
+        "numeric_age_rows": 10072,
+        "age_min": 0.0,
+        "age_max": 5320.0,
+        "age_unit": "kyr_BP",
+        "empirical_test_ids_enabled": []
+      },
+      "vostok_deuterium_temperature": {
+        "file": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/vostok_deutnat.txt",
+        "sha256": "c69eca96499bece4b2f65d4e40240f52e0bfb4027383b3f2db68a1b3e36c75f6",
+        "numeric_age_rows": 3311,
+        "age_min": 0.0,
+        "age_max": 422766.0,
+        "age_unit": "yr_BP",
+        "empirical_test_ids_enabled": []
+      },
+      "interpretation_limit": "Ces quatre séries longues lèvent le manque de durée du seul fichier NOAA 0-22 ka, mais elles ne déclenchent aucun test orbital-climat tant qu'un protocole long, ses critères, son indépendance chronologique et ses contrôles ne sont pas gelés."
+    }
+  },
+  "planetary_histories": {
+    "present": false,
+    "required_state": "absent_until_cell_level_primary_provenance_exists"
+  }
+}

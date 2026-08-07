@@ -1,0 +1,90 @@
+{
+  "repository": "dalozedidier-dot/ORI-C",
+  "branch": "main",
+  "captured": "2026-08-07",
+  "files": {
+    ".gitattributes": [
+      "7765baa26223c4444ac8d3d3c81d23cfda39ea3b"
+    ],
+    "README.md": [
+      "cb9afedd096c22f1e104a26eaea1c99b5ec6bbbf",
+      "3ed12976a191e018b360a166c6ed07daa411945d"
+    ],
+    "ETAT_DES_PREUVES.md": [
+      "28a4014e02aaca3a94b8f57fd2a9717740da71b8"
+    ],
+    "AVANCEES_ET_DECOUVERTES_2026-08-06.md": [
+      "5bbfd60e9b11031d6eaef6bb10ac496063bf8fda"
+    ],
+    "site/index.html": [
+      "27897d52106245bfb6e4e899a0c0dd775a692eee"
+    ],
+    "site/preuves.html": [
+      "9833d0bb042029cce8c1b8741d3dcb39dc7f2308"
+    ],
+    "site/reproductibilite.html": [
+      "d229d8940ab67aa306ce5f8f815486e6d320ec0c"
+    ],
+    "DATA_AVAILABILITY.md": [
+      "8eb7a6a2a7895ac4f4d01627d2f6f9a17d3f9231"
+    ],
+    "INSTRUCTIONS_MISE_A_JOUR.md": [
+      "7c1f6b48b34aaf432ddc7528dcdbf3c6e6a68e3c"
+    ],
+    "scripts/valider_tout.py": [
+      "5c686b2aa4d700ee10e69711a09e4c8f63b789ce",
+      "eb470ecd5c29353267ca32addf394c1130352437"
+    ],
+    "scripts/valider_publication_stable.py": [
+      "c2ef621e7cf6d04245c10d7568025f0cc3c32ce5"
+    ],
+    "plateforme/source_corrigee/src/oric_full/runner.py": [
+      "41088311f84276dfa5303dbb683293aa75be60db"
+    ],
+    "plateforme/source_corrigee/src/oric_full/domains/planetary.py": [
+      "eed580917120a372cb17ebc0432c9bf5ccb4debd"
+    ],
+    "plateforme/source_corrigee/src/oric_full/domains/matter.py": [
+      "02f7c93330d977ddc66886b2a2c9eb53061394c5"
+    ],
+    "plateforme/source_corrigee/src/oric_full/engines.py": [
+      "01bc457141221df8a2702522e1e5537ca0a29349"
+    ],
+    "plateforme/source_corrigee/src/oric_full/cli.py": [
+      "9d405d2c5d2040790ad0590daf090b497725795d"
+    ],
+    "plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py": [
+      "b9fc619cece3c604fbdf231d8b6999ae9437b121"
+    ],
+    "plateforme/campagne_maximale_reelle/integrer_lot_scientifique_2026_08_05.py": [
+      "bf5c28b03df70e80700a5125e7aedf91c947ea98"
+    ],
+    "plateforme/campagne_maximale_reelle/resumer_integration_maximale.py": [
+      "97b47c230062bcede75aa93c85f44532d0c4419e"
+    ],
+    "plateforme/source_corrigee/tests/test_external_scientific_bundle.py": [
+      "e9f68d16102c4be5f23ce21f06773e12028aa5e6"
+    ],
+    "plateforme/source_corrigee/tests/test_real_data_scope.py": [
+      "e4039ee3b1fb4073b973f96d5e9a17a8c80ae31c"
+    ],
+    "plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json": [
+      "fba92a00e5c2868c98d5ad0d6a92bfc6c6cdc098"
+    ],
+    "plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv": [
+      "4bea04fc6b2333a8d84982af46eb6b112c94e9d6"
+    ],
+    "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md": [
+      "025678c441394ac65be66e76764d3b6845f56e61"
+    ],
+    "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md": [
+      "ce2c290d81aff501968167e969070cd8dd050999"
+    ],
+    "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json": [
+      "6b9c826868276bc67ccba8d98bbc6a1d1a1150f8"
+    ],
+    "plateforme/campagne_maximale_reelle/resultats_consolides/REPORT.md": [
+      "234337e4d7e821efe10363c057ddb3163569bf62"
+    ]
+  }
+}
