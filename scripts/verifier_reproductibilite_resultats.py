@@ -9,6 +9,7 @@ les écarts d'arrondi entre BLAS, bibliothèques et versions mineures de Python.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import math
 import sys
@@ -130,6 +131,75 @@ def _compare_values(
         errors.append(f"{location}: attendu {reference!r}, obtenu {candidate!r}")
 
 
+def _compare_csv(
+    reference_path: Path,
+    candidate_path: Path,
+    *,
+    location: str,
+    relative_tolerance: float,
+    absolute_tolerance: float,
+    state: ComparisonState,
+    errors: list[str],
+) -> None:
+    """Compare deux CSV cellule par cellule.
+
+    Les en-têtes, le nombre de lignes et le nombre de colonnes doivent être
+    strictement identiques. Une cellule numérique des deux côtés bénéficie de
+    la tolérance ; toute autre cellule doit être identique caractère pour
+    caractère. Les sorties volumineuses des campagnes sont ainsi contrôlées
+    sur leur contenu, et non sur des octets que l'ordre des opérations
+    flottantes suffit à changer.
+    """
+    try:
+        with reference_path.open(encoding="utf-8", newline="") as handle:
+            reference_rows = list(csv.reader(handle))
+        with candidate_path.open(encoding="utf-8", newline="") as handle:
+            candidate_rows = list(csv.reader(handle))
+    except (OSError, UnicodeError, csv.Error) as exc:
+        errors.append(f"{location}: CSV illisible : {exc}")
+        return
+
+    if len(reference_rows) != len(candidate_rows):
+        errors.append(
+            f"{location}: {len(reference_rows)} lignes attendues, "
+            f"{len(candidate_rows)} obtenues"
+        )
+        return
+
+    for index, (reference_row, candidate_row) in enumerate(
+        zip(reference_rows, candidate_rows)
+    ):
+        if len(reference_row) != len(candidate_row):
+            errors.append(
+                f"{location}, ligne {index + 1} : {len(reference_row)} colonnes "
+                f"attendues, {len(candidate_row)} obtenues"
+            )
+            return
+        for column, (reference_cell, candidate_cell) in enumerate(
+            zip(reference_row, candidate_row)
+        ):
+            if reference_cell == candidate_cell:
+                continue
+            try:
+                reference_value = float(reference_cell)
+                candidate_value = float(candidate_cell)
+            except ValueError:
+                errors.append(
+                    f"{location}, ligne {index + 1}, colonne {column + 1} : "
+                    f"attendu {reference_cell!r}, obtenu {candidate_cell!r}"
+                )
+                continue
+            _compare_values(
+                reference_value,
+                candidate_value,
+                location=f"{location}[{index + 1}][{column + 1}]",
+                relative_tolerance=relative_tolerance,
+                absolute_tolerance=absolute_tolerance,
+                state=state,
+                errors=errors,
+            )
+
+
 def _relative_files(root: Path) -> set[Path]:
     return {
         path.relative_to(root)
@@ -144,9 +214,11 @@ def compare_directories(
     *,
     relative_tolerance: float,
     absolute_tolerance: float,
-) -> tuple[ComparisonState, list[str], int]:
+    ignored_suffixes: frozenset[str] = frozenset(),
+) -> tuple[ComparisonState, list[str], int, int]:
     state = ComparisonState()
     errors: list[str] = []
+    ignored_files = 0
     reference_files = _relative_files(reference_dir)
     candidate_files = _relative_files(candidate_dir)
 
@@ -178,10 +250,22 @@ def compare_directories(
                 state=state,
                 errors=errors,
             )
+        elif relative_path.suffix.lower() == ".csv":
+            _compare_csv(
+                reference_path,
+                candidate_path,
+                location=str(relative_path),
+                relative_tolerance=relative_tolerance,
+                absolute_tolerance=absolute_tolerance,
+                state=state,
+                errors=errors,
+            )
+        elif relative_path.suffix.lower() in ignored_suffixes:
+            ignored_files += 1
         elif reference_path.read_bytes() != candidate_path.read_bytes():
             errors.append(f"{relative_path}: contenu non JSON différent")
 
-    return state, errors, compared_files
+    return state, errors, compared_files, ignored_files
 
 
 def parse_args() -> argparse.Namespace:
@@ -190,6 +274,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--candidate", required=True, type=Path)
     parser.add_argument("--relative-tolerance", type=float, default=1e-8)
     parser.add_argument("--absolute-tolerance", type=float, default=1e-10)
+    parser.add_argument(
+        "--ignorer-suffixes",
+        default="",
+        help=(
+            "Suffixes exclus de la comparaison, séparés par des virgules, par "
+            "exemple « .png ». Les figures matplotlib ne sont pas reproductibles "
+            "octet par octet : leurs métadonnées et le rendu des polices varient "
+            "d'une machine à l'autre. Aucun suffixe n'est ignoré par défaut ; "
+            "chaque exclusion doit être demandée explicitement et reste comptée "
+            "dans le rapport."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -205,11 +301,21 @@ def main() -> int:
         print("Les tolérances doivent être positives ou nulles.", file=sys.stderr)
         return 2
 
-    state, errors, compared_files = compare_directories(
+    ignored_suffixes = frozenset(
+        suffix if suffix.startswith(".") else f".{suffix}"
+        for suffix in (
+            fragment.strip().lower()
+            for fragment in args.ignorer_suffixes.split(",")
+        )
+        if suffix
+    )
+
+    state, errors, compared_files, ignored_files = compare_directories(
         args.reference,
         args.candidate,
         relative_tolerance=args.relative_tolerance,
         absolute_tolerance=args.absolute_tolerance,
+        ignored_suffixes=ignored_suffixes,
     )
 
     if errors:
@@ -225,6 +331,11 @@ def main() -> int:
         f"{compared_files} fichiers, {state.numbers_compared} nombres comparés, "
         f"tolérances rel={args.relative_tolerance:.0e} et abs={args.absolute_tolerance:.0e}."
     )
+    if ignored_files:
+        print(
+            f"{ignored_files} fichier(s) exclus par --ignorer-suffixes "
+            f"({', '.join(sorted(ignored_suffixes))}) : non contrôlés."
+        )
     if state.maximum_difference_path:
         print(
             "Écart maximal accepté : "

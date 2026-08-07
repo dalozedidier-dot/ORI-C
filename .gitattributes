@@ -1,3 +1,13 @@
+# Défaut du dépôt : tout fichier que Git reconnaît comme texte est écrit en LF
+# dans la copie de travail, quelle que soit la valeur de `core.autocrlf` du
+# poste. Les manifestes SHA-256 portent sur ces octets ; sans ce défaut, un
+# clonage Windows convertit en CRLF et `verifier_dossier.py` déclare modifiés
+# des fichiers dont le contenu est intact. `text=auto` laisse Git détecter les
+# binaires, qui ne sont donc jamais touchés. Toutes les règles qui suivent
+# affinent ou annulent ce défaut : en `.gitattributes`, la dernière règle
+# applicable l'emporte.
+* text=auto eol=lf
+
 *.pdf binary
 *.docx binary
 *.xlsx binary
@@ -13,6 +23,20 @@
 *.sha256 binary
 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/hyperaretes_candidat_R1.csv text eol=lf
 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/scenarios_reparation.csv text eol=lf
+
+# Les manifestes SHA-256 portent sur des octets en LF. Sans règle explicite, un
+# poste réglé en `core.autocrlf=true` reçoit ces fichiers en CRLF au clonage et
+# `verifier_dossier.py` les déclare modifiés alors que le contenu est intact.
+# Le défaut ci-dessous vaut pour tout le dépôt ; les exceptions qui suivent
+# concernent les données tierces et doivent rester après lui, car en
+# `.gitattributes` la dernière règle applicable l'emporte.
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf
+*.sh text eol=lf
 
 # Conserver à l'identique les données tierces : leurs empreintes de provenance
 # portent sur les octets distribués par les dépôts sources, fins de ligne incluses.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -110,7 +111,14 @@ def test_workflow_fallback_preserves_bundle_scope_and_carbon_extension(tmp_path:
         "endosymbiosis_events.csv",
         "endosymbiont_hmm_presence_absence.csv",
     ):
-        (data_dir / filename).symlink_to(DATA / filename)
+        # Le lien symbolique évite de recopier des tables de plusieurs mégaoctets.
+        # Windows le refuse sans le mode développeur ou des droits élevés
+        # (`WinError 1314`). Le test ne fait que lire ces fichiers : la copie est
+        # équivalente pour ce qu'il vérifie, elle sert donc de repli.
+        try:
+            (data_dir / filename).symlink_to(DATA / filename)
+        except (OSError, NotImplementedError):
+            shutil.copyfile(DATA / filename, data_dir / filename)
 
     original_raw = lot_module.RAW
     lot_module.RAW = tmp_path / "raw-bundle-absent"

@@ -81,6 +81,39 @@ jobs:
       - name: Vérifier la publication stable
         run: python scripts/valider_publication_stable.py
 
+  # Les seize autres tâches tournent sur ubuntu-latest. Deux défauts ne
+  # pouvaient donc jamais y apparaître : des fins de ligne converties en CRLF
+  # au clonage, qui font diverger les empreintes du manifeste, et du code qui
+  # suppose une sortie UTF-8 alors que Windows utilise la page de code du
+  # système. Cette tâche reste volontairement courte et n'exporte PAS
+  # PYTHONUTF8 : c'est précisément l'absence de cette variable qui révèle le
+  # second défaut.
+  portabilite-windows:
+    name: Portabilité Windows
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+          fetch-depth: 1
+      - name: Hydrater Git LFS
+        run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Contrôler l'intégrité après un clonage Windows
+        run: python verifier_dossier.py
+      - name: Exécuter la suite du socle sans forcer l'encodage
+        working-directory: 00_socle
+        run: python -m pytest -q
+
   memoire:
     name: Mémoire historique Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest

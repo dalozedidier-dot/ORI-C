@@ -919,7 +919,15 @@ def main() -> int:
     data_dir.mkdir(parents=True, exist_ok=True)
     summaries: dict[str, Any] = {}
     summaries["partition_experiments"] = build_partition_experiments(data_dir)
-    with tempfile.TemporaryDirectory(prefix="oric-vesicles-") as temporary:
+    # `ignore_cleanup_errors` protège la fin du script sous Windows. Les
+    # classeurs sont bien refermés, mais l'effacement du dossier temporaire
+    # peut encore échouer sur `WinError 32` lorsque l'antivirus ou l'indexeur
+    # tient brièvement un des `.xlsx` extraits. Sans cette option, l'intégration
+    # complète échouait après avoir écrit toutes ses tables, et le système
+    # nettoie de toute façon ce dossier.
+    with tempfile.TemporaryDirectory(
+        prefix="oric-vesicles-", ignore_cleanup_errors=True
+    ) as temporary:
         work = Path(temporary)
         summaries["prebiotic_lineages"], pairs = build_vesicle_lineages(data_dir, work)
         summaries["prebiotic_design"] = {

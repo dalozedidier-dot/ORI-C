@@ -75,6 +75,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
 
+      - name: Mettre de côté les résultats versionnés comme référence
+        run: |
+          mkdir -p "$RUNNER_TEMP/memoire-reference"
+          cp -R "$MEMORY/results" "$RUNNER_TEMP/memoire-reference/" 2>/dev/null || true
+          cp -R "$MEMORY/results_stress" "$RUNNER_TEMP/memoire-reference/" 2>/dev/null || true
+
       - name: Tester et recalculer la couche mémoire
         run: |
           mkdir -p "$OUT/logs"
@@ -92,14 +98,28 @@ jobs:
           python -m oric_memory_tests.cli --root "$MEMORY" manifest
           python -m oric_memory_tests.cli --root "$MEMORY" verify-manifest
 
+      # Le contrôle de reproductibilité se fait avec la même tolérance numérique
+      # que les workflows ci.yml, analyse-maximale-trois-branches.yml et
+      # release.yml. Un `git diff` brut comparait des octets et signalait des
+      # écarts d'optimiseur de l'ordre de 1e-9 entre versions mineures de scipy,
+      # ce qui produisait un artefact de plusieurs mégaoctets sans qu'aucun
+      # verdict ne change. La liste des fichiers touchés reste jointe pour la
+      # traçabilité, mais elle ne sert plus de critère.
+      - name: Contrôler la reproductibilité numérique de la couche mémoire
+        run: |
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/memoire-reference/results" \
+            --candidate "$MEMORY/results" \
+            | tee "$OUT/reproductibilite_memoire.log"
+
       - name: Rassembler les résultats mémoire
         if: always()
         run: |
           mkdir -p "$OUT/resultats"
           cp -R "$MEMORY/results" "$OUT/resultats/" 2>/dev/null || true
           cp "$MEMORY/RAPPORT_CORRIGE.md" "$OUT/resultats/" 2>/dev/null || true
-          git diff --binary -- 02_branche_systeme_solaire/couche_memoire_historique \
-            > "$OUT/regeneration_memoire.diff" || true
+          git diff --stat -- 02_branche_systeme_solaire/couche_memoire_historique \
+            > "$OUT/regeneration_memoire.txt" || true
           python -m pip freeze > "$OUT/pip-freeze.txt"
 
       - name: Publier les résultats mémoire

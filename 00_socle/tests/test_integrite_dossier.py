@@ -1,6 +1,7 @@
 """Intégrité du dossier unique ORI-C."""
 from __future__ import annotations
 
+import os
 import re
 import subprocess
 import sys
@@ -10,6 +11,12 @@ DOSSIER = Path(__file__).resolve().parents[2]
 
 
 def lancer_verificateur(*options: str) -> subprocess.CompletedProcess[str]:
+    # La sortie est lue en UTF-8, donc le processus fils doit écrire en UTF-8.
+    # Sans cette variable, Python utilise la page de code du système sous
+    # Windows : « objets LFS non hydratés » revient mutilé et l'expression
+    # régulière ci-dessous ne trouve plus rien, quel que soit l'état réel du
+    # dossier.
+    environnement = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     return subprocess.run(
         [sys.executable, str(DOSSIER / "verifier_dossier.py"), *options],
         cwd=DOSSIER,
@@ -17,6 +24,7 @@ def lancer_verificateur(*options: str) -> subprocess.CompletedProcess[str]:
         text=True,
         encoding="utf-8",
         errors="replace",
+        env=environnement,
     )
 
 

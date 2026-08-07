@@ -12,3 +12,8 @@ venv/
 plateforme/campagne_maximale_reelle/sources_brutes/*
 !plateforme/campagne_maximale_reelle/sources_brutes/README.md
 
+
+# Instantane redondant du depot, commite par erreur le 7 aout 2026.
+# Ses 1320 entrees etaient toutes deja suivies ; il pesait 51 Mo et faisait
+# echouer `verifier_dossier.py`, qui ne consulte pas .gitignore.
+/.github.zip
