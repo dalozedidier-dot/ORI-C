@@ -3989,8 +3989,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/PROTOCOLE.json",
-      "size": 4696,
-      "sha256": "41bd8febe8e038f28d0d7141910ef9654bac88ce0b8ee10e101282909615bb9e",
+      "size": 4624,
+      "sha256": "0964c25ef0cd0e50e0be385595f2640bb314d0b72f142fc734ca1e05726a5150",
       "storage": "inline"
     },
     {
@@ -4979,8 +4979,8 @@
     },
     {
       "path": "methodologie_puissance/PROTOCOL_REGISTRY.json",
-      "size": 1896,
-      "sha256": "e93d28bfe22733f97d412fc4b8492bc6014b44744e061103b6d08d66b72c9b6e",
+      "size": 1855,
+      "sha256": "836156dc55ff1af46ee7979d5f154a2b1e059b031d7f78300729a220d522a958",
       "storage": "inline"
     },
     {
@@ -5129,8 +5129,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
-      "size": 6539,
-      "sha256": "99d284850120fe293731afff50f998d1176cccb6af877c9329850445bf41a218",
+      "size": 6805,
+      "sha256": "d3eaa150b4fbce3f611bd0c141d00029b7f478388e20c9df6063115f9d2a5aa9",
       "storage": "inline"
     },
     {
@@ -5141,8 +5141,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/POWER_VIVANT_LONGITUDINAL.json",
-      "size": 2828,
-      "sha256": "134d821a77364ff0a91669c8951f0cc639d120fbb621533066c9efcf9becf987",
+      "size": 2751,
+      "sha256": "4e2940f29ace9571935390a13f19406cfa474f5737faae9807568bded5e547c2",
       "storage": "inline"
     },
     {
@@ -7465,6 +7465,12 @@
       "path": "scripts/valider_tout.py",
       "size": 1595,
       "sha256": "b11ff309e8bc95439caae7c23273e8a5daa995be6ad93a3be5012ea09adf5b42",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/verifier_fins_de_ligne.py",
+      "size": 3977,
+      "sha256": "25bff1bc19f4f21bcd55b75a9e6f0f1ddce8a21826e93f3d2363cd8f8176f2bc",
       "storage": "inline"
     },
     {
