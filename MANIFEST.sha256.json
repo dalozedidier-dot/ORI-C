@@ -5,14 +5,14 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 1384,
-      "sha256": "1dcdaed4f68b1d994e2e5db1da53610ed5e2baf59237d699403176e677678815",
+      "size": 1529,
+      "sha256": "08cb922131e6523884a7c6f8a74331ad57c055438e23dbab7a4d45b44a4f0999",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 7657,
-      "sha256": "bc542418779fb18f667a456bb88c46b6f0b0b9c94c316cf67cfa37f24ee8330e",
+      "size": 7656,
+      "sha256": "6e22ac76be70dfdcd999f12954f87f6172ee296e7f3a5bb373b0e0d59d09d918",
       "storage": "inline"
     },
     {
@@ -4343,8 +4343,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 33726,
-      "sha256": "2896046e3d3fb83eaf59159be40a8d8e379d838c4d85998cc7912f129b29c864",
+      "size": 33831,
+      "sha256": "a0522428f9cd48fd36922c17d07bbcd24fa2fc8a67acfab3e562f472e57a7045",
       "storage": "inline"
     },
     {
@@ -5645,8 +5645,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/PROVENANCE_GISTEMP.json",
-      "size": 1207,
-      "sha256": "b99b8e9889873522642fbf6a76043e0bd9994c45cee5d7ecedab825a1a6a124e",
+      "size": 2382,
+      "sha256": "a45263edce124065d08fc531bb4948f53669a8e954d868577deb557d7981bfbb",
       "storage": "inline"
     },
     {
@@ -5669,8 +5669,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/TESTS_DONNEES_NASA.md",
-      "size": 5001,
-      "sha256": "814e651816d83f5e71b06aaab4ca2ff5d943742b738ac2c79849bcff1f7dacb5",
+      "size": 5711,
+      "sha256": "04c2d153f297a24f5232852f2edd7cbca2f3c01b41d9b8d2850f551102a2e4b6",
       "storage": "inline"
     },
     {
@@ -5993,8 +5993,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/memoire_distribuee_gistemp.py",
-      "size": 7887,
-      "sha256": "08a7438f0266d5ebaad7bacfcf69f35e4fdbbcbe2de092664f96d6d2e1320d66",
+      "size": 9573,
+      "sha256": "71878527bb30b4a06c488dfef72935aed95a2992afb6dc4c359c6a7dd9b87b0e",
       "storage": "inline"
     },
     {
@@ -7297,6 +7297,12 @@
       "path": "plateforme/source_corrigee/tests/test_gistemp_scope.py",
       "size": 1390,
       "sha256": "660a880a99452878657b71137f8956f6297e0e41f864a2531c7d0110198a8776",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/source_corrigee/tests/test_gistemp_workflow_guard.py",
+      "size": 1380,
+      "sha256": "95c34a6c9c1d0518489dde59738e7d2e6ed299c9ecdaed89c15434c328d46500",
       "storage": "inline"
     },
     {

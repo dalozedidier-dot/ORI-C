@@ -28,3 +28,6 @@ plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv -text
 plateforme/campagne_maximale_reelle/data/modern_climate_timeseries.csv -text
 plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv -text
 plateforme/campagne_maximale_reelle/data/volatile_inventory.csv -text
+
+# Corpus externe du 7 août 2026 : préserver les octets sources (y compris CRLF/Latin-1).
+donnees_externes/donnees_reelles_2026_08_07/** -text

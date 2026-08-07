@@ -6,10 +6,17 @@ temporelle unique ne représente pas cette mémoire**. Cette affirmation n'avait
 jamais été testée : elle exigeait des observations climatiques que le dossier
 ne contenait pas.
 
-GISTEMP v4 les fournit. 146 années, quinze bandes de latitude, valeurs
-mesurées par la NASA.
+Une version historique du dépôt utilisait une table GISTEMP zonale de
+146 années pour ces tests. La table canonique actuelle
+`modern_climate_timeseries.csv` contient 7 193 points globaux dérivés de
+GISTEMP et HadCRUT5, sans bandes `NHem`, `SHem` ou `64N-90N`.
 
-Trois tests, tous hors échantillon.
+Le script refuse donc explicitement l'analyse si les régions zonales requises
+ne sont pas présentes. Il produit alors un résultat `blocked` sans inventer,
+agréger ni substituer de compartiments.
+
+Quand une table zonale compatible est fournie, trois tests sont exécutés,
+tous hors échantillon.
 
     CL1.2  Constantes de temps par compartiment. L'hémisphère sud est
            océanique, l'hémisphère nord continental. Le §13.1 prédit des
@@ -87,9 +94,42 @@ def main() -> int:
     parseur.add_argument("--sortie", type=Path, default=Path("."))
     arguments = parseur.parse_args()
 
-    par_region = charger(arguments.data_dir / "modern_climate_timeseries.csv")
+    arguments.sortie.mkdir(parents=True, exist_ok=True)
+    fichier = arguments.data_dir / "modern_climate_timeseries.csv"
+    par_region = charger(fichier)
+
+    requis = COMPARTIMENTS + [CIBLE]
+    manquantes = [region for region in requis if region not in par_region]
+    if manquantes:
+        rapport = {
+            "status": "blocked",
+            "scientific_verdict": "undetermined",
+            "source_file": str(fichier),
+            "required_regions": requis,
+            "missing_regions": manquantes,
+            "available_regions": sorted(par_region),
+            "reason": (
+                "La table canonique actuelle ne contient pas les bandes zonales "
+                "GISTEMP requises par ce protocole historique."
+            ),
+            "rule": (
+                "Aucune reconstruction globale, variable HadCRUT5, LSAT ou SST "
+                "n'est requalifiée en NHem, SHem, 64N-90N ou Glob."
+            ),
+        }
+        (arguments.sortie / "memoire_distribuee_gistemp.json").write_text(
+            json.dumps(rapport, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            "BLOQUÉ : modern_climate_timeseries.csv ne contient pas les régions "
+            + ", ".join(manquantes)
+            + ". Aucun test CL1 n'est exécuté."
+        )
+        return 0
+
     annees = sorted(set.intersection(
-        *(set(par_region[r]) for r in COMPARTIMENTS + [CIBLE])))
+        *(set(par_region[r]) for r in requis)))
     t = np.array(annees, dtype=float)
     y = np.array([par_region[CIBLE][a] for a in annees])
     X = np.array([[par_region[r][a] for a in annees] for r in COMPARTIMENTS])

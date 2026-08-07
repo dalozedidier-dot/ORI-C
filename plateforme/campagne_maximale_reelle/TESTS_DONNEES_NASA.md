@@ -9,6 +9,18 @@ Aucune donnée n'est simulée. Cibles et entrées sont des valeurs mesurées.
 
 ## 1. Mémoire distribuée du climat — WP-CL1, sur GISTEMP
 
+**Statut courant : analyse historique archivée.** Les résultats ci-dessous
+proviennent de l'ancienne table GISTEMP zonale contenant `Glob`, `NHem`,
+`SHem` et `64N-90N`. La table canonique actuelle
+`data/modern_climate_timeseries.csv` contient 7 193 points globaux issus de
+GISTEMP et HadCRUT5 et ne contient plus ces bandes zonales. Le script
+`memoire_distribuee_gistemp.py` vérifie désormais ce contrat et retourne
+`blocked` sans exécuter CL1 lorsque les régions requises sont absentes.
+
+Aucune variable globale actuelle n'est requalifiée en compartiment zonal.
+Les nombres ci-dessous sont conservés pour traçabilité historique et ne
+décrivent pas une réexécution de l'état courant du dépôt.
+
 Le §13.1 du `CODEBOOK.md` affirme deux choses distinctes. Les données
 permettent de les séparer, et elles ne reçoivent pas le même verdict.
 

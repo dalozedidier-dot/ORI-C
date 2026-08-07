@@ -328,7 +328,7 @@ appartiennent à une campagne historique. Le bilan actuel est
 
 | Analyse | Résultat | Statut |
 |---|---|---|
-| Mémoire distribuée GISTEMP | RMSE 0,1252 contre 0,4563 pour l'intégrale simple, mais 0,0997 pour le témoin apparié | **ne valide pas la structure proposée** |
+| Mémoire distribuée GISTEMP, analyse zonale historique | RMSE 0,1252 contre 0,4563 pour l'intégrale simple, mais 0,0997 pour le témoin apparié sur l'ancienne table zonale | **historique** ; la table canonique actuelle est globale et le protocole CL1 reste bloqué |
 | Vallée des rayons exoplanétaires | creux à 1,502 R⊕, quantile de permutation 0,0005 contre 0,95 requis | **Réfuté dans cette implémentation** |
 | Histoire antibiotique | gain moyen 0,0114, IC 95 % [−0,0354 ; 0,0598] | **Non concluant**, exploratoire |
 | Proxy observationnel de `Pacc` | `Pacc = 1` pour toutes les classes dans deux domaines | **Estimateur saturé**, non causal |

@@ -102,7 +102,7 @@ jobs:
           echo "Code attendu avec tables manquantes: $code" \
             >> "$OUT/logs/validation_donnees.log"
 
-      - name: Analyser la mémoire distribuée dans GISTEMP
+      - name: Auditer la mémoire distribuée dans GISTEMP
         run: |
           python plateforme/campagne_maximale_reelle/memoire_distribuee_gistemp.py \
             --data-dir "$DATA" \

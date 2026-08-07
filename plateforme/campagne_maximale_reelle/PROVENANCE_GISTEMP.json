@@ -1,27 +1,52 @@
 {
   "dataset": "NASA GISTEMP v4",
+  "status": "historical_import_provenance_with_current_table_supersession",
   "accessed_at": "2026-08-01",
   "official_page": "https://data.giss.nasa.gov/gistemp/",
   "publication": "https://doi.org/10.1029/2023JD040179",
-  "path_base": "plateforme/campagne_maximale_reelle",
-  "raw_files": {
-    "sources_brutes/NASA_GISTEMP_v4/GLB.Ts+dSST.csv": "99d659d8c955c6599e93be3691467ff56eff80ee4b066c5cacfaaa6f7332ca9f",
-    "sources_brutes/NASA_GISTEMP_v4/ZonAnn.Ts+dSST.csv": "d9fc1a2e279e951ec7c3f53efca16c877f9e24e9038756c019b79bdc24a23d31",
-    "sources_brutes/NASA_GISTEMP_v4/KeySeries.zip": "6eeeca3469c73dcf7e0b2c53f1305f3b3793ae0403d40c635a198a1d8dabf34c"
-  },
-  "outputs": {
-    "data/modern_climate_timeseries.csv": {
-      "rows": 3802,
-      "sha256": "8bf24abc431378003114cd15f5d2a109c7faad13b2d6b0e73a6ccd61fc6a5c65"
+  "historical_import": {
+    "dataset": "NASA GISTEMP v4",
+    "accessed_at": "2026-08-01",
+    "official_page": "https://data.giss.nasa.gov/gistemp/",
+    "publication": "https://doi.org/10.1029/2023JD040179",
+    "path_base": "plateforme/campagne_maximale_reelle",
+    "raw_files": {
+      "sources_brutes/NASA_GISTEMP_v4/GLB.Ts+dSST.csv": "99d659d8c955c6599e93be3691467ff56eff80ee4b066c5cacfaaa6f7332ca9f",
+      "sources_brutes/NASA_GISTEMP_v4/ZonAnn.Ts+dSST.csv": "d9fc1a2e279e951ec7c3f53efca16c877f9e24e9038756c019b79bdc24a23d31",
+      "sources_brutes/NASA_GISTEMP_v4/KeySeries.zip": "6eeeca3469c73dcf7e0b2c53f1305f3b3793ae0403d40c635a198a1d8dabf34c"
     },
-    "data/modern_climate_ensemble.csv": {
-      "rows": 338400,
-      "sha256": "ec76d077338575e7bcc62b170369ecdf1fecb49351b83033ced5edd05520a19e"
-    }
+    "outputs": {
+      "data/modern_climate_timeseries.csv": {
+        "rows": 3802,
+        "sha256": "8bf24abc431378003114cd15f5d2a109c7faad13b2d6b0e73a6ccd61fc6a5c65"
+      },
+      "data/modern_climate_ensemble.csv": {
+        "rows": 338400,
+        "sha256": "ec76d077338575e7bcc62b170369ecdf1fecb49351b83033ced5edd05520a19e"
+      }
+    },
+    "transformations": [
+      "monthly table converted from wide month columns to long rows",
+      "NetCDF global combined observational-uncertainty ensemble converted to long rows",
+      "no interpolation, imputation, resampling or synthetic augmentation"
+    ]
   },
-  "transformations": [
-    "monthly table converted from wide month columns to long rows",
-    "NetCDF global combined observational-uncertainty ensemble converted to long rows",
-    "no interpolation, imputation, resampling or synthetic augmentation"
-  ]
+  "current_canonical_table": {
+    "path": "data/modern_climate_timeseries.csv",
+    "rows": 7193,
+    "sha256": "e2f08d75975cdfe6ff3cd6cc0e382439588b2bcd645ac04e06575e7ea261057e",
+    "provider": "NASA GISTEMP v4 + HadCRUT5",
+    "provenance_registry": "donnees_externes/donnees_reelles_2026_08_07/SOURCE_BUNDLE.json",
+    "regions": [
+      "global"
+    ],
+    "variables": [
+      "hadcrut5_surface_temperature_anomaly_C",
+      "land_surface_air_temperature_anomaly_C",
+      "sea_surface_temperature_anomaly_C",
+      "surface_temperature_anomaly_C"
+    ],
+    "scope_limit": "Cette table ne contient pas NHem, SHem, 64N-90N ni Glob et ne peut pas réexécuter le protocole zonal CL1."
+  },
+  "rule": "Les résultats GISTEMP zonaux historiques restent archivés; aucune variable globale actuelle n'est substituée à une bande zonale."
 }
