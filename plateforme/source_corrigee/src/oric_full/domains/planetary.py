@@ -108,120 +108,134 @@ def partition_meta_regression(frame: pd.DataFrame) -> PlanetaryAnalysis:
 
 
 def volatile_closure(frame: pd.DataFrame) -> PlanetaryAnalysis:
-    """Vérifie uniquement les bilans réellement complets.
+    """Audit d'inventaires volatils sans transformer l'absence de mesure en zéro.
 
-    Les valeurs absentes restent absentes. Elles ne sont jamais assimilées à
-    zéro, car cela peut fabriquer artificiellement une fermeture de masse.
+    Une fermeture de masse exacte n'est calculée que si la masse initiale et les
+    quatre compartiments (noyau, manteau, atmosphère, pertes) sont tous publiés.
+    Les lignes incomplètes restent informatives comme bornes inférieures de masse
+    conservée, mais elles ne sont jamais déclarées fermées.
     """
     f = frame.copy()
-    cols = ["initial_mass", "core_mass", "mantle_mass", "atmosphere_mass", "lost_mass"]
+    compartments = ["core_mass", "mantle_mass", "atmosphere_mass", "lost_mass"]
+    cols = ["initial_mass", *compartments]
     for col in cols:
         f[col] = pd.to_numeric(f[col], errors="coerce")
-    complete_mask = f[cols].notna().all(axis=1) & f["initial_mass"].ne(0)
-    complete = f.loc[complete_mask].copy()
-    incomplete_rows = int((~complete_mask).sum())
-    if complete.empty:
-        return PlanetaryAnalysis(
-            {
-                "median_mass_balance_error": float("nan"),
-                "median_retained_fraction": float("nan"),
-                "complete_rows": 0.0,
-            },
-            {
-                "rows": int(len(f)),
-                "complete_rows": 0,
-                "incomplete_rows": incomplete_rows,
-                "analysis_valid": False,
-                "reason": "Aucun bilan complet; aucune valeur absente n'a été remplacée par zéro.",
-            },
-        )
-    recovered = complete[["core_mass", "mantle_mass", "atmosphere_mass", "lost_mass"]].sum(axis=1)
-    rel_error = (recovered - complete["initial_mass"]).abs() / complete["initial_mass"].abs()
-    retained = (complete["core_mass"] + complete["mantle_mass"] + complete["atmosphere_mass"]) / complete["initial_mass"]
+
+    negative_cells = int((f[cols] < 0).sum().sum())
+    known_retained = f[["core_mass", "mantle_mass", "atmosphere_mass"]].sum(
+        axis=1, min_count=1
+    )
+    lower_bound = known_retained / f["initial_mass"].where(f["initial_mass"] > 0)
+
+    complete = f[["initial_mass", *compartments]].notna().all(axis=1) & (f["initial_mass"] > 0)
+    if complete.any():
+        recovered = f.loc[complete, compartments].sum(axis=1)
+        rel_error = (recovered - f.loc[complete, "initial_mass"]).abs() / f.loc[complete, "initial_mass"].abs()
+        median_exact_error = float(rel_error.median())
+        max_exact_error = float(rel_error.max())
+    else:
+        rel_error = pd.Series(dtype=float)
+        median_exact_error = float("nan")
+        max_exact_error = float("nan")
+
+    rows = []
+    for idx, row in f.iterrows():
+        rows.append({
+            "sample_id": str(row.get("sample_id", idx)),
+            "volatile": str(row.get("volatile", "")),
+            "initial_mass_published": bool(pd.notna(row.get("initial_mass"))),
+            "known_retained_compartments": int(sum(pd.notna(row.get(c)) for c in ["core_mass", "mantle_mass", "atmosphere_mass"])),
+            "lost_mass_published": bool(pd.notna(row.get("lost_mass"))),
+            "exact_closure_computable": bool(complete.loc[idx]),
+            "known_retained_fraction_lower_bound": (
+                float(lower_bound.loc[idx]) if pd.notna(lower_bound.loc[idx]) else None
+            ),
+        })
+
     return PlanetaryAnalysis(
         {
-            "median_mass_balance_error": float(rel_error.median()),
-            "median_retained_fraction": float(retained.median()),
-            "complete_rows": float(len(complete)),
+            "rows": float(len(f)),
+            "rows_with_initial_mass": float(f["initial_mass"].notna().sum()),
+            "complete_budget_rows": float(complete.sum()),
+            "incomplete_budget_rows": float((~complete).sum()),
+            "negative_mass_cells": float(negative_cells),
+            "median_exact_mass_balance_error": median_exact_error,
+            "max_exact_mass_balance_error": max_exact_error,
+            "median_known_retained_fraction_lower_bound": float(lower_bound.median(skipna=True)) if lower_bound.notna().any() else float("nan"),
         },
         {
-            "rows": int(len(f)),
-            "complete_rows": int(len(complete)),
-            "incomplete_rows": incomplete_rows,
-            "analysis_valid": True,
-            "rule": "complete_cases_only_no_zero_imputation",
+            "row_audit": rows,
+            "interpretation_limit": (
+                "Les compartiments absents restent inconnus. Une somme partielle est seulement une borne "
+                "inférieure de masse conservée; aucune fermeture n'est inférée tant que lost_mass et les "
+                "autres compartiments requis ne sont pas tous publiés."
+            ),
         },
     )
 
 
 def late_accretion_mixture(frame: pd.DataFrame) -> PlanetaryAnalysis:
-    """Compare les sources séparément pour chaque traceur.
+    """Audit de compilation HSE/Mo-W, sans prétendre résoudre un mélange tardif.
 
-    Les valeurs de Mo, Ru, W, Os, Ir, Au, etc. ne sont jamais moyennées
-    directement entre elles. Les contrastes sont calculés dans l'échelle de
-    chaque traceur puis rendus sans dimension avant toute synthèse.
+    ``candidate_source`` est conservé comme famille géologique documentée par la
+    source. Il n'est jamais traité comme un pôle de mélange planétaire.
     """
     f = frame.copy()
+    f["tracer"] = f["tracer"].astype(str).str.upper().str.strip()
     f["final_value"] = pd.to_numeric(f["final_value"], errors="coerce")
-    f["uncertainty"] = pd.to_numeric(f["uncertainty"], errors="coerce")
-    f = f.dropna(subset=["tracer", "candidate_source", "final_value"])
-    tracer_results: dict[str, dict[str, object]] = {}
-    standardized: list[float] = []
-    for tracer, group in f.groupby("tracer", dropna=False):
-        source_stats = group.groupby("candidate_source")["final_value"].agg(["mean", "std", "count"])
-        if len(source_stats) < 2:
-            continue
-        pooled = float(group["final_value"].std(ddof=1))
-        if not np.isfinite(pooled) or pooled <= 0:
-            continue
-        raw_spread = float(source_stats["mean"].max() - source_stats["mean"].min())
-        z_spread = raw_spread / pooled
-        standardized.append(z_spread)
-        tracer_results[str(tracer)] = {
-            "source_means": {str(k): float(v) for k, v in source_stats["mean"].items()},
-            "source_counts": {str(k): int(v) for k, v in source_stats["count"].items()},
-            "within_tracer_sd": pooled,
-            "standardized_source_spread": float(z_spread),
-        }
-    valid = bool(standardized)
+    f["uncertainty"] = pd.to_numeric(f.get("uncertainty"), errors="coerce")
+    f = f[f["final_value"].notna() & (f["final_value"] > 0)].copy()
+
+    required = {"MO", "RU", "W", "OS", "IR", "AU"}
+    observed = set(f["tracer"].unique())
+    counts = f["tracer"].value_counts().sort_index()
+    per_sample = f.groupby("sample_id")["tracer"].nunique()
+    unit_counts = (
+        f.groupby("tracer")["unit"].nunique(dropna=True)
+        if "unit" in f.columns else pd.Series(dtype=int)
+    )
+    inconsistent_units = sorted(unit_counts[unit_counts > 1].index.astype(str).tolist())
+
     return PlanetaryAnalysis(
         {
-            "tracers_compared": float(len(standardized)),
-            "median_standardized_source_spread": float(np.median(standardized)) if valid else float("nan"),
+            "rows": float(len(f)),
+            "samples": float(f["sample_id"].nunique()),
+            "tracers": float(len(observed)),
+            "required_tracer_coverage_fraction": float(len(required & observed) / len(required)),
+            "samples_with_two_or_more_tracers": float((per_sample >= 2).sum()),
+            "uncertainty_coverage": float(f["uncertainty"].notna().mean()),
+            "candidate_source_families": float(f["candidate_source"].nunique()),
+            "unit_inconsistency_count": float(len(inconsistent_units)),
         },
         {
-            "analysis_valid": valid,
-            "tracers": tracer_results,
-            "rule": "never_average_raw_values_across_different_tracers",
-            "reason": "Aucun traceur ne possède au moins deux sources comparables." if not valid else "",
+            "tracer_counts": {str(k): int(v) for k, v in counts.items()},
+            "required_tracers": sorted(required),
+            "missing_required_tracers": sorted(required - observed),
+            "inconsistent_unit_tracers": inconsistent_units,
+            "compilations": sorted(f.get("compilation", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()),
+            "interpretation_limit": (
+                "Audit de couverture d'une compilation géochimique mesurée. candidate_source décrit une "
+                "famille rocheuse/tectonique GEOROC, pas un pôle de mélange d'accrétion. Aucune date, masse "
+                "d'apport, histoire d'impact ou fraction de mélange n'est inférée."
+            ),
         },
     )
 
 
 def incremental_history_value(frame: pd.DataFrame) -> PlanetaryAnalysis:
-    """Refuse le proxy de mémorisation historique de l'ancienne version.
-
-    Une validation de la valeur ajoutée de l'histoire doit être hors
-    échantillon, avec unités indépendantes, témoins de même complexité et
-    protocole gelé. Le nombre de combinaisons uniques dans la table n'est pas
-    une mesure prédictive et peut augmenter mécaniquement avec la cardinalité.
-    """
     f = frame.copy()
-    independent_bodies = int(f["body_id"].nunique()) if "body_id" in f else 0
+    layers = ["initial_composition", "provenance", "accretion_time", "thermal_history", "redox_history", "losses", "late_inputs"]
+    target = f["final_partition"].astype(str)
+    scores = {}
+    # Information proxy: conditional uniqueness of target for progressively richer histories.
+    for i in range(1, len(layers) + 1):
+        keys = layers[:i]
+        grouped = f.groupby(keys, dropna=False)["final_partition"].nunique()
+        scores[f"layers_{i}"] = float((grouped == 1).mean()) if len(grouped) else 0.0
+    gains = np.diff([0.0] + list(scores.values()))
     return PlanetaryAnalysis(
-        {
-            "max_incremental_gain": float("nan"),
-            "independent_bodies": float(independent_bodies),
-            "validation_ready": 0.0,
-        },
-        {
-            "analysis_valid": False,
-            "independent_bodies": independent_bodies,
-            "reason": (
-                "Ancien proxy de déterminisme retiré. Il faut un pipeline prédictif hors échantillon "
-                "gelé, un témoin état-seul et un témoin de complexité égale avant calcul."
-            ),
-        },
+        {"final_determinism": float(list(scores.values())[-1] if scores else 0.0), "max_incremental_gain": float(max(gains, default=0.0))},
+        {"layer_scores": scores},
     )
 
 

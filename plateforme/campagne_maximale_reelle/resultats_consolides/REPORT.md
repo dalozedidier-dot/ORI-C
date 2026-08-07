@@ -10,4 +10,4 @@ Les résultats stricts courants sont :
 - `../BILAN_CANONIQUE.md`
 - `../AUDIT_DONNEES_DEPOT.json`
 
-État courant vérifié : **298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**.
+Le compteur 298/337/48 appartient à l’état technique historique conservé dans ce dossier. L’état empirique strict courant est produit dans `../resultats_integration_maximale/` avec le pare-feu `fail_closed_v2` et ne doit pas être déduit de ces fichiers historiques.

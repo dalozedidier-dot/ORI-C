@@ -1,38 +1,45 @@
-# Erratum scientifique — ORI-C v0.9.4-research
+# Erratum scientifique ORI-C v0.9.4-research — 7 août 2026
 
-Date : 7 août 2026
+Cet erratum concerne l’interprétation de la **campagne générique de 683 entrées** publiée avec l’état v0.9.4-research. Il ne réécrit pas rétroactivement les fichiers de la publication Zenodo : il documente la correction méthodologique appliquée à l’état courant du dépôt.
 
-Cet erratum concerne la **plateforme générique des 683 entrées**, pas les résultats issus de pipelines scientifiques dédiés.
+## Correction du compteur générique
 
-## Correction principale
+Les anciens nombres `298 réussites techniques / 337 blocages / 48 non-exécutions` décrivaient des statuts d’exécution de la plateforme. Ils **ne constituaient pas 298 preuves scientifiques**. Le réaudit du 7 août a montré que le mode `--real-data-only` devait être durci : la présence d’un fichier ou l’exécution d’un moteur ne suffisent pas à rendre un protocole empirique.
 
-Le statut technique `pass` de la plateforme ne doit pas être interprété comme une preuve scientifique ni comme la réussite individuelle de tous les protocoles qui partagent le même moteur.
+Le pare-feu `fail_closed_v2` exige désormais, pour chaque `test_id`, une ressource déclarée dans `EMPIRICAL_POLICY.json`, admissible comme preuve empirique et explicitement autorisée pour ce protocole. Avec cette règle, la même matrice de 683 entrées donne :
 
-L'audit du 7 août 2026 a identifié deux défauts :
+- 9 réussites techniques ;
+- 626 blocages ;
+- 48 protocoles non exécutables informatiquement ;
+- 0 échec et 0 erreur ;
+- 0 verdict scientifique `supports` dans cette matrice générique ;
+- 635 verdicts `undetermined` et 48 `not_applicable`.
 
-1. le mode `--real-data-only` était fail-open pour les datasets absents de `REAL_DATA_COVERAGE.json` ;
-2. quatre moteurs génériques étaient trop permissifs pour répondre aux protocoles individuels auxquels ils étaient raccordés : `condensation`, `volatile_budget`, `late_accretion`, `planetary_value`.
+Les neuf réussites techniques sont `P3-001`, `P3-002`, `P5-001`, `V1-001`, `V1-004`, `B2-003`, `R1-005`, `R1-009` et `R1-010`. Un `pass` technique indique seulement que l’analyse autorisée a pu s’exécuter. Il ne vaut pas, à lui seul, confirmation d’une hypothèse.
 
-Ces moteurs sont désormais placés en quarantaine scientifique dans la correction du 7 août 2026 et ne peuvent plus produire de `pass` en mode données réelles strict.
+## Résultats ciblés qui restent séparés
 
-## Ce qui est retiré comme argument de preuve
+Les analyses dédiées possèdent leurs propres données, critères et contrôles. Le résultat D’Onofrio sur 288 mesures antibiotiques et le protocole des vésicules sur des lignées parent-descendant réelles ne doivent ni être promus par l’ancien compteur 298, ni être annulés par le nouveau compteur 9. Ils restent évalués par leurs pipelines ciblés.
 
-- tout compteur global de `pass` de la plateforme utilisé comme nombre de preuves ;
-- toute interprétation empirique d'un résultat provenant des quatre moteurs génériques ci-dessus ;
-- toute prétention selon laquelle l'ajout des quatre CSV manquants suffirait à tester les 46 protocoles concernés.
+De même, les intégrations N-corps, H011 et les autres expériences numériques restent des **résultats de modèle ou de simulation**, jamais des observations empiriques. Leur statut doit être lu dans leur protocole propre.
 
-## Ce qui n'est pas annulé par cet erratum
+## Nouvelles ressources du 7 août
 
-Les résultats obtenus par des pipelines dédiés et traçables restent séparés et doivent être évalués sur leurs propres données, protocoles et contrôles. Cela inclut notamment les analyses D'Onofrio et Sokolskyi-Baum, ainsi que les validations astronomiques explicitement présentées comme résultats de modèle physique et non comme observations directes.
+Le corpus `DONNEES_REELLES_ORI-C_2026-08-07(1).zip` a été vérifié par empreinte. La mise à jour retient uniquement les ressources utiles et leur provenance. Elle n’utilise pas leur simple présence pour fabriquer de nouveaux verdicts :
 
-## Remplacement
+- les traceurs GEOROC ouvrent uniquement l’audit `P5-001` ;
+- la grille thermochimique reste une table calculée depuis des paramètres publiés, sans prétention d’équilibre de condensation ;
+- l’inventaire volatil reste incomplet et aucune masse absente n’est remplacée par zéro ;
+- les séries climatiques longues sont conservées pour de futurs protocoles préenregistrés ;
+- `planetary_histories.csv` reste volontairement absent faute de provenance primaire suffisante par cellule.
 
-La correction complète est documentée dans :
+## Fichiers faisant autorité après correction
 
-`CORRECTION_BARRIERE_SCIENTIFIQUE_2026-08-07.md`
+- `MISE_A_JOUR_PREUVES_EMPIRIQUES_2026-08-07.md`
+- `plateforme/campagne_maximale_reelle/EMPIRICAL_POLICY.json`
+- `plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json`
+- `plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json`
+- `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`
+- `plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.md`
 
-Une nouvelle publication stable doit exécuter :
-
-`scripts/valider_barriere_scientifique_publication.py`
-
-avant la construction de l'archive de release.
+Les manifestes SHA-256 doivent être reconstruits après application de cette correction.

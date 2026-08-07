@@ -11,36 +11,47 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 DEFAULT_DATA = HERE / "data"
 
-UNRESOLVED = {
+RESOURCE_STATUS = {
     "thermochemical_phases.csv": {
-        "tests": 15,
-        "reason": "Les fichiers reçus ne contiennent pas une grille homogène phase-température-pression-énergie de Gibbs permettant les calculs de condensation.",
-        "candidate": "Base thermodynamique quantitative Perple_X/JANAF ou équivalent avec licence et provenance.",
+        "status": "present_non_empirical",
+        "reason": "Grille calculée depuis des paramètres thermodynamiques publiés. Elle audite le domaine T-P-G mais ne constitue pas une séquence de condensation à l'équilibre.",
+        "next_requirement": "Composition globale, bilans élémentaires, activités/fugacités et solveur d'équilibre préenregistré avant tout test M4.",
     },
     "planetary_histories.csv": {
-        "tests": 11,
-        "reason": "Les états orbitaux et les mesures noyau/bulk reçues ne constituent pas des histoires géochimiques complètes d'accrétion, redox, pertes et apports tardifs.",
-        "candidate": "Cas planétaires ou météoritiques harmonisés avec étapes historiques et composition finale.",
+        "status": "absent_by_design",
+        "reason": "Aucune source publique harmonisée ne fournit les sept couches historiques demandées avec provenance primaire par cellule.",
+        "next_requirement": "Compilation primaire cellule par cellule ou redéfinition préenregistrée des protocoles P6.",
     },
     "late_accretion_tracers.csv": {
-        "tests": 10,
-        "reason": "Les isotopes reçus ne relient pas encore des observations finales à plusieurs sources candidates d'accrétion tardive dans un modèle de mélange commun.",
-        "candidate": "Compilation Mo-Ru-W-Os-Ir-Au et modèles de mélange documentés.",
+        "status": "present_partial_empirical",
+        "reason": "122 159 mesures GEOROC réelles couvrent Mo-Ru-W-Os-Ir-Au, mais candidate_source décrit une famille géologique et non un pôle de mélange; les incertitudes analytiques par mesure sont absentes.",
+        "next_requirement": "Modèle de mélange documenté avec pôles physiquement définis, unités et incertitudes avant P5-002 à P5-010. P5-001 seul est exécutable techniquement.",
     },
     "volatile_inventory.csv": {
-        "tests": 9,
-        "reason": "Le dégazage de Murchison et les modèles H-C noyau/bulk sont utiles mais ne ferment pas, par échantillon, les masses initiale, noyau, manteau, atmosphère et pertes.",
-        "candidate": "Inventaires volatils quantitatifs fermés de corps différenciés et météorites.",
+        "status": "present_incomplete",
+        "reason": "Les compartiments non publiés restent vides. Aucune des dix lignes ne contient simultanément masse initiale, noyau, manteau, atmosphère et pertes.",
+        "next_requirement": "Inventaires fermés ou protocole explicitement conçu pour des bornes partielles; aucune valeur absente ne peut être remplacée par zéro.",
+    },
+    "modern_climate_timeseries.csv": {
+        "status": "present_temperature_only",
+        "reason": "7 193 lignes réelles issues de GISTEMP/HadCRUT5, mais les quatre variables sont des reconstructions de température et ne représentent ni forçages ni compartiments de mémoire.",
+        "next_requirement": "Variables causales indépendantes et protocole mémoire/D-H-L gelé avant déblocage CL1/CL2.",
     },
 }
+
 
 
 def blocker_key(result: dict) -> str:
     message = result.get("message", "")
     details = result.get("details", {})
     if details.get("coverage_gaps"):
-        datasets = ",".join(sorted(item["dataset"] for item in details["coverage_gaps"]))
-        return f"portée partielle:{datasets}"
+        gaps = details["coverage_gaps"]
+        descriptors = []
+        for item in gaps:
+            dataset = item.get("dataset") or "aucun_dataset"
+            reason = item.get("reason", "hors_portee")
+            descriptors.append(f"{dataset}:{reason}")
+        return "pare-feu empirique:" + ",".join(sorted(descriptors))
     if "mode données réelles strict" in message:
         return f"simulation/génération interdite:{details.get('engine', '')}"
     if message.startswith("Jeu de données absent:"):
@@ -86,6 +97,10 @@ def build(results_json: Path, data_dir: Path) -> dict:
         "endosymbiosis_events": rows(data_dir / "endosymbiosis_events.csv"),
         "endosymbiont_hmm_rows": rows(data_dir / "endosymbiont_hmm_presence_absence.csv"),
         "murchison_degassing_rows": rows(data_dir / "murchison_degassing_profiles.csv"),
+        "thermochemical_phase_rows": rows(data_dir / "thermochemical_phases.csv"),
+        "late_accretion_tracer_rows": rows(data_dir / "late_accretion_tracers.csv"),
+        "volatile_inventory_rows": rows(data_dir / "volatile_inventory.csv"),
+        "modern_climate_timeseries_rows": rows(data_dir / "modern_climate_timeseries.csv"),
     }
     benchmark = pd.read_csv(data_dir / "benchmark_cases.csv")
     data_summary["benchmark_domains"] = benchmark.groupby("domain").size().astype(int).to_dict()
@@ -95,10 +110,10 @@ def build(results_json: Path, data_dir: Path) -> dict:
         "data_summary": data_summary,
         "blocked_root_causes": dict(blocked.most_common()),
         "coverage_registry": coverage,
-        "unresolved_external_data": UNRESOLVED,
+        "resource_status": RESOURCE_STATUS,
         "interpretation": (
-            "Une réussite technique signifie que le moteur a exécuté une analyse couverte par les données. "
-            "Elle ne constitue pas automatiquement une confirmation scientifique."
+            "Mode réel strict fail-closed: une réussite technique n'existe que pour un test explicitement autorisé "
+            "dans le registre empirique. Elle ne constitue toujours pas une confirmation scientifique."
         ),
     }
     return payload
@@ -122,7 +137,7 @@ def markdown(payload: dict) -> str:
         f"**{scientific.get('does_not_support', 0)} rejet**, "
         f"**{scientific.get('undetermined', 0)} indéterminés**.",
         "",
-        "Une réussite technique signifie seulement que l'analyse couverte a été exécutée. Elle ne transforme pas le résultat en preuve confirmatoire.",
+        "Le pare-feu est fail-closed : présence d'un fichier, taille d'un jeu ou exécution d'un moteur ne suffisent jamais à créer une preuve. Une réussite technique reste distincte d'un verdict scientifique.",
         "",
         "## Données réellement raccordées",
         "",
@@ -132,20 +147,20 @@ def markdown(payload: dict) -> str:
     lines.extend(["", "## Causes racines des blocages restants", ""])
     for key, value in payload["blocked_root_causes"].items():
         lines.append(f"- **{value}** entrées : {key}")
-    lines.extend(["", "## Données réellement absentes ou incompatibles", ""])
-    for filename, item in payload["unresolved_external_data"].items():
+    lines.extend(["", "## Ressources nouvelles et verrous scientifiques", ""])
+    for filename, item in payload["resource_status"].items():
         lines.extend([
-            f"### `{filename}` — {item['tests']} entrées concernées",
+            f"### `{filename}` — {item['status']}",
             "",
             item["reason"],
             "",
-            f"Source complémentaire nécessaire : {item['candidate']}",
+            f"Condition pour aller plus loin : {item['next_requirement']}",
             "",
         ])
     lines.extend([
         "## Règle de portée",
         "",
-        "Les tables partielles ne débloquent que les identifiants explicitement couverts dans `REAL_DATA_COVERAGE.json`. Les autres restent bloqués même lorsque le fichier existe.",
+        "`EMPIRICAL_POLICY.json` est la politique gelée; `REAL_DATA_COVERAGE.json` en est l'état d'exécution. Une table ne débloque que les identifiants explicitement autorisés et admissibles comme preuve empirique.",
     ])
     return "\n".join(lines) + "\n"
 
@@ -175,22 +190,26 @@ def canonical_markdown(payload: dict) -> str:
         f"- Indéterminé : **{scientific.get('undetermined', 0)}**",
         f"- Non applicable : **{scientific.get('not_applicable', 0)}**",
         "",
-        "Une réussite technique indique qu'un moteur a exécuté une analyse couverte par les données. Elle ne constitue pas automatiquement une confirmation scientifique.",
+        "Mode fail-closed : ces réussites techniques correspondent seulement aux protocoles explicitement autorisés par la politique empirique. Aucun résultat de la matrice générique ne devient un soutien scientifique sans critère ciblé gelé.",
         "",
         "## Volumes canoniques utilisés",
         "",
         f"- Expériences de partage métal-silicate : **{data.get('partition_experiments', 0)}**",
         f"- Cas du benchmark transversal : **{data.get('benchmark_cases', 0)}**",
         f"- Lignées prébiotiques : **{data.get('prebiotic_lineage_nodes', 0)}** nœuds",
-        f"- Relations parent-descendant : **{data.get('prebiotic_parent_offspring_pairs', 0)}**",
+        f"- Relations parent-descendant intégrées dans la plateforme : **{data.get('prebiotic_parent_offspring_pairs', 0)}** (volume technique; le protocole ciblé des vésicules conserve son propre effectif préenregistré)",
         f"- Ensemble climatique : **{data.get('modern_climate_ensemble_rows', 0)}** lignes",
         f"- Réseau réactionnel : **{data.get('reaction_network_rows', 0)}** réactions",
         f"- Rendements de nucléosynthèse : **{data.get('nucleosynthesis_element_yields', 0)}** élémentaires et **{data.get('nucleosynthesis_isotope_yields', 0)}** isotopiques",
         f"- Événements endosymbiotiques : **{data.get('endosymbiosis_events', 0)}**",
+        f"- Grille thermochimique calculée (audit seulement) : **{data.get('thermochemical_phase_rows', 0)}** lignes",
+        f"- Traceurs GEOROC d'accrétion tardive : **{data.get('late_accretion_tracer_rows', 0)}** mesures",
+        f"- Inventaire volatil documentaire : **{data.get('volatile_inventory_rows', 0)}** lignes",
+        f"- Climat moderne observationnel/dérivé : **{data.get('modern_climate_timeseries_rows', 0)}** lignes",
         "",
         "## Portée",
         "",
-        "Les causes détaillées des blocages et les données encore absentes figurent dans `AUDIT_DONNEES_DEPOT.md`. Le registre `REAL_DATA_COVERAGE.json` maintient une liste d'autorisation stricte par protocole.",
+        "Les causes détaillées des blocages figurent dans `AUDIT_DONNEES_DEPOT.md`. `EMPIRICAL_POLICY.json` fixe les autorisations; `REAL_DATA_COVERAGE.json` ne peut pas élargir cette portée automatiquement.",
         "",
     ])
 

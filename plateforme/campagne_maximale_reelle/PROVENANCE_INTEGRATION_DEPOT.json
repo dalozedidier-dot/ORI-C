@@ -142,6 +142,7 @@
         "rna_evolution": 70,
         "vesicle": 13680
       },
+      "benchmark_preserved": true,
       "benchmark_rows": 17506,
       "benchmark_splits": {
         "test": 6552,

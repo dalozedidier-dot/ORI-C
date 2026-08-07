@@ -126,40 +126,78 @@ def analyze_astrochemistry(network: pd.DataFrame, inventory: pd.DataFrame | None
 
 
 def analyze_condensation(frame: pd.DataFrame) -> MatterAnalysis:
-    """Audit descriptif des tables thermochimiques, sans faux équilibre.
+    """Audit d'une grille thermodynamique sans la confondre avec un équilibre.
 
-    Une énergie de Gibbs tabulée pour deux espèces de stœchiométries ou de
-    compositions différentes n'est pas directement comparable pour déterminer
-    la phase stable d'un système. Un calcul d'équilibre de condensation exige
-    au minimum un inventaire élémentaire fermé, des potentiels chimiques et un
-    solveur de minimisation sous contraintes. L'ancien ``idxmin`` global a donc
-    été retiré : cette fonction ne prétend plus produire une séquence
-    d'équilibre.
+    Le minimum de Gibbs entre espèces de compositions différentes n'est pas un
+    calcul de condensation à l'équilibre : il manque la composition globale, les
+    contraintes de bilan de matière et un solveur d'équilibre. Cette fonction
+    contrôle donc seulement la couverture et la cohérence interne de la table.
     """
     f = frame.copy()
     for col in ["temperature", "pressure", "gibbs_energy"]:
         f[col] = pd.to_numeric(f[col], errors="coerce")
-    valid = f.dropna(subset=["phase", "temperature", "pressure", "gibbs_energy", "composition"]).copy()
-    repeated_composition_points = (
-        valid.groupby(["composition", "temperature", "pressure"], dropna=False)["phase"]
-        .nunique()
-        .gt(1)
-        .sum()
+    complete = f.dropna(subset=["phase", "temperature", "pressure", "gibbs_energy", "composition"]).copy()
+    key_cols = ["phase", "composition"]
+    for optional in ["state", "modele_thermodynamique", "modele_pression", "reference"]:
+        if optional in complete.columns:
+            key_cols.append(optional)
+
+    duplicate_cols = key_cols + ["temperature", "pressure"]
+    exact_grid_duplicates = int(complete.duplicated(duplicate_cols, keep=False).sum())
+
+    # Diagnostics directionnels uniquement. Ils ne servent pas de preuve de
+    # stabilité de phase et ne déclenchent aucun verdict scientifique.
+    pressure_checks = 0
+    pressure_non_decreasing = 0
+    temperature_checks = 0
+    temperature_non_increasing = 0
+    for _, group in complete.groupby(key_cols + ["temperature"], dropna=False):
+        g = group.sort_values("pressure")
+        diff = g["gibbs_energy"].diff().dropna()
+        if len(diff):
+            pressure_checks += len(diff)
+            pressure_non_decreasing += int((diff >= -1e-9).sum())
+    for _, group in complete.groupby(key_cols + ["pressure"], dropna=False):
+        g = group.sort_values("temperature")
+        diff = g["gibbs_energy"].diff().dropna()
+        if len(diff):
+            temperature_checks += len(diff)
+            temperature_non_increasing += int((diff <= 1e-9).sum())
+
+    pressure_models = sorted(
+        complete.get("modele_pression", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()
     )
+    references = sorted(
+        complete.get("reference", pd.Series(dtype=str)).dropna().astype(str).unique().tolist()
+    )
+    states = sorted(complete.get("state", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
+
     return MatterAnalysis(
         {
-            "phase_count": float(valid["phase"].nunique()),
-            "composition_count": float(valid["composition"].nunique()),
-            "state_points": float(valid[["temperature", "pressure"]].drop_duplicates().shape[0]),
-            "same_composition_competition_points": float(repeated_composition_points),
-            "equilibrium_valid": 0.0,
+            "rows": float(len(f)),
+            "complete_rows": float(len(complete)),
+            "complete_fraction": float(len(complete) / max(len(f), 1)),
+            "phase_count": float(complete["phase"].nunique()),
+            "composition_count": float(complete["composition"].nunique()),
+            "state_count": float(len(states)),
+            "reference_count": float(len(references)),
+            "pressure_model_count": float(len(pressure_models)),
+            "temperature_min_k": float(complete["temperature"].min()) if len(complete) else float("nan"),
+            "temperature_max_k": float(complete["temperature"].max()) if len(complete) else float("nan"),
+            "pressure_min_bar": float(complete["pressure"].min()) if len(complete) else float("nan"),
+            "pressure_max_bar": float(complete["pressure"].max()) if len(complete) else float("nan"),
+            "exact_grid_duplicate_rows": float(exact_grid_duplicates),
+            "pressure_non_decreasing_fraction": float(pressure_non_decreasing / pressure_checks) if pressure_checks else float("nan"),
+            "temperature_non_increasing_fraction": float(temperature_non_increasing / temperature_checks) if temperature_checks else float("nan"),
         },
         {
-            "rows": int(len(valid)),
-            "equilibrium_valid": False,
-            "reason": (
-                "Table thermochimique auditée seulement. Aucun équilibre de condensation n'est calculé "
-                "sans bilan élémentaire fermé et minimisation thermodynamique sous contraintes."
+            "pressure_models": pressure_models,
+            "states": states,
+            "references": references,
+            "interpretation_limit": (
+                "Grille calculée à partir de paramètres thermodynamiques publiés. Aucun équilibre de "
+                "condensation, séquence de phases, C/O, redox, cinétique, transport ou bilan de matière "
+                "n'est déduit de cette seule table."
             ),
         },
     )

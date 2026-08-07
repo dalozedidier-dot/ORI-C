@@ -43,22 +43,31 @@ def test_scientific_bundle_tables_are_real_and_nontrivial() -> None:
 def test_bundle_coverage_stays_conservative() -> None:
     payload = json.loads((DATA / "REAL_DATA_COVERAGE.json").read_text(encoding="utf-8"))
     datasets = payload["datasets"]
-    assert datasets["nucleosynthesis_yields"]["supported_test_ids"] == ["M2-004"]
-    assert datasets["reaction_network"]["supported_test_ids"] == ["M3-001", "M3-011", "M3-015"]
-    assert datasets["isotope_tracers"]["supported_test_ids"] == ["P1-001"]
+    assert datasets["nucleosynthesis_yields"]["supported_test_ids"] == []
+    assert datasets["reaction_network"]["supported_test_ids"] == []
+    assert datasets["isotope_tracers"]["supported_test_ids"] == []
     assert datasets["endosymbiosis_events"]["supported_test_ids"] == ["B2-003"]
     assert "CL3-008" not in datasets["modern_climate_ensemble"]["supported_test_ids"]
     assert "CL3-009" not in datasets["modern_climate_ensemble"]["supported_test_ids"]
 
 
-def test_auxiliary_tables_do_not_replace_missing_canonical_contracts() -> None:
+def test_new_tables_are_present_but_cannot_expand_scope_by_themselves() -> None:
     for filename in (
         "thermochemical_phases.csv",
-        "planetary_histories.csv",
         "late_accretion_tracers.csv",
         "volatile_inventory.csv",
     ):
-        assert not (DATA / filename).exists()
+        assert (DATA / filename).exists()
+    assert not (DATA / "planetary_histories.csv").exists()
+
+    payload = json.loads((DATA / "REAL_DATA_COVERAGE.json").read_text(encoding="utf-8"))
+    datasets = payload["datasets"]
+    assert datasets["thermochemical_phases"]["eligible_for_empirical_proof"] is False
+    assert datasets["thermochemical_phases"]["supported_test_ids"] == []
+    assert datasets["volatile_inventory"]["eligible_for_empirical_proof"] is False
+    assert datasets["volatile_inventory"]["supported_test_ids"] == []
+    assert datasets["late_accretion_tracers"]["eligible_for_empirical_proof"] is True
+    assert datasets["late_accretion_tracers"]["supported_test_ids"] == ["P5-001"]
 
 
 def test_workflow_fallback_preserves_bundle_scope_and_carbon_extension(tmp_path: Path) -> None:
@@ -127,25 +136,27 @@ def test_workflow_fallback_preserves_bundle_scope_and_carbon_extension(tmp_path:
         "partition_experiments",
         "endosymbiosis_events",
     }
-    assert coverage["partition_experiments"]["supported_test_ids"] == [
-        "P3-001", "P3-002", "P3-003", "P3-004", "P3-005"
-    ]
+    assert coverage["partition_experiments"]["supported_test_ids"] == ["P3-001", "P3-002"]
+    assert coverage["nucleosynthesis_yields"]["eligible_for_empirical_proof"] is False
+    assert coverage["reaction_network"]["eligible_for_empirical_proof"] is False
 
 
 def test_canonical_results_and_generated_bilan_match() -> None:
     result_dir = ROOT / "plateforme/campagne_maximale_reelle/resultats_integration_maximale"
     campaign = json.loads((result_dir / "results.json").read_text(encoding="utf-8"))
     assert campaign["counts"] == {
-        "pass": 298,
+        "pass": 9,
         "fail": 0,
         "skip": 0,
-        "blocked": 337,
+        "blocked": 626,
         "error": 0,
         "not_run": 48,
     }
+    assert campaign["scientific_counts"]["supports"] == 0
+    assert campaign["metadata"].get("empirical_firewall") == "fail_closed_v2"
     bilan = (ROOT / "plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md").read_text(encoding="utf-8")
-    assert "Réussites techniques : **298**" in bilan
-    assert "Blocages : **337**" in bilan
+    assert "Réussites techniques : **9**" in bilan
+    assert "Blocages : **626**" in bilan
     assert "Expériences de partage métal-silicate : **41**" in bilan
 
 

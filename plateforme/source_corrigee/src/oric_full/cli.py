@@ -193,7 +193,7 @@ def run_command(
     seed: int = typer.Option(0),
     allow_missing_data: bool = typer.Option(False),
     include_noncomputational: bool = typer.Option(True),
-    real_data_only: bool = typer.Option(False, "--real-data-only", help="Interdire toute génération synthétique ou simulation"),
+    real_data_only: bool = typer.Option(False, "--real-data-only", help="Pare-feu empirique strict: n’autoriser que les jeux mesurés explicitement enregistrés pour le test"),
 ) -> None:
     registry = _registry(catalog)
     if all_tests:

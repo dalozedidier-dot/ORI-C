@@ -28,9 +28,11 @@ def test_partial_real_table_only_unlocks_allow_list(tmp_path: Path):
     data_dir = tmp_path / "data"
     generate_all(data_dir, seed=3)
     coverage = {
-        "schema_version": 1,
+        "schema_version": 2,
         "datasets": {
             "prebiotic_design": {
+                "data_kind": "empirical_derived",
+                "eligible_for_empirical_proof": True,
                 "scope_mode": "allow_list",
                 "supported_test_ids": ["V1-001"],
                 "limitations": "portée volontairement partielle",
@@ -49,7 +51,7 @@ def test_partial_real_table_only_unlocks_allow_list(tmp_path: Path):
     assert outcomes["V1-001"] == Outcome.PASS
     assert outcomes["V1-002"] == Outcome.BLOCKED
     blocked = next(result for result in campaign.results if result.test_id == "V1-002")
-    assert blocked.details["scientific_scope"] == "blocage de portée, pas absence du fichier"
+    assert blocked.details["scientific_scope"] == "blocage empirique fail-closed"
 
 
 def test_noncomputational_protocol_is_not_marked_as_generator_failure(tmp_path: Path):

@@ -86,3 +86,12 @@ Le tri complet est documenté dans :
 - `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md`
 
 Le fichier brut `SIMPLE_CCSNe_v3p1.hdf5` n'est pas redistribué dans cette archive. Son empreinte et son lien direct sont conservés dans `SOURCE.json`, tandis que les rendements élémentaires et isotopiques dérivés restent versionnés dans les tables canoniques.
+
+
+## Corpus réel du 7 août 2026
+
+Le corpus externe `DONNEES_REELLES_ORI-C_2026-08-07(1).zip` est enregistré par son SHA-256 `619bbab8482073076aa6d68d6f6947098b584ce40a7f7c78b4d8b2d097840fb2`. La sélection intégrée, les empreintes par fichier, les licences et les usages interdits sont décrits dans `donnees_externes/donnees_reelles_2026_08_07/SOURCE_BUNDLE.json`.
+
+La mise à jour retient une compilation GEOROC de traceurs, une grille thermodynamique calculée depuis des paramètres publiés, un inventaire volatil documentaire, un jeu climatique GISTEMP/HadCRUT5 et quatre séries paléoclimatiques longues EPICA/Vostok/LR04. Leur présence ne suffit pas à produire un verdict. `EMPIRICAL_POLICY.json` est la politique fail-closed qui décide, test par test, si une ressource peut être utilisée comme entrée empirique.
+
+Les sources paléoclimatiques longues sont conservées pour un futur protocole préenregistré ; aucun test orbital-climat n'est débloqué automatiquement. `planetary_histories.csv` reste volontairement absent faute de provenance primaire complète par cellule.

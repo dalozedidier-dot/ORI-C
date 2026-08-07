@@ -2,15 +2,15 @@
 
 ## Résultat des 683 entrées
 
-- Réussites techniques : **298**
-- Blocages : **337**
+- Réussites techniques : **9**
+- Blocages : **626**
 - Protocoles non exécutables informatiquement : **48**
 - Échecs : **0**
 - Erreurs : **0**
 
 Verdicts scientifiques confirmatoires : **0 soutien**, **0 rejet**, **635 indéterminés**.
 
-Une réussite technique signifie seulement que l'analyse couverte a été exécutée. Elle ne transforme pas le résultat en preuve confirmatoire.
+Le pare-feu est fail-closed : présence d'un fichier, taille d'un jeu ou exécution d'un moteur ne suffisent jamais à créer une preuve. Une réussite technique reste distincte d'un verdict scientifique.
 
 ## Données réellement raccordées
 
@@ -35,62 +35,79 @@ Une réussite technique signifie seulement que l'analyse couverte a été exécu
 - `endosymbiosis_events` : 85
 - `endosymbiont_hmm_rows` : 15810
 - `murchison_degassing_rows` : 3648
+- `thermochemical_phase_rows` : 64512
+- `late_accretion_tracer_rows` : 122159
+- `volatile_inventory_rows` : 10
+- `modern_climate_timeseries_rows` : 7193
 - `benchmark_domains` : {"antibiotic": 288, "antibiotic_longitudinal": 739, "matter_transition": 40, "modern_climate": 1152, "orbital": 1020, "paleoclimate": 517, "rna_evolution": 70, "vesicle": 13680}
 
 ## Causes racines des blocages restants
 
-- **63** entrées : portée partielle:prebiotic_lineages
-- **48** entrées : simulation/génération interdite:core_formal
-- **16** entrées : simulation/génération interdite:astronomy_physics
-- **16** entrées : portée partielle:benchmark_cases
-- **15** entrées : simulation/génération interdite:intervention
-- **15** entrées : fichier absent:thermochemical_phases.csv
-- **12** entrées : portée partielle:molecular_inventory,reaction_network
-- **12** entrées : simulation/génération interdite:astronomy_causality
-- **11** entrées : fichier absent:planetary_histories.csv
-- **11** entrées : portée partielle:endosymbiosis_events
-- **10** entrées : simulation/génération interdite:planetesimal_thermal
-- **10** entrées : portée partielle:partition_experiments
-- **10** entrées : fichier absent:late_accretion_tracers.csv
-- **10** entrées : GISTEMP ne contient ni forçage externe ni expérience multi-mémoires
-- **9** entrées : portée partielle:nucleosynthesis_yields
-- **9** entrées : portée partielle:isotope_tracers
-- **9** entrées : fichier absent:volatile_inventory.csv
-- **9** entrées : simulation/génération interdite:astronomy_repro
-- **9** entrées : portée partielle:modern_climate_ensemble
-- **8** entrées : GISTEMP n'observe pas une phase de retrait/restauration permettant d'estimer D-H-L
-- **8** entrées : portée partielle:cell_architecture
-- **6** entrées : portée partielle:biology_cases
-- **4** entrées : simulation/génération interdite:astronomy_validation
-- **4** entrées : portée partielle:antibiotic_design
-- **3** entrées : portée partielle:prebiotic_design
+- **89** entrées : pare-feu empirique:paleoclimate_timeseries:test_hors_portee_mesuree
+- **85** entrées : pare-feu empirique:prebiotic_lineages:test_hors_portee_mesuree
+- **63** entrées : pare-feu empirique:aucun_dataset:aucun_jeu_empirique_declare
+- **48** entrées : pare-feu empirique:benchmark_cases:non_admissible_comme_preuve_empirique
+- **37** entrées : pare-feu empirique:orbital_initial_conditions:non_admissible_comme_preuve_empirique
+- **23** entrées : pare-feu empirique:matter_transitions:non_admissible_comme_preuve_empirique
+- **23** entrées : pare-feu empirique:antibiotic_cycles:test_hors_portee_mesuree,antibiotic_measurements:test_hors_portee_mesuree
+- **18** entrées : pare-feu empirique:modern_climate_timeseries:test_hors_portee_mesuree
+- **18** entrées : pare-feu empirique:modern_climate_ensemble:non_admissible_comme_preuve_empirique
+- **18** entrées : pare-feu empirique:antibiotic_measurements:test_hors_portee_mesuree
+- **16** entrées : pare-feu empirique:relations:non_admissible_comme_preuve_empirique,states:non_admissible_comme_preuve_empirique
+- **15** entrées : pare-feu empirique:molecular_inventory:non_admissible_comme_preuve_empirique,reaction_network:non_admissible_comme_preuve_empirique
+- **15** entrées : pare-feu empirique:thermochemical_phases:non_admissible_comme_preuve_empirique
+- **13** entrées : pare-feu empirique:partition_experiments:test_hors_portee_mesuree
+- **11** entrées : pare-feu empirique:planetary_histories:non_admissible_comme_preuve_empirique
+- **11** entrées : pare-feu empirique:prebiotic_rna_evolution:test_hors_portee_mesuree
+- **11** entrées : pare-feu empirique:endosymbiosis_events:test_hors_portee_mesuree
+- **11** entrées : pare-feu empirique:antibiotic_cycles:test_hors_portee_mesuree
+- **10** entrées : pare-feu empirique:nucleosynthesis_yields:non_admissible_comme_preuve_empirique
+- **10** entrées : pare-feu empirique:isotope_tracers:test_hors_portee_mesuree
+- **10** entrées : pare-feu empirique:body_properties:non_admissible_comme_preuve_empirique,chronometers:test_hors_portee_mesuree
+- **10** entrées : pare-feu empirique:ephemerides:non_admissible_comme_preuve_empirique,orbital_initial_conditions:non_admissible_comme_preuve_empirique
+- **9** entrées : pare-feu empirique:volatile_inventory:non_admissible_comme_preuve_empirique
+- **9** entrées : pare-feu empirique:late_accretion_tracers:test_hors_portee_mesuree
+- **9** entrées : pare-feu empirique:orbital_timeseries:non_admissible_comme_preuve_empirique
+- **9** entrées : pare-feu empirique:cell_architecture:non_admissible_comme_preuve_empirique
+- **9** entrées : pare-feu empirique:biology_cases:non_admissible_comme_preuve_empirique
+- **5** entrées : pare-feu empirique:prebiotic_design:test_hors_portee_mesuree
+- **4** entrées : pare-feu empirique:orbital_reference:non_admissible_comme_preuve_empirique,orbital_timeseries:non_admissible_comme_preuve_empirique
+- **4** entrées : pare-feu empirique:antibiotic_design:test_hors_portee_mesuree
+- **2** entrées : pare-feu empirique:modern_climate_ensemble:non_admissible_comme_preuve_empirique,modern_climate_timeseries:test_hors_portee_mesuree
+- **1** entrées : pare-feu empirique:exoplanet_observations:test_hors_portee_mesuree
 
-## Données réellement absentes ou incompatibles
+## Ressources nouvelles et verrous scientifiques
 
-### `thermochemical_phases.csv` — 15 entrées concernées
+### `thermochemical_phases.csv` — present_non_empirical
 
-Les fichiers reçus ne contiennent pas une grille homogène phase-température-pression-énergie de Gibbs permettant les calculs de condensation.
+Grille calculée depuis des paramètres thermodynamiques publiés. Elle audite le domaine T-P-G mais ne constitue pas une séquence de condensation à l'équilibre.
 
-Source complémentaire nécessaire : Base thermodynamique quantitative Perple_X/JANAF ou équivalent avec licence et provenance.
+Condition pour aller plus loin : Composition globale, bilans élémentaires, activités/fugacités et solveur d'équilibre préenregistré avant tout test M4.
 
-### `planetary_histories.csv` — 11 entrées concernées
+### `planetary_histories.csv` — absent_by_design
 
-Les états orbitaux et les mesures noyau/bulk reçues ne constituent pas des histoires géochimiques complètes d'accrétion, redox, pertes et apports tardifs.
+Aucune source publique harmonisée ne fournit les sept couches historiques demandées avec provenance primaire par cellule.
 
-Source complémentaire nécessaire : Cas planétaires ou météoritiques harmonisés avec étapes historiques et composition finale.
+Condition pour aller plus loin : Compilation primaire cellule par cellule ou redéfinition préenregistrée des protocoles P6.
 
-### `late_accretion_tracers.csv` — 10 entrées concernées
+### `late_accretion_tracers.csv` — present_partial_empirical
 
-Les isotopes reçus ne relient pas encore des observations finales à plusieurs sources candidates d'accrétion tardive dans un modèle de mélange commun.
+122 159 mesures GEOROC réelles couvrent Mo-Ru-W-Os-Ir-Au, mais candidate_source décrit une famille géologique et non un pôle de mélange; les incertitudes analytiques par mesure sont absentes.
 
-Source complémentaire nécessaire : Compilation Mo-Ru-W-Os-Ir-Au et modèles de mélange documentés.
+Condition pour aller plus loin : Modèle de mélange documenté avec pôles physiquement définis, unités et incertitudes avant P5-002 à P5-010. P5-001 seul est exécutable techniquement.
 
-### `volatile_inventory.csv` — 9 entrées concernées
+### `volatile_inventory.csv` — present_incomplete
 
-Le dégazage de Murchison et les modèles H-C noyau/bulk sont utiles mais ne ferment pas, par échantillon, les masses initiale, noyau, manteau, atmosphère et pertes.
+Les compartiments non publiés restent vides. Aucune des dix lignes ne contient simultanément masse initiale, noyau, manteau, atmosphère et pertes.
 
-Source complémentaire nécessaire : Inventaires volatils quantitatifs fermés de corps différenciés et météorites.
+Condition pour aller plus loin : Inventaires fermés ou protocole explicitement conçu pour des bornes partielles; aucune valeur absente ne peut être remplacée par zéro.
+
+### `modern_climate_timeseries.csv` — present_temperature_only
+
+7 193 lignes réelles issues de GISTEMP/HadCRUT5, mais les quatre variables sont des reconstructions de température et ne représentent ni forçages ni compartiments de mémoire.
+
+Condition pour aller plus loin : Variables causales indépendantes et protocole mémoire/D-H-L gelé avant déblocage CL1/CL2.
 
 ## Règle de portée
 
-Les tables partielles ne débloquent que les identifiants explicitement couverts dans `REAL_DATA_COVERAGE.json`. Les autres restent bloqués même lorsque le fichier existe.
+`EMPIRICAL_POLICY.json` est la politique gelée; `REAL_DATA_COVERAGE.json` en est l'état d'exécution. Une table ne débloque que les identifiants explicitement autorisés et admissibles comme preuve empirique.

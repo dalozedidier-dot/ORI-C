@@ -851,64 +851,33 @@ def summarize_committed_tables(data_dir: Path) -> dict[str, Any]:
 
 
 def scientific_coverage(data_dir: Path) -> dict[str, Any]:
-    """Retourne la portée stricte des tables canoniques réellement présentes."""
-    definitions: dict[str, dict[str, Any]] = {
-        "modern_climate_ensemble": {
-            "required": ["modern_climate_ensemble.csv"],
-            "supported_test_ids": ["CL3-001", "CL3-002", "CL3-003", "CL3-006", "CL3-007", "CL4-001", "CL4-002", "CL4-003", "CL4-005", "CL4-006", "CL4-007"],
-            "limitations": "Observations avec incertitude, trajectoires CMIP6 multi-modèles/scénarios et expériences idéalisées. Aucun coût matériel, overshoot explicite, retrait ou restauration n'est fourni.",
-        },
-        "reaction_network": {
-            "required": ["reaction_network.csv"],
-            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
-            "limitations": "Deux réseaux gazeux indépendants avec taux, températures et incertitudes KIDA. Pas de chimie de surface, glaces, ordre d'irradiation ni inventaire radioastronomique.",
-        },
-        "molecular_inventory": {
-            "required": ["molecular_inventory.csv"],
-            "supported_test_ids": ["M3-001", "M3-011", "M3-015"],
-            "limitations": "Conditions initiales Rate22 directement compatibles avec les espèces du réseau. La compilation d'acides aminés est auxiliaire; aucun inventaire radioastronomique n'est prétendu.",
-        },
-        "nucleosynthesis_yields": {
-            "required": ["nucleosynthesis_yields.csv", "nucleosynthesis_isotope_yields.csv"],
-            "supported_test_ids": ["M2-004"],
-            "limitations": "Dix-huit modèles CCSN, six familles et trois masses : utilisables pour l'effet de masse. Pas de BBN, AGB, fusions compactes, rotation/binarité contrôlée ni incertitudes publiées dans le conteneur.",
-        },
-        "isotope_tracers": {
-            "required": ["isotope_tracers.csv"],
-            "supported_test_ids": ["P1-001"],
-            "limitations": "Compilation D/H, mesures Cr d'Ivuna et Ca lunaires avec provenance. Elle compile des traceurs disponibles, mais ne suffit pas à tester la dichotomie carbonée/non carbonée.",
-        },
-        "endosymbiosis_events": {
-            "required": ["endosymbiosis_events.csv", "endosymbiont_hmm_presence_absence.csv"],
-            "supported_test_ids": ["B2-003"],
-            "limitations": "Réduction génomique mesurée par matrice HMM sur 85 génomes. Hôtes, phylogénies, transferts nucléaires, dépendances directes et systèmes d'import protéique ne sont pas reliés dans cette source.",
-        },
+    """Retourne la portée autorisée par la politique empirique gelée.
+
+    Le nombre de lignes ou la présence physique d'un fichier ne peut pas
+    promouvoir automatiquement une table de modèle, une compilation ou un
+    benchmark dérivé au rang de preuve empirique.
+    """
+    policy_path = HERE / "EMPIRICAL_POLICY.json"
+    policy = json.loads(policy_path.read_text(encoding="utf-8"))
+    requirements = {
+        "modern_climate_ensemble": ["modern_climate_ensemble.csv"],
+        "reaction_network": ["reaction_network.csv"],
+        "molecular_inventory": ["molecular_inventory.csv"],
+        "nucleosynthesis_yields": ["nucleosynthesis_yields.csv", "nucleosynthesis_isotope_yields.csv"],
+        "isotope_tracers": ["isotope_tracers.csv"],
+        "endosymbiosis_events": ["endosymbiosis_events.csv", "endosymbiont_hmm_presence_absence.csv"],
+        "partition_experiments": ["partition_experiments.csv"],
     }
     coverage: dict[str, Any] = {}
-    for dataset, item in definitions.items():
-        if all((data_dir / name).exists() and (data_dir / name).stat().st_size > 0 for name in item["required"]):
-            coverage[dataset] = {
-                "supported_test_ids": item["supported_test_ids"],
-                "limitations": item["limitations"],
-                "scope_mode": "allow_list",
-            }
-
-    partition_path = data_dir / "partition_experiments.csv"
-    if partition_path.exists():
-        partition = pd.read_csv(partition_path)
-        columns = ["pressure_gpa", "temperature_k", "delta_iw", "logD"]
-        complete = int(partition[columns].notna().all(axis=1).sum()) if all(c in partition for c in columns) else 0
-        supported = ["P3-001", "P3-002"]
-        limitation = "Compilation documentaire partielle; les protocoles quantitatifs restent bloqués."
-        if complete >= 8:
-            supported += ["P3-003", "P3-004", "P3-005"]
-            limitation = "Compilation étendue par des expériences de partage du carbone avec P, T, redox et logD. Trajectoires planétaires, ordre des apports, océans magmatiques et validation aveugle restent absents."
-        coverage["partition_experiments"] = {
-            "supported_test_ids": supported,
-            "limitations": limitation,
-            "scope_mode": "allow_list",
-        }
+    for dataset, required in requirements.items():
+        if not all((data_dir / name).exists() and (data_dir / name).stat().st_size > 0 for name in required):
+            continue
+        definition = policy.get("datasets", {}).get(dataset)
+        if definition is None:
+            raise RuntimeError(f"Dataset absent de EMPIRICAL_POLICY.json: {dataset}")
+        coverage[dataset] = dict(definition)
     return coverage
+
 
 def source_manifest() -> dict[str, Any]:
     files = []
