@@ -39,7 +39,7 @@ jobs:
           python verifier_dossier.py
           python scripts/valider_tout.py --strict-lfs
           python scripts/valider_publication_stable.py
-          python scripts/valider_barriere_scientifique_publication.py
+          python scripts/valider_barriere_empirique.py
       - name: Socle, plateforme et matière
         run: |
           python -m pytest -q plateforme/source_corrigee/tests

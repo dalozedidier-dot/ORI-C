@@ -49,7 +49,7 @@ La couche mémoire distingue désormais une dépendance au chemin d’une mémoi
 
 Les résultats négatifs restent attachés à leurs protocoles précis. L’échec de M2 concerne cette formulation paléoclimatique. Le résultat non concluant sur l’amikacine, le résultat négatif Card 2019 et l’absence de filiation dans les seules données ARN ne décrivent ni toute la branche vivant ni les résultats D’Onofrio et vésicules obtenus ensuite.
 
-La campagne stricte des 683 entrées produit **298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Ce compteur décrit la plateforme d’intégration et ne remplace pas les verdicts ciblés obtenus dans les campagnes de branche.
+La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pare-feu empirique `fail_closed_v2`, produit **9 réussites techniques, 626 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Elle produit **0 verdict scientifique `supports`**. Ce compteur décrit uniquement la plateforme d’intégration et ne remplace ni les verdicts ciblés sur données réelles ni les résultats explicitement issus de modèles.
 
 Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
 
@@ -61,7 +61,7 @@ Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_20
 | `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
 | `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
 | `plan_directeur/` | plan de campagne, registre des 35 hypothèses, avancement | transversal |
-| `methodologie_puissance/` | plans de puissance a priori, simulation du pipeline complet et sorties JSON reproductibles | transversal |
+| `methodologie_puissance/` | plans de puissance et analyses de sensibilité méthodologiques ; aucune sortie de ce dossier ne constitue une preuve empirique | transversal |
 | `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
 
 ## Par où commencer

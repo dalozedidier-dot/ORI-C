@@ -190,13 +190,12 @@ def evaluate_engine(
         if engine == "condensation":
             result = analyze_condensation(data.validate("thermochemical_phases"))
             details = result.details | result.metrics
-            if result.metrics.get("complete_rows", 0.0) <= 0:
-                return _fail("Table thermodynamique vide ou inexploitable", details=details)
-            return _pass(
-                "Grille thermodynamique auditée; aucun équilibre de condensation n'est revendiqué",
-                result.metrics.get("phase_count"),
-                details,
+            details["scientific_scope"] = (
+                "Table thermodynamique calculée à partir de paramètres publiés. "
+                "Le moteur de condensation historique est retiré : aucun équilibre, "
+                "aucune séquence de condensation et aucun verdict ne sont calculés ici."
             )
+            return _blocked("Moteur de condensation retiré comme proxy scientifique", details)
 
         if engine == "matter_value":
             result = transition_prediction(data.validate("matter_transitions"), seed=seed)
@@ -260,8 +259,13 @@ def evaluate_engine(
             )
 
         if engine == "planetary_value":
-            result = incremental_history_value(data.validate("planetary_histories"))
-            return _pass("Valeur incrémentale de l'histoire calculée", result.metrics["max_incremental_gain"], result.details | result.metrics)
+            # Le proxy d'unicité historique a été retiré : il pouvait essentiellement
+            # mémoriser des combinaisons de lignes et ne constituait pas un test
+            # scientifique de valeur prédictive de l'histoire.
+            return _blocked(
+                "Proxy planetary_value retiré; un benchmark prédictif gelé et des histoires à provenance primaire sont requis",
+                {"scientific_scope": "aucun verdict produit par ce moteur"},
+            )
 
         if engine == "exoplanet_observations":
             result = exoplanet_observational_demography(data.validate("exoplanet_observations"))

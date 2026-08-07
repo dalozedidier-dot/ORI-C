@@ -1,21 +1,10 @@
-# Instructions de mise à jour
+# État de la mise à jour du 7 août 2026
 
-## Mise à jour du 7 août 2026 — barrière empirique et données réelles
+La correction est intégrée directement dans l’arborescence ORI-C. Aucun dossier `payload`, aucun installateur de patch et aucun manifeste de paquet ne fait partie du dépôt scientifique.
 
-Cette mise à jour ne doit pas être appliquée par simple copie manuelle sans reconstruire les manifestes. Utiliser le script `APPLIQUER_MISE_A_JOUR.py` fourni dans le paquet de mise à jour.
+## État empirique strict
 
-Le script :
-
-1. vérifie que les fichiers sensibles du dépôt correspondent à l'état attendu avant remplacement ;
-2. sauvegarde les fichiers qu'il va modifier ;
-3. installe les nouveaux fichiers et les données sélectionnées ;
-4. applique les corrections textuelles aux documents courants sans écraser les changements indépendants ;
-5. exécute `python build_manifest.py build` ;
-6. exécute `python build_manifest.py verify` ;
-7. exécute le pare-feu empirique, l'audit des données et les tests ciblés ;
-8. restaure la sauvegarde si l'une des étapes obligatoires échoue avant validation finale.
-
-## Résultat attendu de la matrice générique en mode réel strict
+La matrice générique de 683 entrées sous `fail_closed_v2` produit :
 
 - 9 réussites techniques
 - 626 blocages
@@ -23,37 +12,15 @@ Le script :
 - 0 échec
 - 0 erreur
 - 0 verdict scientifique `supports`
-- 635 indéterminés
-- 48 non applicables
+- 635 verdicts `undetermined`
+- 48 `not_applicable`
 
-Ces compteurs décrivent la matrice générique avec le pare-feu `fail_closed_v2`. Ils ne remplacent pas les verdicts des protocoles ciblés de branche.
+Ces compteurs décrivent la plateforme générique. Les résultats ciblés de branche restent évalués dans leurs pipelines propres.
 
-## Données ajoutées
+## Données du corpus réel du 7 août
 
-- `late_accretion_tracers.csv` : 122 159 mesures GEOROC ; seule l'auditabilité P5-001 est autorisée, aucun modèle de mélange n'est revendiqué.
-- `thermochemical_phases.csv` : 64 512 points calculés depuis des paramètres thermodynamiques publiés ; aucune preuve empirique de condensation n'est revendiquée.
-- `volatile_inventory.csv` : dix budgets documentaires incomplets ; aucune valeur absente n'est remplacée par zéro.
-- `modern_climate_timeseries.csv` : 7 193 lignes GISTEMP/HadCRUT5 ; les quatre variables restent des reconstructions de température, donc CL1/CL2 ne sont pas débloqués.
-- quatre sources paléoclimatiques longues NOAA/EPICA/Vostok/LR04, conservées pour un futur protocole préenregistré sans produire de verdict automatique.
+Sont conservés avec provenance et portée explicite : la compilation GEOROC de traceurs, la grille thermodynamique calculée depuis des paramètres publiés, l’inventaire volatil documentaire, les séries GISTEMP/HadCRUT5 et les séries longues EPICA, Vostok et LR04. `planetary_histories.csv` reste absent faute de provenance primaire complète par cellule.
 
-`planetary_histories.csv` reste volontairement absent.
+## Contrôles de cohérence
 
-## Contrôles obligatoires après application
-
-```bash
-python build_manifest.py verify
-python verifier_dossier.py --allow-lfs-pointers
-python scripts/valider_barriere_empirique.py
-python scripts/auditer_donnees_reelles_2026_08_07.py
-python -m pytest -q plateforme/source_corrigee/tests
-```
-
-Avec un clone entièrement hydraté LFS :
-
-```bash
-git lfs pull
-python verifier_dossier.py
-python scripts/valider_tout.py --strict-lfs
-```
-
-Le détail scientifique de la correction se trouve dans `MISE_A_JOUR_PREUVES_EMPIRIQUES_2026-08-07.md`.
+Les deux manifestes SHA-256 sont reconstruits à partir de l’arbre final, après toutes les corrections et sorties canoniques. `EMPIRICAL_POLICY.json` et `REAL_DATA_COVERAGE.json` restent les verrous de portée du mode réel strict.

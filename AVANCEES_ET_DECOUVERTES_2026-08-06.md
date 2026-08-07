@@ -52,7 +52,7 @@ Ces résultats appartiennent à leurs protocoles respectifs. Ils ne résument pa
 
 ## 8. Campagnes et reproductibilité
 
-La campagne stricte des 683 entrées produit 298 réussites techniques, 337 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur. La campagne de recherche suivante exécute H011, `Pacc`, les vésicules, D’Onofrio et l’audit des spéléothèmes avec les données intégrées hors ligne.
+La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pare-feu empirique `fail_closed_v2`, produit 9 réussites techniques, 626 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur, et aucun verdict scientifique `supports`. Les résultats ciblés D’Onofrio, vésicules, H011 et `Pacc` restent attachés à leurs pipelines propres et ne sont pas déduits de ce compteur.
 
 ## Formulation centrale
 

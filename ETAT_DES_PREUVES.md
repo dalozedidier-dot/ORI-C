@@ -313,7 +313,7 @@ Détail : `couche_memoire_historique/results_stress/tests_reels/`
 | Élément | Résultat | Statut |
 |---|---|---|
 | Couverture | 683 entrées, 51 WP, 59 moteurs et 33 jeux de données | outil vérifié |
-| Exécution technique | 298 réussites, 337 blocages, 48 non-exécutions, 0 échec et 0 erreur | **réexécution consolidée actuelle** |
+| Exécution technique | 9 réussites, 626 blocages, 48 non-exécutions, 0 échec et 0 erreur | **réaudit fail-closed du 7 août 2026** |
 | Verdicts scientifiques | 635 indéterminés, 48 non applicables | aucune conversion automatique d'un succès technique en preuve |
 | Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
 | Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |

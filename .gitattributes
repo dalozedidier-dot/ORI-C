@@ -17,3 +17,6 @@
 # Conserver à l'identique les données tierces : leurs empreintes de provenance
 # portent sur les octets distribués par les dépôts sources, fins de ligne incluses.
 donnees_externes/**/*.csv -text
+
+# Tables canoniques générées par ORI-C : fins de ligne stables sur toutes les plateformes.
+plateforme/campagne_maximale_reelle/data/*.csv text eol=lf
