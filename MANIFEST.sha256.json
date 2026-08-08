@@ -970,6 +970,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
+      "size": 5274,
+      "sha256": "42c681d4905b0143ae6fd80109fc24bfd56641e4ce12a8c8c92300544aea114e",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/analyser_verrou.py",
       "size": 11522,
       "sha256": "e663272a1daa095ee6f093e2979e7c2174da559d84f3fd86695dd08fb6c674bd",
@@ -3077,8 +3083,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/MEMOIRE_CLIMATIQUE_SOURCE.json",
-      "size": 3176,
-      "sha256": "62f70ea983f639c1d11a25b5b09c38a5afe5561563bc367ff5858167b58eecd2",
+      "size": 1523,
+      "sha256": "641acb18fdb3700e18704b5b3a93faa3fa971e7f3405c44e3e92e5afe9b9daac",
       "storage": "inline"
     },
     {
@@ -4237,6 +4243,12 @@
       "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE.md",
       "size": 601,
       "sha256": "a35da254d93a0c9b7bdc9fe3bda6448aa2bdd79ab26660e64920d7ca508a20a5",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/RECHERCHE_JEUX_INDEPENDANTS_2026-08-08.md",
+      "size": 3705,
+      "sha256": "b200d64494ef170c68ff373daddf9c249b904a7d0ec3897ca126ca0c804d5f0a",
       "storage": "inline"
     },
     {
