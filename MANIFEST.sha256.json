@@ -35,8 +35,8 @@
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 8418,
-      "sha256": "cd72b0445b2954e1ba6de036a31a1d354ad3ee0d28ad332933ba8608dc6e8507",
+      "size": 8635,
+      "sha256": "3a0b9734f6b4d474c72e9ad7c37df9e097d9aee539ffb992ae17f9d34c420874",
       "storage": "inline"
     },
     {
@@ -3185,8 +3185,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/RESULTAT_B.json",
-      "size": 2233,
-      "sha256": "5359d79668c897b17296c335aee8bd6325557ad929ddd217caa5f471c1ebe821",
+      "size": 2657,
+      "sha256": "e8ab377697fb52a38725da780e194abbc931e7ee4203013c86a6fcbb7d0b48ec",
       "storage": "inline"
     },
     {
@@ -4072,6 +4072,12 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/LIMITES_CONNUES.md",
+      "size": 2541,
+      "sha256": "6be9651319c3c8ba7a5c55d2c4286b312462cb40f30d22692ed1873a7a7bd16f",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/PROTOCOLE.json",
       "size": 6845,
       "sha256": "2ec64b47a6639d0ce09e976fa2268d56c5c1c0c86b5d3049250c8dba70b5ac79",
@@ -4385,8 +4391,8 @@
     },
     {
       "path": "ATTEIGNABILITE_CRITERES.json",
-      "size": 9850,
-      "sha256": "d454dfe4215d1344c3e970c27c996f3c60ff69404079b8c0312bf40cfea7d73e",
+      "size": 11031,
+      "sha256": "850706c60076f2ec35c8a19e41f841452f643be919edaf9baef7048a837e96b0",
       "storage": "inline"
     },
     {
@@ -4397,8 +4403,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 23883,
-      "sha256": "05a8154e8790594c64e6a0d23b54d8802e8defa9ef2758308b3d980cd94475a3",
+      "size": 26118,
+      "sha256": "d720a2533c4999d248360c42d3e360c925402eb89acc60c8a12e6166789cc25d",
       "storage": "inline"
     },
     {
@@ -4463,8 +4469,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 37744,
-      "sha256": "1a8b9d9433b796ac9bd32e007b0738eab4569a53906dc746a70df637c5f32bde",
+      "size": 38276,
+      "sha256": "a37c32367cb89d75f189762af3a7d1b9d0bb8f0b314fd17e868607106ad7864f",
       "storage": "inline"
     },
     {
@@ -4541,8 +4547,8 @@
     },
     {
       "path": "MAPPING_NETTOYAGE.csv",
-      "size": 4517,
-      "sha256": "588458df82ae3846f4d0943cb7a638d1133e428cd79d97dc3f0053a0f25e3906",
+      "size": 4644,
+      "sha256": "e0ed9657d2bdbaf62e11b141a76fb5368c100a3b7bc28dca68f975d8b8b342e7",
       "storage": "inline"
     },
     {
@@ -4685,8 +4691,8 @@
     },
     {
       "path": "build_manifest.py",
-      "size": 4143,
-      "sha256": "13f913d7c4400ece81f0d4816f4be21cb860f41d9dd67d9fae54170aa987f519",
+      "size": 5170,
+      "sha256": "31c605e2596c5a179efd902ee55c9cc42a58f351daf90349f31fd55e7eb71cea",
       "storage": "inline"
     },
     {
@@ -5261,8 +5267,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
-      "size": 6805,
-      "sha256": "d3eaa150b4fbce3f611bd0c141d00029b7f478388e20c9df6063115f9d2a5aa9",
+      "size": 7728,
+      "sha256": "7ecc98449d33b873fdfa71c9e3f12821385f5e583204f4a2d3d1182dbff9152a",
       "storage": "inline"
     },
     {
@@ -6359,8 +6365,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/COMPTEURS_SEPARES.json",
-      "size": 2854,
-      "sha256": "7f65b2ab9902fa3da0b7fe7a18c21ffe93dbb13de10280d9fe97ba3c59e05f3b",
+      "size": 2891,
+      "sha256": "b79a161df6baa911e6486aa22d73234ca5e6e642a8fa11e3dd654c04c215a0d1",
       "storage": "inline"
     },
     {
@@ -6419,8 +6425,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/separer_compteurs.py",
-      "size": 4986,
-      "sha256": "3257af9960eccd802957104e54b57078242bdd0985cc5e2ebbd569bdd5c72e11",
+      "size": 5359,
+      "sha256": "f13f1c6b244281e83c644403b0d1958e627b485e47c0beb50eb7bb237f3267f9",
       "storage": "inline"
     },
     {
@@ -7582,15 +7588,21 @@
       "storage": "inline"
     },
     {
+      "path": "pytest.ini",
+      "size": 1952,
+      "sha256": "6fa6c755b76eb1e65542c3412cf014cbbc9997f35f33c969148d32bd621ffaff",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/CONTROLE_NEGATIF_SURROGATS.json",
-      "size": 15582,
-      "sha256": "d640a877850cb326eb35bdc3d64682bfa01c16f1628a6e3fc8fa416ffb050599",
+      "size": 17024,
+      "sha256": "101bc676a549c53a04435631af864d778ace670a204a493edb9e2327a4374a8f",
       "storage": "inline"
     },
     {
       "path": "scripts/auditer_atteignabilite_criteres.py",
-      "size": 6614,
-      "sha256": "63fb67dad437de8f93e3e3a13be0f6f76a973a413e16ca44e7b085e7abdc1a0c",
+      "size": 9868,
+      "sha256": "ef7ca4eedf500aaa5735981851a07c54c815da2ce5523aa64a594f90f208b06e",
       "storage": "inline"
     },
     {
@@ -7607,14 +7619,14 @@
     },
     {
       "path": "scripts/controle_avant_push.py",
-      "size": 7006,
-      "sha256": "c4eecf8ee56e39f5092e8a47fa94d87c777912e25fb2606e8d0e03a91099fb78",
+      "size": 8821,
+      "sha256": "c4ee7830487532b154dc1c35c0785cefe9e80670faab50f2a88427b1a1efced7",
       "storage": "inline"
     },
     {
       "path": "scripts/controle_negatif_reel_surrogats.py",
-      "size": 15310,
-      "sha256": "00d63c6b6e574eecb283697d4ea3570376cd70aa0e23851b5bc00f96bcc453a7",
+      "size": 16030,
+      "sha256": "f0de668f3b2b6bb2a14e716115ff15807ea013c189c490284fd039e5a5607071",
       "storage": "inline"
     },
     {

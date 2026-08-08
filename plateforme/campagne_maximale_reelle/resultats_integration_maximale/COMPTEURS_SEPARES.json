@@ -6,61 +6,18 @@
   "empirique": {
     "definition": "moteurs lisant des jeux déclarés admissibles comme preuve empirique dans EMPIRICAL_POLICY.json",
     "technique": {
-      "blocked": 470,
-      "pass": 9
+      "blocked": 35,
+      "pass": 5
     },
     "scientifique": {
-      "undetermined": 479
+      "undetermined": 40
     },
     "moteurs": {
-      "prebiotic_components": 33,
-      "memory_families": 19,
-      "prebiotic_coupling": 19,
-      "prebiotic_matrix": 19,
-      "relation_graph": 16,
-      "astrochemistry": 15,
-      "condensation": 15,
-      "metal_silicate": 15,
-      "antibiotic_oric": 15,
-      "cross_domain_benchmark": 15,
-      "climate_models": 14,
       "antibiotic_measurements": 14,
-      "endosymbiosis": 12,
-      "planetary_value": 11,
-      "climate_chronology": 11,
       "prebiotic_rna_evolution": 11,
-      "antibiotic_histories": 11,
-      "nucleosynthesis": 10,
-      "planetary_provenance": 10,
-      "late_accretion": 10,
-      "modern_climate_memory": 10,
-      "modern_climate_pacc": 10,
-      "matter_value": 9,
-      "volatile_budget": 9,
-      "climate_mechanisms": 9,
-      "biology_value": 9,
-      "generality": 9,
-      "predictive_value": 9,
-      "red_team": 9,
-      "modern_climate_dhl": 8,
-      "modern_climate_validation": 8,
-      "prebiotic_transition": 8,
-      "antibiotic_competitors": 8,
-      "paleoclimate_replication": 7,
-      "climate_discrimination": 7,
       "prebiotic_design": 7,
       "antibiotic_design": 7,
-      "prebiotic_space": 6,
-      "compression": 6,
-      "climate_hysteresis": 5,
-      "paleoclimate_prospective": 5,
-      "climate_proxy_robustness": 4,
-      "climate_spectra": 4,
-      "antibiotic_replication": 4,
-      "climate_identifiability": 3,
-      "modern_climate_observational_audit": 2,
-      "exoplanet_observations": 1,
-      "climate_path_dependence": 1
+      "exoplanet_observations": 1
     }
   },
   "modele": {
@@ -87,10 +44,55 @@
   },
   "indetermine": {
     "technique": {
-      "not_run": 48
+      "not_run": 48,
+      "blocked": 435,
+      "pass": 4
     },
     "moteurs": {
-      "sans moteur": 48
+      "sans moteur": 48,
+      "prebiotic_components": 33,
+      "memory_families": 19,
+      "prebiotic_coupling": 19,
+      "prebiotic_matrix": 19,
+      "relation_graph": 16,
+      "astrochemistry": 15,
+      "condensation": 15,
+      "metal_silicate": 15,
+      "antibiotic_oric": 15,
+      "cross_domain_benchmark": 15,
+      "climate_models": 14,
+      "endosymbiosis": 12,
+      "planetary_value": 11,
+      "climate_chronology": 11,
+      "antibiotic_histories": 11,
+      "nucleosynthesis": 10,
+      "planetary_provenance": 10,
+      "late_accretion": 10,
+      "modern_climate_memory": 10,
+      "modern_climate_pacc": 10,
+      "matter_value": 9,
+      "volatile_budget": 9,
+      "climate_mechanisms": 9,
+      "biology_value": 9,
+      "generality": 9,
+      "predictive_value": 9,
+      "red_team": 9,
+      "modern_climate_dhl": 8,
+      "modern_climate_validation": 8,
+      "prebiotic_transition": 8,
+      "antibiotic_competitors": 8,
+      "paleoclimate_replication": 7,
+      "climate_discrimination": 7,
+      "prebiotic_space": 6,
+      "compression": 6,
+      "climate_hysteresis": 5,
+      "paleoclimate_prospective": 5,
+      "climate_proxy_robustness": 4,
+      "climate_spectra": 4,
+      "antibiotic_replication": 4,
+      "climate_identifiability": 3,
+      "modern_climate_observational_audit": 2,
+      "climate_path_dependence": 1
     }
   }
 }

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import subprocess
 import json
 import re
 from pathlib import Path
@@ -28,7 +29,28 @@ LFS_PATTERN = re.compile(
 )
 
 
+def ignored_by_git() -> set[str]:
+    """Chemins que `.gitignore` écarte, s'il y a un dépôt Git.
+
+    Le manifeste décrit ce qu'un clonage restituera. Un fichier ignoré par Git
+    est présent sur le disque du rédacteur et absent partout ailleurs : l'inscrire
+    fait passer le contrôle en local et échouer après le `push`, exactement comme
+    un fichier écrit en CRLF. Une archive livrée hors dépôt Git n'a pas de
+    `.gitignore` applicable ; la fonction rend alors un ensemble vide et le
+    comportement reste celui d'avant.
+    """
+    try:
+        sortie = subprocess.run(
+            ["git", "ls-files", "--others", "--ignored", "--exclude-standard"],
+            cwd=ROOT, capture_output=True, text=True, encoding="utf-8", check=True,
+        ).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return set()
+    return {ligne for ligne in sortie.splitlines() if ligne}
+
+
 def files() -> list[Path]:
+    ignores = ignored_by_git()
     return sorted(
         (
             path for path in ROOT.rglob("*")
@@ -39,6 +61,7 @@ def files() -> list[Path]:
                 path.relative_to(ROOT).as_posix().startswith(prefix)
                 for prefix in EXCLUDED_PATH_PREFIXES
             )
+            and path.relative_to(ROOT).as_posix() not in ignores
         ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
     )

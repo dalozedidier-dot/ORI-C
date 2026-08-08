@@ -4,16 +4,22 @@ Ce tableau est le seul lieu du dossier où les trois branches sont regardées
 ensemble. Il compare des **statuts**, jamais des résultats.
 
 > **Avant de lire un échec comme un résultat négatif.**
-> Trois critères du dossier ne peuvent pas être satisfaits, quelle que soit
-> l’ampleur réelle de l’effet cherché : la **vallée des rayons**, dont le seuil
-> n’est franchi à aucune taille disponible, et les **deux tests de signe** du
-> benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 pour
-> une puissance mesurée de 0,109 et 0,212. Leur échec ne réfute rien.
-> Voir [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md)
-> et [`PUISSANCE_VIVANT_2026-08-07.md`](PUISSANCE_VIVANT_2026-08-07.md).
+> Un critère du dossier ne peut pas être satisfait, quelle que soit l’ampleur
+> réelle de l’effet cherché : la **vallée des rayons**, dont le seuil n’est
+> franchi à aucune taille disponible et dont la profondeur mesurée est négative.
+> Son échec ne réfute rien.
+> Voir [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md).
 >
-> Le balayage complet est rassurant par ailleurs : sur 22 critères discrets,
-> **aucun autre n’est vicié par construction**.
+> Sur 23 critères discrets, 20 sont atteignables et 3 — des bootstraps — ne sont
+> pas évaluables par cette voie, un bootstrap n’ayant pas de plancher de p
+> général.
+>
+> **Correction du 8 août 2026.** Cet encadré citait auparavant « les deux tests
+> de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables
+> sur 10 ». Le benchmark n’emploie pas un test de signe mais un test de
+> **sign-flip**, qui prend les magnitudes en compte et n’exige aucun nombre
+> minimal d’unités favorables. Ces deux critères sont atteignables ; l’auditeur
+> les modélisait par le mauvais test.
 >
 > **Premier test prospectif.** `WP-EXO-PACC-2026`, gelé le 7 août 2026 et
 > vérifiable le 7 août 2028, est le seul protocole du dossier dont la conclusion
@@ -309,9 +315,13 @@ même table. Résultat sur les deux contrôles négatifs propres :
 
 | série réelle substituée | nature | gain | p | verdict rendu |
 |---|---|---:|---:|---|
-| `obliquity_deg` | oscillation à 41 ka, mécanique céleste | **77,3 %** | 0,0000 | soutient |
-| `insolation_65N_jul_Wm2` | fonction calculée des éléments orbitaux | 60,5 % | 0,0000 | soutient |
-| `ice_volume_total_sle` | cible d'origine | 34,4 % | 0,0000 | soutient |
+| `obliquity_deg` | oscillation à 41 ka, mécanique céleste | **77,3 %** | 0,0050 | soutient |
+| `insolation_65N_jul_Wm2` | fonction calculée des éléments orbitaux | 60,5 % | 0,0050 | soutient |
+| `ice_volume_total_sle` | cible d'origine | 34,4 % | 0,0050 | soutient |
+
+La valeur 0,0050 est le plancher 1/(N+1) pour 200 surrogats. Une valeur de p
+exactement nulle est impossible avec un tirage fini : l'estimateur employé est
+(1 + k)/(1 + N), et non la fraction brute qui peut rendre zéro.
 
 L'obliquité terrestre obtient un gain **plus élevé que la cible glaciaire**. Elle
 n'inscrit rien : elle est quasi périodique. Un test qui la déclare positive ne
@@ -326,8 +336,8 @@ de cible et de prédicteur, conserve tout son pouvoir autoprédictif linéaire, 
 n'a perdu que la structure non linéaire.
 
 Sous cette construction corrigée, les deux contrôles propres passent à
-`ne_soutient_pas` — obliquité p = 0,855, insolation p = 0,085 — et la cible
-glaciaire reste positive à p = 0,0000. **Cela ne suffit toujours pas.** La
+`ne_soutient_pas` — obliquité p = 0,856, insolation p = 0,090 — et la cible
+glaciaire reste positive au plancher, p = 0,0050. **Cela ne suffit toujours pas.** La
 statistique corrigée teste la non-linéarité, pas l'inscription : elle déclare
 positives la précession et l'excentricité, qui portent une modulation d'amplitude
 bien réelle sans rien inscrire. Aucun verdict ORI-C n'en est tiré.

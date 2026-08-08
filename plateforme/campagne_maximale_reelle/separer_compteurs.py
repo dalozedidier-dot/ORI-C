@@ -43,7 +43,12 @@ def classe_du_moteur(moteur: str, politique: dict) -> str:
     jeu = politique["datasets"].get(moteur)
     if jeu is not None:
         return "empirique" if jeu.get("eligible_for_empirical_proof") else "modele"
-    return "empirique"
+    # Fail closed. Un moteur absent de EMPIRICAL_POLICY.json n'est pas empirique
+    # par defaut : il est indetermine. Le defaut inverse gonflait le compteur
+    # empirique de 439 entrees sur 479, dont l'admissibilite n'avait jamais ete
+    # declaree nulle part. Un depot qui se reclame du fail closed ne peut pas
+    # classer par optimisme ce qu'il n'a pas verifie.
+    return "indetermine"
 
 
 def main() -> int:

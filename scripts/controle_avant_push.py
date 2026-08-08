@@ -29,6 +29,7 @@ Sortie 0 si le push peut partir, 1 sinon.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 import subprocess
 import sys
@@ -36,7 +37,7 @@ from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
 
-LIGNE = re.compile(r"^[0-9a-f]{64}\s+(.*)$")
+LIGNE = re.compile(r"^([0-9a-f]{64})\s+(.*)$")
 
 # Chaque périmètre reproduit les exclusions de l'outil qui construit son
 # manifeste. Un fichier exclu n'est pas une anomalie ; un fichier ni exclu ni
@@ -89,13 +90,40 @@ def fichiers_connus_de_git() -> set[str]:
     return connus
 
 
-def entrees_du_manifeste(chemin: Path, prefixe: str) -> set[str]:
-    entrees = set()
+def entrees_du_manifeste(chemin: Path, prefixe: str) -> dict[str, str]:
+    """Chemin préfixé → empreinte déclarée."""
+    entrees: dict[str, str] = {}
     for ligne in chemin.read_text(encoding="utf-8").splitlines():
         correspondance = LIGNE.match(ligne.strip())
         if correspondance:
-            entrees.add(prefixe + correspondance.group(1))
+            entrees[prefixe + correspondance.group(2)] = correspondance.group(1)
     return entrees
+
+
+def empreintes_divergentes(chemin_manifeste: Path, entrees: dict[str, str],
+                           prefixe: str) -> list[str]:
+    """Recalcule chaque empreinte déclarée et signale celles qui ne collent pas.
+
+    Contrôler la seule présence des chemins ne suffit pas : un manifeste peut
+    lister tous les bons fichiers et porter des empreintes périmées. C'était le
+    cas de `plan_directeur/revue_systematique/MANIFEST.sha256`, dont 11 entrées
+    sur 22 étaient fausses alors que ce script les déclarait conformes.
+    """
+    base = (chemin_manifeste.parent if prefixe else RACINE)
+    divergentes = []
+    for chemin, attendu in entrees.items():
+        relatif = chemin[len(prefixe):] if prefixe else chemin
+        fichier = base / relatif
+        if not fichier.is_file():
+            continue  # traité par le contrôle de présence
+        try:
+            reel = hashlib.sha256(fichier.read_bytes()).hexdigest()
+        except OSError:
+            divergentes.append(f"{chemin} — illisible")
+            continue
+        if reel != attendu:
+            divergentes.append(chemin)
+    return divergentes
 
 
 def controler_perimetres(connus: set[str]) -> list[str]:
@@ -108,7 +136,7 @@ def controler_perimetres(connus: set[str]) -> list[str]:
             continue
 
         inscrits = entrees_du_manifeste(chemin, perimetre["prefixe"])
-        fantomes = sorted(inscrits - connus)
+        fantomes = sorted(set(inscrits) - connus)
         for fantome in fantomes:
             anomalies.append(f"{nom} : inscrit au manifeste mais inconnu de Git — {fantome}")
 
@@ -120,13 +148,23 @@ def controler_perimetres(connus: set[str]) -> list[str]:
                 if fichier.startswith(perimetre["prefixe"])
                 and not any(part in exclusions for part in fichier.split("/"))
             }
-            manquants = sorted(portee - inscrits)
+            manquants = sorted(portee - set(inscrits))
             for manquant in manquants:
                 anomalies.append(f"{nom} : suivi par Git mais absent du manifeste — {manquant}")
 
-        etat = "conforme" if not (fantomes or manquants) else "À RECONSTRUIRE"
-        print(f"  {nom:<28} {len(inscrits):>5} entrées   {etat}")
-        if fantomes or manquants:
+        # Le manifeste racine est déjà contrôlé octet à octet par
+        # `verifier_dossier.py`. Les sous-manifestes ne l'étaient par rien.
+        divergentes: list[str] = []
+        if not perimetre["sens_unique"]:
+            divergentes = empreintes_divergentes(chemin, inscrits, perimetre["prefixe"])
+            for divergente in divergentes:
+                anomalies.append(f"{nom} : empreinte périmée — {divergente}")
+
+        defauts = fantomes or manquants or divergentes
+        etat = "conforme" if not defauts else "À RECONSTRUIRE"
+        detail = f" ({len(divergentes)} empreintes périmées)" if divergentes else ""
+        print(f"  {nom:<28} {len(inscrits):>5} entrées   {etat}{detail}")
+        if defauts:
             print(f"      {perimetre['reconstruire']}")
     return anomalies
 

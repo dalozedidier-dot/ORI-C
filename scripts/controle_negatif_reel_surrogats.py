@@ -168,8 +168,18 @@ def executer_pipeline(serie, forcages_bruts, surrogats, graine):
     temoins_asymetriques = np.array(temoins_asymetriques)
     gains_symetriques = np.array(gains_symetriques)
 
-    p_asymetrique = float((temoins_asymetriques <= rmse_histoire).mean())
-    p_symetrique = float((gains_symetriques >= gain).mean())
+    # Estimateur de Monte-Carlo borne : (1 + k) / (1 + N). Une valeur de p
+    # exactement nulle est impossible avec un nombre fini de surrogats — la
+    # borne inferieure vaut 1/(N+1), soit 4,98e-03 pour 200 surrogats. Rapporter
+    # 0,0000 revient a affirmer une certitude que le tirage ne peut pas fournir.
+    # Voir Davison et Hinkley, et North, Curtis et Sham 2002.
+    def p_bornee(compte: int, total: int) -> float:
+        return (1.0 + compte) / (1.0 + total)
+
+    p_asymetrique = p_bornee(int((temoins_asymetriques <= rmse_histoire).sum()),
+                             temoins_asymetriques.size)
+    p_symetrique = p_bornee(int((gains_symetriques >= gain).sum()),
+                            gains_symetriques.size)
     return {
         "blocs": blocs,
         "rmse_etat_seul": rmse_etat,
@@ -180,6 +190,7 @@ def executer_pipeline(serie, forcages_bruts, surrogats, graine):
             "temoin_moyenne": float(temoins_asymetriques.mean()),
             "temoin_minimum": float(temoins_asymetriques.min()),
             "p_unilaterale": p_asymetrique,
+            "p_minimale_atteignable": 1.0 / (1 + surrogats),
             "verdict": ("soutient" if rmse_histoire < rmse_etat and p_asymetrique <= ALPHA
                         else "ne_soutient_pas"),
         },
@@ -189,6 +200,7 @@ def executer_pipeline(serie, forcages_bruts, surrogats, graine):
             "gain_temoin_percentile_95": float(np.percentile(gains_symetriques, 95)),
             "gain_temoin_maximum": float(gains_symetriques.max()),
             "p_unilaterale": p_symetrique,
+            "p_minimale_atteignable": 1.0 / (1 + surrogats),
             "verdict": "soutient" if p_symetrique <= ALPHA else "ne_soutient_pas",
         },
     }

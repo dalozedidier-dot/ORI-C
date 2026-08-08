@@ -28,8 +28,23 @@ ci-dessous.
 ## Règles de lecture et de mise à jour
 
 1. Un résultat négatif reste limité au protocole qui l’a produit. Il ne peut pas être étendu à une branche entière ni au programme.
-1 bis. **Un résultat négatif dont le critère est inatteignable n’est pas un résultat.** Avant de citer un échec, il faut vérifier son statut dans `ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Trois critères sont aujourd’hui concernés : la vallée des rayons, dont le seuil n’est franchi à aucune taille disponible, et les deux tests de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 pour une puissance de 0,109 et 0,212. Leur échec ne peut être cité ni comme réfutation ni comme résultat négatif.
-1 ter. **Un compteur empirique et un compteur de modèle ne s’additionnent pas.** `plateforme/campagne_maximale_reelle/resultats_integration_maximale/COMPTEURS_SEPARES.json` les tient séparés : 479 entrées empiriques dont les 9 réussites techniques, 156 entrées de modèle dont aucune. Un rapport qui présenterait leur somme serait fautif.
+1 bis. **Un résultat négatif dont le critère est inatteignable n’est pas un résultat.** Avant de citer un échec, vérifier son statut dans `ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Sur 23 critères discrets, 20 sont atteignables et 3 ne sont pas évaluables par cette voie.
+
+Un seul critère reste écarté pour inatteignabilité : la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible et dont la profondeur mesurée est négative, −0,002420, sur 0 succès en 40 tirages à n = 200, 400, 800 et 1600.
+
+Les trois critères « non évaluables » sont des **bootstraps** — `mpt/bootstrap_draws`, à 20 000 et 200 tirages. Un bootstrap rééchantillonne la distribution observée et estime un intervalle ; il ne construit pas une distribution nulle par ré-étiquetage. Il n’a donc pas de plancher de p général, contrairement à une permutation dont la plus petite valeur vaut 1/(N+1). Leur atteignabilité doit être établie protocole par protocole, et ne peut pas être déduite du nombre de tirages.
+
+**Correction du 8 août 2026.** Cette règle citait auparavant deux critères supplémentaires, « les deux tests de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 ». C’était faux. Le benchmark n’emploie pas un test de signe mais un test de **sign-flip** : `plan_directeur/campagne_maximale_trois_branches/analyse_vivant.py`, ligne 179, calcule `abs(np.mean(differences * signs))`. Le test de signe ne compte que les unités favorables et jette les magnitudes ; le sign-flip énumère les 2ⁿ attributions de signe et compare la moyenne signée observée, magnitudes comprises. Il n’exige aucun nombre minimal d’unités favorables, et sa plus petite valeur de p vaut 2/2¹⁰ = 1,95 × 10⁻³. Ces deux critères sont **atteignables**. L’auditeur les modélisait par le mauvais test ; il distingue désormais les trois familles.
+
+1 ter. **Un compteur empirique et un compteur de modèle ne s’additionnent pas, et un moteur non déclaré n’est pas empirique.** `plateforme/campagne_maximale_reelle/resultats_integration_maximale/COMPTEURS_SEPARES.json` répartit les 683 entrées en trois colonnes qui ne se somment jamais :
+
+| colonne | entrées | réussites techniques |
+|---|---:|---:|
+| empirique | **40** | 5 |
+| modèle | 156 | 0 |
+| indéterminé | **487** | 4 |
+
+**Correction du 8 août 2026.** Cette règle annonçait auparavant « 479 entrées empiriques dont les 9 réussites techniques ». C’était le produit d’un défaut *fail open* : `separer_compteurs.py` classait en empirique tout moteur absent de `EMPIRICAL_POLICY.json`. Or 439 des 479 entrées ainsi comptées avaient un moteur dont l’admissibilité comme preuve empirique n’était déclarée nulle part. Le classement est désormais *fail closed* : un moteur non déclaré est **indéterminé**, jamais empirique. Un dépôt qui se réclame du pare-feu empirique ne peut pas classer par optimisme ce qu’il n’a pas vérifié. Les 9 réussites techniques se répartissent en 5 empiriques et 4 indéterminées ; aucune n’est un résultat de modèle.
 
 1 quater. **La matrice des 683 est un diagnostic de couverture, pas une source de preuves.** Ses 626 blocages ne traduisent pas un manque de données. Le relevé des `coverage_gaps` donne 320 entrées (51,1 %) en `test_hors_portee_mesuree` — la table est réelle mais ne porte pas les variables exactes du test —, 243 (38,8 %) en `non_admissible_comme_preuve_empirique` — sorties de modèle, éphémérides, compilations documentaires, benchmarks dérivés —, et 63 (10,1 %) sans jeu empirique déclaré. Aucun rapport ne doit présenter ce compteur comme une mesure de l’avancement scientifique, ni chercher à le faire monter en ajoutant des tables.
 

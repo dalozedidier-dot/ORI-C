@@ -84,9 +84,22 @@ def main() -> int:
                 if n is None
                 else {
                     "plis": n,
-                    "lignees_equivalentes": round(n * lignees / n_plis),
-                    "mesures_equivalentes": round(n * lignes / n_plis),
-                    "facteur_par_rapport_a_l_existant": round(n / n_plis, 1),
+                    # Aucune conversion vers un nombre de lignees n'est fournie.
+                    # Les dix plis sont des partitions de la MEME donnee, non des
+                    # unites independantes : ils sont correles entre eux et leur
+                    # nombre ne mesure pas une quantite d'information. Multiplier
+                    # le nombre de plis requis par le rapport lignees/plis suppose
+                    # une proportionnalite qui n'existe pas, et produirait un
+                    # dimensionnement d'experience faux. La question « combien de
+                    # lignees faut-il » demande une analyse de puissance sur les
+                    # lignees elles-memes, pas sur les plis de validation croisee.
+                    "lignees_equivalentes": None,
+                    "mesures_equivalentes": None,
+                    "conversion_vers_les_lignees": (
+                        "non fournie : les plis de validation croisee ne sont pas "
+                        "des unites independantes, la proportionnalite est invalide"
+                    ),
+                    "facteur_sur_les_plis": round(n / n_plis, 1),
                 }
             )
 

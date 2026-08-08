@@ -91,6 +91,10 @@ jobs:
           bash scripts/run_all.sh \
             | tee "$OUT/logs/campagne_principale.log"
 
+      - name: Rejouer le contrôle négatif réel des surrogats
+        run: |
+          python scripts/controle_negatif_reel_surrogats.py --surrogats 200             | tee "$OUT/logs/controle_negatif_surrogats.log"
+
       - name: Finaliser et vérifier le manifeste mémoire
         run: |
           cd "$MEMORY"

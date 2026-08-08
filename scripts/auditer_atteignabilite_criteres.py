@@ -40,8 +40,71 @@ def p_signe_bilateral(favorables: int, total: int) -> float:
     return min(1.0, 2 * queue / 2 ** total)
 
 
+def audit_sign_flip(combinaisons: int, alpha: float) -> dict[str, object]:
+    """Test de sign-flip exact sur `n` unites appariees, soit `2**n` signes.
+
+    Ce test n'est PAS un test de signe. Le test de signe ne compte que le nombre
+    d'unites favorables et jette les magnitudes ; le sign-flip enumere les 2**n
+    attributions de signe et compare la moyenne signee observee a la
+    distribution obtenue, magnitudes comprises. Voir
+    `plan_directeur/campagne_maximale_trois_branches/analyse_vivant.py`, ligne
+    179 : `abs(np.mean(differences * signs))`.
+
+    La difference n'est pas cosmetique. Le test de signe exige un nombre minimal
+    d'unites favorables — 9 sur 10 pour atteindre alpha = 0,05. Le sign-flip
+    n'exige rien de tel : une seule unite de magnitude dominante peut suffire, et
+    la plus petite valeur de p atteignable vaut 2 / 2**n quel que soit le
+    decompte des signes. Modeliser l'un par l'autre falsifie le verdict
+    d'atteignabilite.
+    """
+    n = int(round(math.log2(combinaisons)))
+    minimum = 2.0 / 2 ** n
+    return {
+        "famille": "test de sign-flip exact, magnitudes comprises",
+        "unites": n,
+        "p_minimal_atteignable": minimum,
+        "unites_favorables_requises": None,
+        "classe": "atteignable" if minimum <= alpha else "inatteignable",
+        "lecture": (
+            f"Sur {n} unites appariees, la plus petite valeur de p vaut "
+            f"2/2**{n} = {minimum:.2e}. Aucun nombre minimal d'unites favorables "
+            f"n'est requis : les magnitudes entrent dans la statistique."
+        ),
+    }
+
+
+def audit_bootstrap(tirages: int, alpha: float) -> dict[str, object]:
+    """Bootstrap : l'atteignabilite ne se lit pas comme celle d'une permutation.
+
+    Un test de permutation construit sa distribution nulle par re-etiquetage
+    exact, et sa plus petite valeur de p vaut 1/(N+1). Un bootstrap re-echantillonne
+    la distribution observee : il estime un intervalle de confiance, pas une
+    distribution nulle. Sa resolution est bornee par 1/N sur les quantiles, mais
+    le plancher depend de la statistique et du schema de reechantillonnage, et il
+    n'existe pas de formule generale. Le classer comme une permutation attribue
+    une atteignabilite qui n'a pas ete demontree.
+    """
+    return {
+        "famille": "bootstrap",
+        "tirages": tirages,
+        "p_minimal_atteignable": None,
+        "resolution_des_quantiles": 1.0 / tirages,
+        "classe": "non_evaluable",
+        "lecture": (
+            f"Bootstrap a {tirages} tirages. La resolution des quantiles vaut "
+            f"1/{tirages} = {1.0 / tirages:.2e}, mais un bootstrap n'a pas de "
+            f"plancher de p general : l'atteignabilite n'est pas evaluable par "
+            f"cette voie et doit etre etablie protocole par protocole."
+        ),
+    }
+
+
 def audit_signe(combinaisons: int, alpha: float) -> dict[str, object]:
-    """Test de signe exact sur `n` plis, soit `2**n` combinaisons."""
+    """Test de signe exact sur `n` plis, soit `2**n` combinaisons.
+
+    Conserve pour les protocoles qui emploient reellement un test de signe.
+    Aucun protocole du depot n'en emploie a ce jour.
+    """
     n = int(round(math.log2(combinaisons)))
     minimum = p_signe_bilateral(n, n)
     requis = next(
@@ -91,8 +154,10 @@ def audit_permutation(tirages: int, alpha: float) -> dict[str, object]:
     }
 
 
-CLES_SIGNE = ("sign_flip_combinations",)
-CLES_PERMUTATION = ("permutations", "bootstrap_draws", "tirages", "n_tirages")
+CLES_SIGN_FLIP = ("sign_flip_combinations",)
+CLES_SIGNE = ()
+CLES_PERMUTATION = ("permutations", "tirages", "n_tirages")
+CLES_BOOTSTRAP = ("bootstrap_draws",)
 
 
 def parcourir(objet, chemin: str = ""):
@@ -118,8 +183,12 @@ def main() -> int:
             relatif = str(chemin.relative_to(RACINE)).replace(os.sep, "/")
             for emplacement, valeur in parcourir(donnees):
                 nom = emplacement.rsplit("/", 1)[-1]
-                if nom in CLES_SIGNE and valeur >= 2:
+                if nom in CLES_SIGN_FLIP and valeur >= 2:
+                    constat = audit_sign_flip(int(valeur), ALPHA)
+                elif nom in CLES_SIGNE and valeur >= 2:
                     constat = audit_signe(int(valeur), ALPHA)
+                elif nom in CLES_BOOTSTRAP and valeur >= 1:
+                    constat = audit_bootstrap(int(valeur), ALPHA)
                 elif nom in CLES_PERMUTATION and valeur >= 1:
                     constat = audit_permutation(int(valeur), ALPHA)
                 else:

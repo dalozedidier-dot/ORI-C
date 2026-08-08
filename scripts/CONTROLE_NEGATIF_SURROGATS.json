@@ -15,7 +15,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 3.243883330245419,
         "temoin_minimum": 2.846909695901008,
-        "p_unilaterale": 0.21,
+        "p_unilaterale": 0.21393034825870647,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "ne_soutient_pas"
       },
       "symetrique": {
@@ -23,7 +24,8 @@
         "gain_temoin_moyen": 0.09501556473836124,
         "gain_temoin_percentile_95": 0.14256623153500084,
         "gain_temoin_maximum": 0.158407144010412,
-        "p_unilaterale": 0.97,
+        "p_unilaterale": 0.9701492537313433,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "ne_soutient_pas"
       },
       "forcages_utilises": [
@@ -52,7 +54,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 27.226848157162593,
         "temoin_minimum": 23.465488756779077,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -60,7 +63,8 @@
         "gain_temoin_moyen": 0.17471178181810088,
         "gain_temoin_percentile_95": 0.27927140209155726,
         "gain_temoin_maximum": 0.30950309598408543,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -89,7 +93,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 10.032364034924194,
         "temoin_minimum": 8.201765005506509,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -97,7 +102,8 @@
         "gain_temoin_moyen": 0.21314557512889137,
         "gain_temoin_percentile_95": 0.29371349610371655,
         "gain_temoin_maximum": 0.33108415721527706,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -126,7 +132,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 14.31440114798777,
         "temoin_minimum": 12.495561337424991,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -134,7 +141,8 @@
         "gain_temoin_moyen": 0.14164888302283185,
         "gain_temoin_percentile_95": 0.2298776084942583,
         "gain_temoin_maximum": 0.28600711896239317,
-        "p_unilaterale": 0.015,
+        "p_unilaterale": 0.01990049751243781,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -163,7 +171,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 23.654830980753758,
         "temoin_minimum": 20.38124225250511,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -171,7 +180,8 @@
         "gain_temoin_moyen": 0.17457719020817222,
         "gain_temoin_percentile_95": 0.275577410519745,
         "gain_temoin_maximum": 0.3087938590443233,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -200,7 +210,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 8.988163597341423,
         "temoin_minimum": 5.846916146746542,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -208,7 +219,8 @@
         "gain_temoin_moyen": 0.4754622821389127,
         "gain_temoin_percentile_95": 0.6322050750719512,
         "gain_temoin_maximum": 0.6649383838930085,
-        "p_unilaterale": 0.085,
+        "p_unilaterale": 0.08955223880597014,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "ne_soutient_pas"
       },
       "forcages_utilises": [
@@ -236,7 +248,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 0.013453758416329144,
         "temoin_minimum": 0.008774136609183561,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -244,7 +257,8 @@
         "gain_temoin_moyen": 0.5862257187374589,
         "gain_temoin_percentile_95": 0.5999391276435848,
         "gain_temoin_maximum": 0.6134012572402112,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -272,7 +286,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 0.29975197996660113,
         "temoin_minimum": 0.12575686174664036,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -280,7 +295,8 @@
         "gain_temoin_moyen": 0.7856382722610286,
         "gain_temoin_percentile_95": 0.8013094966078176,
         "gain_temoin_maximum": 0.8035424705521157,
-        "p_unilaterale": 0.855,
+        "p_unilaterale": 0.8557213930348259,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "ne_soutient_pas"
       },
       "forcages_utilises": [
@@ -308,7 +324,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 0.009942295649580041,
         "temoin_minimum": 0.005952055656186001,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -316,7 +333,8 @@
         "gain_temoin_moyen": 0.7017963563081036,
         "gain_temoin_percentile_95": 0.7347145853930009,
         "gain_temoin_maximum": 0.7470678968178743,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "forcages_utilises": [
@@ -344,7 +362,8 @@
         "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
         "temoin_moyenne": 0.3598345964744938,
         "temoin_minimum": 0.30457573183588316,
-        "p_unilaterale": 0.0,
+        "p_unilaterale": 0.004975124378109453,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "soutient"
       },
       "symetrique": {
@@ -352,7 +371,8 @@
         "gain_temoin_moyen": 0.16636033444024115,
         "gain_temoin_percentile_95": 0.2436596960842525,
         "gain_temoin_maximum": 0.29311462195828153,
-        "p_unilaterale": 0.08,
+        "p_unilaterale": 0.0845771144278607,
+        "p_minimale_atteignable": 0.004975124378109453,
         "verdict": "ne_soutient_pas"
       },
       "forcages_utilises": [

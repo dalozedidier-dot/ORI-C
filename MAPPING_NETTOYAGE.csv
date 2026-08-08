@@ -24,4 +24,4 @@ retrait,plateforme/campagne_maximale_reelle/sources_brutes/Zenodo_10714366/figur
 retrait,plateforme/campagne_maximale_reelle/sources_brutes/Zenodo_10714366/figure_data/figure_data/Papastavrou_23_fig_3_data.xlsx,"cache, variante, audit remplacé ou résultat non canonique"
 retrait,plateforme/campagne_maximale_reelle/sources_brutes/Zenodo_10714366/figure_data/figure_data/Papastavrou_23_fig_2_and_S2_data.xlsx,"cache, variante, audit remplacé ou résultat non canonique"
 retrait,plateforme/campagne_maximale_reelle/sources_brutes/Zenodo_10714366/figure_data/figure_data/Papastavrou_23_fig_4B_data.xlsx,"cache, variante, audit remplacé ou résultat non canonique"
-retrait,plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,"cache, variante, audit remplacé ou résultat non canonique"
+conserver,plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv,"NE PAS SUPPRIMER : produit par integrer_lot_scientifique_2026_08_05.py ligne 269 et relu ligne 778 ; declare dans construire_dossier.py ligne 543. Le marquage retrait etait une erreur."

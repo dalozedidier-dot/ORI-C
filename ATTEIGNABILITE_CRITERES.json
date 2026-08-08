@@ -2,10 +2,10 @@
   "genere_par": "scripts/auditer_atteignabilite_criteres.py",
   "alpha": 0.05,
   "principe": "Un test à statistique discrète ne peut produire qu'un nombre fini de valeurs de p. Si le seuil de décision est plus exigeant que la plus petite valeur atteignable, le critère ne peut pas être satisfait et son résultat ne porte aucune information.",
-  "constats": 22,
+  "constats": 23,
   "par_classe": {
     "atteignable": 20,
-    "atteignable_fragile": 2
+    "non_evaluable": 3
   },
   "detail": [
     {
@@ -64,30 +64,12 @@
     },
     {
       "famille": "test de permutation",
-      "tirages": 20000,
-      "p_minimal_atteignable": 4.999750012499375e-05,
+      "tirages": 2000,
+      "p_minimal_atteignable": 0.0004997501249375312,
       "classe": "atteignable",
-      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
-      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/primary.json",
-      "emplacement": "/mpt/bootstrap_draws"
-    },
-    {
-      "famille": "test de permutation",
-      "tirages": 200,
-      "p_minimal_atteignable": 0.004975124378109453,
-      "classe": "atteignable",
-      "lecture": "Avec 200 tirages, la plus petite valeur de p vaut 4.98e-03.",
-      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/smoke.json",
-      "emplacement": "/mpt/bootstrap_draws"
-    },
-    {
-      "famille": "test de permutation",
-      "tirages": 20000,
-      "p_minimal_atteignable": 4.999750012499375e-05,
-      "classe": "atteignable",
-      "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
-      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/results/environment.json",
-      "emplacement": "/config/mpt/bootstrap_draws"
+      "lecture": "Avec 2000 tirages, la plus petite valeur de p vaut 5.00e-04.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/RESULTAT.json",
+      "emplacement": "/permutations"
     },
     {
       "famille": "test de permutation",
@@ -115,6 +97,26 @@
       "lecture": "Avec 20000 tirages, la plus petite valeur de p vaut 5.00e-05.",
       "fichier": "documentation/dossier_scientifique/annexes/test_hierarchie_resultats.json",
       "emplacement": "/test_B_information/tirages"
+    },
+    {
+      "famille": "test de sign-flip exact, magnitudes comprises",
+      "unites": 10,
+      "p_minimal_atteignable": 0.001953125,
+      "unites_favorables_requises": null,
+      "classe": "atteignable",
+      "lecture": "Sur 10 unites appariees, la plus petite valeur de p vaut 2/2**10 = 1.95e-03. Aucun nombre minimal d'unites favorables n'est requis : les magnitudes entrent dans la statistique.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/antibiotic_history_robustness/primary_paired_comparison/sign_flip_combinations"
+    },
+    {
+      "famille": "test de sign-flip exact, magnitudes comprises",
+      "unites": 10,
+      "p_minimal_atteignable": 0.001953125,
+      "unites_favorables_requises": null,
+      "classe": "atteignable",
+      "lecture": "Sur 10 unites appariees, la plus petite valeur de p vaut 2/2**10 = 1.95e-03. Aucun nombre minimal d'unites favorables n'est requis : les magnitudes entrent dans la statistique.",
+      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
+      "emplacement": "/antibiotic_history_robustness/slope_ablation/sign_flip_combinations"
     },
     {
       "famille": "test de permutation",
@@ -189,24 +191,34 @@
       "emplacement": "/creux/tirages"
     },
     {
-      "famille": "test de signe exact",
-      "unites": 10,
-      "p_minimal_atteignable": 0.001953125,
-      "unites_favorables_requises": 9,
-      "classe": "atteignable_fragile",
-      "lecture": "Sur 10 unités, il faut au moins 9 unités favorables pour descendre à p <= 0.05.",
-      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
-      "emplacement": "/antibiotic_history_robustness/primary_paired_comparison/sign_flip_combinations"
+      "famille": "bootstrap",
+      "tirages": 20000,
+      "p_minimal_atteignable": null,
+      "resolution_des_quantiles": 5e-05,
+      "classe": "non_evaluable",
+      "lecture": "Bootstrap a 20000 tirages. La resolution des quantiles vaut 1/20000 = 5.00e-05, mais un bootstrap n'a pas de plancher de p general : l'atteignabilite n'est pas evaluable par cette voie et doit etre etablie protocole par protocole.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/primary.json",
+      "emplacement": "/mpt/bootstrap_draws"
     },
     {
-      "famille": "test de signe exact",
-      "unites": 10,
-      "p_minimal_atteignable": 0.001953125,
-      "unites_favorables_requises": 9,
-      "classe": "atteignable_fragile",
-      "lecture": "Sur 10 unités, il faut au moins 9 unités favorables pour descendre à p <= 0.05.",
-      "fichier": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
-      "emplacement": "/antibiotic_history_robustness/slope_ablation/sign_flip_combinations"
+      "famille": "bootstrap",
+      "tirages": 200,
+      "p_minimal_atteignable": null,
+      "resolution_des_quantiles": 0.005,
+      "classe": "non_evaluable",
+      "lecture": "Bootstrap a 200 tirages. La resolution des quantiles vaut 1/200 = 5.00e-03, mais un bootstrap n'a pas de plancher de p general : l'atteignabilite n'est pas evaluable par cette voie et doit etre etablie protocole par protocole.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/configs/smoke.json",
+      "emplacement": "/mpt/bootstrap_draws"
+    },
+    {
+      "famille": "bootstrap",
+      "tirages": 20000,
+      "p_minimal_atteignable": null,
+      "resolution_des_quantiles": 5e-05,
+      "classe": "non_evaluable",
+      "lecture": "Bootstrap a 20000 tirages. La resolution des quantiles vaut 1/20000 = 5.00e-05, mais un bootstrap n'a pas de plancher de p general : l'atteignabilite n'est pas evaluable par cette voie et doit etre etablie protocole par protocole.",
+      "fichier": "02_branche_systeme_solaire/couche_memoire_historique/results/environment.json",
+      "emplacement": "/config/mpt/bootstrap_draws"
     }
   ],
   "limite": "Ce balayage couvre les tests discrets dont la taille est inscrite dans les résultats. Il ne couvre pas les critères dont l'atteignabilité dépend de la distribution des données, comme le quantile de la vallée des rayons : ceux-là demandent une mesure empirique par sous-échantillonnage."
