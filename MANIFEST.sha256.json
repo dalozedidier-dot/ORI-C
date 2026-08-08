@@ -46,6 +46,12 @@
       "storage": "inline"
     },
     {
+      "path": ".github/workflows/campagne-matiere.yml",
+      "size": 3896,
+      "sha256": "abcbb7f0fa74ad70def05cc084e4049f73e4aa6f66d3509a526f9e90f1ab2701",
+      "storage": "inline"
+    },
+    {
       "path": ".github/workflows/ci.yml",
       "size": 9452,
       "sha256": "1b40659e33a172e33947c75532bc5ead179172ffe58f184f6bf7a93525df2866",
@@ -1342,6 +1348,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/INSPECTION.json",
+      "size": 7601,
+      "sha256": "a4b87b43c9fe8bafde4af0a9a13275e50b61d7f8d390f1c0ae47689b2fc183b8",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/PROTOCOLE_CAMPAGNE.md",
       "size": 10508,
       "sha256": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
@@ -1360,9 +1372,129 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/SOURCES.json",
+      "size": 16378,
+      "sha256": "ec89d84217b7d49c7d2dc0c15966b589950f951bfc6d825eaaf7813f76905460",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/TRI_DEPOT.json",
+      "size": 4666,
+      "sha256": "fa7811f3029bff2d07e7eb6b7fa4ed445f273a6c39c91eef12591170d0b68bc0",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/admettre_jeu.py",
       "size": 11127,
       "sha256": "59547fedfc76fcbc3e8077aed50196475ab02c6d309e463df504b97bcb6abb4c",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
+      "size": 1790,
+      "sha256": "71096541e748cc5a609945b8394647a7acac3b1018a313a2bafebba9d80314f7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_C_MAT_MEM_01_02_04.json",
+      "size": 1551,
+      "sha256": "11c1ad050431e6dc928232cd98c2fe83673b299828eefce475058e495597e3bf",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_PLASTICITE_ET_PHASE.json",
+      "size": 1592,
+      "sha256": "f41f8c61d7c0675e1842bf3bfa5ad9254ff83550528777ce0d30d34d2ef1fc74",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_C_MAT_MEM_03.json",
+      "size": 3475,
+      "sha256": "2ce51f9d10e0154dc70bed5c1a2bf8e307af1869213ea1a6a3d2df9a5aee09e7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/fabest_par_eprouvette.csv",
+      "size": 3045,
+      "sha256": "edb172d8519da2b905932cc99b6455ea386b10047c035f6e953cc0bf1898a572",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/iodp_remanence_par_echantillon.csv",
+      "size": 704187,
+      "sha256": "5be7e9c4050b94d73321e8a125c83f599040c3822f1fa68ad2f6887aa31aca67",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/medium_mn_par_eprouvette.csv",
+      "size": 1119,
+      "sha256": "ef5beba42d993cd8591db4441ab0367826e814afc21817a9d80ee1c6f99f24f5",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
+      "size": 12102,
+      "sha256": "20cc9ea0e9291e1b4022e9c74a721980eb192282f9b02f7c6e2789f24dd2fad3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_iodp.py",
+      "size": 10408,
+      "sha256": "9a93deb93ec0d219cf9c584fee93326eac44b73e6240fd4396a80826353c1b43",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/inspecter_jeu.py",
+      "size": 11651,
+      "sha256": "716d772901dc50ad26f6010901653ec088b82c4cd525ad7aa60a3d043fc27d24",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/ne_garder_que_l_exploitable.py",
+      "size": 9398,
+      "sha256": "dbffd1fbd439e35ef46b66483c1c5c9f8a6756634377ef9bbc4f28a117c11aaf",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/reconstituer_provenance.py",
+      "size": 6645,
+      "sha256": "f7ee7b9d7d44ab3574b972e8bfaa811d9440078dcdc54b1f599b4500e115971d",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
+      "size": 6861,
+      "sha256": "2fd1ee640288a9eb5b939e7bb2a311e1cd46c8a8d27047f0c246e310b2dfe634",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/telecharger_toutes_sources.py",
+      "size": 11683,
+      "sha256": "5308a348b851c3b1edd7d7f388d6084c3e4f1524703d94b6cda5c463a778e282",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/tester_ablation_iodp.py",
+      "size": 11773,
+      "sha256": "079ae6135aa9c2ddddd8e05282121e93f8ea947512438fd1fcdbbff6d9c8c747",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/tester_iodp_01_02_04.py",
+      "size": 9090,
+      "sha256": "5b73b48a9c6c5ad1516ce29978177795172c05c60bbb6c490d74ebd30d5db0bd",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/trier_pour_le_depot.py",
+      "size": 8001,
+      "sha256": "b66852f4cfd62fc3a102fd4da97ffe0842c633321407db002591c4f46ca09f09",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/verifier_sources.py",
+      "size": 5990,
+      "sha256": "f39f9fcaa6c5f8e7a4b07d25bb0af50ab0e26fecd14a41c8ce7d7a805f944579",
       "storage": "inline"
     },
     {
