@@ -1,0 +1,69 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "etapes": [
+    {
+      "etape": "gel des fichiers scellés",
+      "code": 0,
+      "duree_s": 0.1,
+      "obligatoire": true
+    },
+    {
+      "etape": "extraction IODP",
+      "code": 0,
+      "duree_s": 1.6,
+      "obligatoire": true
+    },
+    {
+      "etape": "C-MAT-MEM-03, ablation physique",
+      "code": 0,
+      "duree_s": 2.4,
+      "obligatoire": true
+    },
+    {
+      "etape": "C-MAT-MEM-01, 02 et 04",
+      "code": 0,
+      "duree_s": 12.6,
+      "obligatoire": true
+    },
+    {
+      "etape": "plasticité et transition de phase",
+      "code": 0,
+      "duree_s": 0.6,
+      "obligatoire": true
+    }
+  ],
+  "transversalite": {
+    "critere": "C-MAT-MEM-05",
+    "enonce": "le schéma histoire → trace persistante → réponse modifiée est soutenu indépendamment dans au moins trois familles physiques à mécanismes différents",
+    "familles_examinees": {
+      "magnetisme": {
+        "jeu": "rémanence IODP, 25 expéditions",
+        "critere_decisif": "C-MAT-MEM-03, ablation physique",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 4998
+      },
+      "plasticite": {
+        "jeu": "fabest_lcf",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 24
+      },
+      "transition_de_phase": {
+        "jeu": "medium_mn_a",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "indetermine_par_atteignabilite",
+        "niveau_de_temoin": 5,
+        "echantillons": 12
+      }
+    },
+    "familles_soutenantes": [
+      "magnetisme",
+      "plasticite"
+    ],
+    "verdict": "ne_soutient_pas",
+    "motif": "2 famille(s) sur les 3 exigées : magnetisme, plasticite"
+  },
+  "echecs": []
+}

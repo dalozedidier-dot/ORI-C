@@ -1,0 +1,180 @@
+{
+  "regle": "le dépôt ne reçoit aucun fichier copié depuis raw/ ; il reçoit la table extraite par source et la provenance complète",
+  "pourquoi_pas_un_seuil_de_taille": "aucun seuil ne sépare une mesure d'un résultat. À 2 Mo, les 281 séries de boucles individuelles de l'anneau passaient pour des tables dérivées, soit 198 Mo. À 0,2 Mo, les tables de synthèse de dureté et de traction des aciers moyen-Mn étaient écartées alors qu'elles sont ce qu'il faut garder. Le critère est l'origine, pas le poids.",
+  "classes": {
+    "entree_extraction": "lisible par l'extracteur, reste en local",
+    "documentaire": "PDF et images, reste en local",
+    "calcul": "simulation, reste en local et n'est jamais une preuve",
+    "non_exploitable": "archive ou format non reconnu"
+  },
+  "par_source": {
+    "hefmag": {
+      "famille": "magnetisme",
+      "compte": {
+        "documentaire": 1,
+        "entree_extraction": 2
+      },
+      "octets": {
+        "documentaire": 113744,
+        "entree_extraction": 595908
+      }
+    },
+    "hysteresis_dynamique": {
+      "famille": "magnetisme",
+      "compte": {
+        "documentaire": 1,
+        "non_exploitable": 2,
+        "entree_extraction": 465
+      },
+      "octets": {
+        "documentaire": 431608,
+        "non_exploitable": 20488,
+        "entree_extraction": 1509332594
+      }
+    },
+    "poudres_magnetiques": {
+      "famille": "magnetisme",
+      "compte": {
+        "entree_extraction": 1
+      },
+      "octets": {
+        "entree_extraction": 721317
+      }
+    },
+    "fabest_lcf": {
+      "famille": "plasticite",
+      "compte": {
+        "entree_extraction": 117,
+        "documentaire": 57,
+        "non_exploitable": 2
+      },
+      "octets": {
+        "entree_extraction": 1342562960,
+        "documentaire": 129275968,
+        "non_exploitable": 2797220
+      }
+    },
+    "alsi10mg_ecap": {
+      "famille": "plasticite",
+      "compte": {
+        "entree_extraction": 47,
+        "documentaire": 53
+      },
+      "octets": {
+        "entree_extraction": 663239950,
+        "documentaire": 147214353
+      }
+    },
+    "zr15nb": {
+      "famille": "transition_de_phase",
+      "compte": {
+        "entree_extraction": 4,
+        "documentaire": 570,
+        "non_exploitable": 571
+      },
+      "octets": {
+        "entree_extraction": 1761340,
+        "documentaire": 9563131680,
+        "non_exploitable": 2757863
+      }
+    },
+    "medium_mn_a": {
+      "famille": "transition_de_phase",
+      "compte": {
+        "entree_extraction": 52,
+        "documentaire": 21
+      },
+      "octets": {
+        "entree_extraction": 54625671,
+        "documentaire": 20786732
+      }
+    },
+    "medium_mn_b": {
+      "famille": "transition_de_phase",
+      "compte": {
+        "entree_extraction": 15,
+        "documentaire": 6
+      },
+      "octets": {
+        "entree_extraction": 4675784,
+        "documentaire": 8649817
+      }
+    },
+    "ti_nb_sn": {
+      "famille": "transition_de_phase",
+      "compte": {
+        "non_exploitable": 13,
+        "entree_extraction": 40
+      },
+      "octets": {
+        "non_exploitable": 59318664,
+        "entree_extraction": 154317548
+      }
+    },
+    "verres_sous_tg": {
+      "famille": "verre_relaxation",
+      "compte": {
+        "entree_extraction": 5
+      },
+      "octets": {
+        "entree_extraction": 815870
+      }
+    },
+    "fischer_tropsch": {
+      "famille": "reconstruction_de_surface",
+      "compte": {
+        "calcul": 22,
+        "entree_extraction": 28,
+        "non_exploitable": 4
+      },
+      "octets": {
+        "calcul": 303121,
+        "entree_extraction": 38267510,
+        "non_exploitable": 224873
+      }
+    },
+    "la2nio4_oer": {
+      "famille": "reconstruction_de_surface",
+      "compte": {
+        "documentaire": 4,
+        "entree_extraction": 4
+      },
+      "octets": {
+        "documentaire": 25713212,
+        "entree_extraction": 2590407
+      }
+    },
+    "cuivre_co2rr": {
+      "famille": "reconstruction_de_surface",
+      "compte": {
+        "entree_extraction": 64
+      },
+      "octets": {
+        "entree_extraction": 420929
+      }
+    },
+    "preconditionnement_electrolytes": {
+      "famille": "reconstruction_de_surface",
+      "compte": {
+        "non_exploitable": 1
+      },
+      "octets": {
+        "non_exploitable": 3874488320
+      }
+    }
+  },
+  "totaux": {
+    "compte": {
+      "documentaire": 713,
+      "entree_extraction": 844,
+      "non_exploitable": 593,
+      "calcul": 22
+    },
+    "octets": {
+      "documentaire": 9895317114,
+      "entree_extraction": 3773927788,
+      "non_exploitable": 3939607428,
+      "calcul": 303121
+    }
+  }
+}

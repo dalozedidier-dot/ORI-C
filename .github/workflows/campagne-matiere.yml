@@ -1,0 +1,111 @@
+name: Campagne mémoire matérielle ORI-C
+
+# La campagne retélécharge les sources depuis leur DOI, vérifie les empreintes,
+# extrait, teste et publie. Elle ne s'appuie sur aucun fichier local : c'est le
+# seul moyen de savoir qu'un tiers obtiendrait les mêmes verdicts.
+#
+# Le déclenchement est manuel et non sur `push`. Douze gigaoctets de sources
+# n'ont pas à descendre à chaque commit, et les dépôts publics n'ont pas à être
+# martelés. Une exécution mensuelle suffit à détecter qu'une source a bougé.
+
+on:
+  workflow_dispatch:
+    inputs:
+      telecharger:
+        description: "Retélécharger les sources depuis leur DOI"
+        type: boolean
+        default: true
+      sources:
+        description: "Clés à traiter, séparées par des espaces. Vide = toutes."
+        type: string
+        default: ""
+  schedule:
+    - cron: "0 4 1 * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: campagne-matiere
+  cancel-in-progress: true
+
+jobs:
+  campagne:
+    name: Mémoire matérielle réelle
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      CAMPAGNE: 01_branche_matiere/memoire_materielle_reelle
+      PYTHONUTF8: "1"
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v6
+
+      - name: Installer Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy openpyxl rarfile
+
+      - name: Installer les extracteurs d'archives
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+
+      # Le gel passe avant tout. Un fichier scellé modifié interdit toute
+      # admission, et il vaut mieux l'apprendre en trente secondes qu'après
+      # quatre heures de téléchargement.
+      - name: Contrôler le gel de la campagne
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python admettre_jeu.py --toutes
+
+      - name: Télécharger les sources depuis leur DOI
+        if: ${{ inputs.telecharger != false }}
+        working-directory: ${{ env.CAMPAGNE }}
+        run: |
+          if [ -n "${{ inputs.sources }}" ]; then
+            args=""
+            for cle in ${{ inputs.sources }}; do args="$args --cle $cle"; done
+            python telecharger_toutes_sources.py $args
+          else
+            python telecharger_toutes_sources.py
+          fi
+
+      - name: Vérifier empreintes, archives et provenance
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python verifier_sources.py
+
+      - name: Ne garder que l'exploitable
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python ne_garder_que_l_exploitable.py --appliquer
+
+      - name: Réempreinter ce qui est conservé
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python reconstituer_provenance.py
+
+      - name: Exécuter la campagne
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python run_all.py
+
+      # Les tables dérivées versionnées doivent être identiques à celles que
+      # produit une exécution propre. Une divergence signale soit une source qui
+      # a changé, soit un résultat commité à la main.
+      - name: Contrôler que les tables versionnées n'ont pas bougé
+        run: |
+          git diff --exit-code -- "$CAMPAGNE/derive" \
+            || (echo "Les tables dérivées diffèrent de ce que la campagne produit." \
+                && git diff --stat -- "$CAMPAGNE/derive" && exit 1)
+
+      - name: Joindre les résultats
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: campagne-matiere-${{ github.run_number }}
+          path: |
+            ${{ env.CAMPAGNE }}/derive/
+            ${{ env.CAMPAGNE }}/INSPECTION.json
+            ${{ env.CAMPAGNE }}/TRI_DEPOT.json
+          if-no-files-found: warn
+          retention-days: 90

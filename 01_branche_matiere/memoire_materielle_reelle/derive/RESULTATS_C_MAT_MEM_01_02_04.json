@@ -1,0 +1,36 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "jeu": "rémanence IODP, 25 expéditions",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 10000,
+  "estimateur_de_p": "(1 + k) / (1 + N)",
+  "statut_epistemique": "mesures d'instrument sur échantillons physiques",
+  "criteres": {
+    "C-MAT-MEM-01": {
+      "enonce": "la trace ordonne-t-elle les réponses sous stimulus final comparable",
+      "echantillons": 5023,
+      "rho_trace_reponse": 0.8856433364615443,
+      "p_permutation": 9.999000099990002e-05,
+      "temoin": "permutation des étiquettes d'échantillon, appariement détruit",
+      "verdict": "soutient",
+      "portee": "cohérence exigée par l'énoncé, vérifiée. Qu'une trace plus forte laisse un résidu plus fort n'est pas une découverte : ce critère contrôle la cohérence, il ne l'exploite pas comme preuve d'un mécanisme."
+    },
+    "C-MAT-MEM-02": {
+      "enonce": "la différence subsiste-t-elle au-delà de 20.0 mT",
+      "seuil_prefixe_mT": 20.0,
+      "echantillons": 4834,
+      "rho_trace_reponse": 0.8827627993260225,
+      "p_permutation": 9.999000099990002e-05,
+      "verdict": "soutient"
+    },
+    "C-MAT-MEM-04": {
+      "enonce": "la trace naturelle et la trace imposée en laboratoire se comportent-elles différemment sous le même traitement",
+      "echantillons_apparies": 1449,
+      "ecart_moyen_rho": -1.5072194616977228,
+      "p_sign_flip": 9.999000099990002e-05,
+      "temoin": "sign-flip sur les écarts appariés, même échantillon des deux côtés",
+      "verdict": "soutient"
+    }
+  }
+}
