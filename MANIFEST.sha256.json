@@ -1336,6 +1336,36 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
+      "size": 1632,
+      "sha256": "388dc635e768a6ea78de7fb79c88a1ee9d0c850b88afd2d2d46f9a5de3109fec",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/PROTOCOLE_CAMPAGNE.md",
+      "size": 9562,
+      "sha256": "33120e136a2f1ccc8e41b47ce5e77bed453e8237cb156c8c93d0e79b5db7d797",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "size": 6395,
+      "sha256": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/SCHEMA_EXTRACTION.json",
+      "size": 4967,
+      "sha256": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/admettre_jeu.py",
+      "size": 8127,
+      "sha256": "208439f9f97d2bea28d5dd16c7e9daa3c44e9480d301fd7ebfcf75bc9f4b9db6",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/tests_causaux/PROTOCOLE.md",
       "size": 699,
       "sha256": "d0c85441fcd33a7bb5299d84bc6f5c9ca25393e55cbaa2021db5440c1e3c187e",
@@ -4595,8 +4625,8 @@
     },
     {
       "path": "README.md",
-      "size": 19540,
-      "sha256": "fe15fe6d31f6f7d18b38421bd97b65771216857a4fd4840a6b8ea9aaad791c11",
+      "size": 22668,
+      "sha256": "24ed4ebbc54ce29b6d53c80939e74d25aa1b3583b32d48506ed28c4f6f506f72",
       "storage": "inline"
     },
     {
@@ -5213,8 +5243,8 @@
     },
     {
       "path": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
-      "size": 23649,
-      "sha256": "47625d908aa0fd641562d3d9f9cf1a133a56ae5c48d4a669de115695b1c7960a",
+      "size": 29332,
+      "sha256": "2844c18695f7657096dc275229685e22278bf7ca0fbdad3f3e7bdcee2a7ea6e8",
       "storage": "inline"
     },
     {

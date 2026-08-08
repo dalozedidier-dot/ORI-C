@@ -1,0 +1,26 @@
+{
+  "campaign_id": "WP-MAT-MEM-2026",
+  "gele_le": "2026-08-08",
+  "objet": "Campagne « mémoire matérielle réelle », scellée avant inspection du moindre jeu de données.",
+  "ordre_respecte": "critères et schéma gelés d'abord, inspection des sources ensuite. L'ordre inverse produit des critères taillés sur les données, donc non confirmatoires.",
+  "criteres": [
+    "C-MAT-MEM-01",
+    "C-MAT-MEM-02",
+    "C-MAT-MEM-03",
+    "C-MAT-MEM-04",
+    "C-MAT-MEM-05"
+  ],
+  "niveau_de_temoin_vise": 6,
+  "justification_du_niveau": "L'ablation physique — démagnétisation, recuit de restauration, remise en solution — est un témoin expérimental indépendant, pas un artefact statistique. C-MAT-MEM-03 atteint donc le niveau le plus haut de la hiérarchie, hors de portée de toute campagne à surrogats.",
+  "alpha": 0.05,
+  "paires_minimum": 6,
+  "estimateur_de_p": "(1 + k) / (1 + N)",
+  "controle_negatif_obligatoire": "Avant tout verdict, appliquer la même statistique a une grandeur du meme jeu connue par la physique pour ne pas porter l'histoire testee. Herite de la retractation de WP-CLIM-MEM-2026-B, ou le test accordait `soutient` a l'obliquite terrestre.",
+  "aucune_donnee_inspectee": true,
+  "empreintes": {
+    "PROTOCOLE_CAMPAGNE.md": "33120e136a2f1ccc8e41b47ce5e77bed453e8237cb156c8c93d0e79b5db7d797",
+    "SCHEMA_EXTRACTION.json": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
+    "admettre_jeu.py": "1e8c53d43cd73baebc241c48375405e5aa2454ff0d3a5ecc21a45233214f6ba7",
+    "REGISTRE_JEUX_CANDIDATS.json": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9"
+  }
+}

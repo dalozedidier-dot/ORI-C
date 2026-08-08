@@ -94,10 +94,34 @@ Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_20
 
 Un critère peut échouer parce que l’effet n’existe pas, ou parce que le test ne peut pas le détecter. [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md) sépare les deux cas pour l’ensemble du dossier.
 
-Sur 22 critères discrets audités, **aucun n’est inatteignable par construction** et 20 sont franchissables dans des conditions usuelles. Trois critères font exception et leur échec ne constitue pas un résultat :
+Sur 23 critères discrets audités, 20 sont atteignables et 3 — des bootstraps — ne sont pas évaluables par cette voie, un bootstrap n’ayant pas de plancher de p général contrairement à une permutation. Un seul critère est écarté pour inatteignabilité :
 
-- la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible : la profondeur du creux mesurée est négative, il n’y a pas de creux à mesurer ;
-- les **deux tests de signe** du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 et dont la puissance vaut 0,109 et 0,212, détaillé dans [`PUISSANCE_VIVANT_2026-08-07.md`](PUISSANCE_VIVANT_2026-08-07.md).
+- la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible : la profondeur du creux mesurée est négative, il n’y a pas de creux à mesurer.
+
+> **Correction du 8 août 2026.** Cette section citait « les deux tests de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 ». C’était faux : le benchmark emploie un test de **sign-flip**, qui prend les magnitudes en compte et n’exige aucun nombre minimal d’unités favorables. Ces deux critères sont atteignables. L’auditeur les modélisait par le mauvais test.
+
+### Ce que vaut un témoin — hiérarchie à six niveaux
+
+Un verdict exige deux choses, et la force du témoin n’en est qu’une. La hiérarchie va du mélange simple (1) à la réplication sur données indépendantes (6), avec **IAAFT au niveau 4 comme minimum exigé pour tout critère temporel**. Le second axe est l’adéquation de la statistique : un témoin de niveau 6 sur une statistique qui ne teste pas l’hypothèse ne produit rien.
+
+Le dossier a payé cette règle deux fois le même jour. `WP-CLIM-MEM-2026` avait un témoin de niveau 1, une permutation qui ramenait l’autocorrélation de +0,450 à +0,013. Son successeur `WP-CLIM-MEM-2026-B` avait un témoin correct et une statistique asymétrique : rejouée sur l’**obliquité terrestre**, une oscillation à 41 ka calculée par mécanique céleste qui n’inscrit rien, elle accordait `soutient` avec un gain de 77,3 % — supérieur à celui de la cible glaciaire. Les deux protocoles sont clos sur `invalide`. Le contrôle qui les a rétractés n’utilise aucune donnée synthétique : il substitue la cible par d’autres colonnes réelles de la même table. Il tourne en CI, dans [`scripts/controle_negatif_reel_surrogats.py`](scripts/controle_negatif_reel_surrogats.py).
+
+### Campagne « mémoire matérielle réelle » — protocole gelé, sources non encore inspectées
+
+[`01_branche_matiere/memoire_materielle_reelle/`](01_branche_matiere/memoire_materielle_reelle/) porte `WP-MAT-MEM-2026`, cinq critères scellés le 8 août 2026 **avant inspection du moindre jeu de données**.
+
+L’intérêt de cette campagne est qu’elle vise le **niveau 6**, hors de portée de toute campagne à surrogats. Démagnétiser un échantillon ou recuire un acier écroui sont des ablations physiques, pas des permutations : le témoin est un autre échantillon réel ayant subi un traitement réel. Un seul schéma relationnel est testé sur des familles physiques sans rapport entre elles :
+
+> histoire appliquée → trace physique persistante mesurée → réponse ultérieure modifiée sous stimulus identique
+
+| famille | histoire | trace | réponse |
+|---|---|---|---|
+| magnétisme | champ et cycles antérieurs | rémanence, coercivité | boucle B-H suivante, pertes |
+| plasticité | déformation antérieure | dislocations, écrouissage | courbe σ-ε, ratcheting |
+| verre | recuit sous `Tg` | enthalpie résiduelle | cinétique de relaxation |
+| transition de phase | traitement thermique | fractions de phase | transformation ultérieure |
+
+**Aucun jeu n’a encore été inspecté.** Le registre des candidats liste des pistes, pas des sources vérifiées, et le filtre d’admission tourne à vide tant qu’aucune fiche n’est renseignée depuis la source elle-même. Un jeu offrant moins de six paires indépendantes ne peut produire aucun verdict positif à alpha = 0,05, et ce constat se fait à l’admission.
 
 ### Premier test prospectif préenregistré
 

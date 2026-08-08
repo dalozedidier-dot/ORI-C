@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "gele_le": "2026-08-08",
+  "objet": "Schéma d'extraction unique de la campagne « mémoire matérielle réelle ». Tout jeu admis est ramené à cette forme, quelle que soit sa famille physique. C'est cette normalisation qui rend les familles comparables et qui permet à C-MAT-MEM-05 d'exister.",
+  "regle_d_imputation": "aucune. Un champ obligatoire absent écarte l'unité, ou rend le critère concerné non testable avec ce jeu.",
+  "champs": [
+    {
+      "nom": "history_id",
+      "obligatoire": true,
+      "type": "texte",
+      "definition": "Identifiant de l'histoire appliquée. Deux unités partagent un history_id si et seulement si elles ont subi le même traitement documenté.",
+      "sert_a": ["C-MAT-MEM-01", "C-MAT-MEM-02", "C-MAT-MEM-03", "C-MAT-MEM-04"]
+    },
+    {
+      "nom": "sample_id",
+      "obligatoire": true,
+      "type": "texte",
+      "definition": "Identifiant de l'unité expérimentale indépendante. Un échantillon physique, pas un point de mesure. C'est cette colonne qui borne l'atteignabilité.",
+      "sert_a": ["atteignabilite"]
+    },
+    {
+      "nom": "history_parameters",
+      "obligatoire": true,
+      "type": "objet",
+      "definition": "Paramètres documentés de l'histoire : amplitude de champ, nombre de cycles, déformation, température et durée de recuit, rampe. Déclarés par la source, jamais déduits de la réponse.",
+      "sert_a": ["C-MAT-MEM-01", "C-MAT-MEM-04"]
+    },
+    {
+      "nom": "trace_before_response",
+      "obligatoire": true,
+      "type": "booleen",
+      "definition": "La trace a-t-elle été mesurée AVANT le stimulus final ? Si la trace est mesurée après, elle ne distingue plus l'état persistant de l'effet du stimulus, et C-MAT-MEM-04 devient non testable.",
+      "sert_a": ["C-MAT-MEM-01", "C-MAT-MEM-04"]
+    },
+    {
+      "nom": "trace_metric",
+      "obligatoire": true,
+      "type": "nombre",
+      "definition": "Valeur de la trace physique persistante : aimantation rémanente, coercivité, densité de dislocations, fraction de phase, enthalpie résiduelle, paramètre de maille. Une grandeur mesurée, distincte de la réponse.",
+      "sert_a": ["C-MAT-MEM-01"]
+    },
+    {
+      "nom": "final_stimulus",
+      "obligatoire": true,
+      "type": "objet",
+      "definition": "Paramètres du stimulus final. Il doit être comparable entre histoires : c'est la condition qui rend la différence de réponse attribuable à l'histoire et non au stimulus.",
+      "sert_a": ["C-MAT-MEM-01", "C-MAT-MEM-03"]
+    },
+    {
+      "nom": "response_metric",
+      "obligatoire": true,
+      "type": "nombre",
+      "definition": "Réponse ultérieure sous stimulus final : perte magnétique, aire de boucle, seuil d'écoulement, déformation de ratcheting, temps de relaxation, fraction transformée.",
+      "sert_a": ["C-MAT-MEM-01", "C-MAT-MEM-02", "C-MAT-MEM-03"]
+    },
+    {
+      "nom": "control_type",
+      "obligatoire": true,
+      "type": "enum",
+      "valeurs": [
+        "histoire_nulle",
+        "echantillon_de_reference",
+        "ablation_physique",
+        "aucun"
+      ],
+      "definition": "Nature du témoin réel. `ablation_physique` — démagnétisation, recuit de restauration, remise en solution — est le seul qui ouvre C-MAT-MEM-03. `aucun` interdit l'admission.",
+      "sert_a": ["C-MAT-MEM-03", "niveau_de_temoin"]
+    },
+    {
+      "nom": "time_since_history",
+      "obligatoire": false,
+      "type": "nombre",
+      "definition": "Délai, nombre de cycles ou avancement de relaxation entre la fin de l'histoire et la mesure de la réponse. Son absence rend C-MAT-MEM-02 non testable, sans écarter le jeu.",
+      "sert_a": ["C-MAT-MEM-02"]
+    },
+    {
+      "nom": "source",
+      "obligatoire": true,
+      "type": "texte",
+      "definition": "Nom du jeu et de son dépôt, avec la version ou la date de l'instantané utilisé."
+    },
+    {
+      "nom": "doi",
+      "obligatoire": true,
+      "type": "texte",
+      "definition": "Identifiant pérenne. Un jeu sans DOI ni identifiant stable n'est pas citable comme preuve, seulement comme source documentaire."
+    },
+    {
+      "nom": "data_kind",
+      "obligatoire": true,
+      "type": "enum",
+      "valeurs": ["mesure_experimentale", "calcul", "compilation"],
+      "definition": "Seul `mesure_experimentale` entre dans les tests. Les jeux mixtes — mesures plus DFT — sont séparés à l'extraction, conformément à EMPIRICAL_POLICY.json. Un calcul n'est jamais une preuve empirique primaire.",
+      "sert_a": ["pare_feu_empirique"]
+    }
+  ],
+  "familles_physiques_declarees": {
+    "commentaire": "C-MAT-MEM-05 exige trois familles à mécanismes distincts. Deux jeux de la même famille comptent pour une. La famille est déclarée à l'admission, avant tout résultat.",
+    "valeurs": [
+      "magnetisme",
+      "plasticite",
+      "verre_relaxation",
+      "transition_de_phase",
+      "reconstruction_de_surface"
+    ]
+  }
+}

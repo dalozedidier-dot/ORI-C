@@ -542,6 +542,108 @@
       "atteignabilite": "meta-critere",
       "blocage": null,
       "force_du_temoin": 1
+    },
+    {
+      "id": "C-MAT-MEM-01",
+      "levier": "memoire_materielle_reelle",
+      "titre": "Existence de memoire materielle",
+      "enonce": "Sous stimulus final identique, deux systemes ayant subi des histoires differentes presentent une reponse ulterieure differente, accompagnee d'une trace physique persistante mesuree et coherente avec cette difference de reponse.",
+      "variables_obligatoires": [
+        "history_id",
+        "sample_id",
+        "history_parameters",
+        "trace_before_response",
+        "trace_metric",
+        "final_stimulus",
+        "response_metric",
+        "control_type",
+        "data_kind"
+      ],
+      "source_candidate": "aucune inspectee — voir 01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "statut_source": "non_inspectee",
+      "temoin_exige": "ablation physique ou echantillons apparies a histoires assignees experimentalement",
+      "force_du_temoin": 6,
+      "atteignabilite": "six paires independantes minimum ; sign-flip exact, p minimal 2/2**n",
+      "controle_negatif_obligatoire": true,
+      "blocage": "protocole gele le 2026-08-08 ; aucun jeu inspecte a ce jour",
+      "gel": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json"
+    },
+    {
+      "id": "C-MAT-MEM-02",
+      "levier": "memoire_materielle_reelle",
+      "titre": "Persistance",
+      "enonce": "La difference de reponse reste detectable apres un delai, un nombre de cycles ou une relaxation controlee, fixes avant execution.",
+      "variables_obligatoires": [
+        "time_since_history",
+        "response_metric",
+        "history_id",
+        "sample_id"
+      ],
+      "source_candidate": "aucune inspectee — voir 01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "statut_source": "non_inspectee",
+      "temoin_exige": "ablation physique ou echantillons apparies a histoires assignees experimentalement",
+      "force_du_temoin": 6,
+      "atteignabilite": "six paires independantes minimum ; sign-flip exact, p minimal 2/2**n",
+      "controle_negatif_obligatoire": true,
+      "blocage": "protocole gele le 2026-08-08 ; aucun jeu inspecte a ce jour",
+      "gel": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json"
+    },
+    {
+      "id": "C-MAT-MEM-03",
+      "levier": "memoire_materielle_reelle",
+      "titre": "Ablation de l'histoire",
+      "enonce": "Lorsque l'histoire est effacee par une operation physique — demagnetisation, recuit de restauration, remise en solution — la difference de reponse disparait ou chute sous un seuil preenregistre.",
+      "variables_obligatoires": [
+        "control_type",
+        "response_metric",
+        "history_id",
+        "sample_id"
+      ],
+      "source_candidate": "aucune inspectee — voir 01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "statut_source": "non_inspectee",
+      "temoin_exige": "ablation physique ou echantillons apparies a histoires assignees experimentalement",
+      "force_du_temoin": 6,
+      "atteignabilite": "six paires independantes minimum ; sign-flip exact, p minimal 2/2**n",
+      "controle_negatif_obligatoire": true,
+      "blocage": "protocole gele le 2026-08-08 ; aucun jeu inspecte a ce jour",
+      "gel": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json"
+    },
+    {
+      "id": "C-MAT-MEM-04",
+      "levier": "memoire_materielle_reelle",
+      "titre": "Specificite",
+      "enonce": "Le meme stimulus applique sans l'histoire prealable ne produit pas la meme modification persistante.",
+      "variables_obligatoires": [
+        "trace_before_response",
+        "trace_metric",
+        "final_stimulus",
+        "history_id"
+      ],
+      "source_candidate": "aucune inspectee — voir 01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "statut_source": "non_inspectee",
+      "temoin_exige": "ablation physique ou echantillons apparies a histoires assignees experimentalement",
+      "force_du_temoin": 6,
+      "atteignabilite": "six paires independantes minimum ; sign-flip exact, p minimal 2/2**n",
+      "controle_negatif_obligatoire": true,
+      "blocage": "protocole gele le 2026-08-08 ; aucun jeu inspecte a ce jour",
+      "gel": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json"
+    },
+    {
+      "id": "C-MAT-MEM-05",
+      "levier": "memoire_materielle_reelle",
+      "titre": "Transversalite, critere de campagne",
+      "enonce": "Le schema histoire vers trace persistante vers reponse modifiee est soutenu independamment dans au moins trois familles physiques distinctes, a mecanismes materiels differents.",
+      "variables_obligatoires": [
+        "verdicts locaux de trois familles admises"
+      ],
+      "source_candidate": "aucune inspectee — voir 01_branche_matiere/memoire_materielle_reelle/REGISTRE_JEUX_CANDIDATS.json",
+      "statut_source": "non_inspectee",
+      "temoin_exige": "trois familles physiques admises independamment",
+      "force_du_temoin": 6,
+      "atteignabilite": "six paires independantes minimum ; sign-flip exact, p minimal 2/2**n",
+      "controle_negatif_obligatoire": true,
+      "blocage": "protocole gele le 2026-08-08 ; aucun jeu inspecte a ce jour",
+      "gel": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json"
     }
   ],
   "hierarchie_force_des_temoins": [
@@ -553,5 +655,13 @@
     "6 replication sur donnees independantes, memes surrogats"
   ],
   "second_axe_adequation_de_la_statistique": "La statistique doit etre recalculee entierement sur le surrogat, qui sert a la fois de cible et de predicteur. Toute construction asymetrique handicape le temoin et rend le verdict trivialement positif. Un temoin de niveau 6 sur une statistique inadequate ne produit rien.",
-  "controle_negatif_obligatoire": "Avant tout gel, rejouer la construction sur des series reelles connues pour ne pas porter le phenomene, par substitution de la cible. Aucune serie synthetique. Un controle negatif propre positif interdit le gel. Voir scripts/controle_negatif_reel_surrogats.py."
+  "controle_negatif_obligatoire": "Avant tout gel, rejouer la construction sur des series reelles connues pour ne pas porter le phenomene, par substitution de la cible. Aucune serie synthetique. Un controle negatif propre positif interdit le gel. Voir scripts/controle_negatif_reel_surrogats.py.",
+  "campagnes": {
+    "WP-MAT-MEM-2026": {
+      "objet": "memoire materielle reelle, cinq criteres, niveau de temoin vise 6",
+      "gele_le": "2026-08-08",
+      "avantage_decisif": "l'ablation physique est un temoin experimental independant, hors de portee de toute campagne a surrogats",
+      "etat": "gele, aucune source inspectee"
+    }
+  }
 }
