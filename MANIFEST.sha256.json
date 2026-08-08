@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/analyse-maximale-trois-branches.yml",
-      "size": 6293,
-      "sha256": "973953ace9dd0836caf46b1fe8bfa76b1249c460938882bda08f49e9b093941c",
+      "size": 6999,
+      "sha256": "24063ae1f2613be61d6174ef37f3d3121a2fcf051816fc691119a9347cac0d45",
       "storage": "inline"
     },
     {
@@ -4991,8 +4991,8 @@
     },
     {
       "path": "methodologie_puissance/PROTOCOL_REGISTRY.json",
-      "size": 1855,
-      "sha256": "836156dc55ff1af46ee7979d5f154a2b1e059b031d7f78300729a220d522a958",
+      "size": 896,
+      "sha256": "ad8e000cc851f9f0d1dc143e2b9660965f2b494611c838eb9f743a927619efb9",
       "storage": "inline"
     },
     {

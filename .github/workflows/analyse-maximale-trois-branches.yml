@@ -141,6 +141,18 @@ jobs:
         run: |
           set -euo pipefail
           python methodologie_puissance/run_registered_power.py --mode full | tee "$OUT/logs/puissance_statistique.log"
+
+      # `PROTOCOL_REGISTRY.json` pilote exclusivement `power_monte_carlo.py` et
+      # n'accepte que ses cinq commandes. Les deux analyses ci-dessous sont des
+      # calculs directs sur des résultats déjà produits, pas des plans de
+      # puissance Monte-Carlo : elles sont donc appelées explicitement, et non
+      # par le registre.
+      - name: Mesurer l'atteignabilité des critères
+        run: |
+          set -euo pipefail
+          python scripts/auditer_atteignabilite_criteres.py | tee "$OUT/logs/atteignabilite_criteres.log"
+          python plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py \
+            | tee "$OUT/logs/puissance_vivant_longitudinal.log"
       - name: Rassembler résultats et environnement
         if: always()
         run: |
