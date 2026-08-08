@@ -1,0 +1,19 @@
+{
+  "protocol_id": "WP-CLIM-MEM-2026",
+  "titre": "Inscription durable ou relaxation, sur l'enregistrement pleistocene reconstruit",
+  "statut": "gele_avant_execution",
+  "gele_le": "2026-08-08",
+  "analysis_frozen_before_data": false,
+  "note_sur_le_gel": "Les donnees existent deja, contrairement a WP-EXO-PACC-2026. Le gel porte donc sur le critere et le code, ecrits et scelles avant toute statistique. C'est un preenregistrement d'analyse, pas un test prospectif : il en a la discipline mais pas l'aveuglement complet.",
+  "empreintes": {
+    "protocole": "194ebe2fac18d546170892bcacc7cd4776ce626b91bf7083a94007ed66a2188c",
+    "code": "abdc3c228311b73198b80538b85b9ae68052fd71890439d5ac63908c7a2b444e",
+    "table": "4a74189406b1b0e061023c0211eedbece6bce4c7beeee2db5a5b8bcbe0a879c9"
+  },
+  "regle_de_decision": {
+    "soutient": "RMSE(histoire) < RMSE(etat) ET RMSE(histoire) < RMSE(permutee) ET p <= 0,05",
+    "ne_soutient_pas": "l'une des trois conditions n'est pas remplie",
+    "indetermine": "moins de 8 blocs exploitables"
+  },
+  "atteignabilite": "Test de permutation a 2000 tirages : p minimal 5,0e-4, tres en deca d'alpha. Aucun test de signe discret n'est employe."
+}

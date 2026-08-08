@@ -1,0 +1,28 @@
+{
+  "protocol_id": "WP-CLIM-MEM-2026",
+  "gele_le": "2026-08-08",
+  "lignes_apres_decalages": 1030,
+  "blocs_utilises": 10,
+  "rmse_etat_seul": 24.58144477448713,
+  "rmse_etat_plus_histoire": 16.0992884748827,
+  "rmse_histoire_permutee_moyenne": 24.62058408638024,
+  "permutations": 2000,
+  "p_unilaterale": 0.0,
+  "alpha": 0.05,
+  "motif": "les trois conditions de la règle sont remplies",
+  "statut_epistemique": "Sources dérivées de modèle. Ce verdict porte sur une reconstruction largement acceptée, pas sur une mesure directe. Il ne constitue pas une preuve empirique primaire.",
+  "verdict_publie": "invalide",
+  "verdict_brut_obtenu": "soutient",
+  "invalidation": {
+    "decidee_le": "2026-08-08",
+    "motif_principal": "Le temoin `histoire_permutee` detruit toute la structure temporelle, pas seulement la correspondance. La serie permutee a une autocorrelation a 10 ka de +0,013, contre +0,450 pour la serie reelle. Le troisieme modele est donc du bruit blanc a nombre de parametres egal, et non un temoin apparie a structure egale.",
+    "consequence": "Le gain de 34,5 % mesure l'autocorrelation du volume de glace, pas une inscription historique. Predire une serie lisse par sa propre valeur 10 ka plus tot est vrai de toute serie lisse. Le verdict brut `soutient` est techniquement exact et scientifiquement vide.",
+    "ecart_protocole_code": "Le protocole exigeait des decalages calcules dans le bloc d'apprentissage seul ; le code les calcule sur la serie entiere. Verifie empiriquement : avec un embargo de 40 puis 80 ka entre apprentissage et test, le gain reste a 34,4 % et 34,9 %. Cet ecart n'explique donc pas le resultat, mais il constitue une non-conformite reelle.",
+    "regle_appliquee": "Le temoin ne peut pas etre corrige a l'interieur de ce protocole apres lecture du resultat. WP-CLIM-MEM-2026 est clos sur `invalide` et ne peut plus etre rouvert.",
+    "successeur_requis": {
+      "identifiant": "WP-CLIM-MEM-2026-B, a geler",
+      "correction": "Temoin par surrogat a phase randomisee, de type AAFT, qui preserve le spectre d'autocorrelation et ne detruit que la correspondance temporelle avec le forçage. C'est le seul temoin qui teste l'hypothese annoncee.",
+      "conformite": "Les decalages devront etre calcules dans le bloc d'apprentissage seul, comme le protocole l'exigeait."
+    }
+  }
+}
