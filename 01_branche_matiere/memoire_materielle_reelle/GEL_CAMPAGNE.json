@@ -20,7 +20,8 @@
   "empreintes": {
     "PROTOCOLE_CAMPAGNE.md": "33120e136a2f1ccc8e41b47ce5e77bed453e8237cb156c8c93d0e79b5db7d797",
     "SCHEMA_EXTRACTION.json": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
-    "admettre_jeu.py": "1e8c53d43cd73baebc241c48375405e5aa2454ff0d3a5ecc21a45233214f6ba7",
+    "admettre_jeu.py": "208439f9f97d2bea28d5dd16c7e9daa3c44e9480d301fd7ebfcf75bc9f4b9db6",
     "REGISTRE_JEUX_CANDIDATS.json": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9"
-  }
+  },
+  "note_de_rescellement": "Rescelle le 2026-08-08 apres correction de admettre_jeu.py : un jeu ecarte affichait ses criteres comme testables, ce qui invitait a l'exploiter quand meme. Le sceau precedent ne correspondait plus, et un preenregistrement dont les empreintes divergent ne vaut rien."
 }

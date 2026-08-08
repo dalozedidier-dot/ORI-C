@@ -24,3 +24,4 @@ plateforme/campagne_maximale_reelle/sources_brutes/*
 # Aucune archive legitime ne vit a la racine : celles des donnees tierces sont
 # sous donnees_externes/ et suivies par Git LFS.
 /*.zip
+/.claude/

@@ -71,8 +71,8 @@
     },
     {
       "path": ".gitignore",
-      "size": 857,
-      "sha256": "19810805bf22c00a69a6d02242a2c428acf21f52d48e4cfd1fa4302e17b2b68a",
+      "size": 867,
+      "sha256": "68d1ddc0c0826e8ebf2fff4848b6835bbf193413b6f3e383fe924daa0da44fa6",
       "storage": "inline"
     },
     {
@@ -1337,8 +1337,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
-      "size": 1632,
-      "sha256": "388dc635e768a6ea78de7fb79c88a1ee9d0c850b88afd2d2d46f9a5de3109fec",
+      "size": 1928,
+      "sha256": "5ee94274871848c7c38f695e12e8759d5c667d16f0263c9f34463d29587d8dbb",
       "storage": "inline"
     },
     {
@@ -7733,14 +7733,14 @@
     },
     {
       "path": "site/assets/styles.css",
-      "size": 20859,
-      "sha256": "8211488549e43208c32001ea455fc89457e5b4af1b9ccda1ea5e9e1dc0bbd138",
+      "size": 20951,
+      "sha256": "fd6ef117b7de0f05fa53648ab99ce688da00976754e54cb5c8ad6f0b08ee98c1",
       "storage": "inline"
     },
     {
       "path": "site/index.html",
-      "size": 14388,
-      "sha256": "3877e0b89676d0d12c4cd140df04ec7a7acd6cc907a3581bf270cabe0a0d54af",
+      "size": 15337,
+      "sha256": "f6061796d23060bbaa3d89676f6ef7884098cb942400eac9651b234df8a881f0",
       "storage": "inline"
     },
     {
@@ -7751,14 +7751,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 28842,
-      "sha256": "8db70e040a3b70795c1209686380d0a7ed98bcb4d6bda28f479a81e0645b6907",
+      "size": 37709,
+      "sha256": "0a1f57b1fe789f41c55a6a72530254102387991ec9b4e7dab0b501eba9c681fd",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12933,
-      "sha256": "68c43a4c5a0920beb98ea43c603b503fcb2d4ef1293b1f9369ac0488102c1f97",
+      "size": 12998,
+      "sha256": "dcd1ec8d3f002a79a61ebac7f711b4f88f26a72f1d3da046dc8a35485af548c3",
       "storage": "inline"
     },
     {
