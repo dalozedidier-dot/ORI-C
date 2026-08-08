@@ -35,8 +35,8 @@
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 8635,
-      "sha256": "3a0b9734f6b4d474c72e9ad7c37df9e097d9aee539ffb992ae17f9d34c420874",
+      "size": 9364,
+      "sha256": "53694144b27970885c94fdab7aa8800eef2993b705fd16655c9d14679f21da5a",
       "storage": "inline"
     },
     {
@@ -5297,8 +5297,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
-      "size": 7728,
-      "sha256": "7ecc98449d33b873fdfa71c9e3f12821385f5e583204f4a2d3d1182dbff9152a",
+      "size": 8247,
+      "sha256": "5d78857a085fbbea87dc88d10d412bba09f7c97ff5906b5be084e60be924da00",
       "storage": "inline"
     },
     {
@@ -5309,8 +5309,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/POWER_VIVANT_LONGITUDINAL.json",
-      "size": 2751,
-      "sha256": "4e2940f29ace9571935390a13f19406cfa474f5737faae9807568bded5e547c2",
+      "size": 3469,
+      "sha256": "535d21c1c138604cfb47a7b62bafaaa9d084e02fc0c57f7607a24a4747c7c785",
       "storage": "inline"
     },
     {
@@ -7733,14 +7733,14 @@
     },
     {
       "path": "site/assets/styles.css",
-      "size": 20951,
-      "sha256": "fd6ef117b7de0f05fa53648ab99ce688da00976754e54cb5c8ad6f0b08ee98c1",
+      "size": 20859,
+      "sha256": "8211488549e43208c32001ea455fc89457e5b4af1b9ccda1ea5e9e1dc0bbd138",
       "storage": "inline"
     },
     {
       "path": "site/index.html",
-      "size": 15337,
-      "sha256": "f6061796d23060bbaa3d89676f6ef7884098cb942400eac9651b234df8a881f0",
+      "size": 14411,
+      "sha256": "a5ff29054ec2d764235b755325bcc4d645db9d6595ecb5f76064e4a13b0af4e2",
       "storage": "inline"
     },
     {
@@ -7751,14 +7751,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 37709,
-      "sha256": "0a1f57b1fe789f41c55a6a72530254102387991ec9b4e7dab0b501eba9c681fd",
+      "size": 28835,
+      "sha256": "e2fd9fa9708921ddf892e6fbd20074a1500f76d948a52bdf2eb09e12eeb8e2bf",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12998,
-      "sha256": "dcd1ec8d3f002a79a61ebac7f711b4f88f26a72f1d3da046dc8a35485af548c3",
+      "size": 12965,
+      "sha256": "6603f8405062d94153b4606ccf8d1c5cde32f5172e83f54844c8a81c8931342d",
       "storage": "inline"
     },
     {

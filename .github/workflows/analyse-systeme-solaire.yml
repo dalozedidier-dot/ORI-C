@@ -109,11 +109,21 @@ jobs:
       # ce qui produisait un artefact de plusieurs mégaoctets sans qu'aucun
       # verdict ne change. La liste des fichiers touchés reste jointe pour la
       # traçabilité, mais elle ne sert plus de critère.
+      # Tolérance relative portée de 1e-8 à 1e-5 le 8 août 2026. Les sorties de
+      # `mpt/predictions.csv` viennent d'un optimiseur scipy : elles bougent d'une
+      # version mineure à l'autre sans qu'aucun verdict ne change. Distribution
+      # mesurée sur le run échoué, 300 valeurs environ : médiane 1,7e-08,
+      # maximum relevé 1,7e-07. Le seuil laisse presque deux ordres de grandeur
+      # au-dessus du maximum observé, et reste quatre ordres sous tout changement
+      # scientifique réel : une prédiction qui bougerait vraiment se déplacerait
+      # de plusieurs pour cent, pas de 0,001 %.
+      # Ne pas relâcher davantage sans remesurer la distribution.
       - name: Contrôler la reproductibilité numérique de la couche mémoire
         run: |
           python scripts/verifier_reproductibilite_resultats.py \
             --reference "$RUNNER_TEMP/memoire-reference/results" \
             --candidate "$MEMORY/results" \
+            --relative-tolerance 1e-5 \
             | tee "$OUT/reproductibilite_memoire.log"
 
       - name: Rassembler les résultats mémoire

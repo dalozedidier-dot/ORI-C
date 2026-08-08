@@ -24,15 +24,17 @@
       "n_requis": {
         "0.80": {
           "plis": 129,
-          "lignees_equivalentes": 1909,
-          "mesures_equivalentes": 4618,
-          "facteur_par_rapport_a_l_existant": 12.9
+          "lignees_equivalentes": null,
+          "mesures_equivalentes": null,
+          "conversion_vers_les_lignees": "non fournie : les plis de validation croisee ne sont pas des unites independantes, la proportionnalite est invalide",
+          "facteur_sur_les_plis": 12.9
         },
         "0.90": {
           "plis": 172,
-          "lignees_equivalentes": 2546,
-          "mesures_equivalentes": 6158,
-          "facteur_par_rapport_a_l_existant": 17.2
+          "lignees_equivalentes": null,
+          "mesures_equivalentes": null,
+          "conversion_vers_les_lignees": "non fournie : les plis de validation croisee ne sont pas des unites independantes, la proportionnalite est invalide",
+          "facteur_sur_les_plis": 17.2
         }
       }
     },
@@ -49,15 +51,17 @@
       "n_requis": {
         "0.80": {
           "plis": 50,
-          "lignees_equivalentes": 740,
-          "mesures_equivalentes": 1790,
-          "facteur_par_rapport_a_l_existant": 5.0
+          "lignees_equivalentes": null,
+          "mesures_equivalentes": null,
+          "conversion_vers_les_lignees": "non fournie : les plis de validation croisee ne sont pas des unites independantes, la proportionnalite est invalide",
+          "facteur_sur_les_plis": 5.0
         },
         "0.90": {
           "plis": 66,
-          "lignees_equivalentes": 977,
-          "mesures_equivalentes": 2363,
-          "facteur_par_rapport_a_l_existant": 6.6
+          "lignees_equivalentes": null,
+          "mesures_equivalentes": null,
+          "conversion_vers_les_lignees": "non fournie : les plis de validation croisee ne sont pas des unites independantes, la proportionnalite est invalide",
+          "facteur_sur_les_plis": 6.6
         }
       }
     }
@@ -71,7 +75,7 @@
       "10": 0.001953125
     },
     "minimum_de_plis_favorables_pour_conclure": 9,
-    "lecture": "Avec dix plis, le test de signe bilatéral ne peut pas descendre sous alpha tant que moins de neuf plis sur dix sont favorables. La règle de décision est donc quasi inatteignable à cette taille, indépendamment de l'ampleur réelle de l'effet."
+    "lecture": "REPÈRE SEULEMENT, ce test n'est pas celui du benchmark. Le benchmark emploie un sign-flip, qui enumère les 2**n attributions de signe et compare la moyenne signée observée, magnitudes comprises. Il n'exige aucun nombre minimal d'unités favorables. La règle de décision est donc quasi inatteignable à cette taille, indépendamment de l'ampleur réelle de l'effet."
   },
   "conclusion": "Le dispositif actuel n'a pas la puissance de détecter l'effet qu'il mesure. Son résultat non concluant ne constitue donc pas une preuve d'absence d'effet : il constate que le protocole ne tranche pas."
 }

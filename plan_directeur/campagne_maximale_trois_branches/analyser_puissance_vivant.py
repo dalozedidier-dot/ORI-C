@@ -141,8 +141,10 @@ def main() -> int:
             "p_par_nombre_de_plis_favorables": signe,
             "minimum_de_plis_favorables_pour_conclure": minimum_concluant,
             "lecture": (
-                "Avec dix plis, le test de signe bilatéral ne peut pas descendre "
-                "sous alpha tant que moins de neuf plis sur dix sont favorables. "
+                "REPÈRE SEULEMENT, ce test n'est pas celui du benchmark. Le "
+                "benchmark emploie un sign-flip, qui enumère les 2**n attributions "
+                "de signe et compare la moyenne signée observée, magnitudes "
+                "comprises. Il n'exige aucun nombre minimal d'unités favorables. "
                 "La règle de décision est donc quasi inatteignable à cette taille, "
                 "indépendamment de l'ampleur réelle de l'effet."
             ),
@@ -172,12 +174,16 @@ def main() -> int:
             if besoin:
                 print(
                     f"      puissance {float(cible):.0%} : {besoin['plis']} plis, "
-                    f"~{besoin['lignees_equivalentes']} lignées "
-                    f"(x{besoin['facteur_par_rapport_a_l_existant']})"
+                    f"soit x{besoin['facteur_sur_les_plis']} le dispositif actuel. "
+                    f"Aucune conversion vers un nombre de lignées : les plis de "
+                    f"validation croisée ne sont pas des unités indépendantes."
                 )
     print(
-        "Test de signe : au moins "
-        f"{minimum_concluant} plis favorables sur {n_plis} sont nécessaires pour p<=alpha."
+        f"Repère : un test de signe exigerait {minimum_concluant} plis favorables "
+        f"sur {n_plis}. Le benchmark n'en emploie pas — il utilise un sign-flip, "
+        f"qui prend les magnitudes en compte et n'exige aucun nombre minimal "
+        f"d'unités favorables. Plus petite valeur de p atteignable : "
+        f"2/2**{n_plis} = {2.0 / 2 ** n_plis:.2e}."
     )
     print(f"écrit : {SORTIE.relative_to(ICI.parents[1])}")
     return 0
