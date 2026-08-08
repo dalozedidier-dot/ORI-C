@@ -1,0 +1,70 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "famille": "verre_relaxation",
+  "jeu": "polyéthylènes biosourcés vieillis thermiquement",
+  "plan": "3 matériaux × 3 températures × 7 durées, plus témoin non vieilli",
+  "definition_de_la_reponse": "premier écart de plus de 5.0 écarts-types à la ligne de base estimée sur 60.0–120.0 °C, fixée avant lecture des résultats",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "echantillons": 63,
+  "temoins_non_vieillis": 3,
+  "conditions": {
+    "LDPE-SBC-818 90C": {
+      "echantillons": 6,
+      "rho_duree_apparition": -0.8857142857142858,
+      "rho_duree_masse": 0.08571428571428573
+    },
+    "LDPE-SBC-818 100C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.8928571428571429,
+      "rho_duree_masse": -0.03571428571428572
+    },
+    "LDPE-SBC-818 110C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.5357142857142858,
+      "rho_duree_masse": 0.4642857142857144
+    },
+    "LDPE-SEB-853 90C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.642857142857143,
+      "rho_duree_masse": 0.14285714285714288
+    },
+    "LDPE-SEB-853 100C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.6071428571428572,
+      "rho_duree_masse": -0.14285714285714288
+    },
+    "LDPE-SEB-853 110C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.9642857142857145,
+      "rho_duree_masse": 0.0
+    },
+    "LDPE-SPB-681 90C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.642857142857143,
+      "rho_duree_masse": 0.4642857142857144
+    },
+    "LDPE-SPB-681 100C": {
+      "echantillons": 5,
+      "rho_duree_apparition": -0.7,
+      "rho_duree_masse": 0.09999999999999999
+    },
+    "LDPE-SPB-681 110C": {
+      "echantillons": 7,
+      "rho_duree_apparition": -0.6785714285714287,
+      "rho_duree_masse": -0.3571428571428572
+    }
+  },
+  "signal": {
+    "rho_moyen": -0.7277777777777779,
+    "p": 0.00390625,
+    "methode": "sign-flip exact, 512 attributions"
+  },
+  "temoin_negatif_masse": {
+    "rho_moyen": 0.08015873015873017,
+    "p": 0.359375
+  },
+  "verdict": "soutient",
+  "motif": "la température d'apparition de l'oxydation suit la durée de vieillissement sous rampe identique ; la masse ne suit pas",
+  "statut_epistemique": "mesures d'instrument sur échantillons physiques"
+}

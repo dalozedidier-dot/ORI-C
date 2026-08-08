@@ -83,6 +83,17 @@ def synthese_transversale() -> dict:
                 "echantillons": bloc["eprouvettes"],
             }
 
+    vieillissement = DERIVE / "RESULTAT_VIEILLISSEMENT_POLYMERE.json"
+    if vieillissement.exists():
+        r = json.loads(vieillissement.read_text(encoding="utf-8"))
+        familles[r["famille"]] = {
+            "jeu": r["jeu"],
+            "critere_decisif": "dose de vieillissement thermique",
+            "verdict": r["verdict"],
+            "niveau_de_temoin": 6,
+            "echantillons": r["echantillons"],
+        }
+
     soutenues = [f for f, b in familles.items() if b["verdict"] == "soutient"]
     verdict = "soutient" if len(soutenues) >= 3 else "ne_soutient_pas"
     return {
@@ -136,6 +147,8 @@ def main() -> int:
     etapes.append(executer("C-MAT-MEM-01, 02 et 04", ["tester_iodp_01_02_04.py"]))
     etapes.append(executer("plasticité et transition de phase",
                            ["extraire_et_tester_plasticite.py"]))
+    etapes.append(executer("vieillissement thermique de polymères",
+                           ["extraire_et_tester_vieillissement.py"]))
 
     transversal = synthese_transversale()
     print("── C-MAT-MEM-05, transversalité")

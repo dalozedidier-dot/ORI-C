@@ -1373,8 +1373,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/SOURCES.json",
-      "size": 16378,
-      "sha256": "ec89d84217b7d49c7d2dc0c15966b589950f951bfc6d825eaaf7813f76905460",
+      "size": 17343,
+      "sha256": "442fc2ffd4dbc779095a471886184c41b4e69e532374ef9b87de90b83d4c49f4",
       "storage": "inline"
     },
     {
@@ -1391,8 +1391,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 1790,
-      "sha256": "71096541e748cc5a609945b8394647a7acac3b1018a313a2bafebba9d80314f7",
+      "size": 2220,
+      "sha256": "b96a530f7de00cc44f6f065b7c472c1505bb409aa99d4224ecf1135ae2a0ef0a",
       "storage": "inline"
     },
     {
@@ -1414,6 +1414,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_VIEILLISSEMENT_POLYMERE.json",
+      "size": 2305,
+      "sha256": "4a94bfe2a99d6db3d0ee80bc24d715ddd4efbdae560f7fd2aa1452a3905c8fb8",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/fabest_par_eprouvette.csv",
       "size": 3045,
       "sha256": "edb172d8519da2b905932cc99b6455ea386b10047c035f6e953cc0bf1898a572",
@@ -1432,9 +1438,21 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/vieillissement_polymere_par_echantillon.csv",
+      "size": 5858,
+      "sha256": "8fd5ec1246ce46553f87a4d25ff1f8803fd04eb523cc6548eaf3cf5a3a29caa3",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
       "size": 12102,
       "sha256": "20cc9ea0e9291e1b4022e9c74a721980eb192282f9b02f7c6e2789f24dd2fad3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_vieillissement.py",
+      "size": 11203,
+      "sha256": "9bfc7db598fb828860a309afb272654f3288a881f125cd133610c7e3e633c896",
       "storage": "inline"
     },
     {
@@ -1463,8 +1481,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 6861,
-      "sha256": "2fd1ee640288a9eb5b939e7bb2a311e1cd46c8a8d27047f0c246e310b2dfe634",
+      "size": 7430,
+      "sha256": "213de2c6bce53a8a8407f7a7d33e8ad5c3a9b988ea813d43013647e988fe6b59",
       "storage": "inline"
     },
     {

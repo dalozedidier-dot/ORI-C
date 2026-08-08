@@ -305,6 +305,27 @@
       "famille": "verre_relaxation",
       "role": "effets du recuit thermique",
       "attendu": "histoire thermique et relaxation ultérieure"
+    },
+    {
+      "cle": "traces_fission_zircon",
+      "record": "15541268",
+      "famille": "traces_de_fission",
+      "role": "recuit thermique de traces de fission induites, zircon ZAD",
+      "attendu": "1331 mesures de longueur de trace. L'histoire est inscrite par irradiation, le recuit l'efface progressivement : bras d'ablation dans une famille absente de la campagne."
+    },
+    {
+      "cle": "inconel939_detensionnement",
+      "record": "17973816",
+      "famille": "plasticite",
+      "role": "détensionnement et traitement thermique d'Inconel 939 en fabrication additive",
+      "attendu": "le détensionnement est un recuit de restauration après une histoire de fabrication"
+    },
+    {
+      "cle": "monazite_ktb",
+      "record": "20094176",
+      "famille": "traces_de_fission",
+      "role": "longueurs de traces de fission sur monazite, forage KTB",
+      "attendu": "réplication indépendante de traces_fission_zircon, autre minéral"
     }
   ]
 }

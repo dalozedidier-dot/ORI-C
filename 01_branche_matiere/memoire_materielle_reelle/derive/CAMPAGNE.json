@@ -22,13 +22,19 @@
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
-      "duree_s": 12.6,
+      "duree_s": 12.7,
       "obligatoire": true
     },
     {
       "etape": "plasticité et transition de phase",
       "code": 0,
-      "duree_s": 0.6,
+      "duree_s": 0.7,
+      "obligatoire": true
+    },
+    {
+      "etape": "vieillissement thermique de polymères",
+      "code": 0,
+      "duree_s": 0.2,
       "obligatoire": true
     }
   ],
@@ -56,14 +62,22 @@
         "verdict": "indetermine_par_atteignabilite",
         "niveau_de_temoin": 5,
         "echantillons": 12
+      },
+      "verre_relaxation": {
+        "jeu": "polyéthylènes biosourcés vieillis thermiquement",
+        "critere_decisif": "dose de vieillissement thermique",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 63
       }
     },
     "familles_soutenantes": [
       "magnetisme",
-      "plasticite"
+      "plasticite",
+      "verre_relaxation"
     ],
-    "verdict": "ne_soutient_pas",
-    "motif": "2 famille(s) sur les 3 exigées : magnetisme, plasticite"
+    "verdict": "soutient",
+    "motif": "3 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation"
   },
   "echecs": []
 }
