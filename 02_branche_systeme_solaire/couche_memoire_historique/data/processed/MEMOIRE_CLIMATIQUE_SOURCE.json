@@ -1,0 +1,73 @@
+{
+  "table": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/memoire_climatique_bintanja_insolation.csv",
+  "lignes": 1070,
+  "age_ka_bp": [
+    0.0,
+    1069.0
+  ],
+  "pas_ka": 1.0,
+  "jointure": "exacte sur l'âge, aucune tolérance, aucune interpolation",
+  "variables_obligatoires_completes": {
+    "age_ka_bp": 1070,
+    "temp_anomaly_C": 1070,
+    "insolation_65N_jul_Wm2": 1070,
+    "ice_volume_total_sle": 1070
+  },
+  "sources": [
+    {
+      "fichier": "bintanja2005.txt",
+      "sha256": "ee6fd316d5a23fd1f164764bbee03630e0f83c029cc06fd91cfba20151d9cd8c",
+      "octets": 1168402,
+      "reference": "Bintanja, van de Wal & Oerlemans 2005, Nature 437, 125-128",
+      "doi": "10.1038/nature03975",
+      "data_kind": "mixed_observation_and_external_model_output",
+      "limite": "Reconstruction par modélisation inverse du delta18O benthique de LR04. Ce n'est pas une mesure directe."
+    },
+    {
+      "fichier": "orbit91",
+      "sha256": "3afc20dda7b385bdd366bc4c9cf60be02d8defdb4c0f317430ca8386d62f81a3",
+      "octets": 375215,
+      "reference": "Berger & Loutre 1991, Quaternary Science Reviews 10, 297-317",
+      "data_kind": "ephemeris_model_input",
+      "limite": "Solution astronomique calculée, non mesurée."
+    }
+  ],
+  "avertissement": "Les deux sources sont des produits de modèle, pas des observations primaires. Cette table rend le test de mémoire climatique exécutable, elle ne le rend pas confirmatoire. Tout protocole qui l'utilise doit déclarer ce statut.",
+  "controles_physiques": {
+    "plages": {
+      "temp_anomaly_C": [
+        -17.236,
+        2.085
+      ],
+      "sea_level_m": [
+        -127.57,
+        0.31
+      ],
+      "ice_volume_total_sle": [
+        -110.908,
+        0.0
+      ],
+      "insolation_65N_jul_Wm2": [
+        387.98,
+        499.7
+      ],
+      "obliquity_deg": [
+        22.079,
+        24.48
+      ],
+      "eccentricity": [
+        0.005,
+        0.057
+      ]
+    },
+    "puissance_spectrale_du_volume_de_glace_pourcent": {
+      "100_ka": 34.0,
+      "41_ka": 21.3,
+      "23_ka": 6.0
+    },
+    "lecture_spectrale": "Structure pléistocène attendue : la bande 100 ka domine (34,0 %) devant l'obliquité 41 ka (21,3 %) et la précession 23 ka (6,0 %).",
+    "convention_de_signe": "Le volume de glace est exprimé en équivalent niveau marin relatif au présent, donc négatif en période glaciaire. Une valeur de -110 m SLE signifie que la glace abaissait le niveau marin de 110 m. Ce n'est pas une anomalie.",
+    "temperature": "L'amplitude atteint -17,2 degC parce que Bintanja reconstruit la température de l'air de surface au nord d'environ 45N, pas une moyenne globale."
+  },
+  "avertissement_de_redondance": "sea_level_m et ice_volume_total_sle sont corrélés à +1,000 : dans cette reconstruction, le niveau marin est une fonction linéaire des deux volumes de glace. Ce ne sont donc PAS deux variables indépendantes. Un protocole qui prendrait l'une comme forçage et l'autre comme compartiment de mémoire serait circulaire. Le forçage indépendant disponible dans cette table est l'insolation, calculée par Berger et Loutre sans référence au climat."
+}

@@ -3076,6 +3076,18 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/MEMOIRE_CLIMATIQUE_SOURCE.json",
+      "size": 3176,
+      "sha256": "62f70ea983f639c1d11a25b5b09c38a5afe5561563bc367ff5858167b58eecd2",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/memoire_climatique_bintanja_insolation.csv",
+      "size": 92389,
+      "sha256": "4a74189406b1b0e061023c0211eedbece6bce4c7beeee2db5a5b8bcbe0a879c9",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/mpt_lr04_la2004.csv",
       "size": 263707,
       "sha256": "3cdf14fec8ff2309ce3bcd859788056aa26212347ee12bf3b66f42bbd85ece5d",
@@ -3094,9 +3106,21 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/data/raw/bintanja2005.txt",
+      "size": 1168402,
+      "sha256": "ee6fd316d5a23fd1f164764bbee03630e0f83c029cc06fd91cfba20151d9cd8c",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/data/raw/lisiecki2005-d18o-stack-noaa.txt",
       "size": 38409,
       "sha256": "7403573ba1ba1af04ffac0e7259a578864d9fed2e3a90cd012a3af152a6d66c4",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/data/raw/orbit91",
+      "size": 375215,
+      "sha256": "3afc20dda7b385bdd366bc4c9cf60be02d8defdb4c0f317430ca8386d62f81a3",
       "storage": "inline"
     },
     {
@@ -3115,6 +3139,12 @@
       "path": "02_branche_systeme_solaire/couche_memoire_historique/docs/protocoles_sources/protocole_exoplanetaire_source.docx",
       "size": 2238977,
       "sha256": "5b8664d8031f5b90e50e6e9b675c8bf8176d1621662aea2dfffb38dd71888ba5",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/importer_memoire_climatique.py",
+      "size": 8260,
+      "sha256": "3b5be3a389aa0656eba08ae59e66baa8c1d13738e209dd7d21865f6438c92a9d",
       "storage": "inline"
     },
     {
