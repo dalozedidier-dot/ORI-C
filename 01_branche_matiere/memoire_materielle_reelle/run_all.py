@@ -1,24 +1,9 @@
 #!/usr/bin/env python3
-"""Rejoue toute la campagne « mémoire matérielle réelle », de la source au verdict.
+"""Rejoue la campagne : gel, vérification, extraction, tests, synthèse.
 
-L'ordre est contraignant et chaque étape refuse de démarrer si la précédente a
-échoué. Une campagne qui continue sur une extraction ratée produit des verdicts
-sur des données incomplètes, ce qui est pire qu'aucun verdict.
+Chaque étape refuse de démarrer si la précédente a échoué.
 
-    1. gel            les fichiers scellés sont-ils intacts
-    2. téléchargement les sources sont-elles complètes
-    3. vérification   empreintes, archives, doublons, provenance
-    4. extraction     IODP, FABEST, moyen-Mn, au schéma de la campagne
-    5. tests          C-MAT-MEM-01 à 04
-    6. synthèse       C-MAT-MEM-05, transversalité
-
-Deux modes. Par défaut la campagne suppose les sources déjà présentes en local et
-saute le téléchargement — douze gigaoctets ne se retéléchargent pas à chaque
-exécution. `--telecharger` force le rapatriement complet.
-
-    python run_all.py
-    python run_all.py --telecharger
-    python run_all.py --sans-verification   # saute le réempreintage, plus rapide
+    python run_all.py [--telecharger] [--sans-verification]
 """
 from __future__ import annotations
 

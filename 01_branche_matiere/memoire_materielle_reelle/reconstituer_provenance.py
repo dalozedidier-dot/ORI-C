@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstitue la provenance perdue, et empreinte ce qui est réellement conservé.
-
-Deux choses différentes, qu'il ne faut pas confondre.
-
-**La provenance d'origine** — DOI, URL, taille, licence, somme de contrôle
-annoncée par le dépôt — est reconstituable à tout moment depuis l'API. Elle ne
-dépend pas de ce qu'on a sur le disque.
-
-**L'empreinte des octets reçus** ne l'est pas. Elle se calcule au téléchargement,
-sur les octets qui arrivent, et elle atteste que ce qu'on a lu est bien ce que le
-dépôt a publié. Si les fichiers d'origine ont été supprimés, cette empreinte est
-perdue : la recalculer exige de retélécharger.
-
-Ce script fait donc deux choses distinctes et les inscrit séparément :
-
-1. il réinterroge l'API pour toutes les sources et rétablit la provenance
-   d'origine, en marquant explicitement `sha256_recalcule: null` là où
-   l'empreinte des octets reçus n'est plus disponible ;
-2. il empreinte les 843 fichiers réellement conservés dans `exploitable/`, ce qui
-   garantit l'identité de ce qu'on **a** — la garantie qui compte pour la suite,
-   puisque c'est sur ces fichiers que porteront les extractions.
+"""Rétablit la provenance depuis l'API et empreinte les fichiers conservés.
 
     python reconstituer_provenance.py
 """
@@ -143,14 +123,8 @@ def main() -> int:
         flux.write(json.dumps({
             "campagne": "WP-MAT-MEM-2026",
             "genere_par": "01_branche_matiere/memoire_materielle_reelle/reconstituer_provenance.py",
-            "avertissement": (
-                f"{perdues} source(s) ont perdu l'empreinte de leurs octets reçus : "
-                f"un appel partiel du téléchargeur écrasait la provenance au lieu de "
-                f"la compléter, et les fichiers d'origine ont été supprimés ensuite. "
-                f"La provenance d'origine — DOI, URL, taille, licence, somme annoncée — "
-                f"est rétablie depuis l'API et suffit à retélécharger à l'identique. "
-                f"Pour rétablir aussi les empreintes des octets reçus, relancer "
-                f"telecharger_toutes_sources.py, qui fusionne désormais."),
+            "sources_sans_empreinte_des_octets_recus": perdues,
+            "remede": "relancer telecharger_toutes_sources.py",
             "sources": rapports,
             "fichiers_conserves": inventaire,
         }, ensure_ascii=False, indent=2) + "\n")

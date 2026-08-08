@@ -1,0 +1,209 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "objet": "balayage uniforme des sources sans extracteur dédié. Dit lesquelles portent une structure dose-réponse repérable ; ne remplace pas un extracteur propre.",
+  "definition_de_la_reponse": "moyenne de la dernière colonne numérique",
+  "temoin": "permutation des doses à l'intérieur de chaque série",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "doses_minimum_par_serie": 3,
+  "series_minimum_par_source": 3,
+  "sources_a_extracteur_dedie": [
+    "fabest_lcf",
+    "iodp_*",
+    "medium_mn_a",
+    "recuit_thermique_polymere"
+  ],
+  "sources": [
+    {
+      "cle": "hefmag",
+      "fichiers_tabulaires": 2,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "magnetisme"
+    },
+    {
+      "cle": "hysteresis_dynamique",
+      "fichiers_tabulaires": 465,
+      "groupes_dose_reponse": 91,
+      "rho_moyen": 0.4205350405500101,
+      "fraction_negative": 0.2967032967032967,
+      "p": 9.999000099990002e-05,
+      "methode_du_temoin": "sign-flip Monte-Carlo, 10000 tirages",
+      "p_minimal_atteignable": 9.999000099990002e-05,
+      "temoin_permute": {
+        "rho_moyen": -0.07614824191900367,
+        "p": 0.2822717728227177
+      },
+      "series": {
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_100Hz_mf_200_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": -0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_150Hz_mf_133_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 1.0
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_200Hz_mf_100_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_250Hz_mf_80_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": -0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_300Hz_mf_67_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 1.0
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_350Hz_mf_57_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 1.0
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_100_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_150_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": -0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_200_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 0.5
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_21_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": 1.0
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_250_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": -1.0
+        },
+        "Ring20_Dataset_Txt/PWM/PWM_B1_{dose}_f_400Hz_mf_300_ma_0p95.txt": {
+          "fichiers": 3,
+          "doses_distinctes": 3,
+          "rho": -1.0
+        }
+      },
+      "verdict": "soutient",
+      "motif": "la réponse suit la dose d'histoire, le témoin permuté ne suit pas",
+      "famille": "magnetisme"
+    },
+    {
+      "cle": "poudres_magnetiques",
+      "fichiers_tabulaires": 1,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "magnetisme"
+    },
+    {
+      "cle": "alsi10mg_ecap",
+      "fichiers_tabulaires": 37,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "plasticite"
+    },
+    {
+      "cle": "zr15nb",
+      "fichiers_tabulaires": 4,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "transition_de_phase"
+    },
+    {
+      "cle": "medium_mn_b",
+      "fichiers_tabulaires": 15,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "transition_de_phase"
+    },
+    {
+      "cle": "ti_nb_sn",
+      "fichiers_tabulaires": 38,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "transition_de_phase"
+    },
+    {
+      "cle": "verres_sous_tg",
+      "fichiers_tabulaires": 5,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "verre_relaxation"
+    },
+    {
+      "cle": "fischer_tropsch",
+      "fichiers_tabulaires": 28,
+      "groupes_dose_reponse": 2,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "2 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "reconstruction_de_surface"
+    },
+    {
+      "cle": "la2nio4_oer",
+      "fichiers_tabulaires": 4,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "reconstruction_de_surface"
+    },
+    {
+      "cle": "cuivre_co2rr",
+      "fichiers_tabulaires": 64,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "reconstruction_de_surface"
+    },
+    {
+      "cle": "preconditionnement_electrolytes",
+      "fichiers_tabulaires": 419,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "reconstruction_de_surface"
+    },
+    {
+      "cle": "osl_sensibilisation_quartz",
+      "fichiers_tabulaires": 14,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "luminescence"
+    },
+    {
+      "cle": "amf_actuation_thermique",
+      "fichiers_tabulaires": 10,
+      "groupes_dose_reponse": 0,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "transformation_martensitique"
+    },
+    {
+      "cle": "amf_fatigue_transformation",
+      "fichiers_tabulaires": 42,
+      "groupes_dose_reponse": 1,
+      "verdict": "aucune_structure_dose_reponse_reperee",
+      "motif": "1 série(s) dose-réponse trouvée(s), minimum 3",
+      "famille": "transformation_martensitique"
+    }
+  ]
+}

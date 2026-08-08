@@ -1,24 +1,10 @@
 #!/usr/bin/env python3
-"""Vérifie l'intégrité et la provenance des sources téléchargées.
+"""Vérifie les fichiers conservés contre l'inventaire de PROVENANCE.json.
 
-Cinq contrôles, dans cet ordre :
+Contrôle SHA-256, complétude de l'inventaire, archives corrompues,
+doublons d'empreinte, DOI et licence.
 
-1. **SHA-256 de ce qu'on détient** — chaque fichier de `exploitable/` est
-   réempreinté et comparé à l'inventaire de `PROVENANCE.json`. C'est la garantie
-   qui compte : les extractions porteront sur ces fichiers-là.
-2. **Complétude de l'inventaire** — tout fichier présent sur le disque et absent
-   de l'inventaire, ou l'inverse. `raw/` a été supprimé après extraction, à
-   dessein : le vérifier serait vérifier ce qui n'existe plus.
-3. **Archives corrompues** — les `.zip` sont ouverts et leur table testée ; une
-   archive qui se lit à moitié fausse silencieusement une extraction.
-4. **Doublons** — deux fichiers de même empreinte, y compris entre sources
-   différentes. Un doublon inter-sources n'est pas une erreur mais il interdit
-   de compter les deux comme réplications indépendantes : c'est le même octet.
-5. **Provenance** — DOI, licence et version présents pour chaque source. Sans
-   eux, la donnée n'est pas citable.
-
-    python verifier_sources.py
-    python verifier_sources.py --rapide   # saute le réempreintage
+    python verifier_sources.py [--rapide]
 """
 from __future__ import annotations
 

@@ -1,45 +1,9 @@
 #!/usr/bin/env python3
-"""Vieillissement thermique de polyéthylènes biosourcés : la troisième famille.
+"""Vieillissement thermique de polyéthylènes : extraction et test.
 
-Le jeu porte le plan de dose le plus net de toute la campagne, et son auteur le
-décrit lui-même dans sa notice : trois polyéthylènes vieillis à **90, 100 et
-110 °C pendant 1, 2, 5, 8, 12, 16 et 20 jours**, plus un échantillon non vieilli
-noté `0`. Le nom de fichier porte la condition :
-`DSC_OOT_{matériau}_{température}-{jours}_{répétition}`.
-
-## Correspondance ORI-C
-
-| étape | grandeur |
-|---|---|
-| histoire | oxydation thermique, température × durée |
-| dose | la durée, à température fixée |
-| réponse | **température d'apparition de l'oxydation** sous rampe identique |
-| témoin d'histoire nulle | les fichiers `_0_`, non vieillis |
-
-La réponse est mesurée sous une rampe identique pour tous — 25 °C à 300 °C à
-10 K/min, inscrit dans l'en-tête de chaque fichier. Le stimulus final est donc
-rigoureusement le même, ce que l'énoncé de `C-MAT-MEM-01` exige.
-
-## Définition de la réponse, fixée avant lecture
-
-La température d'apparition de l'oxydation est prise comme **le premier point où
-le signal DSC s'écarte de plus de cinq écarts-types de sa ligne de base**, la
-ligne de base étant estimée sur la fenêtre 60–120 °C, avant tout événement
-d'oxydation. Le seuil et la fenêtre sont arrêtés avant d'avoir regardé un seul
-résultat ; sans quoi le choix se ferait sur ce qui donne le bon signe.
-
-Cette définition est plus fruste que l'extrapolation de tangentes du logiciel
-d'instrument, et c'est délibéré : elle est reproductible sans paramètre caché.
-
-## Statistique et témoin
-
-Un matériau, une température : la corrélation de rang entre durée de vieillissement
-et température d'apparition. Neuf combinaisons matériau × température au plus.
-Témoin : sign-flip exact sur ces corrélations.
-
-**Témoin négatif.** La masse de l'échantillon figure dans chaque en-tête et ne
-dépend pas de la durée de vieillissement — les prélèvements sont indépendants.
-Si elle est déclarée corrélée à la dose, la statistique est fautive.
+Réponse : température d'apparition de l'oxydation, définie comme le
+premier écart de plus de cinq écarts-types à la ligne de base 60-120 °C.
+Témoin négatif : la masse prélevée.
 
     python extraire_et_tester_vieillissement.py
 """

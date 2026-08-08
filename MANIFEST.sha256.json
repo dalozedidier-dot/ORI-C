@@ -1343,8 +1343,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
-      "size": 2176,
-      "sha256": "6e92abf2104b0514ac0b1cc17a211aac8e5a8de39c00e9611a7870832f03c5c9",
+      "size": 1753,
+      "sha256": "a692c89c54f5412599a0cf6e8add295479a974d49b78e81830b84bed883f2f2d",
       "storage": "inline"
     },
     {
@@ -1385,14 +1385,26 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/admettre_jeu.py",
-      "size": 11127,
-      "sha256": "59547fedfc76fcbc3e8077aed50196475ab02c6d309e463df504b97bcb6abb4c",
+      "size": 10281,
+      "sha256": "6750e450d58659c1a0817c62e1c864412902afb0603a218a6369ce382c96d23d",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/balayer_toutes_les_sources.py",
+      "size": 11661,
+      "sha256": "847fd86f1da4005fe210be97d75e43aa01f19d34dafcab1ce81f77758c46173b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/BALAYAGE_TOUTES_SOURCES.json",
+      "size": 7107,
+      "sha256": "65c4044a6a68f56b3decae08b32d2b1c0e791d771c819fd21ddf5c91f4992c2e",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
       "size": 2220,
-      "sha256": "b96a530f7de00cc44f6f065b7c472c1505bb409aa99d4224ecf1135ae2a0ef0a",
+      "sha256": "15d43f4d45a7d70e39637914a27c189f1bb6784835046526ca1e595c5f738094",
       "storage": "inline"
     },
     {
@@ -1445,74 +1457,74 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
-      "size": 12102,
-      "sha256": "20cc9ea0e9291e1b4022e9c74a721980eb192282f9b02f7c6e2789f24dd2fad3",
+      "size": 10596,
+      "sha256": "bc75e3b73ab066af3d3ebec6e851a41406b81d82dea5fbe50a7e1073ac37c249",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_vieillissement.py",
-      "size": 11203,
-      "sha256": "9bfc7db598fb828860a309afb272654f3288a881f125cd133610c7e3e633c896",
+      "size": 9368,
+      "sha256": "b8fbd1fa97a3146e27f3db778cbc962b5403c996aacca2ac8673a1fdeba59796",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_iodp.py",
-      "size": 10408,
-      "sha256": "9a93deb93ec0d219cf9c584fee93326eac44b73e6240fd4396a80826353c1b43",
+      "size": 8588,
+      "sha256": "fecae186b5f2fc8afa72619a1f6e6a192e6a922e5a6d1d1be11c09625bba3f32",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/inspecter_jeu.py",
-      "size": 11651,
-      "sha256": "716d772901dc50ad26f6010901653ec088b82c4cd525ad7aa60a3d043fc27d24",
+      "size": 10892,
+      "sha256": "0b536e83aa868fc33c057a728ce9fbaf330454d4c9a9f7eeebd6971f3fdd1321",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/ne_garder_que_l_exploitable.py",
-      "size": 9398,
-      "sha256": "dbffd1fbd439e35ef46b66483c1c5c9f8a6756634377ef9bbc4f28a117c11aaf",
+      "size": 7524,
+      "sha256": "1d76e930d7d8f694408e3aa9fcab76c82c6dfbef057faaad1887cb16862ca1a8",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/reconstituer_provenance.py",
-      "size": 6645,
-      "sha256": "f7ee7b9d7d44ab3574b972e8bfaa811d9440078dcdc54b1f599b4500e115971d",
+      "size": 5041,
+      "sha256": "6936091367c18323d27c5a60842e2e311ac85f3312aea4164d9883b3291e3d4f",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 7430,
-      "sha256": "213de2c6bce53a8a8407f7a7d33e8ad5c3a9b988ea813d43013647e988fe6b59",
+      "size": 6586,
+      "sha256": "18230abd3ef5044124371e2a2b939ce8117a9a5fe713d4bc0f6143c72736439e",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/telecharger_toutes_sources.py",
-      "size": 11683,
-      "sha256": "5308a348b851c3b1edd7d7f388d6084c3e4f1524703d94b6cda5c463a778e282",
+      "size": 10127,
+      "sha256": "922104790e24175e3b75cb5a8fe4a1884754994068eaf318f6e293513ebc6ded",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_ablation_iodp.py",
-      "size": 11773,
-      "sha256": "079ae6135aa9c2ddddd8e05282121e93f8ea947512438fd1fcdbbff6d9c8c747",
+      "size": 9434,
+      "sha256": "a8bddf83ba4c8fd633223d5e29c4d1a356298074a601b30ac1da5c3ffa4b9ccd",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_iodp_01_02_04.py",
-      "size": 9090,
-      "sha256": "5b73b48a9c6c5ad1516ce29978177795172c05c60bbb6c490d74ebd30d5db0bd",
+      "size": 7308,
+      "sha256": "4568ed6331e586a3f37e59a3e6dbffd21f4e0479b3c72a94f4e6a36e4cf026e8",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/trier_pour_le_depot.py",
-      "size": 8001,
-      "sha256": "b66852f4cfd62fc3a102fd4da97ffe0842c633321407db002591c4f46ca09f09",
+      "size": 5763,
+      "sha256": "acfd80c3f6c839c661c6da20334d624be4c65e51e418a0cd3221d12e40934c54",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/verifier_sources.py",
-      "size": 5990,
-      "sha256": "f39f9fcaa6c5f8e7a4b07d25bb0af50ab0e26fecd14a41c8ce7d7a805f944579",
+      "size": 5038,
+      "sha256": "c519368954158a6b1d39cb136d8851148675256de26f6a6649d4a01151bb975f",
       "storage": "inline"
     },
     {

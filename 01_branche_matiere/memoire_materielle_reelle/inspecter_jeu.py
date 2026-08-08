@@ -1,21 +1,9 @@
 #!/usr/bin/env python3
-"""Inspecte automatiquement un jeu téléchargé et décrit ce qu'il contient.
+"""Décrit le contenu d'un jeu téléchargé : volumes, natures de fichiers,
+conditions candidates, indices d'histoire, trace, réponse, témoin,
+ablation. Écrit INSPECTION.json.
 
-L'inspection ne juge pas et ne conclut rien. Elle **décrit** : combien
-d'échantillons physiques, quelles histoires, quels témoins, quelles variables
-structurales, quelles mesures avant et après, quelles réponses ultérieures,
-quelles séries temporelles ou cycliques, quelles ablations physiques. C'est le
-matériau brut de la fiche d'admission, qui reste ensuite à valider par lecture de
-la source — l'inspection automatique propose, elle ne décide pas.
-
-La distinction qui gouverne tout le reste : **un échantillon physique n'est pas
-une mesure**. Dix mille points relevés sur le même morceau de métal restent une
-unité expérimentale. L'inspecteur compte donc séparément les fichiers, les lignes
-et les identifiants d'échantillon qu'il parvient à reconnaître, et ne fusionne
-jamais ces trois nombres.
-
-    python inspecter_jeu.py --cle alsi10mg_ecap
-    python inspecter_jeu.py --toutes
+    python inspecter_jeu.py --cle CLE | --toutes
 """
 from __future__ import annotations
 

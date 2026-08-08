@@ -1,53 +1,9 @@
 #!/usr/bin/env python3
-"""C-MAT-MEM-03 sur la rémanence IODP : l'ablation physique efface-t-elle la trace ?
+"""C-MAT-MEM-03 : l'ablation physique fait-elle décroître la trace.
 
-Ce test est le seul de la campagne qui atteigne le **niveau 6** de la hiérarchie
-des témoins. Le témoin n'est pas un surrogat calculé : c'est une opération
-physique réellement pratiquée sur l'échantillon — un champ alternatif ou un
-chauffage qui détruit l'aimantation rémanente. Aucun raffinement statistique ne
-remplace cela.
-
-## Ce qui est testé
-
-Pour chaque échantillon, on dispose de son aimantation naturelle `NRM`, puis de
-son intensité après chaque étape d'ablation de dose croissante. La question est
-double, et les deux volets doivent tenir :
-
-1. **la trace décroît avec la dose d'ablation**, échantillon par échantillon ;
-2. **cette décroissance n'est pas une dérive de mesure** — elle doit être absente
-   d'une grandeur du même fichier que la physique interdit de faire dépendre du
-   traitement.
-
-## Les deux témoins négatifs
-
-Le premier essai prenait la **profondeur de prélèvement**. C'était une erreur :
-elle est constante au sein d'un échantillon, la corrélation dose-profondeur est
-donc indéfinie et aucun échantillon ne survit au filtre. Un témoin qui ne produit
-aucune valeur n'est pas un témoin qui passe, c'est un témoin qui n'existe pas.
-
-**Témoin physique — les étapes d'aimantation.** `IRM` et `ARM` ne détruisent pas
-l'aimantation, elles en imposent une, d'autant plus forte que le champ appliqué
-est grand. Le signe attendu est donc positif, à l'opposé de la désaimantation.
-Mêmes échantillons, même instrument, même statistique : seule la physique change
-de sens. Un test incapable de distinguer les deux ne mesure pas ce qu'il prétend.
-
-**Témoin statistique — permutation des doses.** À l'intérieur de chaque
-échantillon, les doses sont permutées et les intensités laissées en place. La
-correspondance ordre-valeur est détruite, la distribution reste intacte. Une
-corrélation qui survivrait à cela ne viendrait pas de la dose.
-
-## Statistique et témoin
-
-Statistique par échantillon : corrélation de rang de Spearman entre la dose et
-l'intensité restante. Signe attendu : négatif.
-
-Témoin d'agrégation : **sign-flip exact** sur les corrélations par échantillon.
-Les magnitudes entrent dans la statistique ; aucun nombre minimal d'échantillons
-favorables n'est requis. Au-delà de vingt échantillons l'énumération exhaustive
-est remplacée par un tirage de Monte-Carlo, et la valeur de p est estimée par
-`(1 + k) / (1 + N)` — jamais zéro.
-
-Les paramètres sont fixés avant exécution et scellés avec le code.
+Statistique : corrélation de rang dose-intensité par échantillon.
+Témoins : les étapes d'inscription IRM et ARM, de signe opposé attendu,
+et la permutation des doses dans chaque échantillon.
 
     python tester_ablation_iodp.py
 """

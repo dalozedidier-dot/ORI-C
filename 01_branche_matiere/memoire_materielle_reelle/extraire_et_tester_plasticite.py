@@ -1,39 +1,9 @@
 #!/usr/bin/env python3
-"""FABEST et aciers moyen-Mn : deux familles, deux plans expérimentaux différents.
+"""FABEST et aciers moyen-Mn : extraction et test de dose d'histoire.
 
-Les deux jeux relèvent de familles physiques distinctes et ne se testent pas de la
-même façon. Les traiter avec le même moule serait la faute que la campagne existe
-pour éviter.
-
-## FABEST — plasticité, plan à groupes indépendants
-
-24 éprouvettes de 42CrMo4+QT réparties en trois régimes de chargement : huit sous
-déformation R = −1, huit sous déformation moyenne 0,5 %, huit sous contrainte
-R = −0,5. Chaque éprouvette porte son historique cycle par cycle.
-
-**L'histoire est ici interne à l'essai.** Le cycle *n* est l'histoire du cycle
-*n + 1* : c'est le cyclage lui-même qui inscrit, par adoucissement ou par
-ratcheting. La dose d'histoire est le nombre de cycles accumulés, et la réponse
-est l'amplitude de contrainte à ce cycle.
-
-Statistique : corrélation de rang entre le numéro de cycle et l'amplitude de
-contrainte, **une valeur par éprouvette**. Les milliers de cycles d'une éprouvette
-ne sont pas des réplications.
-
-Témoin : sign-flip exact sur les 24 corrélations, magnitudes comprises.
-
-## Aciers moyen-Mn — transition de phase, plan factoriel
-
-Treize éprouvettes de dureté, identifiées `A0`–`A4`, `B0`–`B4`, `C0`–`C1`, portant
-chacune une histoire thermique documentée : température de recuit intercritique et
-durée de maintien. Neuf indentations par éprouvette.
-
-**Les neuf indentations sont des mesures répétées, pas des unités.** L'éprouvette
-est l'unité, et il y en a treize. La dose d'histoire est la durée de maintien à
-température donnée.
-
-Statistique : corrélation entre durée de maintien et dureté moyenne, **à
-température constante** — mélanger les températures confondrait deux axes.
+FABEST : corrélation cycle-amplitude, une valeur par éprouvette,
+24 éprouvettes en trois groupes de chargement.
+Moyen-Mn : corrélation maintien-dureté à température constante.
 
     python extraire_et_tester_plasticite.py
 """

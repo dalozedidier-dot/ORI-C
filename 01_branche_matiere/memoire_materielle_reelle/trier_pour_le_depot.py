@@ -1,38 +1,6 @@
 #!/usr/bin/env python3
-"""Décide ce qui entre au dépôt et ce qui reste en local.
-
-Le dépôt n'est pas un miroir des archives publiques. Recopier douze gigaoctets
-déjà garantis par un DOI n'ajoute aucune vérifiabilité : cela ajoute du poids, et
-un second exemplaire qui peut diverger du premier.
-
-**La règle n'est pas une taille, c'est une origine.** Un premier essai a trié sur
-le volume : tabulaire et sous deux mégaoctets entrait au dépôt. C'était le mauvais
-axe. À deux mégaoctets, les 281 séries de boucles individuelles de l'anneau
-passaient — 198 Mo de mesures brutes déguisées en tables dérivées. À deux cents
-kilooctets, les tables de synthèse de dureté et de traction des aciers moyen-Mn
-étaient écartées, alors qu'elles sont exactement ce qu'il faut garder. Aucun seuil
-ne sépare correctement une mesure d'un résultat.
-
-La règle retenue ne souffre pas d'exception :
-
-> **Le dépôt ne reçoit aucun fichier copié depuis `raw/`.** Il reçoit ce que
-> notre propre extraction produit — une table par source, au schéma de la
-> campagne — plus la provenance complète de chaque fichier d'origine.
-
-Le tri porte donc sur le **rôle d'entrée** de chaque fichier brut :
-
-`entree_extraction`   tabulaire ou format d'instrument convertible. L'extracteur
-                      le lira. Reste en local.
-`documentaire`        PDF, notices, images de microscopie. Utile à la lecture,
-                      inexploitable comme table. Reste en local.
-`calcul`              sorties de simulation. Reste en local, et ne peut de toute
-                      façon pas servir de preuve empirique.
-`non_exploitable`     format non reconnu, ou archive dont le contenu est classé
-                      séparément.
-
-Ce que le dépôt reçoit pour **tout** fichier, sans exception : nom d'origine,
-DOI, URL, taille, licence et SHA-256. De quoi reconstituer les douze gigaoctets
-et vérifier qu'on a les mêmes octets.
+"""Classe chaque fichier brut : entrée d'extraction, documentaire, calcul,
+non exploitable. Écrit TRI_DEPOT.json.
 
     python trier_pour_le_depot.py
 """
@@ -150,12 +118,7 @@ def main() -> int:
         flux.write(json.dumps({
             "regle": ("le dépôt ne reçoit aucun fichier copié depuis raw/ ; il reçoit "
                       "la table extraite par source et la provenance complète"),
-            "pourquoi_pas_un_seuil_de_taille": (
-                "aucun seuil ne sépare une mesure d'un résultat. À 2 Mo, les 281 séries "
-                "de boucles individuelles de l'anneau passaient pour des tables dérivées, "
-                "soit 198 Mo. À 0,2 Mo, les tables de synthèse de dureté et de traction "
-                "des aciers moyen-Mn étaient écartées alors qu'elles sont ce qu'il faut "
-                "garder. Le critère est l'origine, pas le poids."),
+            "critere": "l'origine du fichier, pas sa taille",
             "classes": {
                 "entree_extraction": "lisible par l'extracteur, reste en local",
                 "documentaire": "PDF et images, reste en local",

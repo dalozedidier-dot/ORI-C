@@ -1,22 +1,10 @@
 #!/usr/bin/env python3
-"""Filtre d'admission de la campagne « mémoire matérielle réelle ».
+"""Filtre d'admission de la campagne. Vérifie le gel, applique les cinq
+conditions de PROTOCOLE_CAMPAGNE.md, calcule l'atteignabilité selon le
+plan expérimental déclaré, et dit quels critères un jeu peut porter.
+Écrit ADMISSION.json.
 
-Décide si un jeu candidat entre dans la campagne, ou reste source documentaire.
-La décision est mécanique et se prend **avant toute extraction**, sur une fiche
-descriptive du jeu — pas sur ses résultats.
-
-Le filtre commence par **vérifier le gel**. `GEL_CAMPAGNE.json` porte les
-empreintes SHA-256 du protocole, du schéma, du registre et de ce fichier même. Si
-l'une d'elles diverge, le programme s'arrête : un préenregistrement que le code ne
-contrôle pas n'est pas un préenregistrement, seulement un fichier de plus.
-
-Il applique ensuite les cinq conditions de `PROTOCOLE_CAMPAGNE.md`, calcule
-l'atteignabilité **à partir du plan expérimental déclaré**, puis dit quels
-critères sont testables avec ce jeu. Un critère non testable est un état
-honorable ; une valeur imputée ne l'est pas.
-
-    python admettre_jeu.py --fiche fiches/exemple.json
-    python admettre_jeu.py --toutes
+    python admettre_jeu.py --fiche CHEMIN | --toutes
 """
 from __future__ import annotations
 
@@ -68,9 +56,6 @@ def p_minimal(plan: str, fiche: dict) -> tuple[float | None, str]:
     groupe, sans appariement. Le test permute les étiquettes d'histoire. Le
     nombre d'assignations distinctes vaut le coefficient multinomial des tailles
     de groupe, donc p minimal bilatéral = 2 / ce nombre.
-
-    Imposer le seuil du plan apparié à un plan non apparié écarterait à tort des
-    jeux parfaitement valables. C'était le défaut de la première version.
     """
     if plan == "apparie":
         paires = fiche.get("paires_independantes")

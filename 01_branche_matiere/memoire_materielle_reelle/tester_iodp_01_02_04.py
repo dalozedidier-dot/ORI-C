@@ -1,45 +1,9 @@
 #!/usr/bin/env python3
-"""C-MAT-MEM-01, 02 et 04 sur la rémanence IODP.
+"""C-MAT-MEM-01, 02 et 04 sur la table IODP par échantillon.
 
-`C-MAT-MEM-03` a été rendu séparément par `tester_ablation_iodp.py`. Les trois
-critères restants portent sur les mêmes échantillons et la même table par
-échantillon, mais posent des questions distinctes qu'il ne faut pas mélanger.
-
-## C-MAT-MEM-01 — existence
-
-Sous stimulus final identique, des systèmes d'histoires différentes répondent
-différemment, et une trace persistante mesurée est cohérente avec cette
-différence.
-
-Ici le stimulus final identique est **la dose de désaimantation maximale
-atteinte**, et la trace est l'intensité de la rémanence naturelle avant toute
-intervention. La question est : l'ordre des traces ordonne-t-il l'ordre des
-réponses ?
-
-*Ce que ce critère ne prouve pas.* Qu'une trace plus forte laisse un résidu plus
-fort n'est pas surprenant. Le critère vérifie la **cohérence** exigée par
-l'énoncé, il ne prétend pas à une découverte. Il est rendu tel quel.
-
-*Témoin.* Permutation des étiquettes d'échantillon entre trace et réponse. La
-distribution des deux grandeurs est conservée, seul l'appariement est détruit.
-
-## C-MAT-MEM-02 — persistance
-
-La différence de réponse reste détectable après une dose préenregistrée. Le seuil
-est fixé à **20 mT**, valeur usuelle de nettoyage des composantes visqueuses en
-paléomagnétisme, choisie avant lecture des résultats. Seuls les échantillons
-atteignant cette dose entrent dans le test.
-
-## C-MAT-MEM-04 — spécificité
-
-Le même stimulus appliqué sans l'histoire préalable ne produit pas la même
-modification persistante.
-
-L'inscription de laboratoire fournit exactement ce bras. Une aimantation `ARM`
-ou `IRM` est imposée par l'expérimentateur ; une `NRM` a été acquise au dépôt,
-il y a des milliers à des millions d'années. Si la trace naturelle et la trace
-imposée se comportaient identiquement sous désaimantation, l'histoire naturelle
-n'aurait rien d'spécifique. On compare donc la **stabilité relative** des deux.
+01 : la trace ordonne-t-elle les réponses.
+02 : la différence subsiste-t-elle au-delà de 20 mT.
+04 : trace naturelle et trace imposée en laboratoire diffèrent-elles.
 
     python tester_iodp_01_02_04.py
 """

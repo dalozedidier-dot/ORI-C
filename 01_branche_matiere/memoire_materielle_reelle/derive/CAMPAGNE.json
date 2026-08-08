@@ -10,25 +10,25 @@
     {
       "etape": "extraction IODP",
       "code": 0,
-      "duree_s": 1.6,
+      "duree_s": 2.1,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
-      "duree_s": 2.4,
+      "duree_s": 2.7,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
-      "duree_s": 12.7,
+      "duree_s": 13.5,
       "obligatoire": true
     },
     {
       "etape": "plasticité et transition de phase",
       "code": 0,
-      "duree_s": 0.7,
+      "duree_s": 0.8,
       "obligatoire": true
     },
     {

@@ -1,39 +1,9 @@
 #!/usr/bin/env python3
 """Extrait les mesures de rémanence IODP au schéma de la campagne.
 
-Correspondance entre les colonnes du magnétomètre et le schéma ORI-C. Elle est
-établie une fois, ici, et rien ne l'infère ailleurs :
-
-| colonne IODP                | champ du schéma      | rôle |
-|---|---|---|
-| `Text ID`                   | `physical_sample_id` | l'unité expérimentale |
-| `Exp`, `Site`, `Hole`       | `history_id`         | contexte de dépôt |
-| `Treatment type`            | `ablation_type`      | NRM, AD, TD, IRM, ARM |
-| `Treatment value`           | `dose`               | mT pour AD, °C pour TD |
-| `Total intensity (A/m)`     | `trace_value`        | la rémanence qui subsiste |
-| `Inclination`, `Declination`| direction            | orientation de l'inscription |
-| `Top depth CSF-A (m)`       | `profondeur`         | **témoin négatif** |
-
-La profondeur sert de témoin négatif et ce choix n'est pas arbitraire : c'est une
-propriété de l'échantillon fixée avant toute mesure, qu'aucune désaimantation ne
-peut modifier. Si la statistique la déclare sensible au traitement, c'est la
-statistique qui est fautive, pas la physique. C'est la leçon de l'obliquité
-terrestre, transposée.
-
-Une ligne du fichier source est une **mesure**, pas une unité. Un échantillon
-porte typiquement dix mesures : une NRM puis les étapes successives. Confondre les
-deux ferait passer 130 000 mesures pour 130 000 réplications.
-
-Deux tables sont donc écrites, et leur destination diffère.
-
-**Par mesure**, 18,8 Mo — elle reste en local. C'est la matière première des
-tests, elle n'a rien à faire dans un dépôt : un dépôt Git n'est pas un entrepôt.
-
-**Par échantillon**, une ligne par unité expérimentale, quelques centaines de
-kilooctets — c'est elle qui est versionnée. Elle porte tout ce dont un lecteur a
-besoin pour refaire le verdict : intensité initiale, nombre d'étapes, plage de
-dose, fraction restante, corrélation dose-intensité. La table par mesure se
-régénère depuis les sources, dont la provenance est inscrite.
+Écrit une table par mesure en local et une table par échantillon dans
+derive/. Un échantillon est retenu s'il porte une NRM et au moins deux
+étapes d'ablation.
 
     python extraire_iodp.py
 """

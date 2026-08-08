@@ -20,8 +20,8 @@
   "empreintes": {
     "PROTOCOLE_CAMPAGNE.md": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
     "SCHEMA_EXTRACTION.json": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
-    "admettre_jeu.py": "59547fedfc76fcbc3e8077aed50196475ab02c6d309e463df504b97bcb6abb4c",
+    "admettre_jeu.py": "6750e450d58659c1a0817c62e1c864412902afb0603a218a6369ce382c96d23d",
     "REGISTRE_JEUX_CANDIDATS.json": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9"
   },
-  "note_de_rescellement": "Rescelle le 2026-08-08, deuxieme fois, avant toute inspection de jeu. Trois defauts corriges dans admettre_jeu.py : il n'imposait qu'un plan apparie et aurait ecarte a tort des jeux a groupes independants ; il deduisait les paires par unites//2, ce qui invente un appariement que la source ne declare pas ; et il ne verifiait pas le gel, si bien qu'un fichier scelle pouvait etre modifie sans que le programme s'en apercoive. Il recalcule desormais les quatre empreintes et refuse toute admission si l'une diverge."
+  "note_de_rescellement": "Rescelle le 2026-08-09 : reduction des docstrings, aucun changement de logique ni de seuil."
 }

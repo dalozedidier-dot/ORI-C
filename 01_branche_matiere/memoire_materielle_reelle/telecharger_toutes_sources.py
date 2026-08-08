@@ -1,26 +1,10 @@
 #!/usr/bin/env python3
-"""Télécharge intégralement les sources de la campagne « mémoire matérielle réelle ».
+"""Télécharge les sources de SOURCES.json et écrit PROVENANCE.json.
 
-Interroge l'API du dépôt pour chaque identifiant de `SOURCES.json`, télécharge
-**tous** les fichiers de chaque enregistrement — y compris les gros bruts — et
-consigne pour chacun le nom d'origine, l'URL, la taille, le DOI, la version, la
-licence et le SHA-256 recalculé localement.
+Consigne nom d'origine, URL, taille, DOI, version, licence et SHA-256
+recalculé. Un appel partiel complète la provenance sans la remplacer.
 
-Deux règles tiennent tout le reste :
-
-**`raw/` n'est jamais transformé.** Aucun script de la campagne n'écrit dans
-`raw/`, ne renomme, ne convertit ni ne décompresse en place. Les dérivations vont
-dans `derive/` et citent le SHA-256 de leur source. C'est ce qui permet de
-refaire le chemin depuis l'octet publié jusqu'au verdict.
-
-**L'empreinte est recalculée, pas recopiée.** Le dépôt annonce une somme de
-contrôle ; on la garde comme `checksum_annonce`, et on inscrit à côté le SHA-256
-qu'on a soi-même calculé sur les octets reçus. Si les deux divergent, le fichier
-est marqué et non silencieusement accepté.
-
-    python telecharger_toutes_sources.py                # tout
-    python telecharger_toutes_sources.py --cle zr15nb   # une source
-    python telecharger_toutes_sources.py --plan         # n'écrit rien, montre le volume
+    python telecharger_toutes_sources.py [--cle CLE] [--plan]
 """
 from __future__ import annotations
 
@@ -67,16 +51,8 @@ def empreinte(chemin: Path) -> str:
 def telecharger(url: str, destination: Path, taille_attendue: int) -> tuple[bool, str]:
     """Télécharge en flux, avec reprise par plage HTTP.
 
-    Une connexion qui se coupe au milieu d'un fichier de plusieurs gigaoctets ne
-    lève pas toujours d'exception : le serveur ferme proprement et le flux se
-    termine sur un fichier tronqué. La première version rendait alors
-    « téléchargé » et le programme sortait en 0 malgré 6 Go manquants — un
-    défaut *fail open* dans l'outil même qui sert à garantir la provenance.
-
-    La taille reçue est donc comparée à la taille annoncée à chaque tentative, et
-    une divergence est un échec, pas un avertissement. Entre deux tentatives, on
-    reprend là où on s'est arrêté par un en-tête `Range`, ce qui évite de
-    recommencer six gigaoctets pour les derniers mégaoctets.
+    La taille reçue est comparée à la taille annoncée à chaque tentative ; une
+    divergence est un échec.
     """
     if destination.exists() and destination.stat().st_size == taille_attendue:
         return True, "déjà présent, taille conforme"
