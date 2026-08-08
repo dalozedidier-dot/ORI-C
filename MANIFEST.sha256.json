@@ -71,8 +71,8 @@
     },
     {
       "path": ".gitignore",
-      "size": 498,
-      "sha256": "066b315f492bc843024cedd77a1f21fad4050130cbab2ce7e0b463f6baaa7919",
+      "size": 857,
+      "sha256": "19810805bf22c00a69a6d02242a2c428acf21f52d48e4cfd1fa4302e17b2b68a",
       "storage": "inline"
     },
     {
@@ -3989,8 +3989,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/PROTOCOLE.json",
-      "size": 4624,
-      "sha256": "0964c25ef0cd0e50e0be385595f2640bb314d0b72f142fc734ca1e05726a5150",
+      "size": 6845,
+      "sha256": "2ec64b47a6639d0ce09e976fa2268d56c5c1c0c86b5d3049250c8dba70b5ac79",
       "storage": "inline"
     },
     {
@@ -4307,8 +4307,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 19619,
-      "sha256": "6603d6cc7e4ba3050a5799a3f89465bf342d2dfed30cb5b2a3589f2e4d653e0f",
+      "size": 20896,
+      "sha256": "0843d1aace61f999e0a8a804ffbc48b97afb7164dc9223847030f2e7992074aa",
       "storage": "inline"
     },
     {
@@ -4421,14 +4421,32 @@
     },
     {
       "path": "LICENSE",
-      "size": 702,
-      "sha256": "5ad210a13ba953a2b2dfdb8f324a105048c9cfb07b23f3f52d2f63eaa5fa7a66",
+      "size": 1686,
+      "sha256": "3518e6f790e10a444888821957c397782c77fabb3935974ef4f0f54dd6372195",
+      "storage": "inline"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "size": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "storage": "inline"
+    },
+    {
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "size": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "storage": "inline"
+    },
+    {
+      "path": "LICENSES/GPL-3.0.txt",
+      "size": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
       "storage": "inline"
     },
     {
       "path": "LICENSING.md",
-      "size": 679,
-      "sha256": "0d80cc3fcd8600a1b5ecf6bb717b37fd7c67dea4c26399d10e37ae79f756fd74",
+      "size": 3387,
+      "sha256": "d89f69afbd0e3536aadc17e4a364dd0caceec7823459f970534dcbbdc602256c",
       "storage": "inline"
     },
     {
@@ -4481,8 +4499,8 @@
     },
     {
       "path": "README.md",
-      "size": 17727,
-      "sha256": "2736d8e567d3486383477c37c4eece0df127e9a94fea6a8306f9468c6a0a2965",
+      "size": 19540,
+      "sha256": "fe15fe6d31f6f7d18b38421bd97b65771216857a4fd4840a6b8ea9aaad791c11",
       "storage": "inline"
     },
     {
@@ -4585,6 +4603,12 @@
       "path": "construire_dossier.py",
       "size": 89165,
       "sha256": "19accf9e244fe122d78cbb5a55165895415a34d46e6df91f9adeb9632a7452d2",
+      "storage": "inline"
+    },
+    {
+      "path": "demo_minimale.py",
+      "size": 9446,
+      "sha256": "645d61b2b3957f420cf1585c4ff67b68785d3472cc15338b0e4521698d8969e4",
       "storage": "inline"
     },
     {
@@ -4799,8 +4823,8 @@
     },
     {
       "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/NOTICE_TABLES_CANDIDATES.md",
-      "size": 10846,
-      "sha256": "36710922d42df1884d48b57ff891f44af503ee171736d5a564809b2b82657d0c",
+      "size": 12281,
+      "sha256": "b683fddd7974244e0b5ea4568256cbb227c91108accbcf949529debb65f667a8",
       "storage": "inline"
     },
     {

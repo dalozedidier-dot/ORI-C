@@ -17,3 +17,10 @@ plateforme/campagne_maximale_reelle/sources_brutes/*
 # Ses 1320 entrees etaient toutes deja suivies ; il pesait 51 Mo et faisait
 # echouer `verifier_dossier.py`, qui ne consulte pas .gitignore.
 /.github.zip
+
+# Instantanes du depot deposes a la racine, commites par erreur. Ils ne
+# contiennent que des fichiers deja suivis, pesent des dizaines de megaoctets
+# et font echouer `verifier_dossier.py`, qui ne consulte pas .gitignore.
+# Aucune archive legitime ne vit a la racine : celles des donnees tierces sont
+# sous donnees_externes/ et suivies par Git LFS.
+/*.zip

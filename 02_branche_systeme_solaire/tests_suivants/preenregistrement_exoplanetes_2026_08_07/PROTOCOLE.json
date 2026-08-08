@@ -41,11 +41,26 @@
   },
   "regle_de_decision": {
     "date_de_verification_principale": "2028-08-07",
-    "lecture_intermediaire": "2027-08-07, rapportée mais non décisive",
-    "succes": "p unilatéral <= 0,05 à la date de vérification principale",
-    "echec": "p unilatéral > 0,05 avec au moins 28 événements exploitables",
-    "indetermine": "moins de 28 événements exploitables à la date de vérification",
-    "interdiction": "Aucune borne, aucun seuil, aucune date ne peut être modifié après lecture du moindre résultat. Toute modification ouvre un nouveau protocole avec un nouvel identifiant."
+    "lecture_intermediaire": "2027-08-07, publiée mais sans valeur décisionnelle",
+    "instantane_candidat": "Requête TAP identique à celle du gel, exécutée le jour de la vérification. Son empreinte SHA-256 est inscrite dans RESULTAT.json avant toute lecture du résultat.",
+    "evenement_retenu": "Planète absente de l'instantané gelé, dont l'hôte y figure déjà, et dont la période orbitale est mesurée dans l'instantané candidat.",
+    "evenement_exclu": "Planète sans période mesurée, planète d'un hôte inconnu au gel, et planète retirée du catalogue entre le gel et la vérification.",
+    "statistique": "Nombre d'événements dont le rapport de période au voisin le plus contraignant tombe dans [1,5130 ; 19,1765], rapporté au nombre total d'événements retenus.",
+    "test": "Test binomial exact unilatéral contre p0 = 0,5808, hypothèse alternative « proportion supérieure ».",
+    "issues": {
+      "succes": "n >= 28 ET p <= 0,05. L'hypothèse est soutenue : l'architecture existante restreint la position accessible d'une planète encore inconnue.",
+      "echec": "n >= 28 ET p > 0,05. L'hypothèse n'est pas soutenue. Ce résultat est publiable tel quel et ne peut pas être requalifié en « indéterminé ».",
+      "indetermine": "n < 28. Le test n'est pas conclu, faute d'événements. Aucune des deux issues précédentes ne peut être invoquée."
+    },
+    "que_faire_si_indetermine": "Reporter la vérification de douze mois, une seule fois, jusqu'au 2029-08-07 au plus tard. Le report doit être inscrit dans RESULTAT.json avant de regarder la statistique. Passé cette date, le protocole est clos sur « indéterminé » et ne peut plus être rouvert.",
+    "revisions_du_catalogue": "Si une planète du gel disparaît du catalogue candidat, elle est signalée mais ne modifie ni la bande ni le témoin. Les révisions de période d'une planète déjà présente au gel sont ignorées : seul l'ajout compte.",
+    "interdictions": [
+      "Aucune borne, aucun seuil, aucune date, aucun critère d'inclusion ne peut être modifié après lecture du moindre résultat.",
+      "La lecture intermédiaire de 2027 ne peut motiver aucune modification du protocole, ni un arrêt anticipé dans un sens ou dans l'autre.",
+      "Le test ne peut pas être relancé sur un instantané différent après un résultat défavorable.",
+      "Toute modification ouvre un nouveau protocole, avec un nouvel identifiant, et laisse celui-ci en l'état avec son issue."
+    ],
+    "qui_peut_conclure": "L'exécution de verifier_bande_accessible.py fait foi. Son empreinte SHA-256 est vérifiée avant exécution ; si elle diverge, le protocole est invalidé et aucune conclusion n'en est tirée."
   },
   "reference": {
     "fichier": "reference/NASA_Exoplanet_Archive_PS_2026-08-07.csv",

@@ -1,8 +1,45 @@
 # ORI-C — dossier unique
 
+[![Validation](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml/badge.svg)](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml)
+[![Analyses structurelles](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml/badge.svg)](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml)
+[![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
+[![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
+
 Didier Daloze | Version 0.9.4-research | 6 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
+
+## Vérifier en deux minutes
+
+```bash
+python demo_minimale.py
+```
+
+Une commande, aucun argument, aucun accès réseau. Elle **recalcule** les trois
+résultats phares depuis les données réelles du dépôt — interventions
+astronomiques, antibiotiques D'Onofrio, lignées de vésicules — et compare chaque
+valeur obtenue à la valeur publiée. Douze contrôles, une trentaine de secondes.
+
+Elle affiche aussi, dans le même rapport, **ce qui ne marche pas** : le résultat
+paléoclimatique négatif, la dissolution de la dépendance au chemin à 600 Ma, et
+les critères dont la puissance est nulle. Un dossier qui ne montrerait que ses
+succès ne serait pas vérifiable.
+
+Installation complète, si le dépôt vient d'être cloné :
+
+```bash
+git lfs pull
+python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+python demo_minimale.py
+```
+
+## Licence
+
+Code sous **MIT**, données produites par ORI-C sous **CC BY 4.0**. Les forks, la
+réutilisation du code et la citation des données sont libres, avec attribution.
+Deux tables dérivées portent une licence virale héritée de leur source — GEOROC
+en CC BY-SA 4.0, CHNOSZ OBIGT en GPL-3 — et les textes restent sous droits
+réservés. La carte complète est dans [`LICENSING.md`](LICENSING.md).
 
 Ce dossier rassemble **l'état intégré du programme ORI-C consacré à la
 chronologie des architectures matérielles, à l'architecture du Système solaire

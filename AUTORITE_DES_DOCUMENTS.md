@@ -30,6 +30,17 @@ ci-dessous.
 1. Un résultat négatif reste limité au protocole qui l’a produit. Il ne peut pas être étendu à une branche entière ni au programme.
 1 bis. **Un résultat négatif dont le critère est inatteignable n’est pas un résultat.** Avant de citer un échec, il faut vérifier son statut dans `ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Trois critères sont aujourd’hui concernés : la vallée des rayons, dont le seuil n’est franchi à aucune taille disponible, et les deux tests de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 pour une puissance de 0,109 et 0,212. Leur échec ne peut être cité ni comme réfutation ni comme résultat négatif.
 1 ter. **Un compteur empirique et un compteur de modèle ne s’additionnent pas.** `plateforme/campagne_maximale_reelle/resultats_integration_maximale/COMPTEURS_SEPARES.json` les tient séparés : 479 entrées empiriques dont les 9 réussites techniques, 156 entrées de modèle dont aucune. Un rapport qui présenterait leur somme serait fautif.
+
+1 quater. **La matrice des 683 est un diagnostic de couverture, pas une source de preuves.** Ses 626 blocages ne traduisent pas un manque de données. Le relevé des `coverage_gaps` donne 320 entrées (51,1 %) en `test_hors_portee_mesuree` — la table est réelle mais ne porte pas les variables exactes du test —, 243 (38,8 %) en `non_admissible_comme_preuve_empirique` — sorties de modèle, éphémérides, compilations documentaires, benchmarks dérivés —, et 63 (10,1 %) sans jeu empirique déclaré. Aucun rapport ne doit présenter ce compteur comme une mesure de l’avancement scientifique, ni chercher à le faire monter en ajoutant des tables.
+
+**Règle d’or pour tout nouveau résultat.** Les avancées viennent des pipelines ciblés, jamais de la matrice générique. L’ordre est contraignant et ne se réarrange pas :
+
+1. écrire le critère exact et la liste des variables obligatoires ;
+2. vérifier qu’une source publique les contient **toutes**, sans imputation ;
+3. préenregistrer le protocole et sceller son empreinte SHA-256 ;
+4. seulement ensuite intégrer la donnée et lancer le test ciblé.
+
+Intégrer d’abord et chercher ensuite ce que la donnée permet de tester produit des résultats non préenregistrés, donc non confirmatoires.
 2. Les jeux Windels, Card 2019, D’Onofrio, Papastavrou et vésicules sont distincts. Aucun rapport ne peut utiliser le résultat de l’un pour qualifier les autres.
 3. `MISE_A_JOUR_RECHERCHE.md` et les fichiers machine de `campagne_recherche_suivante/` priment sur les synthèses antérieures lorsqu’ils décrivent D’Onofrio, les vésicules, H011, `Pacc` ou les spéléothèmes.
 4. Une campagne historique reste autorité sur son propre calcul, mais pas sur l’état courant global du dépôt.

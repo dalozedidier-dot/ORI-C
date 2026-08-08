@@ -1,13 +1,36 @@
-Copyright (c) 2026 Didier Daloze. Tous droits réservés.
+MIT License
 
-Cette version publique d’ORI-C peut être consultée et exécutée à des fins de
-vérification scientifique. Aucune permission générale de copier, modifier,
-redistribuer, republier, sous-licencier ou exploiter commercialement les
-contenus originaux n’est accordée.
+Copyright (c) 2026 Didier Daloze
 
-Les composants qui possèdent leur propre licence restent régis par cette
-licence locale. Les données, textes, figures et logiciels provenant de tiers
-restent régis par les droits et conditions de leurs sources respectives.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Une autorisation écrite séparée de l’auteur est nécessaire pour tout usage qui
-n’est pas expressément permis par la loi applicable.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Cette licence MIT couvre le **code** d'ORI-C. Le dépôt contient aussi des
+données, des textes et des jeux tiers qui relèvent d'autres régimes.
+`LICENSING.md` en donne la carte complète et fait autorité en cas de doute.
+
+En résumé :
+
+  code (.py, .yml, .sh, .bat)          MIT, ci-dessus
+  données produites par ORI-C          CC BY 4.0
+  tables dérivées de GEOROC            CC BY-SA 4.0, partage à l'identique
+  table dérivée de CHNOSZ OBIGT        GPL-3.0
+  articles, PDF, DOCX, figures         tous droits réservés
+  données tierces brutes               licence de leur source, inchangée

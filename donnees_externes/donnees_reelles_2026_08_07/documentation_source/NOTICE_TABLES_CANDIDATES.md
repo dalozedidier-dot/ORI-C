@@ -190,24 +190,49 @@ par cellule.
 
 ---
 
-## Effet mesuré sur la campagne des 683 entrées
+## Effet sur la campagne des 683 entrées — et pourquoi ce compteur n'est pas la bonne mesure
+
+Les chiffres ci-dessous ont été relevés **avant** le pare-feu `fail_closed_v2`. Ils sont
+conservés pour la traçabilité, mais ils ne décrivent plus l'état courant :
 
 | état du jeu de données | réussites | échecs | bloquées | non exécutables |
 |---|---:|---:|---:|---:|
-| chiffres publiés dans `README.md` | 298 | 0 | 337 | 48 |
-| dépôt tel quel, code actuel | 451 | 0 | 200 | 32 |
+| chiffres publiés dans `README.md` avant erratum | 298 | 0 | 337 | 48 |
+| dépôt tel quel, code d'alors | 451 | 0 | 200 | 32 |
 | + climat multi-variables réel | 461 | 0 | 190 | 32 |
 | + thermochimie et traceurs | 486 | 0 | 165 | 32 |
-| **+ inventaire volatil** | **486** | **10** | **155** | **32** |
+| + inventaire volatil | 486 | 10 | 155 | 32 |
+| **état courant, `fail_closed_v2`** | **9** | **0** | **626** | **48** |
 
-Aucune régression à aucune étape. Les 155 blocages restants se répartissent en **144
-exclusions correctes** — les moteurs que la règle « aucune donnée simulée » écarte
-délibérément — et **11 entrées** en attente de `planetary_histories.csv`.
+**La lecture que j'en donnais était fausse.** J'ai décrit les blocages comme des
+« exclusions de moteurs simulant » et comme un manque de données. Le relevé réel des
+`coverage_gaps` dit autre chose :
 
-**Ce que cela ne veut pas dire.** Le dépôt est explicite : une réussite technique signifie
-seulement que l'analyse a été exécutée. Le verdict scientifique des 651 entrées reste
-`undetermined`. Les limites ci-dessus — pression bornée à 5 GPa, pôles de mélange absents,
-incertitudes analytiques absentes — doivent être levées avant toute conclusion.
+| famille | entrées | part |
+|---|---:|---:|
+| `test_hors_portee_mesuree` | **320** | 51,1 % |
+| `non_admissible_comme_preuve_empirique` | **243** | 38,8 % |
+| `aucun_jeu_empirique_declare` | 63 | 10,1 % |
+
+La famille dominante n'est pas l'absence de données. C'est **une table réelle et
+volumineuse qui ne porte pas les variables exactes du test** : GISTEMP donne une
+température mais pas de forçage ni de compartiment ; les vésicules donnent turbidité et
+cartes parent-descendant mais pas longueur de polymère ni fidélité de copie ; GEOROC donne
+122 159 mesures mais une famille géologique là où le test attend un pôle de mélange.
+
+La deuxième famille est un refus délibéré : `derived_benchmark` 57, `ephemeris_model_input`
+47, `documentary_compilation` 32, sorties de modèle et compilations documentaires. La table
+existe, elle est parfois énorme, et la politique dit qu'elle n'est pas une preuve primaire.
+
+**Conséquence pratique.** Ajouter des tables à cette matrice ne produit pas de science. Le
+chemin est l'inverse : écrire d'abord le critère et la liste des variables obligatoires,
+vérifier qu'une source publique les contient toutes sans imputation, préenregistrer le
+protocole avec son empreinte, et seulement ensuite intégrer la donnée dans un pipeline
+ciblé. La matrice générique est un **diagnostic de couverture**, et elle a déjà fait son
+travail.
+
+Les limites propres à ces tables — pression bornée à 5 GPa, pôles de mélange absents,
+incertitudes analytiques absentes — restent celles décrites plus haut.
 
 ---
 
