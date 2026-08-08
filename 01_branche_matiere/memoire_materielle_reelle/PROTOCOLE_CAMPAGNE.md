@@ -146,21 +146,37 @@ pas.
 
 ## Atteignabilité, déclarée avant exécution
 
-Le nombre d'unités expérimentales indépendantes borne ce qui est démontrable.
-Pour un sign-flip exact sur *n* paires, la plus petite valeur de p vaut 2/2ⁿ ; pour
-une permutation à *N* tirages, 1/(N+1). L'estimateur de p est **(1 + k)/(1 + N)** :
-une valeur exactement nulle est impossible avec un tirage fini.
+Le nombre d'unités expérimentales indépendantes borne ce qui est démontrable, et
+cette borne **dépend du plan expérimental**. Deux plans sont admis, et il serait
+faux de leur appliquer la même arithmétique.
 
-| paires *n* | p minimal | verdict à alpha = 0,05 |
-|---:|---:|---|
-| 4 | 0,125 | inatteignable |
-| 5 | 0,0625 | inatteignable |
-| 6 | 0,03125 | atteignable |
-| 8 | 7,8 × 10⁻³ | atteignable |
-| 10 | 2,0 × 10⁻³ | atteignable |
+**Plan apparié.** Chaque unité porte les deux histoires, ou les unités sont
+appariées deux à deux. Le test est un sign-flip exact sur *n* paires : 2ⁿ
+attributions de signe, donc p minimal bilatéral = 2/2ⁿ.
 
-**Un jeu offrant moins de six paires indépendantes ne peut pas produire de verdict
-positif à alpha = 0,05.** Ce constat se fait à l'admission, pas après l'analyse.
+| paires *n* | 4 | 5 | **6** | 8 | 10 |
+|---|---:|---:|---:|---:|---:|
+| p minimal | 0,125 | 0,0625 | **0,031** | 7,8 × 10⁻³ | 2,0 × 10⁻³ |
+
+**Plan à groupes indépendants.** Des groupes distincts d'unités, une histoire par
+groupe, sans appariement. Le test permute les étiquettes d'histoire ; le nombre
+d'assignations distinctes est le coefficient multinomial des tailles de groupe,
+donc p minimal bilatéral = 2 divisé par ce nombre. Deux groupes de 3 donnent 20
+assignations, soit 0,10 — inatteignable. Deux groupes de 4 en donnent 70, soit
+0,029 — atteignable.
+
+Le seuil n'est donc **pas** un nombre fixe de paires. Imposer le plan apparié à un
+jeu non apparié écarterait à tort des dispositifs parfaitement valables.
+
+**Le nombre de paires ne se déduit jamais du nombre d'unités.** Vingt échantillons
+indépendants ne font pas dix paires expérimentales : l'appariement est une
+propriété du dispositif, lue dans la source. Un jeu déclaré apparié sans
+`paires_independantes` explicite est écarté, et non complété par une division.
+
+L'estimateur de p est **(1 + k)/(1 + N)** : une valeur exactement nulle est
+impossible avec un tirage fini.
+
+Ce constat se fait à l'admission, pas après l'analyse.
 
 ## Contrôle négatif obligatoire
 

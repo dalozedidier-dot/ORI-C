@@ -1,14 +1,27 @@
 #!/usr/bin/env python3
-"""Puissance statistique du benchmark antibiotique longitudinal.
+"""Diagnostic de séparabilité sur les plis du benchmark antibiotique.
 
-Le benchmark compare un modèle « état + histoire » à deux témoins sur dix plis
-appariés. Il rapporte un gain moyen, une fraction de plis favorables et un test
-de signe exact. Ce script répond à la question que ces trois nombres ne posent
-pas : **le protocole peut-il seulement détecter l'effet qu'il cherche ?**
+**Ce script ne mesure pas une puissance expérimentale.** La distinction est
+essentielle et elle a été mal posée dans la première version.
 
-Il ne produit aucun verdict scientifique. Il caractérise la capacité de
-détection du dispositif, à partir des plis appariés déjà publiés dans
-`resultats/vivant_robustesse.json`.
+Le benchmark compare un modèle « état + histoire » à deux témoins sur dix plis de
+validation croisée. Ces dix plis sont des **partitions de la même donnée** : ils
+partagent les mêmes 148 lignées et les mêmes 358 mesures, et sont donc corrélés
+entre eux. Une taille d'effet calculée sur leurs différences appariées caractérise
+la stabilité de l'écart entre modèles d'un pli à l'autre — c'est-à-dire la
+séparabilité du dispositif d'évaluation.
+
+Elle ne caractérise **pas** la capacité d'un plan expérimental à détecter un effet
+biologique sur des lignées. Une puissance sur les lignées demanderait une taille
+d'effet estimée entre unités indépendantes, ce que ces données ne fournissent pas
+sous cette forme. Les nombres produits ici — dz, puissance, nombre de plis requis
+— sont donc des diagnostics internes à la validation croisée, et il serait faux
+de les lire comme un dimensionnement d'expérience.
+
+Il ne produit aucun verdict scientifique, et ne peut fonder aucun énoncé du type
+« le dispositif n'a pas la puissance de détecter l'effet ». Tout au plus :
+l'écart entre modèles n'est pas stable d'un pli à l'autre au regard de sa
+dispersion.
 
     python plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py
 """
@@ -108,12 +121,12 @@ def main() -> int:
             "mae_histoire": float(histoire.mean()),
             "gain_moyen_apparie": moyenne,
             "ecart_type_des_differences": ecart_type,
-            "taille_effet_dz": dz,
+            "dz_entre_plis": dz,
             "plis_favorables": favorables,
             "t_apparie": float(statistique),
             "p_apparie": float(valeur_p),
-            "puissance_atteinte": puissance_t_appariee(n_plis, dz),
-            "n_requis": besoins,
+            "separabilite_atteinte_sur_les_plis": puissance_t_appariee(n_plis, dz),
+            "plis_requis_pour_stabiliser": besoins,
         }
 
     signe = {
@@ -129,7 +142,17 @@ def main() -> int:
         "genere_par": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
         "source": "resultats/vivant_robustesse.json",
         "alpha": ALPHA,
-        "unite_independante": "lignee",
+        "portee": (
+            "diagnostic de separabilite sur les plis de validation croisee. "
+            "PAS une puissance experimentale sur les lignees."
+        ),
+        "unite_du_calcul": "pli_de_validation_croisee",
+        "unites_correlees": (
+            "les dix plis partagent les memes lignees et les memes mesures : ils "
+            "ne sont pas independants, et la taille d'effet calculee sur leurs "
+            "differences appariees ne se transpose pas a un plan sur lignees"
+        ),
+        "unite_experimentale_reelle": "lignee, non mesurable par cette voie",
         "dispositif_actuel": {
             "plis": n_plis,
             "mesures": lignes,
@@ -166,14 +189,14 @@ def main() -> int:
     print(f"Dispositif : {n_plis} plis, {lignes} mesures, {lignees} lignées.")
     for temoin, valeurs in comparaisons.items():
         print(
-            f"  contre {temoin:18s} dz={valeurs['taille_effet_dz']:.4f} "
-            f"puissance={valeurs['puissance_atteinte']:.3f} "
+            f"  contre {temoin:18s} dz={valeurs['dz_entre_plis']:.4f} "
+            f"separabilite={valeurs['separabilite_atteinte_sur_les_plis']:.3f} "
             f"p={valeurs['p_apparie']:.4f}"
         )
-        for cible, besoin in valeurs["n_requis"].items():
+        for cible, besoin in valeurs["plis_requis_pour_stabiliser"].items():
             if besoin:
                 print(
-                    f"      puissance {float(cible):.0%} : {besoin['plis']} plis, "
+                    f"      séparabilité {float(cible):.0%} : {besoin['plis']} plis, "
                     f"soit x{besoin['facteur_sur_les_plis']} le dispositif actuel. "
                     f"Aucune conversion vers un nombre de lignées : les plis de "
                     f"validation croisée ne sont pas des unités indépendantes."

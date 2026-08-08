@@ -1,8 +1,18 @@
 # Puissance du benchmark antibiotique longitudinal — 7 août 2026
 
-Ce document ne rend aucun verdict scientifique. Il caractérise la **capacité de
-détection** du benchmark longitudinal de la branche vivant, à partir de ses dix
-plis appariés déjà publiés.
+Ce document ne rend aucun verdict scientifique.
+
+> **Correction du 8 août 2026 — ce n'est pas une puissance expérimentale.**
+> Les dix plis sont des **partitions de la même donnée** : ils partagent les mêmes
+> 148 lignées et les mêmes 358 mesures, et sont donc corrélés entre eux. Une
+> taille d'effet calculée sur leurs différences appariées mesure la **stabilité de
+> l'écart entre modèles d'un pli à l'autre**, c'est-à-dire la séparabilité du
+> dispositif d'évaluation. Elle ne mesure pas la capacité d'un plan expérimental à
+> détecter un effet biologique sur des lignées, ce qui demanderait une taille
+> d'effet estimée entre unités indépendantes. Les nombres ci-dessous — 0,109,
+> 0,212, 129 plis, 50 plis — sont des diagnostics internes à la validation
+> croisée. Le titre et le vocabulaire d'origine sont conservés pour la traçabilité,
+> mais toute lecture en termes de dimensionnement d'expérience est fautive.
 
 Reproduction :
 
@@ -18,21 +28,24 @@ Résultat machine : `plan_directeur/campagne_maximale_trois_branches/resultats/P
 
 10 plis appariés, 358 mesures, 148 lignées, soit 14,8 lignées par pli.
 
-| comparaison | gain moyen apparié | dz | plis favorables | p apparié | **puissance atteinte** |
+| comparaison | gain moyen apparié | dz | plis favorables | p apparié | **séparabilité entre plis** |
 |---|---:|---:|---:|---:|---:|
 | histoire contre `state_only` | 0,00741 MAE | 0,249 | 7/10 | 0,452 | **0,109** |
 | histoire contre `equal_complexity` | 0,00958 MAE | 0,408 | 7/10 | 0,229 | **0,212** |
 
 ## Ce que ces deux nombres impliquent
 
-Une puissance de 0,109 signifie que si l'effet mesuré était réel et de cette
-ampleur, le protocole aurait **environ une chance sur neuf** de le détecter.
-Contre le témoin de complexité appariée, une chance sur cinq.
+La valeur 0,109 dit que l'écart entre le modèle historique et `state_only` n'est
+**pas stable d'un pli à l'autre** au regard de sa propre dispersion. Contre le
+témoin de complexité appariée, il l'est un peu plus, sans l'être assez.
 
 **Le résultat non concluant du benchmark n'est donc pas une preuve d'absence
-d'effet.** C'est le constat qu'un dispositif de cette taille ne tranche pas. La
-distinction est décisive : elle interdit aussi bien d'annoncer un effet
-historique que de le déclarer réfuté par ce benchmark.
+d'effet.** Mais il ne permet pas non plus d'affirmer que « le dispositif n'a pas
+la puissance de détecter l'effet » : cette phrase suppose une puissance
+expérimentale que ces données ne fournissent pas. Ce qui est établi est plus
+étroit et plus sûr — l'écart mesuré n'est pas séparable du bruit de partition.
+La distinction interdit aussi bien d'annoncer un effet historique que de le
+déclarer réfuté par ce benchmark.
 
 ## Un défaut de la règle de décision
 

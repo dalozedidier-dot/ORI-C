@@ -18,10 +18,10 @@
   "controle_negatif_obligatoire": "Avant tout verdict, appliquer la même statistique a une grandeur du meme jeu connue par la physique pour ne pas porter l'histoire testee. Herite de la retractation de WP-CLIM-MEM-2026-B, ou le test accordait `soutient` a l'obliquite terrestre.",
   "aucune_donnee_inspectee": true,
   "empreintes": {
-    "PROTOCOLE_CAMPAGNE.md": "33120e136a2f1ccc8e41b47ce5e77bed453e8237cb156c8c93d0e79b5db7d797",
+    "PROTOCOLE_CAMPAGNE.md": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
     "SCHEMA_EXTRACTION.json": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
-    "admettre_jeu.py": "208439f9f97d2bea28d5dd16c7e9daa3c44e9480d301fd7ebfcf75bc9f4b9db6",
+    "admettre_jeu.py": "59547fedfc76fcbc3e8077aed50196475ab02c6d309e463df504b97bcb6abb4c",
     "REGISTRE_JEUX_CANDIDATS.json": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9"
   },
-  "note_de_rescellement": "Rescelle le 2026-08-08 apres correction de admettre_jeu.py : un jeu ecarte affichait ses criteres comme testables, ce qui invitait a l'exploiter quand meme. Le sceau precedent ne correspondait plus, et un preenregistrement dont les empreintes divergent ne vaut rien."
+  "note_de_rescellement": "Rescelle le 2026-08-08, deuxieme fois, avant toute inspection de jeu. Trois defauts corriges dans admettre_jeu.py : il n'imposait qu'un plan apparie et aurait ecarte a tort des jeux a groupes independants ; il deduisait les paires par unites//2, ce qui invente un appariement que la source ne declare pas ; et il ne verifiait pas le gel, si bien qu'un fichier scelle pouvait etre modifie sans que le programme s'en apercoive. Il recalcule desormais les quatre empreintes et refuse toute admission si l'une diverge."
 }

@@ -3,7 +3,10 @@
   "genere_par": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
   "source": "resultats/vivant_robustesse.json",
   "alpha": 0.05,
-  "unite_independante": "lignee",
+  "portee": "diagnostic de separabilite sur les plis de validation croisee. PAS une puissance experimentale sur les lignees.",
+  "unite_du_calcul": "pli_de_validation_croisee",
+  "unites_correlees": "les dix plis partagent les memes lignees et les memes mesures : ils ne sont pas independants, et la taille d'effet calculee sur leurs differences appariees ne se transpose pas a un plan sur lignees",
+  "unite_experimentale_reelle": "lignee, non mesurable par cette voie",
   "dispositif_actuel": {
     "plis": 10,
     "mesures": 358,
@@ -16,12 +19,12 @@
       "mae_histoire": 0.6228871889145727,
       "gain_moyen_apparie": 0.007410432298200859,
       "ecart_type_des_differences": 0.029793948649068914,
-      "taille_effet_dz": 0.24872273176964213,
+      "dz_entre_plis": 0.24872273176964213,
       "plis_favorables": 7,
       "t_apparie": 0.7865303382511912,
       "p_apparie": 0.4517689410684749,
-      "puissance_atteinte": 0.10870843523636783,
-      "n_requis": {
+      "separabilite_atteinte_sur_les_plis": 0.10870843523636783,
+      "plis_requis_pour_stabiliser": {
         "0.80": {
           "plis": 129,
           "lignees_equivalentes": null,
@@ -43,12 +46,12 @@
       "mae_histoire": 0.6228871889145727,
       "gain_moyen_apparie": 0.009577284221533384,
       "ecart_type_des_differences": 0.023462547797830947,
-      "taille_effet_dz": 0.40819455346698447,
+      "dz_entre_plis": 0.40819455346698447,
       "plis_favorables": 7,
       "t_apparie": 1.2908245174310522,
       "p_apparie": 0.22893520366429673,
-      "puissance_atteinte": 0.21168583653259146,
-      "n_requis": {
+      "separabilite_atteinte_sur_les_plis": 0.21168583653259146,
+      "plis_requis_pour_stabiliser": {
         "0.80": {
           "plis": 50,
           "lignees_equivalentes": null,

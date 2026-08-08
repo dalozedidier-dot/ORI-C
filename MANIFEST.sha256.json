@@ -1337,14 +1337,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
-      "size": 1928,
-      "sha256": "5ee94274871848c7c38f695e12e8759d5c667d16f0263c9f34463d29587d8dbb",
+      "size": 2176,
+      "sha256": "6e92abf2104b0514ac0b1cc17a211aac8e5a8de39c00e9611a7870832f03c5c9",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/PROTOCOLE_CAMPAGNE.md",
-      "size": 9562,
-      "sha256": "33120e136a2f1ccc8e41b47ce5e77bed453e8237cb156c8c93d0e79b5db7d797",
+      "size": 10508,
+      "sha256": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
       "storage": "inline"
     },
     {
@@ -1361,8 +1361,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/admettre_jeu.py",
-      "size": 8127,
-      "sha256": "208439f9f97d2bea28d5dd16c7e9daa3c44e9480d301fd7ebfcf75bc9f4b9db6",
+      "size": 11127,
+      "sha256": "59547fedfc76fcbc3e8077aed50196475ab02c6d309e463df504b97bcb6abb4c",
       "storage": "inline"
     },
     {
@@ -4427,8 +4427,8 @@
     },
     {
       "path": "ATTEIGNABILITE_DES_CRITERES_2026-08-08.md",
-      "size": 5468,
-      "sha256": "6feba1afcfc9d7d80633d71753b4ac8fc983be25c4da9f37f76e9c1040680fc0",
+      "size": 5662,
+      "sha256": "577b9269dde7aa0fb827da1e6314a526cd550614169bb8610fd1fa8d186fcfa3",
       "storage": "inline"
     },
     {
@@ -4613,8 +4613,8 @@
     },
     {
       "path": "PUISSANCE_VIVANT_2026-08-07.md",
-      "size": 3910,
-      "sha256": "c44204dc96fa0cf31f843755a43c06f3c509dc4f391574faba9393d17275537b",
+      "size": 4921,
+      "sha256": "abf24bdb8b9857ad48b70817480a0bd0831382bc190b82f9c94e37134cd510b1",
       "storage": "inline"
     },
     {
@@ -5297,8 +5297,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/analyser_puissance_vivant.py",
-      "size": 8247,
-      "sha256": "5d78857a085fbbea87dc88d10d412bba09f7c97ff5906b5be084e60be924da00",
+      "size": 9711,
+      "sha256": "7455abe6e4c11e963dbb331860940c867cb0ec13d75a1946fb7685606aac86c5",
       "storage": "inline"
     },
     {
@@ -5309,8 +5309,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/POWER_VIVANT_LONGITUDINAL.json",
-      "size": 3469,
-      "sha256": "535d21c1c138604cfb47a7b62bafaaa9d084e02fc0c57f7607a24a4747c7c785",
+      "size": 3973,
+      "sha256": "e1678aab37f40940c9c57288ae38c0562b2e6f883b9727fcfa7d64d70369740c",
       "storage": "inline"
     },
     {

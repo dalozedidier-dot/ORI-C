@@ -55,7 +55,7 @@ plis favorables requis         9 sur 10
 Aucun résultat inférieur à 9/10 ne peut franchir 0,05. Le protocole exige donc
 la quasi-unanimité, ce qui n'est pas une exigence de puissance mais un effet de
 la taille choisie. Voir `PUISSANCE_VIVANT_2026-08-07.md` pour la puissance
-correspondante, mesurée à 0,109 et 0,212.
+correspondante, mesurée à 0,109 et 0,212. Ces deux valeurs sont des diagnostics de séparabilité entre plis corrélés, non des puissances expérimentales sur lignées : voir la correction en tête de `PUISSANCE_VIVANT_2026-08-07.md`.
 
 ---
 
