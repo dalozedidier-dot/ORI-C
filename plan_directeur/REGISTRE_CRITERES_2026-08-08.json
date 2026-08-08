@@ -16,7 +16,7 @@
     "Aucun verdict ne contamine un autre protocole ni une autre branche.",
     "Tout critere sur serie temporelle exige un surrogat AAFT ou IAAFT, avec nombre, graine et percentile fixes avant execution. A defaut : non executable, temoin insuffisant."
   ],
-  "lecon_wp_clim_mem_2026": "Un témoin de même complexité ne suffit pas. Sur une série autocorrélée, permuter détruit la structure en plus de la correspondance, et le test devient trivialement positif. Tout critère portant sur une série temporelle doit exiger un surrogat préservant le spectre d'autocorrélation.",
+  "lecon_wp_clim_mem_2026": "Deux echecs sur deux axes differents. Le premier avait un temoin de niveau 1 : permuter ramenait l'autocorrelation de +0,450 a +0,013. Le second avait un temoin de niveau 4, correct, et une statistique asymetrique : elle accordait `soutient` a l'obliquite terrestre avec un gain de 77,3 % et p nul, superieur a celui de la cible glaciaire. Un bon temoin ne rachete pas une mauvaise statistique.",
   "criteres": [
     {
       "id": "C-MEM-01",
@@ -30,10 +30,10 @@
       ],
       "source_candidate": "data/processed/memoire_climatique_bintanja_insolation.csv, 1070 lignes, complète",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier : tau doit etre estimable sur la duree disponible",
       "blocage": null,
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-MEM-02",
@@ -47,10 +47,10 @@
       ],
       "source_candidate": "EPICA Dome C, edc-co2-2008.txt, deja dans le corpus",
       "statut_source": "presente_mais_a_joindre",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier",
       "blocage": "le CO2 EPICA et le compartiment Bintanja n'ont pas la meme chronologie : jointure a construire sans imputation",
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-MEM-03",
@@ -65,10 +65,10 @@
       ],
       "source_candidate": "jointure Bintanja + Berger + EPICA",
       "statut_source": "a_assembler",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier",
       "blocage": "depend de C-MEM-02",
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-MEM-04",
@@ -81,10 +81,10 @@
       ],
       "source_candidate": "identique a C-MEM-01",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier : exige des episodes de retour au forçage faible assez longs",
       "blocage": null,
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-MEM-05",
@@ -98,10 +98,10 @@
       ],
       "source_candidate": "identique a C-MEM-01",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier",
       "blocage": null,
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-MEM-06",
@@ -112,10 +112,10 @@
       ],
       "source_candidate": "LR04 present ; seconde chronologie a identifier",
       "statut_source": "incomplete",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "a verifier",
       "blocage": "une seule chronologie disponible ; Bintanja derive deja de LR04, donc non independante",
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-VES-01",
@@ -466,10 +466,10 @@
       ],
       "source_candidate": "protocoles positifs",
       "statut_source": "presente",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "favorable",
       "blocage": null,
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-ROB-04",
@@ -494,10 +494,10 @@
       ],
       "source_candidate": "Bintanja disponible a 0,1 et 1 ka",
       "statut_source": "presente",
-      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
+      "temoin_exige": "surrogat IAAFT applique de facon symetrique — statistique recalculee entierement sur le surrogat — avec nombre, graine et percentile fixes avant execution, et controle negatif reel prealable",
       "atteignabilite": "favorable",
       "blocage": null,
-      "force_du_temoin": 3
+      "force_du_temoin": 4
     },
     {
       "id": "C-META-01",
@@ -545,10 +545,13 @@
     }
   ],
   "hierarchie_force_des_temoins": [
-    "1 permutation naive — insuffisant pour serie temporelle",
+    "1 melange simple",
     "2 randomisation de phase de Fourier",
-    "3 AAFT / IAAFT — minimum acceptable pour serie autocorrelee",
-    "4 surrogats preservant en plus des statistiques d'ordre superieur",
-    "5 temoin experimental independant"
-  ]
+    "3 AAFT",
+    "4 IAAFT — minimum exige pour tout critere temporel ORI-C",
+    "5 IAAFT plus plusieurs statistiques independantes : prediction, dimension, reversibilite",
+    "6 replication sur donnees independantes, memes surrogats"
+  ],
+  "second_axe_adequation_de_la_statistique": "La statistique doit etre recalculee entierement sur le surrogat, qui sert a la fois de cible et de predicteur. Toute construction asymetrique handicape le temoin et rend le verdict trivialement positif. Un temoin de niveau 6 sur une statistique inadequate ne produit rien.",
+  "controle_negatif_obligatoire": "Avant tout gel, rejouer la construction sur des series reelles connues pour ne pas porter le phenomene, par substitution de la cible. Aucune serie synthetique. Un controle negatif propre positif interdit le gel. Voir scripts/controle_negatif_reel_surrogats.py."
 }

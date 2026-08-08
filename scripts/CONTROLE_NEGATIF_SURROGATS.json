@@ -1,0 +1,391 @@
+{
+  "objet": "contrôle négatif du pipeline WP-CLIM-MEM-2026-B par substitution de cible, sur colonnes réelles uniquement",
+  "aucune_donnee_synthetique": true,
+  "statut_epistemique": "mesure de ce que l'instrument détecte, pas une preuve. N'entre dans aucun compteur de résultats.",
+  "table": "02_branche_systeme_solaire/couche_memoire_historique/data/processed/memoire_climatique_bintanja_insolation.csv",
+  "surrogats_par_cas": 200,
+  "graine": 20260808,
+  "resultats": {
+    "temp_anomaly_C": {
+      "blocs": 10,
+      "rmse_etat_seul": 3.290734578719954,
+      "rmse_etat_plus_histoire": 3.1607286191006536,
+      "gain_relatif": 0.039506668346941054,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 3.243883330245419,
+        "temoin_minimum": 2.846909695901008,
+        "p_unilaterale": 0.21,
+        "verdict": "ne_soutient_pas"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.09501556473836124,
+        "gain_temoin_percentile_95": 0.14256623153500084,
+        "gain_temoin_maximum": 0.158407144010412,
+        "p_unilaterale": 0.97,
+        "verdict": "ne_soutient_pas"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "climatique, reconstruite",
+      "role": "série climatique voisine",
+      "autocorrelation_lag10": 0.34817131708706933,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.009130547514369607,
+        "autocorrelation_origine_lag10": 0.34817131708706933,
+        "autocorrelation_surrogat_lag10": 0.33717822411520126,
+        "correlation_avec_l_origine": -0.00876476436918315
+      }
+    },
+    "sea_level_m": {
+      "blocs": 10,
+      "rmse_etat_seul": 28.249560299529534,
+      "rmse_etat_plus_histoire": 18.44148548298653,
+      "gain_relatif": 0.34719389302163217,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 27.226848157162593,
+        "temoin_minimum": 23.465488756779077,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.17471178181810088,
+        "gain_temoin_percentile_95": 0.27927140209155726,
+        "gain_temoin_maximum": 0.30950309598408543,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "climatique, reconstruite",
+      "role": "corrélée +1,000 à la cible d'origine",
+      "autocorrelation_lag10": 0.45082072928650396,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.013776435397278044,
+        "autocorrelation_origine_lag10": 0.45082072928650396,
+        "autocorrelation_surrogat_lag10": 0.45826569479344337,
+        "correlation_avec_l_origine": -0.19180013236359997
+      }
+    },
+    "ice_volume_eurasia_sle": {
+      "blocs": 10,
+      "rmse_etat_seul": 10.373372550274041,
+      "rmse_etat_plus_histoire": 6.222770223458612,
+      "gain_relatif": 0.4001208195984226,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 10.032364034924194,
+        "temoin_minimum": 8.201765005506509,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.21314557512889137,
+        "gain_temoin_percentile_95": 0.29371349610371655,
+        "gain_temoin_maximum": 0.33108415721527706,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "climatique, reconstruite",
+      "role": "composante de la cible d'origine",
+      "autocorrelation_lag10": 0.48346819592362567,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.024052223352457346,
+        "autocorrelation_origine_lag10": 0.48346819592362567,
+        "autocorrelation_surrogat_lag10": 0.4905654954119092,
+        "correlation_avec_l_origine": -0.08948523947488131
+      }
+    },
+    "ice_volume_na_sle": {
+      "blocs": 10,
+      "rmse_etat_seul": 14.771478230063089,
+      "rmse_etat_plus_histoire": 10.775698128351518,
+      "gain_relatif": 0.27050644759299114,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 14.31440114798777,
+        "temoin_minimum": 12.495561337424991,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.14164888302283185,
+        "gain_temoin_percentile_95": 0.2298776084942583,
+        "gain_temoin_maximum": 0.28600711896239317,
+        "p_unilaterale": 0.015,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "climatique, reconstruite",
+      "role": "composante de la cible d'origine",
+      "autocorrelation_lag10": 0.42400201298349416,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.014890142349950801,
+        "autocorrelation_origine_lag10": 0.42400201298349416,
+        "autocorrelation_surrogat_lag10": 0.4263176020401212,
+        "correlation_avec_l_origine": -0.17447236951616069
+      }
+    },
+    "ice_volume_total_sle": {
+      "blocs": 10,
+      "rmse_etat_seul": 24.54404851952814,
+      "rmse_etat_plus_histoire": 16.112300096396236,
+      "gain_relatif": 0.3435353550749094,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 23.654830980753758,
+        "temoin_minimum": 20.38124225250511,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.17457719020817222,
+        "gain_temoin_percentile_95": 0.275577410519745,
+        "gain_temoin_maximum": 0.3087938590443233,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "cible d'origine",
+      "role": "verdict rendu par WP-CLIM-MEM-2026-B",
+      "autocorrelation_lag10": 0.45042313563258884,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.016059007044848795,
+        "autocorrelation_origine_lag10": 0.45042313563258884,
+        "autocorrelation_surrogat_lag10": 0.45781787685881964,
+        "correlation_avec_l_origine": -0.18722610895791983
+      }
+    },
+    "insolation_65N_jul_Wm2": {
+      "blocs": 10,
+      "rmse_etat_seul": 9.967232391444131,
+      "rmse_etat_plus_histoire": 3.9373619179269976,
+      "gain_relatif": 0.6049693873590398,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 8.988163597341423,
+        "temoin_minimum": 5.846916146746542,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.4754622821389127,
+        "gain_temoin_percentile_95": 0.6322050750719512,
+        "gain_temoin_maximum": 0.6649383838930085,
+        "p_unilaterale": 0.085,
+        "verdict": "ne_soutient_pas"
+      },
+      "forcages_utilises": [
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "astronomique calculée, fonction des trois autres",
+      "role": "CONTRÔLE NÉGATIF PROPRE : aucune inscription revendiquée",
+      "autocorrelation_lag10": -0.812982443087584,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.011917339957967158,
+        "autocorrelation_origine_lag10": -0.812982443087584,
+        "autocorrelation_surrogat_lag10": -0.7912699309895367,
+        "correlation_avec_l_origine": 0.2085243963227003
+      }
+    },
+    "eccentricity": {
+      "blocs": 10,
+      "rmse_etat_seul": 0.013753112414759811,
+      "rmse_etat_plus_histoire": 0.002778691166277704,
+      "gain_relatif": 0.7979591031848458,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 0.013453758416329144,
+        "temoin_minimum": 0.008774136609183561,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.5862257187374589,
+        "gain_temoin_percentile_95": 0.5999391276435848,
+        "gain_temoin_maximum": 0.6134012572402112,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession"
+      ],
+      "nature": "astronomique calculée, battements de fréquences séculaires",
+      "role": "contrôle imparfait : modulation d'amplitude réelle",
+      "autocorrelation_lag10": 0.8855726749592606,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.010939295333159035,
+        "autocorrelation_origine_lag10": 0.8855726749592606,
+        "autocorrelation_surrogat_lag10": 0.8480974308798555,
+        "correlation_avec_l_origine": -0.6010449202220649
+      }
+    },
+    "obliquity_deg": {
+      "blocs": 10,
+      "rmse_etat_seul": 0.4495726089631126,
+      "rmse_etat_plus_histoire": 0.10189256741797874,
+      "gain_relatif": 0.7733568162593754,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 0.29975197996660113,
+        "temoin_minimum": 0.12575686174664036,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.7856382722610286,
+        "gain_temoin_percentile_95": 0.8013094966078176,
+        "gain_temoin_maximum": 0.8035424705521157,
+        "p_unilaterale": 0.855,
+        "verdict": "ne_soutient_pas"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "astronomique calculée, oscillation quasi unique à 41 ka",
+      "role": "CONTRÔLE NÉGATIF PROPRE : ni inscription ni modulation notable",
+      "autocorrelation_lag10": 0.04272078094758457,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.058464354574757835,
+        "autocorrelation_origine_lag10": 0.04272078094758457,
+        "autocorrelation_surrogat_lag10": 0.047858908933816696,
+        "correlation_avec_l_origine": -0.6675421871878867
+      }
+    },
+    "precession": {
+      "blocs": 10,
+      "rmse_etat_seul": 0.011315632504853658,
+      "rmse_etat_plus_histoire": 0.0018785692551771766,
+      "gain_relatif": 0.8339846001209924,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 0.009942295649580041,
+        "temoin_minimum": 0.005952055656186001,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.7017963563081036,
+        "gain_temoin_percentile_95": 0.7347145853930009,
+        "gain_temoin_maximum": 0.7470678968178743,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "eccentricity"
+      ],
+      "nature": "astronomique calculée, e·sin(omega), amplitude modulée par e",
+      "role": "contrôle imparfait : non-linéarité multiplicative réelle",
+      "autocorrelation_lag10": -0.9267306216347543,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.01651066154039253,
+        "autocorrelation_origine_lag10": -0.9267306216347543,
+        "autocorrelation_surrogat_lag10": -0.9028210917097509,
+        "correlation_avec_l_origine": -0.02546897067229633
+      }
+    },
+    "isotope_total": {
+      "blocs": 10,
+      "rmse_etat_seul": 0.3725670654514372,
+      "rmse_etat_plus_histoire": 0.28651811638888497,
+      "gain_relatif": 0.23096230730509482,
+      "asymetrique": {
+        "description": "cible réelle, prédicteurs issus du surrogat — construction de WP-CLIM-MEM-2026-B",
+        "temoin_moyenne": 0.3598345964744938,
+        "temoin_minimum": 0.30457573183588316,
+        "p_unilaterale": 0.0,
+        "verdict": "soutient"
+      },
+      "symetrique": {
+        "description": "statistique recalculée entièrement sur le surrogat — construction canonique",
+        "gain_temoin_moyen": 0.16636033444024115,
+        "gain_temoin_percentile_95": 0.2436596960842525,
+        "gain_temoin_maximum": 0.29311462195828153,
+        "p_unilaterale": 0.08,
+        "verdict": "ne_soutient_pas"
+      },
+      "forcages_utilises": [
+        "insolation_65N_jul_Wm2",
+        "obliquity_deg",
+        "precession",
+        "eccentricity"
+      ],
+      "nature": "mesure isotopique, reconstruite",
+      "role": "série climatique voisine",
+      "autocorrelation_lag10": 0.44287925642411663,
+      "qualite_du_surrogat": {
+        "histogramme_identique": true,
+        "ecart_relatif_moyen_du_spectre": 0.014950130419387165,
+        "autocorrelation_origine_lag10": 0.44287925642411663,
+        "autocorrelation_surrogat_lag10": 0.44571793553666844,
+        "correlation_avec_l_origine": -0.18088915141890707
+      }
+    }
+  },
+  "controles_negatifs_astronomiques": [
+    "insolation_65N_jul_Wm2",
+    "eccentricity",
+    "obliquity_deg",
+    "precession"
+  ],
+  "controles_negatifs_propres": [
+    "insolation_65N_jul_Wm2",
+    "obliquity_deg"
+  ],
+  "controles_negatifs_positifs_asymetrique": [
+    "insolation_65N_jul_Wm2",
+    "obliquity_deg"
+  ],
+  "controles_negatifs_positifs_symetrique": []
+}

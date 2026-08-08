@@ -14,12 +14,16 @@
   },
   "p_unilaterale": 0.0,
   "alpha": 0.05,
-  "verdict": "soutient",
+  "verdict": "invalide",
   "motif": "les deux conditions de la règle sont remplies",
   "statut_epistemique": "Sources dérivées de modèle. Verdict sur une reconstruction, pas une preuve empirique primaire.",
-  "portee_exacte": {
-    "ce_que_le_verdict_etablit": "Le volume de glace a l'instant t est predictible depuis ses valeurs a -10, -20 et -40 ka au-dela de ce que donne le forcage courant, et au-dela de ce que donnent 500 series de meme spectre et de meme distribution decouplees de cette realisation. La RMSE observee, 16,112, est inferieure au minimum des 500 surrogats, 18,945.",
-    "ce_que_le_verdict_n_etablit_pas": "Que l'architecture du systeme contraigne les trajectoires accessibles. Le test montre que le systeme climatique a une memoire, ce qui est etabli par ailleurs. Il ne distingue pas une inscription historique durable d'une simple persistance autoregressive. Un temoin de niveau superieur — modele autoregressif ajuste sur la cible elle-meme — serait necessaire pour cette distinction, et il n'a pas ete gele ici.",
-    "niveau_de_preuve": "verdict sur reconstruction, temoin de niveau 3 sur 5 dans la hierarchie de force"
+  "verdict_execute": "soutient",
+  "retractation": {
+    "date": "2026-08-08",
+    "motif": "Controle negatif sur donnees reelles : la meme construction accorde `soutient` a l'obliquite terrestre, oscillation a 41 ka calculee par mecanique celeste, avec un gain de 77,3 % et p = 0,0000 — superieur au gain de 34,4 % obtenu sur la cible glaciaire. L'obliquite n'inscrit rien : elle est quasi periodique. Le verdict positif ne porte donc pas sur l'hypothese visee.",
+    "faute_technique": "La statistique etait appliquee de facon asymetrique : cible reelle, predicteurs issus du surrogat. On demandait au modele temoin de predire une serie avec le passe d'une autre. Il ne pouvait pas gagner, quelle que soit la force du surrogat. La construction canonique de Schreiber et Schmitz recalcule la statistique entierement sur le surrogat, qui sert alors a la fois de cible et de predicteur.",
+    "ce_qui_reste_valide": "Le temoin IAAFT lui-meme, de niveau adequat, et l'embargo de 40 ka. Le defaut est dans la statistique, pas dans le surrogat.",
+    "sous_la_construction_corrigee": "La cible glaciaire reste positive, p = 0,0000 sur 200 surrogats, et les deux controles negatifs propres passent a `ne_soutient_pas`. Mais la statistique corrigee teste la non-linearite, non l'inscription : elle declare positives la precession et l'excentricite, qui portent une modulation d'amplitude reelle sans rien inscrire. Aucun verdict ORI-C ne peut donc en etre tire sans une statistique nouvelle.",
+    "preuve": "scripts/CONTROLE_NEGATIF_SURROGATS.json"
   }
 }

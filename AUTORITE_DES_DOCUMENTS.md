@@ -33,19 +33,45 @@ ci-dessous.
 
 1 quater. **La matrice des 683 est un diagnostic de couverture, pas une source de preuves.** Ses 626 blocages ne traduisent pas un manque de données. Le relevé des `coverage_gaps` donne 320 entrées (51,1 %) en `test_hors_portee_mesuree` — la table est réelle mais ne porte pas les variables exactes du test —, 243 (38,8 %) en `non_admissible_comme_preuve_empirique` — sorties de modèle, éphémérides, compilations documentaires, benchmarks dérivés —, et 63 (10,1 %) sans jeu empirique déclaré. Aucun rapport ne doit présenter ce compteur comme une mesure de l’avancement scientifique, ni chercher à le faire monter en ajoutant des tables.
 
-1 quinquies. **Un verdict n’est accepté que si son témoin est au moins aussi fort que le signal testé.** Hiérarchie de force, par ordre croissant :
+1 quinquies. **Un verdict exige deux choses, et la force du témoin n’en est qu’une.**
 
-| niveau | témoin | usage |
-|---|---|---|
-| 1 | permutation naïve, mélange | **insuffisant pour toute série temporelle** |
-| 2 | randomisation de phase de Fourier | acceptable si la distribution importe peu |
-| 3 | **AAFT / IAAFT** | minimum acceptable pour une série autocorrélée |
-| 4 | surrogats préservant en plus des statistiques d’ordre supérieur ou des contraintes physiques | recommandé |
-| 5 | témoin expérimental indépendant : réplication externe, jeu distinct, ablation physique | niveau le plus fort |
+*Premier axe — force du témoin.* Par ordre croissant :
 
-Tout critère portant sur une série temporelle qui ne spécifie pas explicitement le type de surrogat, leur nombre, la graine et le percentile de décision **avant exécution** est bloqué. `scripts/surrogats.py` fournit AAFT et IAAFT, et mesure ce qu’ils préservent.
+| niveau | témoin |
+|---|---|
+| 1 | mélange simple |
+| 2 | randomisation de phase de Fourier |
+| 3 | AAFT |
+| 4 | **IAAFT — minimum exigé pour tout critère temporel ORI-C** |
+| 5 | IAAFT plus plusieurs statistiques indépendantes : prédiction, dimension, réversibilité temporelle |
+| 6 | réplication sur données indépendantes, mêmes surrogats |
 
-Le précédent est `WP-CLIM-MEM-2026` : son témoin permuté ramenait une autocorrélation de +0,450 à +0,013, produisait un gain apparent de 34,5 % avec p nul, et le protocole a été clos sur `invalide`. Son successeur `WP-CLIM-MEM-2026-B`, avec témoin IAAFT, conclut `soutient` — mais sur une hypothèse plus étroite, et cette portée est inscrite dans son résultat.
+*Second axe — adéquation de la statistique.* Un témoin de niveau 6 sur une
+statistique qui ne teste pas l’hypothèse ne produit rien. La statistique doit être
+**recalculée entièrement sur le surrogat**, qui sert alors à la fois de cible et de
+prédicteur : c’est la construction de Schreiber et Schmitz. Toute construction
+asymétrique — cible réelle, prédicteurs issus du surrogat — handicape le témoin par
+construction et rend le verdict trivialement positif.
+
+*Contrôle négatif obligatoire.* Avant tout gel, la construction doit être rejouée
+sur des séries **réelles** dont on sait par leur source qu’elles ne portent pas le
+phénomène visé. Aucune série synthétique : le contrôle se fait par substitution de
+la cible dans la table réelle. Si un contrôle négatif propre obtient un verdict
+positif, le protocole ne peut pas être gelé. `scripts/controle_negatif_reel_surrogats.py`
+tient ce rôle pour la couche mémoire ; l’obliquité terrestre y est le contrôle de
+référence.
+
+Les deux précédents sont instructifs parce qu’ils échouent sur des axes différents.
+`WP-CLIM-MEM-2026` avait un témoin de niveau 1 : permuter ramenait l’autocorrélation
+de +0,450 à +0,013. `WP-CLIM-MEM-2026-B` avait un témoin de niveau 4, correct, et une
+statistique asymétrique : elle accordait `soutient` à l’obliquité terrestre avec un
+gain de 77,3 % et p nul, soit plus que la cible glaciaire. Les deux sont clos sur
+`invalide`. Un bon témoin ne rachète pas une mauvaise statistique.
+
+*Enfin, aucun test de non-linéarité n’est universel.* IAAFT correctement appliqué
+teste la non-linéarité, ce qui n’est pas l’inscription historique : la précession
+vaut e·sin(ω), sa modulation d’amplitude est une non-linéarité réelle, et elle
+n’inscrit rien. Une statistique nouvelle reste à construire pour l’hypothèse ORI-C.
 
 **Règle d’or pour tout nouveau résultat.** Les avancées viennent des pipelines ciblés, jamais de la matrice générique. L’ordre est contraignant et ne se réarrange pas :
 

@@ -286,50 +286,54 @@ même forte, ne valide pas le cadre général.
 
 **Statut : réfuté** pour la déclinaison paléoclimatique examinée.
 
-### Deux protocoles préenregistrés du 8 août 2026
+### Deux protocoles préenregistrés du 8 août 2026, tous deux invalides
 
 | protocole | témoin | verdict |
 |---|---|---|
-| `WP-CLIM-MEM-2026` | permutation naïve | **invalide**, témoin insuffisant |
-| `WP-CLIM-MEM-2026-B` | 500 surrogats IAAFT, graine 20260808 | **soutient**, sur une hypothèse étroite |
+| `WP-CLIM-MEM-2026` | permutation naïve | **invalide** — témoin insuffisant |
+| `WP-CLIM-MEM-2026-B` | 500 surrogats IAAFT | **invalide** — statistique inadéquate |
 
-Le premier a été clos par nous-mêmes, avant publication. Il annonçait un gain de
-34,5 % de RMSE avec p exactement nul — mais son témoin permuté ramenait
-l'autocorrélation du compartiment de +0,450 à +0,013, c'est-à-dire du bruit blanc.
-Sur une série lisse, un tel témoin rend le verdict trivialement positif. Ce
-protocole ne prouve rien et n'est cité nulle part comme preuve.
+Le premier annonçait un gain de 34,5 % de RMSE avec p exactement nul. Son témoin
+permuté ramenait l'autocorrélation du compartiment de +0,450 à +0,013, c'est-à-dire
+du bruit blanc : sur une série lisse, un tel témoin rend le verdict trivialement
+positif.
 
-Le second reprend le même test avec un témoin de force adéquate : 500 surrogats
-IAAFT qui préservent l'histogramme exactement, le spectre à 1,7 % près et une
-autocorrélation de +0,460, et ne détruisent que la correspondance temporelle. Un
-embargo de 40 ka de part et d'autre de chaque bloc de test — le décalage maximal
-employé — corrige la fuite du protocole précédent.
+Le second a corrigé le témoin — 500 surrogats IAAFT préservant l'histogramme
+exactement et le spectre à 1,7 % près — et un embargo de 40 ka. Il a rendu
+`soutient` avec une RMSE de 16,112 passant sous le **minimum** des 500 surrogats,
+18,945. **Ce verdict est rétracté.**
 
-| | RMSE |
-|---|---:|
-| état seul | 24,544 |
-| état + histoire | **16,112** |
-| témoin IAAFT, moyenne | 23,708 |
-| témoin IAAFT, 5ᵉ centile | 21,535 |
-| témoin IAAFT, minimum sur 500 | 18,945 |
+Le contrôle négatif qui le rétracte n'utilise aucune donnée synthétique. Il rejoue
+la même construction en substituant la cible par d'autres colonnes réelles de la
+même table. Résultat sur les deux contrôles négatifs propres :
 
-La valeur observée passe sous le **minimum** des 500 surrogats, d'où p = 0/500.
+| série réelle substituée | nature | gain | p | verdict rendu |
+|---|---|---:|---:|---|
+| `obliquity_deg` | oscillation à 41 ka, mécanique céleste | **77,3 %** | 0,0000 | soutient |
+| `insolation_65N_jul_Wm2` | fonction calculée des éléments orbitaux | 60,5 % | 0,0000 | soutient |
+| `ice_volume_total_sle` | cible d'origine | 34,4 % | 0,0000 | soutient |
 
-**Ce que ce verdict établit.** Le volume de glace à l'instant *t* est prédictible
-depuis ses valeurs à −10, −20 et −40 ka au-delà du forçage courant, et au-delà de
-ce que permettent 500 séries de même spectre et de même distribution découplées
-de cette réalisation.
+L'obliquité terrestre obtient un gain **plus élevé que la cible glaciaire**. Elle
+n'inscrit rien : elle est quasi périodique. Un test qui la déclare positive ne
+teste pas l'inscription historique.
 
-**Ce qu'il n'établit pas.** Que l'architecture contraigne les trajectoires
-accessibles. Il montre que le système climatique a une mémoire, ce qui est établi
-par ailleurs, et ne distingue pas une inscription historique durable d'une simple
-persistance autorégressive. Cette distinction demanderait un témoin de niveau 4 —
-modèle autorégressif ajusté sur la cible elle-même — qui n'a pas été gelé ici.
+**La faute est identifiée.** La statistique était appliquée de façon asymétrique —
+cible réelle, prédicteurs issus du surrogat. On demandait au modèle témoin de
+prédire une série avec le passé d'une autre ; il ne pouvait pas gagner, quelle que
+soit la force du surrogat. La construction canonique de Schreiber et Schmitz
+recalcule la statistique **entièrement sur le surrogat**, qui sert alors à la fois
+de cible et de prédicteur, conserve tout son pouvoir autoprédictif linéaire, et
+n'a perdu que la structure non linéaire.
 
-Les sources sont dérivées de modèle : Bintanja est une inversion de LR04, Berger
-une solution astronomique calculée. **Ce n'est pas une preuve empirique primaire**,
-et cela ne modifie en rien le statut « réfuté » ci-dessus, qui porte sur d'autres
-critères.
+Sous cette construction corrigée, les deux contrôles propres passent à
+`ne_soutient_pas` — obliquité p = 0,855, insolation p = 0,085 — et la cible
+glaciaire reste positive à p = 0,0000. **Cela ne suffit toujours pas.** La
+statistique corrigée teste la non-linéarité, pas l'inscription : elle déclare
+positives la précession et l'excentricité, qui portent une modulation d'amplitude
+bien réelle sans rien inscrire. Aucun verdict ORI-C n'en est tiré.
+
+Rien de tout cela ne modifie le statut « réfuté » ci-dessus, qui porte sur
+d'autres critères. Reproduction : `scripts/controle_negatif_reel_surrogats.py`.
 
 Trois résultats indépendants convergent. Le gain sur M1 disparaît contre un
 témoin de complexité égale. Il est reproduit dans 82 % des tirages d'un nul à
