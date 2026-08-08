@@ -286,6 +286,51 @@ même forte, ne valide pas le cadre général.
 
 **Statut : réfuté** pour la déclinaison paléoclimatique examinée.
 
+### Deux protocoles préenregistrés du 8 août 2026
+
+| protocole | témoin | verdict |
+|---|---|---|
+| `WP-CLIM-MEM-2026` | permutation naïve | **invalide**, témoin insuffisant |
+| `WP-CLIM-MEM-2026-B` | 500 surrogats IAAFT, graine 20260808 | **soutient**, sur une hypothèse étroite |
+
+Le premier a été clos par nous-mêmes, avant publication. Il annonçait un gain de
+34,5 % de RMSE avec p exactement nul — mais son témoin permuté ramenait
+l'autocorrélation du compartiment de +0,450 à +0,013, c'est-à-dire du bruit blanc.
+Sur une série lisse, un tel témoin rend le verdict trivialement positif. Ce
+protocole ne prouve rien et n'est cité nulle part comme preuve.
+
+Le second reprend le même test avec un témoin de force adéquate : 500 surrogats
+IAAFT qui préservent l'histogramme exactement, le spectre à 1,7 % près et une
+autocorrélation de +0,460, et ne détruisent que la correspondance temporelle. Un
+embargo de 40 ka de part et d'autre de chaque bloc de test — le décalage maximal
+employé — corrige la fuite du protocole précédent.
+
+| | RMSE |
+|---|---:|
+| état seul | 24,544 |
+| état + histoire | **16,112** |
+| témoin IAAFT, moyenne | 23,708 |
+| témoin IAAFT, 5ᵉ centile | 21,535 |
+| témoin IAAFT, minimum sur 500 | 18,945 |
+
+La valeur observée passe sous le **minimum** des 500 surrogats, d'où p = 0/500.
+
+**Ce que ce verdict établit.** Le volume de glace à l'instant *t* est prédictible
+depuis ses valeurs à −10, −20 et −40 ka au-delà du forçage courant, et au-delà de
+ce que permettent 500 séries de même spectre et de même distribution découplées
+de cette réalisation.
+
+**Ce qu'il n'établit pas.** Que l'architecture contraigne les trajectoires
+accessibles. Il montre que le système climatique a une mémoire, ce qui est établi
+par ailleurs, et ne distingue pas une inscription historique durable d'une simple
+persistance autorégressive. Cette distinction demanderait un témoin de niveau 4 —
+modèle autorégressif ajusté sur la cible elle-même — qui n'a pas été gelé ici.
+
+Les sources sont dérivées de modèle : Bintanja est une inversion de LR04, Berger
+une solution astronomique calculée. **Ce n'est pas une preuve empirique primaire**,
+et cela ne modifie en rien le statut « réfuté » ci-dessus, qui porte sur d'autres
+critères.
+
 Trois résultats indépendants convergent. Le gain sur M1 disparaît contre un
 témoin de complexité égale. Il est reproduit dans 82 % des tirages d'un nul à
 forçage aléatoire. Et une fois retirée une symétrie exacte non identifiée dans

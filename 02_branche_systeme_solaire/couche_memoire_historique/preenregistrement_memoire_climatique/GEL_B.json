@@ -1,0 +1,26 @@
+{
+  "protocol_id": "WP-CLIM-MEM-2026-B",
+  "titre": "Inscription durable, temoin IAAFT preservant spectre et distribution",
+  "statut": "gele_avant_execution",
+  "gele_le": "2026-08-08",
+  "predecesseur": "WP-CLIM-MEM-2026, clos sur invalide pour temoin insuffisant",
+  "empreintes": {
+    "protocole": "1103b93fd419f62fa6e21db20e741f031054e02f0a9a9ba886848546875dc720",
+    "code": "56e0be83f1eb8701050a89ce59bbd13262e9aee1a46934bfcb41dc573e1fce4e",
+    "surrogats": "bd4fb7eb39c0dfda18c123392a0c4ce9f8cf51c293a0b9784f2cdf89f161561d",
+    "table": "4a74189406b1b0e061023c0211eedbece6bce4c7beeee2db5a5b8bcbe0a879c9"
+  },
+  "parametres_du_temoin": {
+    "surrogats": 500,
+    "iterations_iaaft": 200,
+    "graine": 20260808,
+    "percentile": 95
+  },
+  "regle_de_decision": {
+    "soutient": "RMSE(histoire) < RMSE(etat) ET p <= 0,05 contre la distribution des 500 surrogats IAAFT",
+    "ne_soutient_pas": "l'une des deux conditions n'est pas remplie",
+    "indetermine": "moins de 8 blocs exploitables apres embargo"
+  },
+  "force_du_temoin": "niveau 3 de la hierarchie : AAFT/IAAFT, minimum acceptable pour une serie temporelle autocorrelee.",
+  "atteignabilite": "p minimal 1/501 = 2,0e-3, en deca d'alpha."
+}

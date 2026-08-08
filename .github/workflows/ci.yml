@@ -39,6 +39,7 @@ jobs:
           python -m compileall -q .
           python verifier_dossier.py
           python scripts/verifier_fins_de_ligne.py
+          python scripts/controle_avant_push.py
           python scripts/valider_tout.py --strict-lfs
       - name: Exécuter les suites portables du socle et de la matière
         run: |

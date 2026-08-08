@@ -2,355 +2,553 @@
   "schema": 1,
   "genere_le": "2026-08-08",
   "objet": "Registre des critères préenregistrables. Un critère n'est pas un protocole : il devient protocole quand sa source est vérifiée complète, son code écrit, et l'ensemble scellé par empreinte.",
-  "etats_autorises": ["soutient", "ne_soutient_pas", "indetermine_par_atteignabilite", "invalide"],
+  "etats_autorises": [
+    "soutient",
+    "ne_soutient_pas",
+    "indetermine_par_atteignabilite",
+    "invalide"
+  ],
   "regles_transversales": [
     "Critère écrit et scellé avant toute analyse.",
     "Variables obligatoires listées exhaustivement, zéro imputation.",
     "Témoin apparié de même complexité ET de même structure statistique.",
     "Résultat technique n'est pas verdict scientifique.",
-    "Aucun verdict ne contamine un autre protocole ni une autre branche."
+    "Aucun verdict ne contamine un autre protocole ni une autre branche.",
+    "Tout critere sur serie temporelle exige un surrogat AAFT ou IAAFT, avec nombre, graine et percentile fixes avant execution. A defaut : non executable, temoin insuffisant."
   ],
   "lecon_wp_clim_mem_2026": "Un témoin de même complexité ne suffit pas. Sur une série autocorrélée, permuter détruit la structure en plus de la correspondance, et le test devient trivialement positif. Tout critère portant sur une série temporelle doit exiger un surrogat préservant le spectre d'autocorrélation.",
   "criteres": [
     {
-      "id": "C-MEM-01", "levier": "memoire_climatique",
+      "id": "C-MEM-01",
+      "levier": "memoire_climatique",
       "enonce": "Sous forçage insolation final identique et prolongé, l'écart entre deux histoires initiales converge avec tau < 20 ka, significativement plus vite que sous témoin.",
-      "variables_obligatoires": ["age_ka_bp", "insolation_65N_jul_Wm2", "temp_anomaly_C", "ice_volume_total_sle"],
+      "variables_obligatoires": [
+        "age_ka_bp",
+        "insolation_65N_jul_Wm2",
+        "temp_anomaly_C",
+        "ice_volume_total_sle"
+      ],
       "source_candidate": "data/processed/memoire_climatique_bintanja_insolation.csv, 1070 lignes, complète",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat a phase randomisee AAFT, preservant l'autocorrelation",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier : tau doit etre estimable sur la duree disponible",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 3
     },
     {
-      "id": "C-MEM-02", "levier": "memoire_climatique",
+      "id": "C-MEM-02",
+      "levier": "memoire_climatique",
       "enonce": "Meme structure que C-MEM-01, forçage = CO2.",
-      "variables_obligatoires": ["age_ka_bp", "co2_ppm", "temp_anomaly_C", "compartiment_memoire"],
+      "variables_obligatoires": [
+        "age_ka_bp",
+        "co2_ppm",
+        "temp_anomaly_C",
+        "compartiment_memoire"
+      ],
       "source_candidate": "EPICA Dome C, edc-co2-2008.txt, deja dans le corpus",
       "statut_source": "presente_mais_a_joindre",
-      "temoin_exige": "surrogat AAFT",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier",
-      "blocage": "le CO2 EPICA et le compartiment Bintanja n'ont pas la meme chronologie : jointure a construire sans imputation"
+      "blocage": "le CO2 EPICA et le compartiment Bintanja n'ont pas la meme chronologie : jointure a construire sans imputation",
+      "force_du_temoin": 3
     },
     {
-      "id": "C-MEM-03", "levier": "memoire_climatique",
+      "id": "C-MEM-03",
+      "levier": "memoire_climatique",
       "enonce": "Meme structure, forçage = insolation et CO2 simultanes.",
-      "variables_obligatoires": ["age_ka_bp", "insolation_65N_jul_Wm2", "co2_ppm", "temp_anomaly_C", "compartiment_memoire"],
+      "variables_obligatoires": [
+        "age_ka_bp",
+        "insolation_65N_jul_Wm2",
+        "co2_ppm",
+        "temp_anomaly_C",
+        "compartiment_memoire"
+      ],
       "source_candidate": "jointure Bintanja + Berger + EPICA",
       "statut_source": "a_assembler",
-      "temoin_exige": "surrogat AAFT",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier",
-      "blocage": "depend de C-MEM-02"
+      "blocage": "depend de C-MEM-02",
+      "force_du_temoin": 3
     },
     {
-      "id": "C-MEM-04", "levier": "memoire_climatique",
+      "id": "C-MEM-04",
+      "levier": "memoire_climatique",
       "enonce": "Apres convergence sous forçage fort, retour au forçage faible : l'ecart residuel reste significatif apres 30 ka.",
-      "variables_obligatoires": ["age_ka_bp", "forcage", "compartiment_memoire"],
+      "variables_obligatoires": [
+        "age_ka_bp",
+        "forcage",
+        "compartiment_memoire"
+      ],
       "source_candidate": "identique a C-MEM-01",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat AAFT",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier : exige des episodes de retour au forçage faible assez longs",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 3
     },
     {
-      "id": "C-MEM-05", "levier": "memoire_climatique",
+      "id": "C-MEM-05",
+      "levier": "memoire_climatique",
       "enonce": "Le signal de memoire se degrade significativement quand le compartiment glace est retire, temperature seule.",
-      "variables_obligatoires": ["age_ka_bp", "insolation_65N_jul_Wm2", "temp_anomaly_C", "ice_volume_total_sle"],
+      "variables_obligatoires": [
+        "age_ka_bp",
+        "insolation_65N_jul_Wm2",
+        "temp_anomaly_C",
+        "ice_volume_total_sle"
+      ],
       "source_candidate": "identique a C-MEM-01",
       "statut_source": "assemblee_et_verifiee",
-      "temoin_exige": "surrogat AAFT sur chaque variante ablatee",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 3
     },
     {
-      "id": "C-MEM-06", "levier": "memoire_climatique",
+      "id": "C-MEM-06",
+      "levier": "memoire_climatique",
       "enonce": "Le verdict de C-MEM-01 a C-MEM-04 reste inchange sous deux chronologies independantes.",
-      "variables_obligatoires": ["deux chronologies publiees distinctes"],
+      "variables_obligatoires": [
+        "deux chronologies publiees distinctes"
+      ],
       "source_candidate": "LR04 present ; seconde chronologie a identifier",
       "statut_source": "incomplete",
-      "temoin_exige": "identique aux protocoles testes",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "a verifier",
-      "blocage": "une seule chronologie disponible ; Bintanja derive deja de LR04, donc non independante"
+      "blocage": "une seule chronologie disponible ; Bintanja derive deja de LR04, donc non independante",
+      "force_du_temoin": 3
     },
     {
-      "id": "C-VES-01", "levier": "vivant_vesicules",
+      "id": "C-VES-01",
+      "levier": "vivant_vesicules",
       "enonce": "Sur un jeu independant : correlation parent-descendant superieure au permute p<0,01, reponse a la selection significative contre derive, contraste d'ablation significatif, codage complet des lignees. Les quatre simultanement.",
-      "variables_obligatoires": ["id_lignee", "generation", "parent_vers_descendant", "phenotype", "condition_selection_vs_drift", "variable_architecture", "replicats"],
+      "variables_obligatoires": [
+        "id_lignee",
+        "generation",
+        "parent_vers_descendant",
+        "phenotype",
+        "condition_selection_vs_drift",
+        "variable_architecture",
+        "replicats"
+      ],
       "source_candidate": "aucune",
       "statut_source": "absente",
       "temoin_exige": "permutation intra-generation",
       "atteignabilite": "non evaluable sans source",
-      "blocage": "recherche du 8 aout : aucun jeu qualifiant. Voir 03_branche_vivant/lignees_vesicules/RECHERCHE_JEUX_INDEPENDANTS_2026-08-08.md"
+      "blocage": "recherche du 8 aout : aucun jeu qualifiant. Voir 03_branche_vivant/lignees_vesicules/RECHERCHE_JEUX_INDEPENDANTS_2026-08-08.md",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-VES-02", "levier": "vivant_vesicules",
+      "id": "C-VES-02",
+      "levier": "vivant_vesicules",
       "enonce": "Pente de regression parent vers descendant significativement positive et superieure au temoin de melange aleatoire.",
-      "variables_obligatoires": ["parent_vers_descendant", "phenotype"],
+      "variables_obligatoires": [
+        "parent_vers_descendant",
+        "phenotype"
+      ],
       "source_candidate": "Sokolskyi & Baum, deja integre",
       "statut_source": "presente",
       "temoin_exige": "melange aleatoire intra-generation",
       "atteignabilite": "favorable : 11760 couples",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-VES-03", "levier": "vivant_vesicules",
+      "id": "C-VES-03",
+      "levier": "vivant_vesicules",
       "enonce": "Le gain de selection chute significativement quand le transfert de vesicules intactes est empeche.",
-      "variables_obligatoires": ["condition_transfert", "phenotype", "id_lignee"],
+      "variables_obligatoires": [
+        "condition_transfert",
+        "phenotype",
+        "id_lignee"
+      ],
       "source_candidate": "Sokolskyi & Baum, bras FR FU UR UU",
       "statut_source": "presente",
       "temoin_exige": "bras apparie du meme jeu",
       "atteignabilite": "favorable",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-VES-04", "levier": "vivant_vesicules",
+      "id": "C-VES-04",
+      "levier": "vivant_vesicules",
       "enonce": "Supprimer une variable d'architecture degrade significativement au moins une des quatre composantes de C-VES-01.",
-      "variables_obligatoires": ["variable_architecture", "les quatre composantes"],
+      "variables_obligatoires": [
+        "variable_architecture",
+        "les quatre composantes"
+      ],
       "source_candidate": "Sokolskyi & Baum",
       "statut_source": "presente",
       "temoin_exige": "ablation appariee",
       "atteignabilite": "a verifier",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-VES-05", "levier": "vivant_vesicules",
+      "id": "C-VES-05",
+      "levier": "vivant_vesicules",
       "enonce": "Le contenu encapsule est transmis aux descendants a un taux significativement superieur au temoin d'echange libre.",
-      "variables_obligatoires": ["contenu_encapsule_mesure", "parent_vers_descendant", "temoin_echange_libre"],
+      "variables_obligatoires": [
+        "contenu_encapsule_mesure",
+        "parent_vers_descendant",
+        "temoin_echange_libre"
+      ],
       "source_candidate": "aucune",
       "statut_source": "absente",
       "temoin_exige": "echange libre",
       "atteignabilite": "non evaluable sans source",
-      "blocage": "aucun jeu public connu ne mesure la transmission de contenu encapsule par filiation"
+      "blocage": "aucun jeu public connu ne mesure la transmission de contenu encapsule par filiation",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ANT-01", "levier": "vivant_antibiotiques",
+      "id": "C-ANT-01",
+      "levier": "vivant_antibiotiques",
       "enonce": "RMSE(etat+histoire) inferieure a RMSE(etat seul) ET a RMSE(histoire permutee de meme complexite), p<0,01.",
-      "variables_obligatoires": ["souche", "ancetre", "limitation", "antibiotique", "MIC"],
+      "variables_obligatoires": [
+        "souche",
+        "ancetre",
+        "limitation",
+        "antibiotique",
+        "MIC"
+      ],
       "source_candidate": "D'Onofrio, Dryad 10.5061/dryad.1zcrjdg68, integre",
       "statut_source": "presente",
       "temoin_exige": "histoire permutee de meme complexite",
       "atteignabilite": "atteint : p = 0,004975 sur 200 permutations",
-      "blocage": "deja execute et positif ; reste a repliquer sur jeu independant"
+      "blocage": "deja execute et positif ; reste a repliquer sur jeu independant",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ANT-02", "levier": "vivant_antibiotiques",
+      "id": "C-ANT-02",
+      "levier": "vivant_antibiotiques",
       "enonce": "Meme critere que C-ANT-01 sur un jeu public distinct.",
-      "variables_obligatoires": ["identiques a C-ANT-01"],
+      "variables_obligatoires": [
+        "identiques a C-ANT-01"
+      ],
       "source_candidate": "aucune identifiee",
       "statut_source": "absente",
       "temoin_exige": "identique",
       "atteignabilite": "non evaluable sans source",
-      "blocage": "a chercher"
+      "blocage": "a chercher",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ANT-03", "levier": "vivant_antibiotiques",
+      "id": "C-ANT-03",
+      "levier": "vivant_antibiotiques",
       "enonce": "Le gain d'histoire reste significatif sous bootstrap groupe par lignee.",
-      "variables_obligatoires": ["identiques a C-ANT-01", "identifiant de groupe"],
+      "variables_obligatoires": [
+        "identiques a C-ANT-01",
+        "identifiant de groupe"
+      ],
       "source_candidate": "D'Onofrio",
       "statut_source": "presente",
       "temoin_exige": "bootstrap groupe",
       "atteignabilite": "a verifier",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ANT-04", "levier": "vivant_antibiotiques",
+      "id": "C-ANT-04",
+      "levier": "vivant_antibiotiques",
       "enonce": "Tout critere exigeant k plis favorables sur n avec puissance inferieure a 0,3 est declare indetermine par construction.",
-      "variables_obligatoires": ["nombre de plis", "taille d'effet"],
+      "variables_obligatoires": [
+        "nombre de plis",
+        "taille d'effet"
+      ],
       "source_candidate": "resultats existants",
       "statut_source": "presente",
       "temoin_exige": "sans objet",
       "atteignabilite": "meta-critere",
-      "blocage": "deja applique : benchmark longitudinal, puissance 0,109 et 0,212, declare indetermine"
+      "blocage": "deja applique : benchmark longitudinal, puissance 0,109 et 0,212, declare indetermine",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-01", "levier": "matiere",
+      "id": "C-MAT-01",
+      "levier": "matiere",
       "enonce": "Ajout d'une hyperarete documentee par source primaire rendant les 53 noeuds atteignables.",
-      "variables_obligatoires": ["source primaire demontrant que H052 produit N030 plutot que de l'exiger"],
+      "variables_obligatoires": [
+        "source primaire demontrant que H052 produit N030 plutot que de l'exiger"
+      ],
       "source_candidate": "S14 a relire ; Farough 2016 et Alexander 2026 a verifier en texte integral",
       "statut_source": "candidats_non_verifies",
       "temoin_exige": "sans objet, critere documentaire",
       "atteignabilite": "binaire : la source existe ou non",
-      "blocage": "voir fermeture_stricte/VERROU_H052_SPECIFICATION.md"
+      "blocage": "voir fermeture_stricte/VERROU_H052_SPECIFICATION.md",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-02", "levier": "matiere",
+      "id": "C-MAT-02",
+      "levier": "matiere",
       "enonce": "Retrait de chaque hyperarete incidente au noyau : chute mesuree du nombre de noeuds atteignables.",
-      "variables_obligatoires": ["hypergraphe canonique"],
+      "variables_obligatoires": [
+        "hypergraphe canonique"
+      ],
       "source_candidate": "hyperaretes.csv, noeuds.csv",
       "statut_source": "presente",
       "temoin_exige": "ablation unitaire systematique",
       "atteignabilite": "favorable : calcul deterministe",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-03", "levier": "matiere",
+      "id": "C-MAT-03",
+      "levier": "matiere",
       "enonce": "Le seuil critique de solides augmente monotonement avec la turbulence ; rapport extreme superieur ou egal a 2,0 et pente log-log significative.",
-      "variables_obligatoires": ["seuil critique publie", "parametre de turbulence", "au moins trois points"],
+      "variables_obligatoires": [
+        "seuil critique publie",
+        "parametre de turbulence",
+        "au moins trois points"
+      ],
       "source_candidate": "valeurs publiees deja integrees ; a etendre avec Youdin, Johansen, Carrera",
       "statut_source": "partielle",
       "temoin_exige": "relation sans effet directionnel",
       "atteignabilite": "deja atteint : rapport 3,33",
-      "blocage": "extension a d'autres sources pour robustesse"
+      "blocage": "extension a d'autres sources pour robustesse",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-04", "levier": "matiere",
+      "id": "C-MAT-04",
+      "levier": "matiere",
       "enonce": "Les D metal-silicate experimentaux predisent le rapport noyau/silicate pour C, H, N et si possible S, dans les bornes publiees, sans ajustement.",
-      "variables_obligatoires": ["element", "pression_gpa", "temperature_k", "delta_iw", "logD", "incertitude", "rapport de masses publie"],
+      "variables_obligatoires": [
+        "element",
+        "pression_gpa",
+        "temperature_k",
+        "delta_iw",
+        "logD",
+        "incertitude",
+        "rapport de masses publie"
+      ],
       "source_candidate": "partition_experiments.csv, 41 lignes dont 35 completes ; a etendre",
       "statut_source": "partielle",
       "temoin_exige": "prediction sans ajustement contre bornes publiees",
       "atteignabilite": "a verifier : 35 lignes completes peut etre insuffisant",
-      "blocage": "compilations Mann, Righter, Loroch a acquerir"
+      "blocage": "compilations Mann, Righter, Loroch a acquerir",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-05", "levier": "matiere",
+      "id": "C-MAT-05",
+      "levier": "matiere",
       "enonce": "Gain net d'information superieur a 0,4 bit apres permutation des labels, p<0,001.",
-      "variables_obligatoires": ["echelle des capacites", "labels"],
+      "variables_obligatoires": [
+        "echelle des capacites",
+        "labels"
+      ],
       "source_candidate": "hypergraphe canonique",
       "statut_source": "presente",
       "temoin_exige": "permutation des labels",
       "atteignabilite": "deja mesure : 0,595 bit, p = 5e-05",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-MAT-06", "levier": "matiere",
+      "id": "C-MAT-06",
+      "levier": "matiere",
       "enonce": "Le meme schema reproduit au moins deux trajectoires stellaires independantes avec ecart structurel sous seuil preenregistre.",
-      "variables_obligatoires": ["etapes et seuils de deux trajectoires"],
+      "variables_obligatoires": [
+        "etapes et seuils de deux trajectoires"
+      ],
       "source_candidate": "benchmark MESA 1 Msol et 12 Msol, transcrit",
       "statut_source": "presente",
       "temoin_exige": "seuil structurel preenregistre",
       "atteignabilite": "a verifier : le seuil n'est pas encore fixe",
-      "blocage": "seuil a preenregistrer avant toute lecture"
+      "blocage": "seuil a preenregistrer avant toute lecture",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-AST-01", "levier": "astronomie",
+      "id": "C-AST-01",
+      "levier": "astronomie",
       "enonce": "Effet interventionnel minimal superieur ou egal a 1000 fois les ecarts numeriques et au moins 12 criteres sur 15 reussis.",
-      "variables_obligatoires": ["sorties N-corps des 25 calculs", "acceptance_tests.csv"],
+      "variables_obligatoires": [
+        "sorties N-corps des 25 calculs",
+        "acceptance_tests.csv"
+      ],
       "source_candidate": "real_science_max, hydrate",
       "statut_source": "presente",
       "temoin_exige": "enveloppe de pas de temps et de representation initiale",
       "atteignabilite": "atteint : 13 sur 15, rapport minimal tres superieur a 1000",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-AST-02", "levier": "astronomie",
+      "id": "C-AST-02",
+      "levier": "astronomie",
       "enonce": "Meme jeu de criteres dans le modele etendu Terre-Lune et marees. Succes si au moins 10 criteres sur 15.",
-      "variables_obligatoires": ["modele N-corps etendu"],
+      "variables_obligatoires": [
+        "modele N-corps etendu"
+      ],
       "source_candidate": "a implementer",
       "statut_source": "absente",
       "temoin_exige": "identique a C-AST-01",
       "atteignabilite": "non evaluable avant implementation",
-      "blocage": "le modele etendu n'existe pas"
+      "blocage": "le modele etendu n'existe pas",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-AST-03", "levier": "astronomie",
+      "id": "C-AST-03",
+      "levier": "astronomie",
       "enonce": "Modifier un parametre architectural change significativement le volume de l'espace des trajectoires accessibles.",
-      "variables_obligatoires": ["mesure preenregistree de volume ou d'entropie", "partition declaree des classes"],
+      "variables_obligatoires": [
+        "mesure preenregistree de volume ou d'entropie",
+        "partition declaree des classes"
+      ],
       "source_candidate": "six interventions existantes",
       "statut_source": "partielle",
       "temoin_exige": "enveloppe numerique",
       "atteignabilite": "a verifier",
-      "blocage": "PACC_DEFINITION exige une partition declaree des classes, absente"
+      "blocage": "PACC_DEFINITION exige une partition declaree des classes, absente",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-AST-04", "levier": "astronomie",
+      "id": "C-AST-04",
+      "levier": "astronomie",
       "enonce": "Correlation d'excentricite avec La2010 superieure ou egale a 0,99 a 1 Ma et pic de 405 ka retrouve a plus ou moins 5 ka.",
-      "variables_obligatoires": ["serie d'excentricite N-corps", "La2010"],
+      "variables_obligatoires": [
+        "serie d'excentricite N-corps",
+        "La2010"
+      ],
       "source_candidate": "presente et hydratee",
       "statut_source": "presente",
       "temoin_exige": "solution independante",
       "atteignabilite": "atteint : 0,9973 et 408184 ans",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-AST-05", "levier": "astronomie",
+      "id": "C-AST-05",
+      "levier": "astronomie",
       "enonce": "Critere gele de WP-EXO-PACC-2026, a verifier a la date prevue sans ajustement.",
-      "variables_obligatoires": ["instantane posterieur au gel"],
+      "variables_obligatoires": [
+        "instantane posterieur au gel"
+      ],
       "source_candidate": "NASA Exoplanet Archive, requete TAP identique",
       "statut_source": "gelee",
       "temoin_exige": "appariement aleatoire inter-systemes",
       "atteignabilite": "puissance attendue 0,98 a 24 mois",
-      "blocage": "verification le 2028-08-07, pas avant"
+      "blocage": "verification le 2028-08-07, pas avant",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ROB-01", "levier": "robustesse",
+      "id": "C-ROB-01",
+      "levier": "robustesse",
       "enonce": "Un tiers independant, avec les memes empreintes, obtient le meme verdict.",
-      "variables_obligatoires": ["protocole scelle", "donnees", "code"],
+      "variables_obligatoires": [
+        "protocole scelle",
+        "donnees",
+        "code"
+      ],
       "source_candidate": "protocoles positifs existants",
       "statut_source": "presente",
       "temoin_exige": "sans objet",
       "atteignabilite": "depend d'un tiers",
-      "blocage": "aucun tiers sollicite"
+      "blocage": "aucun tiers sollicite",
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ROB-02", "levier": "robustesse",
+      "id": "C-ROB-02",
+      "levier": "robustesse",
       "enonce": "Supprimer une variable non critique ne fait pas basculer le verdict ; supprimer une variable critique le fait basculer.",
-      "variables_obligatoires": ["jeu du protocole teste"],
+      "variables_obligatoires": [
+        "jeu du protocole teste"
+      ],
       "source_candidate": "D'Onofrio, vesicules",
       "statut_source": "presente",
       "temoin_exige": "ablation unitaire",
       "atteignabilite": "favorable",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ROB-03", "levier": "robustesse",
+      "id": "C-ROB-03",
+      "levier": "robustesse",
       "enonce": "Le signal disparait sous permutation de l'histoire ou des labels.",
-      "variables_obligatoires": ["jeu du protocole teste"],
+      "variables_obligatoires": [
+        "jeu du protocole teste"
+      ],
       "source_candidate": "protocoles positifs",
       "statut_source": "presente",
-      "temoin_exige": "permutation, et surrogat preservant l'autocorrelation si serie temporelle",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "favorable",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 3
     },
     {
-      "id": "C-ROB-04", "levier": "robustesse",
+      "id": "C-ROB-04",
+      "levier": "robustesse",
       "enonce": "Le verdict reste stable sous 50 pour cent de sous-echantillonnage, 100 tirages.",
-      "variables_obligatoires": ["jeu du protocole teste"],
+      "variables_obligatoires": [
+        "jeu du protocole teste"
+      ],
       "source_candidate": "protocoles positifs",
       "statut_source": "presente",
       "temoin_exige": "sans objet",
       "atteignabilite": "favorable",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-ROB-05", "levier": "robustesse",
+      "id": "C-ROB-05",
+      "levier": "robustesse",
       "enonce": "Le verdict reste inchange sous au moins deux resolutions temporelles ou spatiales.",
-      "variables_obligatoires": ["jeu a deux resolutions"],
+      "variables_obligatoires": [
+        "jeu a deux resolutions"
+      ],
       "source_candidate": "Bintanja disponible a 0,1 et 1 ka",
       "statut_source": "presente",
-      "temoin_exige": "identique au protocole teste",
+      "temoin_exige": "surrogat IAAFT, nombre et graine et percentile fixes avant execution",
       "atteignabilite": "favorable",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 3
     },
     {
-      "id": "C-META-01", "levier": "meta",
+      "id": "C-META-01",
+      "levier": "meta",
       "enonce": "Avant execution, verifier que le critere n'est pas inatteignable : puissance inferieure a 0,3 ou seuil hors du domaine des donnees. Si inatteignable, indetermine et non compte comme echec.",
-      "variables_obligatoires": ["taille d'echantillon", "taille d'effet supposee", "seuil"],
+      "variables_obligatoires": [
+        "taille d'echantillon",
+        "taille d'effet supposee",
+        "seuil"
+      ],
       "source_candidate": "scripts/auditer_atteignabilite_criteres.py",
       "statut_source": "outil_present",
       "temoin_exige": "sans objet",
       "atteignabilite": "meta-critere",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-META-02", "levier": "meta",
+      "id": "C-META-02",
+      "levier": "meta",
       "enonce": "Toute variable manquante ou source incomplete provoque un blocage automatique, jamais un succes par defaut.",
-      "variables_obligatoires": ["EMPIRICAL_POLICY.json"],
+      "variables_obligatoires": [
+        "EMPIRICAL_POLICY.json"
+      ],
       "source_candidate": "fail_closed_v2, en place",
       "statut_source": "outil_present",
       "temoin_exige": "sans objet",
       "atteignabilite": "meta-critere",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     },
     {
-      "id": "C-META-03", "levier": "meta",
+      "id": "C-META-03",
+      "levier": "meta",
       "enonce": "Aucun verdict ne peut servir a inferer le resultat d'un autre protocole ni d'une autre branche.",
-      "variables_obligatoires": ["sans objet"],
+      "variables_obligatoires": [
+        "sans objet"
+      ],
       "source_candidate": "AUTORITE_DES_DOCUMENTS.md, regle 1",
       "statut_source": "outil_present",
       "temoin_exige": "sans objet",
       "atteignabilite": "meta-critere",
-      "blocage": null
+      "blocage": null,
+      "force_du_temoin": 1
     }
+  ],
+  "hierarchie_force_des_temoins": [
+    "1 permutation naive — insuffisant pour serie temporelle",
+    "2 randomisation de phase de Fourier",
+    "3 AAFT / IAAFT — minimum acceptable pour serie autocorrelee",
+    "4 surrogats preservant en plus des statistiques d'ordre superieur",
+    "5 temoin experimental independant"
   ]
 }

@@ -33,6 +33,20 @@ ci-dessous.
 
 1 quater. **La matrice des 683 est un diagnostic de couverture, pas une source de preuves.** Ses 626 blocages ne traduisent pas un manque de données. Le relevé des `coverage_gaps` donne 320 entrées (51,1 %) en `test_hors_portee_mesuree` — la table est réelle mais ne porte pas les variables exactes du test —, 243 (38,8 %) en `non_admissible_comme_preuve_empirique` — sorties de modèle, éphémérides, compilations documentaires, benchmarks dérivés —, et 63 (10,1 %) sans jeu empirique déclaré. Aucun rapport ne doit présenter ce compteur comme une mesure de l’avancement scientifique, ni chercher à le faire monter en ajoutant des tables.
 
+1 quinquies. **Un verdict n’est accepté que si son témoin est au moins aussi fort que le signal testé.** Hiérarchie de force, par ordre croissant :
+
+| niveau | témoin | usage |
+|---|---|---|
+| 1 | permutation naïve, mélange | **insuffisant pour toute série temporelle** |
+| 2 | randomisation de phase de Fourier | acceptable si la distribution importe peu |
+| 3 | **AAFT / IAAFT** | minimum acceptable pour une série autocorrélée |
+| 4 | surrogats préservant en plus des statistiques d’ordre supérieur ou des contraintes physiques | recommandé |
+| 5 | témoin expérimental indépendant : réplication externe, jeu distinct, ablation physique | niveau le plus fort |
+
+Tout critère portant sur une série temporelle qui ne spécifie pas explicitement le type de surrogat, leur nombre, la graine et le percentile de décision **avant exécution** est bloqué. `scripts/surrogats.py` fournit AAFT et IAAFT, et mesure ce qu’ils préservent.
+
+Le précédent est `WP-CLIM-MEM-2026` : son témoin permuté ramenait une autocorrélation de +0,450 à +0,013, produisait un gain apparent de 34,5 % avec p nul, et le protocole a été clos sur `invalide`. Son successeur `WP-CLIM-MEM-2026-B`, avec témoin IAAFT, conclut `soutient` — mais sur une hypothèse plus étroite, et cette portée est inscrite dans son résultat.
+
 **Règle d’or pour tout nouveau résultat.** Les avancées viennent des pipelines ciblés, jamais de la matrice générique. L’ordre est contraignant et ne se réarrange pas :
 
 1. écrire le critère exact et la liste des variables obligatoires ;
@@ -45,7 +59,7 @@ Intégrer d’abord et chercher ensuite ce que la donnée permet de tester produ
 3. `MISE_A_JOUR_RECHERCHE.md` et les fichiers machine de `campagne_recherche_suivante/` priment sur les synthèses antérieures lorsqu’ils décrivent D’Onofrio, les vésicules, H011, `Pacc` ou les spéléothèmes.
 4. Une campagne historique reste autorité sur son propre calcul, mais pas sur l’état courant global du dépôt.
 5. Toute mise à jour part de la dernière archive ou du dernier commit validé. Les tests susceptibles de régénérer des résultats sont exécutés avant la construction des manifestes.
-6. `MANIFEST.sha256` et `MANIFEST.sha256.json` sont toujours reconstruits en dernier, puis contrôlés avec `build_manifest.py verify`, `verifier_dossier.py` et `scripts/verifier_fins_de_ligne.py`. Ce dernier est indispensable : `verifier_dossier.py` compare le manifeste à la copie de travail et ne peut donc pas voir qu’un fichier écrit en CRLF sera restitué en LF au clonage. Sans lui, le contrôle passe en local et échoue après le `push`.
+6. Le dépôt porte **trois** manifestes : la racine, `02_branche_systeme_solaire/couche_memoire_historique/` et `plan_directeur/revue_systematique/`. Chacun gouverne son périmètre et **tous** doivent être reconstruits avant un push, le manifeste racine en dernier puisqu'il hache les deux autres. Le contrôle unique est `scripts/controle_avant_push.py`, qui croise l'index Git avec les trois manifestes puis enchaîne `verifier_dossier.py` et `scripts/verifier_fins_de_ligne.py`. Ce dernier est indispensable : `verifier_dossier.py` compare le manifeste à la copie de travail et ne peut donc pas voir qu’un fichier écrit en CRLF sera restitué en LF au clonage. Sans lui, le contrôle passe en local et échoue après le `push`. Le 8 août 2026, cinq étapes de trois workflows ont échoué pour une seule cause : `scripts/surrogats.py` poussé hors du manifeste racine et neuf fichiers importés dans la couche mémoire hors de son manifeste local. Aucun contrôle ne croisait alors l'index Git avec les manifestes de sous-périmètre.
 7. Une livraison de correction contient uniquement les fichiers modifiés et les suppressions explicitement demandées. Les données tierces brutes exclues ne doivent jamais être réintroduites.
 8. Le contrôle de publication doit refuser les formulations périmées qui décrivent les vésicules ou D’Onofrio comme encore en attente.
 

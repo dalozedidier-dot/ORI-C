@@ -47,8 +47,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 9404,
-      "sha256": "c1e0c41bfc4946956d8cf6e48cc80b52ff65441a4fecc178d20f552d3b6a0d5d",
+      "size": 9452,
+      "sha256": "1b40659e33a172e33947c75532bc5ead179172ffe58f184f6bf7a93525df2866",
       "storage": "inline"
     },
     {
@@ -3160,9 +3160,21 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/GEL_B.json",
+      "size": 1212,
+      "sha256": "af5ce78b51609d93a5623038c0b55fa1883fd1ea6ea3de1a9ebbeb883bee7c96",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/PROTOCOLE.md",
       "size": 4637,
       "sha256": "194ebe2fac18d546170892bcacc7cd4776ce626b91bf7083a94007ed66a2188c",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/PROTOCOLE_B.md",
+      "size": 4089,
+      "sha256": "1103b93fd419f62fa6e21db20e741f031054e02f0a9a9ba886848546875dc720",
       "storage": "inline"
     },
     {
@@ -3172,9 +3184,21 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/RESULTAT_B.json",
+      "size": 1632,
+      "sha256": "4b8859632eecfd7372f283144af4cad7f5fea4c39f1a11c6edcb9f79c2a82170",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/executer.py",
       "size": 7415,
       "sha256": "abdc3c228311b73198b80538b85b9ae68052fd71890439d5ac63908c7a2b444e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/executer_b.py",
+      "size": 6344,
+      "sha256": "56e0be83f1eb8701050a89ce59bbd13262e9aee1a46934bfcb41dc573e1fce4e",
       "storage": "inline"
     },
     {
@@ -4373,8 +4397,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 20896,
-      "sha256": "0843d1aace61f999e0a8a804ffbc48b97afb7164dc9223847030f2e7992074aa",
+      "size": 22827,
+      "sha256": "dd7482fdea959c18186f6020a4caed713a52f34b93ae87edd6873b3add51d5e0",
       "storage": "inline"
     },
     {
@@ -4439,8 +4463,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 34918,
-      "sha256": "e76c8e628958e37e7bf7796f64884122429ec7e093fec324c67e1b95b3599460",
+      "size": 37244,
+      "sha256": "74f4cb27471020ce989ddf886b1c384ca802f29ddf2f476b9dec810439436fea",
       "storage": "inline"
     },
     {
@@ -5183,8 +5207,8 @@
     },
     {
       "path": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
-      "size": 19015,
-      "sha256": "c59bf749bbfa6ec41ffa777efe0cfb13afb5c11d288921a726d085f2b3081029",
+      "size": 21906,
+      "sha256": "78c6ebf302d671a21be9ff887d7643bff350076beb13f1eda206f6a5e6428d09",
       "storage": "inline"
     },
     {
@@ -7576,9 +7600,21 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/controle_avant_push.py",
+      "size": 7006,
+      "sha256": "c4eecf8ee56e39f5092e8a47fa94d87c777912e25fb2606e8d0e03a91099fb78",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/importer_bundle_donnees_reelles.py",
       "size": 3061,
       "sha256": "c3ea2683ee08191f97e46f60a1805bc14141583cd1ba4b442b54bf9a8b093eab",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/surrogats.py",
+      "size": 6160,
+      "sha256": "bd4fb7eb39c0dfda18c123392a0c4ce9f8cf51c293a0b9784f2cdf89f161561d",
       "storage": "inline"
     },
     {

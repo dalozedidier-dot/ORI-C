@@ -1,0 +1,25 @@
+{
+  "protocol_id": "WP-CLIM-MEM-2026-B",
+  "gele_le": "2026-08-08",
+  "predecesseur": "WP-CLIM-MEM-2026, clos sur invalide",
+  "blocs_utilises": 10,
+  "embargo_ka": 40,
+  "rmse_etat_seul": 24.54404851952814,
+  "rmse_etat_plus_histoire": 16.112300096396236,
+  "temoin_iaaft": {
+    "surrogats": 500,
+    "rmse_moyenne": 23.707853871427503,
+    "rmse_percentile_5": 21.534845738003796,
+    "rmse_minimale": 18.944708195759453
+  },
+  "p_unilaterale": 0.0,
+  "alpha": 0.05,
+  "verdict": "soutient",
+  "motif": "les deux conditions de la règle sont remplies",
+  "statut_epistemique": "Sources dérivées de modèle. Verdict sur une reconstruction, pas une preuve empirique primaire.",
+  "portee_exacte": {
+    "ce_que_le_verdict_etablit": "Le volume de glace a l'instant t est predictible depuis ses valeurs a -10, -20 et -40 ka au-dela de ce que donne le forcage courant, et au-dela de ce que donnent 500 series de meme spectre et de meme distribution decouplees de cette realisation. La RMSE observee, 16,112, est inferieure au minimum des 500 surrogats, 18,945.",
+    "ce_que_le_verdict_n_etablit_pas": "Que l'architecture du systeme contraigne les trajectoires accessibles. Le test montre que le systeme climatique a une memoire, ce qui est etabli par ailleurs. Il ne distingue pas une inscription historique durable d'une simple persistance autoregressive. Un temoin de niveau superieur — modele autoregressif ajuste sur la cible elle-meme — serait necessaire pour cette distinction, et il n'a pas ete gele ici.",
+    "niveau_de_preuve": "verdict sur reconstruction, temoin de niveau 3 sur 5 dans la hierarchie de force"
+  }
+}
