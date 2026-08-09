@@ -21,7 +21,7 @@ Une ligne par système et par instant, renseignant les six dimensions du
 
 | Bloc | Données | Exemple |
 |---|---|---|
-| **Identification** | système, échelle, lieu, date, régime | cellule, planète, minéral, population |
+| **Identification** | système, échelle `ℓ`, lieu, date, régime, niveau de description | cellule, planète, minéral, population |
 | **Composition** `n` | constituants, abondances, concentrations, isotopes | Fe, Si, eau, gènes, espèces chimiques |
 | **Configuration** `G` | organisation spatiale, compartiments, topologie | noyau-manteau, réseau métabolique, orbites |
 | **Interactions** `I` | liaisons, réactions, transferts, couplages | réactions, gravitation, échanges de matière |
@@ -44,7 +44,7 @@ Histoire → Architecture → Contraintes → Réponse → Inscription → Possi
 | Seuil | valeur à laquelle le régime change |
 | Inscription | modification persistante **après retrait** de la contrainte |
 | État final | architecture après stabilisation |
-| Possibilités futures | états encore accessibles |
+| Possibilités futures | domaines `P^adm`, `P^att`, `P^kin`, `P^pers` et réalisation `R` |
 
 La vitesse de variation et le retrait de la contrainte sont les deux colonnes
 le plus souvent omises. Sans la première, un seuil n'est pas défini ; sans la
@@ -95,6 +95,11 @@ récupération, fréquence des effondrements, capacité de renouvellement.
 > long. **La fenêtre d'observation doit être longue devant toutes les
 > constantes de temps du système.**
 
+La mesure doit déclarer l'observable `O`, la fenêtre `W`, la fonction
+`P_pers^ℓ`, le seuil `Π*_(O,W)` et l'échelle `ℓ`. Le verdict porte alors sur
+`Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W]`, pas sur une persistance universelle. Une
+trace est pertinente pour la suite testée seulement si `Π_pers,t^ℓ ≥ Π*_(O,W)`.
+
 ### Transformation des possibles
 
 La variable la plus importante du cadre, et la moins souvent mesurée. Avant et
@@ -111,10 +116,34 @@ après chaque transition :
 L'avant-dernière ligne correspond au terme `ΔF` de la signature de transition.
 C'est celle qui manquait à la carte relationnelle.
 
-> **Deux domaines, pas un.** Distinguer les possibles théoriques `Pth` des
-> possibles atteignables `Pacc(T, C, ε)`, et **déclarer l'horizon `T`, les
-> contraintes `C` et le seuil de probabilité `ε`**. Sans ces trois paramètres,
-> « accessible » n'est pas une quantité vérifiable. Voir `CODEBOOK.md` §13.3.
+> **Quatre domaines, pas un.** Distinguer les possibles admissibles `P^adm`,
+> atteignables depuis l'état présent `P^att`, cinétiquement accessibles
+> `P^kin(T, C, ε)` et suffisamment persistants `P^pers`. Déclarer l'échelle
+> `ℓ`, le générateur `𝒢^ℓ`, l'horizon `T`, les contraintes `C`, le seuil de
+> probabilité `ε` et le critère de persistance. La réalisation `R` doit rester
+> séparée de ces quatre ensembles. Voir `CODEBOOK.md` §13.3 et §13.5.
+
+### Même état apparent, histoires différentes
+
+Le test transversal de mémoire compare deux unités `A` et `B` telles que
+`S_t,macro^A ≃ S_t,macro^B`, tout en mesurant une différence de trace à une
+échelle plus fine, `m_t,micro^A ≠ m_t,micro^B`. Sous un stimulus final commun,
+la prédiction ORI-C testable est `R_t+1^A ≠ R_t+1^B`. L'appariement
+macroscopique, la mesure microscopique et l'identité du stimulus doivent être
+publiés séparément.
+
+L'ablation renforce l'inférence causale : si l'opération physique met la trace
+pertinente à zéro, la différence de réponse doit disparaître dans la tolérance
+préenregistrée. Il faut tester les deux flèches `H_t → m_t^ℓ` puis
+`m_t^ℓ → R_t+1`, et non une corrélation globale entre histoire et réponse.
+
+### Provenance épistémique
+
+Pour chaque variable de la chaîne, enregistrer le statut `imposé`, `mesuré`,
+`calculé` ou `reconstruit`, ainsi que les données `D` et le modèle `M` utilisés.
+Les grandeurs reconstruites prennent un chapeau dans les rapports (`Ĥ`, `m̂`,
+`P̂`). Une trajectoire physique et son estimation ne doivent jamais occuper la
+même colonne sans ce qualificatif.
 
 ## 4. Données temporelles
 

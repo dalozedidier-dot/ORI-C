@@ -52,6 +52,20 @@ Forme générale, valable dans les trois branches :
 F_t → θ_eff → Σ_t → B_t → O_t → Π_t → H_t → m_t → P_t^(s)
 ```
 
+La forme historique développée rend explicites l'échelle et les filtres qui
+séparent une possibilité abstraite d'une réalisation :
+
+```text
+H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P_t,ℓ^adm → P_t,ℓ^att
+    → P_t,ℓ^kin → P_t,ℓ^pers → R_t+1 → H_t+1 → m_t+1^ℓ
+```
+
+`P_t^(s)` reste une notation générique ; les quatre valeurs physiques de `s`
+sont définies au §13.3. `R_t+1` n'est pas une cinquième classe de possibles :
+c'est l'état ou la trajectoire effectivement réalisé. La chaîne reste un
+schéma d'organisation tant que chaque flèche n'est pas associée à une mesure,
+un modèle et un témoin.
+
 Forme condensée, celle qui sert de fil conducteur :
 
 ```text
@@ -340,7 +354,7 @@ sur une échelle unique ; c'est un changement de mode de continuité.
 Cette section est un **apport du socle**, extrait de l'article d'application
 `../02_branche_systeme_solaire/application_climat/Le_climat_comme_architecture_historique_ORI-C.docx`.
 
-Elle ne contient rien de climatique. Le climat est le domaine où ces cinq
+Elle ne contient rien de climatique. Le climat est le domaine où ces
 distinctions ont d'abord été formulées et où elles correspondent à des
 quantités mesurées ; elles s'appliquent aux trois branches. Tout ce qui touche
 à l'océan, à la cryosphère, au pergélisol, aux forêts, à l'AMOC, à l'engagement
@@ -356,6 +370,20 @@ et les constantes de temps diffèrent :
 ```text
 m(t) = [m₁, m₂, …, m_k]
 ```
+
+Toute mémoire est relative à un niveau de description `ℓ` :
+
+```text
+m_t^ℓ = trace matérielle présente, à l'échelle ℓ, produite par H_t
+Z_t^ℓ = (S_t^ℓ, m_t^ℓ)
+```
+
+Une description réduite par `S_t^ℓ` peut présenter une dépendance explicite au
+passé sans que le système complet soit intrinsèquement non markovien. Si les
+variables internes pertinentes ont été identifiées, l'état augmenté `Z_t^ℓ`
+peut suffire à prévoir la suite. Aimantation rémanente, densité de dislocations,
+fraction de phase métastable et état structural d'un verre sont des
+instanciations possibles de `m_t^ℓ`, jamais des synonymes universels.
 
 En approximation linéaire, chaque composante est la convolution d'un forçage
 passé avec un noyau propre, qui décrit la vitesse d'inscription **et**
@@ -415,34 +443,45 @@ l'architecture, non la durée de la trace. La signature caractérise la nature
 d'un changement ; `D-H-L` caractérise la récupérabilité d'une inscription. Les
 deux sont complémentaires et ne se substituent pas l'une à l'autre.
 
-### 13.3 `Pth` et `Pacc` — deux domaines de possibles, pas un
+### 13.3 Hiérarchie des possibles à une échelle donnée
 
 La chaîne du §3 se termine par « possibilités futures ». Ce terme recouvrait
-deux choses distinctes, qu'il faut désormais séparer :
+plusieurs filtres distincts. À l'échelle `ℓ`, on écrit :
 
 ```text
-Pth              possibles théoriques, compatibles avec les lois
-Pacc(T, C, ε)    possibles atteignables avant l'horizon T, sous les
-                 contraintes et ressources C, avec une probabilité ≥ ε
+P_t,ℓ^adm ⊇ P_t,ℓ^att ⊇ P_t,ℓ^kin ⊇ P_t,ℓ^pers
 ```
 
-`ε` doit être **déclaré**. Sans lui, « accessible » n'a pas de contenu
-vérifiable.
+| Domaine | Définition opératoire |
+|---|---|
+| `P_t,ℓ^adm` | états ou trajectoires compatibles avec les lois et les contraintes déclarées |
+| `P_t,ℓ^att` | sous-ensemble atteignable depuis `Z_t^ℓ` sous le générateur `𝒢^ℓ` |
+| `P_t,ℓ^kin` | sous-ensemble atteignable avant l'horizon `T`, avec les vitesses, ressources et barrières disponibles |
+| `P_t,ℓ^pers` | sous-ensemble dont la réalisation laisserait une trace au-dessus du critère de persistance déclaré |
+
+La notation historique est conservée par correspondance : `Pth = P^adm` et
+`Pacc(T, C, ε) = P^kin` lorsque `C` contient l'état initial, les ressources et
+le générateur. `Pacc` ne doit plus être employé seul lorsqu'il importe de
+séparer atteignabilité dynamique, accessibilité cinétique et persistance.
+
+`T`, `C`, `ε`, `ℓ` et `𝒢^ℓ` doivent être **déclarés**. Sans eux, « accessible »
+n'a pas de contenu vérifiable. Le générateur est noté `𝒢` afin de ne pas le
+confondre avec la configuration `G` des six dimensions.
 
 Les quatre régimes d'inscription s'écrivent alors sans ambiguïté, `O*` désignant
 l'organisation antérieure :
 
 | Régime | Écriture |
 |---|---|
-| Réversible | `O* ∈ Pacc(T, C, ε)` |
-| Hystérétique | `O* ∈ Pacc`, mais `B_retour ≠ B_basculement` |
-| Structurel récupérable | `O* ∉ Pacc(A(t), m(t))`, mais `O* ∈ Pacc(R(A(t)), R(m(t)))` |
-| Structurel quasi irréversible | `O* ∉ Pacc(T, C, ε)` |
+| Réversible | `O* ∈ P_t,ℓ^kin(T, C, ε)` |
+| Hystérétique | `O* ∈ P_t,ℓ^kin`, mais `B_retour ≠ B_basculement` |
+| Structurel récupérable | `O* ∉ P_t,ℓ^kin(A(t), m(t))`, mais `O* ∈ P_t,ℓ^kin(R(A(t)), R(m(t)))` |
+| Structurel quasi irréversible | `O* ∉ P_t,ℓ^kin(T, C, ε)` |
 
 `R` est une opération de **restauration active** : le retour cesse d'être une
 relaxation spontanée et devient une reconstruction, avec son propre coût.
 
-Une organisation peut rester dans `Pth` en étant sortie de `Pacc`. Un
+Une organisation peut rester dans `P^adm` en étant sortie de `P^kin`. Un
 constituant dont l'information reproductive a disparu du système sort des deux.
 « Quasi irréversible » est toujours relatif à `T` : l'horizon doit être écrit.
 
@@ -452,13 +491,13 @@ L'écriture usuelle `X(t+1) = F(X(t), U(t))` laisse `F` inchangée. Le cadre
 ORI-C affirme précisément le contraire. Il faut donc trois lois couplées :
 
 ```text
-X(t+1)  = F[A(t)](X(t), U(t), m(t), ξ(t))
-mᵢ(t+1) = Gᵢ(m(t), X(t), A(t), U(t), ξ(t))
-A(t+1)  = Q(A(t), m(t), X(t), U(t), ξ(t))
-Pacc(t+1; T, C, ε) = P(A(t+1), m(t+1), C(t+1), ε)
+S_t+1^ℓ  = F^ℓ[A_t^ℓ](S_t^ℓ, U_t^ℓ, m_t^ℓ, ξ_t^ℓ)
+m_t+1^ℓ  = 𝒢_m^ℓ(m_t^ℓ, S_t^ℓ, A_t^ℓ, U_t^ℓ, ξ_t^ℓ)
+A_t+1^ℓ  = Q^ℓ(A_t^ℓ, m_t^ℓ, S_t^ℓ, U_t^ℓ, ξ_t^ℓ)
+P_t+1,ℓ^(s) = P^(s)(A_t+1^ℓ, m_t+1^ℓ, C_t+1^ℓ, T, ε)
 ```
 
-`X` est l'état présent, `m` les inscriptions héritées, `A` les composants,
+`S^ℓ` est l'état présent au niveau de description `ℓ`, `m^ℓ` les inscriptions héritées, `A^ℓ` les composants,
 relations et fonctions qui rendent la réponse possible, `U` les perturbations
 imposées, `ξ(t)` la variabilité interne et les événements rares. `ξ` est
 retenu parce que **l'ordre** des perturbations rares suffit à faire diverger
@@ -494,7 +533,24 @@ peut se contenter de déplacer l'état ; elle peut déformer les bassins ; elle
 peut supprimer des régimes. Ces trois cas sont différents et le §13.2 sert à
 les distinguer.
 
-### 13.5 Critère d'altération architecturale
+### 13.5 Mesure et seuil de persistance
+
+Le vecteur `Π^ℓ` du §4 décrit un **mode** de maintien. Dans une expérience
+donnée, sa composante testée doit être remplacée ou complétée par une grandeur
+scalaire mesurée :
+
+```text
+Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W]
+Π_pers,t^ℓ ≥ Π*_(O,W)  ⇒  inscription pertinente pour la suite testée
+```
+
+`O` désigne l'observable, `W` la fenêtre de mesure et `h_t` la trace candidate.
+Le seuil `Π*_(O,W)` n'est jamais universel. Il peut être une rémanence après
+retrait du champ, une modification durable du seuil d'écoulement, ou un écart
+d'enthalpie encore présent après un délai fixé. Une transformation réalisée
+mais effacée sous `W` ne rejoint pas `P^pers` pour ce test.
+
+### 13.6 Critère d'altération architecturale
 
 Une fonction de réponse peut varier continûment sans qu'aucune architecture
 soit altérée.
@@ -524,10 +580,28 @@ est une amputation.
 conséquences réversibles. C'est le passage d'un compartiment à un autre, décrit
 au §13.1, qui convertit la première en secondes.
 
-### 13.6 Ce que cette section ne fait pas
+### 13.7 Chaîne physique et chaîne de preuve
+
+La trajectoire du système et sa reconstruction à partir de données ne doivent
+pas partager la même notation :
+
+```text
+physique :    H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P^adm → P^att
+              → P^kin → P^pers → R_t+1
+épistémique : D + M → (Ĥ_t, m̂_t^ℓ, P̂_t,ℓ^(s), R̂_t+1)
+```
+
+`D` désigne les observations et `M` le modèle d'inférence. Le chapeau signifie
+« inféré » et non « directement observé ». Une expérience contrôlée, une
+reconstruction paléoclimatique, une trajectoire N-corps calculée et une
+proposition formelle peuvent ainsi contribuer au cadre sans recevoir le même
+mode de preuve. Toute instanciation doit qualifier séparément ce qui est imposé,
+mesuré, calculé et reconstruit.
+
+### 13.8 Ce que cette section ne fait pas
 
 Elle n'ajoute aucune quatrième branche et ne propage aucun niveau de preuve.
-Ces cinq distinctions sont des **définitions et des critères**, au même titre
+Ces distinctions sont des **définitions et des critères**, au même titre
 que les §6 à §8 : elles disent comment coder et comment vérifier, elles
 n'établissent aucun résultat. Leur instanciation sur un domaine réel, avec ses
 repères empiriques et ses niveaux de confiance, appartient à l'article
