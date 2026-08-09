@@ -174,14 +174,6 @@
       "famille": "reconstruction_de_surface"
     },
     {
-      "cle": "preconditionnement_electrolytes",
-      "fichiers_tabulaires": 419,
-      "groupes_dose_reponse": 0,
-      "verdict": "aucune_structure_dose_reponse_reperee",
-      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
-      "famille": "reconstruction_de_surface"
-    },
-    {
       "cle": "osl_sensibilisation_quartz",
       "fichiers_tabulaires": 14,
       "groupes_dose_reponse": 0,
@@ -204,14 +196,6 @@
       "verdict": "aucune_structure_dose_reponse_reperee",
       "motif": "1 série(s) dose-réponse trouvée(s), minimum 3",
       "famille": "transformation_martensitique"
-    },
-    {
-      "cle": "traces_fission_zircon",
-      "fichiers_tabulaires": 1,
-      "groupes_dose_reponse": 0,
-      "verdict": "aucune_structure_dose_reponse_reperee",
-      "motif": "0 série(s) dose-réponse trouvée(s), minimum 3",
-      "famille": "traces_de_fission"
     },
     {
       "cle": "inconel939_detensionnement",

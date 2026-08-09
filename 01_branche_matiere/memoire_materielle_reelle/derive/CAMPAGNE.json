@@ -12,21 +12,21 @@
       "etape": "extraction IODP",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.1,
+      "duree_s": 2.0,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.8,
+      "duree_s": 2.7,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 21.7,
+      "duree_s": 13.1,
       "obligatoire": true
     },
     {
@@ -54,14 +54,14 @@
       "etape": "reconstruction de surface",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.8,
+      "duree_s": 2.4,
       "obligatoire": true
     },
     {
       "etape": "balayage des sources restantes",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 206.4,
+      "duree_s": 111.3,
       "obligatoire": true
     }
   ],

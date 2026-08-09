@@ -23,6 +23,62 @@ API = "https://zenodo.org/api/records/{}"
 BLOC = 1 << 20
 TENTATIVES = 3
 
+# Un enregistrement Zenodo mêle souvent quelques tables exploitables et des
+# gigaoctets d'images ou de sorties de simulation. L'API donne la liste des
+# fichiers avant tout téléchargement : autant s'en servir. Le zircon annonce
+# 8,2 Go dont un seul fichier de 0,1 Mo est lu par un test.
+MOTIFS_ECARTES = (
+    "rawdata", "raw_data", "_raw", "hexrd", "tiff", "images",
+    "micrograph", "dft_", "_dft", "ebsd_maps", "sem_", "tem_",
+)
+EXTENSIONS_ECARTEES = {".tif", ".tiff", ".png", ".jpg", ".jpeg", ".bmp", ".emf",
+                       ".mp4", ".avi", ".cif", ".vasp", ".poscar"}
+
+# Au-delà de ce seuil, une archive n'est plus rapatriée : son index est lu à
+# distance et seuls les membres exploitables sont extraits par plage d'octets.
+SEUIL_ARCHIVE_DISTANTE = 50 << 20
+EXTENSIONS_UTILES = {".csv", ".txt", ".dat", ".tsv", ".asc", ".xlsx", ".xls",
+                     ".xlsm", ".ctf", ".ang", ".osc", ".xrdml", ".oim", ".md"}
+TAILLE_MEMBRE_MAXIMALE = 50 << 20
+
+
+def membre_utile(nom: str, taille: int, motifs: tuple) -> bool:
+    if Path(nom).suffix.lower() not in EXTENSIONS_UTILES:
+        return False
+    if taille > TAILLE_MEMBRE_MAXIMALE:
+        return False
+    minuscule = nom.lower()
+    return not any(motif in minuscule for motif in motifs)
+
+
+def moissonner_archive(url: str, destination: Path, motifs: tuple) -> tuple[int, int, int]:
+    """Extrait les membres utiles d'une archive distante. (membres, octets, total)."""
+    from zip_distant import membres, extraire
+    liste = membres(url)
+    total = sum(taille for _, taille, _ in liste)
+    voulus = [nom for nom, taille, _ in liste if membre_utile(nom, taille, motifs)]
+    if not voulus:
+        return 0, 0, total
+    contenus = extraire(url, voulus)
+    octets = 0
+    for nom, donnees in contenus.items():
+        cible = destination / nom
+        cible.parent.mkdir(parents=True, exist_ok=True)
+        cible.write_bytes(donnees)
+        octets += len(donnees)
+    return len(contenus), octets, total
+
+
+def a_ecarter(nom: str, taille: int, motifs: tuple) -> str | None:
+    """Motif d'exclusion, ou None si le fichier doit être téléchargé."""
+    minuscule = nom.lower()
+    if Path(nom).suffix.lower() in EXTENSIONS_ECARTEES:
+        return f"extension {Path(nom).suffix.lower()}"
+    for motif in motifs:
+        if motif in minuscule:
+            return f"nom contenant {motif!r}"
+    return None
+
 
 def racine_donnees(config: dict) -> Path:
     return (ICI / config["racine_locale"]).resolve()
@@ -101,7 +157,8 @@ def telecharger(url: str, destination: Path, taille_attendue: int) -> tuple[bool
     return False, "échec"
 
 
-def traiter(source: dict, racine: Path, plan_seulement: bool) -> dict:
+def traiter(source: dict, racine: Path, plan_seulement: bool,
+            tout: bool = False) -> dict:
     cle, record = source["cle"], source["record"]
     donnees = interroger(record)
     if donnees is None or "metadata" not in donnees:
@@ -116,10 +173,19 @@ def traiter(source: dict, racine: Path, plan_seulement: bool) -> dict:
     print(f"  {cle:<28} {len(fichiers_distants):>2} fichiers  {total / 1e6:>8.1f} Mo  "
           f"{licence}  {donnees.get('doi')}")
 
+    motifs = MOTIFS_ECARTES + tuple(source.get("ignorer", ()))
     entrees = []
+    ecartes = ecartes_octets = 0
     for distant in fichiers_distants:
         nom = distant.get("key")
         taille = distant.get("size", 0)
+        raison = None if tout else a_ecarter(nom, taille, motifs)
+        if raison:
+            ecartes += 1
+            ecartes_octets += taille
+            entrees.append({"nom_original": nom, "taille_annoncee": taille,
+                            "statut": f"écarté avant téléchargement : {raison}"})
+            continue
         url = (distant.get("links") or {}).get("self") or (
             f"https://zenodo.org/records/{record}/files/{nom}?download=1")
         destination = racine / cle / "raw" / nom
@@ -134,6 +200,24 @@ def traiter(source: dict, racine: Path, plan_seulement: bool) -> dict:
             entree["statut"] = "non téléchargé (mode plan)"
             entrees.append(entree)
             continue
+
+        if (not tout and nom.lower().endswith(".zip")
+                and taille > SEUIL_ARCHIVE_DISTANTE):
+            try:
+                n, octets, decompresse = moissonner_archive(
+                    url, racine / cle / "exploitable", motifs)
+                entree["statut"] = (f"archive lue à distance : {n} membre(s) "
+                                    f"extrait(s), {octets / 1e6:.1f} Mo")
+                entree["archive_distante"] = True
+                entree["octets_evites"] = max(taille - octets, 0)
+                ecartes_octets += entree["octets_evites"]
+                print(f"      distant  {n:>4} membre(s), {octets / 1e6:>8.1f} Mo "
+                      f"sur {taille / 1e6:.1f} Mo annoncés — {nom[:44]}")
+                entrees.append(entree)
+                continue
+            except Exception as erreur:
+                print(f"      lecture distante impossible ({type(erreur).__name__}), "
+                      f"rapatriement complet")
 
         reussi, detail = telecharger(url, destination, taille)
         entree["statut"] = detail
@@ -154,9 +238,15 @@ def traiter(source: dict, racine: Path, plan_seulement: bool) -> dict:
             print(f"      ÉCHEC  {nom[:58]}  {detail}")
         entrees.append(entree)
 
+    if ecartes:
+        print(f"      {ecartes} fichier(s) écarté(s) sans téléchargement, "
+              f"{ecartes_octets / 1e9:.2f} Go évités")
+
     return {
         "cle": cle,
         "record": record,
+        "fichiers_ecartes": ecartes,
+        "octets_evites": ecartes_octets,
         "doi": donnees.get("doi"),
         "titre": meta.get("title"),
         "version": meta.get("version") or donnees.get("revision"),
@@ -176,6 +266,8 @@ def main() -> int:
                            help="ne traiter que ces clés de SOURCES.json")
     analyseur.add_argument("--plan", action="store_true",
                            help="n'écrit aucun octet, montre seulement le volume")
+    analyseur.add_argument("--tout", action="store_true",
+                           help="télécharge aussi les images et sorties de simulation")
     arguments = analyseur.parse_args()
 
     config = json.loads(SOURCES.read_text(encoding="utf-8"))
@@ -193,8 +285,9 @@ def main() -> int:
     print(f"{len(sources)} source(s). raw/ n'est jamais transformé.")
     print()
 
-    rapports = [traiter(s, racine, arguments.plan) for s in sources]
+    rapports = [traiter(s, racine, arguments.plan, arguments.tout) for s in sources]
 
+    evites = sum(r.get("octets_evites", 0) for r in rapports)
     volume = sum(r.get("taille_totale_annoncee", 0) for r in rapports)
     recu = sum(f.get("taille_recue", 0) for r in rapports for f in r["fichiers"])
     # Une taille divergente est un échec. Ne pas la compter comme telle ferait
@@ -205,6 +298,8 @@ def main() -> int:
 
     print()
     print(f"Volume annoncé : {volume / 1e9:.2f} Go")
+    print(f"Écarté avant téléchargement : {evites / 1e9:.2f} Go")
+    print(f"À rapatrier    : {(volume - evites) / 1e9:.2f} Go")
     if not arguments.plan:
         print(f"Volume reçu    : {recu / 1e9:.2f} Go")
         print(f"Échecs         : {len(echecs)}")

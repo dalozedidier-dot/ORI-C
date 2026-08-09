@@ -1397,14 +1397,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/BALAYAGE_TOUTES_SOURCES.json",
-      "size": 7662,
-      "sha256": "0ad749b2a94d3a344d3289317538114d75736972da90fdf75dec0932e64ac757",
+      "size": 7086,
+      "sha256": "286c3364ff296cc269ffd2b634da0f282f73cd7150992a2ed5f72b6e59e50381",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
       "size": 3542,
-      "sha256": "bc5d41dd9f928b1aa5c1dacf046c2b4f666bb15448170da2ed41b3ed48be60e1",
+      "sha256": "8f0c66f263bbe510e83481a8c68e621e9f08109b999df187bd9e9374a027d86f",
       "storage": "inline"
     },
     {
@@ -1589,8 +1589,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/telecharger_toutes_sources.py",
-      "size": 10127,
-      "sha256": "922104790e24175e3b75cb5a8fe4a1884754994068eaf318f6e293513ebc6ded",
+      "size": 14544,
+      "sha256": "c965d5b3624d8bff4283e546c8e54f8e7b1bb50b09c1fac82ac750c1e264d7e6",
       "storage": "inline"
     },
     {
@@ -1615,6 +1615,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/verifier_sources.py",
       "size": 5038,
       "sha256": "c519368954158a6b1d39cb136d8851148675256de26f6a6649d4a01151bb975f",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/zip_distant.py",
+      "size": 3464,
+      "sha256": "b915086bf01a7bfd806d957d4e1499da7ccd6337fb7b5de63a49fdcfb545920a",
       "storage": "inline"
     },
     {
