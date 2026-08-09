@@ -45,7 +45,7 @@ sur 35 hypothèses enregistrées, les résultats réfutés et non concluants res
 | WP-C6 | 15 | 10 | **M2 non identifiable** |
 | WP-C7 | 10 | 5 | le signal manquant est la bande de 100 ka |
 | WP-T2 | 10 | 5 | 8 notions sur 15 traversent 2 branches |
-| WP-T4 | 6 | 3 | 3,75 concepts par résultat positif |
+| WP-T4 | 6 | 3 | 3,00 concepts par résultat positif |
 | WP-V1 | 10 | 4 | validateur de lignées vérifié |
 
 ## Les huit résultats qui comptent

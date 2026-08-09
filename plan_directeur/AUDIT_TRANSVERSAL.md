@@ -9,7 +9,7 @@ L'audit se calcule sur le dossier lui-même. Il cherche chaque notion du socle d
 | Notion | Branches où une mesure existe |
 |---|---:|
 | vecteur de persistance `Π` | **3** |
-| liens typés de la carte | **3** |
+| liens typés de la carte | **4** |
 | mémoire distribuée `m(t)` | **3** |
 | dépendance au chemin | **3** |
 | fenêtre longue devant les constantes de temps | **3** |
@@ -19,12 +19,12 @@ L'audit se calcule sur le dossier lui-même. Il cherche chaque notion du socle d
 | signature de transition `S` | 1 |
 | seuil et bifurcation | 1 |
 | diagnostic `D-H-L` | **0** |
-| `Pth` et `Pacc(T, C, ε)` | **0** |
+| `Pth` et `Pacc(T, C, ε)` | 1 |
 | séparation `X` / `m` / `A` | **0** |
 | critère d'altération architecturale | **0** |
 | **chaîne ORI-C** | **0** |
 
-**Huit notions sur quinze traversent au moins deux branches.** Cinq notions ne produisent aucune mesure dans les sorties générées examinées : la chaîne ORI-C, `D-H-L`, `Pth/Pacc`, la séparation `X/m/A` et le critère d'altération architecturale.
+**Huit notions sur quinze traversent au moins deux branches.** Quatre notions ne produisent aucune mesure dans les sorties générées examinées : la chaîne ORI-C, `D-H-L`, la séparation `X/m/A` et le critère d'altération architecturale. `Pth/Pacc` possède maintenant une mesure dans une branche, mais n'est pas encore transversal.
 
 ### Portée exacte du résultat
 
@@ -43,15 +43,15 @@ La chaîne présence → accessibilité → mobilisabilité possède désormais 
 | Quantité | Valeur |
 |---|---:|
 | Sections du CODEBOOK | 15 |
-| Sous-sections | 15 |
+| Sous-sections | 18 |
 | Codes de relation | 13 |
 | Hypothèses enregistrées | 35 |
-| Hypothèses à statut positif | **4** |
-| **Concepts par résultat positif** | **3,75** |
+| Hypothèses à statut positif | **5** |
+| **Concepts par résultat positif** | **3,00** |
 
-Les quatre statuts positifs comprennent un résultat *Validé dans le modèle réduit* et trois résultats *Établi*. Ce compteur décrit le registre interne. Il ne représente pas quatre validations scientifiques indépendantes du cadre général.
+Les cinq statuts positifs comprennent deux résultats *Validé dans le modèle réduit* et trois résultats *Établi*. Ce compteur décrit le registre interne. Il ne représente pas cinq validations scientifiques indépendantes du cadre général.
 
-**Le cadre introduit 3,75 concepts par résultat positif obtenu.** Onze hypothèses sont réfutées, cinq non concluantes, six non testées, une sans verdict et une non évaluée. Le rapport mesure l'avancement, pas la valeur intrinsèque du programme. Les résultats négatifs restent informatifs même s'ils ne figurent pas au numérateur.
+**Le cadre introduit 3,00 concepts par résultat positif obtenu.** Onze hypothèses sont réfutées, cinq non concluantes et plusieurs restent non testées, sans verdict ou non évaluées. Le rapport mesure l'avancement, pas la valeur intrinsèque du programme. Les résultats négatifs restent informatifs même s'ils ne figurent pas au numérateur.
 
 ## Items non couverts
 

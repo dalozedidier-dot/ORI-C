@@ -65,6 +65,12 @@ pas comptées comme contrôles négatifs physiques.
 
 ## Socle
 
+L'audit transversal distingue désormais quatre objets du cadre qui ne
+produisent encore **aucune mesure** dans les sorties générées : la chaîne ORI-C
+complète, le diagnostic `D-H-L`, la séparation `X/m/A` et le critère
+d'altération architecturale. Ils organisent le programme et ses futurs tests ;
+ils ne doivent pas être présentés comme des résultats empiriquement établis.
+
 | Élément | Statut | Où |
 |---|---|---|
 | Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
