@@ -61,7 +61,7 @@ Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient
 | Élément | Statut | Où |
 |---|---|---|
 | Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
-| Mémoire distribuée, `D-H-L`, hiérarchie `P^adm/P^att/P^kin/P^pers`, `S`/`m`/`A`, seuil de persistance, chaînes physique/épistémique | Définitions et critères, non preuve empirique | `00_socle/CODEBOOK.md` §13 |
+| Mémoire distribuée, `D-H-L`, filtres `P^adm/P^att/P^kin`, persistance vectorielle `P_pers/Π*/Q`, `S`/`m`/`A`, `ℓ_ana/{ℓ_phys}`, régimes `(D_i,G_i)`, raccords `T(i→j)`, mise à jour `U_i`, chaînes physique/épistémique | Définitions et critères, non preuve empirique | `00_socle/CODEBOOK.md` §13 |
 | Carte des 40 transitions, 47 relations | Cohérence structurelle vérifiée | `00_socle/carte_relationnelle/` |
 | Suite de tests de la carte | voir `ETAT_DES_TESTS.md` | `00_socle/tests/` |
 | Représentation des fermetures | attribut de nœud, 5 transitions ; `CLOS` et `INTG` définis, non instanciés | `ARCHITECTURE.md` |

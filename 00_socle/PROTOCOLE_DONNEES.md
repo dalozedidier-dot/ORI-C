@@ -21,7 +21,7 @@ Une ligne par système et par instant, renseignant les six dimensions du
 
 | Bloc | Données | Exemple |
 |---|---|---|
-| **Identification** | système, échelle `ℓ`, lieu, date, régime, niveau de description | cellule, planète, minéral, population |
+| **Identification** | système, échelle d'analyse `ℓ_ana`, échelles physiques pertinentes `{ℓ_phys}`, lieu, date, régime `(D_i,G_i)`, niveau de description | cellule, planète, minéral, population |
 | **Composition** `n` | constituants, abondances, concentrations, isotopes | Fe, Si, eau, gènes, espèces chimiques |
 | **Configuration** `G` | organisation spatiale, compartiments, topologie | noyau-manteau, réseau métabolique, orbites |
 | **Interactions** `I` | liaisons, réactions, transferts, couplages | réactions, gravitation, échanges de matière |
@@ -44,7 +44,9 @@ Histoire → Architecture → Contraintes → Réponse → Inscription → Possi
 | Seuil | valeur à laquelle le régime change |
 | Inscription | modification persistante **après retrait** de la contrainte |
 | État final | architecture après stabilisation |
-| Possibilités futures | domaines `P^adm`, `P^att`, `P^kin`, `P^pers` et réalisation `Réal` |
+| Possibilités futures | domaines `P^adm`, `P^att`, `P^kin`, critères `P_pers`, seuils `Π*`, règle `Q` et segment réalisé `h_i` |
+| Mise à jour | état `S(t1)` produit par `U_i[t0,t1;S(t0),h_i]` |
+| Changement de régime | validité de `D_i`, raccord éventuel `T(i→j)`, information conservée, abandonnée ou reconstruite |
 
 La vitesse de variation et le retrait de la contrainte sont les deux colonnes
 le plus souvent omises. Sans la première, un seuil n'est pas défini ; sans la
@@ -95,10 +97,16 @@ récupération, fréquence des effondrements, capacité de renouvellement.
 > long. **La fenêtre d'observation doit être longue devant toutes les
 > constantes de temps du système.**
 
-La mesure doit déclarer l'observable `O`, la fenêtre `W`, la fonction
-`P_pers^ℓ`, le seuil `Π*_(O,W)` et l'échelle `ℓ`. Le verdict porte alors sur
-`Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W]`, pas sur une persistance universelle. Une
-trace est pertinente pour la suite testée seulement si `Π_pers,t^ℓ ≥ Π*_(O,W)`.
+La mesure doit déclarer l'échelle d'analyse `ℓ_ana`, les échelles physiques
+pertinentes `{ℓ_phys}`, les composantes du vecteur
+`P_pers[h]=(P_1[h],...,P_n[h])`, leurs observables, fenêtres et unités, le
+vecteur de seuils `Π*` et la règle `Q`. Durée, abondance, flux transmis et
+rémanence ne doivent pas être additionnés sans adimensionnalisation explicite.
+
+La mesure historique `Π_pers,t^ℓ_ana = P_k[h_t;O,W]` est conservée pour une
+composante locale `k`. Son verdict ne porte que sur cette composante. Le verdict
+global de persistance porte sur `Q(P_pers[h],Π*)`, pas sur un scalaire
+universel.
 
 ### Transformation des possibles
 
@@ -116,26 +124,45 @@ après chaque transition :
 L'avant-dernière ligne correspond au terme `ΔF` de la signature de transition.
 C'est celle qui manquait à la carte relationnelle.
 
-> **Quatre domaines, pas un.** Distinguer les possibles admissibles `P^adm`,
-> atteignables depuis l'état présent `P^att`, cinétiquement accessibles
-> `P^kin(T, C, ε)` et suffisamment persistants `P^pers`. Déclarer l'échelle
-> `ℓ`, le générateur `𝒢^ℓ`, l'horizon `T`, les contraintes `C`, le seuil de
-> probabilité `ε` et le critère de persistance. La réalisation `R` doit rester
-> séparée de ces quatre ensembles. Voir `CODEBOOK.md` §13.3 et §13.5.
+> **Trois filtres puis une décision vectorielle.** Distinguer les possibles
+> admissibles `P^adm`, atteignables depuis l'état présent `P^att` et
+> cinétiquement accessibles `P^kin(T,C,ε)`. Déclarer `ℓ_ana`, les
+> `{ℓ_phys}` pertinentes, le régime `(D_i,G_i)`, l'horizon `T`, les contraintes
+> `C`, le seuil de probabilité `ε`, puis `P_pers`, `Π*` et `Q`. Le segment
+> réalisé `h_i` reste séparé de ces filtres et déclenche la mise à jour `U_i`.
+> Voir `CODEBOOK.md` §13.3 et §13.5.
+
+### Boucle de mise à jour et changement de régime
+
+Toute future instanciation complète doit enregistrer :
+
+1. l'état initial `S(t0)` et le domaine `D_i` qui le contient ;
+2. la dynamique `G_i` et les trajectoires considérées dans `Ω_Gi(S(t0))` ;
+3. le segment effectivement réalisé `h_i` ;
+4. l'opérateur `U_i` et l'état obtenu `S(t1)` ;
+5. le résultat de la réévaluation de `D_i` ;
+6. si nécessaire, le raccord `T(i→j)` et sa nature : matching/continuité ou
+   projection/coarse-graining ;
+7. les variables conservées, abandonnées et reconstruites par ce raccord.
+
+Ces champs sont recommandés pour les nouvelles instanciations mais ne sont pas
+ajoutés rétroactivement comme exigences aux tables expérimentales existantes.
 
 ### Même état apparent, histoires différentes
 
 Le test transversal de mémoire compare deux unités `A` et `B` telles que
 `S_t,macro^A ≃ S_t,macro^B`, tout en mesurant une différence de trace à une
 échelle plus fine, `m_t,micro^A ≠ m_t,micro^B`. Sous un stimulus final commun,
-la prédiction ORI-C testable est `Réal_t+1^A ≠ Réal_t+1^B`. L'appariement
+la prédiction ORI-C testable est que les segments réalisés ou états mis à jour
+diffèrent, `h_i^A ≠ h_i^B` ou `S^A(t1) ≠ S^B(t1)`. L'appariement
 macroscopique, la mesure microscopique et l'identité du stimulus doivent être
 publiés séparément.
 
 L'ablation renforce l'inférence causale : si l'opération physique met la trace
 pertinente à zéro, la différence de réponse doit disparaître dans la tolérance
-préenregistrée. Il faut tester les deux flèches `H_t → m_t^ℓ` puis
-`m_t^ℓ → Réal_t+1`, et non une corrélation globale entre histoire et réponse.
+préenregistrée. Il faut tester les deux flèches `H_t → m_t^ℓ_ana` puis
+`m_t^ℓ_ana → h_i → U_i → S(t1)`, et non une corrélation globale entre histoire
+et réponse.
 
 ### Provenance épistémique
 

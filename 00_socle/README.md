@@ -14,7 +14,7 @@ empirique d'un domaine.
 
 | Dossier | Contenu |
 |---|---|
-| `CODEBOOK.md` | définitions communes : six dimensions, chaîne historique multi-échelle, hiérarchie des possibles, persistance, liens typés, niveaux et modes de preuve |
+| `CODEBOOK.md` | définitions communes : six dimensions, boucle historique récursive, distinction `ℓ_ana/{ℓ_phys}`, régimes et raccords, hiérarchie des possibles, persistance vectorielle, liens typés, niveaux et modes de preuve |
 | `PROTOCOLE_DONNEES.md` | quelles données récupérer pour tester le cadre, y compris la provenance épistémique et le test même état/histoires différentes |
 | `valider_donnees.py` | rend les trois tables canoniques vérifiables par machine |
 | `carte_relationnelle/` | 40 transitions, 47 relations typées, données, scripts et sorties |
