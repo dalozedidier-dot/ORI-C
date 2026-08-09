@@ -1,6 +1,7 @@
 {
   "status": "completed",
-  "campaign": "maximum_possible_with_repository_data",
+  "campaign": "integrated_repository_evidence_synthesis",
+  "scope_note": "synthèse des campagnes versionnées ; le nom historique du dossier est conservé pour la stabilité des chemins, pas comme revendication d'exhaustivité absolue",
   "branches": {
     "matiere": {
       "tests_executed": [
@@ -8,7 +9,8 @@
         "suppression de chaque nœud",
         "ablation de chaque famille de processus",
         "retrait un par un des coefficients de partage",
-        "audit de complétude des 40 transitions"
+        "audit de complétude des 40 transitions",
+        "campagne de mémoire matérielle réelle et matrice d'admission"
       ],
       "main_results": {
         "strict_nodes_reachable": 46,
@@ -33,9 +35,12 @@
         "fragile_partition_overlap_elements": [
           "N"
         ],
-        "empty_transition_fields": 10
+        "empty_transition_fields": 10,
+        "material_memory_partial_positive_families": 5,
+        "material_memory_complete_chain_families": 0,
+        "material_memory_transversality_verdict": "ne_soutient_pas"
       },
-      "evidence_level": "structural_and_descriptive"
+      "evidence_level": "structural_and_descriptive_plus_partial_real_material_evidence"
     },
     "systeme_solaire_et_terre": {
       "tests_executed": [
@@ -65,27 +70,39 @@
         "exclusion successive de chaque dose",
         "permutation de l'ordre historique",
         "dynamique de composition ARN sur huit cycles",
-        "validation du schéma prébiotique synthétique"
+        "validation du schéma prébiotique synthétique",
+        "benchmark D'Onofrio contre état seul et histoire mélangée",
+        "lignées de vésicules, filiation, sélection et ablation"
       ],
       "main_results": {
         "antibiotic_prediction_rows": 358,
-        "group_cv_mae_equal_complexity": 0.6334607097403668,
-        "group_cv_mae_history": 0.6240441170130244,
+        "group_cv_mae_equal_complexity": 0.6334607097403693,
+        "group_cv_mae_history": 0.6240441170130245,
         "group_cv_mae_history_without_slope": 0.622097665825241,
         "paired_history_vs_equal_complexity_p": 0.2265625,
         "slope_ablation_p": 0.0078125,
         "ordered_history_null_p": 0.06493506493506493,
         "rna_observations": 80,
-        "prebiotic_real_lineage_data": false
+        "legacy_prebiotic_real_lineage_data": false,
+        "donofrio_rows": 288,
+        "donofrio_groups": 24,
+        "donofrio_rmse_state_only": 1.13089812488,
+        "donofrio_rmse_state_plus_history": 0.8042295741181,
+        "donofrio_permutation_p": 0.004975124378109,
+        "vesicle_parent_offspring_pairs": 11760,
+        "vesicle_permutation_p": 0.0004997501249375,
+        "vesicle_global_verdict": "all_pre_registered_components_supported",
+        "current_real_biological_results_included": true
       },
-      "evidence_level": "exploratory_only"
+      "evidence_level": "legacy_tests_mixed_plus_two_positive_real_data_protocols"
     }
   },
-  "global_verdict": "La campagne renforce la causalité architecturale dans le modèle astronomique, quantifie la fragilité de certaines représentations matérielles et ne trouve aucun appui biologique confirmatoire robuste. Elle ne valide pas ORI-C comme théorie générale.",
+  "global_verdict": "Le dépôt contient un résultat fort de causalité architecturale dans un modèle astronomique, plusieurs effets matériels réels partiels et deux résultats biologiques positifs sur données réelles (D'Onofrio et vésicules). La chaîne matérielle confirmatoire complète reste ouverte et C-MAT-MEM-05 ne soutient pas la transversalité. Cet ensemble ne valide pas ORI-C comme théorie générale.",
   "next_data_bottlenecks": [
     "flux, temps de résidence et stocks opératoires pour C, H et S",
     "simulations climatiques interventionnelles et ensembles GCM indépendants",
-    "jeu antibiotique final externe avec séquences d'exposition manipulées",
-    "données réelles de lignées prébiotiques avec témoins appariés"
+    "réplication externe indépendante des résultats D'Onofrio",
+    "réplication indépendante des lignées de vésicules",
+    "trois familles matérielles admises portant histoire → trace → réponse et ablation"
   ]
 }

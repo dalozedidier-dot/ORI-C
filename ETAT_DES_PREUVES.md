@@ -56,6 +56,13 @@ Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient
 | Distinction relaxation/mémoire | convergence sous forçage final commun ; temps caractéristique 7,02 Ma | **Critère opératoire établi dans le modèle** |
 | Mémoire matérielle réelle, transversalité | 5 familles positives sur au moins une relation, mais 0 famille porte la chaîne complète sous les quatre contrôles, 3 exigées | **C-MAT-MEM-05 ne soutient pas la transversalité** |
 
+Pour la mémoire matérielle, « positive sur une relation » signifie **preuve
+partielle**, pas admission au schéma confirmatoire complet. IODP soutient
+l'ablation physique `C03`; ses associations trace-réponse, sa résistance à
+20 mT et la comparaison NRM/IRM-ARM ne satisfont pas les plans gelés de `C01`,
+`C02` et `C04`. Les permutations servent de contrôles statistiques et ne sont
+pas comptées comme contrôles négatifs physiques.
+
 ## Socle
 
 | Élément | Statut | Où |

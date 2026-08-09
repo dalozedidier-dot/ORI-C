@@ -47,8 +47,12 @@ with open(BASE / '01_branche_matiere/hypergraphe_transformations/test_hierarchie
     hierarchy = json.load(f)
 with open(BASE / '01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json', encoding='utf-8') as f:
     inventory = json.load(f)
-with open(BASE / '01_branche_matiere/memoire_materielle_reelle/derive/execution/CAMPAGNE.json', encoding='utf-8') as f:
+with open(BASE / '01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json', encoding='utf-8') as f:
     material_memory = json.load(f)
+with open(BASE / '03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json', encoding='utf-8') as f:
+    donofrio = json.load(f)
+with open(BASE / '03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json', encoding='utf-8') as f:
+    vesicules = json.load(f)
 
 # Copies utiles dans les annexes du document scientifique.
 for rel in [
@@ -427,10 +431,10 @@ al26_fig=render_graph(D,'10_correction_aluminium_26')
 
 # Results status chart (matplotlib)
 fig, ax = plt.subplots(figsize=(10,5.2))
-labels=['Socle\nchémostat','Carte\nrelationnelle','Capacités\nmatière','Inventaire\naccessible','Astronomie\nN-corps','Mémoire\nM2','Exoplanète\npersistance','Prébiotique']
-values=[3,1,2,2,3,0,0,1]
-status=['validé modèle','réfuté prédictif','établi graphe','fortement appuyé','validé modèle','réfuté','non réussi','non testé']
-colors=['#3B82F6','#C0392B','#D97706','#D97706','#3B82F6','#C0392B','#C0392B','#98A2B3']
+labels=['Socle\nchémostat','Carte\nrelationnelle','Capacités\nmatière','Inventaire\naccessible','Astronomie\nN-corps','Mémoire\nM2','Exoplanète\npersistance','Vivant\ndonnées réelles']
+values=[3,1,2,2,3,0,0,2]
+status=['validé modèle','réfuté prédictif','établi graphe','fortement appuyé','validé modèle','réfuté','non réussi','2 protocoles positifs']
+colors=['#3B82F6','#C0392B','#D97706','#D97706','#3B82F6','#C0392B','#C0392B',TEAL]
 ax.bar(range(len(labels)),values,color=colors)
 ax.set_xticks(range(len(labels)),labels,fontsize=8)
 ax.set_ylim(0,3.5)
@@ -472,6 +476,15 @@ results_rows=[
 ('Mémoire','Bassins et hystérèse','deux bassins pour M2 et M2P ; aucun écart matériel après retour complet','Exploratoire, non confirmatoire'),
 ('Vivant','Benchmark externe Card 2019','histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable','Externe rétrospectif, non confirmatoire'),
 ('Vivant','Programme prébiotique','deux trajectoires ARN sur huit cycles, aucune lignée parent-descendant','Critère héréditaire non testé'),
+('Vivant','Histoire antibiotique D’Onofrio',
+ f"RMSE {donofrio['rmse_state_only']:.4f} → {donofrio['rmse_state_plus_history']:.4f} ; "
+ f"témoin mélangé {donofrio['same_complexity_shuffled_history_rmse_mean']:.4f} ; "
+ f"p = {donofrio['permutation_p_history_better_than_shuffled']:.5f}",
+ 'Soutenu contre les deux témoins dans ce protocole'),
+('Vivant','Lignées de vésicules',
+ f"{vesicules['pairs']} relations parent-descendant ; quatre composantes préenregistrées soutenues ; "
+ f"p = {vesicules['lineage_permutation_test']['permutation_p_one_sided']:.5f}",
+ 'Résultat positif, réplication indépendante encore requise'),
 ('Généalogie','Clôture du graphe linéaire','39 transitions, 77 relations parent-produit, aucune anomalie formelle','Cohérence structurelle vérifiée, distincte de l’hypergraphe strict')]
 with (ANNEX / 'resultats_scientifiques_consolides.csv').open(
         'w', encoding='utf-8-sig', newline='') as flux:
@@ -811,6 +824,7 @@ add_para('Ce résultat mesure une répartition entre réservoirs. Il ne mesure p
 add_para('4.5 Campagne de mémoire matérielle réelle',style='Heading 2')
 mm = material_memory['transversalite']
 add_para(f"La campagne WP-MAT-MEM-2026 trouve {len(mm['familles_soutenantes'])} familles positives sur au moins une relation, mais {mm['familles_au_schema_complet']} famille porte la chaîne complète histoire → trace → réponse sous les quatre contrôles conjoints, alors que trois étaient exigées. Le verdict C-MAT-MEM-05 est donc {mm['verdict']}. Les résultats relationnels locaux ne doivent pas être transformés en validation transversale.")
+add_para('Le filtre d’admission gelé sépare désormais explicitement ces preuves partielles des jeux admissibles à la chaîne complète. Pour IODP, la cohérence trace-réponse, la résistance à 20 mT et la comparaison trace naturelle/IRM-ARM ne satisfont pas les plans de C01, C02 et C04 ; seule l’ablation physique contribue à C03. Les permutations statistiques ne sont pas comptées comme contrôles négatifs physiques.')
 add_para('Un test même état apparent, même stimulus et histoires différentes est ajouté comme analyse exploratoire. Son plan ayant été choisi après inspection de la table, il ne rend aucun verdict confirmatoire et sert uniquement à préparer une réplication indépendante préenregistrée.')
 
 add_para('4.6 Filtrages historiques planétaires',style='Heading 2')
@@ -859,10 +873,13 @@ add_table(['Objet','Statut','Portée'],[
 ('Endosymbiose mitochondriale','Preuve de concept','Faits biologiques fortement appuyés, représentation ORI-C non testée'),
 ('Résistance aux antibiotiques','Non testé dans la branche canonique','Protocole expérimental proposé'),
 ('Programme prébiotique','Critère héréditaire non testé','Trajectoires ARN réelles, aucune lignée de compartiments'),
-('Universalité et pouvoir prédictif','Non testé','Aucune validation transversale')],font_size=8)
+('Histoire antibiotique D’Onofrio','Soutenu contre deux témoins',f"{donofrio['rows']} mesures, gain {donofrio['history_gain_percent']:.2f} %, p = {donofrio['permutation_p_history_better_than_shuffled']:.5f}"),
+('Lignées de vésicules','Quatre composantes soutenues',f"{vesicules['pairs']} relations parent-descendant, p = {vesicules['lineage_permutation_test']['permutation_p_one_sided']:.5f}"),
+('Universalité et pouvoir prédictif','Non testé','Aucune validation transversale commune')],font_size=8)
 add_figure(branch_figs['3 vivant'],'Figure 7. Branche du vivant de l’arbre global.',width_cm=16.4)
 
-add_para('Les données Papastavrou ajoutent deux trajectoires expérimentales de populations d’ARN catalytique suivies pendant huit cycles. Elles mesurent une dynamique de composition, sans relier des compartiments parents à leurs descendants. Le critère de continuité héréditaire reste non testé.')
+add_para('Les données Papastavrou ajoutent deux trajectoires expérimentales de populations d’ARN catalytique suivies pendant huit cycles. Elles mesurent une dynamique de composition, sans relier des compartiments parents à leurs descendants. Cette limite propre aux ARN ne s’applique pas aux expériences de vésicules, qui contiennent des cartes parent-descendant réelles.')
+add_para(f"Dans le jeu D’Onofrio, l’histoire réduit la RMSE de {donofrio['rmse_state_only']:.4f} à {donofrio['rmse_state_plus_history']:.4f} et bat aussi un témoin d’histoire mélangée de même complexité, avec p = {donofrio['permutation_p_history_better_than_shuffled']:.5f}. Dans les vésicules, les quatre composantes préenregistrées sont soutenues sur {vesicules['pairs']} relations parent-descendant. Ces deux résultats positifs appartiennent à leurs protocoles respectifs et ne valident pas ORI-C comme théorie générale.")
 
 add_para('6.2 Le verrou prébiotique',style='Heading 2')
 add_para('Le programme ne situe pas le verrou dans une brique isolée comme l’ARN, la membrane ou une réaction métabolique. Il le situe dans le couplage entre compartimentation, copie par matrice, variation héritable, apport énergétique et persistance sur plusieurs cycles. Une molécule produite n’est pas une hérédité. Une fonction transitoire sans information transmise reste un état. Une information transmise sans effet fonctionnel reste une trace.')

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""C-MAT-MEM-01, 02 et 04 sur la table IODP par échantillon.
+"""Diagnostics IODP associés à C-MAT-MEM-01, 02 et 04.
 
-01 : la trace ordonne-t-elle les réponses.
-02 : la différence subsiste-t-elle au-delà de 20 mT.
-04 : trace naturelle et trace imposée en laboratoire diffèrent-elles.
+Les statistiques historiques sont conservées, mais le script refuse désormais
+de les attribuer aux critères gelés quand leur plan expérimental ne correspond
+pas à l'énoncé : dépôt naturel non assigné pour C01, résistance à l'effacement
+plutôt que délai/relaxation pour C02, et absence de bras sans histoire pour C04.
 
     python tester_iodp_01_02_04.py
 """
@@ -101,7 +102,16 @@ def main() -> int:
         "rho_trace_reponse": rho01,
         "p_permutation": p01,
         "temoin": "permutation des étiquettes d'échantillon, appariement détruit",
-        "verdict": "soutient" if p01 <= ALPHA and rho01 > 0 else "ne_soutient_pas",
+        "verdict": "non_testable_avec_ce_jeu",
+        "resultat_partiel": (
+            "association_trace_reponse_robuste" if p01 <= ALPHA and rho01 > 0
+            else "association_trace_reponse_non_soutenue"
+        ),
+        "motif_non_testable": (
+            "l'histoire naturelle de dépôt n'est ni contrôlée ni assignée ; "
+            "la cohérence trace-réponse ne suffit pas au C01 gelé"
+        ),
+        "nature_du_controle": "permutation_statistique",
         "portee": ("cohérence exigée par l'énoncé, vérifiée. Qu'une trace plus forte "
                    "laisse un résidu plus fort n'est pas une découverte : ce critère "
                    "contrôle la cohérence, il ne l'exploite pas comme preuve d'un "
@@ -114,16 +124,24 @@ def main() -> int:
         t2 = np.array([l["nrm"] for l in persistants])
         r2 = np.array([l["finale"] for l in persistants])
         rho02, p02 = p_permutation(t2, r2, aleatoire)
-        verdict02 = "soutient" if p02 <= ALPHA and rho02 > 0 else "ne_soutient_pas"
+        resultat02 = ("resistance_effacement_robuste"
+                      if p02 <= ALPHA and rho02 > 0
+                      else "resistance_effacement_non_soutenue")
     else:
-        rho02, p02, verdict02 = float("nan"), 1.0, "non_testable_avec_ce_jeu"
+        rho02, p02, resultat02 = float("nan"), 1.0, "non_testable_avec_ce_jeu"
     resultats["C-MAT-MEM-02"] = {
         "enonce": f"la différence subsiste-t-elle au-delà de {DOSE_PERSISTANCE_MT} mT",
         "seuil_prefixe_mT": DOSE_PERSISTANCE_MT,
         "echantillons": len(persistants),
         "rho_trace_reponse": rho02,
         "p_permutation": p02,
-        "verdict": verdict02,
+        "verdict": "non_testable_avec_ce_jeu",
+        "resultat_partiel": resultat02,
+        "motif_non_testable": (
+            "20 mT mesure une résistance à l'effacement, pas une persistance "
+            "après délai, cycles ou relaxation contrôlée au sens du C02 gelé"
+        ),
+        "rattachement_correct": "diagnostic d'ablation/résistance associé à C03",
     }
 
     # ---------------------------------------------------------- C-MAT-MEM-04
@@ -142,10 +160,11 @@ def main() -> int:
             if abs(float((differences * signes).mean())) >= observe:
                 compte += 1
         p04 = (1 + compte) / (1 + TIRAGES)
-        verdict04 = "soutient" if p04 <= ALPHA else "ne_soutient_pas"
+        resultat04 = ("difference_naturelle_imposee_detectee"
+                      if p04 <= ALPHA else "difference_naturelle_imposee_non_detectee")
         ecart = float(differences.mean())
     else:
-        p04, verdict04, ecart = 1.0, "non_testable_avec_ce_jeu", float("nan")
+        p04, resultat04, ecart = 1.0, "non_testable_avec_ce_jeu", float("nan")
     resultats["C-MAT-MEM-04"] = {
         "enonce": ("la trace naturelle et la trace imposée en laboratoire se "
                    "comportent-elles différemment sous le même traitement"),
@@ -153,7 +172,13 @@ def main() -> int:
         "ecart_moyen_rho": ecart,
         "p_sign_flip": p04,
         "temoin": "sign-flip sur les écarts appariés, même échantillon des deux côtés",
-        "verdict": verdict04,
+        "verdict": "non_testable_avec_ce_jeu",
+        "resultat_partiel": resultat04,
+        "motif_non_testable": (
+            "les deux bras possèdent une histoire ; aucun bras sous le même "
+            "stimulus final sans histoire préalable n'est disponible"
+        ),
+        "nature_du_controle": "comparaison_physique_appariee_mais_non_C04",
     }
 
     entete = f"{'critère':<16}{'n':>7}{'statistique':>14}{'p':>10}   verdict"
@@ -161,8 +186,8 @@ def main() -> int:
     print("-" * len(entete))
     print(f"{'C-MAT-MEM-01':<16}{resultats['C-MAT-MEM-01']['echantillons']:>7}"
           f"{rho01:>14.4f}{p01:>10.4f}   {resultats['C-MAT-MEM-01']['verdict']}")
-    print(f"{'C-MAT-MEM-02':<16}{len(persistants):>7}{rho02:>14.4f}{p02:>10.4f}   {verdict02}")
-    print(f"{'C-MAT-MEM-04':<16}{len(apparies):>7}{ecart:>14.4f}{p04:>10.4f}   {verdict04}")
+    print(f"{'C-MAT-MEM-02':<16}{len(persistants):>7}{rho02:>14.4f}{p02:>10.4f}   non_testable_avec_ce_jeu")
+    print(f"{'C-MAT-MEM-04':<16}{len(apparies):>7}{ecart:>14.4f}{p04:>10.4f}   non_testable_avec_ce_jeu")
 
     rapport = {
         "campagne": "WP-MAT-MEM-2026",

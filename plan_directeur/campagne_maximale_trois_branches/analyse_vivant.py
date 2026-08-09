@@ -477,6 +477,8 @@ def validate_prebiotic_schema() -> dict:
         [sys.executable, str(validator), "--repertoire", str(directory), "--critere"],
         capture_output=True,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         check=False,
     )
     return {

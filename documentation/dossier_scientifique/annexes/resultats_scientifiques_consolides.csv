@@ -16,4 +16,6 @@ Climat,Transfert orbital intermédiaire,"gain positif dans 3 fenêtres sur 3, 3,
 Mémoire,Bassins et hystérèse,deux bassins pour M2 et M2P ; aucun écart matériel après retour complet,"Exploratoire, non confirmatoire"
 Vivant,Benchmark externe Card 2019,histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable,"Externe rétrospectif, non confirmatoire"
 Vivant,Programme prébiotique,"deux trajectoires ARN sur huit cycles, aucune lignée parent-descendant",Critère héréditaire non testé
+Vivant,Histoire antibiotique D’Onofrio,RMSE 1.1309 → 0.8042 ; témoin mélangé 1.1415 ; p = 0.00498,Soutenu contre les deux témoins dans ce protocole
+Vivant,Lignées de vésicules,11760 relations parent-descendant ; quatre composantes préenregistrées soutenues ; p = 0.00050,"Résultat positif, réplication indépendante encore requise"
 Généalogie,Clôture du graphe linéaire,"39 transitions, 77 relations parent-produit, aucune anomalie formelle","Cohérence structurelle vérifiée, distincte de l’hypergraphe strict"
