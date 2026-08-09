@@ -151,9 +151,9 @@
   },
   "WP_T4_compression_explicative": {
     "sections_du_codebook": 15,
-    "sous_sections": 15,
+    "sous_sections": 17,
     "codes_de_relation": 13,
-    "lignes_du_codebook": 534,
+    "lignes_du_codebook": 608,
     "hypotheses_enregistrees": 35,
     "statuts": {
       "Validé dans le modèle réduit": 2,

@@ -156,8 +156,11 @@ def wp_t4() -> dict:
 def main() -> int:
     rapport = {"WP_T2_generalite_reelle": wp_t2(),
                "WP_T4_compression_explicative": wp_t4()}
-    SORTIE.write_text(json.dumps(rapport, indent=2, ensure_ascii=False),
-                      encoding="utf-8")
+    SORTIE.write_text(
+        json.dumps(rapport, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+        newline="\n",
+    )
 
     t2 = rapport["WP_T2_generalite_reelle"]
     print("WP-T2 — notions et mesures\n")
