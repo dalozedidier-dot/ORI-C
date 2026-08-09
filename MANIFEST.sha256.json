@@ -77,8 +77,8 @@
     },
     {
       "path": ".gitignore",
-      "size": 867,
-      "sha256": "68d1ddc0c0826e8ebf2fff4848b6835bbf193413b6f3e383fe924daa0da44fa6",
+      "size": 929,
+      "sha256": "80610456de060bc9e0ac925bc0ef68a30d24634291391905c35943956a1c241d",
       "storage": "inline"
     },
     {
@@ -1342,6 +1342,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/.cache_donnees/traces_fission_zircon/ZAD_Fission_Track_Dataset/data/raw/measurements/TabelaMediçãoZAD.csv",
+      "size": 125264,
+      "sha256": "3c5c48c49664a82d20eeb86ec590df875cdcb74a96be88cc723def19532af24a",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
       "size": 1753,
       "sha256": "a692c89c54f5412599a0cf6e8add295479a974d49b78e81830b84bed883f2f2d",
@@ -1404,7 +1410,7 @@
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
       "size": 3110,
-      "sha256": "a20bba93a353ffae89c85b393f33141a3aa66b8bb2f2cd4bb91095047ad75605",
+      "sha256": "4ab4d36035187fb47d9970daf1e86889d66939675320c8b7ddd1953a0d78a6b7",
       "storage": "inline"
     },
     {
@@ -1486,21 +1492,51 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/fabest_lcf.zip",
+      "size": 4208462,
+      "sha256": "5d911122be5e0756dfdcabf24d31ca2cc1bd9f3927b75d81c76771b3216a8da3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/medium_mn_a.zip",
+      "size": 3670275,
+      "sha256": "d88a690628c8c54cc43ab06691a4a8b46b67bdb0c5ab138c3fe90dad1fcb3b2e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/recuit_thermique_polymere.zip",
+      "size": 229724,
+      "sha256": "35a81ecccf1edadc23428efe8971c74da70795d61ee457486147d905863f79c3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/traces_fission_zircon.zip",
+      "size": 53095,
+      "sha256": "748fa05f66cbc111495cd2edfad7915b59536fa77517574e9125bf7f5d1cee15",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees_campagne.py",
+      "size": 1768,
+      "sha256": "fec683d4a53502318233cc49393f7ea18889ff8a2ff2d54cec1ab57066531e83",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
-      "size": 10937,
-      "sha256": "d8361d080973f3f480ededce2f4ed3b65ef88c8cf05cbbf5be54466a5b7dfa0e",
+      "size": 10939,
+      "sha256": "aa97f3cd7ef9fe9118d14506fc30477b5d069e7c676b54d87c3a4a2983948dc9",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_traces_fission.py",
-      "size": 7270,
-      "sha256": "b80709ed9e6b597c62ca912c3f5b16635d65ed567f75debcacb17c3b85454f46",
+      "size": 7330,
+      "sha256": "6fef1f1624f8e97837afce0592caa1a95b28d42aa97bd9c5be9b080180a2a415",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_vieillissement.py",
-      "size": 9429,
-      "sha256": "7d4193fd4323fa4e57f7c7c375ec59eb221ca523607db8864359f639b2143ed9",
+      "size": 9469,
+      "sha256": "c7aceb823f7eef3f9f0457c907ddc75a860a93bbc665f547f7029cff402b5522",
       "storage": "inline"
     },
     {

@@ -12,28 +12,28 @@
       "etape": "extraction IODP",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 1.9,
+      "duree_s": 1.6,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.4,
+      "duree_s": 2.8,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 22.2,
+      "duree_s": 14.9,
       "obligatoire": true
     },
     {
       "etape": "plasticité et transition de phase",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 0.6,
+      "duree_s": 0.8,
       "obligatoire": true
     },
     {
@@ -47,14 +47,14 @@
       "etape": "recuit de traces de fission",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.9,
+      "duree_s": 3.0,
       "obligatoire": true
     },
     {
       "etape": "balayage des sources restantes",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 277.2,
+      "duree_s": 144.4,
       "obligatoire": true
     }
   ],
