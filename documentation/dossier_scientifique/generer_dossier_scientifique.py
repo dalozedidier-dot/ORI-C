@@ -10,7 +10,10 @@ import zipfile
 from pathlib import Path
 
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 from graphviz import Digraph
 from PIL import Image, ImageDraw, ImageFont
 from docx import Document
@@ -44,6 +47,8 @@ with open(BASE / '01_branche_matiere/hypergraphe_transformations/test_hierarchie
     hierarchy = json.load(f)
 with open(BASE / '01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json', encoding='utf-8') as f:
     inventory = json.load(f)
+with open(BASE / '01_branche_matiere/memoire_materielle_reelle/derive/execution/CAMPAGNE.json', encoding='utf-8') as f:
+    material_memory = json.load(f)
 
 # Copies utiles dans les annexes du document scientifique.
 for rel in [
@@ -81,8 +86,38 @@ def gnode(dot, node_id, label, color, dashed=False, fill='white', fontsize='9'):
 
 def render_graph(dot: Digraph, name: str, fmt='png') -> Path:
     path = ASSETS / name
+    cible = ASSETS / f'{path.stem}.{fmt}'
+    if shutil.which('dot') is None:
+        if cible.exists():
+            print(f'Graphviz absent : figure versionnée réutilisée — {cible.name}')
+            return cible
+        raise RuntimeError(f'Graphviz absent et figure introuvable : {cible}')
     dot.render(filename=path.stem, directory=str(ASSETS), format=fmt, cleanup=True)
-    return ASSETS / f'{path.stem}.{fmt}'
+    return cible
+
+
+def render_chain_figure() -> Path:
+    """Rend la chaîne canonique sans dépendre de l'exécutable Graphviz."""
+    labels = [
+        'Histoire\nHₜ', 'Mémoire\nmₜ^ℓ', 'État et contraintes\nSₜ^ℓ, Θeff,t^ℓ',
+        'P^adm', 'P^att', 'P^kin', 'P^pers', 'Réalisation\nRéalₜ₊₁',
+    ]
+    colors = [NAVY, NAVY, PURPLE, PURPLE, ORANGE, ORANGE, TEAL, RED]
+    fig, ax = plt.subplots(figsize=(15.5, 2.25))
+    ax.set_xlim(-0.5, len(labels) - 0.5)
+    ax.set_ylim(-0.6, 0.6)
+    ax.axis('off')
+    for i, (label, color) in enumerate(zip(labels, colors)):
+        ax.text(i, 0, label, ha='center', va='center', fontsize=9,
+                bbox=dict(boxstyle='round,pad=0.42', facecolor='white',
+                          edgecolor=color, linewidth=1.4))
+        if i:
+            ax.annotate('', xy=(i - 0.43, 0), xytext=(i - 0.57, 0),
+                        arrowprops=dict(arrowstyle='->', color=GRAY, lw=1.2))
+    cible = ASSETS / '03_chaine_oric.png'
+    fig.savefig(cible, dpi=180, bbox_inches='tight', facecolor='white')
+    plt.close(fig)
+    return cible
 
 # Figure 1: Programme architecture
 D = Digraph('program', graph_attr={'rankdir':'TB','bgcolor':'white','pad':'0.25','nodesep':'0.35','ranksep':'0.55'})
@@ -105,7 +140,7 @@ program_fig=render_graph(D,'01_architecture_programme')
 D = Digraph('layers', graph_attr={'rankdir':'TB','bgcolor':'white','pad':'0.25','nodesep':'0.22','ranksep':'0.28'})
 layers=[
 ('L1','1. ARCHITECTURE PRÉSENTE','A(t) = [n, G, I, E, Π, H]','Composition, configuration, interactions, environnement, persistance, histoire',PURPLE,'#F2EFFF'),
-('L2','2. DYNAMIQUE','X(t), m(t), A(t)','L’état, les mémoires et l’opérateur d’évolution changent séparément',NAVY,'#EEF3FB'),
+('L2','2. DYNAMIQUE','Sₜ^ℓ, mₜ^ℓ, Aₜ^ℓ','L’état, les mémoires et l’opérateur d’évolution changent séparément à l’échelle déclarée',NAVY,'#EEF3FB'),
 ('L3','3. TRANSITION','S = (ΔV, ΔC, ΔΠ, ΔH, ΔR, ΔF)','Variables collectives, connectivité, persistance, héritage, robustesse, fermetures',ORANGE,'#FFF6EA'),
 ('L4','4. GÉNÉALOGIE','parents + conditions → mécanisme → produit','Les produits antérieurs deviennent les ressources matérielles des étapes suivantes',TEAL,'#EAF8F4'),
 ('L5','5. PREUVE','mécanisme, nature, histoire, rôle causal','Les niveaux de preuve et les tests restent séparés par domaine',RED,'#FFF0EF')]
@@ -114,14 +149,9 @@ for i,(nid,title,formula,desc,color,fill) in enumerate(layers):
     if i: D.edge(layers[i-1][0],nid,color=GRAY)
 base_layers_fig=render_graph(D,'02_couches_architecture_scientifique')
 
-# Figure 3: ORI-C chain
-D=Digraph('chain',graph_attr={'rankdir':'LR','bgcolor':'white','pad':'0.2','nodesep':'0.18','ranksep':'0.2'})
-chain=[('F','Flux Fₜ'),('th','Contraintes θeff'),('S','Espace Σₜ'),('B','Seuil Bₜ'),('O','Organisation Oₜ'),('Pi','Persistance Πₜ'),('H','Histoire Hₜ'),('mem','Inscription mₜ'),('P','Possibles Pₜ⁽ˢ⁾')]
-for i,(nid,label) in enumerate(chain):
-    color=[NAVY,PURPLE,PURPLE,ORANGE,TEAL,TEAL,NAVY,NAVY,RED][i]
-    gnode(D,nid,label,color,fill='white',fontsize='9')
-    if i: D.edge(chain[i-1][0],nid,color=GRAY)
-chain_fig=render_graph(D,'03_chaine_oric')
+# Figure 3: chaîne ORI-C, rendue sans dépendance Graphviz afin que le dossier
+# reste reconstructible sur Windows à partir d'un clone standard.
+chain_fig=render_chain_figure()
 
 # Figure 4: Four representations
 D=Digraph('repr',graph_attr={'rankdir':'LR','bgcolor':'white','pad':'0.25','nodesep':'0.45','ranksep':'0.3'})
@@ -190,8 +220,10 @@ for branch, fname, title in [('1 matière','06_branche_matiere','Branche 1 - arc
 
 
 # Remplacement des schémas horizontaux par des versions paginables et lisibles.
-FONT_REG = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
-FONT_BOLD = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+FONT_REG = font_manager.findfont(font_manager.FontProperties(family='DejaVu Sans'))
+FONT_BOLD = font_manager.findfont(
+    font_manager.FontProperties(family='DejaVu Sans', weight='bold')
+)
 
 
 def _rgb(hex_color):
@@ -408,7 +440,9 @@ plt.close(fig)
 # ---------- Annex data ----------
 # La table de correspondance canonique est maintenue dans le socle.
 map_df = pd.read_csv(BASE / '00_socle/genealogie/correspondance_GM_GA.csv', sep=';', encoding='utf-8-sig')
-map_df.to_csv(ANNEX / 'correspondance_GM_GA.csv', sep=';', index=False, encoding='utf-8-sig')
+with (ANNEX / 'correspondance_GM_GA.csv').open(
+        'w', encoding='utf-8-sig', newline='') as flux:
+    map_df.to_csv(flux, sep=';', index=False, lineterminator='\n')
 
 results_rows=[
 ('Socle','Test interventionnel','11/11 dans le modèle réduit, six cinétiques robustes','Validé dans le modèle réduit'),
@@ -417,6 +451,10 @@ results_rows=[
 ('Matière','Six dimensions','0,000 bit propre','Codage actuel réfuté comme mesure indépendante'),
 ('Matière','Échelle de capacités','0,595 bit net, p = 5e-5, rho = 0,74','Établi dans le graphe'),
 ('Matière','Inventaire accessible','C, H, N recouvrent les coefficients, S en désaccord','Fortement appuyé, tension identifiée'),
+('Matière','Mémoire matérielle réelle',
+ f"{len(material_memory['transversalite']['familles_soutenantes'])} familles positives sur au moins une relation ; "
+ f"{material_memory['transversalite']['familles_au_schema_complet']} chaîne complète sous quatre contrôles, 3 exigées",
+ 'C-MAT-MEM-05 ne soutient pas la transversalité'),
 ('Astronomie','N-corps','13 critères sur 15','Validé dans le modèle réduit'),
 ('Climat','M2 contre M1P','0 critère sur 5, gain RMSE -31,6 %','Réfuté'),
 ('Exoplanètes','Dépendance au chemin','4 variables sur 4, ablation 4 sur 4','Validation structurelle'),
@@ -428,7 +466,12 @@ results_rows=[
 ('Vivant','Benchmark externe Card 2019','histoire moins bonne dans les 4 groupes ; IC bootstrap défavorable','Externe rétrospectif, non confirmatoire'),
 ('Vivant','Programme prébiotique','deux trajectoires ARN sur huit cycles, aucune lignée parent-descendant','Critère héréditaire non testé'),
 ('Généalogie','Clôture du graphe linéaire','39 transitions, 77 relations parent-produit, aucune anomalie formelle','Cohérence structurelle vérifiée, distincte de l’hypergraphe strict')]
-pd.DataFrame(results_rows,columns=['domaine','test_ou_objet','resultat','statut']).to_csv(ANNEX/'resultats_scientifiques_consolides.csv',index=False,encoding='utf-8-sig')
+with (ANNEX / 'resultats_scientifiques_consolides.csv').open(
+        'w', encoding='utf-8-sig', newline='') as flux:
+    pd.DataFrame(
+        results_rows,
+        columns=['domaine','test_ou_objet','resultat','statut'],
+    ).to_csv(flux, index=False, lineterminator='\n')
 
 # ---------- DOCX Helpers ----------
 DOCX = OUT / 'DOSSIER_SCIENTIFIQUE_ORI-C.docx'
@@ -650,12 +693,12 @@ add_table(['Dimension','Contenu','Question opératoire'],[
 add_para('Les propriétés observables sont attribuées à l’architecture entière, Y(t) = Φ[n, G, I, E, Π, H]. Les tests du socle ont toutefois montré que le premier remplissage des six dimensions ne constituait pas six mesures indépendantes. Les codages étaient entièrement expliqués par le régime. Leur information propre était nulle. Cette réfutation porte sur le codage actuel, pas sur l’utilité conceptuelle des dimensions.')
 
 add_para('2.2 Séparer l’état, les mémoires et l’architecture',style='Heading 2')
-add_para('Le cadre distingue l’état présent X, les inscriptions héritées m et l’architecture A qui rend la réponse possible. Une perturbation peut seulement déplacer l’état. Elle peut aussi laisser une mémoire ou modifier les composants, les paramètres structurels, les relations et l’opérateur d’évolution lui-même.')
+add_para('Le cadre distingue l’état présent S à une échelle ℓ, les inscriptions héritées m et l’architecture A qui rend la réponse possible. Une perturbation peut seulement déplacer l’état. Elle peut aussi laisser une mémoire ou modifier les composants, les paramètres structurels, les relations et l’opérateur d’évolution lui-même.')
 add_callout('Dynamique couplée',
-            'X(t+1) = F[A(t)](X(t), U(t), m(t), ξ(t))\n'
-            'mᵢ(t+1) = Gᵢ(m(t), X(t), A(t), U(t), ξ(t))\n'
-            'A(t+1) = Q(A(t), m(t), X(t), U(t), ξ(t))\n'
-            'Pacc(t+1) = P(A(t+1), m(t+1), C(t+1), ε)',NAVY,'#EEF3FB')
+            'Sₜ₊₁^ℓ = F^ℓ[Aₜ^ℓ](Sₜ^ℓ, Uₜ^ℓ, mₜ^ℓ, ξₜ^ℓ)\n'
+            'mₜ₊₁^ℓ = 𝒢ₘ^ℓ(mₜ^ℓ, Sₜ^ℓ, Aₜ^ℓ, Uₜ^ℓ, ξₜ^ℓ)\n'
+            'Aₜ₊₁^ℓ = Q^ℓ(Aₜ^ℓ, mₜ^ℓ, Sₜ^ℓ, Uₜ^ℓ, ξₜ^ℓ)\n'
+            'Pₜ₊₁,ℓ^(s) = P^(s)(Aₜ₊₁^ℓ, mₜ₊₁^ℓ, Cₜ₊₁^ℓ, T, ε)',NAVY,'#EEF3FB')
 add_para('Une variation appartient à l’état lorsqu’elle peut être représentée sans modifier l’opérateur d’évolution. Elle devient architecturale lorsqu’il faut modifier les composants, les relations, les paramètres structurels ou l’opérateur. Ce partage dépend du niveau de description et du plancher de bruit, qui doivent être déclarés.')
 add_figure(base_layers_fig,'Figure 2. Les cinq couches de l’architecture scientifique ORI-C.',width_cm=15.5)
 
@@ -693,7 +736,8 @@ add_table(['Diagnostic','Mesure','Ce qu’il ne faut pas confondre'],[
 ('D - durée','Temps de relaxation, de résidence ou de reconstruction','Une mémoire longue n’est pas nécessairement irréversible'),
 ('H - hystérésis','Écart entre seuil de basculement et seuil de retour','Une asymétrie de retour n’implique pas une perte de composant'),
 ('L - perte','Disparition d’un composant, d’une relation ou d’un chemin','Une perte peut être lente et sans basculement brutal')],font_size=8)
-add_para('Le socle distingue les possibles théoriques Pth, compatibles avec les lois, et les possibles accessibles Pacc(T, C, ε), atteignables avant un horizon T, sous les ressources et contraintes C, avec une probabilité au moins égale à ε. Une organisation peut rester théoriquement possible tout en étant sortie du domaine accessible de l’architecture actuelle.')
+add_para('À une échelle ℓ, le socle distingue quatre filtres emboîtés : P^adm, compatible avec les lois et contraintes ; P^att, atteignable depuis l’état courant sous le générateur déclaré ; P^kin, accessible avant l’horizon T avec les vitesses, ressources et barrières disponibles ; P^pers, dont la réalisation laisserait une trace au-dessus du seuil de persistance déclaré. Les anciennes notations restent compatibles : Pth correspond à P^adm et Pacc(T,C,ε) à P^kin lorsque l’état initial et le générateur sont inclus dans C.')
+add_para('La mesure de persistance Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W] doit déclarer l’observable O, la fenêtre W et un seuil Π*. La réalisation effective reste séparée des quatre ensembles. La chaîne physique du système doit également être distinguée de la chaîne épistémique D + M → grandeurs inférées.')
 add_figure(chain_fig,'Figure 3. Chaîne d’organisation ORI-C. Elle structure l’analyse, mais aucune branche ne la mesure encore de bout en bout.',width_cm=16.2)
 
 add_para('2.7 Relations causales et niveaux de preuve',style='Heading 2')
@@ -756,7 +800,12 @@ add_table(['Élément','Réservoir de référence','Part accessible selon scéna
 add_para('Les trente et un enregistrements couvrent le carbone, l’hydrogène, l’azote et le soufre. Les budgets noyau plus silicate reconstituent les totaux publiés avec un écart maximal de 2,88 %. Les coefficients de partage métal-silicate indépendants recouvrent les répartitions observées pour le carbone, l’hydrogène et l’azote. Le soufre reste en désaccord. Cette tension reproduit un désaccord publié entre une estimation classique riche en soufre et des coefficients expérimentaux indiquant un noyau plus pauvre.')
 add_para('Ce résultat mesure une répartition entre réservoirs. Il ne mesure pas encore les fractions mobilisables, les flux de transfert ni Pacc à un horizon donné. Il fournit néanmoins la première mise en données réelle de la distinction entre inventaire total et inventaire disponible dans le dossier.')
 
-add_para('4.5 Filtrages historiques planétaires',style='Heading 2')
+add_para('4.5 Campagne de mémoire matérielle réelle',style='Heading 2')
+mm = material_memory['transversalite']
+add_para(f"La campagne WP-MAT-MEM-2026 trouve {len(mm['familles_soutenantes'])} familles positives sur au moins une relation, mais {mm['familles_au_schema_complet']} famille porte la chaîne complète histoire → trace → réponse sous les quatre contrôles conjoints, alors que trois étaient exigées. Le verdict C-MAT-MEM-05 est donc {mm['verdict']}. Les résultats relationnels locaux ne doivent pas être transformés en validation transversale.")
+add_para('Un test même état apparent, même stimulus et histoires différentes est ajouté comme analyse exploratoire. Son plan ayant été choisi après inspection de la table, il ne rend aucun verdict confirmatoire et sert uniquement à préparer une réplication indépendante préenregistrée.')
+
+add_para('4.6 Filtrages historiques planétaires',style='Heading 2')
 add_table(['Filtrage','Conséquence architecturale','Statut disciplinaire'],[
 ('Lieu de formation','Sélection des matériaux et des signatures isotopiques','Établi'),
 ('Moment de l’accrétion','Quantité de ²⁶Al restante et destin thermique','Établi'),
@@ -792,7 +841,7 @@ add_para('Deux histoires spin-orbitales différentes aboutissent au même força
 add_para('Aucune variable ne franchit toutefois le seuil d’amplitude physique défini avant le calcul. Après un palier final de trois cents millions d’années, l’écart s’annule. Le temps caractéristique de décroissance est d’environ sept millions d’années. Le résultat correspond à un retard de relaxation, pas à une inscription durable.')
 
 add_para('5.4 Application climatique séparée',style='Heading 2')
-add_para('L’article climatique est hors de la chaîne de preuve de la branche. Il ne reçoit aucun verdict des tests N-corps ou MPT. Son apport au socle réside dans cinq distinctions devenues transversales, mémoire distribuée, D-H-L, Pth/Pacc, séparation X/m/A et critère d’altération architecturale. Les contenus propres au climat restent des éléments de littérature et une étude de cas, pas une validation d’ORI-C.')
+add_para('L’article climatique est hors de la chaîne de preuve de la branche. Il ne reçoit aucun verdict des tests N-corps ou MPT. Son apport au socle réside dans des distinctions devenues transversales : mémoire distribuée, D-H-L, hiérarchie des possibles, séparation S/m/A, seuil de persistance, critère d’altération architecturale et séparation des chaînes physique et épistémique. Les contenus propres au climat restent des éléments de littérature et une étude de cas, pas une validation d’ORI-C.')
 
 # 6 living
 add_para('6. Branche vivant et programme prébiotique',style='Heading 1')

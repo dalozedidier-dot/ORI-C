@@ -106,7 +106,7 @@ Un verdict exige deux choses, et la force du témoin n’en est qu’une. La hi�
 
 Le dossier a payé cette règle deux fois le même jour. `WP-CLIM-MEM-2026` avait un témoin de niveau 1, une permutation qui ramenait l’autocorrélation de +0,450 à +0,013. Son successeur `WP-CLIM-MEM-2026-B` avait un témoin correct et une statistique asymétrique : rejouée sur l’**obliquité terrestre**, une oscillation à 41 ka calculée par mécanique céleste qui n’inscrit rien, elle accordait `soutient` avec un gain de 77,3 % — supérieur à celui de la cible glaciaire. Les deux protocoles sont clos sur `invalide`. Le contrôle qui les a rétractés n’utilise aucune donnée synthétique : il substitue la cible par d’autres colonnes réelles de la même table. Il tourne en CI, dans [`scripts/controle_negatif_reel_surrogats.py`](scripts/controle_negatif_reel_surrogats.py).
 
-### Campagne « mémoire matérielle réelle » — protocole gelé, sources non encore inspectées
+### Campagne « mémoire matérielle réelle » — résultats par relation, transversalité non soutenue
 
 [`01_branche_matiere/memoire_materielle_reelle/`](01_branche_matiere/memoire_materielle_reelle/) porte `WP-MAT-MEM-2026`, cinq critères scellés le 8 août 2026 **avant inspection du moindre jeu de données**.
 
@@ -121,7 +121,19 @@ L’intérêt de cette campagne est qu’elle vise le **niveau 6**, hors de port
 | verre | recuit sous `Tg` | enthalpie résiduelle | cinétique de relaxation |
 | transition de phase | traitement thermique | fractions de phase | transformation ultérieure |
 
-**Aucun jeu n’a encore été inspecté.** Le registre des candidats liste des pistes, pas des sources vérifiées, et le filtre d’admission tourne à vide tant qu’aucune fiche n’est renseignée depuis la source elle-même. Un jeu offrant moins de six paires indépendantes ne peut produire aucun verdict positif à alpha = 0,05, et ce constat se fait à l’admission.
+Les sources ont depuis été inspectées, extraites et rejouées dans le pipeline
+versionné. Cinq familles rendent un verdict positif sur au moins une relation :
+magnétisme, plasticité, relaxation de verre, traces de fission et reconstruction
+de surface. Ce résultat partiel ne valide pas la chaîne complète. Sous les
+quatre contrôles conjoints de la matrice transversale, **zéro famille** porte le
+schéma complet `histoire → trace → réponse`, alors que trois étaient exigées :
+`C-MAT-MEM-05` conclut donc `ne_soutient_pas`.
+
+Un test supplémentaire compare, dans des boucles magnétiques encastrées, des
+blocs ayant le même état apparent et le même stimulus mais des histoires
+différentes. Son plan ayant été choisi après inspection, il est explicitement
+**exploratoire** et ne produit aucun verdict confirmatoire. Il sert à préparer
+un test indépendant préenregistré.
 
 ### Premier test prospectif préenregistré
 

@@ -172,10 +172,10 @@ Ce programme n'invente pas de vocabulaire. Il instancie celui du socle.
 
 | Notion du socle | Instanciation ici |
 |---|---|
-| `X` / `m` / `A` (`CODEBOOK` §13.4) | `X` concentrations et volumes ; `m` séquence du polymère et composition transmise ; `A` couplage membrane-copie-énergie |
-| Critère état / architecture (§13.4) | une variation reste dans `X` si elle se corrige au cycle suivant sans changer le mécanisme ; elle devient architecturale si le mode de transmission lui-même change |
+| `S` / `m` / `A` (`CODEBOOK` §13.4) | `S` concentrations et volumes ; `m` séquence du polymère et composition transmise ; `A` couplage membrane-copie-énergie |
+| Critère état / architecture (§13.4) | une variation reste dans `S` si elle se corrige au cycle suivant sans changer le mécanisme ; elle devient architecturale si le mode de transmission lui-même change |
 | Diagnostic `D-H-L` (§13.2) | `D` nombre de cycles de survie de la variante ; `H` écart entre conditions d'acquisition et de perte ; `L` variantes définitivement sorties de la population |
-| `Pth` / `Pacc` (§13.3) | `Pth` produits compatibles avec la chimie ; `Pacc(T, C, ε)` produits atteignables sous une trajectoire environnementale donnée, en un nombre de cycles donné |
+| Hiérarchie des possibles (§13.3) | `P^adm` produits compatibles avec la chimie ; `P^att` produits atteignables depuis l'état courant ; `P^kin(T,C,ε)` produits accessibles dans le nombre de cycles et avec les ressources déclarés ; `P^pers` produits laissant une trace au-dessus du seuil retenu |
 | Mémoire distribuée (§13.1) | séquence, composition membranaire et gradient énergétique sont **trois mémoires de constantes de temps différentes**, et l'irréversibilité peut passer de l'une à l'autre |
 | Signature de transition (§6) | `ΔΠ` nouveau mode de persistance ; `ΔH` importance nouvelle de l'héritage — ce sont les deux termes que le franchissement du verrou doit faire basculer |
 | Témoins (`PROTOCOLE_DONNEES` §6) | les sept témoins du §4.3, **plus** le témoin de complexité égale du §5 |

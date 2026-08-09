@@ -57,11 +57,11 @@ séparent une possibilité abstraite d'une réalisation :
 
 ```text
 H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P_t,ℓ^adm → P_t,ℓ^att
-    → P_t,ℓ^kin → P_t,ℓ^pers → R_t+1 → H_t+1 → m_t+1^ℓ
+    → P_t,ℓ^kin → P_t,ℓ^pers → Réal_t+1 → H_t+1 → m_t+1^ℓ
 ```
 
 `P_t^(s)` reste une notation générique ; les quatre valeurs physiques de `s`
-sont définies au §13.3. `R_t+1` n'est pas une cinquième classe de possibles :
+sont définies au §13.3. `Réal_t+1` n'est pas une cinquième classe de possibles :
 c'est l'état ou la trajectoire effectivement réalisé. La chaîne reste un
 schéma d'organisation tant que chaque flèche n'est pas associée à une mesure,
 un modèle et un témoin.
@@ -475,17 +475,17 @@ l'organisation antérieure :
 |---|---|
 | Réversible | `O* ∈ P_t,ℓ^kin(T, C, ε)` |
 | Hystérétique | `O* ∈ P_t,ℓ^kin`, mais `B_retour ≠ B_basculement` |
-| Structurel récupérable | `O* ∉ P_t,ℓ^kin(A(t), m(t))`, mais `O* ∈ P_t,ℓ^kin(R(A(t)), R(m(t)))` |
+| Structurel récupérable | `O* ∉ P_t,ℓ^kin(A(t), m(t))`, mais `O* ∈ P_t,ℓ^kin(𝓡_rest(A(t)), 𝓡_rest(m(t)))` |
 | Structurel quasi irréversible | `O* ∉ P_t,ℓ^kin(T, C, ε)` |
 
-`R` est une opération de **restauration active** : le retour cesse d'être une
+`𝓡_rest` est une opération de **restauration active** : le retour cesse d'être une
 relaxation spontanée et devient une reconstruction, avec son propre coût.
 
 Une organisation peut rester dans `P^adm` en étant sortie de `P^kin`. Un
 constituant dont l'information reproductive a disparu du système sort des deux.
 « Quasi irréversible » est toujours relatif à `T` : l'horizon doit être écrit.
 
-### 13.4 Séparer l'état `X`, les mémoires `m` et l'architecture `A`
+### 13.4 Séparer l'état `S`, les mémoires `m` et l'architecture `A`
 
 L'écriture usuelle `X(t+1) = F(X(t), U(t))` laisse `F` inchangée. Le cadre
 ORI-C affirme précisément le contraire. Il faut donc trois lois couplées :
@@ -587,8 +587,8 @@ pas partager la même notation :
 
 ```text
 physique :    H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P^adm → P^att
-              → P^kin → P^pers → R_t+1
-épistémique : D + M → (Ĥ_t, m̂_t^ℓ, P̂_t,ℓ^(s), R̂_t+1)
+              → P^kin → P^pers → Réal_t+1
+épistémique : D + M → (Ĥ_t, m̂_t^ℓ, P̂_t,ℓ^(s), Réal̂_t+1)
 ```
 
 `D` désigne les observations et `M` le modèle d'inférence. Le chapeau signifie

@@ -18,9 +18,11 @@ Une troisième confusion doit être écartée, et le socle en fait une règle :
 lire cette structure comme une marche vers la complexité. La flèche
 thermodynamique globale va vers l'augmentation de l'entropie ; les poches
 d'organisation se maintiennent en dissipant les gradients qui les alimentent.
-Voir `00_socle/CODEBOOK.md` §12. Le §13 ajoute cinq distinctions transversales
-— mémoire distribuée, diagnostic `D-H-L`, `Pth`/`Pacc`, séparation
-`X`/`m`/`A`, critère d'altération architecturale — extraites d'une
+Voir `00_socle/CODEBOOK.md` §12. Le §13 ajoute des distinctions transversales
+— mémoire distribuée, diagnostic `D-H-L`, hiérarchie
+`P^adm ⊇ P^att ⊇ P^kin ⊇ P^pers`, séparation `S`/`m`/`A`, seuil de
+persistance, critère d'altération architecturale et séparation entre chaîne
+physique et chaîne de preuve — extraites d'une
 application et valables pour les trois branches.
 
 Ce que les trois branches partagent réellement n'est pas un mécanisme, c'est

@@ -196,9 +196,10 @@ un complément de l'article de branche 2. Trois règles s'y appliquent.
 1. **Il ne propage aucun niveau de preuve.** Ses repères empiriques viennent de
    la littérature qu'il cite ; aucun test de ce dossier ne porte sur eux, et il
    ne reçoit rien des résultats de la couche mémoire historique.
-2. **Sur les cinq notions transversales qui en ont été extraites — mémoire
-   distribuée, diagnostic `D-H-L`, `Pth`/`Pacc`, séparation `X`/`m`/`A`,
-   critère d'altération architecturale — c'est le `CODEBOOK.md` §13 qui fait
+2. **Sur les notions transversales qui en ont été extraites — mémoire
+   distribuée, diagnostic `D-H-L`, hiérarchie des possibles, séparation
+   `S`/`m`/`A`, seuil de persistance, critère d'altération architecturale et
+   séparation des chaînes physique et épistémique — c'est le `CODEBOOK.md` §13 qui fait
    foi**, conformément à la règle générale : le socle prime, l'article
    d'application illustre.
 3. **Son contenu de domaine reste chez lui.** Océan, cryosphère, pergélisol,

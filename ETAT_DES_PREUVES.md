@@ -54,13 +54,14 @@ Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient
 | Seuil H011 | seuil monotone avec la turbulence ; rapport extrême 3,33 | **Soutenu dans les simulations publiées** |
 | Organisation de l’hypergraphe matériel | 46/53 en fermeture stricte ; 34 relations critiques ; 0,595 bit, p = 0,00005 | **Structure et information mesurées** |
 | Distinction relaxation/mémoire | convergence sous forçage final commun ; temps caractéristique 7,02 Ma | **Critère opératoire établi dans le modèle** |
+| Mémoire matérielle réelle, transversalité | 5 familles positives sur au moins une relation, mais 0 famille porte la chaîne complète sous les quatre contrôles, 3 exigées | **C-MAT-MEM-05 ne soutient pas la transversalité** |
 
 ## Socle
 
 | Élément | Statut | Où |
 |---|---|---|
 | Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
-| Mémoire distribuée, `D-H-L`, `Pth`/`Pacc`, `X`/`m`/`A`, altération architecturale | Preuve de concept | `00_socle/CODEBOOK.md` §13 |
+| Mémoire distribuée, `D-H-L`, hiérarchie `P^adm/P^att/P^kin/P^pers`, `S`/`m`/`A`, seuil de persistance, chaînes physique/épistémique | Définitions et critères, non preuve empirique | `00_socle/CODEBOOK.md` §13 |
 | Carte des 40 transitions, 47 relations | Cohérence structurelle vérifiée | `00_socle/carte_relationnelle/` |
 | Suite de tests de la carte | voir `ETAT_DES_TESTS.md` | `00_socle/tests/` |
 | Représentation des fermetures | attribut de nœud, 5 transitions ; `CLOS` et `INTG` définis, non instanciés | `ARCHITECTURE.md` |
@@ -469,9 +470,10 @@ changé la réponse ; le premier n'a pas été converti en verdict.
 Cet article est une étude de cas autonome. Il n'exécute aucun test de ce
 dossier et n'en reçoit aucun statut. Ses repères empiriques et leurs niveaux
 de confiance relèvent de la littérature qu'il cite. Sa seule contribution au
-programme est conceptuelle : cinq distinctions transversales, portées dans le
-socle au `00_socle/CODEBOOK.md` §13, où elles ont le statut *Preuve de
-concept* comme le reste du vocabulaire.
+programme est conceptuelle : les distinctions transversales sont portées dans
+le socle au `00_socle/CODEBOOK.md` §13. Ce sont des définitions et des critères,
+pas une preuve empirique ; leur instanciation doit recevoir un statut propre
+dans chaque branche.
 
 ## Branche 3 — Vivant
 
