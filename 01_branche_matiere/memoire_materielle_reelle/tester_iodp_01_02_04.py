@@ -17,6 +17,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 ICI = Path(__file__).resolve().parent
 TABLE = ICI / "derive" / "iodp_remanence_par_echantillon.csv"
 SORTIE = ICI / "derive" / "RESULTATS_C_MAT_MEM_01_02_04.json"
@@ -26,18 +28,6 @@ TIRAGES = 10000
 GRAINE = 20260809
 DOSE_PERSISTANCE_MT = 20.0
 ETAPES_MINIMUM = 3
-
-
-def spearman(x: np.ndarray, y: np.ndarray) -> float:
-    def rangs(v):
-        ordre = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[ordre] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def p_permutation(x: np.ndarray, y: np.ndarray, aleatoire) -> tuple[float, float]:

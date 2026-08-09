@@ -1,5 +1,8 @@
 {
   "critere": "C-MAT-MEM-03",
+  "portee": "preuve_forte_ablation_physique",
+  "verdict_C03_complet": "non_testable_avec_ce_jeu",
+  "motif_C03_complet": "le jeu démontre dose d'ablation → effacement de la trace, mais ne compare pas deux histoires A/B avant et après ablation sous un même stimulus final pour montrer la disparition de leur écart de réponse",
   "campagne": "WP-MAT-MEM-2026",
   "niveau_de_temoin": 6,
   "justification_du_niveau": "le témoin est une opération physique réellement pratiquée sur l'échantillon — champ alternatif ou chauffage — et non un surrogat calculé",

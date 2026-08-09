@@ -199,11 +199,19 @@ def main() -> int:
         motif = "la décroissance n'est pas établie contre ses témoins"
 
     print()
-    print(f"VERDICT C-MAT-MEM-03 : {verdict}")
+    print(f"VERDICT ABLATION PHYSIQUE : {verdict}")
+    print("C-MAT-MEM-03 complet : non_testable_avec_ce_jeu")
     print(f"  {motif}")
 
     rapport = {
         "critere": "C-MAT-MEM-03",
+        "portee": "preuve_forte_ablation_physique",
+        "verdict_C03_complet": "non_testable_avec_ce_jeu",
+        "motif_C03_complet": (
+            "le jeu démontre dose d'ablation → effacement de la trace, mais ne "
+            "compare pas deux histoires A/B avant et après ablation sous un même "
+            "stimulus final pour montrer la disparition de leur écart de réponse"
+        ),
         "campagne": "WP-MAT-MEM-2026",
         "niveau_de_temoin": 6,
         "justification_du_niveau": (

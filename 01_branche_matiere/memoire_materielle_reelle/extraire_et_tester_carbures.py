@@ -25,6 +25,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 from donnees_campagne import base_de
 
 warnings.filterwarnings("ignore")
@@ -37,21 +39,6 @@ ALPHA = 0.05
 GRAINE = 20260809
 TIRAGES = 20000
 REVENU = re.compile(r"(\d{3})\s*°C")
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def feuille(chemin: Path) -> list[tuple]:
@@ -206,7 +193,7 @@ def main() -> int:
             continue
         detail = "  ".join(f"{m} {v:+.2f}" for m, v in sorted(r["rho_par_materiau"].items()))
         print(f"{nom:<28}{r['eprouvettes']:>4}{r['rho_stratifie']:>10.4f}"
-              f"{r['p_permutation']:>10.4f}  {detail}")
+              f"{r['p_permutation']:>10.6f}  {detail}")
 
     maillons = ("histoire_vers_trace", "trace_vers_reponse")
     parfaits = all(abs(relations[c].get("rho_stratifie", 0)) > 0.99

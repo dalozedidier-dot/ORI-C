@@ -26,6 +26,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import permuter_dans_strates, spearman
+
 ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
 SORTIE = DERIVE / "MATRICE_TRANSVERSALE.json"
@@ -35,21 +37,6 @@ GRAINE = 20260809
 TIRAGES = 5000
 RELATIONS = ("histoire_vers_trace", "trace_vers_reponse", "histoire_vers_reponse",
              "persistance", "ablation", "replication")
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def lire(nom: str) -> list[dict]:
@@ -81,9 +68,10 @@ def eprouver(x: list[float], y: list[float], groupes: list[str],
     if not np.isfinite(observe):
         return {"testable": False, "motif": "corrélation indéfinie"}
 
-    # Permutation des étiquettes.
+    # Permutation conditionnelle au groupe expérimental.
     compte = sum(1 for _ in range(TIRAGES)
-                 if abs(spearman(x, aleatoire.permutation(y))) >= abs(observe))
+                 if abs(spearman(x, permuter_dans_strates(y, groupes, aleatoire)))
+                 >= abs(observe))
     p = (1 + compte) / (1 + TIRAGES)
 
     # Bootstrap au niveau de l'unité physique, jamais du point de mesure.
@@ -121,6 +109,7 @@ def eprouver(x: list[float], y: list[float], groupes: list[str],
     )
     return {
         "testable": True, "unites": int(x.size), "rho": observe, "p": p,
+        "permutation": "dans_les_strates", "strates": len(set(groupes)),
         "bootstrap_ic95": intervalle,
         "retrait_une_unite": {"min": float(sans_une.min()) if sans_une.size else None,
                               "max": float(sans_une.max()) if sans_une.size else None},
@@ -165,6 +154,8 @@ def magnetisme(aleatoire) -> dict:
         "ablation": {"testable": True, "unites": int(np.isfinite(ablation).sum()),
                      "rho": float(np.nanmean(ablation)),
                      "p": None, "survit_aux_controles": True,
+                     "portee": "preuve_forte_ablation_physique",
+                     "verdict_C03_complet": "non_testable_avec_ce_jeu",
                      "detail": "corrélation dose-intensité par échantillon, "
                                "témoin physique IRM et ARM de signe opposé"},
         "replication": {"testable": True, "unites": len(moyennes),
@@ -370,6 +361,7 @@ def main() -> int:
         "trace_vers_reponse": compter("trace_vers_reponse"),
         "persistance": compter("persistance"),
         "ablation_physique": compter("ablation"),
+        "C_MAT_MEM_03_complet": 0,
         "replication_independante": compter("replication"),
     }
     print()
@@ -379,7 +371,7 @@ def main() -> int:
     rapport = {
         "campagne": "WP-MAT-MEM-2026",
         "alpha": ALPHA, "graine": GRAINE, "tirages": TIRAGES,
-        "controles": ["permutation des étiquettes",
+        "controles": ["permutation des étiquettes dans les strates expérimentales",
                       "bootstrap au niveau de l'unité physique",
                       "retrait d'une unité",
                       "retrait d'un groupe entier"],
@@ -395,7 +387,7 @@ def main() -> int:
                 "masse des polymères, grandeur mesurée du même jeu et attendue insensible"
             ],
             "statistiques": [
-                "permutations d'étiquettes utilisées pour les p-values"
+                "permutations intra-strates utilisées pour les p-values"
             ],
             "regle": (
                 "une permutation vérifie la spécificité statistique de l'association ; "

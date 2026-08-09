@@ -20,6 +20,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 from donnees_campagne import base_de
 
 ICI = Path(__file__).resolve().parent
@@ -31,21 +33,6 @@ GRAINE = 20260809
 TIRAGES = 20000
 CONDITION = re.compile(r"ZAD(\d+)H(\d+)", re.I)
 TRACES_MINIMUM = 5
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def statistique(strates: dict[float, list[tuple[float, float]]]) -> float:

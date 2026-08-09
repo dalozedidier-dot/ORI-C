@@ -121,8 +121,9 @@ L’intérêt de cette campagne est qu’elle vise le **niveau 6**, hors de port
 | verre | recuit sous `Tg` | enthalpie résiduelle | cinétique de relaxation |
 | transition de phase | traitement thermique | fractions de phase | transformation ultérieure |
 
-Les sources ont depuis été inspectées, extraites et rejouées dans le pipeline
-versionné. Cinq familles rendent un verdict positif sur au moins une relation :
+Les jeux ont été extraits et analysés dans un pipeline séparé, mais aucune
+fiche d'admission confirmatoire n'existe encore dans `fiches/`. Cinq familles
+rendent un verdict positif sur au moins une relation partielle :
 magnétisme, plasticité, relaxation de verre, traces de fission et reconstruction
 de surface. Ce résultat partiel ne valide pas la chaîne complète. Sous les
 quatre contrôles conjoints de la matrice transversale, **zéro famille** porte le
@@ -136,9 +137,17 @@ par condition ; Medium-Mn n'apparie pas suffisamment trace et réponse. Pour
 IODP, la cohérence trace-réponse, la résistance au-delà de 20 mT et la
 comparaison trace naturelle/IRM-ARM restent publiées comme diagnostics partiels,
 mais ne sont plus attribuées respectivement à `C01`, `C02` et `C04`. Seule
-l'ablation physique contribue à `C03`. Les permutations statistiques sont
+l'ablation physique est fortement soutenue, mais le plan A/B complet de `C03`
+reste non testable avec IODP. Les permutations statistiques sont
 également distinguées des contrôles négatifs physiques, dont la masse des
 polymères fournit ici l'exemple explicite.
+
+Tous les Spearman de cette campagne utilisent désormais des rangs moyens pour
+les ex æquo. La matrice transversale permute les étiquettes uniquement au sein
+des matériaux, températures, séries ou régimes expérimentaux. Le champ
+historique `paires_minimum: 6` du gel est explicitement supplanté, sans modifier
+le fichier scellé, par
+[`NOTE_SUPERSESSION_GEL.md`](01_branche_matiere/memoire_materielle_reelle/NOTE_SUPERSESSION_GEL.md).
 
 Un test supplémentaire compare, dans des boucles magnétiques encastrées, des
 blocs ayant le même état apparent et le même stimulus mais des histoires
