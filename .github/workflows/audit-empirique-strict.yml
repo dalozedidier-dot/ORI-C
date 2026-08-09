@@ -7,6 +7,8 @@ on:
       - 'plateforme/source_corrigee/src/oric_full/**'
       - 'plateforme/source_corrigee/tests/**'
       - 'plateforme/campagne_maximale_reelle/data/**'
+      - 'plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py'
+      - 'plateforme/campagne_maximale_reelle/tests/test_priorites_acquisition.py'
       - 'donnees_externes/donnees_reelles_2026_08_07/**'
       - 'scripts/valider_barriere_empirique.py'
       - 'scripts/auditer_donnees_reelles_2026_08_07.py'
@@ -79,6 +81,13 @@ jobs:
           print('Matrice stricte:', counts)
           print('Verdicts scientifiques:', sci)
           PY
+
+      - name: Classer les données manquantes par tests potentiellement débloqués
+        run: |
+          python plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py \
+            --entree plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/results.json \
+            --sortie-json plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.json \
+            --sortie-md plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.md
 
       - name: Publier uniquement les audits et sorties strictes
         if: always()

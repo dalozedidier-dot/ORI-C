@@ -1,0 +1,1265 @@
+{
+  "source": "plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json",
+  "lecture": "carte des données manquantes, pas tableau de score scientifique ; un déblocage potentiel ne garantit ni exécution réussie ni soutien",
+  "campagne": {
+    "tests_catalogues": 683,
+    "bloques": 626,
+    "non_executes_automatiquement": 48,
+    "executes_techniquement": 9,
+    "echecs_techniques": 0,
+    "erreurs_informatiques": 0
+  },
+  "causes": {
+    "aucun_jeu_empirique_declare": {
+      "occurrences": 63,
+      "tests_distincts": 63,
+      "action": "identifier puis déclarer un jeu réel adapté au test"
+    },
+    "non_admissible_comme_preuve_empirique": {
+      "occurrences": 300,
+      "tests_distincts": 255,
+      "action": "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+    },
+    "test_hors_portee_mesuree": {
+      "occurrences": 343,
+      "tests_distincts": 320,
+      "action": "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+    }
+  },
+  "regle_de_comptage": "les causes et datasets peuvent se cumuler sur un test ; chaque ligne de priorité déduplique les test_id pour éviter le double comptage",
+  "priorites": [
+    {
+      "dataset_cible": "paleoclimate_timeseries",
+      "tests_distincts_potentiellement_debloquables": 89,
+      "test_ids": [
+        "C1-001",
+        "C1-002",
+        "C1-003",
+        "C1-004",
+        "C1-005",
+        "C1-006",
+        "C1-007",
+        "C1-008",
+        "C1-009",
+        "C1-010",
+        "C2-001",
+        "C2-002",
+        "C2-003",
+        "C2-005",
+        "C2-007",
+        "C2-008",
+        "C2-009",
+        "C2-010",
+        "C3-001",
+        "C3-002",
+        "C3-003",
+        "C3-004",
+        "C3-005",
+        "C3-006",
+        "C3-007",
+        "C3-008",
+        "C3-009",
+        "C3-010",
+        "C3-011",
+        "C3-012",
+        "C3-013",
+        "C3-014",
+        "C3-015",
+        "C3-016",
+        "C3-017",
+        "C3-018",
+        "C3-019",
+        "C3-020",
+        "C3-021",
+        "C3-022",
+        "C4-001",
+        "C4-002",
+        "C4-003",
+        "C4-004",
+        "C4-005",
+        "C4-006",
+        "C4-007",
+        "C4-008",
+        "C4-009",
+        "C4-010",
+        "C4-011",
+        "C4-012",
+        "C4-013",
+        "C4-014",
+        "C4-015",
+        "C5-001",
+        "C5-002",
+        "C5-003",
+        "C5-004",
+        "C5-005",
+        "C5-006",
+        "C5-007",
+        "C5-008",
+        "C5-009",
+        "C6-001",
+        "C6-002",
+        "C6-003",
+        "C6-004",
+        "C6-005",
+        "C6-006",
+        "C6-007",
+        "C6-008",
+        "C6-009",
+        "C6-010",
+        "C6-011",
+        "C6-012",
+        "C6-013",
+        "C6-014",
+        "C6-015",
+        "C7-001",
+        "C7-002",
+        "C7-003",
+        "C7-004",
+        "C7-005",
+        "C7-006",
+        "C7-007",
+        "C7-008",
+        "C7-009",
+        "C7-010"
+      ],
+      "work_packages": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 89
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "prebiotic_lineages",
+      "tests_distincts_potentiellement_debloquables": 85,
+      "test_ids": [
+        "V2-001",
+        "V2-002",
+        "V2-003",
+        "V2-004",
+        "V2-005",
+        "V2-007",
+        "V2-008",
+        "V2-010",
+        "V2-011",
+        "V2-013",
+        "V2-014",
+        "V2-015",
+        "V2-016",
+        "V2-017",
+        "V2-018",
+        "V2-019",
+        "V2-020",
+        "V2-021",
+        "V2-022",
+        "V2-023",
+        "V2-026",
+        "V2-028",
+        "V2-029",
+        "V2-031",
+        "V2-032",
+        "V2-033",
+        "V2-034",
+        "V2-035",
+        "V2-036",
+        "V2-037",
+        "V2-038",
+        "V2-039",
+        "V2-040",
+        "V3-001",
+        "V3-002",
+        "V3-003",
+        "V3-004",
+        "V3-005",
+        "V3-006",
+        "V3-007",
+        "V3-009",
+        "V3-010",
+        "V3-011",
+        "V3-012",
+        "V3-013",
+        "V3-014",
+        "V3-015",
+        "V3-016",
+        "V3-017",
+        "V3-018",
+        "V3-019",
+        "V3-020",
+        "V4-001",
+        "V4-002",
+        "V4-003",
+        "V4-004",
+        "V4-005",
+        "V4-006",
+        "V4-007",
+        "V4-008",
+        "V4-009",
+        "V4-010",
+        "V4-011",
+        "V4-012",
+        "V4-013",
+        "V4-015",
+        "V4-016",
+        "V4-017",
+        "V4-018",
+        "V4-019",
+        "V4-020",
+        "V5-001",
+        "V5-002",
+        "V5-003",
+        "V5-005",
+        "V5-006",
+        "V5-009",
+        "V6-002",
+        "V6-003",
+        "V6-004",
+        "V6-005",
+        "V6-006",
+        "V6-007",
+        "V6-008",
+        "V6-009"
+      ],
+      "work_packages": [
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 85
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "aucun_dataset_declare",
+      "tests_distincts_potentiellement_debloquables": 63,
+      "test_ids": [
+        "S1-001",
+        "S1-003",
+        "S1-004",
+        "S1-005",
+        "S1-006",
+        "S1-007",
+        "S1-008",
+        "S1-009",
+        "S1-010",
+        "S1-011",
+        "S1-012",
+        "S1-013",
+        "S1-014",
+        "S1-015",
+        "S1-017",
+        "S1-018",
+        "S1-019",
+        "S1-020",
+        "S1-021",
+        "S1-022",
+        "S1-023",
+        "S1-024",
+        "S1-025",
+        "S1-026",
+        "S1-027",
+        "S1-028",
+        "S1-029",
+        "S1-030",
+        "S1-031",
+        "S1-032",
+        "S1-033",
+        "S1-034",
+        "S1-035",
+        "S1-036",
+        "S1-037",
+        "S1-038",
+        "S1-039",
+        "S1-040",
+        "S1-041",
+        "S1-042",
+        "S1-043",
+        "S1-044",
+        "S1-045",
+        "S1-046",
+        "S1-047",
+        "S1-048",
+        "S1-049",
+        "S1-050",
+        "S2-001",
+        "S2-002",
+        "S2-004",
+        "S2-005",
+        "S2-006",
+        "S2-007",
+        "S2-008",
+        "S2-009",
+        "S2-010",
+        "S2-011",
+        "S2-012",
+        "S2-013",
+        "S2-014",
+        "S2-015",
+        "S2-020"
+      ],
+      "work_packages": [
+        "S1",
+        "S2"
+      ],
+      "causes": {
+        "aucun_jeu_empirique_declare": 63
+      },
+      "actions_requises": [
+        "identifier puis déclarer un jeu réel adapté au test"
+      ]
+    },
+    {
+      "dataset_cible": "benchmark_cases",
+      "tests_distincts_potentiellement_debloquables": 48,
+      "test_ids": [
+        "T1-001",
+        "T1-002",
+        "T1-003",
+        "T1-004",
+        "T1-006",
+        "T1-007",
+        "T1-008",
+        "T1-009",
+        "T1-010",
+        "T1-011",
+        "T1-012",
+        "T1-013",
+        "T1-014",
+        "T1-015",
+        "T1-016",
+        "T2-001",
+        "T2-002",
+        "T2-003",
+        "T2-004",
+        "T2-005",
+        "T2-006",
+        "T2-007",
+        "T2-008",
+        "T2-010",
+        "T3-001",
+        "T3-002",
+        "T3-003",
+        "T3-004",
+        "T3-005",
+        "T3-006",
+        "T3-007",
+        "T3-008",
+        "T3-010",
+        "T4-001",
+        "T4-002",
+        "T4-003",
+        "T4-004",
+        "T4-005",
+        "T4-006",
+        "T5-001",
+        "T5-002",
+        "T5-003",
+        "T5-004",
+        "T5-005",
+        "T5-006",
+        "T5-007",
+        "T5-008",
+        "T5-010"
+      ],
+      "work_packages": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 48
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "orbital_initial_conditions",
+      "tests_distincts_potentiellement_debloquables": 47,
+      "test_ids": [
+        "A1-001",
+        "A1-002",
+        "A1-003",
+        "A1-004",
+        "A1-005",
+        "A1-006",
+        "A1-007",
+        "A1-008",
+        "A1-009",
+        "A2-001",
+        "A2-002",
+        "A2-003",
+        "A2-004",
+        "A2-005",
+        "A2-006",
+        "A2-007",
+        "A2-008",
+        "A2-009",
+        "A2-010",
+        "A3-001",
+        "A3-002",
+        "A3-003",
+        "A3-004",
+        "A3-005",
+        "A3-006",
+        "A3-007",
+        "A3-008",
+        "A3-009",
+        "A3-010",
+        "A3-011",
+        "A3-012",
+        "A3-013",
+        "A3-014",
+        "A3-015",
+        "A3-016",
+        "A4-001",
+        "A4-002",
+        "A4-003",
+        "A4-004",
+        "A4-005",
+        "A4-006",
+        "A4-007",
+        "A4-008",
+        "A4-009",
+        "A4-010",
+        "A4-011",
+        "A4-012"
+      ],
+      "work_packages": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 47
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "antibiotic_measurements",
+      "tests_distincts_potentiellement_debloquables": 41,
+      "test_ids": [
+        "R3-001",
+        "R3-002",
+        "R3-003",
+        "R3-004",
+        "R3-005",
+        "R3-006",
+        "R3-008",
+        "R3-009",
+        "R3-010",
+        "R3-011",
+        "R3-012",
+        "R3-013",
+        "R3-014",
+        "R3-015",
+        "R4-001",
+        "R4-002",
+        "R4-003",
+        "R4-004",
+        "R4-005",
+        "R4-006",
+        "R4-007",
+        "R4-008",
+        "R4-009",
+        "R4-010",
+        "R4-011",
+        "R4-012",
+        "R4-013",
+        "R4-014",
+        "R4-015",
+        "R5-001",
+        "R5-002",
+        "R5-003",
+        "R5-004",
+        "R5-005",
+        "R5-006",
+        "R5-007",
+        "R5-008",
+        "R6-005",
+        "R6-006",
+        "R6-007",
+        "R6-008"
+      ],
+      "work_packages": [
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 41
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "antibiotic_cycles",
+      "tests_distincts_potentiellement_debloquables": 34,
+      "test_ids": [
+        "R2-001",
+        "R2-002",
+        "R2-003",
+        "R2-004",
+        "R2-005",
+        "R2-007",
+        "R2-008",
+        "R2-009",
+        "R2-013",
+        "R2-014",
+        "R2-015",
+        "R4-001",
+        "R4-002",
+        "R4-003",
+        "R4-004",
+        "R4-005",
+        "R4-006",
+        "R4-007",
+        "R4-008",
+        "R4-009",
+        "R4-010",
+        "R4-011",
+        "R4-012",
+        "R4-013",
+        "R4-014",
+        "R4-015",
+        "R5-001",
+        "R5-002",
+        "R5-003",
+        "R5-004",
+        "R5-005",
+        "R5-006",
+        "R5-007",
+        "R5-008"
+      ],
+      "work_packages": [
+        "R2",
+        "R4",
+        "R5"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 34
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "matter_transitions",
+      "tests_distincts_potentiellement_debloquables": 23,
+      "test_ids": [
+        "M1-001",
+        "M1-002",
+        "M1-003",
+        "M1-004",
+        "M1-005",
+        "M1-006",
+        "M1-007",
+        "M1-008",
+        "M1-009",
+        "M1-010",
+        "M1-011",
+        "M1-012",
+        "M1-013",
+        "M1-014",
+        "M5-001",
+        "M5-002",
+        "M5-003",
+        "M5-004",
+        "M5-005",
+        "M5-006",
+        "M5-007",
+        "M5-008",
+        "M5-009"
+      ],
+      "work_packages": [
+        "M1",
+        "M5"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 23
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "modern_climate_ensemble",
+      "tests_distincts_potentiellement_debloquables": 20,
+      "test_ids": [
+        "CL2-005",
+        "CL3-001",
+        "CL3-002",
+        "CL3-003",
+        "CL3-004",
+        "CL3-005",
+        "CL3-006",
+        "CL3-007",
+        "CL3-008",
+        "CL3-009",
+        "CL3-010",
+        "CL4-001",
+        "CL4-002",
+        "CL4-003",
+        "CL4-004",
+        "CL4-005",
+        "CL4-006",
+        "CL4-007",
+        "CL4-008",
+        "CL4-009"
+      ],
+      "work_packages": [
+        "CL2",
+        "CL3",
+        "CL4"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 20
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "modern_climate_timeseries",
+      "tests_distincts_potentiellement_debloquables": 20,
+      "test_ids": [
+        "CL1-001",
+        "CL1-002",
+        "CL1-003",
+        "CL1-004",
+        "CL1-005",
+        "CL1-006",
+        "CL1-007",
+        "CL1-008",
+        "CL1-009",
+        "CL1-010",
+        "CL2-001",
+        "CL2-002",
+        "CL2-003",
+        "CL2-004",
+        "CL2-005",
+        "CL2-006",
+        "CL2-007",
+        "CL2-009",
+        "CL2-010",
+        "CL4-001"
+      ],
+      "work_packages": [
+        "CL1",
+        "CL2",
+        "CL4"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 20
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "relations",
+      "tests_distincts_potentiellement_debloquables": 16,
+      "test_ids": [
+        "S3-001",
+        "S3-002",
+        "S3-003",
+        "S3-004",
+        "S3-008",
+        "S3-009",
+        "S3-010",
+        "S3-011",
+        "S3-012",
+        "S3-013",
+        "S3-014",
+        "S3-015",
+        "S3-016",
+        "S3-017",
+        "S3-019",
+        "S3-020"
+      ],
+      "work_packages": [
+        "S3"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 16
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "states",
+      "tests_distincts_potentiellement_debloquables": 16,
+      "test_ids": [
+        "S3-001",
+        "S3-002",
+        "S3-003",
+        "S3-004",
+        "S3-008",
+        "S3-009",
+        "S3-010",
+        "S3-011",
+        "S3-012",
+        "S3-013",
+        "S3-014",
+        "S3-015",
+        "S3-016",
+        "S3-017",
+        "S3-019",
+        "S3-020"
+      ],
+      "work_packages": [
+        "S3"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 16
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "molecular_inventory",
+      "tests_distincts_potentiellement_debloquables": 15,
+      "test_ids": [
+        "M3-001",
+        "M3-002",
+        "M3-003",
+        "M3-004",
+        "M3-005",
+        "M3-006",
+        "M3-007",
+        "M3-008",
+        "M3-009",
+        "M3-010",
+        "M3-011",
+        "M3-012",
+        "M3-013",
+        "M3-014",
+        "M3-015"
+      ],
+      "work_packages": [
+        "M3"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 15
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "reaction_network",
+      "tests_distincts_potentiellement_debloquables": 15,
+      "test_ids": [
+        "M3-001",
+        "M3-002",
+        "M3-003",
+        "M3-004",
+        "M3-005",
+        "M3-006",
+        "M3-007",
+        "M3-008",
+        "M3-009",
+        "M3-010",
+        "M3-011",
+        "M3-012",
+        "M3-013",
+        "M3-014",
+        "M3-015"
+      ],
+      "work_packages": [
+        "M3"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 15
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "thermochemical_phases",
+      "tests_distincts_potentiellement_debloquables": 15,
+      "test_ids": [
+        "M4-001",
+        "M4-002",
+        "M4-003",
+        "M4-004",
+        "M4-005",
+        "M4-006",
+        "M4-007",
+        "M4-008",
+        "M4-009",
+        "M4-010",
+        "M4-011",
+        "M4-012",
+        "M4-013",
+        "M4-014",
+        "M4-015"
+      ],
+      "work_packages": [
+        "M4"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 15
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "orbital_timeseries",
+      "tests_distincts_potentiellement_debloquables": 13,
+      "test_ids": [
+        "A5-001",
+        "A5-002",
+        "A5-003",
+        "A5-004",
+        "A5-005",
+        "A5-006",
+        "A5-007",
+        "A5-008",
+        "A5-009",
+        "A6-001",
+        "A6-002",
+        "A6-003",
+        "A6-004"
+      ],
+      "work_packages": [
+        "A5",
+        "A6"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 13
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "partition_experiments",
+      "tests_distincts_potentiellement_debloquables": 13,
+      "test_ids": [
+        "P3-003",
+        "P3-004",
+        "P3-005",
+        "P3-006",
+        "P3-007",
+        "P3-008",
+        "P3-009",
+        "P3-010",
+        "P3-011",
+        "P3-012",
+        "P3-013",
+        "P3-014",
+        "P3-015"
+      ],
+      "work_packages": [
+        "P3"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 13
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "endosymbiosis_events",
+      "tests_distincts_potentiellement_debloquables": 11,
+      "test_ids": [
+        "B2-001",
+        "B2-002",
+        "B2-004",
+        "B2-005",
+        "B2-006",
+        "B2-007",
+        "B2-008",
+        "B2-009",
+        "B2-010",
+        "B2-011",
+        "B2-012"
+      ],
+      "work_packages": [
+        "B2"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 11
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "planetary_histories",
+      "tests_distincts_potentiellement_debloquables": 11,
+      "test_ids": [
+        "P6-001",
+        "P6-002",
+        "P6-003",
+        "P6-004",
+        "P6-005",
+        "P6-006",
+        "P6-007",
+        "P6-008",
+        "P6-009",
+        "P6-010",
+        "P6-011"
+      ],
+      "work_packages": [
+        "P6"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 11
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "prebiotic_rna_evolution",
+      "tests_distincts_potentiellement_debloquables": 11,
+      "test_ids": [
+        "V2-006",
+        "V2-012",
+        "V2-024",
+        "V2-025",
+        "V2-027",
+        "V2-030",
+        "V4-014",
+        "V5-004",
+        "V5-007",
+        "V5-008",
+        "V6-001"
+      ],
+      "work_packages": [
+        "V2",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 11
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "body_properties",
+      "tests_distincts_potentiellement_debloquables": 10,
+      "test_ids": [
+        "P2-001",
+        "P2-002",
+        "P2-003",
+        "P2-004",
+        "P2-005",
+        "P2-006",
+        "P2-007",
+        "P2-008",
+        "P2-009",
+        "P2-010"
+      ],
+      "work_packages": [
+        "P2"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 10
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "chronometers",
+      "tests_distincts_potentiellement_debloquables": 10,
+      "test_ids": [
+        "P2-001",
+        "P2-002",
+        "P2-003",
+        "P2-004",
+        "P2-005",
+        "P2-006",
+        "P2-007",
+        "P2-008",
+        "P2-009",
+        "P2-010"
+      ],
+      "work_packages": [
+        "P2"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 10
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "ephemerides",
+      "tests_distincts_potentiellement_debloquables": 10,
+      "test_ids": [
+        "A2-001",
+        "A2-002",
+        "A2-003",
+        "A2-004",
+        "A2-005",
+        "A2-006",
+        "A2-007",
+        "A2-008",
+        "A2-009",
+        "A2-010"
+      ],
+      "work_packages": [
+        "A2"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 10
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "isotope_tracers",
+      "tests_distincts_potentiellement_debloquables": 10,
+      "test_ids": [
+        "P1-001",
+        "P1-002",
+        "P1-003",
+        "P1-004",
+        "P1-005",
+        "P1-006",
+        "P1-007",
+        "P1-008",
+        "P1-009",
+        "P1-010"
+      ],
+      "work_packages": [
+        "P1"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 10
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "nucleosynthesis_yields",
+      "tests_distincts_potentiellement_debloquables": 10,
+      "test_ids": [
+        "M2-001",
+        "M2-002",
+        "M2-003",
+        "M2-004",
+        "M2-005",
+        "M2-006",
+        "M2-007",
+        "M2-008",
+        "M2-009",
+        "M2-010"
+      ],
+      "work_packages": [
+        "M2"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 10
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "biology_cases",
+      "tests_distincts_potentiellement_debloquables": 9,
+      "test_ids": [
+        "B3-001",
+        "B3-002",
+        "B3-003",
+        "B3-004",
+        "B3-005",
+        "B3-006",
+        "B3-007",
+        "B3-008",
+        "B3-010"
+      ],
+      "work_packages": [
+        "B3"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 9
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "cell_architecture",
+      "tests_distincts_potentiellement_debloquables": 9,
+      "test_ids": [
+        "B1-001",
+        "B1-002",
+        "B1-004",
+        "B1-005",
+        "B1-006",
+        "B1-007",
+        "B1-008",
+        "B1-009",
+        "B1-010"
+      ],
+      "work_packages": [
+        "B1"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 9
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "late_accretion_tracers",
+      "tests_distincts_potentiellement_debloquables": 9,
+      "test_ids": [
+        "P5-002",
+        "P5-003",
+        "P5-004",
+        "P5-005",
+        "P5-006",
+        "P5-007",
+        "P5-008",
+        "P5-009",
+        "P5-010"
+      ],
+      "work_packages": [
+        "P5"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 9
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "volatile_inventory",
+      "tests_distincts_potentiellement_debloquables": 9,
+      "test_ids": [
+        "P4-001",
+        "P4-002",
+        "P4-003",
+        "P4-004",
+        "P4-005",
+        "P4-006",
+        "P4-007",
+        "P4-008",
+        "P4-009"
+      ],
+      "work_packages": [
+        "P4"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 9
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "prebiotic_design",
+      "tests_distincts_potentiellement_debloquables": 5,
+      "test_ids": [
+        "V1-002",
+        "V1-003",
+        "V1-005",
+        "V1-006",
+        "V1-007"
+      ],
+      "work_packages": [
+        "V1"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 5
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "antibiotic_design",
+      "tests_distincts_potentiellement_debloquables": 4,
+      "test_ids": [
+        "R1-003",
+        "R1-004",
+        "R1-006",
+        "R1-007"
+      ],
+      "work_packages": [
+        "R1"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 4
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    },
+    {
+      "dataset_cible": "orbital_reference",
+      "tests_distincts_potentiellement_debloquables": 4,
+      "test_ids": [
+        "A6-001",
+        "A6-002",
+        "A6-003",
+        "A6-004"
+      ],
+      "work_packages": [
+        "A6"
+      ],
+      "causes": {
+        "non_admissible_comme_preuve_empirique": 4
+      },
+      "actions_requises": [
+        "remplacer la simulation, reconstruction ou benchmark par une source empirique admissible ; télécharger davantage du même objet ne suffit pas"
+      ]
+    },
+    {
+      "dataset_cible": "exoplanet_observations",
+      "tests_distincts_potentiellement_debloquables": 1,
+      "test_ids": [
+        "P4-010"
+      ],
+      "work_packages": [
+        "P4"
+      ],
+      "causes": {
+        "test_hors_portee_mesuree": 1
+      },
+      "actions_requises": [
+        "acquérir une source réelle mesurant exactement les variables, traces, interventions ou réponses exigées par le protocole"
+      ]
+    }
+  ]
+}

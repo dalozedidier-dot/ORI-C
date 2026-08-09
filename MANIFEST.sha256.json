@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/audit-empirique-strict.yml",
-      "size": 3447,
-      "sha256": "2e6ad1309475938b6b23c56bd332fbe49c573ccb6db38df957def2fc21073f19",
+      "size": 4154,
+      "sha256": "fbd8f577a01e7f2aea7e6b2d55b661f31e3f87611264cea12a6ec01297526da2",
       "storage": "inline"
     },
     {
@@ -4763,8 +4763,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 26307,
-      "sha256": "8d68f1072b1e4377bf7a22869f0126ba1d28e837baeee208cad1e1b7a5b349e6",
+      "size": 26368,
+      "sha256": "2a5ddf0337cc93efd0b645bd1ae37fc20325ad3abe0bcd5d7082e3d66a8c57c2",
       "storage": "inline"
     },
     {
@@ -4829,8 +4829,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 40264,
-      "sha256": "bf6ea72440dd57e93613e1fff50322d49fc3ec12fd1beeb1f8361ddc4cef484a",
+      "size": 40348,
+      "sha256": "89ad16268252c5af7e3cc5ac83fbb97c7b84547cf8cc9edfe17fdfb87108646f",
       "storage": "inline"
     },
     {
@@ -6166,6 +6166,18 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/PRIORITES_ACQUISITION_DONNEES.json",
+      "size": 29162,
+      "sha256": "6f6e540d56e4b1f83603dc5681a7621dd22f3cbe92b09970468221d1c4916f4e",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/PRIORITES_ACQUISITION_DONNEES.md",
+      "size": 6557,
+      "sha256": "e427cea3d9b324cd011f868db40c2f32c1dc17d6be70c84b850fe7bf3a6dcbab",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/PROTOCOLE_EXPLORATOIRE_ANTIBIOTIQUES.md",
       "size": 1164,
       "sha256": "afa16f703994887baa33cfe4a23fb1e5160d9664d2e3e2dfc3968fbe328e2aa9",
@@ -6544,6 +6556,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py",
+      "size": 7156,
+      "sha256": "52b613627f486ddf294ea3d289205142df27f56d0a74557218f2a3928672106d",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/resultats/REPORT.md",
       "size": 85113,
       "sha256": "3e36a5ef361231be3a39e3ba120b02e81e5e21068768d7f85270b81e853d5de9",
@@ -6793,6 +6811,12 @@
       "path": "plateforme/campagne_maximale_reelle/sources_brutes/README.md",
       "size": 278,
       "sha256": "7a9cbfbf70225c2d93ffce9db258c0c27746a03742fdaa8ca9483edb9bd26a62",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/tests/test_priorites_acquisition.py",
+      "size": 2076,
+      "sha256": "bd51b8ffe0164f263597abc6c3263fa0777903eb247d2a6311df1ad7e92688bb",
       "storage": "inline"
     },
     {
@@ -8069,8 +8093,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 14506,
-      "sha256": "0041e51bf028b8d29e11a613b68cde7bbc666ffe38e4401df19967ad4abcd771",
+      "size": 14499,
+      "sha256": "b91ad4dc4b3f522638fa5aaec74ee6f0dbb532f10f413d9a8cbfd60307882778",
       "storage": "inline"
     },
     {
@@ -8087,8 +8111,8 @@
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12983,
-      "sha256": "64696f7d9caf43ee9c6d0a49ef4e642e29518fe2875fea4f6240e1a2ad7beec8",
+      "size": 14622,
+      "sha256": "50cbd7fb2fb106b40e62c1c847b61e82fd1b9bb99d8c45e1934f566b38d724c9",
       "storage": "inline"
     },
     {
