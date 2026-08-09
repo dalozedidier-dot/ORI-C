@@ -103,16 +103,30 @@ def synthese_transversale() -> dict:
             }
 
     soutenues = [f for f, b in familles.items() if b["verdict"] == "soutient"]
-    verdict = "soutient" if len(soutenues) >= 3 else "ne_soutient_pas"
+
+    # C-MAT-MEM-05 exige le schéma complet, pas un verdict quelconque par
+    # famille. La matrice transversale le mesure sous quatre contrôles de
+    # robustesse ; c'est elle qui tranche.
+    matrice = DERIVE / "MATRICE_TRANSVERSALE.json"
+    comptes = {}
+    if matrice.exists():
+        comptes = json.loads(matrice.read_text(encoding="utf-8"))["comptes"]
+    complet = comptes.get("schema_complet_histoire_trace_reponse", 0)
+    verdict = "soutient" if complet >= 3 else "ne_soutient_pas"
     return {
         "critere": "C-MAT-MEM-05",
+        "comptes_sous_controles": comptes,
+        "familles_au_schema_complet": complet,
         "enonce": ("le schéma histoire → trace persistante → réponse modifiée est "
                    "soutenu indépendamment dans au moins trois familles physiques "
                    "à mécanismes différents"),
         "familles_examinees": familles,
         "familles_soutenantes": soutenues,
         "verdict": verdict,
-        "motif": (f"{len(soutenues)} famille(s) sur les 3 exigées : "
+        "motif": (f"{complet} famille(s) portent le schéma complet "
+                  f"histoire vers trace vers réponse sous les quatre contrôles, "
+                  f"3 exigées. {len(soutenues)} famille(s) rendent un verdict "
+                  f"positif sur au moins une relation : "
                   f"{', '.join(soutenues) if soutenues else 'aucune'}"),
     }
 
@@ -163,6 +177,8 @@ def main() -> int:
                            ["extraire_et_tester_surface.py"]))
     etapes.append(executer("balayage des sources restantes",
                            ["balayer_toutes_les_sources.py"]))
+    etapes.append(executer("matrice transversale et robustesse",
+                           ["matrice_transversale.py"]))
 
     transversal = synthese_transversale()
     print("── C-MAT-MEM-05, transversalité")

@@ -1,0 +1,306 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 5000,
+  "controles": [
+    "permutation des étiquettes",
+    "bootstrap au niveau de l'unité physique",
+    "retrait d'une unité",
+    "retrait d'un groupe entier"
+  ],
+  "regle": "une relation n'est retenue que si elle est significative et conserve son signe sous les quatre contrôles",
+  "familles": {
+    "magnetisme": {
+      "jeu": "rémanence IODP, 25 expéditions",
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 5031,
+        "rho": 0.8860130293697156,
+        "p": 0.0001999600079984003,
+        "bootstrap_ic95": [
+          0.8771456263127508,
+          0.893729667859346
+        ],
+        "retrait_une_unite": {
+          "min": 0.8859459687480469,
+          "max": 0.8870553886809108
+        },
+        "retrait_un_groupe": {
+          "groupes": 25,
+          "min": 0.8748575429905289,
+          "max": 0.9004768751259056
+        },
+        "survit_aux_controles": true
+      },
+      "persistance": {
+        "testable": true,
+        "unites": 4838,
+        "rho": 0.8830308496606827,
+        "p": 0.0001999600079984003,
+        "bootstrap_ic95": [
+          0.8736361742636056,
+          0.8918682098470226
+        ],
+        "retrait_une_unite": {
+          "min": 0.8829593271989927,
+          "max": 0.8841110489454803
+        },
+        "retrait_un_groupe": {
+          "groupes": 25,
+          "min": 0.871356328169658,
+          "max": 0.8986167433228234
+        },
+        "survit_aux_controles": true
+      },
+      "ablation": {
+        "testable": true,
+        "unites": 5023,
+        "rho": -0.7419002986263189,
+        "p": null,
+        "survit_aux_controles": true,
+        "detail": "corrélation dose-intensité par échantillon, témoin physique IRM et ARM de signe opposé"
+      },
+      "replication": {
+        "testable": true,
+        "unites": 25,
+        "concordantes": 24,
+        "survit_aux_controles": true,
+        "detail": "expéditions indépendantes, océans et lithologies différents"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "l'histoire est le dépôt naturel, non contrôlée"
+      },
+      "histoire_vers_reponse": {
+        "testable": false,
+        "motif": "l'histoire est le dépôt naturel, non contrôlée"
+      }
+    },
+    "plasticite": {
+      "jeu": "FABEST LCF, 24 éprouvettes en 3 régimes",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 24,
+        "rho": -0.6617391304347826,
+        "p": 0.0007998400319936012,
+        "bootstrap_ic95": [
+          -0.8835434782608695,
+          -0.3329565217391305
+        ],
+        "retrait_une_unite": {
+          "min": -0.7272727272727272,
+          "max": -0.6156126482213439
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.976470588235294,
+          "max": -0.6235294117647059
+        },
+        "survit_aux_controles": true
+      },
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 24,
+        "rho": -0.27999999999999997,
+        "p": 0.1865626874625075,
+        "bootstrap_ic95": [
+          -0.5957173913043478,
+          0.16260869565217392
+        ],
+        "retrait_une_unite": {
+          "min": -0.40513833992094866,
+          "max": -0.23616600790513834
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.4176470588235294,
+          "max": 0.4147058823529412
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 3,
+        "concordantes": 3,
+        "survit_aux_controles": true,
+        "detail": "trois régimes de chargement indépendants"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "aucune trace microstructurale dans le jeu"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après essai"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun recuit de restauration"
+      }
+    },
+    "verre_relaxation": {
+      "jeu": "polyéthylènes biosourcés, 3 matériaux x 3 températures x 7 durées",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 60,
+        "rho": -0.43789941650458464,
+        "p": 0.0007998400319936012,
+        "bootstrap_ic95": [
+          -0.6178799666574049,
+          -0.26630730758544047
+        ],
+        "retrait_une_unite": {
+          "min": -0.46306253652834606,
+          "max": -0.4144360023378142
+        },
+        "retrait_un_groupe": {
+          "groupes": 9,
+          "min": -0.48347040799870994,
+          "max": -0.40711175616835993
+        },
+        "survit_aux_controles": true
+      },
+      "replication": {
+        "testable": true,
+        "unites": 3,
+        "concordantes": 3,
+        "survit_aux_controles": true,
+        "detail": "trois polyéthylènes de formulation différente"
+      },
+      "temoin_negatif_masse": {
+        "testable": true,
+        "unites": 60,
+        "rho": 0.08085579327591,
+        "p": 0.5398920215956808,
+        "bootstrap_ic95": [
+          -0.16896499027507644,
+          0.3365073631564322
+        ],
+        "retrait_une_unite": {
+          "min": 0.04436002337814144,
+          "max": 0.12133255406195209
+        },
+        "retrait_un_groupe": {
+          "groupes": 9,
+          "min": 0.04128366392517336,
+          "max": 0.1369940332204483
+        },
+        "survit_aux_controles": false
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "la trace structurale n'est pas tabulée"
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "trace absente"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après vieillissement"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun rajeunissement au-dessus de Tg"
+      }
+    },
+    "transition_de_phase": {
+      "jeu": "aciers moyen-Mn, 12 éprouvettes",
+      "histoire_vers_trace": {
+        "testable": true,
+        "unites": 12,
+        "rho": -0.1328671328671329,
+        "p": 0.6858628274345131,
+        "bootstrap_ic95": [
+          -0.6503496503496504,
+          0.7624125874125874
+        ],
+        "retrait_une_unite": {
+          "min": -0.3727272727272728,
+          "max": 0.1272727272727273
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.642857142857143,
+          "max": 0.5714285714285715
+        },
+        "survit_aux_controles": false
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "la traction n'est pas appariée aux éprouvettes de dureté"
+      },
+      "histoire_vers_reponse": {
+        "testable": false,
+        "motif": "idem"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun recuit de restauration"
+      },
+      "replication": {
+        "testable": false,
+        "motif": "medium_mn_b non extrait, axe vitesse de chauffe"
+      }
+    },
+    "reconstruction_de_surface": {
+      "jeu": "Fischer-Tropsch, 2 séries x 7 durées d'exposition",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 14,
+        "rho": -0.6,
+        "p": 0.027194561087782444,
+        "bootstrap_ic95": [
+          -0.8505494505494505,
+          0.06395604395604375
+        ],
+        "retrait_une_unite": {
+          "min": -0.6978021978021978,
+          "max": -0.5
+        },
+        "retrait_un_groupe": {
+          "groupes": 2,
+          "min": -1.0,
+          "max": -1.0
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 2,
+        "concordantes": 2,
+        "survit_aux_controles": true,
+        "detail": "deux séries de chromatogrammes"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "STM et XPS non tabulés par condition"
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "trace absente"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après exposition"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucune régénération du catalyseur"
+      }
+    }
+  },
+  "comptes": {
+    "schema_complet_histoire_trace_reponse": 0,
+    "effet_total_histoire_vers_reponse": 2,
+    "trace_vers_reponse": 1,
+    "persistance": 1,
+    "ablation_physique": 1,
+    "replication_independante": 4
+  }
+}

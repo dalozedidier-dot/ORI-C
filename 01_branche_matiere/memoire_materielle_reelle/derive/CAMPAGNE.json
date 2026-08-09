@@ -54,10 +54,25 @@
       "code": 0,
       "sources_absentes": false,
       "obligatoire": true
+    },
+    {
+      "etape": "matrice transversale et robustesse",
+      "code": 0,
+      "sources_absentes": false,
+      "obligatoire": true
     }
   ],
   "transversalite": {
     "critere": "C-MAT-MEM-05",
+    "comptes_sous_controles": {
+      "schema_complet_histoire_trace_reponse": 0,
+      "effet_total_histoire_vers_reponse": 2,
+      "trace_vers_reponse": 1,
+      "persistance": 1,
+      "ablation_physique": 1,
+      "replication_independante": 4
+    },
+    "familles_au_schema_complet": 0,
     "enonce": "le schéma histoire → trace persistante → réponse modifiée est soutenu indépendamment dans au moins trois familles physiques à mécanismes différents",
     "familles_examinees": {
       "magnetisme": {
@@ -110,8 +125,8 @@
       "traces_de_fission",
       "reconstruction_de_surface"
     ],
-    "verdict": "soutient",
-    "motif": "5 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation, traces_de_fission, reconstruction_de_surface"
+    "verdict": "ne_soutient_pas",
+    "motif": "0 famille(s) portent le schéma complet histoire vers trace vers réponse sous les quatre contrôles, 3 exigées. 5 famille(s) rendent un verdict positif sur au moins une relation : magnetisme, plasticite, verre_relaxation, traces_de_fission, reconstruction_de_surface"
   },
   "echecs": [],
   "ignorees_faute_de_sources": []

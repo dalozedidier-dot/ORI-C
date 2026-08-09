@@ -1403,8 +1403,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 3341,
-      "sha256": "9c1e48da2311aea92f07e039970161575bcc85167b27cdf0368e874f0e5ea17f",
+      "size": 3931,
+      "sha256": "2aac759d0781578f66a2c5fea6d219de2a54870dff45f05e7a4fe526c16044aa",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/MATRICE_TRANSVERSALE.json",
+      "size": 8651,
+      "sha256": "076bdf2ad96eb39d37c6f0cb75bd5085b74dcb665a8dcb3bf6fcca72cfd0781b",
       "storage": "inline"
     },
     {
@@ -1570,6 +1576,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/matrice_transversale.py",
+      "size": 15229,
+      "sha256": "33a2acc88ade0bf20e247457226d206298dfc60a4957d8943db73eb9ce1c99a3",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/ne_garder_que_l_exploitable.py",
       "size": 7524,
       "sha256": "1d76e930d7d8f694408e3aa9fcab76c82c6dfbef057faaad1887cb16862ca1a8",
@@ -1583,8 +1595,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 8338,
-      "sha256": "c12db19b1b509507e1a5ab6f51f30a4ba2d06d7c15229040e48d33798c2805a5",
+      "size": 9199,
+      "sha256": "e075679851eb78a41586440f50be91e5f06fcf2de89649c7dc255888c392eb84",
       "storage": "inline"
     },
     {
