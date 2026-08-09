@@ -19,14 +19,14 @@
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.7,
+      "duree_s": 2.8,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 13.1,
+      "duree_s": 13.4,
       "obligatoire": true
     },
     {
@@ -47,7 +47,7 @@
       "etape": "recuit de traces de fission",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 3.5,
+      "duree_s": 3.2,
       "obligatoire": true
     },
     {
@@ -61,7 +61,7 @@
       "etape": "balayage des sources restantes",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 111.3,
+      "duree_s": 122.5,
       "obligatoire": true
     }
   ],

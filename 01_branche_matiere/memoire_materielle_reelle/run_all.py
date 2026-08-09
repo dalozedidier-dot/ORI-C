@@ -41,9 +41,11 @@ def executer(titre: str, arguments: list[str], obligatoire: bool = True) -> dict
         for ligne in (resultat.stderr or "").strip().splitlines()[-5:]:
             print(f"     {ligne}")
     print()
+    # La durée n'est pas inscrite dans le rapport versionné : elle change à
+    # chaque exécution, le manifeste ne correspondrait plus et le contrôle
+    # d'intégrité échouerait sur un fichier pourtant identique quant au fond.
     return {"etape": titre, "code": 0 if ignore else resultat.returncode,
-            "sources_absentes": ignore,
-            "duree_s": round(duree, 1), "obligatoire": obligatoire}
+            "sources_absentes": ignore, "obligatoire": obligatoire}
 
 
 def synthese_transversale() -> dict:
