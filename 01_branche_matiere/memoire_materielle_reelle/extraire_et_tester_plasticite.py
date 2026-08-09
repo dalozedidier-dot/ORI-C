@@ -17,6 +17,8 @@ from pathlib import Path
 
 import numpy as np
 
+from donnees_campagne import base_de
+
 warnings.filterwarnings("ignore")
 
 ICI = Path(__file__).resolve().parent
@@ -62,7 +64,9 @@ def p_sign_flip(valeurs: np.ndarray, aleatoire) -> tuple[float, str]:
 
 def extraire_fabest(racine: Path) -> list[dict]:
     """Une ligne par éprouvette : corrélation cycle / amplitude de contrainte."""
-    base = racine / "fabest_lcf" / "exploitable"
+    base = base_de("fabest_lcf", racine)
+    if base is None:
+        return []
     eprouvettes = []
     for fichier in sorted(base.rglob("amp_mean_values.csv")):
         # Le correctif de juillet 2026 duplique des essais octet pour octet.
@@ -110,7 +114,8 @@ def extraire_fabest(racine: Path) -> list[dict]:
 def extraire_medium_mn(racine: Path) -> list[dict]:
     """Une ligne par éprouvette : histoire thermique et dureté moyenne."""
     from openpyxl import load_workbook
-    chemins = list((racine / "medium_mn_a" / "exploitable").rglob("twardosc.xlsx"))
+    base = base_de("medium_mn_a", racine)
+    chemins = list(base.rglob("twardosc.xlsx")) if base else []
     if not chemins:
         return []
     classeur = load_workbook(chemins[0], read_only=True, data_only=True)
@@ -147,12 +152,10 @@ def extraire_medium_mn(racine: Path) -> list[dict]:
 def main() -> int:
     config = json.loads(SOURCES.read_text(encoding="utf-8"))
     racine = (ICI / config["racine_locale"]).resolve()
-    attendues = [racine / "fabest_lcf" / "exploitable",
-                 racine / "medium_mn_a" / "exploitable"]
-    absentes = [d for d in attendues if not d.is_dir()]
+    absentes = [c for c in ("fabest_lcf", "medium_mn_a") if base_de(c, racine) is None]
     if absentes:
-        for dossier in absentes:
-            print(f"source absente : {dossier}")
+        for cle in absentes:
+            print(f"source absente : {cle}")
         print("Résultats commités laissés intacts.")
         return 1
     DERIVE.mkdir(exist_ok=True)

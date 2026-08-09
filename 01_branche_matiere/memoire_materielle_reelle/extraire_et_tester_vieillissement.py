@@ -17,6 +17,8 @@ from pathlib import Path
 
 import numpy as np
 
+from donnees_campagne import base_de
+
 ICI = Path(__file__).resolve().parent
 SOURCES = ICI / "SOURCES.json"
 DERIVE = ICI / "derive"
@@ -102,9 +104,9 @@ def temperature_d_apparition(temperatures, signaux) -> float:
 def main() -> int:
     config = json.loads(SOURCES.read_text(encoding="utf-8"))
     racine = (ICI / config["racine_locale"]).resolve()
-    dossier = racine / "recuit_thermique_polymere" / "exploitable"
-    if not dossier.is_dir():
-        print(f"source absente : {dossier}")
+    dossier = base_de("recuit_thermique_polymere", racine)
+    if dossier is None:
+        print("source absente : recuit_thermique_polymere")
         print("Résultats commités laissés intacts.")
         return 1
 

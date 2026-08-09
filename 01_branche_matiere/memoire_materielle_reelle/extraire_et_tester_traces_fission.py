@@ -20,6 +20,8 @@ from pathlib import Path
 
 import numpy as np
 
+from donnees_campagne import base_de
+
 ICI = Path(__file__).resolve().parent
 SOURCES = ICI / "SOURCES.json"
 DERIVE = ICI / "derive"
@@ -61,10 +63,10 @@ def statistique(strates: dict[float, list[tuple[float, float]]]) -> float:
 def main() -> int:
     config = json.loads(SOURCES.read_text(encoding="utf-8"))
     racine = (ICI / config["racine_locale"]).resolve()
-    dossier = racine / "traces_fission_zircon" / "exploitable"
-    tables = list(dossier.rglob("*.csv"))
+    dossier = base_de("traces_fission_zircon", racine)
+    tables = list(dossier.rglob("*.csv")) if dossier else []
     if not tables:
-        print(f"source absente : {dossier}")
+        print("source absente : traces_fission_zircon")
         print("Résultats commités laissés intacts.")
         return 1
 
