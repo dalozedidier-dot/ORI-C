@@ -1373,8 +1373,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/SOURCES.json",
-      "size": 17343,
-      "sha256": "442fc2ffd4dbc779095a471886184c41b4e69e532374ef9b87de90b83d4c49f4",
+      "size": 18918,
+      "sha256": "bdd01e2829cf751d0e1bdc0866d5ecf800b72ffd309d83fabf0d6330ef44db43",
       "storage": "inline"
     },
     {
@@ -1403,14 +1403,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 3931,
-      "sha256": "2aac759d0781578f66a2c5fea6d219de2a54870dff45f05e7a4fe526c16044aa",
+      "size": 4074,
+      "sha256": "14f5d8de4cdb9111cb4be5f049b4e17f6828da34884b9c0181a4246c4a16f764",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/MATRICE_TRANSVERSALE.json",
-      "size": 8651,
-      "sha256": "076bdf2ad96eb39d37c6f0cb75bd5085b74dcb665a8dcb3bf6fcca72cfd0781b",
+      "size": 10711,
+      "sha256": "6bb231caf357814bc5e008f1727758c181084ecba2a7dc2d99522f315f9cc3e0",
       "storage": "inline"
     },
     {
@@ -1423,6 +1423,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_PLASTICITE_ET_PHASE.json",
       "size": 1592,
       "sha256": "f41f8c61d7c0675e1842bf3bfa5ad9254ff83550528777ce0d30d34d2ef1fc74",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_CARBURES.json",
+      "size": 2791,
+      "sha256": "605686cdd5a65cc86d26ee71c320afb25c47809f8c766de0a7cb6377136c134a",
       "storage": "inline"
     },
     {
@@ -1447,6 +1453,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_VIEILLISSEMENT_POLYMERE.json",
       "size": 2305,
       "sha256": "4a94bfe2a99d6db3d0ee80bc24d715ddd4efbdae560f7fd2aa1452a3905c8fb8",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/carbures_par_eprouvette.csv",
+      "size": 555,
+      "sha256": "93fdec1e6a5adae3dfbb305f0b43a1962f42d0d19e9cdfd74b9de22f4f77ec47",
       "storage": "inline"
     },
     {
@@ -1540,6 +1552,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_carbures.py",
+      "size": 10721,
+      "sha256": "f1c51ed96278f0a140fd263f97393e0070a13022eb982b5530136cdbc093d24f",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
       "size": 10939,
       "sha256": "aa97f3cd7ef9fe9118d14506fc30477b5d069e7c676b54d87c3a4a2983948dc9",
@@ -1577,8 +1595,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/matrice_transversale.py",
-      "size": 15229,
-      "sha256": "33a2acc88ade0bf20e247457226d206298dfc60a4957d8943db73eb9ce1c99a3",
+      "size": 16485,
+      "sha256": "f1e27a42045e75007e9cd88450f8a75e5752b5d4f7b0ad42c235b79ad8f1bd78",
       "storage": "inline"
     },
     {
@@ -1595,8 +1613,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 9199,
-      "sha256": "e075679851eb78a41586440f50be91e5f06fcf2de89649c7dc255888c392eb84",
+      "size": 9329,
+      "sha256": "a55ba2ae01d3679d8472702a506c8af8d5f3a74c6c1c5924da51d51c9a9e3521",
       "storage": "inline"
     },
     {

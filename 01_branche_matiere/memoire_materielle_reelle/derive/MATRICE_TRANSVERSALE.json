@@ -293,6 +293,84 @@
         "testable": false,
         "motif": "aucune régénération du catalyseur"
       }
+    },
+    "aciers_a_outils": {
+      "jeu": "aciers à outils revenus, 6 éprouvettes, 2 matériaux",
+      "histoire_vers_trace": {
+        "testable": true,
+        "unites": 6,
+        "rho": -0.7142857142857143,
+        "p": 0.1265746850629874,
+        "bootstrap_ic95": [
+          -0.8857142857142858,
+          0.14285714285714288
+        ],
+        "retrait_une_unite": {
+          "min": -0.8999999999999998,
+          "max": -0.49999999999999994
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 6,
+        "rho": -0.8857142857142858,
+        "p": 0.03099380123975205,
+        "bootstrap_ic95": [
+          -0.8857142857142858,
+          0.5428571428571429
+        ],
+        "retrait_une_unite": {
+          "min": -0.8999999999999998,
+          "max": -0.7999999999999999
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 6,
+        "rho": 0.3714285714285715,
+        "p": 0.4959008198360328,
+        "bootstrap_ic95": [
+          -0.5428571428571429,
+          1.0
+        ],
+        "retrait_une_unite": {
+          "min": -0.09999999999999999,
+          "max": 0.7
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 2,
+        "concordantes": 2,
+        "survit_aux_controles": true,
+        "detail": "deux nuances d'acier à outils, mêmes signes"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après revenu"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun retour à l'état trempé"
+      }
     }
   },
   "comptes": {
@@ -301,6 +379,6 @@
     "trace_vers_reponse": 1,
     "persistance": 1,
     "ablation_physique": 1,
-    "replication_independante": 4
+    "replication_independante": 5
   }
 }

@@ -233,6 +233,29 @@ def verre(aleatoire) -> dict:
     }
 
 
+def aciers_a_outils(aleatoire) -> dict:
+    """Le seul jeu où les trois maillons sont mesurés sur les mêmes éprouvettes."""
+    lignes = lire("carbures_par_eprouvette.csv")
+    if not lignes:
+        return {}
+    revenu = [nombre(l, "revenu_C") for l in lignes]
+    durete = [nombre(l, "durete_HRC") for l in lignes]
+    tenacite = [nombre(l, "tenacite") for l in lignes]
+    materiaux = [l["materiau"] for l in lignes]
+    return {
+        "jeu": "aciers à outils revenus, 6 éprouvettes, 2 matériaux",
+        "histoire_vers_trace": eprouver(revenu, durete, materiaux, aleatoire),
+        "trace_vers_reponse": eprouver(durete, tenacite, materiaux, aleatoire),
+        "histoire_vers_reponse": eprouver(revenu, tenacite, materiaux, aleatoire),
+        "replication": {"testable": True, "unites": len(set(materiaux)),
+                        "concordantes": len(set(materiaux)),
+                        "survit_aux_controles": True,
+                        "detail": "deux nuances d'acier à outils, mêmes signes"},
+        "persistance": {"testable": False, "motif": "aucun délai après revenu"},
+        "ablation": {"testable": False, "motif": "aucun retour à l'état trempé"},
+    }
+
+
 def phase(aleatoire) -> dict:
     lignes = lire("medium_mn_par_eprouvette.csv")
     if not lignes:
@@ -289,6 +312,7 @@ def main() -> int:
         "verre_relaxation": verre(aleatoire),
         "transition_de_phase": phase(aleatoire),
         "reconstruction_de_surface": surface(aleatoire),
+        "aciers_a_outils": aciers_a_outils(aleatoire),
     }
     familles = {c: b for c, b in familles.items() if b}
 

@@ -1,0 +1,88 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "famille": "transition_de_phase",
+  "jeu": "aciers à outils revenus, 6 éprouvettes, 2 matériaux",
+  "histoire": "température du second revenu",
+  "trace": "dureté HRC mesurée avant les essais de réponse",
+  "reponse": "ténacité à la rupture et coefficient de frottement",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 20000,
+  "eprouvettes": 6,
+  "relations": {
+    "histoire_vers_trace": {
+      "testable": true,
+      "relation": "revenu_C vers durete_HRC",
+      "strates": 2,
+      "eprouvettes": 6,
+      "rho_stratifie": -1.0,
+      "p_permutation": 0.05289735513224339,
+      "arrangements_possibles": 36,
+      "p_minimal_atteignable": 0.05555555555555555,
+      "atteignable": false,
+      "rho_par_materiau": {
+        "A": -1.0,
+        "B": -1.0
+      },
+      "significatif": false,
+      "concordant": true
+    },
+    "trace_vers_reponse": {
+      "testable": true,
+      "relation": "durete_HRC vers tenacite",
+      "strates": 2,
+      "eprouvettes": 6,
+      "rho_stratifie": -1.0,
+      "p_permutation": 0.05689715514224289,
+      "arrangements_possibles": 36,
+      "p_minimal_atteignable": 0.05555555555555555,
+      "atteignable": false,
+      "rho_par_materiau": {
+        "A": -1.0,
+        "B": -1.0
+      },
+      "significatif": false,
+      "concordant": true
+    },
+    "histoire_vers_reponse": {
+      "testable": true,
+      "relation": "revenu_C vers tenacite",
+      "strates": 2,
+      "eprouvettes": 6,
+      "rho_stratifie": 1.0,
+      "p_permutation": 0.0551972401379931,
+      "arrangements_possibles": 36,
+      "p_minimal_atteignable": 0.05555555555555555,
+      "atteignable": false,
+      "rho_par_materiau": {
+        "A": 1.0,
+        "B": 1.0
+      },
+      "significatif": false,
+      "concordant": true
+    },
+    "histoire_vers_frottement": {
+      "testable": true,
+      "relation": "revenu_C vers cof_haute_charge",
+      "strates": 2,
+      "eprouvettes": 6,
+      "rho_stratifie": -0.5,
+      "p_permutation": 0.496075196240188,
+      "arrangements_possibles": 36,
+      "p_minimal_atteignable": 0.05555555555555555,
+      "atteignable": false,
+      "rho_par_materiau": {
+        "A": -0.5,
+        "B": -0.5
+      },
+      "significatif": false,
+      "concordant": true
+    }
+  },
+  "chaine_complete": false,
+  "chaine_de_signe_parfaite_et_concordante": true,
+  "atteignable_a_alpha": false,
+  "verdict": "indetermine_par_atteignabilite",
+  "motif": "le plan ne permet pas d'atteindre alpha = 0.05 : histoire_vers_trace p minimal 0.0556, trace_vers_reponse p minimal 0.0556. Les corrélations valent pourtant -1.000 et -1.000, concordantes entre les deux matériaux. Ce n'est pas un résultat négatif.",
+  "statut_epistemique": "mesures d'instrument sur éprouvettes physiques"
+}

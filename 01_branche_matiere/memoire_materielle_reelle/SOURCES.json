@@ -326,6 +326,48 @@
       "famille": "traces_de_fission",
       "role": "longueurs de traces de fission sur monazite, forage KTB",
       "attendu": "réplication indépendante de traces_fission_zircon, autre minéral"
+    },
+    {
+      "cle": "carbures_matrice_acier",
+      "record": "19334962",
+      "famille": "transition_de_phase",
+      "role": "influence de la morphologie des carbures et de la matrice",
+      "attendu": "morphologie de carbure comme trace structurale mesurée par condition"
+    },
+    {
+      "cle": "fluage_relaxation_martensitique",
+      "record": "14051050",
+      "famille": "plasticite",
+      "role": "fluage et relaxation de contrainte, acier martensitique",
+      "attendu": "relaxation après charge : bras de persistance qui manque à la matrice"
+    },
+    {
+      "cle": "synchrotron_in_situ_effets",
+      "record": "8387004",
+      "famille": "transition_de_phase",
+      "role": "diffraction synchrotron in situ, effets d'un traitement",
+      "attendu": "fractions de phase mesurées, candidat histoire vers trace"
+    },
+    {
+      "cle": "nanoindentation_stem",
+      "record": "21296200",
+      "famille": "plasticite",
+      "role": "nanoindentation expérimentale et STEM",
+      "attendu": "dureté locale comme trace, microstructure appariée"
+    },
+    {
+      "cle": "fluage_fatigue_grade",
+      "record": "7198219",
+      "famille": "plasticite",
+      "role": "essais de fluage-fatigue de service",
+      "attendu": "cycles et maintiens : dose et persistance"
+    },
+    {
+      "cle": "shkh15_traitement",
+      "record": "19557697",
+      "famille": "transition_de_phase",
+      "role": "propriétés mécaniques d'acier de roulement ShKh15",
+      "attendu": "traitement thermique et propriétés, candidat histoire vers réponse"
     }
   ]
 }

@@ -44,6 +44,12 @@
       "obligatoire": true
     },
     {
+      "etape": "aciers à outils, chaîne complète",
+      "code": 0,
+      "sources_absentes": false,
+      "obligatoire": true
+    },
+    {
       "etape": "reconstruction de surface",
       "code": 0,
       "sources_absentes": false,
@@ -70,7 +76,7 @@
       "trace_vers_reponse": 1,
       "persistance": 1,
       "ablation_physique": 1,
-      "replication_independante": 4
+      "replication_independante": 5
     },
     "familles_au_schema_complet": 0,
     "enonce": "le schéma histoire → trace persistante → réponse modifiée est soutenu indépendamment dans au moins trois familles physiques à mécanismes différents",

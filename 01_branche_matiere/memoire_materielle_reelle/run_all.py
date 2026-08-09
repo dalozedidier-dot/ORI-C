@@ -173,6 +173,8 @@ def main() -> int:
                            ["extraire_et_tester_vieillissement.py"]))
     etapes.append(executer("recuit de traces de fission",
                            ["extraire_et_tester_traces_fission.py"]))
+    etapes.append(executer("aciers à outils, chaîne complète",
+                           ["extraire_et_tester_carbures.py"]))
     etapes.append(executer("reconstruction de surface",
                            ["extraire_et_tester_surface.py"]))
     etapes.append(executer("balayage des sources restantes",
