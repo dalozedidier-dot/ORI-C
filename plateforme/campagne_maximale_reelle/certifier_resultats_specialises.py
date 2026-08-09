@@ -99,57 +99,67 @@ EVALUATEURS = {
 def certifier(config: dict) -> dict:
     if config.get("schema") != SCHEMA_ATTENDU:
         raise ValueError(f"schéma de certification inconnu : {config.get('schema')}")
+
     registre_path = RACINE / config["registre_criteres"]
     empreinte_registre = sha256(registre_path)
     if empreinte_registre != config.get("registre_criteres_sha256"):
         raise ValueError("empreinte du registre de critères divergente")
+
     registre = json.loads(registre_path.read_text(encoding="utf-8"))
     ids_registre = [c["id"] for c in registre["criteres"]]
     if len(ids_registre) != len(set(ids_registre)):
         raise ValueError("criterion_id dupliqué dans le registre")
     criteres = {c["id"]: c for c in registre["criteres"]}
-    sorties = []
-    ids_certifies = [s["criterion_id"] for s in config["certifications"]]
+
+    specifications = config.get("certifications")
+    if not isinstance(specifications, list):
+        raise ValueError("liste de certifications absente ou invalide")
+    ids_certifies = [s.get("criterion_id") for s in specifications]
     if len(ids_certifies) != len(set(ids_certifies)):
         raise ValueError("criterion_id certifié plusieurs fois")
-    for specification in config["certifications"]:
+
+    sorties = []
+    for specification in specifications:
         criterion_id = specification["criterion_id"]
         if criterion_id not in criteres:
             raise ValueError(f"criterion_id absent du registre : {criterion_id}")
+
         evaluateur_nom = specification.get("evaluateur")
         if evaluateur_nom not in EVALUATEURS:
             raise ValueError(f"évaluateur inconnu : {evaluateur_nom}")
-        critere_evaluateur, evaluateur = EVALUATEURS[evaluateur_nom]
-        if criterion_id != critere_evaluateur:
+        criterion_attendu, evaluateur = EVALUATEURS[evaluateur_nom]
+        if criterion_attendu != criterion_id:
             raise ValueError(
-                f"évaluateur incompatible avec le critère : {evaluateur_nom} / "
-                f"{criterion_id}"
+                f"évaluateur {evaluateur_nom} incompatible avec {criterion_id} "
+                f"(attendu : {criterion_attendu})"
             )
-        if specification.get("verdict_attendu") not in VERDICTS_ADMIS:
-            raise ValueError(f"verdict attendu invalide : {criterion_id}")
+
+        verdict_attendu = specification.get("verdict_attendu")
+        if verdict_attendu not in VERDICTS_ADMIS:
+            raise ValueError(f"verdict attendu invalide : {verdict_attendu}")
+
         artefact = RACINE / specification["artefact"]
         empreinte = sha256(artefact)
-        if empreinte != specification["artefact_sha256"]:
+        if empreinte != specification.get("artefact_sha256"):
             raise ValueError(f"empreinte artefact divergente : {criterion_id}")
+
         source = specification.get("source")
+        source_sha = specification.get("source_sha256")
+        if bool(source) != bool(source_sha):
+            raise ValueError(f"source et empreinte source incohérentes : {criterion_id}")
         if source:
-            if not specification.get("source_sha256"):
-                raise ValueError(f"empreinte source absente : {criterion_id}")
             source_path = RACINE / source
-            if sha256(source_path) != specification["source_sha256"]:
+            if sha256(source_path) != source_sha:
                 raise ValueError(f"empreinte source divergente : {criterion_id}")
-        elif specification.get("source_sha256") is not None:
-            raise ValueError(f"source absente mais empreinte déclarée : {criterion_id}")
-        elif not specification.get("limite_provenance"):
-            raise ValueError(f"source absente sans limite de provenance : {criterion_id}")
-        verdict, mesures = evaluateur(
-            json.loads(artefact.read_text(encoding="utf-8"))
-        )
-        if verdict != specification["verdict_attendu"]:
+
+        verdict, mesures = evaluateur(json.loads(artefact.read_text(encoding="utf-8")))
+        if verdict not in VERDICTS_ADMIS:
+            raise ValueError(f"verdict évaluateur invalide : {criterion_id} -> {verdict}")
+        if verdict != verdict_attendu:
             raise ValueError(
-                f"verdict divergent pour {criterion_id}: {verdict} != "
-                f"{specification['verdict_attendu']}"
+                f"verdict divergent pour {criterion_id}: {verdict} != {verdict_attendu}"
             )
+
         sorties.append({
             "criterion_id": criterion_id,
             "verdict": verdict,
@@ -159,10 +169,11 @@ def certifier(config: dict) -> dict:
             "artefact": specification["artefact"],
             "artefact_sha256": empreinte,
             "source": source,
-            "source_sha256": specification.get("source_sha256"),
+            "source_sha256": source_sha,
             "limite_provenance": specification.get("limite_provenance"),
             "mesures": mesures,
         })
+
     comptes = Counter(s["verdict"] for s in sorties)
     return {
         "schema": config["schema"],

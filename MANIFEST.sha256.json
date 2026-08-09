@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/audit-empirique-strict.yml",
-      "size": 5232,
-      "sha256": "040a2f8e545a56ef9f5e242fc934477a845f4786842e90a8e24961bb22eba4a7",
+      "size": 5928,
+      "sha256": "6cb6df61dda6620a28a5fe13c6e41857056a67f5c63ae9cc3708bff316224392",
       "storage": "inline"
     },
     {
@@ -4799,8 +4799,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 26620,
-      "sha256": "03b54a3915eb5b9b55dbe277628190de75efcbe31614620663150b264cc573b8",
+      "size": 26861,
+      "sha256": "5467b9360aab6bd6146d6bd5bb617319c1220be7bbacfadd000641e92e793bd4",
       "storage": "inline"
     },
     {
@@ -6142,9 +6142,21 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/NOYAU_PROBANT.md",
+      "size": 1625,
+      "sha256": "b3f651ea2ceec12d7a7f37489a8804753a45a15e795276f3c68086d1ae713c7a",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/POLITIQUE_NOYAU_PROBANT.csv",
+      "size": 35991,
+      "sha256": "38b5997c703ce69d3c0ec4288179dbe1e93f59445f802764820b727367895052",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/README.md",
-      "size": 1445,
-      "sha256": "5b030534422e27718d24146c7f8a0cc4a28c0b34227255953f785b58c8c6f7c1",
+      "size": 1966,
+      "sha256": "dde7c74f941d72057d1513c4e444565d2bd26e4da4f473a2ba66bab3b0f85e85",
       "storage": "inline"
     },
     {
@@ -6287,8 +6299,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py",
-      "size": 8181,
-      "sha256": "7894985b9ac6a0df1a4b165d346db11abe472143387c53f9902cd09e2b079684",
+      "size": 8178,
+      "sha256": "295feef4c2d90eb6c26ccec70bc27cda84b92023a4dfec962d39cd3b271cb362",
       "storage": "inline"
     },
     {
@@ -6875,8 +6887,14 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/tests/test_certifications_specialisees.py",
-      "size": 3467,
-      "sha256": "cbec26df32b12e123bad9ff3fee38e899de356dd6b19d99e32376de3a7763073",
+      "size": 3432,
+      "sha256": "e24092f1175e224d3fb3c72d0138e023dab91f4ee6f8d20416382e1aee84559e",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/tests/test_noyau_probant.py",
+      "size": 2454,
+      "sha256": "7495befdb0a6d21b2b309889961ba624d88cfa66127461a45b22234dd2bafa1b",
       "storage": "inline"
     },
     {
@@ -7975,6 +7993,12 @@
       "path": "plateforme/source_corrigee/tests/test_runner.py",
       "size": 1910,
       "sha256": "7fc4d913c80526a8239c67f530a8fc137cd5279d00dadb92b7eea42ab9e4fbe4",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/valider_noyau_probant.py",
+      "size": 5804,
+      "sha256": "b809463daf674cecabd47ac5dca3eb13dbaa502af08cc02d597f3540106e2a0a",
       "storage": "inline"
     },
     {
