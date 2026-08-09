@@ -36,7 +36,7 @@ Les propriétés observables sont produites par l'architecture entière :
 Y(t) = Φ[ n, G, I, E, Π, H ]
 ```
 
-## 3. La chaîne ORI-C
+## 3. La boucle récursive ORI-C
 
 > **Statut : schéma d'organisation, pas quantité mesurée.** L'audit
 > transversal du WP-T2 a cherché une instanciation de cette chaîne dans tous
@@ -52,19 +52,31 @@ Forme générale, valable dans les trois branches :
 F_t → θ_eff → Σ_t → B_t → O_t → Π_t → H_t → m_t → P_t^(s)
 ```
 
-La forme historique développée rend explicites l'échelle et les filtres qui
-séparent une possibilité abstraite d'une réalisation :
+La forme historique développée est désormais une **boucle récursive**. Elle
+distingue l'échelle choisie pour décrire le système des échelles que celui-ci
+produit physiquement, puis rend explicites le régime dynamique, les filtres,
+la réalisation et la mise à jour de l'état :
 
 ```text
-H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P_t,ℓ^adm → P_t,ℓ^att
-    → P_t,ℓ^kin → P_t,ℓ^pers → Réal_t+1 → H_t+1 → m_t+1^ℓ
+S(t0)
+  → [échelle d'analyse ℓ_ana ; échelles physiques {ℓ_phys}]
+  → régime (D_i, G_i)
+  → trajectoires Ω_Gi(S(t0))
+  → P^adm → P^att → P^kin
+  → stabilité + P_pers[h_i] / Π* / Q
+  → segment réalisé h_i
+  → S(t1) = U_i[t0,t1 ; S(t0),h_i]
+  → réévaluation de D_i
+  → si nécessaire T(i→j) vers (D_j,G_j)
+  → nouveaux possibles, puis nouvelle itération
 ```
 
-`P_t^(s)` reste une notation générique ; les quatre valeurs physiques de `s`
-sont définies au §13.3. `Réal_t+1` n'est pas une cinquième classe de possibles :
-c'est l'état ou la trajectoire effectivement réalisé. La chaîne reste un
-schéma d'organisation tant que chaque flèche n'est pas associée à une mesure,
-un modèle et un témoin.
+`P_t^(s)` reste une notation générique ; les filtres physiques sont définis au
+§13.3. Le segment `h_i` n'est pas une classe supplémentaire de possibles : il
+est la trajectoire effectivement réalisée sur `[t0,t1]`. `U_i` met ensuite à
+jour l'état ; les accessibles sont toujours recalculés depuis ce nouvel état.
+La boucle reste un schéma d'organisation tant que chaque flèche n'est pas
+associée à une mesure, un modèle et un témoin.
 
 Forme condensée, celle qui sert de fil conducteur :
 
@@ -371,19 +383,19 @@ et les constantes de temps diffèrent :
 m(t) = [m₁, m₂, …, m_k]
 ```
 
-Toute mémoire est relative à un niveau de description `ℓ` :
+Toute mémoire est relative à l'échelle d'analyse `ℓ_ana` :
 
 ```text
-m_t^ℓ = trace matérielle présente, à l'échelle ℓ, produite par H_t
-Z_t^ℓ = (S_t^ℓ, m_t^ℓ)
+m_t^ℓ_ana = trace matérielle présente à l'échelle d'analyse, produite par H_t
+Z_t^ℓ_ana = (S_t^ℓ_ana, m_t^ℓ_ana)
 ```
 
-Une description réduite par `S_t^ℓ` peut présenter une dépendance explicite au
+Une description réduite par `S_t^ℓ_ana` peut présenter une dépendance explicite au
 passé sans que le système complet soit intrinsèquement non markovien. Si les
-variables internes pertinentes ont été identifiées, l'état augmenté `Z_t^ℓ`
+variables internes pertinentes ont été identifiées, l'état augmenté `Z_t^ℓ_ana`
 peut suffire à prévoir la suite. Aimantation rémanente, densité de dislocations,
 fraction de phase métastable et état structural d'un verre sont des
-instanciations possibles de `m_t^ℓ`, jamais des synonymes universels.
+instanciations possibles de `m_t^ℓ_ana`, jamais des synonymes universels.
 
 En approximation linéaire, chaque composante est la convolution d'un forçage
 passé avec un noyau propre, qui décrit la vitesse d'inscription **et**
@@ -443,40 +455,75 @@ l'architecture, non la durée de la trace. La signature caractérise la nature
 d'un changement ; `D-H-L` caractérise la récupérabilité d'une inscription. Les
 deux sont complémentaires et ne se substituent pas l'une à l'autre.
 
-### 13.3 Hiérarchie des possibles à une échelle donnée
+### 13.3 Échelles, régimes et hiérarchie des possibles
 
 La chaîne du §3 se termine par « possibilités futures ». Ce terme recouvrait
-plusieurs filtres distincts. À l'échelle `ℓ`, on écrit :
+plusieurs filtres distincts. L'ancien symbole unique `ℓ` est remplacé par :
+
+- `ℓ_ana`, échelle de description ou de coarse-graining choisie pour définir
+  les variables conservées par le modèle ;
+- `{ℓ_phys}`, ensemble des échelles caractéristiques produites par le système
+  (longueur de corrélation, libre parcours moyen, horizon causal, taille de
+  domaine, etc.).
+
+Le choix de `ℓ_ana` ne crée pas les échelles physiques. Les rapports entre
+`ℓ_ana` et `{ℓ_phys}` déterminent quelles descriptions sont pertinentes et
+quelles informations sont invisibles à la résolution retenue.
+
+Il n'existe pas de générateur universel `𝒢^ℓ`. Chaque régime `i` est défini par
+un couple `(D_i,G_i)` : `D_i` est son domaine de validité et `G_i` la dynamique
+valable dans ce domaine. Ici `G_i` désigne un générateur dynamique indexé par
+le régime ; il ne doit pas être confondu avec la configuration `G(t)` du §2.
+Depuis `S(t0) ∈ D_i`, l'ensemble des trajectoires candidates est
+`Ω_Gi(S(t0))`. À l'échelle d'analyse déclarée, on écrit :
 
 ```text
-P_t,ℓ^adm ⊇ P_t,ℓ^att ⊇ P_t,ℓ^kin ⊇ P_t,ℓ^pers
+P_t,ℓ_ana^adm ⊇ P_t,ℓ_ana^att ⊇ P_t,ℓ_ana^kin
 ```
 
 | Domaine | Définition opératoire |
 |---|---|
-| `P_t,ℓ^adm` | états ou trajectoires compatibles avec les lois et les contraintes déclarées |
-| `P_t,ℓ^att` | sous-ensemble atteignable depuis `Z_t^ℓ` sous le générateur `𝒢^ℓ` |
-| `P_t,ℓ^kin` | sous-ensemble atteignable avant l'horizon `T`, avec les vitesses, ressources et barrières disponibles |
-| `P_t,ℓ^pers` | sous-ensemble dont la réalisation laisserait une trace au-dessus du critère de persistance déclaré |
+| `P_t,ℓ_ana^adm` | états ou trajectoires compatibles avec les lois, contraintes et hypothèses déclarées |
+| `P_t,ℓ_ana^att` | sous-ensemble atteignable depuis `S(t)` par une trajectoire de `Ω_Gi(S(t))`, tant que la description reste dans `D_i` |
+| `P_t,ℓ_ana^kin` | sous-ensemble atteignable avant l'horizon `T`, avec les vitesses, ressources et barrières disponibles |
+
+La persistance n'est plus supposée former universellement un quatrième
+sous-ensemble scalaire. Elle qualifie les histoires candidates au moyen du
+vecteur `P_pers[h]`, des seuils `Π*` et de la règle `Q` définis au §13.5. Une
+instanciation peut noter `P^pers_Q` le sous-ensemble qui satisfait cette règle,
+mais doit publier `P_pers`, `Π*` et `Q` au lieu de traiter ce symbole comme un
+filtre universel déjà défini.
 
 La notation historique est conservée par correspondance : `Pth = P^adm` et
 `Pacc(T, C, ε) = P^kin` lorsque `C` contient l'état initial, les ressources et
 le générateur. `Pacc` ne doit plus être employé seul lorsqu'il importe de
 séparer atteignabilité dynamique, accessibilité cinétique et persistance.
 
-`T`, `C`, `ε`, `ℓ` et `𝒢^ℓ` doivent être **déclarés**. Sans eux, « accessible »
-n'a pas de contenu vérifiable. Le générateur est noté `𝒢` afin de ne pas le
-confondre avec la configuration `G` des six dimensions.
+`T`, `C`, `ε`, `ℓ_ana`, les échelles pertinentes de `{ℓ_phys}`, `D_i` et `G_i`
+doivent être **déclarés**. Sans eux, « accessible » n'a pas de contenu
+vérifiable.
+
+Lorsqu'un état quitte `D_i`, le raccord `T(i→j)` vers `(D_j,G_j)` doit être
+typé et documenté :
+
+| Type de raccord | Condition | Documentation minimale |
+|---|---|---|
+| matching / continuité | les descriptions se recouvrent et partagent des variables comparables | variables communes, conditions de raccord et quantités conservées |
+| projection / coarse-graining | la description cible élimine des degrés de liberté | information conservée, abandonnée et éventuellement reconstruite |
+
+Un raccord n'est jamais supposé bijectif. Une reconstruction doit être
+identifiée comme telle et ne doit pas être présentée comme de l'information
+physiquement conservée.
 
 Les quatre régimes d'inscription s'écrivent alors sans ambiguïté, `O*` désignant
 l'organisation antérieure :
 
 | Régime | Écriture |
 |---|---|
-| Réversible | `O* ∈ P_t,ℓ^kin(T, C, ε)` |
-| Hystérétique | `O* ∈ P_t,ℓ^kin`, mais `B_retour ≠ B_basculement` |
-| Structurel récupérable | `O* ∉ P_t,ℓ^kin(A(t), m(t))`, mais `O* ∈ P_t,ℓ^kin(𝓡_rest(A(t)), 𝓡_rest(m(t)))` |
-| Structurel quasi irréversible | `O* ∉ P_t,ℓ^kin(T, C, ε)` |
+| Réversible | `O* ∈ P_t,ℓ_ana^kin(T, C, ε)` |
+| Hystérétique | `O* ∈ P_t,ℓ_ana^kin`, mais `B_retour ≠ B_basculement` |
+| Structurel récupérable | `O* ∉ P_t,ℓ_ana^kin(A(t), m(t))`, mais `O* ∈ P_t,ℓ_ana^kin(𝓡_rest(A(t)), 𝓡_rest(m(t)))` |
+| Structurel quasi irréversible | `O* ∉ P_t,ℓ_ana^kin(T, C, ε)` |
 
 `𝓡_rest` est une opération de **restauration active** : le retour cesse d'être une
 relaxation spontanée et devient une reconstruction, avec son propre coût.
@@ -491,14 +538,15 @@ L'écriture usuelle `X(t+1) = F(X(t), U(t))` laisse `F` inchangée. Le cadre
 ORI-C affirme précisément le contraire. Il faut donc trois lois couplées :
 
 ```text
-S_t+1^ℓ  = F^ℓ[A_t^ℓ](S_t^ℓ, U_t^ℓ, m_t^ℓ, ξ_t^ℓ)
-m_t+1^ℓ  = 𝒢_m^ℓ(m_t^ℓ, S_t^ℓ, A_t^ℓ, U_t^ℓ, ξ_t^ℓ)
-A_t+1^ℓ  = Q^ℓ(A_t^ℓ, m_t^ℓ, S_t^ℓ, U_t^ℓ, ξ_t^ℓ)
-P_t+1,ℓ^(s) = P^(s)(A_t+1^ℓ, m_t+1^ℓ, C_t+1^ℓ, T, ε)
+S_t+1^ℓ_ana  = F^ℓ_ana[A_t^ℓ_ana](S_t^ℓ_ana, u_t^ℓ_ana, m_t^ℓ_ana, ξ_t^ℓ_ana)
+m_t+1^ℓ_ana  = 𝒢_m^ℓ_ana(m_t^ℓ_ana, S_t^ℓ_ana, A_t^ℓ_ana, u_t^ℓ_ana, ξ_t^ℓ_ana)
+A_t+1^ℓ_ana  = Q_A^ℓ_ana(A_t^ℓ_ana, m_t^ℓ_ana, S_t^ℓ_ana, u_t^ℓ_ana, ξ_t^ℓ_ana)
+P_t+1,ℓ_ana^(s) = P^(s)(A_t+1^ℓ_ana, m_t+1^ℓ_ana, C_t+1^ℓ_ana, T, ε)
 ```
 
-`S^ℓ` est l'état présent au niveau de description `ℓ`, `m^ℓ` les inscriptions héritées, `A^ℓ` les composants,
-relations et fonctions qui rendent la réponse possible, `U` les perturbations
+`S^ℓ_ana` est l'état présent au niveau de description `ℓ_ana`, `m^ℓ_ana` les
+inscriptions héritées, `A^ℓ_ana` les composants, relations et fonctions qui
+rendent la réponse possible, `u` les perturbations
 imposées, `ξ(t)` la variabilité interne et les événements rares. `ξ` est
 retenu parce que **l'ordre** des perturbations rares suffit à faire diverger
 deux systèmes soumis au même forçage moyen ; le socle ne prétend pas en fournir
@@ -533,22 +581,52 @@ peut se contenter de déplacer l'état ; elle peut déformer les bassins ; elle
 peut supprimer des régimes. Ces trois cas sont différents et le §13.2 sert à
 les distinguer.
 
-### 13.5 Mesure et seuil de persistance
+### 13.5 Persistance vectorielle, seuils et règle de décision
 
-Le vecteur `Π^ℓ` du §4 décrit un **mode** de maintien. Dans une expérience
-donnée, sa composante testée doit être remplacée ou complétée par une grandeur
-scalaire mesurée :
+Le vecteur `Π^ℓ_ana` du §4 décrit un **mode** de maintien. La mesure scalaire
+historique `Π_pers` reste recevable comme mesure **locale** d'une composante
+dans une expérience donnée, mais elle ne constitue pas une persistance
+universelle. La formulation canonique est :
 
 ```text
-Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W]
-Π_pers,t^ℓ ≥ Π*_(O,W)  ⇒  inscription pertinente pour la suite testée
+P_pers[h] = (P_1[h], ..., P_n[h])
+Π* = (Π_1*, ..., Π_n*)
+Q(P_pers[h], Π*) ∈ {satisfait, ne_satisfait_pas, indéterminé}
+```
+
+Les composantes peuvent représenter durée, abondance intégrée, temps de
+résidence, flux transmis à l'étape suivante, rémanence ou probabilité de
+non-dissipation. Chacune garde ses unités et son sens physique. `Q` peut exiger
+des seuils simultanés, définir un ordre partiel ou utiliser une scalarisation
+explicitement adimensionnée ; aucune addition brute de grandeurs hétérogènes
+n'est admise.
+
+Pour conserver la compatibilité avec les expériences existantes :
+
+```text
+Π_pers,t^ℓ_ana = P_k[h_t ; O, W]
+Π_pers,t^ℓ_ana ≥ Π_k*  ⇒  composante locale k satisfaite
 ```
 
 `O` désigne l'observable, `W` la fenêtre de mesure et `h_t` la trace candidate.
-Le seuil `Π*_(O,W)` n'est jamais universel. Il peut être une rémanence après
-retrait du champ, une modification durable du seuil d'écoulement, ou un écart
-d'enthalpie encore présent après un délai fixé. Une transformation réalisée
-mais effacée sous `W` ne rejoint pas `P^pers` pour ce test.
+Les seuils ne sont jamais universels. Une transformation réalisée mais effacée
+sous `W`, ou qui échoue à la règle `Q`, n'est pas persistante pour le test
+déclaré.
+
+### 13.5.1 Opérateur de mise à jour et récursion
+
+Pour un segment réalisé `h_i` dans le régime `(D_i,G_i)`, l'état devient :
+
+```text
+S(t1) = U_i[t0,t1 ; S(t0), h_i]
+```
+
+`U_i` est l'opérateur de mise à jour associé au régime ; il ne désigne pas une
+perturbation externe, notée `u` au §13.4. Après cette mise à jour, le domaine
+`D_i` et tous les ensembles accessibles sont recalculés depuis `S(t1)`. Si
+`S(t1) ∉ D_i`, un raccord documenté `T(i→j)` initialise la description
+`(D_j,G_j)`. L'état initial du segment suivant est donc hérité du segment
+réalisé précédent : la chaîne ORI-C est récursive.
 
 ### 13.6 Critère d'altération architecturale
 
@@ -586,9 +664,10 @@ La trajectoire du système et sa reconstruction à partir de données ne doivent
 pas partager la même notation :
 
 ```text
-physique :    H_t → m_t^ℓ → (S_t^ℓ, Θ_eff,t^ℓ) → P^adm → P^att
-              → P^kin → P^pers → Réal_t+1
-épistémique : D + M → (Ĥ_t, m̂_t^ℓ, P̂_t,ℓ^(s), Réal̂_t+1)
+physique :    S(t0) → [ℓ_ana,{ℓ_phys}] → (D_i,G_i) → Ω_Gi(S(t0))
+              → P^adm → P^att → P^kin → [P_pers,Π*,Q] → h_i
+              → U_i → S(t1) → D_i ? → T(i→j) ? → nouveaux possibles
+épistémique : D + M → (Ŝ, ĥ_i, P̂_t,ℓ_ana^(s), D̂_i, Ĝ_i)
 ```
 
 `D` désigne les observations et `M` le modèle d'inférence. Le chapeau signifie

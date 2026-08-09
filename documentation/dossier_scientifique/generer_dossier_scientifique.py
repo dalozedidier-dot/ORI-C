@@ -97,15 +97,17 @@ def render_graph(dot: Digraph, name: str, fmt='png') -> Path:
 
 
 def render_chain_figure() -> Path:
-    """Rend la chaîne canonique sans dépendre de l'exécutable Graphviz."""
+    """Rend la boucle canonique sans dépendre de l'exécutable Graphviz."""
     labels = [
-        'Histoire\nHₜ', 'Mémoire\nmₜ^ℓ', 'État et contraintes\nSₜ^ℓ, Θeff,t^ℓ',
-        'P^adm', 'P^att', 'P^kin', 'P^pers', 'Réalisation\nRéalₜ₊₁',
+        'État\nS(t₀)', 'Échelles\nℓ_ana ; {ℓ_phys}', 'Régime\n(Dᵢ,Gᵢ)',
+        'Trajectoires\nΩ_Gi', 'Filtres\nP^adm → P^att → P^kin',
+        'Persistance\nP_pers ; Π* ; Q', 'Segment\nhᵢ',
+        'Mise à jour\nUᵢ → S(t₁)', 'Dᵢ ? / raccord\nT(i→j)',
     ]
-    colors = [NAVY, NAVY, PURPLE, PURPLE, ORANGE, ORANGE, TEAL, RED]
-    fig, ax = plt.subplots(figsize=(15.5, 2.25))
+    colors = [NAVY, NAVY, PURPLE, PURPLE, ORANGE, TEAL, RED, NAVY, PURPLE]
+    fig, ax = plt.subplots(figsize=(16.8, 2.8))
     ax.set_xlim(-0.5, len(labels) - 0.5)
-    ax.set_ylim(-0.6, 0.6)
+    ax.set_ylim(-0.8, 0.6)
     ax.axis('off')
     for i, (label, color) in enumerate(zip(labels, colors)):
         ax.text(i, 0, label, ha='center', va='center', fontsize=9,
@@ -114,6 +116,11 @@ def render_chain_figure() -> Path:
         if i:
             ax.annotate('', xy=(i - 0.43, 0), xytext=(i - 0.57, 0),
                         arrowprops=dict(arrowstyle='->', color=GRAY, lw=1.2))
+    ax.annotate('', xy=(0, -0.28), xytext=(len(labels) - 1, -0.28),
+                arrowprops=dict(arrowstyle='->', color=GRAY, lw=1.2,
+                                connectionstyle='arc3,rad=-0.08'))
+    ax.text((len(labels) - 1) / 2, -0.38, 'nouveaux possibles',
+            ha='center', va='center', fontsize=8, color=GRAY)
     cible = ASSETS / '03_chaine_oric.png'
     fig.savefig(cible, dpi=180, bbox_inches='tight', facecolor='white')
     plt.close(fig)
@@ -140,7 +147,7 @@ program_fig=render_graph(D,'01_architecture_programme')
 D = Digraph('layers', graph_attr={'rankdir':'TB','bgcolor':'white','pad':'0.25','nodesep':'0.22','ranksep':'0.28'})
 layers=[
 ('L1','1. ARCHITECTURE PRÉSENTE','A(t) = [n, G, I, E, Π, H]','Composition, configuration, interactions, environnement, persistance, histoire',PURPLE,'#F2EFFF'),
-('L2','2. DYNAMIQUE','Sₜ^ℓ, mₜ^ℓ, Aₜ^ℓ','L’état, les mémoires et l’opérateur d’évolution changent séparément à l’échelle déclarée',NAVY,'#EEF3FB'),
+('L2','2. DYNAMIQUE','Sₜ^ℓ_ana, mₜ^ℓ_ana, Aₜ^ℓ_ana','L’échelle d’analyse est distincte des échelles physiques ; chaque dynamique Gᵢ possède son domaine Dᵢ',NAVY,'#EEF3FB'),
 ('L3','3. TRANSITION','S = (ΔV, ΔC, ΔΠ, ΔH, ΔR, ΔF)','Variables collectives, connectivité, persistance, héritage, robustesse, fermetures',ORANGE,'#FFF6EA'),
 ('L4','4. GÉNÉALOGIE','parents + conditions → mécanisme → produit','Les produits antérieurs deviennent les ressources matérielles des étapes suivantes',TEAL,'#EAF8F4'),
 ('L5','5. PREUVE','mécanisme, nature, histoire, rôle causal','Les niveaux de preuve et les tests restent séparés par domaine',RED,'#FFF0EF')]
@@ -149,7 +156,7 @@ for i,(nid,title,formula,desc,color,fill) in enumerate(layers):
     if i: D.edge(layers[i-1][0],nid,color=GRAY)
 base_layers_fig=render_graph(D,'02_couches_architecture_scientifique')
 
-# Figure 3: chaîne ORI-C, rendue sans dépendance Graphviz afin que le dossier
+# Figure 3: boucle ORI-C, rendue sans dépendance Graphviz afin que le dossier
 # reste reconstructible sur Windows à partir d'un clone standard.
 chain_fig=render_chain_figure()
 
@@ -693,12 +700,13 @@ add_table(['Dimension','Contenu','Question opératoire'],[
 add_para('Les propriétés observables sont attribuées à l’architecture entière, Y(t) = Φ[n, G, I, E, Π, H]. Les tests du socle ont toutefois montré que le premier remplissage des six dimensions ne constituait pas six mesures indépendantes. Les codages étaient entièrement expliqués par le régime. Leur information propre était nulle. Cette réfutation porte sur le codage actuel, pas sur l’utilité conceptuelle des dimensions.')
 
 add_para('2.2 Séparer l’état, les mémoires et l’architecture',style='Heading 2')
-add_para('Le cadre distingue l’état présent S à une échelle ℓ, les inscriptions héritées m et l’architecture A qui rend la réponse possible. Une perturbation peut seulement déplacer l’état. Elle peut aussi laisser une mémoire ou modifier les composants, les paramètres structurels, les relations et l’opérateur d’évolution lui-même.')
+add_para('Le cadre distingue l’état présent S à l’échelle d’analyse ℓ_ana, les échelles physiques caractéristiques {ℓ_phys}, les inscriptions héritées m et l’architecture A qui rend la réponse possible. Une perturbation peut seulement déplacer l’état. Elle peut aussi laisser une mémoire ou modifier les composants, les paramètres structurels, les relations et l’opérateur d’évolution lui-même.')
 add_callout('Dynamique couplée',
-            'Sₜ₊₁^ℓ = F^ℓ[Aₜ^ℓ](Sₜ^ℓ, Uₜ^ℓ, mₜ^ℓ, ξₜ^ℓ)\n'
-            'mₜ₊₁^ℓ = 𝒢ₘ^ℓ(mₜ^ℓ, Sₜ^ℓ, Aₜ^ℓ, Uₜ^ℓ, ξₜ^ℓ)\n'
-            'Aₜ₊₁^ℓ = Q^ℓ(Aₜ^ℓ, mₜ^ℓ, Sₜ^ℓ, Uₜ^ℓ, ξₜ^ℓ)\n'
-            'Pₜ₊₁,ℓ^(s) = P^(s)(Aₜ₊₁^ℓ, mₜ₊₁^ℓ, Cₜ₊₁^ℓ, T, ε)',NAVY,'#EEF3FB')
+            'Sₜ₊₁^ℓ_ana = F^ℓ_ana[Aₜ^ℓ_ana](Sₜ^ℓ_ana, uₜ^ℓ_ana, mₜ^ℓ_ana, ξₜ^ℓ_ana)\n'
+            'mₜ₊₁^ℓ_ana = 𝒢ₘ^ℓ_ana(mₜ^ℓ_ana, Sₜ^ℓ_ana, Aₜ^ℓ_ana, uₜ^ℓ_ana, ξₜ^ℓ_ana)\n'
+            'Aₜ₊₁^ℓ_ana = Q_A^ℓ_ana(Aₜ^ℓ_ana, mₜ^ℓ_ana, Sₜ^ℓ_ana, uₜ^ℓ_ana, ξₜ^ℓ_ana)\n'
+            'S(t₁) = Uᵢ[t₀,t₁ ; S(t₀),hᵢ]',NAVY,'#EEF3FB')
+add_para('La dynamique n’est pas représentée par un générateur universel. Chaque régime i possède un domaine de validité Dᵢ et une dynamique Gᵢ. Si S(t₁) quitte Dᵢ, un raccord T(i→j) initialise la description suivante. Un matching conserve les variables communes dans une zone de recouvrement ; une projection ou un coarse-graining doit déclarer l’information conservée, abandonnée et reconstruite.')
 add_para('Une variation appartient à l’état lorsqu’elle peut être représentée sans modifier l’opérateur d’évolution. Elle devient architecturale lorsqu’il faut modifier les composants, les relations, les paramètres structurels ou l’opérateur. Ce partage dépend du niveau de description et du plancher de bruit, qui doivent être déclarés.')
 add_figure(base_layers_fig,'Figure 2. Les cinq couches de l’architecture scientifique ORI-C.',width_cm=15.5)
 
@@ -736,9 +744,9 @@ add_table(['Diagnostic','Mesure','Ce qu’il ne faut pas confondre'],[
 ('D - durée','Temps de relaxation, de résidence ou de reconstruction','Une mémoire longue n’est pas nécessairement irréversible'),
 ('H - hystérésis','Écart entre seuil de basculement et seuil de retour','Une asymétrie de retour n’implique pas une perte de composant'),
 ('L - perte','Disparition d’un composant, d’une relation ou d’un chemin','Une perte peut être lente et sans basculement brutal')],font_size=8)
-add_para('À une échelle ℓ, le socle distingue quatre filtres emboîtés : P^adm, compatible avec les lois et contraintes ; P^att, atteignable depuis l’état courant sous le générateur déclaré ; P^kin, accessible avant l’horizon T avec les vitesses, ressources et barrières disponibles ; P^pers, dont la réalisation laisserait une trace au-dessus du seuil de persistance déclaré. Les anciennes notations restent compatibles : Pth correspond à P^adm et Pacc(T,C,ε) à P^kin lorsque l’état initial et le générateur sont inclus dans C.')
-add_para('La mesure de persistance Π_pers,t^ℓ = P_pers^ℓ[h_t ; O, W] doit déclarer l’observable O, la fenêtre W et un seuil Π*. La réalisation effective reste séparée des quatre ensembles. La chaîne physique du système doit également être distinguée de la chaîne épistémique D + M → grandeurs inférées.')
-add_figure(chain_fig,'Figure 3. Chaîne d’organisation ORI-C. Elle structure l’analyse, mais aucune branche ne la mesure encore de bout en bout.',width_cm=16.2)
+add_para('À l’échelle d’analyse ℓ_ana, le socle distingue trois filtres emboîtés : P^adm, compatible avec les lois et contraintes ; P^att, atteignable depuis l’état courant sous Gᵢ dans Dᵢ ; P^kin, accessible avant l’horizon T avec les vitesses, ressources et barrières disponibles. Les anciennes notations restent compatibles : Pth correspond à P^adm et Pacc(T,C,ε) à P^kin lorsque l’état initial et le régime sont inclus dans C.')
+add_para('La persistance est vectorielle : P_pers[h] = (P₁[h],…,Pₙ[h]), comparé au vecteur Π* par une règle explicite Q. La mesure historique Π_pers reste une mesure locale d’une composante, non un scalaire universel additionnant durée, abondance, flux et rémanence. Le segment réalisé hᵢ met à jour l’état par Uᵢ ; les accessibles sont ensuite recalculés, avec T(i→j) si le domaine de validité change. La boucle physique doit rester distincte de la chaîne épistémique D + M → grandeurs inférées.')
+add_figure(chain_fig,'Figure 3. Boucle récursive ORI-C. Elle structure l’analyse, mais aucune branche ne la mesure encore de bout en bout.',width_cm=16.2)
 
 add_para('2.7 Relations causales et niveaux de preuve',style='Heading 2')
 add_table(['Code','Sens','Portée'],[
@@ -1088,5 +1096,5 @@ Ce dossier regroupe :
 
 Le dossier rassemble le socle, les branches, les résultats, les données et la généalogie intégrée. Les résultats probants, exploratoires, négatifs et non testés restent explicitement distingués.
 """
-(OUT/'README.md').write_text(readme,encoding='utf-8')
+(OUT/'README.md').write_text(readme, encoding='utf-8', newline='\n')
 print(DOCX)

@@ -89,8 +89,8 @@
     },
     {
       "path": "00_socle/CODEBOOK.md",
-      "size": 28514,
-      "sha256": "f5db3b2bad6499224a22b3a353a433053437d11ce64412d30dbcb127c880aa75",
+      "size": 32497,
+      "sha256": "b740ec53e840a2bd82c35648af8dd4aeeac26a0c1389a464b8bbc2b44c21b6da",
       "storage": "inline"
     },
     {
@@ -101,14 +101,14 @@
     },
     {
       "path": "00_socle/PROTOCOLE_DONNEES.md",
-      "size": 12640,
-      "sha256": "f62f0b0245990038f1f8426098b8822b62d08b967ed24f8c1fcb2670fea07b5e",
+      "size": 14114,
+      "sha256": "7199d1d1ef5d973fade1fe6662683f94093da1c1806acfef0c8f48ecd6b2b8c2",
       "storage": "inline"
     },
     {
       "path": "00_socle/README.md",
-      "size": 4203,
-      "sha256": "17ad1f909d709dbcd6c167dd762007cafad006928e7a892376958b9981383614",
+      "size": 4266,
+      "sha256": "cf0b2968b7dd8185cb6592d382f7a3fa3c3b0014d50a6ecbdb6d60134c792427",
       "storage": "inline"
     },
     {
@@ -523,6 +523,12 @@
       "path": "00_socle/tests/test_documents.py",
       "size": 8311,
       "sha256": "ff2130769c6a5f78da20060ce09c521dfb981958bcfa1fc8d67dfebe6c21b85a",
+      "storage": "inline"
+    },
+    {
+      "path": "00_socle/tests/test_formalisme_v6.py",
+      "size": 1431,
+      "sha256": "e6b64639500fb55ef0484f446bce1de424588b82b6cea35a2d740468722da3fc",
       "storage": "inline"
     },
     {
@@ -4715,8 +4721,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "size": 11846,
-      "sha256": "86f57106775aa3465a3af031aeb9ad2aa45aae06e7094096db455e31b0859e66",
+      "size": 12958,
+      "sha256": "72525b95048698e82187a7b1ef21972d88c5f76b75118b7b474b60eebec2ed68",
       "storage": "inline"
     },
     {
@@ -4733,8 +4739,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 26205,
-      "sha256": "5a70b63a542eb47d31e4dcb5d483a563aa22dc84d181af6889b92b0512587a76",
+      "size": 26307,
+      "sha256": "8d68f1072b1e4377bf7a22869f0126ba1d28e837baeee208cad1e1b7a5b349e6",
       "storage": "inline"
     },
     {
@@ -4799,8 +4805,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 38663,
-      "sha256": "d68e7a4784941c29c115e89b22b43d105621bbc99f38a5d9b418bffe5d3d2d2f",
+      "size": 38755,
+      "sha256": "249b6f3c27b362e52d585d87afa2c45051182ed7f155b6636d6e90676481bc4d",
       "storage": "inline"
     },
     {
@@ -5051,8 +5057,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
-      "size": 705520,
-      "sha256": "375bc9451382992a16b548889df53cabd6c328723b3bb6df483e40e7dc14938d",
+      "size": 725558,
+      "sha256": "28fdc7b6e5a81ef34ce4b585bffe4f46536463d3c67f634a9e9e8117561970e1",
       "storage": "inline"
     },
     {
@@ -5159,8 +5165,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/assets/03_chaine_oric.png",
-      "size": 32811,
-      "sha256": "15edde8ae6c54a7fdc47ea851c8001125fcccf8854e4b1c5162d128c40c57148",
+      "size": 53605,
+      "sha256": "b0f8c301bb7b0bb14fd81d95c759a46b6708dd129c16215ce6f1c9615b70638e",
       "storage": "inline"
     },
     {
@@ -5171,26 +5177,26 @@
     },
     {
       "path": "documentation/dossier_scientifique/assets/05_arbre_genealogique_vue_ensemble.png",
-      "size": 128309,
-      "sha256": "689a0e56ea78ba0c6be107eb49a38e28c1fa6cb34eaa3d2da740d7f9ded028fc",
+      "size": 123671,
+      "sha256": "ab4c81db891c4b0c8cec96f2774dd562bcfef0d2f05b662f27ce3a41c7dfba77",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/assets/06_branche_matiere.png",
-      "size": 94039,
-      "sha256": "475e1931772cea0659e8896ab6d657c8c7881ba274349e5d5dfd2040ad3cb2a5",
+      "size": 91719,
+      "sha256": "3233e83c13277e5d0e35bdbd46f23c96e4e1d776410de3ae8608d198d21ca949",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/assets/07_branche_planetaire.png",
-      "size": 66709,
-      "sha256": "a88485677b89fb575628d880d07b8a68dbdd9199563a4f054004830442734e6c",
+      "size": 65276,
+      "sha256": "7d72d4511407a2d27cc1637ad622dae113082050ad089950d8235557d5fbdeec",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/assets/08_branche_vivant.png",
-      "size": 64892,
-      "sha256": "84a633bf51ba9e7104e5a8dfdc26066bad774d1c7429d0ac55ead6b7c1fef7c5",
+      "size": 63773,
+      "sha256": "f5c8b204dfb77b011575ad7a501e6ec4fa58e4ba819a6898fa4bb5d438672304",
       "storage": "inline"
     },
     {
@@ -5213,8 +5219,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/generer_dossier_scientifique.py",
-      "size": 90540,
-      "sha256": "7ee63c9469664143f30c110d3416199941ef52870d765fd3e89e25c9162d5b7b",
+      "size": 91658,
+      "sha256": "961cc0746d4eeb1d8066f13cd625219ba15682e3321661d455f356dffde46b76",
       "storage": "inline"
     },
     {
@@ -5556,7 +5562,7 @@
     {
       "path": "plan_directeur/audit_transversal.json",
       "size": 5752,
-      "sha256": "6996bcf02a8ba49958e397c9241d964b5a965098092ce5349fb68dbfda39a8ba",
+      "sha256": "dd24c2f043aa9ea9b5791c7c71a362aa2cdb656c81ce1f0c11329429f4185722",
       "storage": "inline"
     },
     {

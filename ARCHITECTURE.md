@@ -20,9 +20,10 @@ thermodynamique globale va vers l'augmentation de l'entropie ; les poches
 d'organisation se maintiennent en dissipant les gradients qui les alimentent.
 Voir `00_socle/CODEBOOK.md` §12. Le §13 ajoute des distinctions transversales
 — mémoire distribuée, diagnostic `D-H-L`, hiérarchie
-`P^adm ⊇ P^att ⊇ P^kin ⊇ P^pers`, séparation `S`/`m`/`A`, seuil de
-persistance, critère d'altération architecturale et séparation entre chaîne
-physique et chaîne de preuve — extraites d'une
+`P^adm ⊇ P^att ⊇ P^kin`, persistance vectorielle, séparation `S`/`m`/`A`,
+distinction `ℓ_ana` / `{ℓ_phys}`, régimes `(D_i,G_i)`, raccords `T(i→j)`,
+mise à jour `U_i`, critère d'altération architecturale et séparation entre
+chaîne physique et chaîne de preuve — extraites d'une
 application et valables pour les trois branches.
 
 Ce que les trois branches partagent réellement n'est pas un mécanisme, c'est
@@ -32,6 +33,30 @@ une **structure relationnelle** :
 Histoire → Architecture → Contraintes → Réponse → Inscription → Possibilités futures
 ```
 
+Cette lecture condensée se déploie dans la boucle canonique suivante :
+
+```text
+S(t0)
+  → [ℓ_ana ; {ℓ_phys}]
+  → régime (D_i,G_i)
+  → Ω_Gi(S(t0))
+  → P^adm → P^att → P^kin
+  → stabilité + P_pers[h_i] / Π* / Q
+  → h_i réalisé
+  → S(t1) = U_i[t0,t1 ; S(t0),h_i]
+  → réévaluation de D_i
+  → T(i→j) si le régime change
+  → nouveaux possibles → itération suivante
+```
+
+`ℓ_ana` est une décision de description ; `{ℓ_phys}` appartient au système.
+Chaque dynamique `G_i` n'est valide que dans `D_i`. Un raccord `T(i→j)` doit
+indiquer s'il conserve des variables par matching/continuité ou s'il projette
+la description avec perte d'information, et préciser ce qui est conservé,
+abandonné ou reconstruit. La réalisation n'est donc pas le dernier maillon
+d'une chaîne : elle met à jour l'état dont seront calculés les possibles
+suivants.
+
 ## Le socle n'est pas une branche
 
 Le socle contient le langage et un résultat formel commun, jamais un
@@ -39,7 +64,9 @@ résultat empirique de branche. Il rassemble :
 
 - la définition d'une architecture matérielle ;
 - les six dimensions `n, G, I, E, Π, H` ;
-- la chaîne ORI-C générale ;
+- la boucle récursive ORI-C générale ;
+- les échelles d'analyse et les échelles physiques ;
+- les domaines de validité, dynamiques de régime et raccords ;
 - le profil temporel des transitions ;
 - les liens typés et leurs règles d'emploi ;
 - les niveaux et les modes de preuve ;
