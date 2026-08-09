@@ -4,7 +4,7 @@
   "graine": 20260809,
   "tirages": 5000,
   "controles": [
-    "permutation des étiquettes",
+    "permutation des étiquettes dans les strates expérimentales",
     "bootstrap au niveau de l'unité physique",
     "retrait d'une unité",
     "retrait d'un groupe entier"
@@ -16,7 +16,7 @@
       "masse des polymères, grandeur mesurée du même jeu et attendue insensible"
     ],
     "statistiques": [
-      "permutations d'étiquettes utilisées pour les p-values"
+      "permutations intra-strates utilisées pour les p-values"
     ],
     "regle": "une permutation vérifie la spécificité statistique de l'association ; elle ne remplace pas une grandeur physique négative du même jeu"
   },
@@ -26,20 +26,22 @@
       "trace_vers_reponse": {
         "testable": true,
         "unites": 5031,
-        "rho": 0.8860130293697156,
+        "rho": 0.8860368038918093,
         "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 25,
         "bootstrap_ic95": [
-          0.8771456263127508,
-          0.893729667859346
+          0.8766593669935839,
+          0.8936957661061691
         ],
         "retrait_une_unite": {
-          "min": 0.8859459687480469,
-          "max": 0.8870553886809108
+          "min": 0.8859697573794013,
+          "max": 0.8870791785919182
         },
         "retrait_un_groupe": {
           "groupes": 25,
-          "min": 0.8748575429905289,
-          "max": 0.9004768751259056
+          "min": 0.8748823860247154,
+          "max": 0.9005011855170681
         },
         "survit_aux_controles": true
       },
@@ -49,20 +51,22 @@
         "diagnostic_partiel": {
           "testable": true,
           "unites": 4838,
-          "rho": 0.8830308496606827,
+          "rho": 0.883047251852118,
           "p": 0.0001999600079984003,
+          "permutation": "dans_les_strates",
+          "strates": 25,
           "bootstrap_ic95": [
-            0.8736361742636056,
-            0.8918682098470226
+            0.8733266249632722,
+            0.8912496289195527
           ],
           "retrait_une_unite": {
-            "min": 0.8829593271989927,
-            "max": 0.8841110489454803
+            "min": 0.8829757394926399,
+            "max": 0.8841274604450735
           },
           "retrait_un_groupe": {
             "groupes": 25,
-            "min": 0.871356328169658,
-            "max": 0.8986167433228234
+            "min": 0.8713723063399625,
+            "max": 0.89863388672141
           },
           "survit_aux_controles": true
         },
@@ -74,6 +78,8 @@
         "rho": -0.7419002986263189,
         "p": null,
         "survit_aux_controles": true,
+        "portee": "preuve_forte_ablation_physique",
+        "verdict_C03_complet": "non_testable_avec_ce_jeu",
         "detail": "corrélation dose-intensité par échantillon, témoin physique IRM et ARM de signe opposé"
       },
       "replication": {
@@ -101,10 +107,12 @@
         "testable": true,
         "unites": 24,
         "rho": -0.6617391304347826,
-        "p": 0.0007998400319936012,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 3,
         "bootstrap_ic95": [
-          -0.8835434782608695,
-          -0.3329565217391305
+          -0.8843689982816132,
+          -0.3212457066015727
         ],
         "retrait_une_unite": {
           "min": -0.7272727272727272,
@@ -121,10 +129,12 @@
         "testable": true,
         "unites": 24,
         "rho": -0.27999999999999997,
-        "p": 0.1865626874625075,
+        "p": 0.9998000399920016,
+        "permutation": "dans_les_strates",
+        "strates": 3,
         "bootstrap_ic95": [
-          -0.5957173913043478,
-          0.16260869565217392
+          -0.6198461368659375,
+          0.14063218602608482
         ],
         "retrait_une_unite": {
           "min": -0.40513833992094866,
@@ -165,20 +175,22 @@
       "histoire_vers_reponse": {
         "testable": true,
         "unites": 60,
-        "rho": -0.43789941650458464,
-        "p": 0.0007998400319936012,
+        "rho": -0.4696209716785577,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 9,
         "bootstrap_ic95": [
-          -0.6178799666574049,
-          -0.26630730758544047
+          -0.6399790114731806,
+          -0.25237375386736743
         ],
         "retrait_une_unite": {
-          "min": -0.46306253652834606,
-          "max": -0.4144360023378142
+          "min": -0.49293224500072763,
+          "max": -0.4449432178932612
         },
         "retrait_un_groupe": {
           "groupes": 9,
-          "min": -0.48347040799870994,
-          "max": -0.40711175616835993
+          "min": -0.5020625696112531,
+          "max": -0.4429989984458188
         },
         "survit_aux_controles": true
       },
@@ -192,20 +204,22 @@
       "temoin_negatif_masse": {
         "testable": true,
         "unites": 60,
-        "rho": 0.08085579327591,
-        "p": 0.5398920215956808,
+        "rho": 0.07852532295608493,
+        "p": 0.5408918216356728,
+        "permutation": "dans_les_strates",
+        "strates": 9,
         "bootstrap_ic95": [
-          -0.16896499027507644,
-          0.3365073631564322
+          -0.18312718533324457,
+          0.30874757571818573
         ],
         "retrait_une_unite": {
-          "min": 0.04436002337814144,
-          "max": 0.12133255406195209
+          "min": 0.043265358476695014,
+          "max": 0.12282636580517035
         },
         "retrait_un_groupe": {
           "groupes": 9,
-          "min": 0.04128366392517336,
-          "max": 0.1369940332204483
+          "min": 0.027806894953253742,
+          "max": 0.15026212011423729
         },
         "survit_aux_controles": false
       },
@@ -234,20 +248,22 @@
       "histoire_vers_trace": {
         "testable": true,
         "unites": 12,
-        "rho": -0.1328671328671329,
-        "p": 0.6858628274345131,
+        "rho": -0.007131495823206693,
+        "p": 0.9860027994401119,
+        "permutation": "dans_les_strates",
+        "strates": 3,
         "bootstrap_ic95": [
-          -0.6503496503496504,
-          0.7624125874125874
+          -0.7981507061936146,
+          0.7137959899005294
         ],
         "retrait_une_unite": {
-          "min": -0.3727272727272728,
-          "max": 0.1272727272727273
+          "min": -0.26518799996356424,
+          "max": 0.2465783157555948
         },
         "retrait_un_groupe": {
           "groupes": 3,
-          "min": -0.642857142857143,
-          "max": 0.5714285714285715
+          "min": -0.545544725589981,
+          "max": 0.6728384948943099
         },
         "survit_aux_controles": false
       },
@@ -280,15 +296,17 @@
       "histoire_vers_reponse": {
         "testable": true,
         "unites": 14,
-        "rho": -0.6,
-        "p": 0.027194561087782444,
+        "rho": -0.4961389383568339,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 2,
         "bootstrap_ic95": [
-          -0.8505494505494505,
-          0.06395604395604375
+          -0.8836575536091199,
+          0.007122417197740475
         ],
         "retrait_une_unite": {
-          "min": -0.6978021978021978,
-          "max": -0.5
+          "min": -0.6038989694084802,
+          "max": -0.3878250262256295
         },
         "retrait_un_groupe": {
           "groupes": 2,
@@ -329,15 +347,17 @@
       "histoire_vers_trace": {
         "testable": true,
         "unites": 6,
-        "rho": -0.7142857142857143,
-        "p": 0.1265746850629874,
+        "rho": -0.8366600265340757,
+        "p": 0.05698860227954409,
+        "permutation": "dans_les_strates",
+        "strates": 2,
         "bootstrap_ic95": [
-          -0.8857142857142858,
-          0.14285714285714288
+          -1.0,
+          -0.14142135623730953
         ],
         "retrait_une_unite": {
-          "min": -0.8999999999999998,
-          "max": -0.49999999999999994
+          "min": -0.9486832980505137,
+          "max": -0.7378647873726218
         },
         "retrait_un_groupe": {
           "groupes": 0,
@@ -349,15 +369,17 @@
       "trace_vers_reponse": {
         "testable": true,
         "unites": 6,
-        "rho": -0.8857142857142858,
-        "p": 0.03099380123975205,
+        "rho": -0.6063390625908325,
+        "p": 0.05678864227154569,
+        "permutation": "dans_les_strates",
+        "strates": 2,
         "bootstrap_ic95": [
-          -0.8857142857142858,
-          0.5428571428571429
+          -1.0,
+          0.10000000000000002
         ],
         "retrait_une_unite": {
-          "min": -0.8999999999999998,
-          "max": -0.7999999999999999
+          "min": -0.7378647873726218,
+          "max": -0.40555355282690636
         },
         "retrait_un_groupe": {
           "groupes": 0,
@@ -369,15 +391,17 @@
       "histoire_vers_reponse": {
         "testable": true,
         "unites": 6,
-        "rho": 0.3714285714285715,
-        "p": 0.4959008198360328,
+        "rho": 0.2608969660436018,
+        "p": 0.47110577884423116,
+        "permutation": "dans_les_strates",
+        "strates": 2,
         "bootstrap_ic95": [
-          -0.5428571428571429,
+          -0.8000000000000002,
           1.0
         ],
         "retrait_une_unite": {
-          "min": -0.09999999999999999,
-          "max": 0.7
+          "min": -0.30779350562554625,
+          "max": 0.5642880936468347
         },
         "retrait_un_groupe": {
           "groupes": 0,
@@ -412,6 +436,7 @@
     "trace_vers_reponse": 1,
     "persistance": 0,
     "ablation_physique": 1,
+    "C_MAT_MEM_03_complet": 0,
     "replication_independante": 5
   }
 }

@@ -1360,6 +1360,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/NOTE_SUPERSESSION_GEL.md",
+      "size": 1037,
+      "sha256": "1f8382aadaaa3ad20c0089b70b940037dc7578c85642344ddb0d0bf6b29f6f8c",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/PROTOCOLE_CAMPAGNE.md",
       "size": 10508,
       "sha256": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
@@ -1397,8 +1403,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/balayer_toutes_les_sources.py",
-      "size": 11712,
-      "sha256": "379783b643f66a1fe1bf1006ad04c2cd2371ca7544558563843a5811ecf6a4d5",
+      "size": 11311,
+      "sha256": "738df10e37f6c0ac936e5bced20e850fbef8bc7a0346621f38598413514e377c",
       "storage": "inline"
     },
     {
@@ -1409,20 +1415,20 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/MATRICE_TRANSVERSALE.json",
-      "size": 12701,
-      "sha256": "1e43639a81a60659939c24209e218532c4009e6901b291f0653f3005eab7d7d5",
+      "size": 13624,
+      "sha256": "5cf66590de4ccffeaf05b31a9b0f27fe9d81542721d0904cff251fa41450814a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_C_MAT_MEM_01_02_04.json",
       "size": 2474,
-      "sha256": "9d96b90195401770090c570261655d068e27f8056d41d8daa6251ad66919a1c1",
+      "sha256": "b1b658e0e875d8996df51cbe8a23c537c11123f340ee08d29592181cb4874c8b",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_PLASTICITE_ET_PHASE.json",
       "size": 1592,
-      "sha256": "f41f8c61d7c0675e1842bf3bfa5ad9254ff83550528777ce0d30d34d2ef1fc74",
+      "sha256": "3ee26a38cc546ec1af78e0eff8db275d53f58a32a93c015af438b037d057184b",
       "storage": "inline"
     },
     {
@@ -1433,8 +1439,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_C_MAT_MEM_03.json",
-      "size": 3475,
-      "sha256": "2ce51f9d10e0154dc70bed5c1a2bf8e307af1869213ea1a6a3d2df9a5aee09e7",
+      "size": 3809,
+      "sha256": "9f54e3713ca143f1e1c41284d4773fc3fe35e3e82e3046297220d1f1eff7dcdf",
       "storage": "inline"
     },
     {
@@ -1445,8 +1451,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_TEST_COMBINE.json",
-      "size": 4886,
-      "sha256": "a6147ae76e98389b20a6a82bb04d22e14310c831325eea02fa2735a724b69b38",
+      "size": 4892,
+      "sha256": "9277b41edbb97828e9e813d9d6226dc301f33ddce403b2f9625c4675ff7a5fe5",
       "storage": "inline"
     },
     {
@@ -1457,14 +1463,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_VIEILLISSEMENT_POLYMERE.json",
-      "size": 2305,
-      "sha256": "4a94bfe2a99d6db3d0ee80bc24d715ddd4efbdae560f7fd2aa1452a3905c8fb8",
+      "size": 2306,
+      "sha256": "b5263dcfde06fe997e0188ad484ccf9785a5e7ac7400ac221cb1f5301c56a50a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
-      "size": 2942,
-      "sha256": "4469ef08ed4185f99bf3152a2de3536e63beb811671df12aa56bd55318287b19",
+      "size": 3288,
+      "sha256": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
       "storage": "inline"
     },
     {
@@ -1476,7 +1482,7 @@
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/fabest_par_eprouvette.csv",
       "size": 3045,
-      "sha256": "edb172d8519da2b905932cc99b6455ea386b10047c035f6e953cc0bf1898a572",
+      "sha256": "9ecc375bbefd02da5df306f118f871c2d5bb7166d0518dec06e4d080259954fd",
       "storage": "inline"
     },
     {
@@ -1565,32 +1571,32 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_carbures.py",
-      "size": 10721,
-      "sha256": "f1c51ed96278f0a140fd263f97393e0070a13022eb982b5530136cdbc093d24f",
+      "size": 10320,
+      "sha256": "fed8f8f4b3acd9efec82ad56aa6cbac9ea79277ed5cd1aadee31f84058da47f6",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
-      "size": 10939,
-      "sha256": "aa97f3cd7ef9fe9118d14506fc30477b5d069e7c676b54d87c3a4a2983948dc9",
+      "size": 10538,
+      "sha256": "995f6fc974c5c716b40ec112dd0315345492d9d7d2ef9320b06be7c26f1d5862",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_surface.py",
-      "size": 9453,
-      "sha256": "7bf89d403e359836cd17c63741ac5d2add0917a292a0597111b59a8e3f3d6428",
+      "size": 9052,
+      "sha256": "5869caaac312afee4c3c89147a0a8d132c37954c0da86add4c495bb760980219",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_traces_fission.py",
-      "size": 7330,
-      "sha256": "6fef1f1624f8e97837afce0592caa1a95b28d42aa97bd9c5be9b080180a2a415",
+      "size": 6929,
+      "sha256": "cae7be7802136c1cc5fef3a434cba30b822d63e702b6766d823b0b8fd56b319f",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_vieillissement.py",
-      "size": 9469,
-      "sha256": "c7aceb823f7eef3f9f0457c907ddc75a860a93bbc665f547f7029cff402b5522",
+      "size": 9068,
+      "sha256": "8f42911c310da9cd0acfaa4ac2c5c149598eacf10341cca87ff3cfc301bbff06",
       "storage": "inline"
     },
     {
@@ -1607,8 +1613,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/matrice_transversale.py",
-      "size": 18663,
-      "sha256": "7a6c60117c14e2afbc3c5c5102f212b3f6154e73b118822ea89e7d4d64951366",
+      "size": 18623,
+      "sha256": "2defbc00ee94c52677d62dd5736706d61477ae34053c3f59e62db2abe000c0e4",
       "storage": "inline"
     },
     {
@@ -1625,8 +1631,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 13294,
-      "sha256": "fc368440fd1deb7eb07dbf7b91dbf7bfc4d20b86bb2b05abb945add761986166",
+      "size": 14337,
+      "sha256": "f96c37e35fd54df949579999e244b89462cf9d53e880e9a5cc7bc528b96e3aec",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/statistiques_rangs.py",
+      "size": 1796,
+      "sha256": "b09c3f3048167061c4455d25636aa159fbd83ba0204e07a26815bffe68136150",
       "storage": "inline"
     },
     {
@@ -1637,20 +1649,20 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/test_combine_familles.py",
-      "size": 9695,
-      "sha256": "9a95740369af8cef681d6952d6af7ce6cab4de59153d0082fd39e49af53130dd",
+      "size": 9220,
+      "sha256": "fb820be162b24157e8ad3670f1746923771d4de70986bd4e6c1851a2b101f6f5",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_ablation_iodp.py",
-      "size": 9710,
-      "sha256": "8151a8c93e7fb092ba96770fec6a866743f5b5a1667e09518018f6151b81eb09",
+      "size": 10182,
+      "sha256": "a546451e3620d113b0c8de6b43060d93c2cdb92f58f35323148425138f916638",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_iodp_01_02_04.py",
-      "size": 8728,
-      "sha256": "0c7d8a2bb407475a0ba39dda853886ad17fc4b085f91923be32383ab75fd2e74",
+      "size": 8396,
+      "sha256": "8fd272640911e919fbb9b008642780ac22244b546c531d08b93f0f557b2e4e28",
       "storage": "inline"
     },
     {
@@ -1661,8 +1673,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tests/test_conformite_protocole.py",
-      "size": 1952,
-      "sha256": "8b85f041bb545be08f08a2891d1007109e2863b948f9f6d1cf4ee8a560b31f5a",
+      "size": 3983,
+      "sha256": "f28aff20e9d6ac3606676c5f048eb8cd2a5bdfcad58d5ba08a4cd787bb98ed5c",
       "storage": "inline"
     },
     {
@@ -4817,8 +4829,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 39200,
-      "sha256": "4111629268b0f1388916e1df1169bb8367da46becb50a7492f50dbc41da5cf4c",
+      "size": 39874,
+      "sha256": "ce5a2b3fb1be0dde7a65555cb301880f1546e4fbe6f92ad977dcf2478edbc90a",
       "storage": "inline"
     },
     {
@@ -4943,8 +4955,8 @@
     },
     {
       "path": "README.md",
-      "size": 23956,
-      "sha256": "f9d2df73319b5bb43695d2f9dd8eb1954d5c763e91761cd61cf92264fc355a6d",
+      "size": 24528,
+      "sha256": "02454af192dceed0dd4ff2b63b46901d5fa05e51ca373dc1095412df6cf09017",
       "storage": "inline"
     },
     {
@@ -5069,8 +5081,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
-      "size": 729015,
-      "sha256": "e40c3e0a001ff4043e144ad121edf9c280ebdc2c43643c127ba40f41c779efc2",
+      "size": 729075,
+      "sha256": "fb73e2b6a02bd6ab42fa40020b8511a8dd15c3c8948ef86bb15c733d264099dd",
       "storage": "inline"
     },
     {
@@ -5231,8 +5243,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/generer_dossier_scientifique.py",
-      "size": 94064,
-      "sha256": "6a50df906be422a85d8ef53d12c181a3a5c364b6fbc66231896362f174e85e64",
+      "size": 94209,
+      "sha256": "a1f4f172350177a90b7b3a3b9cd78df5f5ad29450ae62785f4080a4cc7abd33f",
       "storage": "inline"
     },
     {
@@ -8057,8 +8069,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 14411,
-      "sha256": "a5ff29054ec2d764235b755325bcc4d645db9d6595ecb5f76064e4a13b0af4e2",
+      "size": 14430,
+      "sha256": "415168d9ea2afe10303a64251dcf1b2022727a6d3361b3ccb502b45e53fc42cd",
       "storage": "inline"
     },
     {
@@ -8069,14 +8081,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 28835,
-      "sha256": "e2fd9fa9708921ddf892e6fbd20074a1500f76d948a52bdf2eb09e12eeb8e2bf",
+      "size": 31371,
+      "sha256": "dcc11995cd3ec7acad3fd6cdbc0aec8b46712188f8473231cd9f22b7859159fb",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 12965,
-      "sha256": "6603f8405062d94153b4606ccf8d1c5cde32f5172e83f54844c8a81c8931342d",
+      "size": 12984,
+      "sha256": "8635e67b258d63e84a12c02f91a770eb99377045b77d20d6e0f2d182c63b37e4",
       "storage": "inline"
     },
     {

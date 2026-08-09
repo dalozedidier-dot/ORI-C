@@ -20,6 +20,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
 SORTIE = DERIVE / "RESULTAT_TEST_COMBINE.json"
@@ -32,23 +34,6 @@ RELATIONS = (
     "histoire_vers_reponse",
     "ablation",
 )
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    garde = np.isfinite(x) & np.isfinite(y)
-    x, y = x[garde], y[garde]
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def lire(nom: str) -> list[dict]:
@@ -201,7 +186,7 @@ def main() -> int:
         resultat["verdict"] = verdict
         accord = f"{resultat['concordants']}/{resultat['jeux']}"
         print(f"{relation:<26}{resultat['jeux']:>6}{accord:>10}"
-              f"{resultat['p_bilaterale']:>10.4f}"
+              f"{resultat['p_bilaterale']:>10.6f}"
               f"{resultat['p_minimal_atteignable']:>9.4f}   {verdict}")
         for e in resultat["jeux_detail"]:
             print(f"      {e['jeu']:<24}{e['famille']:<26}{e['rho']:+.3f}"

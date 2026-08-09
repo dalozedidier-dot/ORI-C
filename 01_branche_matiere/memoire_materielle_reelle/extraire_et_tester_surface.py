@@ -20,6 +20,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 from donnees_campagne import base_de
 
 ICI = Path(__file__).resolve().parent
@@ -31,21 +33,6 @@ GRAINE = 20260809
 TIRAGES = 20000
 HEURE = re.compile(r"_(\d+)h\.txt$", re.I)
 SERIE = re.compile(r"(GC_Fig\w+?)_\d+h\.txt$", re.I)
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def aire_chromatogramme(chemin: Path) -> float:
@@ -182,7 +169,7 @@ def main() -> int:
                 "verdict": verdict,
             }
             print(f"Fischer-Tropsch : {len(ft)} mesures, {n_series} séries, "
-                  f"rho {observe:+.4f}, p = {p:.4f}  →  {verdict}")
+                  f"rho {observe:+.4f}, p = {p:.6f}  →  {verdict}")
             for serie, points in sorted(strates.items()):
                 rho = spearman([d for d, _ in points], [v for _, v in points])
                 print(f"    {serie:<18}{len(points):>3} points  rho {rho:+.4f}")

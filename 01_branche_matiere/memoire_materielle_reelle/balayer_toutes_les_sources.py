@@ -20,6 +20,8 @@ from pathlib import Path
 
 import numpy as np
 
+from statistiques_rangs import spearman
+
 warnings.filterwarnings("ignore")
 
 ICI = Path(__file__).resolve().parent
@@ -42,21 +44,6 @@ JETON = re.compile(rf"(?<![A-Za-z0-9])(\d+(?:[.,p]\d+)?)\s*({UNITES})(?![A-Za-z]
 COUPLE = re.compile(r"(?<![A-Za-z0-9])(\d{2,3})-(\d{1,3})(?![A-Za-z0-9])")
 
 TABULAIRE = {".csv", ".txt", ".dat", ".tsv", ".asc", ".xlsx", ".xls", ".xlsm"}
-
-
-def spearman(x, y) -> float:
-    x, y = np.asarray(x, float), np.asarray(y, float)
-    if x.size < 3:
-        return float("nan")
-    def rangs(v):
-        o = np.argsort(v, kind="mergesort")
-        r = np.empty(len(v), dtype=float)
-        r[o] = np.arange(len(v), dtype=float)
-        return r
-    rx, ry = rangs(x), rangs(y)
-    if rx.std() == 0 or ry.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(rx, ry)[0, 1])
 
 
 def p_sign_flip(valeurs: np.ndarray, aleatoire) -> tuple[float, str]:

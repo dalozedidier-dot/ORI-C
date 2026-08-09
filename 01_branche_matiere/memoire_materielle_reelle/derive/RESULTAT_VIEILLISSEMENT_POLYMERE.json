@@ -26,12 +26,12 @@
     },
     "LDPE-SEB-853 90C": {
       "echantillons": 7,
-      "rho_duree_apparition": -0.642857142857143,
+      "rho_duree_apparition": -0.6910233190806426,
       "rho_duree_masse": 0.14285714285714288
     },
     "LDPE-SEB-853 100C": {
       "echantillons": 7,
-      "rho_duree_apparition": -0.6071428571428572,
+      "rho_duree_apparition": -0.7412493166611013,
       "rho_duree_masse": -0.14285714285714288
     },
     "LDPE-SEB-853 110C": {
@@ -42,7 +42,7 @@
     "LDPE-SPB-681 90C": {
       "echantillons": 7,
       "rho_duree_apparition": -0.642857142857143,
-      "rho_duree_masse": 0.4642857142857144
+      "rho_duree_masse": 0.504524979109513
     },
     "LDPE-SPB-681 100C": {
       "echantillons": 5,
@@ -56,13 +56,13 @@
     }
   },
   "signal": {
-    "rho_moyen": -0.7277777777777779,
+    "rho_moyen": -0.7480302928601938,
     "p": 0.00390625,
     "methode": "sign-flip exact, 512 attributions"
   },
   "temoin_negatif_masse": {
-    "rho_moyen": 0.08015873015873017,
-    "p": 0.359375
+    "rho_moyen": 0.08462975958359668,
+    "p": 0.3515625
   },
   "verdict": "soutient",
   "motif": "la température d'apparition de l'oxydation suit la durée de vieillissement sous rampe identique ; la masse ne suit pas",

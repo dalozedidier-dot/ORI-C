@@ -58,7 +58,7 @@ Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient
 
 Pour la mémoire matérielle, « positive sur une relation » signifie **preuve
 partielle**, pas admission au schéma confirmatoire complet. IODP soutient
-l'ablation physique `C03`; ses associations trace-réponse, sa résistance à
+fortement l'ablation physique, tandis que `C03` complet reste non testable ; ses associations trace-réponse, sa résistance à
 20 mT et la comparaison NRM/IRM-ARM ne satisfont pas les plans gelés de `C01`,
 `C02` et `C04`. Les permutations servent de contrôles statistiques et ne sont
 pas comptées comme contrôles négatifs physiques.
@@ -94,6 +94,15 @@ admissible. Elle ne constitue ni une preuve sur toutes les structures
 mathématiques possibles, ni une validation empirique dans le vivant.
 
 ## Branche 1 — Matière
+
+La campagne de mémoire matérielle utilise désormais des rangs moyens pour les
+ex æquo et des permutations au sein des strates expérimentales. Aucun jeu ne
+dispose encore d'une fiche d'admission confirmatoire : IODP, FABEST, polymères,
+traces de fission et jeux associés restent donc des preuves partielles. IODP
+apporte une preuve forte d'ablation physique, mais pas le plan A/B complet de
+C-MAT-MEM-03. La CI rejoue les résultats versionnés lorsque les sources
+primaires IODP, aciers à outils ou hystérésis dynamique sont absentes ; elle ne
+démontre alors pas la chaîne primaire intégrale pour ces étapes.
 
 | Élément | Statut | Remarque |
 |---|---|---|

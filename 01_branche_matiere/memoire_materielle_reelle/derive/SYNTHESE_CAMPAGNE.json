@@ -1,5 +1,9 @@
 {
   "campagne": "WP-MAT-MEM-2026",
+  "separation_des_portees": {
+    "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+    "partielle": "les jeux analysés sont publiés comme preuves partielles hors chaîne confirmatoire admise"
+  },
   "transversalite": {
     "critere": "C-MAT-MEM-05",
     "comptes_sous_controles": {
@@ -8,6 +12,7 @@
       "trace_vers_reponse": 1,
       "persistance": 0,
       "ablation_physique": 1,
+      "C_MAT_MEM_03_complet": 0,
       "replication_independante": 5
     },
     "familles_au_schema_complet": 0,
@@ -15,7 +20,8 @@
     "familles_examinees": {
       "magnetisme": {
         "jeu": "rémanence IODP, 25 expéditions",
-        "critere_decisif": "C-MAT-MEM-03, ablation physique",
+        "critere_decisif": "preuve forte d'ablation physique, hors C03 complet",
+        "verdict_C03_complet": "non_testable_avec_ce_jeu",
         "verdict": "soutient",
         "niveau_de_temoin": 6,
         "echantillons": 4998
@@ -69,6 +75,6 @@
   "statut_provenance": {
     "chaine_integrale_exigee": "source primaire → extraction → table par unité → statistique",
     "distinction": "la reproductibilité d'une table dérivée ne démontre pas à elle seule la reproductibilité intégrale depuis la source primaire",
-    "preuve_par_execution": "derive/execution/CAMPAGNE.json dans l'artefact CI ; les étapes IODP et aciers à outils déclarent séparément leur niveau"
+    "preuve_par_execution": "derive/execution/CAMPAGNE.json dans l'artefact CI ; les étapes IODP, aciers à outils et hystérésis dynamique déclarent séparément leur niveau"
   }
 }

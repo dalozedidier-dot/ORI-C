@@ -43,7 +43,10 @@ def executer(titre: str, arguments: list[str], obligatoire: bool = True,
         print(f"     {ligne}")
     # Une source absente n'est pas un échec : les résultats commités restent
     # valides et l'extracteur a refusé de les écraser.
-    ignore = "Résultats commités laissés intacts" in texte
+    ignore = any(marqueur in texte for marqueur in (
+        "Résultats commités laissés intacts",
+        "source absente : hysteresis_dynamique",
+    ))
     if ignore:
         etat = "ignoré, sources absentes"
     else:
@@ -79,7 +82,8 @@ def synthese_transversale() -> dict:
         r = json.loads(ablation.read_text(encoding="utf-8"))
         familles["magnetisme"] = {
             "jeu": "rémanence IODP, 25 expéditions",
-            "critere_decisif": "C-MAT-MEM-03, ablation physique",
+            "critere_decisif": "preuve forte d'ablation physique, hors C03 complet",
+            "verdict_C03_complet": r.get("verdict_C03_complet"),
             "verdict": r["verdict"],
             "niveau_de_temoin": r.get("niveau_de_temoin"),
             "echantillons": r["signal"]["echantillons"],
@@ -157,6 +161,13 @@ def ecrire_synthese_versionnee(transversal: dict) -> Path:
     """Écrit la synthèse stable consommée par les autres campagnes."""
     synthese_versionnee = {
         "campagne": "WP-MAT-MEM-2026",
+        "separation_des_portees": {
+            "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+            "partielle": (
+                "les jeux analysés sont publiés comme preuves partielles hors "
+                "chaîne confirmatoire admise"
+            ),
+        },
         "transversalite": transversal,
         "statut_provenance": {
             "chaine_integrale_exigee": (
@@ -168,7 +179,8 @@ def ecrire_synthese_versionnee(transversal: dict) -> Path:
             ),
             "preuve_par_execution": (
                 "derive/execution/CAMPAGNE.json dans l'artefact CI ; les étapes "
-                "IODP et aciers à outils déclarent séparément leur niveau"
+                "IODP, aciers à outils et hystérésis dynamique déclarent "
+                "séparément leur niveau"
             ),
         },
     }
@@ -194,9 +206,12 @@ def main() -> int:
         print(f"écrit : {sortie.relative_to(ICI.parents[1]).as_posix()}")
         return 0
 
-    print("Campagne « mémoire matérielle réelle » — WP-MAT-MEM-2026")
+    print("WP-MAT-MEM-2026 — admission confirmatoire et analyses partielles séparées")
     print()
-    etapes = [executer("gel des fichiers scellés", ["admettre_jeu.py", "--toutes"])]
+    etapes = [executer(
+        "admission confirmatoire (aucune fiche admise à ce jour)",
+        ["admettre_jeu.py", "--toutes"],
+    )]
     if etapes[-1]["code"] != 0:
         print("Gel rompu. La campagne s'arrête.")
         return 2
@@ -222,7 +237,9 @@ def main() -> int:
               "incomplètes.")
         return 1
 
-    etapes.append(executer("C-MAT-MEM-03, ablation physique",
+    print("── Analyses partielles hors campagne confirmatoire admise")
+    print()
+    etapes.append(executer("preuve forte d'ablation physique, C03 complet non testé",
                            ["tester_ablation_iodp.py"]))
     etapes.append(executer("diagnostics partiels IODP hors C01/C02/C04",
                            ["tester_iodp_01_02_04.py"]))
@@ -247,6 +264,7 @@ def main() -> int:
         "même état, même stimulus, histoire différente — exploratoire",
         ["tester_meme_etat_histoire_differente.py"],
         obligatoire=False,
+        source_primaire_requise=True,
     ))
 
     transversal = synthese_transversale()
@@ -260,6 +278,13 @@ def main() -> int:
 
     rapport = {
         "campagne": "WP-MAT-MEM-2026",
+        "separation_des_portees": {
+            "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+            "partielle": (
+                "IODP, FABEST, polymères, traces de fission, aciers et surface "
+                "sont analysés hors chaîne confirmatoire admise"
+            ),
+        },
         "etapes": etapes,
         "transversalite": transversal,
         "echecs": [e["etape"] for e in etapes if e["code"] != 0],

@@ -13,7 +13,7 @@
         "Case_2_Strain_Mean_0.5pct": 8,
         "Case_3_Stress_R-0.5": 8
       },
-      "rho_moyen_cycle_amplitude": -0.6820871439727232,
+      "rho_moyen_cycle_amplitude": -0.6844689303583582,
       "fraction_negative": 0.8333333333333334,
       "p": 9.999000099990002e-05,
       "methode_du_temoin": "sign-flip Monte-Carlo, 10000 tirages",
