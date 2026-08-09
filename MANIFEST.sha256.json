@@ -1409,14 +1409,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/MATRICE_TRANSVERSALE.json",
-      "size": 10711,
-      "sha256": "6bb231caf357814bc5e008f1727758c181084ecba2a7dc2d99522f315f9cc3e0",
+      "size": 12701,
+      "sha256": "1e43639a81a60659939c24209e218532c4009e6901b291f0653f3005eab7d7d5",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTATS_C_MAT_MEM_01_02_04.json",
-      "size": 1551,
-      "sha256": "11c1ad050431e6dc928232cd98c2fe83673b299828eefce475058e495597e3bf",
+      "size": 2474,
+      "sha256": "9d96b90195401770090c570261655d068e27f8056d41d8daa6251ad66919a1c1",
       "storage": "inline"
     },
     {
@@ -1445,8 +1445,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_TEST_COMBINE.json",
-      "size": 3002,
-      "sha256": "5a1de3d245f56c1817384cd524abbfdadb09795306f7cca672518ea7e2949de6",
+      "size": 4886,
+      "sha256": "a6147ae76e98389b20a6a82bb04d22e14310c831325eea02fa2735a724b69b38",
       "storage": "inline"
     },
     {
@@ -1459,6 +1459,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_VIEILLISSEMENT_POLYMERE.json",
       "size": 2305,
       "sha256": "4a94bfe2a99d6db3d0ee80bc24d715ddd4efbdae560f7fd2aa1452a3905c8fb8",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
+      "size": 2942,
+      "sha256": "4469ef08ed4185f99bf3152a2de3536e63beb811671df12aa56bd55318287b19",
       "storage": "inline"
     },
     {
@@ -1601,8 +1607,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/matrice_transversale.py",
-      "size": 16485,
-      "sha256": "f1e27a42045e75007e9cd88450f8a75e5752b5d4f7b0ad42c235b79ad8f1bd78",
+      "size": 18663,
+      "sha256": "7a6c60117c14e2afbc3c5c5102f212b3f6154e73b118822ea89e7d4d64951366",
       "storage": "inline"
     },
     {
@@ -1619,8 +1625,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 10255,
-      "sha256": "b3f75425af745d988b8edaea635cd2d0d2128130b1cf8911f922012136595979",
+      "size": 13294,
+      "sha256": "fc368440fd1deb7eb07dbf7b91dbf7bfc4d20b86bb2b05abb945add761986166",
       "storage": "inline"
     },
     {
@@ -1631,8 +1637,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/test_combine_familles.py",
-      "size": 8960,
-      "sha256": "a4f658d060471c123def776e9879ec09fa6fa24548ad658f02d9eac1e6ebd8bb",
+      "size": 9695,
+      "sha256": "9a95740369af8cef681d6952d6af7ce6cab4de59153d0082fd39e49af53130dd",
       "storage": "inline"
     },
     {
@@ -1643,14 +1649,20 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_iodp_01_02_04.py",
-      "size": 7308,
-      "sha256": "4568ed6331e586a3f37e59a3e6dbffd21f4e0479b3c72a94f4e6a36e4cf026e8",
+      "size": 8728,
+      "sha256": "0c7d8a2bb407475a0ba39dda853886ad17fc4b085f91923be32383ab75fd2e74",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_meme_etat_histoire_differente.py",
       "size": 7153,
       "sha256": "1d0017c7e0487bdd53fe2dd333a99e8e4c8c3a09cbbe015f0a03cdadd1f16101",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/tests/test_conformite_protocole.py",
+      "size": 1952,
+      "sha256": "8b85f041bb545be08f08a2891d1007109e2863b948f9f6d1cf4ee8a560b31f5a",
       "storage": "inline"
     },
     {
@@ -4715,8 +4727,8 @@
     },
     {
       "path": "03_branche_vivant/programme_prebiotique/valider_lignees.py",
-      "size": 19958,
-      "sha256": "34b5232b6f8b3a23082337b1fd64166089d6f1a41c466fc5b220765552b1a36a",
+      "size": 20163,
+      "sha256": "cddb126a7dc680cf6dd7227b797d8572dd9f7a71c08b56f359469b191842663e",
       "storage": "inline"
     },
     {
@@ -4805,8 +4817,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 38755,
-      "sha256": "249b6f3c27b362e52d585d87afa2c45051182ed7f155b6636d6e90676481bc4d",
+      "size": 39200,
+      "sha256": "4111629268b0f1388916e1df1169bb8367da46becb50a7492f50dbc41da5cf4c",
       "storage": "inline"
     },
     {
@@ -4931,8 +4943,8 @@
     },
     {
       "path": "README.md",
-      "size": 23196,
-      "sha256": "5ca39b53409dc49e27bdef7ce263a2d493dff0266d53f229c142d0ec0059830a",
+      "size": 23956,
+      "sha256": "f9d2df73319b5bb43695d2f9dd8eb1954d5c763e91761cd61cf92264fc355a6d",
       "storage": "inline"
     },
     {
@@ -5051,14 +5063,14 @@
     },
     {
       "path": "documentation/POINT_D_ENTREE.md",
-      "size": 4797,
-      "sha256": "2f650c9af2bb9467914cf5247b2cf422478f6588cd315847f36c1092355f32db",
+      "size": 4957,
+      "sha256": "08046e19c3e71c3ba025c518d63342c4c43f03fbb1ce6840d681205def30c7d3",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.docx",
-      "size": 725558,
-      "sha256": "28fdc7b6e5a81ef34ce4b585bffe4f46536463d3c67f634a9e9e8117561970e1",
+      "size": 729015,
+      "sha256": "e40c3e0a001ff4043e144ad121edf9c280ebdc2c43643c127ba40f41c779efc2",
       "storage": "inline"
     },
     {
@@ -5141,8 +5153,8 @@
     },
     {
       "path": "documentation/dossier_scientifique/annexes/resultats_scientifiques_consolides.csv",
-      "size": 2277,
-      "sha256": "53b118b406f38836f113d00fecb67690a8ffc182f5afbf3a861d878bc87e5a53",
+      "size": 2623,
+      "sha256": "9fba1676e271a8b7d5e2fe37b0173f5fef2acec41783ab1e4651c77e02b65d74",
       "storage": "inline"
     },
     {
@@ -5213,14 +5225,14 @@
     },
     {
       "path": "documentation/dossier_scientifique/assets/11_statuts_consolides.png",
-      "size": 79061,
-      "sha256": "f8b1d77bdd318d49175a90acde1b418bc6f4c52946aa065aa8e88a47de7f17f5",
+      "size": 81258,
+      "sha256": "c571c913ce4e2f1955da69eada817aa87b6f4c913930840f8d88ae9ea542c773",
       "storage": "inline"
     },
     {
       "path": "documentation/dossier_scientifique/generer_dossier_scientifique.py",
-      "size": 91658,
-      "sha256": "961cc0746d4eeb1d8066f13cd625219ba15682e3321661d455f356dffde46b76",
+      "size": 94064,
+      "sha256": "6a50df906be422a85d8ef53d12c181a3a5c364b6fbc66231896362f174e85e64",
       "storage": "inline"
     },
     {
@@ -5573,8 +5585,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/README.md",
-      "size": 2228,
-      "sha256": "1bae37ec046c3477e3f592f78b98e0030b633da3ba85060b48a6c51f6e298229",
+      "size": 2839,
+      "sha256": "0f16662239373ff0ca2cd00d2ecfdb64180d945e52bc70e2165b3d13099374b6",
       "storage": "inline"
     },
     {
@@ -5597,8 +5609,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/analyse_vivant.py",
-      "size": 22139,
-      "sha256": "028513497c547ecb193c5446d08be117155185e476a95c023c2b9e364ddc7268",
+      "size": 22191,
+      "sha256": "15f45e1e15c7e5efff059a6c0da88febb03bd7a05592ccbaed8a54a33704a51e",
       "storage": "inline"
     },
     {
@@ -5609,8 +5621,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/common.py",
-      "size": 961,
-      "sha256": "d46d4882846f5a7add3b373edbd94889c1f10d99f8ec1ba8390e39c339d42fd8",
+      "size": 983,
+      "sha256": "46a0ada4076e461ff7df5109f225e2078f680ce83b3e4f529e535b6789928f41",
       "storage": "inline"
     },
     {
@@ -5621,8 +5633,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md",
-      "size": 6438,
-      "sha256": "22022bc6378b484077453eb36ba2bf2e1dae28bc7c7ec47679a9a261bfe534ef",
+      "size": 7809,
+      "sha256": "0d221c8270e1091761bba9adc6d9261dc334ee61e4647673950015ab73b11679",
       "storage": "inline"
     },
     {
@@ -5633,8 +5645,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json",
-      "size": 3375,
-      "sha256": "049712a3c38de1c45553a53581087290015c53b6f64c8ec189e78aa0fa26e892",
+      "size": 4714,
+      "sha256": "1c8e3ae92317ce04aaf9bce60ebed3f320abe2d5528e31a13bf250b5167c9133",
       "storage": "inline"
     },
     {
@@ -5651,8 +5663,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/run_all.py",
-      "size": 15398,
-      "sha256": "8dce8dec20eed766f9e86fae07d40d8382b41b7aa402f0a457348e32d183ef0a",
+      "size": 20643,
+      "sha256": "a09aefea19a712c28e982304af200a2d64587eabdae5aedaff7c1d02fb8aad50",
       "storage": "inline"
     },
     {
@@ -5669,8 +5681,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/tests/test_synthese.py",
-      "size": 930,
-      "sha256": "3ac89049e19a839cf7c84b6cc9c35853bf801f89b4958da57e09267bde9cabd6",
+      "size": 1441,
+      "sha256": "ee0b5168f9e2edca9c20d55e4373d1e9feba591533ade3b2186e0b990d73851d",
       "storage": "inline"
     },
     {

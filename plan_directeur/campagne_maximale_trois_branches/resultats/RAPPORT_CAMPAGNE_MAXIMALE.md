@@ -1,10 +1,10 @@
-# Campagne maximale sur les trois branches
+# Synthèse intégrée des preuves du dépôt
 
 Cette campagne utilise uniquement les données, résultats et modèles déjà présents dans le dépôt. Elle ajoute des contrôles de robustesse et des ablations. Elle ne remplace pas les données absentes par des valeurs inventées et ne transforme jamais un succès technique en preuve scientifique.
 
 ## Résultat global
 
-La campagne renforce la causalité architecturale dans le modèle astronomique, quantifie la fragilité de certaines représentations matérielles et ne trouve aucun appui biologique confirmatoire robuste. Elle ne valide pas ORI-C comme théorie générale.
+Le dépôt contient un résultat fort de causalité architecturale dans un modèle astronomique, plusieurs effets matériels réels partiels et deux résultats biologiques positifs sur données réelles (D'Onofrio et vésicules). La chaîne matérielle confirmatoire complète reste ouverte et C-MAT-MEM-05 ne soutient pas la transversalité. Cet ensemble ne valide pas ORI-C comme théorie générale.
 
 ## 1. Matière
 
@@ -15,6 +15,8 @@ Sur cette fermeture stricte, la suppression individuelle des 53 hyperarêtes mon
 Le contrôle des coefficients de partage donne trois situations distinctes. Le recouvrement du carbone résiste au retrait de chacune des trois valeurs. L'hydrogène reste non testable en retrait unitaire parce qu'une seule borne inférieure est disponible. Le recouvrement de l'azote devient faux lorsque la valeur `D-N-37GPA` est retirée. Il est donc **fragile à une mesure publiée**. Le désaccord du soufre reste présent quel que soit le coefficient retiré.
 
 La base des 40 transitions reste remplie à 54,8 %. **10 champs sont entièrement vides**, notamment les preuves directes, les modèles concurrents, les seuils, les vitesses, les mécanismes de persistance et les contre-exemples. Les prochains progrès quantitatifs nécessitent donc des sources externes, pas un nouveau calcul sur les mêmes colonnes.
+
+La campagne de mémoire matérielle trouve **5 familles positives sur au moins une relation locale**, mais **0 famille** admise porte la chaîne complète histoire → trace → réponse sous les contrôles gelés. `C-MAT-MEM-05` reste donc `ne_soutient_pas`. Les effets de démagnétisation, plasticité cyclique, vieillissement thermique et recuit sont des résultats matériels réels ; ils ne doivent être ni effacés de la synthèse, ni promus en validation transversale complète.
 
 ## 2. Système solaire et Terre
 
@@ -36,15 +38,20 @@ L'ablation est plus révélatrice : retirer la pente historique améliore légè
 
 Les 80 observations ARN montrent plusieurs tendances de fréquences individuelles après correction pour comparaisons multiples. Dans la branche 71-89, la diversité du sous-ensemble suivi augmente avec les cycles (permutation exacte p = 0.0117), tandis que la branche 52-2 ne montre pas de tendance globale significative. La concentration maximale n'évolue significativement dans aucune des deux branches. Ces données décrivent une dynamique de composition. Elles ne contiennent aucune filiation entre compartiments et ne testent pas l'hérédité prébiotique.
 
+Ces anciens jeux ne résument plus la branche. Sur les **288 mesures** D'Onofrio réparties en **24 groupes**, la RMSE passe de **1.1309** pour l'état seul à **0.8042** avec l'histoire ; le témoin d'histoire mélangée vaut 1.1415 et la permutation donne p = 0.004975. Le verdict est `history_supported_against_both_controls`.
+
+Les expériences de vésicules fournissent **11760 relations parent-descendant**. Le signal observé vaut r = 0.7643, contre 0.7467 sous permutation, avec p = 0.00049975. Les quatre composantes préenregistrées sont soutenues (`all_pre_registered_components_supported`). Ce résultat reste unique et demande une réplication indépendante.
+
 ## Ce qui peut encore être calculé
 
 Les données actuelles permettent encore des variantes de sensibilité et des contrôles secondaires. Elles ne permettent plus de franchir les principaux verrous par simple multiplication des calculs. Les données nouvelles prioritaires sont :
 
 1. flux et stocks opératoires pour étendre la chaîne matière au-delà de l'azote ;
 2. simulations climatiques interventionnelles indépendantes pour relier le spectre orbital à une réponse terrestre ;
-3. jeu antibiotique confirmatoire externe et laissé intact ;
-4. véritables tables de lignées prébiotiques avec témoins de complexité égale.
+3. réplication externe indépendante du résultat D'Onofrio ;
+4. réplication indépendante des lignées de vésicules ;
+5. trois familles matérielles admises avec chaîne complète et ablation.
 
 ## Verdict
 
-La campagne maximale disponible aujourd'hui **renforce un résultat astronomique localisé**, **révèle la fragilité de certaines conclusions structurelles de la branche matière** et **affaiblit l'interprétation d'un effet historique robuste dans le benchmark biologique actuel**. Elle améliore la précision du programme, sans fournir la prédiction positive transversale qui manque encore à ORI-C.
+La synthèse actuelle conserve les résultats négatifs et les limites propres à chaque protocole, tout en intégrant les résultats positifs matériels et biologiques désormais présents. Plusieurs systèmes indépendants montrent une dépendance empirique à l'histoire, mais la chaîne opérationnelle commune et transversale n'est pas encore démontrée. ORI-C n'est donc pas validé comme théorie générale.

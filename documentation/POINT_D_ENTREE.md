@@ -32,13 +32,13 @@ Pour les verdicts, les limites et les résultats reproductibles, les fichiers de
 
 Chaque branche conserve ses données, ses scripts, ses critères et ses rapports dans sa propre arborescence. Les résultats générés et les fichiers machine lisibles priment sur les résumés narratifs lorsqu'ils décrivent le même calcul. Les résultats positifs, négatifs, exploratoires et non testés restent séparés.
 
-### Campagne maximale sur les trois branches
+### Synthèse intégrée des campagnes sur les trois branches
 
-- `../plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` : synthèse de la robustesse maximale calculable avec les données présentes.
+- `../plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` : synthèse courante des campagnes versionnées, incluant D'Onofrio, vésicules et mémoire matérielle. Le nom du chemin est historique et ne revendique plus un « maximum possible ».
 - `../plan_directeur/campagne_maximale_trois_branches/resultats/matiere_robustesse.json` : retraits de nœuds, d'hyperarêtes, coefficients de partage et complétude des transitions.
 - `../plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json` : interventions, bandes orbitales, horizon de phase, 100 ka et relaxation exoplanétaire.
 - `../plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json` : validation antibiotique, permutation historique, ARN et contrôle du gabarit prébiotique.
-- `../plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json` : verdict machine transversal, sans fusion des niveaux de preuve.
+- `../plan_directeur/campagne_maximale_trois_branches/resultats/synthese_trois_branches.json` : synthèse machine inter-campagnes, sans fusion des niveaux de preuve en un méta-verdict homogène.
 
 ## Vérification
 

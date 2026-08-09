@@ -10,6 +10,16 @@
     "retrait d'un groupe entier"
   ],
   "regle": "une relation n'est retenue que si elle est significative et conserve son signe sous les quatre contrôles",
+  "regle_admission": "une relation locale positive reste une preuve partielle ; seule une famille satisfaisant les cinq conditions gelées peut contribuer au compte de chaîne complète",
+  "controles_negatifs": {
+    "physiques": [
+      "masse des polymères, grandeur mesurée du même jeu et attendue insensible"
+    ],
+    "statistiques": [
+      "permutations d'étiquettes utilisées pour les p-values"
+    ],
+    "regle": "une permutation vérifie la spécificité statistique de l'association ; elle ne remplace pas une grandeur physique négative du même jeu"
+  },
   "familles": {
     "magnetisme": {
       "jeu": "rémanence IODP, 25 expéditions",
@@ -34,24 +44,29 @@
         "survit_aux_controles": true
       },
       "persistance": {
-        "testable": true,
-        "unites": 4838,
-        "rho": 0.8830308496606827,
-        "p": 0.0001999600079984003,
-        "bootstrap_ic95": [
-          0.8736361742636056,
-          0.8918682098470226
-        ],
-        "retrait_une_unite": {
-          "min": 0.8829593271989927,
-          "max": 0.8841110489454803
+        "testable": false,
+        "motif": "le seuil de 20 mT mesure une résistance à l'effacement, pas un délai, des cycles ou une relaxation contrôlée au sens du C-MAT-MEM-02 gelé",
+        "diagnostic_partiel": {
+          "testable": true,
+          "unites": 4838,
+          "rho": 0.8830308496606827,
+          "p": 0.0001999600079984003,
+          "bootstrap_ic95": [
+            0.8736361742636056,
+            0.8918682098470226
+          ],
+          "retrait_une_unite": {
+            "min": 0.8829593271989927,
+            "max": 0.8841110489454803
+          },
+          "retrait_un_groupe": {
+            "groupes": 25,
+            "min": 0.871356328169658,
+            "max": 0.8986167433228234
+          },
+          "survit_aux_controles": true
         },
-        "retrait_un_groupe": {
-          "groupes": 25,
-          "min": 0.871356328169658,
-          "max": 0.8986167433228234
-        },
-        "survit_aux_controles": true
+        "rattachement_correct": "ablation/résistance à l'effacement"
       },
       "ablation": {
         "testable": true,
@@ -75,7 +90,10 @@
       "histoire_vers_reponse": {
         "testable": false,
         "motif": "l'histoire est le dépôt naturel, non contrôlée"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "histoire naturelle non assignée et absence de bras sans histoire",
+      "portee": "preuve_partielle_relationnelle"
     },
     "plasticite": {
       "jeu": "FABEST LCF, 24 éprouvettes en 3 régimes",
@@ -137,7 +155,10 @@
       "ablation": {
         "testable": false,
         "motif": "aucun recuit de restauration"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace microstructurale indépendante absente",
+      "portee": "preuve_partielle_relationnelle"
     },
     "verre_relaxation": {
       "jeu": "polyéthylènes biosourcés, 3 matériaux x 3 températures x 7 durées",
@@ -203,7 +224,10 @@
       "ablation": {
         "testable": false,
         "motif": "aucun rajeunissement au-dessus de Tg"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace structurale indépendante non tabulée",
+      "portee": "preuve_partielle_relationnelle"
     },
     "transition_de_phase": {
       "jeu": "aciers moyen-Mn, 12 éprouvettes",
@@ -246,7 +270,10 @@
       "replication": {
         "testable": false,
         "motif": "medium_mn_b non extrait, axe vitesse de chauffe"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace et réponse non appariées sur les mêmes unités",
+      "portee": "preuve_partielle_relationnelle"
     },
     "reconstruction_de_surface": {
       "jeu": "Fischer-Tropsch, 2 séries x 7 durées d'exposition",
@@ -292,7 +319,10 @@
       "ablation": {
         "testable": false,
         "motif": "aucune régénération du catalyseur"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "STM/XPS et réponse non appariés condition par condition",
+      "portee": "preuve_partielle_relationnelle"
     },
     "aciers_a_outils": {
       "jeu": "aciers à outils revenus, 6 éprouvettes, 2 matériaux",
@@ -370,14 +400,17 @@
       "ablation": {
         "testable": false,
         "motif": "aucun retour à l'état trempé"
-      }
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "atteignabilité insuffisante et absence de témoin complet",
+      "portee": "preuve_partielle_relationnelle"
     }
   },
   "comptes": {
     "schema_complet_histoire_trace_reponse": 0,
     "effet_total_histoire_vers_reponse": 2,
     "trace_vers_reponse": 1,
-    "persistance": 1,
+    "persistance": 0,
     "ablation_physique": 1,
     "replication_independante": 5
   }

@@ -151,9 +151,17 @@ def magnetisme(aleatoire) -> dict:
     return {
         "jeu": "rémanence IODP, 25 expéditions",
         "trace_vers_reponse": eprouver(trace, reponse, expeditions, aleatoire),
-        "persistance": eprouver([trace[i] for i in persistants],
-                                [reponse[i] for i in persistants],
-                                [expeditions[i] for i in persistants], aleatoire),
+        "persistance": {
+            "testable": False,
+            "motif": ("le seuil de 20 mT mesure une résistance à l'effacement, "
+                      "pas un délai, des cycles ou une relaxation contrôlée au "
+                      "sens du C-MAT-MEM-02 gelé"),
+            "diagnostic_partiel": eprouver(
+                [trace[i] for i in persistants],
+                [reponse[i] for i in persistants],
+                [expeditions[i] for i in persistants], aleatoire),
+            "rattachement_correct": "ablation/résistance à l'effacement",
+        },
         "ablation": {"testable": True, "unites": int(np.isfinite(ablation).sum()),
                      "rho": float(np.nanmean(ablation)),
                      "p": None, "survit_aux_controles": True,
@@ -316,6 +324,22 @@ def main() -> int:
     }
     familles = {c: b for c, b in familles.items() if b}
 
+    # Aucun de ces jeux ne satisfait actuellement les cinq conditions du filtre
+    # gelé pour une chaîne confirmatoire complète. Les relations locales restent
+    # publiées comme preuves partielles ; elles ne sont pas promues en admission.
+    motifs_admission = {
+        "magnetisme": "histoire naturelle non assignée et absence de bras sans histoire",
+        "plasticite": "trace microstructurale indépendante absente",
+        "verre_relaxation": "trace structurale indépendante non tabulée",
+        "transition_de_phase": "trace et réponse non appariées sur les mêmes unités",
+        "reconstruction_de_surface": "STM/XPS et réponse non appariés condition par condition",
+        "aciers_a_outils": "atteignabilité insuffisante et absence de témoin complet",
+    }
+    for famille, bloc in familles.items():
+        bloc["admission_chaine_complete"] = False
+        bloc["motif_non_admission"] = motifs_admission[famille]
+        bloc["portee"] = "preuve_partielle_relationnelle"
+
     entete = f"{'famille':<28}" + "".join(f"{r[:11]:>13}" for r in RELATIONS)
     print(entete)
     print("-" * len(entete))
@@ -339,7 +363,8 @@ def main() -> int:
     comptes = {
         "schema_complet_histoire_trace_reponse": sum(
             1 for b in familles.values()
-            if b.get("histoire_vers_trace", {}).get("survit_aux_controles")
+            if b.get("admission_chaine_complete")
+            and b.get("histoire_vers_trace", {}).get("survit_aux_controles")
             and b.get("trace_vers_reponse", {}).get("survit_aux_controles")),
         "effet_total_histoire_vers_reponse": compter("histoire_vers_reponse"),
         "trace_vers_reponse": compter("trace_vers_reponse"),
@@ -360,6 +385,23 @@ def main() -> int:
                       "retrait d'un groupe entier"],
         "regle": ("une relation n'est retenue que si elle est significative et "
                   "conserve son signe sous les quatre contrôles"),
+        "regle_admission": (
+            "une relation locale positive reste une preuve partielle ; seule une "
+            "famille satisfaisant les cinq conditions gelées peut contribuer au "
+            "compte de chaîne complète"
+        ),
+        "controles_negatifs": {
+            "physiques": [
+                "masse des polymères, grandeur mesurée du même jeu et attendue insensible"
+            ],
+            "statistiques": [
+                "permutations d'étiquettes utilisées pour les p-values"
+            ],
+            "regle": (
+                "une permutation vérifie la spécificité statistique de l'association ; "
+                "elle ne remplace pas une grandeur physique négative du même jeu"
+            ),
+        },
         "familles": familles,
         "comptes": comptes,
     }

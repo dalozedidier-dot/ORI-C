@@ -28,7 +28,8 @@ ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
 
 
-def executer(titre: str, arguments: list[str], obligatoire: bool = True) -> dict:
+def executer(titre: str, arguments: list[str], obligatoire: bool = True,
+             source_primaire_requise: bool = False) -> dict:
     debut = time.monotonic()
     print(f"── {titre}")
     environnement = dict(os.environ, PYTHONUTF8="1")
@@ -55,8 +56,18 @@ def executer(titre: str, arguments: list[str], obligatoire: bool = True) -> dict
     # La durée n'est pas inscrite dans le rapport versionné : elle change à
     # chaque exécution, le manifeste ne correspondrait plus et le contrôle
     # d'intégrité échouerait sur un fichier pourtant identique quant au fond.
+    if source_primaire_requise:
+        niveau = ("derive_versionne_rejouable_source_primaire_absente"
+                  if ignore else "source_primaire_vers_table_et_statistique")
+    else:
+        niveau = "table_versionnee_vers_statistique"
     return {"etape": titre, "code": 0 if ignore else resultat.returncode,
-            "sources_absentes": ignore, "obligatoire": obligatoire}
+            "sources_absentes": ignore, "obligatoire": obligatoire,
+            "source_primaire_requise": source_primaire_requise,
+            "provenance_complete_depuis_source_primaire": bool(
+                source_primaire_requise and not ignore
+            ),
+            "niveau_reproductibilite": niveau}
 
 
 def synthese_transversale() -> dict:
@@ -142,11 +153,46 @@ def synthese_transversale() -> dict:
     }
 
 
+def ecrire_synthese_versionnee(transversal: dict) -> Path:
+    """Écrit la synthèse stable consommée par les autres campagnes."""
+    synthese_versionnee = {
+        "campagne": "WP-MAT-MEM-2026",
+        "transversalite": transversal,
+        "statut_provenance": {
+            "chaine_integrale_exigee": (
+                "source primaire → extraction → table par unité → statistique"
+            ),
+            "distinction": (
+                "la reproductibilité d'une table dérivée ne démontre pas à elle "
+                "seule la reproductibilité intégrale depuis la source primaire"
+            ),
+            "preuve_par_execution": (
+                "derive/execution/CAMPAGNE.json dans l'artefact CI ; les étapes "
+                "IODP et aciers à outils déclarent séparément leur niveau"
+            ),
+        },
+    }
+    sortie = DERIVE / "SYNTHESE_CAMPAGNE.json"
+    with sortie.open("w", encoding="utf-8", newline="") as flux:
+        flux.write(json.dumps(synthese_versionnee, ensure_ascii=False, indent=2) + "\n")
+    return sortie
+
+
 def main() -> int:
     analyseur = argparse.ArgumentParser(description=__doc__)
     analyseur.add_argument("--telecharger", action="store_true")
     analyseur.add_argument("--sans-verification", action="store_true")
+    analyseur.add_argument(
+        "--synthese-seule",
+        action="store_true",
+        help="régénère seulement la synthèse stable depuis les résultats versionnés",
+    )
     arguments = analyseur.parse_args()
+
+    if arguments.synthese_seule:
+        sortie = ecrire_synthese_versionnee(synthese_transversale())
+        print(f"écrit : {sortie.relative_to(ICI.parents[1]).as_posix()}")
+        return 0
 
     print("Campagne « mémoire matérielle réelle » — WP-MAT-MEM-2026")
     print()
@@ -169,7 +215,8 @@ def main() -> int:
             print("Sources non intègres. La campagne s'arrête.")
             return 1
 
-    etapes.append(executer("extraction IODP", ["extraire_iodp.py"]))
+    etapes.append(executer("extraction IODP", ["extraire_iodp.py"],
+                           source_primaire_requise=True))
     if etapes[-1]["code"] != 0 and not etapes[-1]["sources_absentes"]:
         print("Extraction ratée. Aucun test ne sera exécuté sur des données "
               "incomplètes.")
@@ -177,20 +224,22 @@ def main() -> int:
 
     etapes.append(executer("C-MAT-MEM-03, ablation physique",
                            ["tester_ablation_iodp.py"]))
-    etapes.append(executer("C-MAT-MEM-01, 02 et 04", ["tester_iodp_01_02_04.py"]))
+    etapes.append(executer("diagnostics partiels IODP hors C01/C02/C04",
+                           ["tester_iodp_01_02_04.py"]))
     etapes.append(executer("plasticité et transition de phase",
                            ["extraire_et_tester_plasticite.py"]))
     etapes.append(executer("vieillissement thermique de polymères",
                            ["extraire_et_tester_vieillissement.py"]))
     etapes.append(executer("recuit de traces de fission",
                            ["extraire_et_tester_traces_fission.py"]))
-    etapes.append(executer("aciers à outils, chaîne complète",
-                           ["extraire_et_tester_carbures.py"]))
+    etapes.append(executer("aciers à outils, chaîne candidate",
+                           ["extraire_et_tester_carbures.py"],
+                           source_primaire_requise=True))
     etapes.append(executer("reconstruction de surface",
                            ["extraire_et_tester_surface.py"]))
     etapes.append(executer("balayage des sources restantes",
                            ["balayer_toutes_les_sources.py"]))
-    etapes.append(executer("test de signe combiné sur les jeux",
+    etapes.append(executer("test de signe orienté combiné sur les jeux",
                            ["test_combine_familles.py"]))
     etapes.append(executer("matrice transversale et robustesse",
                            ["matrice_transversale.py"]))
@@ -216,6 +265,18 @@ def main() -> int:
         "echecs": [e["etape"] for e in etapes if e["code"] != 0],
         "ignorees_faute_de_sources": [e["etape"] for e in etapes
                                       if e.get("sources_absentes")],
+        "provenance": {
+            "regle": (
+                "une table dérivée versionnée peut rendre le verdict rejouable, "
+                "mais seule une étape marquée source_primaire_vers_table_et_statistique "
+                "démontre la chaîne intégrale depuis la source primaire"
+            ),
+            "etapes_source_primaire_incompletes": [
+                e["etape"] for e in etapes
+                if e.get("source_primaire_requise")
+                and not e.get("provenance_complete_depuis_source_primaire")
+            ],
+        },
     }
     journal = DERIVE / "execution"
     journal.mkdir(parents=True, exist_ok=True)
@@ -223,6 +284,11 @@ def main() -> int:
     with sortie.open("w", encoding="utf-8", newline="") as flux:
         flux.write(json.dumps(rapport, ensure_ascii=False, indent=2) + "\n")
     print(f"écrit : {sortie.relative_to(ICI.parents[1]).as_posix()}")
+
+    # La synthèse scientifique est versionnée ; le journal d'exécution reste
+    # ignoré car la disponibilité locale des sources varie entre CI et postes.
+    sortie_versionnee = ecrire_synthese_versionnee(transversal)
+    print(f"écrit : {sortie_versionnee.relative_to(ICI.parents[1]).as_posix()}")
 
     if rapport["echecs"]:
         print(f"{len(rapport['echecs'])} étape(s) en échec : {rapport['echecs']}")

@@ -13,7 +13,10 @@
       "rho_trace_reponse": 0.8856433364615443,
       "p_permutation": 9.999000099990002e-05,
       "temoin": "permutation des étiquettes d'échantillon, appariement détruit",
-      "verdict": "soutient",
+      "verdict": "non_testable_avec_ce_jeu",
+      "resultat_partiel": "association_trace_reponse_robuste",
+      "motif_non_testable": "l'histoire naturelle de dépôt n'est ni contrôlée ni assignée ; la cohérence trace-réponse ne suffit pas au C01 gelé",
+      "nature_du_controle": "permutation_statistique",
       "portee": "cohérence exigée par l'énoncé, vérifiée. Qu'une trace plus forte laisse un résidu plus fort n'est pas une découverte : ce critère contrôle la cohérence, il ne l'exploite pas comme preuve d'un mécanisme."
     },
     "C-MAT-MEM-02": {
@@ -22,7 +25,10 @@
       "echantillons": 4834,
       "rho_trace_reponse": 0.8827627993260225,
       "p_permutation": 9.999000099990002e-05,
-      "verdict": "soutient"
+      "verdict": "non_testable_avec_ce_jeu",
+      "resultat_partiel": "resistance_effacement_robuste",
+      "motif_non_testable": "20 mT mesure une résistance à l'effacement, pas une persistance après délai, cycles ou relaxation contrôlée au sens du C02 gelé",
+      "rattachement_correct": "diagnostic d'ablation/résistance associé à C03"
     },
     "C-MAT-MEM-04": {
       "enonce": "la trace naturelle et la trace imposée en laboratoire se comportent-elles différemment sous le même traitement",
@@ -30,7 +36,10 @@
       "ecart_moyen_rho": -1.5072194616977228,
       "p_sign_flip": 9.999000099990002e-05,
       "temoin": "sign-flip sur les écarts appariés, même échantillon des deux côtés",
-      "verdict": "soutient"
+      "verdict": "non_testable_avec_ce_jeu",
+      "resultat_partiel": "difference_naturelle_imposee_detectee",
+      "motif_non_testable": "les deux bras possèdent une histoire ; aucun bras sous le même stimulus final sans histoire préalable n'est disponible",
+      "nature_du_controle": "comparaison_physique_appariee_mais_non_C04"
     }
   }
 }

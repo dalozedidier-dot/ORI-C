@@ -129,6 +129,17 @@ quatre contrôles conjoints de la matrice transversale, **zéro famille** porte 
 schéma complet `histoire → trace → réponse`, alors que trois étaient exigées :
 `C-MAT-MEM-05` conclut donc `ne_soutient_pas`.
 
+Le filtre gelé est maintenant appliqué explicitement au niveau de la synthèse :
+FABEST et les polymères soutiennent `histoire → réponse` sans trace structurale
+indépendante tabulée ; Fischer-Tropsch ne relie pas STM/XPS et réponse condition
+par condition ; Medium-Mn n'apparie pas suffisamment trace et réponse. Pour
+IODP, la cohérence trace-réponse, la résistance au-delà de 20 mT et la
+comparaison trace naturelle/IRM-ARM restent publiées comme diagnostics partiels,
+mais ne sont plus attribuées respectivement à `C01`, `C02` et `C04`. Seule
+l'ablation physique contribue à `C03`. Les permutations statistiques sont
+également distinguées des contrôles négatifs physiques, dont la masse des
+polymères fournit ici l'exemple explicite.
+
 Un test supplémentaire compare, dans des boucles magnétiques encastrées, des
 blocs ayant le même état apparent et le même stimulus mais des histoires
 différentes. Son plan ayant été choisi après inspection, il est explicitement

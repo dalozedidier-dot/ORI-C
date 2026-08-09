@@ -1,7 +1,7 @@
 {
   "campagne": "WP-MAT-MEM-2026",
   "alpha": 0.05,
-  "principe": "test de signe sur les jeux, chaque jeu compte pour un",
+  "principe": "test de signe sur les effets orientés par la prédiction physique propre à chaque jeu ; chaque jeu compte pour un",
   "relations": {
     "histoire_vers_trace": {
       "jeux": 2,
@@ -12,12 +12,18 @@
           "jeu": "medium_mn",
           "famille": "transition_de_phase",
           "rho": -0.1329,
+          "signe_attendu": -1,
+          "effet_oriente": 0.1329,
+          "justification_signe": "le maintien thermique prédit ici une baisse de dureté",
           "unites": 12
         },
         {
           "jeu": "aciers_a_outils",
           "famille": "transition_de_phase",
           "rho": -0.7143,
+          "signe_attendu": -1,
+          "effet_oriente": 0.7143,
+          "justification_signe": "la température de revenu prédit une baisse de dureté",
           "unites": 6
         }
       ],
@@ -27,8 +33,8 @@
     },
     "trace_vers_reponse": {
       "jeux": 3,
-      "concordants": 1,
-      "sens_attendu": "+",
+      "concordants": 2,
+      "sens_attendu": "effet_oriente_positif",
       "p_bilaterale": 1.0,
       "p_minimal_atteignable": 0.25,
       "significatif": false,
@@ -37,18 +43,27 @@
           "jeu": "iodp_remanence",
           "famille": "magnetisme",
           "rho": 0.886,
+          "signe_attendu": 1,
+          "effet_oriente": 0.886,
+          "justification_signe": "une rémanence initiale plus forte prédit un résidu plus fort",
           "unites": 5031
         },
         {
           "jeu": "fabest_lcf",
           "famille": "plasticite",
           "rho": -0.28,
+          "signe_attendu": 1,
+          "effet_oriente": -0.28,
+          "justification_signe": "les amplitudes initiale et finale sont prédites concordantes",
           "unites": 24
         },
         {
           "jeu": "aciers_a_outils",
           "famille": "transition_de_phase",
           "rho": -0.8857,
+          "signe_attendu": -1,
+          "effet_oriente": 0.8857,
+          "justification_signe": "une dureté accrue prédit ici une ténacité réduite",
           "unites": 6
         }
       ],
@@ -61,9 +76,9 @@
     },
     "histoire_vers_reponse": {
       "jeux": 4,
-      "concordants": 3,
-      "sens_attendu": "-",
-      "p_bilaterale": 0.625,
+      "concordants": 4,
+      "sens_attendu": "effet_oriente_positif",
+      "p_bilaterale": 0.125,
       "p_minimal_atteignable": 0.125,
       "significatif": false,
       "jeux_detail": [
@@ -71,24 +86,36 @@
           "jeu": "fabest_lcf",
           "famille": "plasticite",
           "rho": -0.6617,
+          "signe_attendu": -1,
+          "effet_oriente": 0.6617,
+          "justification_signe": "le cyclage prédit ici une diminution de l'amplitude de contrainte",
           "unites": 24
         },
         {
           "jeu": "vieillissement_polymere",
           "famille": "verre_relaxation",
           "rho": -0.4379,
+          "signe_attendu": -1,
+          "effet_oriente": 0.4379,
+          "justification_signe": "le vieillissement prédit une baisse de la température d'apparition",
           "unites": 60
         },
         {
           "jeu": "aciers_a_outils",
           "famille": "transition_de_phase",
           "rho": 0.3714,
+          "signe_attendu": 1,
+          "effet_oriente": 0.3714,
+          "justification_signe": "la température de revenu prédit ici une ténacité accrue",
           "unites": 6
         },
         {
           "jeu": "fischer_tropsch",
           "famille": "reconstruction_de_surface",
           "rho": -0.6,
+          "signe_attendu": -1,
+          "effet_oriente": 0.6,
+          "justification_signe": "l'exposition prédit ici une baisse de l'aire chromatographique",
           "unites": 14
         }
       ],
@@ -109,12 +136,18 @@
           "jeu": "iodp_remanence",
           "famille": "magnetisme",
           "rho": -0.7419,
+          "signe_attendu": -1,
+          "effet_oriente": 0.7419,
+          "justification_signe": "la dose de démagnétisation doit réduire la rémanence",
           "unites": 5023
         },
         {
           "jeu": "traces_fission",
           "famille": "traces_de_fission",
           "rho": -0.8,
+          "signe_attendu": -1,
+          "effet_oriente": 0.8,
+          "justification_signe": "la température de recuit doit réduire la longueur de trace",
           "unites": 11
         }
       ],

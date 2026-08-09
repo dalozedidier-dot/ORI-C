@@ -1,24 +1,58 @@
 #!/usr/bin/env python3
-"""Exécute la campagne maximale réalisable avec les données déjà présentes."""
+"""Construit la synthèse intégrée des campagnes présentes dans le dépôt."""
 from __future__ import annotations
 
 import json
+import sys
 from analyse_matiere import run as run_matter
 from analyse_systeme_solaire import run as run_solar
 from analyse_vivant import run as run_living
-from common import RESULTS, write_json
+from common import RESULTS, ROOT, read_json, write_json
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+
+def load_current_evidence() -> dict:
+    """Charge les campagnes plus récentes que le runner historique.
+
+    Le dossier conserve les anciens calculs antibiotique/ARN pour leur portée
+    propre, mais la synthèse du dépôt doit aussi inclure D'Onofrio, les
+    vésicules et la campagne de mémoire matérielle exécutés par la CI.
+    """
+    return {
+        "donofrio": read_json(
+            ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/"
+            "resultats/RESULTAT.json"
+        ),
+        "vesicules": read_json(
+            ROOT / "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json"
+        ),
+        "memoire_materielle": read_json(
+            ROOT / "01_branche_matiere/memoire_materielle_reelle/derive/"
+            "SYNTHESE_CAMPAGNE.json"
+        ),
+    }
 
 
 def fmt(value: float, digits: int = 4) -> str:
     return f"{value:.{digits}f}".replace(".", ",")
 
 
-def build_summary(matter: dict, solar: dict, living: dict) -> dict:
+def build_summary(matter: dict, solar: dict, living: dict, current: dict) -> dict:
     antibiotic = living["antibiotic_history_robustness"]
     cv = antibiotic["group_cross_validation"]["models"]
+    donofrio = current["donofrio"]
+    vesicules = current["vesicules"]
+    memoire = current["memoire_materielle"]["transversalite"]
     return {
         "status": "completed",
-        "campaign": "maximum_possible_with_repository_data",
+        "campaign": "integrated_repository_evidence_synthesis",
+        "scope_note": (
+            "synthèse des campagnes versionnées ; le nom historique du dossier "
+            "est conservé pour la stabilité des chemins, pas comme revendication "
+            "d'exhaustivité absolue"
+        ),
         "branches": {
             "matiere": {
                 "tests_executed": [
@@ -27,6 +61,7 @@ def build_summary(matter: dict, solar: dict, living: dict) -> dict:
                     "ablation de chaque famille de processus",
                     "retrait un par un des coefficients de partage",
                     "audit de complétude des 40 transitions",
+                    "campagne de mémoire matérielle réelle et matrice d'admission",
                 ],
                 "main_results": {
                     "strict_nodes_reachable": matter["hypergraph_robustness"]["baseline_reachable"],
@@ -43,8 +78,17 @@ def build_summary(matter: dict, solar: dict, living: dict) -> dict:
                     "empty_transition_fields": len(
                         matter["transition_database_completeness"]["empty_fields"]
                     ),
+                    "material_memory_partial_positive_families": len(
+                        memoire["familles_soutenantes"]
+                    ),
+                    "material_memory_complete_chain_families": memoire[
+                        "familles_au_schema_complet"
+                    ],
+                    "material_memory_transversality_verdict": memoire["verdict"],
                 },
-                "evidence_level": "structural_and_descriptive",
+                "evidence_level": (
+                    "structural_and_descriptive_plus_partial_real_material_evidence"
+                ),
             },
             "systeme_solaire_et_terre": {
                 "tests_executed": [
@@ -76,6 +120,8 @@ def build_summary(matter: dict, solar: dict, living: dict) -> dict:
                     "permutation de l'ordre historique",
                     "dynamique de composition ARN sur huit cycles",
                     "validation du schéma prébiotique synthétique",
+                    "benchmark D'Onofrio contre état seul et histoire mélangée",
+                    "lignées de vésicules, filiation, sélection et ablation",
                 ],
                 "main_results": {
                     "antibiotic_prediction_rows": antibiotic["prediction_rows"],
@@ -94,27 +140,48 @@ def build_summary(matter: dict, solar: dict, living: dict) -> dict:
                     "rna_observations": living["catalytic_rna_frequency_dynamics"][
                         "observations"
                     ],
-                    "prebiotic_real_lineage_data": False,
+                    "legacy_prebiotic_real_lineage_data": False,
+                    "donofrio_rows": donofrio["rows"],
+                    "donofrio_groups": donofrio["group_count"],
+                    "donofrio_rmse_state_only": donofrio["rmse_state_only"],
+                    "donofrio_rmse_state_plus_history": donofrio[
+                        "rmse_state_plus_history"
+                    ],
+                    "donofrio_permutation_p": donofrio[
+                        "permutation_p_history_better_than_shuffled"
+                    ],
+                    "vesicle_parent_offspring_pairs": vesicules["pairs"],
+                    "vesicle_permutation_p": vesicules["lineage_permutation_test"][
+                        "permutation_p_one_sided"
+                    ],
+                    "vesicle_global_verdict": vesicules["global_verdict"],
+                    "current_real_biological_results_included": True,
                 },
-                "evidence_level": "exploratory_only",
+                "evidence_level": (
+                    "legacy_tests_mixed_plus_two_positive_real_data_protocols"
+                ),
             },
         },
         "global_verdict": (
-            "La campagne renforce la causalité architecturale dans le modèle astronomique, "
-            "quantifie la fragilité de certaines représentations matérielles et ne trouve "
-            "aucun appui biologique confirmatoire robuste. Elle ne valide pas ORI-C comme "
-            "théorie générale."
+            "Le dépôt contient un résultat fort de causalité architecturale dans un "
+            "modèle astronomique, plusieurs effets matériels réels partiels et deux "
+            "résultats biologiques positifs sur données réelles (D'Onofrio et "
+            "vésicules). La chaîne matérielle confirmatoire complète reste ouverte et "
+            "C-MAT-MEM-05 ne soutient pas la transversalité. Cet ensemble ne valide "
+            "pas ORI-C comme théorie générale."
         ),
         "next_data_bottlenecks": [
             "flux, temps de résidence et stocks opératoires pour C, H et S",
             "simulations climatiques interventionnelles et ensembles GCM indépendants",
-            "jeu antibiotique final externe avec séquences d'exposition manipulées",
-            "données réelles de lignées prébiotiques avec témoins appariés",
+            "réplication externe indépendante des résultats D'Onofrio",
+            "réplication indépendante des lignées de vésicules",
+            "trois familles matérielles admises portant histoire → trace → réponse et ablation",
         ],
     }
 
 
-def build_report(summary: dict, matter: dict, solar: dict, living: dict) -> str:
+def build_report(summary: dict, matter: dict, solar: dict, living: dict,
+                 current: dict) -> str:
     matter_robust = matter["hypergraph_robustness"]
     partition = matter["partition_coefficient_robustness"]["per_element"]
     solar_pairs = solar["paired_intervention_symmetry"]
@@ -126,9 +193,12 @@ def build_report(summary: dict, matter: dict, solar: dict, living: dict) -> str:
     slope = antibiotic["slope_ablation"]
     final_holdout = antibiotic["final_transition_holdout"]["models"]
     rna = living["catalytic_rna_frequency_dynamics"]
+    donofrio = current["donofrio"]
+    vesicules = current["vesicules"]
+    memoire = current["memoire_materielle"]["transversalite"]
 
     lines = [
-        "# Campagne maximale sur les trois branches",
+        "# Synthèse intégrée des preuves du dépôt",
         "",
         "Cette campagne utilise uniquement les données, résultats et modèles déjà présents dans le dépôt. Elle ajoute des contrôles de robustesse et des ablations. Elle ne remplace pas les données absentes par des valeurs inventées et ne transforme jamais un succès technique en preuve scientifique.",
         "",
@@ -145,6 +215,8 @@ def build_report(summary: dict, matter: dict, solar: dict, living: dict) -> str:
         f"Le contrôle des coefficients de partage donne trois situations distinctes. Le recouvrement du carbone résiste au retrait de chacune des trois valeurs. L'hydrogène reste non testable en retrait unitaire parce qu'une seule borne inférieure est disponible. Le recouvrement de l'azote devient faux lorsque la valeur `{partition['N']['leave_one_out'][1]['removed_record']}` est retirée. Il est donc **fragile à une mesure publiée**. Le désaccord du soufre reste présent quel que soit le coefficient retiré.",
         "",
         f"La base des 40 transitions reste remplie à {fmt(matter['transition_database_completeness']['global_fill_rate'] * 100, 1)} %. **{len(matter['transition_database_completeness']['empty_fields'])} champs sont entièrement vides**, notamment les preuves directes, les modèles concurrents, les seuils, les vitesses, les mécanismes de persistance et les contre-exemples. Les prochains progrès quantitatifs nécessitent donc des sources externes, pas un nouveau calcul sur les mêmes colonnes.",
+        "",
+        f"La campagne de mémoire matérielle trouve **{len(memoire['familles_soutenantes'])} familles positives sur au moins une relation locale**, mais **{memoire['familles_au_schema_complet']} famille** admise porte la chaîne complète histoire → trace → réponse sous les contrôles gelés. `C-MAT-MEM-05` reste donc `{memoire['verdict']}`. Les effets de démagnétisation, plasticité cyclique, vieillissement thermique et recuit sont des résultats matériels réels ; ils ne doivent être ni effacés de la synthèse, ni promus en validation transversale complète.",
         "",
         "## 2. Système solaire et Terre",
         "",
@@ -166,18 +238,23 @@ def build_report(summary: dict, matter: dict, solar: dict, living: dict) -> str:
         "",
         f"Les {rna['observations']} observations ARN montrent plusieurs tendances de fréquences individuelles après correction pour comparaisons multiples. Dans la branche 71-89, la diversité du sous-ensemble suivi augmente avec les cycles (permutation exacte p = {rna['branch_dynamics']['71-89']['entropy_trend_exact_permutation']['exact_two_sided_p']:.4f}), tandis que la branche 52-2 ne montre pas de tendance globale significative. La concentration maximale n'évolue significativement dans aucune des deux branches. Ces données décrivent une dynamique de composition. Elles ne contiennent aucune filiation entre compartiments et ne testent pas l'hérédité prébiotique.",
         "",
+        f"Ces anciens jeux ne résument plus la branche. Sur les **{donofrio['rows']} mesures** D'Onofrio réparties en **{donofrio['group_count']} groupes**, la RMSE passe de **{donofrio['rmse_state_only']:.4f}** pour l'état seul à **{donofrio['rmse_state_plus_history']:.4f}** avec l'histoire ; le témoin d'histoire mélangée vaut {donofrio['same_complexity_shuffled_history_rmse_mean']:.4f} et la permutation donne p = {donofrio['permutation_p_history_better_than_shuffled']:.6f}. Le verdict est `{donofrio['verdict']}`.",
+        "",
+        f"Les expériences de vésicules fournissent **{vesicules['pairs']} relations parent-descendant**. Le signal observé vaut r = {vesicules['lineage_permutation_test']['observed_parent_offspring_r']:.4f}, contre {vesicules['lineage_permutation_test']['null_mean_r']:.4f} sous permutation, avec p = {vesicules['lineage_permutation_test']['permutation_p_one_sided']:.8f}. Les quatre composantes préenregistrées sont soutenues (`{vesicules['global_verdict']}`). Ce résultat reste unique et demande une réplication indépendante.",
+        "",
         "## Ce qui peut encore être calculé",
         "",
         "Les données actuelles permettent encore des variantes de sensibilité et des contrôles secondaires. Elles ne permettent plus de franchir les principaux verrous par simple multiplication des calculs. Les données nouvelles prioritaires sont :",
         "",
         "1. flux et stocks opératoires pour étendre la chaîne matière au-delà de l'azote ;",
         "2. simulations climatiques interventionnelles indépendantes pour relier le spectre orbital à une réponse terrestre ;",
-        "3. jeu antibiotique confirmatoire externe et laissé intact ;",
-        "4. véritables tables de lignées prébiotiques avec témoins de complexité égale.",
+        "3. réplication externe indépendante du résultat D'Onofrio ;",
+        "4. réplication indépendante des lignées de vésicules ;",
+        "5. trois familles matérielles admises avec chaîne complète et ablation.",
         "",
         "## Verdict",
         "",
-        "La campagne maximale disponible aujourd'hui **renforce un résultat astronomique localisé**, **révèle la fragilité de certaines conclusions structurelles de la branche matière** et **affaiblit l'interprétation d'un effet historique robuste dans le benchmark biologique actuel**. Elle améliore la précision du programme, sans fournir la prédiction positive transversale qui manque encore à ORI-C.",
+        "La synthèse actuelle conserve les résultats négatifs et les limites propres à chaque protocole, tout en intégrant les résultats positifs matériels et biologiques désormais présents. Plusieurs systèmes indépendants montrent une dépendance empirique à l'histoire, mais la chaîne opérationnelle commune et transversale n'est pas encore démontrée. ORI-C n'est donc pas validé comme théorie générale.",
         "",
     ]
     return "\n".join(lines)
@@ -187,10 +264,13 @@ def main() -> int:
     matter = run_matter()
     solar = run_solar()
     living = run_living()
-    summary = build_summary(matter, solar, living)
+    current = load_current_evidence()
+    summary = build_summary(matter, solar, living, current)
     write_json(RESULTS / "synthese_trois_branches.json", summary)
-    report = build_report(summary, matter, solar, living)
-    (RESULTS / "RAPPORT_CAMPAGNE_MAXIMALE.md").write_text(report, encoding="utf-8")
+    report = build_report(summary, matter, solar, living, current)
+    (RESULTS / "RAPPORT_CAMPAGNE_MAXIMALE.md").write_text(
+        report, encoding="utf-8", newline="\n"
+    )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
