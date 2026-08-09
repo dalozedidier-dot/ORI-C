@@ -146,8 +146,29 @@ def empreinte(chemin: Path) -> str:
     return valeur.hexdigest()
 
 
+def ignores_par_git() -> set[str]:
+    """Chemins écartés par `.gitignore`, s'il y a un dépôt Git.
+
+    Le manifeste décrit ce qu'un clonage restituera : un fichier ignoré n'y est
+    jamais, et le signaler comme non listé est un faux positif. La sortie est
+    lue en NUL-séparé avec `core.quotepath=false`, sans quoi git échappe les
+    caractères non ASCII et les chemins ne correspondent plus.
+    """
+    import subprocess
+    try:
+        sortie = subprocess.run(
+            ["git", "-c", "core.quotepath=false", "ls-files", "--others",
+             "--ignored", "--exclude-standard", "-z"],
+            cwd=RACINE, capture_output=True, check=True,
+        ).stdout.decode("utf-8", "surrogateescape")
+    except (OSError, subprocess.CalledProcessError):
+        return set()
+    return {ligne.rstrip("/") for ligne in sortie.split(chr(0)) if ligne}
+
+
 def fichiers_du_dossier() -> list[Path]:
     resultat = []
+    ignores = ignores_par_git()
     for chemin in sorted(RACINE.rglob("*")):
         if chemin.is_dir():
             continue
@@ -161,6 +182,9 @@ def fichiers_du_dossier() -> list[Path]:
         ):
             continue
         if any(relatif.as_posix().startswith(prefixe) for prefixe in EXCLUS_CHEMINS_PREFIXES):
+            continue
+        pose = relatif.as_posix()
+        if pose in ignores or any(pose.startswith(p + "/") for p in ignores):
             continue
         if chemin.suffix in EXCLUS_SUFFIXES:
             continue
