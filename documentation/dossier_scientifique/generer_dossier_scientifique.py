@@ -863,7 +863,7 @@ add_para('Deux histoires spin-orbitales différentes aboutissent au même força
 add_para('Aucune variable ne franchit toutefois le seuil d’amplitude physique défini avant le calcul. Après un palier final de trois cents millions d’années, l’écart s’annule. Le temps caractéristique de décroissance est d’environ sept millions d’années. Le résultat correspond à un retard de relaxation, pas à une inscription durable.')
 
 add_para('5.4 Application climatique séparée',style='Heading 2')
-add_para('L’article climatique est hors de la chaîne de preuve de la branche. Il ne reçoit aucun verdict des tests N-corps ou MPT. Son apport au socle réside dans des distinctions devenues transversales : mémoire distribuée, D-H-L, hiérarchie des possibles, séparation S/m/A, seuil de persistance, critère d’altération architecturale et séparation des chaînes physique et épistémique. Les contenus propres au climat restent des éléments de littérature et une étude de cas, pas une validation d’ORI-C.')
+add_para('L’article climatique est hors de la chaîne de preuve de la branche. Il ne reçoit aucun verdict des tests N-corps ou MPT. Son apport au socle réside dans des distinctions formelles : mémoire distribuée, D-H-L, hiérarchie des possibles, séparation X/m/A, seuil de persistance, critère d’altération architecturale et séparation des chaînes physique et épistémique. L’audit transversal indique toutefois que la chaîne ORI-C complète, D-H-L, X/m/A et le critère d’altération architecturale ne produisent encore aucune mesure dans les sorties générées. Ces quatre objets organisent de futurs tests ; ils ne valident pas ORI-C.')
 
 # 6 living
 add_para('6. Branche vivant et programme prébiotique',style='Heading 1')

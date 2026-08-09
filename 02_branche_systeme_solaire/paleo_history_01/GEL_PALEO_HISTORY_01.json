@@ -1,0 +1,10 @@
+{
+  "campaign_id": "PALEO-HISTORY-01",
+  "status": "gele_avant_execution",
+  "regle": "Toute modification d'un fichier scellé exige un nouveau numéro de protocole et une justification publique ; les résultats antérieurs ne peuvent pas être requalifiés rétroactivement.",
+  "fichiers": {
+    "PROTOCOLE_GELE.md": "487e86634b0856e7f182903c19d39c8434fbebc83c23aacabb48ff69e4d02508",
+    "SCHEMA_DONNEES.json": "c691088a0bc7b9969bf30b99d827f1d311b7c035615ddc5399e1baf03c64044c",
+    "PLAN_ANALYSE.json": "408303526b4639ae9e7ab656de5faf5b75b599d540dd9337e10554efb4596747"
+  }
+}

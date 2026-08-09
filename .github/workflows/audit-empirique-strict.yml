@@ -7,6 +7,15 @@ on:
       - 'plateforme/source_corrigee/src/oric_full/**'
       - 'plateforme/source_corrigee/tests/**'
       - 'plateforme/campagne_maximale_reelle/data/**'
+      - 'plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py'
+      - 'plateforme/campagne_maximale_reelle/tests/test_priorites_acquisition.py'
+      - 'plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py'
+      - 'plateforme/campagne_maximale_reelle/CERTIFICATIONS_SPECIALISEES.json'
+      - 'plateforme/campagne_maximale_reelle/tests/test_certifications_specialisees.py'
+      - '03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json'
+      - '03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json'
+      - '01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json'
+      - 'plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json'
       - 'donnees_externes/donnees_reelles_2026_08_07/**'
       - 'scripts/valider_barriere_empirique.py'
       - 'scripts/auditer_donnees_reelles_2026_08_07.py'
@@ -79,6 +88,18 @@ jobs:
           print('Matrice stricte:', counts)
           print('Verdicts scientifiques:', sci)
           PY
+
+      - name: Classer les données manquantes par tests potentiellement débloqués
+        run: |
+          python plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py \
+            --entree plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/results.json \
+            --sortie-json plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.json \
+            --sortie-md plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.md
+
+      - name: Certifier les verdicts scientifiques des campagnes spécialisées
+        run: |
+          python plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py \
+            --sortie plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/RESULTATS_SCIENTIFIQUES_CERTIFIES.json
 
       - name: Publier uniquement les audits et sorties strictes
         if: always()

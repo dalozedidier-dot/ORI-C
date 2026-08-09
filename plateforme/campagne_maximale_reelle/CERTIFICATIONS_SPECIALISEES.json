@@ -1,0 +1,63 @@
+{
+  "schema": "oric.strict-specialized-certifications.v1",
+  "registre_criteres": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
+  "regle": "Un résultat spécialisé n'est certifié que si le criterion_id existe, si les empreintes sont exactes et si l'évaluateur dédié reproduit le verdict depuis l'artefact.",
+  "certifications": [
+    {
+      "criterion_id": "C-ANT-01",
+      "evaluateur": "donofrio_c_ant_01",
+      "verdict_attendu": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "artefact_sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "source": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
+      "source_sha256": "44910659200ba2a899b210402523ce68fa21f6cbf1a27c537bea92184b267172"
+    },
+    {
+      "criterion_id": "C-VES-02",
+      "evaluateur": "vesicules_c_ves_02",
+      "verdict_attendu": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "artefact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636"
+    },
+    {
+      "criterion_id": "C-VES-03",
+      "evaluateur": "vesicules_c_ves_03",
+      "verdict_attendu": "supports",
+      "niveau_preuve": "E4",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "artefact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636"
+    },
+    {
+      "criterion_id": "C-MAT-MEM-05",
+      "evaluateur": "matiere_c_mat_mem_05",
+      "verdict_attendu": "does_not_support",
+      "niveau_preuve": null,
+      "portee": "campagne_empirique_partielle_sans_admission_complete",
+      "artefact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
+      "artefact_sha256": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
+      "source": null,
+      "source_sha256": null,
+      "limite_provenance": "certaines extractions primaires restent absentes de la CI ; le verdict transversal est reproductible depuis les tables dérivées versionnées"
+    },
+    {
+      "criterion_id": "C-AST-01",
+      "evaluateur": "astronomie_c_ast_01",
+      "verdict_attendu": "supports",
+      "niveau_preuve": "E4_modele",
+      "portee": "modele_physique_reduit_valide",
+      "artefact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+      "artefact_sha256": "7b4e433524321005b2aabe9a593330cdd1ded1a7a72e29d61e0a8a224a2561f8",
+      "source": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
+      "source_sha256": "6b891e059829b6c90abffab3c85134e9b19c2f3f7f1fc6cad5b2d66f9098d259"
+    }
+  ]
+}

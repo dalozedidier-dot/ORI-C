@@ -46,9 +46,9 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid">
-          <article class="metric"><strong>1 296</strong><span>fichiers manifestés</span><small>trois manifestes SHA-256 croisés</small></article>
-          <article class="metric"><strong>683</strong><span>entrées du catalogue</span><small>40 empiriques, 156 modèle, 487 indéterminées</small></article>
-          <article class="metric"><strong>9</strong><span>réussites techniques</span><small>0 soutien confirmatoire, 635 indéterminés</small></article>
+          <article class="metric"><strong>1 366</strong><span>fichiers manifestés</span><small>manifeste racine, tous conformes</small></article>
+          <article class="metric"><strong>683</strong><span>tests possibles catalogués</span><small>pas 683 expériences disponibles</small></article>
+          <article class="metric"><strong>9</strong><span>réussites techniques génériques</span><small>4 soutiens et 1 non-soutien spécialisés certifiés</small></article>
           <article class="metric"><strong>0</strong><span>échec ou erreur</span><small>campagne stricte finale</small></article>
         </div>
       </div>
@@ -92,11 +92,26 @@ python verifier_dossier.py --allow-lfs-pointers</code></pre>
 
     <section class="section alt">
       <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Campagne réelle stricte</p><h2>Reproduire les 683 entrées</h2></div>
+        <div class="section-heading"><p class="eyebrow">Catalogue strict</p><h2>Reproduire l'audit des 683 tests possibles</h2></div>
         <pre><code>python plateforme/campagne_maximale_reelle/integrer_donnees_existantes.py   --data-dir plateforme/campagne_maximale_reelle/data
 
 python -m oric_full run   --all   --real-data-only   --data-dir plateforme/campagne_maximale_reelle/data   --output-dir resultats/campagne_complete   --oric-root .</code></pre>
-        <p class="data-note">Le rapport courant se trouve dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json"><code>resultats_integration_maximale/results.json</code></a>. Le dossier <code>resultats_consolides</code> est conservé comme état historique.</p>
+        <p class="data-note">Le rapport courant se trouve dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json"><code>resultats_integration_maximale/results.json</code></a>. Ses 626 blocages signalent des données absentes, hors portée ou non admissibles ; ils ne représentent pas des expériences ratées.</p>
+        <p class="data-note">Les verdicts déjà obtenus par les campagnes spécialisées sont contrôlés séparément par empreinte, seuil et <code>criterion_id</code> dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json"><code>RESULTATS_SCIENTIFIQUES_CERTIFIES.json</code></a>. Cette couche certifie quatre soutiens et un non-soutien sans modifier artificiellement les 683 lignes génériques.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Priorités d'acquisition</p><h2>Données réelles à obtenir pour lever le plus de blocages</h2></div>
+        <p>Chaque nombre est un maximum de tests distincts potentiellement débloquables, après dédoublonnage. Il ne garantit ni une exécution réussie ni un soutien scientifique.</p>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Paléoclimat</h3><p><strong>89 tests</strong> demandent des mesures ou interventions que les séries temporelles actuelles ne portent pas.</p></article>
+          <article class="feature-card"><h3>Lignées prébiotiques</h3><p><strong>85 tests</strong> demandent des filiations, traces et réponses réellement appariées.</p></article>
+          <article class="feature-card"><h3>Aucun dataset déclaré</h3><p><strong>63 tests</strong> nécessitent d'abord l'identification et la déclaration d'un jeu réel adapté.</p></article>
+          <article class="feature-card"><h3>Mesures antibiotiques</h3><p><strong>41 tests</strong> exigent des variables absentes des mesures actuellement associées.</p></article>
+        </div>
+        <p class="data-note">Le classement complet — benchmarks 48, conditions orbitales 47, cycles antibiotiques 34 et 33 cibles au total — est disponible dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/PRIORITES_ACQUISITION_DONNEES.md"><code>PRIORITES_ACQUISITION_DONNEES.md</code></a>.</p>
       </div>
     </section>
 

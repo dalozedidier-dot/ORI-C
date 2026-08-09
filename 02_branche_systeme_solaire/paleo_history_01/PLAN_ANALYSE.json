@@ -1,0 +1,28 @@
+{
+  "criterion_id": "PALEO-HISTORY-01",
+  "cible_primaire": "variation_future_proxy_a_10_ka",
+  "horizons_secondaires_ka": [20, 50],
+  "fenetres_histoire_ka": [20, 50, 100],
+  "blocs_test_ka": [[0, 200], [200, 400], [400, 600], [600, 800]],
+  "modeles": [
+    "etat_et_forcages",
+    "etat_forcages_histoire_reelle",
+    "etat_forcages_histoire_permutee",
+    "temoin_complexite_egale_sans_ordre"
+  ],
+  "n_realisations_chronologiques": 2000,
+  "n_surrogats": 2000,
+  "alpha": 0.01,
+  "gain_rmse_minimum": 0.05,
+  "blocs_minimum_avec_gain": 3,
+  "nulls": ["AR1", "IAAFT"],
+  "sorties_obligatoires": [
+    "scores_par_bloc_et_modele",
+    "residus_et_autocorrelation",
+    "distribution_sous_incertitude_age",
+    "tests_surrogats_symetriques",
+    "replication_pile_independante",
+    "controle_negatif_reel",
+    "verdict_et_motif"
+  ]
+}

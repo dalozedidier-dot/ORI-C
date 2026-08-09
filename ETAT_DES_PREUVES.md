@@ -65,6 +65,12 @@ pas comptées comme contrôles négatifs physiques.
 
 ## Socle
 
+L'audit transversal distingue désormais quatre objets du cadre qui ne
+produisent encore **aucune mesure** dans les sorties générées : la chaîne ORI-C
+complète, le diagnostic `D-H-L`, la séparation `X/m/A` et le critère
+d'altération architecturale. Ils organisent le programme et ses futurs tests ;
+ils ne doivent pas être présentés comme des résultats empiriquement établis.
+
 | Élément | Statut | Où |
 |---|---|---|
 | Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
@@ -405,13 +411,14 @@ Détail : `couche_memoire_historique/results_stress/tests_reels/`
 
 | Élément | Résultat | Statut |
 |---|---|---|
-| Couverture | 683 entrées, 51 WP, 59 moteurs et 33 jeux de données | outil vérifié |
+| Couverture | 683 tests possibles, 51 WP, 59 moteurs et 33 jeux de données ; ce n'est pas un inventaire de 683 expériences disponibles | outil de cartographie vérifié |
 | Exécution technique | 9 réussites, 626 blocages, 48 non-exécutions, 0 échec et 0 erreur | **réaudit fail-closed du 7 août 2026** |
 | Verdicts scientifiques | 635 indéterminés, 48 non applicables | aucune conversion automatique d'un succès technique en preuve |
 | Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
 | Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |
 | AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat négatif du socle |
-| Hypothèses confirmatoires de la campagne plateforme des 683 entrées | **aucune** | compteur propre à cette campagne d’intégration, sans effacer les verdicts ciblés des autres protocoles |
+| Matrice générique des 683 tests possibles | **aucun soutien dans ses propres lignes** | compteur technique et diagnostic de couverture |
+| Couche stricte de certifications spécialisées | **4 `supports`, 1 `does_not_support`** | `C-ANT-01`, `C-VES-02`, `C-VES-03`, `C-AST-01` et `C-MAT-MEM-05`, reliés par empreinte au registre de critères |
 
 Les compteurs 235/370 conservés dans `plan_directeur/campagne_plateforme/README.md`
 appartiennent à une campagne historique. Le bilan actuel est
