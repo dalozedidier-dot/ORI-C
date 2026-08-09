@@ -34,19 +34,33 @@ def ignored_by_git() -> set[str]:
 
     Le manifeste décrit ce qu'un clonage restituera. Un fichier ignoré par Git
     est présent sur le disque du rédacteur et absent partout ailleurs : l'inscrire
-    fait passer le contrôle en local et échouer après le `push`, exactement comme
-    un fichier écrit en CRLF. Une archive livrée hors dépôt Git n'a pas de
-    `.gitignore` applicable ; la fonction rend alors un ensemble vide et le
-    comportement reste celui d'avant.
+    fait passer le contrôle en local et échouer après le `push`.
+
+    La sortie est lue en NUL-séparé avec `core.quotepath=false` : sans cela git
+    échappe les caractères non ASCII en octal et le chemin ne correspond plus au
+    fichier réel.
     """
     try:
         sortie = subprocess.run(
-            ["git", "ls-files", "--others", "--ignored", "--exclude-standard"],
-            cwd=ROOT, capture_output=True, text=True, encoding="utf-8", check=True,
-        ).stdout
+            ["git", "-c", "core.quotepath=false", "ls-files", "--others",
+             "--ignored", "--exclude-standard", "-z"],
+            cwd=ROOT, capture_output=True, check=True,
+        ).stdout.decode("utf-8", "surrogateescape")
     except (OSError, subprocess.CalledProcessError):
         return set()
-    return {ligne for ligne in sortie.splitlines() if ligne}
+    return {ligne.rstrip("/") for ligne in sortie.split(chr(0)) if ligne}
+
+
+def _est_ignore(relatif: str, ignores: set[str]) -> bool:
+    """Vrai si le chemin est ignoré, ou situé sous un dossier ignoré.
+
+    `git ls-files --others --ignored` rend le dossier et non son contenu quand
+    la règle porte sur un dossier entier. Comparer les seuls chemins de fichiers
+    laisse alors entrer tout le contenu.
+    """
+    if relatif in ignores:
+        return True
+    return any(relatif.startswith(prefixe + "/") for prefixe in ignores)
 
 
 def files() -> list[Path]:
@@ -61,7 +75,7 @@ def files() -> list[Path]:
                 path.relative_to(ROOT).as_posix().startswith(prefix)
                 for prefix in EXCLUDED_PATH_PREFIXES
             )
-            and path.relative_to(ROOT).as_posix() not in ignores
+            and not _est_ignore(path.relative_to(ROOT).as_posix(), ignores)
         ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
     )
