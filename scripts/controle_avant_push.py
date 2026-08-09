@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import re
 import subprocess
 import sys
@@ -192,11 +193,28 @@ def simuler_la_ci() -> bool:
     if not (RACINE / campagne / "run_all.py").exists():
         return True
     with tempfile.TemporaryDirectory() as temporaire:
-        clone = Path(temporaire) / "clone"
+        # Le clone va dans un sous-dossier vide : `racine_locale` de la campagne
+        # pointe vers le parent du dépôt, et si ce parent contient les données
+        # locales la simulation n'est plus celle d'un runner.
+        parent = Path(temporaire) / "vide"
+        parent.mkdir()
+        clone = parent / "ORI-C"
+        # `GIT_LFS_SKIP_SMUDGE` laisse les pointeurs en place, comme un
+        # `checkout` sans `lfs: true`. C'est ce qui a fait échouer le job
+        # matière quatre fois : en local LFS est hydraté, sur le runner non.
+        environnement = dict(os.environ, GIT_LFS_SKIP_SMUDGE="1")
         fait = subprocess.run(["git", "clone", "--quiet", str(RACINE), str(clone)],
-                              capture_output=True, text=True)
+                              capture_output=True, text=True, env=environnement)
         if fait.returncode != 0:
             print("  simulation de la CI      clonage impossible, contrôle sauté")
+            return True
+        # La CI hydre LFS avant de lire les données. Le clone ci-dessus les a
+        # laissées en pointeurs pour vérifier que le workflow le fait bien ;
+        # on les hydre maintenant, comme lui.
+        hydrate = subprocess.run(["git", "lfs", "pull"], cwd=clone,
+                                 capture_output=True, text=True)
+        if hydrate.returncode != 0:
+            print("  simulation de la CI      git lfs pull impossible, contrôle sauté")
             return True
         execution = subprocess.run(
             [sys.executable, "run_all.py", "--sans-verification"],

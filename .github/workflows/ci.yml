@@ -146,7 +146,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # Les données de la campagne sont en Git LFS : `.gitattributes` y route
+      # `*.gz` et `*.zip`. Sans `lfs: true`, le runner ne reçoit que des
+      # pointeurs de 130 octets et toute lecture échoue.
       - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - name: Hydrater Git LFS
+        run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
