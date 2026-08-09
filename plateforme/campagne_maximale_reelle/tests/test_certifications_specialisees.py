@@ -62,3 +62,38 @@ def test_une_empreinte_divergente_est_refusee() -> None:
     config["certifications"][0]["artefact_sha256"] = "0" * 64
     with pytest.raises(ValueError, match="empreinte artefact divergente"):
         MODULE.certifier(config)
+
+
+def test_une_empreinte_de_registre_divergente_est_refusee() -> None:
+    config = configuration()
+    config["registre_criteres_sha256"] = "0" * 64
+    with pytest.raises(ValueError, match="empreinte du registre"):
+        MODULE.certifier(config)
+
+
+def test_un_evaluateur_ne_peut_pas_etre_attribue_a_un_autre_critere() -> None:
+    config = configuration()
+    config["certifications"][0]["evaluateur"] = "vesicules_c_ves_02"
+    with pytest.raises(ValueError, match="évaluateur incompatible"):
+        MODULE.certifier(config)
+
+
+def test_un_critere_ne_peut_pas_etre_certifie_deux_fois() -> None:
+    config = configuration()
+    config["certifications"].append(dict(config["certifications"][0]))
+    with pytest.raises(ValueError, match="certifié plusieurs fois"):
+        MODULE.certifier(config)
+
+
+def test_une_source_non_scellee_est_refusee() -> None:
+    config = configuration()
+    config["certifications"][0]["source_sha256"] = None
+    with pytest.raises(ValueError, match="empreinte source absente"):
+        MODULE.certifier(config)
+
+
+def test_une_absence_de_source_doit_etre_documentee() -> None:
+    config = configuration()
+    config["certifications"][3]["limite_provenance"] = ""
+    with pytest.raises(ValueError, match="source absente sans limite"):
+        MODULE.certifier(config)

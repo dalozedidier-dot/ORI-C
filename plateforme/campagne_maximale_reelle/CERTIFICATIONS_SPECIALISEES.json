@@ -1,6 +1,7 @@
 {
   "schema": "oric.strict-specialized-certifications.v1",
   "registre_criteres": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
+  "registre_criteres_sha256": "2844c18695f7657096dc275229685e22278bf7ca0fbdad3f3e7bdcee2a7ea6e8",
   "regle": "Un résultat spécialisé n'est certifié que si le criterion_id existe, si les empreintes sont exactes et si l'évaluateur dédié reproduit le verdict depuis l'artefact.",
   "certifications": [
     {

@@ -8,6 +8,8 @@ on:
       - 'plateforme/source_corrigee/tests/**'
       - 'plateforme/campagne_maximale_reelle/data/**'
       - 'plateforme/campagne_maximale_reelle/prioriser_donnees_manquantes.py'
+      - 'plateforme/POLITIQUE_NOYAU_PROBANT.csv'
+      - 'plateforme/valider_noyau_probant.py'
       - 'plateforme/campagne_maximale_reelle/tests/test_priorites_acquisition.py'
       - 'plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py'
       - 'plateforme/campagne_maximale_reelle/CERTIFICATIONS_SPECIALISEES.json'
@@ -88,6 +90,12 @@ jobs:
           print('Matrice stricte:', counts)
           print('Verdicts scientifiques:', sci)
           PY
+
+      - name: Valider et matérialiser le noyau probant actif
+        run: |
+          python plateforme/valider_noyau_probant.py \
+            --sortie-csv plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/NOYAU_PROBANT_ACTIF.csv \
+            --sortie-json plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/NOYAU_PROBANT_RESUME.json
 
       - name: Classer les données manquantes par tests potentiellement débloqués
         run: |
