@@ -179,6 +179,8 @@ def main() -> int:
                            ["extraire_et_tester_surface.py"]))
     etapes.append(executer("balayage des sources restantes",
                            ["balayer_toutes_les_sources.py"]))
+    etapes.append(executer("test de signe combiné sur les jeux",
+                           ["test_combine_familles.py"]))
     etapes.append(executer("matrice transversale et robustesse",
                            ["matrice_transversale.py"]))
 

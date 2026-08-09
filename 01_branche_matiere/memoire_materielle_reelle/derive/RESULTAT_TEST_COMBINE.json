@@ -1,0 +1,128 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "alpha": 0.05,
+  "principe": "test de signe sur les jeux, chaque jeu compte pour un",
+  "relations": {
+    "histoire_vers_trace": {
+      "jeux": 2,
+      "p_bilaterale": null,
+      "motif": "2 jeu(x), minimum 3",
+      "jeux_detail": [
+        {
+          "jeu": "medium_mn",
+          "famille": "transition_de_phase",
+          "rho": -0.1329,
+          "unites": 12
+        },
+        {
+          "jeu": "aciers_a_outils",
+          "famille": "transition_de_phase",
+          "rho": -0.7143,
+          "unites": 6
+        }
+      ],
+      "familles": [
+        "transition_de_phase"
+      ]
+    },
+    "trace_vers_reponse": {
+      "jeux": 3,
+      "concordants": 1,
+      "sens_attendu": "+",
+      "p_bilaterale": 1.0,
+      "p_minimal_atteignable": 0.25,
+      "significatif": false,
+      "jeux_detail": [
+        {
+          "jeu": "iodp_remanence",
+          "famille": "magnetisme",
+          "rho": 0.886,
+          "unites": 5031
+        },
+        {
+          "jeu": "fabest_lcf",
+          "famille": "plasticite",
+          "rho": -0.28,
+          "unites": 24
+        },
+        {
+          "jeu": "aciers_a_outils",
+          "famille": "transition_de_phase",
+          "rho": -0.8857,
+          "unites": 6
+        }
+      ],
+      "familles": [
+        "magnetisme",
+        "plasticite",
+        "transition_de_phase"
+      ],
+      "verdict": "indetermine_par_atteignabilite"
+    },
+    "histoire_vers_reponse": {
+      "jeux": 4,
+      "concordants": 3,
+      "sens_attendu": "-",
+      "p_bilaterale": 0.625,
+      "p_minimal_atteignable": 0.125,
+      "significatif": false,
+      "jeux_detail": [
+        {
+          "jeu": "fabest_lcf",
+          "famille": "plasticite",
+          "rho": -0.6617,
+          "unites": 24
+        },
+        {
+          "jeu": "vieillissement_polymere",
+          "famille": "verre_relaxation",
+          "rho": -0.4379,
+          "unites": 60
+        },
+        {
+          "jeu": "aciers_a_outils",
+          "famille": "transition_de_phase",
+          "rho": 0.3714,
+          "unites": 6
+        },
+        {
+          "jeu": "fischer_tropsch",
+          "famille": "reconstruction_de_surface",
+          "rho": -0.6,
+          "unites": 14
+        }
+      ],
+      "familles": [
+        "plasticite",
+        "reconstruction_de_surface",
+        "transition_de_phase",
+        "verre_relaxation"
+      ],
+      "verdict": "indetermine_par_atteignabilite"
+    },
+    "ablation": {
+      "jeux": 2,
+      "p_bilaterale": null,
+      "motif": "2 jeu(x), minimum 3",
+      "jeux_detail": [
+        {
+          "jeu": "iodp_remanence",
+          "famille": "magnetisme",
+          "rho": -0.7419,
+          "unites": 5023
+        },
+        {
+          "jeu": "traces_fission",
+          "famille": "traces_de_fission",
+          "rho": -0.8,
+          "unites": 11
+        }
+      ],
+      "familles": [
+        "magnetisme",
+        "traces_de_fission"
+      ]
+    }
+  },
+  "relations_soutenues": []
+}
