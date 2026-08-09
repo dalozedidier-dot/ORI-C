@@ -1,0 +1,2283 @@
+# TRI COMPLET DES 683 TESTS ORI-C
+
+Décision binaire : **366 GARDER / 317 VIRER**.
+
+**Sens de VIRER :** sortir du noyau probant strict. Le test peut rester en QA, documentation ou exploratoire s'il est utile, mais il ne doit plus être traité comme une cible de preuve autonome.
+
+## Règle de tri
+
+- GARDER : test empirique direct, prédiction hors échantillon, réplication, intervention/ablation, Pacc/domaine accessible, comparaison à témoin fort, contrôle anti-faux-positif ou intégrité confirmatoire indispensable.
+- VIRER : simulation/formalisme pur, reproductibilité informatique, inventaire descriptif, simple balayage paramétrique, variable d'appariement, liste de modèles concurrents à consolider, benchmark non empirique, métrique secondaire ou redondance.
+
+## Comptage par work package
+
+| WP | GARDER | VIRER |
+|---|---:|---:|
+| A1 | 0 | 10 |
+| A2 | 4 | 6 |
+| A3 | 5 | 11 |
+| A4 | 12 | 0 |
+| A5 | 3 | 7 |
+| A6 | 5 | 1 |
+| B1 | 7 | 3 |
+| B2 | 7 | 5 |
+| B3 | 9 | 1 |
+| C1 | 9 | 1 |
+| C2 | 9 | 1 |
+| C3 | 6 | 16 |
+| C4 | 0 | 15 |
+| C5 | 7 | 3 |
+| C6 | 9 | 6 |
+| C7 | 4 | 6 |
+| CL1 | 5 | 5 |
+| CL2 | 9 | 1 |
+| CL3 | 10 | 0 |
+| CL4 | 7 | 3 |
+| M1 | 0 | 15 |
+| M2 | 3 | 7 |
+| M3 | 8 | 7 |
+| M4 | 6 | 9 |
+| M5 | 10 | 0 |
+| P1 | 3 | 7 |
+| P2 | 5 | 5 |
+| P3 | 9 | 6 |
+| P4 | 5 | 5 |
+| P5 | 9 | 1 |
+| P6 | 11 | 1 |
+| R1 | 10 | 0 |
+| R2 | 7 | 8 |
+| R3 | 9 | 6 |
+| R4 | 15 | 0 |
+| R5 | 0 | 8 |
+| R6 | 6 | 2 |
+| S1 | 22 | 28 |
+| S2 | 4 | 16 |
+| S3 | 6 | 14 |
+| T1 | 0 | 16 |
+| T2 | 5 | 5 |
+| T3 | 10 | 0 |
+| T4 | 0 | 6 |
+| T5 | 9 | 1 |
+| V1 | 7 | 3 |
+| V2 | 16 | 24 |
+| V3 | 14 | 6 |
+| V4 | 10 | 10 |
+| V5 | 10 | 0 |
+| V6 | 10 | 0 |
+
+## S1
+
+- **S1-001 — GARDER [P3]** — Vérifier qu’elles peuvent être codées sans chevauchement complet sur au moins 100 systèmes provenant des trois branches.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-002 — GARDER [P3]** — Mesurer l’accord entre plusieurs codeurs indépendants.
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S1-003 — GARDER [P3]** — Calculer la stabilité du codage après retrait du nom du domaine.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-004 — VIRER** — Tester des cas limites où une variable peut appartenir à deux dimensions.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-005 — GARDER [P3]** — Comparer une version à six dimensions à des versions réduites à cinq, quatre et trois dimensions.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-006 — GARDER [P3]** — Tester si l’ajout de chaque dimension améliore réellement une tâche de classification ou de prédiction.
+  - valeur prédictive
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-007 — GARDER [P3]** — Mesurer la redondance entre dimensions par information mutuelle et corrélations conditionnelles.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-008 — VIRER** — Vérifier l’invariance des conclusions sous plusieurs normalisations.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-009 — VIRER** — Construire des systèmes synthétiques où la vérité est connue.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-010 — VIRER** — Produire des changements d’état sans changement d’opérateur.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-011 — VIRER** — Produire des changements de paramètres structurels.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-012 — VIRER** — Produire des changements de topologie.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-013 — VIRER** — Tester si la règle ORI-C classe correctement les trois cas.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-014 — VIRER** — Comparer cette classification à des méthodes de détection de changement de régime.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-015 — VIRER** — Tester la dépendance au niveau de description.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-016 — GARDER [P3]** — Mesurer l’accord entre codeurs sur des cas empiriques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S1-017 — GARDER [P3]** — Vérifier si un changement classé architectural améliore la prédiction d’une réponse future.
+  - valeur prédictive
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-018 — GARDER [P2]** — Rechercher des faux positifs où une dérive lente de paramètres ressemble à une transformation architecturale.
+  - contrôle anti-faux-positif
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-019 — VIRER** — Simuler une mémoire unique à noyau fixe.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-020 — VIRER** — Simuler plusieurs mémoires indépendantes.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-021 — VIRER** — Simuler plusieurs mémoires couplées.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-022 — VIRER** — Rendre les noyaux dépendants de l’état.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-023 — VIRER** — Faire varier les constantes de temps sur plusieurs ordres de grandeur.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-024 — VIRER** — Comparer une intégrale cumulée unique à un modèle multi-mémoires.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-025 — GARDER [P3]** — Tester l’identifiabilité du nombre de mémoires.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-026 — GARDER [P3]** — Tester la capacité à distinguer mémoire longue et attracteur multiple.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-027 — VIRER** — Tester le transfert d’une trace rapide vers un compartiment lent.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-028 — VIRER** — Tester le transfert inverse.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-029 — GARDER [P3]** — Mesurer la durée nécessaire pour éviter de confondre relaxation et inscription.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-030 — VIRER** — Comparer modèles convolutionnels, espaces d’état, équations différentielles retardées et réseaux récurrents contraints.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-031 — VIRER** — Générer des systèmes présentant `D` seul.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-032 — VIRER** — Générer des systèmes présentant `H` seul.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-033 — VIRER** — Générer des systèmes présentant `L` seul.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-034 — VIRER** — Générer les quatre combinaisons doubles et la combinaison triple.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S1-035 — VIRER** — Vérifier que les métriques restent séparables.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-036 — GARDER [P3]** — Tester la sensibilité au bruit et aux données manquantes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-037 — VIRER** — Comparer plusieurs estimateurs du temps de relaxation.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-038 — VIRER** — Comparer plusieurs définitions de seuil aller-retour.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S1-039 — VIRER** — Tester la détection de pertes topologiques.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-040 — VIRER** — Vérifier que `L` distingue perte réelle et coût d’accès accru.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-041 — GARDER [P3]** — Définir un estimateur opérationnel par domaine.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-042 — GARDER [P3]** — Tester la dépendance à l’horizon `T`.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-043 — GARDER [P3]** — Tester la dépendance aux ressources et contraintes `C`.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-044 — GARDER [P3]** — Tester la dépendance au seuil probabiliste `ε`.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-045 — VIRER** — Comparer échantillonnage Monte-Carlo, continuation numérique, méthodes de viabilité et apprentissage de variétés.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S1-046 — GARDER [P3]** — Mesurer le volume accessible avant et après une transition.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-047 — GARDER [P3]** — Mesurer les états nouvellement accessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-048 — GARDER [P3]** — Mesurer les états devenus inaccessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-049 — GARDER [P3]** — Mesurer le coût énergétique et temporel d’accès.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+- **S1-050 — GARDER [P3]** — Vérifier la robustesse des conclusions à la métrique de distance choisie.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : aucun_dataset_declare
+  - Action : Acquérir/relier la donnée admissible : aucun_dataset_declare.
+
+## S2
+
+- **S2-001 — VIRER** — Remplacer la cinétique de Monod par Hill, Contois, Haldane et Droop.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-002 — VIRER** — Ajouter une ressource secondaire limitante.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-003 — VIRER** — Ajouter plusieurs espèces concurrentes.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **S2-004 — VIRER** — Ajouter coopération et cross-feeding.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-005 — VIRER** — Ajouter prédation ou phage.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-006 — VIRER** — Ajouter bruit démographique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-007 — VIRER** — Ajouter bruit environnemental coloré.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-008 — VIRER** — Ajouter délais et mémoire physiologique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-009 — VIRER** — Ajouter hétérogénéité spatiale.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-010 — VIRER** — Ajouter biofilm et diffusion.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-011 — VIRER** — Tester des pertes dépendantes de la densité.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-012 — VIRER** — Tester des pertes pulsées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-013 — VIRER** — Tester des pertes corrélées à la ressource.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-014 — VIRER** — Rechercher les domaines où réduire une perte diminue la persistance globale par effet indirect.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-015 — VIRER** — Comparer le résultat à des modèles de contrôle optimal.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S2-016 — GARDER [P3]** — Tester le seuil de lavage sur données expérimentales de chémostat publiées.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S2-017 — GARDER [P1]** — Concevoir une expérience de laboratoire simple avec intervention préenregistrée.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S2-018 — GARDER [P3]** — Répliquer dans au moins deux espèces et deux milieux.
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S2-019 — GARDER [P3]** — Tester la généralisation hors chémostat.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S2-020 — VIRER** — Séparer clairement le théorème local, la robustesse structurelle et la validité biologique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+
+## S3
+
+- **S3-001 — VIRER** — Régénérer la carte avec `CLOS` et `INTG` instanciés.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **S3-002 — VIRER** — Vérifier automatiquement l’absence de cycles interdits.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-003 — VIRER** — Vérifier la cohérence chronologique de chaque relation.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-004 — VIRER** — Vérifier la compatibilité du type de relation avec les définitions.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-005 — VIRER** — Faire coder les 47 relations par trois experts indépendants.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **S3-006 — VIRER** — Mesurer l’accord inter-évaluateurs.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **S3-007 — VIRER** — Publier les désaccords.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **S3-008 — VIRER** — Tester des relations candidates refusées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-009 — VIRER** — Ajouter des contre-exemples pour chaque type de lien.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-010 — VIRER** — Tester la stabilité de la carte lorsque les transitions incertaines sont retirées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-011 — VIRER** — Tester la stabilité sous fusion ou division de transitions.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-012 — VIRER** — Mesurer centralité, modularité, chemins et goulets d’étranglement.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-013 — VIRER** — Vérifier que les propriétés de graphe ne proviennent pas du choix manuel des nœuds.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-014 — VIRER** — Comparer à des graphes nuls conservant le degré.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **S3-015 — GARDER [P3]** — Tester si la carte prédit correctement des relations masquées.
+  - valeur prédictive
+  - Donnée cible : relations ; states
+  - Action : Acquérir/relier la donnée admissible : relations ; states.
+- **S3-016 — GARDER [P3]** — Comparer cette prédiction à des méthodes simples de proximité temporelle.
+  - valeur prédictive
+  - Donnée cible : relations ; states
+  - Action : Acquérir/relier la donnée admissible : relations ; states.
+- **S3-017 — GARDER [P3]** — Comparer à des graph embeddings.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : relations ; states
+  - Action : Acquérir/relier la donnée admissible : relations ; states.
+- **S3-018 — GARDER [P3]** — Tester la capacité à proposer des relations nouvelles qui seront ensuite validées par la littérature.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **S3-019 — GARDER [P2]** — Mesurer le taux de faux positifs.
+  - contrôle anti-faux-positif
+  - Donnée cible : relations ; states
+  - Action : Acquérir/relier la donnée admissible : relations ; states.
+- **S3-020 — GARDER [P3]** — Geler une version confirmatoire de la carte avant toute nouvelle recherche bibliographique.
+  - intégrité confirmatoire
+  - Donnée cible : relations ; states
+  - Action : Acquérir/relier la donnée admissible : relations ; states.
+
+## M1
+
+- **M1-001 — VIRER** — définir l’état antérieur
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-002 — VIRER** — définir l’état postérieur
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-003 — VIRER** — définir les variables `n, G, I, E, Π, H`
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-004 — VIRER** — dater la transition avec intervalle d’incertitude
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-005 — VIRER** — lister les preuves directes
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-006 — VIRER** — lister les preuves indirectes
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-007 — VIRER** — lister les modèles concurrents
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-008 — VIRER** — identifier le seuil ou la plage de transition
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-009 — VIRER** — identifier la vitesse de variation
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-010 — VIRER** — identifier les états devenus accessibles
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-011 — VIRER** — identifier les états fermés
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-012 — VIRER** — identifier les pertes
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-013 — VIRER** — identifier les mécanismes de persistance
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-014 — VIRER** — identifier les contre-exemples
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+- **M1-015 — VIRER** — attribuer un niveau de preuve par évaluateurs indépendants
+  - fiche descriptive/inventaire : ne discrimine pas ORI-C
+
+## M2
+
+- **M2-001 — VIRER** — Reproduire les abondances primordiales avec plusieurs codes publics.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **M2-002 — VIRER** — Comparer aux observations de deutérium, hélium et lithium.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M2-003 — VIRER** — Quantifier les incertitudes nucléaires.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M2-004 — VIRER** — Tester l’effet des masses stellaires sur les rendements.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M2-005 — VIRER** — Tester métallicité, rotation et binarité.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M2-006 — VIRER** — Comparer supernovæ, étoiles AGB, fusions d’objets compacts et autres sources.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M2-007 — GARDER [P3]** — Construire des histoires d’enrichissement différentes atteignant une métallicité finale comparable.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : nucleosynthesis_yields
+  - Action : Acquérir/relier la donnée admissible : nucleosynthesis_yields.
+- **M2-008 — GARDER [P3]** — Mesurer les différences de rapports isotopiques résiduels.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : nucleosynthesis_yields
+  - Action : Acquérir/relier la donnée admissible : nucleosynthesis_yields.
+- **M2-009 — GARDER [P3]** — Tester si l’histoire reste récupérable à partir de l’état final.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : nucleosynthesis_yields
+  - Action : Acquérir/relier la donnée admissible : nucleosynthesis_yields.
+- **M2-010 — VIRER** — Mesurer l’expansion du réseau de réactions accessible après chaque famille d’éléments.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+
+## M3
+
+- **M3-001 — VIRER** — Construire un réseau chimique interstellaire versionné.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-002 — VIRER** — Tester température, densité, ionisation, UV et chocs.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **M3-003 — VIRER** — Comparer chimie gazeuse et chimie de surface.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-004 — VIRER** — Tester la composition des grains.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-005 — VIRER** — Tester l’épaisseur et la stratification des glaces.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-006 — GARDER [P3]** — Tester plusieurs ordres d’irradiation, chauffage et refroidissement.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-007 — GARDER [P3]** — Rechercher des dépendances au chemin à état final macroscopique égal.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-008 — GARDER [P3]** — Mesurer les molécules nouvellement accessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-009 — GARDER [P3]** — Mesurer les molécules détruites ou rendues inaccessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-010 — GARDER [P3]** — Comparer les prédictions aux inventaires moléculaires astronomiques.
+  - valeur prédictive
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-011 — VIRER** — Tester la robustesse aux incertitudes de taux réactionnels.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-012 — VIRER** — Faire une analyse globale de sensibilité.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M3-013 — GARDER [P2]** — Identifier les réactions qui contrôlent le plus `Pacc`.
+  - domaine des possibles / Pacc
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-014 — GARDER [P3]** — Tester la généralisation à plusieurs nuages et disques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+- **M3-015 — GARDER [P3]** — Répliquer avec un second réseau chimique indépendant.
+  - réplication indépendante
+  - Donnée cible : molecular_inventory ; reaction_network
+  - Action : Acquérir/relier la donnée admissible : molecular_inventory ; reaction_network.
+
+## M4
+
+- **M4-001 — VIRER** — Reproduire plusieurs séquences de condensation à l’équilibre.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **M4-002 — VIRER** — Faire varier pression, C/O, redox et composition.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-003 — VIRER** — Ajouter cinétique et systèmes ouverts.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-004 — VIRER** — Ajouter séparation gaz-solides.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-005 — VIRER** — Ajouter transport radial.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-006 — VIRER** — Tester plusieurs vitesses de refroidissement.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **M4-007 — GARDER [P3]** — Comparer aux CAI, chondres et matrices météoritiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+- **M4-008 — GARDER [P3]** — Tester l’héritage présolaire.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+- **M4-009 — GARDER [P3]** — Mesurer les minéraux accessibles selon l’ordre des traitements.
+  - domaine des possibles / Pacc
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+- **M4-010 — GARDER [P3]** — Rechercher des états finaux de composition globale proche mais de minéralogie différente.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+- **M4-011 — GARDER [P3]** — Mesurer la fermeture de voies par évaporation ou séquestration.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+- **M4-012 — VIRER** — Comparer aux bases de données minérales terrestres et météoritiques.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-013 — VIRER** — Tester la croissance combinatoire du nombre de phases.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-014 — VIRER** — Comparer cette croissance à des graphes chimiques nuls.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **M4-015 — GARDER [P3]** — Évaluer si ORI-C prédit mieux les phases observées qu’un simple gradient de volatilité.
+  - valeur prédictive
+  - Donnée cible : thermochemical_phases
+  - Action : Acquérir/relier la donnée admissible : thermochemical_phases.
+
+## M5
+
+- **M5-001 — GARDER [P3]** — Masquer 20 % des transitions et tenter de les reconstruire avec ORI-C.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-002 — GARDER [P3]** — Comparer à une chronologie descriptive simple.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-003 — GARDER [P3]** — Comparer à un graphe causal standard.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-004 — GARDER [P3]** — Comparer à un modèle de réseau sans histoire.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-005 — GARDER [P3]** — Tester si les dimensions ORI-C améliorent la prédiction de la transition suivante.
+  - valeur prédictive
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-006 — GARDER [P3]** — Tester si elles améliorent la prédiction des états fermés.
+  - domaine des possibles / Pacc
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-007 — GARDER [P3]** — Tester si elles améliorent l’inférence de l’histoire depuis l’état final.
+  - valeur prédictive
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-008 — GARDER [P3]** — Tester la calibration probabiliste des prédictions.
+  - valeur prédictive
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-009 — GARDER [P3]** — Répéter sur des sous-domaines indépendants.
+  - réplication indépendante
+  - Donnée cible : matter_transitions
+  - Action : Acquérir/relier la donnée admissible : matter_transitions.
+- **M5-010 — GARDER [P1]** — Faire évaluer les prédictions à l’aveugle par des spécialistes.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## P1
+
+- **P1-001 — VIRER** — Compiler les isotopes Ti, Cr, Mo, W, Ni, Ru, Pd et autres traceurs disponibles.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P1-002 — VIRER** — Tester la dichotomie carbonée et non carbonée par plusieurs méthodes de clustering.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P1-003 — VIRER** — Quantifier l’incertitude de classification.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P1-004 — VIRER** — Tester les météorites intermédiaires et les exceptions.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P1-005 — VIRER** — Comparer plusieurs modèles de barrière dans le disque.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P1-006 — VIRER** — Tester les scénarios de transport radial.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P1-007 — VIRER** — Reconstruire les mélanges possibles.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P1-008 — GARDER [P3]** — Vérifier si la provenance améliore la prédiction de la composition finale des corps.
+  - valeur prédictive
+  - Donnée cible : isotope_tracers
+  - Action : Acquérir/relier la donnée admissible : isotope_tracers.
+- **P1-009 — GARDER [P1]** — Tester cette prédiction hors échantillon sur des groupes météoritiques masqués.
+  - confirmatoire/préenregistré
+  - Donnée cible : isotope_tracers
+  - Action : Acquérir/relier la donnée admissible : isotope_tracers.
+- **P1-010 — GARDER [P3]** — Comparer à un modèle fondé uniquement sur la distance au Soleil.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : isotope_tracers
+  - Action : Acquérir/relier la donnée admissible : isotope_tracers.
+
+## P2
+
+- **P2-001 — VIRER** — Compiler les chronomètres Al-Mg, Hf-W, Mn-Cr et Pb-Pb.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P2-002 — VIRER** — Propager toutes les incertitudes de datation.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P2-003 — VIRER** — Tester distribution homogène et hétérogène de l’aluminium 26.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P2-004 — VIRER** — Simuler des corps de tailles et porosités variées.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **P2-005 — VIRER** — Tester conduction, convection, fusion et migration des fluides.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P2-006 — GARDER [P3]** — Comparer les prédictions aux achondrites et corps primitifs.
+  - valeur prédictive
+  - Donnée cible : body_properties ; chronometers
+  - Action : Acquérir/relier la donnée admissible : body_properties ; chronometers.
+- **P2-007 — GARDER [P3]** — Produire des paires à composition initiale semblable et dates différentes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : body_properties ; chronometers
+  - Action : Acquérir/relier la donnée admissible : body_properties ; chronometers.
+- **P2-008 — GARDER [P3]** — Mesurer l’effet causal sur fusion, différenciation et perte de volatils.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : body_properties ; chronometers
+  - Action : Acquérir/relier la donnée admissible : body_properties ; chronometers.
+- **P2-009 — GARDER [P3]** — Tester la capacité d’inférer la date d’accrétion depuis la structure finale.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : body_properties ; chronometers
+  - Action : Acquérir/relier la donnée admissible : body_properties ; chronometers.
+- **P2-010 — GARDER [P3]** — Comparer à des modèles thermiques standards sans variables ORI-C.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : body_properties ; chronometers
+  - Action : Acquérir/relier la donnée admissible : body_properties ; chronometers.
+
+## P3
+
+- **P3-001 — VIRER** — Compiler les expériences de partage disponibles.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P3-002 — VIRER** — Harmoniser pression, température, redox et composition.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P3-003 — VIRER** — Construire une méta-analyse hiérarchique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P3-004 — VIRER** — Tester les interactions entre variables.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P3-005 — VIRER** — Comparer plusieurs lois de partage.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P3-006 — GARDER [P3]** — Tester les trajectoires d’accrétion continues et par épisodes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-007 — GARDER [P3]** — Permuter l’ordre des apports oxydés et réduits.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-008 — GARDER [P3]** — Mesurer les différences de noyau, manteau et surface à inventaire global comparable.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-009 — GARDER [P3]** — Tester Fe, Ni, Co, Nb, Ta, W, Mo, N, P, C, S et éléments hautement sidérophiles.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-010 — GARDER [P3]** — Quantifier l’accessibilité ultérieure des éléments de surface.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-011 — GARDER [P3]** — Tester la sensibilité aux océans magmatiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-012 — GARDER [P3]** — Tester l’équilibration complète et incomplète.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-013 — GARDER [P3]** — Comparer Terre, Mars, Vesta et corps différenciés.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+- **P3-014 — VIRER** — Étendre aux exoplanètes rocheuses simulées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **P3-015 — GARDER [P1]** — Faire une validation aveugle sur expériences non utilisées à l’ajustement.
+  - confirmatoire/préenregistré
+  - Donnée cible : partition_experiments
+  - Action : Acquérir/relier la donnée admissible : partition_experiments.
+
+## P4
+
+- **P4-001 — VIRER** — Compiler eau, carbone, azote et soufre dans les météorites différenciées.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P4-002 — VIRER** — Tester taille, température, durée de fusion et gravité.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P4-003 — VIRER** — Tester atmosphère présente ou absente pendant le dégazage.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P4-004 — VIRER** — Tester impacts et érosion atmosphérique.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P4-005 — VIRER** — Tester photodissociation et échappement.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **P4-006 — GARDER [P3]** — Comparer pertes précoces et tardives.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : volatile_inventory
+  - Action : Acquérir/relier la donnée admissible : volatile_inventory.
+- **P4-007 — GARDER [P3]** — Mesurer `inventaire initial` et `inventaire conservé`.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : volatile_inventory
+  - Action : Acquérir/relier la donnée admissible : volatile_inventory.
+- **P4-008 — GARDER [P3]** — Produire des courbes de transfert vers noyau, manteau, atmosphère et espace.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : volatile_inventory
+  - Action : Acquérir/relier la donnée admissible : volatile_inventory.
+- **P4-009 — GARDER [P3]** — Tester l’hystérésis de rétention.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : volatile_inventory
+  - Action : Acquérir/relier la donnée admissible : volatile_inventory.
+- **P4-010 — GARDER [P3]** — Comparer aux observations des planètes et météorites.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : exoplanet_observations
+  - Action : Acquérir/relier la donnée admissible : exoplanet_observations.
+
+## P5
+
+- **P5-001 — VIRER** — Compiler Mo, Ru, W, Os, Ir, Au et autres traceurs.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **P5-002 — GARDER [P3]** — Tester plusieurs dates et masses d’apport.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-003 — GARDER [P3]** — Tester l’équilibrage avec le noyau.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-004 — GARDER [P3]** — Tester les scénarios d’impact lunaire.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-005 — GARDER [P3]** — Tester les apports carbonés et non carbonés.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-006 — GARDER [P3]** — Quantifier la contribution aux volatils de surface.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-007 — GARDER [P3]** — Séparer matière tardive et conservation pendant la formation du noyau.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-008 — GARDER [P3]** — Comparer plusieurs modèles de mélange.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-009 — GARDER [P3]** — Tester la récupération de l’histoire d’apport depuis les isotopes finaux.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+- **P5-010 — GARDER [P1]** — Réaliser une validation croisée par familles d’éléments.
+  - confirmatoire/préenregistré
+  - Donnée cible : late_accretion_tracers
+  - Action : Acquérir/relier la donnée admissible : late_accretion_tracers.
+
+## P6
+
+- **P6-001 — GARDER [P3]** — Prédire la distribution noyau-manteau-surface à partir de la seule composition initiale.
+  - valeur prédictive
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-002 — GARDER [P3]** — Ajouter la provenance.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-003 — GARDER [P3]** — Ajouter la date d’accrétion.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-004 — GARDER [P3]** — Ajouter l’histoire thermique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-005 — GARDER [P3]** — Ajouter le redox.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-006 — GARDER [P3]** — Ajouter les pertes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-007 — GARDER [P3]** — Ajouter les apports tardifs.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-008 — GARDER [P3]** — Mesurer le gain incrémental de chaque couche.
+  - valeur prédictive
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-009 — GARDER [P3]** — Comparer à un modèle géochimique standard de même complexité.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-010 — GARDER [P1]** — Tester hors échantillon sur Mars, Vesta et groupes météoritiques.
+  - confirmatoire/préenregistré
+  - Donnée cible : planetary_histories
+  - Action : Acquérir/relier la donnée admissible : planetary_histories.
+- **P6-011 — VIRER** — Tester sur populations synthétiques d’exoplanètes.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **P6-012 — GARDER [P1]** — Préenregistrer les prédictions avant d’ajouter de nouvelles données.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## A1
+
+- **A1-001 — VIRER** — Reproduire tous les 25 calculs dans un conteneur propre.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-002 — VIRER** — Répéter sur plusieurs systèmes d’exploitation.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-003 — VIRER** — Répéter en simple et double précision lorsque possible.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-004 — VIRER** — Tester plusieurs compilateurs.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-005 — VIRER** — Tester plusieurs versions de REBOUND.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-006 — VIRER** — Comparer WHFast, IAS15, Mercurius et un intégrateur indépendant.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-007 — VIRER** — Tester une grille plus fine de pas temporels.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-008 — VIRER** — Tester les critères sur énergie et moment angulaire adaptés à la relativité.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-009 — VIRER** — Tester l’aller-retour sur plusieurs horizons.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+- **A1-010 — VIRER** — Publier la convergence de chaque observable, pas seulement de l’excentricité.
+  - reproductibilité numérique : garder en QA, sortir du noyau probant
+
+## A2
+
+- **A2-001 — VIRER** — Utiliser plusieurs éphémérides JPL.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **A2-002 — VIRER** — Propager les covariances des conditions initiales.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A2-003 — VIRER** — Générer des ensembles d’états initiaux cohérents avec les incertitudes.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **A2-004 — VIRER** — Comparer coordonnées cartésiennes et éléments orbitaux.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A2-005 — VIRER** — Tester les transformations de repère.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A2-006 — VIRER** — Tester plusieurs époques initiales.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **A2-007 — GARDER [P3]** — Comparer aux solutions La2004, La2010 et autres références indépendantes.
+  - réplication indépendante
+  - Donnée cible : ephemerides ; orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : ephemerides ; orbital_initial_conditions.
+- **A2-008 — GARDER [P3]** — Valider sur des horizons croissants.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : ephemerides ; orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : ephemerides ; orbital_initial_conditions.
+- **A2-009 — GARDER [P3]** — Mesurer le temps de divergence chaotique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : ephemerides ; orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : ephemerides ; orbital_initial_conditions.
+- **A2-010 — GARDER [P3]** — Ne jamais interpréter au-delà de l’horizon de fiabilité.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : ephemerides ; orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : ephemerides ; orbital_initial_conditions.
+
+## A3
+
+- **A3-001 — VIRER** — la Lune résolue
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-002 — VIRER** — la rotation terrestre
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-003 — VIRER** — l’obliquité dynamique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-004 — VIRER** — le J2 solaire
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-005 — VIRER** — les marées
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-006 — VIRER** — la relativité cohérente dans tous les diagnostics
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-007 — VIRER** — les principaux astéroïdes
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-008 — VIRER** — la perte de masse solaire
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-009 — VIRER** — les effets de figures planétaires lorsque pertinents
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-010 — VIRER** — les interactions spin-orbite
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-011 — GARDER [P1]** — test d’ablation
+  - causalité / histoire / ablation
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A3-012 — GARDER [P3]** — gain contre référence
+  - valeur prédictive
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A3-013 — VIRER** — coût numérique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A3-014 — GARDER [P3]** — effet sur le spectre
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A3-015 — GARDER [P3]** — effet sur l’incertitude
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A3-016 — GARDER [P3]** — interaction avec les autres ajouts
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+
+## A4
+
+- **A4-001 — GARDER [P3]** — Perturber masses de Jupiter et Saturne sur une grille fine.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-002 — GARDER [P3]** — Perturber demi-grands axes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-003 — GARDER [P3]** — Perturber excentricités et inclinaisons.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-004 — GARDER [P3]** — Perturber phases orbitales.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-005 — GARDER [P3]** — Retirer chaque planète à tour de rôle dans un modèle exploratoire.
+  - causalité / histoire / ablation
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-006 — GARDER [P3]** — Ajouter des perturbations combinées.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-007 — GARDER [P3]** — Tester des scénarios de migration historique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-008 — GARDER [P3]** — Mesurer la réponse spectrale de la Terre.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-009 — GARDER [P3]** — Mesurer la stabilité des résonances.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-010 — GARDER [P3]** — Construire des surfaces de réponse causale.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-011 — GARDER [P3]** — Comparer à des ensembles d’états initiaux quasi identiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+- **A4-012 — GARDER [P3]** — Séparer effet de l’intervention et divergence chaotique.
+  - causalité / histoire / ablation
+  - Donnée cible : orbital_initial_conditions
+  - Action : Acquérir/relier la donnée admissible : orbital_initial_conditions.
+
+## A5
+
+- **A5-001 — VIRER** — Tester plusieurs méthodes spectrales.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **A5-002 — VIRER** — Comparer fenêtres, résolution et detrending.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A5-003 — VIRER** — Quantifier l’incertitude des pics.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A5-004 — GARDER [P3]** — Tester 405 ka, 2,4 Ma et autres bandes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_timeseries
+  - Action : Acquérir/relier la donnée admissible : orbital_timeseries.
+- **A5-005 — VIRER** — Mesurer stabilité des phases.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A5-006 — VIRER** — Mesurer transfert entre planètes et variables orbitales.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A5-007 — VIRER** — Tester la robustesse aux horizons d’analyse.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **A5-008 — GARDER [P3]** — Comparer spectres aux solutions de référence.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_timeseries
+  - Action : Acquérir/relier la donnée admissible : orbital_timeseries.
+- **A5-009 — VIRER** — Utiliser des signaux synthétiques pour mesurer les faux pics.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **A5-010 — GARDER [P1]** — Préenregistrer les bandes avant l’analyse confirmatoire.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## A6
+
+- **A6-001 — GARDER [P3]** — Réimplémenter le calcul dans un second code N-corps.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_reference ; orbital_timeseries
+  - Action : Acquérir/relier la donnée admissible : orbital_reference ; orbital_timeseries.
+- **A6-002 — GARDER [P1]** — Faire reproduire les résultats par une autre équipe.
+  - réplication indépendante
+  - Donnée cible : orbital_reference ; orbital_timeseries
+  - Action : Acquérir/relier la donnée admissible : orbital_reference ; orbital_timeseries.
+- **A6-003 — GARDER [P3]** — Masquer les critères pendant l’exécution.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : orbital_reference ; orbital_timeseries
+  - Action : Acquérir/relier la donnée admissible : orbital_reference ; orbital_timeseries.
+- **A6-004 — VIRER** — Archiver les sorties brutes.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **A6-005 — GARDER [P3]** — Faire auditer les transformations et figures.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **A6-006 — GARDER [P1]** — Publier les deux échecs préenregistrés avec les réussites.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## C1
+
+- **C1-001 — VIRER** — Reproduire tous les tests avec l’environnement verrouillé.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C1-002 — GARDER [P3]** — Répliquer sur toute l’étendue LR04.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-003 — GARDER [P3]** — Répliquer avec incertitudes d’âge et de mesure.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-004 — GARDER [P3]** — Répliquer avec autres piles benthiques.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-005 — GARDER [P3]** — Répliquer avec niveau marin indépendant.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-006 — GARDER [P3]** — Répliquer avec CO2, température et poussières.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-007 — GARDER [P3]** — Répliquer sous plusieurs conventions d’insolation.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-008 — GARDER [P1]** — Répliquer par validation croisée temporelle.
+  - confirmatoire/préenregistré
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-009 — GARDER [P3]** — Répliquer avec modèles nuls supplémentaires.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C1-010 — GARDER [P3]** — Faire confirmer le verdict par une équipe indépendante.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+
+## C2
+
+- **C2-001 — GARDER [P3]** — Cartographier entièrement les régions mono et multistables.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-002 — GARDER [P3]** — Choisir des points réellement discriminants.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-003 — GARDER [P2]** — Apparier les variables motrices du témoin de complexité égale.
+  - contrôle anti-faux-positif
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-004 — VIRER** — Publier leurs plages d’exploitation.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **C2-005 — GARDER [P3]** — Définir une normalisation indépendante du point testé.
+  - réplication indépendante
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-006 — GARDER [P1]** — Simuler la puissance avant préenregistrement.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **C2-007 — GARDER [P3]** — Fixer les seuils de matérialité.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-008 — GARDER [P3]** — Fixer la durée d’observation au-delà de toutes les constantes de temps.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-009 — GARDER [P3]** — Geler le protocole.
+  - intégrité confirmatoire
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C2-010 — GARDER [P3]** — Exécuter une seule fois sur données confirmatoires.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+
+## C3
+
+- **C3-001 — VIRER** — mémoire du volume de glace
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-002 — VIRER** — géométrie et hauteur des calottes
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-003 — VIRER** — érosion du régolithe
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-004 — VIRER** — altération continentale
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-005 — VIRER** — carbone océanique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-006 — VIRER** — circulation océanique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-007 — VIRER** — sédiments marins
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-008 — VIRER** — poussières et fertilisation
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-009 — VIRER** — méthane et pergélisol pour périodes adaptées
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-010 — VIRER** — isostasie et topographie
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-011 — VIRER** — végétation et albédo
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-012 — VIRER** — seuils de plateformes glaciaires
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-013 — VIRER** — couplages état-dépendants
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-014 — VIRER** — délais distribués
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-015 — VIRER** — événements stochastiques rares
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-016 — VIRER** — interactions entre mémoires rapides et lentes
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C3-017 — GARDER [P2]** — un témoin instantané
+  - contrôle anti-faux-positif
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C3-018 — GARDER [P2]** — un témoin de complexité égale
+  - contrôle anti-faux-positif
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C3-019 — GARDER [P1]** — une ablation
+  - causalité / histoire / ablation
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C3-020 — GARDER [P1]** — une prédiction hors échantillon
+  - confirmatoire/préenregistré
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C3-021 — GARDER [P3]** — une fenêtre longue
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C3-022 — GARDER [P3]** — une variable mesurée directement lorsque possible
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+
+## C4
+
+- **C4-001 — VIRER** — régression et filtres linéaires
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-002 — VIRER** — modèles d’espace d’état
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-003 — VIRER** — modèles à retards distribués
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-004 — VIRER** — systèmes dynamiques non linéaires
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-005 — VIRER** — modèles à seuils
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-006 — VIRER** — modèles à attracteurs multiples
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-007 — VIRER** — modèles stochastiques
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-008 — VIRER** — modèles de viabilité
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-009 — VIRER** — réseaux causaux dynamiques
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-010 — VIRER** — modèles hybrides événementiels
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-011 — VIRER** — modèles conceptuels glaciaires
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-012 — VIRER** — modèles de bilan énergétique
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-013 — VIRER** — EMIC
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-014 — VIRER** — modèles de calotte simplifiés
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+- **C4-015 — VIRER** — émulateurs de modèles complexes
+  - inventaire de modèles concurrents : consolider en un benchmark, pas 15 preuves
+
+## C5
+
+- **C5-001 — GARDER [P3]** — Propager l’incertitude des modèles d’âge.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-002 — VIRER** — Tester plusieurs alignements chronologiques.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **C5-003 — VIRER** — Travailler sur données brutes et piles.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C5-004 — VIRER** — Tester la sensibilité aux résolutions.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C5-005 — GARDER [P3]** — Tester les biais de préservation.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-006 — GARDER [P3]** — Tester l’autocorrélation et la taille efficace.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-007 — GARDER [P3]** — Tester les ruptures de proxy.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-008 — GARDER [P3]** — Utiliser des proxys multiples dans un modèle hiérarchique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-009 — GARDER [P1]** — Réserver des carottes ou périodes entières pour validation.
+  - confirmatoire/préenregistré
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C5-010 — GARDER [P1]** — Préenregistrer les transformations.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## C6
+
+- **C6-001 — GARDER [P1]** — RMSE hors échantillon
+  - confirmatoire/préenregistré
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-002 — VIRER** — log-vraisemblance prédictive
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-003 — GARDER [P3]** — calibration probabiliste
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-004 — VIRER** — corrélation et phase
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-005 — VIRER** — spectre 41, 100 et 405 ka
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-006 — VIRER** — chronologie des terminaisons
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-007 — VIRER** — stabilité des paramètres
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-008 — VIRER** — identifiabilité
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C6-009 — GARDER [P3]** — persistance après convergence des forçages
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-010 — GARDER [P3]** — hystérésis
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-011 — GARDER [P3]** — pertes de régimes ou de chemins de retour
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-012 — GARDER [P2]** — valeur de `Pacc`
+  - domaine des possibles / Pacc
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-013 — GARDER [P3]** — performance sur périodes jamais ajustées
+  - valeur prédictive
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-014 — GARDER [P3]** — performance sur un autre jeu de proxys
+  - valeur prédictive
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C6-015 — GARDER [P2]** — avantage contre témoin de complexité égale
+  - contrôle anti-faux-positif
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+
+## C7
+
+- **C7-001 — VIRER** — Utiliser l’échec de M2 pour localiser les résidus structurés.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-002 — VIRER** — Chercher les périodes où M2 capte la signature de 100 ka mais rate l’amplitude.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-003 — VIRER** — Tester si le mécanisme correct est additif, multiplicatif ou conditionnel.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-004 — VIRER** — Tester si la mémoire dépend du régime climatique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-005 — GARDER [P3]** — Tester des changements d’architecture plutôt qu’un noyau fixe.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C7-006 — VIRER** — Tester des ruptures de connectivité entre bassins.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-007 — GARDER [P3]** — Tester si une variable lente modifie l’opérateur de réponse.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C7-008 — GARDER [P2]** — Générer des prédictions qui divergent de tous les témoins standards.
+  - contrôle anti-faux-positif
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+- **C7-009 — VIRER** — Rechercher les données capables de trancher.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **C7-010 — GARDER [P1]** — Abandonner toute famille qui échoue sur deux validations confirmatoires indépendantes.
+  - confirmatoire/préenregistré
+  - Donnée cible : paleoclimate_timeseries
+  - Action : Acquérir/relier la donnée admissible : paleoclimate_timeseries.
+
+## CL1
+
+- **CL1-001 — VIRER** — Quantifier les noyaux de mémoire océanique, cryosphérique, carbonée, écologique et géologique.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL1-002 — VIRER** — Estimer leurs constantes de temps et incertitudes.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL1-003 — VIRER** — Tester leur dépendance à l’état.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL1-004 — VIRER** — Tester les couplages entre compartiments.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL1-005 — GARDER [P3]** — Comparer un modèle multi-mémoires à une intégrale unique du forçage.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL1-006 — VIRER** — Valider sur simulations historiques.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL1-007 — GARDER [P3]** — Valider sur expériences d’arrêt des émissions et de retrait du forçage.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL1-008 — GARDER [P3]** — Tester sur plusieurs modèles climatiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL1-009 — GARDER [P3]** — Vérifier la généralisation entre scénarios.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL1-010 — GARDER [P3]** — Mesurer la part irréversible transférée entre compartiments.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+
+## CL2
+
+- **CL2-001 — GARDER [P3]** — mesurer `D`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-002 — GARDER [P3]** — mesurer `H`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-003 — GARDER [P3]** — mesurer `L`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-004 — GARDER [P3]** — tester leur indépendance
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-005 — GARDER [P3]** — quantifier les incertitudes
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble ; modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble ; modern_climate_timeseries.
+- **CL2-006 — GARDER [P3]** — comparer modèles et observations
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-007 — GARDER [P3]** — identifier les cas où un terme est élevé et les deux autres faibles
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-008 — VIRER** — publier les horizons temporels
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **CL2-009 — GARDER [P3]** — distinguer retour spontané et restauration active
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+- **CL2-010 — GARDER [P3]** — mesurer le coût de restauration
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_timeseries.
+
+## CL3
+
+- **CL3-001 — GARDER [P2]** — Définir `Pth` et `Pacc` pour chaque cas.
+  - domaine des possibles / Pacc
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-002 — GARDER [P3]** — Déclarer `T`, `C` et `ε`.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-003 — GARDER [P3]** — Cartographier les états climatiques accessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-004 — GARDER [P3]** — Cartographier les chemins de récupération.
+  - domaine des possibles / Pacc
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-005 — GARDER [P3]** — mesurer les coûts énergétiques, temporels et matériels.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-006 — GARDER [P3]** — tester les changements après différentes trajectoires d’émissions.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-007 — GARDER [P2]** — comparer même réchauffement final avec vitesses et histoires différentes.
+  - causalité / histoire / ablation
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-008 — GARDER [P3]** — tester les overshoots.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-009 — GARDER [P3]** — tester les interventions de restauration.
+  - causalité / histoire / ablation
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL3-010 — GARDER [P3]** — distinguer bassin réduit et attracteur supprimé.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+
+## CL4
+
+- **CL4-001 — GARDER [P3]** — Utiliser réanalyses et observations.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble ; modern_climate_timeseries
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble ; modern_climate_timeseries.
+- **CL4-002 — GARDER [P3]** — Utiliser ensembles climatiques multi-modèles.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL4-003 — VIRER** — Utiliser expériences idéalisées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL4-004 — GARDER [P3]** — Utiliser paléoclimats comme contraintes externes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL4-005 — GARDER [P1]** — Réserver des modèles entiers pour validation.
+  - confirmatoire/préenregistré
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL4-006 — VIRER** — Tester robustesse aux définitions de seuil.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL4-007 — VIRER** — Tester robustesse aux scénarios.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **CL4-008 — GARDER [P3]** — comparer aux cadres classiques de résilience.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL4-009 — GARDER [P3]** — mesurer la valeur prédictive ajoutée d’ORI-C.
+  - valeur prédictive
+  - Donnée cible : modern_climate_ensemble
+  - Action : Acquérir/relier la donnée admissible : modern_climate_ensemble.
+- **CL4-010 — GARDER [P3]** — publier les cas où ORI-C ne change aucune conclusion.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## V1
+
+- **V1-001 — VIRER** — Geler le schéma des lignées.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V1-002 — VIRER** — Vérifier le validateur sur données synthétiques positives et négatives.
+  - simulation/synthétique : garde-fou méthodologique, pas preuve externe
+- **V1-003 — GARDER [P3]** — Ajouter les incertitudes et limites de détection.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_design
+  - Action : Acquérir/relier la donnée admissible : prebiotic_design.
+- **V1-004 — GARDER [P3]** — Définir les cycles et générations.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Conserver ; ne promouvoir scientifiquement qu'avec criterion_id/seuil/verdict certifié.
+- **V1-005 — GARDER [P3]** — Définir les événements de fusion, division et disparition.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_design
+  - Action : Acquérir/relier la donnée admissible : prebiotic_design.
+- **V1-006 — GARDER [P3]** — Définir les critères de transmission.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_design
+  - Action : Acquérir/relier la donnée admissible : prebiotic_design.
+- **V1-007 — GARDER [P3]** — Définir les critères fonctionnels.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_design
+  - Action : Acquérir/relier la donnée admissible : prebiotic_design.
+- **V1-008 — GARDER [P1]** — Préenregistrer les six conditions minimales.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **V1-009 — GARDER [P1]** — Préenregistrer les huit témoins.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **V1-010 — VIRER** — Faire auditer le protocole par chimistes prébiotiques et biologistes de l’évolution.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+
+## V2
+
+- **V2-001 — VIRER** — plusieurs compositions initiales
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **V2-002 — VIRER** — plusieurs atmosphères et gaz
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **V2-003 — VIRER** — plusieurs sources d’énergie
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **V2-004 — VIRER** — plusieurs surfaces minérales
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **V2-005 — VIRER** — plusieurs températures et pressions
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **V2-006 — GARDER [P3]** — plusieurs séquences temporelles
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V2-007 — VIRER** — rendements et sous-produits
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-008 — VIRER** — stabilité et dégradation
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-009 — GARDER [P3]** — répétabilité inter-laboratoires
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **V2-010 — VIRER** — bilan de masse complet
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-011 — VIRER** — distributions de longueurs
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-012 — VIRER** — distributions de séquences
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-013 — VIRER** — fidélité de liaison
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-014 — VIRER** — vitesse de croissance
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-015 — VIRER** — vitesse de dégradation
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-016 — VIRER** — cycles humide-sec
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-017 — VIRER** — gel-dégel
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-018 — VIRER** — gradients hydrothermaux
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-019 — VIRER** — surfaces minérales
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-020 — VIRER** — alternance d’environnements
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-021 — GARDER [P3]** — fidélité
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-022 — GARDER [P3]** — taux d’erreur
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-023 — VIRER** — vitesse
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-024 — GARDER [P3]** — dépendance à la séquence
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V2-025 — VIRER** — blocages
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-026 — GARDER [P3]** — copies partielles
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-027 — GARDER [P3]** — compétition entre matrices
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V2-028 — GARDER [P3]** — effet du compartiment
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-029 — VIRER** — effet de l’énergie renouvelée
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-030 — GARDER [P3]** — persistance sur plusieurs cycles
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V2-031 — VIRER** — types de lipides
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-032 — VIRER** — tailles de vésicules
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-033 — VIRER** — perméabilité
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V2-034 — GARDER [P3]** — encapsulation
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-035 — GARDER [P3]** — croissance
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-036 — GARDER [P3]** — division
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-037 — GARDER [P3]** — fusion
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-038 — GARDER [P3]** — fuite
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-039 — GARDER [P3]** — stabilité sous cycles
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V2-040 — GARDER [P3]** — partage du contenu aux descendants
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+
+## V3
+
+- **V3-001 — GARDER [P3]** — copie à l’intérieur et à l’extérieur des compartiments
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-002 — GARDER [P3]** — matrice copiable contre polymère non copiable apparié
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-003 — VIRER** — même longueur
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-004 — VIRER** — même charge
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-005 — VIRER** — même concentration
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-006 — VIRER** — même encombrement
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-007 — VIRER** — même apport énergétique
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-008 — VIRER** — même nombre d’espèces chimiques
+  - variable d’appariement : intégrer au protocole, pas compter comme test
+- **V3-009 — GARDER [P3]** — copie sans division
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-010 — GARDER [P3]** — division sans copie
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-011 — GARDER [P3]** — copie et division sans variation
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-012 — GARDER [P3]** — copie, division et variation
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-013 — GARDER [P3]** — transmission sur plusieurs générations
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-014 — GARDER [P3]** — effet fonctionnel des variantes
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-015 — GARDER [P3]** — maintien sans réinitialisation complète
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-016 — GARDER [P1]** — ablation de la membrane
+  - causalité / histoire / ablation
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-017 — GARDER [P1]** — ablation de la matrice
+  - causalité / histoire / ablation
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-018 — GARDER [P1]** — ablation du flux énergétique
+  - causalité / histoire / ablation
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-019 — GARDER [P1]** — ablation de la variation
+  - causalité / histoire / ablation
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V3-020 — GARDER [P3]** — permutation de l’ordre des environnements
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+
+## V4
+
+- **V4-001 — VIRER** — humide-sec
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-002 — VIRER** — gel-dégel
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-003 — VIRER** — gradients hydrothermaux
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-004 — VIRER** — irradiation UV
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-005 — VIRER** — surfaces minérales
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-006 — VIRER** — cycles de salinité
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-007 — VIRER** — cycles de pH
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-008 — VIRER** — cycles redox
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-009 — VIRER** — chocs thermiques
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-010 — VIRER** — alternances combinées
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **V4-011 — GARDER [P3]** — état initial identique
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-012 — GARDER [P3]** — ordre différent
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-013 — GARDER [P3]** — état final environnemental identique
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-014 — GARDER [P3]** — mesure des lignées
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V4-015 — GARDER [P3]** — mesure de transmission
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-016 — GARDER [P3]** — mesure de fonction
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-017 — GARDER [P3]** — retrait du forçage
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-018 — GARDER [P3]** — durée longue devant toutes les mémoires
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-019 — GARDER [P1]** — réplication biologique et technique
+  - confirmatoire/préenregistré
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V4-020 — GARDER [P3]** — comparaison à trajectoire aléatoire
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+
+## V5
+
+- **V5-001 — GARDER [P3]** — Construire `Pth` chimique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-002 — GARDER [P2]** — Estimer `Pacc(T,C,ε)` par expérience à haut débit.
+  - domaine des possibles / Pacc
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-003 — GARDER [P3]** — Cartographier les produits accessibles.
+  - domaine des possibles / Pacc
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-004 — GARDER [P3]** — Cartographier les lignées viables.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V5-005 — GARDER [P3]** — Cartographier les trajectoires fermées.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-006 — GARDER [P3]** — Mesurer les coûts énergétiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-007 — GARDER [P3]** — Identifier les goulets d’étranglement.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V5-008 — GARDER [P3]** — Tester la robustesse des résultats aux seuils.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V5-009 — GARDER [P3]** — Reproduire dans un second système chimique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V5-010 — GARDER [P1]** — Faire une réplication inter-laboratoires.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## V6
+
+- **V6-001 — GARDER [P3]** — copies avec variations
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_rna_evolution
+  - Action : Acquérir/relier la donnée admissible : prebiotic_rna_evolution.
+- **V6-002 — GARDER [P3]** — association au compartiment
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-003 — GARDER [P3]** — croissance et division
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-004 — GARDER [P3]** — transmission aux descendants
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-005 — GARDER [P3]** — effet des variantes sur persistance ou reproduction
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-006 — GARDER [P3]** — maintien sur plusieurs cycles sans reconstruction complète externe
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-007 — GARDER [P2]** — avantage contre témoin de complexité égale
+  - contrôle anti-faux-positif
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-008 — GARDER [P1]** — ablation qui supprime l’effet
+  - causalité / histoire / ablation
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-009 — GARDER [P3]** — persistance après retrait d’une contrainte temporaire
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : prebiotic_lineages
+  - Action : Acquérir/relier la donnée admissible : prebiotic_lineages.
+- **V6-010 — GARDER [P1]** — reproduction dans un second laboratoire
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+
+## B1
+
+- **B1-001 — VIRER** — Coder les six dimensions sur plusieurs types cellulaires.
+  - balayage exploratoire/paramétrique : intégrer comme robustesse, pas comme test autonome
+- **B1-002 — VIRER** — Inclure bactéries, archées et eucaryotes.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **B1-003 — VIRER** — Tester l’accord entre codeurs.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **B1-004 — GARDER [P3]** — Perturber chaque organite ou fonction dans des données publiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-005 — GARDER [P3]** — Mesurer survie, réparation, reproduction et évolution.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-006 — GARDER [P3]** — Construire des graphes de dépendances fonctionnelles.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-007 — GARDER [P3]** — Tester la redondance et la compensation.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-008 — GARDER [P3]** — Mesurer les chemins de récupération.
+  - domaine des possibles / Pacc
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-009 — GARDER [P3]** — Tester si le vecteur `Π` prédit mieux la viabilité qu’un ensemble classique de variables.
+  - valeur prédictive
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+- **B1-010 — GARDER [P3]** — Valider sur types cellulaires masqués.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : cell_architecture
+  - Action : Acquérir/relier la donnée admissible : cell_architecture.
+
+## B2
+
+- **B2-001 — VIRER** — Compiler phylogénies des gènes mitochondriaux et nucléaires.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B2-002 — VIRER** — Compiler transferts de gènes vers le noyau.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B2-003 — VIRER** — Compiler réduction génomique.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B2-004 — VIRER** — Compiler systèmes d’import protéique.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B2-005 — VIRER** — Compiler dépendances métaboliques.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B2-006 — GARDER [P3]** — Comparer plusieurs scénarios d’endosymbiose.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-007 — GARDER [P3]** — Tester la relation `INTG` sur critères explicites.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-008 — GARDER [P3]** — Tester les étapes de fermeture d’alternatives.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-009 — GARDER [P3]** — Rechercher des transitions analogues dans plastes et symbioses récentes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-010 — GARDER [P3]** — Tester la capacité du cadre à prédire quelles symbioses deviennent obligatoires.
+  - valeur prédictive
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-011 — GARDER [P3]** — Comparer à des modèles standards de dépendance symbiotique.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+- **B2-012 — GARDER [P3]** — Valider sur cas non utilisés pour construire les critères.
+  - validation hors échantillon
+  - Donnée cible : endosymbiosis_events
+  - Action : Acquérir/relier la donnée admissible : endosymbiosis_events.
+
+## B3
+
+- **B3-001 — GARDER [P3]** — Prédire persistance et récupération à partir des six dimensions.
+  - valeur prédictive
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-002 — GARDER [P3]** — Comparer à des modèles de réseaux biologiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-003 — GARDER [P3]** — Comparer à des modèles de fitness.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-004 — GARDER [P3]** — Comparer à des modèles de résilience.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-005 — GARDER [P3]** — Tester les données hors domaine.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-006 — GARDER [P2]** — Mesurer calibration et faux positifs.
+  - contrôle anti-faux-positif
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-007 — GARDER [P3]** — Tester si les notions `D-H-L` ajoutent une information indépendante.
+  - réplication indépendante
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-008 — GARDER [P2]** — Tester si `Pacc` prédit les transitions observées.
+  - domaine des possibles / Pacc
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+- **B3-009 — VIRER** — Publier les domaines où le cadre reste descriptif.
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **B3-010 — GARDER [P1]** — Réserver le statut prédictif aux cas confirmés hors échantillon.
+  - confirmatoire/préenregistré
+  - Donnée cible : biology_cases
+  - Action : Acquérir/relier la donnée admissible : biology_cases.
+
+## R1
+
+- **R1-001 — GARDER [P3]** — Utiliser plusieurs espèces bactériennes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R1-002 — GARDER [P3]** — Utiliser plusieurs familles d’antibiotiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R1-003 — GARDER [P3]** — Inclure milieux riches, pauvres et structurés.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_design
+  - Action : Acquérir/relier la donnée admissible : antibiotic_design.
+- **R1-004 — GARDER [P3]** — Inclure populations planctoniques et biofilms.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_design
+  - Action : Acquérir/relier la donnée admissible : antibiotic_design.
+- **R1-005 — GARDER [P3]** — Prévoir au moins 12 à 24 lignées indépendantes par condition.
+  - réplication indépendante
+  - Action : Conserver ; ne promouvoir scientifiquement qu'avec criterion_id/seuil/verdict certifié.
+- **R1-006 — GARDER [P3]** — Randomiser les traitements.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_design
+  - Action : Acquérir/relier la donnée admissible : antibiotic_design.
+- **R1-007 — GARDER [P1]** — Aveugler l’analyse lorsque possible.
+  - confirmatoire/préenregistré
+  - Donnée cible : antibiotic_design
+  - Action : Acquérir/relier la donnée admissible : antibiotic_design.
+- **R1-008 — GARDER [P1]** — Préenregistrer les critères.
+  - confirmatoire/préenregistré
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R1-009 — GARDER [P3]** — Séparer résistance, tolérance et persistance.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Conserver ; ne promouvoir scientifiquement qu'avec criterion_id/seuil/verdict certifié.
+- **R1-010 — GARDER [P3]** — Suivre les coûts de fitness.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Conserver ; ne promouvoir scientifiquement qu'avec criterion_id/seuil/verdict certifié.
+
+## R2
+
+- **R2-001 — GARDER [P3]** — exposition constante
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+- **R2-002 — VIRER** — augmentation progressive
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-003 — VIRER** — diminution progressive
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-004 — VIRER** — impulsions courtes
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-005 — VIRER** — impulsions longues
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-006 — GARDER [P3]** — alternance de deux antibiotiques
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R2-007 — GARDER [P3]** — ordre A puis B
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+- **R2-008 — GARDER [P3]** — ordre B puis A
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+- **R2-009 — VIRER** — combinaison simultanée
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-010 — VIRER** — périodes sans antibiotique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-011 — VIRER** — stress environnemental avant antibiotique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-012 — VIRER** — stress après antibiotique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R2-013 — GARDER [P3]** — trajectoires aléatoires appariées
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+- **R2-014 — GARDER [P3]** — même dose cumulée avec ordres différents
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+- **R2-015 — GARDER [P2]** — même MIC finale obtenue par histoires différentes
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles.
+
+## R3
+
+- **R3-001 — GARDER [P3]** — MIC
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-002 — VIRER** — courbe dose-réponse
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-003 — VIRER** — temps de latence
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-004 — GARDER [P3]** — taux de croissance
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-005 — GARDER [P3]** — survie après choc
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-006 — GARDER [P3]** — fraction persistante
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-007 — GARDER [P3]** — fitness sans antibiotique
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R3-008 — GARDER [P3]** — mutations
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-009 — GARDER [P3]** — fréquences alléliques
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-010 — VIRER** — expression génique
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-011 — VIRER** — métabolisme
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-012 — VIRER** — morphologie
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-013 — VIRER** — hétérogénéité cellule par cellule
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R3-014 — GARDER [P3]** — stabilité après retrait
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R3-015 — GARDER [P3]** — transmissibilité aux descendants
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+
+## R4
+
+- **R4-001 — GARDER [P2]** — dépendance au chemin à état final égal
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-002 — GARDER [P3]** — hystérésis des seuils de résistance
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-003 — GARDER [P3]** — durée `D`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-004 — GARDER [P3]** — asymétrie `H`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-005 — GARDER [P3]** — pertes `L`
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-006 — GARDER [P3]** — changements d’état contre changements architecturaux
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-007 — GARDER [P3]** — modification du domaine de viabilité
+  - domaine des possibles / Pacc
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-008 — GARDER [P3]** — états devenus inaccessibles
+  - domaine des possibles / Pacc
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-009 — GARDER [P3]** — coût des chemins de retour
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-010 — GARDER [P1]** — ablation génétique des mécanismes candidats
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-011 — GARDER [P3]** — réversion ou remplacement d’allèles
+  - causalité / histoire / ablation
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-012 — GARDER [P3]** — transfert dans un fond génétique naïf
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-013 — GARDER [P2]** — témoin de complexité égale dans les modèles prédictifs
+  - contrôle anti-faux-positif
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-014 — GARDER [P3]** — prédiction de la prochaine mutation ou du prochain phénotype
+  - valeur prédictive
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+- **R4-015 — GARDER [P1]** — validation sur lignées masquées
+  - confirmatoire/préenregistré
+  - Donnée cible : antibiotic_cycles ; antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_cycles ; antibiotic_measurements.
+
+## R5
+
+- **R5-001 — VIRER** — modèles de fitness landscape
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-002 — VIRER** — chaînes de Markov
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-003 — VIRER** — modèles de population classiques
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-004 — VIRER** — apprentissage supervisé sans histoire
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-005 — VIRER** — modèles récurrents avec histoire
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-006 — VIRER** — modèles causaux dynamiques
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-007 — VIRER** — modèles de collateral sensitivity
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+- **R5-008 — VIRER** — modèles génétiques mécanistes
+  - inventaire de modèles concurrents : consolider sous le témoin de complexité égale
+
+## R6
+
+- **R6-001 — GARDER [P3]** — seconde espèce
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R6-002 — GARDER [P3]** — second antibiotique
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R6-003 — GARDER [P1]** — second laboratoire
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R6-004 — GARDER [P3]** — répétition à partir de stocks indépendants
+  - réplication indépendante
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **R6-005 — GARDER [P3]** — analyse bioinformatique indépendante
+  - réplication indépendante
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R6-006 — GARDER [P1]** — validation des mutations par reconstruction
+  - confirmatoire/préenregistré
+  - Donnée cible : antibiotic_measurements
+  - Action : Acquérir/relier la donnée admissible : antibiotic_measurements.
+- **R6-007 — VIRER** — dépôt des lignées et séquences
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **R6-008 — VIRER** — publication des trajectoires complètes
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+
+## T1
+
+- **T1-001 — VIRER** — transition de phase
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-002 — VIRER** — différenciation planétaire
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-003 — VIRER** — dynamique orbitale
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-004 — VIRER** — mémoire climatique
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-005 — VIRER** — protocellules
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-006 — VIRER** — évolution bactérienne
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-007 — VIRER** — masquer une partie de l’histoire
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-008 — VIRER** — masquer une partie des états futurs
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-009 — VIRER** — demander la reconstruction
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-010 — VIRER** — demander la prédiction
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-011 — VIRER** — demander la détection de seuil
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-012 — VIRER** — demander la détection de perte
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-013 — VIRER** — demander l’estimation de `Pacc`
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-014 — VIRER** — comparer ORI-C aux cadres concurrents
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-015 — VIRER** — mesurer performance et calibration
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+- **T1-016 — VIRER** — mesurer coût de données et complexité
+  - benchmark actuel non empirique : remplacer par cas réels avant réintégration
+
+## T2
+
+- **T2-001 — GARDER [P3]** — Tester les mêmes définitions dans les trois branches.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T2-002 — VIRER** — Mesurer les adaptations nécessaires.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **T2-003 — GARDER [P3]** — Identifier les notions réellement invariantes.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T2-004 — GARDER [P3]** — Identifier les notions seulement analogiques.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T2-005 — GARDER [P3]** — Retirer les notions qui ne produisent aucune mesure.
+  - causalité / histoire / ablation
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T2-006 — GARDER [P3]** — Vérifier qu’un résultat d’une branche ne modifie pas le statut d’une autre.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T2-007 — VIRER** — Tester la portabilité des schémas de données.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **T2-008 — VIRER** — Tester l’accord de codage entre disciplines.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **T2-009 — VIRER** — Faire auditer le langage par experts externes.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+- **T2-010 — VIRER** — Réviser le Codebook à partir des échecs.
+  - secondaire/redondant : intégrer comme sous-analyse d’un test fort
+
+## T3
+
+- **T3-001 — GARDER [P3]** — Définir au moins une prédiction nouvelle par branche.
+  - valeur prédictive
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-002 — GARDER [P3]** — Geler ces prédictions avant collecte des données.
+  - intégrité confirmatoire
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-003 — GARDER [P2]** — Fixer un témoin de complexité égale.
+  - contrôle anti-faux-positif
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-004 — GARDER [P3]** — Fixer un seuil d’amélioration minimal.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-005 — GARDER [P3]** — Utiliser des données jamais examinées.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-006 — GARDER [P3]** — Répliquer la prédiction.
+  - réplication indépendante
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-007 — GARDER [P3]** — Calculer la puissance statistique.
+  - contrôle anti-faux-positif
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-008 — GARDER [P3]** — Corriger les comparaisons multiples.
+  - contrôle anti-faux-positif
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T3-009 — GARDER [P3]** — Publier les échecs.
+  - mesure/contrôle nécessaire à une preuve forte
+  - Action : Exécuter humainement/laboratoire/externe sans modifier le critère.
+- **T3-010 — GARDER [P1]** — Refuser le statut prédictif sans réplication.
+  - confirmatoire/préenregistré
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+
+## T4
+
+- **T4-001 — VIRER** — Mesurer le nombre de concepts et paramètres nécessaires.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+- **T4-002 — VIRER** — Comparer à des descriptions disciplinaires séparées.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+- **T4-003 — VIRER** — Vérifier si ORI-C réduit la complexité sans perdre de précision.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+- **T4-004 — VIRER** — Mesurer les erreurs introduites par la compression.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+- **T4-005 — VIRER** — Faire évaluer la clarté par des lecteurs indépendants.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+- **T4-006 — VIRER** — Distinguer utilité pédagogique et valeur scientifique.
+  - compression/pédagogie : utilité possible, pas preuve du noyau scientifique
+
+## T5
+
+- **T5-001 — GARDER [P2]** — trouver des contre-exemples
+  - contrôle anti-faux-positif
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-002 — GARDER [P3]** — produire des codages alternatifs
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-003 — GARDER [P2]** — construire des témoins plus forts
+  - contrôle anti-faux-positif
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-004 — GARDER [P3]** — rechercher les fuites de données
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-005 — GARDER [P3]** — tester les choix de métriques
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-006 — GARDER [P3]** — chercher les hypothèses non identifiables
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-007 — GARDER [P3]** — reproduire les analyses depuis zéro
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-008 — GARDER [P3]** — proposer des expériences qui maximisent le risque de réfutation
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
+- **T5-009 — VIRER** — publier un rapport contradictoire
+  - préparation/documentation : nécessaire au travail, pas une preuve autonome
+- **T5-010 — GARDER [P3]** — intégrer les critiques sans changer rétroactivement les critères
+  - mesure/contrôle nécessaire à une preuve forte
+  - Donnée cible : benchmark_cases
+  - Action : Acquérir/relier la donnée admissible : benchmark_cases.
