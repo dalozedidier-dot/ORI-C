@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/audit-empirique-strict.yml",
-      "size": 5060,
-      "sha256": "89e8a6ff0e70d84460dd834bade2284fd136fe2c9af5a9adcaf698c16fecb261",
+      "size": 5232,
+      "sha256": "040a2f8e545a56ef9f5e242fc934477a845f4786842e90a8e24961bb22eba4a7",
       "storage": "inline"
     },
     {
@@ -6179,8 +6179,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/CERTIFICATIONS_SPECIALISEES.json",
-      "size": 3245,
-      "sha256": "3b00f0c8622082b4e41ebeff8bf5d0679d6737d5f5f5787a157eeea1ce4b91e2",
+      "size": 3343,
+      "sha256": "56dfd7ce4862111c90c7953f7f560fb6420be5e2a5e73772228c68667cee9db4",
       "storage": "inline"
     },
     {
@@ -6287,8 +6287,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py",
-      "size": 6294,
-      "sha256": "7b3a2d3dd8cf458b89f188d0904a255a777bf64a8518cf9539972955b7d2708d",
+      "size": 8181,
+      "sha256": "7894985b9ac6a0df1a4b165d346db11abe472143387c53f9902cd09e2b079684",
       "storage": "inline"
     },
     {
@@ -6875,8 +6875,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/tests/test_certifications_specialisees.py",
-      "size": 2161,
-      "sha256": "ee28e441b7bb2b380e5a55512163728da4491fbae243ab57d1fc5a5626e10d64",
+      "size": 3467,
+      "sha256": "cbec26df32b12e123bad9ff3fee38e899de356dd6b19d99e32376de3a7763073",
       "storage": "inline"
     },
     {

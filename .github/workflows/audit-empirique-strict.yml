@@ -96,6 +96,9 @@ jobs:
             --sortie-json plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.json \
             --sortie-md plateforme/campagne_maximale_reelle/resultats_empiriques/strict_683/PRIORITES_ACQUISITION_DONNEES.md
 
+      - name: Tester la couche de certification fail-closed
+        run: python -m pytest -q plateforme/campagne_maximale_reelle/tests/test_certifications_specialisees.py
+
       - name: Certifier les verdicts scientifiques des campagnes spécialisées
         run: |
           python plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py \

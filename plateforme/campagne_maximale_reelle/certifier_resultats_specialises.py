@@ -21,6 +21,8 @@ ICI = Path(__file__).resolve().parent
 RACINE = ICI.parents[1]
 CONFIG = ICI / "CERTIFICATIONS_SPECIALISEES.json"
 SORTIE = ICI / "RESULTATS_SCIENTIFIQUES_CERTIFIES.json"
+SCHEMA_ATTENDU = "oric.strict-specialized-certifications.v1"
+VERDICTS_ADMIS = {"supports", "does_not_support"}
 
 
 def sha256(chemin: Path) -> str:
@@ -86,33 +88,61 @@ def astronomie_c_ast_01(d: dict) -> tuple[str, dict]:
 
 
 EVALUATEURS = {
-    nom: objet for nom, objet in globals().copy().items()
-    if callable(objet) and nom in {
-        "donofrio_c_ant_01", "vesicules_c_ves_02", "vesicules_c_ves_03",
-        "matiere_c_mat_mem_05", "astronomie_c_ast_01",
-    }
+    "donofrio_c_ant_01": ("C-ANT-01", donofrio_c_ant_01),
+    "vesicules_c_ves_02": ("C-VES-02", vesicules_c_ves_02),
+    "vesicules_c_ves_03": ("C-VES-03", vesicules_c_ves_03),
+    "matiere_c_mat_mem_05": ("C-MAT-MEM-05", matiere_c_mat_mem_05),
+    "astronomie_c_ast_01": ("C-AST-01", astronomie_c_ast_01),
 }
 
 
 def certifier(config: dict) -> dict:
+    if config.get("schema") != SCHEMA_ATTENDU:
+        raise ValueError(f"schéma de certification inconnu : {config.get('schema')}")
     registre_path = RACINE / config["registre_criteres"]
+    empreinte_registre = sha256(registre_path)
+    if empreinte_registre != config.get("registre_criteres_sha256"):
+        raise ValueError("empreinte du registre de critères divergente")
     registre = json.loads(registre_path.read_text(encoding="utf-8"))
+    ids_registre = [c["id"] for c in registre["criteres"]]
+    if len(ids_registre) != len(set(ids_registre)):
+        raise ValueError("criterion_id dupliqué dans le registre")
     criteres = {c["id"]: c for c in registre["criteres"]}
     sorties = []
+    ids_certifies = [s["criterion_id"] for s in config["certifications"]]
+    if len(ids_certifies) != len(set(ids_certifies)):
+        raise ValueError("criterion_id certifié plusieurs fois")
     for specification in config["certifications"]:
         criterion_id = specification["criterion_id"]
         if criterion_id not in criteres:
             raise ValueError(f"criterion_id absent du registre : {criterion_id}")
+        evaluateur_nom = specification.get("evaluateur")
+        if evaluateur_nom not in EVALUATEURS:
+            raise ValueError(f"évaluateur inconnu : {evaluateur_nom}")
+        critere_evaluateur, evaluateur = EVALUATEURS[evaluateur_nom]
+        if criterion_id != critere_evaluateur:
+            raise ValueError(
+                f"évaluateur incompatible avec le critère : {evaluateur_nom} / "
+                f"{criterion_id}"
+            )
+        if specification.get("verdict_attendu") not in VERDICTS_ADMIS:
+            raise ValueError(f"verdict attendu invalide : {criterion_id}")
         artefact = RACINE / specification["artefact"]
         empreinte = sha256(artefact)
         if empreinte != specification["artefact_sha256"]:
             raise ValueError(f"empreinte artefact divergente : {criterion_id}")
         source = specification.get("source")
         if source:
+            if not specification.get("source_sha256"):
+                raise ValueError(f"empreinte source absente : {criterion_id}")
             source_path = RACINE / source
             if sha256(source_path) != specification["source_sha256"]:
                 raise ValueError(f"empreinte source divergente : {criterion_id}")
-        verdict, mesures = EVALUATEURS[specification["evaluateur"]](
+        elif specification.get("source_sha256") is not None:
+            raise ValueError(f"source absente mais empreinte déclarée : {criterion_id}")
+        elif not specification.get("limite_provenance"):
+            raise ValueError(f"source absente sans limite de provenance : {criterion_id}")
+        verdict, mesures = evaluateur(
             json.loads(artefact.read_text(encoding="utf-8"))
         )
         if verdict != specification["verdict_attendu"]:
@@ -140,7 +170,7 @@ def certifier(config: dict) -> dict:
             "couche scientifique certifiée associée à l'audit strict ; les 683 "
             "lignes génériques et leurs compteurs techniques restent inchangés"
         ),
-        "registre_criteres_sha256": sha256(registre_path),
+        "registre_criteres_sha256": empreinte_registre,
         "comptes": dict(sorted(comptes.items())),
         "resultats": sorties,
     }
