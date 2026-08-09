@@ -199,8 +199,9 @@ def main() -> int:
         "ignorees_faute_de_sources": [e["etape"] for e in etapes
                                       if e.get("sources_absentes")],
     }
-    sortie = DERIVE / "CAMPAGNE.json"
-    DERIVE.mkdir(exist_ok=True)
+    journal = DERIVE / "execution"
+    journal.mkdir(parents=True, exist_ok=True)
+    sortie = journal / "CAMPAGNE.json"
     with sortie.open("w", encoding="utf-8", newline="") as flux:
         flux.write(json.dumps(rapport, ensure_ascii=False, indent=2) + "\n")
     print(f"écrit : {sortie.relative_to(ICI.parents[1]).as_posix()}")

@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 10576,
-      "sha256": "fffd63f9bf7fa8e88851a521e947f9bc7bbf78c51766335e37c4173d476dc95b",
+      "size": 10584,
+      "sha256": "86f8765851593821ed988df1794d67a9b63f984641242ce58f94c27080ef18e8",
       "storage": "inline"
     },
     {
@@ -77,8 +77,8 @@
     },
     {
       "path": ".gitignore",
-      "size": 867,
-      "sha256": "68d1ddc0c0826e8ebf2fff4848b6835bbf193413b6f3e383fe924daa0da44fa6",
+      "size": 931,
+      "sha256": "77a32c6d8d541715695ea60f5756c3861f142f1ae61568b054b56d4e29615764",
       "storage": "inline"
     },
     {
@@ -1391,20 +1391,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/balayer_toutes_les_sources.py",
-      "size": 11661,
-      "sha256": "847fd86f1da4005fe210be97d75e43aa01f19d34dafcab1ce81f77758c46173b",
-      "storage": "inline"
-    },
-    {
-      "path": "01_branche_matiere/memoire_materielle_reelle/derive/BALAYAGE_TOUTES_SOURCES.json",
-      "size": 7086,
-      "sha256": "286c3364ff296cc269ffd2b634da0f282f73cd7150992a2ed5f72b6e59e50381",
-      "storage": "inline"
-    },
-    {
-      "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 4074,
-      "sha256": "14f5d8de4cdb9111cb4be5f049b4e17f6828da34884b9c0181a4246c4a16f764",
+      "size": 11712,
+      "sha256": "379783b643f66a1fe1bf1006ad04c2cd2371ca7544558563843a5811ecf6a4d5",
       "storage": "inline"
     },
     {
@@ -1613,8 +1601,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 9329,
-      "sha256": "a55ba2ae01d3679d8472702a506c8af8d5f3a74c6c1c5924da51d51c9a9e3521",
+      "size": 9380,
+      "sha256": "d7886dc3b91721532e960d21a4e3cbbe209cddb436a31c242604e1fce70037be",
       "storage": "inline"
     },
     {
@@ -7937,8 +7925,8 @@
     },
     {
       "path": "scripts/controle_avant_push.py",
-      "size": 8821,
-      "sha256": "c4ee7830487532b154dc1c35c0785cefe9e80670faab50f2a88427b1a1efced7",
+      "size": 10738,
+      "sha256": "ad8082decc502da821e1087e6d1b68a1a443df3a68b7c6429ffebb4347d0532b",
       "storage": "inline"
     },
     {

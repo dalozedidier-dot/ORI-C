@@ -151,7 +151,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Installer les dépendances
-        run: python -m pip install --upgrade pip numpy openpyxl
+        run: python -m pip install --upgrade pip numpy openpyxl rarfile
       - name: Rejouer la campagne sur les données versionnées
         working-directory: 01_branche_matiere/memoire_materielle_reelle
         run: python run_all.py --sans-verification

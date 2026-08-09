@@ -179,6 +179,48 @@ def executer(titre: str, commande: list[str]) -> bool:
     return reussi
 
 
+def simuler_la_ci() -> bool:
+    """Rejoue la campagne sur un clone nu et vérifie que rien ne bouge.
+
+    Un clone n'a ni les sources locales ni le cache : c'est exactement ce que
+    voit la CI. Trois échecs de suite venaient de la différence entre les deux.
+    """
+    import shutil
+    import tempfile
+
+    campagne = "01_branche_matiere/memoire_materielle_reelle"
+    if not (RACINE / campagne / "run_all.py").exists():
+        return True
+    with tempfile.TemporaryDirectory() as temporaire:
+        clone = Path(temporaire) / "clone"
+        fait = subprocess.run(["git", "clone", "--quiet", str(RACINE), str(clone)],
+                              capture_output=True, text=True)
+        if fait.returncode != 0:
+            print("  simulation de la CI      clonage impossible, contrôle sauté")
+            return True
+        execution = subprocess.run(
+            [sys.executable, "run_all.py", "--sans-verification"],
+            cwd=clone / campagne, capture_output=True, text=True,
+            encoding="utf-8", errors="replace")
+        modifies = subprocess.run(["git", "status", "--short", "--", f"{campagne}/derive"],
+                                  cwd=clone, capture_output=True, text=True,
+                                  encoding="utf-8").stdout.strip()
+        shutil.rmtree(clone, ignore_errors=True)
+
+    if execution.returncode != 0:
+        print(f"  simulation de la CI      ÉCHEC, run_all sort en {execution.returncode}")
+        for ligne in (execution.stdout or "").strip().splitlines()[-8:]:
+            print(f"      {ligne}")
+        return False
+    if modifies:
+        print("  simulation de la CI      ÉCHEC, la campagne modifie des fichiers versionnés")
+        for ligne in modifies.splitlines()[:6]:
+            print(f"      {ligne}")
+        return False
+    print("  simulation de la CI      conforme")
+    return True
+
+
 def main() -> int:
     analyseur = argparse.ArgumentParser(description=__doc__)
     analyseur.add_argument(
@@ -197,6 +239,8 @@ def main() -> int:
         executer("contenus du dépôt", [sys.executable, "verifier_dossier.py", *options]),
         executer("fins de ligne promises", [sys.executable, "scripts/verifier_fins_de_ligne.py"]),
     ]
+
+    reussites.append(simuler_la_ci())
 
     print()
     if anomalies:

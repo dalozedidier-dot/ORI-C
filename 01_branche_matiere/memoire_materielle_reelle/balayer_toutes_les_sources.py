@@ -252,8 +252,9 @@ def main() -> int:
     print(f"{len(soutiennent)} source(s) soutiennent, "
           f"{len(familles)} famille(s) : {', '.join(sorted(familles)) or 'aucune'}")
 
-    DERIVE.mkdir(exist_ok=True)
-    sortie = DERIVE / "BALAYAGE_TOUTES_SOURCES.json"
+    journal = DERIVE / "execution"
+    journal.mkdir(parents=True, exist_ok=True)
+    sortie = journal / "BALAYAGE_TOUTES_SOURCES.json"
     with sortie.open("w", encoding="utf-8", newline="") as flux:
         flux.write(json.dumps({
             "campagne": "WP-MAT-MEM-2026",
