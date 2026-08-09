@@ -12,21 +12,21 @@
       "etape": "extraction IODP",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.0,
+      "duree_s": 2.1,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 2.6,
+      "duree_s": 2.8,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 13.0,
+      "duree_s": 21.7,
       "obligatoire": true
     },
     {
@@ -47,14 +47,21 @@
       "etape": "recuit de traces de fission",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 3.2,
+      "duree_s": 3.5,
+      "obligatoire": true
+    },
+    {
+      "etape": "reconstruction de surface",
+      "code": 0,
+      "sources_absentes": false,
+      "duree_s": 2.8,
       "obligatoire": true
     },
     {
       "etape": "balayage des sources restantes",
       "code": 0,
       "sources_absentes": false,
-      "duree_s": 126.8,
+      "duree_s": 206.4,
       "obligatoire": true
     }
   ],
@@ -96,16 +103,24 @@
         "verdict": "soutient",
         "niveau_de_temoin": 6,
         "echantillons": 11
+      },
+      "reconstruction_de_surface": {
+        "jeu": "fischer_tropsch",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "soutient",
+        "niveau_de_temoin": 5,
+        "echantillons": 14
       }
     },
     "familles_soutenantes": [
       "magnetisme",
       "plasticite",
       "verre_relaxation",
-      "traces_de_fission"
+      "traces_de_fission",
+      "reconstruction_de_surface"
     ],
     "verdict": "soutient",
-    "motif": "4 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation, traces_de_fission"
+    "motif": "5 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation, traces_de_fission, reconstruction_de_surface"
   },
   "echecs": [],
   "ignorees_faute_de_sources": []

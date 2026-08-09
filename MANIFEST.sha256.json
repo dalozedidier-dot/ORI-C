@@ -77,8 +77,8 @@
     },
     {
       "path": ".gitignore",
-      "size": 929,
-      "sha256": "80610456de060bc9e0ac925bc0ef68a30d24634291391905c35943956a1c241d",
+      "size": 867,
+      "sha256": "68d1ddc0c0826e8ebf2fff4848b6835bbf193413b6f3e383fe924daa0da44fa6",
       "storage": "inline"
     },
     {
@@ -1403,8 +1403,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 3110,
-      "sha256": "4ab4d36035187fb47d9970daf1e86889d66939675320c8b7ddd1953a0d78a6b7",
+      "size": 3542,
+      "sha256": "bc5d41dd9f928b1aa5c1dacf046c2b4f666bb15448170da2ed41b3ed48be60e1",
       "storage": "inline"
     },
     {
@@ -1423,6 +1423,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_C_MAT_MEM_03.json",
       "size": 3475,
       "sha256": "2ce51f9d10e0154dc70bed5c1a2bf8e307af1869213ea1a6a3d2df9a5aee09e7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_SURFACE.json",
+      "size": 580,
+      "sha256": "16bb67f3b2e45e97a64d32413c4baf8c35b5274a06f7c7866ed0559f3cf69d80",
       "storage": "inline"
     },
     {
@@ -1453,6 +1459,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/medium_mn_par_eprouvette.csv",
       "size": 1119,
       "sha256": "ef5beba42d993cd8591db4441ab0367826e814afc21817a9d80ee1c6f99f24f5",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/surface_fischer_tropsch.csv",
+      "size": 1021,
+      "sha256": "4b209d6dd2f2c7e28179a255cd3fb9cf02f113842f0a0718a9cd86a4b4939899",
       "storage": "inline"
     },
     {
@@ -1492,6 +1504,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/fischer_tropsch.zip",
+      "size": 1143251,
+      "sha256": "fb9fa339a6436274a6eb59fbda3d5e17740cb07257c41fb42065b463a5113595",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/donnees/sources/medium_mn_a.zip",
       "size": 3670275,
       "sha256": "d88a690628c8c54cc43ab06691a4a8b46b67bdb0c5ab138c3fe90dad1fcb3b2e",
@@ -1511,14 +1529,20 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/donnees_campagne.py",
-      "size": 1768,
-      "sha256": "fec683d4a53502318233cc49393f7ea18889ff8a2ff2d54cec1ab57066531e83",
+      "size": 1979,
+      "sha256": "3ef7d4fdeee51aa38c3ebcc4130fa2a8100643713834784dd7f347d54796dd8a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
       "size": 10939,
       "sha256": "aa97f3cd7ef9fe9118d14506fc30477b5d069e7c676b54d87c3a4a2983948dc9",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_surface.py",
+      "size": 9453,
+      "sha256": "7bf89d403e359836cd17c63741ac5d2add0917a292a0597111b59a8e3f3d6428",
       "storage": "inline"
     },
     {
@@ -1559,8 +1583,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 7840,
-      "sha256": "c3804917c731d3cf236a6fbb499cc8017cc4399bbebe58484c328cb43629fd33",
+      "size": 8141,
+      "sha256": "9b5cef357fad7ac1ef92a2fcca5958252473895a340cd03d8e29eb2a70a61807",
       "storage": "inline"
     },
     {
