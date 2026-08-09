@@ -64,8 +64,9 @@ def main() -> int:
     dossier = racine / "traces_fission_zircon" / "exploitable"
     tables = list(dossier.rglob("*.csv"))
     if not tables:
-        print("Source non installée.")
-        return 2
+        print(f"source absente : {dossier}")
+        print("Résultats commités laissés intacts.")
+        return 1
 
     par_condition: dict[tuple[float, float], list[float]] = defaultdict(list)
     for table in tables:

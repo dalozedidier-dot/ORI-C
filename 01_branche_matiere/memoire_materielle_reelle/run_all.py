@@ -25,17 +25,25 @@ def executer(titre: str, arguments: list[str], obligatoire: bool = True) -> dict
                               capture_output=True, text=True, encoding="utf-8",
                               errors="replace")
     duree = time.monotonic() - debut
-    sortie = (resultat.stdout or "").strip().splitlines()
+    texte = resultat.stdout or ""
+    sortie = texte.strip().splitlines()
     for ligne in sortie[-6:]:
         print(f"     {ligne}")
-    etat = "ok" if resultat.returncode == 0 else "ÉCHEC"
+    # Une source absente n'est pas un échec : les résultats commités restent
+    # valides et l'extracteur a refusé de les écraser.
+    ignore = "Résultats commités laissés intacts" in texte
+    if ignore:
+        etat = "ignoré, sources absentes"
+    else:
+        etat = "ok" if resultat.returncode == 0 else "ÉCHEC"
     print(f"     {etat} en {duree:.1f} s")
-    if resultat.returncode != 0:
+    if resultat.returncode != 0 and not ignore:
         for ligne in (resultat.stderr or "").strip().splitlines()[-5:]:
             print(f"     {ligne}")
     print()
-    return {"etape": titre, "code": resultat.returncode, "duree_s": round(duree, 1),
-            "obligatoire": obligatoire}
+    return {"etape": titre, "code": 0 if ignore else resultat.returncode,
+            "sources_absentes": ignore,
+            "duree_s": round(duree, 1), "obligatoire": obligatoire}
 
 
 def synthese_transversale() -> dict:
@@ -133,7 +141,7 @@ def main() -> int:
             return 1
 
     etapes.append(executer("extraction IODP", ["extraire_iodp.py"]))
-    if etapes[-1]["code"] != 0:
+    if etapes[-1]["code"] != 0 and not etapes[-1]["sources_absentes"]:
         print("Extraction ratée. Aucun test ne sera exécuté sur des données "
               "incomplètes.")
         return 1
@@ -164,6 +172,8 @@ def main() -> int:
         "etapes": etapes,
         "transversalite": transversal,
         "echecs": [e["etape"] for e in etapes if e["code"] != 0],
+        "ignorees_faute_de_sources": [e["etape"] for e in etapes
+                                      if e.get("sources_absentes")],
     }
     sortie = DERIVE / "CAMPAGNE.json"
     DERIVE.mkdir(exist_ok=True)

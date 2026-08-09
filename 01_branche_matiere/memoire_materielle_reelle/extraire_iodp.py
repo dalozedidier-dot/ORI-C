@@ -99,6 +99,12 @@ def main() -> int:
     racine = (ICI / config["racine_locale"]).resolve()
     cles = [s["cle"] for s in config["sources"] if s["cle"].startswith("iodp_")]
 
+    presentes = [c for c in cles if (racine / c / "exploitable").is_dir()]
+    if not presentes:
+        print(f"aucune source IODP sous {racine}")
+        print("Résultats commités laissés intacts.")
+        return 1
+
     toutes: list[dict] = []
     for cle in cles:
         lignes = extraire_source(cle, racine)

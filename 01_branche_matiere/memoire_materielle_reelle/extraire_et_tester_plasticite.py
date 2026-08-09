@@ -147,6 +147,14 @@ def extraire_medium_mn(racine: Path) -> list[dict]:
 def main() -> int:
     config = json.loads(SOURCES.read_text(encoding="utf-8"))
     racine = (ICI / config["racine_locale"]).resolve()
+    attendues = [racine / "fabest_lcf" / "exploitable",
+                 racine / "medium_mn_a" / "exploitable"]
+    absentes = [d for d in attendues if not d.is_dir()]
+    if absentes:
+        for dossier in absentes:
+            print(f"source absente : {dossier}")
+        print("Résultats commités laissés intacts.")
+        return 1
     DERIVE.mkdir(exist_ok=True)
     aleatoire = np.random.default_rng(GRAINE)
     rapports = {}

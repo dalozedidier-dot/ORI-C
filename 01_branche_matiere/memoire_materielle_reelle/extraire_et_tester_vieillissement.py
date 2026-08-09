@@ -104,8 +104,9 @@ def main() -> int:
     racine = (ICI / config["racine_locale"]).resolve()
     dossier = racine / "recuit_thermique_polymere" / "exploitable"
     if not dossier.is_dir():
-        print("Source non installée.")
-        return 2
+        print(f"source absente : {dossier}")
+        print("Résultats commités laissés intacts.")
+        return 1
 
     echantillons = []
     for chemin in sorted(dossier.glob("DSC_OOT_*")):
