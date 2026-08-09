@@ -79,6 +79,17 @@ def synthese_transversale() -> dict:
             "echantillons": r["echantillons"],
         }
 
+    for fichier, niveau in ((DERIVE / "RESULTAT_TRACES_FISSION.json", 6),):
+        if fichier.exists():
+            r = json.loads(fichier.read_text(encoding="utf-8"))
+            familles[r["famille"]] = {
+                "jeu": r["jeu"],
+                "critere_decisif": r.get("ablation", "dose d'histoire"),
+                "verdict": r["verdict"],
+                "niveau_de_temoin": niveau,
+                "echantillons": r.get("conditions", 0),
+            }
+
     soutenues = [f for f, b in familles.items() if b["verdict"] == "soutient"]
     verdict = "soutient" if len(soutenues) >= 3 else "ne_soutient_pas"
     return {
@@ -134,6 +145,10 @@ def main() -> int:
                            ["extraire_et_tester_plasticite.py"]))
     etapes.append(executer("vieillissement thermique de polymères",
                            ["extraire_et_tester_vieillissement.py"]))
+    etapes.append(executer("recuit de traces de fission",
+                           ["extraire_et_tester_traces_fission.py"]))
+    etapes.append(executer("balayage des sources restantes",
+                           ["balayer_toutes_les_sources.py"]))
 
     transversal = synthese_transversale()
     print("── C-MAT-MEM-05, transversalité")

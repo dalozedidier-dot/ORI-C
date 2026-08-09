@@ -1,0 +1,20 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "famille": "traces_de_fission",
+  "jeu": "zircon ZAD, recuit thermique de traces de fission induites",
+  "plan": "3 durées x températures de 500 à 775 °C, 12 conditions",
+  "ablation": "recuit thermique, dose = température à durée constante",
+  "trace": "longueur moyenne de trace",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 20000,
+  "traces_mesurees": 1327,
+  "conditions": 11,
+  "strates_exploitables": 3,
+  "rho_stratifie": -0.7999999999999999,
+  "p_permutation": 0.025298735063246838,
+  "temoin": "permutation des températures dans chaque strate de durée",
+  "verdict": "soutient",
+  "motif": "la longueur de trace décroît avec la température de recuit à durée constante ; la permutation des températures dans chaque strate annule l'effet",
+  "statut_epistemique": "mesures d'instrument sur échantillons physiques"
+}

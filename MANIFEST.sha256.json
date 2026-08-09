@@ -1397,14 +1397,14 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/BALAYAGE_TOUTES_SOURCES.json",
-      "size": 7107,
-      "sha256": "65c4044a6a68f56b3decae08b32d2b1c0e791d771c819fd21ddf5c91f4992c2e",
+      "size": 7662,
+      "sha256": "0ad749b2a94d3a344d3289317538114d75736972da90fdf75dec0932e64ac757",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/CAMPAGNE.json",
-      "size": 2220,
-      "sha256": "15d43f4d45a7d70e39637914a27c189f1bb6784835046526ca1e595c5f738094",
+      "size": 2811,
+      "sha256": "a0ac69d5c612558ba407dd384a34e2377807f3c0339e25592d2f863a1e66f7f6",
       "storage": "inline"
     },
     {
@@ -1423,6 +1423,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_C_MAT_MEM_03.json",
       "size": 3475,
       "sha256": "2ce51f9d10e0154dc70bed5c1a2bf8e307af1869213ea1a6a3d2df9a5aee09e7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_TRACES_FISSION.json",
+      "size": 884,
+      "sha256": "d0db134589aa28c54a3e6fb017c4e52d5bf293b903f9afba560a2b2810c5b9e5",
       "storage": "inline"
     },
     {
@@ -1450,6 +1456,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/traces_fission_par_condition.csv",
+      "size": 1125,
+      "sha256": "2901b2cdda81116675e2656acac4519bbd7574e1725cb3a4dee5399af1c7cd3e",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/vieillissement_polymere_par_echantillon.csv",
       "size": 5858,
       "sha256": "8fd5ec1246ce46553f87a4d25ff1f8803fd04eb523cc6548eaf3cf5a3a29caa3",
@@ -1459,6 +1471,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
       "size": 10596,
       "sha256": "bc75e3b73ab066af3d3ebec6e851a41406b81d82dea5fbe50a7e1073ac37c249",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_traces_fission.py",
+      "size": 7209,
+      "sha256": "9cda99cfe3219634750cbfba137745f9edd2b0152bc3442ed0531608d5f50a3e",
       "storage": "inline"
     },
     {
@@ -1493,8 +1511,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 6586,
-      "sha256": "18230abd3ef5044124371e2a2b939ce8117a9a5fe713d4bc0f6143c72736439e",
+      "size": 7308,
+      "sha256": "6b287faa855af59f27caa54e9d607970467aec5e325dd853b04aeb725c93eed9",
       "storage": "inline"
     },
     {

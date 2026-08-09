@@ -10,19 +10,19 @@
     {
       "etape": "extraction IODP",
       "code": 0,
-      "duree_s": 2.1,
+      "duree_s": 1.6,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-03, ablation physique",
       "code": 0,
-      "duree_s": 2.7,
+      "duree_s": 2.6,
       "obligatoire": true
     },
     {
       "etape": "C-MAT-MEM-01, 02 et 04",
       "code": 0,
-      "duree_s": 13.5,
+      "duree_s": 13.0,
       "obligatoire": true
     },
     {
@@ -35,6 +35,18 @@
       "etape": "vieillissement thermique de polymères",
       "code": 0,
       "duree_s": 0.2,
+      "obligatoire": true
+    },
+    {
+      "etape": "recuit de traces de fission",
+      "code": 0,
+      "duree_s": 3.1,
+      "obligatoire": true
+    },
+    {
+      "etape": "balayage des sources restantes",
+      "code": 0,
+      "duree_s": 128.4,
       "obligatoire": true
     }
   ],
@@ -69,15 +81,23 @@
         "verdict": "soutient",
         "niveau_de_temoin": 6,
         "echantillons": 63
+      },
+      "traces_de_fission": {
+        "jeu": "zircon ZAD, recuit thermique de traces de fission induites",
+        "critere_decisif": "recuit thermique, dose = température à durée constante",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 11
       }
     },
     "familles_soutenantes": [
       "magnetisme",
       "plasticite",
-      "verre_relaxation"
+      "verre_relaxation",
+      "traces_de_fission"
     ],
     "verdict": "soutient",
-    "motif": "3 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation"
+    "motif": "4 famille(s) sur les 3 exigées : magnetisme, plasticite, verre_relaxation, traces_de_fission"
   },
   "echecs": []
 }
