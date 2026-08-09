@@ -10,6 +10,7 @@ et la permutation des doses dans chaque échantillon.
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import math
 from collections import defaultdict
@@ -21,9 +22,11 @@ ICI = Path(__file__).resolve().parent
 # La table par mesure vit hors dépôt : 18,8 Mo n'ont rien à faire dans Git. Elle
 # se régénère par `extraire_iodp.py` depuis les sources, dont la provenance est
 # inscrite. Seule la table par échantillon, 709 ko, est versionnée.
+VERSIONNEE = ICI / "donnees" / "iodp_remanence_par_mesure.csv.gz"
 RACINE_LOCALE = (ICI / json.loads(
     (ICI / "SOURCES.json").read_text(encoding="utf-8"))["racine_locale"]).resolve()
-TABLE = RACINE_LOCALE / "derive_local" / "iodp_remanence_par_mesure.csv"
+LOCALE = RACINE_LOCALE / "derive_local" / "iodp_remanence_par_mesure.csv"
+TABLE = VERSIONNEE if VERSIONNEE.exists() else LOCALE
 SORTIE = ICI / "derive" / "RESULTAT_C_MAT_MEM_03.json"
 
 ALPHA = 0.05
@@ -122,8 +125,11 @@ def main() -> int:
         print("Exécuter extraire_iodp.py.")
         return 2
 
+    ouvrir = (lambda: gzip.open(TABLE, "rt", encoding="utf-8", newline="")
+              if TABLE.suffix == ".gz"
+              else TABLE.open(encoding="utf-8", newline=""))
     mesures = []
-    with TABLE.open(encoding="utf-8", newline="") as flux:
+    with ouvrir() as flux:
         for ligne in csv.DictReader(flux):
             mesures.append({
                 "cle": f"{ligne['source']}|{ligne['physical_sample_id']}",

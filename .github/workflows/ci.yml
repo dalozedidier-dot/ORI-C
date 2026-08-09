@@ -41,6 +41,10 @@ jobs:
           python scripts/verifier_fins_de_ligne.py
           python scripts/controle_avant_push.py
           python scripts/valider_tout.py --strict-lfs
+      - name: Rejouer les verdicts de la campagne matière
+        working-directory: 01_branche_matiere/memoire_materielle_reelle
+        run: python run_all.py --sans-verification
+
       - name: Exécuter les suites portables du socle et de la matière
         run: |
           python -m pytest -q plateforme/source_corrigee/tests

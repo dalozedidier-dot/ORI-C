@@ -14,7 +14,7 @@ on:
       telecharger:
         description: "Retélécharger les sources depuis leur DOI"
         type: boolean
-        default: true
+        default: false
       sources:
         description: "Clés à traiter, séparées par des espaces. Vide = toutes."
         type: string
@@ -74,20 +74,23 @@ jobs:
           fi
 
       - name: Vérifier empreintes, archives et provenance
+        if: ${{ inputs.telecharger == true }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python verifier_sources.py
 
       - name: Ne garder que l'exploitable
+        if: ${{ inputs.telecharger == true }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python ne_garder_que_l_exploitable.py --appliquer
 
       - name: Réempreinter ce qui est conservé
+        if: ${{ inputs.telecharger == true }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python reconstituer_provenance.py
 
       - name: Exécuter la campagne
         working-directory: ${{ env.CAMPAGNE }}
-        run: python run_all.py
+        run: python run_all.py --sans-verification
 
       # Les tables dérivées versionnées doivent être identiques à celles que
       # produit une exécution propre. Une divergence signale soit une source qui

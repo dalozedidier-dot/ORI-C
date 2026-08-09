@@ -47,14 +47,14 @@
     },
     {
       "path": ".github/workflows/campagne-matiere.yml",
-      "size": 3896,
-      "sha256": "abcbb7f0fa74ad70def05cc084e4049f73e4aa6f66d3509a526f9e90f1ab2701",
+      "size": 4055,
+      "sha256": "e4bf50f505750f49288558dae03f945a16021828026690f6a32fcd839b356aa9",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 9452,
-      "sha256": "1b40659e33a172e33947c75532bc5ead179172ffe58f184f6bf7a93525df2866",
+      "size": 9635,
+      "sha256": "4d5aac719877a6a56d6635a0977c3f8e2ad35ace8bf793da82cb37c93ed3f1db",
       "storage": "inline"
     },
     {
@@ -1468,6 +1468,24 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/DONNEES.md",
+      "size": 3195,
+      "sha256": "9443f72fa80de944a25e888659a5069e0c43d2d8286c76c54ef76f94bfb981c7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/PROVENANCE.json",
+      "size": 1291089,
+      "sha256": "888dd10559d8954546e8471f348ec86baf111953e07e926cfd4d372bd34dcb91",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/donnees/iodp_remanence_par_mesure.csv.gz",
+      "size": 1593411,
+      "sha256": "ef1bdb07bbed2531a83ce69a844460603e3698a734a828158ff793f9802c3269",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/extraire_et_tester_plasticite.py",
       "size": 10596,
       "sha256": "bc75e3b73ab066af3d3ebec6e851a41406b81d82dea5fbe50a7e1073ac37c249",
@@ -1523,8 +1541,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_ablation_iodp.py",
-      "size": 9434,
-      "sha256": "a8bddf83ba4c8fd633223d5e29c4d1a356298074a601b30ac1da5c3ffa4b9ccd",
+      "size": 9710,
+      "sha256": "8151a8c93e7fb092ba96770fec6a866743f5b5a1667e09518018f6151b81eb09",
       "storage": "inline"
     },
     {
