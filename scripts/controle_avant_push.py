@@ -20,7 +20,9 @@ Ce script ferme cet angle mort. Il vérifie, dans l'ordre :
 2. que les contenus correspondent, via `verifier_dossier.py` ;
 3. qu'aucun fichier promis en LF n'est écrit en CRLF, via
    `scripts/verifier_fins_de_ligne.py` — sans quoi le contrôle passe en local et
-   échoue après le clonage.
+   échoue après le clonage ;
+4. que la campagne matière rejouée sur un clone réel, dans les conditions d'un
+   runner, redonne exactement les fichiers versionnés.
 
 Sortie 0 si le push peut partir, 1 sinon.
 
@@ -180,11 +182,14 @@ def executer(titre: str, commande: list[str]) -> bool:
     return reussi
 
 
-def simuler_la_ci() -> bool:
-    """Rejoue la campagne sur un clone nu et vérifie que rien ne bouge.
+def repeter_sur_un_clone_reel() -> bool:
+    """Rejoue la campagne sur un clone du dépôt et vérifie que rien ne bouge.
 
-    Un clone n'a ni les sources locales ni le cache : c'est exactement ce que
-    voit la CI. Trois échecs de suite venaient de la différence entre les deux.
+    Rien n'est simulé ici : le clone est réel, les données sont celles qui sont
+    commitées, et `run_all.py` est le même script qu'ailleurs. Seules les
+    conditions du runner sont reproduites — pointeurs LFS non hydratés au
+    clonage, puis `git lfs pull` — parce que c'est là que se logeaient les
+    échecs invisibles depuis une machine où LFS est toujours hydraté.
     """
     import shutil
     import tempfile
@@ -206,7 +211,7 @@ def simuler_la_ci() -> bool:
         fait = subprocess.run(["git", "clone", "--quiet", str(RACINE), str(clone)],
                               capture_output=True, text=True, env=environnement)
         if fait.returncode != 0:
-            print("  simulation de la CI      clonage impossible, contrôle sauté")
+            print("  répétition sur clone   clonage impossible, contrôle sauté")
             return True
         # La CI hydre LFS avant de lire les données. Le clone ci-dessus les a
         # laissées en pointeurs pour vérifier que le workflow le fait bien ;
@@ -214,7 +219,7 @@ def simuler_la_ci() -> bool:
         hydrate = subprocess.run(["git", "lfs", "pull"], cwd=clone,
                                  capture_output=True, text=True)
         if hydrate.returncode != 0:
-            print("  simulation de la CI      git lfs pull impossible, contrôle sauté")
+            print("  répétition sur clone   git lfs pull impossible, contrôle sauté")
             return True
         execution = subprocess.run(
             [sys.executable, "run_all.py", "--sans-verification"],
@@ -226,16 +231,16 @@ def simuler_la_ci() -> bool:
         shutil.rmtree(clone, ignore_errors=True)
 
     if execution.returncode != 0:
-        print(f"  simulation de la CI      ÉCHEC, run_all sort en {execution.returncode}")
+        print(f"  répétition sur clone   ÉCHEC, run_all sort en {execution.returncode}")
         for ligne in (execution.stdout or "").strip().splitlines()[-8:]:
             print(f"      {ligne}")
         return False
     if modifies:
-        print("  simulation de la CI      ÉCHEC, la campagne modifie des fichiers versionnés")
+        print("  répétition sur clone   ÉCHEC, la campagne modifie des fichiers versionnés")
         for ligne in modifies.splitlines()[:6]:
             print(f"      {ligne}")
         return False
-    print("  simulation de la CI      conforme")
+    print("  répétition sur clone   conforme")
     return True
 
 
@@ -258,7 +263,7 @@ def main() -> int:
         executer("fins de ligne promises", [sys.executable, "scripts/verifier_fins_de_ligne.py"]),
     ]
 
-    reussites.append(simuler_la_ci())
+    reussites.append(repeter_sur_un_clone_reel())
 
     print()
     if anomalies:
