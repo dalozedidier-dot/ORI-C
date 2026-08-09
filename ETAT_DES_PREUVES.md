@@ -417,7 +417,8 @@ Détail : `couche_memoire_historique/results_stress/tests_reels/`
 | Périodes de Milankovitch sur La2004 | 404,77 / 40,22 / 18,79 ka | **contrôle positif**, ne soutient aucune hypothèse |
 | Horizon de divergence chaotique La2010 | 2,02 × 10⁻⁴ sur 0–2,6 Ma ; 1 % à 6,9 Ma | **Établi** |
 | AUC de liens masqués sur la carte | 0,4938, indépendant du dossier | confirme le résultat négatif du socle |
-| Hypothèses confirmatoires de la campagne plateforme des 683 entrées | **aucune** | compteur propre à cette campagne d’intégration, sans effacer les verdicts ciblés des autres protocoles |
+| Matrice générique des 683 tests possibles | **aucun soutien dans ses propres lignes** | compteur technique et diagnostic de couverture |
+| Couche stricte de certifications spécialisées | **4 `supports`, 1 `does_not_support`** | `C-ANT-01`, `C-VES-02`, `C-VES-03`, `C-AST-01` et `C-MAT-MEM-05`, reliés par empreinte au registre de critères |
 
 Les compteurs 235/370 conservés dans `plan_directeur/campagne_plateforme/README.md`
 appartiennent à une campagne historique. Le bilan actuel est

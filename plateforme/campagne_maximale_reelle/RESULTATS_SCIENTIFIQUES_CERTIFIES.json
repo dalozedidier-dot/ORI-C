@@ -1,0 +1,98 @@
+{
+  "schema": "oric.strict-specialized-certifications.v1",
+  "integration": "couche scientifique certifiée associée à l'audit strict ; les 683 lignes génériques et leurs compteurs techniques restent inchangés",
+  "registre_criteres_sha256": "2844c18695f7657096dc275229685e22278bf7ca0fbdad3f3e7bdcee2a7ea6e8",
+  "comptes": {
+    "does_not_support": 1,
+    "supports": 4
+  },
+  "resultats": [
+    {
+      "criterion_id": "C-ANT-01",
+      "verdict": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "enonce": "RMSE(etat+histoire) inferieure a RMSE(etat seul) ET a RMSE(histoire permutee de meme complexite), p<0,01.",
+      "artefact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "artefact_sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "source": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
+      "source_sha256": "44910659200ba2a899b210402523ce68fa21f6cbf1a27c537bea92184b267172",
+      "limite_provenance": null,
+      "mesures": {
+        "rmse_etat": 1.13089812488,
+        "rmse_etat_histoire": 0.8042295741181,
+        "rmse_histoire_permutee": 1.141486951118,
+        "p_permutation": 0.004975124378109
+      }
+    },
+    {
+      "criterion_id": "C-VES-02",
+      "verdict": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "enonce": "Pente de regression parent vers descendant significativement positive et superieure au temoin de melange aleatoire.",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "artefact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636",
+      "limite_provenance": null,
+      "mesures": {
+        "observed_parent_offspring_r": 0.7642621398381,
+        "null_mean_r": 0.7466668339765,
+        "permutation_p_one_sided": 0.0004997501249375,
+        "permutations": 2000
+      }
+    },
+    {
+      "criterion_id": "C-VES-03",
+      "verdict": "supports",
+      "niveau_preuve": "E4",
+      "portee": "empirique_externe",
+      "enonce": "Le gain de selection chute significativement quand le transfert de vesicules intactes est empeche.",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "artefact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636",
+      "limite_provenance": null,
+      "mesures": {
+        "reponse_selection_FR": 0.05441770833333,
+        "contraste_ablation": 0.04600191818548,
+        "FR_depasse_ablation": true
+      }
+    },
+    {
+      "criterion_id": "C-MAT-MEM-05",
+      "verdict": "does_not_support",
+      "niveau_preuve": null,
+      "portee": "campagne_empirique_partielle_sans_admission_complete",
+      "enonce": "Le schema histoire vers trace persistante vers reponse modifiee est soutenu independamment dans au moins trois familles physiques distinctes, a mecanismes materiels differents.",
+      "artefact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
+      "artefact_sha256": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
+      "source": null,
+      "source_sha256": null,
+      "limite_provenance": "certaines extractions primaires restent absentes de la CI ; le verdict transversal est reproductible depuis les tables dérivées versionnées",
+      "mesures": {
+        "familles_completes": 0,
+        "minimum": 3,
+        "verdict_campagne": "ne_soutient_pas"
+      }
+    },
+    {
+      "criterion_id": "C-AST-01",
+      "verdict": "supports",
+      "niveau_preuve": "E4_modele",
+      "portee": "modele_physique_reduit_valide",
+      "enonce": "Effet interventionnel minimal superieur ou egal a 1000 fois les ecarts numeriques et au moins 12 criteres sur 15 reussis.",
+      "artefact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+      "artefact_sha256": "7b4e433524321005b2aabe9a593330cdd1ded1a7a72e29d61e0a8a224a2561f8",
+      "source": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
+      "source_sha256": "6b891e059829b6c90abffab3c85134e9b19c2f3f7f1fc6cad5b2d66f9098d259",
+      "limite_provenance": null,
+      "mesures": {
+        "criteres_passes": 13,
+        "criteres_total": 15,
+        "ratio_minimal_intervention_bruit_numerique": 4964.415695208393
+      }
+    }
+  ]
+}

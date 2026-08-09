@@ -1,0 +1,32 @@
+{
+  "schema": "oric.paleo-history-01.data.v1",
+  "intervalle_primaire_ka": [0, 800],
+  "jeux_obligatoires": [
+    "LR04",
+    "pile_benthique_independante",
+    "proxy_niveau_marin_independant",
+    "EPICA_temperature",
+    "EPICA_CO2",
+    "EPICA_poussieres",
+    "Vostok",
+    "insolation_convention_1",
+    "insolation_convention_2"
+  ],
+  "champs_communs": [
+    "dataset_id",
+    "source_id",
+    "age_ka_bp",
+    "age_uncertainty_ka",
+    "proxy_name",
+    "proxy_value",
+    "proxy_unit",
+    "quality_flag",
+    "sha256_source"
+  ],
+  "interdictions": [
+    "chronologie sans incertitude ou justification explicite",
+    "interpolation du bloc test utilisant sa cible future",
+    "remplacement d'une mesure absente par une sortie de modèle",
+    "sélection d'un horizon après observation des scores"
+  ]
+}

@@ -1,5 +1,10 @@
 # Autorité des documents
 
+L'échelle transversale de force des résultats est définie dans
+[`00_socle/ECHELLE_PREUVE_E0_E6.md`](00_socle/ECHELLE_PREUVE_E0_E6.md). Elle ne
+remplace ni les critères gelés ni leurs verdicts ; elle indique les contrôles
+effectivement franchis.
+
 Quand deux fichiers se contredisent, celui-ci tranche.
 
 ## Document principal
