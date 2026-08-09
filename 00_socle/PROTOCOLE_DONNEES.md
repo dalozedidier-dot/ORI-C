@@ -44,7 +44,7 @@ Histoire → Architecture → Contraintes → Réponse → Inscription → Possi
 | Seuil | valeur à laquelle le régime change |
 | Inscription | modification persistante **après retrait** de la contrainte |
 | État final | architecture après stabilisation |
-| Possibilités futures | domaines `P^adm`, `P^att`, `P^kin`, `P^pers` et réalisation `R` |
+| Possibilités futures | domaines `P^adm`, `P^att`, `P^kin`, `P^pers` et réalisation `Réal` |
 
 La vitesse de variation et le retrait de la contrainte sont les deux colonnes
 le plus souvent omises. Sans la première, un seuil n'est pas défini ; sans la
@@ -128,14 +128,14 @@ C'est celle qui manquait à la carte relationnelle.
 Le test transversal de mémoire compare deux unités `A` et `B` telles que
 `S_t,macro^A ≃ S_t,macro^B`, tout en mesurant une différence de trace à une
 échelle plus fine, `m_t,micro^A ≠ m_t,micro^B`. Sous un stimulus final commun,
-la prédiction ORI-C testable est `R_t+1^A ≠ R_t+1^B`. L'appariement
+la prédiction ORI-C testable est `Réal_t+1^A ≠ Réal_t+1^B`. L'appariement
 macroscopique, la mesure microscopique et l'identité du stimulus doivent être
 publiés séparément.
 
 L'ablation renforce l'inférence causale : si l'opération physique met la trace
 pertinente à zéro, la différence de réponse doit disparaître dans la tolérance
 préenregistrée. Il faut tester les deux flèches `H_t → m_t^ℓ` puis
-`m_t^ℓ → R_t+1`, et non une corrélation globale entre histoire et réponse.
+`m_t^ℓ → Réal_t+1`, et non une corrélation globale entre histoire et réponse.
 
 ### Provenance épistémique
 

@@ -9,10 +9,20 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
 from pathlib import Path
+
+# La campagne imprime des flèches, des tirets cadratins et des symboles grecs.
+# Sous Windows, une console CP-1252 lève sinon UnicodeEncodeError avant même le
+# premier contrôle. La CI Linux est déjà en UTF-8 ; cette reconfiguration y est
+# sans effet fonctionnel.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
@@ -21,9 +31,10 @@ DERIVE = ICI / "derive"
 def executer(titre: str, arguments: list[str], obligatoire: bool = True) -> dict:
     debut = time.monotonic()
     print(f"── {titre}")
+    environnement = dict(os.environ, PYTHONUTF8="1")
     resultat = subprocess.run([sys.executable, *arguments], cwd=ICI,
                               capture_output=True, text=True, encoding="utf-8",
-                              errors="replace")
+                              errors="replace", env=environnement)
     duree = time.monotonic() - debut
     texte = resultat.stdout or ""
     sortie = texte.strip().splitlines()
@@ -183,6 +194,11 @@ def main() -> int:
                            ["test_combine_familles.py"]))
     etapes.append(executer("matrice transversale et robustesse",
                            ["matrice_transversale.py"]))
+    etapes.append(executer(
+        "même état, même stimulus, histoire différente — exploratoire",
+        ["tester_meme_etat_histoire_differente.py"],
+        obligatoire=False,
+    ))
 
     transversal = synthese_transversale()
     print("── C-MAT-MEM-05, transversalité")

@@ -1,0 +1,202 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "statut": "EXPLORATOIRE, plan choisi après inspection, aucun verdict rendu",
+  "question": "à état et stimulus identiques, une histoire différente change-t-elle la réponse",
+  "jeu": "anneau FeSi, boucles mineures encastrées dans une majeure",
+  "etat": "Bdc, aimantation continue",
+  "histoire": "BpM, amplitude de la majeure",
+  "stimulus": "Bp et f, tenus fixes dans chaque bloc",
+  "blocs": 10,
+  "blocs_a_trois_histoires": 9,
+  "monotonie": {
+    "blocs_monotones": 6,
+    "blocs": 9,
+    "p_sous_hypothese_nulle_un_tiers": 0.04242239496011786
+  },
+  "concordance_entre_amplitudes": {
+    "accords": 3,
+    "etats": 5,
+    "p_sous_hypothese_nulle_un_demi": 0.5
+  },
+  "inversion_du_sens": {
+    "monte_aux_etats": [
+      0.0
+    ],
+    "descend_aux_etats": [
+      0.4,
+      0.6,
+      0.7
+    ]
+  },
+  "detail": [
+    {
+      "Bp_T": 0.05,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.0,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        0.8192,
+        0.8338,
+        0.8418
+      ],
+      "sens": 1,
+      "ecart_relatif": 0.02758789062499994
+    },
+    {
+      "Bp_T": 0.05,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.2,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        0.8045,
+        0.8039,
+        0.8112
+      ],
+      "sens": 0,
+      "ecart_relatif": 0.009080731434258098
+    },
+    {
+      "Bp_T": 0.05,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.4,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        0.8392,
+        0.8134,
+        0.8152
+      ],
+      "sens": 0,
+      "ecart_relatif": 0.03171871158101787
+    },
+    {
+      "Bp_T": 0.05,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.6,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        0.9116,
+        0.8795,
+        0.8401
+      ],
+      "sens": -1,
+      "ecart_relatif": 0.0851089156052851
+    },
+    {
+      "Bp_T": 0.05,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.7,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        0.9683,
+        0.9097,
+        0.8842
+      ],
+      "sens": -1,
+      "ecart_relatif": 0.09511422755032806
+    },
+    {
+      "Bp_T": 0.15,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.0,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        6.713,
+        6.842,
+        7.019
+      ],
+      "sens": 1,
+      "ecart_relatif": 0.045583196782362584
+    },
+    {
+      "Bp_T": 0.15,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.2,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        6.691,
+        6.639,
+        6.753
+      ],
+      "sens": 0,
+      "ecart_relatif": 0.017171260732037938
+    },
+    {
+      "Bp_T": 0.15,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.4,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        7.053,
+        6.786,
+        6.691
+      ],
+      "sens": -1,
+      "ecart_relatif": 0.05410252578089973
+    },
+    {
+      "Bp_T": 0.15,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.6,
+      "BpM": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        7.814,
+        7.365,
+        7.048
+      ],
+      "sens": -1,
+      "ecart_relatif": 0.10868331441543701
+    },
+    {
+      "Bp_T": 0.15,
+      "f_Hz": 2000.0,
+      "Bdc_T": 0.7,
+      "BpM": [
+        1.0,
+        1.25
+      ],
+      "pertes": [
+        7.92,
+        7.471
+      ],
+      "sens": -1,
+      "ecart_relatif": 0.06009904965868021
+    }
+  ],
+  "confirmatoire_requis": "geler ce plan puis l'appliquer à un jeu indépendant portant des boucles mineures encastrées à plusieurs amplitudes de majeure"
+}

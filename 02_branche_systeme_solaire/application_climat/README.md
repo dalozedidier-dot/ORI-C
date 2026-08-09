@@ -16,16 +16,18 @@ réciproquement.
 
 ## Ce qui en a été extrait vers le socle
 
-Cinq contributions transversales ont été portées dans `00_socle/CODEBOOK.md`
+Des contributions transversales ont été portées dans `00_socle/CODEBOOK.md`
 §13, sous forme de définitions et de critères, sans aucun contenu climatique :
 
 | § du CODEBOOK | Apport |
 |---|---|
 | 13.1 | mémoire distribuée `m(t)`, noyaux `Kᵢ` et couplages `Cᵢⱼ` dépendants de l'état, transfert d'irréversibilité entre compartiments |
 | 13.2 | diagnostic `D-H-L` : persistance, asymétrie, perte — trois propriétés indépendantes, pas une échelle |
-| 13.3 | séparation `Pth` / `Pacc(T, C, ε)` |
-| 13.4 | séparation `X` / `m` / `A` et critère opératoire état / architecture |
-| 13.5 | critère d'altération architecturale : une variation de noyau ne suffit pas |
+| 13.3 | hiérarchie `P^adm ⊇ P^att ⊇ P^kin ⊇ P^pers`, avec compatibilité documentée de `Pth` / `Pacc` |
+| 13.4 | séparation `S` / `m` / `A` et critère opératoire état / architecture |
+| 13.5 | mesure et seuil contextuel de persistance |
+| 13.6 | critère d'altération architecturale : une variation de noyau ne suffit pas |
+| 13.7 | séparation entre chaîne physique et chaîne de preuve |
 
 ## Ce qui reste ici et n'a pas vocation à monter dans le socle
 

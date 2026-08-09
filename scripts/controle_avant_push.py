@@ -38,6 +38,14 @@ import subprocess
 import sys
 from pathlib import Path
 
+# Les rapports contiennent des accents, des flèches et des tirets cadratins.
+# Sans reconfiguration, le garde-fou peut masquer un échec réel par un
+# UnicodeEncodeError sur une console Windows CP-1252.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 RACINE = Path(__file__).resolve().parent.parent
 
 LIGNE = re.compile(r"^([0-9a-f]{64})\s+(.*)$")
@@ -173,11 +181,18 @@ def controler_perimetres(connus: set[str]) -> list[str]:
 
 
 def executer(titre: str, commande: list[str]) -> bool:
-    resultat = subprocess.run(commande, cwd=RACINE, capture_output=True, text=True, encoding="utf-8")
+    resultat = subprocess.run(
+        commande,
+        cwd=RACINE,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
     reussi = resultat.returncode == 0
     print(f"  {titre:<28} {'conforme' if reussi else 'ÉCHEC'}")
     if not reussi:
-        for ligne in (resultat.stdout + resultat.stderr).strip().splitlines()[-8:]:
+        for ligne in ((resultat.stdout or "") + (resultat.stderr or "")).strip().splitlines()[-8:]:
             print(f"      {ligne}")
     return reussi
 

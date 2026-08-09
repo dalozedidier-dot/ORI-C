@@ -14,8 +14,8 @@ empirique d'un domaine.
 
 | Dossier | Contenu |
 |---|---|
-| `CODEBOOK.md` | définitions communes : six dimensions, chaîne ORI-C, liens typés, niveaux et modes de preuve |
-| `PROTOCOLE_DONNEES.md` | quelles données récupérer pour tester le cadre, et non seulement le décrire |
+| `CODEBOOK.md` | définitions communes : six dimensions, chaîne historique multi-échelle, hiérarchie des possibles, persistance, liens typés, niveaux et modes de preuve |
+| `PROTOCOLE_DONNEES.md` | quelles données récupérer pour tester le cadre, y compris la provenance épistémique et le test même état/histoires différentes |
 | `valider_donnees.py` | rend les trois tables canoniques vérifiables par machine |
 | `carte_relationnelle/` | 40 transitions, 47 relations typées, données, scripts et sorties |
 | `test_interventionnel/` | chémostat, contrôle général du mécanisme d'intervention |
