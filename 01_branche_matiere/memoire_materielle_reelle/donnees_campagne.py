@@ -15,14 +15,16 @@ from pathlib import Path
 
 ICI = Path(__file__).resolve().parent
 ARCHIVES = ICI / "donnees" / "sources"
-CACHE = ICI / ".cache_donnees"
 
 
 def base_de(cle: str, racine_locale: Path) -> Path | None:
     """Dossier contenant les fichiers de `cle`, ou None si introuvable."""
     archive = ARCHIVES / f"{cle}.zip"
     if archive.is_file():
-        cible = CACHE / cle
+        # Le cache d'extraction vit hors du dépôt : y écrire ferait apparaître
+        # des fichiers non listés au manifeste et casserait le contrôle
+        # d'intégrité que la CI exécute juste après.
+        cible = racine_locale / ".cache_campagne" / cle
         if not cible.is_dir():
             cible.mkdir(parents=True, exist_ok=True)
             with zipfile.ZipFile(archive) as source:

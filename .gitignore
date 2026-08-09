@@ -25,4 +25,3 @@ plateforme/campagne_maximale_reelle/sources_brutes/*
 # sous donnees_externes/ et suivies par Git LFS.
 /*.zip
 /.claude/
-/01_branche_matiere/memoire_materielle_reelle/.cache_donnees/

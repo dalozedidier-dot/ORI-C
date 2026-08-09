@@ -1,0 +1,21 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "famille": "reconstruction_de_surface",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 20000,
+  "jeux": {
+    "fischer_tropsch": {
+      "dose": "durée d'exposition au carbone, 0 à 6 h",
+      "reponse": "aire du chromatogramme",
+      "mesures": 14,
+      "series": 2,
+      "rho_stratifie": -1.0,
+      "p_permutation": 4.999750012499375e-05,
+      "temoin": "permutation des durées dans chaque série",
+      "verdict": "soutient"
+    }
+  },
+  "verdict": "soutient",
+  "motif": "1 jeu(x) de surface soutiennent : fischer_tropsch"
+}

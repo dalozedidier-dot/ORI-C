@@ -87,15 +87,17 @@ def synthese_transversale() -> dict:
             "echantillons": r["echantillons"],
         }
 
-    for fichier, niveau in ((DERIVE / "RESULTAT_TRACES_FISSION.json", 6),):
+    for fichier, niveau in ((DERIVE / "RESULTAT_TRACES_FISSION.json", 6),
+                            (DERIVE / "RESULTAT_SURFACE.json", 5)):
         if fichier.exists():
             r = json.loads(fichier.read_text(encoding="utf-8"))
             familles[r["famille"]] = {
-                "jeu": r["jeu"],
+                "jeu": r.get("jeu") or ", ".join(r.get("jeux", {})),
                 "critere_decisif": r.get("ablation", "dose d'histoire"),
                 "verdict": r["verdict"],
                 "niveau_de_temoin": niveau,
-                "echantillons": r.get("conditions", 0),
+                "echantillons": r.get("conditions", sum(
+                    j.get("mesures", 0) for j in r.get("jeux", {}).values())),
             }
 
     soutenues = [f for f, b in familles.items() if b["verdict"] == "soutient"]
@@ -155,6 +157,8 @@ def main() -> int:
                            ["extraire_et_tester_vieillissement.py"]))
     etapes.append(executer("recuit de traces de fission",
                            ["extraire_et_tester_traces_fission.py"]))
+    etapes.append(executer("reconstruction de surface",
+                           ["extraire_et_tester_surface.py"]))
     etapes.append(executer("balayage des sources restantes",
                            ["balayer_toutes_les_sources.py"]))
 
