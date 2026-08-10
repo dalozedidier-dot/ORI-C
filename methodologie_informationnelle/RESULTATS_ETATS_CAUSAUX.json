@@ -1,0 +1,116 @@
+{
+  "status": "exploratory_finite_causal_state_analysis",
+  "scope": "finite-history predictive-state approximation; not an exact CSSR reconstruction or asymptotic epsilon-machine",
+  "results": {
+    "paleoclimat_d18o_2600ka": {
+      "method": "finite_history_predictive_state_clustering",
+      "not_exact_epsilon_machine": true,
+      "n_symbols": 4,
+      "history_length": 4,
+      "js_threshold": 0.08,
+      "min_history_count": 3,
+      "quantile_edges": [
+        3.1,
+        3.605,
+        3.85,
+        4.17,
+        5.08
+      ],
+      "n_states": 7,
+      "covered_samples": 2567,
+      "coverage_fraction": 0.9884482094724683,
+      "C_mu_finite_bits": 2.241344159041855,
+      "E_finite_bits": 1.3265622901470369,
+      "crypticity_finite_proxy_bits": 0.9147818688948182,
+      "future_entropy_bits": 1.9999733882828434,
+      "state_sizes": [
+        648,
+        625,
+        625,
+        544,
+        82,
+        28,
+        15
+      ],
+      "shuffle_control_E_finite_bits": {
+        "replicates": 200,
+        "mean": 0.12390492843867591,
+        "q975": 0.14936870007426975,
+        "p_ge_observed": 0.004975124378109453
+      }
+    },
+    "spin_with_moon_20myr": {
+      "method": "finite_history_predictive_state_clustering",
+      "not_exact_epsilon_machine": true,
+      "n_symbols": 4,
+      "history_length": 4,
+      "js_threshold": 0.08,
+      "min_history_count": 3,
+      "quantile_edges": [
+        22.0873117452473,
+        22.873342519143687,
+        23.336151103570185,
+        23.773704688310183,
+        24.44370846600097
+      ],
+      "n_states": 5,
+      "covered_samples": 1991,
+      "coverage_fraction": 0.9969954932398598,
+      "C_mu_finite_bits": 2.237011900405307,
+      "E_finite_bits": 1.3817962166240727,
+      "crypticity_finite_proxy_bits": 0.8552156837812344,
+      "future_entropy_bits": 1.9999936337419522,
+      "state_sizes": [
+        499,
+        499,
+        497,
+        312,
+        184
+      ],
+      "shuffle_control_E_finite_bits": {
+        "replicates": 200,
+        "mean": 0.17186337511769775,
+        "q975": 0.20299272813999528,
+        "p_ge_observed": 0.004975124378109453
+      }
+    },
+    "spin_no_moon_20myr": {
+      "method": "finite_history_predictive_state_clustering",
+      "not_exact_epsilon_machine": true,
+      "n_symbols": 4,
+      "history_length": 4,
+      "js_threshold": 0.08,
+      "min_history_count": 3,
+      "quantile_edges": [
+        1.2498500566145063,
+        16.858975588923997,
+        24.88000037730309,
+        32.017117053408555,
+        45.04188940616386
+      ],
+      "n_states": 8,
+      "covered_samples": 1991,
+      "coverage_fraction": 0.9969954932398598,
+      "C_mu_finite_bits": 2.1539828437773823,
+      "E_finite_bits": 1.9244615911822385,
+      "crypticity_finite_proxy_bits": 0.22952125259514378,
+      "future_entropy_bits": 1.9999410224637741,
+      "state_sizes": [
+        492,
+        490,
+        482,
+        482,
+        18,
+        9,
+        9,
+        9
+      ],
+      "shuffle_control_E_finite_bits": {
+        "replicates": 200,
+        "mean": 0.17065912827569374,
+        "q975": 0.19716193258882822,
+        "p_ge_observed": 0.004975124378109453
+      }
+    }
+  }
+}

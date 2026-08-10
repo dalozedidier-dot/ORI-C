@@ -1,0 +1,39 @@
+{
+  "status": "exploratory_additional_analysis",
+  "method": "Williams-Beer I_min PID on discretely observed variables",
+  "scope": "Does not alter C-ANT-01 certification; X=Limitation|Antibiotic, M=Ancestor, Y=observed MIC level.",
+  "rows": 288,
+  "strain_groups": 24,
+  "permutations": 2000,
+  "seed": 20260810,
+  "observed": {
+    "I_X_Y_bits": 0.8691616334432043,
+    "I_M_Y_bits": 0.5061474711996119,
+    "I_XM_Y_bits": 1.7707496731285581,
+    "redundancy_Imin_bits": 0.41159912527250914,
+    "unique_X_bits": 0.45756250817069516,
+    "unique_M_history_bits": 0.09454834592710276,
+    "synergy_XM_bits": 0.8070396937582511
+  },
+  "null": {
+    "unique_M_history_bits": {
+      "mean": 0.009073413601812567,
+      "q025": -5.551115123125783e-17,
+      "q975": 0.03774019102731052,
+      "p_one_sided_ge_observed": 0.0004997501249375312
+    },
+    "synergy_XM_bits": {
+      "mean": 0.6513106687834413,
+      "q025": 0.5807602012547565,
+      "q975": 0.7432435487199619,
+      "p_one_sided_ge_observed": 0.0009995002498750624
+    },
+    "I_XM_Y_bits": {
+      "mean": 1.5295457158284582,
+      "q025": 1.456695283362504,
+      "q975": 1.6316945666685738,
+      "p_one_sided_ge_observed": 0.0004997501249375312
+    }
+  },
+  "warning": "PID I_min is one redundancy definition among several; results are exploratory and discretization-specific."
+}

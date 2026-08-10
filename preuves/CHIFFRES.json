@@ -1,0 +1,145 @@
+{
+  "schema": "oric.canonical-numbers.v1",
+  "regle": "Chaque valeur canonique pointe vers une sortie machine. Le validateur compare valeur source et valeur enregistrée, puis vérifie les rendus publics explicitement déclarés.",
+  "valeurs": [
+    {
+      "id": "EXO_TAU_TEMP_MYR",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json",
+      "pointer": "/relaxation/temperature_k/efolding_myr",
+      "value": 7.024011067403678,
+      "tolerance": 1e-12,
+      "display": "7,02 Ma",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "MPT_CRITERES_PASSES",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
+      "pointer": "/passed_criteria",
+      "value": 1,
+      "tolerance": 0,
+      "display": "1 critère sur 10",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "VES_PAIRES",
+      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "pointer": "/pairs",
+      "value": 11760,
+      "tolerance": 0,
+      "display": "11 760",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "VES_P_PERM",
+      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "pointer": "/lineage_permutation_test/permutation_p_one_sided",
+      "value": 0.0004997501249375,
+      "tolerance": 1e-15,
+      "display": "0,00050",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "DONO_RMSE_ETAT",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "pointer": "/rmse_state_only",
+      "value": 1.13089812488,
+      "tolerance": 1e-12,
+      "display": "1,1309",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "DONO_RMSE_HIST",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "pointer": "/rmse_state_plus_history",
+      "value": 0.8042295741181,
+      "tolerance": 1e-12,
+      "display": "0,8042",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "DONO_P_PERM",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "pointer": "/permutation_p_history_better_than_shuffled",
+      "value": 0.004975124378109,
+      "tolerance": 1e-15,
+      "display": "0,00498",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "AUDIT_BLOQUES",
+      "source": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
+      "pointer": "/campaign_counts/blocked",
+      "value": 626,
+      "tolerance": 0,
+      "display": "626 blocages",
+      "targets": [
+        "site/preuves.html",
+        "site/reproductibilite.html"
+      ]
+    },
+    {
+      "id": "AST_RATIO_NUM",
+      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
+      "pointer": "/resultats/4/mesures/ratio_minimal_intervention_bruit_numerique",
+      "value": 4964.415695208393,
+      "tolerance": 1e-09,
+      "display": "4 964",
+      "targets": []
+    },
+    {
+      "id": "SPIN_RMSE_1MA",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "pointer": "/la2004_validation/2/obliquity_rmse_deg",
+      "value": 0.0791416499718946,
+      "tolerance": 1e-12,
+      "display": "0,079°",
+      "targets": []
+    },
+    {
+      "id": "PID_SYNERGIE_DONO",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "pointer": "/observed/synergy_XM_bits",
+      "value": 0.8070396937582512,
+      "tolerance": 1e-12,
+      "display": "0,807 bit",
+      "targets": []
+    },
+    {
+      "id": "MAT_STABLE_CORE",
+      "source": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json",
+      "pointer": "/monte_carlo/stable_core_nodes",
+      "transform": "len",
+      "value": 31,
+      "tolerance": 0,
+      "display": "31 nœuds",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "H011_RATIO",
+      "source": "01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json",
+      "pointer": "/threshold_ratio_high_low_turbulence",
+      "value": 3.3333333333333335,
+      "tolerance": 1e-12,
+      "display": "3,33",
+      "targets": [
+        "site/preuves.html"
+      ]
+    }
+  ]
+}

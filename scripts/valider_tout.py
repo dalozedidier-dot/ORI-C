@@ -26,6 +26,8 @@ def main(argv=None)->int:
     run(*verifier)
     run(sys.executable,'-m','compileall','-q','.')
     run(sys.executable,'methodologie_puissance/power_monte_carlo.py','validate-all','.')
+    run(sys.executable,'scripts/construire_registre_preuves.py')
+    run(sys.executable,'scripts/valider_registre_preuves.py')
     run(sys.executable,'scripts/valider_publication_stable.py')
     run(sys.executable,'scripts/valider_barriere_empirique.py')
     print('Contrôles rapides réussis, barrière empirique comprise. Les suites scientifiques sont séparées dans la CI.')

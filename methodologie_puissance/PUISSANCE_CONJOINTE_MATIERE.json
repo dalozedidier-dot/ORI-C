@@ -1,0 +1,46 @@
+{
+  "schema": "oric.joint-power-material.v1",
+  "status": "prospective_simulation",
+  "repetitions_per_n": 250,
+  "seed": 20260810,
+  "assumptions_standardized_not_empirical_estimates": {
+    "strata": 6,
+    "b_ht": 1.5,
+    "b_tr": 1.2,
+    "retention": 0.85,
+    "ablation_fraction": 0.5
+  },
+  "success_rule": "all four chain tests + leave-one-stratum sign robustness",
+  "grid": [
+    {
+      "n": 36,
+      "joint_power": 0.668
+    },
+    {
+      "n": 48,
+      "joint_power": 0.856
+    },
+    {
+      "n": 60,
+      "joint_power": 0.92
+    },
+    {
+      "n": 72,
+      "joint_power": 0.984
+    },
+    {
+      "n": 84,
+      "joint_power": 0.992
+    },
+    {
+      "n": 96,
+      "joint_power": 0.992
+    },
+    {
+      "n": 120,
+      "joint_power": 0.996
+    }
+  ],
+  "first_n_reaching_90pct_under_these_assumptions": 60,
+  "decision": "Use this as a dimensioning engine. The returned n is conditional on explicit assumed effects and must not be described as an empirically guaranteed sample size."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "secondary_reanalysis_of_published_replay_counts",
+  "source_doi": "10.1073/pnas.0803151105",
+  "totals": {
+    "replicates": 3212,
+    "citplus": 17
+  },
+  "pre_20000_generations": {
+    "replicates": 852,
+    "citplus": 0
+  },
+  "from_20000_generations": {
+    "replicates": 2360,
+    "citplus": 17
+  },
+  "fisher_one_sided_post_vs_pre": {
+    "odds_ratio": null,
+    "p": 0.005219806269915467
+  },
+  "generation_vs_replay_success_rate_spearman": {
+    "rho": 0.6309417136865039,
+    "p": 0.008772657108572902
+  },
+  "interpretation": "Published replay counts are compatible with historical potentiation: Cit+ replay events occur only from later sampled ancestors in this table.",
+  "scope": "External historical-contingency benchmark; secondary table transcription, exploratory for ORI-C, no certification level assigned."
+}

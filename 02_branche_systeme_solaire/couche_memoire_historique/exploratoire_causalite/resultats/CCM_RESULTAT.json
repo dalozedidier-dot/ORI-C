@@ -1,0 +1,241 @@
+{
+  "status": "exploratory_ccm_executed",
+  "data": "LR04 + La2004 merged series, 2600-0 ka BP",
+  "results": [
+    {
+      "reported_direction": "insolation_65n_june_wm2 -> d18o_permil",
+      "reconstruction_rule": "reconstruct insolation_65n_june_wm2 from manifold of d18o_permil",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.17627368957290374,
+          "sd_rho": 0.07577972057875282,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.21597084530539173,
+          "sd_rho": 0.05730035170268728,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.24507367966600588,
+          "sd_rho": 0.0333301989178703,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.2647185798653223,
+          "sd_rho": 0.01999591574092824,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.2609877488375315,
+          "sd_rho": 0.006815527076374841,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": 0.08471405926462777
+    },
+    {
+      "reported_direction": "d18o_permil -> insolation_65n_june_wm2",
+      "reconstruction_rule": "reconstruct d18o_permil from manifold of insolation_65n_june_wm2",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.22951274167853225,
+          "sd_rho": 0.05805052198428984,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.23732982263368166,
+          "sd_rho": 0.06482141081284734,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.2325078518566613,
+          "sd_rho": 0.023061200273412127,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.24420954271740108,
+          "sd_rho": 0.021471354556838993,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.2408858243524714,
+          "sd_rho": 0.006570382122470493,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": 0.011373082673939161
+    },
+    {
+      "reported_direction": "eccentricity -> d18o_permil",
+      "reconstruction_rule": "reconstruct eccentricity from manifold of d18o_permil",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.2376394242658067,
+          "sd_rho": 0.08465989897795444,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.2527656166203366,
+          "sd_rho": 0.05841464188143141,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.29589336087859014,
+          "sd_rho": 0.026139028241874668,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.310711938516091,
+          "sd_rho": 0.01884453857392791,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.3080223046081137,
+          "sd_rho": 0.0062705152574280614,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": 0.070382880342307
+    },
+    {
+      "reported_direction": "d18o_permil -> eccentricity",
+      "reconstruction_rule": "reconstruct d18o_permil from manifold of eccentricity",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.33003635217016797,
+          "sd_rho": 0.06233794616401267,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.3908776193054263,
+          "sd_rho": 0.04093747099821798,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.47528623644380164,
+          "sd_rho": 0.024483302324528795,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.5172046353206504,
+          "sd_rho": 0.009970223998165467,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.531100060564741,
+          "sd_rho": 0.004051373904291887,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": 0.20106370839457305
+    },
+    {
+      "reported_direction": "obliquity_deg -> d18o_permil",
+      "reconstruction_rule": "reconstruct obliquity_deg from manifold of d18o_permil",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.5797399009266694,
+          "sd_rho": 0.05423953787141493,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.6055728601888198,
+          "sd_rho": 0.02558125968297776,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.6142141208699419,
+          "sd_rho": 0.021077593888667742,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.6337688359963154,
+          "sd_rho": 0.007282966386410284,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.632155747463949,
+          "sd_rho": 0.0028470538227634112,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": 0.0524158465372796
+    },
+    {
+      "reported_direction": "d18o_permil -> obliquity_deg",
+      "reconstruction_rule": "reconstruct d18o_permil from manifold of obliquity_deg",
+      "E": 3,
+      "tau_kyr": 5,
+      "curve": [
+        {
+          "library_size": 300,
+          "mean_rho": 0.30300103988486315,
+          "sd_rho": 0.05998665072358619,
+          "repeats": 20
+        },
+        {
+          "library_size": 600,
+          "mean_rho": 0.3093851272295722,
+          "sd_rho": 0.044159353561639005,
+          "repeats": 20
+        },
+        {
+          "library_size": 1200,
+          "mean_rho": 0.2896199170467807,
+          "sd_rho": 0.024310569996483577,
+          "repeats": 20
+        },
+        {
+          "library_size": 2000,
+          "mean_rho": 0.2841271389104231,
+          "sd_rho": 0.018507139614861744,
+          "repeats": 20
+        },
+        {
+          "library_size": 2500,
+          "mean_rho": 0.2747480960977829,
+          "sd_rho": 0.005189913354761206,
+          "repeats": 20
+        }
+      ],
+      "delta_rho_last_minus_first": -0.028252943787080265
+    }
+  ],
+  "scope": "Exploratory nonlinear state-space diagnostic only. LR04 chronology is orbitally tuned; this analysis cannot independently validate orbital climate causality and does not modify the negative M2 verdict."
+}

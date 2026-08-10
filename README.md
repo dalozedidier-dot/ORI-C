@@ -280,7 +280,7 @@ python construire_dossier.py --sources <rep> --verifier-reconstruction
 
 - `DATA_AVAILABILITY.md` distingue le dépôt Git, le ZIP source GitHub et
   l'archive canonique hydratée.
-- `LICENSE` fixe définitivement le régime général « tous droits réservés » pour cette version.
+- `LICENSE` fixe la licence **MIT du code** ; `LICENSING.md` cartographie séparément les données, textes, figures et contenus tiers.
 - `CITATION.cff` contient le dépôt réel et la version courante.
 - `documentation/ALIASES_DOCUMENTAIRES.md` identifie le dossier scientifique
   canonique et ses copies de livraison.
@@ -314,3 +314,9 @@ Exécution complète :
 python plan_directeur/campagne_recherche_suivante/run_all.py
 python scripts/valider_recherche_suivante.py
 ```
+
+## Formalismes externes intégrés — 10 août 2026
+
+Le dépôt exécute désormais, sans reclasser rétroactivement les preuves certifiées, un registre machine des preuves et chiffres, une PID `X/m` sur D'Onofrio, une approximation finie des états causaux prédictifs, un pont vers la théorie de la viabilité sur la couche spin-orbite, une filtration topologique persistante de l'hypergraphe matériel, un pont fail-closed vers Chemical Organization Theory, un simulateur de puissance conjointe matière, un CCM exploratoire paléoclimatique, une réanalyse secondaire des replays LTEE et un pont formel vers Assembly Theory.
+
+Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.

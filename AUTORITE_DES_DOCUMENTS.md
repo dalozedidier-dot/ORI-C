@@ -28,7 +28,7 @@ ci-dessous.
    recalculé à chaque exécution.
 2. Un **erratum** prime sur l'article qu'il accompagne.
 3. Un **article** prime sur ses variantes et versions antérieures.
-4. En dernier ressort, `ETAT_DES_PREUVES.md` fixe le statut de chaque couche.
+4. En dernier ressort, `preuves/PREUVES.json` fixe le statut machine de chaque résultat. `ETAT_DES_PREUVES.md` en est la vue générée destinée à la lecture humaine.
 
 ## Règles de lecture et de mise à jour
 
@@ -248,7 +248,7 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Extension astronomie globale | `02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md` | feuille de route historique de l’extension ; la partie spin réduite a depuis été exécutée séparément |
 | Couche spin-orbite, résultat | `02_branche_systeme_solaire/couche_spin_orbite/resultats/RAPPORT.md` | généré, prime pour les résultats spin/obliquité/insolation ; **niveau modèle, ne modifie pas la certification de `C-AST-01`** |
 | Couche spin-orbite, méthode et limites | `02_branche_systeme_solaire/couche_spin_orbite/README.md` et `PROVENANCE.md` | canonique pour l’équation, les constantes de précession et la distinction couple lunaire effectif / Lune N-corps résolue |
-| Registre des hypothèses | `plan_directeur/REGISTRE_HYPOTHESES.csv` | généré, prime sur tout statut cité ailleurs sauf `ETAT_DES_PREUVES.md` |
+| Registre des hypothèses | `plan_directeur/REGISTRE_HYPOTHESES.csv` | généré, prime sur tout statut cité ailleurs sauf `preuves/PREUVES.json` |
 | Avancement | `plan_directeur/AVANCEMENT_DU_PLAN.md` | généré ; descriptif, ne fixe aucun statut |
 | Grille de l'Étape 2 | `plan_directeur/GRILLE_ETAPE_2.md` | généré ; audit, ne fixe aucun statut |
 | Audit transversal | `plan_directeur/AUDIT_TRANSVERSAL.md` | généré, prime ; **exploratoire** |
@@ -267,8 +267,7 @@ Le plan directeur **n'établit rien**. Il décrit une campagne à mener. Cocher
 un de ses items ne rend aucune hypothèse valide : sur les neuf tests
 climatiques exécutés au titre du WP-C1, sept concluent à une réfutation.
 
-En cas de désaccord entre le registre et `ETAT_DES_PREUVES.md`, c'est ce
-dernier qui tranche, conformément à la règle générale.
+En cas de désaccord entre une prose et `preuves/PREUVES.json`, le registre machine tranche. `ETAT_DES_PREUVES.md` doit être régénéré depuis ce registre ; une divergence entre les deux est une erreur de CI.
 
 ## Fichiers retirés du paquet
 
@@ -364,3 +363,9 @@ Les fichiers faisant autorité pour le calibrage sont :
 - `calibrage_v094/benchmark_externe_stellaire/PROVENANCE.md` pour la portée du test MESA.
 
 Les coefficients documentaires sont des conventions de stress. Ils ne représentent ni des probabilités de vérité, ni des estimations de force causale naturelle. Une hyperarête critique sous ablation est indispensable à la représentation actuelle, ce qui reste distinct d’une nécessité empirique démontrée.
+
+## Registre machine des preuves et chiffres
+
+À partir du 10 août 2026, `preuves/PREUVES.json` est l'index machine des verdicts. Les cinq certifications spécialisées restent dérivées de `plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json` et doivent y conserver exactement verdict, niveau et portée. `ETAT_DES_PREUVES.md` est généré et ne doit plus être édité manuellement.
+
+`preuves/CHIFFRES.json` relie les nombres publiés à leurs sorties machine. `scripts/valider_registre_preuves.py` contrôle source → registre → rendu déclaré. Une analyse exploratoire ajoutée au registre n'acquiert aucun niveau de preuve par ce seul fait.

@@ -1,0 +1,223 @@
+{
+  "schema": "oric.proofs-registry.v1",
+  "authority": "machine-readable registry; certified entries are imported byte-for-byte in status from RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
+  "entries": [
+    {
+      "id": "C-ANT-01",
+      "question": "RMSE(etat+histoire) inferieure a RMSE(etat seul) ET a RMSE(histoire permutee de meme complexite), p<0,01.",
+      "statut": "certifie",
+      "verdict": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "empreinte_sortie": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "source": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
+      "mesures": {
+        "rmse_etat": 1.13089812488,
+        "rmse_etat_histoire": 0.8042295741181,
+        "rmse_histoire_permutee": 1.141486951118,
+        "p_permutation": 0.004975124378109
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-VES-02",
+      "question": "Pente de regression parent vers descendant significativement positive et superieure au temoin de melange aleatoire.",
+      "statut": "certifie",
+      "verdict": "supports",
+      "niveau_preuve": "E2",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "empreinte_sortie": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "mesures": {
+        "observed_parent_offspring_r": 0.7642621398381,
+        "null_mean_r": 0.7466668339765,
+        "permutation_p_one_sided": 0.0004997501249375,
+        "permutations": 2000
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-VES-03",
+      "question": "Le gain de selection chute significativement quand le transfert de vesicules intactes est empeche.",
+      "statut": "certifie",
+      "verdict": "supports",
+      "niveau_preuve": "E4",
+      "portee": "empirique_externe",
+      "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "empreinte_sortie": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
+      "mesures": {
+        "reponse_selection_FR": 0.05441770833333,
+        "contraste_ablation": 0.04600191818548,
+        "FR_depasse_ablation": true
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-MAT-MEM-05",
+      "question": "Le schema histoire vers trace persistante vers reponse modifiee est soutenu independamment dans au moins trois familles physiques distinctes, a mecanismes materiels differents.",
+      "statut": "certifie",
+      "verdict": "does_not_support",
+      "niveau_preuve": null,
+      "portee": "campagne_empirique_partielle_sans_admission_complete",
+      "artefact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
+      "empreinte_sortie": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
+      "source": null,
+      "mesures": {
+        "familles_completes": 0,
+        "minimum": 3,
+        "verdict_campagne": "ne_soutient_pas"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-AST-01",
+      "question": "Effet interventionnel minimal superieur ou egal a 1000 fois les ecarts numeriques et au moins 12 criteres sur 15 reussis.",
+      "statut": "certifie",
+      "verdict": "supports",
+      "niveau_preuve": "E4_modele",
+      "portee": "modele_physique_reduit_valide",
+      "artefact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+      "empreinte_sortie": "7b4e433524321005b2aabe9a593330cdd1ded1a7a72e29d61e0a8a224a2561f8",
+      "source": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
+      "mesures": {
+        "criteres_passes": 13,
+        "criteres_total": 15,
+        "ratio_minimal_intervention_bruit_numerique": 4964.415695208393
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "SPIN-ORB-EXE",
+      "question": "spin, obliquité et insolation sous couple lunaire effectif",
+      "statut": "exploratoire",
+      "verdict": "executed_model",
+      "niveau_preuve": null,
+      "portee": "modele_reduit",
+      "artefact": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "empreinte_sortie": "580eb07469b45795d39f898904e89801ae11a9361e0583ddc3ed2c5c6aee8627",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "VIAB-SPIN-01",
+      "question": "distance des trajectoires spin-orbite à une enveloppe de référence",
+      "statut": "exploratoire",
+      "verdict": "executed_not_kernel",
+      "niveau_preuve": null,
+      "portee": "modele_reduit",
+      "artefact": "02_branche_systeme_solaire/couche_spin_orbite/resultats/viabilite/RESULTAT.json",
+      "empreinte_sortie": "f6adfdacd2dbed4222c9b40ee9e05c7f1c42f32da2ad50d692692841273759d6",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "PID-ANT-01",
+      "question": "information unique de l’histoire et synergie X×m sur D’Onofrio",
+      "statut": "exploratoire",
+      "verdict": "executed",
+      "niveau_preuve": null,
+      "portee": "empirique_externe_secondaire",
+      "artefact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "empreinte_sortie": "33c1b1443d23efdaa5eb570c68ea362246d81ccde404b8ff3e9cc8e10ac345af",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "CSTATE-01",
+      "question": "états prédictifs à histoire finie sur séries ORI-C",
+      "statut": "exploratoire",
+      "verdict": "executed_finite_proxy",
+      "niveau_preuve": null,
+      "portee": "methodologique",
+      "artefact": "methodologie_informationnelle/RESULTATS_ETATS_CAUSAUX.json",
+      "empreinte_sortie": "3dc5ad1ba0d0e4273911093d292d654a3f93e4807cd2c9417ba7d3d2d017b1eb",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "TOPO-MAT-01",
+      "question": "persistance multi-seuil de l’expansion simpliciale documentaire",
+      "statut": "exploratoire",
+      "verdict": "executed",
+      "niveau_preuve": null,
+      "portee": "structure_documentaire",
+      "artefact": "01_branche_matiere/hypergraphe_transformations/resultats_topologie/RESULTAT.json",
+      "empreinte_sortie": "d0a949be1e055f0bca6b53481691fad1242fc9c21edc12259a028da9ccf7df77",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "COT-MAT-01",
+      "question": "organisation chimique close et auto-maintenue",
+      "statut": "non_concluant",
+      "verdict": "not_evaluable_missing_stoichiometry",
+      "niveau_preuve": null,
+      "portee": "structure_documentaire",
+      "artefact": "01_branche_matiere/organisations_chimiques/resultats/DIAGNOSTIC.json",
+      "empreinte_sortie": "bd520e8ab206acaf014e0236b29d648a26ec133868fba39e1bfd174a4e3828df",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "POWER-MAT-01",
+      "question": "puissance conjointe du futur protocole matière",
+      "statut": "exploratoire",
+      "verdict": "prospective_simulation",
+      "niveau_preuve": null,
+      "portee": "dimensionnement",
+      "artefact": "methodologie_puissance/PUISSANCE_CONJOINTE_MATIERE.json",
+      "empreinte_sortie": "505f16a48e73a3c28b34313bd072d2493f36bcf7ab545a4f546ce83ea6c05c14",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "CCM-CLIM-01",
+      "question": "cross-mapping convergent exploratoire LR04/La2004",
+      "statut": "exploratoire",
+      "verdict": "executed",
+      "niveau_preuve": null,
+      "portee": "observational_orbitally_tuned",
+      "artefact": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/CCM_RESULTAT.json",
+      "empreinte_sortie": "ca3a58936c305c77dd9807030862bf93bf44d981bafe57bf07831bb29b3fca82",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "LTEE-REPLAY-01",
+      "question": "rejeu évolutif depuis ancêtres congelés, comptes publiés",
+      "statut": "exploratoire",
+      "verdict": "secondary_reanalysis",
+      "niveau_preuve": null,
+      "portee": "empirique_externe_table_transcription",
+      "artefact": "03_branche_vivant/ltee_replay_history/resultats/RESULTAT.json",
+      "empreinte_sortie": "05d35686c454ea82eb203b69958b738a528857a42c982b06d31d08e0be852532",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "ASSEMBLY-BRIDGE-01",
+      "question": "comparaison ORI-C / Assembly Theory sur objets appariés",
+      "statut": "non_concluant",
+      "verdict": "not_evaluable_missing_paired_observables",
+      "niveau_preuve": null,
+      "portee": "comparaison_formelle",
+      "artefact": "comparaisons_externes/assembly_theory/DIAGNOSTIC.json",
+      "empreinte_sortie": "4ac80f19461726a4c96f9461c022c49076a84df2c56c47f4852eb65f99bb4352",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    }
+  ]
+}

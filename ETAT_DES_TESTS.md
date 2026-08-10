@@ -24,6 +24,7 @@ Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une e
 | Recherche suivante | 32 | 0 | 0 | 0 |
 | Couche astronomique | 12 | 0 | 2 | 0 |
 | Couche spin-orbite | 4 | 0 | 0 | 0 |
+| Formalismes externes intégrés | 16 | 0 | 0 | 0 |
 
 Le `xfail` attendu du socle concerne deux relations dont la référence est encore trop générique pour être datée : `TR-021 → TR-028` et `TR-024 → TR-023`. Il passera au vert dès qu'une source datable leur sera attachée. Il ne compte pas comme un échec réel.
 

@@ -1,8 +1,8 @@
 """Vérification des documents : article, cas exoplanétaires, deux schémas PDF."""
 from __future__ import annotations
 
-import fitz
 import pytest
+fitz = pytest.importorskip("fitz", reason="PyMuPDF requis uniquement pour les contrôles PDF")
 
 
 def apostrophes_uniformes(texte: str) -> str:

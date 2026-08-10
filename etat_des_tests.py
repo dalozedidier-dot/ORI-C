@@ -201,6 +201,26 @@ def suite_spin_orbite() -> dict:
     }
 
 
+
+def suite_formalismes_externes() -> dict:
+    """Tests légers des formalismes externes intégrés."""
+    import os
+    environnement = dict(os.environ)
+    environnement["PYTHONPATH"] = str(RACINE)
+    environnement["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    paths = [
+        "methodologie_informationnelle/tests",
+        "methodologie_puissance/tests",
+        "01_branche_matiere/organisations_chimiques/tests",
+        "01_branche_matiere/hypergraphe_transformations/test_topologie_persistante.py",
+        "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/tests",
+        "03_branche_vivant/ltee_replay_history/tests",
+        "comparaisons_externes/assembly_theory/tests",
+    ]
+    sortie, code = executer([sys.executable, "-m", "pytest", "-q", *paths], RACINE, environnement)
+    reussis = re.search(r"(\d+) passed", sortie); echoues = re.search(r"(\d+) failed", sortie); ignores = re.search(r"(\d+) skipped", sortie)
+    return {"reussis": int(reussis.group(1)) if reussis else 0, "echoues": int(echoues.group(1)) if echoues else 0, "ignores": int(ignores.group(1)) if ignores else 0, "code_retour": code}
+
 def suite_trois_branches() -> dict:
     """Tests de régression de la campagne maximale sur les trois branches."""
     import os
@@ -334,6 +354,7 @@ SUITES_ISOLEES = {
     "memoire": suite_memoire,
     "astronomie": suite_astronomique,
     "spin-orbite": suite_spin_orbite,
+    "formalismes-externes": suite_formalismes_externes,
     "trois-branches": suite_trois_branches,
 }
 
@@ -475,6 +496,7 @@ def composer(rejouer: bool = False) -> str:
     memoire = lancer_suite_isolee("memoire")
     astro = lancer_suite_isolee("astronomie")
     spin_orbite = lancer_suite_isolee("spin-orbite")
+    formalismes = lancer_suite_isolee("formalismes-externes")
     trois_branches = lancer_suite_isolee("trois-branches")
     exhaustif = rapport_exhaustif(rejouer=rejouer)
 
@@ -525,6 +547,11 @@ def composer(rejouer: bool = False) -> str:
     lignes.append(
         f"| Couche spin-orbite | {spin_orbite['reussis']} | {spin_orbite['echoues']} | "
         f"{spin_orbite['ignores']} | 0 |"
+    )
+
+    lignes.append(
+        f"| Formalismes externes intégrés | {formalismes['reussis']} | {formalismes['echoues']} | "
+        f"{formalismes['ignores']} | 0 |"
     )
 
     lignes.append("")

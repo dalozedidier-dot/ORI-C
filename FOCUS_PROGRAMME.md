@@ -33,3 +33,7 @@ Les folds de validation croisée ne sont jamais comptés comme observations ind�
 La taille nécessaire est retenue lorsque la borne inférieure de l’intervalle de Wilson atteint la puissance cible après au moins 10 000 simulations de confirmation. Lorsque la taille est déjà fixée, le protocole rapporte le plus petit effet détectable à 80 % ou 90 % de puissance. Une puissance recalculée après observation du résultat ne constitue pas une preuve.
 
 Le format, le validateur et le moteur commun se trouvent dans `methodologie_puissance/`.
+
+## Nouveau front d'intégration formelle
+
+Les tâches purement prospectives ont été remplacées par des modules exécutables lorsque les données le permettent : viabilité de trajectoire sur spin-orbite, PID D'Onofrio, états prédictifs finis, topologie persistante, puissance conjointe matière, CCM et réanalyse LTEE. COT et Assembly Theory restent explicitement non évaluables sur les objets courants faute de stœchiométrie ou d'observables appariées. Les deux hypothèses séparantes du cadre sont enregistrées comme candidates et non comme lois.

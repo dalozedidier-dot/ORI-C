@@ -78,3 +78,7 @@ La campagne de recherche suivante ajoute des tests ciblés, sans étendre automa
 - l’audit des spéléothèmes est exécuté sur 27 721 couples âge-isotope.
 
 Les données nécessaires à ces tests sont intégrées et les analyses s’exécutent hors ligne dans le dépôt.
+
+## Formalismes importés, portée scientifique
+
+Les ponts vers théorie de la viabilité, PID, états causaux finis, Chemical Organization Theory, topologie persistante, CCM, LTEE et Assembly Theory sont des **extensions méthodologiques**. Ils ne modifient pas les certifications `C-AST-01`, `C-ANT-01`, `C-VES-02`, `C-VES-03` ou le verdict négatif `C-MAT-MEM-05`. Le PCMCI+ est isolé dans une CI dédiée et reste exploratoire. M2 reste fermé dans sa formulation testée.

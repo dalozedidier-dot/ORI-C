@@ -1,0 +1,22 @@
+{
+  "schema": "oric.separating-hypotheses.v1",
+  "regle": "Ces énoncés sont des hypothèses candidates destinées à distinguer ORI-C d'un cadre générique où l'histoire compte. Ils ne sont ni lois ni résultats tant que leurs grandeurs et tests ne sont pas gelés et exécutés.",
+  "hypotheses": [
+    {
+      "id": "HYP-ORI-C-001",
+      "titre": "Coût d'intégration et contraction de l'accessible",
+      "forme_candidate": "Delta D <= -k * Delta log(Pacc)",
+      "statut": "candidate_non_testee",
+      "conditions_avant_test": ["définition dimensionnelle de D", "définition interventionnelle non saturée de Pacc", "domaine où Delta log(Pacc) est défini", "témoin concurrent et k estimable hors échantillon"],
+      "refutation_candidate": "au moins une intégration mesurée avec diminution de D sans contraction correspondante de l'accessible sous le protocole gelé"
+    },
+    {
+      "id": "HYP-ORI-C-002",
+      "titre": "Séparation des temps de relaxation et inscription",
+      "forme_candidate": "la distribution inter-familles de tau_relaxation/tau_dynamique présente une structure de régimes séparés plutôt qu'un continuum unique",
+      "statut": "candidate_non_testee",
+      "conditions_avant_test": ["définition homogène des deux temps", "inventaire multi-familles", "test de multimodalité gelé", "contrôle de censure pour les tau non observables"],
+      "refutation_candidate": "distribution compatible avec un continuum unimodal sous le test et la puissance préenregistrés"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+name: Formalismes externes ORI-C
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'methodologie_informationnelle/**'
+      - 'methodologie_puissance/**'
+      - '01_branche_matiere/organisations_chimiques/**'
+      - '01_branche_matiere/hypergraphe_transformations/topologie_persistante.py'
+      - '02_branche_systeme_solaire/couche_spin_orbite/run_viability.py'
+      - '02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/**'
+      - '03_branche_vivant/ltee_replay_history/**'
+      - 'comparaisons_externes/assembly_theory/**'
+      - 'preuves/**'
+      - 'scripts/valider_registre_preuves.py'
+      - 'scripts/construire_registre_preuves.py'
+      - 'scripts/verifier_reproductibilite_formalismes.py'
+      - '.github/workflows/analyse-formalismes-externes.yml'
+permissions:
+  contents: read
+jobs:
+  leger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with: {lfs: true}
+      - uses: actions/setup-python@v6
+        with: {python-version: '3.12'}
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - run: python -m pytest -q methodologie_informationnelle/tests methodologie_puissance/tests 01_branche_matiere/organisations_chimiques/tests 01_branche_matiere/hypergraphe_transformations/test_topologie_persistante.py 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/tests 03_branche_vivant/ltee_replay_history/tests comparaisons_externes/assembly_theory/tests
+      - name: Recalculer et comparer les sorties versionnées
+        run: python scripts/verifier_reproductibilite_formalismes.py
+      - run: python scripts/valider_registre_preuves.py
+  pcmci_plus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with: {lfs: true}
+      - uses: actions/setup-python@v6
+        with: {python-version: '3.12'}
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt -r 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/requirements-pcmci.lock.txt
+      - run: python 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/run_pcmci_plus.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: pcmci-plus-${{ github.sha }}
+          path: 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json
