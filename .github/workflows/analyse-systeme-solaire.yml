@@ -117,6 +117,9 @@ jobs:
       # au-dessus du maximum observé, et reste quatre ordres sous tout changement
       # scientifique réel : une prédiction qui bougerait vraiment se déplacerait
       # de plusieurs pour cent, pas de 0,001 %.
+      # La tolérance absolue locale vaut 2e-10 pour les valeurs proches de zéro.
+      # Elle absorbe l'écart maximal observé de 1,068e-10 sans modifier la
+      # tolérance par défaut du vérificateur ni les autres workflows.
       # Ne pas relâcher davantage sans remesurer la distribution.
       - name: Contrôler la reproductibilité numérique de la couche mémoire
         run: |
@@ -124,6 +127,7 @@ jobs:
             --reference "$RUNNER_TEMP/memoire-reference/results" \
             --candidate "$MEMORY/results" \
             --relative-tolerance 1e-5 \
+            --absolute-tolerance 2e-10 \
             | tee "$OUT/reproductibilite_memoire.log"
 
       - name: Rassembler les résultats mémoire
