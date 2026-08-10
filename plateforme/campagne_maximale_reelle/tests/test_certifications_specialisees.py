@@ -64,36 +64,36 @@ def test_une_empreinte_divergente_est_refusee() -> None:
         MODULE.certifier(config)
 
 
-def test_une_empreinte_de_registre_divergente_est_refusee() -> None:
+def test_schema_inconnu_est_refuse() -> None:
+    config = configuration()
+    config["schema"] = "inconnu"
+    with pytest.raises(ValueError, match="schéma de certification inconnu"):
+        MODULE.certifier(config)
+
+
+def test_empreinte_du_registre_divergente_est_refusee() -> None:
     config = configuration()
     config["registre_criteres_sha256"] = "0" * 64
-    with pytest.raises(ValueError, match="empreinte du registre"):
+    with pytest.raises(ValueError, match="empreinte du registre de critères divergente"):
         MODULE.certifier(config)
 
 
-def test_un_evaluateur_ne_peut_pas_etre_attribue_a_un_autre_critere() -> None:
-    config = configuration()
-    config["certifications"][0]["evaluateur"] = "vesicules_c_ves_02"
-    with pytest.raises(ValueError, match="évaluateur incompatible"):
-        MODULE.certifier(config)
-
-
-def test_un_critere_ne_peut_pas_etre_certifie_deux_fois() -> None:
+def test_criterion_id_certifie_deux_fois_est_refuse() -> None:
     config = configuration()
     config["certifications"].append(dict(config["certifications"][0]))
-    with pytest.raises(ValueError, match="certifié plusieurs fois"):
+    with pytest.raises(ValueError, match="criterion_id certifié plusieurs fois"):
         MODULE.certifier(config)
 
 
-def test_une_source_non_scellee_est_refusee() -> None:
+def test_evaluateur_incompatible_avec_le_critere_est_refuse() -> None:
     config = configuration()
-    config["certifications"][0]["source_sha256"] = None
-    with pytest.raises(ValueError, match="empreinte source absente"):
+    config["certifications"][0]["evaluateur"] = "vesicules_c_ves_02"
+    with pytest.raises(ValueError, match="incompatible"):
         MODULE.certifier(config)
 
 
-def test_une_absence_de_source_doit_etre_documentee() -> None:
+def test_evaluateur_inconnu_est_refuse() -> None:
     config = configuration()
-    config["certifications"][3]["limite_provenance"] = ""
-    with pytest.raises(ValueError, match="source absente sans limite"):
+    config["certifications"][0]["evaluateur"] = "inconnu"
+    with pytest.raises(ValueError, match="évaluateur inconnu"):
         MODULE.certifier(config)

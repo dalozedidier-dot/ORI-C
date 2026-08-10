@@ -253,6 +253,7 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Campagne réelle corrigée | `plateforme/campagne_maximale_reelle/BILAN_CORRIGE.md` | autorité sur la correction La2004, le retrait du gabarit synthétique et la comparaison N-corps/La2004 ; ses compteurs précèdent les extensions exoplanètes, antibiotiques et ARN |
 | Information des six dimensions | `01_branche_matiere/base_transitions/information_dimensions.json` | généré, prime sur `qualite_dimensions.json` |
 | Campagne plateforme | `plan_directeur/campagne_plateforme/README.md` | généré ; **ne fixe aucun statut** |
+| Politique du noyau probant | `plateforme/POLITIQUE_NOYAU_PROBANT.csv` et `plateforme/NOYAU_PROBANT.md` | organisation des cibles de preuve ; **ne fixe aucun verdict** et ne remplace ni les 683 entrées canoniques ni les critères gelés |
 | Préenregistrement de la campagne | `…/campagne_plateforme/preenregistrement/catalogue_frozen.json` | gelé, autorité unique sur les critères de la campagne |
 | Environnement d'exécution | `ENVIRONNEMENT.md` | généré ; informatif, n'invalide rien |
 

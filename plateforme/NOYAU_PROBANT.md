@@ -1,13 +1,23 @@
 # Noyau probant actif
 
-Le catalogue canonique conserve **683 tests** pour préserver l’historique, les identifiants et la traçabilité. Une politique séparée classe chaque entrée sans modifier ce registre :
+Le catalogue canonique conserve **683 tests**. Le tri ne supprime aucun identifiant et ne modifie aucun verdict scientifique.
 
-- **366 GARDER** : cibles du noyau probant actif ;
-- **317 VIRER** : sorties du noyau probant et conservées uniquement en QA/exploration si elles restent utiles ;
-- **27/27 tests confirmatoires conservés**.
+La politique d'organisation est portée par `POLITIQUE_NOYAU_PROBANT.csv` :
 
-`VIRER` ne signifie pas supprimer le code. Les simulations, contrôles de reproductibilité, inventaires, balayages paramétriques et métriques secondaires peuvent rester indispensables à la qualité de la plateforme, mais ils ne sont plus traités comme des preuves scientifiques autonomes.
+- **366 `GARDER`** : tests qui restent dans le programme probant actif ;
+- **317 `VIRER`** : tests sortis du noyau probant et conservés, si utiles, comme QA, exploration, documentation ou sous-analyses ;
+- **27/27 tests confirmatoires** restent dans le noyau probant.
 
-La politique est dans `POLITIQUE_NOYAU_PROBANT.csv`. `valider_noyau_probant.py` vérifie en mode fail-closed que les 683 IDs sont classés exactement une fois, que les compteurs restent 366/317 et qu’aucun test confirmatoire n’est exclu. Il peut matérialiser un catalogue dérivé de 366 lignes pour les campagnes de recherche sans altérer `catalogue_tests.csv`.
+`VIRER` signifie uniquement « sortir du noyau probant ». Cela ne signifie ni effacer le code, ni effacer un résultat négatif, ni réécrire l'historique du catalogue.
 
-Ce tri est une décision d’organisation du programme de preuve. Il **ne constitue pas un verdict scientifique** et ne modifie pas les compteurs de l’audit empirique strict ni les certifications spécialisées.
+## Colonnes de la politique
+
+- `test_id` : identifiant canonique du catalogue ;
+- `decision` : `GARDER` ou `VIRER` ;
+- `destination` : `noyau_probant` ou `qa_exploratoire` ;
+- `rang_action` : ordre d'action interne au tri (`1`, `2`, `3`) pour les tests gardés. Ce champ n'est **ni** la colonne `priority` du catalogue **ni** un niveau de preuve E0–E6 ;
+- `motif_code` : motif contrôlé, sans verdict scientifique implicite.
+
+Les motifs autorisés sont validés par `valider_noyau_probant.py`. Le validateur est fail-closed : il exige une bijection exacte avec les 683 IDs, les compteurs 366/317, des destinations cohérentes et la conservation de tous les tests confirmatoires.
+
+Le workflow matérialise `NOYAU_PROBANT_ACTIF.csv` et `NOYAU_PROBANT_RESUME.json` dans les sorties de l'audit. Ces fichiers générés sont des vues de travail et ne remplacent ni `catalogue_tests.csv`, ni les critères gelés, ni `RESULTATS_SCIENTIFIQUES_CERTIFIES.json`.
