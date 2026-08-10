@@ -33,6 +33,22 @@ une **structure relationnelle** :
 Histoire → Architecture → Contraintes → Réponse → Inscription → Possibilités futures
 ```
 
+### Patron expérimental transversal
+
+Cette structure reçoit désormais un patron causal commun. Pour tester `A`, on
+intervient explicitement sur l'architecture. Pour tester `m`, on apparie l'état
+présent `X` ou `S` et l'architecture `A`, puis on intervient spécifiquement sur
+la trace. Dans les deux cas, on mesure une réponse future, on compare à un
+témoin de complexité appariée, on sépare l'effet du bruit et on exige une
+réplication pour dépasser le résultat local.
+
+La couche astronomique est la première instanciation forte de ce patron : les
+interventions sur l'architecture planétaire produisent une réponse orbitale
+terrestre très supérieure aux écarts numériques sélectionnés. Ce résultat reste
+`E4_modele`. Il sert de prototype de méthode et ne transfère aucun niveau de
+preuve à la matière, au climat ou au vivant. Le protocole transversal est
+défini dans `plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md`.
+
 Cette lecture condensée se déploie dans la boucle canonique suivante :
 
 ```text

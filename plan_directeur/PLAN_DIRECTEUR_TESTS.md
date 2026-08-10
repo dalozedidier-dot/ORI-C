@@ -27,6 +27,32 @@ La règle générale est :
 
 **Une affirmation ORI-C = une variable mesurable + un témoin apparié + une intervention ou une comparaison causale + un critère préenregistré + une fenêtre assez longue + une réplication indépendante.**
 
+## Patron causal transversal `X/m/A`
+
+Le plan applique désormais un même patron expérimental aux trois branches. Il
+ne crée aucun nouveau verdict. `X` est l'alias expérimental de l'état `S` du
+Codebook. Pour tester une causalité architecturale, on intervient sur `A`. Pour
+tester une causalité de mémoire, on apparie `X` et `A`, on intervient
+spécifiquement sur `m`, puis on mesure la réponse future ou le domaine des
+futurs accessibles. L'effet doit franchir le plancher de bruit, un témoin de
+complexité appariée et les contrôles négatifs applicables avant toute montée de
+niveau de preuve.
+
+```text
+architecture et état définis
+  → intervention explicite sur A ou m
+  → réponse future mesurée
+  → témoin de complexité appariée
+  → effet > bruit et contrôles négatifs
+  → réplication indépendante
+```
+
+`C-AST-01` constitue la première instanciation forte de cette logique dans un
+modèle physique réduit. Son niveau reste `E4_modele` et ne circule vers aucune
+autre branche. Le protocole transversal complet et les conditions qui rendent
+une intervention sur `m` interprétable sont définis dans
+`PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md`.
+
 ---
 
 # I. Organisation générale de la campagne

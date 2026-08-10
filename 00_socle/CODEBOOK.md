@@ -581,6 +581,18 @@ peut se contenter de déplacer l'état ; elle peut déformer les bassins ; elle
 peut supprimer des régimes. Ces trois cas sont différents et le §13.2 sert à
 les distinguer.
 
+**Conséquence expérimentale.** Attribuer un effet causal à `m` exige de
+modifier ou d'abolir la trace tout en maintenant `S` et les composantes non
+visées de `A` dans des tolérances d'appariement préenregistrées. Un simple gain
+prédictif de l'histoire sur l'état présent établit une valeur informationnelle,
+pas une causalité de la trace. Réciproquement, une causalité architecturale se
+teste par une intervention explicite sur `A`. Dans les deux cas, la réponse
+future doit battre un témoin de complexité appariée et le plancher de bruit. Le
+patron d'instanciation est défini dans
+`plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md`. La notation `X/m/A`
+employée par certains protocoles est un raccourci expérimental où `X` désigne
+le même état présent que `S` au niveau `ℓ_ana` déclaré.
+
 ### 13.5 Persistance vectorielle, seuils et règle de décision
 
 Le vecteur `Π^ℓ_ana` du §4 décrit un **mode** de maintien. La mesure scalaire

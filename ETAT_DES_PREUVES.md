@@ -71,6 +71,13 @@ complète, le diagnostic `D-H-L`, la séparation `X/m/A` et le critère
 d'altération architecturale. Ils organisent le programme et ses futurs tests ;
 ils ne doivent pas être présentés comme des résultats empiriquement établis.
 
+Le protocole `plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md` ferme
+désormais le **vide méthodologique**, pas le vide empirique. Il spécifie comment
+isoler `m` de l'état présent et de l'architecture, comment intervenir sur la
+trace, comment mesurer les futurs accessibles et comment exiger un témoin
+apparié, un plancher de bruit et une réplication. Aucun des quatre objets
+ci-dessus ne change donc de statut par cette seule formalisation.
+
 | Élément | Statut | Où |
 |---|---|---|
 | Vocabulaire des six dimensions | Preuve de concept | `00_socle/CODEBOOK.md` |
@@ -294,6 +301,12 @@ Détail : `02_branche_systeme_solaire/FILTRAGES_HISTORIQUES.md`.
 
 **13 réussis sur 15.** Statut : *validé dans le modèle réduit*.
 
+Cette couche sert désormais de **prototype méthodologique** pour le protocole
+transversal de causalité architecturale : architecture explicite, intervention,
+réponse mesurée, séparation effet/bruit et reproductibilité. Cette fonction de
+prototype ne modifie pas son niveau `E4_modele` et ne constitue aucune preuve
+par transfert pour les autres branches.
+
 Les deux échecs sont documentés à leur source. Le premier concerne un
 diagnostic newtonien dans le seul contrôle relativiste complet ; tous les jobs
 de production restent sous 4,33 × 10⁻¹². Le second est corrigé au pas raffiné
@@ -303,6 +316,14 @@ maximum des deux essais et l'échec est conservé.
 Portée : le modèle réduit ne résout ni la Lune, ni la rotation terrestre, ni le
 J₂ solaire, ni les marées, ni l'obliquité dynamique. Une ressemblance orbitale,
 même forte, ne valide pas le cadre général.
+
+Le terme « réduit » ne signifie pas que les planètes externes manquent : le témoin
+`real_science_max` contient déjà les huit planètes jusqu'à Neptune, et un contrôle
+séparé ajoute Pluton plus Cérès, Pallas, Vesta, Iris et Bamberga. La prochaine
+extension probante porte donc sur la **spécificité causale** des quatre géantes,
+l'extraction explicite des modes `g_i/s_i`, puis sur un module spin-orbite
+Terre-Lune validé séparément. La feuille de route correspondante est
+`02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md`.
 
 ## Branche 2 — Système solaire, couche mémoire historique
 
@@ -519,6 +540,8 @@ Le programme comporte maintenant deux types de données complémentaires. Les tr
 ORI-C dispose aujourd’hui de plusieurs résultats convergents : une causalité architecturale mesurée dans le modèle astronomique, une relation de persistance démontrée dans le chémostat, un gain prédictif de l’histoire sur le jeu D’Onofrio, une transmission parent-descendant mesurable dans les vésicules, un seuil matériel H011 et une organisation cumulative quantifiée dans l’hypergraphe.
 
 Les résultats négatifs restent utiles dans leur périmètre. M2 ferme une formulation climatique, Card 2019 ferme un benchmark rétrospectif et l’amikacine intégrée reste non concluante. Aucun de ces verdicts n’annule les résultats obtenus avec d’autres données et d’autres témoins.
+
+La prochaine montée de preuve doit suivre le même patron causal dans les branches qui le permettent. D’Onofrio reste `E2` tant qu'aucune intervention ciblée sur `m` n'est réalisée. Les vésicules possèdent déjà une ablation `E4`, mais il reste à expliciter l'appariement `X/m/A` autour de cette intervention et à obtenir une réplication indépendante. La matière doit encore réunir histoire, trace, effacement ou intervention et réponse dans une même famille. En paléoclimat, M1P a fourni le témoin de complexité appariée qui rejette M2 dans cette formulation et doit être conservé comme exigence méthodologique dans toute nouvelle architecture mémoire.
 
 ## Campagne ciblée v0.9.3
 

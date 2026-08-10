@@ -36,7 +36,7 @@ Cette version implémente :
 7. une comparaison Lomb–Scargle avec une archive irrégulièrement échantillonnée ;
 8. un manifeste d’exécution, les empreintes SHA-256 et un rapport automatique.
 
-Le protocole renforcé `configs/real_science_max.yaml` ajoute :
+Le protocole renforcé `configs/real_science_max.yaml` utilise déjà **les huit planètes de Mercure à Neptune** dans son témoin de référence et ajoute :
 
 1. des vecteurs cartésiens J2000 tirés de JPL Horizons DE441 ;
 2. la relativité générale par REBOUNDx ;
@@ -51,8 +51,9 @@ Le protocole renforcé `configs/real_science_max.yaml` ajoute :
 Limites importantes :
 
 - l’obliquité terrestre est prescrite dans cette version ; le couplage complet rotation-orbite n’est pas encore intégré ;
-- la Lune est représentée par le barycentre Terre-Lune dans les conditions initiales ;
+- la Lune est représentée par le barycentre Terre-Lune dans les conditions initiales : ce choix reproduit la dynamique orbitale du barycentre, **pas le couple stabilisateur de la Lune sur l'axe de rotation terrestre** ;
 - la relativité générale est optionnelle et les marées séculaires ne sont pas intégrées ;
+- La2010 sert ici de référence **orbitale** ; pour une future validation de l'obliquité et de l'insolation, les produits IMCCE renvoient à La2004 ;
 - le modèle climatique est un modèle de réponse réduit, pas un GCM ;
 - les éléments J2000 historiques restent disponibles pour contrôle, mais les tests longs utilisent les vecteurs Horizons ;
 - `gr_potential` préserve la structure symplectique et reproduit la précession, sans remplacer le modèle relativiste complet de La2010.
@@ -147,6 +148,11 @@ Les deux échecs restent publiés : l’aller-retour au pas 0,01 an dépasse son
 seuil alors que le pas 0,005 le réussit, et le diagnostic newtonien de moment
 angulaire dépasse son seuil pour le contrôle 1PN `gr_full`. Les résultats et
 leurs limites sont résumés dans `docs/REAL_SCIENCE_RESULTS.md`.
+
+La feuille de route pour les fréquences séculaires, les interventions comparatives
+sur les quatre géantes et le futur module spin-orbite Terre-Lune se trouve dans
+`docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md`. Elle est prospective et ne
+modifie aucun verdict actuel.
 
 ## Commandes principales
 

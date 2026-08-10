@@ -89,8 +89,8 @@
     },
     {
       "path": "00_socle/CODEBOOK.md",
-      "size": 32497,
-      "sha256": "b740ec53e840a2bd82c35648af8dd4aeeac26a0c1389a464b8bbc2b44c21b6da",
+      "size": 33324,
+      "sha256": "da64b3ab014a30b387e557a9a8385cd8b65e9bd7e6a91f86ee8f71d20933bb56",
       "storage": "inline"
     },
     {
@@ -539,8 +539,8 @@
     },
     {
       "path": "00_socle/tests/test_integrite_dossier.py",
-      "size": 2385,
-      "sha256": "d32923e20cdd549c455667a586d20c891f5ef943b983198c4e7a54f47eaff63a",
+      "size": 3039,
+      "sha256": "b722da07bfa4365c2b4f332639722a00194bf422ca8d1949657b5d72529685c2",
       "storage": "inline"
     },
     {
@@ -1793,8 +1793,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/LISEZ_MOI.md",
-      "size": 755,
-      "sha256": "22c6e019d204ef1f850f7d5d163a598b3ccc3b896db8c90c6c6d782648d8dc9a",
+      "size": 1051,
+      "sha256": "9b411e1b695399400d9da7d64680a8cd06a21945e9e6d12e61900dfbecc03383",
       "storage": "inline"
     },
     {
@@ -1865,8 +1865,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/README.md",
-      "size": 10111,
-      "sha256": "3b7687df2100d83d1db7b9d9423d77c077123e73f9e520d2152a978777294463",
+      "size": 10769,
+      "sha256": "c89e17fac7265b4f7fba81b6f5a323fdc86a647246ad708a65e9e653e1ac41da",
       "storage": "inline"
     },
     {
@@ -1954,6 +1954,18 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/La2010a_eccentricity_combinations.csv",
+      "size": 619,
+      "sha256": "bfc94992d16889e7e38999559ae891e7a18d85b5be860fa6672fd31403f64ad5",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/La2010a_secular_frequencies.csv",
+      "size": 1252,
+      "sha256": "7bcf31ec5e255f370903247dec1c2bfca655792b76e3f96dbd9f1aa3e43fff77",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/La2010b_ecc3.dat",
       "size": 1200000,
       "sha256": "35fb5609133491b256d22b794a5634270ad062b531afe34009906377a6a4d43f",
@@ -1973,14 +1985,26 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/PROVENANCE.md",
-      "size": 1592,
-      "sha256": "5ff0918703478f5f256b2989e8ab8402c13f2b5cf4500b452b8df9c4256bb6f0",
+      "size": 1852,
+      "sha256": "9d1f808c59f8f45eeb780c919bc88485d1038c8e4cacf53371b2c14630a72630",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/README.TXT",
       "size": 3798,
       "sha256": "8c6bd60958738db3b2d688ce9cfe8bf05fcd6812ea4c0ea5ba7c948fe01fb93a",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/data/reference/la2010/SECULAR_FREQUENCIES_PROVENANCE.md",
+      "size": 1270,
+      "sha256": "1ed9072115ceb84079c3ef94333ba0aed246d9096f51a5f3537d31d83a4e717b",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md",
+      "size": 13931,
+      "sha256": "f3fd523c27c597205fc681141262fc3107caa5d31bb2f68512afa2054c18455f",
       "storage": "inline"
     },
     {
@@ -1997,8 +2021,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/TEST_PLAN.md",
-      "size": 3832,
-      "sha256": "da5f8f3717c80f93f633ed50804f187c6c1d9ec548730d246de2c46a0836a8ec",
+      "size": 5411,
+      "sha256": "5c3e6e1fcabafd5e1ee9147f77bd24bfb4a2a6111df511a731e59cead9566bba",
       "storage": "inline"
     },
     {
@@ -2221,6 +2245,12 @@
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/tests/test_rebound_backend.py",
       "size": 1998,
       "sha256": "acb91a4b049acf7bef962b7d0d4c2e7f3aa16700b09e49f1e88b50c51bd66c1b",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/tests/test_secular_reference.py",
+      "size": 1341,
+      "sha256": "b11a857d6f6ed11bbb77addfdd190b8fa205c5da9a74975952b6a2d1e45e4d57",
       "storage": "inline"
     },
     {
@@ -3391,6 +3421,12 @@
       "path": "02_branche_systeme_solaire/couche_memoire_historique/CITATION.cff",
       "size": 242,
       "sha256": "39cc8a46299b70bee39b9bed2c966deb55adcab5e02b17bbb306d205eca2de8f",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
+      "size": 17609,
+      "sha256": "0e1569e01aabbeb75c0af4beffb69b3253c9b4e8aea8a19043ec74a61dfc9181",
       "storage": "inline"
     },
     {
@@ -4781,8 +4817,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "size": 12958,
-      "sha256": "72525b95048698e82187a7b1ef21972d88c5f76b75118b7b474b60eebec2ed68",
+      "size": 13916,
+      "sha256": "1199e49125b36d0cb7aaacfe6547f6fbeed62f5ee90c0577a683f491dbdbecba",
       "storage": "inline"
     },
     {
@@ -4799,8 +4835,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 26861,
-      "sha256": "5467b9360aab6bd6146d6bd5bb617319c1220be7bbacfadd000641e92e793bd4",
+      "size": 28018,
+      "sha256": "3738b2b8e0196006d588d5c5d829be0cfb024b863ebbf7eb934031a5ba6a6d79",
       "storage": "inline"
     },
     {
@@ -4823,8 +4859,8 @@
     },
     {
       "path": "CONTROLES_INTEGRITE.md",
-      "size": 5065,
-      "sha256": "d3bc0b9a4df953072fd2fc4a9771d7d849de6c2409496649b9f8d300d8696ad9",
+      "size": 5913,
+      "sha256": "dd92d4b025050ca62fd1d741133228c6e88be21b8f879f034df9629f560b04b1",
       "storage": "inline"
     },
     {
@@ -4865,8 +4901,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 40500,
-      "sha256": "4f904f36cf97433e93bad58dd63e31664f9575b9dd7f31be0fdf3bb5337fdf0e",
+      "size": 42627,
+      "sha256": "613b49a1c340333ac0ccaa09e7e446ff7c1ce0dca473dad8d440cdee1715490b",
       "storage": "inline"
     },
     {
@@ -4883,8 +4919,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 3568,
-      "sha256": "d3f2e1b54f901b5b5a3c7a9b081a00a1f55cce4b5501fc14489de8a45ce35a0f",
+      "size": 4894,
+      "sha256": "73338eaabe968f1c135fbf3b6456c6ac9445d238180fff9c1520054a022d51c7",
       "storage": "inline"
     },
     {
@@ -4895,8 +4931,8 @@
     },
     {
       "path": "INSTRUCTIONS_MISE_A_JOUR.md",
-      "size": 1340,
-      "sha256": "9c9e7013be3c5f05ba4bbc84e7464f88719b2a334d3d32140d8cdf359994e48c",
+      "size": 1525,
+      "sha256": "3ec68bf9e564fff7140a1b29a842c0d6dd3cc35a8d60e96c6c9947642e2d6b74",
       "storage": "inline"
     },
     {
@@ -5015,8 +5051,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 6106,
-      "sha256": "ecc803c7b00af8f4afebbe2b4d1eaefedd5b6be1f91378b6332a50ca765f132c",
+      "size": 7194,
+      "sha256": "cfb1f6578e4c921e192cc2423bb89621924bf03aee94fefce7c19ba9e11efeb0",
       "storage": "inline"
     },
     {
@@ -5087,8 +5123,8 @@
     },
     {
       "path": "build_manifest.py",
-      "size": 5688,
-      "sha256": "619cd5e963bcbcd3b627dbff473a72284aca8ca1f598772c18dc1e249219827d",
+      "size": 5722,
+      "sha256": "94cf578f9834a98fc0c28528ffe7f14820d9521bca3bbeb939a1f07a97d3d7a9",
       "storage": "inline"
     },
     {
@@ -5609,8 +5645,14 @@
     },
     {
       "path": "plan_directeur/PLAN_DIRECTEUR_TESTS.md",
-      "size": 47696,
-      "sha256": "0374e99fa0e94e57bb8f7b3f6d1ce7603a0072614c0a9fb9e088e3d219b6d027",
+      "size": 48881,
+      "sha256": "5e7ed8fa4e38f43d380df28ef77396e9651e58558ccc05c6b3b04b92003bef9a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md",
+      "size": 10813,
+      "sha256": "2932e3ddfe6ad1565f513ae993f1ab0f01a31356e58d5ad225fabae01b2d85f2",
       "storage": "inline"
     },
     {
@@ -6019,6 +6061,12 @@
       "path": "plan_directeur/revue_systematique/LIMITES.md",
       "size": 976,
       "sha256": "d48c45c4d67e58af6cde161ff6a1f081ce4061263043218094cfe6a2b6fe5ee5",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/revue_systematique/MANIFEST.sha256",
+      "size": 1937,
+      "sha256": "c60b5b3285cbd50dd74ae86d3c3b530dd713c74d88f7fafe45b54630b1841fac",
       "storage": "inline"
     },
     {
@@ -8219,8 +8267,8 @@
     },
     {
       "path": "verifier_dossier.py",
-      "size": 12512,
-      "sha256": "1eff7b4ea474a7066cc44419f5651807a1adbac94b167ae19a49588525df4386",
+      "size": 12522,
+      "sha256": "d7434aea91516d4e33da852da83c96c00e390a3fb9f8b43c2a1616fd2e3eaa07",
       "storage": "inline"
     }
   ]

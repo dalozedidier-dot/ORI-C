@@ -23,4 +23,4 @@ Sont conservés avec provenance et portée explicite : la compilation GEOROC de 
 
 ## Contrôles de cohérence
 
-Les deux manifestes SHA-256 sont reconstruits à partir de l’arbre final, après toutes les corrections et sorties canoniques. `EMPIRICAL_POLICY.json` et `REAL_DATA_COVERAGE.json` restent les verrous de portée du mode réel strict.
+Les trois périmètres de manifeste sont reconstruits à partir de l’arbre final, après toutes les corrections et sorties canoniques : couche mémoire historique, revue systématique, puis racine. La racine est publiée sous `MANIFEST.sha256` et `MANIFEST.sha256.json` et elle chaîne les deux sous-manifestes. `EMPIRICAL_POLICY.json` et `REAL_DATA_COVERAGE.json` restent les verrous de portée du mode réel strict.

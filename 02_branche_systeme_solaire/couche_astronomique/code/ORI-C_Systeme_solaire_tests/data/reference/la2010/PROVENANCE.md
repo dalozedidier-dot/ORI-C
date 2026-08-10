@@ -1,8 +1,7 @@
 # Provenance des séries La2010
 
 Ces fichiers sont les séries officielles d’excentricité terrestre publiées par
-l’Institut de mécanique céleste et de calcul des éphémérides. Ils n’ont subi
-aucune transformation dans le dossier `data/reference/la2010`.
+l’Institut de mécanique céleste et de calcul des éphémérides. Les fichiers `La2010*_ecc3*.dat` n’ont subi aucune transformation dans le dossier `data/reference/la2010`. Les tables `La2010a_secular_frequencies.csv` et `La2010a_eccentricity_combinations.csv` sont des dérivés documentaires séparés ; leur provenance et leur règle de calcul sont décrites dans `SECULAR_FREQUENCIES_PROVENANCE.md`.
 
 Source :
 

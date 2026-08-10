@@ -65,3 +65,19 @@ def test_les_deux_couches_de_la_branche_2_restent_separees() -> None:
     branche = DOSSIER / "02_branche_systeme_solaire"
     assert (branche / "couche_astronomique").is_dir()
     assert (branche / "couche_memoire_historique").is_dir()
+
+
+def test_le_manifeste_racine_chaine_les_deux_sous_manifestes() -> None:
+    import json
+
+    attendus = {
+        "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
+        "plan_directeur/revue_systematique/MANIFEST.sha256",
+    }
+    lignes = (DOSSIER / "MANIFEST.sha256").read_text(encoding="utf-8").splitlines()
+    chemins_texte = {ligne.split("  ", 1)[1] for ligne in lignes if "  " in ligne}
+    document = json.loads((DOSSIER / "MANIFEST.sha256.json").read_text(encoding="utf-8"))
+    chemins_json = {entree["path"] for entree in document["files"]}
+
+    assert attendus <= chemins_texte
+    assert attendus <= chemins_json

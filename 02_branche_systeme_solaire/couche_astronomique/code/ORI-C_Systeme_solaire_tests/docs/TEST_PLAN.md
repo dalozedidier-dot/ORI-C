@@ -22,9 +22,12 @@ Contrôles du protocole maximal :
 - modèle à huit planètes puis ajout de Pluton et cinq astéroïdes ;
 - huit conditions initiales perturbées de \(10^{-10}\) radian.
 
-Encore à ajouter avant une solution de précision La2010 : modèle Terre-Lune
-résolu, J2 solaire, marées, ajustement initial complet et croisement
-REBOUND/ASSIST.
+Le témoin maximal contient déjà Uranus et Neptune. Le contrôle enrichi ajoute
+Pluton, Cérès, Pallas, Vesta, Iris et Bamberga. Encore à ajouter avant une
+solution de précision comparable aux solutions astronomiques complètes : modèle
+Terre-Lune résolu, J2 solaire, marées, ajustement initial complet et croisement
+REBOUND/ASSIST. Pour le spin terrestre, La2010 reste la référence orbitale tandis
+que l'obliquité/insolation doit être validée séparément, notamment contre La2004.
 
 ## 11.2 — Extraction du spectre
 
@@ -98,3 +101,29 @@ seuils numériques et astronomiques du protocole maximal sont inscrits dans
 - limites empêchant une conclusion causale.
 
 Une réfutation utile serait obtenue si les modèles dépendants de l’état n’améliorent pas les prédictions hors échantillon, si les effets architecturaux disparaissent sous contrôle numérique, ou si un modèle plus simple explique les archives avec moins de paramètres.
+
+
+## 11.8 — Extension architecturale globale et spin-orbite
+
+Document de conception : `EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md`.
+
+Cette extension ne remplace pas `C-AST-01`. Elle doit être traitée comme un
+nouveau protocole prospectif.
+
+Ordre recommandé :
+
+1. extraire et valider les modes séculaires `g_i` et `s_i` sur le témoin ;
+2. appliquer des interventions comparables à Jupiter, Saturne, Uranus et Neptune ;
+3. mesurer les déplacements des modes et des combinaisons liées aux bandes
+   d'excentricité terrestre ;
+4. étendre les interventions à une fenêtre permettant de résoudre proprement
+   les bandes longues, avec ensembles dès que la divergence chaotique l'exige ;
+5. ajouter ensuite le spin terrestre et le couple lunaire ;
+6. valider l'obliquité/insolation contre une référence indépendante avant toute
+   interprétation climatique.
+
+Le domaine `0-85°` d'une Terre sans Lune décrit une zone chaotique issue d'une
+analyse de fréquences classique. Il ne doit pas servir de seuil confirmatoire :
+les intégrations ultérieures montrent des trajectoires souvent beaucoup plus
+confinées. Les métriques doivent porter sur l'amplitude, la diffusion, les
+franchissements résonants et la réponse d'insolation.

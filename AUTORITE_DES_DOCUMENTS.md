@@ -93,6 +93,8 @@ teste la non-linéarité, ce qui n’est pas l’inscription historique : la pr�
 vaut e·sin(ω), sa modulation d’amplitude est une non-linéarité réelle, et elle
 n’inscrit rien. Une statistique nouvelle reste à construire pour l’hypothèse ORI-C.
 
+**Règle causale transversale.** Un gain prédictif de l'histoire ne suffit pas à attribuer un effet causal à `m`. Une telle attribution exige une intervention ou une ablation ciblée de la trace, avec `X` et les composantes non visées de `A` appariés selon des tolérances gelées, puis une réponse future supérieure au témoin de complexité appariée et au plancher de bruit. La causalité sur `A` exige de la même manière une intervention explicite sur l'architecture. `C-AST-01` est le prototype méthodologique actuel dans un modèle réduit, pas une preuve transférable aux autres branches.
+
 **Règle d’or pour tout nouveau résultat.** Les avancées viennent des pipelines ciblés, jamais de la matrice générique. L’ordre est contraignant et ne se réarrange pas :
 
 1. écrire le critère exact et la liste des variables obligatoires ;
@@ -242,6 +244,8 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Rôle | Fichier | Statut |
 |---|---|---|
 | Plan de campagne | `plan_directeur/PLAN_DIRECTEUR_TESTS.md` | canonique ; **plan, pas résultat** |
+| Protocole transversal de causalité `X/m/A` | `plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md` | méthodologique et prospectif ; **ne fixe aucun verdict** ; chaque instanciation confirmatoire doit être gelée séparément |
+| Extension astronomie globale et spin-orbite | `02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md` | feuille de route prospective ; documente fréquences, spécificité des géantes et Terre-Lune ; **ne modifie pas `C-AST-01`** |
 | Registre des hypothèses | `plan_directeur/REGISTRE_HYPOTHESES.csv` | généré, prime sur tout statut cité ailleurs sauf `ETAT_DES_PREUVES.md` |
 | Avancement | `plan_directeur/AVANCEMENT_DU_PLAN.md` | généré ; descriptif, ne fixe aucun statut |
 | Grille de l'Étape 2 | `plan_directeur/GRILLE_ETAPE_2.md` | généré ; audit, ne fixe aucun statut |

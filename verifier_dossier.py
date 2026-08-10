@@ -188,7 +188,7 @@ def fichiers_du_dossier() -> list[Path]:
             continue
         if chemin.suffix in EXCLUS_SUFFIXES:
             continue
-        if chemin.name in {MANIFESTE.name, "MANIFEST.sha256.json"}:
+        if relatif.as_posix() in {"MANIFEST.sha256", "MANIFEST.sha256.json"}:
             continue
         resultat.append(chemin)
     return resultat

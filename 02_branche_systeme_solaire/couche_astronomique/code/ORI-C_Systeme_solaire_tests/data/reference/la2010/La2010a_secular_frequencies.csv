@@ -1,0 +1,17 @@
+mode,type,la2004_arcsec_per_year,la2010a_arcsec_per_year,delta100_arcsec_per_year,period_years,dominant_association,source_note
+g1,g,5.59,5.59,0.13,231843,Mercure,Table 6 Laskar et al. 2011; value rounded as published
+g2,g,7.452,7.453,0.019,173913,Vénus,Table 6 Laskar et al. 2011
+g3,g,17.368,17.368,0.20,74620,Terre,Table 6 Laskar et al. 2011
+g4,g,17.916,17.916,0.20,72338,Mars,Table 6 Laskar et al. 2011
+g5,g,4.257452,4.257482,0.000030,304407,Jupiter,Table 6 Laskar et al. 2011
+g6,g,28.2450,28.2449,0.0010,45884,Saturne,Table 6 Laskar et al. 2011
+g7,g,3.087951,3.087946,0.000034,419696,Uranus,Table 6 Laskar et al. 2011
+g8,g,0.673019,0.673019,0.000015,1925646,Neptune,Table 6 Laskar et al. 2011
+s1,s,-5.59,-5.61,0.15,231843,Mercure,Table 6 Laskar et al. 2011
+s2,s,-7.05,-7.06,0.19,183830,Vénus,Table 6 Laskar et al. 2011
+s3,s,-18.850,-18.848,0.066,68753,Terre,Table 6 Laskar et al. 2011
+s4,s,-17.755,-17.751,0.064,72994,Mars,Table 6 Laskar et al. 2011
+s5,s,0,0,,0,Jupiter,Reference nodale; Table 6 Laskar et al. 2011
+s6,s,-26.347855,-26.347841,0.000076,49188,Saturne,Table 6 Laskar et al. 2011
+s7,s,-2.9925259,-2.9925258,0.000025,433079,Uranus,Table 6 Laskar et al. 2011
+s8,s,-0.691736,-0.691740,0.000010,1873547,Neptune,Table 6 Laskar et al. 2011

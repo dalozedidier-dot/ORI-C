@@ -90,3 +90,9 @@ point fixe atteint 46 nœuds sur 53. Sept nœuds, `N029`, `N030`, `N031`, `N032`
 `N035`, `N053` et `N054`, restent enfermés dans une dépendance circulaire. La
 formulation « hypergraphe clos » est donc retirée. Le résultat négatif est
 verrouillé par la suite de tests.
+
+## Chaînage des sous-manifestes, correction du 2026-08-10
+
+La règle d'autorité exige trois périmètres de manifeste : racine, couche mémoire historique et revue systématique. Le constructeur racine excluait auparavant tout fichier nommé `MANIFEST.sha256`, y compris les deux sous-manifestes. Le vérificateur reproduisait la même exclusion. La racine ne pouvait donc pas détecter leur remplacement malgré la règle documentaire qui annonçait leur chaînage.
+
+`build_manifest.py` et `verifier_dossier.py` excluent désormais uniquement `MANIFEST.sha256` et `MANIFEST.sha256.json` **à la racine**. Les deux sous-manifestes sont inscrits dans les deux formes du manifeste racine et un test du socle impose leur présence. L'ordre de reconstruction est : sous-manifeste mémoire, sous-manifeste de revue, puis manifeste racine en dernier.

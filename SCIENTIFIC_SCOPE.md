@@ -8,7 +8,7 @@ Le jeu NASA Exoplanet Archive sert à une analyse démographique des solutions p
 
 Les données biologiques sont séparées par protocole. Windels documente des cycles d’exposition à l’amikacine. D’Onofrio fournit 288 mesures permettant de comparer état seul, état + histoire et histoire permutée de même complexité. Les douze classeurs de vésicules contiennent des cartes donneur-receveur et produisent 11 760 couples parent-descendant. Papastavrou, Horning et Joyce documentent des fréquences de séquences d’ARN catalytique sur plusieurs cycles, sans généalogie de compartiments. Aucun verdict obtenu sur l’un de ces jeux ne doit être étendu aux autres.
 
-La couche astronomique conserve l’intégration N-corps et ses validations séparées. La série orbitale réelle utilisée par la campagne est La2004 à 51 001 pas avec excentricité, obliquité et précession. La référence La2010 est conservée séparément et tronquée à son horizon de fiabilité déclaré.
+La couche astronomique conserve l’intégration N-corps et ses validations séparées. Le témoin N-corps maximal contient déjà les huit planètes, de Mercure à Neptune ; un contrôle séparé ajoute Pluton et cinq astéroïdes. La série paléoclimatique de campagne issue de La2004 contient excentricité, obliquité et précession, tandis que la validation N-corps de l'excentricité utilise La2010. Cette distinction doit être conservée : les produits IMCCE La2010 servent de référence orbitale, alors que La2004 reste la référence publiée à utiliser pour l'obliquité et l'insolation.
 
 La campagne consolidée reste exploratoire lorsque aucun critère confirmatoire n’a été gelé. Une réussite technique signifie qu’un moteur a traité ses données. Elle ne vaut pas soutien scientifique d’ORI-C.
 
@@ -44,6 +44,21 @@ Dans la branche vivant, la campagne maximale historique sur l’amikacine reste 
 Les 21 tests de régression de cette campagne vérifient que les scripts
 reproduisent les résultats publiés et conservent les limites annoncées. Ils ne
 sont pas 21 preuves scientifiques indépendantes.
+
+## Portée du protocole transversal `X/m/A`
+
+`plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md` est un patron
+méthodologique prospectif. Il formalise une séquence commune : architecture et
+état définis, intervention explicite sur `A` ou `m`, réponse future mesurée,
+témoin de complexité appariée, séparation de l'effet et du bruit, puis
+réplication. Il ne crée aucun soutien scientifique par lui-même.
+
+`C-AST-01` illustre ce patron dans un modèle N-corps réduit et reste
+`E4_modele`. D’Onofrio reste `E2`. L'ablation des vésicules reste `E4` dans son
+protocole actuel. Le résultat négatif de `C-MAT-MEM-05` et la fermeture de M2
+restent inchangés. Toute nouvelle instanciation doit être préenregistrée
+séparément et ne peut hériter du verdict d'une autre branche.
+
 ## Portée du calibrage v0.9.4
 
 Le calibrage permet de trier les relations documentaires faibles, les voies uniques, les relations redondantes, les hyperarêtes critiques par ablation et les cycles d’entretien mutuel. Il ne mesure pas encore la nécessité empirique, la suffisance, la temporalité quantitative, la réversibilité physique ni l’effet d’une intervention directe.
