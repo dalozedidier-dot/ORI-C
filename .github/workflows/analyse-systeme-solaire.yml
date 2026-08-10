@@ -24,6 +24,7 @@ on:
       - '02_branche_systeme_solaire/couche_astronomique/**'
       - '02_branche_systeme_solaire/couche_memoire_historique/**'
       - '02_branche_systeme_solaire/couche_spin_orbite/**'
+      - 'scripts/verifier_reproductibilite_spin_orbite.py'
       - '.github/workflows/analyse-systeme-solaire.yml'
 
 permissions:
@@ -306,12 +307,13 @@ jobs:
 
       - name: Contrôler la reproductibilité numérique spin-orbite
         run: |
-          python scripts/verifier_reproductibilite_resultats.py \
+          # Le témoin avec Lune est comparé point par point sur 20 Ma.
+          # L'ablation lunaire, chaotiquement sensible à long terme, est
+          # comparée point par point jusqu'à 2 Ma puis par agrégats 20 Ma.
+          # La viabilité est recalculée par le workflow des formalismes externes.
+          python scripts/verifier_reproductibilite_spin_orbite.py \
             --reference "$SPIN/resultats" \
             --candidate "$CANDIDATE" \
-            --relative-tolerance 1e-10 \
-            --absolute-tolerance 1e-10 \
-            --ignorer-suffixes .png,.sha256 \
             | tee "$OUT/logs/reproductibilite_spin_orbite.log"
 
       - name: Rassembler les résultats spin-orbite

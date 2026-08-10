@@ -41,8 +41,8 @@
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 13176,
-      "sha256": "8a1ef79814cb9842b09aaa5c287bd05d6272e722e44a5e8a99b8df7ee937625d",
+      "size": 13418,
+      "sha256": "5ffdac6f44f06cf733af044b94c0955d315bbed366ff64e06969633c58d9ce48",
       "storage": "inline"
     },
     {
@@ -3492,7 +3492,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
       "size": 18352,
-      "sha256": "9206b06147b018554aa6c2bc04be8f6f0536718231a75177d43b0095df656756",
+      "sha256": "db8268eb34849de39f89a39db4425baae8fb8deaae47781577fc2756346e8dd6",
       "storage": "inline"
     },
     {
@@ -3617,8 +3617,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/README.md",
-      "size": 475,
-      "sha256": "0fa613bd172d4afed32b525aee6fb6ec1868395b4b2c8d2916597d1e720fdc51",
+      "size": 1172,
+      "sha256": "c2d35981ac22950e70b8eba7d2e2b0af9c4b69d4946b814bfdc3069551634e96",
       "storage": "inline"
     },
     {
@@ -4571,8 +4571,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_spin_orbite/README.md",
-      "size": 1590,
-      "sha256": "3822b5f82ef5b040fe2cb9d93bab827b0f383e944c6d1cfb506e7a856e3b8ac9",
+      "size": 2694,
+      "sha256": "f5bc4b19345c9608322a0f43b3cd0f343e4436266ca75fc61b41977bdd457478",
       "storage": "inline"
     },
     {
@@ -8609,14 +8609,20 @@
     },
     {
       "path": "scripts/verifier_reproductibilite_formalismes.py",
-      "size": 5130,
-      "sha256": "cab2aab74f4bfd87cfcd16e1a2ecdb7e4bd58e254729766c7757644be200da0a",
+      "size": 6242,
+      "sha256": "41a73ce54142d53c98a467565a1fb2fb24b5cf828e063f644f9dafd47de1a945",
       "storage": "inline"
     },
     {
       "path": "scripts/verifier_reproductibilite_resultats.py",
       "size": 13965,
       "sha256": "8225ae52b473fc80a2f5f33552509e8c11cd0206e3a4bb28c54c7894ac5a3e2f",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/verifier_reproductibilite_spin_orbite.py",
+      "size": 8972,
+      "sha256": "a74cc7126e3962310e6a3b20b546f2089106da256bb31918616700eaf180e20b",
       "storage": "inline"
     },
     {

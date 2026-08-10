@@ -32,3 +32,14 @@ Cette couche calcule effectivement :
 `architecture N-corps → spin → obliquité → insolation`.
 
 Elle ne résout pas explicitement l'orbite mensuelle de la Lune, les marées ni l'évolution de la distance Terre-Lune. Ces éléments restent une extension physique de long terme et ne sont pas nécessaires pour tester ici l'effet stabilisateur du couple lunaire sur le spin séculaire.
+
+## Reproductibilité numérique
+
+Le contrôle CI distingue deux régimes au lieu d'imposer une identité point par point artificielle sur toute la fenêtre :
+
+- avec couple lunaire effectif, la trajectoire est comparée point par point sur 20 Ma à `rel=1e-10`, `abs=1e-10` ;
+- pour l'ablation lunaire, la comparaison point par point est conservée jusqu'à 2 Ma ; au-delà, la sensibilité chaotique aux derniers bits rend une identité trajectorielle de 20 Ma inappropriée, donc les statistiques canoniques de `summary.json` sont comparées avec une tolérance locale de `2e-6` relative et `2e-5` absolue ;
+- les rapports effet/plancher utilisent la même tolérance locale, car leur dénominateur est une dispersion d'ensemble de l'ordre de `1e-9` ;
+- `resultats/viabilite/` est recalculé et contrôlé séparément par le workflow des formalismes externes, car ce sous-dossier n'est pas produit par `run_spin_orbit.py`.
+
+Le script d'autorité est `scripts/verifier_reproductibilite_spin_orbite.py`. Cette séparation ne modifie aucun résultat scientifique ni aucun critère de validation La2004.

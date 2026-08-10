@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Recalcule les formalismes externes versionnés puis compare leurs sorties.
 
-Le script travaille dans l'arbre courant parce que plusieurs adaptateurs historiques
-écrivent encore vers un chemin de sortie fixe. Chaque sortie de référence est copiée
-avant le recalcul et restaurée dans un bloc ``finally``. La comparaison est numérique
-et tolérancée : elle ne dépend donc pas d'une identité binaire des derniers bits entre
-versions compatibles de Python/NumPy.
+Toutes les sorties déterministes sont comparées à la tolérance numérique globale
+(très serrée par défaut). CCM est traité séparément : son estimateur dépend d'un
+classement de voisins dans un espace reconstruit et de répétitions d'échantillons.
+De minuscules différences de distances entre bibliothèques numériques peuvent
+changer l'identité de voisins quasi ex aequo et déplacer les moyennes de rho de
+~1e-4 sans changer le diagnostic. Sa tolérance dédiée est donc explicite et
+locale ; elle ne relâche aucun autre formalisme.
 
-PCMCI+ n'est pas inclus ici : son résultat n'est pas versionné tant que Tigramite
-n'est pas disponible dans l'environnement scientifique principal. Il possède un job CI
-séparé qui publie son artefact exploratoire.
+PCMCI+ n'est pas versionné : son job CI séparé publie l'artefact exploratoire.
 """
 from __future__ import annotations
 
@@ -77,20 +77,41 @@ CASES = [
 ]
 
 
+def _verify(reference: Path, candidate: Path, *, rel: float, abs_: float, label: str) -> int:
+    print(f"[comparaison] {label}: rel={rel:g}, abs={abs_:g}")
+    command = [
+        sys.executable,
+        str(ROOT / "scripts/verifier_reproductibilite_resultats.py"),
+        "--reference", str(reference),
+        "--candidate", str(candidate),
+        "--relative-tolerance", str(rel),
+        "--absolute-tolerance", str(abs_),
+    ]
+    return subprocess.run(command, cwd=ROOT).returncode
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--relative-tolerance", type=float, default=1e-10)
     parser.add_argument("--absolute-tolerance", type=float, default=1e-10)
+    parser.add_argument("--ccm-relative-tolerance", type=float, default=5e-3)
+    parser.add_argument("--ccm-absolute-tolerance", type=float, default=2e-4)
     args = parser.parse_args()
 
     originals: dict[Path, bytes] = {}
     with tempfile.TemporaryDirectory(prefix="oric_formalismes_") as td:
         temp = Path(td)
-        reference = temp / "reference"
-        candidate = temp / "candidate"
+        ref_strict = temp / "reference_strict"
+        cand_strict = temp / "candidate_strict"
+        ref_ccm = temp / "reference_ccm"
+        cand_ccm = temp / "candidate_ccm"
         try:
             for name, command, outputs in CASES:
                 print(f"[recalcul] {name}")
+                is_ccm = name == "ccm_paleoclimat"
+                reference = ref_ccm if is_ccm else ref_strict
+                candidate = cand_ccm if is_ccm else cand_strict
+
                 for rel in outputs:
                     path = ROOT / rel
                     if not path.is_file():
@@ -108,16 +129,24 @@ def main() -> int:
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(path, dest)
 
-            verify = [
-                sys.executable,
-                str(ROOT / "scripts/verifier_reproductibilite_resultats.py"),
-                "--reference", str(reference),
-                "--candidate", str(candidate),
-                "--relative-tolerance", str(args.relative_tolerance),
-                "--absolute-tolerance", str(args.absolute_tolerance),
-            ]
-            completed = subprocess.run(verify, cwd=ROOT)
-            return completed.returncode
+            strict_rc = _verify(
+                ref_strict,
+                cand_strict,
+                rel=args.relative_tolerance,
+                abs_=args.absolute_tolerance,
+                label="formalismes déterministes",
+            )
+            ccm_rc = _verify(
+                ref_ccm,
+                cand_ccm,
+                rel=args.ccm_relative_tolerance,
+                abs_=args.ccm_absolute_tolerance,
+                label="CCM exploratoire",
+            )
+            if strict_rc or ccm_rc:
+                return 1
+            print("Reproductibilité des formalismes externes validée")
+            return 0
         finally:
             for path, content in originals.items():
                 path.write_bytes(content)
