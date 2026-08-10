@@ -37,3 +37,7 @@ Le format, le validateur et le moteur commun se trouvent dans `methodologie_puis
 ## Nouveau front d'intégration formelle
 
 Les tâches purement prospectives ont été remplacées par des modules exécutables lorsque les données le permettent : viabilité de trajectoire sur spin-orbite, PID D'Onofrio, états prédictifs finis, topologie persistante, puissance conjointe matière, CCM et réanalyse LTEE. COT et Assembly Theory restent explicitement non évaluables sur les objets courants faute de stœchiométrie ou d'observables appariées. Les deux hypothèses séparantes du cadre sont enregistrées comme candidates et non comme lois.
+
+## Frontière après publication stable 0.9.5-research
+
+Le snapshot stable ferme la phase d’intégration documentaire du 10 août : N-corps **13/15**, spin-orbite exécuté et reproductible selon son vérificateur dédié, M2 **1/10** et non soutenu. Les prochains travaux scientifiques doivent partir de cette frontière sans réécrire ces verdicts. Les priorités restent la réplication indépendante, les interventions symétriques Uranus/Neptune, une Terre-Lune explicitement résolue si les marées deviennent l’objet du test, et des prédictions séparantes du cadre.

@@ -40,7 +40,11 @@ jobs:
       - uses: actions/setup-python@v6
         with: {python-version: '3.12'}
       - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt -r 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/requirements-pcmci.lock.txt
+      - name: Conserver la référence PCMCI+
+        run: cp 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json "$RUNNER_TEMP/PCMCI_PLUS_REFERENCE.json"
       - run: python 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/run_pcmci_plus.py
+      - name: Vérifier la reproductibilité sémantique PCMCI+
+        run: python scripts/verifier_pcmci_plus.py --reference "$RUNNER_TEMP/PCMCI_PLUS_REFERENCE.json" --candidate 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json
       - uses: actions/upload-artifact@v6
         with:
           name: pcmci-plus-${{ github.sha }}

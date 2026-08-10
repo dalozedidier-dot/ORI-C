@@ -22,7 +22,7 @@ EXCLUDED_PARTS = {
     ".git", "__pycache__", ".pytest_cache", ".pytest-tmp",
     ".mplconfig", ".claude", "node_modules", "dist",
 }
-FIXED_DATE = (2026, 8, 4, 0, 0, 0)
+FIXED_DATE = (2026, 8, 10, 0, 0, 0)
 EXCLUDED_PATH_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
 
 

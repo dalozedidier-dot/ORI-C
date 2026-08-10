@@ -5,7 +5,7 @@
 [![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
 
-Didier Daloze | Version 0.9.4-research | 6 août 2026
+Didier Daloze | Version 0.9.5-research | 10 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -86,7 +86,7 @@ La branche matière mesure une structure cumulative de 53 nœuds, une fermeture 
 
 La couche mémoire distingue désormais une dépendance au chemin d’une mémoire persistante : sous un même forçage final prolongé, les écarts exoplanétaires se relaxent avec un temps caractéristique de 7,02 Ma. Une différence historique qui disparaît ainsi correspond à un retard de relaxation, pas à une inscription durable.
 
-Les résultats négatifs restent attachés à leurs protocoles précis. L’échec de M2 concerne cette formulation paléoclimatique. Le résultat non concluant sur l’amikacine, le résultat négatif Card 2019 et l’absence de filiation dans les seules données ARN ne décrivent ni toute la branche vivant ni les résultats D’Onofrio et vésicules obtenus ensuite.
+Les résultats négatifs restent attachés à leurs protocoles précis. **M2 reste non soutenu dans sa formulation paléoclimatique testée : 1 critère sur 10 au total, dont 0 sur 5 face au témoin M1P de même complexité.** Le résultat non concluant sur l’amikacine, le résultat négatif Card 2019 et l’absence de filiation dans les seules données ARN ne décrivent ni toute la branche vivant ni les résultats D’Onofrio et vésicules obtenus ensuite.
 
 La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pare-feu empirique `fail_closed_v2`, produit **9 réussites techniques, 626 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Elle produit **0 verdict scientifique `supports`**. Ce compteur décrit uniquement la plateforme d’intégration et ne remplace ni les verdicts ciblés sur données réelles ni les résultats explicitement issus de modèles.
 
@@ -206,7 +206,7 @@ Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écar
 - **Vivant.** Le jeu Card 2019 fournit une réplication externe temporelle. Le modèle état + histoire est moins bon dans chacun des quatre groupes de test et le bootstrap groupé conserve un écart défavorable. Le protocole prospectif suivant est gelé avant acquisition du prochain jeu.
 - **Prébiotique.** Deux trajectoires expérimentales de populations d'ARN catalytique sur huit cycles sont intégrées. Elles ne contiennent aucune filiation parent-descendant de compartiments, donc la continuité héréditaire reste non testable.
 
-## Nouveaux travaux v0.9.4
+## Travaux v0.9.4 conservés
 
 - **Graphe gelé.** Les fichiers canoniques v0.9.3 sont scellés par empreinte. Le calibrage ne modifie ni les 53 nœuds ni les 53 hyperarêtes.
 - **Tri documentaire et structurel.** Les statuts de preuve et les types de source sont séparés des effets d’ablation, des voies alternatives, des cycles et de la portée en aval. Aucun score causal unique n’est déclaré.
@@ -320,3 +320,15 @@ python scripts/valider_recherche_suivante.py
 Le dépôt exécute désormais, sans reclasser rétroactivement les preuves certifiées, un registre machine des preuves et chiffres, une PID `X/m` sur D'Onofrio, une approximation finie des états causaux prédictifs, un pont vers la théorie de la viabilité sur la couche spin-orbite, une filtration topologique persistante de l'hypergraphe matériel, un pont fail-closed vers Chemical Organization Theory, un simulateur de puissance conjointe matière, un CCM exploratoire paléoclimatique, une réanalyse secondaire des replays LTEE et un pont formel vers Assembly Theory.
 
 Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
+
+## Publication stable v0.9.5-research
+
+La version `0.9.5-research` fige l’état scientifique du 10 août 2026 après le run complet du Système solaire. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée.
+
+La chaîne modèle désormais exécutée est :
+
+`architecture N-corps → dynamique orbitale → spin séculaire → obliquité → insolation à 65°N`.
+
+La Lune est représentée dans cette couche par son couple effectif sur le spin. Une orbite Terre-Lune explicitement résolue, les marées et l’évolution tidale restent hors de cette version. Les analyses PID, états causaux finis, viabilité, topologie persistante, COT, CCM, PCMCI+, LTEE et Assembly Theory restent exploratoires ou méthodologiques sauf statut contraire dans `preuves/PREUVES.json`.
+
+`preuves/PREUVES.json` et `preuves/CHIFFRES.json` sont les registres machine de publication. `ETAT_DES_PREUVES.md` est généré depuis le premier, et `scripts/valider_registre_preuves.py` contrôle les empreintes et les valeurs rendues publiquement.

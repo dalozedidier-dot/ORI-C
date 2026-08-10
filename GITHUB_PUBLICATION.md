@@ -49,6 +49,6 @@ test: add three-branch regression campaign
 Créer ensuite un tag annoté, par exemple :
 
 ```bash
-git tag -a v0.9.4-research -m "ORI-C v0.9.4-research"
+git tag -a v0.9.5-research -m "ORI-C v0.9.5-research"
 git push origin main --follow-tags
 ```

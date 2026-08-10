@@ -16,7 +16,9 @@ extra=[
  ('TOPO-MAT-01','persistance multi-seuil de l’expansion simpliciale documentaire','exploratoire','executed','structure_documentaire','01_branche_matiere/hypergraphe_transformations/resultats_topologie/RESULTAT.json'),
  ('COT-MAT-01','organisation chimique close et auto-maintenue','non_concluant','not_evaluable_missing_stoichiometry','structure_documentaire','01_branche_matiere/organisations_chimiques/resultats/DIAGNOSTIC.json'),
  ('POWER-MAT-01','puissance conjointe du futur protocole matière','exploratoire','prospective_simulation','dimensionnement','methodologie_puissance/PUISSANCE_CONJOINTE_MATIERE.json'),
+ ('MPT-M2-01','formulation paléoclimatique M2 contre M1 et témoin apparié M1P','resultat_negatif','does_not_support','modele_paleoclimatique_orbitally_tuned','02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json'),
  ('CCM-CLIM-01','cross-mapping convergent exploratoire LR04/La2004','exploratoire','executed','observational_orbitally_tuned','02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/CCM_RESULTAT.json'),
+ ('PCMCI-CLIM-01','PCMCI+ exploratoire LR04/La2004, p brutes et sans reclassement de M2','exploratoire','executed_raw_p','observational_orbitally_tuned','02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json'),
  ('LTEE-REPLAY-01','rejeu évolutif depuis ancêtres congelés, comptes publiés','exploratoire','secondary_reanalysis','empirique_externe_table_transcription','03_branche_vivant/ltee_replay_history/resultats/RESULTAT.json'),
  ('ASSEMBLY-BRIDGE-01','comparaison ORI-C / Assembly Theory sur objets appariés','non_concluant','not_evaluable_missing_paired_observables','comparaison_formelle','comparaisons_externes/assembly_theory/DIAGNOSTIC.json')]
 for id,q,statut,verdict,portee,p in extra:

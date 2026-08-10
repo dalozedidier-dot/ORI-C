@@ -52,6 +52,7 @@
       <div class="wrap">
         <div class="metric-grid">
           <article class="metric"><strong>13 / 15</strong><span>critères astronomiques</span><small>couche N-corps réduite</small></article>
+          <article class="metric"><strong>1 / 10</strong><span>critères M2</span><small>0 / 5 face à M1P</small></article>
           <article class="metric"><strong>46 / 53</strong><span>fermeture stricte</span><small>hypergraphe de matière</small></article>
           <article class="metric"><strong>9 / 683</strong><span>réussites techniques</span><small>626 bloquées, 48 non exécutées</small></article>
           <article class="metric"><strong>0 / 635</strong><span>soutien dans la matrice générique</span><small>ce compteur n'inclut pas les protocoles spécialisés</small></article>
@@ -200,6 +201,19 @@
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max">Résultats complets</a></div>
             </article>
 
+            <article class="evidence-card" data-status="model">
+              <div class="evidence-top"><span class="status model">Spin-orbite exécuté</span><span class="evidence-id">S-SPIN</span></div>
+              <h3>Le forçage orbital est propagé jusqu’à l’obliquité et l’insolation</h3>
+              <p class="claim">La couche séculaire force l’axe de spin par la normale orbitale N-corps, confronte le témoin à La2004 et calcule une ablation du couple lunaire effectif.</p>
+              <dl>
+                <div><dt>Avec couple lunaire, 2 Ma</dt><dd>Obliquité de 22,09° à 24,44° ; période dominante ≈ 40,84 ka.</dd></div>
+                <div><dt>Ablation lunaire, 2 Ma</dt><dd>Obliquité de 1,25° à 45,04° sur le même forçage orbital.</dd></div>
+                <div><dt>La2004 à 1 Ma</dt><dd>Corrélation 0,9899 ; RMSE 0,079°.</dd></div>
+                <div><dt>Limite</dt><dd>Couple lunaire effectif seulement : orbite lunaire mensuelle, marées et évolution tidale non résolues.</dd></div>
+              </dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/02_branche_systeme_solaire/couche_spin_orbite">Couche spin-orbite</a></div>
+            </article>
+
             <article class="evidence-card" data-status="concept">
               <div class="evidence-top"><span class="status concept">Attracteurs et bassins</span><span class="evidence-id">S-03</span></div>
               <h3>Le modèle climatique réduit possède plusieurs régions bistables</h3>
@@ -318,12 +332,24 @@
             <article class="evidence-card" data-status="refuted">
               <div class="evidence-top"><span class="status refuted">Test paléoclimatique</span><span class="evidence-id">P-01</span></div>
               <h3>La formulation M2 est départagée par un témoin de même complexité</h3>
-              <p class="claim">Le protocole corrigé obtient 1 critère sur 10 au total : 1 sur 5 contre M1 et 0 sur 5 contre M1P.</p>
+              <p class="claim">Le protocole corrigé obtient 1 critère sur 10 au total : 1 sur 5 contre M1 et 0 sur 5 contre M1P. Cette formulation M2 reste non soutenue.</p>
               <dl>
                 <div><dt>Comparaison principale</dt><dd>M2 perd 31,6 % face à M1P.</dd></div>
                 <div><dt>Apport méthodologique</dt><dd>Le cadre dispose désormais d’un témoin apparié capable de distinguer l’effet d’une mémoire proposée de celui de la complexité du modèle.</dd></div>
               </dl>
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/RAPPORT_CORRIGE.md">Rapport corrigé</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Exploratoire PCMCI+</span><span class="evidence-id">P-PCMCI</span></div>
+              <h3>Le diagnostic causal exploratoire ne requalifie pas M2</h3>
+              <p class="claim">Dans la configuration publiée, les liens sous p brute ≤ 0,01 sont dominés par les auto-dépendances temporelles. Une seule association inter-variable non orientée subsiste entre excentricité et insolation à lag 0.</p>
+              <dl>
+                <div><dt>Variables</dt><dd>δ18O, excentricité, obliquité et insolation 65°N.</dd></div>
+                <div><dt>Association inter-variable</dt><dd>1 association inter-variable non orientée, à lag 0.</dd></div>
+                <div><dt>Portée</dt><dd>P-values brutes, chronologie LR04 accordée orbitalement ; aucun reclassement du verdict M2.</dd></div>
+              </dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json">Résultat PCMCI+</a></div>
             </article>
 
             <article class="evidence-card" data-status="model">
@@ -382,7 +408,7 @@
       <div>
         <strong>ORI-C</strong>
         <p>Le possible a une histoire.</p>
-        <p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+        <p class="build-meta">Publication stable : <code>v0.9.5-research</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
       </div>
       <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
       <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>

@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/analyse-formalismes-externes.yml",
-      "size": 2427,
-      "sha256": "75a6dfca385f84ba4bbd8273b1031367011e4d01e3f6925451edc68935eba95b",
+      "size": 2932,
+      "sha256": "fc37e5dbe20b11b8630ea162ebd6ea71913ce46617dbfa161cd17c6c718e0fa7",
       "storage": "inline"
     },
     {
@@ -65,8 +65,8 @@
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 1631,
-      "sha256": "cb945aa7d3e3264bdc754d89b5f5bf521bf3f629c2eaeae8125e56c6ddfe5385",
+      "size": 1877,
+      "sha256": "f688d3ab19805933a60f26355ea904f8b66369c0d102ee5b4b22c99827624762",
       "storage": "inline"
     },
     {
@@ -77,8 +77,8 @@
     },
     {
       "path": ".github/workflows/release.yml",
-      "size": 5642,
-      "sha256": "e22d55075d5116585e2494e46a4a5112c30dfadc4f6827481680e68ee0ac3ae0",
+      "size": 9512,
+      "sha256": "003e276e3752f2b2ca0496d2d8167c987939ed004f95704c143420597f47a38f",
       "storage": "inline"
     },
     {
@@ -89,8 +89,8 @@
     },
     {
       "path": ".zenodo.json",
-      "size": 792,
-      "sha256": "2fad5e59f06596174ec5210d5d5e3593ae2a962b1c6159287cfe59faee9f93b4",
+      "size": 1045,
+      "sha256": "eff1c42e939058d2fbd16d25a8fc66fc94cbd49dfec02e08df0fab500964d5b9",
       "storage": "inline"
     },
     {
@@ -3491,8 +3491,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
-      "size": 18352,
-      "sha256": "db8268eb34849de39f89a39db4425baae8fb8deaae47781577fc2756346e8dd6",
+      "size": 18476,
+      "sha256": "8c84a302f7026798fe32aad1ccff40cb0db5c480308314508d3d23837fe3dfdb",
       "storage": "inline"
     },
     {
@@ -3637,6 +3637,12 @@
       "path": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/CCM_RESULTAT.json",
       "size": 6831,
       "sha256": "ca3a58936c305c77dd9807030862bf93bf44d981bafe57bf07831bb29b3fca82",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json",
+      "size": 5360,
+      "sha256": "81b77d66e6af999d17898602b927d59e3a213e2b99e0949ad6c4386e2651446f",
       "storage": "inline"
     },
     {
@@ -5105,8 +5111,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 29323,
-      "sha256": "4dc4c2ac7d5f0bcba4dba9621a3b874f2b585cc4208994d35fc79bb28ffcf356",
+      "size": 30169,
+      "sha256": "639fc1cf0d5274d2faac916a93cb174db5e51a42e484ab02756943187e92de59",
       "storage": "inline"
     },
     {
@@ -5117,8 +5123,8 @@
     },
     {
       "path": "CITATION.cff",
-      "size": 740,
-      "sha256": "9572da5f50792216788c29b91b75699707e5ada65be6fd30d30fdf92a2495ee4",
+      "size": 1039,
+      "sha256": "10fbc9c76626d62bbeba8a0d6f16eb3c56c9330bfc4a4581292ec39a14150aef",
       "storage": "inline"
     },
     {
@@ -5171,8 +5177,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 2442,
-      "sha256": "e426e0c4a9abb9f9e71c7b854b795859b7719f8943517e3c571d8d1d197d9cf4",
+      "size": 2621,
+      "sha256": "e8d16cdf1c64cb3588d01d41893c02389dd29281c80d03bbb2d6fff6f18a477d",
       "storage": "inline"
     },
     {
@@ -5189,14 +5195,14 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 5590,
-      "sha256": "eb7086162f9b037332475016c1f51e7a285d7892daf977f403fa76aec3d44ceb",
+      "size": 6171,
+      "sha256": "72a590f9234bdfe5349c6f630bd0fac45e7edd2eb8e6b437b51355c0b3bf041f",
       "storage": "inline"
     },
     {
       "path": "GITHUB_PUBLICATION.md",
       "size": 1512,
-      "sha256": "20bb9e61ec4310a230e4995d7318eb17d1d27723d34b002253fd41e1c7cc499f",
+      "sha256": "2d6f9862ff8b5f1661b7b7e2255863171f91cbb4ff9cddc47c4f250ea6825473",
       "storage": "inline"
     },
     {
@@ -5279,8 +5285,8 @@
     },
     {
       "path": "PUBLICATION_STABLE.md",
-      "size": 806,
-      "sha256": "6c15c230e167d75ca4e932d5e60f37c73a7e73414f66ff5a86500c3c8ace0d0b",
+      "size": 2686,
+      "sha256": "4feb26684595605b8f1eafe9f277999167abd037f27d953f8c7f5361a720974f",
       "storage": "inline"
     },
     {
@@ -5297,8 +5303,8 @@
     },
     {
       "path": "README.md",
-      "size": 26120,
-      "sha256": "070c380903414263ac54523b3cc820d535f34c5c12086406eebf28f5fd8468c5",
+      "size": 27359,
+      "sha256": "d9b111a6ede985c6f48ef807d2a308aface9682729ae5d9ef8c5673cba92b483",
       "storage": "inline"
     },
     {
@@ -5314,6 +5320,12 @@
       "storage": "inline"
     },
     {
+      "path": "RELEASE_NOTES_v0.9.5-research.md",
+      "size": 2306,
+      "sha256": "bb59ae82e7a75c746aeca48b8c46d635497b15aba884fc7034a4a64f1deb43cd",
+      "storage": "inline"
+    },
+    {
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
       "size": 9253,
       "sha256": "585025b5c0f2958af8204eeac290fa297f5ac1ed1bb56673fc42972d7917f850",
@@ -5321,8 +5333,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 7953,
-      "sha256": "6511c3eca98879d3e6d2c900c18ed0741ab4c4d480255a05863ebb184333f223",
+      "size": 8561,
+      "sha256": "d6e5384d02a621080ff1c96af7f5ab2aeb04bcf125b3b1477c56ddb7873662b2",
       "storage": "inline"
     },
     {
@@ -5340,7 +5352,7 @@
     {
       "path": "VERSION",
       "size": 15,
-      "sha256": "5cb49d40f73a35ea11fa12725dd6502f69b12ce982eeb17db3b32c4adf045737",
+      "sha256": "915c8c8bd5e1da1858e2d695f3d484bc2514a51eaa0d6aa4533803479699c12e",
       "storage": "inline"
     },
     {
@@ -8435,14 +8447,14 @@
     },
     {
       "path": "preuves/CHIFFRES.json",
-      "size": 4457,
-      "sha256": "0d3e047e602454d040616817f69fc7f33dc5592785cb017139e166f91975155e",
+      "size": 7420,
+      "sha256": "37d2ffe3d7a93ba99aacbf71f1a1a9ebfc66afa6ea96bcb75763b771446513bc",
       "storage": "inline"
     },
     {
       "path": "preuves/PREUVES.json",
-      "size": 9338,
-      "sha256": "50f56e6480e9ae67b2cc385bf53705ca529627657c9ff27cf25c5e0c2935d927",
+      "size": 10465,
+      "sha256": "00e0d2090fb70afc6571ebf648b8deb3ca813dd2a97733f99949ec19dda16e1c",
       "storage": "inline"
     },
     {
@@ -8531,14 +8543,14 @@
     },
     {
       "path": "scripts/construire_archive_canonique.py",
-      "size": 4128,
-      "sha256": "82798ba47cbfeddbae79f03a67d544ec17310b796767a9fc08d1d20f604043e4",
+      "size": 4129,
+      "sha256": "f9f0776d684a3f6917a577737ea072456736ced203e1649b102bd6913696ade5",
       "storage": "inline"
     },
     {
       "path": "scripts/construire_registre_preuves.py",
-      "size": 4820,
-      "sha256": "f3cb3e7b90c8c1c7305eb304c8cab68afb77b102677f9600162e9269aa3f25e0",
+      "size": 5331,
+      "sha256": "54c95dcef99949463bf772972b55527c1332093268f6b9ab6527ecbc6b050c3b",
       "storage": "inline"
     },
     {
@@ -8579,8 +8591,8 @@
     },
     {
       "path": "scripts/valider_publication_stable.py",
-      "size": 2714,
-      "sha256": "8b4404256f49a881b7792469eb532d2c4c071a4b007a411d7db5cda86121c083",
+      "size": 3180,
+      "sha256": "47cc08614e6802f1445664eadf68de1d79f19a37951d0e17e5dd3054892201b3",
       "storage": "inline"
     },
     {
@@ -8591,8 +8603,8 @@
     },
     {
       "path": "scripts/valider_registre_preuves.py",
-      "size": 2491,
-      "sha256": "ba1bc07f6a7d75abdbb5762fdab91e382771736c9b8cab51d1f4d08ac6e36c43",
+      "size": 2738,
+      "sha256": "c802a77694bb637ace0d25fa0af31cde6b15e9c9e986b092c518b6b96e882fcf",
       "storage": "inline"
     },
     {
@@ -8608,9 +8620,15 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/verifier_pcmci_plus.py",
+      "size": 1624,
+      "sha256": "f206f14fb9f5aaee1463157fc0242bbd0e48a650e119cb32b847108c5d052f09",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/verifier_reproductibilite_formalismes.py",
-      "size": 6242,
-      "sha256": "41a73ce54142d53c98a467565a1fb2fb24b5cf828e063f644f9dafd47de1a945",
+      "size": 6312,
+      "sha256": "fac860b0b44784d4423ec596b4e894eb67b2085b25f08eac62aaad3300553822",
       "storage": "inline"
     },
     {
@@ -8651,26 +8669,26 @@
     },
     {
       "path": "site/index.html",
-      "size": 14515,
-      "sha256": "98fd34e9fe2873962aff806f734e8fce9529a1d3b1877ad73d5fff86b057ddc8",
+      "size": 15275,
+      "sha256": "cfaada098381d332f70ce3e39b38d5dd9b2f42c229b7a6b466835b161f266419",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
-      "size": 12075,
-      "sha256": "48a2c6afa09f1451ff691c2b692b7d9953c55eea32d01c54a31a78903dc9dc01",
+      "size": 13910,
+      "sha256": "106edf5b6257f3638d57caf27648cf8089e07e999353f708881679e5b72e438c",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 31551,
-      "sha256": "d9d18363988e9bbe68d02a47c72af4b1de36f0e1ed6fb8eeebbc0b0677d3d4e2",
+      "size": 34264,
+      "sha256": "01136beb78b5db7a9be5ff18295b655c9e90e362235be31172e7f4988984aa18",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 15133,
-      "sha256": "55f2add3bd1327e5405b2006b7bfafe2bc016679decb13940d7a2eaf0af5b0be",
+      "size": 16511,
+      "sha256": "8c8a0e9c9537ef79db8cf877519afcc1d1b3f6a6832ac845501a0ad482d70b52",
       "storage": "inline"
     },
     {
@@ -8682,7 +8700,7 @@
     {
       "path": "site/sitemap.xml",
       "size": 535,
-      "sha256": "410500574bbebff09978dd47743b322111f934eb3b3da7ce914b0eedffc7ebc4",
+      "sha256": "58c2e33c33dbce9f10f540da7a5c3b2262ef525c7582e687714959279dca4b7e",
       "storage": "inline"
     },
     {

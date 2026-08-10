@@ -1,0 +1,215 @@
+{
+  "status": "exploratory_pcmciplus",
+  "tigramite_version": "unknown",
+  "variables": [
+    "d18o_permil",
+    "eccentricity",
+    "obliquity_deg",
+    "insolation_65n_june_wm2"
+  ],
+  "tau_max_kyr": 20,
+  "pc_alpha": 0.01,
+  "significant_links_raw_p_le_0p01": [
+    {
+      "source": "d18o_permil",
+      "target": "d18o_permil",
+      "lag_kyr": 1,
+      "p": 0.0,
+      "value": 0.7713362150088011,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "d18o_permil",
+      "target": "d18o_permil",
+      "lag_kyr": 2,
+      "p": 1.9606851595268372e-10,
+      "value": -0.1254982110226571,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "eccentricity",
+      "target": "eccentricity",
+      "lag_kyr": 1,
+      "p": 0.0,
+      "value": 0.8896038519914042,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "eccentricity",
+      "target": "eccentricity",
+      "lag_kyr": 2,
+      "p": 4.103002067188179e-49,
+      "value": -0.2855308601148582,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "eccentricity",
+      "target": "eccentricity",
+      "lag_kyr": 4,
+      "p": 2.9722524204939442e-40,
+      "value": -0.2585006892067696,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "eccentricity",
+      "target": "eccentricity",
+      "lag_kyr": 14,
+      "p": 5.736325271403657e-07,
+      "value": -0.09876074563968303,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "eccentricity",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 0,
+      "p": 8.286870059960647e-06,
+      "value": 0.08821470470213987,
+      "graph_mark": "x-x"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 1,
+      "p": 0.0,
+      "value": 0.9559813683910938,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 2,
+      "p": 1.93802689585152e-309,
+      "value": -0.6530308280872806,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 5,
+      "p": 9.801258305833784e-98,
+      "value": 0.3987184131734433,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 7,
+      "p": 1.324630162230354e-269,
+      "value": -0.6193455873497471,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 8,
+      "p": 9.8599389795283e-45,
+      "value": 0.2730437428854504,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 9,
+      "p": 1.796168278589749e-06,
+      "value": -0.09448852976360897,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 14,
+      "p": 1.5463784615193682e-63,
+      "value": 0.3246970958192491,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 16,
+      "p": 2.0838496764033512e-54,
+      "value": -0.30099405913448324,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 18,
+      "p": 2.0894073442452887e-06,
+      "value": 0.09392402034401486,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "obliquity_deg",
+      "target": "obliquity_deg",
+      "lag_kyr": 19,
+      "p": 7.587682673535457e-06,
+      "value": 0.08865601778386091,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "eccentricity",
+      "lag_kyr": 0,
+      "p": 8.286870059960647e-06,
+      "value": 0.08821470470213987,
+      "graph_mark": "x-x"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 1,
+      "p": 0.0,
+      "value": 0.919299794631118,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 2,
+      "p": 7.623734269483487e-05,
+      "value": -0.0783339811860456,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 3,
+      "p": 0.0,
+      "value": -0.8444488008040643,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 5,
+      "p": 5.447577318997159e-190,
+      "value": 0.5370271054437021,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 6,
+      "p": 1.682407434998462e-86,
+      "value": 0.3767435266787967,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 7,
+      "p": 4.0609739199404e-310,
+      "value": -0.6540500123504241,
+      "graph_mark": "-->"
+    },
+    {
+      "source": "insolation_65n_june_wm2",
+      "target": "insolation_65n_june_wm2",
+      "lag_kyr": 8,
+      "p": 1.1898951192428884e-96,
+      "value": -0.3970025965429941,
+      "graph_mark": "-->"
+    }
+  ],
+  "scope": "Exploratory observational causal-discovery diagnostic. LR04 chronology is orbitally tuned; no change to M2 verdict or certified climate evidence."
+}

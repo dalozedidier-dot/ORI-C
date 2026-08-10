@@ -9,7 +9,7 @@ changer l'identité de voisins quasi ex aequo et déplacer les moyennes de rho d
 ~1e-4 sans changer le diagnostic. Sa tolérance dédiée est donc explicite et
 locale ; elle ne relâche aucun autre formalisme.
 
-PCMCI+ n'est pas versionné : son job CI séparé publie l'artefact exploratoire.
+PCMCI+ est versionné comme sortie exploratoire et vérifié séparément par `scripts/verifier_pcmci_plus.py`, car son environnement inclut Tigramite.
 """
 from __future__ import annotations
 

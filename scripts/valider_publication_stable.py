@@ -27,6 +27,13 @@ repro=(ROOT/'site/reproductibilite.html').read_text(encoding='utf-8')
 for needle in ['tolérance','Trajectoires réelles','H011','MESA']:
     if needle not in proof+repro: errors.append(f'page publique incomplète: {needle}')
 current_text='\n'.join([(ROOT/'README.md').read_text(encoding='utf-8'),(ROOT/'ETAT_DES_PREUVES.md').read_text(encoding='utf-8'),proof])
+for required in ['13 / 15','1 / 10',version]:
+    if required not in current_text + repro:
+        errors.append(f'frontière stable absente du rendu public: {required}')
+if 'MPT-M2-01' not in (ROOT/'preuves/PREUVES.json').read_text(encoding='utf-8'):
+    errors.append('M2 absent du registre PREUVES.json')
+if 'PCMCI-CLIM-01' not in (ROOT/'preuves/PREUVES.json').read_text(encoding='utf-8'):
+    errors.append('PCMCI+ exploratoire absent du registre PREUVES.json')
 for stale in ['Le vivant montre un petit signal exploratoire','Lignées de vésicules | **En attente','Histoire antibiotique 2026 | **En attente',"La grille reste une preuve de concept. Sur l'amikacine",'298 réussites techniques, 337 blocages','<strong>298</strong><span>analyses exécutées</span>']:
     if stale in current_text: errors.append(f'formulation périmée présente: {stale}')
 print(json.dumps({'version':version,'errors':errors,'status':'ok' if not errors else 'error'},ensure_ascii=False,indent=2))

@@ -46,7 +46,7 @@
     <section class="section compact">
       <div class="wrap">
         <div class="metric-grid">
-          <article class="metric"><strong>1 366</strong><span>fichiers manifestés</span><small>manifeste racine, tous conformes</small></article>
+          <article class="metric"><strong>1 451</strong><span>contenus manifestés</span><small>manifeste racine, tous conformes</small></article>
           <article class="metric"><strong>683</strong><span>tests possibles catalogués</span><small>pas 683 expériences disponibles</small></article>
           <article class="metric"><strong>9</strong><span>réussites techniques génériques</span><small>4 soutiens et 1 non-soutien spécialisés certifiés</small></article>
           <article class="metric"><strong>0</strong><span>échec ou erreur</span><small>campagne stricte finale</small></article>
@@ -66,6 +66,20 @@
           <pre><code>python build_manifest.py verify
 python verifier_dossier.py --allow-lfs-pointers</code></pre>
           <p class="data-note">Le premier contrôle compare la liste, la taille et l’empreinte de chaque fichier. Le second vérifie aussi la structure du dossier et les objets LFS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="publication-stable">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Snapshot citable</p><h2>Publication stable 0.9.5-research</h2></div>
+          <p>Le tag de release fige code, données, résultats et limites. Le workflow de publication réexécute les validations, reconstruit les sous-manifestes mémoire et revue systématique, puis le manifeste racine en dernier.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Système solaire complet</h3><p>N-corps, spin-orbite et mémoire historique restent séparés. La reproductibilité spin utilise un vérificateur dédié qui distingue la trajectoire stricte et les agrégats longue durée de l’ablation lunaire.</p></article>
+          <article class="feature-card"><h3>Registres machine</h3><p><code>PREUVES.json</code> contrôle les statuts et empreintes. <code>CHIFFRES.json</code> contrôle les nombres rendus sur le site.</p></article>
+          <article class="feature-card"><h3>Résultats négatifs inclus</h3><p>La release conserve explicitement astronomie 13 / 15 et M2 1 / 10. Une publication stable n’est pas un filtrage des seuls résultats positifs.</p></article>
         </div>
       </div>
     </section>
@@ -164,7 +178,7 @@ python scripts/valider_recherche_suivante.py</code></pre><p>H011, Pacc, spéléo
       <div>
         <strong>ORI-C</strong>
         <p>Le possible a une histoire.</p>
-        <p class="build-meta">Version : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+        <p class="build-meta">Publication stable : <code>v0.9.5-research</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
       </div>
       <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
       <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>

@@ -66,6 +66,44 @@ jobs:
       - name: Couche astronomique
         working-directory: 02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
         run: PYTHONPATH="$PWD:$PWD/src" python -m pytest -q
+      - name: Couche spin-orbite en environnement isolé
+        run: |
+          python -m venv "$RUNNER_TEMP/spin-venv"
+          "$RUNNER_TEMP/spin-venv/bin/python" -m pip install --upgrade pip
+          "$RUNNER_TEMP/spin-venv/bin/python" -m pip install -r 02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/requirements.science.lock.txt
+          "$RUNNER_TEMP/spin-venv/bin/python" -m pytest -q 02_branche_systeme_solaire/couche_spin_orbite/tests
+          mkdir -p "$RUNNER_TEMP/spin-candidate"
+          "$RUNNER_TEMP/spin-venv/bin/python" 02_branche_systeme_solaire/couche_spin_orbite/run_spin_orbit.py --output-dir "$RUNNER_TEMP/spin-candidate"
+          "$RUNNER_TEMP/spin-venv/bin/python" scripts/verifier_reproductibilite_spin_orbite.py \
+            --reference 02_branche_systeme_solaire/couche_spin_orbite/resultats \
+            --candidate "$RUNNER_TEMP/spin-candidate"
+
+      - name: Formalismes externes légers
+        run: |
+          python -m pytest -q \
+            methodologie_informationnelle/tests \
+            methodologie_puissance/tests \
+            01_branche_matiere/organisations_chimiques/tests \
+            01_branche_matiere/hypergraphe_transformations/test_topologie_persistante.py \
+            02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/tests \
+            03_branche_vivant/ltee_replay_history/tests \
+            comparaisons_externes/assembly_theory/tests
+          python scripts/verifier_reproductibilite_formalismes.py
+          python scripts/valider_registre_preuves.py
+
+      - name: PCMCI+ exploratoire en environnement isolé
+        run: |
+          cp 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json "$RUNNER_TEMP/PCMCI_PLUS_REFERENCE.json"
+          python -m venv "$RUNNER_TEMP/pcmci-venv"
+          "$RUNNER_TEMP/pcmci-venv/bin/python" -m pip install --upgrade pip
+          "$RUNNER_TEMP/pcmci-venv/bin/python" -m pip install \
+            -r plateforme/source_corrigee/requirements-lock.txt \
+            -r 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/requirements-pcmci.lock.txt
+          "$RUNNER_TEMP/pcmci-venv/bin/python" 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/run_pcmci_plus.py
+          "$RUNNER_TEMP/pcmci-venv/bin/python" scripts/verifier_pcmci_plus.py \
+            --reference "$RUNNER_TEMP/PCMCI_PLUS_REFERENCE.json" \
+            --candidate 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json
+          cp "$RUNNER_TEMP/PCMCI_PLUS_REFERENCE.json" 02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json
       - name: Campagne maximale et reproductibilité
         run: |
           cp -R plan_directeur/campagne_maximale_trois_branches/resultats "$RUNNER_TEMP/campagne-reference"
@@ -83,18 +121,42 @@ jobs:
           python -m pytest -q 02_branche_systeme_solaire/couche_memoire_historique/tests/test_hysteresis_c3.py
           python -m pytest -q 03_branche_vivant/benchmark_externe_card2019/tests
           python -m pytest -q 03_branche_vivant/programme_prebiotique/tests
+      - name: Restaurer exactement l’état du tag après les recalculs
+        run: |
+          git restore --worktree -- .
+          git clean -fd
+
       - name: Finaliser le manifeste de la couche mémoire
         working-directory: 02_branche_systeme_solaire/couche_memoire_historique
         run: |
           export PYTHONPATH="$PWD/src"
           python -m oric_memory_tests.cli --root "$PWD" manifest
           python -m oric_memory_tests.cli --root "$PWD" verify-manifest
-      - name: Reconstruire les manifestes après les calculs
+      - name: Reconstruire le manifeste de la revue systématique
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          root=Path('plan_directeur/revue_systematique')
+          rows=[]
+          for path in sorted(p for p in root.rglob('*') if p.is_file() and p.name != 'MANIFEST.sha256'):
+              rel=path.relative_to(root).as_posix()
+              rows.append(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {rel}")
+          (root/'MANIFEST.sha256').write_text('\n'.join(rows)+'\n',encoding='utf-8')
+          print(f"revue systématique: {len(rows)} entrées")
+          PY
+      - name: Valider les registres de publication
+        run: |
+          python scripts/construire_registre_preuves.py
+          python scripts/valider_registre_preuves.py
+          python scripts/valider_publication_stable.py
+      - name: Reconstruire le manifeste racine en dernier
         run: |
           python build_manifest.py build
           python verifier_dossier.py
+          python scripts/controle_avant_push.py
       - name: Construire l'archive canonique
-        run: python scripts/construire_archive_canonique.py --output-dir dist
+        run: python scripts/construire_archive_canonique.py --output-dir dist --skip-tests
       - name: Déterminer les fichiers de publication
         run: |
           echo "ARCHIVE=$(find dist -maxdepth 1 -type f -name '*.zip' | head -1)" >> "$GITHUB_ENV"

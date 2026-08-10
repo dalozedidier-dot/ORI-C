@@ -21,6 +21,7 @@
       "tolerance": 0,
       "display": "1 critère sur 10",
       "targets": [
+        "README.md",
         "site/preuves.html"
       ]
     },
@@ -98,7 +99,11 @@
       "value": 4964.415695208393,
       "tolerance": 1e-09,
       "display": "4 964",
-      "targets": []
+      "targets": [
+        "README.md",
+        "site/index.html",
+        "site/preuves.html"
+      ]
     },
     {
       "id": "SPIN_RMSE_1MA",
@@ -107,7 +112,10 @@
       "value": 0.0791416499718946,
       "tolerance": 1e-12,
       "display": "0,079°",
-      "targets": []
+      "targets": [
+        "README.md",
+        "site/preuves.html"
+      ]
     },
     {
       "id": "PID_SYNERGIE_DONO",
@@ -139,6 +147,101 @@
       "display": "3,33",
       "targets": [
         "site/preuves.html"
+      ]
+    },
+    {
+      "id": "AST_CRITERES_PASSES",
+      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
+      "pointer": "/resultats/4/mesures/criteres_passes",
+      "value": 13,
+      "tolerance": 0,
+      "display": "13 / 15",
+      "targets": [
+        "README.md",
+        "site/index.html",
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "AST_CRITERES_TOTAL",
+      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
+      "pointer": "/resultats/4/mesures/criteres_total",
+      "value": 15,
+      "tolerance": 0,
+      "display": "13 / 15",
+      "targets": [
+        "README.md",
+        "site/index.html",
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "SPIN_OBL_MIN_2MA",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "pointer": "/with_moon_2myr/obliquity_min_deg",
+      "value": 22.0873117452473,
+      "tolerance": 1e-12,
+      "display": "22,09°",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "SPIN_OBL_MAX_2MA",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "pointer": "/with_moon_2myr/obliquity_max_deg",
+      "value": 24.443708466000974,
+      "tolerance": 1e-12,
+      "display": "24,44°",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "SPIN_NO_MOON_MIN_2MA",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "pointer": "/no_moon_2myr/obliquity_min_deg",
+      "value": 1.2498500566145063,
+      "tolerance": 1e-12,
+      "display": "1,25°",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "SPIN_NO_MOON_MAX_2MA",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "pointer": "/no_moon_2myr/obliquity_max_deg",
+      "value": 45.04188940616386,
+      "tolerance": 1e-12,
+      "display": "45,04°",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "PCMCI_INTERVAR_RAW_LINKS",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json",
+      "pointer": "/significant_links_raw_p_le_0p01",
+      "transform": "count_intervariable_unique",
+      "value": 1,
+      "tolerance": 0,
+      "display": "1 association inter-variable non orientée",
+      "targets": [
+        "site/preuves.html"
+      ]
+    },
+    {
+      "id": "MANIFEST_FILES",
+      "source": "MANIFEST.sha256.json",
+      "pointer": "/files",
+      "transform": "len",
+      "value": 1451,
+      "tolerance": 0,
+      "display": "1 451",
+      "targets": [
+        "site/index.html",
+        "site/reproductibilite.html"
       ]
     }
   ]

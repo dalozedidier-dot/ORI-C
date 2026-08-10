@@ -181,6 +181,19 @@
       "supersede_par": null
     },
     {
+      "id": "MPT-M2-01",
+      "question": "formulation paléoclimatique M2 contre M1 et témoin apparié M1P",
+      "statut": "resultat_negatif",
+      "verdict": "does_not_support",
+      "niveau_preuve": null,
+      "portee": "modele_paleoclimatique_orbitally_tuned",
+      "artefact": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
+      "empreinte_sortie": "04c6d500a77a6287d92a8e80de446d357495ea9fb85e9a97e52104b44a09df7a",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
       "id": "CCM-CLIM-01",
       "question": "cross-mapping convergent exploratoire LR04/La2004",
       "statut": "exploratoire",
@@ -189,6 +202,19 @@
       "portee": "observational_orbitally_tuned",
       "artefact": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/CCM_RESULTAT.json",
       "empreinte_sortie": "ca3a58936c305c77dd9807030862bf93bf44d981bafe57bf07831bb29b3fca82",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
+      "id": "PCMCI-CLIM-01",
+      "question": "PCMCI+ exploratoire LR04/La2004, p brutes et sans reclassement de M2",
+      "statut": "exploratoire",
+      "verdict": "executed_raw_p",
+      "niveau_preuve": null,
+      "portee": "observational_orbitally_tuned",
+      "artefact": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json",
+      "empreinte_sortie": "81b77d66e6af999d17898602b927d59e3a213e2b99e0949ad6c4386e2651446f",
       "source": null,
       "mesures": null,
       "supersede_par": null

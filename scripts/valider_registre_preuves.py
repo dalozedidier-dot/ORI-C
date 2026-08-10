@@ -26,6 +26,12 @@ for n in nums['valeurs']:
  try:
   src=pointer(json.loads(p.read_text()),n['pointer'])
   if n.get('transform')=='len': src=len(src)
+  elif n.get('transform')=='count_intervariable_unique':
+   pairs=set()
+   for row in src:
+    if row.get('source')!=row.get('target'):
+     pairs.add(tuple(sorted((row.get('source'),row.get('target')))) + (row.get('lag_kyr'),))
+   src=len(pairs)
  except Exception as exc: errors.append(f"source chiffre illisible {n['id']}: {exc}"); continue
  if isinstance(src,(int,float)) and isinstance(n['value'],(int,float)):
   if not math.isclose(float(src),float(n['value']),rel_tol=0,abs_tol=float(n.get('tolerance',0))): errors.append(f"chiffre divergent {n['id']}: source={src} registre={n['value']}")

@@ -1,14 +1,14 @@
 {
   "title": "ORI-C : architecture, mémoire et futurs accessibles",
-  "description": "Version de recherche ajoutant le calibrage documentaire et structurel des 53 relations matérielles, les tests de stabilité et un benchmark stellaire externe, tout en conservant le graphe v0.9.3 gelé.",
+  "description": "Snapshot stable 0.9.5-research du programme ORI-C. La publication conserve les résultats positifs et négatifs, notamment 13/15 critères pour la couche astronomique N-corps et 1/10 pour la formulation paléoclimatique M2. Elle inclut la couche spin-orbite réduite, les registres machine PREUVES/CHIFFRES et les formalismes externes exploratoires. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
   "creators": [
     {
       "name": "Daloze, Didier"
     }
   ],
-  "version": "0.9.4-research",
-  "publication_date": "2026-08-04",
-  "license": "other-closed",
+  "version": "0.9.5-research",
+  "publication_date": "2026-08-10",
+  "license": "MIT",
   "upload_type": "software",
   "keywords": [
     "ORI-C",

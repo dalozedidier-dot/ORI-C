@@ -25,7 +25,9 @@ Les certifications historiques restent inchangées. Les nouvelles analyses impor
 | `TOPO-MAT-01` | exploratoire | executed | structure_documentaire |
 | `COT-MAT-01` | non_concluant | not_evaluable_missing_stoichiometry | structure_documentaire |
 | `POWER-MAT-01` | exploratoire | prospective_simulation | dimensionnement |
+| `MPT-M2-01` | resultat_negatif | does_not_support | modele_paleoclimatique_orbitally_tuned |
 | `CCM-CLIM-01` | exploratoire | executed | observational_orbitally_tuned |
+| `PCMCI-CLIM-01` | exploratoire | executed_raw_p | observational_orbitally_tuned |
 | `LTEE-REPLAY-01` | exploratoire | secondary_reanalysis | empirique_externe_table_transcription |
 | `ASSEMBLY-BRIDGE-01` | non_concluant | not_evaluable_missing_paired_observables | comparaison_formelle |
 
