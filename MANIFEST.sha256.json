@@ -1799,8 +1799,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/MANIFESTE.json",
-      "size": 51927,
-      "sha256": "da0e808e8e66343aa60431ecbb0143f95fa9575efd74aa41328a0dceb1f4c5de",
+      "size": 54046,
+      "sha256": "0827e9a6751c21f78caa4c25624d1e6748c1b064c4f4463c54d17f2db8ca6938",
       "storage": "inline"
     },
     {
@@ -1811,8 +1811,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/SHA256SUMS.txt",
-      "size": 34039,
-      "sha256": "e20c1a70489b0f3427f2737d6d1043b92f549926536acd329850df88c291f4fd",
+      "size": 35409,
+      "sha256": "58a13ad71daeaf73dacfdabac4045a4e516a37895d7974951d8eda3cac3237cb",
       "storage": "inline"
     },
     {
@@ -5670,7 +5670,7 @@
     {
       "path": "plan_directeur/audit_transversal.json",
       "size": 5752,
-      "sha256": "dd24c2f043aa9ea9b5791c7c71a362aa2cdb656c81ce1f0c11329429f4185722",
+      "sha256": "60ee7776f7bb359fca7c765ffc5ff29dc33340ded375d5d2d0dbbe75b07c8d19",
       "storage": "inline"
     },
     {
