@@ -245,7 +245,9 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 |---|---|---|
 | Plan de campagne | `plan_directeur/PLAN_DIRECTEUR_TESTS.md` | canonique ; **plan, pas résultat** |
 | Protocole transversal de causalité `X/m/A` | `plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md` | méthodologique et prospectif ; **ne fixe aucun verdict** ; chaque instanciation confirmatoire doit être gelée séparément |
-| Extension astronomie globale et spin-orbite | `02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md` | feuille de route prospective ; documente fréquences, spécificité des géantes et Terre-Lune ; **ne modifie pas `C-AST-01`** |
+| Extension astronomie globale | `02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md` | feuille de route historique de l’extension ; la partie spin réduite a depuis été exécutée séparément |
+| Couche spin-orbite, résultat | `02_branche_systeme_solaire/couche_spin_orbite/resultats/RAPPORT.md` | généré, prime pour les résultats spin/obliquité/insolation ; **niveau modèle, ne modifie pas la certification de `C-AST-01`** |
+| Couche spin-orbite, méthode et limites | `02_branche_systeme_solaire/couche_spin_orbite/README.md` et `PROVENANCE.md` | canonique pour l’équation, les constantes de précession et la distinction couple lunaire effectif / Lune N-corps résolue |
 | Registre des hypothèses | `plan_directeur/REGISTRE_HYPOTHESES.csv` | généré, prime sur tout statut cité ailleurs sauf `ETAT_DES_PREUVES.md` |
 | Avancement | `plan_directeur/AVANCEMENT_DU_PLAN.md` | généré ; descriptif, ne fixe aucun statut |
 | Grille de l'Étape 2 | `plan_directeur/GRILLE_ETAPE_2.md` | généré ; audit, ne fixe aucun statut |

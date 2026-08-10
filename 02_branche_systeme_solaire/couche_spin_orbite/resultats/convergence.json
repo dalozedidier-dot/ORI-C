@@ -1,0 +1,8 @@
+{
+  "coarse_substep_years": 100.0,
+  "fine_substep_years": 50.0,
+  "with_moon_obliquity_rmse_deg": 3.7397745158478015e-07,
+  "with_moon_obliquity_max_abs_deg": 8.304137537606948e-07,
+  "no_moon_obliquity_rmse_deg": 6.9060099305391374e-09,
+  "no_moon_obliquity_max_abs_deg": 1.5463673008753176e-08
+}

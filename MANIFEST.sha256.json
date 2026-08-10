@@ -35,8 +35,8 @@
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 9638,
-      "sha256": "6434e4f3e9d2fbec1f54d66480d96abcaf141ff70faa4541a3dfe1fa3ebdf7bd",
+      "size": 13176,
+      "sha256": "8a1ef79814cb9842b09aaa5c287bd05d6272e722e44a5e8a99b8df7ee937625d",
       "storage": "inline"
     },
     {
@@ -1757,8 +1757,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/README.md",
-      "size": 7583,
-      "sha256": "e3ba3e96189dc37dc0c9245b9d6676fd2748fddd9ad043acc7e7e7116c123969",
+      "size": 10151,
+      "sha256": "0c3eb2a3c1986e970275d17c21e499441617a2475e247e5a599ae52ddebfed84",
       "storage": "inline"
     },
     {
@@ -4450,6 +4450,102 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/PROTOCOLE_REPLICATION.md",
+      "size": 1242,
+      "sha256": "8894c63991bb3fd13a554b5c314a2385cd7667d747fe92d5cdda53b503f9a1db",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/PROVENANCE.md",
+      "size": 2020,
+      "sha256": "d6193e2994249d8ef7527ade5f49cc8e2236e70bb4ea99fb1fc16e74fcc0cd55",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/README.md",
+      "size": 1590,
+      "sha256": "3822b5f82ef5b040fe2cb9d93bab827b0f383e944c6d1cfb506e7a856e3b8ac9",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/RAPPORT.md",
+      "size": 5500,
+      "sha256": "c9ef5474ae17b96d8adc9a74419a4d620c1efe045a46968092f0e5646f6c4ccd",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/RESULTATS.sha256",
+      "size": 836,
+      "sha256": "b2646297a6d272b0081312d3c7f52a6a7ff50b2ba85e2a8860413143a64c9130",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/baseline_no_moon_20myr.csv",
+      "size": 3019165,
+      "sha256": "087b5536c4bc19bd930d268cc7343f874d83c93b8370a02b455d2a910aca74cc",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/baseline_with_moon_20myr.csv",
+      "size": 3024940,
+      "sha256": "577ffea90cde475c16bb6c78ab420ce3ab4d4e9c95d3e2b6d2bead5a1d20d6c4",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/convergence.json",
+      "size": 299,
+      "sha256": "153e8dd903d373a42acdb4dd21858f5d74244dc60eba21b86c46889984c3184e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/figures/insolation_65n_avec_sans_lune_2myr.png",
+      "size": 192667,
+      "sha256": "75183dc60eb431959dc844d987907d1daa741dd21777f1eb41617b87eded49d8",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/figures/obliquite_avec_sans_lune_2myr.png",
+      "size": 120625,
+      "sha256": "5d95d52c137058d7ccbacca092f221defa876dc6c21115e03f3f3fc41c550edf",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/interventions_spin_insolation.csv",
+      "size": 758,
+      "sha256": "61986a57512cd633761d86a8bf2a92dc35bbfa64ccf72eefdc12c716eb5a15b6",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
+      "size": 5496,
+      "sha256": "580eb07469b45795d39f898904e89801ae11a9361e0583ddc3ed2c5c6aee8627",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/resultats/validation_la2004.csv",
+      "size": 901,
+      "sha256": "5b47ab90f54a98464896345b71f4bf33110f2b0a8d1e36f8c23cc0f33627baf6",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/run_spin_orbit.py",
+      "size": 15167,
+      "sha256": "34122fafe928c71a9fb9e43075da29a40c00f045d82e22c3ff17734e902f92ac",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/spin_orbit.py",
+      "size": 9985,
+      "sha256": "a7f421d29ee2c4d75e251ea6a1dd86f176c5fc459973f2625b860f70357ce6bb",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_spin_orbite/tests/test_spin_orbit.py",
+      "size": 1940,
+      "sha256": "c5392d7db2967e1b37c82dac33fcd3d5c4befb51c2e5496e15d2ceed3a115280",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/paleo_history_01/GEL_PALEO_HISTORY_01.json",
       "size": 580,
       "sha256": "388cd980f8f1a29aa195200b14576070f3e8184dcf94cb764109c608ca260e46",
@@ -4817,8 +4913,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "size": 13916,
-      "sha256": "1199e49125b36d0cb7aaacfe6547f6fbeed62f5ee90c0577a683f491dbdbecba",
+      "size": 14125,
+      "sha256": "47528ecd9bfd8d7c66e317e5df985517057b7a151115a0eb9a01df9b89301827",
       "storage": "inline"
     },
     {
@@ -4835,8 +4931,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 28018,
-      "sha256": "3738b2b8e0196006d588d5c5d829be0cfb024b863ebbf7eb934031a5ba6a6d79",
+      "size": 28476,
+      "sha256": "32ee63b6bc14077e92c91c11be6b84858f52ca4fd91a356645a9ac79cef26ae1",
       "storage": "inline"
     },
     {
@@ -4901,14 +4997,14 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 42627,
-      "sha256": "613b49a1c340333ac0ccaa09e7e446ff7c1ce0dca473dad8d440cdee1715490b",
+      "size": 44677,
+      "sha256": "9407e5667f7583c11f151d476ae66db93aa636d7e725d1be32812bf3bba14adb",
       "storage": "inline"
     },
     {
       "path": "ETAT_DES_TESTS.md",
-      "size": 2846,
-      "sha256": "1c4b888ca642f06b096593f7454eddc6880edfc0ccbf873ff662b74439ebc80f",
+      "size": 2885,
+      "sha256": "f83a678016b2eccd1b790915d8eae3efd20c108ad83659bc8eceacf8fb24775a",
       "storage": "inline"
     },
     {
@@ -4919,8 +5015,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 4894,
-      "sha256": "73338eaabe968f1c135fbf3b6456c6ac9445d238180fff9c1520054a022d51c7",
+      "size": 5028,
+      "sha256": "f5cbacd89cd188a4eb526e51607aaff621d998748586f001dce5cbec3c1b15f1",
       "storage": "inline"
     },
     {
@@ -5027,8 +5123,8 @@
     },
     {
       "path": "README.md",
-      "size": 24528,
-      "sha256": "02454af192dceed0dd4ff2b63b46901d5fa05e51ca373dc1095412df6cf09017",
+      "size": 25201,
+      "sha256": "91138299aba3a0358abd7e337fa024e3ec91f2cacc21fddc57f6f7d60b3e048b",
       "storage": "inline"
     },
     {
@@ -5051,8 +5147,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 7194,
-      "sha256": "cfb1f6578e4c921e192cc2423bb89621924bf03aee94fefce7c19ba9e11efeb0",
+      "size": 7475,
+      "sha256": "8ee31c5192f43c97272835a88b68870206d613f69ece56bef6df67db50e72533",
       "storage": "inline"
     },
     {
@@ -5537,8 +5633,8 @@
     },
     {
       "path": "etat_des_tests.py",
-      "size": 26761,
-      "sha256": "165aaec04a2798521aadff376bc898638c8961e4b63a27ab19b228ba02a34582",
+      "size": 27928,
+      "sha256": "2169020701bf8843d16c4e0f7847a18551a37c043dfa71b1c0c24c18920612c8",
       "storage": "inline"
     },
     {
@@ -5645,14 +5741,14 @@
     },
     {
       "path": "plan_directeur/PLAN_DIRECTEUR_TESTS.md",
-      "size": 48881,
-      "sha256": "5e7ed8fa4e38f43d380df28ef77396e9651e58558ccc05c6b3b04b92003bef9a",
+      "size": 49835,
+      "sha256": "2062150e52b1588cc5473f923e96d5a9686ba92af0d112781b1ef735df106f88",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md",
-      "size": 10813,
-      "sha256": "2932e3ddfe6ad1565f513ae993f1ab0f01a31356e58d5ad225fabae01b2d85f2",
+      "size": 11276,
+      "sha256": "1bf77bb2f471861c7a8954a70e5cc7f4c1b6480308743876054a7897b60b7b69",
       "storage": "inline"
     },
     {
@@ -6066,7 +6162,7 @@
     {
       "path": "plan_directeur/revue_systematique/MANIFEST.sha256",
       "size": 1937,
-      "sha256": "c60b5b3285cbd50dd74ae86d3c3b530dd713c74d88f7fafe45b54630b1841fac",
+      "sha256": "23f3ba3301cd78090f54443af3a84a440319f14a48a8fb5d4e48b59f4552dafb",
       "storage": "inline"
     },
     {

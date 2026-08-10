@@ -78,6 +78,8 @@ séparés.
 
 ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.
 
+La branche astronomique possède désormais une extension dynamique jusqu'au spin. À partir des normales orbitales du calcul N-corps, un modèle séculaire du spin avec `α = 54,93″/an` reproduit La2004 avec une corrélation de 0,9899 et une RMSE de 0,079° à 1 Ma. Sur 2 Ma, le témoin avec couple lunaire effectif reste entre 22,09° et 24,44°, alors que l'ablation lunaire (`α ≈ 20″/an`) explore 1,25° à 45,04°. Les mêmes sorties propagent les six interventions Jupiter/Saturne jusqu'à l'insolation à 65°N. Cette extension reste **au niveau modèle** : elle n'intègre pas une orbite lunaire explicite ni les marées.
+
 Le dépôt contient aussi deux résultats positifs sur données biologiques réelles. Dans le jeu D’Onofrio, l’histoire améliore la prédiction de la résistance antibiotique : la RMSE passe de 1,1309 pour l’état seul à 0,8042 avec l’histoire, et le modèle historique bat également le témoin d’histoire permutée de même complexité, avec p = 0,00498. Dans les expériences de vésicules, 11 760 couples parent-descendant sont analysés et les quatre composantes préenregistrées sont soutenues : réponse à la sélection, contraste d’ablation, signal de filiation supérieur au témoin permuté et codage complet des lignées.
 
 La branche matière mesure une structure cumulative de 53 nœuds, une fermeture stricte de 46 nœuds, 34 hyperarêtes critiques pour cette fermeture et 40 relations ayant un effet mesurable sur au moins une métrique. Le test H011 établit en simulation un seuil critique qui augmente avec la turbulence, avec un rapport extrême de 3,33.
@@ -167,7 +169,7 @@ Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écar
 |---|---|---|
 | `00_socle/` | vocabulaire, carte des 40 transitions et 47 relations, test interventionnel, suite de tests | langage transversal |
 | `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
-| `02_branche_systeme_solaire/` | article, couche astronomique N-corps, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
+| `02_branche_systeme_solaire/` | article, couche astronomique N-corps, **couche spin-orbite calculée**, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
 | `plan_directeur/` | plan de campagne, registre des 35 hypothèses, avancement | transversal |
 | `methodologie_puissance/` | plans de puissance et analyses de sensibilité méthodologiques ; aucune sortie de ce dossier ne constitue une preuve empirique | transversal |
 | `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |

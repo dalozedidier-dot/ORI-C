@@ -1,0 +1,136 @@
+{
+  "status": "executed_reduced_secular_spin_model",
+  "scope": "model-level; lunar torque effective, Moon orbit and tides not resolved",
+  "orbital_forcing": "ORI-C real_science_max eight-planet N-body Earth output",
+  "reference": "La2004 INSOLN.LA2004.BTL.ASC",
+  "alpha_with_moon_arcsec_per_year": 54.93,
+  "alpha_solar_only_arcsec_per_year": 20.0,
+  "initial_obliquity_deg": 23.43929111,
+  "with_moon_2myr": {
+    "horizon_years": 2000000,
+    "obliquity_min_deg": 22.0873117452473,
+    "obliquity_max_deg": 24.443708466000974,
+    "obliquity_range_deg": 2.3563967207536756,
+    "obliquity_std_deg": 0.5317241509718919,
+    "dominant_obliquity_period_years": 40836.73469387755,
+    "insolation_min_w_m2": 433.14717386010824,
+    "insolation_max_w_m2": 564.0643114958255,
+    "insolation_std_w_m2": 24.390886369626237
+  },
+  "no_moon_2myr": {
+    "horizon_years": 2000000,
+    "obliquity_min_deg": 1.2498500566145063,
+    "obliquity_max_deg": 45.04188940616386,
+    "obliquity_range_deg": 43.792039349549356,
+    "obliquity_std_deg": 10.133539762271667,
+    "dominant_obliquity_period_years": 333500.0,
+    "insolation_min_w_m2": 187.4457592818562,
+    "insolation_max_w_m2": 947.8912209867365,
+    "insolation_std_w_m2": 166.9151119103374
+  },
+  "with_moon_20myr": {
+    "horizon_years": 20000000,
+    "obliquity_min_deg": 22.022338943849945,
+    "obliquity_max_deg": 24.471134954510333,
+    "obliquity_range_deg": 2.448796010660388,
+    "obliquity_std_deg": 0.4932792607349853,
+    "dominant_obliquity_period_years": 40901.84049079755,
+    "insolation_min_w_m2": 426.44481473963765,
+    "insolation_max_w_m2": 567.3201034034967,
+    "insolation_std_w_m2": 23.055969189364305
+  },
+  "no_moon_20myr": {
+    "horizon_years": 20000000,
+    "obliquity_min_deg": 0.07993682922830954,
+    "obliquity_max_deg": 45.17698529807164,
+    "obliquity_range_deg": 45.09704846884333,
+    "obliquity_std_deg": 10.156553746415746,
+    "dominant_obliquity_period_years": 487829.26829268294,
+    "insolation_min_w_m2": 179.93673409054927,
+    "insolation_max_w_m2": 947.8912209867365,
+    "insolation_std_w_m2": 168.34832974638982
+  },
+  "ensemble_floor_2myr": {
+    "obliquity_rms_deg": 4.153887189714534e-08,
+    "insolation_rms_w_m2": 1.6990518813908386e-06,
+    "realizations": 8
+  },
+  "minimum_intervention_effect_to_ensemble_floor": {
+    "obliquity": 4430858.7354808375,
+    "insolation": 7061902.023192729
+  },
+  "convergence": {
+    "coarse_substep_years": 100.0,
+    "fine_substep_years": 50.0,
+    "with_moon_obliquity_rmse_deg": 3.7397745158478015e-07,
+    "with_moon_obliquity_max_abs_deg": 8.304137537606948e-07,
+    "no_moon_obliquity_rmse_deg": 6.9060099305391374e-09,
+    "no_moon_obliquity_max_abs_deg": 1.5463673008753176e-08
+  },
+  "la2004_validation": [
+    {
+      "horizon_years": 100000,
+      "samples": 101,
+      "obliquity_rmse_deg": 0.00780543267140785,
+      "obliquity_correlation": 0.9999483335564113,
+      "moving_perihelion_circular_rmse_rad": 0.006859976569444069,
+      "insolation_rmse_w_m2": 0.2219847508783891,
+      "insolation_correlation": 0.9999429280045756
+    },
+    {
+      "horizon_years": 500000,
+      "samples": 501,
+      "obliquity_rmse_deg": 0.05938269823167825,
+      "obliquity_correlation": 0.9958951886385502,
+      "moving_perihelion_circular_rmse_rad": 0.08378012248075484,
+      "insolation_rmse_w_m2": 1.788282971924074,
+      "insolation_correlation": 0.9971878593366477
+    },
+    {
+      "horizon_years": 1000000,
+      "samples": 1001,
+      "obliquity_rmse_deg": 0.0791416499718946,
+      "obliquity_correlation": 0.9899274021830725,
+      "moving_perihelion_circular_rmse_rad": 0.12810702622773276,
+      "insolation_rmse_w_m2": 3.0727161152395857,
+      "insolation_correlation": 0.9915229580602446
+    },
+    {
+      "horizon_years": 2000000,
+      "samples": 2001,
+      "obliquity_rmse_deg": 0.15955078846280185,
+      "obliquity_correlation": 0.9554649525108655,
+      "moving_perihelion_circular_rmse_rad": 0.25036028778941066,
+      "insolation_rmse_w_m2": 5.831296730123204,
+      "insolation_correlation": 0.9713192408846377
+    },
+    {
+      "horizon_years": 5000000,
+      "samples": 5001,
+      "obliquity_rmse_deg": 0.1989615216084052,
+      "obliquity_correlation": 0.9246035492294149,
+      "moving_perihelion_circular_rmse_rad": 0.4451352863602464,
+      "insolation_rmse_w_m2": 7.229627024442224,
+      "insolation_correlation": 0.9502420176090458
+    },
+    {
+      "horizon_years": 10000000,
+      "samples": 10001,
+      "obliquity_rmse_deg": 0.46941020112150744,
+      "obliquity_correlation": 0.5724483541450973,
+      "moving_perihelion_circular_rmse_rad": 1.314367284580958,
+      "insolation_rmse_w_m2": 22.95615149367289,
+      "insolation_correlation": 0.5028678026668177
+    },
+    {
+      "horizon_years": 20000000,
+      "samples": 20001,
+      "obliquity_rmse_deg": 0.5932631594057869,
+      "obliquity_correlation": 0.2892424197522493,
+      "moving_perihelion_circular_rmse_rad": 1.5593593404943438,
+      "insolation_rmse_w_m2": 28.02119805258575,
+      "insolation_correlation": 0.257320325547145
+    }
+  ],
+  "interpretation": "Le couple lunaire effectif stabilise fortement l'obliquité dans ce modèle séculaire réduit. L'ablation lunaire augmente fortement l'amplitude de l'obliquité et de l'insolation. Les six interventions Jupiter/Saturne restent mesurables après propagation jusqu'au spin et à l'insolation. Ce résultat ne remplace pas une intégration Terre-Lune explicite avec marées."
+}

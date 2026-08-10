@@ -456,20 +456,22 @@ Pour chacune des 40 transitions :
 9. Mesurer le temps de divergence chaotique.
 10. Ne jamais interpréter au-delà de l’horizon de fiabilité.
 
-## WP-A3. Physique manquante
+## WP-A3. Physique manquante et extensions exécutées
 
-Ajouter séparément puis conjointement :
+Une première extension **spin-orbite séculaire réduite est désormais exécutée** dans `02_branche_systeme_solaire/couche_spin_orbite/`. Elle intègre dynamiquement le spin terrestre sous le forçage du plan orbital N-corps, calcule l’obliquité et l’insolation à 65°N, confronte le témoin à La2004 et réalise une ablation du couple lunaire effectif. Elle ne résout ni l’orbite mensuelle de la Lune ni les marées et reste exploratoire au niveau modèle.
 
-1. la Lune résolue
-2. la rotation terrestre
-3. l’obliquité dynamique
-4. le J2 solaire
-5. les marées
-6. la relativité cohérente dans tous les diagnostics
-7. les principaux astéroïdes
-8. la perte de masse solaire
-9. les effets de figures planétaires lorsque pertinents
-10. les interactions spin-orbite
+Restent à ajouter séparément puis conjointement :
+
+1. la Lune N-corps explicitement résolue
+2. l’évolution tidale de la rotation terrestre et de la distance Terre-Lune
+3. le J2 solaire
+4. les marées dans le modèle orbital et de spin
+5. la relativité cohérente dans tous les diagnostics
+6. les effets des principaux astéroïdes au-delà du contrôle déjà exécuté
+7. la perte de masse solaire
+8. les effets de figures planétaires lorsque pertinents
+9. la dépendance temporelle de la constante de précession
+10. le couplage spin-orbite complet avec ces termes physiques
 
 Pour chaque ajout :
 
@@ -1197,11 +1199,12 @@ Le seuil fort est atteint lorsqu’une prédiction nouvelle, formulée avant les
 
 ## Bloc D, Système solaire et climat
 
-1. reproduire la couche astronomique
-2. ajouter la Lune, obliquité, J2 et marées par ablations
-3. réparer le test prospectif climatique
-4. lancer les familles alternatives de mémoire
-5. réserver des données confirmatoires
+1. reproduire la couche astronomique — **exécuté**
+2. propager l’architecture orbitale jusqu’au spin, à l’obliquité et à l’insolation avec ablation du couple lunaire — **exécuté au niveau séculaire réduit**
+3. résoudre explicitement la Lune, puis ajouter J2 et marées par ablations — **ouvert**
+4. réparer le test prospectif climatique
+5. lancer les familles alternatives de mémoire
+6. réserver des données confirmatoires
 
 ## Bloc E, vivant
 

@@ -48,6 +48,7 @@ Un verdict appartient au protocole qui l’a produit. Un échec de M2 ne devient
 | Résultat | Mesure principale | Statut |
 |---|---|---|
 | Causalité architecturale astronomique | effet interventionnel minimal 4 964 fois supérieur aux écarts numériques sélectionnés ; 13/15 critères | **Validé dans le modèle réduit** |
+| Extension spin-orbite | La2004 : r = 0,9899 et RMSE = 0,079° à 1 Ma ; obliquité 22,09-24,44° avec couple lunaire effectif contre 1,25-45,04° après ablation sur 2 Ma | **Résultat modèle exécuté, exploratoire ; pas de reclassement confirmatoire** |
 | Persistance dans le chémostat | relation démontrée symboliquement ; 11/11 sections réussies | **Établi dans le modèle** |
 | Histoire antibiotique D’Onofrio | RMSE 1,1309 → 0,8042 ; témoin permuté 1,1415 ; p = 0,00498 | **Soutenu contre les deux témoins** |
 | Lignées de vésicules | 11 760 couples ; quatre composantes préenregistrées soutenues ; permutation p = 0,00050 | **Soutenu dans le protocole préenregistré** |
@@ -313,17 +314,23 @@ de production restent sous 4,33 × 10⁻¹². Le second est corrigé au pas raff
 de 0,005 an, qui atteint 7,54 × 10⁻⁶, mais le seuil préenregistré porte sur le
 maximum des deux essais et l'échec est conservé.
 
-Portée : le modèle réduit ne résout ni la Lune, ni la rotation terrestre, ni le
-J₂ solaire, ni les marées, ni l'obliquité dynamique. Une ressemblance orbitale,
-même forte, ne valide pas le cadre général.
+Portée : la **couche N-corps** ne résout ni la Lune, ni la rotation terrestre, ni le J₂ solaire, ni les marées. Une ressemblance orbitale, même forte, ne valide pas le cadre général. Le spin est désormais traité dans une couche séparée afin de ne pas mélanger le niveau de preuve de `C-AST-01` et celui de son extension.
 
-Le terme « réduit » ne signifie pas que les planètes externes manquent : le témoin
-`real_science_max` contient déjà les huit planètes jusqu'à Neptune, et un contrôle
-séparé ajoute Pluton plus Cérès, Pallas, Vesta, Iris et Bamberga. La prochaine
-extension probante porte donc sur la **spécificité causale** des quatre géantes,
-l'extraction explicite des modes `g_i/s_i`, puis sur un module spin-orbite
-Terre-Lune validé séparément. La feuille de route correspondante est
-`02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/docs/EXTENSION_ARCHITECTURE_GLOBALE_SPIN_ORBITE.md`.
+Le terme « réduit » ne signifie pas que les planètes externes manquent : le témoin `real_science_max` contient déjà les huit planètes jusqu'à Neptune, et un contrôle séparé ajoute Pluton plus Cérès, Pallas, Vesta, Iris et Bamberga.
+
+### Extension exécutée — spin, obliquité et insolation
+
+`02_branche_systeme_solaire/couche_spin_orbite/` intègre maintenant un axe de spin séculaire forcé directement par la normale orbitale de la Terre issue des calculs N-corps. Le témoin utilise la constante de précession actuelle `α = 54,93″/an`. L'ablation lunaire garde exactement la même orbite mais emploie `α ≈ 20″/an`, couple solaire seul. La Lune agit donc ici comme **couple effectif**, sans orbite lunaire explicite ni marées.
+
+À 1 Ma, le témoin donne `r = 0,9899` avec La2004 et une RMSE d'obliquité de `0,079°`. À 2 Ma, `r = 0,9555` et la RMSE vaut `0,160°`. La période dominante calculée sur 2 Ma est `40,84 ka`. L'obliquité du témoin reste dans `22,087-24,444°`, alors que l'ablation lunaire explore `1,250-45,042°`. L'écart-type de l'insolation journalière à 65°N au solstice passe de `24,39` à `166,92 W/m²`.
+
+Les six interventions Jupiter/Saturne ont également été propagées au spin et à l'insolation. Le plus petit rapport à la dispersion des huit réalisations quasi identiques vaut `4,43 × 10^6` pour l'obliquité et `7,06 × 10^6` pour l'insolation. Cette dispersion est un plan d'ensemble numérique très serré, pas une enveloppe complète de l'incertitude astronomique.
+
+Le sous-pas de spin de 100 ans comparé à 50 ans change l'obliquité avec une RMSE de `3,74 × 10^-7°` sur 2 Ma. Le calcul est reproductible dans `couche_spin_orbite/resultats/`.
+
+**Statut :** extension exécutée au niveau modèle et validation externe de courte portée contre La2004. Elle n'est pas ajoutée à la couche confirmatoire existante parce que ses critères de réplication ont été formalisés après cette première exécution. `PROTOCOLE_REPLICATION.md` gèle ces critères pour la prochaine implémentation indépendante.
+
+Les extensions encore ouvertes sont la spécificité causale Uranus/Neptune, l'extraction explicite des `g_i/s_i`, puis une Terre-Lune explicitement résolue avec marées pour l'évolution tidale longue durée.
 
 ## Branche 2 — Système solaire, couche mémoire historique
 

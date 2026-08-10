@@ -175,6 +175,7 @@ mélangées** :
 | Couche | Objet | Statut |
 |---|---|---|
 | `couche_astronomique/` | 25 calculs N-corps, trajectoire de 20 Ma, comparaison à JPL Horizons DE441 et La2010 | validée, 13 critères sur 15 |
+| `couche_spin_orbite/` | spin séculaire forcé par la normale orbitale N-corps, validation La2004, ablation du couple lunaire et insolation | **exécutée au niveau modèle**, sans Lune N-corps ni marées |
 | `couche_memoire_historique/` | tests MPT sur LR04 et test exoplanétaire à chemins contrôlés | **négatif** après correction du protocole |
 
 La première établit que l'architecture héritée produit un spectre calculable et

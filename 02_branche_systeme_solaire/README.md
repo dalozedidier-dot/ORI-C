@@ -32,6 +32,7 @@ H^SysSol → m^SysSol → S_astro → C_k → H_i^Terre → R_i → m^Terre
 | `article/` | l'article de la branche, et son `ERRATUM.md` |
 | `FILTRAGES_HISTORIQUES.md` | la chaîne de filtrages qui produit une architecture planétaire, et les formulations à ne pas relâcher |
 | `couche_astronomique/` | 25 calculs N-corps |
+| `couche_spin_orbite/` | spin terrestre dynamique, obliquité, ablation lunaire et insolation |
 | `couche_memoire_historique/` | tests MPT et exoplanétaire |
 | `application_climat/` | article d'application autonome, hors chaîne de preuve de la branche |
 
@@ -46,14 +47,14 @@ du programme où la dépendance au chemin est matériellement enregistrée plut�
 que modélisée. Il documente un mécanisme établi par la cosmochimie ; il ne
 mesure aucun apport propre à ORI-C.
 
-## Deux couches de résultats, à ne jamais mélanger
+## Trois couches de résultats, à ne jamais mélanger
 
-C'est la règle la plus importante de cette branche. Les deux couches ont des
-objets, des méthodes et des verdicts différents.
+C'est la règle la plus importante de cette branche. Les trois couches ont des objets, des méthodes et des portées différentes.
 
 | Couche | Question testée | Verdict |
 |---|---|---|
 | `couche_astronomique/` | le modèle réduit reproduit-il une trajectoire astronomique indépendante, et modifier l'architecture change-t-il la trajectoire terrestre ? | **13 critères réussis sur 15** |
+| `couche_spin_orbite/` | le forçage orbital N-corps produit-il un spin et une obliquité cohérents avec La2004, et l'ablation du couple lunaire modifie-t-elle fortement cette dynamique ? | **extension exécutée au niveau modèle, validée contre La2004 sur la fenêtre courte** |
 | `couche_memoire_historique/` | une réponse dépendante de l'histoire prédit-elle mieux une archive hors échantillon qu'un modèle classique de complexité égale ? | **réfuté** |
 
 ### Couche astronomique
@@ -71,12 +72,25 @@ Deux critères échouent et sont conservés tels quels : le moment angulaire
 newtonien dans le seul contrôle relativiste complet, et l'aller-retour
 temporel au pas de 0,01 an, qui réussit au pas raffiné.
 
-**Portée.** Validation astronomique et numérique du mécanisme réduit. Le modèle
-ne résout ni la Lune, ni la rotation terrestre, ni le J₂ solaire, ni les marées,
-ni l'obliquité dynamique. Il ne produit aucune prédiction climatique ou
-géologique hors échantillon.
+**Portée.** Validation astronomique et numérique du mécanisme N-corps réduit. Cette couche N-corps ne résout pas le spin ni la Lune explicitement. La propagation vers le spin et l'obliquité est désormais traitée séparément dans `couche_spin_orbite/`.
 
 Voir `couche_astronomique/STATUT_SCIENTIFIQUE.md`.
+
+### Couche spin-orbite
+
+La nouvelle couche intègre l'axe de spin terrestre à partir de la normale orbitale N-corps. Le couple lunaire est représenté par la constante de précession effective `α = 54,93″/an`; l'ablation lunaire conserve exactement le même forçage orbital et utilise `α ≈ 20″/an`, correspondant au couple solaire seul.
+
+Sur 2 Ma, la configuration avec couple lunaire effectif donne une obliquité de **22,087° à 24,444°**, avec une période dominante de **40,84 ka**. La comparaison à La2004 donne une corrélation de **0,9899** et une RMSE de **0,079° à 1 Ma**, puis une corrélation de **0,9555** et une RMSE de **0,160° à 2 Ma**.
+
+L'ablation lunaire donne, sur la même orbite et sur 2 Ma, une obliquité de **1,25° à 45,04°**. L'écart-type de l'insolation journalière à 65°N au solstice passe de **24,39 W/m²** à **166,92 W/m²**. Sur 20 Ma, le témoin avec Lune effective reste dans **22,02° à 24,47°**, tandis que l'ablation explore **0,08° à 45,18°** dans ce modèle réduit.
+
+Les six interventions Jupiter/Saturne ont aussi été propagées jusqu'à l'obliquité et l'insolation. Le plus petit rapport effet / dispersion des huit réalisations quasi identiques reste supérieur à **4,43 millions** pour l'obliquité et **7,06 millions** pour l'insolation. Ces nombres décrivent le plan d'ensemble extrêmement serré déjà utilisé par la couche N-corps et ne sont pas une incertitude astronomique totale.
+
+La convergence du spin entre des sous-pas de 100 ans et 50 ans donne une RMSE de **3,74 × 10⁻⁷ degré** sur 2 Ma.
+
+Cette couche constitue un **calcul séculaire réduit**. Elle ne résout pas l'orbite lunaire mensuelle, les marées ni l'évolution de la distance Terre-Lune. Elle ne transforme pas `C-AST-01` en preuve empirique du climat.
+
+Voir `couche_spin_orbite/resultats/RAPPORT.md`.
 
 ### Couche mémoire historique
 
@@ -136,6 +150,7 @@ planète différenciée → hydrosphère, atmosphère, minéraux, gradients, cyc
 |---|---|
 | `article/` | Architecture historique du Système solaire, revue approfondie |
 | `couche_astronomique/` | 25 calculs N-corps, code, données de référence, manifestes, bundle Git |
+| `couche_spin_orbite/` | intégration séculaire du spin, validation La2004, ablation lunaire, insolation et propagation des interventions |
 | `couche_memoire_historique/` | tests MPT et exoplanétaire, version corrigée, campagne de stress |
 
 ## Exécution
@@ -147,7 +162,7 @@ python -m unittest discover -s tests -v
 python -m oric_memory_tests --root "$PWD" run-all --config configs/primary.json
 ```
 
-La couche astronomique se reproduit selon `couche_astronomique/REPRODUCTION.md`.
+La couche astronomique se reproduit selon `couche_astronomique/REPRODUCTION.md`. La couche spin-orbite se recalcule avec `python couche_spin_orbite/run_spin_orbit.py --overwrite` et son manifeste local de résultats est vérifié par `spin_orbit.verify_results_manifest`.
 
 ## Tests de recherche suivants
 

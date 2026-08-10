@@ -176,6 +176,31 @@ def suite_astronomique() -> dict:
 
 
 
+
+def suite_spin_orbite() -> dict:
+    """Tests de la couche séculaire spin-orbite Terre-Lune."""
+    import os
+
+    chemin = RACINE / "02_branche_systeme_solaire" / "couche_spin_orbite"
+    environnement = dict(os.environ)
+    environnement["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+    environnement.setdefault("OPENBLAS_NUM_THREADS", "1")
+    environnement.setdefault("OMP_NUM_THREADS", "1")
+    sortie, code = executer(
+        [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", "tests"],
+        chemin, environnement,
+    )
+    reussis = re.search(r"(\d+) passed", sortie)
+    echoues = re.search(r"(\d+) failed", sortie)
+    ignores = re.search(r"(\d+) skipped", sortie)
+    return {
+        "reussis": int(reussis.group(1)) if reussis else 0,
+        "echoues": int(echoues.group(1)) if echoues else 0,
+        "ignores": int(ignores.group(1)) if ignores else 0,
+        "code_retour": code,
+    }
+
+
 def suite_trois_branches() -> dict:
     """Tests de régression de la campagne maximale sur les trois branches."""
     import os
@@ -308,6 +333,7 @@ SUITES_ISOLEES = {
     "socle": suite_socle,
     "memoire": suite_memoire,
     "astronomie": suite_astronomique,
+    "spin-orbite": suite_spin_orbite,
     "trois-branches": suite_trois_branches,
 }
 
@@ -448,6 +474,7 @@ def composer(rejouer: bool = False) -> str:
     socle = lancer_suite_isolee("socle")
     memoire = lancer_suite_isolee("memoire")
     astro = lancer_suite_isolee("astronomie")
+    spin_orbite = lancer_suite_isolee("spin-orbite")
     trois_branches = lancer_suite_isolee("trois-branches")
     exhaustif = rapport_exhaustif(rejouer=rejouer)
 
@@ -495,6 +522,10 @@ def composer(rejouer: bool = False) -> str:
             f"| Couche astronomique | — | — | — | non exécutable ici, "
             f"{astro.get('motif', 'dépendance absente')} |"
         )
+    lignes.append(
+        f"| Couche spin-orbite | {spin_orbite['reussis']} | {spin_orbite['echoues']} | "
+        f"{spin_orbite['ignores']} | 0 |"
+    )
 
     lignes.append("")
 
