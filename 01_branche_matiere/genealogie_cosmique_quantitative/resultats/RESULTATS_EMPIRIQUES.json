@@ -25,33 +25,33 @@
     "ryugu_presolar_grains_total": 57,
     "ryugu_presolar_nominal_abundance_sum_ppm": 40.8,
     "source_mode_counts": {
-      "astronomical_observation": 33,
+      "astronomical_observation": 42,
       "laboratory_experiment": 6,
       "meteorite_isotope_measurement": 8,
-      "meteoritic_chronometry": 6,
+      "meteoritic_chronometry": 9,
       "official_observation_product": 1,
       "planetary_isotope_reconstruction": 2,
-      "returned_sample_measurement": 18,
+      "returned_sample_measurement": 20,
       "spacecraft_observation": 2
     },
     "wild2_refractory_and_highT_material_detected": true
   },
   "evidence_mode_counts": {
-    "astronomical_observation": 33,
+    "astronomical_observation": 42,
     "laboratory_experiment": 6,
     "meteorite_isotope_measurement": 8,
-    "meteoritic_chronometry": 6,
+    "meteoritic_chronometry": 9,
     "official_observation_product": 1,
     "planetary_isotope_reconstruction": 2,
-    "returned_sample_measurement": 18,
+    "returned_sample_measurement": 20,
     "spacecraft_observation": 2
   },
   "imputed_rows": 0,
   "link_count": 22,
-  "observed_records": 76,
+  "observed_records": 90,
   "schema": "oric.gc.empirical-results.v3",
   "simulations_used": 0,
-  "source_count": 33,
+  "source_count": 38,
   "stage_count": 20,
   "synthetic_rows": 0
 }

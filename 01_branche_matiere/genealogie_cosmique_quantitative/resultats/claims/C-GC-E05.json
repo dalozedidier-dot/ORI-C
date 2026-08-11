@@ -1,16 +1,20 @@
 {
   "claim_id": "C-GC-E05",
   "criteria": {
-    "streamer_length_au_lower_bound": 10500.0
+    "Per_emb_2_streamer_length_au_lower_bound": 10500.0,
+    "VLA1623B_streamer_excitation_temperature_K": 33.0,
+    "VLA1623B_streamer_length_au": 2000.0,
+    "independent_streamer_systems": 2
   },
-  "directness": "direct_astronomical_observation",
+  "directness": "replicated_direct_astronomical_observation",
   "mechanism": "large_scale_material_stream_feeds_disk_scales",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?",
   "schema": "oric.gc.claim.v3",
-  "scope": "Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
+  "scope": "Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
   "source_ids": [
-    "S007"
+    "S007",
+    "S036"
   ],
   "stages": [
     "GC-E05"

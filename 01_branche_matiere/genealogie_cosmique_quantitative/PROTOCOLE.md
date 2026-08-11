@@ -41,3 +41,11 @@ La synthèse globale est positive seulement si plusieurs porteurs indépendants 
 ## Limite non négociable
 
 L’architecture actuelle du Système solaire est observée. Ses histoires de croissance sont partiellement contraintes par des archives isotopiques. Une trajectoire orbitale détaillée unique depuis le disque jusqu’aux orbites actuelles n’est pas directement enregistrée. Sans recours aux simulations, cette question doit rester ouverte.
+
+## Campagne quantitative v2
+
+La couche quantitative d’autorité est définie par `GEL_ANALYSE_QUANTITATIVE_V2.json`. Ce gel est **prospectif uniquement pour les ajouts futurs** : les tests v2 ont été définis sur le corpus déjà connu et ne sont donc pas présentés comme préenregistrés pour les données actuelles.
+
+Les huit tests/audits couvrent : réplication inter-missions, compatibilité isotopologique, ordre chronométrique avec propagation d’incertitudes, contraste temporel du même objet, réplication de streamers, réactivation tardive d’un corps retourné, robustesse du graphe empirique et ablations par famille de preuve.
+
+Un test quantitatif n’est déclaré positif que selon le critère enregistré dans le gel. Un résultat positif ne relève jamais automatiquement le niveau de causalité au-delà de la `directness` documentée par les sources.

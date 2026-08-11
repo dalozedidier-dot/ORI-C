@@ -1,0 +1,289 @@
+{
+  "schema": "oric.gc.quantitative-real-tests.v2",
+  "tests": [
+    {
+      "name": "replication_presolar_returned_samples",
+      "passed": true,
+      "result": {
+        "pairs": [
+          {
+            "absolute_difference_ppm": 0.0,
+            "category": "SiC",
+            "record_a": "M021",
+            "record_b": "M069",
+            "sigma_a_descriptive": 4.5,
+            "sigma_b_descriptive": 5.5,
+            "standardized_descriptive_difference": 0.0,
+            "value_a_ppm": 25.0,
+            "value_b_ppm": 25.0,
+            "within_2_combined_sigma": true
+          },
+          {
+            "absolute_difference_ppm": 0.7999999999999998,
+            "category": "O-rich",
+            "record_a": "M023",
+            "record_b": "M068",
+            "sigma_a_descriptive": 2.0,
+            "sigma_b_descriptive": 3.6500000000000004,
+            "standardized_descriptive_difference": 0.1922138607859766,
+            "value_a_ppm": 4.0,
+            "value_b_ppm": 4.8,
+            "within_2_combined_sigma": true
+          }
+        ]
+      },
+      "test_id": "GCQ-T01",
+      "verdict": "supports_cross_mission_consistency"
+    },
+    {
+      "name": "water_isotopologue_cross_system_consistency",
+      "passed": true,
+      "result": {
+        "67P_D2O_over_H2O_derived": 1.89e-05,
+        "67P_sigma_propagated": 9.780230058643815e-06,
+        "V883_D2O_over_H2O": 3.2e-05,
+        "standardized_difference": 0.8462135034684345
+      },
+      "test_id": "GCQ-T02",
+      "verdict": "compatible_within_2sigma"
+    },
+    {
+      "name": "early_solar_chronological_order",
+      "passed": true,
+      "result": {
+        "comparisons": [
+          {
+            "combined_sigma_conservative_myr": 0.2,
+            "comparison": "CAI_to_EC002",
+            "gap_myr": 1.7399999999997817,
+            "older_record": "M033",
+            "ordering_gt_5sigma": true,
+            "ordering_sigma": 8.699999999998909,
+            "younger_record": "M029"
+          },
+          {
+            "combined_sigma_conservative_myr": 0.18867962264113208,
+            "comparison": "CAI_to_angrite",
+            "gap_myr": 1.1000000000003638,
+            "older_record": "M033",
+            "ordering_gt_5sigma": true,
+            "ordering_sigma": 5.829988340036908,
+            "younger_record": "M036"
+          },
+          {
+            "combined_sigma_conservative_myr": 0.33999999999999997,
+            "comparison": "CAI_to_youngest_chondrule",
+            "gap_myr": 2.5900000000001455,
+            "older_record": "M033",
+            "ordering_gt_5sigma": true,
+            "ordering_sigma": 7.617647058823958,
+            "younger_record": "M035"
+          },
+          {
+            "combined_sigma_conservative_myr": 0.5099019513592785,
+            "comparison": "angrite_to_CM_carbonate",
+            "gap_myr": 2.800000000000182,
+            "older_record": "M036",
+            "ordering_gt_5sigma": true,
+            "ordering_sigma": 5.491251783869509,
+            "younger_record": "M038"
+          }
+        ],
+        "independent_AlMg_crosscheck": {
+          "initial_26Al_27Al_CAI1": 4.7e-06,
+          "initial_26Al_27Al_CAI1_sigma": 1.4e-06,
+          "initial_26Al_27Al_CAI2_upper_bound": 1.2e-06,
+          "remelting_delay_myr_after_canonical_CAI": 2.0,
+          "role": "independent_chronometric_crosscheck_not_used_in_5sigma_gate",
+          "source_id": "S038"
+        }
+      },
+      "test_id": "GCQ-T03",
+      "verdict": "supports_resolved_temporal_ordering"
+    },
+    {
+      "name": "same_object_event_linked_state_change",
+      "passed": true,
+      "result": {
+        "EC53_burst_enstatite_feature_detected": 1.0,
+        "EC53_burst_forsterite_feature_detected": 1.0,
+        "EC53_crystalline_species_appearing_only_during_burst": 2.0,
+        "EC53_quiescent_enstatite_feature_detected": 0.0,
+        "EC53_quiescent_forsterite_feature_detected": 0.0
+      },
+      "test_id": "GCQ-T04",
+      "verdict": "supports_same_object_event_linked_state_change"
+    },
+    {
+      "name": "streamer_observation_replication",
+      "passed": true,
+      "result": {
+        "independent_systems": 2,
+        "streamer_lengths_au": [
+          10500.0,
+          2000.0
+        ]
+      },
+      "test_id": "GCQ-T05",
+      "verdict": "supports_replicated_large_scale_streamer_channel"
+    },
+    {
+      "name": "long_term_parent_body_reactivation",
+      "passed": true,
+      "result": {
+        "late_Lu_mobilization_detected": true,
+        "late_fluid_flow_lower_bound_myr_after_formation": 1000.0
+      },
+      "test_id": "GCQ-T06",
+      "verdict": "supports_long_term_history_reactivation"
+    },
+    {
+      "name": "empirical_graph_robustness",
+      "passed": true,
+      "result": {
+        "analogue_or_nonunique_edges": 9,
+        "analogue_or_nonunique_relations": [
+          {
+            "from_stage": "GC-E04",
+            "link_class": "observed_analogue_bridge",
+            "to_stage": "GC-E05"
+          },
+          {
+            "from_stage": "GC-E04",
+            "link_class": "observed_analogue_bridge",
+            "to_stage": "GC-E06"
+          },
+          {
+            "from_stage": "GC-E05",
+            "link_class": "observed_analogue_bridge",
+            "to_stage": "GC-E06"
+          },
+          {
+            "from_stage": "GC-E06",
+            "link_class": "cross_system_empirical_consistency",
+            "to_stage": "GC-E08"
+          },
+          {
+            "from_stage": "GC-E07",
+            "link_class": "analogue_to_solar_archive",
+            "to_stage": "GC-E10"
+          },
+          {
+            "from_stage": "GC-E11",
+            "link_class": "laboratory_mechanism_stack",
+            "to_stage": "GC-E12"
+          },
+          {
+            "from_stage": "GC-E12",
+            "link_class": "mechanism_to_observation_non_unique",
+            "to_stage": "GC-E15"
+          },
+          {
+            "from_stage": "GC-E14",
+            "link_class": "solar_context_non_genealogical",
+            "to_stage": "GC-E18"
+          },
+          {
+            "from_stage": "GC-E16",
+            "link_class": "analogue_endpoint_bridge",
+            "to_stage": "GC-E19"
+          }
+        ],
+        "end_to_end_strict_closure": "open",
+        "historical_contrast_edges": 1,
+        "strict_archive_or_same_history_edges": 12,
+        "strict_longest_path": [
+          "GC-E01",
+          "GC-E02",
+          "GC-E03",
+          "GC-E08",
+          "GC-E09",
+          "GC-E10",
+          "GC-E13",
+          "GC-E17",
+          "GC-E19"
+        ],
+        "strict_longest_path_edges": 8,
+        "strict_path_primordial_baseline_to_present_endpoint": false,
+        "strict_path_stellar_products_to_present_endpoint": true,
+        "total_edges": 22
+      },
+      "test_id": "GCQ-T07",
+      "verdict": "partial_strict_sequence_with_open_end_to_end_closure"
+    },
+    {
+      "name": "evidence_family_ablation",
+      "passed": true,
+      "result": {
+        "ablations": [
+          {
+            "covered_stages": 12,
+            "lost_stage_count": 8,
+            "lost_stages": "GC-E00;GC-E01;GC-E02;GC-E04;GC-E05;GC-E07;GC-E15;GC-E16",
+            "remaining_measurement_records": 48,
+            "removed_evidence_mode": "astronomical_observation",
+            "strict_stellar_to_endpoint_path_preserved": false
+          },
+          {
+            "covered_stages": 18,
+            "lost_stage_count": 2,
+            "lost_stages": "GC-E11;GC-E12",
+            "remaining_measurement_records": 84,
+            "removed_evidence_mode": "laboratory_experiment",
+            "strict_stellar_to_endpoint_path_preserved": true
+          },
+          {
+            "covered_stages": 20,
+            "lost_stage_count": 0,
+            "lost_stages": "",
+            "remaining_measurement_records": 82,
+            "removed_evidence_mode": "meteorite_isotope_measurement",
+            "strict_stellar_to_endpoint_path_preserved": true
+          },
+          {
+            "covered_stages": 18,
+            "lost_stage_count": 2,
+            "lost_stages": "GC-E10;GC-E13",
+            "remaining_measurement_records": 81,
+            "removed_evidence_mode": "meteoritic_chronometry",
+            "strict_stellar_to_endpoint_path_preserved": false
+          },
+          {
+            "covered_stages": 19,
+            "lost_stage_count": 1,
+            "lost_stages": "GC-E19",
+            "remaining_measurement_records": 89,
+            "removed_evidence_mode": "official_observation_product",
+            "strict_stellar_to_endpoint_path_preserved": false
+          },
+          {
+            "covered_stages": 18,
+            "lost_stage_count": 2,
+            "lost_stages": "GC-E17;GC-E18",
+            "remaining_measurement_records": 88,
+            "removed_evidence_mode": "planetary_isotope_reconstruction",
+            "strict_stellar_to_endpoint_path_preserved": false
+          },
+          {
+            "covered_stages": 18,
+            "lost_stage_count": 2,
+            "lost_stages": "GC-E03;GC-E09",
+            "remaining_measurement_records": 70,
+            "removed_evidence_mode": "returned_sample_measurement",
+            "strict_stellar_to_endpoint_path_preserved": false
+          },
+          {
+            "covered_stages": 20,
+            "lost_stage_count": 0,
+            "lost_stages": "",
+            "remaining_measurement_records": 88,
+            "removed_evidence_mode": "spacecraft_observation",
+            "strict_stellar_to_endpoint_path_preserved": true
+          }
+        ]
+      },
+      "test_id": "GCQ-T08",
+      "verdict": "sensitivity_mapped_not_redundancy_claimed"
+    }
+  ]
+}

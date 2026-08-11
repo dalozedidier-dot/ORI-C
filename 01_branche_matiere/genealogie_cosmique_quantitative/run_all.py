@@ -8,6 +8,7 @@ SRC=HERE/'src'
 sys.path.insert(0,str(SRC))
 from analyser_empirique import read_csv, validate_empirical_only, derive, evaluate_claims, ALLOWED_MODES
 from analyser_approfondissement_empirique import analyse as analyse_approfondissement
+from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -147,6 +148,42 @@ def main():
     dump(out/'APPROFONDISSEMENT_EMPIRIQUE.json',deep['summary'])
     dump(out/'CLAIMS_QUANTITATIFS.json',{'schema':'oric.gc.quantitative-empirical-claims.v1','claims':deep['claims']})
     write_csv(out/'COUVERTURE_DAG_EMPIRIQUE.csv',['stage_id','anchor_stage_id','measurement_records_in_anchor','covered'],deep['coverage'])
+
+    # Couche quantitative v2: résultats réels calculés directement sur les mesures empiriques.
+    q2=analyse_quantitatif_reel(HERE)
+    dump(out/'TESTS_QUANTITATIFS_REELS.json',{'schema':'oric.gc.quantitative-real-tests.v2','tests':q2['tests']})
+    dump(out/'ROBUSTESSE_GRAPHE.json',q2['graph'])
+    dump(out/'VERDICT_QUANTITATIF.json',q2['verdict'])
+    write_csv(out/'REPLICATION_ECHANTILLONS.csv',list(q2['replication'][0].keys()),q2['replication'])
+    write_csv(out/'CHRONOLOGIE_QUANTITATIVE.csv',list(q2['chronology'][0].keys()),q2['chronology'])
+    write_csv(out/'REDONDANCE_PAR_STAGE.csv',list(q2['redundancy'][0].keys()),q2['redundancy'])
+    write_csv(out/'ABLATIONS_FAMILLES_PREUVES.csv',list(q2['ablations'][0].keys()),q2['ablations'])
+    qby={t['test_id']:t for t in q2['tests']}
+    qlines=[
+      '# Rapport quantitatif réel — généalogie cosmique', '',
+      '**Autorité v2 : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**','',
+      f"- Sources primaires/officielles : {q2['verdict']['sources']}",
+      f"- Enregistrements de mesures réelles : {q2['verdict']['measurement_records']}",
+      f"- Tests quantitatifs/audits : {q2['verdict']['tests']} ({q2['verdict']['tests_passed']} exécutés conformément aux critères gelés pour les mises à jour futures).", '',
+      '## Résultats quantitatifs', '',
+      f"- Réplication grains présolaires : SiC Bennu/Ryugu z descriptif = {qby['GCQ-T01']['result']['pairs'][0]['standardized_descriptive_difference']:.3f}; O-rich z = {qby['GCQ-T01']['result']['pairs'][1]['standardized_descriptive_difference']:.3f}.",
+      f"- Eau lourde V883 Ori / 67P : écart standardisé = {qby['GCQ-T02']['result']['standardized_difference']:.3f}.",
+      f"- Chronologie : quatre écarts temporels sélectionnés sont résolus à >5σ avec propagation conservative des incertitudes publiées; un second chronomètre Al-Mg apporte en plus un cross-check indépendant d’environ {qby['GCQ-T03']['result']['independent_AlMg_crosscheck']['remelting_delay_myr_after_canonical_CAI']:.0f} Myr après les CAI canoniques.",
+      f"- EC 53 : deux espèces cristallines (forstérite, enstatite) absentes en quiescence et détectées pendant le burst du même objet.",
+      f"- Streamers : deux systèmes indépendants observés, longueurs ~{qby['GCQ-T05']['result']['streamer_lengths_au'][1]:.0f} au et >{qby['GCQ-T05']['result']['streamer_lengths_au'][0]:.0f} au.",
+      f"- Ryugu : archive Lu-Hf d’une circulation de fluide >{qby['GCQ-T06']['result']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation.", '',
+      '## Robustesse et limites', '',
+      f"- Graphe empirique : {q2['graph']['strict_archive_or_same_history_edges']} liens stricts d’archive/séquence sur {q2['graph']['total_edges']} liens; {q2['graph']['analogue_or_nonunique_edges']} liens restent analogues ou non uniques.",
+      f"- Une séquence stricte d’archives relie les produits stellaires à un endpoint planétaire actuel : {str(q2['graph']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
+      f"- Fermeture stricte depuis la baseline primordiale jusqu’à l’endpoint actuel : {q2['graph']['end_to_end_strict_closure']}.",
+      f"- Stades à source unique : {q2['verdict']['single_source_stage_bottlenecks']} ({', '.join(q2['verdict']['single_source_stage_ids'])}).",
+      '- Les ablations par famille de preuve sont enregistrées dans `ABLATIONS_FAMILLES_PREUVES.csv`; elles auditent la dépendance de la chaîne aux familles de mesures et ne simulent aucun processus physique.', '',
+      '## Verdict', '',
+      f"`{q2['verdict']['global_quantitative_verdict']}`", '',
+      'La branche dispose maintenant de résultats quantitatifs falsifiables/descriptifs sur les mesures elles-mêmes. La fermeture généalogique stricte de bout en bout reste ouverte là où les données ne permettent pas de remplacer honnêtement un analogue ou une relation non unique.'
+    ]
+    (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(qlines)+'\n',encoding='utf-8')
+
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]
     for p in files:

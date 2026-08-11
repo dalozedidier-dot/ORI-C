@@ -45,9 +45,13 @@ python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
 ```
 
 Le recalcul doit être byte-for-byte reproductible à partir des tables empiriques versionnées.
-## Approfondissement quantitatif conservateur
 
-Une seconde couche analytique est ajoutée **sans remplacer la branche empirique d’autorité** : `DAG_EMPIRIQUE_APPROFONDI.csv` décrit 23 stades analytiques, `RELATIONS_EMPIRIQUES_APPROFONDIES.csv` 40 relations qualifiées, `data/OBSERVATIONS_QUANTITATIVES_SELECTION.csv` sélectionne 24 enregistrements copiés depuis les 76 mesures réelles, et `CLAIMS_QUANTITATIFS_EMPIRIQUES.csv` fournit 12 synthèses machine.
+## Campagne quantitative réelle v2
 
-Cette couche respecte le même pare-feu : 0 simulation, 0 donnée synthétique, 0 imputation, 0 rendement théorique et 0 sortie thermochimique. Les 16 claims `C-GC-E*` restent l’autorité scientifique de la branche. Les 12 claims `C-GC-Q*` sont des synthèses quantitatives secondaires et ne doublent pas le registre central des preuves.
+La couche quantitative ne prend plus comme résultat scientifique le simple comptage « 23 stades / 40 relations / 24 observations / 12 synthèses ». Ces fichiers v1 sont conservés pour provenance et leur statut est documenté dans `STATUT_APPROFONDISSEMENT_V1.md`.
 
+L’autorité quantitative est désormais `GEL_ANALYSE_QUANTITATIVE_V2.json` + `src/analyser_quantitatif_reel.py`. Elle calcule huit tests/audits directement sur les mesures empiriques : réplication Bennu/Ryugu, comparaison V883 Ori/67P, chronologie avec propagation d’incertitudes, contraste temporel EC 53, réplication de streamers, réactivation tardive de Ryugu, robustesse du graphe et ablations par famille de preuve.
+
+Les sorties d’autorité sont `resultats/TESTS_QUANTITATIFS_REELS.json`, `CHRONOLOGIE_QUANTITATIVE.csv`, `REPLICATION_ECHANTILLONS.csv`, `ROBUSTESSE_GRAPHE.json`, `REDONDANCE_PAR_STAGE.csv`, `ABLATIONS_FAMILLES_PREUVES.csv`, `VERDICT_QUANTITATIF.json` et `RAPPORT_QUANTITATIF.md`.
+
+Le corpus courant contient 38 sources primaires/officielles et 90 mesures réelles. Le verdict quantitatif soutient des contraintes matérielles et temporelles dépendantes de l’histoire, tout en laissant ouverte la fermeture généalogique stricte de bout en bout.

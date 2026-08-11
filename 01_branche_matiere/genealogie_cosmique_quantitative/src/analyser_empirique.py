@@ -112,19 +112,19 @@ def evaluate_claims(measurements, derived, source_ids):
         'ice_inventory_and_grain_growth_precede_protostar','direct_astronomical_observation','Analogue astrophysique de l’amont de systèmes planétaires, pas observation du nuage protosolaire historique.',
         {'ice_budget_percent_range':[v['dense_cloud_ice_budget_min'],v['dense_cloud_ice_budget_max']],'grain_scale_micrometre_at_least':v['dense_cloud_grain_scale']})
     add('C-GC-E05','Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?',
-        'supports_observed_cloud_to_disk_supply',['GC-E05'],['S007'],
-        'large_scale_material_stream_feeds_disk_scales','direct_astronomical_observation','Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.',
-        {'streamer_length_au_lower_bound':v['streamer_length_lower_bound']})
+        'supports_observed_cloud_to_disk_supply',['GC-E05'],['S007','S036'],
+        'large_scale_material_stream_feeds_disk_scales','replicated_direct_astronomical_observation','Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.',
+        {'Per_emb_2_streamer_length_au_lower_bound':v['streamer_length_lower_bound'],'VLA1623B_streamer_length_au':v['VLA1623B_streamer_length'],'VLA1623B_streamer_excitation_temperature_K':v['VLA1623B_streamer_SO_excitation_temperature'],'independent_streamer_systems':2})
     add('C-GC-E06','Des signatures moléculaires formées en phase froide sont-elles observées jusque dans les disques et compatibles avec des matériaux cométaires ?',
         'supports_observational_molecular_inheritance',['GC-E04','GC-E06'],['S008','S009','S033'],
         'molecular_and_isotopic_signatures_survive_across_formation_stages','cross_system_observational_consistency',
         'V883 Ori/67P testent la continuité isotopique de l’eau; TW Hya apporte une détection indépendante de CH3OH. Les abondances modélisées de TW Hya sont exclues.',
         {'V883_D2O_H2O':v['V883_D2O_over_H2O'],'67P_D2O_H2O_derived':derived['comet_67P_D2O_over_H2O_derived'],'standardized_difference':derived['V883_vs_67P_standardized_difference'],'criterion_z_lt_2':derived['V883_vs_67P_standardized_difference']<2,'TW_Hya_direct_detection':derived['TW_Hya_methanol_direct_detection']})
     add('C-GC-E07','La formation de solides réfractaires est-elle directement observable dans un disque planétaire jeune ?',
-        'supports_observed_refractory_solid_formation',['GC-E07'],['S024'],
-        'hot_gas_and_crystalline_refractory_solids_coexist_in_embedded_disk','direct_astronomical_observation',
-        'HOPS-315 est un analogue astrophysique observé; la comparaison à des modèles de condensation publiée dans l’article n’est pas utilisée comme donnée de cette campagne.',
-        {'refractory_disk_observation_present':True})
+        'supports_observed_refractory_solid_formation',['GC-E07'],['S024','S034'],
+        'hot_gas_and_crystalline_refractory_solids_are_observed_and_crystalline_state_changes_with_burst','direct_astronomical_observation_plus_same_object_time_domain_contrast',
+        'HOPS-315 fournit une détection de solides réfractaires dans un jeune disque. EC 53 ajoute un contraste temporel du même objet: forstérite et enstatite sont absentes en quiescence et détectées pendant le burst. Les modèles de transport restent exclus.',
+        {'refractory_disk_observation_present':True,'EC53_same_object_time_domain_change':bool(v['EC53_burst_forsterite_feature_detected']==1 and v['EC53_quiescent_forsterite_feature_detected']==0 and v['EC53_burst_enstatite_feature_detected']==1 and v['EC53_quiescent_enstatite_feature_detected']==0),'EC53_crystalline_species_appearing_only_during_burst':int(v['EC53_crystalline_species_appearing_only_during_burst'])})
     add('C-GC-E08','Les archives réelles du disque solaire montrent-elles une architecture isotopique et temporelle non homogène ?',
         'supports_persistent_nebular_heterogeneity',['GC-E08','GC-E10'],['S011','S012','S013','S014','S015','S016'],
         'isotopic_reservoirs_and_time_order_are_recorded_in_solids','returned_sample_and_meteorite_measurements','Les causes dynamiques exactes de la séparation NC/CC et de l’hétérogénéité ne sont pas imposées.',

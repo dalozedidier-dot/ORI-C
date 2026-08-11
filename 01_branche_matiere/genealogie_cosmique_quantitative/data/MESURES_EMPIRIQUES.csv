@@ -75,3 +75,17 @@ M073,GC-E09,S032,returned_sample_measurement,Wild2_high_temperature_material_det
 M074,GC-E06,S033,astronomical_observation,TW_Hya_methanol_velocity_channels_gt3sigma,6,,,count,,,
 M075,GC-E06,S033,astronomical_observation,TW_Hya_methanol_peak_SNR,5.5,,,sigma,,,
 M076,GC-E15,S025,astronomical_observation,PDS70_protoplanets_within_disk_gap,1,,,boolean,,true,Le même système PDS 70 fournit le contexte disque/cavité et les deux sources Hα en accrétion; aucun mécanisme de migration n’est déduit.
+M077,GC-E07,S034,astronomical_observation,EC53_quiescent_forsterite_feature_detected,0,,,boolean,,false,Comparaison temporelle du même objet; la signature de forstérite apparaît uniquement pendant le burst.
+M078,GC-E07,S034,astronomical_observation,EC53_burst_forsterite_feature_detected,1,,,boolean,,true,Comparaison temporelle du même objet; signature de forstérite détectée pendant le burst.
+M079,GC-E07,S034,astronomical_observation,EC53_quiescent_enstatite_feature_detected,0,,,boolean,,false,Comparaison temporelle du même objet; la signature d’enstatite apparaît uniquement pendant le burst.
+M080,GC-E07,S034,astronomical_observation,EC53_burst_enstatite_feature_detected,1,,,boolean,,true,Comparaison temporelle du même objet; signature d’enstatite détectée pendant le burst.
+M081,GC-E07,S034,astronomical_observation,EC53_crystalline_species_appearing_only_during_burst,2,,,count,,forsterite;enstatite,Deux familles de signatures cristallines apparaissent seulement dans la phase de burst observée.
+M082,GC-E14,S035,returned_sample_measurement,Ryugu_late_fluid_flow_after_formation_lower_bound,1000,,,Myr_after_formation,,>1 Gyr,Borne minimale publiée issue des systématiques Lu-Hf; la cause dynamique proposée n’est pas utilisée.
+M083,GC-E14,S035,returned_sample_measurement,Ryugu_late_Lu_mobilization_detected,1,,,boolean,,true,Mobilisation tardive de Lu enregistrée dans les échantillons retournés.
+M084,GC-E05,S036,astronomical_observation,VLA1623B_streamer_length,2000,,,au,,~2000,Longueur observée approximative du streamer accélérant; second système indépendant de Per-emb-2.
+M085,GC-E05,S036,astronomical_observation,VLA1623B_streamer_SO_excitation_temperature,33,9,9,K,,33 ± 9,Température d’excitation SO rapportée pour le streamer; masse et taux d’accrétion exclus.
+M086,GC-E02,S037,astronomical_observation,SN1987A_ALMA_ejecta_dust_mass_lower_bound,0.2,,,solar_mass,,>0.2,Borne observationnelle publiée; aucune extrapolation à la survie future ou à une population de supernovæ.
+M087,GC-E02,S037,astronomical_observation,SN1987A_ALMA_dust_spatially_resolved_inner_ejecta,1,,,boolean,,true,La concentration centrale de l’émission montre directement que la poussière observée se trouve dans les éjecta internes.
+M088,GC-E10,S038,meteoritic_chronometry,chondrule_bearing_CAI_remelting_delay_after_canonical_CAI,2,,,Myr_after_CAI,2,~2,"Contrainte chronométrique approximative publiée à partir des rapports initiaux 26Al/27Al; utilisée comme réplication indépendante, pas dans le calcul >5σ."
+M089,GC-E10,S038,meteoritic_chronometry,chondrule_bearing_CAI1_initial_26Al_27Al,4.7e-6,1.4e-6,1.4e-6,ratio,1,(4.7 ± 1.4) × 10^-6,Rapport initial publié pour l’un des deux CAI à matériel chondritique.
+M090,GC-E10,S038,meteoritic_chronometry,chondrule_bearing_CAI2_initial_26Al_27Al_upper_bound,1.2e-6,,,ratio_upper_bound,1,<1.2 × 10^-6,"Borne supérieure publiée; la valeur numérique est enregistrée comme limite, pas comme mesure ponctuelle."

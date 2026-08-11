@@ -166,10 +166,11 @@
       "evidence_class": "observation_directe",
       "history_carrier": "poussiere_stellaire_mesuree",
       "label": "Éjecta stellaires convertis en poussières observées",
-      "measurement_count": 4,
+      "measurement_count": 6,
       "order": "2",
       "source_ids": [
-        "S029"
+        "S029",
+        "S037"
       ],
       "stage_id": "GC-E02"
     },
@@ -205,10 +206,11 @@
       "evidence_class": "observation_directe",
       "history_carrier": "flux_materiel_nuage_disque",
       "label": "Apport de matière du nuage vers les échelles du disque",
-      "measurement_count": 1,
+      "measurement_count": 3,
       "order": "5",
       "source_ids": [
-        "S007"
+        "S007",
+        "S036"
       ],
       "stage_id": "GC-E05"
     },
@@ -231,10 +233,11 @@
       "evidence_class": "observation_directe",
       "history_carrier": "solides_refractaires",
       "label": "Condensation de solides réfractaires observée dans un jeune disque",
-      "measurement_count": 3,
+      "measurement_count": 8,
       "order": "7",
       "source_ids": [
-        "S024"
+        "S024",
+        "S034"
       ],
       "stage_id": "GC-E07"
     },
@@ -272,10 +275,11 @@
       "evidence_class": "chronometrie_meteoritique",
       "history_carrier": "ordre_temporel_solides",
       "label": "Chronologie CAI et chondres",
-      "measurement_count": 3,
+      "measurement_count": 6,
       "order": "10",
       "source_ids": [
-        "S016"
+        "S016",
+        "S038"
       ],
       "stage_id": "GC-E10"
     },
@@ -320,10 +324,11 @@
       "evidence_class": "chronometrie_meteoritique",
       "history_carrier": "alteration_aqueuse_plus_tardive",
       "label": "Planétésimaux hydratés plus tardifs",
-      "measurement_count": 1,
+      "measurement_count": 3,
       "order": "14",
       "source_ids": [
-        "S018"
+        "S018",
+        "S035"
       ],
       "stage_id": "GC-E14"
     },

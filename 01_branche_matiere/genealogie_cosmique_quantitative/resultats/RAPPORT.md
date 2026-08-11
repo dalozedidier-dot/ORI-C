@@ -3,7 +3,7 @@
 **Règle absolue : aucune simulation, aucune donnée synthétique, aucune imputation et aucune sortie de modèle ne comptent comme preuve dans cette branche.**
 
 - 20 stades empiriques et 22 liens qualifiés.
-- 33 sources primaires/officielles et 76 enregistrements de mesures réelles.
+- 38 sources primaires/officielles et 90 enregistrements de mesures réelles.
 - 15 résultats/claims soutenus; 1 question reste explicitement indéterminée.
 - Audit : 0 simulation, 0 ligne synthétique, 0 ligne imputée.
 

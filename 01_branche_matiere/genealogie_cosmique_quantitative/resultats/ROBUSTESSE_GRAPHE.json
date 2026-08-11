@@ -1,0 +1,68 @@
+{
+  "analogue_or_nonunique_edges": 9,
+  "analogue_or_nonunique_relations": [
+    {
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "to_stage": "GC-E05"
+    },
+    {
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "to_stage": "GC-E06"
+    },
+    {
+      "from_stage": "GC-E05",
+      "link_class": "observed_analogue_bridge",
+      "to_stage": "GC-E06"
+    },
+    {
+      "from_stage": "GC-E06",
+      "link_class": "cross_system_empirical_consistency",
+      "to_stage": "GC-E08"
+    },
+    {
+      "from_stage": "GC-E07",
+      "link_class": "analogue_to_solar_archive",
+      "to_stage": "GC-E10"
+    },
+    {
+      "from_stage": "GC-E11",
+      "link_class": "laboratory_mechanism_stack",
+      "to_stage": "GC-E12"
+    },
+    {
+      "from_stage": "GC-E12",
+      "link_class": "mechanism_to_observation_non_unique",
+      "to_stage": "GC-E15"
+    },
+    {
+      "from_stage": "GC-E14",
+      "link_class": "solar_context_non_genealogical",
+      "to_stage": "GC-E18"
+    },
+    {
+      "from_stage": "GC-E16",
+      "link_class": "analogue_endpoint_bridge",
+      "to_stage": "GC-E19"
+    }
+  ],
+  "end_to_end_strict_closure": "open",
+  "historical_contrast_edges": 1,
+  "strict_archive_or_same_history_edges": 12,
+  "strict_longest_path": [
+    "GC-E01",
+    "GC-E02",
+    "GC-E03",
+    "GC-E08",
+    "GC-E09",
+    "GC-E10",
+    "GC-E13",
+    "GC-E17",
+    "GC-E19"
+  ],
+  "strict_longest_path_edges": 8,
+  "strict_path_primordial_baseline_to_present_endpoint": false,
+  "strict_path_stellar_products_to_present_endpoint": true,
+  "total_edges": 22
+}

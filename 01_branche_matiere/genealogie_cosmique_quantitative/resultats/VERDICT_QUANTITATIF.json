@@ -1,0 +1,39 @@
+{
+  "data_policy": "empirical_measurements_only",
+  "freeze_status": "frozen_for_future_source_additions_not_preregistered_for_current_data",
+  "global_quantitative_verdict": "supports_history_dependent_material_and_temporal_constraints_with_open_end_to_end_closure",
+  "imputed_rows": 0,
+  "measurement_records": 90,
+  "not_claimed": [
+    "unique_orbital_history",
+    "universal_ORI_C_law",
+    "direct_protosolar_observation_for_analogue_stages",
+    "simulation_based_closure"
+  ],
+  "schema": "oric.gc.quantitative-real-verdict.v2",
+  "simulations_used": 0,
+  "single_source_stage_bottlenecks": 7,
+  "single_source_stage_ids": [
+    "GC-E11",
+    "GC-E12",
+    "GC-E13",
+    "GC-E16",
+    "GC-E17",
+    "GC-E18",
+    "GC-E19"
+  ],
+  "sources": 38,
+  "strict_archive_sequence_stellar_to_present_endpoint": true,
+  "strict_end_to_end_from_primordial_baseline": false,
+  "strong_results": [
+    "cross_mission_presolar_abundance_consistency",
+    "cross_system_water_isotopologue_compatibility",
+    "resolved_early_solar_chronological_order",
+    "same_object_burst_linked_crystalline_state_change",
+    "replicated_large_scale_streamer_observations",
+    "returned_sample_record_of_greater_than_1Gyr_parent_body_reactivation"
+  ],
+  "synthetic_rows": 0,
+  "tests": 8,
+  "tests_passed": 8
+}

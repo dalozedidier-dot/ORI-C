@@ -1,0 +1,9 @@
+removed_evidence_mode,remaining_measurement_records,covered_stages,lost_stage_count,lost_stages,strict_stellar_to_endpoint_path_preserved
+astronomical_observation,48,12,8,GC-E00;GC-E01;GC-E02;GC-E04;GC-E05;GC-E07;GC-E15;GC-E16,False
+laboratory_experiment,84,18,2,GC-E11;GC-E12,True
+meteorite_isotope_measurement,82,20,0,,True
+meteoritic_chronometry,81,18,2,GC-E10;GC-E13,False
+official_observation_product,89,19,1,GC-E19,False
+planetary_isotope_reconstruction,88,18,2,GC-E17;GC-E18,False
+returned_sample_measurement,70,18,2,GC-E03;GC-E09,False
+spacecraft_observation,88,20,0,,True

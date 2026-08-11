@@ -1,0 +1,21 @@
+stage_id,label,measurement_records,independent_sources,source_ids,evidence_modes,single_source_bottleneck
+GC-E00,Inventaire primordial contraint par observation,2,2,S001;S002,astronomical_observation,False
+GC-E01,Produits de nucléosynthèse stellaire observés,6,2,S003;S004,astronomical_observation,False
+GC-E02,Éjecta stellaires convertis en poussières observées,6,2,S029;S037,astronomical_observation,False
+GC-E03,Matière présolaire incorporée aux corps primitifs,15,3,S010;S030;S031,returned_sample_measurement,False
+GC-E04,Grains et glaces dans les nuages moléculaires denses,4,2,S005;S006,astronomical_observation,False
+GC-E05,Apport de matière du nuage vers les échelles du disque,3,2,S007;S036,astronomical_observation,False
+GC-E06,Molécules héritables observées dans les disques,6,3,S008;S009;S033,astronomical_observation;spacecraft_observation,False
+GC-E07,Condensation de solides réfractaires observée dans un jeune disque,8,2,S024;S034,astronomical_observation,False
+GC-E08,Architecture isotopique et temporelle de la nébuleuse solaire,9,5,S011;S012;S013;S014;S015,meteorite_isotope_measurement;returned_sample_measurement,False
+GC-E09,Redistribution de matériaux dans le disque solaire enregistrée dans une comète,2,2,S031;S032,returned_sample_measurement,False
+GC-E10,Chronologie CAI et chondres,6,2,S016;S038,meteoritic_chronometry,False
+GC-E11,Agrégation de poussières mesurée en microgravité,3,1,S019,laboratory_experiment,True
+GC-E12,Instabilité collective poussière-gaz mesurée en microgravité,3,1,S020,laboratory_experiment,True
+GC-E13,Planétésimaux différenciés précoces,2,1,S017,meteoritic_chronometry,True
+GC-E14,Planétésimaux hydratés plus tardifs,3,2,S018;S035,meteoritic_chronometry;returned_sample_measurement,False
+GC-E15,Disques jeunes avec croissance et sous-structures observées,8,4,S021;S022;S023;S025,astronomical_observation,False
+GC-E16,Protoplanètes en accrétion observées,1,1,S025,astronomical_observation,True
+GC-E17,Croissance rapide de Mars reconstruite isotopiquement,1,1,S026,planetary_isotope_reconstruction,True
+GC-E18,Accrétion hétérogène de la Terre enregistrée isotopiquement,1,1,S027,planetary_isotope_reconstruction,True
+GC-E19,Architecture actuelle du Système solaire observée,1,1,S028,official_observation_product,True

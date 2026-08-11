@@ -1,0 +1,3 @@
+category,record_a,record_b,value_a_ppm,value_b_ppm,sigma_a_descriptive,sigma_b_descriptive,absolute_difference_ppm,standardized_descriptive_difference,within_2_combined_sigma
+SiC,M021,M069,25.0,25.0,4.5,5.5,0.0,0.0,True
+O-rich,M023,M068,4.0,4.8,2.0,3.6500000000000004,0.7999999999999998,0.1922138607859766,True

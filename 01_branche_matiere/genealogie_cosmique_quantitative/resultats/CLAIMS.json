@@ -103,15 +103,19 @@
     {
       "claim_id": "C-GC-E05",
       "criteria": {
-        "streamer_length_au_lower_bound": 10500.0
+        "Per_emb_2_streamer_length_au_lower_bound": 10500.0,
+        "VLA1623B_streamer_excitation_temperature_K": 33.0,
+        "VLA1623B_streamer_length_au": 2000.0,
+        "independent_streamer_systems": 2
       },
-      "directness": "direct_astronomical_observation",
+      "directness": "replicated_direct_astronomical_observation",
       "mechanism": "large_scale_material_stream_feeds_disk_scales",
       "preregistration": "non_preregistered_initial_empirical_synthesis",
       "question": "Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?",
-      "scope": "Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
+      "scope": "Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
       "source_ids": [
-        "S007"
+        "S007",
+        "S036"
       ],
       "stages": [
         "GC-E05"
@@ -146,15 +150,18 @@
     {
       "claim_id": "C-GC-E07",
       "criteria": {
+        "EC53_crystalline_species_appearing_only_during_burst": 2,
+        "EC53_same_object_time_domain_change": true,
         "refractory_disk_observation_present": true
       },
-      "directness": "direct_astronomical_observation",
-      "mechanism": "hot_gas_and_crystalline_refractory_solids_coexist_in_embedded_disk",
+      "directness": "direct_astronomical_observation_plus_same_object_time_domain_contrast",
+      "mechanism": "hot_gas_and_crystalline_refractory_solids_are_observed_and_crystalline_state_changes_with_burst",
       "preregistration": "non_preregistered_initial_empirical_synthesis",
       "question": "La formation de solides réfractaires est-elle directement observable dans un disque planétaire jeune ?",
-      "scope": "HOPS-315 est un analogue astrophysique observé; la comparaison à des modèles de condensation publiée dans l’article n’est pas utilisée comme donnée de cette campagne.",
+      "scope": "HOPS-315 fournit une détection de solides réfractaires dans un jeune disque. EC 53 ajoute un contraste temporel du même objet: forstérite et enstatite sont absentes en quiescence et détectées pendant le burst. Les modèles de transport restent exclus.",
       "source_ids": [
-        "S024"
+        "S024",
+        "S034"
       ],
       "stages": [
         "GC-E07"
@@ -395,7 +402,12 @@
         "S030",
         "S031",
         "S032",
-        "S033"
+        "S033",
+        "S034",
+        "S035",
+        "S036",
+        "S037",
+        "S038"
       ],
       "stages": [
         "GC-E00",
