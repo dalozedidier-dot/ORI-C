@@ -1,0 +1,43 @@
+{
+  "claim_id": "GCQ-T10",
+  "criterion_met": true,
+  "data_policy": "real_measurements_and_official_empirical_data_only",
+  "executed": true,
+  "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+  "preregistered": false,
+  "question": "La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?",
+  "result": {
+    "core_window_vs_CM_carbonate_inventory_factor_range": [
+      10.177281442223894,
+      16.50270259716069
+    ],
+    "core_window_vs_youngest_chondrule_inventory_factor_range": [
+      2.8683541306925924,
+      4.651104072426406
+    ],
+    "interpretation_limit": "The mapping quantifies available parent radionuclide inventory only; it does not model temperature, melting, size, porosity or accretion.",
+    "paper_reports_age_uncertainty_approximately_myr": 1.0,
+    "published_core_formation_window_myr_after_CAI": [
+      1.0,
+      1.5
+    ],
+    "remaining_26Al_fraction_range": [
+      0.2345471361871662,
+      0.3803237294248149
+    ],
+    "remaining_fraction_at_youngest_chondrule": 0.08177063413384472
+  },
+  "schema": "oric.gc.quantitative-claim.v3",
+  "source_ids": [
+    "S041",
+    "S039",
+    "S040",
+    "S016"
+  ],
+  "stage_ids": [
+    "GC-E10",
+    "GC-E13"
+  ],
+  "status": "retrospective_empirical_quantitative_extension",
+  "verdict": "supports_earlier_differentiation_archive_during_higher_26Al_inventory"
+}

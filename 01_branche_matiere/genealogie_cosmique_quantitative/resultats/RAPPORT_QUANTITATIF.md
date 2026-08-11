@@ -2,8 +2,8 @@
 
 **Autorité v2 : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**
 
-- Sources primaires/officielles : 38
-- Enregistrements de mesures réelles : 90
+- Sources primaires/officielles : 43
+- Enregistrements de mesures réelles : 120
 - Tests quantitatifs/audits : 8 (8 exécutés conformément aux critères gelés pour les mises à jour futures).
 
 ## Résultats quantitatifs
@@ -20,7 +20,7 @@
 - Graphe empirique : 12 liens stricts d’archive/séquence sur 22 liens; 9 liens restent analogues ou non uniques.
 - Une séquence stricte d’archives relie les produits stellaires à un endpoint planétaire actuel : true.
 - Fermeture stricte depuis la baseline primordiale jusqu’à l’endpoint actuel : open.
-- Stades à source unique : 7 (GC-E11, GC-E12, GC-E13, GC-E16, GC-E17, GC-E18, GC-E19).
+- Stades à source unique : 5 (GC-E11, GC-E12, GC-E16, GC-E17, GC-E19).
 - Les ablations par famille de preuve sont enregistrées dans `ABLATIONS_FAMILLES_PREUVES.csv`; elles auditent la dépendance de la chaîne aux familles de mesures et ne simulent aucun processus physique.
 
 ## Verdict

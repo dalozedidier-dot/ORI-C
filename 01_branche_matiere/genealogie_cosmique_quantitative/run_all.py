@@ -9,6 +9,7 @@ sys.path.insert(0,str(SRC))
 from analyser_empirique import read_csv, validate_empirical_only, derive, evaluate_claims, ALLOWED_MODES
 from analyser_approfondissement_empirique import analyse as analyse_approfondissement
 from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
+from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -183,6 +184,120 @@ def main():
       'La branche dispose maintenant de résultats quantitatifs falsifiables/descriptifs sur les mesures elles-mêmes. La fermeture généalogique stricte de bout en bout reste ouverte là où les données ne permettent pas de remplacer honnêtement un analogue ou une relation non unique.'
     ]
     (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(qlines)+'\n',encoding='utf-8')
+
+    # Couche quantitative v3 complète: transformation historique quantifiée, sans simulation.
+    q3=analyse_quantitatif_complet(HERE)
+    dump(out/'RESULTATS_QUANTITATIFS_COMPLETS.json',q3['result'])
+    dump(out/'TESTS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-complete-tests.v3','tests':q3['tests']})
+
+    # Claims v3 individuels : même discipline que les claims empiriques de la branche.
+    # Chaque résultat quantitatif possède ainsi son artefact, ses sources et son statut
+    # sans être promu à une certification historique du dépôt.
+    q3_claim_meta={
+      'GCQ-T09':('Le moment mesuré d’un événement change-t-il la fraction de 26Al encore physiquement disponible?', ['S016','S017','S014','S018','S039','S040'], ['GC-E10','GC-E13','GC-E08','GC-E14']),
+      'GCQ-T10':('La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?', ['S041','S039','S040','S016'], ['GC-E10','GC-E13']),
+      'GCQ-T11':('La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?', ['S013','S039','S040'], ['GC-E08','GC-E10']),
+      'GCQ-T12':('Des porteurs matériels présolaires persistent-ils jusqu’aux échantillons retournés actuels?', ['S010','S030','S031','S016'], ['GC-E03','GC-E09','GC-E19']),
+      'GCQ-T13':('Ryugu enregistre-t-il une réactivation tardive physiquement séparée de l’horloge primordiale 26Al?', ['S035','S040'], ['GC-E14']),
+      'GCQ-T14':('Les reconstructions empiriques de la provenance terrestre convergent-elles?', ['S027','S042','S043'], ['GC-E18']),
+      'GCQ-T15':('Quel endpoint orbital actuel est directement décrit par le produit observationnel officiel retenu?', ['S028'], ['GC-E19']),
+      'GCQ-T16':('Quels nœuds et relations documentés contrôlent la fermeture stricte de la chaîne empirique?', [], ['GC-E01','GC-E02','GC-E03','GC-E08','GC-E10','GC-E13','GC-E17','GC-E19']),
+    }
+    q3_claims=[]
+    q3_claim_dir=out/'claims_quantitatifs_v3'; q3_claim_dir.mkdir(exist_ok=True)
+    for t in q3['tests']:
+      question,src_ids,stage_ids=q3_claim_meta[t['test_id']]
+      c={
+        'schema':'oric.gc.quantitative-claim.v3',
+        'claim_id':t['test_id'],
+        'question':question,
+        'verdict':t['scientific_verdict'],
+        'criterion_met':t['criterion_met'],
+        'executed':t['executed'],
+        'source_ids':src_ids,
+        'stage_ids':stage_ids,
+        'data_policy':'real_measurements_and_official_empirical_data_only',
+        'preregistered':False,
+        'status':'retrospective_empirical_quantitative_extension',
+        'result':t['result'],
+        'interpretation_limit':'Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.'
+      }
+      q3_claims.append(c); dump(q3_claim_dir/f"{t['test_id']}.json",c)
+    x=q3['crosschecks'][0]
+    xclaim={
+      'schema':'oric.gc.quantitative-crosscheck.v3',
+      'claim_id':'GCQ-X01',
+      'question':'La décroissance canonique temporelle suffit-elle à représenter un inventaire 26Al local unique?',
+      'verdict':x['result'],
+      'criterion_met':None,
+      'executed':True,
+      'source_ids':['S014','S038','S039','S040'],
+      'stage_ids':['GC-E08','GC-E10'],
+      'data_policy':'real_measurements_and_official_empirical_data_only',
+      'preregistered':False,
+      'status':'posthoc_empirical_crosscheck_not_frozen_test',
+      'result':x,
+      'interpretation_limit':'Contrôle post-hoc déterministe. Le délai ~2 Myr ne reçoit aucune incertitude inventée et aucun test de significativité indépendant n’est revendiqué.'
+    }
+    dump(q3_claim_dir/'GCQ-X01.json',xclaim)
+    dump(out/'CLAIMS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-claims.v3','claims':q3_claims,'posthoc_crosschecks':[xclaim]})
+    dump(out/'CROSSCHECK_HETEROGENEITE_26AL.json',x)
+
+    write_csv(out/'INVENTAIRE_26AL_PAR_EVENEMENT.csv',list(q3['inventory'][0].keys()),q3['inventory'])
+    write_csv(out/'FERMETURE_RELATIONS_EMPIRIQUES.csv',list(q3['closure'][0].keys()),q3['closure'])
+    dump(out/'VERROUS_BOUT_EN_BOUT.json',{
+      'schema':'oric.gc.end-to-end-locks.v3',
+      'strict_path_stellar_products_to_present_endpoint':q3['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint'],
+      'strict_path_primordial_baseline_to_present_endpoint':q3['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint'],
+      'critical_nodes':q3['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'],
+      'critical_edges':q3['result']['graph_closure']['critical_edges_for_stellar_to_endpoint_path'],
+      'Earth_provenance_status':q3['result']['earth_provenance']['status'],
+      'open_links':[x for x in q3['closure'] if x['closure_status']!='strict_documented_relation']
+    })
+    q3by={t['test_id']:t for t in q3['tests']}
+    inv={x['event']:x for x in q3['result']['radiogenic_inventory']}
+    rr=q3['result']['reservoir_persistence']; core=q3['result']['early_core_formation_window']; ep=q3['result']['endpoint_architecture']
+    complete_lines=[
+      '# Généalogie cosmique quantitative — résultats physiques complets v3','',
+      '**Corpus: données réelles et produits empiriques officiels uniquement. 0 simulation, 0 donnée synthétique, 0 imputation, 0 échantillonnage aléatoire.**','',
+      f"- Sources: {q3['result']['sources_total']}",
+      f"- Enregistrements empiriques: {q3['result']['measurement_records_total']}",
+      f"- Nouveaux tests physiques/fermeture v3: {q3['result']['new_v3_tests']} ({q3['result']['criteria_met']} critères d'exécution satisfaits).",'',
+      '## 1. L’histoire change quantitativement un inventaire physique accessible','',
+      f"- À l’archive angritique, t = {inv['angrite']['time_after_CAI_myr']:.2f} ± {inv['angrite']['time_sigma_myr']:.2f} Myr après le repère CAI, il reste {100*inv['angrite']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% de l’inventaire initial de 26Al.",
+      f"- À EC 002, t = {inv['EC002']['time_after_CAI_myr']:.2f} ± {inv['EC002']['time_sigma_myr']:.2f} Myr: {100*inv['EC002']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% reste.",
+      f"- Au chondre le plus jeune sélectionné, t = {inv['youngest_chondrule']['time_after_CAI_myr']:.2f} ± {inv['youngest_chondrule']['time_sigma_myr']:.2f} Myr: {100*inv['youngest_chondrule']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% reste.",
+      f"- À l’événement carbonate CM, t = {inv['CM_carbonate']['time_after_CAI_myr']:.2f} ± {inv['CM_carbonate']['time_sigma_myr']:.2f} Myr: {100*inv['CM_carbonate']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% reste.",'',
+      'Ces nombres ne sont pas un modèle thermique: ils quantifient seulement la quantité relative de radionucléide parent encore disponible à partir d’un rapport initial mesuré, d’âges mesurés et d’une demi-vie nucléaire évaluée.','',
+      '## 2. Différenciation précoce et fenêtre radiogénique','',
+      f"- Les météorites de fer IIAB/IIIAB/IVA placent la formation des noyaux vers {core['published_core_formation_window_myr_after_CAI'][0]:.1f}–{core['published_core_formation_window_myr_after_CAI'][1]:.1f} Myr après CAI. À cet intervalle, le calcul déterministe donne {100*core['remaining_26Al_fraction_range'][0]:.1f}–{100*core['remaining_26Al_fraction_range'][1]:.1f}% de l’inventaire initial encore présent.",
+      f"- Cette fenêtre contient environ {core['core_window_vs_youngest_chondrule_inventory_factor_range'][0]:.1f}–{core['core_window_vs_youngest_chondrule_inventory_factor_range'][1]:.1f} fois plus de 26Al que l’époque du chondre le plus jeune du test.",'',
+      '## 3. Une architecture isotopique persiste pendant que l’inventaire énergétique s’effondre','',
+      f"- La séparation NC/CC publiée persiste au minimum {rr['minimum_persistence_myr']:.0f}–{rr['maximum_persistence_myr']:.0f} Myr, soit {rr['persistence_half_lives_range'][0]:.2f}–{rr['persistence_half_lives_range'][1]:.2f} demi-vies de 26Al.",
+      f"- Entre le début et la fin de cette fenêtre, l’inventaire relatif de 26Al diminue d’un facteur {rr['inventory_decline_factor_start_to_end_range'][0]:.1f}–{rr['inventory_decline_factor_start_to_end_range'][1]:.1f}.",'',
+      '### Contrôle post-hoc — le temps ne fixe pas seul l’inventaire local','',
+      f"- À ~{x['approximate_delay_myr_after_CAI']:.0f} Myr, la référence canonique de décroissance seule vaut {x['canonical_decay_only_reference_26Al_27Al']:.3e}.",
+      f"- Le premier CAI à matériel chondritique mesure {x['measured_chondrule_bearing_CAI1_26Al_27Al']:.2e}, soit {100*x['measured_CAI1_fraction_of_decay_only_reference']:.1f}% de cette référence.",
+      f"- Le second est <{x['measured_chondrule_bearing_CAI2_26Al_27Al_upper_bound']:.2e}, soit <{100*x['CAI2_upper_bound_fraction_of_decay_only_reference']:.1f}% de la référence.",
+      f"- Une autre archive du corpus rapporte indépendamment une hétérogénéité 26Al d’un facteur {x['independent_reported_26Al_heterogeneity_factor_range'][0]:.0f}–{x['independent_reported_26Al_heterogeneity_factor_range'][1]:.0f}.",
+      '- Ce contrôle est explicitement post-hoc et ne compte pas parmi les huit tests gelés. Il montre que la décroissance temporelle est une référence nécessaire mais pas un inventaire local unique : l’histoire de réservoir/mélange intervient aussi.','',
+      '## 4. Mémoire matérielle sur plusieurs échelles de temps','',
+      f"- Les grains présolaires mesurés dans Bennu, Ryugu et Wild 2 imposent une borne conservatrice de persistance matérielle >{q3['result']['presolar_memory']['conservative_persistence_lower_bound_gyr']:.3f} Gyr.",
+      f"- Ryugu enregistre une réactivation fluide >{q3['result']['late_reactivation']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation, soit >{q3['result']['late_reactivation']['elapsed_26Al_half_lives_lower_bound']:.0f} demi-vies de 26Al; la cause tardive reste non identifiée ici.",'',
+      '## 5. Terre: le résultat correct est un conflit empirique, pas une histoire forcée','',
+      '- Budde et al. 2019 soutiennent une composante CC tardive à partir du Mo; Bermingham et al. 2025 concluent au contraire que les 10–20 derniers % massiques sont dominés par du matériel NC, avec une petite contribution CC encore possible dans les 0,5–1 derniers %.',
+      '- Les valeurs Mo BSE rapportées en 2026 sont conservées, mais la conclusion multivariée de cette étude n’est pas utilisée comme preuve car son pipeline publié emploie des priors synthétiques et du Monte-Carlo.',
+      f"- Verdict ORI-C sur la provenance terrestre: `{q3['result']['earth_provenance']['status']}`.",'',
+      '## 6. Endpoint mesuré et verrou de reconstruction','',
+      f"- Les 8 corps de l’endpoint JPL couvrent un facteur {ep['semimajor_axis_span_factor']:.2f} en demi-grand axe (Mercure → Neptune) dans la table utilisée.",
+      f"- Chaîne stricte produits stellaires → endpoint actuel: {str(q3['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
+      f"- Chaîne stricte baseline primordiale → endpoint actuel: {str(q3['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint']).lower()}.",
+      f"- Nœuds critiques de la chaîne stricte: {', '.join(q3['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'])}.",'',
+      '## Verdict global','',
+      f"`{q3['result']['global_result']['verdict']}`",'',
+      'Le résultat central est désormais quantitatif: le moment d’incorporation transforme directement la fraction d’un inventaire radiogénique mesuré qui reste physiquement disponible. Des architectures isotopiques et des porteurs matériels persistent pendant ces changements, mais plusieurs raccords de bout en bout et la provenance terrestre restent explicitement ouverts ou contestés.'
+    ]
+    (out/'RAPPORT_QUANTITATIF_COMPLET.md').write_text('\n'.join(complete_lines)+'\n',encoding='utf-8')
 
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]

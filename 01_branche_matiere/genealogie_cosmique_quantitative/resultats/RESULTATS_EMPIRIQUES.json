@@ -27,10 +27,10 @@
     "source_mode_counts": {
       "astronomical_observation": 42,
       "laboratory_experiment": 6,
-      "meteorite_isotope_measurement": 8,
-      "meteoritic_chronometry": 9,
-      "official_observation_product": 1,
-      "planetary_isotope_reconstruction": 2,
+      "meteorite_isotope_measurement": 9,
+      "meteoritic_chronometry": 14,
+      "official_observation_product": 18,
+      "planetary_isotope_reconstruction": 9,
       "returned_sample_measurement": 20,
       "spacecraft_observation": 2
     },
@@ -39,19 +39,19 @@
   "evidence_mode_counts": {
     "astronomical_observation": 42,
     "laboratory_experiment": 6,
-    "meteorite_isotope_measurement": 8,
-    "meteoritic_chronometry": 9,
-    "official_observation_product": 1,
-    "planetary_isotope_reconstruction": 2,
+    "meteorite_isotope_measurement": 9,
+    "meteoritic_chronometry": 14,
+    "official_observation_product": 18,
+    "planetary_isotope_reconstruction": 9,
     "returned_sample_measurement": 20,
     "spacecraft_observation": 2
   },
   "imputed_rows": 0,
   "link_count": 22,
-  "observed_records": 90,
+  "observed_records": 120,
   "schema": "oric.gc.empirical-results.v3",
   "simulations_used": 0,
-  "source_count": 38,
+  "source_count": 43,
   "stage_count": 20,
   "synthetic_rows": 0
 }

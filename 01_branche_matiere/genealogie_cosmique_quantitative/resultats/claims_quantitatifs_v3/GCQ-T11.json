@@ -1,0 +1,48 @@
+{
+  "claim_id": "GCQ-T11",
+  "criterion_met": true,
+  "data_policy": "real_measurements_and_official_empirical_data_only",
+  "executed": true,
+  "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+  "preregistered": false,
+  "question": "La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?",
+  "result": {
+    "26Al_fraction_at_end_range": [
+      0.020922505574935486,
+      0.055012359093601075
+    ],
+    "26Al_fraction_at_start": 0.3803237294248149,
+    "inventory_decline_factor_start_to_end_range": [
+      6.913423377785182,
+      18.17773344892454
+    ],
+    "inventory_loss_percent_start_to_end_range": [
+      85.53538608364002,
+      94.4987640906399
+    ],
+    "maximum_persistence_myr": 3.0,
+    "minimum_persistence_myr": 2.0,
+    "persistence_half_lives_range": [
+      2.789400278940028,
+      4.184100418410042
+    ],
+    "result": "isotopic_partition_persists_while_radiogenic_inventory_changes_by_large_factor",
+    "separation_end_range_myr_after_solar_start": [
+      3.0,
+      4.0
+    ],
+    "separation_start_myr_after_solar_start": 1.0
+  },
+  "schema": "oric.gc.quantitative-claim.v3",
+  "source_ids": [
+    "S013",
+    "S039",
+    "S040"
+  ],
+  "stage_ids": [
+    "GC-E08",
+    "GC-E10"
+  ],
+  "status": "retrospective_empirical_quantitative_extension",
+  "verdict": "supports_persistent_isotopic_architecture_across_large_inventory_change"
+}

@@ -1,0 +1,462 @@
+{
+  "claims": [
+    {
+      "claim_id": "GCQ-T09",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Le moment mesuré d’un événement change-t-il la fraction de 26Al encore physiquement disponible?",
+      "result": {
+        "events": [
+          {
+            "calculation_class": "deterministic_decay_from_empirical_inputs",
+            "decayed_fraction": 0.6547221129097065,
+            "event": "angrite",
+            "expected_26Al_27Al_from_decay_only": 1.8058033494822346e-05,
+            "expected_ratio_sigma_from_measured_age_and_initial_ratio": 3.324277570283637e-06,
+            "remaining_26Al_fraction_of_CAI_inventory": 0.34527788709029344,
+            "remaining_fraction_sigma": 0.06297962490530283,
+            "role": "differentiated_parent_body_archive",
+            "time_after_CAI_myr": 1.1000000000003638,
+            "time_sigma_myr": 0.18867962264113208
+          },
+          {
+            "calculation_class": "deterministic_decay_from_empirical_inputs",
+            "decayed_fraction": 0.8140196947738474,
+            "event": "EC002",
+            "expected_26Al_27Al_from_decay_only": 9.726769963327777e-06,
+            "expected_ratio_sigma_from_measured_age_and_initial_ratio": 1.8961144197255134e-06,
+            "remaining_26Al_fraction_of_CAI_inventory": 0.18598030522615255,
+            "remaining_fraction_sigma": 0.03595863994621638,
+            "role": "early_igneous_body_archive",
+            "time_after_CAI_myr": 1.7399999999997817,
+            "time_sigma_myr": 0.2
+          },
+          {
+            "calculation_class": "deterministic_decay_from_empirical_inputs",
+            "decayed_fraction": 0.9182293658661553,
+            "event": "youngest_chondrule",
+            "expected_26Al_27Al_from_decay_only": 4.276604165200079e-06,
+            "expected_ratio_sigma_from_measured_age_and_initial_ratio": 1.4096866403768173e-06,
+            "remaining_26Al_fraction_of_CAI_inventory": 0.08177063413384472,
+            "remaining_fraction_sigma": 0.02687711120061495,
+            "role": "late_chondrule_archive",
+            "time_after_CAI_myr": 2.5900000000001455,
+            "time_sigma_myr": 0.33999999999999997
+          },
+          {
+            "calculation_class": "deterministic_decay_from_empirical_inputs",
+            "decayed_fraction": 0.9769538518199892,
+            "event": "CM_carbonate",
+            "expected_26Al_27Al_from_decay_only": 1.2053135498145664e-06,
+            "expected_ratio_sigma_from_measured_age_and_initial_ratio": 6.124437638105387e-07,
+            "remaining_26Al_fraction_of_CAI_inventory": 0.02304614818001083,
+            "remaining_fraction_sigma": 0.011696185888261709,
+            "role": "aqueous_parent_body_archive",
+            "time_after_CAI_myr": 3.9000000000005457,
+            "time_sigma_myr": 0.5249761899362675
+          }
+        ]
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S016",
+        "S017",
+        "S014",
+        "S018",
+        "S039",
+        "S040"
+      ],
+      "stage_ids": [
+        "GC-E10",
+        "GC-E13",
+        "GC-E08",
+        "GC-E14"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "supports_strong_time_dependence_of_radiogenic_accessibility"
+    },
+    {
+      "claim_id": "GCQ-T10",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?",
+      "result": {
+        "core_window_vs_CM_carbonate_inventory_factor_range": [
+          10.177281442223894,
+          16.50270259716069
+        ],
+        "core_window_vs_youngest_chondrule_inventory_factor_range": [
+          2.8683541306925924,
+          4.651104072426406
+        ],
+        "interpretation_limit": "The mapping quantifies available parent radionuclide inventory only; it does not model temperature, melting, size, porosity or accretion.",
+        "paper_reports_age_uncertainty_approximately_myr": 1.0,
+        "published_core_formation_window_myr_after_CAI": [
+          1.0,
+          1.5
+        ],
+        "remaining_26Al_fraction_range": [
+          0.2345471361871662,
+          0.3803237294248149
+        ],
+        "remaining_fraction_at_youngest_chondrule": 0.08177063413384472
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S041",
+        "S039",
+        "S040",
+        "S016"
+      ],
+      "stage_ids": [
+        "GC-E10",
+        "GC-E13"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "supports_earlier_differentiation_archive_during_higher_26Al_inventory"
+    },
+    {
+      "claim_id": "GCQ-T11",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?",
+      "result": {
+        "26Al_fraction_at_end_range": [
+          0.020922505574935486,
+          0.055012359093601075
+        ],
+        "26Al_fraction_at_start": 0.3803237294248149,
+        "inventory_decline_factor_start_to_end_range": [
+          6.913423377785182,
+          18.17773344892454
+        ],
+        "inventory_loss_percent_start_to_end_range": [
+          85.53538608364002,
+          94.4987640906399
+        ],
+        "maximum_persistence_myr": 3.0,
+        "minimum_persistence_myr": 2.0,
+        "persistence_half_lives_range": [
+          2.789400278940028,
+          4.184100418410042
+        ],
+        "result": "isotopic_partition_persists_while_radiogenic_inventory_changes_by_large_factor",
+        "separation_end_range_myr_after_solar_start": [
+          3.0,
+          4.0
+        ],
+        "separation_start_myr_after_solar_start": 1.0
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S013",
+        "S039",
+        "S040"
+      ],
+      "stage_ids": [
+        "GC-E08",
+        "GC-E10"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "supports_persistent_isotopic_architecture_across_large_inventory_change"
+    },
+    {
+      "claim_id": "GCQ-T12",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Des porteurs matériels présolaires persistent-ils jusqu’aux échantillons retournés actuels?",
+      "result": {
+        "basis": "Presolar grains predate the Solar System and are measured in returned material; CAI age is used only as a conservative lower time anchor.",
+        "conservative_persistence_lower_bound_gyr": 4.5673,
+        "conservative_persistence_lower_bound_myr": 4567.3,
+        "returned_sample_bodies_with_presolar_evidence": 3,
+        "source_ids": [
+          "S010",
+          "S030",
+          "S031"
+        ]
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S010",
+        "S030",
+        "S031",
+        "S016"
+      ],
+      "stage_ids": [
+        "GC-E03",
+        "GC-E09",
+        "GC-E19"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "supports_gigayear_material_memory_carrier"
+    },
+    {
+      "claim_id": "GCQ-T13",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Ryugu enregistre-t-il une réactivation tardive physiquement séparée de l’horloge primordiale 26Al?",
+      "result": {
+        "cause_not_inferred": true,
+        "elapsed_26Al_half_lives_lower_bound": 1394.700139470014,
+        "late_Lu_mobilization_detected": true,
+        "late_fluid_flow_lower_bound_myr_after_formation": 1000.0,
+        "log10_upper_bound_on_remaining_primordial_26Al_fraction": -419.84657693721226,
+        "result": "late_reactivation_is_physically_separated_from_primordial_26Al_clock"
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S035",
+        "S040"
+      ],
+      "stage_ids": [
+        "GC-E14"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "supports_late_reactivation_of_old_material_memory_by_unresolved_later_process"
+    },
+    {
+      "claim_id": "GCQ-T14",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Les reconstructions empiriques de la provenance terrestre convergent-elles?",
+      "result": {
+        "BSE_epsilon94Mo": [
+          0.0,
+          0.05
+        ],
+        "BSE_epsilon95Mo": [
+          0.03,
+          0.03
+        ],
+        "S043_multivariate_homogeneous_accretion_conclusion_used_as_evidence": false,
+        "earlier_Mo_reconstruction_source": "S027",
+        "earlier_result_CC_late_addition_supported": true,
+        "latest_BSE_Mo_values_source": "S043",
+        "minor_CC_still_possible_final_mass_interval_wt_percent": [
+          0.5,
+          1.0
+        ],
+        "newer_Mo_reconstruction_source": "S042",
+        "newer_late_stage_interval_wt_percent": [
+          10.0,
+          20.0
+        ],
+        "newer_result_final_10_20_wt_percent_NC_dominated": true,
+        "reason_S043_conclusion_excluded": "Its published multivariate workflow inserts synthetic priors for missing ratios and uses Monte-Carlo regression; only the reported empirical BSE Mo values are retained under the branch policy.",
+        "status": "empirically_contested_not_closed"
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S027",
+        "S042",
+        "S043"
+      ],
+      "stage_ids": [
+        "GC-E18"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "contested_not_closed"
+    },
+    {
+      "claim_id": "GCQ-T15",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Quel endpoint orbital actuel est directement décrit par le produit observationnel officiel retenu?",
+      "result": {
+        "bodies": [
+          {
+            "a_au": 0.38709927,
+            "body": "Mercury",
+            "e": 0.20563593
+          },
+          {
+            "a_au": 0.72333566,
+            "body": "Venus",
+            "e": 0.00677672
+          },
+          {
+            "a_au": 1.00000261,
+            "body": "Earth_Moon_Barycenter",
+            "e": 0.01671123
+          },
+          {
+            "a_au": 1.52371034,
+            "body": "Mars",
+            "e": 0.0933941
+          },
+          {
+            "a_au": 5.202887,
+            "body": "Jupiter",
+            "e": 0.04838624
+          },
+          {
+            "a_au": 9.53667594,
+            "body": "Saturn",
+            "e": 0.05386179
+          },
+          {
+            "a_au": 19.18916464,
+            "body": "Uranus",
+            "e": 0.04725744
+          },
+          {
+            "a_au": 30.06992276,
+            "body": "Neptune",
+            "e": 0.00859048
+          }
+        ],
+        "body_count": 8,
+        "eccentricity_max": 0.20563593,
+        "eccentricity_min": 0.00677672,
+        "eccentricity_range": 0.19885921,
+        "history_reconstructed": false,
+        "semimajor_axis_max_au": 30.06992276,
+        "semimajor_axis_min_au": 0.38709927,
+        "semimajor_axis_span_factor": 77.68013295400945,
+        "source": "JPL Table 1 fitted Keplerian elements valid 1800-2050"
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [
+        "S028"
+      ],
+      "stage_ids": [
+        "GC-E19"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "endpoint_quantified_history_not_reconstructed"
+    },
+    {
+      "claim_id": "GCQ-T16",
+      "criterion_met": true,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.",
+      "preregistered": false,
+      "question": "Quels nœuds et relations documentés contrôlent la fermeture stricte de la chaîne empirique?",
+      "result": {
+        "all_documented_edge_count": 22,
+        "critical_edge_count": 6,
+        "critical_edges_for_stellar_to_endpoint_path": [
+          {
+            "from_stage": "GC-E01",
+            "to_stage": "GC-E02"
+          },
+          {
+            "from_stage": "GC-E02",
+            "to_stage": "GC-E03"
+          },
+          {
+            "from_stage": "GC-E03",
+            "to_stage": "GC-E08"
+          },
+          {
+            "from_stage": "GC-E10",
+            "to_stage": "GC-E13"
+          },
+          {
+            "from_stage": "GC-E13",
+            "to_stage": "GC-E17"
+          },
+          {
+            "from_stage": "GC-E17",
+            "to_stage": "GC-E19"
+          }
+        ],
+        "critical_node_count": 6,
+        "critical_nodes_for_stellar_to_endpoint_path": [
+          "GC-E02",
+          "GC-E03",
+          "GC-E08",
+          "GC-E10",
+          "GC-E13",
+          "GC-E17"
+        ],
+        "end_to_end_status": "open_from_primordial_baseline",
+        "strict_edge_count": 12,
+        "strict_path_primordial_baseline_to_present_endpoint": false,
+        "strict_path_stellar_products_to_present_endpoint": true
+      },
+      "schema": "oric.gc.quantitative-claim.v3",
+      "source_ids": [],
+      "stage_ids": [
+        "GC-E01",
+        "GC-E02",
+        "GC-E03",
+        "GC-E08",
+        "GC-E10",
+        "GC-E13",
+        "GC-E17",
+        "GC-E19"
+      ],
+      "status": "retrospective_empirical_quantitative_extension",
+      "verdict": "strict_stellar_to_endpoint_chain_exists_but_primordial_end_to_end_closure_open"
+    }
+  ],
+  "posthoc_crosschecks": [
+    {
+      "claim_id": "GCQ-X01",
+      "criterion_met": null,
+      "data_policy": "real_measurements_and_official_empirical_data_only",
+      "executed": true,
+      "interpretation_limit": "Contrôle post-hoc déterministe. Le délai ~2 Myr ne reçoit aucune incertitude inventée et aucun test de significativité indépendant n’est revendiqué.",
+      "preregistered": false,
+      "question": "La décroissance canonique temporelle suffit-elle à représenter un inventaire 26Al local unique?",
+      "result": {
+        "CAI2_minimum_deficit_vs_decay_only_reference_percent": 84.1374607010665,
+        "CAI2_upper_bound_fraction_of_decay_only_reference": 0.158625392989335,
+        "approximate_delay_myr_after_CAI": 2.0,
+        "canonical_decay_only_reference_26Al_27Al": 7.56499307825627e-06,
+        "canonical_decay_only_reference_fraction": 0.1446461391635998,
+        "crosscheck_id": "GCQ-X01",
+        "independent_reported_26Al_heterogeneity_factor_range": [
+          3.0,
+          4.0
+        ],
+        "interpretation": "Measured local 26Al/27Al values can depart substantially from the homogeneous canonical decay-only reference. Time dependence is real, but reservoir/mixing history also constrains local inventory.",
+        "measured_CAI1_deficit_vs_decay_only_reference_percent": 37.87172107917712,
+        "measured_CAI1_fraction_of_decay_only_reference": 0.6212827892082288,
+        "measured_chondrule_bearing_CAI1_26Al_27Al": 4.7e-06,
+        "measured_chondrule_bearing_CAI2_26Al_27Al_upper_bound": 1.2e-06,
+        "no_significance_test_reason": "The ~2 Myr delay is approximate and is not assigned an invented uncertainty; this is a deterministic ratio cross-check, not an independent significance test.",
+        "result": "canonical_decay_curve_is_time_reference_not_unique_local_inventory",
+        "status": "posthoc_empirical_crosscheck_not_frozen_test"
+      },
+      "schema": "oric.gc.quantitative-crosscheck.v3",
+      "source_ids": [
+        "S014",
+        "S038",
+        "S039",
+        "S040"
+      ],
+      "stage_ids": [
+        "GC-E08",
+        "GC-E10"
+      ],
+      "status": "posthoc_empirical_crosscheck_not_frozen_test",
+      "verdict": "canonical_decay_curve_is_time_reference_not_unique_local_inventory"
+    }
+  ],
+  "schema": "oric.gc.quantitative-claims.v3"
+}

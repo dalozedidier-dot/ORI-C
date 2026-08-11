@@ -36,6 +36,20 @@ if gc_path.is_file():
   else: statut='extension_empirique_non_concluante'
   entries.append({'id':cid,'question':c['question'],'statut':statut,'verdict':c['verdict'],'niveau_preuve':None,'portee':f"{c['directness']} — {c['scope']}",'artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stages'),'mechanism':c.get('mechanism'),'preregistration':c.get('preregistration')},'supersede_par':None})
 
+# Généalogie cosmique quantitative v3 : huit résultats physiques/audits
+# calculés uniquement à partir d'entrées empiriques admissibles. Ils restent
+# des extensions rétrospectives non préenregistrées, séparées des certifications.
+gcq_path=ROOT/'01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS_QUANTITATIFS_COMPLETS.json'
+if gcq_path.is_file():
+ gcq=json.loads(gcq_path.read_text(encoding='utf-8'))
+ if gcq.get('schema')!='oric.gc.quantitative-claims.v3': raise ValueError('schéma claims quantitatifs v3 inattendu')
+ for c in gcq['claims']:
+  cid=c['claim_id']; artefact=f'01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/{cid}.json'
+  entries.append({'id':cid,'question':c['question'],'statut':'extension_quantitative_empirique_non_preregistered','verdict':c['verdict'],'niveau_preuve':None,'portee':'quantitatif empirique rétrospectif — sans simulation/synthétique/imputation','artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stage_ids'),'criterion_met':c.get('criterion_met'),'preregistered':c.get('preregistered'),'data_policy':c.get('data_policy')},'supersede_par':None})
+ for c in gcq.get('posthoc_crosschecks',[]):
+  cid=c['claim_id']; artefact=f'01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/{cid}.json'
+  entries.append({'id':cid,'question':c['question'],'statut':'controle_quantitatif_empirique_posthoc','verdict':c['verdict'],'niveau_preuve':None,'portee':'contrôle post-hoc déterministe — non compté parmi les tests gelés','artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stage_ids'),'criterion_met':c.get('criterion_met'),'preregistered':c.get('preregistered'),'data_policy':c.get('data_policy')},'supersede_par':None})
+
 out={'schema':'oric.proofs-registry.v1','authority':'machine-readable registry; certified entries are imported byte-for-byte in status from RESULTATS_SCIENTIFIQUES_CERTIFIES.json','entries':entries}
 (ROOT/'preuves/PREUVES.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 # Markdown généré
@@ -45,6 +59,6 @@ for e in entries:
 lines += ['', '## Extensions exécutées sans reclassement des certifications','', '| ID | Statut | Verdict technique | Portée |','|---|---|---|---|']
 for e in entries:
  if e['statut']!='certifie': lines.append(f"| `{e['id']}` | {e['statut']} | {e['verdict']} | {e['portee']} |")
-lines += ['', '## Règle de lecture','', "Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires. La généalogie cosmique est soumise à un pare-feu empirique propre : aucune simulation, donnée synthétique ou sortie de modèle n'entre dans ses claims. Ses 15 résultats soutenus sont des extensions empiriques initiales non préenregistrées ; la trajectoire orbitale unique reste ouverte et C-AST demeure séparé au niveau modèle.",'']
+lines += ['', '## Règle de lecture','', "Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires. La généalogie cosmique est soumise à un pare-feu empirique propre : aucune simulation, donnée synthétique ou sortie de modèle n'entre dans ses claims. Ses 15 résultats empiriques soutenus restent des extensions initiales non préenregistrées. Les huit claims `GCQ-T09` à `GCQ-T16` sont des extensions quantitatives empiriques rétrospectives : ils quantifient notamment l'inventaire radiogénique accessible et les verrous de chaîne, sans certifier une trajectoire orbitale unique ni fermer artificiellement la chaîne primordiale→présent. `GCQ-X01` est explicitement un contrôle post-hoc montrant que la courbe canonique de décroissance ne constitue pas un inventaire local unique. C-AST demeure séparé au niveau modèle.",'']
 (ROOT/'ETAT_DES_PREUVES.md').write_text('\n'.join(lines),encoding='utf-8')
 print(f"PREUVES.json: {len(entries)} entrées; ETAT_DES_PREUVES.md généré")

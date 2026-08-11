@@ -1,0 +1,152 @@
+{
+  "Earth_provenance_status": "empirically_contested_not_closed",
+  "critical_edges": [
+    {
+      "from_stage": "GC-E01",
+      "to_stage": "GC-E02"
+    },
+    {
+      "from_stage": "GC-E02",
+      "to_stage": "GC-E03"
+    },
+    {
+      "from_stage": "GC-E03",
+      "to_stage": "GC-E08"
+    },
+    {
+      "from_stage": "GC-E10",
+      "to_stage": "GC-E13"
+    },
+    {
+      "from_stage": "GC-E13",
+      "to_stage": "GC-E17"
+    },
+    {
+      "from_stage": "GC-E17",
+      "to_stage": "GC-E19"
+    }
+  ],
+  "critical_nodes": [
+    "GC-E02",
+    "GC-E03",
+    "GC-E08",
+    "GC-E10",
+    "GC-E13",
+    "GC-E17"
+  ],
+  "open_links": [
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 2,
+      "from_stage": "GC-E00",
+      "link_class": "empirical_historical_contrast",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 2,
+      "to_measurement_records": 6,
+      "to_stage": "GC-E01"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 4,
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 2,
+      "to_measurement_records": 3,
+      "to_stage": "GC-E05"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 4,
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 3,
+      "to_measurement_records": 6,
+      "to_stage": "GC-E06"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 3,
+      "from_stage": "GC-E05",
+      "link_class": "observed_analogue_bridge",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 3,
+      "to_measurement_records": 6,
+      "to_stage": "GC-E06"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 3,
+      "from_measurement_records": 6,
+      "from_stage": "GC-E06",
+      "link_class": "cross_system_empirical_consistency",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 5,
+      "to_measurement_records": 9,
+      "to_stage": "GC-E08"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 8,
+      "from_stage": "GC-E07",
+      "link_class": "analogue_to_solar_archive",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 4,
+      "to_measurement_records": 8,
+      "to_stage": "GC-E10"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 1,
+      "from_measurement_records": 3,
+      "from_stage": "GC-E11",
+      "link_class": "laboratory_mechanism_stack",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 1,
+      "to_measurement_records": 3,
+      "to_stage": "GC-E12"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 1,
+      "from_measurement_records": 3,
+      "from_stage": "GC-E12",
+      "link_class": "mechanism_to_observation_non_unique",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 4,
+      "to_measurement_records": 8,
+      "to_stage": "GC-E15"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 2,
+      "from_measurement_records": 3,
+      "from_stage": "GC-E14",
+      "link_class": "solar_context_non_genealogical",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 3,
+      "to_measurement_records": 8,
+      "to_stage": "GC-E18"
+    },
+    {
+      "closure_status": "open_or_nonunique_bridge",
+      "from_independent_sources": 1,
+      "from_measurement_records": 1,
+      "from_stage": "GC-E16",
+      "link_class": "analogue_endpoint_bridge",
+      "strict_empirical_archive_or_sequence": false,
+      "to_independent_sources": 1,
+      "to_measurement_records": 17,
+      "to_stage": "GC-E19"
+    }
+  ],
+  "schema": "oric.gc.end-to-end-locks.v3",
+  "strict_path_primordial_baseline_to_present_endpoint": false,
+  "strict_path_stellar_products_to_present_endpoint": true
+}

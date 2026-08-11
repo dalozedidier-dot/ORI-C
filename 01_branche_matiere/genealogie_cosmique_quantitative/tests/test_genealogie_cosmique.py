@@ -19,7 +19,7 @@ def test_empirical_only_policy_and_banned_artifacts_absent():
 def test_sources_are_primary_or_official_and_mixed_sources_have_firewall():
     s=rows(HERE/'SOURCES_EMPIRIQUES.csv'); m=rows(HERE/'data/MESURES_EMPIRIQUES.csv')
     ids={x['source_id'] for x in s}
-    assert len(s)==38
+    assert len(s)==43
     assert all(x['source_class'] in {'primary_peer_reviewed','official_observation_product'} for x in s)
     assert all(x['url'].startswith('http') for x in s)
     assert all(x['portion_used'].strip() and x['portion_excluded'].strip() for x in s)
@@ -36,8 +36,8 @@ def test_every_stage_has_empirical_measurement_and_source():
 def test_results_are_deep_and_empirical_only():
     s=json.loads((HERE/'resultats/SYNTHESE.json').read_text())
     a=json.loads((HERE/'resultats/AUDIT_ADMISSIBILITE.json').read_text())
-    assert s['stages']==20 and s['links']==22 and s['primary_or_official_sources']==38
-    assert s['empirical_measurement_records']==90
+    assert s['stages']==20 and s['links']==22 and s['primary_or_official_sources']==43
+    assert s['empirical_measurement_records']==120
     assert s['simulations_used']==0 and s['synthetic_rows']==0 and s['imputed_rows']==0
     assert s['supported_claims']==15 and s['unresolved_claims']==1
     assert s['global_empirical_verdict']=='supports_empirical_historical_accessibility_mechanism'
@@ -112,8 +112,8 @@ def test_deep_quantitative_layer_is_empirical_only():
     assert d['qualified_relations']==40
     assert d['selected_quantitative_observations']==24
     assert d['quantitative_synthesis_claims']==12
-    assert d['underlying_empirical_measurement_records']==90
-    assert d['primary_or_official_sources']==38
+    assert d['underlying_empirical_measurement_records']==120
+    assert d['primary_or_official_sources']==43
     assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0
     assert d['dag_acyclic'] is True and d['all_analytical_stages_empirically_anchored'] is True
     assert d['authoritative_empirical_claims_preserved']==16
@@ -129,7 +129,7 @@ def test_quantitative_v2_has_real_calculations_not_count_only():
     v=json.loads((HERE/'resultats/VERDICT_QUANTITATIF.json').read_text())
     t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_REELS.json').read_text())
     assert v['schema']=='oric.gc.quantitative-real-verdict.v2'
-    assert v['sources']==38 and v['measurement_records']==90
+    assert v['sources']==43 and v['measurement_records']==120
     assert v['tests']==8 and v['tests_passed']==8
     assert v['simulations_used']==0 and v['synthetic_rows']==0 and v['imputed_rows']==0
     assert v['strict_archive_sequence_stellar_to_present_endpoint'] is True
@@ -158,17 +158,18 @@ def test_quantitative_v2_ablation_and_bottlenecks_are_explicit():
     assert g['strict_path_primordial_baseline_to_present_endpoint'] is False
     a=rows(HERE/'resultats/ABLATIONS_FAMILLES_PREUVES.csv')
     assert len(a)>=7
-    assert all(int(x['remaining_measurement_records'])<90 for x in a)
+    assert all(int(x['remaining_measurement_records'])<120 for x in a)
     r=rows(HERE/'resultats/REDONDANCE_PAR_STAGE.csv')
     singles={x['stage_id'] for x in r if x['single_source_bottleneck']=='True'}
-    assert {'GC-E11','GC-E12','GC-E13','GC-E16','GC-E17','GC-E18','GC-E19'} <= singles
+    assert {'GC-E11','GC-E12','GC-E16','GC-E17','GC-E19'} <= singles
+    assert 'GC-E13' not in singles and 'GC-E18' not in singles
     assert 'GC-E02' not in singles and 'GC-E10' not in singles
 
 
 def test_new_empirical_sources_are_firewalled():
     s={x['source_id']:x for x in rows(HERE/'SOURCES_EMPIRIQUES.csv')}
     m={x['record_id']:x for x in rows(HERE/'data/MESURES_EMPIRIQUES.csv')}
-    assert {'S034','S035','S036','S037','S038'}<=set(s)
+    assert {'S034','S035','S036','S037','S038','S039','S040','S041','S042','S043'}<=set(s)
     assert s['S034']['doi']=='10.1038/s41586-025-09939-3'
     assert s['S035']['doi']=='10.1038/s41586-025-09483-0'
     assert s['S036']['doi']=='10.1093/mnras/stae472'
@@ -182,3 +183,120 @@ def test_new_empirical_sources_are_firewalled():
     assert float(m['M088']['value_numeric'])==2
     assert math.isclose(float(m['M089']['value_numeric']),4.7e-6,rel_tol=0,abs_tol=1e-16)
     assert math.isclose(float(m['M090']['value_numeric']),1.2e-6,rel_tol=0,abs_tol=1e-16)
+
+
+def test_quantitative_v3_complete_physical_results_are_real_and_deterministic():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
+    t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_COMPLETS.json').read_text())
+    assert d['schema']=='oric.gc.quantitative-complete-results.v3'
+    assert d['sources_total']==43 and d['measurement_records_total']==120
+    assert d['new_v3_tests']==8 and d['criteria_met']==8
+    assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0 and d['random_sampling_used']==0
+    assert d['global_result']['history_changes_quantified_accessible_physical_inventory'] is True
+    assert d['global_result']['primordial_to_present_strict_chain_closed'] is False
+    inv={x['event']:x for x in d['radiogenic_inventory']}
+    assert 0.34 < inv['angrite']['remaining_26Al_fraction_of_CAI_inventory'] < 0.35
+    assert 0.18 < inv['EC002']['remaining_26Al_fraction_of_CAI_inventory'] < 0.19
+    assert 0.08 < inv['youngest_chondrule']['remaining_26Al_fraction_of_CAI_inventory'] < 0.083
+    assert 0.022 < inv['CM_carbonate']['remaining_26Al_fraction_of_CAI_inventory'] < 0.024
+    by={x['test_id']:x for x in t['tests']}
+    assert set(by)=={f'GCQ-T{i:02d}' for i in range(9,17)}
+    assert all(x['executed'] and x['criterion_met'] for x in by.values())
+
+
+def test_quantitative_v3_reservoir_memory_and_reactivation_are_quantified():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
+    r=d['reservoir_persistence']
+    assert r['minimum_persistence_myr']==2 and r['maximum_persistence_myr']==3
+    assert r['inventory_decline_factor_start_to_end_range'][0] > 6
+    assert r['inventory_decline_factor_start_to_end_range'][1] > 18
+    assert d['presolar_memory']['conservative_persistence_lower_bound_gyr'] > 4.5
+    assert d['late_reactivation']['elapsed_26Al_half_lives_lower_bound'] > 1300
+    assert d['late_reactivation']['log10_upper_bound_on_remaining_primordial_26Al_fraction'] < -400
+
+
+def test_quantitative_v3_earth_conflict_is_not_artificially_closed():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
+    e=d['earth_provenance']
+    assert e['earlier_result_CC_late_addition_supported'] is True
+    assert e['newer_result_final_10_20_wt_percent_NC_dominated'] is True
+    assert e['status']=='empirically_contested_not_closed'
+    assert e['S043_multivariate_homogeneous_accretion_conclusion_used_as_evidence'] is False
+    assert e['minor_CC_still_possible_final_mass_interval_wt_percent']==[0.5,1.0]
+
+
+def test_quantitative_v3_endpoint_and_strict_bottlenecks():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
+    ep=d['endpoint_architecture']
+    assert ep['body_count']==8 and ep['history_reconstructed'] is False
+    assert 77 < ep['semimajor_axis_span_factor'] < 78
+    g=d['graph_closure']
+    assert g['strict_path_stellar_products_to_present_endpoint'] is True
+    assert g['strict_path_primordial_baseline_to_present_endpoint'] is False
+    assert g['critical_node_count']==6 and g['critical_edge_count']==6
+    assert set(g['critical_nodes_for_stellar_to_endpoint_path'])=={'GC-E02','GC-E03','GC-E08','GC-E10','GC-E13','GC-E17'}
+
+
+def test_new_v3_sources_and_measurements_are_explicitly_firewalled():
+    s={x['source_id']:x for x in rows(HERE/'SOURCES_EMPIRIQUES.csv')}
+    m={x['record_id']:x for x in rows(HERE/'data/MESURES_EMPIRIQUES.csv')}
+    assert s['S039']['doi']=='10.1016/j.epsl.2008.05.003'
+    assert s['S041']['doi']=='10.1016/j.gca.2012.09.015'
+    assert s['S042']['doi']=='10.1016/j.gca.2024.11.005'
+    assert s['S043']['doi']=='10.1038/s41550-026-02824-7'
+    assert math.isclose(float(m['M091']['value_numeric']),5.23e-5,rel_tol=0,abs_tol=1e-16)
+    assert math.isclose(float(m['M092']['value_numeric']),0.717,rel_tol=0,abs_tol=1e-15)
+    assert float(m['M093']['value_numeric'])==1.0 and float(m['M094']['value_numeric'])==1.5
+    assert float(m['M098']['value_numeric'])==10 and float(m['M099']['value_numeric'])==20
+    assert float(m['M100']['value_numeric'])==0.5 and float(m['M101']['value_numeric'])==1.0
+    assert m['M102']['value_text']=='true'
+    assert float(m['M105']['value_numeric'])==0.38709927
+    assert float(m['M119']['value_numeric'])==30.06992276
+    freeze=json.loads((HERE/'GEL_ANALYSE_QUANTITATIVE_V3.json').read_text())
+    assert freeze['preregistered'] is False
+    assert 'monte_carlo_generated_samples' in freeze['forbidden_as_evidence']
+
+
+def test_quantitative_v3_claim_artifacts_are_complete_and_machine_readable():
+    d=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_COMPLETS.json').read_text())
+    assert d['schema']=='oric.gc.quantitative-claims.v3'
+    claims=d['claims']
+    assert len(claims)==8
+    assert {c['claim_id'] for c in claims}=={f'GCQ-T{i:02d}' for i in range(9,17)}
+    assert all(c['executed'] and c['criterion_met'] for c in claims)
+    assert all(c['preregistered'] is False for c in claims)
+    assert all(c['data_policy']=='real_measurements_and_official_empirical_data_only' for c in claims)
+    for c in claims:
+        p=HERE/'resultats/claims_quantitatifs_v3'/f"{c['claim_id']}.json"
+        assert p.is_file()
+        one=json.loads(p.read_text())
+        assert one==c
+
+
+def test_quantitative_v3_authority_docs_state_current_corpus_and_verdict():
+    readme=(HERE/'README.md').read_text()
+    review=(HERE/'REVUE_QUANTITATIVE_EMPIRIQUE.md').read_text()
+    protocol=(HERE/'PROTOCOLE.md').read_text()
+    assert '43 sources primaires/officielles' in readme
+    assert '120 enregistrements empiriques' in readme
+    assert '34,5 %' in readme and '2,30 %' in readme
+    assert 'quantified_history_dependent_accessibility_with_explicit_open_links' in readme
+    assert '43 sources primaires/officielles' in review
+    assert 'GCQ-T09' in review and 'GCQ-T16' in review
+    assert 'Campagne quantitative complète v3' in protocol
+
+
+def test_posthoc_26Al_crosscheck_is_explicit_and_not_counted_as_frozen_test():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
+    x=d['radiogenic_heterogeneity_crosscheck']
+    assert d['new_v3_tests']==8 and d['posthoc_crosschecks']==1
+    assert x['crosscheck_id']=='GCQ-X01'
+    assert x['status']=='posthoc_empirical_crosscheck_not_frozen_test'
+    assert 7.5e-6 < x['canonical_decay_only_reference_26Al_27Al'] < 7.7e-6
+    assert 0.61 < x['measured_CAI1_fraction_of_decay_only_reference'] < 0.63
+    assert x['CAI2_upper_bound_fraction_of_decay_only_reference'] < 0.16
+    assert x['independent_reported_26Al_heterogeneity_factor_range']==[3.0,4.0]
+    agg=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_COMPLETS.json').read_text())
+    assert len(agg['claims'])==8 and len(agg['posthoc_crosschecks'])==1
+    assert agg['posthoc_crosschecks'][0]['claim_id']=='GCQ-X01'
+    assert (HERE/'resultats/claims_quantitatifs_v3/GCQ-X01.json').is_file()

@@ -244,14 +244,14 @@
       "value": 1451
     },
     {
-      "display": "1 515",
+      "display": "1 534",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1515
+      "value": 1534
     },
     {
       "display": "20 stades",
@@ -272,22 +272,22 @@
       "value": 22
     },
     {
-      "display": "38 sources primaires/officielles",
+      "display": "43 sources primaires/officielles",
       "id": "GC_EMP_SOURCES",
       "pointer": "/primary_or_official_sources",
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
       "targets": [],
       "tolerance": 0,
-      "value": 38
+      "value": 43
     },
     {
-      "display": "90 enregistrements empiriques",
+      "display": "120 enregistrements empiriques",
       "id": "GC_EMP_RECORDS",
       "pointer": "/empirical_measurement_records",
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
       "targets": [],
       "tolerance": 0,
-      "value": 90
+      "value": 120
     },
     {
       "display": "16 claims",
@@ -468,6 +468,168 @@
       "targets": [],
       "tolerance": 0,
       "value": 12
+    },
+    {
+      "display": "8 tests quantitatifs v3",
+      "id": "GCQ_V3_TESTS",
+      "pointer": "/new_v3_tests",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 8
+    },
+    {
+      "display": "8/8 critères v3 satisfaits",
+      "id": "GCQ_V3_CRITERIA_MET",
+      "pointer": "/criteria_met",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 8
+    },
+    {
+      "display": "34,53 % de 26Al restant à l’archive angritique",
+      "id": "GCQ_26AL_ANGRITE_FRACTION",
+      "pointer": "/radiogenic_inventory/0/remaining_26Al_fraction_of_CAI_inventory",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.34527788709029344
+    },
+    {
+      "display": "18,60 % de 26Al restant à EC 002",
+      "id": "GCQ_26AL_EC002_FRACTION",
+      "pointer": "/radiogenic_inventory/1/remaining_26Al_fraction_of_CAI_inventory",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.18598030522615255
+    },
+    {
+      "display": "8,18 % de 26Al restant au chondre jeune",
+      "id": "GCQ_26AL_YOUNG_CHONDRULE_FRACTION",
+      "pointer": "/radiogenic_inventory/2/remaining_26Al_fraction_of_CAI_inventory",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.08177063413384472
+    },
+    {
+      "display": "2,30 % de 26Al restant au carbonate CM",
+      "id": "GCQ_26AL_CM_CARBONATE_FRACTION",
+      "pointer": "/radiogenic_inventory/3/remaining_26Al_fraction_of_CAI_inventory",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.02304614818001083
+    },
+    {
+      "display": "facteur 6,91 de diminution minimale 26Al pendant NC/CC",
+      "id": "GCQ_NCCC_DECLINE_MIN",
+      "pointer": "/reservoir_persistence/inventory_decline_factor_start_to_end_range/0",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 6.913423377785182
+    },
+    {
+      "display": "facteur 18,18 de diminution maximale 26Al pendant NC/CC",
+      "id": "GCQ_NCCC_DECLINE_MAX",
+      "pointer": "/reservoir_persistence/inventory_decline_factor_start_to_end_range/1",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 18.17773344892454
+    },
+    {
+      "display": ">4,567 Gyr de persistance matérielle conservatrice",
+      "id": "GCQ_PRESOLAR_MEMORY_GYR",
+      "pointer": "/presolar_memory/conservative_persistence_lower_bound_gyr",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 4.5673
+    },
+    {
+      "display": ">1 394 demi-vies de 26Al avant réactivation tardive Ryugu",
+      "id": "GCQ_RYUGU_HALFLIVES",
+      "pointer": "/late_reactivation/elapsed_26Al_half_lives_lower_bound",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-09,
+      "value": 1394.700139470014
+    },
+    {
+      "display": "facteur 77,68 de portée en demi-grand axe",
+      "id": "GCQ_ENDPOINT_A_SPAN",
+      "pointer": "/endpoint_architecture/semimajor_axis_span_factor",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 77.68013295400945
+    },
+    {
+      "display": "6 nœuds critiques de chaîne stricte",
+      "id": "GCQ_CRITICAL_NODES",
+      "pointer": "/graph_closure/critical_node_count",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 6
+    },
+    {
+      "display": "6 relations critiques de chaîne stricte",
+      "id": "GCQ_CRITICAL_EDGES",
+      "pointer": "/graph_closure/critical_edge_count",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 6
+    },
+    {
+      "display": "provenance terrestre empiriquement contestée",
+      "id": "GCQ_EARTH_PROVENANCE_STATUS",
+      "pointer": "/earth_provenance/status",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": "empirically_contested_not_closed"
+    },
+    {
+      "display": "chaîne primordiale→présent stricte ouverte",
+      "id": "GCQ_PRIMORDIAL_CHAIN_CLOSED",
+      "pointer": "/graph_closure/strict_path_primordial_baseline_to_present_endpoint",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": false
+    },
+    {
+      "display": "7,56×10^-6 référence 26Al/27Al à ~2 Myr",
+      "id": "GCQ_X01_DECAY_REFERENCE",
+      "pointer": "/radiogenic_heterogeneity_crosscheck/canonical_decay_only_reference_26Al_27Al",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-18,
+      "value": 7.56499307825627e-06
+    },
+    {
+      "display": "62,13 % de la référence pour CAI1",
+      "id": "GCQ_X01_CAI1_REFERENCE_FRACTION",
+      "pointer": "/radiogenic_heterogeneity_crosscheck/measured_CAI1_fraction_of_decay_only_reference",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.6212827892082288
+    },
+    {
+      "display": "<15,86 % de la référence pour CAI2",
+      "id": "GCQ_X01_CAI2_REFERENCE_UPPER_FRACTION",
+      "pointer": "/radiogenic_heterogeneity_crosscheck/CAI2_upper_bound_fraction_of_decay_only_reference",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.158625392989335
     }
   ]
 }

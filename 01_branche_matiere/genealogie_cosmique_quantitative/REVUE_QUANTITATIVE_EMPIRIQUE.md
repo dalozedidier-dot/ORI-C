@@ -1,72 +1,56 @@
-# Revue quantitative empirique approfondie — v2
+# Revue quantitative empirique complète — v3
 
-Cette couche n’utilise **ni simulation, ni donnée synthétique, ni imputation, ni rendement stellaire théorique, ni sortie thermochimique**. Elle travaille directement sur le registre empirique de la branche et distingue résultat quantitatif, audit de robustesse et limite d’identifiabilité.
+Cette revue décrit l’autorité quantitative courante de `genealogie_cosmique_quantitative`. La v1 et la v2 restent conservées pour provenance, mais leurs comptages et audits ne constituent plus le résultat final de la campagne.
 
-## Base de données d’autorité
+## Politique de données
 
-La branche contient désormais **38 sources primaires/officielles** et **90 enregistrements de mesures réelles** répartis sur les 20 stades empiriques. Les 16 claims `C-GC-E*` restent l’autorité de synthèse empirique : 15 sont soutenus et l’histoire orbitale détaillée unique reste `undetermined_empirical_only`.
+Le corpus v3 contient **43 sources primaires/officielles** et **120 enregistrements empiriques**. Les verdicts utilisent 0 simulation, 0 donnée synthétique, 0 imputation et 0 échantillonnage aléatoire. Les sorties théoriques, thermochimiques et N-corps sont exclues. Lorsqu’une publication combine mesures et traitement dépendant de données synthétiques ou de Monte-Carlo, seule la portion empirique explicitement admissible est conservée.
 
-Cinq renforcements empiriques ont été ajoutés sans changer le pare-feu :
+## Résultat 1 — transformation quantitative d’un inventaire hérité
 
-- EC 53 : suivi temporel JWST du même objet, avec forstérite et enstatite détectées pendant le burst et absentes dans l’état quiescent retenu pour la comparaison ;
-- Ryugu : systématique Lu–Hf d’échantillons retournés enregistrant une circulation de fluide plus de 1 Gyr après la formation ;
-- VLA1623 B : second système indépendant avec un streamer protostellaire d’environ 2 000 au et une température d’excitation SO de 33 ± 9 K ;
-- SN 1987A : une seconde campagne instrumentale primaire, ALMA, résout spatialement la poussière dans les éjecta internes et fournit une borne >0,2 M☉ ;
-- CAI/chondres : une seconde chronométrie primaire Al-Mg fournit un cross-check d’environ 2 Myr après les CAI canoniques, sans être artificiellement convertie en mesure >5σ.
+À partir du rapport initial canonique `26Al/27Al`, d’âges Pb-Pb mesurés et de la demi-vie évaluée de `26Al`, la campagne calcule la fraction de radionucléide parent encore disponible, sans modèle thermique :
 
-Les interprétations dépendantes de modèles présentes dans ces publications sont explicitement exclues du registre machine.
+- angrite, 1,10 ± 0,19 Myr après CAI : **34,5 %** ;
+- EC 002, 1,74 ± 0,20 Myr : **18,6 %** ;
+- chondre jeune sélectionné, 2,59 ± 0,34 Myr : **8,18 %** ;
+- carbonate CM, 3,90 ± 0,52 Myr : **2,30 %**.
 
-## Pourquoi la v1 n’est plus l’autorité quantitative
+Ce résultat répond directement à la question ORI-C locale : deux incorporations de matière à des moments différents n’héritent pas du même inventaire radiogénique accessible, même si la loi de décroissance est identique. La campagne ne transforme pas cette fraction en température, fusion ou différenciation simulée.
 
-La v1 avait ajouté 23 stades analytiques, 40 relations, une sélection de 24 observations et 12 synthèses. Ces objets sont conservés pour provenance, mais leurs **comptages ne constituent pas un résultat scientifique**. Leur statut est documenté dans `STATUT_APPROFONDISSEMENT_V1.md`.
+## Résultat 2 — différenciation précoce dans une fenêtre d’inventaire plus élevé
 
-La v2 remplace cette logique de comptage par huit tests/audits reproductibles `GCQ-T01` à `GCQ-T08`.
+La fenêtre Hf-W publiée pour la formation de noyaux de météorites de fer, environ 1,0–1,5 Myr après CAI, correspond à **23,5–38,0 %** de l’inventaire initial de `26Al` encore présent. Cette fenêtre dispose de **2,87–4,65 fois** l’inventaire du chondre jeune du test et de **10,18–16,50 fois** celui de l’événement carbonate CM. Il s’agit d’une mise en correspondance déterministe entre deux horloges empiriques indépendantes, pas d’une simulation thermique.
 
-## Résultats quantitatifs v2
+## Résultat 3 — persistance d’une architecture pendant un changement physique majeur
 
-### GCQ-T01 — réplication inter-missions des grains présolaires
+La séparation NC/CC enregistrée dans les météorites persiste pendant au moins 2–3 Myr. Sur cette durée, l’inventaire relatif de `26Al` diminue d’un facteur **6,91–18,18**, soit une perte de **85,5–94,5 %** entre le début et la fin de la fenêtre utilisée. Une structure historique peut donc persister alors qu’une condition physique héritée change de presque un ordre de grandeur à plus d’un ordre de grandeur.
 
-Les abondances SiC mesurées dans Bennu et Ryugu sont toutes deux nominalement de 25 ppm. L’écart standardisé descriptif est donc 0. Pour les grains O-rich/O-anormaux, Bennu = 4 ± 2 ppm et Ryugu = 4,8 ppm avec incertitude asymétrique publiée ; l’écart standardisé descriptif calculé par la campagne vaut environ 0,19. Ces comparaisons soutiennent une cohérence inter-missions des ordres de grandeur sans être traitées comme une méta-analyse populationnelle.
+## Contrôle post-hoc — la décroissance temporelle ne fixe pas un inventaire local unique
 
-### GCQ-T02 — eau lourde V883 Ori / 67P
+Le calcul canonique est volontairement traité comme une **référence de décroissance**. À environ 2 Myr après CAI, cette référence donne `26Al/27Al = 7,56×10^-6`. Deux CAI à matériel chondritique du corpus donnent respectivement `4,7±1,4×10^-6` et `<1,2×10^-6`, soit environ **62,1 %** et **<15,9 %** de la référence temporelle. Une archive indépendante rapporte par ailleurs une hétérogénéité `26Al` d’un facteur 3–4.
 
-Le produit des deux rapports ROSINA mesurés pour 67P donne `D2O/H2O = 1,89×10^-5` avec propagation des incertitudes publiées. Comparé à V883 Ori, l’écart standardisé vaut environ 0,85, donc inférieur à 2. Le résultat soutient une compatibilité observationnelle, sans établir une filiation directe entre les deux systèmes.
+Ce contrôle `GCQ-X01` a été ajouté après les huit tests gelés et est donc explicitement marqué **post-hoc**. Il ne reçoit aucun test de significativité artificiel, car le délai publié de ~2 Myr n’a pas d’incertitude numérique transcrite. Son rôle est de borner l’interprétation : le temps transforme fortement l’inventaire radiogénique, mais l’histoire locale des réservoirs/mélanges intervient également.
 
-### GCQ-T03 — ordre chronologique du Système solaire primitif
+## Résultat 4 — porteurs de mémoire sur plusieurs échelles
 
-Quatre écarts sont calculés avec propagation conservative des erreurs publiées :
+Les grains présolaires identifiés dans des matériaux retournés imposent une borne conservatrice de persistance matérielle supérieure à **4,567 Gyr**. À l’autre extrême, Ryugu enregistre une réactivation fluide plus de 1 000 Myr après sa formation. Cette borne correspond à plus de **1 394 demi-vies** de `26Al`; l’horloge radiogénique initiale est donc physiquement séparée de cet épisode tardif. La campagne ne déduit pas la cause de la réactivation.
 
-- CAI → EC 002 : ~1,74 Myr, ~8,7σ ;
-- CAI → angrite : ~1,10 Myr, ~5,83σ ;
-- CAI → plus jeune chondre sélectionné : ~2,59 Myr, ~7,62σ ;
-- angrite → carbonate CM : ~2,80 Myr, ~5,49σ.
+## Résultat 5 — provenance terrestre : conflit empirique conservé
 
-La séquence temporelle utilisée par la branche n’est donc plus seulement narrative : plusieurs ordres sont quantitativement résolus au-delà de 5σ dans les données sélectionnées.
+Les reconstructions isotopiques de la provenance terrestre ne convergent pas dans le corpus retenu. Une reconstruction antérieure soutient une contribution CC tardive, tandis qu’une étude plus récente indique que les 10–20 derniers pourcents massiques sont dominés par du matériel NC, avec une petite contribution CC encore possible dans les 0,5–1 derniers pourcents. Les valeurs BSE Mo rapportées en 2026 sont enregistrées, mais la conclusion multivariée de cette étude est exclue du registre de preuve parce que son pipeline publié utilise des priors synthétiques et du Monte-Carlo. Le verdict est donc `empirically_contested_not_closed`.
 
-### GCQ-T04 — changement d’état dans le même objet
+## Résultat 6 — endpoint et fermeture du graphe
 
-EC 53 apporte un test temporel plus fort qu’un simple analogue inter-systèmes : les signatures de forstérite et d’enstatite retenues sont absentes en quiescence et présentes pendant le burst. La branche code ce résultat comme **association événement–changement d’état dans le même système**, sans prétendre observer le transport ultérieur de ces grains.
+L’endpoint officiel retenu comprend huit corps et couvre un facteur **77,68** en demi-grand axe entre Mercure et Neptune dans la table utilisée. Il décrit l’état actuel approché, sans reconstruire l’histoire qui y mène.
 
-### GCQ-T05 — réplication des streamers
+L’ablation exacte des relations documentées identifie **6 nœuds critiques** et **6 relations critiques** pour le chemin strict produits stellaires → endpoint actuel. Ce chemin existe. En revanche, le chemin strict baseline primordiale → endpoint actuel reste ouvert. La branche transforme ainsi un ancien « trou » narratif en liste machine de verrous localisés.
 
-Deux systèmes indépendants présentent des structures de type streamer à l’échelle de milliers d’au : Per-emb-2 (>10 500 au) et VLA1623 B (~2 000 au). Cela renforce l’existence observationnelle du canal physique nuage/environnement → échelles du disque, sans l’identifier à l’histoire protosolaire.
+## Claims machine v3
 
-### GCQ-T06 — réactivation tardive d’un corps primitif
+Les huit tests `GCQ-T09` à `GCQ-T16` sont générés individuellement sous `resultats/claims_quantitatifs_v3/` et agrégés dans `resultats/CLAIMS_QUANTITATIFS_COMPLETS.json`. Chaque claim contient son verdict, ses sources, ses stades, ses données de résultat et sa limite d’interprétation.
 
-Ryugu conserve une archive isotopique d’une circulation de fluide **plus de 1 000 Myr après la formation**. Ce résultat montre qu’un corps primitif peut subir une transformation historique tardive et en conserver une trace mesurable. La cause dynamique proposée dans l’article n’est pas importée comme preuve.
+## Verdict global
 
-### GCQ-T07 — robustesse du graphe empirique
+`quantified_history_dependent_accessibility_with_explicit_open_links`
 
-Sur 22 liens, 12 sont classés comme séquences d’archive, continuités matérielles, mêmes systèmes ou mêmes histoires ; 9 restent analogues/non uniques et 1 est un contraste historique. Une séquence stricte d’archives relie les produits stellaires à un endpoint planétaire actuel, mais **la fermeture stricte depuis la baseline primordiale jusqu’à l’endpoint reste ouverte**.
-
-### GCQ-T08 — ablations par familles de preuve
-
-Chaque famille de preuve est retirée à tour de rôle et la campagne recalcule la couverture des stades et la persistance de la séquence stricte. Il s’agit d’un audit de dépendance du corpus, pas d’une simulation physique. Les résultats sont enregistrés dans `resultats/ABLATIONS_FAMILLES_PREUVES.csv`.
-
-## Verrous résiduels
-
-Sept stades restent soutenus par une seule source dans la version actuelle : `GC-E11`, `GC-E12`, `GC-E13`, `GC-E16`, `GC-E17`, `GC-E18` et `GC-E19`. La fermeture de bout en bout n’est donc pas certifiée. La priorité scientifique suivante n’est pas d’ajouter des relations théoriques : elle consiste à **répliquer empiriquement les stades à source unique** et à remplacer, quand c’est possible, les ponts analogues par des archives solaires ou des observations temporelles plus directes.
-
-Le verdict quantitatif machine est :
-
-`supports_history_dependent_material_and_temporal_constraints_with_open_end_to_end_closure`
+La campagne démontre quantitativement, sur des entrées empiriques, qu’un changement de moment historique modifie une ressource physique accessible et que des porteurs/architectures peuvent persister à travers ce changement. Elle ne certifie ni une trajectoire orbitale unique ni une chaîne primordiale→présent entièrement fermée.

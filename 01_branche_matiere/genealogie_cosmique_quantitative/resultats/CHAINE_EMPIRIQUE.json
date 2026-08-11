@@ -275,11 +275,13 @@
       "evidence_class": "chronometrie_meteoritique",
       "history_carrier": "ordre_temporel_solides",
       "label": "Chronologie CAI et chondres",
-      "measurement_count": 6,
+      "measurement_count": 8,
       "order": "10",
       "source_ids": [
         "S016",
-        "S038"
+        "S038",
+        "S039",
+        "S040"
       ],
       "stage_id": "GC-E10"
     },
@@ -312,10 +314,13 @@
       "evidence_class": "chronometrie_meteoritique",
       "history_carrier": "differenciation_precoce",
       "label": "Planétésimaux différenciés précoces",
-      "measurement_count": 2,
+      "measurement_count": 7,
       "order": "13",
       "source_ids": [
-        "S017"
+        "S017",
+        "S039",
+        "S040",
+        "S041"
       ],
       "stage_id": "GC-E13"
     },
@@ -328,7 +333,9 @@
       "order": "14",
       "source_ids": [
         "S018",
-        "S035"
+        "S035",
+        "S039",
+        "S040"
       ],
       "stage_id": "GC-E14"
     },
@@ -376,10 +383,12 @@
       "evidence_class": "reconstruction_isotopique",
       "history_carrier": "histoire_accretion_terre",
       "label": "Accrétion hétérogène de la Terre enregistrée isotopiquement",
-      "measurement_count": 1,
+      "measurement_count": 8,
       "order": "18",
       "source_ids": [
-        "S027"
+        "S027",
+        "S042",
+        "S043"
       ],
       "stage_id": "GC-E18"
     },
@@ -388,7 +397,7 @@
       "evidence_class": "produit_observationnel_officiel",
       "history_carrier": "architecture_terminale_observee",
       "label": "Architecture actuelle du Système solaire observée",
-      "measurement_count": 1,
+      "measurement_count": 17,
       "order": "19",
       "source_ids": [
         "S028"

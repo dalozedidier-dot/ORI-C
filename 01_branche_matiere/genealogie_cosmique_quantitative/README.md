@@ -54,4 +54,24 @@ L’autorité quantitative est désormais `GEL_ANALYSE_QUANTITATIVE_V2.json` + `
 
 Les sorties d’autorité sont `resultats/TESTS_QUANTITATIFS_REELS.json`, `CHRONOLOGIE_QUANTITATIVE.csv`, `REPLICATION_ECHANTILLONS.csv`, `ROBUSTESSE_GRAPHE.json`, `REDONDANCE_PAR_STAGE.csv`, `ABLATIONS_FAMILLES_PREUVES.csv`, `VERDICT_QUANTITATIF.json` et `RAPPORT_QUANTITATIF.md`.
 
-Le corpus courant contient 38 sources primaires/officielles et 90 mesures réelles. Le verdict quantitatif soutient des contraintes matérielles et temporelles dépendantes de l’histoire, tout en laissant ouverte la fermeture généalogique stricte de bout en bout.
+Le corpus v3 contient **43 sources primaires/officielles et 120 enregistrements empiriques**. La v2 reste conservée comme étape méthodologique, mais l’autorité quantitative courante est désormais `GEL_ANALYSE_QUANTITATIVE_V3.json` + `src/analyser_quantitatif_complet.py`.
+
+## Campagne quantitative complète v3
+
+La v3 ne se contente plus de tester la cohérence du corpus. Elle quantifie directement des transformations historiques à partir d’entrées mesurées ou de produits empiriques officiels, avec propagation analytique des incertitudes et sans échantillonnage aléatoire.
+
+Les huit résultats `GCQ-T09` à `GCQ-T16` établissent notamment :
+
+- la décroissance de l’inventaire relatif de `26Al` encore disponible à quatre événements datés : **34,5 %** à l’archive angritique, **18,6 %** à EC 002, **8,18 %** au chondre jeune sélectionné et **2,30 %** à l’événement carbonate CM ;
+- une fenêtre de formation de noyaux de météorites de fer vers 1,0–1,5 Myr après CAI correspondant encore à **23,5–38,0 %** de l’inventaire initial de `26Al` ;
+- une séparation NC/CC persistant 2–3 Myr pendant que cet inventaire diminue d’un facteur **6,9–18,2** ;
+- un contrôle post-hoc montrant qu’à ~2 Myr la référence canonique de décroissance seule (`7,56×10^-6`) ne fixe pas un inventaire local unique : deux CAI à matériel chondritique mesurent `4,7±1,4×10^-6` et `<1,2×10^-6`, tandis qu’une autre archive du corpus rapporte une hétérogénéité `26Al` d’un facteur 3–4 ;
+- une borne conservatrice de persistance des porteurs présolaires supérieure à **4,567 Gyr** ;
+- une réactivation fluide enregistrée dans Ryugu plus de 1 000 Myr après formation, soit plus de **1 394 demi-vies** de `26Al` ;
+- une provenance terrestre laissée **empiriquement contestée** lorsque les reconstructions publiées ne convergent pas ;
+- un endpoint orbital actuel quantifié sans le transformer en reconstruction historique ;
+- six nœuds et six relations critiques dans la chaîne stricte produits stellaires → endpoint, tandis que la fermeture stricte baseline primordiale → endpoint reste ouverte.
+
+Les artefacts d’autorité v3 sont `resultats/RESULTATS_QUANTITATIFS_COMPLETS.json`, `TESTS_QUANTITATIFS_COMPLETS.json`, `CLAIMS_QUANTITATIFS_COMPLETS.json`, `resultats/claims_quantitatifs_v3/`, `INVENTAIRE_26AL_PAR_EVENEMENT.csv`, `FERMETURE_RELATIONS_EMPIRIQUES.csv`, `VERROUS_BOUT_EN_BOUT.json` et `RAPPORT_QUANTITATIF_COMPLET.md`.
+
+Le verdict v3 est `quantified_history_dependent_accessibility_with_explicit_open_links`. Il signifie que la dépendance au chemin est désormais **quantifiée sur au moins un inventaire physique réel**, tout en conservant explicitement ouverts les raccords que les données ne ferment pas.

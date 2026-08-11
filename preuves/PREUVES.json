@@ -554,13 +554,15 @@
       "statut": "extension_empirique_non_preregistered",
       "verdict": "supports_planet_specific_accretion_histories",
       "niveau_preuve": null,
-      "portee": "planetary_isotope_reconstruction_plus_observed_endpoint — Les scénarios orbitaux expliquant ces apports sont exclus; seuls les systèmes isotopiques mesurés et l’endpoint planétaire actuel sont retenus.",
+      "portee": "planetary_isotope_reconstruction_plus_observed_endpoint — Mars conserve une contrainte temporelle Hf-W-Th et la Terre plusieurs contraintes Mo. Les reconstructions de provenance terrestre sont désormais explicitement contradictoires: ORI-C conserve ce conflit au lieu de choisir une histoire. Les scénarios orbitaux restent exclus.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E14.json",
-      "empreinte_sortie": "cf3080d6c1b7798f11526266f0b411c5cc6fda9b901c6574b5209389ef308d66",
+      "empreinte_sortie": "a4fbce3448328730d0385ae9d8004169c19d0452620e40d46ca7cd5a7cfd66ef",
       "source": [
         "S026",
         "S027",
-        "S028"
+        "S028",
+        "S042",
+        "S043"
       ],
       "mesures": {
         "stages": [
@@ -581,7 +583,7 @@
       "niveau_preuve": null,
       "portee": "cross_domain_empirical_synthesis — Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
-      "empreinte_sortie": "bfd16ec5329577d94bace2b849a42c042ef1aa1678effe20d2380df2a75474bb",
+      "empreinte_sortie": "433eb8d937886ad49f77d9d2bcd19b022a0dadb1906d72a353e2fe9e75e11f7e",
       "source": [
         "S001",
         "S002",
@@ -620,7 +622,12 @@
         "S035",
         "S036",
         "S037",
-        "S038"
+        "S038",
+        "S039",
+        "S040",
+        "S041",
+        "S042",
+        "S043"
       ],
       "mesures": {
         "stages": [
@@ -668,6 +675,236 @@
         ],
         "mechanism": "unique_orbital_genealogy_not_identifiable_from_empirical_archives_alone",
         "preregistration": "non_preregistered_initial_empirical_synthesis"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T09",
+      "question": "Le moment mesuré d’un événement change-t-il la fraction de 26Al encore physiquement disponible?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "supports_strong_time_dependence_of_radiogenic_accessibility",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T09.json",
+      "empreinte_sortie": "f1511812df0d5b364a1e66b78ec3b5c7efa13afb9ab07da2bfc9e4caabc898f0",
+      "source": [
+        "S016",
+        "S017",
+        "S014",
+        "S018",
+        "S039",
+        "S040"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E10",
+          "GC-E13",
+          "GC-E08",
+          "GC-E14"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T10",
+      "question": "La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "supports_earlier_differentiation_archive_during_higher_26Al_inventory",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T10.json",
+      "empreinte_sortie": "5766956f0aec23ee1ea2e6cccb545acb20b03a11a179a529b278ff2951964496",
+      "source": [
+        "S041",
+        "S039",
+        "S040",
+        "S016"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E10",
+          "GC-E13"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T11",
+      "question": "La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "supports_persistent_isotopic_architecture_across_large_inventory_change",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T11.json",
+      "empreinte_sortie": "7f810a98a8f8a43297480cac5807e19ac8e1a8a9fde9e891bfb8ae954b9c1f57",
+      "source": [
+        "S013",
+        "S039",
+        "S040"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T12",
+      "question": "Des porteurs matériels présolaires persistent-ils jusqu’aux échantillons retournés actuels?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "supports_gigayear_material_memory_carrier",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T12.json",
+      "empreinte_sortie": "83d6715a4bc70557602187e5824609c2b2260d2052728ef261280ff62124812a",
+      "source": [
+        "S010",
+        "S030",
+        "S031",
+        "S016"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E03",
+          "GC-E09",
+          "GC-E19"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T13",
+      "question": "Ryugu enregistre-t-il une réactivation tardive physiquement séparée de l’horloge primordiale 26Al?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "supports_late_reactivation_of_old_material_memory_by_unresolved_later_process",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T13.json",
+      "empreinte_sortie": "fb94f0985dff4a31dc5c55de1399f929489ed200d8a6c0dde53f150b4a77b374",
+      "source": [
+        "S035",
+        "S040"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E14"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T14",
+      "question": "Les reconstructions empiriques de la provenance terrestre convergent-elles?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "contested_not_closed",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T14.json",
+      "empreinte_sortie": "1e5db4fc6e5f6c16c1e0384fbc4ef91455595d8b144b259b9cba3eeb80d30cfa",
+      "source": [
+        "S027",
+        "S042",
+        "S043"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E18"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T15",
+      "question": "Quel endpoint orbital actuel est directement décrit par le produit observationnel officiel retenu?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "endpoint_quantified_history_not_reconstructed",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T15.json",
+      "empreinte_sortie": "03a9f0783ecf659e5595601c2b1dbb09696c19996dc3dcfd49f9bbb9b74a8670",
+      "source": [
+        "S028"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E19"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T16",
+      "question": "Quels nœuds et relations documentés contrôlent la fermeture stricte de la chaîne empirique?",
+      "statut": "extension_quantitative_empirique_non_preregistered",
+      "verdict": "strict_stellar_to_endpoint_chain_exists_but_primordial_end_to_end_closure_open",
+      "niveau_preuve": null,
+      "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T16.json",
+      "empreinte_sortie": "4595822d61da3a81c89262176647c1756d7af5c1374be9d928df8161b6095b27",
+      "source": [],
+      "mesures": {
+        "stages": [
+          "GC-E01",
+          "GC-E02",
+          "GC-E03",
+          "GC-E08",
+          "GC-E10",
+          "GC-E13",
+          "GC-E17",
+          "GC-E19"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-X01",
+      "question": "La décroissance canonique temporelle suffit-elle à représenter un inventaire 26Al local unique?",
+      "statut": "controle_quantitatif_empirique_posthoc",
+      "verdict": "canonical_decay_curve_is_time_reference_not_unique_local_inventory",
+      "niveau_preuve": null,
+      "portee": "contrôle post-hoc déterministe — non compté parmi les tests gelés",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-X01.json",
+      "empreinte_sortie": "a85bf4b8631b7c966708e0c850caa6945c8ad37e65ad9dfabfc0573edfe98929",
+      "source": [
+        "S014",
+        "S038",
+        "S039",
+        "S040"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": null,
+        "preregistered": false,
+        "data_policy": "real_measurements_and_official_empirical_data_only"
       },
       "supersede_par": null
     }

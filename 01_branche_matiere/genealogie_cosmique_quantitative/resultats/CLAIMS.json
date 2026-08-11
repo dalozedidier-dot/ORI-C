@@ -319,7 +319,11 @@
     {
       "claim_id": "C-GC-E14",
       "criteria": {
-        "Earth_Mo_between_NC_CC": true,
+        "BSE_epsilon94Mo_latest": 0.0,
+        "BSE_epsilon95Mo_latest": 0.03,
+        "Earth_2019_Mo_CC_late_addition_supported": true,
+        "Earth_2025_late_stage_NC_dominated": true,
+        "Earth_provenance_status": "empirically_contested",
         "Mars_half_size_time_upper_myr": 2.0,
         "present_planets": 8.0
       },
@@ -327,11 +331,13 @@
       "mechanism": "present_planets_retain_isotopic_constraints_on_distinct_growth_histories",
       "preregistration": "non_preregistered_initial_empirical_synthesis",
       "question": "Des planètes du Système solaire portent-elles aujourd’hui des histoires d’accrétion différentes mesurables ?",
-      "scope": "Les scénarios orbitaux expliquant ces apports sont exclus; seuls les systèmes isotopiques mesurés et l’endpoint planétaire actuel sont retenus.",
+      "scope": "Mars conserve une contrainte temporelle Hf-W-Th et la Terre plusieurs contraintes Mo. Les reconstructions de provenance terrestre sont désormais explicitement contradictoires: ORI-C conserve ce conflit au lieu de choisir une histoire. Les scénarios orbitaux restent exclus.",
       "source_ids": [
         "S026",
         "S027",
-        "S028"
+        "S028",
+        "S042",
+        "S043"
       ],
       "stages": [
         "GC-E17",
@@ -407,7 +413,12 @@
         "S035",
         "S036",
         "S037",
-        "S038"
+        "S038",
+        "S039",
+        "S040",
+        "S041",
+        "S042",
+        "S043"
       ],
       "stages": [
         "GC-E00",

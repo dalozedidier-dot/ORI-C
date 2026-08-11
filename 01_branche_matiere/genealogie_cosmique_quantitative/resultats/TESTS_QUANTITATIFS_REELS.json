@@ -220,7 +220,7 @@
             "covered_stages": 12,
             "lost_stage_count": 8,
             "lost_stages": "GC-E00;GC-E01;GC-E02;GC-E04;GC-E05;GC-E07;GC-E15;GC-E16",
-            "remaining_measurement_records": 48,
+            "remaining_measurement_records": 78,
             "removed_evidence_mode": "astronomical_observation",
             "strict_stellar_to_endpoint_path_preserved": false
           },
@@ -228,7 +228,7 @@
             "covered_stages": 18,
             "lost_stage_count": 2,
             "lost_stages": "GC-E11;GC-E12",
-            "remaining_measurement_records": 84,
+            "remaining_measurement_records": 114,
             "removed_evidence_mode": "laboratory_experiment",
             "strict_stellar_to_endpoint_path_preserved": true
           },
@@ -236,15 +236,15 @@
             "covered_stages": 20,
             "lost_stage_count": 0,
             "lost_stages": "",
-            "remaining_measurement_records": 82,
+            "remaining_measurement_records": 111,
             "removed_evidence_mode": "meteorite_isotope_measurement",
             "strict_stellar_to_endpoint_path_preserved": true
           },
           {
-            "covered_stages": 18,
-            "lost_stage_count": 2,
-            "lost_stages": "GC-E10;GC-E13",
-            "remaining_measurement_records": 81,
+            "covered_stages": 19,
+            "lost_stage_count": 1,
+            "lost_stages": "GC-E13",
+            "remaining_measurement_records": 106,
             "removed_evidence_mode": "meteoritic_chronometry",
             "strict_stellar_to_endpoint_path_preserved": false
           },
@@ -252,7 +252,7 @@
             "covered_stages": 19,
             "lost_stage_count": 1,
             "lost_stages": "GC-E19",
-            "remaining_measurement_records": 89,
+            "remaining_measurement_records": 102,
             "removed_evidence_mode": "official_observation_product",
             "strict_stellar_to_endpoint_path_preserved": false
           },
@@ -260,7 +260,7 @@
             "covered_stages": 18,
             "lost_stage_count": 2,
             "lost_stages": "GC-E17;GC-E18",
-            "remaining_measurement_records": 88,
+            "remaining_measurement_records": 111,
             "removed_evidence_mode": "planetary_isotope_reconstruction",
             "strict_stellar_to_endpoint_path_preserved": false
           },
@@ -268,7 +268,7 @@
             "covered_stages": 18,
             "lost_stage_count": 2,
             "lost_stages": "GC-E03;GC-E09",
-            "remaining_measurement_records": 70,
+            "remaining_measurement_records": 100,
             "removed_evidence_mode": "returned_sample_measurement",
             "strict_stellar_to_endpoint_path_preserved": false
           },
@@ -276,7 +276,7 @@
             "covered_stages": 20,
             "lost_stage_count": 0,
             "lost_stages": "",
-            "remaining_measurement_records": 88,
+            "remaining_measurement_records": 118,
             "removed_evidence_mode": "spacecraft_observation",
             "strict_stellar_to_endpoint_path_preserved": true
           }

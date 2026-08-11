@@ -49,3 +49,14 @@ La couche quantitative d’autorité est définie par `GEL_ANALYSE_QUANTITATIVE_
 Les huit tests/audits couvrent : réplication inter-missions, compatibilité isotopologique, ordre chronométrique avec propagation d’incertitudes, contraste temporel du même objet, réplication de streamers, réactivation tardive d’un corps retourné, robustesse du graphe empirique et ablations par famille de preuve.
 
 Un test quantitatif n’est déclaré positif que selon le critère enregistré dans le gel. Un résultat positif ne relève jamais automatiquement le niveau de causalité au-delà de la `directness` documentée par les sources.
+
+
+## Campagne quantitative complète v3
+
+`GEL_ANALYSE_QUANTITATIVE_V3.json` fige les règles de la campagne finale. Le gel est rétrospectif : le corpus existait avant la définition des tests, donc aucun résultat v3 ne doit être décrit comme préenregistré.
+
+Les calculs déterministes dérivés sont autorisés uniquement lorsque toutes les entrées numériques proviennent de mesures publiées ou de produits empiriques officiels. Les incertitudes sont propagées analytiquement au premier ordre ou par intervalles. Aucun tirage Monte-Carlo, aucune imputation et aucune population synthétique ne sont autorisés comme preuve.
+
+Chaque test `GCQ-T09` à `GCQ-T16` doit produire : un verdict machine, un artefact individuel sous `resultats/claims_quantitatifs_v3/`, les sources utilisées, les stades concernés, le résultat numérique et une limite d’interprétation. Les claims v3 sont des extensions quantitatives empiriques non préenregistrées, jamais des certifications historiques automatiques.
+
+Le critère de fermeture de bout en bout est strict : une chaîne n’est déclarée fermée que si un chemin composé exclusivement de relations d’archive, de continuité matérielle ou de séquence empirique documentée relie les deux endpoints. Un analogue inter-système ou un pont mécanisme→observation ne ferme jamais artificiellement un maillon.

@@ -3,7 +3,7 @@
   "freeze_status": "frozen_for_future_source_additions_not_preregistered_for_current_data",
   "global_quantitative_verdict": "supports_history_dependent_material_and_temporal_constraints_with_open_end_to_end_closure",
   "imputed_rows": 0,
-  "measurement_records": 90,
+  "measurement_records": 120,
   "not_claimed": [
     "unique_orbital_history",
     "universal_ORI_C_law",
@@ -12,17 +12,15 @@
   ],
   "schema": "oric.gc.quantitative-real-verdict.v2",
   "simulations_used": 0,
-  "single_source_stage_bottlenecks": 7,
+  "single_source_stage_bottlenecks": 5,
   "single_source_stage_ids": [
     "GC-E11",
     "GC-E12",
-    "GC-E13",
     "GC-E16",
     "GC-E17",
-    "GC-E18",
     "GC-E19"
   ],
-  "sources": 38,
+  "sources": 43,
   "strict_archive_sequence_stellar_to_present_endpoint": true,
   "strict_end_to_end_from_primordial_baseline": false,
   "strong_results": [
