@@ -19,8 +19,8 @@ def test_empirical_only_policy_and_banned_artifacts_absent():
 def test_sources_are_primary_or_official_and_mixed_sources_have_firewall():
     s=rows(HERE/'SOURCES_EMPIRIQUES.csv'); m=rows(HERE/'data/MESURES_EMPIRIQUES.csv')
     ids={x['source_id'] for x in s}
-    assert len(s)==43
-    assert all(x['source_class'] in {'primary_peer_reviewed','official_observation_product'} for x in s)
+    assert len(s)==48
+    assert all(x['source_class'] in {'primary_peer_reviewed','official_observation_product','curated_empirical_database','primary_research_dataset'} for x in s)
     assert all(x['url'].startswith('http') for x in s)
     assert all(x['portion_used'].strip() and x['portion_excluded'].strip() for x in s)
     assert all(x['source_id'] in ids for x in m)
@@ -36,7 +36,7 @@ def test_every_stage_has_empirical_measurement_and_source():
 def test_results_are_deep_and_empirical_only():
     s=json.loads((HERE/'resultats/SYNTHESE.json').read_text())
     a=json.loads((HERE/'resultats/AUDIT_ADMISSIBILITE.json').read_text())
-    assert s['stages']==20 and s['links']==22 and s['primary_or_official_sources']==43
+    assert s['stages']==20 and s['links']==22 and s['primary_or_official_sources']==48
     assert s['empirical_measurement_records']==120
     assert s['simulations_used']==0 and s['synthetic_rows']==0 and s['imputed_rows']==0
     assert s['supported_claims']==15 and s['unresolved_claims']==1
@@ -113,7 +113,7 @@ def test_deep_quantitative_layer_is_empirical_only():
     assert d['selected_quantitative_observations']==24
     assert d['quantitative_synthesis_claims']==12
     assert d['underlying_empirical_measurement_records']==120
-    assert d['primary_or_official_sources']==43
+    assert d['primary_or_official_sources']==48
     assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0
     assert d['dag_acyclic'] is True and d['all_analytical_stages_empirically_anchored'] is True
     assert d['authoritative_empirical_claims_preserved']==16
@@ -129,7 +129,7 @@ def test_quantitative_v2_has_real_calculations_not_count_only():
     v=json.loads((HERE/'resultats/VERDICT_QUANTITATIF.json').read_text())
     t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_REELS.json').read_text())
     assert v['schema']=='oric.gc.quantitative-real-verdict.v2'
-    assert v['sources']==43 and v['measurement_records']==120
+    assert v['sources']==48 and v['measurement_records']==120
     assert v['tests']==8 and v['tests_passed']==8
     assert v['simulations_used']==0 and v['synthetic_rows']==0 and v['imputed_rows']==0
     assert v['strict_archive_sequence_stellar_to_present_endpoint'] is True
@@ -189,7 +189,7 @@ def test_quantitative_v3_complete_physical_results_are_real_and_deterministic():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_COMPLETS.json').read_text())
     assert d['schema']=='oric.gc.quantitative-complete-results.v3'
-    assert d['sources_total']==43 and d['measurement_records_total']==120
+    assert d['sources_total']==48 and d['measurement_records_total']==120
     assert d['new_v3_tests']==8 and d['criteria_met']==8
     assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0 and d['random_sampling_used']==0
     assert d['global_result']['history_changes_quantified_accessible_physical_inventory'] is True
@@ -277,11 +277,11 @@ def test_quantitative_v3_authority_docs_state_current_corpus_and_verdict():
     readme=(HERE/'README.md').read_text()
     review=(HERE/'REVUE_QUANTITATIVE_EMPIRIQUE.md').read_text()
     protocol=(HERE/'PROTOCOLE.md').read_text()
-    assert '43 sources primaires/officielles' in readme
+    assert '48 sources/datasets empiriques admissibles' in readme
     assert '120 enregistrements empiriques' in readme
     assert '34,5 %' in readme and '2,30 %' in readme
     assert 'quantified_history_dependent_accessibility_with_explicit_open_links' in readme
-    assert '43 sources primaires/officielles' in review
+    assert '48 sources/datasets empiriques admissibles' in review
     assert 'GCQ-T09' in review and 'GCQ-T16' in review
     assert 'Campagne quantitative complète v3' in protocol
 
@@ -300,3 +300,69 @@ def test_posthoc_26Al_crosscheck_is_explicit_and_not_counted_as_frozen_test():
     assert len(agg['claims'])==8 and len(agg['posthoc_crosschecks'])==1
     assert agg['posthoc_crosschecks'][0]['claim_id']=='GCQ-X01'
     assert (HERE/'resultats/claims_quantitatifs_v3/GCQ-X01.json').is_file()
+
+
+def test_v4_massive_input_selection_excludes_duplicates_unpublished_and_synthetic():
+    sel=json.loads((HERE/'data_massives_reelles/IMPORT_SELECTION_V4.json').read_text())
+    assert sel['pgd_sic_total_rows']==20432
+    assert sel['pgd_sic_unpublished_excluded']==11567
+    assert sel['pgd_sic_admissible_rows']==8865
+    assert sel['pgd_graphite_admissible_rows']==2342
+    assert sel['admissible_presolar_grains_total']==11207
+    decisions={x['filename']:x['decision'] for x in sel['inputs']}
+    assert decisions['PGD_SiC_2025-03-10.xlsx']=='excluded_duplicate'
+    assert decisions['PGD_Gra_2025-03-24.xlsx']=='excluded_duplicate'
+    assert decisions['pnas.2423345122.sd01.xlsx']=='excluded_current_scope'
+    assert 'included_sheet' in decisions.values()
+
+
+def test_v4_presolar_population_result_uses_published_grains_only():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
+    p=d['presolar_grains']
+    assert d['schema']=='oric.gc.quantitative-data-rich-results.v4'
+    assert d['tests_total']==5 and d['criteria_met']==5 and d['all_criteria_met']
+    assert d['audit']['synthetic_rows_used']==0 and d['audit']['imputed_rows_used']==0 and d['audit']['simulation_rows_used']==0
+    assert p['admissible_grains_total']==11207
+    assert p['SiC_unpublished_rows_excluded']==11567
+    assert p['X_to_M_median_26Al_27Al_factor']>250
+    assert p['selected_SiC_type_isotope_medians']['M']['d(29Si/28Si)']['median']>0
+    assert p['selected_SiC_type_isotope_medians']['X']['d(29Si/28Si)']['median']<0
+
+
+def test_v4_NC_CC_multisystem_separation_has_no_imputation():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())['NC_CC']
+    assert d['rows']==41 and d['isotope_systems']==11
+    assert d['leave_one_out_correct']==41 and d['leave_one_out_total']==41
+    assert d['missing_values_imputed']==0
+    assert min(abs(v['CC_minus_NC_Cohen_d']) for v in d['effect_sizes'].values())>1.9
+
+
+def test_v4_allende_heterogeneity_is_distribution_level():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
+    c=d['Allende_chondrules']; w=d['Allende_subsamples']
+    assert c['Allende_chondrules']==34
+    assert all(x['fraction_gt_3sigma']>0.70 for x in c['metrics'].values())
+    assert w['Allende_subsamples_n']==12
+    assert w['pairs_gt_2sigma']==55 and w['pair_count']==66
+    assert w['max_pairwise']['z']>36
+    assert w['literature_Table4_used'] is False
+
+
+def test_v4_bennu_individual_measurements_show_resolved_component_contrast():
+    b=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())['Bennu_returned_samples']
+    assert b['Bennu_2025_individual_presolar_grains']==52
+    assert b['Bennu_2026_O_isotope_spots']==18
+    assert b['number_refractory_spots_all_gt_3sigma_from_diopside']==17
+    assert b['diopside_vs_each_refractory_min_z']>9.9
+
+
+def test_v4_claim_artifacts_and_authority_report_exist():
+    d=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
+    assert d['schema']=='oric.gc.quantitative-claims.v4'
+    assert {c['claim_id'] for c in d['claims']}=={f'GCQ-T{i}' for i in range(17,22)}
+    assert all(c['criterion_met'] for c in d['claims'])
+    for c in d['claims']:
+        assert (HERE/'resultats/claims_quantitatifs_v4'/f"{c['claim_id']}.json").is_file()
+    report=(HERE/'resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md').read_text()
+    assert '11207' not in report  # guard against hidden control characters
+    assert '11207' in report and '41/41' in report and '55/66' in report

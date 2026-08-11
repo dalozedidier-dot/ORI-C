@@ -1,0 +1,12 @@
+{
+  "duplicate_spreadsheet_formats_used_as_independent_data": 0,
+  "imported_rows": 11467,
+  "imputed_rows_used": 0,
+  "normalized_input_files": 7,
+  "published_presolar_grains": 11207,
+  "schema": "oric.gc.massive-real-data-audit.v4",
+  "selection_manifest": "data_massives_reelles/IMPORT_SELECTION_V4.json",
+  "simulation_rows_used": 0,
+  "synthetic_rows_used": 0,
+  "unpublished_SiC_rows_excluded": 11567
+}

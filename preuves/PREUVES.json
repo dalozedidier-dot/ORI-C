@@ -583,7 +583,7 @@
       "niveau_preuve": null,
       "portee": "cross_domain_empirical_synthesis — Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
-      "empreinte_sortie": "433eb8d937886ad49f77d9d2bcd19b022a0dadb1906d72a353e2fe9e75e11f7e",
+      "empreinte_sortie": "d4c9b2209d38328480e56f462698abee09c02539353c9d1a8c7a226498a48447",
       "source": [
         "S001",
         "S002",
@@ -627,7 +627,12 @@
         "S040",
         "S041",
         "S042",
-        "S043"
+        "S043",
+        "S044",
+        "S045",
+        "S046",
+        "S047",
+        "S048"
       ],
       "mesures": {
         "stages": [
@@ -905,6 +910,125 @@
         "criterion_met": null,
         "preregistered": false,
         "data_policy": "real_measurements_and_official_empirical_data_only"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T17",
+      "question": "Les bases publiées de grains présolaires révèlent-elles des populations isotopiques quantitativement distinctes ?",
+      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "verdict": "supports_published_presolar_grain_population_structure",
+      "niveau_preuve": null,
+      "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T17.json",
+      "empreinte_sortie": "3b8932107f049e2c7da17953e465f42fcd85c16dd0321913a317008f029b799b",
+      "source": [
+        "S044",
+        "S045"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E03",
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T18",
+      "question": "La dichotomie NC/CC reste-t-elle quantitativement séparable à travers plusieurs systèmes isotopiques mesurés sans imputation ?",
+      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "verdict": "supports_multisystem_NC_CC_isotopic_separation",
+      "niveau_preuve": null,
+      "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T18.json",
+      "empreinte_sortie": "f793609c3d6ab7cd6c4b5185e41523401ca98c42465b91c97c72292745ebf654",
+      "source": [
+        "S043"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T19",
+      "question": "Des chondres d’une même météorite montrent-ils une hétérogénéité O-Cr-Ti résolue au-delà des incertitudes ?",
+      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "verdict": "supports_within_meteorite_chondrule_isotopic_heterogeneity",
+      "niveau_preuve": null,
+      "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T19.json",
+      "empreinte_sortie": "18400baa6a632cf35b1433069919d44864061e5a406950407249dfd38489314e",
+      "source": [
+        "S047"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T20",
+      "question": "Des sous-échantillons d’Allende mesurés dans une même étude montrent-ils une hétérogénéité Ti spatialement résolue ?",
+      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "verdict": "supports_within_meteorite_subsample_Ti_heterogeneity",
+      "niveau_preuve": null,
+      "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T20.json",
+      "empreinte_sortie": "c5e8658547d9564aa72125da02e0984e14882dfcc7a7f7c1bc453d072d8587e0",
+      "source": [
+        "S046"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E08",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "GCQ-T21",
+      "question": "Les échantillons retournés de Bennu contiennent-ils des composants individuels isotopiquement distincts à plusieurs niveaux ?",
+      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "verdict": "supports_returned_sample_multiscale_isotopic_heterogeneity",
+      "niveau_preuve": null,
+      "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T21.json",
+      "empreinte_sortie": "8ab797e5950fdd02c6c74b915cbea8f97f613c55eead16284ef8febb84902576",
+      "source": [
+        "S010",
+        "S048"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E03",
+          "GC-E07",
+          "GC-E10"
+        ],
+        "criterion_met": true,
+        "preregistered": false,
+        "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
       },
       "supersede_par": null
     }

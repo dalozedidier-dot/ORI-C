@@ -24,17 +24,17 @@
   "source_mode_counts": {
     "astronomical_observation": 18,
     "laboratory_experiment": 2,
-    "meteorite_isotope_measurement": 5,
+    "meteorite_isotope_measurement": 9,
     "meteoritic_chronometry": 5,
     "official_observation_product": 2,
     "planetary_isotope_reconstruction": 4,
-    "returned_sample_measurement": 6,
+    "returned_sample_measurement": 7,
     "spacecraft_observation": 1
   },
   "sources_official_observation_product": 2,
-  "sources_primary_peer_reviewed": 41,
-  "sources_total": 43,
-  "sources_with_explicit_used_and_excluded_portions": 43,
+  "sources_primary_peer_reviewed": 43,
+  "sources_total": 48,
+  "sources_with_explicit_used_and_excluded_portions": 48,
   "stage_measurement_counts": {
     "GC-E00": 2,
     "GC-E01": 6,

@@ -4,7 +4,7 @@ Cette revue décrit l’autorité quantitative courante de `genealogie_cosmique_
 
 ## Politique de données
 
-Le corpus v3 contient **43 sources primaires/officielles** et **120 enregistrements empiriques**. Les verdicts utilisent 0 simulation, 0 donnée synthétique, 0 imputation et 0 échantillonnage aléatoire. Les sorties théoriques, thermochimiques et N-corps sont exclues. Lorsqu’une publication combine mesures et traitement dépendant de données synthétiques ou de Monte-Carlo, seule la portion empirique explicitement admissible est conservée.
+Le corpus v3 contient **48 sources/datasets empiriques admissibles** et **120 enregistrements empiriques**. Les verdicts utilisent 0 simulation, 0 donnée synthétique, 0 imputation et 0 échantillonnage aléatoire. Les sorties théoriques, thermochimiques et N-corps sont exclues. Lorsqu’une publication combine mesures et traitement dépendant de données synthétiques ou de Monte-Carlo, seule la portion empirique explicitement admissible est conservée.
 
 ## Résultat 1 — transformation quantitative d’un inventaire hérité
 
@@ -54,3 +54,10 @@ Les huit tests `GCQ-T09` à `GCQ-T16` sont générés individuellement sous `res
 `quantified_history_dependent_accessibility_with_explicit_open_links`
 
 La campagne démontre quantitativement, sur des entrées empiriques, qu’un changement de moment historique modifie une ressource physique accessible et que des porteurs/architectures peuvent persister à travers ce changement. Elle ne certifie ni une trajectoire orbitale unique ni une chaîne primordiale→présent entièrement fermée.
+
+
+## Extension data-rich v4
+
+La branche exploite désormais des distributions au niveau grain/échantillon, sans remplacer les résultats v3. Le corpus d’autorité comprend 48 sources/datasets empiriques admissibles. La couche massive importe 11 467 lignes utiles normalisées, dont 11 207 grains présolaires publiés ou partiellement publiés. Les 11 567 lignes SiC marquées `Data Published = no` sont exclues des claims. Les doublons XLSX/CSV, valeurs synthétiques, priors, Monte-Carlo, imputations et sorties de simulation ne comptent pas comme preuves.
+
+Les nouveaux claims `GCQ-T17` à `GCQ-T21` testent les distributions présolaires, la séparation multivariée NC/CC, l’hétérogénéité O-Cr-Ti des chondres d’Allende, l’hétérogénéité ε50Ti de sous-échantillons d’Allende et des contrastes isotopiques individuels dans les échantillons retournés de Bennu. Le rapport d’autorité est `resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md`.

@@ -2,7 +2,7 @@
 
 **Autorité v2 : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**
 
-- Sources primaires/officielles : 43
+- Sources primaires/officielles : 48
 - Enregistrements de mesures réelles : 120
 - Tests quantitatifs/audits : 8 (8 exécutés conformément aux critères gelés pour les mises à jour futures).
 

@@ -2,7 +2,7 @@
 
 **Corpus: données réelles et produits empiriques officiels uniquement. 0 simulation, 0 donnée synthétique, 0 imputation, 0 échantillonnage aléatoire.**
 
-- Sources: 43
+- Sources: 48
 - Enregistrements empiriques: 120
 - Nouveaux tests physiques/fermeture v3: 8 (8 critères d'exécution satisfaits).
 

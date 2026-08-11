@@ -20,7 +20,7 @@
     "GC-E17",
     "GC-E19"
   ],
-  "sources": 43,
+  "sources": 48,
   "strict_archive_sequence_stellar_to_present_endpoint": true,
   "strict_end_to_end_from_primordial_baseline": false,
   "strong_results": [

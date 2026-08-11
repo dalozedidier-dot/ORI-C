@@ -60,3 +60,8 @@ Les calculs déterministes dérivés sont autorisés uniquement lorsque toutes l
 Chaque test `GCQ-T09` à `GCQ-T16` doit produire : un verdict machine, un artefact individuel sous `resultats/claims_quantitatifs_v3/`, les sources utilisées, les stades concernés, le résultat numérique et une limite d’interprétation. Les claims v3 sont des extensions quantitatives empiriques non préenregistrées, jamais des certifications historiques automatiques.
 
 Le critère de fermeture de bout en bout est strict : une chaîne n’est déclarée fermée que si un chemin composé exclusivement de relations d’archive, de continuité matérielle ou de séquence empirique documentée relie les deux endpoints. Un analogue inter-système ou un pont mécanisme→observation ne ferme jamais artificiellement un maillon.
+
+
+## Campagne data-rich v4
+
+Extension rétrospective au niveau grain/échantillon. Les fichiers bruts sont sélectionnés avant analyse et consignés dans `data_massives_reelles/IMPORT_SELECTION_V4.json`. Un format canonique unique est retenu pour chaque base afin d’éviter le double comptage. Pour PGD SiC, seules les lignes `Data Published = full|partial` sont admissibles. Toute ligne non publiée, synthétique, imputée, simulée ou issue d’un prior/Monte-Carlo reste hors verdict. Les analyses sont déterministes et n’inventent aucune valeur manquante.

@@ -8,7 +8,7 @@ ALLOWED_MODES={
     'meteorite_isotope_measurement','meteoritic_chronometry','laboratory_experiment',
     'planetary_isotope_reconstruction','official_observation_product'
 }
-ALLOWED_SOURCE_CLASSES={'primary_peer_reviewed','official_observation_product'}
+ALLOWED_SOURCE_CLASSES={'primary_peer_reviewed','official_observation_product','curated_empirical_database','primary_research_dataset'}
 FORBIDDEN_EVIDENCE_TOKENS=('synthetic','simulat','mock','constructed','numerical_model_output','theoretical_yield','thermochemical_model')
 
 def read_csv(path: Path):

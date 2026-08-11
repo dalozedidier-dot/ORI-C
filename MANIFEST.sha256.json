@@ -892,6 +892,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/GEL_ANALYSE_QUANTITATIVE_V4.json",
+      "size": 548,
+      "sha256": "ac2f09611ce82e37869985b39d2636150b70b58579304ee77ed52ae0a8fc9e89",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/LIENS_EMPIRIQUES.csv",
       "size": 2514,
       "sha256": "422937495de88db3869414c9f6050ca747ec5039f0db0363894b64941c30082f",
@@ -911,14 +917,14 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/PROTOCOLE.md",
-      "size": 5474,
-      "sha256": "402c0a49d088938a830a1accc5d03aff3b885b4956733228fdef75a06ebe8d6f",
+      "size": 6041,
+      "sha256": "ea633dba3f4c42fc27898d762cc8a0a5721934a62274727188519657d45623e1",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/README.md",
-      "size": 7956,
-      "sha256": "7e470a78ec79c67143b8bd64258750b71826e55738702b8c8b8b56068bd3c68e",
+      "size": 8932,
+      "sha256": "048c6dbae66375080028fded3fdaa0a8e81cc012c47573844f3608552b1a3a66",
       "storage": "inline"
     },
     {
@@ -935,14 +941,14 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/REVUE_QUANTITATIVE_EMPIRIQUE.md",
-      "size": 6358,
-      "sha256": "ff8c0bb62cba6d6f85d12848b3a9de5fb7fe917c9026be01f64151c98bf23d4d",
+      "size": 7334,
+      "sha256": "e8f41328703d70ae7591d1a2a6883f40fec7c7b95ca4c80a985f06168d29527b",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/SOURCES_EMPIRIQUES.csv",
-      "size": 19342,
-      "sha256": "bc72468bfe8f2b469bf35b7fb3d6460111d003da0c2a3800f837e61da5ab1064",
+      "size": 21839,
+      "sha256": "be53dd130e522b03e87e281772ff9df65944f24bb7bdf076d7146613ab64c79a",
       "storage": "inline"
     },
     {
@@ -964,6 +970,54 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/BENNU_PRESOLAR_GRAINS_2025.csv",
+      "size": 4911,
+      "sha256": "44f0c988087ee4f7f5cb517d7ec300575e011e4ad53cbb8553f7f29f65c82c9b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/BENNU_REFRACTORY_O_2026.csv",
+      "size": 3025,
+      "sha256": "490606209608158dde2caec4748353f78f2fa6e45aaf5d4af53d2ac82252c36b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/FUKUDA_CHONDRULE_O_CR_TI.csv",
+      "size": 4414,
+      "sha256": "2a193b97f9e1bf78b15a9ad7f38e6ea1c8c62d150775c602f177bc2db7e01b71",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION_V4.json",
+      "size": 4974,
+      "sha256": "c3290ed57e5de760945a9dfd6fbe96f1da037fe7727521bd1bbc617a070e61ac",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/PGD_GRAPHITE_PUBLISHED_SELECTED.csv",
+      "size": 394316,
+      "sha256": "5524a4874cfa52f795764a3a0d4a94ed403e4fca91855c8bad623f904d865bd4",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/PGD_SiC_PUBLISHED_SELECTED.csv",
+      "size": 1652244,
+      "sha256": "dcf9d775c568c69540c0c44edb1febd8a9237a0943d993fe15a0f68c4a1bbe5e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/SOSSI_NC_CC_MEASURED.csv",
+      "size": 4400,
+      "sha256": "318ea7e66c6d37c22c5ca9e1c84ddcc7c9c3d7951d6855332f7ca64bfc3fef36",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/WOLFER_TICRMO_TABLES1_3.csv",
+      "size": 17763,
+      "sha256": "c3fa0c30e27d0d5aec71b04d0a15de41c3056071f985ee3fe1301ac1a904610b",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/ABLATIONS_FAMILLES_PREUVES.csv",
       "size": 581,
       "sha256": "b7257ec5c93e8b2e2ad530d8687490d49555c7bbb82ee267c6f051d0e880530e",
@@ -972,19 +1026,25 @@
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/APPROFONDISSEMENT_EMPIRIQUE.json",
       "size": 806,
-      "sha256": "e6a93949dcf372650c912ab038522bd497ad878bfbe82a69b20c589b403d59b6",
+      "sha256": "176bc7ac2b1aee9604ae6fca5d73b262a3a6e1400f9e2568a74e263b2164144a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/AUDIT_ADMISSIBILITE.json",
       "size": 2172,
-      "sha256": "cdb36d9fb7d946640af1a0e71f64c246557f85924843ae7a4413096b41b28339",
+      "sha256": "2ec150b61bfca7db2a2c416fccc5d1a7967c8875bd20dc17f947b58edf16cac3",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/AUDIT_DONNEES_MASSIVES_V4.json",
+      "size": 410,
+      "sha256": "89c5489764e3c76bbc12895274aacca8d014262a419fa28504fa333489a6f75f",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/CHAINE_EMPIRIQUE.json",
-      "size": 13073,
-      "sha256": "a38b262577255a904244788c7d97841e90fe98a1e93a2aa40883d91bd23e6b9d",
+      "size": 13281,
+      "sha256": "338a775c0eb1ebeab882c1bca9f732048863c0d01596b8fe08efd178585afb6e",
       "storage": "inline"
     },
     {
@@ -995,8 +1055,8 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS.json",
-      "size": 17863,
-      "sha256": "d20e6e6dd62e6f6159e31122f4153171e7a24ef5ae230eed5f0e1e50ca689eeb",
+      "size": 17943,
+      "sha256": "c26f1275df1afaced9048e8137dac2c3da449b9aee3950059cbfa7cee0c569d5",
       "storage": "inline"
     },
     {
@@ -1009,6 +1069,12 @@
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS_QUANTITATIFS_COMPLETS.json",
       "size": 17927,
       "sha256": "0609646a63c856cc7b00e5bfefeec287f9194b898f4584a8734c967f79c19b27",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS_QUANTITATIFS_DATA_RICH_V4.json",
+      "size": 11713,
+      "sha256": "91bff3a4c7d53eb2421e43ecf059bd2d846f8c73bf7db41576ae24865bc2b420",
       "storage": "inline"
     },
     {
@@ -1044,25 +1110,31 @@
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/MATRICE_PREUVES_EMPIRIQUES.csv",
       "size": 9121,
-      "sha256": "5f21743e8c330a6bf436117307a1a90039c78a60b74c6ef710dd0dd7f237ef98",
+      "sha256": "a9758856aa887199c24fb9fece036719abe97d19491f8859f9e61c969930766b",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT.md",
       "size": 2457,
-      "sha256": "37388fe5d1e8cb931797cfc20beda6f6889e9dd76ec2f48e132b1aca0724e8a9",
+      "sha256": "782343d2c172624d5f538cbe936f3356e06ede51a821996f9f0f10a64bf6e30e",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT_QUANTITATIF.md",
       "size": 2127,
-      "sha256": "97da9c51a5dd3da3a8ff1eb900a18e144ceec85abb004142f1f5a8b708f6e229",
+      "sha256": "2e83c2955ef6c3c9fced887f34dc77e280988a0a5951991fce70b0f12e08703e",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT_QUANTITATIF_COMPLET.md",
       "size": 4238,
-      "sha256": "069b65d851c8a351baae8141f0c8f8f31181094003e7fbc7754ce7aad227ac37",
+      "sha256": "fb2febd93923b2cec13324ff7ae26787049a3e41b5cbbb3c58c482fdb9f35d32",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md",
+      "size": 1351,
+      "sha256": "b14bd71c42d7142c956842a092c2ee7cae766c30a57efb152a014fe87babee9d",
       "storage": "inline"
     },
     {
@@ -1079,26 +1151,32 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS.sha256",
-      "size": 4915,
-      "sha256": "3e788699a154906a3ef7722922985ba812f827103fdbbb104f2276ce314ba996",
+      "size": 5938,
+      "sha256": "144391be747de280824123dd1a255b06bd7009b41b57dea48f35c5825e30f79d",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_CLEFS.csv",
-      "size": 6478,
-      "sha256": "75909ffcc6c19a729315e2005276025a7d03cf3e1a13a680229a76984012f26d",
+      "size": 6503,
+      "sha256": "0b18296f06990762e1b2e80c62a5d63def1e45bbf114002f941064f73becb83f",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_EMPIRIQUES.json",
       "size": 1992,
-      "sha256": "05afdebae15b9ff22ab94802fc9b6deade9809e0217c00561a5b1dabe11162be",
+      "sha256": "de7b5be4866801cabdf25d999192cef6a2178ccc16ee2c90eadbf590e6cbe183",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
       "size": 10113,
-      "sha256": "08f8664c4e5e11b8b3a6da3a7b275c7266be15deb9779cdc061855883e5adff7",
+      "sha256": "b07fb760f45ff98a21762325bbfa40aebfcd317d36a40c2bec8f4f9bfbf8130b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "size": 8459,
+      "sha256": "7d6a88533cf8c2f17dab7df151933ba745f3e555b96880107b10899d838889b0",
       "storage": "inline"
     },
     {
@@ -1110,13 +1188,19 @@
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
       "size": 1229,
-      "sha256": "538c12b1ccb332104df270cb0ce7389dff80a5351c6f269d04527c0738829b47",
+      "sha256": "417c088d8d3c6eb7a7b3a09de7776b4aed86df0c9c6c78e9802004acfcf525b3",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/TESTS_QUANTITATIFS_COMPLETS.json",
       "size": 10839,
       "sha256": "29f6068c8c497d2aae672dd375ebbb26f8e8bb7f5258efb6105456acaa74c926",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/TESTS_QUANTITATIFS_DATA_RICH_V4.json",
+      "size": 903,
+      "sha256": "a770837cb4118c96f0e16f9c7dd320ce03c5f94ca527c5fa21ce3abf2d7f0c3a",
       "storage": "inline"
     },
     {
@@ -1128,7 +1212,7 @@
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/VERDICT_QUANTITATIF.json",
       "size": 1268,
-      "sha256": "903c0016f1e8d63ad9d7d1ab1515d686b905ef6cc630248f7c97f2422a276d67",
+      "sha256": "606e95dcc81d805e59558677e966072928c3502d0a79a2272e0c2b901b7d4ad7",
       "storage": "inline"
     },
     {
@@ -1223,8 +1307,8 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
-      "size": 2141,
-      "sha256": "433eb8d937886ad49f77d9d2bcd19b022a0dadb1906d72a353e2fe9e75e11f7e",
+      "size": 2201,
+      "sha256": "d4c9b2209d38328480e56f462698abee09c02539353c9d1a8c7a226498a48447",
       "storage": "inline"
     },
     {
@@ -1288,9 +1372,39 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T17.json",
+      "size": 3870,
+      "sha256": "3b8932107f049e2c7da17953e465f42fcd85c16dd0321913a317008f029b799b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T18.json",
+      "size": 2138,
+      "sha256": "f793609c3d6ab7cd6c4b5185e41523401ca98c42465b91c97c72292745ebf654",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T19.json",
+      "size": 1739,
+      "sha256": "18400baa6a632cf35b1433069919d44864061e5a406950407249dfd38489314e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T20.json",
+      "size": 1066,
+      "sha256": "c5e8658547d9564aa72125da02e0984e14882dfcc7a7f7c1bc453d072d8587e0",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T21.json",
+      "size": 1521,
+      "sha256": "8ab797e5950fdd02c6c74b915cbea8f97f613c55eead16284ef8febb84902576",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/run_all.py",
-      "size": 30225,
-      "sha256": "143a622eeb561537c4ad8e5a2db284584ba948e45ca70ca81fdf45f9dba0f10c",
+      "size": 33141,
+      "sha256": "d1bbf9f7c0d7902cbe804cdd7d2c41f9c25ded7fed8bbab2f703e309e3f7b3e8",
       "storage": "inline"
     },
     {
@@ -1300,9 +1414,15 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_donnees_massives_v4.py",
+      "size": 11568,
+      "sha256": "9efbae7e0c6aec2305c2d7238cee372497326b351667597645480e85ed4b61ae",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_empirique.py",
-      "size": 19201,
-      "sha256": "6372c27c6332477279908c2095fb6e6e3841d4834dacffc3bfb8ae21e0bf4522",
+      "size": 19257,
+      "sha256": "60dfef766c207b956e357dbf3b0f6bf02edaf17caf0d43b6707c25adbd98fc46",
       "storage": "inline"
     },
     {
@@ -1319,8 +1439,8 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/tests/test_genealogie_cosmique.py",
-      "size": 18523,
-      "sha256": "50b14e0df7e9af2ba51391e3d2de79b6349cd1d046cf07c35354583cb747a542",
+      "size": 22194,
+      "sha256": "0a51aadb2457bbff15468e162c3b5f7a1f7d8d1328b3fe4c1da5d238c3345ae6",
       "storage": "inline"
     },
     {
@@ -5669,8 +5789,8 @@
     },
     {
       "path": "ETAT_DES_PREUVES.md",
-      "size": 10763,
-      "sha256": "08bfa6b2e6dceea783ed5c4f1628eccb36ae389578428ec1a74b6c484d0633c2",
+      "size": 12258,
+      "sha256": "27458f41d5361197ebae6e1268691a53a8338071f4e96063063113b630cd48fe",
       "storage": "inline"
     },
     {
@@ -5795,8 +5915,8 @@
     },
     {
       "path": "README.md",
-      "size": 30083,
-      "sha256": "1b90c4f55123e4a3bdc6bd6bd295a977939eef15ad4c13c5b74f9ebb5dc3adcd",
+      "size": 30201,
+      "sha256": "38e0472e8ceb8eaefdbc7f9dc683e4abd0ad40ba1d35c5323a30a2da365a3dbe",
       "storage": "inline"
     },
     {
@@ -8939,14 +9059,14 @@
     },
     {
       "path": "preuves/CHIFFRES.json",
-      "size": 21770,
-      "sha256": "4101201e2891c412fc8443e071158401f4fdfec87b5fa9a1a378bd94f84e38cd",
+      "size": 24303,
+      "sha256": "80d6a24b4d305d624092bcdfcd2841785fcce433bca8edfdd22dec584b3add66",
       "storage": "inline"
     },
     {
       "path": "preuves/PREUVES.json",
-      "size": 38699,
-      "sha256": "02f71ac0b916d4bd934139c61bb1d17002991417b8a8a0fa9be64f8ca096e062",
+      "size": 44106,
+      "sha256": "4c9c63464d109c9d57033491fbde7b3382d971e764465861c4901b27d38fdc7a",
       "storage": "inline"
     },
     {
@@ -9047,8 +9167,8 @@
     },
     {
       "path": "scripts/construire_registre_preuves.py",
-      "size": 9043,
-      "sha256": "f667dfa6a9128f3f56eee24ce73184fb0fb6a26d5c4c05a61289372743db614c",
+      "size": 10403,
+      "sha256": "3cec7da153be109b950d7b2a1b395c5132223243f7a6c433b8410164d22d8d3e",
       "storage": "inline"
     },
     {

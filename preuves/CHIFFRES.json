@@ -244,14 +244,14 @@
       "value": 1451
     },
     {
-      "display": "1 534",
+      "display": "1 554",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1534
+      "value": 1554
     },
     {
       "display": "20 stades",
@@ -272,13 +272,13 @@
       "value": 22
     },
     {
-      "display": "43 sources primaires/officielles",
+      "display": "48 sources/datasets empiriques admissibles",
       "id": "GC_EMP_SOURCES",
       "pointer": "/primary_or_official_sources",
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
       "targets": [],
       "tolerance": 0,
-      "value": 43
+      "value": 48
     },
     {
       "display": "120 enregistrements empiriques",
@@ -630,6 +630,69 @@
       "targets": [],
       "tolerance": 1e-15,
       "value": 0.158625392989335
+    },
+    {
+      "display": "11 467 lignes utiles normalisées",
+      "id": "GCQ_V4_IMPORTED_ROWS",
+      "pointer": "/audit/imported_rows",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 11467
+    },
+    {
+      "display": "11 207 grains présolaires publiés admissibles",
+      "id": "GCQ_V4_PRESOLAR_GRAINS",
+      "pointer": "/presolar_grains/admissible_grains_total",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 11207
+    },
+    {
+      "display": "11 567 SiC non publiés exclus",
+      "id": "GCQ_V4_SIC_UNPUBLISHED_EXCLUDED",
+      "pointer": "/presolar_grains/SiC_unpublished_rows_excluded",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 11567
+    },
+    {
+      "display": "facteur 252,69 entre médianes 26Al/27Al SiC X et M",
+      "id": "GCQ_V4_X_M_26AL_FACTOR",
+      "pointer": "/presolar_grains/X_to_M_median_26Al_27Al_factor",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 252.6946107784431
+    },
+    {
+      "display": "41/41 groupes NC/CC classés",
+      "id": "GCQ_V4_NCCC_LOO_CORRECT",
+      "pointer": "/NC_CC/leave_one_out_correct",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 41
+    },
+    {
+      "display": "55/66 paires Allende >2σ",
+      "id": "GCQ_V4_WOLFER_GT2SIGMA",
+      "pointer": "/Allende_subsamples/pairs_gt_2sigma",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 55
+    },
+    {
+      "display": "z minimal 9,99 diopside vs autres réfractaires Bennu",
+      "id": "GCQ_V4_BENNU_MIN_Z",
+      "pointer": "/Bennu_returned_samples/diopside_vs_each_refractory_min_z",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 9.988123086397183
     }
   ]
 }

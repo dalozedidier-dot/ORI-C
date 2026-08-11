@@ -10,6 +10,7 @@ from analyser_empirique import read_csv, validate_empirical_only, derive, evalua
 from analyser_approfondissement_empirique import analyse as analyse_approfondissement
 from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
 from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
+from analyser_donnees_massives_v4 import analyse as analyse_donnees_massives_v4
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -298,6 +299,32 @@ def main():
       'Le résultat central est désormais quantitatif: le moment d’incorporation transforme directement la fraction d’un inventaire radiogénique mesuré qui reste physiquement disponible. Des architectures isotopiques et des porteurs matériels persistent pendant ces changements, mais plusieurs raccords de bout en bout et la provenance terrestre restent explicitement ouverts ou contestés.'
     ]
     (out/'RAPPORT_QUANTITATIF_COMPLET.md').write_text('\n'.join(complete_lines)+'\n',encoding='utf-8')
+
+    # Couche v4 data-rich : distributions individuelles publiées/mesurées uniquement.
+    q4res,q4tests,q4claims,q4audit=analyse_donnees_massives_v4(HERE)
+    dump(out/'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json',q4res)
+    dump(out/'TESTS_QUANTITATIFS_DATA_RICH_V4.json',q4tests)
+    dump(out/'CLAIMS_QUANTITATIFS_DATA_RICH_V4.json',q4claims)
+    dump(out/'AUDIT_DONNEES_MASSIVES_V4.json',q4audit)
+    q4dir=out/'claims_quantitatifs_v4'; q4dir.mkdir(exist_ok=True)
+    for c in q4claims['claims']:
+        one={'schema':'oric.gc.quantitative-claim.v4',**c}
+        dump(q4dir/f"{c['claim_id']}.json",one)
+    p=q4res['presolar_grains'];n=q4res['NC_CC'];ch=q4res['Allende_chondrules'];w=q4res['Allende_subsamples'];b=q4res['Bennu_returned_samples']
+    v4lines=[
+      '# Généalogie cosmique quantitative — extension data-rich v4','',
+      '**Données réelles au niveau grain, échantillon ou groupe mesuré. 0 simulation, 0 synthétique, 0 imputation. Les doublons de format et les lignes PGD non publiées sont exclus des claims.**','',
+      f"- Grains présolaires admissibles : {p['admissible_grains_total']} ({p['SiC_admissible_published_or_partial_rows']} SiC publiés/partiellement publiés + {p['graphite_admissible_rows']} graphites).",
+      f"- SiC non publiés explicitement exclus : {p['SiC_unpublished_rows_excluded']}.",
+      f"- NC/CC : {n['rows']} groupes, {n['isotope_systems']} systèmes isotopiques, classification leave-one-out {n['leave_one_out_correct']}/{n['leave_one_out_total']} sans imputation.",
+      f"- Chondres Allende : {ch['Allende_chondrules']} objets ; ε54Cr, ε50Ti et Δ17O présentent chacun >70 % de paires séparées à >3σ.",
+      f"- Sous-échantillons Allende Wölfer : {w['Allende_subsamples_n']} mesures, ε50Ti {w['epsilon50Ti_min']:.3f} à {w['epsilon50Ti_max']:.3f}, {w['pairs_gt_2sigma']}/{w['pair_count']} paires >2σ.",
+      f"- Bennu : {b['Bennu_2025_individual_presolar_grains']} grains présolaires individuels + {b['Bennu_2026_O_isotope_spots']} spots O réfractaires; le spot diopside est séparé de chacun des {b['number_refractory_spots_all_gt_3sigma_from_diopside']} autres spots réfractaires à au moins {b['diopside_vs_each_refractory_min_z']:.2f}σ.",'',
+      '## Résultat','',
+      '`distribution_level_history_encoding_supported_with_open_end_to_end_genealogy`','',
+      'Les nouveaux jeux ne ferment pas une trajectoire cosmique unique. Ils changent toutefois le niveau de preuve : les signatures historiques ne reposent plus seulement sur quelques valeurs résumées, mais sur des distributions de milliers de grains, des groupes isotopiques multivariés et des hétérogénéités intra-météorite résolues au-delà des erreurs publiées.'
+    ]
+    (out/'RAPPORT_QUANTITATIF_DATA_RICH_V4.md').write_text('\n'.join(v4lines)+'\n',encoding='utf-8')
 
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]

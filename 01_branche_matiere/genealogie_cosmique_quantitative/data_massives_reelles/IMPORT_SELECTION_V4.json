@@ -1,0 +1,117 @@
+{
+  "admissible_presolar_grains_total": 11207,
+  "inputs": [
+    {
+      "decision": "included_filtered",
+      "filename": "PGD_SiC_2025-03-10.csv",
+      "reason": "published/partial rows only; XLSX duplicate excluded",
+      "rows_imported": 8865,
+      "sha256": "2de10aa0a717b1f156de1b00f59db7ec43b06d4c9bee41b759b0d352ccbdb0f1"
+    },
+    {
+      "decision": "included_filtered",
+      "filename": "PGD_Gra_2025-03-24.csv",
+      "reason": "published/partial rows only; XLSX duplicate excluded",
+      "rows_imported": 2342,
+      "sha256": "c047a4858b1d6667d625aada851458c1a8ef59530b9bff0be0db28c3489f8a9e"
+    },
+    {
+      "decision": "included_sheet",
+      "filename": "41550_2026_2824_MOESM3_ESM.xlsx",
+      "reason": "NC_CC_AllData_R1 only; regression, priors and Monte Carlo sheets excluded",
+      "rows_imported": 41,
+      "sha256": "48fcf5bbf654a3059c33a73008b2d8060f3a734a333e04aaf791bb350424fab5"
+    },
+    {
+      "decision": "included_sheet",
+      "filename": "Data_Repository_Tables_1-3.xlsx",
+      "reason": "new Tables 1-3; literature Table 4 excluded from primary v4 tests",
+      "rows_imported": 93,
+      "sha256": "1d683c51e045b2058093c9faacd42f5d18b8c1abc2e9aa4e705a424a09e01f59"
+    },
+    {
+      "decision": "included_sheet",
+      "filename": "maps14276-sup-0002-supplementarymaterial2.xlsx",
+      "reason": "Table S6 O-Cr-Ti chondrule compilation with per-row references",
+      "rows_imported": 56,
+      "sha256": "0af2b3049a53dffd632bef76bca0779e6ee7382513a24062a7df4cf3662bc7b1"
+    },
+    {
+      "decision": "included_sheet",
+      "filename": "41550_2025_2631_MOESM2_ESM.xlsx",
+      "reason": "SI Table 11 direct Bennu presolar grain measurements",
+      "rows_imported": 52,
+      "sha256": "608a181d4a97c66396c1f24da47118c65e2773e02fe3ef9bb202b10c3fa920b3"
+    },
+    {
+      "decision": "included_sheet",
+      "filename": "41467_2026_73868_MOESM3_ESM.xlsx",
+      "reason": "Fig4a-c direct oxygen isotope spots only",
+      "rows_imported": 18,
+      "sha256": "780777bf0e885808a90e2b5116e1dff5bb3e8af41f5c8d201e554d9ccfc6c156"
+    },
+    {
+      "decision": "excluded_duplicate",
+      "filename": "PGD_SiC_2025-03-10.xlsx",
+      "reason": "same database as canonical CSV",
+      "rows_imported": 0,
+      "sha256": "2919747eed5a5a66172607bc179260d5517b7fd972bc46e6b2078032b3655515"
+    },
+    {
+      "decision": "excluded_duplicate",
+      "filename": "PGD_Gra_2025-03-24.xlsx",
+      "reason": "same database as canonical CSV",
+      "rows_imported": 0,
+      "sha256": "dd8662ac409a274d019706f88278f7fa5248edc87a6a1e0aa67b7c49808cb5c4"
+    },
+    {
+      "decision": "excluded_redundant",
+      "filename": "41586_2017_BFnature20830_MOESM314_ESM.xls",
+      "reason": "older aggregate; modern measured NC/CC tables retained instead",
+      "rows_imported": 0,
+      "sha256": "e5ad4836036502912a12ff5b934058b922c9e471865fa0c75cc09c1cab5c111a"
+    },
+    {
+      "decision": "excluded_current_scope",
+      "filename": "pnas.2423345122.sd01.xlsx",
+      "reason": "organic matter dataset useful for a dedicated parent-body chemistry analysis but not needed for current v4 claims",
+      "rows_imported": 0,
+      "sha256": "7b34bda16dc95a7e3234dec362ccff47555b6b98039db92b869b33fa8cd9d672"
+    },
+    {
+      "decision": "excluded_current_scope",
+      "filename": "41467_2025_65672_MOESM3_ESM.xlsx",
+      "reason": "elemental leachate table does not provide the direct isotope distribution required by current v4 tests",
+      "rows_imported": 0,
+      "sha256": "d210b72a12bf4fd056ba95da8a857544606778895d008027071641d00c99c0c8"
+    },
+    {
+      "decision": "excluded_redundant_for_v4",
+      "filename": "41467_2023_40026_MOESM4_ESM.xlsx",
+      "reason": "detailed EC002 fractions preserved outside repo; v3 already uses the published chronology and v4 focuses on distribution-level gaps",
+      "rows_imported": 0,
+      "sha256": "8ec4a2b4e1ea74e97360216389c1c9da14eaefdc59b93ea9f38dffd54f087e56"
+    },
+    {
+      "decision": "excluded_redundant_for_v4",
+      "filename": "41467_2023_40026_MOESM5_ESM.xlsx",
+      "reason": "source-data chronology already represented in v3; no duplicate import",
+      "rows_imported": 0,
+      "sha256": "9a2713c859ff82a965b90b71a00ab0d14a29806046bb566a6d025f39c0ba741b"
+    },
+    {
+      "decision": "excluded_duplicate",
+      "filename": "41550_2025_2631_MOESM13_ESM.xlsx",
+      "reason": "figure source duplicates Bennu presolar measurements imported from SI Table 11",
+      "rows_imported": 0,
+      "sha256": "4e1d80440b0fe9b638c8e233a3dc2d1f84d2e41388fd3871d1e313a7c1d93dd2"
+    }
+  ],
+  "pgd_graphite_admissible_rows": 2342,
+  "pgd_sic_admissible_rows": 8865,
+  "pgd_sic_total_rows": 20432,
+  "pgd_sic_unpublished_excluded": 11567,
+  "policy": "only_useful_real_measured_rows_no_simulation_no_synthetic_no_imputation",
+  "raw_files_are_not_duplicated_in_repository": "normalized selected tables only",
+  "schema": "oric.gc.massive-real-data-selection.v4"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "oric.gc.quantitative-tests.v4",
+  "tests": [
+    {
+      "criterion_met": true,
+      "executed": true,
+      "test_id": "GCQ-T17",
+      "verdict": "supports_published_presolar_grain_population_structure"
+    },
+    {
+      "criterion_met": true,
+      "executed": true,
+      "test_id": "GCQ-T18",
+      "verdict": "supports_multisystem_NC_CC_isotopic_separation"
+    },
+    {
+      "criterion_met": true,
+      "executed": true,
+      "test_id": "GCQ-T19",
+      "verdict": "supports_within_meteorite_chondrule_isotopic_heterogeneity"
+    },
+    {
+      "criterion_met": true,
+      "executed": true,
+      "test_id": "GCQ-T20",
+      "verdict": "supports_within_meteorite_subsample_Ti_heterogeneity"
+    },
+    {
+      "criterion_met": true,
+      "executed": true,
+      "test_id": "GCQ-T21",
+      "verdict": "supports_returned_sample_multiscale_isotopic_heterogeneity"
+    }
+  ]
+}
