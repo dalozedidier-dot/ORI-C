@@ -11,10 +11,11 @@ from analyser_approfondissement_empirique import analyse as analyse_approfondiss
 from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
 from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
 from analyser_donnees_massives import analyse as analyse_donnees_massives
+from analyser_information_historique import write_outputs as write_information_outputs
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(obj,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+    path.write_text(json.dumps(obj,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
 
 def write_csv(path, fieldnames, rows):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -145,7 +146,7 @@ def main():
       '**Soutien empirique du mécanisme de transmission historique.** Des constituants, grains, molécules, isotopes, réservoirs, âges, structures et histoires d’accrétion mesurés conservent des conséquences de stades antérieurs et conditionnent le matériau/architecture disponible aux stades suivants.', '',
       'Ce verdict ne prouve pas une trajectoire cosmologique ou orbitale unique. Le problème inverse des éléments orbitaux précis actuels reste `undetermined_empirical_only`; il n’est pas fermé par une simulation puisque les simulations sont hors preuve dans cette branche.'
     ]
-    (out/'RAPPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    (out/'RAPPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     deep=analyse_approfondissement(HERE)
     dump(out/'APPROFONDISSEMENT_EMPIRIQUE.json',deep['summary'])
     dump(out/'CLAIMS_QUANTITATIFS.json',{'schema':'oric.gc.quantitative-empirical-claims','claims':deep['claims']})
@@ -184,7 +185,7 @@ def main():
       f"`{real_q['verdict']['global_quantitative_verdict']}`", '',
       'La branche dispose maintenant de résultats quantitatifs falsifiables/descriptifs sur les mesures elles-mêmes. La fermeture généalogique stricte de bout en bout reste ouverte là où les données ne permettent pas de remplacer honnêtement un analogue ou une relation non unique.'
     ]
-    (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(real_lines)+'\n',encoding='utf-8')
+    (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(real_lines)+'\n',encoding='utf-8',newline='\n')
 
     # Couche quantitative complète: transformation historique quantifiée, sans simulation.
     complete_q=analyse_quantitatif_complet(HERE)
@@ -298,7 +299,7 @@ def main():
       f"`{complete_q['result']['global_result']['verdict']}`",'',
       'Le résultat central est désormais quantitatif: le moment d’incorporation transforme directement la fraction d’un inventaire radiogénique mesuré qui reste physiquement disponible. Des architectures isotopiques et des porteurs matériels persistent pendant ces changements, mais plusieurs raccords de bout en bout et la provenance terrestre restent explicitement ouverts ou contestés.'
     ]
-    (out/'RAPPORT_QUANTITATIF_COMPLET.md').write_text('\n'.join(complete_lines)+'\n',encoding='utf-8')
+    (out/'RAPPORT_QUANTITATIF_COMPLET.md').write_text('\n'.join(complete_lines)+'\n',encoding='utf-8',newline='\n')
 
     # Couche de données massives réelles : distributions individuelles publiées/mesurées uniquement.
     massive_res,massive_tests,massive_claims,massive_audit=analyse_donnees_massives(HERE)
@@ -324,12 +325,16 @@ def main():
       '`distribution_level_history_encoding_supported_with_open_end_to_end_genealogy`','',
       'Les nouveaux jeux ne ferment pas une trajectoire cosmique unique. Ils changent toutefois le niveau de preuve : les signatures historiques ne reposent plus seulement sur quelques valeurs résumées, mais sur des distributions de milliers de grains, des groupes isotopiques multivariés et des hétérogénéités intra-météorite résolues au-delà des erreurs publiées.'
     ]
-    (out/'RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md').write_text('\n'.join(massive_lines)+'\n',encoding='utf-8')
+    (out/'RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md').write_text('\n'.join(massive_lines)+'\n',encoding='utf-8',newline='\n')
+
+    # Information de provenance : artefacts reconstruits avec toutes les autres
+    # sorties afin que le test d'identité et le manifeste local les couvrent.
+    write_information_outputs(out)
 
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]
     for p in files:
       rel=p.relative_to(out).as_posix(); rels.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {rel}")
-    (out/'RESULTATS.sha256').write_text('\n'.join(rels)+'\n',encoding='utf-8')
+    (out/'RESULTATS.sha256').write_text('\n'.join(rels)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 if __name__=='__main__': main()

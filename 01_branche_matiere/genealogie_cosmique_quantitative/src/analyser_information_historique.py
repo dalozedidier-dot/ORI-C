@@ -152,10 +152,64 @@ def analyse() -> dict:
     }
 
 
-def main() -> int:
+def render_report(result: dict) -> str:
+    """Construit le rapport lisible depuis le même résultat que le JSON."""
+    labels = {
+        "reservoir_NC_CC": "Réservoirs NC/CC",
+        "grains_SiC": "Grains SiC",
+        "grains_graphite": "Grains graphite",
+        "chondres": "Chondres",
+        "Bennu_refractaires": "Réfractaires Bennu",
+    }
+    rows = []
+    for item in result["results"]:
+        label = labels[item["dataset"]]
+        if item["status"] == "non_testable":
+            rows.append(f"| {label} | {item['n']} | — | — | — | — | groupes complets insuffisants |")
+            continue
+        verdict = "provenance décodable" if item["status"] == "information_decodable" else "non décodable par ce test"
+        gain = item["accuracy_gain"]
+        rows.append(
+            f"| {label} | {item['n']} | {item['loo_accuracy']:.3f} | "
+            f"{item['majority_baseline']:.3f} | {gain:+.3f} | "
+            f"{item['label_permutation_p_one_sided']:.5f} | {verdict} |"
+        )
+    return "\n".join([
+        "# Information historique dans les mesures cosmiques individuelles", "",
+        "## Résultat", "",
+        "L'analyse rétrospective utilise uniquement des lignes publiées, une",
+        "classification par centroïdes en leave-one-out, un bootstrap de l'exactitude et",
+        "500 permutations des étiquettes.", "",
+        "| Population | n | Exactitude | Baseline majoritaire | Gain | p permutation | Verdict local |",
+        "|---|---:|---:|---:|---:|---:|---|", *rows, "",
+        "Les deux résultats positifs montrent qu'une information de population reste",
+        "présente dans les observables isotopiques. Les trois autres résultats empêchent",
+        "d'étendre cette conclusion à toutes les populations.", "",
+        "## Limite décisive", "",
+        "Les tables ne suivent pas les mêmes objets de l'étoile au grain, puis au disque",
+        "et au planétésimal. Cette analyse ne produit donc pas encore une courbe causale",
+        "de conservation de l'histoire entre étages. Elle mesure une information locale",
+        "de provenance, pas `I(H_ancien;X_t)` sur une lignée matérielle appariée.", "",
+    ])
+
+
+def write_outputs(out: Path) -> dict:
+    """Écrit les deux artefacts canoniques dans le dossier demandé."""
     result = analyse()
-    path = OUT / "INFORMATION_HISTORIQUE.json"
-    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "INFORMATION_HISTORIQUE.json").write_text(
+        json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    (out / "RAPPORT_INFORMATION_HISTORIQUE.md").write_text(
+        render_report(result), encoding="utf-8", newline="\n"
+    )
+    return result
+
+
+def main() -> int:
+    result = write_outputs(OUT)
     print(json.dumps({r["dataset"]: r["status"] for r in result["results"]}, ensure_ascii=False))
     return 0
 
