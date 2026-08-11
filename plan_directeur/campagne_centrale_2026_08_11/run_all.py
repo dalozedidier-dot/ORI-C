@@ -20,27 +20,40 @@ def dump(name: str, value: object) -> None:
 
 def admission_paleo() -> dict:
     data = ROOT / "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long"
+    external = ROOT / "donnees_externes/paleo_history_01"
     mapping = {
-        "LR04": "lisiecki2005_LR04.txt",
-        "EPICA_temperature": "edc3deuttemp2007.txt",
-        "EPICA_CO2": "edc-co2-2008.txt",
-        "Vostok": "vostok_deutnat.txt",
+        "LR04": data / "lisiecki2005_LR04.txt",
+        "pile_benthique_independante": external / "ahn2017_prob_stack.txt",
+        "proxy_niveau_marin_independant": external / "spratt2016_sea_level_noaa.txt",
+        "EPICA_temperature": data / "edc3deuttemp2007.txt",
+        "EPICA_CO2": data / "edc-co2-2008.txt",
+        "EPICA_poussieres": external / "lambert2008_epica_dust/datasets/EDC_dust_lpc.tab",
+        "Vostok": data / "vostok_deutnat.txt",
+        "insolation_convention_1": ROOT / "02_branche_systeme_solaire/couche_memoire_historique/data/raw/orbit91",
+        "insolation_convention_2": external / "INSOLN.LA2004.BTL.100.ASC",
     }
     required = json.loads((ROOT / "02_branche_systeme_solaire/paleo_history_01/SCHEMA_DONNEES.json").read_text(encoding="utf-8"))["jeux_obligatoires"]
     present = {}
-    for dataset, filename in mapping.items():
-        path = data / filename
+    for dataset, path in mapping.items():
+        path = path.resolve()
         if path.exists():
             present[dataset] = {"path": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
     missing = [name for name in required if name not in present]
+    normalized = ROOT / "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees.csv"
+    schema_issues = [] if normalized.exists() else [
+        "table normalisée absente",
+        "age_uncertainty_ka non validé pour chaque série",
+        "unités, quality_flag et sha256_source non validés ligne par ligne",
+    ]
     return {
         "campaign_id": "PALEO-HISTORY-01",
-        "verdict": "admis" if not missing else "non_testable",
+        "verdict": "admis" if not missing and not schema_issues else "non_testable",
         "required_count": len(required),
         "present_count": len(present),
         "present": present,
         "missing": missing,
-        "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont admises; le gel n'est pas assoupli",
+        "schema_issues": schema_issues,
+        "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont présentes et conformes au schéma; le gel n'est pas assoupli",
     }
 
 
@@ -100,7 +113,7 @@ def main() -> int:
         "axes_total": len(plan["axes"]),
         "axes_documentes": sum("statut" in axis for axis in plan["axes"]),
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_gate": "acquisition et admission des cinq familles manquantes de PALEO-HISTORY-01",
+        "next_executable_gate": "normalisation et validation des incertitudes chronologiques de PALEO-HISTORY-01",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")
     return 0

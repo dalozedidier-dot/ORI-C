@@ -1,0 +1,38 @@
+{
+  "schema": "oric.paleo-history-01.sources.v1",
+  "sources": [
+    {
+      "dataset_id": "pile_benthique_independante",
+      "file": "ahn2017_prob_stack.txt",
+      "sha256": "5851d3696a142be40503acc8d92323a7e0b5771a27ea7b7a9b83e430a3babe19",
+      "url": "https://raw.githubusercontent.com/seonminahn/HMM-Stack/master/Prob_stack.txt",
+      "reference": "Ahn et al. 2017, doi:10.1093/climsys/dzx002",
+      "status": "published_independent_stack"
+    },
+    {
+      "dataset_id": "proxy_niveau_marin_independant",
+      "file": "spratt2016_sea_level_noaa.txt",
+      "sha256": "02f56f02f709b70ac70fe5e403326272e19b42bf34ee9b1bba3b8322e1375dc1",
+      "url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/spratt2016/spratt2016-noaa.txt",
+      "reference": "Spratt & Lisiecki 2016, doi:10.5194/cp-12-1079-2016",
+      "status": "NOAA_primary_archive"
+    },
+    {
+      "dataset_id": "EPICA_poussieres",
+      "file": "lambert2008_epica_dust.zip",
+      "sha256": "1c1fbe95541d27be722a4752acfa0aae693a21310ef9d3ab399de3fc1b82f8ba",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.695995?format=zip",
+      "reference": "Lambert et al. 2008, doi:10.1038/nature06763",
+      "status": "PANGAEA_primary_archive"
+    },
+    {
+      "dataset_id": "insolation_convention_2",
+      "file": "INSOLN.LA2004.BTL.100.ASC",
+      "sha256": "9d5e20008a2484236bf13a3f5c6f59adc4db533cfc04229b17d1c3475efc6acc",
+      "url": "https://vo.imcce.fr/insola/earth/online/earth/La2004/INSOLN.LA2004.BTL.100.ASC",
+      "reference": "Laskar et al. 2004, Astronomy & Astrophysics 428:261-285",
+      "status": "IMCCE_official_orbital_solution"
+    }
+  ],
+  "warning": "présence et empreinte d'une source ne valent pas admission au schéma PALEO-HISTORY-01"
+}

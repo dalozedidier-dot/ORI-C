@@ -8,10 +8,11 @@ quatre campagnes : fermeture mécanistique, quantification, transversalité et
 prédiction. Son lanceur publie l'admissibilité des données, les dépendances et
 les blocages ; il ne transforme jamais un axe documenté en résultat exécuté.
 
-`PALEO-HISTORY-01` reste prioritaire mais est actuellement `non_testable` : le
-dépôt possède quatre familles de données sur neuf obligatoires. Les cinq
-familles absentes sont publiées dans
-`resultats/ADMISSION_PALEO_HISTORY_01.json`. Le protocole gelé reste inchangé.
+`PALEO-HISTORY-01` reste prioritaire. Les neuf familles de sources sont
+désormais présentes, mais la campagne reste `non_testable` tant que leurs
+incertitudes chronologiques et leur table normalisée ne satisfont pas le schéma
+gelé. Les défauts d'admission sont publiés dans
+`resultats/ADMISSION_PALEO_HISTORY_01.json` ; le protocole reste inchangé.
 
 La gouvernance centrale retient uniquement les travaux qui ferment un verrou,
 mesurent `P_acc`, testent un invariant, ajoutent une intervention, fournissent

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 
@@ -15,11 +16,9 @@ def test_paleo_refuse_une_execution_partielle() -> None:
     result = MODULE.admission_paleo()
     assert result["verdict"] == "non_testable"
     assert result["required_count"] == 9
-    assert result["present_count"] == 4
-    assert set(result["missing"]) == {
-        "pile_benthique_independante", "proxy_niveau_marin_independant",
-        "EPICA_poussieres", "insolation_convention_1", "insolation_convention_2",
-    }
+    assert result["present_count"] == 9
+    assert result["missing"] == []
+    assert "age_uncertainty_ka non validé pour chaque série" in result["schema_issues"]
 
 
 def test_les_30_axes_ont_un_statut() -> None:
@@ -40,3 +39,10 @@ def test_aucune_prediction_retrospective_n_est_fabriquee() -> None:
     directory = HERE / "PREDICTIONS_PROSPECTIVES"
     assert {p.name for p in directory.iterdir()} == {"README.md", "SCHEMA_PREDICTION.json"}
 
+
+def test_les_nouvelles_sources_paleo_sont_scellees() -> None:
+    source_dir = MODULE.ROOT / "donnees_externes/paleo_history_01"
+    manifest = json.loads((source_dir / "SOURCES.json").read_text(encoding="utf-8"))
+    for source in manifest["sources"]:
+        actual = hashlib.sha256((source_dir / source["file"]).read_bytes()).hexdigest()
+        assert actual == source["sha256"]
