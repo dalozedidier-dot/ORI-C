@@ -246,304 +246,421 @@
       "supersede_par": null
     },
     {
-      "id": "C-GC-01",
-      "question": "La nucléosynthèse stellaire élargit-elle l’inventaire matériel au-delà de la BBN légère ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_narrow",
+      "id": "C-GC-E01",
+      "question": "Les observations réelles montrent-elles que la composition disponible change entre l’inventaire primordial léger et les produits stellaires ultérieurs ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_empirical_enrichment_sequence",
       "niveau_preuve": null,
-      "portee": "mixte — Le dépôt quantifie la couverture des éléments par 6 familles de rendements; cela teste l’élargissement de l’inventaire modèle, pas une trajectoire galactique unique.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-01.json",
-      "empreinte_sortie": "eadf8c2bd119a923c715cebed0dfa0a825dce2dfbc8ae950ef62dbf99e3c4969",
+      "portee": "direct_observation_plus_observational_reconstruction — Contraste empirique entre abondances primordiales reconstruites depuis spectres et noyaux produits par des étoiles/explosions détectés directement; aucune table de rendement théorique n’est utilisée.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E01.json",
+      "empreinte_sortie": "9c6c95d216192e9cdb50ddea2776492b0f58898221be8a33e08b804e35c82fc6",
       "source": [
-        "SRC-GC-001",
-        "SRC-GC-002",
-        "SRC-GC-005",
-        "SRC-GC-006",
-        "SRC-GC-007"
+        "S001",
+        "S002",
+        "S003",
+        "S004"
       ],
       "mesures": {
         "stages": [
-          "GC-001",
-          "GC-003",
-          "GC-005"
+          "GC-E00",
+          "GC-E01"
         ],
-        "mechanism": "Production de noyaux plus lourds dans les étoiles et leurs explosions."
+        "mechanism": "composition_available_changes_across_cosmic_history",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-02",
-      "question": "Une trace matérielle de nucléosynthèse stellaire peut-elle survivre jusqu’aux matériaux primitifs du Système solaire ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_direct_material_inheritance",
+      "id": "C-GC-E02",
+      "question": "Observe-t-on directement la conversion d’éjecta stellaires enrichis en poussière solide ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_observed_stellar_dust_formation",
       "niveau_preuve": null,
-      "portee": "directe sur la matière conservée — Démontre une continuité matérielle pour des grains particuliers.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-02.json",
-      "empreinte_sortie": "281064d92c27f9da7227679782d0700e937042088325a580918094a905db9ce3",
+      "portee": "same_object_astronomical_observation — SN1987A fournit un cas observationnel où les produits de l’explosion et une grande masse de poussière froide sont mesurés dans les éjecta. La masse est issue de la photométrie publiée; aucun rendement simulé n’est utilisé.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E02.json",
+      "empreinte_sortie": "4a874014c385d3a877491f82def9a6d104cdbecfe8294cae7d5574e85e59fb60",
       "source": [
-        "SRC-GC-010",
-        "SRC-GC-011",
-        "SRC-GC-012",
-        "SRC-GC-028",
-        "SRC-GC-040"
+        "S003",
+        "S029"
       ],
       "mesures": {
         "stages": [
-          "GC-002",
-          "GC-003",
-          "GC-004",
-          "GC-016"
+          "GC-E01",
+          "GC-E02"
         ],
-        "mechanism": "Condensation de grains autour d’étoiles puis survie à travers ISM, nuage, disque et accrétion."
+        "mechanism": "stellar_ejecta_produce_persistent_solid_dust",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-03",
-      "question": "Des molécules/glaces formées avant le disque peuvent-elles rester disponibles dans un disque planétaire ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_external_analogue",
+      "id": "C-GC-E03",
+      "question": "De la matière formée avant le Système solaire est-elle encore mesurable dans plusieurs corps primitifs retournés ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_replicated_direct_material_inheritance",
       "niveau_preuve": null,
-      "portee": "directe dans un autre système — V883 Ori fournit un test observationnel de l’héritage eau nuage→disque.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-03.json",
-      "empreinte_sortie": "9a2903d83f2caf5cefe9c6a83edb5cfd3f4ceb0d9fba1a06d91768ad43681d89",
+      "portee": "multi_mission_returned_sample_direct_measurement — Transmission matérielle directe observée indépendamment dans Bennu, Ryugu et Wild 2. Le total de grains est un minimum de détections des études citées, pas une abondance combinée comparable.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E03.json",
+      "empreinte_sortie": "811e5259c9643705e221e8c32db5fd1b8006129bc44d08d0eba6d113f61f50d8",
       "source": [
-        "SRC-GC-013",
-        "SRC-GC-029"
+        "S010",
+        "S030",
+        "S031"
       ],
       "mesures": {
         "stages": [
-          "GC-006",
-          "GC-007",
-          "GC-008"
+          "GC-E02",
+          "GC-E03"
         ],
-        "mechanism": "Survie partielle pendant effondrement et formation du disque."
+        "mechanism": "stellar_material_survives_as_presolar_grains",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-04",
-      "question": "L’histoire d’alimentation et de traitement du disque laisse-t-elle des réservoirs isotopiques distincts ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_history_dependent_disk_structure",
+      "id": "C-GC-E04",
+      "question": "Les grains et glaces sont-ils déjà transformés dans les nuages denses avant la phase protostellaire ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_pre_stellar_material_processing",
       "niveau_preuve": null,
-      "portee": "archive historique reconstruite — Les hétérogénéités isotopiques sont réelles; leur mécanisme exact n’est pas unique.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-04.json",
-      "empreinte_sortie": "9a22021371c0d4f04cd871623c445a9971d5aa6dbc9596b5ae8188b8bd6f65c7",
+      "portee": "direct_astronomical_observation — Analogue astrophysique de l’amont de systèmes planétaires, pas observation du nuage protosolaire historique.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E04.json",
+      "empreinte_sortie": "55d1e54fc884334f047eeb31886c106d007978d8ea93174fd674799e62277b0a",
       "source": [
-        "SRC-GC-014",
-        "SRC-GC-015",
-        "SRC-GC-016",
-        "SRC-GC-025",
-        "SRC-GC-027",
-        "SRC-GC-030",
-        "SRC-GC-031",
-        "SRC-GC-034",
-        "SRC-GC-040"
+        "S005",
+        "S006"
       ],
       "mesures": {
         "stages": [
-          "GC-008",
-          "GC-009",
-          "GC-012"
+          "GC-E04"
         ],
-        "mechanism": "Infall, transport radial, tri thermique et mélange incomplet."
+        "mechanism": "ice_inventory_and_grain_growth_precede_protostar",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-05",
-      "question": "La composition et le régime thermique conditionnent-ils quels solides deviennent accessibles ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_model",
+      "id": "C-GC-E05",
+      "question": "Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_observed_cloud_to_disk_supply",
       "niveau_preuve": null,
-      "portee": "modèle mécanistique contraint — Le cadre de condensation relie inventaire et état global aux phases solides possibles.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-05.json",
-      "empreinte_sortie": "a4581f0dc581b157e1db112a98aeb0b0c98924b44fc5654dbd4135e0963c35bb",
+      "portee": "direct_astronomical_observation — Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E05.json",
+      "empreinte_sortie": "4884a78f231a1186c47be8797ba5e5ac28c9802d8d17529e43c18565def00791",
       "source": [
-        "SRC-GC-008",
-        "SRC-GC-009",
-        "SRC-GC-017",
-        "SRC-GC-032",
-        "SRC-GC-039"
+        "S007"
       ],
       "mesures": {
         "stages": [
-          "GC-010",
-          "GC-011",
-          "GC-012"
+          "GC-E05"
         ],
-        "mechanism": "Condensation/évaporation dépendantes de T, P et composition."
+        "mechanism": "large_scale_material_stream_feeds_disk_scales",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-06",
-      "question": "Les CAI et chondres enregistrent-ils une succession de transformations du disque ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_historical_record",
+      "id": "C-GC-E06",
+      "question": "Des signatures moléculaires formées en phase froide sont-elles observées jusque dans les disques et compatibles avec des matériaux cométaires ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_observational_molecular_inheritance",
       "niveau_preuve": null,
-      "portee": "directe sur archives solides — Les solides primitifs enregistrent des événements distincts dans le temps.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-06.json",
-      "empreinte_sortie": "a426a42be4d533a6d29d446c73680bb5729338156301c038b94fc9b146896d96",
+      "portee": "cross_system_observational_consistency — V883 Ori/67P testent la continuité isotopique de l’eau; TW Hya apporte une détection indépendante de CH3OH. Les abondances modélisées de TW Hya sont exclues.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E06.json",
+      "empreinte_sortie": "2108c484bb7e598de7a911b50a87a2a8a0982e28ec8a6a91e51f868266e827e6",
       "source": [
-        "SRC-GC-017",
-        "SRC-GC-018"
+        "S008",
+        "S009",
+        "S033"
       ],
       "mesures": {
         "stages": [
-          "GC-011",
-          "GC-012"
+          "GC-E04",
+          "GC-E06"
         ],
-        "mechanism": "Condensation/fusion, remaniement et chronométrie des solides."
+        "mechanism": "molecular_and_isotopic_signatures_survive_across_formation_stages",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-07",
-      "question": "La concentration collective des solides peut-elle ouvrir la formation gravitationnelle de planétésimaux ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_model",
+      "id": "C-GC-E07",
+      "question": "La formation de solides réfractaires est-elle directement observable dans un disque planétaire jeune ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_observed_refractory_solid_formation",
       "niveau_preuve": null,
-      "portee": "modèle causal — Cohérent avec H011 du dépôt, ratio de seuil 3,33 entre conditions comparées.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-07.json",
-      "empreinte_sortie": "ebeeecf0be632946d906df0d0fda3ca31267a327c9e32860db056c3e214d09a1",
+      "portee": "direct_astronomical_observation — HOPS-315 est un analogue astrophysique observé; la comparaison à des modèles de condensation publiée dans l’article n’est pas utilisée comme donnée de cette campagne.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E07.json",
+      "empreinte_sortie": "9e029ff2505626508e2fdd440ace2784bd73f35dd965c2a89d3dfb94698b11ab",
       "source": [
-        "SRC-GC-019",
-        "SRC-GC-020",
-        "SRC-GC-032",
-        "SRC-GC-034"
+        "S024"
       ],
       "mesures": {
         "stages": [
-          "GC-014",
-          "GC-015",
-          "GC-016"
+          "GC-E07"
         ],
-        "mechanism": "Streaming/turbulence → surdensité → auto-gravité."
+        "mechanism": "hot_gas_and_crystalline_refractory_solids_coexist_in_embedded_disk",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-08",
-      "question": "Le temps d’accrétion et l’inventaire de 26Al modifient-ils le destin thermique des petits corps ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_history_changes_future_fate",
+      "id": "C-GC-E08",
+      "question": "Les archives réelles du disque solaire montrent-elles une architecture isotopique et temporelle non homogène ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_persistent_nebular_heterogeneity",
       "niveau_preuve": null,
-      "portee": "archive + mécanisme physique — Exemple fort de variable historique qui change l’accès à fusion/différenciation.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-08.json",
-      "empreinte_sortie": "3f8c39b541cc1e74802023bd50c0a0a0b0cd3dc3d6b2be27ab5061136a880b8a",
+      "portee": "returned_sample_and_meteorite_measurements — Les causes dynamiques exactes de la séparation NC/CC et de l’hétérogénéité ne sont pas imposées.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E08.json",
+      "empreinte_sortie": "09581e121b3e4a4a44e5bf1e95788641443c5361a4493db3941dc6584ab4b659",
       "source": [
-        "SRC-GC-018",
-        "SRC-GC-021",
-        "SRC-GC-036"
+        "S011",
+        "S012",
+        "S013",
+        "S014",
+        "S015",
+        "S016"
       ],
       "mesures": {
         "stages": [
-          "GC-003",
-          "GC-017",
-          "GC-018"
+          "GC-E08",
+          "GC-E10"
         ],
-        "mechanism": "Décroissance 26Al → chauffage dont l’intensité dépend du temps et de l’inventaire initial."
+        "mechanism": "isotopic_reservoirs_and_time_order_are_recorded_in_solids",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-09",
-      "question": "Des signatures isotopiques permettent-elles de reconnaître des stades de croissance planétaire ?",
-      "statut": "extension_genealogique",
-      "verdict": "supports_reconstruction",
+      "id": "C-GC-E09",
+      "question": "Des échantillons cométaires retournés enregistrent-ils une redistribution de matériaux formés dans des régimes thermiques différents ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_empirical_solar_disk_material_redistribution",
       "niveau_preuve": null,
-      "portee": "reconstruction — Mars est cohérent avec une croissance rapide et un statut d’embryon préservé.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-09.json",
-      "empreinte_sortie": "0944bbce0ae9664989a82cd38a4833b17850d3e2ef5dae3f8db84b4714c3b046",
+      "portee": "returned_sample_mineralogy_and_isotopes — La coexistence de stardust et de matériaux réfractaires/haute température dans Wild 2 soutient un mélange/transport à grande échelle. Aucun scénario dynamique ni distance de transport n’est calculé ici.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E09.json",
+      "empreinte_sortie": "4fe5cad4e76921b64832d6151b7df3327fb4f842b807295cd5ca261cffcf74db",
       "source": [
-        "SRC-GC-021",
-        "SRC-GC-033",
-        "SRC-GC-037",
-        "SRC-GC-041"
+        "S031",
+        "S032"
       ],
       "mesures": {
         "stages": [
-          "GC-018",
-          "GC-019",
-          "GC-020"
+          "GC-E09"
         ],
-        "mechanism": "Chronomètres Hf-W-Th et fractionnements pendant accrétion/différenciation."
+        "mechanism": "high_temperature_and_presolar_material_coexist_in_outer_comet",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-10",
-      "question": "Une formation unique du Système solaire est-elle déjà identifiée ?",
-      "statut": "ouvert",
-      "verdict": "open_multiple_models",
+      "id": "C-GC-E10",
+      "question": "La succession CAI/chondres est-elle quantitativement ordonnée par chronométrie directe ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_measured_early_solar_chronology",
       "niveau_preuve": null,
-      "portee": "indirecte — Plusieurs mécanismes reproduisent des sous-ensembles des contraintes.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-10.json",
-      "empreinte_sortie": "71c6645f4291ebbd46ed983f25b70c0456f1ffd026b859553176e504734dd798",
+      "portee": "meteoritic_chronometry — Âges Pb-Pb U-corrigés mesurés sur inclusions et chondres; aucune horloge synthétique n’est utilisée.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E10.json",
+      "empreinte_sortie": "e5a283b3c887a415f37f618adb26a5af79307cbee75217e0c257f38b5dcaf508",
       "source": [
-        "SRC-GC-022",
-        "SRC-GC-023",
-        "SRC-GC-024",
-        "SRC-GC-025",
-        "SRC-GC-026",
-        "SRC-GC-027",
-        "SRC-GC-031",
-        "SRC-GC-032",
-        "SRC-GC-033",
-        "SRC-GC-034",
-        "SRC-GC-041"
+        "S016"
       ],
       "mesures": {
         "stages": [
-          "GC-020",
-          "GC-021",
-          "GC-022",
-          "GC-023"
+          "GC-E10"
         ],
-        "mechanism": "Comparaison Grand Tack, Nice, disque structuré, anneaux de planétésimaux, accrétion de galets."
+        "mechanism": "absolute_PbPb_ages_record_time_order_and_duration",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-11",
-      "question": "L’architecture actuelle du Système solaire a-t-elle une efficacité causale mesurée en aval ?",
-      "statut": "liaison_certification_existante",
-      "verdict": "linked_to_C_AST_13_of_15_E4_model",
+      "id": "C-GC-E11",
+      "question": "Des expériences physiques réelles montrent-elles des étapes de croissance et de structuration collectives de poussière ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_laboratory_dust_mechanisms",
       "niveau_preuve": null,
-      "portee": "modèle causal aval — Le résultat certifié C-AST reste inchangé et sert de point aval.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-11.json",
-      "empreinte_sortie": "4835d801667c958cb2358057835eb087bffdcf4327b09c8924aa33420ea8e9f9",
-      "source": [],
+      "portee": "laboratory_experiment — Seules les mesures expérimentales entrent dans les résultats; toute section numérique des articles est exclue.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E11.json",
+      "empreinte_sortie": "9bb0f75caa94c11a2707899474c25d3c14312a9def742df5eb0f6e71f5c8e0a4",
+      "source": [
+        "S019",
+        "S020"
+      ],
       "mesures": {
         "stages": [
-          "GC-023"
+          "GC-E11",
+          "GC-E12"
         ],
-        "mechanism": "Interventions sur masse/axe de Jupiter/Saturne dans C-AST."
+        "mechanism": "grain_aggregation_and_dust_gas_collective_structure",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     },
     {
-      "id": "C-GC-12",
-      "question": "La chaîne nucléosynthèse stellaire → architecture actuelle est-elle fermée quantitativement de bout en bout ?",
-      "statut": "ouvert",
-      "verdict": "open_not_certified",
+      "id": "C-GC-E12",
+      "question": "L’ordre temporel mesuré est-il associé à des destins matériels différents des petits corps ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_timing_dependent_material_fates",
       "niveau_preuve": null,
-      "portee": "n/a — La branche documente et quantifie plusieurs maillons mais refuse le saut vers une preuve end-to-end.",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-12.json",
-      "empreinte_sortie": "f2b593ce523ec1c4a0834650289d05e91355a2fc32ae18c07fba04eed37c9c82",
+      "portee": "meteoritic_chronometry — Association chronologique empirique entre archives de corps différenciés précoces et carbonates hydratés plus tardifs; aucun calcul thermique n’est utilisé comme preuve.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E12.json",
+      "empreinte_sortie": "cbe309f8d0e5a412903e4de5dc934dc9fefe0011580f11a17541e4a3139ef877",
       "source": [
-        "SRC-GC-001",
-        "SRC-GC-014",
-        "SRC-GC-026"
+        "S017",
+        "S018"
       ],
       "mesures": {
         "stages": [
-          "GC-001",
-          "GC-023"
+          "GC-E13",
+          "GC-E14"
         ],
-        "mechanism": "Handoff entre modèles d’enrichissement, disque, formation planétaire et IC N-corps actuelles."
+        "mechanism": "formation_time_associates_with_differentiated_vs_hydrous_records",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-GC-E13",
+      "question": "Observe-t-on dans de vrais systèmes une séquence allant de disques jeunes structurés à des protoplanètes en accrétion ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_observed_disk_to_protoplanet_sequence",
+      "niveau_preuve": null,
+      "portee": "astronomical_observation — Le contexte général utilise plusieurs systèmes observés, mais PDS 70 fournit en plus un raccord dans le même système entre une cavité de disque et deux protoplanètes Hα en accrétion; aucune structure annulaire n’est automatiquement attribuée à une planète et aucune migration/résonance n’est utilisée comme preuve.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E13.json",
+      "empreinte_sortie": "07c4f6430e16a088fbd5aee3bdda4cb88d87b44b09f1eacd28bd61f62a52916a",
+      "source": [
+        "S021",
+        "S022",
+        "S023",
+        "S025"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E15",
+          "GC-E16"
+        ],
+        "mechanism": "disk_substructure_and_planetary_accretion_are_observed_stages",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-GC-E14",
+      "question": "Des planètes du Système solaire portent-elles aujourd’hui des histoires d’accrétion différentes mesurables ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_planet_specific_accretion_histories",
+      "niveau_preuve": null,
+      "portee": "planetary_isotope_reconstruction_plus_observed_endpoint — Les scénarios orbitaux expliquant ces apports sont exclus; seuls les systèmes isotopiques mesurés et l’endpoint planétaire actuel sont retenus.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E14.json",
+      "empreinte_sortie": "cf3080d6c1b7798f11526266f0b411c5cc6fda9b901c6574b5209389ef308d66",
+      "source": [
+        "S026",
+        "S027",
+        "S028"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E17",
+          "GC-E18",
+          "GC-E19"
+        ],
+        "mechanism": "present_planets_retain_isotopic_constraints_on_distinct_growth_histories",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-GC-E15",
+      "question": "L’ensemble des données empiriques soutient-il le mécanisme ORI-C selon lequel l’histoire modifie les constituants, traces, contraintes ou architectures disponibles pour les étapes suivantes ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_empirical_historical_accessibility_mechanism",
+      "niveau_preuve": null,
+      "portee": "cross_domain_empirical_synthesis — Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
+      "empreinte_sortie": "7b67521a464c982e88f5a0978e665f39a16dc56c29f7dba9cc8876f18eb8da31",
+      "source": [
+        "S001",
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S011",
+        "S012",
+        "S013",
+        "S014",
+        "S015",
+        "S016",
+        "S017",
+        "S018",
+        "S019",
+        "S020",
+        "S021",
+        "S022",
+        "S023",
+        "S024",
+        "S025",
+        "S026",
+        "S027",
+        "S028",
+        "S029",
+        "S030",
+        "S031",
+        "S032",
+        "S033"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E00",
+          "GC-E01",
+          "GC-E02",
+          "GC-E03",
+          "GC-E04",
+          "GC-E05",
+          "GC-E06",
+          "GC-E07",
+          "GC-E08",
+          "GC-E09",
+          "GC-E10",
+          "GC-E11",
+          "GC-E12",
+          "GC-E13",
+          "GC-E14",
+          "GC-E15",
+          "GC-E16",
+          "GC-E17",
+          "GC-E18",
+          "GC-E19"
+        ],
+        "mechanism": "history_is_physically_carried_by_material_isotopic_chemical_temporal_and_architectural_state",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "C-GC-E16",
+      "question": "Les seules données empiriques permettent-elles de reconstruire une trajectoire causale unique jusqu’aux éléments orbitaux précis du Système solaire actuel ?",
+      "statut": "ouvert_empirique",
+      "verdict": "undetermined_empirical_only",
+      "niveau_preuve": null,
+      "portee": "explicit_limit — Les archives empiriques atteignent l’architecture présente et contraignent des histoires de croissance, mais elles ne sélectionnent pas une unique trajectoire orbitale détaillée. Aucune simulation n’est substituée pour fermer artificiellement ce problème inverse.",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E16.json",
+      "empreinte_sortie": "3b9989d9073a6392578f13ee1d97a84ff1630348d4b2f90416e915ef7578b7b6",
+      "source": [
+        "S028"
+      ],
+      "mesures": {
+        "stages": [
+          "GC-E19"
+        ],
+        "mechanism": "unique_orbital_genealogy_not_identifiable_from_empirical_archives_alone",
+        "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
     }

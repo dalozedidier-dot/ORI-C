@@ -167,17 +167,20 @@ incorporent deux corrections de niveau faites après lecture des violations :
 elles sont explicitement marquées exploratoires et ne doivent jamais être
 citées comme une validation.
 
-### Généalogie cosmique quantitative post-v0.9.5
+### Généalogie cosmique empirique post-v0.9.5
 
 | Rôle | Fichier | Statut |
 |---|---|---|
+| Politique d'admissibilité | `01_branche_matiere/genealogie_cosmique_quantitative/EMPIRICAL_ONLY_POLICY.json` | **autorité : données réelles uniquement ; simulations/synthétique/imputation interdits comme preuve** |
 | Protocole de raccordement cosmique → Système solaire | `01_branche_matiere/genealogie_cosmique_quantitative/PROTOCOLE.md` | canonique pour le nouveau front de recherche |
-| Chaîne et provenance | `CHAINE_GENEALOGIQUE.csv`, `SOURCES_PRIMAIRES.csv`, `MATRICE_PREUVES.csv` dans ce dossier | registres sources ; séparent données, analogues, reconstructions et modèles |
-| Résultat machine | `01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json` | généré, prime sur les résumés rédigés |
-| Claims locaux | `.../resultats/claims/C-GC-*.json` | extensions locales ; aucune certification héritée |
-| Raccordement à C-AST | `.../resultats/HANDOFF_SYSTEME_SOLAIRE.json` | **doit rester `open` tant que les conditions initiales orbitales ne sont pas dérivées avec incertitudes** |
+| Sources et mesures | `SOURCES_EMPIRIQUES.csv` et `data/MESURES_EMPIRIQUES.csv` | sources primaires/officielles et valeurs mesurées admissibles ; portions modélisées explicitement exclues |
+| Chaîne et liens | `CHAINE_EMPIRIQUE.csv` et `LIENS_EMPIRIQUES.csv` | distinguent continuité matérielle, même archive, analogue, laboratoire et liens non uniques |
+| Audit d'admissibilité | `.../resultats/AUDIT_ADMISSIBILITE.json` | doit afficher 0 simulation, 0 synthétique, 0 imputation |
+| Résultat machine | `.../resultats/SYNTHESE.json` | généré, prime sur les résumés rédigés |
+| Claims locaux | `.../resultats/claims/C-GC-E*.json` | synthèse empirique initiale non préenregistrée ; aucune certification héritée |
+| Raccordement Système solaire | `.../resultats/HANDOFF_SYSTEME_SOLAIRE.json` | endpoint présent observé ; trajectoire orbitale unique `undetermined_empirical_only` |
 
-La nouvelle couche ne modifie pas les 22 transitions de `01_branche_matiere/genealogie/genealogie_matiere.csv` : leur SHA-256 de référence est testé à chaque exécution. Elle développe leur raccordement quantitatif sans transformer une succession de mécanismes établis ou modélisés en histoire unique certifiée.
+La nouvelle couche ne modifie pas les transitions historiques antérieures. Elle les réévalue sous un pare-feu empirique séparé et interdit qu'une simulation ou une sortie de modèle ferme un maillon manquant. `C-AST-01` reste hors de cette preuve de genèse et conserve son statut modèle propre.
 
 ## Branche 2 — Système solaire
 

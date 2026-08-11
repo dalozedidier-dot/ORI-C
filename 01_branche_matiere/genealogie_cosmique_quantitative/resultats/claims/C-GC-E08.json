@@ -1,0 +1,35 @@
+{
+  "claim_id": "C-GC-E08",
+  "criteria": {
+    "Al26_factor": [
+      3.0,
+      4.0
+    ],
+    "NC_CC_coexistence_myr": [
+      2.0,
+      3.0
+    ],
+    "chondrule_age_span_myr": 2.6099999999996726,
+    "mu30Si_mu26Mg_slope": 0.83,
+    "solar_planetary_O_shift_percent": 7.0
+  },
+  "directness": "returned_sample_and_meteorite_measurements",
+  "mechanism": "isotopic_reservoirs_and_time_order_are_recorded_in_solids",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Les archives réelles du disque solaire montrent-elles une architecture isotopique et temporelle non homogène ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Les causes dynamiques exactes de la séparation NC/CC et de l’hétérogénéité ne sont pas imposées.",
+  "source_ids": [
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016"
+  ],
+  "stages": [
+    "GC-E08",
+    "GC-E10"
+  ],
+  "verdict": "supports_persistent_nebular_heterogeneity"
+}

@@ -1,0 +1,394 @@
+{
+  "links": [
+    {
+      "from_stage": "GC-E00",
+      "link_class": "empirical_historical_contrast",
+      "relation": "inventaire primordial léger → apparition ultérieure de noyaux stellaires mesurés",
+      "to_stage": "GC-E01"
+    },
+    {
+      "from_stage": "GC-E01",
+      "link_class": "same_event_observed_transformation",
+      "relation": "produits d’éjecta stellaires → poussière froide dans les éjecta",
+      "to_stage": "GC-E02"
+    },
+    {
+      "from_stage": "GC-E02",
+      "link_class": "direct_material_inheritance_class",
+      "relation": "poussières d’origine stellaire → grains présolaires conservés dans matériaux solaires",
+      "to_stage": "GC-E03"
+    },
+    {
+      "from_stage": "GC-E03",
+      "link_class": "measured_material_continuity",
+      "relation": "grains présolaires → hétérogénéités nucléosynthétiques conservées dans la matière solaire",
+      "to_stage": "GC-E08"
+    },
+    {
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "relation": "nuage dense → alimentation protostellaire",
+      "to_stage": "GC-E05"
+    },
+    {
+      "from_stage": "GC-E04",
+      "link_class": "observed_analogue_bridge",
+      "relation": "glaces du nuage → molécules/glaces observées dans disques",
+      "to_stage": "GC-E06"
+    },
+    {
+      "from_stage": "GC-E05",
+      "link_class": "observed_analogue_bridge",
+      "relation": "apport de matière → disque jeune",
+      "to_stage": "GC-E06"
+    },
+    {
+      "from_stage": "GC-E06",
+      "link_class": "cross_system_empirical_consistency",
+      "relation": "héritage moléculaire/isotopique → réservoirs du disque solaire",
+      "to_stage": "GC-E08"
+    },
+    {
+      "from_stage": "GC-E07",
+      "link_class": "analogue_to_solar_archive",
+      "relation": "solides réfractaires observables dans jeunes disques → archives CAI/chondres solaires",
+      "to_stage": "GC-E10"
+    },
+    {
+      "from_stage": "GC-E08",
+      "link_class": "solar_sample_link",
+      "relation": "réservoirs solaires hétérogènes → matériaux redistribués conservés dans Wild 2",
+      "to_stage": "GC-E09"
+    },
+    {
+      "from_stage": "GC-E08",
+      "link_class": "solar_sample_link",
+      "relation": "réservoirs isotopiques → solides datés",
+      "to_stage": "GC-E10"
+    },
+    {
+      "from_stage": "GC-E09",
+      "link_class": "solar_sample_sequence",
+      "relation": "redistribution/recyclage de solides → coexistence d’archives thermiques différentes",
+      "to_stage": "GC-E10"
+    },
+    {
+      "from_stage": "GC-E10",
+      "link_class": "chronometric_sequence",
+      "relation": "solides primitifs → corps différenciés précoces",
+      "to_stage": "GC-E13"
+    },
+    {
+      "from_stage": "GC-E10",
+      "link_class": "chronometric_sequence",
+      "relation": "solides primitifs → corps hydratés plus tardifs",
+      "to_stage": "GC-E14"
+    },
+    {
+      "from_stage": "GC-E11",
+      "link_class": "laboratory_mechanism_stack",
+      "relation": "agrégats de poussière → comportement collectif poussière-gaz",
+      "to_stage": "GC-E12"
+    },
+    {
+      "from_stage": "GC-E12",
+      "link_class": "mechanism_to_observation_non_unique",
+      "relation": "mécanisme collectif possible → structures réelles de disques",
+      "to_stage": "GC-E15"
+    },
+    {
+      "from_stage": "GC-E15",
+      "link_class": "same_system_observed_sequence",
+      "relation": "disque de PDS 70 avec cavité → deux protoplanètes en accrétion détectées en Hα",
+      "to_stage": "GC-E16"
+    },
+    {
+      "from_stage": "GC-E13",
+      "link_class": "solar_chronometric_sequence",
+      "relation": "petits corps différenciés précoces → histoire d’un embryon planétaire",
+      "to_stage": "GC-E17"
+    },
+    {
+      "from_stage": "GC-E14",
+      "link_class": "solar_context_non_genealogical",
+      "relation": "archives hydratées/carbonées des petits corps → contexte empirique de matériaux volatils, sans filiation directe imposée vers la Terre",
+      "to_stage": "GC-E18"
+    },
+    {
+      "from_stage": "GC-E16",
+      "link_class": "analogue_endpoint_bridge",
+      "relation": "protoplanètes observées ailleurs → endpoint d’architecture planétaire",
+      "to_stage": "GC-E19"
+    },
+    {
+      "from_stage": "GC-E17",
+      "link_class": "same_body_history_to_endpoint",
+      "relation": "Mars reconstruit → Mars actuel",
+      "to_stage": "GC-E19"
+    },
+    {
+      "from_stage": "GC-E18",
+      "link_class": "same_body_history_to_endpoint",
+      "relation": "Terre reconstruite → Terre actuelle",
+      "to_stage": "GC-E19"
+    }
+  ],
+  "schema": "oric.gc.empirical-chain.v3",
+  "stages": [
+    {
+      "empirical_anchor": "D/H primordial et Yp reconstruits à partir de spectres réels",
+      "evidence_class": "reconstruction_observationnelle",
+      "history_carrier": "baseline_elementaire_mesuree",
+      "label": "Inventaire primordial contraint par observation",
+      "measurement_count": 2,
+      "order": "0",
+      "source_ids": [
+        "S001",
+        "S002"
+      ],
+      "stage_id": "GC-E00"
+    },
+    {
+      "empirical_anchor": "44Ti dans SN1987A; P/Cl/K dans Cas A",
+      "evidence_class": "observation_directe",
+      "history_carrier": "noyaux_stellaires_mesures",
+      "label": "Produits de nucléosynthèse stellaire observés",
+      "measurement_count": 6,
+      "order": "1",
+      "source_ids": [
+        "S003",
+        "S004"
+      ],
+      "stage_id": "GC-E01"
+    },
+    {
+      "empirical_anchor": "poussière froide directement détectée dans les éjecta de SN1987A",
+      "evidence_class": "observation_directe",
+      "history_carrier": "poussiere_stellaire_mesuree",
+      "label": "Éjecta stellaires convertis en poussières observées",
+      "measurement_count": 4,
+      "order": "2",
+      "source_ids": [
+        "S029"
+      ],
+      "stage_id": "GC-E02"
+    },
+    {
+      "empirical_anchor": "grains présolaires Bennu, Ryugu et Wild 2 retournés",
+      "evidence_class": "mesure_echantillons_retournes",
+      "history_carrier": "grains_presolaires_conserves",
+      "label": "Matière présolaire incorporée aux corps primitifs",
+      "measurement_count": 15,
+      "order": "3",
+      "source_ids": [
+        "S010",
+        "S030",
+        "S031"
+      ],
+      "stage_id": "GC-E03"
+    },
+    {
+      "empirical_anchor": "inventaire JWST de glaces et croissance de grains",
+      "evidence_class": "observation_directe",
+      "history_carrier": "glaces_et_grains_prestellaires",
+      "label": "Grains et glaces dans les nuages moléculaires denses",
+      "measurement_count": 4,
+      "order": "4",
+      "source_ids": [
+        "S005",
+        "S006"
+      ],
+      "stage_id": "GC-E04"
+    },
+    {
+      "empirical_anchor": "streamer protostellaire de ≥10 500 au",
+      "evidence_class": "observation_directe",
+      "history_carrier": "flux_materiel_nuage_disque",
+      "label": "Apport de matière du nuage vers les échelles du disque",
+      "measurement_count": 1,
+      "order": "5",
+      "source_ids": [
+        "S007"
+      ],
+      "stage_id": "GC-E05"
+    },
+    {
+      "empirical_anchor": "D2O V883 Ori; CH3OH TW Hya; comparaison à 67P",
+      "evidence_class": "observations_multi_systemes",
+      "history_carrier": "signature_moleculaire_et_isotopique",
+      "label": "Molécules héritables observées dans les disques",
+      "measurement_count": 6,
+      "order": "6",
+      "source_ids": [
+        "S008",
+        "S009",
+        "S033"
+      ],
+      "stage_id": "GC-E06"
+    },
+    {
+      "empirical_anchor": "SiO chaud et silicates cristallins dans HOPS-315",
+      "evidence_class": "observation_directe",
+      "history_carrier": "solides_refractaires",
+      "label": "Condensation de solides réfractaires observée dans un jeune disque",
+      "measurement_count": 3,
+      "order": "7",
+      "source_ids": [
+        "S024"
+      ],
+      "stage_id": "GC-E07"
+    },
+    {
+      "empirical_anchor": "Genesis, météorites NC/CC, 26Al, Si-Mg et chronométrie",
+      "evidence_class": "mesures_echantillons",
+      "history_carrier": "reservoirs_isotopiques_persistants",
+      "label": "Architecture isotopique et temporelle de la nébuleuse solaire",
+      "measurement_count": 9,
+      "order": "8",
+      "source_ids": [
+        "S011",
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ],
+      "stage_id": "GC-E08"
+    },
+    {
+      "empirical_anchor": "particules Wild 2 avec matériaux haute température et présolaires",
+      "evidence_class": "mesure_echantillon_retourne",
+      "history_carrier": "transport_et_melange_enregistres",
+      "label": "Redistribution de matériaux dans le disque solaire enregistrée dans une comète",
+      "measurement_count": 2,
+      "order": "9",
+      "source_ids": [
+        "S031",
+        "S032"
+      ],
+      "stage_id": "GC-E09"
+    },
+    {
+      "empirical_anchor": "âges Pb-Pb U-corrigés de CAI et chondres",
+      "evidence_class": "chronometrie_meteoritique",
+      "history_carrier": "ordre_temporel_solides",
+      "label": "Chronologie CAI et chondres",
+      "measurement_count": 3,
+      "order": "10",
+      "source_ids": [
+        "S016"
+      ],
+      "stage_id": "GC-E10"
+    },
+    {
+      "empirical_anchor": "croissance d’agrégats jusqu’à limite d’érosion",
+      "evidence_class": "experience_laboratoire",
+      "history_carrier": "architecture_granulaire",
+      "label": "Agrégation de poussières mesurée en microgravité",
+      "measurement_count": 3,
+      "order": "11",
+      "source_ids": [
+        "S019"
+      ],
+      "stage_id": "GC-E11"
+    },
+    {
+      "empirical_anchor": "longueur d’onde et fréquences observées expérimentalement",
+      "evidence_class": "experience_laboratoire",
+      "history_carrier": "organisation_collective_poussiere_gaz",
+      "label": "Instabilité collective poussière-gaz mesurée en microgravité",
+      "measurement_count": 3,
+      "order": "12",
+      "source_ids": [
+        "S020"
+      ],
+      "stage_id": "GC-E12"
+    },
+    {
+      "empirical_anchor": "angrites datées et excès radiogénique mesuré",
+      "evidence_class": "chronometrie_meteoritique",
+      "history_carrier": "differenciation_precoce",
+      "label": "Planétésimaux différenciés précoces",
+      "measurement_count": 2,
+      "order": "13",
+      "source_ids": [
+        "S017"
+      ],
+      "stage_id": "GC-E13"
+    },
+    {
+      "empirical_anchor": "carbonates CM datés",
+      "evidence_class": "chronometrie_meteoritique",
+      "history_carrier": "alteration_aqueuse_plus_tardive",
+      "label": "Planétésimaux hydratés plus tardifs",
+      "measurement_count": 1,
+      "order": "14",
+      "source_ids": [
+        "S018"
+      ],
+      "stage_id": "GC-E14"
+    },
+    {
+      "empirical_anchor": "TMC1A, IRS63 et DSHARP",
+      "evidence_class": "observation_directe",
+      "history_carrier": "architecture_disque_observee",
+      "label": "Disques jeunes avec croissance et sous-structures observées",
+      "measurement_count": 8,
+      "order": "15",
+      "source_ids": [
+        "S021",
+        "S022",
+        "S023",
+        "S025"
+      ],
+      "stage_id": "GC-E15"
+    },
+    {
+      "empirical_anchor": "PDS 70 b et c en Hα",
+      "evidence_class": "observation_directe",
+      "history_carrier": "protoplanetes_en_croissance",
+      "label": "Protoplanètes en accrétion observées",
+      "measurement_count": 1,
+      "order": "16",
+      "source_ids": [
+        "S025"
+      ],
+      "stage_id": "GC-E16"
+    },
+    {
+      "empirical_anchor": "Hf-W-Th: Mars à ≥1/2 masse en ≤2 Ma",
+      "evidence_class": "reconstruction_isotopique",
+      "history_carrier": "histoire_accretion_mars",
+      "label": "Croissance rapide de Mars reconstruite isotopiquement",
+      "measurement_count": 1,
+      "order": "17",
+      "source_ids": [
+        "S026"
+      ],
+      "stage_id": "GC-E17"
+    },
+    {
+      "empirical_anchor": "Mo du manteau terrestre entre réservoirs NC/CC",
+      "evidence_class": "reconstruction_isotopique",
+      "history_carrier": "histoire_accretion_terre",
+      "label": "Accrétion hétérogène de la Terre enregistrée isotopiquement",
+      "measurement_count": 1,
+      "order": "18",
+      "source_ids": [
+        "S027"
+      ],
+      "stage_id": "GC-E18"
+    },
+    {
+      "empirical_anchor": "huit planètes, endpoint observationnel JPL",
+      "evidence_class": "produit_observationnel_officiel",
+      "history_carrier": "architecture_terminale_observee",
+      "label": "Architecture actuelle du Système solaire observée",
+      "measurement_count": 1,
+      "order": "19",
+      "source_ids": [
+        "S028"
+      ],
+      "stage_id": "GC-E19"
+    }
+  ]
+}

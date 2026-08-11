@@ -1,18 +1,12 @@
 {
-  "downstream_evidence_level": "E4_modele",
-  "downstream_model": "C-AST-01",
-  "downstream_passed_criteria": 13,
-  "downstream_total_criteria": 15,
-  "downstream_verdict": "supports",
-  "formation_endpoint": "GC-023",
-  "non_claim": "Le succès aval de C-AST ne constitue pas une reconstruction de la formation du Système solaire.",
-  "reason": "Aucun pipeline de formation planétaire de cette branche ne produit encore avec incertitudes les conditions initiales J2000 utilisées par C-AST.",
-  "required_future_closure": [
-    "modèle formation-disque→planètes",
-    "sortie masses+éléments orbitaux avec incertitudes",
-    "comparaison à plusieurs observables indépendantes",
-    "handoff explicite vers les variables C-AST"
-  ],
-  "schema": "oric.gc.handoff-solar-system.v1",
-  "status": "open"
+  "C_AST_relation": "C-AST reste séparé. Il peut tester les conséquences d’une architecture donnée, pas servir de preuve empirique de sa genèse.",
+  "empirical_chain_status": "supported_at_mechanism_level",
+  "endpoint": "current_solar_system_architecture",
+  "endpoint_source": "S028",
+  "model_firewall": "Aucun résultat C-AST, aucune intégration N-corps et aucune simulation de formation planétaire ne sont comptés comme preuve de cette branche.",
+  "observed_planet_count": 8,
+  "schema": "oric.gc.empirical-handoff.v3",
+  "status": "empirical_endpoint_reached_unique_orbital_history_unresolved",
+  "what_is_established": "Des archives empiriques indépendantes relient enrichissement stellaire, poussières, grains présolaires, glaces et molécules, réservoirs isotopiques, chronométrie, croissance de petits corps, protoplanètes observées et histoires d’accrétion jusqu’à l’architecture présente.",
+  "what_is_not_claimed": "Les données empiriques seules ne sélectionnent pas une trajectoire orbitale unique donnant les éléments orbitaux précis actuels."
 }

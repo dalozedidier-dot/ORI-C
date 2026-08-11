@@ -1,0 +1,22 @@
+{
+  "claim_id": "C-GC-E10",
+  "criteria": {
+    "CAI_age_Ma": 4567.3,
+    "measured_chondrule_span_myr": 2.6099999999996726,
+    "oldest_chondrule_Ma": 4567.32,
+    "youngest_chondrule_Ma": 4564.71
+  },
+  "directness": "meteoritic_chronometry",
+  "mechanism": "absolute_PbPb_ages_record_time_order_and_duration",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "La succession CAI/chondres est-elle quantitativement ordonnée par chronométrie directe ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Âges Pb-Pb U-corrigés mesurés sur inclusions et chondres; aucune horloge synthétique n’est utilisée.",
+  "source_ids": [
+    "S016"
+  ],
+  "stages": [
+    "GC-E10"
+  ],
+  "verdict": "supports_measured_early_solar_chronology"
+}

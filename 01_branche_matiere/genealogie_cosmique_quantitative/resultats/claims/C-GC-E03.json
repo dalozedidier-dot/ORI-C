@@ -1,0 +1,26 @@
+{
+  "claim_id": "C-GC-E03",
+  "criteria": {
+    "Bennu_grains": 52,
+    "Ryugu_grains": 57,
+    "Wild2_circumstellar_grains": 1,
+    "minimum_detected_across_studies": 110,
+    "returned_sample_bodies": 3
+  },
+  "directness": "multi_mission_returned_sample_direct_measurement",
+  "mechanism": "stellar_material_survives_as_presolar_grains",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "De la matière formée avant le Système solaire est-elle encore mesurable dans plusieurs corps primitifs retournés ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Transmission matérielle directe observée indépendamment dans Bennu, Ryugu et Wild 2. Le total de grains est un minimum de détections des études citées, pas une abondance combinée comparable.",
+  "source_ids": [
+    "S010",
+    "S030",
+    "S031"
+  ],
+  "stages": [
+    "GC-E02",
+    "GC-E03"
+  ],
+  "verdict": "supports_replicated_direct_material_inheritance"
+}

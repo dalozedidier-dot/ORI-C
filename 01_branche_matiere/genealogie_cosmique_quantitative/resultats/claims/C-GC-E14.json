@@ -1,0 +1,25 @@
+{
+  "claim_id": "C-GC-E14",
+  "criteria": {
+    "Earth_Mo_between_NC_CC": true,
+    "Mars_half_size_time_upper_myr": 2.0,
+    "present_planets": 8.0
+  },
+  "directness": "planetary_isotope_reconstruction_plus_observed_endpoint",
+  "mechanism": "present_planets_retain_isotopic_constraints_on_distinct_growth_histories",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Des planètes du Système solaire portent-elles aujourd’hui des histoires d’accrétion différentes mesurables ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Les scénarios orbitaux expliquant ces apports sont exclus; seuls les systèmes isotopiques mesurés et l’endpoint planétaire actuel sont retenus.",
+  "source_ids": [
+    "S026",
+    "S027",
+    "S028"
+  ],
+  "stages": [
+    "GC-E17",
+    "GC-E18",
+    "GC-E19"
+  ],
+  "verdict": "supports_planet_specific_accretion_histories"
+}

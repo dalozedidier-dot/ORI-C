@@ -1,0 +1,21 @@
+stage_id,order,label,empirical_anchor,history_carrier,evidence_class
+GC-E00,0,Inventaire primordial contraint par observation,D/H primordial et Yp reconstruits à partir de spectres réels,baseline_elementaire_mesuree,reconstruction_observationnelle
+GC-E01,1,Produits de nucléosynthèse stellaire observés,44Ti dans SN1987A; P/Cl/K dans Cas A,noyaux_stellaires_mesures,observation_directe
+GC-E02,2,Éjecta stellaires convertis en poussières observées,poussière froide directement détectée dans les éjecta de SN1987A,poussiere_stellaire_mesuree,observation_directe
+GC-E03,3,Matière présolaire incorporée aux corps primitifs,"grains présolaires Bennu, Ryugu et Wild 2 retournés",grains_presolaires_conserves,mesure_echantillons_retournes
+GC-E04,4,Grains et glaces dans les nuages moléculaires denses,inventaire JWST de glaces et croissance de grains,glaces_et_grains_prestellaires,observation_directe
+GC-E05,5,Apport de matière du nuage vers les échelles du disque,streamer protostellaire de ≥10 500 au,flux_materiel_nuage_disque,observation_directe
+GC-E06,6,Molécules héritables observées dans les disques,D2O V883 Ori; CH3OH TW Hya; comparaison à 67P,signature_moleculaire_et_isotopique,observations_multi_systemes
+GC-E07,7,Condensation de solides réfractaires observée dans un jeune disque,SiO chaud et silicates cristallins dans HOPS-315,solides_refractaires,observation_directe
+GC-E08,8,Architecture isotopique et temporelle de la nébuleuse solaire,"Genesis, météorites NC/CC, 26Al, Si-Mg et chronométrie",reservoirs_isotopiques_persistants,mesures_echantillons
+GC-E09,9,Redistribution de matériaux dans le disque solaire enregistrée dans une comète,particules Wild 2 avec matériaux haute température et présolaires,transport_et_melange_enregistres,mesure_echantillon_retourne
+GC-E10,10,Chronologie CAI et chondres,âges Pb-Pb U-corrigés de CAI et chondres,ordre_temporel_solides,chronometrie_meteoritique
+GC-E11,11,Agrégation de poussières mesurée en microgravité,croissance d’agrégats jusqu’à limite d’érosion,architecture_granulaire,experience_laboratoire
+GC-E12,12,Instabilité collective poussière-gaz mesurée en microgravité,longueur d’onde et fréquences observées expérimentalement,organisation_collective_poussiere_gaz,experience_laboratoire
+GC-E13,13,Planétésimaux différenciés précoces,angrites datées et excès radiogénique mesuré,differenciation_precoce,chronometrie_meteoritique
+GC-E14,14,Planétésimaux hydratés plus tardifs,carbonates CM datés,alteration_aqueuse_plus_tardive,chronometrie_meteoritique
+GC-E15,15,Disques jeunes avec croissance et sous-structures observées,"TMC1A, IRS63 et DSHARP",architecture_disque_observee,observation_directe
+GC-E16,16,Protoplanètes en accrétion observées,PDS 70 b et c en Hα,protoplanetes_en_croissance,observation_directe
+GC-E17,17,Croissance rapide de Mars reconstruite isotopiquement,Hf-W-Th: Mars à ≥1/2 masse en ≤2 Ma,histoire_accretion_mars,reconstruction_isotopique
+GC-E18,18,Accrétion hétérogène de la Terre enregistrée isotopiquement,Mo du manteau terrestre entre réservoirs NC/CC,histoire_accretion_terre,reconstruction_isotopique
+GC-E19,19,Architecture actuelle du Système solaire observée,"huit planètes, endpoint observationnel JPL",architecture_terminale_observee,produit_observationnel_officiel

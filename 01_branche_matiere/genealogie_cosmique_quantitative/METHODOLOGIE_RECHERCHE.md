@@ -1,48 +1,25 @@
-# Méthodologie de recherche — généalogie cosmique quantitative
-
-## Objet
-
-Cette branche ne cherche pas à raconter une chronologie générale. Elle teste une proposition plus étroite : **des produits de l'histoire physique peuvent rester incorporés dans la composition, les isotopes, les grains, les réservoirs, les gradients ou l'architecture, puis modifier les transformations accessibles au stade suivant**.
-
-Le parcours couvert est le raccordement entre la nucléosynthèse stellaire déjà versionnée dans ORI-C et l'architecture du Système solaire utilisée comme entrée de la couche C-AST.
+# Méthodologie de recherche et de transcription
 
 ## Recherche bibliographique
 
-La revue privilégie les articles primaires, les jeux de données et les échantillons retournés. Une revue de synthèse peut être conservée pour cartographier un débat, mais elle est explicitement marquée `revue` et ne compte pas comme observation indépendante. Les DOI et la nature de la preuve sont enregistrés dans `SOURCES_PRIMAIRES.csv`.
+La campagne privilégie les articles primaires et les produits officiels. Les revues servent à orienter la recherche mais ne fournissent pas de valeurs au registre machine lorsqu’une source primaire est disponible.
 
-Les sources sont séparées en cinq familles de preuve :
+Pour chaque maillon, la recherche porte séparément sur : mesure directe, échantillon retourné, chronométrie, expérience de laboratoire, analogue astrophysique et limite d’identifiabilité. Cela évite de confondre observation d’un état, mécanisme plausible et reconstruction historique.
 
-1. échantillons directs et analyses isotopiques ;
-2. observations astronomiques d'analogues actuels ;
-3. reconstructions historiques par chronomètres/isotopes ;
-4. thermodynamique et mécanismes physicochimiques ;
-5. simulations dynamiques ou hydrodynamiques.
+## Transcription
 
-Les sorties de modèles ne sont jamais renommées « observations ». Les analogues extrasolaires ne sont jamais présentés comme des mesures du disque solaire disparu.
+Chaque nombre utilisé est transcrit dans `data/MESURES_EMPIRIQUES.csv` avec : identifiant, stade, source, mode de preuve, quantité, valeur, incertitude lorsqu’elle est publiée, unité, taille d’échantillon lorsqu’elle est disponible et note de portée.
 
-## Règle de raccordement ORI-C
+Aucune valeur manquante n’est remplacée. Une grandeur présentée uniquement comme sortie d’un modèle n’est pas transcrite. Une grandeur calculée dans ORI-C n’est autorisée que si elle est une opération déterministe sur des mesures publiées, par exemple un produit de deux rapports isotopiques mesurés ou un écart d’âges publiés. Ces dérivations sont listées dans `RESULTATS_EMPIRIQUES.json`.
 
-Pour chaque stade `GC-xxx`, la table exige :
+## Contrôle des comparaisons inter-études
 
-- un état antérieur ;
-- un processus ;
-- des contraintes ;
-- une inscription historique ;
-- un nouvel ensemble d'états accessibles ;
-- ce qui reste non démontré ;
-- une observable ;
-- des sources ;
-- un mode de preuve ;
-- un statut.
+Les comparaisons entre études ne sont jamais présentées comme mesure commune si les échantillons ou méthodes diffèrent. Les différences d’âges inter-études sont marquées « nominales ». Les comparaisons isotopiques propagent les incertitudes publiées lorsque cela est possible.
 
-Une relation `GC-i → GC-j` signifie seulement que le premier fournit une condition, un constituant, une contrainte ou une architecture pertinente pour le second. Elle ne signifie ni nécessité universelle ni suffisance.
+## Pare-feu des analogues
 
-## Contrôles contre la confirmation facile
+V883 Ori, TW Hya, HOPS-315, TMC1A, IRS63, DSHARP et PDS 70 démontrent l’existence de processus ou d’états dans de vrais systèmes planétaires en formation. Ils ne sont pas assimilés au Soleil jeune. Leur rôle est indiqué comme `analogue` ou `cross_system` dans les liens et claims.
 
-La branche contient des modèles concurrents et des contre-exemples structurels. L'hypothèse « Jupiter est l'unique cause de la dichotomie NC/CC » n'est pas admise comme fait : un disque structuré fournit un mécanisme concurrent. Le Grand Tack, le modèle Nice, les anneaux de planétésimaux et l'accrétion de galets restent des familles de modèles. Le résultat de 2026 sur l'infall tardif est enregistré en séparant les mesures isotopiques de l'inférence de masse du modèle.
+## Reproductibilité
 
-Le succès aval `C-AST-01` ne ferme pas l'amont. Il démontre l'efficacité causale de l'architecture actuelle **dans le modèle orbital réduit**, pas la trajectoire qui l'a produite.
-
-## Réfutabilité
-
-Les claims locales peuvent être contredites par de nouvelles mesures, un recalcul ou une comparaison de modèle. La claim end-to-end reste `open_not_certified` tant qu'aucun pipeline de formation ne produit une distribution d'architectures compatible avec les observables du Système solaire et un handoff quantifié vers les variables utilisées par C-AST.
+`run_all.py` reconstruit toutes les sorties à partir des CSV versionnés. Les tests exécutent une seconde reconstruction dans un dossier temporaire et comparent les empreintes octet par octet. `RESULTATS.sha256` couvre toutes les sorties locales sauf lui-même.

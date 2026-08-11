@@ -1,347 +1,437 @@
 {
-  "schema": "oric.canonical-numbers.v1",
   "regle": "Chaque valeur canonique pointe vers une sortie machine. Le validateur compare valeur source et valeur enregistrée, puis vérifie les rendus publics explicitement déclarés.",
+  "schema": "oric.canonical-numbers.v1",
   "valeurs": [
     {
-      "id": "EXO_TAU_TEMP_MYR",
-      "source": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json",
-      "pointer": "/relaxation/temperature_k/efolding_myr",
-      "value": 7.024011067403678,
-      "tolerance": 1e-12,
       "display": "7,02 Ma",
+      "id": "EXO_TAU_TEMP_MYR",
+      "pointer": "/relaxation/temperature_k/efolding_myr",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 7.024011067403678
     },
     {
-      "id": "MPT_CRITERES_PASSES",
-      "source": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
-      "pointer": "/passed_criteria",
-      "value": 1,
-      "tolerance": 0,
       "display": "1 critère sur 10",
+      "id": "MPT_CRITERES_PASSES",
+      "pointer": "/passed_criteria",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
       "targets": [
         "README.md",
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 0,
+      "value": 1
     },
     {
-      "id": "VES_PAIRES",
-      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "pointer": "/pairs",
-      "value": 11760,
-      "tolerance": 0,
       "display": "11 760",
-      "targets": [
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "VES_P_PERM",
+      "id": "VES_PAIRES",
+      "pointer": "/pairs",
       "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "pointer": "/lineage_permutation_test/permutation_p_one_sided",
-      "value": 0.0004997501249375,
-      "tolerance": 1e-15,
-      "display": "0,00050",
       "targets": [
         "site/preuves.html"
-      ]
-    },
-    {
-      "id": "DONO_RMSE_ETAT",
-      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
-      "pointer": "/rmse_state_only",
-      "value": 1.13089812488,
-      "tolerance": 1e-12,
-      "display": "1,1309",
-      "targets": [
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "DONO_RMSE_HIST",
-      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
-      "pointer": "/rmse_state_plus_history",
-      "value": 0.8042295741181,
-      "tolerance": 1e-12,
-      "display": "0,8042",
-      "targets": [
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "DONO_P_PERM",
-      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
-      "pointer": "/permutation_p_history_better_than_shuffled",
-      "value": 0.004975124378109,
-      "tolerance": 1e-15,
-      "display": "0,00498",
-      "targets": [
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "AUDIT_BLOQUES",
-      "source": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
-      "pointer": "/campaign_counts/blocked",
-      "value": 626,
+      ],
       "tolerance": 0,
+      "value": 11760
+    },
+    {
+      "display": "0,00050",
+      "id": "VES_P_PERM",
+      "pointer": "/lineage_permutation_test/permutation_p_one_sided",
+      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-15,
+      "value": 0.0004997501249375
+    },
+    {
+      "display": "1,1309",
+      "id": "DONO_RMSE_ETAT",
+      "pointer": "/rmse_state_only",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 1.13089812488
+    },
+    {
+      "display": "0,8042",
+      "id": "DONO_RMSE_HIST",
+      "pointer": "/rmse_state_plus_history",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.8042295741181
+    },
+    {
+      "display": "0,00498",
+      "id": "DONO_P_PERM",
+      "pointer": "/permutation_p_history_better_than_shuffled",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-15,
+      "value": 0.004975124378109
+    },
+    {
       "display": "626 blocages",
+      "id": "AUDIT_BLOQUES",
+      "pointer": "/campaign_counts/blocked",
+      "source": "plateforme/campagne_maximale_reelle/AUDIT_DONNEES_DEPOT.json",
       "targets": [
         "site/preuves.html",
         "site/reproductibilite.html"
-      ]
+      ],
+      "tolerance": 0,
+      "value": 626
     },
     {
-      "id": "AST_RATIO_NUM",
-      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
-      "pointer": "/resultats/4/mesures/ratio_minimal_intervention_bruit_numerique",
-      "value": 4964.415695208393,
-      "tolerance": 1e-09,
       "display": "4 964",
+      "id": "AST_RATIO_NUM",
+      "pointer": "/resultats/4/mesures/ratio_minimal_intervention_bruit_numerique",
+      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
       "targets": [
         "README.md",
         "site/index.html",
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-09,
+      "value": 4964.415695208393
     },
     {
-      "id": "SPIN_RMSE_1MA",
-      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
-      "pointer": "/la2004_validation/2/obliquity_rmse_deg",
-      "value": 0.0791416499718946,
-      "tolerance": 1e-12,
       "display": "0,079°",
+      "id": "SPIN_RMSE_1MA",
+      "pointer": "/la2004_validation/2/obliquity_rmse_deg",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
       "targets": [
         "README.md",
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 0.0791416499718946
     },
     {
-      "id": "PID_SYNERGIE_DONO",
-      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
-      "pointer": "/observed/synergy_XM_bits",
-      "value": 0.8070396937582512,
-      "tolerance": 1e-12,
       "display": "0,807 bit",
-      "targets": []
+      "id": "PID_SYNERGIE_DONO",
+      "pointer": "/observed/synergy_XM_bits",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 0.8070396937582512
     },
     {
-      "id": "MAT_STABLE_CORE",
-      "source": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json",
-      "pointer": "/monte_carlo/stable_core_nodes",
-      "transform": "len",
-      "value": 31,
-      "tolerance": 0,
       "display": "31 nœuds",
+      "id": "MAT_STABLE_CORE",
+      "pointer": "/monte_carlo/stable_core_nodes",
+      "source": "01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/SYNTHESE_CALIBRAGE.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 0,
+      "transform": "len",
+      "value": 31
     },
     {
-      "id": "H011_RATIO",
-      "source": "01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json",
-      "pointer": "/threshold_ratio_high_low_turbulence",
-      "value": 3.3333333333333335,
-      "tolerance": 1e-12,
       "display": "3,33",
+      "id": "H011_RATIO",
+      "pointer": "/threshold_ratio_high_low_turbulence",
+      "source": "01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 3.3333333333333335
     },
     {
+      "display": "13 / 15",
       "id": "AST_CRITERES_PASSES",
-      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
       "pointer": "/resultats/4/mesures/criteres_passes",
-      "value": 13,
-      "tolerance": 0,
-      "display": "13 / 15",
-      "targets": [
-        "README.md",
-        "site/index.html",
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "AST_CRITERES_TOTAL",
       "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
-      "pointer": "/resultats/4/mesures/criteres_total",
-      "value": 15,
-      "tolerance": 0,
-      "display": "13 / 15",
       "targets": [
         "README.md",
         "site/index.html",
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 0,
+      "value": 13
     },
     {
-      "id": "SPIN_OBL_MIN_2MA",
-      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
-      "pointer": "/with_moon_2myr/obliquity_min_deg",
-      "value": 22.0873117452473,
-      "tolerance": 1e-12,
+      "display": "13 / 15",
+      "id": "AST_CRITERES_TOTAL",
+      "pointer": "/resultats/4/mesures/criteres_total",
+      "source": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
+      "targets": [
+        "README.md",
+        "site/index.html",
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 15
+    },
+    {
       "display": "22,09°",
+      "id": "SPIN_OBL_MIN_2MA",
+      "pointer": "/with_moon_2myr/obliquity_min_deg",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 22.0873117452473
     },
     {
-      "id": "SPIN_OBL_MAX_2MA",
-      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
-      "pointer": "/with_moon_2myr/obliquity_max_deg",
-      "value": 24.443708466000974,
-      "tolerance": 1e-12,
       "display": "24,44°",
+      "id": "SPIN_OBL_MAX_2MA",
+      "pointer": "/with_moon_2myr/obliquity_max_deg",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 24.443708466000974
     },
     {
-      "id": "SPIN_NO_MOON_MIN_2MA",
-      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
-      "pointer": "/no_moon_2myr/obliquity_min_deg",
-      "value": 1.2498500566145063,
-      "tolerance": 1e-12,
       "display": "1,25°",
-      "targets": [
-        "site/preuves.html"
-      ]
-    },
-    {
-      "id": "SPIN_NO_MOON_MAX_2MA",
+      "id": "SPIN_NO_MOON_MIN_2MA",
+      "pointer": "/no_moon_2myr/obliquity_min_deg",
       "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
-      "pointer": "/no_moon_2myr/obliquity_max_deg",
-      "value": 45.04188940616386,
+      "targets": [
+        "site/preuves.html"
+      ],
       "tolerance": 1e-12,
+      "value": 1.2498500566145063
+    },
+    {
       "display": "45,04°",
+      "id": "SPIN_NO_MOON_MAX_2MA",
+      "pointer": "/no_moon_2myr/obliquity_max_deg",
+      "source": "02_branche_systeme_solaire/couche_spin_orbite/resultats/summary.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 1e-12,
+      "value": 45.04188940616386
     },
     {
-      "id": "PCMCI_INTERVAR_RAW_LINKS",
-      "source": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json",
-      "pointer": "/significant_links_raw_p_le_0p01",
-      "transform": "count_intervariable_unique",
-      "value": 1,
-      "tolerance": 0,
       "display": "1 association inter-variable non orientée",
+      "id": "PCMCI_INTERVAR_RAW_LINKS",
+      "pointer": "/significant_links_raw_p_le_0p01",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json",
       "targets": [
         "site/preuves.html"
-      ]
+      ],
+      "tolerance": 0,
+      "transform": "count_intervariable_unique",
+      "value": 1
     },
     {
-      "id": "MANIFEST_FILES",
-      "source": "preuves/snapshots/v0.9.5-research.json",
-      "pointer": "/file_count",
-      "value": 1451,
-      "tolerance": 0,
       "display": "1 451",
+      "id": "MANIFEST_FILES",
+      "pointer": "/file_count",
+      "source": "preuves/snapshots/v0.9.5-research.json",
       "targets": [
         "site/index.html",
         "site/reproductibilite.html"
-      ]
-    },
-    {
-      "id": "GC_STAGES",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/stages",
-      "value": 23,
+      ],
       "tolerance": 0,
-      "display": "23 stades",
-      "targets": []
+      "value": 1451
     },
     {
-      "id": "GC_SOURCES",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/sources",
-      "value": 41,
-      "tolerance": 0,
-      "display": "41 sources",
-      "targets": []
-    },
-    {
-      "id": "GC_CLAIMS",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/claims",
-      "value": 12,
-      "tolerance": 0,
-      "display": "12 claims",
-      "targets": []
-    },
-    {
-      "id": "GC_OBSERVATIONS",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/curated_observation_records",
-      "value": 24,
-      "tolerance": 0,
-      "display": "24 enregistrements",
-      "targets": []
-    },
-    {
-      "id": "GC_STELLAR_ELEMENTS",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/stellar_yield_elements",
-      "value": 84,
-      "tolerance": 0,
-      "display": "84 éléments",
-      "targets": []
-    },
-    {
-      "id": "GC_STELLAR_ISOTOPES",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/stellar_yield_isotopes",
-      "value": 5258,
-      "tolerance": 0,
-      "display": "5 258 isotopes",
-      "targets": []
-    },
-    {
-      "id": "GC_ELEMENTS_BEYOND_BBN",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/elements_beyond_bbn_baseline",
-      "value": 81,
-      "tolerance": 0,
-      "display": "81 éléments au-delà du baseline BBN",
-      "targets": []
-    },
-    {
-      "id": "GC_PHASE_TABLE",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/thermochemical_phase_compositions",
-      "value": 1026,
-      "tolerance": 0,
-      "display": "1 026 compositions de phases",
-      "targets": []
-    },
-    {
-      "id": "GC_PHASE_BBN_ADMISSIBLE",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/bbn_stoichiometrically_admissible_phases",
-      "value": 0,
-      "tolerance": 0,
-      "display": "0 phase stoichiométriquement admissible dans cette table avec H/He/Li seuls",
-      "targets": []
-    },
-    {
-      "id": "GC_PHASE_ENRICHED_ADMISSIBLE",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
-      "pointer": "/enriched_stoichiometrically_admissible_phases",
-      "value": 1015,
-      "tolerance": 0,
-      "display": "1 015 phases stoichiométriquement admissibles avec l’inventaire enrichi",
-      "targets": []
-    },
-    {
+      "display": "1 495",
       "id": "MAIN_MANIFEST_FILES",
-      "source": "MANIFEST.sha256.json",
       "pointer": "/files",
-      "transform": "len",
-      "value": 1497,
+      "source": "MANIFEST.sha256.json",
+      "targets": [],
       "tolerance": 0,
-      "display": "1 497",
-      "targets": []
+      "transform": "len",
+      "value": 1495
+    },
+    {
+      "display": "20 stades",
+      "id": "GC_EMP_STAGES",
+      "pointer": "/stages",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 20
+    },
+    {
+      "display": "22 liens qualifiés",
+      "id": "GC_EMP_LINKS",
+      "pointer": "/links",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 22
+    },
+    {
+      "display": "33 sources primaires/officielles",
+      "id": "GC_EMP_SOURCES",
+      "pointer": "/primary_or_official_sources",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 33
+    },
+    {
+      "display": "76 enregistrements empiriques",
+      "id": "GC_EMP_RECORDS",
+      "pointer": "/empirical_measurement_records",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 76
+    },
+    {
+      "display": "16 claims",
+      "id": "GC_EMP_CLAIMS",
+      "pointer": "/claims",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 16
+    },
+    {
+      "display": "15 claims soutenus",
+      "id": "GC_EMP_SUPPORTED_CLAIMS",
+      "pointer": "/supported_claims",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 15
+    },
+    {
+      "display": "1 question ouverte",
+      "id": "GC_EMP_UNRESOLVED_CLAIMS",
+      "pointer": "/unresolved_claims",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 1
+    },
+    {
+      "display": "0 simulation",
+      "id": "GC_EMP_SIMULATIONS_USED",
+      "pointer": "/simulations_used",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 0
+    },
+    {
+      "display": "0 donnée synthétique",
+      "id": "GC_EMP_SYNTHETIC_ROWS",
+      "pointer": "/synthetic_rows",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 0
+    },
+    {
+      "display": "0 imputation",
+      "id": "GC_EMP_IMPUTED_ROWS",
+      "pointer": "/imputed_rows",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 0
+    },
+    {
+      "display": "52 grains présolaires Bennu",
+      "id": "GC_BENNU_PRESOLAR_GRAINS",
+      "pointer": "/bennu_presolar_grains_total",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 52
+    },
+    {
+      "display": "57 grains présolaires Ryugu",
+      "id": "GC_RYUGU_PRESOLAR_GRAINS",
+      "pointer": "/ryugu_presolar_grains_total",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 57
+    },
+    {
+      "display": "≥110 grains présolaires identifiés",
+      "id": "GC_RETURNED_SAMPLE_PRESOLAR_MIN",
+      "pointer": "/returned_sample_presolar_grains_minimum_across_cited_studies",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 110
+    },
+    {
+      "display": "3 corps retournés",
+      "id": "GC_RETURNED_SAMPLE_BODIES",
+      "pointer": "/returned_sample_bodies_with_presolar_detection",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 3
+    },
+    {
+      "display": "z = 0,846",
+      "id": "GC_WATER_Z",
+      "pointer": "/V883_vs_67P_standardized_difference",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.8462135034684345
+    },
+    {
+      "display": "2,61 Ma",
+      "id": "GC_CHONDRULE_SPAN_MYR",
+      "pointer": "/chondrule_measured_age_span_myr",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 2.6099999999996726
+    },
+    {
+      "display": "0,5 m/s",
+      "id": "GC_LAB_EROSION_THRESHOLD",
+      "pointer": "/laboratory_erosion_threshold_m_s",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 0.5
+    },
+    {
+      "display": "3,0 cm",
+      "id": "GC_LAB_INSTABILITY_WAVELENGTH_CM",
+      "pointer": "/laboratory_instability_wavelength_cm",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 3.0
+    },
+    {
+      "display": "2 protoplanètes",
+      "id": "GC_PDS70_ACCRETING_PROTOPLANETS",
+      "pointer": "/observed_accreting_protoplanets_PDS70",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 2
+    },
+    {
+      "display": "8 planètes",
+      "id": "GC_PRESENT_PLANETS",
+      "pointer": "/present_solar_system_planets",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "targets": [],
+      "tolerance": 0,
+      "value": 8
     }
   ]
 }

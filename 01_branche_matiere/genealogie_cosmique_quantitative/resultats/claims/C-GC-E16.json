@@ -1,0 +1,20 @@
+{
+  "claim_id": "C-GC-E16",
+  "criteria": {
+    "empirical_endpoint_observed": true,
+    "unique_history_claimed": false
+  },
+  "directness": "explicit_limit",
+  "mechanism": "unique_orbital_genealogy_not_identifiable_from_empirical_archives_alone",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Les seules données empiriques permettent-elles de reconstruire une trajectoire causale unique jusqu’aux éléments orbitaux précis du Système solaire actuel ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Les archives empiriques atteignent l’architecture présente et contraignent des histoires de croissance, mais elles ne sélectionnent pas une unique trajectoire orbitale détaillée. Aucune simulation n’est substituée pour fermer artificiellement ce problème inverse.",
+  "source_ids": [
+    "S028"
+  ],
+  "stages": [
+    "GC-E19"
+  ],
+  "verdict": "undetermined_empirical_only"
+}

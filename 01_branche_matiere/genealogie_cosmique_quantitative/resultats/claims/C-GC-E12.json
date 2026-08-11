@@ -1,0 +1,24 @@
+{
+  "claim_id": "C-GC-E12",
+  "criteria": {
+    "CM_carbonate_age_Ma": 4563.4,
+    "angrite_Mg26_excess": true,
+    "angrite_age_Ma": 4566.2,
+    "nominal_event_gap_myr": 2.800000000000182
+  },
+  "directness": "meteoritic_chronometry",
+  "mechanism": "formation_time_associates_with_differentiated_vs_hydrous_records",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "L’ordre temporel mesuré est-il associé à des destins matériels différents des petits corps ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Association chronologique empirique entre archives de corps différenciés précoces et carbonates hydratés plus tardifs; aucun calcul thermique n’est utilisé comme preuve.",
+  "source_ids": [
+    "S017",
+    "S018"
+  ],
+  "stages": [
+    "GC-E13",
+    "GC-E14"
+  ],
+  "verdict": "supports_timing_dependent_material_fates"
+}

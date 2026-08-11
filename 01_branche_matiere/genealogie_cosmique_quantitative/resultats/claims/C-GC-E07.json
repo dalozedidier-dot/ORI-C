@@ -1,0 +1,19 @@
+{
+  "claim_id": "C-GC-E07",
+  "criteria": {
+    "refractory_disk_observation_present": true
+  },
+  "directness": "direct_astronomical_observation",
+  "mechanism": "hot_gas_and_crystalline_refractory_solids_coexist_in_embedded_disk",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "La formation de solides réfractaires est-elle directement observable dans un disque planétaire jeune ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "HOPS-315 est un analogue astrophysique observé; la comparaison à des modèles de condensation publiée dans l’article n’est pas utilisée comme donnée de cette campagne.",
+  "source_ids": [
+    "S024"
+  ],
+  "stages": [
+    "GC-E07"
+  ],
+  "verdict": "supports_observed_refractory_solid_formation"
+}

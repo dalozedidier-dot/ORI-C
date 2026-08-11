@@ -243,7 +243,7 @@ jobs:
 
 
   genealogie-cosmique:
-    name: Généalogie cosmique quantitative
+    name: Généalogie cosmique empirique
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -268,3 +268,14 @@ jobs:
             --candidate "$RUNNER_TEMP/gc-candidate" \
             --relative-tolerance 0 --absolute-tolerance 0 --ignorer-suffixes .sha256
           (cd 01_branche_matiere/genealogie_cosmique_quantitative/resultats && sha256sum -c RESULTATS.sha256)
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('01_branche_matiere/genealogie_cosmique_quantitative/resultats/AUDIT_ADMISSIBILITE.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['status']=='pass'
+          assert d['simulations_used_as_evidence']==0
+          assert d['synthetic_rows']==0
+          assert d['imputed_rows']==0
+          print('pare-feu empirique: 0 simulation, 0 synthétique, 0 imputation')
+          PY

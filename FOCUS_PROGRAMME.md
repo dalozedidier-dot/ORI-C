@@ -38,9 +38,13 @@ Le format, le validateur et le moteur commun se trouvent dans `methodologie_puis
 
 Les tâches purement prospectives ont été remplacées par des modules exécutables lorsque les données le permettent : viabilité de trajectoire sur spin-orbite, PID D'Onofrio, états prédictifs finis, topologie persistante, puissance conjointe matière, CCM et réanalyse LTEE. COT et Assembly Theory restent explicitement non évaluables sur les objets courants faute de stœchiométrie ou d'observables appariées. Les deux hypothèses séparantes du cadre sont enregistrées comme candidates et non comme lois.
 
-### Priorité structurante : fermer le raccordement Big Bang chaud → architecture solaire
+### Priorité structurante : raccordement empirique Big Bang chaud → architecture solaire
 
-La nouvelle couche `01_branche_matiere/genealogie_cosmique_quantitative/` porte 23 stades, des sources primaires/reconstructions/modèles explicitement séparés, des claims machine, des contrôles de non-surinterprétation et une reproductibilité stricte. Elle reprend sans modifier la généalogie qualitative existante et l'étend jusqu'au handoff vers `C-AST-01`. Ce handoff doit rester `open` tant qu'aucun modèle de formation ne produit les conditions initiales orbitales du calcul N-corps avec incertitudes.
+La couche `01_branche_matiere/genealogie_cosmique_quantitative/` est désormais **strictement empirique** : 20 stades, 22 liens qualifiés, 33 sources primaires/officielles, 76 mesures ou reconstructions directement ancrées dans des mesures, 15 claims soutenus et 1 limite ouverte. Son audit machine impose **0 simulation, 0 donnée synthétique, 0 imputation**.
+
+Le travail prioritaire n’est plus d’ajouter des scénarios de formation. Il consiste à renforcer les continuités matérielles et isotopiques observables : produits stellaires → poussières → grains présolaires retournés → glaces/molécules → réservoirs et chronologie du disque solaire → petits corps → histoires planétaires. La branche atteint l’architecture actuelle comme endpoint observationnel, tout en laissant `undetermined_empirical_only` la reconstruction d’une trajectoire orbitale unique. Aucun modèle n’est autorisé à combler ce trou.
+
+`C-AST-01` demeure séparé : il teste l’efficacité causale d’une architecture déjà donnée au niveau modèle et ne sert pas de preuve de sa genèse.
 
 ## Frontière après publication stable 0.9.5-research
 

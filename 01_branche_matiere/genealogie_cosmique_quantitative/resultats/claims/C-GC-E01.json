@@ -1,0 +1,26 @@
+{
+  "claim_id": "C-GC-E01",
+  "criteria": {
+    "D_over_H_measured": true,
+    "Ti44_direct_lines": true,
+    "Yp_measured": true,
+    "odd_Z_detected": true
+  },
+  "directness": "direct_observation_plus_observational_reconstruction",
+  "mechanism": "composition_available_changes_across_cosmic_history",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Les observations réelles montrent-elles que la composition disponible change entre l’inventaire primordial léger et les produits stellaires ultérieurs ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Contraste empirique entre abondances primordiales reconstruites depuis spectres et noyaux produits par des étoiles/explosions détectés directement; aucune table de rendement théorique n’est utilisée.",
+  "source_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004"
+  ],
+  "stages": [
+    "GC-E00",
+    "GC-E01"
+  ],
+  "verdict": "supports_empirical_enrichment_sequence"
+}

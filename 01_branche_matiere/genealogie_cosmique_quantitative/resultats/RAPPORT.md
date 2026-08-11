@@ -1,37 +1,34 @@
-# Rapport — Généalogie cosmique quantitative
+# Résultats — généalogie cosmique empirique complète
 
-## Couverture
+**Règle absolue : aucune simulation, aucune donnée synthétique, aucune imputation et aucune sortie de modèle ne comptent comme preuve dans cette branche.**
 
-- Stades : **23**
-- Relations parent→descendant : **40**
-- Sources : **41**
-- Claims locales : **12**
-- Enregistrements quantitatifs de littérature : **24**
+- 20 stades empiriques et 22 liens qualifiés.
+- 33 sources primaires/officielles et 76 enregistrements de mesures réelles.
+- 15 résultats/claims soutenus; 1 question reste explicitement indéterminée.
+- Audit : 0 simulation, 0 ligne synthétique, 0 ligne imputée.
 
-## Nucléosynthèse versionnée
+## Résultats matériels directs
 
-- Familles de modèles : **6**
-- Éléments couverts : **84**
-- Isotopes couverts : **5258**
-- Éléments du tableau au-delà du baseline BBN H/He/Li : **81**
-- Éléments rocheux clefs tous présents : **True**
+- SN1987A : poussière froide mesurée dans les éjecta, 17–23 K et 0.4–0.7 M☉.
+- Échantillons retournés : Bennu 52 grains présolaires, Ryugu 57, Wild 2 au moins 1; minimum descriptif = 110 grains identifiés dans les études citées sur trois corps retournés.
+- Wild 2 contient aussi un grain réfractaire enrichi en 16O et des matériaux haute température: trace empirique de redistribution/recyclage de matériaux dans le disque solaire.
 
-Ce calcul mesure une **expansion de l’inventaire dans les rendements stellaires versionnés**. Il ne remplace pas une simulation d’évolution chimique galactique.
+## Résultats moléculaires et isotopiques
 
-## Maillons causalement informatifs déjà présents
+- 67P : D2O/H2O dérivé de deux rapports ROSINA = 1.890e-05 ± 9.780e-06; V883 Ori = 3.20e-05; écart standardisé = 0.846.
+- TW Hya : CH3OH détecté directement sur 6 canaux >3σ, pic S/N = 5.5.
+- Réservoirs NC/CC : coexistence déduite des bornes publiées ~2–3 Ma; hétérogénéité de 26Al rapportée par facteur 3–4.
+- CAI/chondres : intervalle d’âges Pb-Pb mesuré des chondres = 2.61 Ma.
 
-- Grains présolaires : transmission matérielle directe étroite depuis des sources stellaires jusqu’à des matériaux primitifs.
-- Glaces nuage→disque : observation forte dans un analogue externe, non transposée comme mesure directe du disque solaire.
-- Réservoirs isotopiques : archives météoritiques montrant une histoire de mélange/tri non totalement effacée.
-- 26Al + temps d’accrétion : mécanisme où l’histoire modifie le budget thermique et donc les futurs matériels.
-- Concentration/streaming : mécanisme modèle vers les planétésimaux; H011 conserve son statut `mechanistic_threshold_supported_in_simulations` et son rapport 3.33333333333.
+## Résultats de croissance et d’architecture
 
-## Raccordement Système solaire
+- Microgravité : seuil d’érosion mesuré = 0.5 m/s; longueur d’onde minimale observée de l’instabilité collective = 3.0 cm.
+- PDS 70 : 2 protoplanètes en accrétion détectées en Hα.
+- Mars et Terre conservent des contraintes isotopiques différentes sur leurs histoires de croissance/accrétion.
+- Endpoint : 8 planètes observées dans l’architecture actuelle.
 
-C-AST reste **13/15**, verdict `supports`. Le handoff formation→conditions initiales actuelles reste **OPEN**. Aucun résultat de cette branche ne requalifie C-AST ni ne transforme un scénario de formation en histoire unique certifiée.
+## Verdict ORI-C
 
-## Verdict de branche
+**Soutien empirique du mécanisme de transmission historique.** Des constituants, grains, molécules, isotopes, réservoirs, âges, structures et histoires d’accrétion mesurés conservent des conséquences de stades antérieurs et conditionnent le matériau/architecture disponible aux stades suivants.
 
-**open_not_certified**
-
-La branche établit une base quantitative et bibliographique profonde pour tester le mécanisme ORI-C de transmission historique. Elle ne revendique pas encore une fermeture causale de bout en bout.
+Ce verdict ne prouve pas une trajectoire cosmologique ou orbitale unique. Le problème inverse des éléments orbitaux précis actuels reste `undetermined_empirical_only`; il n’est pas fermé par une simulation puisque les simulations sont hors preuve dans cette branche.

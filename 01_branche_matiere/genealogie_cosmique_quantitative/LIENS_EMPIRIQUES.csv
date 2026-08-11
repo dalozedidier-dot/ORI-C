@@ -1,0 +1,23 @@
+from_stage,to_stage,relation,link_class
+GC-E00,GC-E01,inventaire primordial léger → apparition ultérieure de noyaux stellaires mesurés,empirical_historical_contrast
+GC-E01,GC-E02,produits d’éjecta stellaires → poussière froide dans les éjecta,same_event_observed_transformation
+GC-E02,GC-E03,poussières d’origine stellaire → grains présolaires conservés dans matériaux solaires,direct_material_inheritance_class
+GC-E03,GC-E08,grains présolaires → hétérogénéités nucléosynthétiques conservées dans la matière solaire,measured_material_continuity
+GC-E04,GC-E05,nuage dense → alimentation protostellaire,observed_analogue_bridge
+GC-E04,GC-E06,glaces du nuage → molécules/glaces observées dans disques,observed_analogue_bridge
+GC-E05,GC-E06,apport de matière → disque jeune,observed_analogue_bridge
+GC-E06,GC-E08,héritage moléculaire/isotopique → réservoirs du disque solaire,cross_system_empirical_consistency
+GC-E07,GC-E10,solides réfractaires observables dans jeunes disques → archives CAI/chondres solaires,analogue_to_solar_archive
+GC-E08,GC-E09,réservoirs solaires hétérogènes → matériaux redistribués conservés dans Wild 2,solar_sample_link
+GC-E08,GC-E10,réservoirs isotopiques → solides datés,solar_sample_link
+GC-E09,GC-E10,redistribution/recyclage de solides → coexistence d’archives thermiques différentes,solar_sample_sequence
+GC-E10,GC-E13,solides primitifs → corps différenciés précoces,chronometric_sequence
+GC-E10,GC-E14,solides primitifs → corps hydratés plus tardifs,chronometric_sequence
+GC-E11,GC-E12,agrégats de poussière → comportement collectif poussière-gaz,laboratory_mechanism_stack
+GC-E12,GC-E15,mécanisme collectif possible → structures réelles de disques,mechanism_to_observation_non_unique
+GC-E15,GC-E16,disque de PDS 70 avec cavité → deux protoplanètes en accrétion détectées en Hα,same_system_observed_sequence
+GC-E13,GC-E17,petits corps différenciés précoces → histoire d’un embryon planétaire,solar_chronometric_sequence
+GC-E14,GC-E18,"archives hydratées/carbonées des petits corps → contexte empirique de matériaux volatils, sans filiation directe imposée vers la Terre",solar_context_non_genealogical
+GC-E16,GC-E19,protoplanètes observées ailleurs → endpoint d’architecture planétaire,analogue_endpoint_bridge
+GC-E17,GC-E19,Mars reconstruit → Mars actuel,same_body_history_to_endpoint
+GC-E18,GC-E19,Terre reconstruite → Terre actuelle,same_body_history_to_endpoint

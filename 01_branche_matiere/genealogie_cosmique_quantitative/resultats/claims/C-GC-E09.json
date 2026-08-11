@@ -1,0 +1,22 @@
+{
+  "claim_id": "C-GC-E09",
+  "criteria": {
+    "O16_refractory_grain_detected": true,
+    "circumstellar_grain_detected": true,
+    "high_temperature_material_detected": true
+  },
+  "directness": "returned_sample_mineralogy_and_isotopes",
+  "mechanism": "high_temperature_and_presolar_material_coexist_in_outer_comet",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Des échantillons cométaires retournés enregistrent-ils une redistribution de matériaux formés dans des régimes thermiques différents ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "La coexistence de stardust et de matériaux réfractaires/haute température dans Wild 2 soutient un mélange/transport à grande échelle. Aucun scénario dynamique ni distance de transport n’est calculé ici.",
+  "source_ids": [
+    "S031",
+    "S032"
+  ],
+  "stages": [
+    "GC-E09"
+  ],
+  "verdict": "supports_empirical_solar_disk_material_redistribution"
+}

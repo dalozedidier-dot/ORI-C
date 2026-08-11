@@ -111,7 +111,7 @@ la capacité de former des corps planétaires.
 Les régimes 5 à 8 restent présents dans l'article sous forme de passages de
 liaison. Leur développement complet est dans les branches 2 et 3.
 
-Depuis la publication `v0.9.5-research`, cette liaison est développée comme une couche quantitative dédiée dans `01_branche_matiere/genealogie_cosmique_quantitative/`. Elle conserve la généalogie qualitative antérieure intacte, mais explicite 23 stades, leurs dépendances, leurs sources, leurs observables, les mécanismes concurrents et les limites de chaque flèche. Son point aval est un contrat `HANDOFF_SYSTEME_SOLAIRE.json` vers `C-AST-01`; ce contrat reste ouvert tant qu'un modèle de formation ne produit pas les conditions initiales orbitales avec incertitudes.
+Depuis la publication `v0.9.5-research`, cette liaison est développée comme une couche empirique dédiée dans `01_branche_matiere/genealogie_cosmique_quantitative/`. Elle conserve la généalogie qualitative antérieure intacte et impose un pare-feu **données réelles uniquement** : 20 stades, 22 liens qualifiés, 33 sources primaires/officielles et 76 enregistrements empiriques. Aucune simulation, donnée synthétique, imputation, sortie thermochimique, rendement stellaire théorique ou intégration orbitale ne peut entrer dans les verdicts. Le point aval `HANDOFF_SYSTEME_SOLAIRE.json` atteint l'architecture présente comme endpoint observationnel ; la reconstruction d'une trajectoire orbitale unique reste `undetermined_empirical_only` plutôt que d'être comblée par un modèle. `C-AST-01` demeure un test séparé des conséquences d'une architecture donnée.
 
 **Liaison vers la branche 2** — héritage matériel et organisationnel :
 

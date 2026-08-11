@@ -85,9 +85,15 @@ Les ponts vers théorie de la viabilité, PID, états causaux finis, Chemical Or
 
 ## Développement post-publication : généalogie cosmique quantitative
 
-`01_branche_matiere/genealogie_cosmique_quantitative/` est une extension de recherche de la branche matière, pas une nouvelle certification globale et pas une modification rétroactive de `v0.9.5-research`. Elle relie 23 stades depuis les produits de nucléosynthèse stellaire jusqu'au raccordement avec l'architecture orbitale actuelle. Les sources et sorties distinguent systématiquement échantillon direct, chronométrie/reconstruction isotopique, analogue astrophysique, simulation et modèle.
+`01_branche_matiere/genealogie_cosmique_quantitative/` est une extension empirique de la branche matière. Elle ne modifie pas rétroactivement `v0.9.5-research` et ne transforme aucune certification existante.
 
-La présence de grains présolaires, d'hétérogénéités isotopiques, de glaces héritées ou de mécanismes de formation des planétésimaux soutient des maillons locaux. Elle n'établit pas une histoire unique du Système solaire. Les scénarios de structuration du disque, de croissance des géantes, de migration et d'instabilité restent concurrents dans `MODELES_CONCURRENTS.csv`. Le verdict end-to-end reste `open_not_certified` et l'interface `HANDOFF_SYSTEME_SOLAIRE.json` reste `open` tant que la branche ne dérive pas les conditions initiales de `C-AST-01` avec leurs incertitudes.
+**Politique de preuve : données réelles uniquement.** Sont admis les observations astronomiques/spatiales, échantillons retournés, mesures isotopiques et chronométriques, expériences de laboratoire, reconstructions planétaires fondées sur des isotopes mesurés et produits observationnels officiels. Sont exclus des verdicts : simulation, donnée synthétique ou construite, imputation, sortie numérique de modèle, rendement stellaire théorique, calcul thermochimique et intégration orbitale.
+
+La couche courante couvre **20 stades, 22 liens, 33 sources primaires/officielles et 76 enregistrements empiriques**. Elle produit **15 résultats locaux/synthétiques soutenus et 1 limite ouverte**. Les continuités matérielles directes, les archives du même Système solaire, les analogues astrophysiques et les expériences de laboratoire sont marqués séparément ; un analogue inter-systèmes n'est jamais présenté comme l'histoire observée du Soleil.
+
+Le résultat global `supports_empirical_historical_accessibility_mechanism` signifie que des constituants, poussières, grains présolaires, molécules, isotopes, réservoirs, âges, structures et histoires d'accrétion conservent des conséquences mesurables d'étapes antérieures. Il soutient le mécanisme d'inscription historique formulé par ORI-C. Il ne démontre ni une loi universelle ni une trajectoire cosmologique/orbitale unique.
+
+L'endpoint planétaire actuel est observé. Le chemin orbital précis qui y conduit reste `undetermined_empirical_only`. `C-AST-01` et les autres résultats de modèle restent hors du décompte empirique de cette branche.
 
 ## Snapshot stable 0.9.5-research
 

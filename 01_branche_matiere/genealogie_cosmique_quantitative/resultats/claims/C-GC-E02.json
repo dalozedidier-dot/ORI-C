@@ -1,0 +1,28 @@
+{
+  "claim_id": "C-GC-E02",
+  "criteria": {
+    "dust_mass_solar": [
+      0.4,
+      0.7
+    ],
+    "dust_temperature_K": [
+      17.0,
+      23.0
+    ]
+  },
+  "directness": "same_object_astronomical_observation",
+  "mechanism": "stellar_ejecta_produce_persistent_solid_dust",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Observe-t-on directement la conversion d’éjecta stellaires enrichis en poussière solide ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "SN1987A fournit un cas observationnel où les produits de l’explosion et une grande masse de poussière froide sont mesurés dans les éjecta. La masse est issue de la photométrie publiée; aucun rendement simulé n’est utilisé.",
+  "source_ids": [
+    "S003",
+    "S029"
+  ],
+  "stages": [
+    "GC-E01",
+    "GC-E02"
+  ],
+  "verdict": "supports_observed_stellar_dust_formation"
+}

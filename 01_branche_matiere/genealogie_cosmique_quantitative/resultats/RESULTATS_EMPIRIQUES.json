@@ -1,0 +1,57 @@
+{
+  "data_policy": "published_or_direct_empirical_measurements_only",
+  "derived_from_observations": {
+    "EC002_offset_from_CAI_nominal_myr": 1.7399999999997817,
+    "NC_CC_maximum_coexistence_myr": 3.0,
+    "NC_CC_minimum_coexistence_myr": 2.0,
+    "SN1987A_dust_mass_solar_range": [
+      0.4,
+      0.7
+    ],
+    "SN1987A_dust_temperature_K_range": [
+      17.0,
+      23.0
+    ],
+    "TW_Hya_methanol_direct_detection": true,
+    "V883_vs_67P_standardized_difference": 0.8462135034684345,
+    "angrite_to_CM_carbonate_event_gap_nominal_myr": 2.800000000000182,
+    "bennu_presolar_grains_total": 52,
+    "bennu_presolar_nominal_abundance_sum_ppm": 41.0,
+    "chondrule_measured_age_span_myr": 2.6099999999996726,
+    "comet_67P_D2O_over_H2O_derived": 1.89e-05,
+    "comet_67P_D2O_over_H2O_sigma": 9.780230058643815e-06,
+    "returned_sample_bodies_with_presolar_detection": 3,
+    "returned_sample_presolar_grains_minimum_across_cited_studies": 110,
+    "ryugu_presolar_grains_total": 57,
+    "ryugu_presolar_nominal_abundance_sum_ppm": 40.8,
+    "source_mode_counts": {
+      "astronomical_observation": 33,
+      "laboratory_experiment": 6,
+      "meteorite_isotope_measurement": 8,
+      "meteoritic_chronometry": 6,
+      "official_observation_product": 1,
+      "planetary_isotope_reconstruction": 2,
+      "returned_sample_measurement": 18,
+      "spacecraft_observation": 2
+    },
+    "wild2_refractory_and_highT_material_detected": true
+  },
+  "evidence_mode_counts": {
+    "astronomical_observation": 33,
+    "laboratory_experiment": 6,
+    "meteorite_isotope_measurement": 8,
+    "meteoritic_chronometry": 6,
+    "official_observation_product": 1,
+    "planetary_isotope_reconstruction": 2,
+    "returned_sample_measurement": 18,
+    "spacecraft_observation": 2
+  },
+  "imputed_rows": 0,
+  "link_count": 22,
+  "observed_records": 76,
+  "schema": "oric.gc.empirical-results.v3",
+  "simulations_used": 0,
+  "source_count": 33,
+  "stage_count": 20,
+  "synthetic_rows": 0
+}

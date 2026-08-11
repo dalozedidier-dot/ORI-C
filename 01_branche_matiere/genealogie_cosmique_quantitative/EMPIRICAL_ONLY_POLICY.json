@@ -1,0 +1,28 @@
+{
+  "schema": "oric.gc.empirical-only-policy.v1",
+  "scope": "01_branche_matiere/genealogie_cosmique_quantitative",
+  "rule": "Only published/direct empirical measurements or official observation products may enter evidence calculations.",
+  "allowed_evidence_modes": [
+    "astronomical_observation",
+    "spacecraft_observation",
+    "returned_sample_measurement",
+    "meteorite_isotope_measurement",
+    "meteoritic_chronometry",
+    "laboratory_experiment",
+    "planetary_isotope_reconstruction",
+    "official_observation_product"
+  ],
+  "forbidden_as_evidence": [
+    "simulation",
+    "synthetic_data",
+    "mock_data",
+    "constructed_benchmark",
+    "numerical_model_output",
+    "theoretical_yield_table",
+    "thermochemical_model_output",
+    "orbital_integration_as_genealogy_evidence"
+  ],
+  "mixed_paper_rule": "If a source contains observations and simulations/models, only explicitly transcribed measured quantities may enter MESURES_EMPIRIQUES.csv; modeled quantities are listed in portion_excluded.",
+  "negative_rule": "Missing empirical information remains missing; it is never imputed.",
+  "C_AST_firewall": "C-AST-01 remains a separate model-level certification and is not counted as empirical genealogy evidence."
+}

@@ -1,0 +1,21 @@
+empirical_stage,existing_transition,status,note
+GC-E00,TR-004/TR-005,extends_empirically,"baseline primordial mesuré, sans calcul BBN comme preuve"
+GC-E01,TR-007/TR-009,extends_empirically,produits stellaires détectés directement
+GC-E02,TR-008/TR-009,extends_empirically,poussière fraîche dans éjecta observée
+GC-E03,TR-016,extends_empirically,"Bennu, Ryugu, Wild2 retournés"
+GC-E04,TR-012/TR-014/TR-015,extends_empirically,glaces et grains dans nuages denses
+GC-E05,,new_empirical_bridge,streamer nuage-protostar/disque
+GC-E06,TR-014/TR-015,extends_empirically,eau lourde et méthanol dans disques
+GC-E07,TR-017,analogue_empirical,condensation réfractaire observée dans un autre disque
+GC-E08,TR-017/TR-018,extends_empirically,réservoirs isotopiques et chronologie solaire
+GC-E09,TR-017/TR-018,new_empirical_bridge,mélange/transport enregistré dans Wild2
+GC-E10,TR-017/TR-018,extends_empirically,chronologie Pb-Pb CAI/chondres
+GC-E11,,new_laboratory_bridge,agrégation mesurée
+GC-E12,TR-019,new_laboratory_bridge,"instabilité collective mesurée, sans simulation"
+GC-E13,TR-019,extends_empirically,corps différenciés précoces
+GC-E14,TR-019,extends_empirically,corps hydratés plus tardifs
+GC-E15,,analogue_empirical,disques jeunes observés
+GC-E16,TR-020,analogue_empirical,protoplanètes en accrétion observées
+GC-E17,TR-020,extends_empirically,Mars comme embryon via isotopes
+GC-E18,TR-020,extends_empirically,"Terre, provenance d’accrétion via Mo"
+GC-E19,,observed_endpoint,architecture présente uniquement

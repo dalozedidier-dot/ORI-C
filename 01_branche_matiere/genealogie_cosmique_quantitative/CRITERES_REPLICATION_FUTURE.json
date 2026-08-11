@@ -1,0 +1,14 @@
+{
+  "schema": "oric.gc.future-replication-criteria.v1",
+  "frozen_on": "2026-08-11",
+  "status": "frozen_after_initial_empirical_synthesis_not_retroactive_preregistration",
+  "criteria": [
+    "Every evidence row must resolve to a primary peer-reviewed source or official observation product.",
+    "No simulation, synthetic, mock, constructed, imputed, or numerical-model output may enter evidence calculations.",
+    "At least two independent returned-sample bodies must retain presolar material for replication of direct material inheritance.",
+    "Cross-stage isotope comparisons must propagate reported measurement uncertainties and be labelled consistency, not identity of lineage.",
+    "Any causal link inferred across different astrophysical systems must remain explicitly labelled analogue or cross-system.",
+    "A unique orbital history is not supportable unless directly identifiable from empirical archives; no model may be silently substituted.",
+    "All derived numbers must be exactly reproducible from MESURES_EMPIRIQUES.csv."
+  ]
+}

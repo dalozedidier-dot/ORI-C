@@ -7,9 +7,6 @@ on:
     paths:
       - '01_branche_matiere/genealogie_cosmique_quantitative/**'
       - '01_branche_matiere/genealogie/genealogie_matiere.csv'
-      - 'plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv'
-      - 'plateforme/campagne_maximale_reelle/data/nucleosynthesis_isotope_yields.csv'
-      - '01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json'
       - 'scripts/verifier_reproductibilite_resultats.py'
       - '.github/workflows/analyse-genealogie-cosmique.yml'
 
@@ -23,7 +20,7 @@ env:
 
 jobs:
   genealogie-cosmique:
-    name: Généalogie cosmique quantitative
+    name: Généalogie cosmique empirique
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -57,3 +54,16 @@ jobs:
       - name: Vérifier les empreintes locales
         working-directory: 01_branche_matiere/genealogie_cosmique_quantitative/resultats
         run: sha256sum -c RESULTATS.sha256
+      - name: Audit empirique strict
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('01_branche_matiere/genealogie_cosmique_quantitative/resultats/AUDIT_ADMISSIBILITE.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['status']=='pass'
+          assert d['simulations_used_as_evidence']==0
+          assert d['synthetic_rows']==0
+          assert d['imputed_rows']==0
+          print('pare-feu empirique: 0 simulation, 0 synthétique, 0 imputation')
+          PY

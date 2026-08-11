@@ -1,0 +1,26 @@
+{
+  "claim_id": "C-GC-E06",
+  "criteria": {
+    "67P_D2O_H2O_derived": 1.89e-05,
+    "TW_Hya_direct_detection": true,
+    "V883_D2O_H2O": 3.2e-05,
+    "criterion_z_lt_2": true,
+    "standardized_difference": 0.8462135034684345
+  },
+  "directness": "cross_system_observational_consistency",
+  "mechanism": "molecular_and_isotopic_signatures_survive_across_formation_stages",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Des signatures moléculaires formées en phase froide sont-elles observées jusque dans les disques et compatibles avec des matériaux cométaires ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "V883 Ori/67P testent la continuité isotopique de l’eau; TW Hya apporte une détection indépendante de CH3OH. Les abondances modélisées de TW Hya sont exclues.",
+  "source_ids": [
+    "S008",
+    "S009",
+    "S033"
+  ],
+  "stages": [
+    "GC-E04",
+    "GC-E06"
+  ],
+  "verdict": "supports_observational_molecular_inheritance"
+}

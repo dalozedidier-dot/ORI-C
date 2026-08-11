@@ -24,17 +24,17 @@ extra=[
 for id,q,statut,verdict,portee,p in extra:
  entries.append({'id':id,'question':q,'statut':statut,'verdict':verdict,'niveau_preuve':None,'portee':portee,'artefact':p,'empreinte_sortie':sha(p),'source':None,'mesures':None,'supersede_par':None})
 
-# Généalogie cosmique quantitative : extensions locales, jamais certifications héritées.
+# Généalogie cosmique : synthèse empirique stricte, séparée des certifications héritées.
 gc_path=ROOT/'01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS.json'
 if gc_path.is_file():
  gc=json.loads(gc_path.read_text(encoding='utf-8'))
- if gc.get('schema')!='oric.gc.claims.v1': raise ValueError('schéma CLAIMS généalogie cosmique inattendu')
+ if gc.get('schema')!='oric.gc.claims.v3': raise ValueError('schéma CLAIMS généalogie cosmique inattendu')
  for c in gc['claims']:
   cid=c['claim_id']; artefact=f'01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/{cid}.json'
-  if cid=='C-GC-11': statut='liaison_certification_existante'
-  elif c['verdict'].startswith('open_'): statut='ouvert'
-  else: statut='extension_genealogique'
-  entries.append({'id':cid,'question':c['question'],'statut':statut,'verdict':c['verdict'],'niveau_preuve':None,'portee':f"{c['directness']} — {c['scope']}",'artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stages'),'mechanism':c.get('mechanism')},'supersede_par':None})
+  if c['verdict'].startswith('undetermined_'): statut='ouvert_empirique'
+  elif c['verdict'].startswith('supports_'): statut='extension_empirique_non_preregistered'
+  else: statut='extension_empirique_non_concluante'
+  entries.append({'id':cid,'question':c['question'],'statut':statut,'verdict':c['verdict'],'niveau_preuve':None,'portee':f"{c['directness']} — {c['scope']}",'artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stages'),'mechanism':c.get('mechanism'),'preregistration':c.get('preregistration')},'supersede_par':None})
 
 out={'schema':'oric.proofs-registry.v1','authority':'machine-readable registry; certified entries are imported byte-for-byte in status from RESULTATS_SCIENTIFIQUES_CERTIFIES.json','entries':entries}
 (ROOT/'preuves/PREUVES.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -45,6 +45,6 @@ for e in entries:
 lines += ['', '## Extensions exécutées sans reclassement des certifications','', '| ID | Statut | Verdict technique | Portée |','|---|---|---|---|']
 for e in entries:
  if e['statut']!='certifie': lines.append(f"| `{e['id']}` | {e['statut']} | {e['verdict']} | {e['portee']} |")
-lines += ['', '## Règle de lecture','', 'Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires. La généalogie cosmique quantitative enregistre séparément ses claims locaux et conserve son handoff vers C-AST ouvert tant que les conditions initiales orbitales ne sont pas dérivées avec leurs incertitudes.','']
+lines += ['', '## Règle de lecture','', "Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires. La généalogie cosmique est soumise à un pare-feu empirique propre : aucune simulation, donnée synthétique ou sortie de modèle n'entre dans ses claims. Ses 15 résultats soutenus sont des extensions empiriques initiales non préenregistrées ; la trajectoire orbitale unique reste ouverte et C-AST demeure séparé au niveau modèle.",'']
 (ROOT/'ETAT_DES_PREUVES.md').write_text('\n'.join(lines),encoding='utf-8')
 print(f"PREUVES.json: {len(entries)} entrées; ETAT_DES_PREUVES.md généré")

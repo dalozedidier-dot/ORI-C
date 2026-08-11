@@ -1,0 +1,19 @@
+{
+  "claim_id": "C-GC-E05",
+  "criteria": {
+    "streamer_length_au_lower_bound": 10500.0
+  },
+  "directness": "direct_astronomical_observation",
+  "mechanism": "large_scale_material_stream_feeds_disk_scales",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
+  "source_ids": [
+    "S007"
+  ],
+  "stages": [
+    "GC-E05"
+  ],
+  "verdict": "supports_observed_cloud_to_disk_supply"
+}

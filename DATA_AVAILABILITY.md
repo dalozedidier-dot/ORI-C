@@ -32,11 +32,11 @@ dans `masses_reservoirs.csv`, jamais dans la saisie. Les colonnes non
 contraintes restent vides : le validateur refuse tout inventaire accessible
 chiffré dont les deux facteurs ne sont pas renseignés.
 
-## Généalogie cosmique quantitative — provenance de la littérature
+## Généalogie cosmique empirique — provenance de la littérature
 
-La couche `01_branche_matiere/genealogie_cosmique_quantitative/` ne redistribue aucun PDF d'article. `SOURCES_PRIMAIRES.csv` conserve DOI, URL, type de source, mode de preuve, stade concerné, apport et caveat. Les valeurs numériques explicitement transcrites sont isolées dans `data/OBSERVATIONS_CLEFS.csv` avec un statut épistémique (`mesure échantillon`, `chronométrie isotopique`, `reconstruction isotopique`, `observation analogue externe`, `sortie de modèle` ou `inférence de modèle`).
+La couche `01_branche_matiere/genealogie_cosmique_quantitative/` ne redistribue aucun PDF d'article. `SOURCES_EMPIRIQUES.csv` conserve DOI/URL, classe de source, mode de preuve, stades concernés, portion effectivement utilisée et portion explicitement exclue. Les valeurs admissibles sont isolées dans `data/MESURES_EMPIRIQUES.csv` et proviennent uniquement d'observations astronomiques ou spatiales, d'échantillons retournés, de mesures isotopiques/chronométriques, d'expériences de laboratoire, de reconstructions planétaires ancrées dans des isotopes mesurés ou d'un produit observationnel officiel.
 
-Les calculs locaux utilisent seulement des données déjà versionnées dans le dépôt : rendements de nucléosynthèse élémentaires/isotopiques, grille thermochimique et résultat H011. Le filtre `ACCESSIBILITE_PHASES.json` est volontairement stoichiométrique : il vérifie la disponibilité des constituants et ne requalifie pas la grille thermochimique en simulation du disque protosolaire. Le raccordement final vers la branche Système solaire reste `open`.
+La politique `EMPIRICAL_ONLY_POLICY.json` interdit comme preuve toute simulation, donnée synthétique ou construite, imputation, sortie numérique de modèle, table de rendement stellaire théorique, sortie thermochimique et intégration orbitale. Lorsqu'un article mélange mesures et modèles, seules les grandeurs mesurées transcrites sont admissibles ; les sorties modélisées restent documentées dans `portion_excluded`. `resultats/AUDIT_ADMISSIBILITE.json` contrôle ce pare-feu et doit rester à zéro pour simulation, synthétique et imputation. Le raccordement final atteint l'architecture présente mais laisse la trajectoire orbitale unique `undetermined_empirical_only`.
 
 ## Trois formes de livraison à distinguer
 

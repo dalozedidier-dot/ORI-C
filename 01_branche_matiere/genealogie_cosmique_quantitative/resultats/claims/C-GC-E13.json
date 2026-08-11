@@ -1,0 +1,27 @@
+{
+  "claim_id": "C-GC-E13",
+  "criteria": {
+    "DSHARP_disks": 20.0,
+    "IRS63_rings": 4.0,
+    "PDS70_accreting_protoplanets": 2.0,
+    "PDS70_same_system_disk_gap_context": true,
+    "TMC1A_age_yr": 100000.0
+  },
+  "directness": "astronomical_observation",
+  "mechanism": "disk_substructure_and_planetary_accretion_are_observed_stages",
+  "preregistration": "non_preregistered_initial_empirical_synthesis",
+  "question": "Observe-t-on dans de vrais systèmes une séquence allant de disques jeunes structurés à des protoplanètes en accrétion ?",
+  "schema": "oric.gc.claim.v3",
+  "scope": "Le contexte général utilise plusieurs systèmes observés, mais PDS 70 fournit en plus un raccord dans le même système entre une cavité de disque et deux protoplanètes Hα en accrétion; aucune structure annulaire n’est automatiquement attribuée à une planète et aucune migration/résonance n’est utilisée comme preuve.",
+  "source_ids": [
+    "S021",
+    "S022",
+    "S023",
+    "S025"
+  ],
+  "stages": [
+    "GC-E15",
+    "GC-E16"
+  ],
+  "verdict": "supports_observed_disk_to_protoplanet_sequence"
+}

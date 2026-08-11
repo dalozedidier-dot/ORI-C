@@ -1,56 +1,43 @@
-# Protocole — Généalogie cosmique quantitative
+# Protocole — généalogie cosmique empirique
 
-## 1. Question
+## Objet
 
-Tester, stade par stade, si l’histoire physique transforme les constituants, les contraintes ou l’architecture de manière à modifier l’ensemble des états et trajectoires physiquement accessibles au stade suivant.
+Tester, sans simulation ni données synthétiques, si l’histoire cosmique et planétaire laisse des inscriptions mesurables qui modifient ce qui est matériellement ou architecturalement disponible aux étapes suivantes.
 
-## 2. Unité d’analyse
+## Unité de preuve
 
-Chaque stade `GC-xxx` contient : état antérieur, processus, contraintes, inscription historique, nouveaux accessibles, ce qui n’est pas démontré, observable, sources et mode de preuve.
+Une unité de preuve est un enregistrement de `MESURES_EMPIRIQUES.csv` relié à une source primaire ou à un produit observationnel officiel. Chaque source déclare : le mode de preuve, la portion utilisée, la portion exclue et les stades couverts.
 
-Une flèche `GC-i → GC-j` n’est admise que comme **relation conditionnelle**. La présence d’un stade ne signifie pas que toutes ses sorties sont nécessaires ni suffisantes pour le suivant.
+## Admissibilité
 
-## 3. Hiérarchie de preuve
+Sont admis : observation astronomique, observation spatiale, échantillon retourné, mesure isotopique météoritique, chronométrie météoritique, expérience de laboratoire, reconstruction planétaire fondée sur isotopes mesurés, produit observationnel officiel.
 
-1. **Échantillon direct** : matière retournée ou météoritique portant une signature mesurée.
-2. **Observation astronomique** : mesure d’un système actuel, qui peut être un analogue du passé solaire.
-3. **Reconstruction historique** : isotopes/chronomètres qui contraignent un événement non observé directement.
-4. **Expérience / thermodynamique** : mécanisme reproductible sous conditions contrôlées.
-5. **Simulation** : causalité dans un modèle explicite, avec domaine de validité.
+Sont exclus des verdicts : simulation numérique, donnée synthétique, mock, benchmark construit, imputation, table de rendement stellaire théorique, sortie thermochimique, intégration N-corps, scénario orbital servant à combler une archive manquante.
 
-Aucun niveau n’est automatiquement transposé à un autre.
+Un article mixte n’est pas rejeté en bloc. Sa partie observationnelle peut être utilisée si les grandeurs employées sont mesurées et si les sorties modélisées sont explicitement exclues dans `SOURCES_EMPIRIQUES.csv`.
 
-## 4. Tests quantitatifs exécutés ici
+## Hiérarchie de lecture
 
-### NUC-01 — expansion de l’inventaire élémentaire dans les rendements stellaires
+1. **Continuité matérielle directe** : un objet physique ancien est mesuré dans un objet ultérieur, par exemple un grain présolaire dans un échantillon retourné.
+2. **Même système / même archive** : des isotopes ou âges différents dans des matériaux du Système solaire enregistrent une structure ou un ordre temporel.
+3. **Observation d’un mécanisme analogue** : un autre système montre physiquement une étape inaccessible dans les archives solaires directes, par exemple un streamer ou une protoplanète en accrétion.
+4. **Expérience de laboratoire** : mécanisme physique mesuré sous conditions contrôlées.
+5. **Synthèse inter-domaines** : plusieurs résultats locaux indépendants soutiennent un mécanisme général, sans créer une trajectoire unique.
 
-Le dépôt contient six familles de rendements stellaires. On compare le set élémentaire représenté par ces rendements au baseline élémentaire BBN `H, He, Li`. Ce test ne prétend pas calculer l’évolution chimique galactique; il mesure seulement si les modèles stellaires versionnés produisent un espace de constituants plus large.
+Aucune catégorie n’est automatiquement promue au niveau supérieur.
 
-### PHASE-01 — filtre stoichiométrique des phases accessibles
+## Critère ORI-C local
 
-La table thermochimique versionnée est filtrée par les éléments effectivement disponibles. Une composition de phase n'est dite *stoichiométriquement admissible* que si tous les éléments de sa formule appartiennent à l'inventaire considéré. Le baseline BBN `H, He, Li` est comparé à l'inventaire couvert par les rendements stellaires. Ce test vérifie une **condition nécessaire de constituants uniquement** : il ne calcule ni équilibre de condensation, ni activités, ni pression partielle, ni cinétique, ni réalisation historique dans le disque.
+Pour chaque claim, il faut identifier :
 
-### GEN-01 — fermeture topologique de la chaîne
+- une grandeur ou structure effectivement mesurée à l’étape amont ;
+- un porteur d’histoire persistant ou une transformation mesurée ;
+- une grandeur, structure ou domaine matériel différent à l’étape aval ;
+- la force de liaison permise par les données ;
+- les scénarios que le résultat ne permet pas de sélectionner.
 
-Tous les parents doivent être résolus, aucun cycle n’est admis, chaque stade doit avoir au moins une source ou être le raccordement explicite vers une certification existante.
+La synthèse globale est positive seulement si plusieurs porteurs indépendants sont soutenus : composition, matière présolaire, molécules/isotopes, architecture du disque/chronologie, croissance de corps et histoires planétaires.
 
-### SRC-01 — séparation des modes de preuve
+## Limite non négociable
 
-Le catalogue doit permettre de distinguer les preuves primaires, les revues et les sorties de modèles. Les observations numériques importées de la littérature sont marquées `mesure`, `reconstruction`, `sortie de modèle` ou `inférence de modèle`.
-
-### HANDOFF-01 — raccordement vers C-AST
-
-Le point aval doit retrouver la certification C-AST sans la modifier. Le handoff est déclaré `open` tant qu’aucun pipeline de formation planétaire ne produit, avec incertitudes et contrôle hors-échantillon, les mêmes variables nécessaires à la couche N-corps actuelle.
-
-## 5. Critères de non-surinterprétation
-
-- Les grains présolaires démontrent une transmission matérielle locale, pas le budget total de matière stellaire du disque.
-- V883 Ori est un analogue externe, pas une observation du disque solaire.
-- Les rapports >30 % d’infall tardif de 2026 sont des inférences du modèle de l’article, pas une mesure directe de masse du disque solaire.
-- Le 26Al ne reçoit pas une valeur initiale universelle imposée : une hétérogénéité 3–4 est rapportée par une analyse récente.
-- Streaming, Grand Tack, Nice, anneaux de planétésimaux et accrétion de galets conservent leur statut de modèles.
-- C-AST mesure l’efficacité causale de l’architecture actuelle **dans le modèle**; il ne reconstruit pas sa formation.
-
-## 6. Réfutabilité locale
-
-Une claim locale est réfutée si les données ou recalculs requis contredisent son énoncé sous le protocole défini. La proposition end-to-end reste `open_not_certified` jusqu’à fermeture du handoff.
+L’architecture actuelle du Système solaire est observée. Ses histoires de croissance sont partiellement contraintes par des archives isotopiques. Une trajectoire orbitale détaillée unique depuis le disque jusqu’aux orbites actuelles n’est pas directement enregistrée. Sans recours aux simulations, cette question doit rester ouverte.
