@@ -71,11 +71,12 @@ vérifier en texte intégral avant tout usage :
 
 | source candidate | pertinence | statut |
 |---|---|---|
-| Farough et al. 2016, *Geochemistry, Geophysics, Geosystems* — évolution de la perméabilité de fracture de roches ultramafiques en cours de serpentinisation, **étude expérimentale** | la serpentinisation augmente le volume, fracture la roche mère et favorise la percolation : la réaction crée la voie | non vérifié en texte intégral |
+| Farough et al. 2016, *Geochemistry, Geophysics, Geosystems* — évolution de la perméabilité de fracture de roches ultramafiques en cours de serpentinisation, **étude expérimentale** | le supplément S1 fournit 94 mesures `(t,Q,ΔP,k_e)` sur cinq expériences | supplément vérifié le 12 août 2026 : dans les cinq séries `k_e` décroît avec le temps ; cela ne démontre pas que H052 produit N030 |
 | Alexander et al. 2026, *AGU Advances* — perméabilité crustale induite par impacts sur la Terre primitive | les impacts fracturent la croûte et ouvrent la circulation sans interface préalable | non vérifié en texte intégral |
 
-**Ces références ne sont pas injectées dans le graphe.** Aucune n'a été lue en
-texte intégral, et surtout aucune ne porte encore sur l'hyperarête exacte : elles
+**Ces références ne sont pas injectées dans le graphe.** Le supplément numérique
+de Farough a désormais été lu et calculé, mais l'article principal et Alexander
+ne sont pas tous vérifiés en texte intégral. Surtout, aucune ne porte encore sur l'hyperarête exacte : elles
 établissent qu'une circulation crée de la perméabilité, pas que H052 produise
 N030 au sens où ORI-C code ce nœud. La distinction est ténue et elle est
 décisive.
@@ -91,7 +92,9 @@ actuel lui est fidèle.
    fidèle, ou s'il ajoute une précondition que la source n'impose pas. Si le
    codage est une sur-interprétation, le corriger est une correction
    documentaire, pas une réparation.
-2. **Si S14 ne tranche pas**, vérifier Farough 2016 et Alexander 2026, et exiger
+2. **Si S14 ne tranche pas**, vérifier l'article principal de Farough 2016 et
+   Alexander 2026. Le supplément Farough ne suffit pas : il montre une perte de
+   perméabilité au cours des cinq expériences. Exiger
    qu'une source démontre explicitement la production de l'interface par la
    circulation, dans des conditions compatibles avec N051 et N028.
 3. **Si aucune source ne tranche**, ne pas fermer le graphe. Geler à la place un

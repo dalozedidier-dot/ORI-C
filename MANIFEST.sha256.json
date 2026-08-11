@@ -1649,8 +1649,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
-      "size": 5274,
-      "sha256": "42c681d4905b0143ae6fd80109fc24bfd56641e4ce12a8c8c92300544aea114e",
+      "size": 5585,
+      "sha256": "e7b403d6fe985f4139c0b477ae9cce883dcdb77bfb8705ac89e4b1b7307b0f90",
       "storage": "inline"
     },
     {
@@ -6929,8 +6929,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/DONNEES_EXTERNES_A_ACQUERIR.json",
-      "size": 5310,
-      "sha256": "f7a360175c98fb79ffc00e08022d52f958c84d547b9753e35f9d1cd7d31fa6b1",
+      "size": 6305,
+      "sha256": "f61fed04b4db119da4239fc0c3bd8744b5e2c74861c722de737130c43cb1d739",
       "storage": "inline"
     },
     {
@@ -7012,6 +7012,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/analyser_sources_recuperees.py",
+      "size": 8090,
+      "sha256": "6e63dc538eac9694bd7e9021581cf7fde18d03eda16dcd5a1de326a31f52c0da",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/construire_benchmark_transversal.py",
       "size": 4247,
       "sha256": "874623e65f72e2ddbae809d842ce0d0f82bdac0cd7537c7e7e2494a3485401aa",
@@ -7060,6 +7066,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/INSPECTION_SOURCES_RECUPEREES_2026_08_12.json",
+      "size": 17923,
+      "sha256": "c3d901853a64c26eaeaee59b307bfdb8e0561a68a33bcacfe84d1a427d85b78a",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/MESURES_COMMUNES_EXECUTEES.json",
       "size": 3450,
       "sha256": "5e1bdf9bedf59e0e590f6499dde324d6ce8e1e8929ce964d62b460e8bb209ee6",
@@ -7081,6 +7093,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
       "size": 3278,
       "sha256": "557e52754fdb3e08f2b75b627f85cb05b98fe1adbe47aadb0ba1888db78c6200",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_sources_recuperees.py",
+      "size": 1384,
+      "sha256": "a3841119fe39b2dae5cd689cec1e6eb510547eb63c4ee6e6b98f49a3c66ccf12",
       "storage": "inline"
     },
     {
@@ -9474,7 +9492,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 24418,
-      "sha256": "77b0c72e9869026d927819cb830fd5e796a18456baff484dc89ec6cc38721ecf",
+      "sha256": "34473bccda8ca72a6b38c535e7d62ee9ad9936b92cb9edba1216f09701dadba1",
       "storage": "inline"
     },
     {

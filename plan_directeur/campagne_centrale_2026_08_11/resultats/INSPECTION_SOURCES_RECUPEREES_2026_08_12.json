@@ -1,0 +1,539 @@
+{
+  "schema": "oric.recovered-sources-inspection.v1",
+  "date": "2026-08-12",
+  "u1506": {
+    "sha256": "6bc73f3fe882467f1d3b2b244f2c3a9662e0fee7fce0371d6d808b32f75bdc94",
+    "membres_hors_metadonnees_macos": 103,
+    "resultats": {
+      "AF": {
+        "observations": 669,
+        "series": 23,
+        "rho_moyen": -0.9170212088817444,
+        "rho_median": -0.9940886699507386,
+        "series_decroissantes": 23,
+        "series_decroissantes_p_le_005": 22,
+        "retention_finale_mediane": 0.030487804878048783,
+        "details": [
+          {
+            "sample": "30R5W62-64",
+            "n": 29,
+            "rho_spearman": -0.984604022741199,
+            "p_value": 5.458843617137551e-22,
+            "retention_finale": 0.11327102803738318,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "32R2W30-32",
+            "n": 29,
+            "rho_spearman": -0.9868210445587297,
+            "p_value": 6.778508443483014e-23,
+            "retention_finale": 0.026016260162601626,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R1W45-47",
+            "n": 30,
+            "rho_spearman": -0.9997774810858925,
+            "p_value": 1.7842467809411996e-48,
+            "retention_finale": 0.04586956521739131,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R3W62-64",
+            "n": 29,
+            "rho_spearman": -0.9999999999999998,
+            "p_value": 8.376948343984933e-209,
+            "retention_finale": 0.05323529411764706,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R3W79-81",
+            "n": 29,
+            "rho_spearman": -0.9940886699507386,
+            "p_value": 1.4090774418974405e-27,
+            "retention_finale": 0.0027216494845360827,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R4W28-30",
+            "n": 29,
+            "rho_spearman": -0.9275862068965516,
+            "p_value": 4.653274312073214e-13,
+            "retention_finale": 0.004574257425742574,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R4W43-45",
+            "n": 28,
+            "rho_spearman": -0.6703161414900891,
+            "p_value": 9.511950705030396e-05,
+            "retention_finale": 0.009947916666666666,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "34R4W5-7",
+            "n": 30,
+            "rho_spearman": -0.8670597450471613,
+            "p_value": 5.743519462931496e-10,
+            "retention_finale": 0.02012269938650307,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R2W109-111",
+            "n": 30,
+            "rho_spearman": -0.9926568758344462,
+            "p_value": 3.1035437675710354e-27,
+            "retention_finale": 0.018767123287671234,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R3W132-134",
+            "n": 29,
+            "rho_spearman": -0.9998768397064113,
+            "p_value": 2.9321501129297075e-50,
+            "retention_finale": 0.04776500638569604,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R3W24-26",
+            "n": 29,
+            "rho_spearman": -0.9374230390427768,
+            "p_value": 6.876759931068545e-14,
+            "retention_finale": 0.031073170731707317,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R3W37-39",
+            "n": 29,
+            "rho_spearman": -0.1926108374384236,
+            "p_value": 0.31681260682710827,
+            "retention_finale": 0.08507936507936509,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R3W95-97",
+            "n": 29,
+            "rho_spearman": -0.9980295566502461,
+            "p_value": 5.221249057467744e-34,
+            "retention_finale": 0.015527230590961762,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R4W135-137",
+            "n": 29,
+            "rho_spearman": -0.9999999999999998,
+            "p_value": 8.376948343984933e-209,
+            "retention_finale": 0.0696165191740413,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R4W22-24",
+            "n": 29,
+            "rho_spearman": -0.9999999999999998,
+            "p_value": 8.376948343984933e-209,
+            "retention_finale": 0.025545454545454545,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R4W70-72",
+            "n": 29,
+            "rho_spearman": -0.9969194745055326,
+            "p_value": 2.161660467030327e-31,
+            "retention_finale": 0.03398058252427185,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "35R4W91-93",
+            "n": 29,
+            "rho_spearman": -0.999014778325123,
+            "p_value": 4.532740807117181e-38,
+            "retention_finale": 0.0052460984393757504,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R1W130-132",
+            "n": 29,
+            "rho_spearman": -0.5916256157635467,
+            "p_value": 0.0007241025829309865,
+            "retention_finale": 0.05124260355029585,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R2W110-112",
+            "n": 29,
+            "rho_spearman": -0.9890380663762606,
+            "p_value": 5.712815246278729e-24,
+            "retention_finale": 0.01301775147928994,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R2W4-6",
+            "n": 29,
+            "rho_spearman": -0.999014778325123,
+            "p_value": 4.532740807117181e-38,
+            "retention_finale": 0.0103954802259887,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R2W54-56",
+            "n": 29,
+            "rho_spearman": -0.9950738916256154,
+            "p_value": 1.209160040375558e-28,
+            "retention_finale": 0.030487804878048783,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R3W46-48",
+            "n": 29,
+            "rho_spearman": -0.9995073891625613,
+            "p_value": 3.923749270358099e-42,
+            "retention_finale": 0.08369098712446352,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          },
+          {
+            "sample": "36R3W65-67",
+            "n": 29,
+            "rho_spearman": -0.9704433497536943,
+            "p_value": 3.3481491931816918e-18,
+            "retention_finale": 0.05536082474226804,
+            "dose_min": 0.0,
+            "dose_max": 120.0
+          }
+        ]
+      },
+      "thermal": {
+        "observations": 598,
+        "series": 23,
+        "rho_moyen": -0.9386467941798394,
+        "rho_median": -0.9719658119658119,
+        "series_decroissantes": 23,
+        "series_decroissantes_p_le_005": 23,
+        "retention_finale_mediane": 0.007138103161397671,
+        "details": [
+          {
+            "sample": "30R5W62-64",
+            "n": 26,
+            "rho_spearman": -0.975034256747445,
+            "p_value": 3.407682609565275e-17,
+            "retention_finale": 0.004353182751540041,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "32R2W30-32",
+            "n": 26,
+            "rho_spearman": -0.9993162393162391,
+            "p_value": 6.870897395439247e-36,
+            "retention_finale": 0.0005241379310344828,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R1W45-47",
+            "n": 26,
+            "rho_spearman": -0.9977774124285691,
+            "p_value": 9.485832862918914e-30,
+            "retention_finale": 0.0014999999999999998,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R3W62-64",
+            "n": 26,
+            "rho_spearman": -0.9218669992828727,
+            "p_value": 2.2826048336387314e-11,
+            "retention_finale": 0.024460966542750928,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R3W79-81",
+            "n": 26,
+            "rho_spearman": -0.8714529914529915,
+            "p_value": 6.8676414868445615e-09,
+            "retention_finale": 0.02530534351145038,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R4W28-30",
+            "n": 26,
+            "rho_spearman": -0.9883760683760683,
+            "p_value": 3.7862922394602546e-21,
+            "retention_finale": 0.0035980392156862743,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R4W43-45",
+            "n": 26,
+            "rho_spearman": -0.9734997577738643,
+            "p_value": 6.916744059039756e-17,
+            "retention_finale": 0.0019733333333333334,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "34R4W5-7",
+            "n": 26,
+            "rho_spearman": -0.9617094017094016,
+            "p_value": 5.3906714022328616e-15,
+            "retention_finale": 0.005550335570469798,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R2W109-111",
+            "n": 26,
+            "rho_spearman": -0.9998290452162907,
+            "p_value": 4.110266105035489e-43,
+            "retention_finale": 0.0021554054054054054,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R3W132-134",
+            "n": 26,
+            "rho_spearman": -0.9015384615384615,
+            "p_value": 3.28863523868891e-10,
+            "retention_finale": 0.009573934837092731,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R3W24-26",
+            "n": 26,
+            "rho_spearman": -0.7476923076923077,
+            "p_value": 1.132330029330546e-05,
+            "retention_finale": 0.02121212121212121,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R3W37-39",
+            "n": 26,
+            "rho_spearman": -0.9457659576726287,
+            "p_value": 3.235403945407776e-13,
+            "retention_finale": 0.011372549019607844,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R3W95-97",
+            "n": 26,
+            "rho_spearman": -0.7705198809021373,
+            "p_value": 4.129226111170042e-06,
+            "retention_finale": 0.01788375558867362,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R4W135-137",
+            "n": 26,
+            "rho_spearman": -0.9719658119658119,
+            "p_value": 1.3481454280561148e-16,
+            "retention_finale": 0.014922600619195045,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R4W22-24",
+            "n": 26,
+            "rho_spearman": -0.9295726495726495,
+            "p_value": 6.837019677124319e-12,
+            "retention_finale": 0.0016010928961748632,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R4W70-72",
+            "n": 26,
+            "rho_spearman": -0.9936741468531262,
+            "p_value": 2.6250291862479473e-24,
+            "retention_finale": 0.0044444444444444444,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "35R4W91-93",
+            "n": 26,
+            "rho_spearman": -0.8858119658119656,
+            "p_value": 1.7902762089458104e-09,
+            "retention_finale": 0.007838179519595449,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R1W130-132",
+            "n": 26,
+            "rho_spearman": -0.8339887282088007,
+            "p_value": 1.2064626703459677e-07,
+            "retention_finale": 0.033129770992366414,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R2W110-112",
+            "n": 26,
+            "rho_spearman": -0.9993162393162391,
+            "p_value": 6.870897395439247e-36,
+            "retention_finale": 0.002213930348258707,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R2W4-6",
+            "n": 26,
+            "rho_spearman": -0.9788034188034187,
+            "p_value": 4.874269396099533e-18,
+            "retention_finale": 0.0013241106719367591,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R2W54-56",
+            "n": 26,
+            "rho_spearman": -0.9719658119658119,
+            "p_value": 1.3481454280561148e-16,
+            "retention_finale": 0.007138103161397671,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R3W46-48",
+            "n": 26,
+            "rho_spearman": -0.9823901665206577,
+            "p_value": 5.3673281536407225e-19,
+            "retention_finale": 0.0168,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          },
+          {
+            "sample": "36R3W65-67",
+            "n": 26,
+            "rho_spearman": -0.987008547008547,
+            "p_value": 1.4283639501032408e-20,
+            "retention_finale": 0.008349381017881706,
+            "dose_min": 25.0,
+            "dose_max": 650.0
+          }
+        ]
+      }
+    },
+    "qualification": "preuve_forte_ablation_physique_non_C03_complet",
+    "manques_C03": [
+      "deux histoires A/B contrôlées",
+      "même stimulus final avant et après ablation",
+      "disparition appariée de l'écart de réponse A/B"
+    ]
+  },
+  "u1537": {
+    "sha256": "6fcc286ce7dff5395333f1a922411c8abbd80874f8b39dcd2f7ea0469d27cebc",
+    "files": 20,
+    "samples": [
+      "U1537A-24H-4W-126CM",
+      "U1537A-25H-4W-80CM",
+      "U1537A-26H-4W-62CM",
+      "U1537A-29F-3W-20CM",
+      "U1537A-31F-4W-40CM"
+    ],
+    "protocoles": [
+      "FC",
+      "ZFC",
+      "LTC-RTSIRM",
+      "hysteresis",
+      "DCD",
+      "FORC"
+    ],
+    "qualification": "mesures_multiprotocoles_appariees_non_chaine_complete",
+    "manques": [
+      "histoires A/B contrôlées",
+      "persistance temporelle",
+      "ablation appariée de ΔR"
+    ]
+  },
+  "farough": {
+    "sha256_source_originale": "470f346a753247b035c119bb216119c16276bd927098261bdad468daf406d0ee",
+    "sha256_document_converti": "ebbf831ce7eece00167883d6c45eee7208efde919d0050f24e75d66da5b56ed9",
+    "observations": 94,
+    "experiences": [
+      {
+        "experience": "TS",
+        "n": 21,
+        "rho_temps_permeabilite": -1.0,
+        "p_value": null,
+        "p_value_display": "< 2.23e-308",
+        "ratio_permeabilite_finale_initiale": 0.02056034482758621
+      },
+      {
+        "experience": "SQ",
+        "n": 14,
+        "rho_temps_permeabilite": -0.9076923076923077,
+        "p_value": 7.301703996852342e-06,
+        "p_value_display": "7.3017e-06",
+        "ratio_permeabilite_finale_initiale": 0.008450704225352114
+      },
+      {
+        "experience": "JC",
+        "n": 12,
+        "rho_temps_permeabilite": -1.0,
+        "p_value": null,
+        "p_value_display": "< 2.23e-308",
+        "ratio_permeabilite_finale_initiale": 0.0030136986301369864
+      },
+      {
+        "experience": "ND",
+        "n": 23,
+        "rho_temps_permeabilite": -0.9943168082150137,
+        "p_value": 6.441381638338006e-22,
+        "p_value_display": "6.44138e-22",
+        "ratio_permeabilite_finale_initiale": 0.010325318246110327
+      },
+      {
+        "experience": "BC",
+        "n": 24,
+        "rho_temps_permeabilite": -0.9999999999999999,
+        "p_value": 1.088022137778727e-173,
+        "p_value_display": "1.08802e-173",
+        "ratio_permeabilite_finale_initiale": 0.02362637362637363
+      }
+    ],
+    "qualification_H052": "ne_justifie_pas_le_reencodage_R1",
+    "interpretation": "Les cinq séries documentent une perte de perméabilité avec le temps; elles ne démontrent pas que la circulation produit N030."
+  },
+  "edc3": {
+    "sha256": "225dcb0340a5ffddab99936f2237a1f5f5d34908232e4d8b60aa2357cb24831c",
+    "pages": 13,
+    "mentions_monte_carlo": 1,
+    "mentions_uncertainty": 12,
+    "qualification_PALEO_HISTORY_02": "methodologie_chronologique_sans_distributions_ponctuelles_exploitables",
+    "controle_negatif_reel_preregistre": false
+  },
+  "scientific_effect": {
+    "material_complete_chains_admitted": 0,
+    "hypergraph_canonical_closure": "46/53",
+    "paleo_history_02": "non_testable"
+  }
+}

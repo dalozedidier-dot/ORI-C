@@ -1,6 +1,6 @@
 {
   "schema": "oric.external-acquisition.v1",
-  "generated": "2026-08-11",
+  "generated": "2026-08-12",
   "policy": "Ne jamais convertir un article, une simulation ou des donnees non appariees en chaine confirmatoire complete.",
   "items": [
     {
@@ -11,7 +11,8 @@
       "landing_url": "https://zenodo.org/records/17522856",
       "size_note": "archive magnetique environ 2.9 MB; ne pas telecharger les volumes SEM/TEM de plusieurs Go",
       "expected_unlock": "inspection histoire-trace-ablation; admission complete non presumee",
-      "inspection_status": "archive magnetique inspectee temporairement le 2026-08-11; FORC et hysteresis disponibles, mais aucune paire d'histoires controlees, persistance temporelle et ablation appariee demontrees; non admissible comme chaine complete"
+      "inspection_status": "acquise et calculee le 2026-08-12; les quatre copies magnetic data*.zip sont identiques (SHA-256 6bc73f3fe882467f1d3b2b244f2c3a9662e0fee7fce0371d6d808b32f75bdc94). U1506A contient 669 observations AF et 598 thermiques sur 23 series. Les 23 series decroissent dans les deux modes; preuve forte d'ablation physique, mais pas C03 complet faute d'histoires A/B et de reponse finale appariee.",
+      "acquisition_status": "acquis_ne_plus_telecharger"
     },
     {
       "priority": 1,
@@ -21,7 +22,8 @@
       "landing_url": "https://zenodo.org/records/14564186",
       "size_note": "environ 5 MB repartis en petits fichiers",
       "expected_unlock": "tester l'appariement des mesures FC/ZFC, IRM, hysteresis, DCD et FORC",
-      "inspection_status": "metadonnees et liste des 20 fichiers verifiees le 2026-08-11; cinq echantillons avec FC, ZFC, LTC-RTSIRM, hysteresis, DCD et FORC, mais pas deux histoires controlees ni une ablation appariee de la difference de reponse; preuve relationnelle candidate, pas chaine complete"
+      "inspection_status": "archive acquise et inspectee le 2026-08-12 (SHA-256 6fcc286ce7dff5395333f1a922411c8abbd80874f8b39dcd2f7ea0469d27cebc); cinq echantillons avec FC, ZFC, LTC-RTSIRM, hysteresis, DCD et FORC, mais pas deux histoires controlees ni une ablation appariee de la difference de reponse; preuve relationnelle candidate, pas chaine complete",
+      "acquisition_status": "acquis_ne_plus_telecharger"
     },
     {
       "priority": 1,
@@ -30,7 +32,9 @@
       "direct_url": "https://doi.org/10.1002/2015GC005973",
       "landing_url": "https://doi.org/10.1002/2015GC005973",
       "size_note": "acces editeur potentiellement manuel",
-      "expected_unlock": "chercher une trajectoire unique avec flux, quantites, incertitudes et horizon; ne valide pas HC01/H052 par titre seul"
+      "expected_unlock": "chercher une trajectoire unique avec flux, quantites, incertitudes et horizon; ne valide pas HC01/H052 par titre seul",
+      "inspection_status": "supplement S1 acquis et calcule le 2026-08-12; 94 observations dans cinq experiences. La permeabilite decroit avec le temps dans les cinq series. Le supplement ne demontre pas que H052 produit N030 et ne ferme pas le cycle.",
+      "acquisition_status": "supplement_acquis_article_principal_a_verifier"
     },
     {
       "priority": 1,
@@ -57,7 +61,9 @@
       "direct_url": "https://cp.copernicus.org/articles/3/485/2007/cp-3-485-2007.pdf",
       "landing_url": "https://cp.copernicus.org/articles/3/485/2007/",
       "size_note": "PDF ouvert",
-      "expected_unlock": "methodologie chronologique; ne fournit pas necessairement une distribution ponctuelle exploitable"
+      "expected_unlock": "methodologie chronologique; ne fournit pas necessairement une distribution ponctuelle exploitable",
+      "inspection_status": "PDF de 13 pages acquis et lu le 2026-08-12; methodologie et incertitudes documentees, mais aucune distribution chronologique ponctuelle directement exploitable et aucun controle negatif reel preregistre pour PALEO-HISTORY-02.",
+      "acquisition_status": "acquis_insuffisant_pour_paleo_history_02"
     },
     {
       "priority": 2,
