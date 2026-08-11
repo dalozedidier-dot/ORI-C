@@ -117,7 +117,7 @@ status = {
 }
 
 (OUT / "audit_donnees_reelles.json").write_text(
-    json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
 )
 
 trajectory_text = ""
@@ -142,5 +142,5 @@ report = (
     + status["scientific_boundary"]
     + "\n"
 )
-(OUT / "RAPPORT_DONNEES_REELLES.md").write_text(report, encoding="utf-8")
+(OUT / "RAPPORT_DONNEES_REELLES.md").write_text(report, encoding="utf-8", newline="\n")
 print(json.dumps(status, ensure_ascii=False, indent=2))

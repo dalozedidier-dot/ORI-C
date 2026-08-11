@@ -76,7 +76,7 @@ def main() -> dict[str, object]:
     protocol["protocol_sha256"] = hashlib.sha256(canonical).hexdigest()
     OUT.mkdir(exist_ok=True)
     (OUT / "PROTOCOLE_C2B.json").write_text(
-        json.dumps(protocol, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(protocol, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     print(json.dumps(protocol, indent=2, ensure_ascii=False))
     return protocol

@@ -41,7 +41,7 @@ def main() -> dict[str, object]:
     }
     OUT.mkdir(exist_ok=True)
     (OUT / "CYCLE_INTERFACES_RESULTAT.json").write_text(
-        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result

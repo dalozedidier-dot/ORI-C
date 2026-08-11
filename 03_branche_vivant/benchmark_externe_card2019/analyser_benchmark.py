@@ -108,14 +108,14 @@ def main() -> None:
     group_summary["state_rmse"] = np.sqrt(group_summary["state_mse"])
     group_summary["history_rmse"] = np.sqrt(group_summary["history_mse"])
     group_summary["history_minus_state_rmse"] = group_summary["history_rmse"] - group_summary["state_rmse"]
-    group_summary.to_csv(OUT / "contraste_par_groupe.csv", index=False)
+    group_summary.to_csv(OUT / "contraste_par_groupe.csv", index=False, lineterminator="\n")
 
-    bench.to_csv(OUT/"benchmark_temporel.csv",index=False)
+    bench.to_csv(OUT/"benchmark_temporel.csv",index=False,lineterminator="\n")
     pred=test[["strain","generation_k","clone","parent_log2","evolvability"]].reset_index(drop=True)
     for name, vals in predictions: pred[name]=vals
-    pred.to_csv(OUT/"predictions_hors_echantillon.csv",index=False)
+    pred.to_csv(OUT/"predictions_hors_echantillon.csv",index=False,lineterminator="\n")
     by_time=df.groupby("generation_k",as_index=False).agg(n=("evolvability","size"),mediane=("evolvability","median"),moyenne=("evolvability","mean"),ecart_type=("evolvability","std"))
-    by_time.to_csv(OUT/"serie_temporelle_resume.csv",index=False)
+    by_time.to_csv(OUT/"serie_temporelle_resume.csv",index=False,lineterminator="\n")
     verdict={
       "dataset":"Card et al. 2019, Ara+5 LTEE, tetracycline",
       "doi_dataset":"10.5061/dryad.g41hg96",
@@ -137,7 +137,7 @@ def main() -> None:
       "status":"retrospectif_externe_non_confirmatoire",
       "interpretation":"jeu indépendant des données Windels; test temporel strict mais conception postérieure à l'accès aux données"
     }
-    (OUT/"verdict_externe.json").write_text(json.dumps(verdict,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    (OUT/"verdict_externe.json").write_text(json.dumps(verdict,ensure_ascii=False,indent=2)+"\n",encoding="utf-8",newline="\n")
     report=f"""# Benchmark antibiotique externe Card 2019
 
 ## Données
@@ -161,6 +161,6 @@ Le modèle historique est moins bon dans les quatre groupes de test. Sur 10 000 
 
 Ce jeu est indépendant des données Windels et fournit une vraie séparation temporelle. Il reste **rétrospectif** car le protocole a été construit après accès au jeu. Il qualifie l'instrument et ne compte pas comme confirmation prospective d'ORI-C.
 """
-    (OUT/"RAPPORT_BENCHMARK_EXTERNE.md").write_text(report,encoding="utf-8")
+    (OUT/"RAPPORT_BENCHMARK_EXTERNE.md").write_text(report,encoding="utf-8",newline="\n")
     print(json.dumps(verdict,ensure_ascii=False,indent=2))
 if __name__=="__main__": main()
