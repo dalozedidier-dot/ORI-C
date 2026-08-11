@@ -1,0 +1,26 @@
+{
+  "schema": "oric.m-pacc-operationalization.v1",
+  "rule": "Un champ défini n'est pas déclaré mesuré. P_acc est un ensemble ou une proportion d'issues accessibles sous contraintes explicites; m est une trace physique ou un état historique mesuré avant R.",
+  "cases": [
+    {"id":"C-ANT-01","m":"paramètres d'histoire de lignée mesurés avant MIC","P_acc":"fraction des antibiotiques/doses du panneau dont la croissance dépasse le seuil gelé","measurement_status":"m_available_Pacc_requires_raw_growth_panel"},
+    {"id":"C-VES-02","m":"composition parentale pré-division","P_acc":"fraction des états descendants dans les classes compositionnelles préfixées","measurement_status":"m_available_Pacc_computable_from_raw_lineages"},
+    {"id":"C-VES-03","m":"trace parentale ciblée avant ablation","P_acc":"fraction des classes descendantes accessibles après intervention","measurement_status":"m_partial_Pacc_requires_intervention"},
+    {"id":"C-MAT-MEM-05","m":"trace matérielle distincte mesurée avant réponse","P_acc":"fraction des classes de réponse atteignables sous stimulus final commun","measurement_status":"definitions_complete_no_admitted_complete_family"},
+    {"id":"C-AST-01","m":"architecture orbitale initiale et modes propres","P_acc":"fraction des cellules orbitales stables accessibles à l'horizon gelé","measurement_status":"Pacc_model_available_m_modes_to_extract"},
+    {"id":"MPT-M2-01","m":"variable lente interne du modèle M2","P_acc":"fraction des régimes glaciaires accessibles dans l'ensemble chronologique","measurement_status":"m_model_available_Pacc_requires_age_ensembles"},
+    {"id":"PID-ANT-01","m":"état historique de lignée utilisé par le modèle","P_acc":"fraction des classes MIC futures accessibles conditionnellement à X,H","measurement_status":"m_available_Pacc_computable"},
+    {"id":"GCQ-T09","m":"signature isotopique du réservoir/porteur","P_acc":"fraction des classes de provenance compatibles avec incertitudes","measurement_status":"m_and_Pacc_local_available"},
+    {"id":"GCQ-T10","m":"signature isotopique ou minéralogique héritée","P_acc":"fraction des réservoirs sources compatibles","measurement_status":"requires_individual_carrier_data"},
+    {"id":"GCQ-T11","m":"signature du grain présolaire","P_acc":"fraction des classes stellaires sources compatibles","measurement_status":"m_partial_Pacc_computable"},
+    {"id":"GCQ-T12","m":"Q26 et contexte du réservoir","P_acc":"fraction des trajectoires thermiques compatibles","measurement_status":"requires_joint_Q26_time_reservoir_distribution"},
+    {"id":"GCQ-T13","m":"signature isotopique héritée du disque","P_acc":"fraction des réservoirs NC/CC accessibles","measurement_status":"requires_linked_carriers"},
+    {"id":"GCQ-T14","m":"signature du porteur entre disque et corps","P_acc":"fraction des corps parents compatibles","measurement_status":"requires_linked_carriers"},
+    {"id":"GCQ-T15","m":"trace isotopique dans le corps parent","P_acc":"fraction des chemins d'altération/échauffement compatibles","measurement_status":"requires_paired_chronology_trace"},
+    {"id":"GCQ-T16","m":"trace conservée après différenciation","P_acc":"fraction des réservoirs planétaires compatibles","measurement_status":"requires_information_retention_curve"},
+    {"id":"GCQ-T17","m":"signature manteau-croûte héritée","P_acc":"fraction des trajectoires géochimiques compatibles","measurement_status":"requires_probabilistic_provenance_model"},
+    {"id":"GCQ-T18","m":"trace de provenance terrestre","P_acc":"fraction des modèles de provenance non rejetés","measurement_status":"requires_reserved_validation"},
+    {"id":"GCQ-T19","m":"signature du goulet mono-source","P_acc":"fraction des sources indépendantes compatibles","measurement_status":"requires_independent_replications"},
+    {"id":"GCQ-T20","m":"information portée d'un étage au suivant","P_acc":"fraction des états du prochain étage compatibles","measurement_status":"requires_same_carrier_multistage_tracking"},
+    {"id":"GCQ-T21","m":"courbe de conservation/perte d'information","P_acc":"fraction des trajectoires étoile-grain-disque-corps-planète compatibles","measurement_status":"requires_full_interstage_curve"}
+  ]
+}

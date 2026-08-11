@@ -35,12 +35,16 @@ def build() -> tuple[dict, dict]:
     registry_path = ROOT / "preuves/PREUVES.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     by_id = {entry["id"]: entry for entry in registry["entries"]}
+    operationalization_path = HERE / "OPERATIONNALISATION_M_PACC_20_CAS.json"
+    operationalization = json.loads(operationalization_path.read_text(encoding="utf-8"))
+    op_by_id = {case["id"]: case for case in operationalization["cases"]}
     cases = []
     for case_id in SELECTED:
         entry = by_id[case_id]
         artifact = ROOT / entry["artefact"]
         present = artifact.is_file()
         covered = COVERAGE.get(case_id, {"X", "H", "Theta", "tau", "R"})
+        op = op_by_id[case_id]
         cases.append({
             "id": case_id,
             "question": entry["question"],
@@ -50,6 +54,9 @@ def build() -> tuple[dict, dict]:
             "artifact": entry["artefact"],
             "artifact_present": present,
             "artifact_sha256": hashlib.sha256(artifact.read_bytes()).hexdigest() if present else None,
+            "m_operational_definition": op["m"],
+            "P_acc_operational_definition": op["P_acc"],
+            "m_P_acc_measurement_status": op["measurement_status"],
             "field_coverage": {field: field in covered for field in FIELDS},
             "missing_fields": [field for field in FIELDS if field not in covered],
             "eligible_for_common_invariant": all(field in covered for field in FIELDS),
@@ -59,6 +66,8 @@ def build() -> tuple[dict, dict]:
         "selection": "20 cas réels ou résultats de modèle explicitement qualifiés, sélectionnés avant tout test transversal",
         "case_count": len(cases),
         "required_fields": FIELDS,
+        "operational_definitions_complete": len(op_by_id) == len(SELECTED),
+        "warning": "définition opérationnelle complète ne signifie pas mesure disponible",
         "cases": cases,
     }
     eligible = [case["id"] for case in cases if case["eligible_for_common_invariant"]]

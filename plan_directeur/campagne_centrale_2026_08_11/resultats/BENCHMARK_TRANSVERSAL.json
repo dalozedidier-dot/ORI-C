@@ -11,6 +11,8 @@
     "P_acc",
     "R"
   ],
+  "operational_definitions_complete": true,
+  "warning": "définition opérationnelle complète ne signifie pas mesure disponible",
   "cases": [
     {
       "id": "C-ANT-01",
@@ -21,6 +23,9 @@
       "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
       "artifact_present": true,
       "artifact_sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "m_operational_definition": "paramètres d'histoire de lignée mesurés avant MIC",
+      "P_acc_operational_definition": "fraction des antibiotiques/doses du panneau dont la croissance dépasse le seuil gelé",
+      "m_P_acc_measurement_status": "m_available_Pacc_requires_raw_growth_panel",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -45,6 +50,9 @@
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
       "artifact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "m_operational_definition": "composition parentale pré-division",
+      "P_acc_operational_definition": "fraction des états descendants dans les classes compositionnelles préfixées",
+      "m_P_acc_measurement_status": "m_available_Pacc_computable_from_raw_lineages",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -68,6 +76,9 @@
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
       "artifact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "m_operational_definition": "trace parentale ciblée avant ablation",
+      "P_acc_operational_definition": "fraction des classes descendantes accessibles après intervention",
+      "m_P_acc_measurement_status": "m_partial_Pacc_requires_intervention",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -91,6 +102,9 @@
       "artifact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
       "artifact_present": true,
       "artifact_sha256": "05bb1316ed93953d6c86c8368d6a10b1bfc0a9114cf41e1aec510886e4388b2f",
+      "m_operational_definition": "trace matérielle distincte mesurée avant réponse",
+      "P_acc_operational_definition": "fraction des classes de réponse atteignables sous stimulus final commun",
+      "m_P_acc_measurement_status": "definitions_complete_no_admitted_complete_family",
       "field_coverage": {
         "X": false,
         "H": true,
@@ -115,6 +129,9 @@
       "artifact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
       "artifact_present": true,
       "artifact_sha256": "7b4e433524321005b2aabe9a593330cdd1ded1a7a72e29d61e0a8a224a2561f8",
+      "m_operational_definition": "architecture orbitale initiale et modes propres",
+      "P_acc_operational_definition": "fraction des cellules orbitales stables accessibles à l'horizon gelé",
+      "m_P_acc_measurement_status": "Pacc_model_available_m_modes_to_extract",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -138,6 +155,9 @@
       "artifact": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
       "artifact_present": true,
       "artifact_sha256": "04c6d500a77a6287d92a8e80de446d357495ea9fb85e9a97e52104b44a09df7a",
+      "m_operational_definition": "variable lente interne du modèle M2",
+      "P_acc_operational_definition": "fraction des régimes glaciaires accessibles dans l'ensemble chronologique",
+      "m_P_acc_measurement_status": "m_model_available_Pacc_requires_age_ensembles",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -162,6 +182,9 @@
       "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
       "artifact_present": true,
       "artifact_sha256": "33c1b1443d23efdaa5eb570c68ea362246d81ccde404b8ff3e9cc8e10ac345af",
+      "m_operational_definition": "état historique de lignée utilisé par le modèle",
+      "P_acc_operational_definition": "fraction des classes MIC futures accessibles conditionnellement à X,H",
+      "m_P_acc_measurement_status": "m_available_Pacc_computable",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -185,6 +208,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T09.json",
       "artifact_present": true,
       "artifact_sha256": "d82e282bc6e2f479121bd7c83637db9b9d41b4915067d84cd51adc7595f8a238",
+      "m_operational_definition": "signature isotopique du réservoir/porteur",
+      "P_acc_operational_definition": "fraction des classes de provenance compatibles avec incertitudes",
+      "m_P_acc_measurement_status": "m_and_Pacc_local_available",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -208,6 +234,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T10.json",
       "artifact_present": true,
       "artifact_sha256": "fe8bbe239c7b7b4871fdf45cdf6e2d3129c9c5d0acf1eed966fb127227a0847b",
+      "m_operational_definition": "signature isotopique ou minéralogique héritée",
+      "P_acc_operational_definition": "fraction des réservoirs sources compatibles",
+      "m_P_acc_measurement_status": "requires_individual_carrier_data",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -232,6 +261,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T11.json",
       "artifact_present": true,
       "artifact_sha256": "713b941136e773958d181818b0f30d0de725c5ddb8af424d31ece897e8de385d",
+      "m_operational_definition": "signature du grain présolaire",
+      "P_acc_operational_definition": "fraction des classes stellaires sources compatibles",
+      "m_P_acc_measurement_status": "m_partial_Pacc_computable",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -256,6 +288,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T12.json",
       "artifact_present": true,
       "artifact_sha256": "e04e889d4cdd787b8e5e60f86c835fabfe2f04ed21cfe45f92288bbe0874ffdd",
+      "m_operational_definition": "Q26 et contexte du réservoir",
+      "P_acc_operational_definition": "fraction des trajectoires thermiques compatibles",
+      "m_P_acc_measurement_status": "requires_joint_Q26_time_reservoir_distribution",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -280,6 +315,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T13.json",
       "artifact_present": true,
       "artifact_sha256": "1aa61be5b42734922c4e025667090b5ad870d95e4e1bd1a02c01887aafda892a",
+      "m_operational_definition": "signature isotopique héritée du disque",
+      "P_acc_operational_definition": "fraction des réservoirs NC/CC accessibles",
+      "m_P_acc_measurement_status": "requires_linked_carriers",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -304,6 +342,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T14.json",
       "artifact_present": true,
       "artifact_sha256": "cdf9dc5df82f342de4c926362f31c7041364f4065bf0595aa8944338332a9493",
+      "m_operational_definition": "signature du porteur entre disque et corps",
+      "P_acc_operational_definition": "fraction des corps parents compatibles",
+      "m_P_acc_measurement_status": "requires_linked_carriers",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -328,6 +369,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T15.json",
       "artifact_present": true,
       "artifact_sha256": "55c89e6a97d690215db14557f545917fe039369fa037a60c606e46960ea87033",
+      "m_operational_definition": "trace isotopique dans le corps parent",
+      "P_acc_operational_definition": "fraction des chemins d'altération/échauffement compatibles",
+      "m_P_acc_measurement_status": "requires_paired_chronology_trace",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -352,6 +396,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T16.json",
       "artifact_present": true,
       "artifact_sha256": "569daa08655061b07394eddc8e764e8b8f707ce6a2cd554a95ca181398dd780f",
+      "m_operational_definition": "trace conservée après différenciation",
+      "P_acc_operational_definition": "fraction des réservoirs planétaires compatibles",
+      "m_P_acc_measurement_status": "requires_information_retention_curve",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -376,6 +423,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T17.json",
       "artifact_present": true,
       "artifact_sha256": "8ecf20968e645b1977964b2e6e32e6905d989a117abd83811c6501a5d6f4d585",
+      "m_operational_definition": "signature manteau-croûte héritée",
+      "P_acc_operational_definition": "fraction des trajectoires géochimiques compatibles",
+      "m_P_acc_measurement_status": "requires_probabilistic_provenance_model",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -400,6 +450,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T18.json",
       "artifact_present": true,
       "artifact_sha256": "8d97473c3b152483e6899b0926361842a1e689b9f44d81845a2c70c1483b9d56",
+      "m_operational_definition": "trace de provenance terrestre",
+      "P_acc_operational_definition": "fraction des modèles de provenance non rejetés",
+      "m_P_acc_measurement_status": "requires_reserved_validation",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -424,6 +477,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T19.json",
       "artifact_present": true,
       "artifact_sha256": "0460c461e05b8b93df22cb1d7d2b9fd77c3bc0358d4b5fea319eb44adfd627b7",
+      "m_operational_definition": "signature du goulet mono-source",
+      "P_acc_operational_definition": "fraction des sources indépendantes compatibles",
+      "m_P_acc_measurement_status": "requires_independent_replications",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -448,6 +504,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T20.json",
       "artifact_present": true,
       "artifact_sha256": "c1b0c6205502710c1a98d798802c22f1233d59b61856caa3440ff06b1d270372",
+      "m_operational_definition": "information portée d'un étage au suivant",
+      "P_acc_operational_definition": "fraction des états du prochain étage compatibles",
+      "m_P_acc_measurement_status": "requires_same_carrier_multistage_tracking",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -472,6 +531,9 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T21.json",
       "artifact_present": true,
       "artifact_sha256": "e74f8c65972ea76bcad8735d319141c5c317b1200ce8f7af0b580b117ffdad68",
+      "m_operational_definition": "courbe de conservation/perte d'information",
+      "P_acc_operational_definition": "fraction des trajectoires étoile-grain-disque-corps-planète compatibles",
+      "m_P_acc_measurement_status": "requires_full_interstage_curve",
       "field_coverage": {
         "X": true,
         "H": true,

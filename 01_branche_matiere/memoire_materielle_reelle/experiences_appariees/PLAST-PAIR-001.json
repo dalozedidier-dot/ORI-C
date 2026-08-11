@@ -1,0 +1,20 @@
+{
+  "schema": "oric.paired-material-experiment.v1",
+  "id": "PLAST-PAIR-001",
+  "family": "plasticite_cyclique",
+  "unit": "éprouvette usinée issue d'une plaque cartographiée",
+  "minimum_independent_units": 60,
+  "blocking": ["plaque", "orientation", "position"],
+  "histories": ["precyclage_faible_amplitude", "precyclage_forte_amplitude_isoenergie_gelée"],
+  "trace_measurement": "densité de dislocations EBSD/TEM ou proxy diffraction validé, mesuré avant réponse",
+  "persistence_test": "trace après 72 heures sans charge puis nouveau scan sur région repérée",
+  "response": "boucle contrainte-déformation sous cycle test identique; amplitude et énergie dissipée préspécifiées",
+  "ablation": "recuit de récupération calibré pour réduire la trace d'au moins 50 % sans recristallisation ni changement de phase",
+  "sham_ablation": "même enceinte et durée à température sous seuil de récupération",
+  "pairing": "mesures longitudinales sur la même éprouvette et jumelles adjacentes pour contrôle destructif",
+  "blinding": "micrographies et courbes codées; analystes aveugles à l'histoire et au bras thermique",
+  "primary_endpoint": "interaction histoire_x_ablation sur l'énergie dissipée du cycle test",
+  "success_rule": "trace et réponse diffèrent entre histoires; persistance détectée; ablation réduit trace et écart de réponse; sham non",
+  "raw_data_required": ["fichiers_machine", "cartes_EBSD_ou_diffraction", "courbes_thermiques", "géométrie", "randomisation"],
+  "status": "protocol_ready_physical_execution_required"
+}

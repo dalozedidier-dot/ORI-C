@@ -109,3 +109,14 @@ une séquence historique unique. Un graphe qui se ferme n'est pas un graphe qui
 décrit le monde. Le scénario R1 est une **réparation structurelle**, le scénario
 R2 une **hypothèse testable non canonique**, et le scénario R0 — 46 sur 53 —
 reste le résultat courant du dossier.
+## Mise à jour — source primaire expérimentale trouvée
+
+Okamoto et al. (2025), DOI `10.1016/j.gca.2025.06.018`, mesure dans une même
+expérience d'hydratation de periclase la génération de contrainte, la rupture,
+l'augmentation d'environ deux ordres de grandeur de la perméabilité et
+l'accélération d'environ 18 fois de la réaction. L'audit détaillé est dans
+`PREUVE_PRIMAIRE_HC01_OKAMOTO_2025.md`.
+
+Cette source ferme le mécanisme sur analogue expérimental, mais pas encore le
+cas naturel de croûte primitive requis pour promouvoir HC01 dans l'hypergraphe
+canonique. Farough demeure insuffisant pour cette promotion.

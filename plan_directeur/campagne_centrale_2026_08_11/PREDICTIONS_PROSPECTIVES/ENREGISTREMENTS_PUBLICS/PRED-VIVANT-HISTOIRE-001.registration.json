@@ -1,0 +1,24 @@
+{
+  "schema": "oric.public-blind-registration-package.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "source_file": "PRED-VIVANT-HISTOIRE-001.json",
+  "source_sha256": "822953f4549e4c0bcd580dbbc8fe49401ce587d6a38f14a8e0059e4413b58ce6",
+  "frozen_on": "2026-08-11",
+  "hypothesis": "Dans une replication longitudinale independante de D'Onofrio, l'histoire ameliore la prediction de la MIC au-dela de l'etat present.",
+  "seen_data": [
+    "jeu D'Onofrio analyse dans ORI-C"
+  ],
+  "forbidden_or_hidden_data": [
+    "jeu de replication independant et ses resultats"
+  ],
+  "predicted_variable": "gain relatif de RMSE du modele etat plus histoire sur etat seul",
+  "prediction": ">= 5 %",
+  "competitor": "etat present seul et histoire permutee dans les groupes",
+  "success": "gain >= 5 %, intervalle bootstrap du gain > 0 et permutation p <= 0.05",
+  "failure": "gain < 5 % ou intervalle bootstrap incluant 0 ou permutation p > 0.05",
+  "registration_service": "OSF Registries",
+  "public_url": null,
+  "registered_at": null,
+  "status": "package_ready_external_account_required",
+  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse"
+}

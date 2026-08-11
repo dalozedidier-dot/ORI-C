@@ -1,0 +1,20 @@
+{
+  "schema": "oric.paired-material-experiment.v1",
+  "id": "MAG-PAIR-001",
+  "family": "magnetisme",
+  "unit": "carotte cylindrique issue d'un même lot homogénéisé",
+  "minimum_independent_units": 48,
+  "blocking": ["lot", "position_dans_le_lot"],
+  "histories": ["IRM_positive_saturee", "IRM_negative_saturee"],
+  "trace_measurement": "vecteur de remanence avant stimulus final",
+  "persistence_test": "remanence après délai gelé de 7 jours et 10 lectures non destructives",
+  "response": "projection de la remanence après un même champ test sous-coercitif",
+  "ablation": "démagnétisation AF jusqu'au palier préenregistré réduisant la trace d'au moins 80 %",
+  "sham_ablation": "même manipulation et même durée avec champ AF nul",
+  "pairing": "chaque éprouvette est mesurée avant et après ablation; paires jumelles de chaque bloc pour sham",
+  "blinding": "codes histoire/ablation masqués à l'opérateur de lecture et à l'analyste jusqu'au gel du tableau",
+  "primary_endpoint": "interaction histoire_x_ablation sur la réponse finale",
+  "success_rule": "écart A/B avant ablation non nul; A_normalisee >= 0.50; interaction bilatérale p <= 0.05; sham ne reproduit pas la chute",
+  "raw_data_required": ["journal_champs", "mesures_vectorielles", "température", "horodatages", "randomisation"],
+  "status": "protocol_ready_physical_execution_required"
+}

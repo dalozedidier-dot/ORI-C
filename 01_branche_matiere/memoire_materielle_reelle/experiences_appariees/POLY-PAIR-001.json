@@ -1,0 +1,20 @@
+{
+  "schema": "oric.paired-material-experiment.v1",
+  "id": "POLY-PAIR-001",
+  "family": "vieillissement_polymere",
+  "unit": "coupon découpé dans une même plaque de polymère",
+  "minimum_independent_units": 72,
+  "blocking": ["plaque", "position", "épaisseur"],
+  "histories": ["vieillissement_thermo_oxydatif_court", "vieillissement_thermo_oxydatif_long_iso_temperature"],
+  "trace_measurement": "indice carbonyle FTIR et cristallinité DSC mesurés séparément de la réponse",
+  "persistence_test": "trace après 14 jours en atmosphère contrôlée sans sollicitation",
+  "response": "module, contrainte et allongement à rupture sous essai identique",
+  "ablation": "traitement de restauration choisi après pilote pour réduire la trace ciblée sans changer masse de plus de 0,5 %",
+  "sham_ablation": "même manipulation, atmosphère et durée sans condition active",
+  "pairing": "suivi non destructif du même coupon; coupons jumeaux adjacents pour traction destructive",
+  "blinding": "spectres et essais codés; décodage après verrouillage du fichier d'analyse",
+  "primary_endpoint": "interaction histoire_x_ablation sur l'allongement à rupture, médiation par la trace en analyse secondaire",
+  "success_rule": "différence de trace persistante et de réponse; A_normalisee >= 0.50; interaction p <= 0.05; contrôle masse et sham négatifs",
+  "raw_data_required": ["spectres_FTIR", "thermogrammes_DSC", "courbes_traction", "masse", "température_oxygène_humidité", "randomisation"],
+  "status": "protocol_ready_physical_execution_required"
+}

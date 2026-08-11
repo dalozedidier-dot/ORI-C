@@ -1,0 +1,24 @@
+{
+  "schema": "oric.public-blind-registration-package.v1",
+  "prediction_id": "PRED-PALEO-HISTORY-02",
+  "source_file": "PRED-PALEO-HISTORY-02.json",
+  "source_sha256": "a7557b8cc540c14b054a5fc48db24f70d993e7aab16001e0957a0b67c2fe3065",
+  "frozen_on": "2026-08-11",
+  "hypothesis": "Avec des incertitudes chronologiques ponctuelles et un controle negatif reel, H apporte une information predictive sur R_future conditionnellement a X.",
+  "seen_data": [
+    "neuf familles PALEO-HISTORY-01 normalisees, 19809 observations"
+  ],
+  "forbidden_or_hidden_data": [
+    "distributions chronologiques ponctuelles et controle negatif acquis apres ce gel"
+  ],
+  "predicted_variable": "gain hors echantillon de X plus H sur X seul dans des blocs chronologiques",
+  "prediction": ">= 5 % dans au moins 3 blocs sur 4",
+  "competitor": "X seul, H permute dans les strates et controle negatif preregistre",
+  "success": "gain >= 5 % dans au moins 3/4 blocs et controle negatif non significatif",
+  "failure": "moins de 3/4 blocs au seuil ou controle negatif significatif",
+  "registration_service": "OSF Registries",
+  "public_url": null,
+  "registered_at": null,
+  "status": "package_ready_external_account_required",
+  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse"
+}

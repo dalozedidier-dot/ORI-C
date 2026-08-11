@@ -1,0 +1,24 @@
+{
+  "registrations": [
+    {
+      "id": "PRED-COSMOS-NCCC-001",
+      "package": "PRED-COSMOS-NCCC-001.registration.json",
+      "status": "package_ready_external_account_required"
+    },
+    {
+      "id": "PRED-MATIERE-ABLATION-001",
+      "package": "PRED-MATIERE-ABLATION-001.registration.json",
+      "status": "package_ready_external_account_required"
+    },
+    {
+      "id": "PRED-PALEO-HISTORY-02",
+      "package": "PRED-PALEO-HISTORY-02.registration.json",
+      "status": "package_ready_external_account_required"
+    },
+    {
+      "id": "PRED-VIVANT-HISTOIRE-001",
+      "package": "PRED-VIVANT-HISTOIRE-001.registration.json",
+      "status": "package_ready_external_account_required"
+    }
+  ]
+}

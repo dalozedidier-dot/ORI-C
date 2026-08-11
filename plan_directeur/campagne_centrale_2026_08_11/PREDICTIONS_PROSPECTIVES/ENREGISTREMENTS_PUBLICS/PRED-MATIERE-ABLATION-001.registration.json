@@ -1,0 +1,24 @@
+{
+  "schema": "oric.public-blind-registration-package.v1",
+  "prediction_id": "PRED-MATIERE-ABLATION-001",
+  "source_file": "PRED-MATIERE-ABLATION-001.json",
+  "source_sha256": "6da67d433eccc06681e8b29174fd20f6e1c22cb8068d3f0feb323cc42c539770",
+  "frozen_on": "2026-08-11",
+  "hypothesis": "Dans une experience appariee, l'ablation physique de la trace reduit l'ecart de reponse entre deux histoires controlees.",
+  "seen_data": [
+    "resultats partiels IODP, FABEST, polymeres et traces de fission"
+  ],
+  "forbidden_or_hidden_data": [
+    "experience appariee histoire-trace-reponse-ablation a venir"
+  ],
+  "predicted_variable": "A = 1 - abs(delta_R_apres) / abs(delta_R_avant)",
+  "prediction": ">= 0.50",
+  "competitor": "ablation factice appariee et absence d'interaction histoire fois ablation",
+  "success": "delta_R_avant non nul, A >= 0.50 et interaction preregistree p <= 0.05",
+  "failure": "delta_R_avant non detecte, A < 0.50 ou interaction p > 0.05",
+  "registration_service": "OSF Registries",
+  "public_url": null,
+  "registered_at": null,
+  "status": "package_ready_external_account_required",
+  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse"
+}
