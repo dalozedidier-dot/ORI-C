@@ -1,0 +1,41 @@
+{
+  "schema": "oric.gc.interstage-information.v1",
+  "analysis": "retrospective_same_grain_population_association",
+  "stages": [
+    "stellar_source_class",
+    "presolar_grain",
+    "meteorite_or_returned_sample_host"
+  ],
+  "results": [
+    {
+      "dataset": "PGD_SiC_PUBLISHED_SELECTED.csv",
+      "same_carrier_rows": 8865,
+      "stellar_source_classes": 15,
+      "final_host_bodies": 40,
+      "publications": 97,
+      "normalized_I_stellar_type_host": 0.050419643117984754,
+      "global_label_permutation_p": 0.0004997501249375312,
+      "publication_stratified_permutation_p": 0.47226386806596704,
+      "publication_stratified_null_mean": 0.05037548492725508,
+      "status": "association_not_separable_from_publication_sampling"
+    },
+    {
+      "dataset": "PGD_GRAPHITE_PUBLISHED_SELECTED.csv",
+      "same_carrier_rows": 2285,
+      "stellar_source_classes": 3,
+      "final_host_bodies": 3,
+      "publications": 18,
+      "normalized_I_stellar_type_host": 0.1530848455898593,
+      "global_label_permutation_p": 0.0004997501249375312,
+      "publication_stratified_permutation_p": 1.0,
+      "publication_stratified_null_mean": 0.15308484558985927,
+      "status": "association_not_separable_from_publication_sampling"
+    }
+  ],
+  "verdict": "first_interstage_measurement_executed_but_no_conservation_claim_without_publication_robustness",
+  "limits": [
+    "le type stellaire et le corps hôte sont portés par la même ligne/grain, mais les grains ne sont pas suivis expérimentalement avant et après chaque étage",
+    "la permutation dans chaque publication contrôle le ciblage d'échantillons et d'analyses propre à chaque étude",
+    "cette mesure n'est pas une courbe complète étoile-grain-disque-corps-planète"
+  ]
+}

@@ -21,7 +21,7 @@ FIELDS = ["X", "H", "m", "Theta", "tau", "P_acc", "R"]
 # Couverture déclarée à partir des protocoles et non inférée d'un verdict.
 COVERAGE = {
     "C-ANT-01": {"X", "H", "Theta", "tau", "R"},
-    "C-VES-02": {"X", "H", "m", "Theta", "tau", "R"},
+    "C-VES-02": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
     "C-VES-03": {"X", "H", "m", "Theta", "tau", "R"},
     "C-MAT-MEM-05": {"H", "m", "Theta", "tau", "R"},
     "C-AST-01": {"X", "H", "Theta", "tau", "P_acc", "R"},
@@ -83,7 +83,7 @@ def build() -> tuple[dict, dict]:
             {"id": "INV-D", "hypothesis": "information historique décroît ou change de support", "status": "non_testable"},
             {"id": "INV-E", "hypothesis": "interfaces disproportionnées", "status": "non_testable"},
         ],
-        "verdict": "aucun invariant transversal calculable sans redéfinition post-hoc des variables",
+        "verdict": "un premier cas empirique rétrospectif est complet; aucun invariant transversal n'est testable sur un cas unique",
         "rule": "l'hétérogénéité des métriques n'est pas masquée par une standardisation arbitraire",
     }
     return benchmark, invariants

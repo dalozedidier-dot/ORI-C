@@ -1,5 +1,5 @@
 {
-  "schema": "oric.paleo-history-02-acquisition.v1",
+  "schema": "oric.paleo-history-02-acquisition.v2",
   "checked_at": "2026-08-12",
   "source": {
     "title": "PALMOD 130k marine palaeoclimate data synthesis V2_0_0",
@@ -8,19 +8,35 @@
     "license": "CC-BY-4.0",
     "sites": 475,
     "time_series": 2286,
-    "declared_posterior_age_depth_models_per_site": 1000
+    "posterior_age_depth_models_per_site": 1000
   },
-  "acquired_outside_repository": [
-    {"url":"https://lipdverse.org/PalMod/current_version/PalMod2_0_0.zip","bytes":11146740,"sha256":"10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef","contents":"475 LiPD: médiane et intervalle 95 %, données et paramètres BACON; ensembles absents"},
-    {"url":"https://lipdverse.org/PalMod/current_version/PalMod2_0_0.pkl","bytes":215402100,"sha256":"a64b94afd054120c3a904147d65d966cb0503280e23885d3261742c8dace42c4","contents":"sérialisation Python; non désérialisée car pickle distant non fiable"},
-    {"url":"https://lipdverse.org/PalMod/current_version/PalMod2_0_0.mat","bytes":15231355,"sha256":"45e36008595b905908097234cae2a6a0992478f79a1f98412f429e99f00c56e3","contents":"475 structures; pas de champ AgeEnsemblesBACON exposé"}
-  ],
-  "chronology_verdict": "source appropriée identifiée et résumés acquis; les 1000 tirages postérieurs annoncés ne sont pas présents dans les trois distributions LiPDverse inspectées",
+  "compilation": {
+    "url": "https://lipdverse.org/PalMod/current_version/PalMod2_0_0.zip",
+    "bytes": 11146740,
+    "sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
+    "contents": "475 LiPD avec données, médianes et intervalles; les ensembles sont distribués séparément par fiche"
+  },
+  "individual_ensembles": {
+    "status": "direct_download_confirmed",
+    "url_rule": "{lipdverseLink}/{dataSetName}-ensemble.lpd",
+    "catalog_entries_constructible": 475,
+    "verified_example": {
+      "dataset": "GIK18462_3.Xu.2010",
+      "url": "https://lipdverse.org/data/pmbf9MyxDk6pjUEqQS21uw/1_0_3/GIK18462_3.Xu.2010-ensemble.lpd",
+      "bytes": 1000290,
+      "sha256": "86e63537ddc0c8e88a52107f61f8e2a0633ebb2f32e4efb1f842cef857af6cb1",
+      "chronology_table": "GIK18462_3.Xu.2010.chron1model1ensemble1.csv",
+      "columns": 1001,
+      "interpretation": "une profondeur suivie de 1000 tirages chronologiques"
+    },
+    "reproduction_command": "python verifier_palmod_v2.py PalMod2_0_0.zip --ensemble GIK18462_3.Xu.2010-ensemble.lpd --write-catalog palmod_ensemble_urls.json",
+    "repository_size_policy": "conserver le catalogue et les contrôles dans Git; télécharger les ensembles dans un cache externe ignoré"
+  },
+  "chronology_verdict": "les vrais ensembles chronologiques PALMOD sont identifiés, directement téléchargeables et vérifiés sur un premier site; l'acquisition exhaustive reste à exécuter hors dépôt",
   "negative_control": {
     "status": "not_obtained",
     "reason": "aucune variable réelle du produit n'est établie a priori comme insensible à l'histoire climatique tout en suivant le même plan de mesure; une permutation ou un identifiant arbitraire ne serait pas un contrôle physique",
-    "required_action": "obtenir des auteurs l'élément AgeEnsemblesBACON complet et préenregistrer un contrôle mesuré indépendant avant toute analyse de résultat"
+    "required_action": "préenregistrer et acquérir un contrôle mesuré indépendant avant tout verdict PALEO-HISTORY-02"
   },
-  "admission": "blocked_until_exact_ensembles_and_real_negative_control",
-  "repository_size_policy": "fichiers temporaires non ajoutés au dépôt"
+  "admission": "blocked_only_by_real_negative_control_and_exhaustive_local_acquisition"
 }

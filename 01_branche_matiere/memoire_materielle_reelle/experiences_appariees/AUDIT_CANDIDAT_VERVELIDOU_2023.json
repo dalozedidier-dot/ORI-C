@@ -1,0 +1,35 @@
+{
+  "schema": "oric.material-paired-source-audit.v1",
+  "checked_at": "2026-08-12",
+  "candidate": "Vervelidou et al. 2023 — Hand Magnets and the Destruction of Ancient Meteorite Magnetism",
+  "article_doi": "10.1029/2022JE007464",
+  "article_url": "https://doi.org/10.1029/2022JE007464",
+  "public_data_url": "https://earthref.org/MagIC/download/19658",
+  "public_data_sha256": "580e18c1856399a955525ba42ffcbdc19e503f33694d57a6d883ebf3a8b10446",
+  "design_found": {
+    "units": "13 fragments d'un même basalte terrestre",
+    "history_A_B": "distance différente au même aimant, avec fragment témoin non exposé dans la géométrie publiée",
+    "trace": "aimantation rémanente acquise et direction",
+    "ablation": "démagnétisation AF progressive sur les mêmes fragments",
+    "pairing": "mêmes fragments avant/après remagnétisation et pendant l'ablation"
+  },
+  "raw_data_audit": {
+    "MagIC_19658_contents": "mesures des pierres appariées NWA 7034 uniquement",
+    "basalt_experiment_rows_present": false,
+    "supporting_information_contains_raw_curves": false,
+    "reason": "le supplément décrit les calculs et fournit les figures/tables auxiliaires, mais pas une table machine des courbes du basalte"
+  },
+  "ori_c_chain": {
+    "H": "available_in_protocol_not_in_raw_table",
+    "m": "available_in_protocol_not_in_raw_table",
+    "persistence": "progressive_AF_curve_described",
+    "R": "magnetic_response_is_the_trace_measure_not_an_independent_later_response",
+    "ablation": "available_in_protocol_not_in_public_raw_table"
+  },
+  "verdict": "high_leverage_paired_candidate_not_computable_and_not_complete_C03",
+  "blocking_items": [
+    "obtenir des auteurs les courbes machine des 13 fragments de basalte",
+    "définir une réponse finale indépendante de la trace magnétique elle-même",
+    "vérifier l'appariement A/B avant et après ablation sous le même stimulus final"
+  ]
+}

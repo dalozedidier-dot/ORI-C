@@ -13,6 +13,7 @@ from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
 from analyser_donnees_massives import analyse as analyse_donnees_massives
 from analyser_information_historique import write_outputs as write_information_outputs
 from analyser_distribution_26al import analyse as analyse_distribution_26al
+from analyser_information_interetages import write_output as write_interstage_output
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -332,6 +333,7 @@ def main():
     # Information de provenance : artefacts reconstruits avec toutes les autres
     # sorties afin que le test d'identité et le manifeste local les couvrent.
     write_information_outputs(out)
+    write_interstage_output(HERE, out/'INFORMATION_INTERETAGES.json')
 
     files=sorted(
       (p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256'),

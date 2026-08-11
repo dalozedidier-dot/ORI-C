@@ -1,8 +1,10 @@
 {
   "schema": "oric.transversal-invariants-audit.v1",
   "cases_total": 20,
-  "cases_complete_X_H_m_Theta_tau_Pacc_R": 0,
-  "eligible_case_ids": [],
+  "cases_complete_X_H_m_Theta_tau_Pacc_R": 1,
+  "eligible_case_ids": [
+    "C-VES-02"
+  ],
   "tests": [
     {
       "id": "INV-A",
@@ -30,6 +32,6 @@
       "status": "non_testable"
     }
   ],
-  "verdict": "aucun invariant transversal calculable sans redéfinition post-hoc des variables",
+  "verdict": "un premier cas empirique rétrospectif est complet; aucun invariant transversal n'est testable sur un cas unique",
   "rule": "l'hétérogénéité des métriques n'est pas masquée par une standardisation arbitraire"
 }

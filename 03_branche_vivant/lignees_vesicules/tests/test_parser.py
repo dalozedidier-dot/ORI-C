@@ -132,3 +132,16 @@ def test_canonical_numbers_absorb_python_312_313_micro_rounding():
     ]
     assert module.canonicalize_numbers(python_312) == module.canonicalize_numbers(python_313)
 
+
+def test_pacc_uses_prefixed_composition_classes():
+    module = load()
+    data = pd.DataFrame({
+        "condition": ["FR"] * 4,
+        "arm": ["selection"] * 4,
+        "transition": [0] * 4,
+        "offspring": [0.1, 0.3, 0.6, 0.9],
+    })
+    result = module.accessible_descendant_classes(data)
+    assert result["strata_count"] == 1
+    assert result["mean_P_acc"] == 1.0
+    assert result["strata"][0]["occupied_classes"] == [0, 1, 2, 3]

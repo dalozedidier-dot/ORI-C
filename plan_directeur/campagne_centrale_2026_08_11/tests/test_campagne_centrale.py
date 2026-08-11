@@ -37,11 +37,12 @@ def test_la_matrice_ne_presente_pas_un_deblocage_comme_un_resultat() -> None:
     assert scores == sorted(scores, reverse=True)
 
 
-def test_benchmark_transversal_sans_remplissage_des_champs_absents() -> None:
+def test_benchmark_transversal_admet_un_premier_cas_complet_mesure() -> None:
     benchmark, invariants = MODULE.benchmark_transversal()
     assert 20 <= benchmark["case_count"] <= 30
     assert all(case["artifact_present"] for case in benchmark["cases"])
-    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 0
+    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 1
+    assert invariants["eligible_case_ids"] == ["C-VES-02"]
     assert all(test["status"] == "non_testable" for test in invariants["tests"])
 
 

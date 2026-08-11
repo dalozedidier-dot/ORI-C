@@ -64,6 +64,1191 @@
     "permutation_p_one_sided": 0.0004997501249375,
     "permutations": 2000
   },
+  "P_acc_measurement": {
+    "definition": "fraction des 4 classes [0,.25), [.25,.5), [.5,.75), [.75,+inf) occupées par les descendants",
+    "status": "empirical_retrospective_support_proxy",
+    "strata": [
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 10,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 11,
+        "n_pairs": 48,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 12,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 13,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 14,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 15,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 16,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 17,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 18,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "drift",
+        "transition": 19,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 10,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 11,
+        "n_pairs": 48,
+        "occupied_classes": [
+          1,
+          2
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 12,
+        "n_pairs": 48,
+        "occupied_classes": [
+          1,
+          2
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 13,
+        "n_pairs": 48,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 14,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 15,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 16,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 17,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 18,
+        "n_pairs": 48,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "FR",
+        "arm": "selection",
+        "transition": 19,
+        "n_pairs": 48,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 3,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 4,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 5,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 6,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 7,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 8,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "drift",
+        "transition": 9,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 2,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 3,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 4,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 5,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 6,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 7,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 8,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "FU",
+        "arm": "selection",
+        "transition": 9,
+        "n_pairs": 96,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "drift",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          1,
+          2,
+          3
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UR",
+        "arm": "selection",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "P_acc": 1.0
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1,
+          2
+        ],
+        "P_acc": 0.75
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "drift",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 0,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 1,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 2,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 3,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 4,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 5,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 6,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 7,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0,
+          1
+        ],
+        "P_acc": 0.5
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 8,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      },
+      {
+        "condition": "UU",
+        "arm": "selection",
+        "transition": 9,
+        "n_pairs": 144,
+        "occupied_classes": [
+          0
+        ],
+        "P_acc": 0.25
+      }
+    ],
+    "strata_count": 100,
+    "mean_P_acc": 0.66,
+    "min_P_acc": 0.25,
+    "max_P_acc": 1.0
+  },
+  "complete_case_X_H_m_Theta_tau_Pacc_R": {
+    "X": "condition expérimentale et bras drift/selection au départ de la transition",
+    "H": "suite codée des transferts donneur-receveur avant la transition",
+    "m": "composition mesurée du parent immédiatement avant transfert",
+    "Theta": "régime expérimental FR, FU, UR ou UU et protocole de sélection",
+    "tau": "indice de génération et transition parent-descendant",
+    "P_acc": "support empirique des classes descendantes; voir P_acc_measurement",
+    "R": "composition mesurée du descendant et réponse moyenne à la sélection",
+    "status": "complete_empirical_retrospective_case",
+    "limitation": "P_acc est une mesure rétrospective du support observé, pas encore une prédiction prospective ni l'ensemble contrefactuel complet"
+  },
   "decision_components": {
     "selection_response_FR_positive": true,
     "FR_exceeds_ablation_mean": true,

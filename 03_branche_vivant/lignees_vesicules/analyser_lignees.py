@@ -327,6 +327,35 @@ def lineage_permutation_test(data: pd.DataFrame, repeats: int = 2000) -> dict[st
     }
 
 
+def accessible_descendant_classes(data: pd.DataFrame) -> dict[str, object]:
+    """Mesure rétrospective de P_acc sur quatre classes fixées de composition."""
+    bins = np.array([-np.inf, 0.25, 0.5, 0.75, np.inf])
+    work = data.copy()
+    work["descendant_class"] = np.digitize(work["offspring"].to_numpy(float), bins[1:-1])
+    strata = []
+    for (condition, arm, transition), group in work.groupby(
+        ["condition", "arm", "transition"], observed=False, sort=True
+    ):
+        occupied = sorted(int(value) for value in group["descendant_class"].unique())
+        strata.append({
+            "condition": str(condition),
+            "arm": str(arm),
+            "transition": int(transition),
+            "n_pairs": int(len(group)),
+            "occupied_classes": occupied,
+            "P_acc": len(occupied) / 4.0,
+        })
+    return {
+        "definition": "fraction des 4 classes [0,.25), [.25,.5), [.5,.75), [.75,+inf) occupées par les descendants",
+        "status": "empirical_retrospective_support_proxy",
+        "strata": strata,
+        "strata_count": len(strata),
+        "mean_P_acc": float(np.mean([row["P_acc"] for row in strata])),
+        "min_P_acc": float(np.min([row["P_acc"] for row in strata])),
+        "max_P_acc": float(np.max([row["P_acc"] for row in strata])),
+    }
+
+
 def main() -> dict[str, object]:
     files = {
         condition: [path for replicate in (1, 2, 3) if (path := locate(f"{condition}{replicate}_log.xlsx"))]
@@ -360,6 +389,7 @@ def main() -> dict[str, object]:
         ablation_controls = [selection_response[key] for key in ("FU", "UR", "UU")]
         mechanism_contrast = float(selection_response["FR"] - np.mean(ablation_controls))
         lineage_test = lineage_permutation_test(data)
+        p_acc = accessible_descendant_classes(data)
         result = {
             "status": "analysed",
             "pairs": int(len(data)),
@@ -367,6 +397,18 @@ def main() -> dict[str, object]:
             "selection_response": selection_response,
             "mechanism_ablation_contrast": mechanism_contrast,
             "lineage_permutation_test": lineage_test,
+            "P_acc_measurement": p_acc,
+            "complete_case_X_H_m_Theta_tau_Pacc_R": {
+                "X": "condition expérimentale et bras drift/selection au départ de la transition",
+                "H": "suite codée des transferts donneur-receveur avant la transition",
+                "m": "composition mesurée du parent immédiatement avant transfert",
+                "Theta": "régime expérimental FR, FU, UR ou UU et protocole de sélection",
+                "tau": "indice de génération et transition parent-descendant",
+                "P_acc": "support empirique des classes descendantes; voir P_acc_measurement",
+                "R": "composition mesurée du descendant et réponse moyenne à la sélection",
+                "status": "complete_empirical_retrospective_case",
+                "limitation": "P_acc est une mesure rétrospective du support observé, pas encore une prédiction prospective ni l'ensemble contrefactuel complet"
+            },
             "decision_components": {
                 "selection_response_FR_positive": selection_response["FR"] > 0,
                 "FR_exceeds_ablation_mean": mechanism_contrast > 0,

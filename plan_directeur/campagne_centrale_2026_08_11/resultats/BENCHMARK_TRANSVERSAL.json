@@ -49,23 +49,21 @@
       "scope": "empirique_externe",
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
-      "artifact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "artifact_sha256": "e5587a71ed8ba5cdf4498b09850315a7506f7ffd93023669a5c6b5c615fe9620",
       "m_operational_definition": "composition parentale pré-division",
-      "P_acc_operational_definition": "fraction des états descendants dans les classes compositionnelles préfixées",
-      "m_P_acc_measurement_status": "m_available_Pacc_computable_from_raw_lineages",
+      "P_acc_operational_definition": "fraction des quatre classes compositionnelles préfixées effectivement occupées par les descendants dans chaque condition, bras et transition",
+      "m_P_acc_measurement_status": "complete_empirical_retrospective_case_measured_from_raw_lineages",
       "field_coverage": {
         "X": true,
         "H": true,
         "m": true,
         "Theta": true,
         "tau": true,
-        "P_acc": false,
+        "P_acc": true,
         "R": true
       },
-      "missing_fields": [
-        "P_acc"
-      ],
-      "eligible_for_common_invariant": false
+      "missing_fields": [],
+      "eligible_for_common_invariant": true
     },
     {
       "id": "C-VES-03",
@@ -75,7 +73,7 @@
       "scope": "empirique_externe",
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
-      "artifact_sha256": "562c0bc4e6e5a0c09755d25d540c289c93c68af6ed23253928a992dd2e478f8b",
+      "artifact_sha256": "e5587a71ed8ba5cdf4498b09850315a7506f7ffd93023669a5c6b5c615fe9620",
       "m_operational_definition": "trace parentale ciblée avant ablation",
       "P_acc_operational_definition": "fraction des classes descendantes accessibles après intervention",
       "m_P_acc_measurement_status": "m_partial_Pacc_requires_intervention",

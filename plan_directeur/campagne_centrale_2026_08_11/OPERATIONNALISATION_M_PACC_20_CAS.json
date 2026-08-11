@@ -3,7 +3,7 @@
   "rule": "Un champ défini n'est pas déclaré mesuré. P_acc est un ensemble ou une proportion d'issues accessibles sous contraintes explicites; m est une trace physique ou un état historique mesuré avant R.",
   "cases": [
     {"id":"C-ANT-01","m":"paramètres d'histoire de lignée mesurés avant MIC","P_acc":"fraction des antibiotiques/doses du panneau dont la croissance dépasse le seuil gelé","measurement_status":"m_available_Pacc_requires_raw_growth_panel"},
-    {"id":"C-VES-02","m":"composition parentale pré-division","P_acc":"fraction des états descendants dans les classes compositionnelles préfixées","measurement_status":"m_available_Pacc_computable_from_raw_lineages"},
+    {"id":"C-VES-02","m":"composition parentale pré-division","P_acc":"fraction des quatre classes compositionnelles préfixées effectivement occupées par les descendants dans chaque condition, bras et transition","measurement_status":"complete_empirical_retrospective_case_measured_from_raw_lineages"},
     {"id":"C-VES-03","m":"trace parentale ciblée avant ablation","P_acc":"fraction des classes descendantes accessibles après intervention","measurement_status":"m_partial_Pacc_requires_intervention"},
     {"id":"C-MAT-MEM-05","m":"trace matérielle distincte mesurée avant réponse","P_acc":"fraction des classes de réponse atteignables sous stimulus final commun","measurement_status":"definitions_complete_no_admitted_complete_family"},
     {"id":"C-AST-01","m":"architecture orbitale initiale et modes propres","P_acc":"fraction des cellules orbitales stables accessibles à l'horizon gelé","measurement_status":"Pacc_model_available_m_modes_to_extract"},

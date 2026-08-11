@@ -1,0 +1,29 @@
+{
+  "schema": "oric.independent-biological-replication-search.v2",
+  "checked_at": "2026-08-12",
+  "target": "réplication indépendante de Sokolskyi–Baum ou D'Onofrio",
+  "existing_independent_test": {
+    "dataset": "Card et al. 2019",
+    "doi": "10.5061/dryad.g41hg96",
+    "target": "histoire LTEE vers susceptibilité antibiotique",
+    "verdict": "does_not_support",
+    "interpretation": "une réplication indépendante négative existe déjà pour la famille antibiotique; elle ne reproduit pas le gain D'Onofrio"
+  },
+  "new_high_leverage_candidate": {
+    "study": "Abil et al. 2024 — Darwinian Evolution of Self-Replicating DNA in a Synthetic Protocell",
+    "doi": "10.1038/s41467-024-53226-0",
+    "article_url": "https://www.nature.com/articles/s41467-024-53226-0",
+    "direct_source_data_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-024-53226-0/MediaObjects/41467_2024_53226_MOESM6_ESM.zip",
+    "ngs_accession": "PRJEB75735",
+    "code_doi": "10.5281/zenodo.13757341",
+    "design": "cycles de réplication en liposomes, dilution, fusion-fission et témoin bulk; données qPCR et NGS",
+    "qualification": "réplication conceptuelle indépendante de transmission historique en protocellules, pas réplication stricte des filiations parent-descendant Sokolskyi–Baum",
+    "blocking_reason": "les cycles redistribuent stochastiquement l'ADN entre vésicules et ne publient pas une carte mère-fille individuelle; l'archive source n'a pas pu être acquise automatiquement pendant cette exécution"
+  },
+  "zambrano_2024": {
+    "doi": "10.1021/jacs.4c08226",
+    "status": "division filmée mais aucune table mère-fille longitudinale identifiée",
+    "verdict": "not_a_qualifying_replication_dataset"
+  },
+  "overall_verdict": "no_new_strict_independent_replication_completed"
+}
