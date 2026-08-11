@@ -1,0 +1,11 @@
+{
+  "schema": "oric.prospective-prediction.v1",
+  "required": [
+    "id", "date_gel", "hypothese", "donnees_vues", "donnees_interdites",
+    "variable_predite", "valeur_ou_intervalle", "modele_concurrent",
+    "critere_succes", "critere_echec", "empreinte_avant_ouverture",
+    "date_ouverture", "resultat"
+  ],
+  "immutable_after_freeze": true
+}
+

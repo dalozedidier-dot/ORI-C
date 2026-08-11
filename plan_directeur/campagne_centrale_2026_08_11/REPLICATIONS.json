@@ -1,0 +1,41 @@
+{
+  "schema": "oric.replications.v1",
+  "regle": "R compte uniquement les réplications indépendantes du résultat initial ; deux critères sur le même système ne constituent pas deux réplications.",
+  "resultats": [
+    {
+      "claim": "C-ANT-01",
+      "resultat_initial": "D'Onofrio",
+      "niveau": "E2",
+      "replications_independantes": 1,
+      "replications": [
+        {"dataset": "Card 2019", "type": "dataset_externe", "verdict": "does_not_support", "reference": "03_branche_vivant/benchmark_externe_card2019/resultats/verdict_externe.json"}
+      ],
+      "statut": "effet_non_replique"
+    },
+    {
+      "claim": "C-VES-02/C-VES-03",
+      "resultat_initial": "Sokolskyi-Baum",
+      "niveau": "E4",
+      "replications_independantes": 0,
+      "replications": [],
+      "statut": "replication_externe_requise"
+    },
+    {
+      "claim": "C-AST-01",
+      "resultat_initial": "modèle N-corps réduit",
+      "niveau": "E4_modele",
+      "replications_independantes": 0,
+      "replications": [],
+      "statut": "validation_multi_modele_requise"
+    },
+    {
+      "claim": "C-MAT-MEM-05",
+      "resultat_initial": "campagne mémoire matérielle",
+      "niveau": null,
+      "replications_independantes": 0,
+      "replications": [],
+      "statut": "does_not_support_0_famille_complete"
+    }
+  ]
+}
+

@@ -1,0 +1,32 @@
+{
+  "campaign_id": "PALEO-HISTORY-01",
+  "verdict": "non_testable",
+  "required_count": 9,
+  "present_count": 4,
+  "present": {
+    "LR04": {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/lisiecki2005_LR04.txt",
+      "sha256": "973a52d988da04333c98c3fc0cb51babac2fa9bb1c05d42de3d6df726d96b6fc"
+    },
+    "EPICA_temperature": {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc3deuttemp2007.txt",
+      "sha256": "b801fc2e422d427524619be25b50ee86fd63b36eb440eb5044d9bec12a4d1747"
+    },
+    "EPICA_CO2": {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc-co2-2008.txt",
+      "sha256": "ae2ecff8e048c2357094c14742fb83eecc97c896707fc1f983614818427ae390"
+    },
+    "Vostok": {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/vostok_deutnat.txt",
+      "sha256": "c69eca96499bece4b2f65d4e40240f52e0bfb4027383b3f2db68a1b3e36c75f6"
+    }
+  },
+  "missing": [
+    "pile_benthique_independante",
+    "proxy_niveau_marin_independant",
+    "EPICA_poussieres",
+    "insolation_convention_1",
+    "insolation_convention_2"
+  ],
+  "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont admises; le gel n'est pas assoupli"
+}

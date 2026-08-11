@@ -1,0 +1,13 @@
+{
+  "verdict": "indetermine_faute_de_donnees",
+  "fermeture_canonique": {
+    "reachable": 46,
+    "total": 53
+  },
+  "fermeture_candidate": {
+    "reachable": 53,
+    "total": 53
+  },
+  "preuve_candidate_admise": false,
+  "motif": "la source actuelle ne démontre pas HC01/H052 dans une trajectoire unique avec flux, quantités, incertitudes et horizon temporel"
+}

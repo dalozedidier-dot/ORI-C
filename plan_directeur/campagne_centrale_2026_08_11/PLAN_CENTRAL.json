@@ -1,0 +1,43 @@
+{
+  "schema": "oric.central-program.v1",
+  "objectif": "fermer_mecanismes_mesurer_possibles_tester_invariants_predire",
+  "campagnes": [
+    {"id": "I", "nom": "fermeture_mecanistique", "axes": [1,2,3,4,5,6,18,19], "critere_fin": "au moins trois branches avec H→m→ΔP→R"},
+    {"id": "II", "nom": "quantification", "axes": [7,8,9,10,13,14,15], "critere_fin": "lois quantitatives locales avec incertitudes"},
+    {"id": "III", "nom": "transversalite", "axes": [11,12,25,27,28,29], "critere_fin": "benchmark de 20 à 30 cas et invariants testés"},
+    {"id": "IV", "nom": "prediction", "axes": [21,22,23,24,26], "critere_fin": "prédictions gelées sur données non vues"}
+  ],
+  "axes": [
+    {"id":1,"nom":"hypergraphe_matiere","statut":"partiel","sortie":"01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json","prochaine_condition":"source primaire démontrant H052/HC01 dans un système unique"},
+    {"id":2,"nom":"memoire_materielle","statut":"bloque_externe","prochaine_condition":"expérience appariée H→m→persistance→ΔR→ablation"},
+    {"id":3,"nom":"genealogie_cosmique","statut":"data_rich_partiel","prochaine_condition":"mesurer information conservée entre étages avec validation réservée"},
+    {"id":4,"nom":"systeme_solaire","statut":"E4_modele","prochaine_condition":"interventions symétriques et contraintes observationnelles"},
+    {"id":5,"nom":"climat","statut":"M2_closed_negative_paleo_non_testable"},
+    {"id":6,"nom":"vivant","statut":"E2_E4_non_repliques"},
+    {"id":7,"nom":"domaine_possibles","statut":"mesure_locale_une_branche"},
+    {"id":8,"nom":"temps_memoire","statut":"formalise_non_transversal"},
+    {"id":9,"nom":"force_trace","statut":"formalise_non_teste"},
+    {"id":10,"nom":"ablation_universelle","statut":"formalise_partiel"},
+    {"id":11,"nom":"benchmark_transversal","statut":"a_construire_apres_admission"},
+    {"id":12,"nom":"invariants","statut":"protocoles_requis"},
+    {"id":13,"nom":"information_historique","statut":"formalise_non_transversal"},
+    {"id":14,"nom":"irreversibilite","statut":"formalise_non_mesure"},
+    {"id":15,"nom":"bifurcations","statut":"registre_a_alimenter"},
+    {"id":16,"nom":"tests_bloques","statut":"matrice_generee"},
+    {"id":17,"nom":"acquisition_donnees","statut":"priorisee"},
+    {"id":18,"nom":"interventions","statut":"partiel_par_branche"},
+    {"id":19,"nom":"replications","statut":"registre_cree"},
+    {"id":20,"nom":"resultats_negatifs","statut":"registre_cree"},
+    {"id":21,"nom":"predictions_prospectives","statut":"schema_cree_aucune_prediction_gelee"},
+    {"id":22,"nom":"premieres_predictions","statut":"non_lance"},
+    {"id":23,"nom":"test_aveugle","statut":"workflow_defini_non_execute"},
+    {"id":24,"nom":"validation_externe","statut":"bloque_nouvelles_donnees"},
+    {"id":25,"nom":"modeles_concurrents","statut":"obligatoire_dans_formalisme"},
+    {"id":26,"nom":"falsification","statut":"criteres_crees"},
+    {"id":27,"nom":"architecture_preuve","statut":"champs_obligatoires_definis"},
+    {"id":28,"nom":"hierarchie_claims","statut":"E0_E6_existant"},
+    {"id":29,"nom":"dependances_scientifiques","statut":"graphe_genere"},
+    {"id":30,"nom":"gouvernance","statut":"regle_active"}
+  ]
+}
+

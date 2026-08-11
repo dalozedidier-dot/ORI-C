@@ -1,0 +1,8 @@
+{
+  "schema": "oric.central-campaign-status.v1",
+  "paleo_history_01": "non_testable",
+  "axes_total": 30,
+  "axes_documentes": 30,
+  "claim_general": "ORI-C n'est pas validé comme théorie générale",
+  "next_executable_gate": "acquisition et admission des cinq familles manquantes de PALEO-HISTORY-01"
+}

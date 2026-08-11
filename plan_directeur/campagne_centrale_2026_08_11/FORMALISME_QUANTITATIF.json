@@ -1,0 +1,26 @@
+{
+  "schema": "oric.quantitative-history.v1",
+  "objet": "P_acc(X,H,Theta,tau)",
+  "definitions": {
+    "delta_H_P": "D(P_acc(X,H1,Theta,tau), P_acc(X,H2,Theta,tau))",
+    "temps_memoire": "tau_m, durée caractéristique pendant laquelle H conserve une influence détectable",
+    "rapport_temps": "tau_m / tau_T",
+    "force_trace": "M = ||m||, avec norme et unités déclarées par domaine",
+    "ablation": "A = (DeltaR - DeltaR_ablation) / DeltaR, indéfini si DeltaR = 0",
+    "information_trace": "I(H;X_t)",
+    "information_fonctionnelle": "I(H;P_future | X_t)",
+    "possibles_perdus": "L_t = P_t \\ P_(t+1)",
+    "possibles_gagnes": "G_t = P_(t+1) \\ P_t"
+  },
+  "champs_obligatoires_par_mesure": [
+    "X", "H", "m", "Theta", "tau", "partition_de_P_acc", "distance_D",
+    "incertitude", "modele_etat_seul", "modele_concurrent", "provenance"
+  ],
+  "regles": [
+    "P_acc doit être défini sur un ensemble fini ou une mesure explicitement normalisée",
+    "une fraction d'interventions calculées n'est pas une probabilité naturelle",
+    "les valeurs de domaines différents ne sont comparées qu'après test d'invariance de la définition",
+    "une trace I(H;X_t)>0 n'implique pas une pertinence future I(H;P_future|X_t)>0"
+  ]
+}
+

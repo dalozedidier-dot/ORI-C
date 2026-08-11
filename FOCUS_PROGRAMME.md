@@ -1,5 +1,23 @@
 # Périmètre de recherche ORI-C après v0.9.5
 
+## Plan directeur central actif
+
+Depuis le 11 août 2026, le point d'entrée opérationnel est
+`plan_directeur/campagne_centrale_2026_08_11/`. Il ordonne les trente axes en
+quatre campagnes : fermeture mécanistique, quantification, transversalité et
+prédiction. Son lanceur publie l'admissibilité des données, les dépendances et
+les blocages ; il ne transforme jamais un axe documenté en résultat exécuté.
+
+`PALEO-HISTORY-01` reste prioritaire mais est actuellement `non_testable` : le
+dépôt possède quatre familles de données sur neuf obligatoires. Les cinq
+familles absentes sont publiées dans
+`resultats/ADMISSION_PALEO_HISTORY_01.json`. Le protocole gelé reste inchangé.
+
+La gouvernance centrale retient uniquement les travaux qui ferment un verrou,
+mesurent `P_acc`, testent un invariant, ajoutent une intervention, fournissent
+une réplication, produisent une prédiction prospective ou peuvent falsifier une
+hypothèse importante. Le reste demeure dans le backlog.
+
 Le tag `v0.9.5-research` reste gelé. Le développement de `main` n'ajoute pas de domaines opportunistes : il ouvre un front explicitement autorisé, la **généalogie cosmique quantitative** qui manquait entre l'enrichissement stellaire et l'architecture du Système solaire. Les cinq livrables antérieurs restent valides, mais ce raccordement amont devient la priorité scientifique structurante.
 
 | Livrable | État courant | Prochaine étape utile |
