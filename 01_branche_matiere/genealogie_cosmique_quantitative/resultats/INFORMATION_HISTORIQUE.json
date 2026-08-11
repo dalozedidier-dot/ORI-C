@@ -1,0 +1,158 @@
+{
+  "schema": "oric.gc.historical-information.v1",
+  "analysis": "retrospective",
+  "estimand": "information de provenance décodable dans les mesures individuelles",
+  "results": [
+    {
+      "dataset": "reservoir_NC_CC",
+      "source": "data_massives_reelles/SOSSI_NC_CC_MEASURED.csv",
+      "label": "Reservoir",
+      "n": 9,
+      "groups": 2,
+      "features": [
+        "17O",
+        "48Ca",
+        "50Ti",
+        "54Cr",
+        "54Fe",
+        "64Ni",
+        "66Zn",
+        "96Zr",
+        "94Mo",
+        "95Mo",
+        "100Ru"
+      ],
+      "loo_accuracy": 1.0,
+      "majority_baseline": 0.5555555555555556,
+      "accuracy_gain": 0.4444444444444444,
+      "bootstrap_95_accuracy": [
+        1.0,
+        1.0
+      ],
+      "label_permutation_p_one_sided": 0.005988023952095809,
+      "label_permutations": 500,
+      "normalized_mi_by_feature": {
+        "17O": 0.7757768235684186,
+        "48Ca": 1.0,
+        "50Ti": 1.0,
+        "54Cr": 1.0,
+        "54Fe": 0.5515536471368372,
+        "64Ni": 1.0,
+        "66Zn": 1.0,
+        "96Zr": 1.0,
+        "94Mo": 1.0,
+        "95Mo": 1.0,
+        "100Ru": 0.7757768235684186
+      },
+      "normalized_mi_mean": 0.9184642994794249,
+      "between_within_ratio_mean": 5.586272411986737,
+      "status": "information_decodable"
+    },
+    {
+      "dataset": "grains_SiC",
+      "source": "data_massives_reelles/PGD_SiC_PUBLISHED_SELECTED.csv",
+      "label": "Type",
+      "n": 423,
+      "groups": 15,
+      "features": [
+        "12C/13C",
+        "14N/15N",
+        "26Al/27Al",
+        "d(29Si/28Si)",
+        "d(30Si/28Si)"
+      ],
+      "loo_accuracy": 0.44208037825059104,
+      "majority_baseline": 0.2293144208037825,
+      "accuracy_gain": 0.21276595744680854,
+      "bootstrap_95_accuracy": [
+        0.39243498817966904,
+        0.48936170212765956
+      ],
+      "label_permutation_p_one_sided": 0.001996007984031936,
+      "label_permutations": 500,
+      "normalized_mi_by_feature": {
+        "12C/13C": 0.393698039834671,
+        "14N/15N": 0.3209165541894205,
+        "26Al/27Al": 0.34897783993583287,
+        "d(29Si/28Si)": 0.29385187603162816,
+        "d(30Si/28Si)": 0.30047876286653247
+      },
+      "normalized_mi_mean": 0.331584614571617,
+      "between_within_ratio_mean": 2.7210303671695604,
+      "status": "information_decodable"
+    },
+    {
+      "dataset": "grains_graphite",
+      "source": "data_massives_reelles/PGD_GRAPHITE_PUBLISHED_SELECTED.csv",
+      "label": "Type",
+      "n": 136,
+      "groups": 3,
+      "features": [
+        "12C/13C",
+        "14N/15N",
+        "26Al/27Al",
+        "d(29Si/28Si)",
+        "d(30Si/28Si)"
+      ],
+      "loo_accuracy": 0.5073529411764706,
+      "majority_baseline": 0.7205882352941176,
+      "accuracy_gain": -0.21323529411764708,
+      "bootstrap_95_accuracy": [
+        0.41911764705882354,
+        0.5882352941176471
+      ],
+      "label_permutation_p_one_sided": 0.12375249500998003,
+      "label_permutations": 500,
+      "normalized_mi_by_feature": {
+        "12C/13C": 0.03655626079709981,
+        "14N/15N": 0.08960786702350065,
+        "26Al/27Al": 0.09866756012745798,
+        "d(29Si/28Si)": 0.02648856230283739,
+        "d(30Si/28Si)": 0.06548590005345417
+      },
+      "normalized_mi_mean": 0.06336123006087,
+      "between_within_ratio_mean": 0.03854652051330877,
+      "status": "non_decodable_par_ce_test"
+    },
+    {
+      "dataset": "chondres",
+      "status": "non_testable",
+      "n": 17,
+      "reason": "moins de deux groupes ou moins de six lignes complètes"
+    },
+    {
+      "dataset": "Bennu_refractaires",
+      "source": "data_massives_reelles/BENNU_REFRACTORY_O_2026.csv",
+      "label": "context",
+      "n": 16,
+      "groups": 5,
+      "features": [
+        "d17O",
+        "d18O",
+        "Delta17O"
+      ],
+      "loo_accuracy": 0.1875,
+      "majority_baseline": 0.25,
+      "accuracy_gain": -0.0625,
+      "bootstrap_95_accuracy": [
+        0.0,
+        0.375
+      ],
+      "label_permutation_p_one_sided": 0.5808383233532934,
+      "label_permutations": 500,
+      "normalized_mi_by_feature": {
+        "d17O": 0.49946423984351446,
+        "d18O": 0.4239676513053474,
+        "Delta17O": 0.49946423984351446
+      },
+      "normalized_mi_mean": 0.4742987103307921,
+      "between_within_ratio_mean": 0.8076127944469206,
+      "status": "non_decodable_par_ce_test"
+    }
+  ],
+  "limits": [
+    "les classes rares et lignes incomplètes sont exclues selon une règle fixe",
+    "l'information décodable n'établit pas que la provenance modifie une réponse future",
+    "les tables ne suivent pas les mêmes objets entre étages; aucune courbe de perte causale inter-étages n'est revendiquée"
+  ]
+}

@@ -2,11 +2,19 @@
   "campaign_id": "PALEO-HISTORY-01",
   "verdict": "non_testable",
   "required_count": 9,
-  "present_count": 4,
+  "present_count": 9,
   "present": {
     "LR04": {
       "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/lisiecki2005_LR04.txt",
       "sha256": "973a52d988da04333c98c3fc0cb51babac2fa9bb1c05d42de3d6df726d96b6fc"
+    },
+    "pile_benthique_independante": {
+      "path": "donnees_externes/paleo_history_01/ahn2017_prob_stack.txt",
+      "sha256": "5851d3696a142be40503acc8d92323a7e0b5771a27ea7b7a9b83e430a3babe19"
+    },
+    "proxy_niveau_marin_independant": {
+      "path": "donnees_externes/paleo_history_01/spratt2016_sea_level_noaa.txt",
+      "sha256": "02f56f02f709b70ac70fe5e403326272e19b42bf34ee9b1bba3b8322e1375dc1"
     },
     "EPICA_temperature": {
       "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc3deuttemp2007.txt",
@@ -16,17 +24,28 @@
       "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/edc-co2-2008.txt",
       "sha256": "ae2ecff8e048c2357094c14742fb83eecc97c896707fc1f983614818427ae390"
     },
+    "EPICA_poussieres": {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/datasets/EDC_dust_lpc.tab",
+      "sha256": "dde5ccd37ebc84ea79d5d96064c87002fd950ee1f7fcd954f0407a261e9d27d5"
+    },
     "Vostok": {
       "path": "donnees_externes/donnees_reelles_2026_08_07/paleoclimat_long/vostok_deutnat.txt",
       "sha256": "c69eca96499bece4b2f65d4e40240f52e0bfb4027383b3f2db68a1b3e36c75f6"
+    },
+    "insolation_convention_1": {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/data/raw/orbit91",
+      "sha256": "3afc20dda7b385bdd366bc4c9cf60be02d8defdb4c0f317430ca8386d62f81a3"
+    },
+    "insolation_convention_2": {
+      "path": "donnees_externes/paleo_history_01/INSOLN.LA2004.BTL.100.ASC",
+      "sha256": "9d5e20008a2484236bf13a3f5c6f59adc4db533cfc04229b17d1c3475efc6acc"
     }
   },
-  "missing": [
-    "pile_benthique_independante",
-    "proxy_niveau_marin_independant",
-    "EPICA_poussieres",
-    "insolation_convention_1",
-    "insolation_convention_2"
+  "missing": [],
+  "schema_issues": [
+    "table normalisée absente",
+    "age_uncertainty_ka non validé pour chaque série",
+    "unités, quality_flag et sha256_source non validés ligne par ligne"
   ],
-  "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont admises; le gel n'est pas assoupli"
+  "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont présentes et conformes au schéma; le gel n'est pas assoupli"
 }

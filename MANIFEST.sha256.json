@@ -1102,6 +1102,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/INFORMATION_HISTORIQUE.json",
+      "size": 4694,
+      "sha256": "434fe57b123d65cc731fab43d7c49b3811b105b41d60cc0e2d85f5167bcaa0af",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/INVENTAIRE_26AL_PAR_EVENEMENT.csv",
       "size": 1121,
       "sha256": "02f322f4c5d9142698a5bd46d2380f8b0adb95de2633261799352dada21d5c10",
@@ -1117,6 +1123,12 @@
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT.md",
       "size": 2457,
       "sha256": "782343d2c172624d5f538cbe936f3356e06ede51a821996f9f0f10a64bf6e30e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RAPPORT_INFORMATION_HISTORIQUE.md",
+      "size": 1381,
+      "sha256": "43f2ace0a79a1483b68779e88446d9dca8f1abba1a79d9d3280a37cf00e5a763",
       "storage": "inline"
     },
     {
@@ -1426,6 +1438,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_information_historique.py",
+      "size": 8199,
+      "sha256": "fe6aa69a2b08189c8c9cbca2998ede29d858fda68a2a2dcfbe38c0da564c74ab",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_quantitatif_complet.py",
       "size": 18330,
       "sha256": "d5db76da6da83774f061974db652c70ae3ab72b5e43b6d59d4dfa674b81f2b80",
@@ -1441,6 +1459,12 @@
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/tests/test_genealogie_cosmique.py",
       "size": 22288,
       "sha256": "ddeb3133919fac63f6c6bb65a600fd77948b53a82a36d4ee31adbc63aab4961a",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/tests/test_information_historique.py",
+      "size": 1052,
+      "sha256": "9808cf1fcbb2e181d7fd7a84a886388270aa8f31b5fc0012d06aecb447f0af10",
       "storage": "inline"
     },
     {
@@ -5831,8 +5855,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 8629,
-      "sha256": "8d2d82ecb066c0e4559e13ca1dfc2c4acb90288f3643b49fd9404641cea6ecb1",
+      "size": 8711,
+      "sha256": "fb3c4ac83aad869becc3ec0486abffec9bfc9552b02ecd9556a392a8a5003f65",
       "storage": "inline"
     },
     {
@@ -6281,8 +6305,8 @@
     },
     {
       "path": "donnees_externes/.gitignore",
-      "size": 483,
-      "sha256": "cf618b3a96201f5650f9484ca98ef4ea390667793b0475dd885214063405eeeb",
+      "size": 523,
+      "sha256": "f5394ec068bd5b674f8d6f3eb163e986d16f8caebf3ccafa4a44bc9c506e6043",
       "storage": "inline"
     },
     {
@@ -6379,6 +6403,78 @@
       "path": "donnees_externes/lot_scientifique_maximal_2026_08_05/SOURCE.json",
       "size": 8178,
       "sha256": "61a8a3cf27f98ca350d22ef30b89b83bceed551814a4b50352b9a67d65c2d70b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/INSOLN.LA2004.BTL.100.ASC",
+      "size": 3838038,
+      "sha256": "9d5e20008a2484236bf13a3f5c6f59adc4db533cfc04229b17d1c3475efc6acc",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/LA2004_README.TXT",
+      "size": 8678,
+      "sha256": "7b5ab619cbc629425fd19879ca81d0b8439e134668a8f26579e9bdf613ed8b9e",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/README.md",
+      "size": 589,
+      "sha256": "99c6a12750da942b1d505e5522be8e60dc692eb5d33eb399d2557fc3818b3d0e",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/SOURCES.json",
+      "size": 1764,
+      "sha256": "69d48e98b61632f97d9b1573ac08e1a0a55041fcab9cc77296a3f6b3bb0665df",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/ahn2017_prob_stack.txt",
+      "size": 166131,
+      "sha256": "5851d3696a142be40503acc8d92323a7e0b5771a27ea7b7a9b83e430a3babe19",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust.zip",
+      "size": 70306,
+      "sha256": "1c1fbe95541d27be722a4752acfa0aae693a21310ef9d3ab399de3fc1b82f8ba",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/datasets/EDC_FPP_cc.tab",
+      "size": 5216,
+      "sha256": "d7d53daafda7cfc39df411ac74399cb467a9210a29ba254ad8f95bb2a504b332",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/datasets/EDC_FPP_lpc.tab",
+      "size": 8417,
+      "sha256": "fea27c8e1fbed7a435b4e27d2793031da962f02b84239ce1882982a291a72287",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/datasets/EDC_dust_cc.tab",
+      "size": 29092,
+      "sha256": "b30b945918285e3da14b70f58271822316f71da99eceb935589ef5392bb9706b",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/datasets/EDC_dust_lpc.tab",
+      "size": 114719,
+      "sha256": "dde5ccd37ebc84ea79d5d96064c87002fd950ee1f7fcd954f0407a261e9d27d5",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/lambert2008_epica_dust/summary.txt",
+      "size": 5353,
+      "sha256": "06cb36afc47423cb1cfe36ce7b3b1834464f9e7d13ff892b29de85fe2cda2f20",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/paleo_history_01/spratt2016_sea_level_noaa.txt",
+      "size": 51519,
+      "sha256": "02f56f02f709b70ac70fe5e403326272e19b42bf34ee9b1bba3b8322e1375dc1",
       "storage": "inline"
     },
     {
@@ -6743,8 +6839,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ADMISSION_PALEO_HISTORY_01.json",
-      "size": 1251,
-      "sha256": "4f192d3e5ac9484624cf8ba39fc6119ce1522b3a96c660ba0ed6c543330050d3",
+      "size": 2345,
+      "sha256": "c9e95cde83bf8f944aa9102209c18b6df6ea909fde18bd55a2cd2c47329d9c35",
       "storage": "inline"
     },
     {
@@ -6761,20 +6857,20 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ETAT_CAMPAGNE.json",
-      "size": 308,
-      "sha256": "2b95f59e62e8548c50a2d095ae1107291a0600a748ff90e86e9085c379cc610c",
+      "size": 314,
+      "sha256": "b6ddf3c6929b2ef252439aea9ca543444bb830db2de6d25e657ff0fefba2c6b7",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 4855,
-      "sha256": "f521b29e9c87d73706af10ff3e05b3cb8aff3f3ab4dd54e33fe9ba2055df5fc1",
+      "size": 5804,
+      "sha256": "a585d206a3e88ac50ecb240aedc6ef5349dd2965901975fafa5859651628ded6",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
-      "size": 1558,
-      "sha256": "f14df27f745ab374ccef43eee1799974fcf1d474d1e62094c5fcae5ddae11470",
+      "size": 1882,
+      "sha256": "5cfc6a104f7f1ff20e463eaf16872c0c88d72a6b297429a24790b29b3f7a346a",
       "storage": "inline"
     },
     {
