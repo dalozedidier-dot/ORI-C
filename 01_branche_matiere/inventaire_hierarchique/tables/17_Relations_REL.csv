@@ -1,0 +1,112 @@
+relation_id;source_libelle;relation_type;target_libelle;transformation_id;mecanisme;reservoir;condition_ids;fenetre;axe_mecanisme;axe_milieu_naturel;axe_transition_historique;axe_role_causal
+REL-0001;quarks;filiation_materielle;nucléons | protons | neutrons;GA-001;confinement;plasma de quarks et gluons;expansion cosmologique;~10⁻⁵ s;établi;établi;établi;établi
+REL-0002;gluons;filiation_materielle;nucléons | protons | neutrons;GA-001;confinement;plasma de quarks et gluons;expansion cosmologique;~10⁻⁵ s;établi;établi;établi;établi
+REL-0003;expansion cosmologique;condition_ouverture;nucléons | protons | neutrons;GA-001;confinement;plasma de quarks et gluons;;~10⁻⁵ s;établi;établi;établi;établi
+REL-0004;nucléons;filiation_materielle;deutérium;GA-002;fusion_nucleaire;plasma primordial;expansion cosmologique;~100 s;établi;établi;établi;établi
+REL-0005;expansion cosmologique;condition_ouverture;deutérium;GA-002;fusion_nucleaire;plasma primordial;;~100 s;établi;établi;établi;établi
+REL-0006;deutérium;filiation_materielle;hélium 4 | hélium 3 | lithium 7;GA-003;fusion_nucleaire;plasma primordial;expansion cosmologique;~3 à 20 min;établi;établi;établi;établi
+REL-0007;nucléons;filiation_materielle;hélium 4 | hélium 3 | lithium 7;GA-003;fusion_nucleaire;plasma primordial;expansion cosmologique;~3 à 20 min;établi;établi;établi;établi
+REL-0008;expansion cosmologique;condition_ouverture;hélium 4 | hélium 3 | lithium 7;GA-003;fusion_nucleaire;plasma primordial;;~3 à 20 min;établi;établi;établi;établi
+REL-0009;hélium 4;filiation_materielle;atomes neutres;GA-004;recombinaison_electronique;univers en expansion;expansion cosmologique;~380 000 ans;établi;établi;établi;établi
+REL-0010;deutérium;filiation_materielle;atomes neutres;GA-004;recombinaison_electronique;univers en expansion;expansion cosmologique;~380 000 ans;établi;établi;établi;établi
+REL-0011;électrons;filiation_materielle;atomes neutres;GA-004;recombinaison_electronique;univers en expansion;expansion cosmologique;~380 000 ans;établi;établi;établi;établi
+REL-0012;expansion cosmologique;condition_ouverture;atomes neutres;GA-004;recombinaison_electronique;univers en expansion;;~380 000 ans;établi;établi;établi;établi
+REL-0013;atomes neutres;filiation_materielle;dihydrogène;GA-005;chimie_phase_gazeuse;gaz sans poussière;;z ≈ 100 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0014;électrons;filiation_materielle;dihydrogène;GA-005;chimie_phase_gazeuse;gaz sans poussière;;z ≈ 100 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0015;atomes neutres;filiation_materielle;premières étoiles;GA-006;effondrement_gravitationnel;mini-halos;gravité | refroidissement par H2 | refroidissement par HD;z ≈ 30 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0016;gravité;condition_ouverture;premières étoiles;GA-006;effondrement_gravitationnel;mini-halos;;z ≈ 30 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0017;refroidissement par H2;condition_ouverture;premières étoiles;GA-006;effondrement_gravitationnel;mini-halos;;z ≈ 30 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0018;refroidissement par HD;condition_ouverture;premières étoiles;GA-006;effondrement_gravitationnel;mini-halos;;z ≈ 30 à 20;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0019;hélium 4;filiation_materielle;carbone 12;GA-007;fusion_nucleaire;cœur stellaire;;combustion de l'hélium;établi;établi;établi;établi
+REL-0020;premières étoiles;filiation_materielle;carbone 12;GA-007;fusion_nucleaire;cœur stellaire;;combustion de l'hélium;établi;établi;établi;établi
+REL-0021;carbone 12;filiation_materielle;oxygène | néon | magnésium | silicium | soufre;GA-008;fusion_nucleaire;couches en combustion;;évolution avancée;établi;établi;établi;établi
+REL-0022;hélium 4;filiation_materielle;oxygène | néon | magnésium | silicium | soufre;GA-008;fusion_nucleaire;couches en combustion;;évolution avancée;établi;établi;établi;établi
+REL-0023;silicium;filiation_materielle;fer | nickel | cobalt;GA-009;fusion_nucleaire;cœur en combustion du silicium;;dernières heures d'une étoile massive;établi;établi;établi;établi
+REL-0024;soufre;filiation_materielle;fer | nickel | cobalt;GA-009;fusion_nucleaire;cœur en combustion du silicium;;dernières heures d'une étoile massive;établi;établi;établi;établi
+REL-0025;fer;filiation_materielle;éléments lourds voie s;GA-010;capture_neutronique;couche riche en hélium;flux neutronique lent;phase AGB;établi;établi;établi;établi
+REL-0026;nickel;filiation_materielle;éléments lourds voie s;GA-010;capture_neutronique;couche riche en hélium;flux neutronique lent;phase AGB;établi;établi;établi;établi
+REL-0027;cobalt;filiation_materielle;éléments lourds voie s;GA-010;capture_neutronique;couche riche en hélium;flux neutronique lent;phase AGB;établi;établi;établi;établi
+REL-0028;neutrons;filiation_materielle;éléments lourds voie s;GA-010;capture_neutronique;couche riche en hélium;flux neutronique lent;phase AGB;établi;établi;établi;établi
+REL-0029;flux neutronique lent;condition_ouverture;éléments lourds voie s;GA-010;capture_neutronique;couche riche en hélium;;phase AGB;établi;établi;établi;établi
+REL-0030;fer;filiation_materielle;actinides;GA-011;capture_neutronique;"éjecta de fusions d'étoiles à neutrons ; sites explosifs riches en neutrons";flux neutronique rapide;dès les premières générations;établi;établi;établi;établi
+REL-0031;nickel;filiation_materielle;actinides;GA-011;capture_neutronique;"éjecta de fusions d'étoiles à neutrons ; sites explosifs riches en neutrons";flux neutronique rapide;dès les premières générations;établi;établi;établi;établi
+REL-0032;cobalt;filiation_materielle;actinides;GA-011;capture_neutronique;"éjecta de fusions d'étoiles à neutrons ; sites explosifs riches en neutrons";flux neutronique rapide;dès les premières générations;établi;établi;établi;établi
+REL-0033;neutrons;filiation_materielle;actinides;GA-011;capture_neutronique;"éjecta de fusions d'étoiles à neutrons ; sites explosifs riches en neutrons";flux neutronique rapide;dès les premières générations;établi;établi;établi;établi
+REL-0034;flux neutronique rapide;condition_ouverture;actinides;GA-011;capture_neutronique;"éjecta de fusions d'étoiles à neutrons ; sites explosifs riches en neutrons";;dès les premières générations;établi;établi;établi;établi
+REL-0035;magnésium;filiation_materielle;aluminium 26;GA-012;fusion_nucleaire;cœurs, coquilles et éjecta stellaires massifs;évolution des étoiles massives;évolution et fin de vie des étoiles massives;établi;établi;établi;établi
+REL-0036;protons;filiation_materielle;aluminium 26;GA-012;fusion_nucleaire;cœurs, coquilles et éjecta stellaires massifs;évolution des étoiles massives;évolution et fin de vie des étoiles massives;établi;établi;établi;établi
+REL-0037;évolution des étoiles massives;condition_ouverture;aluminium 26;GA-012;fusion_nucleaire;cœurs, coquilles et éjecta stellaires massifs;;évolution et fin de vie des étoiles massives;établi;établi;établi;établi
+REL-0038;oxygène;filiation_materielle;grains réfractaires;GA-013;condensation_thermique;"enveloppes d'AGB ; éjecta";;perte de masse stellaire;établi;établi;établi;établi
+REL-0039;néon;filiation_materielle;grains réfractaires;GA-013;condensation_thermique;"enveloppes d'AGB ; éjecta";;perte de masse stellaire;établi;établi;établi;établi
+REL-0040;magnésium;filiation_materielle;grains réfractaires;GA-013;condensation_thermique;"enveloppes d'AGB ; éjecta";;perte de masse stellaire;établi;établi;établi;établi
+REL-0041;silicium;filiation_materielle;grains réfractaires;GA-013;condensation_thermique;"enveloppes d'AGB ; éjecta";;perte de masse stellaire;établi;établi;établi;établi
+REL-0042;carbone 12;filiation_materielle;grains réfractaires;GA-013;condensation_thermique;"enveloppes d'AGB ; éjecta";;perte de masse stellaire;établi;établi;établi;établi
+REL-0043;grains réfractaires;filiation_materielle;dihydrogène de surface;GA-014;chimie_de_surface;nuages moléculaires;;milieu interstellaire évolué;établi;établi;établi;établi
+REL-0044;atomes neutres;filiation_materielle;dihydrogène de surface;GA-014;chimie_de_surface;nuages moléculaires;;milieu interstellaire évolué;établi;établi;établi;établi
+REL-0045;grains réfractaires;filiation_materielle;manteaux de glace;GA-015;hydrogenation;nuages denses, T < 20 K;;cœurs préstellaires;établi;établi;établi;établi
+REL-0046;atomes neutres;filiation_materielle;manteaux de glace;GA-015;hydrogenation;nuages denses, T < 20 K;;cœurs préstellaires;établi;établi;établi;établi
+REL-0047;dihydrogène de surface;filiation_materielle;manteaux de glace;GA-015;hydrogenation;nuages denses, T < 20 K;;cœurs préstellaires;établi;établi;établi;établi
+REL-0048;manteaux de glace;filiation_materielle;molécules organiques complexes;GA-016;photolyse;glaces irradiées puis réchauffées;flux ultraviolet;cœurs chauds;établi;établi;établi;établi
+REL-0049;flux ultraviolet;condition_ouverture;molécules organiques complexes;GA-016;photolyse;glaces irradiées puis réchauffées;;cœurs chauds;établi;établi;établi;établi
+REL-0050;grains réfractaires;filiation_materielle;condensats réfractaires;GA-017;condensation_thermique;disque interne chaud;;disque précoce, t = 0;établi;établi;établi;établi
+REL-0051;oxygène;filiation_materielle;condensats réfractaires;GA-017;condensation_thermique;disque interne chaud;;disque précoce, t = 0;établi;établi;établi;établi
+REL-0052;magnésium;filiation_materielle;condensats réfractaires;GA-017;condensation_thermique;disque interne chaud;;disque précoce, t = 0;établi;établi;établi;établi
+REL-0053;silicium;filiation_materielle;condensats réfractaires;GA-017;condensation_thermique;disque interne chaud;;disque précoce, t = 0;établi;établi;établi;établi
+REL-0054;condensats réfractaires;filiation_materielle;chondres;GA-018;cristallisation;disque, événements de chauffage éclair;chocs;0 à 3 Ma après les condensats;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0055;grains réfractaires;filiation_materielle;chondres;GA-018;cristallisation;disque, événements de chauffage éclair;chocs;0 à 3 Ma après les condensats;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0056;chocs;condition_ouverture;chondres;GA-018;cristallisation;disque, événements de chauffage éclair;;0 à 3 Ma après les condensats;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0057;chondres;filiation_materielle;agrégats poreux;GA-019;collision_adhesion;régions denses et froides;turbulence du disque;disque;établi;établi;établi;établi
+REL-0058;condensats réfractaires;filiation_materielle;agrégats poreux;GA-019;collision_adhesion;régions denses et froides;turbulence du disque;disque;établi;établi;établi;établi
+REL-0059;manteaux de glace;filiation_materielle;agrégats poreux;GA-019;collision_adhesion;régions denses et froides;turbulence du disque;disque;établi;établi;établi;établi
+REL-0060;turbulence du disque;condition_ouverture;agrégats poreux;GA-019;collision_adhesion;régions denses et froides;;disque;établi;établi;établi;établi
+REL-0061;agrégats poreux;filiation_materielle;galets;GA-020;compaction;plan médian;turbulence du disque;disque;établi;établi;établi;établi
+REL-0062;turbulence du disque;condition_ouverture;galets;GA-020;compaction;plan médian;;disque;établi;établi;établi;établi
+REL-0063;galets;filiation_materielle;concentrations de galets;GA-021;concentration_hydrodynamique;pièges à pression, anneaux, tourbillons;piège à pression | turbulence du disque;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0064;piège à pression;condition_ouverture;concentrations de galets;GA-021;concentration_hydrodynamique;pièges à pression, anneaux, tourbillons;;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0065;turbulence du disque;condition_ouverture;concentrations de galets;GA-021;concentration_hydrodynamique;pièges à pression, anneaux, tourbillons;;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0066;concentrations de galets;filiation_materielle;planétésimaux;GA-022;effondrement_gravitationnel;plan médian;gravité | seuil de Roche;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0067;gravité;condition_ouverture;planétésimaux;GA-022;effondrement_gravitationnel;plan médian;;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0068;seuil de Roche;condition_ouverture;planétésimaux;GA-022;effondrement_gravitationnel;plan médian;;disque;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0069;planétésimaux;filiation_materielle;planétésimaux chauffés;GA-023;chauffage_radiogenique;intérieur de planétésimal;;< 3 Ma;établi;établi;établi;établi
+REL-0070;aluminium 26;filiation_materielle;planétésimaux chauffés;GA-023;chauffage_radiogenique;intérieur de planétésimal;;< 3 Ma;établi;établi;établi;établi
+REL-0071;planétésimaux chauffés;filiation_materielle;noyau métallique | manteau silicaté;GA-024;segregation_densite;intérieur en fusion;gravité | fugacité d'oxygène;premiers millions d'années;établi;établi;établi;établi
+REL-0072;gravité;condition_ouverture;noyau métallique | manteau silicaté;GA-024;segregation_densite;intérieur en fusion;;premiers millions d'années;établi;établi;établi;établi
+REL-0073;fugacité d'oxygène;condition_ouverture;noyau métallique | manteau silicaté;GA-024;segregation_densite;intérieur en fusion;;premiers millions d'années;établi;établi;établi;établi
+REL-0074;planétésimaux;filiation_materielle;embryons planétaires;GA-025;collision_adhesion;disque en dissipation;gravité | dissipation du disque;0,1 à 10 Ma;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0075;planétésimaux chauffés;filiation_materielle;embryons planétaires;GA-025;collision_adhesion;disque en dissipation;gravité | dissipation du disque;0,1 à 10 Ma;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0076;gravité;condition_ouverture;embryons planétaires;GA-025;collision_adhesion;disque en dissipation;;0,1 à 10 Ma;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0077;dissipation du disque;condition_ouverture;embryons planétaires;GA-025;collision_adhesion;disque en dissipation;;0,1 à 10 Ma;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0078;embryons planétaires;filiation_materielle;corps différenciés | océan magmatique;GA-026;impact;protoplanète;gravité;10 à 100 Ma;établi;établi;établi;établi
+REL-0079;noyau métallique;filiation_materielle;corps différenciés | océan magmatique;GA-026;impact;protoplanète;gravité;10 à 100 Ma;établi;établi;établi;établi
+REL-0080;manteau silicaté;filiation_materielle;corps différenciés | océan magmatique;GA-026;impact;protoplanète;gravité;10 à 100 Ma;établi;établi;établi;établi
+REL-0081;gravité;condition_ouverture;corps différenciés | océan magmatique;GA-026;impact;protoplanète;;10 à 100 Ma;établi;établi;établi;établi
+REL-0082;océan magmatique;filiation_materielle;atmosphère secondaire | hydrosphère;GA-027;degazage;surface planétaire;gravité;< 100 Ma;établi;établi;établi;établi
+REL-0083;manteaux de glace;filiation_materielle;atmosphère secondaire | hydrosphère;GA-027;degazage;surface planétaire;gravité;< 100 Ma;établi;établi;établi;établi
+REL-0084;gravité;condition_ouverture;atmosphère secondaire | hydrosphère;GA-027;degazage;surface planétaire;;< 100 Ma;établi;établi;établi;établi
+REL-0085;atmosphère secondaire;filiation_materielle;atmosphère filtrée;GA-028;echappement_atmospherique;haute atmosphère;flux XUV stellaire;100 Ma à 1 Ga;établi;établi;établi;établi
+REL-0086;flux XUV stellaire;condition_ouverture;atmosphère filtrée;GA-028;echappement_atmospherique;haute atmosphère;;100 Ma à 1 Ga;établi;établi;établi;établi
+REL-0087;hydrosphère;filiation_materielle;minéraux secondaires | gradients redox;GA-029;alteration_aqueuse;croûte et fonds hydrothermaux;circulation hydrothermale | énergie hydrothermale;dès l'hydrosphère stable;établi;établi;établi;établi
+REL-0088;manteau silicaté;filiation_materielle;minéraux secondaires | gradients redox;GA-029;alteration_aqueuse;croûte et fonds hydrothermaux;circulation hydrothermale | énergie hydrothermale;dès l'hydrosphère stable;établi;établi;établi;établi
+REL-0089;condensats réfractaires;filiation_materielle;minéraux secondaires | gradients redox;GA-029;alteration_aqueuse;croûte et fonds hydrothermaux;circulation hydrothermale | énergie hydrothermale;dès l'hydrosphère stable;établi;établi;établi;établi
+REL-0090;circulation hydrothermale;condition_ouverture;minéraux secondaires | gradients redox;GA-029;alteration_aqueuse;croûte et fonds hydrothermaux;;dès l'hydrosphère stable;établi;établi;établi;établi
+REL-0091;énergie hydrothermale;condition_ouverture;minéraux secondaires | gradients redox;GA-029;alteration_aqueuse;croûte et fonds hydrothermaux;;dès l'hydrosphère stable;établi;établi;établi;établi
+REL-0092;molécules organiques complexes;filiation_materielle;monomères biologiques;GA-030;catalyse;"surfaces minérales ; bassins ; systèmes hydrothermaux";énergie hydrothermale;Hadéen à Archéen;établi;établi;établi;établi
+REL-0093;minéraux secondaires;filiation_materielle;monomères biologiques;GA-030;catalyse;"surfaces minérales ; bassins ; systèmes hydrothermaux";énergie hydrothermale;Hadéen à Archéen;établi;établi;établi;établi
+REL-0094;gradients redox;filiation_materielle;monomères biologiques;GA-030;catalyse;"surfaces minérales ; bassins ; systèmes hydrothermaux";énergie hydrothermale;Hadéen à Archéen;établi;établi;établi;établi
+REL-0095;énergie hydrothermale;condition_ouverture;monomères biologiques;GA-030;catalyse;"surfaces minérales ; bassins ; systèmes hydrothermaux";;Hadéen à Archéen;établi;établi;établi;établi
+REL-0096;monomères biologiques;filiation_materielle;polymères;GA-031;polymerisation;"bords de bassins ; surfaces d'argile";cycles humide-sec;Hadéen à Archéen;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0097;cycles humide-sec;condition_ouverture;polymères;GA-031;polymerisation;"bords de bassins ; surfaces d'argile";;Hadéen à Archéen;fortement inféré;fortement inféré;fortement inféré;fortement inféré
+REL-0098;polymères;filiation_materielle;réseaux réactionnels autocatalytiques;GA-032;catalyse;milieux confinés;;Archéen;plausible;non documenté;plausible;plausible
+REL-0099;molécules organiques complexes;filiation_materielle;vésicules lipidiques;GA-033;auto_assemblage;eau douce ou saumâtre;;Archéen;établi;établi;établi;établi
+REL-0100;monomères biologiques;filiation_materielle;vésicules lipidiques;GA-033;auto_assemblage;eau douce ou saumâtre;;Archéen;établi;établi;établi;établi
+REL-0101;vésicules lipidiques;filiation_materielle;protocellules;GA-034;encapsulation;milieux cycliques;cycles humide-sec;Archéen;plausible;non documenté;plausible;plausible
+REL-0102;polymères;filiation_materielle;protocellules;GA-034;encapsulation;milieux cycliques;cycles humide-sec;Archéen;plausible;non documenté;plausible;plausible
+REL-0103;réseaux réactionnels autocatalytiques;filiation_materielle;protocellules;GA-034;encapsulation;milieux cycliques;cycles humide-sec;Archéen;plausible;non documenté;plausible;plausible
+REL-0104;cycles humide-sec;condition_ouverture;protocellules;GA-034;encapsulation;milieux cycliques;;Archéen;plausible;non documenté;plausible;plausible
+REL-0105;protocellules;filiation_materielle;hérédité moléculaire;GA-035;copie_par_matrice;protocellules en cycles;;Archéen;plausible;plausible;plausible;plausible
+REL-0106;polymères;filiation_materielle;hérédité moléculaire;GA-035;copie_par_matrice;protocellules en cycles;;Archéen;plausible;plausible;plausible;plausible
+REL-0107;hérédité moléculaire;filiation_materielle;lignées sélectionnées;GA-036;selection_differentielle;populations de protocellules;;Archéen;établi;établi;établi;établi
+REL-0108;lignées sélectionnées;filiation_materielle;cellules à métabolisme codé;GA-037;catalyse;environnements chimiquement actifs;;Archéen;établi;établi;établi;établi
+REL-0109;gradients redox;filiation_materielle;cellules à métabolisme codé;GA-037;catalyse;environnements chimiquement actifs;;Archéen;établi;établi;établi;établi
+REL-0110;cellules à métabolisme codé;filiation_materielle;cellules à endosymbiote;GA-038;endosymbiose;cellules hôtes anaérobies;;~1,8 à 2,0 Ga;établi;établi;établi;établi
+REL-0111;cellules à endosymbiote;filiation_materielle;eucaryotes;GA-039;transfert_de_genes;milieux oxygénés;;~1,6 Ga et après;établi;établi;établi;établi

@@ -1,0 +1,13 @@
+source,eprouvette,temperature_C,maintien_s,n_indentations,durete_moyenne_HV,durete_ecart_type,data_kind
+medium_mn_a,A0,720.0,20.0,9,299.3333333333333,6.041522986797286,mesure_experimentale
+medium_mn_a,A1,720.0,40.0,9,306.22222222222223,6.320161741952846,mesure_experimentale
+medium_mn_a,A2,720.0,60.0,9,296.55555555555554,5.294126724756197,mesure_experimentale
+medium_mn_a,A3,720.0,90.0,9,317.44444444444446,5.246692079565731,mesure_experimentale
+medium_mn_a,A4,720.0,120.0,9,321.3333333333333,5.656854249492381,mesure_experimentale
+medium_mn_a,B0,700.0,20.0,9,304.22222222222223,4.521553322083513,mesure_experimentale
+medium_mn_a,B1,700.0,40.0,9,303.55555555555554,4.156654637779975,mesure_experimentale
+medium_mn_a,B2,700.0,60.0,9,296.8888888888889,5.988414741073894,mesure_experimentale
+medium_mn_a,B3,700.0,90.0,9,296.3333333333333,3.968626966596886,mesure_experimentale
+medium_mn_a,B4,700.0,120.0,9,294.1111111111111,3.620926830400072,mesure_experimentale
+medium_mn_a,C0,710.0,20.0,9,294.3333333333333,4.898979485566356,mesure_experimentale
+medium_mn_a,C1,710.0,40.0,9,297.0,3.570714214271425,mesure_experimentale

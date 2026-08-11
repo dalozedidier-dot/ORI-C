@@ -1,0 +1,157 @@
+evidence_id;cible_id;domaine;niveau;mode_experimental;mode_observationnel;statut_evaluation
+PRV-0001;GA-001;mécanisme;établi;collisions d'ions lourds, RHIC et LHC;abondance baryonique du fond diffus;préliminaire - revue bibliographique indépendante requise
+PRV-0002;GA-001;milieu naturel;établi;collisions d'ions lourds, RHIC et LHC;abondance baryonique du fond diffus;préliminaire - revue bibliographique indépendante requise
+PRV-0003;GA-001;transition historique;établi;collisions d'ions lourds, RHIC et LHC;abondance baryonique du fond diffus;préliminaire - revue bibliographique indépendante requise
+PRV-0004;GA-001;rôle causal;établi;collisions d'ions lourds, RHIC et LHC;abondance baryonique du fond diffus;préliminaire - revue bibliographique indépendante requise
+PRV-0005;GA-002;mécanisme;établi;sections efficaces mesurées;D/H des systèmes Lyman-α;préliminaire - revue bibliographique indépendante requise
+PRV-0006;GA-002;milieu naturel;établi;sections efficaces mesurées;D/H des systèmes Lyman-α;préliminaire - revue bibliographique indépendante requise
+PRV-0007;GA-002;transition historique;établi;sections efficaces mesurées;D/H des systèmes Lyman-α;préliminaire - revue bibliographique indépendante requise
+PRV-0008;GA-002;rôle causal;établi;sections efficaces mesurées;D/H des systèmes Lyman-α;préliminaire - revue bibliographique indépendante requise
+PRV-0009;GA-003;mécanisme;établi;réseau nucléaire mesuré;Y_p ≈ 0,247 en régions H II pauvres;préliminaire - revue bibliographique indépendante requise
+PRV-0010;GA-003;milieu naturel;établi;réseau nucléaire mesuré;Y_p ≈ 0,247 en régions H II pauvres;préliminaire - revue bibliographique indépendante requise
+PRV-0011;GA-003;transition historique;établi;réseau nucléaire mesuré;Y_p ≈ 0,247 en régions H II pauvres;préliminaire - revue bibliographique indépendante requise
+PRV-0012;GA-003;rôle causal;établi;réseau nucléaire mesuré;Y_p ≈ 0,247 en régions H II pauvres;préliminaire - revue bibliographique indépendante requise
+PRV-0013;GA-004;mécanisme;établi;spectroscopie atomique;fond diffus cosmologique;préliminaire - revue bibliographique indépendante requise
+PRV-0014;GA-004;milieu naturel;établi;spectroscopie atomique;fond diffus cosmologique;préliminaire - revue bibliographique indépendante requise
+PRV-0015;GA-004;transition historique;établi;spectroscopie atomique;fond diffus cosmologique;préliminaire - revue bibliographique indépendante requise
+PRV-0016;GA-004;rôle causal;établi;spectroscopie atomique;fond diffus cosmologique;préliminaire - revue bibliographique indépendante requise
+PRV-0017;GA-005;mécanisme;fortement inféré;taux de réaction mesurés;inféré, non observé directement;préliminaire - revue bibliographique indépendante requise
+PRV-0018;GA-005;milieu naturel;fortement inféré;taux de réaction mesurés;inféré, non observé directement;préliminaire - revue bibliographique indépendante requise
+PRV-0019;GA-005;transition historique;fortement inféré;taux de réaction mesurés;inféré, non observé directement;préliminaire - revue bibliographique indépendante requise
+PRV-0020;GA-005;rôle causal;fortement inféré;taux de réaction mesurés;inféré, non observé directement;préliminaire - revue bibliographique indépendante requise
+PRV-0021;GA-006;mécanisme;fortement inféré;sans objet;étoiles extrêmement pauvres en métaux;préliminaire - revue bibliographique indépendante requise
+PRV-0022;GA-006;milieu naturel;fortement inféré;sans objet;étoiles extrêmement pauvres en métaux;préliminaire - revue bibliographique indépendante requise
+PRV-0023;GA-006;transition historique;fortement inféré;sans objet;étoiles extrêmement pauvres en métaux;préliminaire - revue bibliographique indépendante requise
+PRV-0024;GA-006;rôle causal;fortement inféré;sans objet;étoiles extrêmement pauvres en métaux;préliminaire - revue bibliographique indépendante requise
+PRV-0025;GA-007;mécanisme;établi;état de Hoyle mesuré;carbone des géantes AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0026;GA-007;milieu naturel;établi;état de Hoyle mesuré;carbone des géantes AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0027;GA-007;transition historique;établi;état de Hoyle mesuré;carbone des géantes AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0028;GA-007;rôle causal;établi;état de Hoyle mesuré;carbone des géantes AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0029;GA-008;mécanisme;établi;sections efficaces de capture alpha;rapports alpha sur fer;préliminaire - revue bibliographique indépendante requise
+PRV-0030;GA-008;milieu naturel;établi;sections efficaces de capture alpha;rapports alpha sur fer;préliminaire - revue bibliographique indépendante requise
+PRV-0031;GA-008;transition historique;établi;sections efficaces de capture alpha;rapports alpha sur fer;préliminaire - revue bibliographique indépendante requise
+PRV-0032;GA-008;rôle causal;établi;sections efficaces de capture alpha;rapports alpha sur fer;préliminaire - revue bibliographique indépendante requise
+PRV-0033;GA-009;mécanisme;établi;courbe d'énergie de liaison;courbes de lumière de supernovæ;préliminaire - revue bibliographique indépendante requise
+PRV-0034;GA-009;milieu naturel;établi;courbe d'énergie de liaison;courbes de lumière de supernovæ;préliminaire - revue bibliographique indépendante requise
+PRV-0035;GA-009;transition historique;établi;courbe d'énergie de liaison;courbes de lumière de supernovæ;préliminaire - revue bibliographique indépendante requise
+PRV-0036;GA-009;rôle causal;établi;courbe d'énergie de liaison;courbes de lumière de supernovæ;préliminaire - revue bibliographique indépendante requise
+PRV-0037;GA-010;mécanisme;établi;sections efficaces neutroniques;technétium dans les spectres AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0038;GA-010;milieu naturel;établi;sections efficaces neutroniques;technétium dans les spectres AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0039;GA-010;transition historique;établi;sections efficaces neutroniques;technétium dans les spectres AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0040;GA-010;rôle causal;établi;sections efficaces neutroniques;technétium dans les spectres AGB;préliminaire - revue bibliographique indépendante requise
+PRV-0041;GA-011;mécanisme;établi;faisceaux radioactifs;kilonova AT2017gfo associée à GW170817;préliminaire - revue bibliographique indépendante requise
+PRV-0042;GA-011;milieu naturel;établi;faisceaux radioactifs;kilonova AT2017gfo associée à GW170817;préliminaire - revue bibliographique indépendante requise
+PRV-0043;GA-011;transition historique;établi;faisceaux radioactifs;kilonova AT2017gfo associée à GW170817;préliminaire - revue bibliographique indépendante requise
+PRV-0044;GA-011;rôle causal;établi;faisceaux radioactifs;kilonova AT2017gfo associée à GW170817;préliminaire - revue bibliographique indépendante requise
+PRV-0045;GA-012;mécanisme;établi;sections efficaces et produits de réaction mesurés en physique nucléaire;"émission gamma galactique du ²⁶Al ; excès de ²⁶Mg dans les solides primitifs";préliminaire - revue bibliographique indépendante requise
+PRV-0046;GA-012;milieu naturel;établi;sections efficaces et produits de réaction mesurés en physique nucléaire;"émission gamma galactique du ²⁶Al ; excès de ²⁶Mg dans les solides primitifs";préliminaire - revue bibliographique indépendante requise
+PRV-0047;GA-012;transition historique;établi;sections efficaces et produits de réaction mesurés en physique nucléaire;"émission gamma galactique du ²⁶Al ; excès de ²⁶Mg dans les solides primitifs";préliminaire - revue bibliographique indépendante requise
+PRV-0048;GA-012;rôle causal;établi;sections efficaces et produits de réaction mesurés en physique nucléaire;"émission gamma galactique du ²⁶Al ; excès de ²⁶Mg dans les solides primitifs";préliminaire - revue bibliographique indépendante requise
+PRV-0049;GA-013;mécanisme;établi;"condensation en four ; grains présolaires";bandes silicatées à 9,7 et 18 µm;préliminaire - revue bibliographique indépendante requise
+PRV-0050;GA-013;milieu naturel;établi;"condensation en four ; grains présolaires";bandes silicatées à 9,7 et 18 µm;préliminaire - revue bibliographique indépendante requise
+PRV-0051;GA-013;transition historique;établi;"condensation en four ; grains présolaires";bandes silicatées à 9,7 et 18 µm;préliminaire - revue bibliographique indépendante requise
+PRV-0052;GA-013;rôle causal;établi;"condensation en four ; grains présolaires";bandes silicatées à 9,7 et 18 µm;préliminaire - revue bibliographique indépendante requise
+PRV-0053;GA-014;mécanisme;établi;surfaces sous ultravide;H₂ des nuages sombres;préliminaire - revue bibliographique indépendante requise
+PRV-0054;GA-014;milieu naturel;établi;surfaces sous ultravide;H₂ des nuages sombres;préliminaire - revue bibliographique indépendante requise
+PRV-0055;GA-014;transition historique;établi;surfaces sous ultravide;H₂ des nuages sombres;préliminaire - revue bibliographique indépendante requise
+PRV-0056;GA-014;rôle causal;établi;surfaces sous ultravide;H₂ des nuages sombres;préliminaire - revue bibliographique indépendante requise
+PRV-0057;GA-015;mécanisme;établi;glaces analogues;"bandes à 3,0, 4,27 et 4,67 µm ; JWST";préliminaire - revue bibliographique indépendante requise
+PRV-0058;GA-015;milieu naturel;établi;glaces analogues;"bandes à 3,0, 4,27 et 4,67 µm ; JWST";préliminaire - revue bibliographique indépendante requise
+PRV-0059;GA-015;transition historique;établi;glaces analogues;"bandes à 3,0, 4,27 et 4,67 µm ; JWST";préliminaire - revue bibliographique indépendante requise
+PRV-0060;GA-015;rôle causal;établi;glaces analogues;"bandes à 3,0, 4,27 et 4,67 µm ; JWST";préliminaire - revue bibliographique indépendante requise
+PRV-0061;GA-016;mécanisme;établi;glycine et sucres en glaces analogues;"molécules complexes en millimétrique ; acides aminés de Murchison";préliminaire - revue bibliographique indépendante requise
+PRV-0062;GA-016;milieu naturel;établi;glycine et sucres en glaces analogues;"molécules complexes en millimétrique ; acides aminés de Murchison";préliminaire - revue bibliographique indépendante requise
+PRV-0063;GA-016;transition historique;établi;glycine et sucres en glaces analogues;"molécules complexes en millimétrique ; acides aminés de Murchison";préliminaire - revue bibliographique indépendante requise
+PRV-0064;GA-016;rôle causal;établi;glycine et sucres en glaces analogues;"molécules complexes en millimétrique ; acides aminés de Murchison";préliminaire - revue bibliographique indépendante requise
+PRV-0065;GA-017;mécanisme;établi;séquences de condensation calculées et vérifiées;inclusions réfractaires calco-alumineuses, 4 567,3 Ma;préliminaire - revue bibliographique indépendante requise
+PRV-0066;GA-017;milieu naturel;établi;séquences de condensation calculées et vérifiées;inclusions réfractaires calco-alumineuses, 4 567,3 Ma;préliminaire - revue bibliographique indépendante requise
+PRV-0067;GA-017;transition historique;établi;séquences de condensation calculées et vérifiées;inclusions réfractaires calco-alumineuses, 4 567,3 Ma;préliminaire - revue bibliographique indépendante requise
+PRV-0068;GA-017;rôle causal;établi;séquences de condensation calculées et vérifiées;inclusions réfractaires calco-alumineuses, 4 567,3 Ma;préliminaire - revue bibliographique indépendante requise
+PRV-0069;GA-018;mécanisme;fortement inféré;reproduction texturale en four à trempe;chondres des chondrites ordinaires et carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0070;GA-018;milieu naturel;fortement inféré;reproduction texturale en four à trempe;chondres des chondrites ordinaires et carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0071;GA-018;transition historique;fortement inféré;reproduction texturale en four à trempe;chondres des chondrites ordinaires et carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0072;GA-018;rôle causal;fortement inféré;reproduction texturale en four à trempe;chondres des chondrites ordinaires et carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0073;GA-019;mécanisme;établi;collisions en microgravité;opacité et polarisation des disques;préliminaire - revue bibliographique indépendante requise
+PRV-0074;GA-019;milieu naturel;établi;collisions en microgravité;opacité et polarisation des disques;préliminaire - revue bibliographique indépendante requise
+PRV-0075;GA-019;transition historique;établi;collisions en microgravité;opacité et polarisation des disques;préliminaire - revue bibliographique indépendante requise
+PRV-0076;GA-019;rôle causal;établi;collisions en microgravité;opacité et polarisation des disques;préliminaire - revue bibliographique indépendante requise
+PRV-0077;GA-020;mécanisme;établi;seuils de rebond et de fragmentation;indices spectraux millimétriques;préliminaire - revue bibliographique indépendante requise
+PRV-0078;GA-020;milieu naturel;établi;seuils de rebond et de fragmentation;indices spectraux millimétriques;préliminaire - revue bibliographique indépendante requise
+PRV-0079;GA-020;transition historique;établi;seuils de rebond et de fragmentation;indices spectraux millimétriques;préliminaire - revue bibliographique indépendante requise
+PRV-0080;GA-020;rôle causal;établi;seuils de rebond et de fragmentation;indices spectraux millimétriques;préliminaire - revue bibliographique indépendante requise
+PRV-0081;GA-021;mécanisme;fortement inféré;"lits de particules ; simulations";anneaux et cavités résolus par ALMA;préliminaire - revue bibliographique indépendante requise
+PRV-0082;GA-021;milieu naturel;fortement inféré;"lits de particules ; simulations";anneaux et cavités résolus par ALMA;préliminaire - revue bibliographique indépendante requise
+PRV-0083;GA-021;transition historique;fortement inféré;"lits de particules ; simulations";anneaux et cavités résolus par ALMA;préliminaire - revue bibliographique indépendante requise
+PRV-0084;GA-021;rôle causal;fortement inféré;"lits de particules ; simulations";anneaux et cavités résolus par ALMA;préliminaire - revue bibliographique indépendante requise
+PRV-0085;GA-022;mécanisme;fortement inféré;sans objet;"distribution de tailles de Kuiper ; binaires";préliminaire - revue bibliographique indépendante requise
+PRV-0086;GA-022;milieu naturel;fortement inféré;sans objet;"distribution de tailles de Kuiper ; binaires";préliminaire - revue bibliographique indépendante requise
+PRV-0087;GA-022;transition historique;fortement inféré;sans objet;"distribution de tailles de Kuiper ; binaires";préliminaire - revue bibliographique indépendante requise
+PRV-0088;GA-022;rôle causal;fortement inféré;sans objet;"distribution de tailles de Kuiper ; binaires";préliminaire - revue bibliographique indépendante requise
+PRV-0089;GA-023;mécanisme;établi;modèles thermiques calibrés;"excès de ²⁶Mg ; Hf-W ; achondrites précoces";préliminaire - revue bibliographique indépendante requise
+PRV-0090;GA-023;milieu naturel;établi;modèles thermiques calibrés;"excès de ²⁶Mg ; Hf-W ; achondrites précoces";préliminaire - revue bibliographique indépendante requise
+PRV-0091;GA-023;transition historique;établi;modèles thermiques calibrés;"excès de ²⁶Mg ; Hf-W ; achondrites précoces";préliminaire - revue bibliographique indépendante requise
+PRV-0092;GA-023;rôle causal;établi;modèles thermiques calibrés;"excès de ²⁶Mg ; Hf-W ; achondrites précoces";préliminaire - revue bibliographique indépendante requise
+PRV-0093;GA-024;mécanisme;établi;partage à haute pression;"météorites de fer ; déficit du manteau terrestre";préliminaire - revue bibliographique indépendante requise
+PRV-0094;GA-024;milieu naturel;établi;partage à haute pression;"météorites de fer ; déficit du manteau terrestre";préliminaire - revue bibliographique indépendante requise
+PRV-0095;GA-024;transition historique;établi;partage à haute pression;"météorites de fer ; déficit du manteau terrestre";préliminaire - revue bibliographique indépendante requise
+PRV-0096;GA-024;rôle causal;établi;partage à haute pression;"météorites de fer ; déficit du manteau terrestre";préliminaire - revue bibliographique indépendante requise
+PRV-0097;GA-025;mécanisme;fortement inféré;sans objet;"démographie exoplanétaire ; 6 333 planètes du catalogue NASA";préliminaire - revue bibliographique indépendante requise
+PRV-0098;GA-025;milieu naturel;fortement inféré;sans objet;"démographie exoplanétaire ; 6 333 planètes du catalogue NASA";préliminaire - revue bibliographique indépendante requise
+PRV-0099;GA-025;transition historique;fortement inféré;sans objet;"démographie exoplanétaire ; 6 333 planètes du catalogue NASA";préliminaire - revue bibliographique indépendante requise
+PRV-0100;GA-025;rôle causal;fortement inféré;sans objet;"démographie exoplanétaire ; 6 333 planètes du catalogue NASA";préliminaire - revue bibliographique indépendante requise
+PRV-0101;GA-026;mécanisme;établi;expériences d'équilibrage à haute pression;"système Terre-Lune ; chronologie Hf-W";préliminaire - revue bibliographique indépendante requise
+PRV-0102;GA-026;milieu naturel;établi;expériences d'équilibrage à haute pression;"système Terre-Lune ; chronologie Hf-W";préliminaire - revue bibliographique indépendante requise
+PRV-0103;GA-026;transition historique;établi;expériences d'équilibrage à haute pression;"système Terre-Lune ; chronologie Hf-W";préliminaire - revue bibliographique indépendante requise
+PRV-0104;GA-026;rôle causal;établi;expériences d'équilibrage à haute pression;"système Terre-Lune ; chronologie Hf-W";préliminaire - revue bibliographique indépendante requise
+PRV-0105;GA-027;mécanisme;établi;solubilité des volatils dans les silicates;D/H des océans comparé aux chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0106;GA-027;milieu naturel;établi;solubilité des volatils dans les silicates;D/H des océans comparé aux chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0107;GA-027;transition historique;établi;solubilité des volatils dans les silicates;D/H des océans comparé aux chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0108;GA-027;rôle causal;établi;solubilité des volatils dans les silicates;D/H des océans comparé aux chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0109;GA-028;mécanisme;établi;modèles d'échappement calibrés;D/H de Vénus, enrichi d'un facteur 100;préliminaire - revue bibliographique indépendante requise
+PRV-0110;GA-028;milieu naturel;établi;modèles d'échappement calibrés;D/H de Vénus, enrichi d'un facteur 100;préliminaire - revue bibliographique indépendante requise
+PRV-0111;GA-028;transition historique;établi;modèles d'échappement calibrés;D/H de Vénus, enrichi d'un facteur 100;préliminaire - revue bibliographique indépendante requise
+PRV-0112;GA-028;rôle causal;établi;modèles d'échappement calibrés;D/H de Vénus, enrichi d'un facteur 100;préliminaire - revue bibliographique indépendante requise
+PRV-0113;GA-029;mécanisme;établi;serpentinisation reproduite en autoclave;"champs hydrothermaux type Lost City ; minéraux d'altération des chondrites";préliminaire - revue bibliographique indépendante requise
+PRV-0114;GA-029;milieu naturel;établi;serpentinisation reproduite en autoclave;"champs hydrothermaux type Lost City ; minéraux d'altération des chondrites";préliminaire - revue bibliographique indépendante requise
+PRV-0115;GA-029;transition historique;établi;serpentinisation reproduite en autoclave;"champs hydrothermaux type Lost City ; minéraux d'altération des chondrites";préliminaire - revue bibliographique indépendante requise
+PRV-0116;GA-029;rôle causal;établi;serpentinisation reproduite en autoclave;"champs hydrothermaux type Lost City ; minéraux d'altération des chondrites";préliminaire - revue bibliographique indépendante requise
+PRV-0117;GA-030;mécanisme;établi;"Miller-Urey ; Strecker ; formose";acides aminés et sucres de Murchison et Ryugu;préliminaire - revue bibliographique indépendante requise
+PRV-0118;GA-030;milieu naturel;établi;"Miller-Urey ; Strecker ; formose";acides aminés et sucres de Murchison et Ryugu;préliminaire - revue bibliographique indépendante requise
+PRV-0119;GA-030;transition historique;établi;"Miller-Urey ; Strecker ; formose";acides aminés et sucres de Murchison et Ryugu;préliminaire - revue bibliographique indépendante requise
+PRV-0120;GA-030;rôle causal;établi;"Miller-Urey ; Strecker ; formose";acides aminés et sucres de Murchison et Ryugu;préliminaire - revue bibliographique indépendante requise
+PRV-0121;GA-031;mécanisme;fortement inféré;"polymérisation en cycles humide-sec ; montmorillonite";aucune trace directe conservée;préliminaire - revue bibliographique indépendante requise
+PRV-0122;GA-031;milieu naturel;fortement inféré;"polymérisation en cycles humide-sec ; montmorillonite";aucune trace directe conservée;préliminaire - revue bibliographique indépendante requise
+PRV-0123;GA-031;transition historique;fortement inféré;"polymérisation en cycles humide-sec ; montmorillonite";aucune trace directe conservée;préliminaire - revue bibliographique indépendante requise
+PRV-0124;GA-031;rôle causal;fortement inféré;"polymérisation en cycles humide-sec ; montmorillonite";aucune trace directe conservée;préliminaire - revue bibliographique indépendante requise
+PRV-0125;GA-032;mécanisme;plausible;réseaux peptidiques autocatalytiques en laboratoire;aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0126;GA-032;milieu naturel;non documenté;réseaux peptidiques autocatalytiques en laboratoire;aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0127;GA-032;transition historique;plausible;réseaux peptidiques autocatalytiques en laboratoire;aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0128;GA-032;rôle causal;plausible;réseaux peptidiques autocatalytiques en laboratoire;aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0129;GA-033;mécanisme;établi;vésicules d'acides gras, croissance et division;acides gras dans les chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0130;GA-033;milieu naturel;établi;vésicules d'acides gras, croissance et division;acides gras dans les chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0131;GA-033;transition historique;établi;vésicules d'acides gras, croissance et division;acides gras dans les chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0132;GA-033;rôle causal;établi;vésicules d'acides gras, croissance et division;acides gras dans les chondrites carbonées;préliminaire - revue bibliographique indépendante requise
+PRV-0133;GA-034;mécanisme;plausible;"protocellules à croissance et division ; copie non enzymatique en vésicule";aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0134;GA-034;milieu naturel;non documenté;"protocellules à croissance et division ; copie non enzymatique en vésicule";aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0135;GA-034;transition historique;plausible;"protocellules à croissance et division ; copie non enzymatique en vésicule";aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0136;GA-034;rôle causal;plausible;"protocellules à croissance et division ; copie non enzymatique en vésicule";aucune;préliminaire - revue bibliographique indépendante requise
+PRV-0137;GA-035;mécanisme;plausible;"copie non enzymatique d'ARN ; ribozymes polymérases partiels";"aucune ; ARN ancestral non conservé";préliminaire - revue bibliographique indépendante requise
+PRV-0138;GA-035;milieu naturel;plausible;"copie non enzymatique d'ARN ; ribozymes polymérases partiels";"aucune ; ARN ancestral non conservé";préliminaire - revue bibliographique indépendante requise
+PRV-0139;GA-035;transition historique;plausible;"copie non enzymatique d'ARN ; ribozymes polymérases partiels";"aucune ; ARN ancestral non conservé";préliminaire - revue bibliographique indépendante requise
+PRV-0140;GA-035;rôle causal;plausible;"copie non enzymatique d'ARN ; ribozymes polymérases partiels";"aucune ; ARN ancestral non conservé";préliminaire - revue bibliographique indépendante requise
+PRV-0141;GA-036;mécanisme;établi;"évolution expérimentale de ribozymes ; évolution bactérienne sous antibiotiques, 942 cycles réels";"arbre du vivant ; horloges moléculaires";préliminaire - revue bibliographique indépendante requise
+PRV-0142;GA-036;milieu naturel;établi;"évolution expérimentale de ribozymes ; évolution bactérienne sous antibiotiques, 942 cycles réels";"arbre du vivant ; horloges moléculaires";préliminaire - revue bibliographique indépendante requise
+PRV-0143;GA-036;transition historique;établi;"évolution expérimentale de ribozymes ; évolution bactérienne sous antibiotiques, 942 cycles réels";"arbre du vivant ; horloges moléculaires";préliminaire - revue bibliographique indépendante requise
+PRV-0144;GA-036;rôle causal;établi;"évolution expérimentale de ribozymes ; évolution bactérienne sous antibiotiques, 942 cycles réels";"arbre du vivant ; horloges moléculaires";préliminaire - revue bibliographique indépendante requise
+PRV-0145;GA-037;mécanisme;établi;"chimiosmose démontrée ; traduction reconstituée in vitro";"universalité du code génétique ; LUCA";préliminaire - revue bibliographique indépendante requise
+PRV-0146;GA-037;milieu naturel;établi;"chimiosmose démontrée ; traduction reconstituée in vitro";"universalité du code génétique ; LUCA";préliminaire - revue bibliographique indépendante requise
+PRV-0147;GA-037;transition historique;établi;"chimiosmose démontrée ; traduction reconstituée in vitro";"universalité du code génétique ; LUCA";préliminaire - revue bibliographique indépendante requise
+PRV-0148;GA-037;rôle causal;établi;"chimiosmose démontrée ; traduction reconstituée in vitro";"universalité du code génétique ; LUCA";préliminaire - revue bibliographique indépendante requise
+PRV-0149;GA-038;mécanisme;établi;endosymbioses expérimentales chez les amibes;phylogénie mitochondriale au sein des alphaprotéobactéries;préliminaire - revue bibliographique indépendante requise
+PRV-0150;GA-038;milieu naturel;établi;endosymbioses expérimentales chez les amibes;phylogénie mitochondriale au sein des alphaprotéobactéries;préliminaire - revue bibliographique indépendante requise
+PRV-0151;GA-038;transition historique;établi;endosymbioses expérimentales chez les amibes;phylogénie mitochondriale au sein des alphaprotéobactéries;préliminaire - revue bibliographique indépendante requise
+PRV-0152;GA-038;rôle causal;établi;endosymbioses expérimentales chez les amibes;phylogénie mitochondriale au sein des alphaprotéobactéries;préliminaire - revue bibliographique indépendante requise
+PRV-0153;GA-039;mécanisme;établi;import protéique reconstitué;"gènes d'origine mitochondriale dans le noyau ; fossiles eucaryotes";préliminaire - revue bibliographique indépendante requise
+PRV-0154;GA-039;milieu naturel;établi;import protéique reconstitué;"gènes d'origine mitochondriale dans le noyau ; fossiles eucaryotes";préliminaire - revue bibliographique indépendante requise
+PRV-0155;GA-039;transition historique;établi;import protéique reconstitué;"gènes d'origine mitochondriale dans le noyau ; fossiles eucaryotes";préliminaire - revue bibliographique indépendante requise
+PRV-0156;GA-039;rôle causal;établi;import protéique reconstitué;"gènes d'origine mitochondriale dans le noyau ; fossiles eucaryotes";préliminaire - revue bibliographique indépendante requise

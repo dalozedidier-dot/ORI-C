@@ -1,0 +1,32 @@
+source_id;reference;url;doi;type;date_acces;portee
+S01;Annual Review of Astronomy and Astrophysics volume 62 - protoplanetary disks;https://www.annualreviews.org/content/journals/astro/62/1;;revue;2026-08-02;heritage chimie poussiere transport
+S02;Johansen et al. Forming Planetesimals in Solar and Extrasolar Nebulae;https://www.annualreviews.org/doi/10.1146/annurev-earth-040809-152513;10.1146/annurev-earth-040809-152513;revue;2026-08-02;streaming et planetesimaux
+S03;JAXA Hayabusa2 aqueous alteration and primitive composition of Ryugu;https://global.jaxa.jp/press/2022/06/20220610-2_e.html;;mission_source;2026-08-02;alteration aqueuse Ryugu
+S04;JAXA macromolecular organic matter of Ryugu;https://global.jaxa.jp/press/2023/02/20230224-2_e.html;;mission_source;2026-08-02;heritage interstellaire et modification aqueuse
+S05;Larsen et al. Igneous meteorites suggest Aluminium-26 heterogeneity;https://www.nature.com/articles/s41467-023-40026-1;10.1038/s41467-023-40026-1;article;2026-08-02;26Al et chronologie
+S06;Itoh and Yurimoto. Contemporaneous formation of chondrules and refractory inclusions;https://www.nature.com/articles/nature01699;10.1038/nature01699;article;2026-08-02;chevauchement CAI-chondres
+S07;Johnson et al. Impact jetting as the origin of chondrules;https://www.nature.com/articles/nature14105;10.1038/nature14105;article_modele;2026-08-02;chondres apres planetesimaux
+S08;Kruijer et al. The great isotopic dichotomy of the early Solar System;https://www.nature.com/articles/s41550-019-0959-9;10.1038/s41550-019-0959-9;revue;2026-08-02;reservoirs NC CC
+S09;Isotopic variation caused by dust leakage across the Jovian gap;https://arxiv.org/abs/2405.20553;;prepublication;2026-08-02;permeabilite du filtre
+S10;The Compositions of Planetary Cores;https://www.annualreviews.org/content/journals/10.1146/annurev-earth-040722-094945;10.1146/annurev-earth-040722-094945;revue;2026-08-02;partitionnement et noyaux
+S11;A very early origin of isotopically distinct nitrogen in inner Solar System protoplanets;https://www.nature.com/articles/s41550-020-01283-y;10.1038/s41550-020-01283-y;article;2026-08-02;melange reservoirs et azote
+S12;The accretion of planet Earth;https://www.nature.com/articles/s43017-022-00370-0;10.1038/s43017-022-00370-0;revue;2026-08-02;accretion et impacts geants
+S13;Homogeneous accretion of the Earth in the inner Solar System;https://www.nature.com/articles/s41550-026-02824-7;10.1038/s41550-026-02824-7;article_recent;2026-08-02;scenario provenance interne
+S14;Follow the serpentine as a comprehensive diagnostic for extraterrestrial habitability;https://www.nature.com/articles/s41550-024-02373-x;10.1038/s41550-024-02373-x;perspective;2026-08-02;interfaces serpentinisation habitabilite
+S15;Particle Data Group Review - Big Bang cosmology and nucleosynthesis;https://pdg.lbl.gov/2023/reviews/rpp2022-rev-bbang-cosmology.pdf;;revue_reference;2026-08-02;inventaire baryonique confinement nucleosynthese recombinaison
+S16;Galli and Palla. The Dawn of Chemistry;https://www.annualreviews.org/doi/10.1146/annurev-astro-082812-141029;10.1146/annurev-astro-082812-141029;revue;2026-08-02;molecules primordiales et refroidissement
+S17;Bromm and Larson. The First Stars;https://www.annualreviews.org/doi/10.1146/annurev.astro.42.053102.134034;10.1146/annurev.astro.42.053102.134034;revue;2026-08-02;premieres etoiles et enrichissement
+S18;Chemistry in Protoplanetary Disks;https://www.annualreviews.org/content/journals/astro/54/1;;revue;2026-08-02;chimie gazeuse glaces surfaces irradiation
+S19;Johnson and Goldblatt. The Nitrogen Budget of Earth. Earth-Science Reviews 148;https://arxiv.org/abs/1505.03813;10.1016/j.earscirev.2015.05.006;article;2026-08-02;inventaire azote par reservoir Terre et Venus
+S20;Zhang et Yin 2012 cite dans Johnson et Goldblatt. Azote du noyau par dynamique moleculaire ab initio;https://arxiv.org/abs/1505.03813;;source_secondaire;2026-08-02;estimation basse de l azote du noyau
+S21;NASA Planetary Fact Sheet - masses planetaires et masse des oceans;https://nssdc.gsfc.nasa.gov/planetary/factsheet/;;reference;2026-08-02;masses de reference des corps et des reservoirs
+S22;The Metal-Silicate Partitioning of Carbon During Earth Accretion - reprend Hirschmann 2018 pour la terre silicatee;https://arxiv.org/abs/2202.06809;;prepublication;2026-08-02;carbone de la terre silicatee et borne du noyau
+S23;Core-mantle partitioning and the bulk Earth abundances of hydrogen and carbon;https://arxiv.org/abs/2508.17740;;prepublication;2026-08-02;hydrogene et carbone du noyau et de la Terre globale
+S24;Earth composition origin evolution and energy budget - reprend McDonough 2014 pour le soufre;https://arxiv.org/abs/2505.02641;;prepublication;2026-08-02;soufre de la terre silicatee du noyau et globale
+S25;Willbold Elliott et Moorbath. The tungsten isotopic composition of the Earth mantle before the terminal bombardment. Nature 477;https://www.nature.com/articles/nature10399;10.1038/nature10399;article;2026-08-02;apport tardif et reapprovisionnement en siderophiles
+S26;NASA. Asteroid Bennu sample reveals mix of life ingredients;https://www.nasa.gov/news-release/nasas-asteroid-bennu-sample-reveals-mix-of-lifes-ingredients/;;mission_source;2026-08-02;phosphates solubles carbonates sulfures et sels de Bennu
+S27;Late veneer and late accretion to the terrestrial planets;https://arxiv.org/abs/1609.01785;;prepublication;2026-08-02;masse et chronologie de l apport tardif
+S28;A comparative study of nitrogen incorporation in silicate metallic and bulk earth melts at high pressure;https://www.sciencedirect.com/science/article/abs/pii/S0012821X25004510;10.1016/j.epsl.2025.119654;article;2026-08-02;coefficient de partage de l azote a haute pression
+S29;Experimental evidence for hydrogen incorporation into Earth core;https://pmc.ncbi.nlm.nih.gov/articles/PMC8113257/;;article;2026-08-02;coefficient de partage de l hydrogene fer-silicate
+S30;Suer et al. A sulfur-poor terrestrial core inferred from metal-silicate partitioning experiments;https://www.sciencedirect.com/science/article/pii/S0012821X17301954;10.1016/j.epsl.2017.03.037;article;2026-08-02;coefficient de partage du soufre en cellule a enclumes
+S31;Carbon partitioning between metal and silicate melts during Earth accretion;https://www.sciencedirect.com/science/article/pii/S0012821X20306038;10.1016/j.epsl.2020.116721;article;2026-08-02;coefficient de partage du carbone et effet de NBO/T

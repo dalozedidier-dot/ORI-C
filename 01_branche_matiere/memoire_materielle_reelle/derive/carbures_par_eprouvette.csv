@@ -1,0 +1,7 @@
+source,eprouvette,materiau,revenu_C,durete_HRC,tenacite,cof_haute_charge,cof_basse_charge,data_kind
+carbures_matrice_acier,A-1,A,510.0,54.0,39.0,0.51,0.71,mesure_experimentale
+carbures_matrice_acier,A-2,A,550.0,49.0,70.0,0.48,0.71,mesure_experimentale
+carbures_matrice_acier,A-3,A,615.0,45.0,81.0,0.49,0.72,mesure_experimentale
+carbures_matrice_acier,B-1,B,555.0,54.0,24.0,0.55,0.76,mesure_experimentale
+carbures_matrice_acier,B-2,B,580.0,49.0,34.0,0.5,0.72,mesure_experimentale
+carbures_matrice_acier,B-3,B,600.0,45.0,39.0,0.51,0.73,mesure_experimentale

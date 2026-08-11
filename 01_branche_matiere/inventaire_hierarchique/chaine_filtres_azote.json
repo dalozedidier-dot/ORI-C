@@ -1,0 +1,65 @@
+{
+  "element": "N",
+  "corps": "Terre",
+  "Q_present_par_scenario_de_noyau": {
+    "chondritique CC": {
+      "Q_present_kg": 2.07e+20,
+      "Q_accessible_kg": 6.32e+18,
+      "f_acces": 0.030531
+    },
+    "chondritique EC": {
+      "Q_present_kg": 3.27e+20,
+      "Q_accessible_kg": 6.32e+18,
+      "f_acces": 0.019327
+    },
+    "ab initio Zhang-Yin": {
+      "Q_present_kg": 2.88e+19,
+      "Q_accessible_kg": 6.32e+18,
+      "f_acces": 0.219444
+    }
+  },
+  "Q_accessible_kg": 6.32e+18,
+  "reservoirs_comptes_comme_accessibles": [
+    "atmosphere",
+    "croute continentale",
+    "croute oceanique",
+    "sediments oceaniques"
+  ],
+  "flux_de_mobilisation_Tg_par_an": {
+    "fixation biologique marine": 140.0,
+    "fixation biologique terrestre naturelle": 88.0
+  },
+  "flux_naturel_total_Tg_par_an": 228.0,
+  "flux_anthropique_Tg_par_an": 210.0,
+  "temps_de_residence_atmospherique_ans": 17540000.0,
+  "Q_mobilisable_par_horizon": {
+    "1e+02 ans": {
+      "f_mobilisation": 6e-06,
+      "Q_mobilisable_kg": 22800000000000.0
+    },
+    "1e+04 ans": {
+      "f_mobilisation": 0.00057,
+      "Q_mobilisable_kg": 2279000000000000.0
+    },
+    "1e+06 ans": {
+      "f_mobilisation": 0.055406,
+      "Q_mobilisable_kg": 2.216e+17
+    },
+    "2e+07 ans": {
+      "f_mobilisation": 0.6312,
+      "Q_mobilisable_kg": 2.525e+18
+    },
+    "1e+08 ans": {
+      "f_mobilisation": 0.996654,
+      "Q_mobilisable_kg": 3.987e+18
+    },
+    "1e+09 ans": {
+      "f_mobilisation": 1.0,
+      "Q_mobilisable_kg": 4e+18
+    }
+  },
+  "Q_operatoire_kg": null,
+  "pourquoi_Q_operatoire_est_absent": "Il exige le stock d'azote effectivement incorpore dans des architectures vivantes. Les sources donnent des flux de fixation et d'absorption, pas un stock de biomasse azotee mesure. Le deriver d'un rapport carbone sur azote serait un calcul, pas une donnee : la case reste vide.",
+  "lecture": "L'azote est present en masse et parfaitement accessible : f_acces vaut 0.0305 dans le scenario chondritique, et l'atmosphere est ouverte a toute interface de surface. Ce n'est ni la quantite ni l'acces qui limitent : c'est la mobilisation. Le temps de residence de l'azote atmospherique contre la fixation biologique vaut 17.5 millions d'annees. Sur un siecle, la fraction mobilisable vaut 6.00e-06. C'est le cas le plus net ou la presence ne determine pas les transformations possibles.",
+  "portee": "Un seul element, un seul corps, un modele de mobilisation de premier ordre. Le resultat montre que f_mobilisation est une fonction de l'horizon et non une constante ; il ne mesure pas l'operativite, qui reste sans donnee."
+}

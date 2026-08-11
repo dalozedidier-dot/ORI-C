@@ -1,0 +1,442 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "alpha": 0.05,
+  "graine": 20260809,
+  "tirages": 5000,
+  "controles": [
+    "permutation des étiquettes dans les strates expérimentales",
+    "bootstrap au niveau de l'unité physique",
+    "retrait d'une unité",
+    "retrait d'un groupe entier"
+  ],
+  "regle": "une relation n'est retenue que si elle est significative et conserve son signe sous les quatre contrôles",
+  "regle_admission": "une relation locale positive reste une preuve partielle ; seule une famille satisfaisant les cinq conditions gelées peut contribuer au compte de chaîne complète",
+  "controles_negatifs": {
+    "physiques": [
+      "masse des polymères, grandeur mesurée du même jeu et attendue insensible"
+    ],
+    "statistiques": [
+      "permutations intra-strates utilisées pour les p-values"
+    ],
+    "regle": "une permutation vérifie la spécificité statistique de l'association ; elle ne remplace pas une grandeur physique négative du même jeu"
+  },
+  "familles": {
+    "magnetisme": {
+      "jeu": "rémanence IODP, 25 expéditions",
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 5031,
+        "rho": 0.8860368038918093,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 25,
+        "bootstrap_ic95": [
+          0.8766593669935839,
+          0.8936957661061691
+        ],
+        "retrait_une_unite": {
+          "min": 0.8859697573794013,
+          "max": 0.8870791785919182
+        },
+        "retrait_un_groupe": {
+          "groupes": 25,
+          "min": 0.8748823860247154,
+          "max": 0.9005011855170681
+        },
+        "survit_aux_controles": true
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "le seuil de 20 mT mesure une résistance à l'effacement, pas un délai, des cycles ou une relaxation contrôlée au sens du C-MAT-MEM-02 gelé",
+        "diagnostic_partiel": {
+          "testable": true,
+          "unites": 4838,
+          "rho": 0.883047251852118,
+          "p": 0.0001999600079984003,
+          "permutation": "dans_les_strates",
+          "strates": 25,
+          "bootstrap_ic95": [
+            0.8733266249632722,
+            0.8912496289195527
+          ],
+          "retrait_une_unite": {
+            "min": 0.8829757394926399,
+            "max": 0.8841274604450735
+          },
+          "retrait_un_groupe": {
+            "groupes": 25,
+            "min": 0.8713723063399625,
+            "max": 0.89863388672141
+          },
+          "survit_aux_controles": true
+        },
+        "rattachement_correct": "ablation/résistance à l'effacement"
+      },
+      "ablation": {
+        "testable": true,
+        "unites": 5023,
+        "rho": -0.7419002986263189,
+        "p": null,
+        "survit_aux_controles": true,
+        "portee": "preuve_forte_ablation_physique",
+        "verdict_C03_complet": "non_testable_avec_ce_jeu",
+        "detail": "corrélation dose-intensité par échantillon, témoin physique IRM et ARM de signe opposé"
+      },
+      "replication": {
+        "testable": true,
+        "unites": 25,
+        "concordantes": 24,
+        "survit_aux_controles": true,
+        "detail": "expéditions indépendantes, océans et lithologies différents"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "l'histoire est le dépôt naturel, non contrôlée"
+      },
+      "histoire_vers_reponse": {
+        "testable": false,
+        "motif": "l'histoire est le dépôt naturel, non contrôlée"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "histoire naturelle non assignée et absence de bras sans histoire",
+      "portee": "preuve_partielle_relationnelle"
+    },
+    "plasticite": {
+      "jeu": "FABEST LCF, 24 éprouvettes en 3 régimes",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 24,
+        "rho": -0.6617391304347826,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 3,
+        "bootstrap_ic95": [
+          -0.8843689982816132,
+          -0.3212457066015727
+        ],
+        "retrait_une_unite": {
+          "min": -0.7272727272727272,
+          "max": -0.6156126482213439
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.976470588235294,
+          "max": -0.6235294117647059
+        },
+        "survit_aux_controles": true
+      },
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 24,
+        "rho": -0.27999999999999997,
+        "p": 0.9998000399920016,
+        "permutation": "dans_les_strates",
+        "strates": 3,
+        "bootstrap_ic95": [
+          -0.6198461368659375,
+          0.14063218602608482
+        ],
+        "retrait_une_unite": {
+          "min": -0.40513833992094866,
+          "max": -0.23616600790513834
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.4176470588235294,
+          "max": 0.4147058823529412
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 3,
+        "concordantes": 3,
+        "survit_aux_controles": true,
+        "detail": "trois régimes de chargement indépendants"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "aucune trace microstructurale dans le jeu"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après essai"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun recuit de restauration"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace microstructurale indépendante absente",
+      "portee": "preuve_partielle_relationnelle"
+    },
+    "verre_relaxation": {
+      "jeu": "polyéthylènes biosourcés, 3 matériaux x 3 températures x 7 durées",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 60,
+        "rho": -0.4696209716785577,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 9,
+        "bootstrap_ic95": [
+          -0.6399790114731806,
+          -0.25237375386736743
+        ],
+        "retrait_une_unite": {
+          "min": -0.49293224500072763,
+          "max": -0.4449432178932612
+        },
+        "retrait_un_groupe": {
+          "groupes": 9,
+          "min": -0.5020625696112531,
+          "max": -0.4429989984458188
+        },
+        "survit_aux_controles": true
+      },
+      "replication": {
+        "testable": true,
+        "unites": 3,
+        "concordantes": 3,
+        "survit_aux_controles": true,
+        "detail": "trois polyéthylènes de formulation différente"
+      },
+      "temoin_negatif_masse": {
+        "testable": true,
+        "unites": 60,
+        "rho": 0.07852532295608493,
+        "p": 0.5408918216356728,
+        "permutation": "dans_les_strates",
+        "strates": 9,
+        "bootstrap_ic95": [
+          -0.18312718533324457,
+          0.30874757571818573
+        ],
+        "retrait_une_unite": {
+          "min": 0.043265358476695014,
+          "max": 0.12282636580517035
+        },
+        "retrait_un_groupe": {
+          "groupes": 9,
+          "min": 0.027806894953253742,
+          "max": 0.15026212011423729
+        },
+        "survit_aux_controles": false
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "la trace structurale n'est pas tabulée"
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "trace absente"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après vieillissement"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun rajeunissement au-dessus de Tg"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace structurale indépendante non tabulée",
+      "portee": "preuve_partielle_relationnelle"
+    },
+    "transition_de_phase": {
+      "jeu": "aciers moyen-Mn, 12 éprouvettes",
+      "histoire_vers_trace": {
+        "testable": true,
+        "unites": 12,
+        "rho": -0.007131495823206693,
+        "p": 0.9860027994401119,
+        "permutation": "dans_les_strates",
+        "strates": 3,
+        "bootstrap_ic95": [
+          -0.7981507061936146,
+          0.7137959899005294
+        ],
+        "retrait_une_unite": {
+          "min": -0.26518799996356424,
+          "max": 0.2465783157555948
+        },
+        "retrait_un_groupe": {
+          "groupes": 3,
+          "min": -0.545544725589981,
+          "max": 0.6728384948943099
+        },
+        "survit_aux_controles": false
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "la traction n'est pas appariée aux éprouvettes de dureté"
+      },
+      "histoire_vers_reponse": {
+        "testable": false,
+        "motif": "idem"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun recuit de restauration"
+      },
+      "replication": {
+        "testable": false,
+        "motif": "medium_mn_b non extrait, axe vitesse de chauffe"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "trace et réponse non appariées sur les mêmes unités",
+      "portee": "preuve_partielle_relationnelle"
+    },
+    "reconstruction_de_surface": {
+      "jeu": "Fischer-Tropsch, 2 séries x 7 durées d'exposition",
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 14,
+        "rho": -0.4961389383568339,
+        "p": 0.0001999600079984003,
+        "permutation": "dans_les_strates",
+        "strates": 2,
+        "bootstrap_ic95": [
+          -0.8836575536091199,
+          0.007122417197740475
+        ],
+        "retrait_une_unite": {
+          "min": -0.6038989694084802,
+          "max": -0.3878250262256295
+        },
+        "retrait_un_groupe": {
+          "groupes": 2,
+          "min": -1.0,
+          "max": -1.0
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 2,
+        "concordantes": 2,
+        "survit_aux_controles": true,
+        "detail": "deux séries de chromatogrammes"
+      },
+      "histoire_vers_trace": {
+        "testable": false,
+        "motif": "STM et XPS non tabulés par condition"
+      },
+      "trace_vers_reponse": {
+        "testable": false,
+        "motif": "trace absente"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après exposition"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucune régénération du catalyseur"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "STM/XPS et réponse non appariés condition par condition",
+      "portee": "preuve_partielle_relationnelle"
+    },
+    "aciers_a_outils": {
+      "jeu": "aciers à outils revenus, 6 éprouvettes, 2 matériaux",
+      "histoire_vers_trace": {
+        "testable": true,
+        "unites": 6,
+        "rho": -0.8366600265340757,
+        "p": 0.05698860227954409,
+        "permutation": "dans_les_strates",
+        "strates": 2,
+        "bootstrap_ic95": [
+          -1.0,
+          -0.14142135623730953
+        ],
+        "retrait_une_unite": {
+          "min": -0.9486832980505137,
+          "max": -0.7378647873726218
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "trace_vers_reponse": {
+        "testable": true,
+        "unites": 6,
+        "rho": -0.6063390625908325,
+        "p": 0.05678864227154569,
+        "permutation": "dans_les_strates",
+        "strates": 2,
+        "bootstrap_ic95": [
+          -1.0,
+          0.10000000000000002
+        ],
+        "retrait_une_unite": {
+          "min": -0.7378647873726218,
+          "max": -0.40555355282690636
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "histoire_vers_reponse": {
+        "testable": true,
+        "unites": 6,
+        "rho": 0.2608969660436018,
+        "p": 0.47110577884423116,
+        "permutation": "dans_les_strates",
+        "strates": 2,
+        "bootstrap_ic95": [
+          -0.8000000000000002,
+          1.0
+        ],
+        "retrait_une_unite": {
+          "min": -0.30779350562554625,
+          "max": 0.5642880936468347
+        },
+        "retrait_un_groupe": {
+          "groupes": 0,
+          "min": null,
+          "max": null
+        },
+        "survit_aux_controles": false
+      },
+      "replication": {
+        "testable": true,
+        "unites": 2,
+        "concordantes": 2,
+        "survit_aux_controles": true,
+        "detail": "deux nuances d'acier à outils, mêmes signes"
+      },
+      "persistance": {
+        "testable": false,
+        "motif": "aucun délai après revenu"
+      },
+      "ablation": {
+        "testable": false,
+        "motif": "aucun retour à l'état trempé"
+      },
+      "admission_chaine_complete": false,
+      "motif_non_admission": "atteignabilité insuffisante et absence de témoin complet",
+      "portee": "preuve_partielle_relationnelle"
+    }
+  },
+  "comptes": {
+    "schema_complet_histoire_trace_reponse": 0,
+    "effet_total_histoire_vers_reponse": 2,
+    "trace_vers_reponse": 1,
+    "persistance": 0,
+    "ablation_physique": 1,
+    "C_MAT_MEM_03_complet": 0,
+    "replication_independante": 5
+  }
+}

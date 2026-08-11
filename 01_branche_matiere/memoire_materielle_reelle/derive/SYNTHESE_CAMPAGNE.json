@@ -1,0 +1,80 @@
+{
+  "campagne": "WP-MAT-MEM-2026",
+  "separation_des_portees": {
+    "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+    "partielle": "les jeux analysés sont publiés comme preuves partielles hors chaîne confirmatoire admise"
+  },
+  "transversalite": {
+    "critere": "C-MAT-MEM-05",
+    "comptes_sous_controles": {
+      "schema_complet_histoire_trace_reponse": 0,
+      "effet_total_histoire_vers_reponse": 2,
+      "trace_vers_reponse": 1,
+      "persistance": 0,
+      "ablation_physique": 1,
+      "C_MAT_MEM_03_complet": 0,
+      "replication_independante": 5
+    },
+    "familles_au_schema_complet": 0,
+    "enonce": "le schéma histoire → trace persistante → réponse modifiée est soutenu indépendamment dans au moins trois familles physiques à mécanismes différents",
+    "familles_examinees": {
+      "magnetisme": {
+        "jeu": "rémanence IODP, 25 expéditions",
+        "critere_decisif": "preuve forte d'ablation physique, hors C03 complet",
+        "verdict_C03_complet": "non_testable_avec_ce_jeu",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 4998
+      },
+      "plasticite": {
+        "jeu": "fabest_lcf",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 24
+      },
+      "transition_de_phase": {
+        "jeu": "medium_mn_a",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "indetermine_par_atteignabilite",
+        "niveau_de_temoin": 5,
+        "echantillons": 12
+      },
+      "verre_relaxation": {
+        "jeu": "polyéthylènes biosourcés vieillis thermiquement",
+        "critere_decisif": "dose de vieillissement thermique",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 63
+      },
+      "traces_de_fission": {
+        "jeu": "zircon ZAD, recuit thermique de traces de fission induites",
+        "critere_decisif": "recuit thermique, dose = température à durée constante",
+        "verdict": "soutient",
+        "niveau_de_temoin": 6,
+        "echantillons": 11
+      },
+      "reconstruction_de_surface": {
+        "jeu": "fischer_tropsch",
+        "critere_decisif": "dose d'histoire",
+        "verdict": "soutient",
+        "niveau_de_temoin": 5,
+        "echantillons": 14
+      }
+    },
+    "familles_soutenantes": [
+      "magnetisme",
+      "plasticite",
+      "verre_relaxation",
+      "traces_de_fission",
+      "reconstruction_de_surface"
+    ],
+    "verdict": "ne_soutient_pas",
+    "motif": "0 famille(s) portent le schéma complet histoire vers trace vers réponse sous les quatre contrôles, 3 exigées. 5 famille(s) rendent un verdict positif sur au moins une relation : magnetisme, plasticite, verre_relaxation, traces_de_fission, reconstruction_de_surface"
+  },
+  "statut_provenance": {
+    "chaine_integrale_exigee": "source primaire → extraction → table par unité → statistique",
+    "distinction": "la reproductibilité d'une table dérivée ne démontre pas à elle seule la reproductibilité intégrale depuis la source primaire",
+    "preuve_par_execution": "derive/execution/CAMPAGNE.json dans l'artefact CI ; les étapes IODP, aciers à outils et hystérésis dynamique déclarent séparément leur niveau"
+  }
+}

@@ -1,0 +1,26 @@
+ID;Parent ID;Nœud;Statut du niveau;Définition
+U00;;Contenu physique de l'Univers;Cadre général;Inclut matière ordinaire, antimatière, matière noire et composantes non matérielles du modèle cosmologique
+U10;U00;Matière ordinaire baryonique et leptonique;Composante confirmée;Particules du Modèle standard, atomes, plasmas, molécules, matériaux, organismes
+U20;U00;Antimatière;Composante confirmée;Antiparticules, antihadrons, antinoyaux et antiatomes
+U30;U00;Matière noire;Composante inférée;Distribution gravitationnelle confirmée, composition microscopique inconnue
+U40;U00;Énergie noire;Composante non matérielle;Contexte cosmologique, hors inventaire strict de matière
+P10;U10;Particules élémentaires;Niveau fondamental;Quarks, leptons, bosons de jauge, Higgs
+P20;U20;Antiparticules élémentaires;Niveau fondamental;Antiquarks, antileptons et bosons conjugués
+C10;U10;Particules composites;Niveau hadronique et atomique exotique;Baryons, mésons, états exotiques, positronium et autres
+C20;U20;Antimatière composite;Niveau hadronique et nucléaire;Antiprotons, antineutrons, antinoyaux, antiatomes
+N10;U10;Noyaux et nuclides;Niveau nucléaire;États fondamentaux, isomères, résonances et noyaux estimés
+A10;U10;Atomes et éléments;Niveau atomique;118 éléments officiellement confirmés
+A20;A10;Ions atomiques;Niveau atomique chargé;Atomes ayant perdu ou gagné des électrons
+M10;U10;Molécules;Niveau moléculaire;Molécules neutres, ions moléculaires, radicaux et isotopologues
+M20;M10;Macromolécules et polymères;Niveau moléculaire étendu;Polymères naturels, biologiques et synthétiques
+R10;U10;Réseaux et matériaux;Niveau mésoscopique et macroscopique;Cristaux, verres, alliages, céramiques, composites
+R20;R10;Minéraux;Sous-ensemble naturel;Espèces minérales reconnues et assemblages géologiques
+S10;U10;États et phases de la matière;Dimension d'état;Phases classiques, quantiques, nucléaires, topologiques et hors équilibre
+B10;U10;Matière biologique;Architecture vivante et dérivée;Cellules, tissus, organismes, écosystèmes, biomasse et nécromasse
+E10;U10;Réservoirs astronomiques et planétaires;Dimension spatiale;Milieux intergalactiques, étoiles, planètes, petits corps, technosphère
+T10;U10;Transformations;Dimension dynamique;Interactions, réactions, transitions, flux et réorganisations
+O10;T10;Accessibilité;Dimension ORI-C;Possibilité d'atteindre une matière ou un réservoir
+O20;O10;Mobilisabilité;Dimension ORI-C;Fraction réellement déplaçable, soluble, transportable ou transformable
+O30;O20;Opérativité;Dimension ORI-C;Fraction incorporée dans une architecture et contribuant à sa persistance
+D10;U30;Candidats de matière noire;Niveau hypothétique;Axions, WIMP, neutrinos stériles, champs ultralégers et autres
+X10;U10;Matière exotique dense;Niveau inféré ou hypothétique;Phases internes d'objets compacts et matière de quarks possible

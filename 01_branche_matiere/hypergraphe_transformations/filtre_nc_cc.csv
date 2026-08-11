@@ -1,0 +1,16 @@
+attribut;valeur;unite;incertitude_ou_scenario;source;statut
+reservoir_amont;NC - non carbone, Systeme solaire interne;;signature isotopique distincte sur Ti Cr Mo Ni W;S08;observe
+reservoir_aval;CC - carbone, Systeme solaire externe;;signature isotopique distincte sur les memes elements;S08;observe
+reservoir_tiers;CI - possiblement distinct du reste des CC;;statut revise par des travaux recents, non tranche;S08;observe_hypothese
+debut_de_la_separation;1;Ma apres les CAI;les corps parents differencies les plus anciens sont deja separes;S08;infere_Hf_W
+fin_de_la_separation;3 a 4;Ma apres les CAI;la dispersion du disque et la croissance de Jupiter y mettent fin;S08;infere_Hf_W
+duree_de_la_separation;2 a 3;Ma;encadree par les deux dates ci-dessus, pas mesuree directement;S08;infere_Hf_W
+mecanisme_propose_1;Ouverture d un sillon par Jupiter;;explication historique dominante, plus consideree comme unique;S08;scenario_concurrent
+mecanisme_propose_2;Structure propre du disque, pieges de pression sans planete geante;;n exige pas la formation precoce de Jupiter;S09;scenario_concurrent
+mecanisme_propose_3;Filtre permeable avec fuite dependante de la taille;;la fragmentation reinjecte des petites particules franchissables;S09;scenario_concurrent
+taille_franchissant_le_filtre;petites poussieres, ordre du micrometre a la centaine de micrometres;m;seuil non unique, depend de la profondeur du sillon et de la turbulence;S09;modele
+taille_bloquee_par_le_filtre;galets couples aerodynamiquement, ordre du millimetre au centimetre;m;bloques par le maximum de pression au bord externe du sillon;S09;modele
+degre_de_permeabilite;non nul et variable dans le temps;;la contamination croisee augmente a mesure que le filtre vieillit;S09;modele
+date_de_formation_des_corps_parents_NC;moins de 1;Ma apres les CAI;accretion precoce, chauffage intense par 26Al, differenciation;S08;infere_Hf_W
+date_de_formation_des_corps_parents_CC;2 a 4;Ma apres les CAI;accretion plus tardive, conservation de materiaux primitifs et hydrates;S08;infere_Hf_W
+consequence_sur_l_inventaire;Deux inventaires accessibles disjoints pendant plusieurs millions d annees;;c est le filtrage, pas la composition initiale, qui fixe ce qui est mobilisable;S08;interpretation_ORI_C

@@ -1,0 +1,198 @@
+{
+  "status": "valid_with_strict_closure_gap",
+  "errors": [],
+  "warnings": [
+    "La projection paire à paire est connectée, mais la fermeture hypergraphique stricte laisse 7 nœuds inatteignables."
+  ],
+  "nodes": 53,
+  "hyperedges": 53,
+  "sources": 31,
+  "multi_input_edges": 29,
+  "multi_output_edges": 13,
+  "recycling_or_transport_edges_with_shared_endpoint": 5,
+  "explicit_scenario_or_hypothesis_edges": 4,
+  "edge_types": {
+    "transmission": 6,
+    "transformation": 17,
+    "transport": 6,
+    "assemblage": 9,
+    "recyclage": 2,
+    "concentration": 1,
+    "collectif": 1,
+    "transition": 3,
+    "filtrage": 2,
+    "separation": 1,
+    "fragmentation": 1,
+    "partitionnement": 1,
+    "selection": 1,
+    "contrainte": 1,
+    "condition": 1
+  },
+  "evidence_statuses": {
+    "observe_infere": 17,
+    "modele_appuye": 7,
+    "observe_modele": 9,
+    "experience_modele": 3,
+    "modele": 2,
+    "observe": 8,
+    "observe_hypothese": 1,
+    "observe_experience": 2,
+    "scenario_concurrent": 2,
+    "definition_operationnelle": 1,
+    "hypothese_testable": 1
+  },
+  "old_relations_reclassified": 47,
+  "old_relation_classes": {
+    "contrainte_inventaire": 2,
+    "filiation_materielle": 13,
+    "condition_ouverture": 23,
+    "transformation_environnementale": 5,
+    "dependance_non_genealogique": 3,
+    "transmission_trace_historique": 1
+  },
+  "tests": {
+    "not_a_linear_tree": true,
+    "all_endpoints_exist": true,
+    "all_edges_sourced": true,
+    "competing_scenarios_explicit": true,
+    "four_relation_families_represented": true,
+    "single_declared_root": true,
+    "pairwise_projection_connected": true,
+    "strict_hypergraph_closed": false
+  },
+  "declared_roots": [
+    "N036"
+  ],
+  "pairwise_projection": {
+    "nodes_reachable_from_root": 53,
+    "unreachable_nodes": [],
+    "scope": "Projection de chaque hyperarête en liens paire à paire. Elle ne vérifie pas la disponibilité simultanée de toutes les entrées."
+  },
+  "strict_hypergraph_closure": {
+    "nodes_reachable_from_root": 46,
+    "unreachable_nodes": [
+      "N029",
+      "N030",
+      "N031",
+      "N032",
+      "N035",
+      "N053",
+      "N054"
+    ],
+    "blocking_dependencies": {
+      "N029": [
+        {
+          "edge_id": "H030",
+          "processus": "Formation de l inventaire accessible",
+          "entrees": [
+            "N026",
+            "N027",
+            "N028",
+            "N052",
+            "N054"
+          ],
+          "entrees_manquantes": [
+            "N054"
+          ]
+        }
+      ],
+      "N030": [
+        {
+          "edge_id": "H031",
+          "processus": "Circulation entre reservoirs et interfaces",
+          "entrees": [
+            "N027",
+            "N028",
+            "N029"
+          ],
+          "entrees_manquantes": [
+            "N029"
+          ]
+        }
+      ],
+      "N031": [
+        {
+          "edge_id": "H032",
+          "processus": "Serpentinisation",
+          "entrees": [
+            "N030"
+          ],
+          "entrees_manquantes": [
+            "N030"
+          ]
+        }
+      ],
+      "N032": [
+        {
+          "edge_id": "H033",
+          "processus": "Organisation chimique aux interfaces",
+          "entrees": [
+            "N029",
+            "N030",
+            "N031"
+          ],
+          "entrees_manquantes": [
+            "N029",
+            "N030",
+            "N031"
+          ]
+        }
+      ],
+      "N035": [
+        {
+          "edge_id": "H033",
+          "processus": "Organisation chimique aux interfaces",
+          "entrees": [
+            "N029",
+            "N030",
+            "N031"
+          ],
+          "entrees_manquantes": [
+            "N029",
+            "N030",
+            "N031"
+          ]
+        }
+      ],
+      "N053": [
+        {
+          "edge_id": "H052",
+          "processus": "Circulation hydrothermale entretenue",
+          "entrees": [
+            "N051",
+            "N028",
+            "N030"
+          ],
+          "entrees_manquantes": [
+            "N030"
+          ]
+        }
+      ],
+      "N054": [
+        {
+          "edge_id": "H053",
+          "processus": "Alteration aqueuse produisant des especes solubles",
+          "entrees": [
+            "N020",
+            "N053"
+          ],
+          "entrees_manquantes": [
+            "N053"
+          ]
+        }
+      ]
+    },
+    "scope": "Fermeture par point fixe exigeant toutes les entrées de chaque hyperarête."
+  },
+  "nodes_reachable_from_root": 46,
+  "unreachable_nodes": [
+    "N029",
+    "N030",
+    "N031",
+    "N032",
+    "N035",
+    "N053",
+    "N054"
+  ],
+  "scope": "Hypergraphe mécanistique initial. La connectivité de sa projection et sa fermeture hypergraphique stricte sont distinctes. Il ne valide pas ORI-C ni ne remplace une mesure quantitative d'inventaire accessible."
+}

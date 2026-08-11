@@ -1,0 +1,251 @@
+{
+  "objet": "description automatique des jeux téléchargés ; ne conclut rien et n'admet rien",
+  "jeux": [
+    {
+      "cle": "medium_mn_a",
+      "famille_declaree": "transition_de_phase",
+      "statut": "inspecté",
+      "volume": {
+        "fichiers_telecharges": 1,
+        "octets": 47390472,
+        "entrees_internes": 73
+      },
+      "nature_des_fichiers": {
+        "tabulaires": 37,
+        "images": 21,
+        "documents": 0,
+        "fichiers_de_calcul": 0,
+        "extensions": {
+          ".csv": 26,
+          ".xrdml": 12,
+          ".jpg": 8,
+          ".txt": 8,
+          ".tif": 7,
+          ".bmp": 6,
+          ".osc": 3,
+          ".xlsx": 2,
+          ".xls": 1
+        }
+      },
+      "conditions_candidates": {
+        "niveau_0": {
+          "dilatometry": 26,
+          "SEM": 16,
+          "TEM": 13,
+          "XRD": 12,
+          "ebsd": 3,
+          "furnace": 1,
+          "hardness": 1,
+          "tensile": 1
+        },
+        "niveau_1": {
+          "1": 4,
+          "2": 4
+        }
+      },
+      "indices": {
+        "histoire": {},
+        "trace": {
+          "dilat": 26,
+          "tem": 13,
+          "xrd": 12,
+          "ebsd": 3,
+          "hardness": 1
+        },
+        "reponse": {
+          "tensile": 1
+        },
+        "temoin": {},
+        "ablation": {},
+        "serie_temporelle": {
+          "profile": 2
+        }
+      },
+      "avertissement_unites": "Le nombre d'entrées internes n'est PAS un nombre d'échantillons physiques. Dix mille points relevés sur le même morceau de métal restent une unité expérimentale. Le nombre d'échantillons se lit dans la source, jamais dans l'arborescence.",
+      "suite": "Renseigner une fiche depuis la source elle-même, puis admettre_jeu.py. L'inspection propose, elle ne décide pas."
+    },
+    {
+      "cle": "medium_mn_b",
+      "famille_declaree": "transition_de_phase",
+      "statut": "inspecté",
+      "volume": {
+        "fichiers_telecharges": 1,
+        "octets": 10274866,
+        "entrees_internes": 21
+      },
+      "nature_des_fichiers": {
+        "tabulaires": 15,
+        "images": 6,
+        "documents": 0,
+        "fichiers_de_calcul": 0,
+        "extensions": {
+          ".csv": 6,
+          ".jpg": 6,
+          ".txt": 6,
+          ".xls": 2,
+          ".xlsx": 1
+        }
+      },
+      "conditions_candidates": {
+        "niveau_0": {
+          "SEM": 12,
+          "dylatometry": 6,
+          "furnace": 2,
+          "tensile": 1
+        }
+      },
+      "indices": {
+        "histoire": {},
+        "trace": {},
+        "reponse": {
+          "tensile": 1
+        },
+        "temoin": {},
+        "ablation": {},
+        "serie_temporelle": {}
+      },
+      "avertissement_unites": "Le nombre d'entrées internes n'est PAS un nombre d'échantillons physiques. Dix mille points relevés sur le même morceau de métal restent une unité expérimentale. Le nombre d'échantillons se lit dans la source, jamais dans l'arborescence.",
+      "suite": "Renseigner une fiche depuis la source elle-même, puis admettre_jeu.py. L'inspection propose, elle ne décide pas."
+    },
+    {
+      "cle": "ti_nb_sn",
+      "famille_declaree": "transition_de_phase",
+      "statut": "inspecté",
+      "volume": {
+        "fichiers_telecharges": 14,
+        "octets": 84003313,
+        "entrees_internes": 53
+      },
+      "nature_des_fichiers": {
+        "tabulaires": 40,
+        "images": 0,
+        "documents": 0,
+        "fichiers_de_calcul": 0,
+        "extensions": {
+          ".txt": 37,
+          ".svg": 13,
+          ".ctf": 2,
+          ".csv": 1
+        }
+      },
+      "conditions_candidates": {
+        "niveau_0": {
+          "Figure_8": 10,
+          "Figure_6": 7,
+          "Figure_5": 6,
+          "Figure_1": 5,
+          "Figure_11": 5,
+          "Figure_7": 5,
+          "Figure_3": 3,
+          "Figure_4": 3,
+          "Figure_9": 3,
+          "Figure_13": 2,
+          "Figure_10": 1,
+          "Figure_12": 1,
+          "Figure_2": 1
+        }
+      },
+      "indices": {
+        "histoire": {
+          "as-built": 12
+        },
+        "trace": {
+          "composition": 7
+        },
+        "reponse": {},
+        "temoin": {},
+        "ablation": {},
+        "serie_temporelle": {}
+      },
+      "avertissement_unites": "Le nombre d'entrées internes n'est PAS un nombre d'échantillons physiques. Dix mille points relevés sur le même morceau de métal restent une unité expérimentale. Le nombre d'échantillons se lit dans la source, jamais dans l'arborescence.",
+      "suite": "Renseigner une fiche depuis la source elle-même, puis admettre_jeu.py. L'inspection propose, elle ne décide pas."
+    },
+    {
+      "cle": "verres_sous_tg",
+      "famille_declaree": "verre_relaxation",
+      "statut": "inspecté",
+      "volume": {
+        "fichiers_telecharges": 5,
+        "octets": 815870,
+        "entrees_internes": 10
+      },
+      "nature_des_fichiers": {
+        "tabulaires": 5,
+        "images": 0,
+        "documents": 0,
+        "fichiers_de_calcul": 0,
+        "extensions": {
+          ".xlsx": 5,
+          ".xlsx#fig_2": 1,
+          ".xlsx#fig_3": 1,
+          ".xlsx#fig_4": 1,
+          ".xlsx#fig_5": 1,
+          ".xlsx#fig_6": 1
+        }
+      },
+      "conditions_candidates": {},
+      "indices": {
+        "histoire": {},
+        "trace": {},
+        "reponse": {},
+        "temoin": {},
+        "ablation": {},
+        "serie_temporelle": {}
+      },
+      "avertissement_unites": "Le nombre d'entrées internes n'est PAS un nombre d'échantillons physiques. Dix mille points relevés sur le même morceau de métal restent une unité expérimentale. Le nombre d'échantillons se lit dans la source, jamais dans l'arborescence.",
+      "suite": "Renseigner une fiche depuis la source elle-même, puis admettre_jeu.py. L'inspection propose, elle ne décide pas."
+    },
+    {
+      "cle": "la2nio4_oer",
+      "famille_declaree": "reconstruction_de_surface",
+      "statut": "inspecté",
+      "volume": {
+        "fichiers_telecharges": 8,
+        "octets": 28303619,
+        "entrees_internes": 41
+      },
+      "nature_des_fichiers": {
+        "tabulaires": 4,
+        "images": 0,
+        "documents": 0,
+        "fichiers_de_calcul": 0,
+        "extensions": {
+          ".1 m koh": 5,
+          ".emf": 4,
+          ".xlsx": 4,
+          ".xlsx#xrd": 1,
+          ".xlsx#xanes": 1,
+          ".xlsx#exafs": 1,
+          ".xlsx#cvs (ph)": 1,
+          ".xlsx#xps  o 1s la2nio4": 1,
+          ".xlsx#xps o 1s lanio3": 1,
+          ".xlsx#xps la 3d la2nio4": 1,
+          ".xlsx#o k-edge (fy)": 1,
+          ".xlsx#o k-edge (tey)": 1,
+          ".xlsx#figure s3": 1,
+          ".xlsx#figure s4": 1,
+          ".xlsx#figure s5": 1,
+          ".xlsx#figure s6": 1,
+          ".xlsx#figure s7": 1,
+          ".xlsx#figure s8": 1,
+          ".xlsx#figure s9": 1,
+          ".xlsx#figure s10": 1
+        }
+      },
+      "conditions_candidates": {},
+      "indices": {
+        "histoire": {},
+        "trace": {
+          "xps": 3,
+          "xrd": 1
+        },
+        "reponse": {},
+        "temoin": {},
+        "ablation": {},
+        "serie_temporelle": {}
+      },
+      "avertissement_unites": "Le nombre d'entrées internes n'est PAS un nombre d'échantillons physiques. Dix mille points relevés sur le même morceau de métal restent une unité expérimentale. Le nombre d'échantillons se lit dans la source, jamais dans l'arborescence.",
+      "suite": "Renseigner une fiche depuis la source elle-même, puis admettre_jeu.py. L'inspection propose, elle ne décide pas."
+    }
+  ]
+}
