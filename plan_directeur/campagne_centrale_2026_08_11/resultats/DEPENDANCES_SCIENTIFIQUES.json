@@ -1,0 +1,58 @@
+{
+  "schema": "oric.scientific-dependencies.v1",
+  "nodes": [
+    "hypergraphe",
+    "memoire_matiere",
+    "genealogie_cosmique",
+    "PALEO-HISTORY-01",
+    "replication_antibiotique",
+    "replication_vesicules",
+    "P_acc",
+    "benchmark_transversal",
+    "invariants",
+    "predictions_prospectives"
+  ],
+  "edges": [
+    [
+      "hypergraphe",
+      "P_acc"
+    ],
+    [
+      "memoire_matiere",
+      "P_acc"
+    ],
+    [
+      "genealogie_cosmique",
+      "P_acc"
+    ],
+    [
+      "PALEO-HISTORY-01",
+      "P_acc"
+    ],
+    [
+      "replication_antibiotique",
+      "benchmark_transversal"
+    ],
+    [
+      "replication_vesicules",
+      "benchmark_transversal"
+    ],
+    [
+      "P_acc",
+      "benchmark_transversal"
+    ],
+    [
+      "benchmark_transversal",
+      "invariants"
+    ],
+    [
+      "invariants",
+      "predictions_prospectives"
+    ]
+  ],
+  "critical_blockers": [
+    "PALEO-HISTORY-01: données obligatoires absentes",
+    "memoire_matiere: aucune chaîne complète admise",
+    "P_acc: non mesuré transversalement"
+  ]
+}

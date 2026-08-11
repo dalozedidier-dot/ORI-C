@@ -117,6 +117,23 @@ def add_edge(edges: list[Edge], edge: Edge) -> list[Edge]:
     return [*edges, edge]
 
 
+def ablate_edges(edges: list[Edge], roots: set[str], all_nodes: set[str]) -> list[dict]:
+    """Retire chaque hyperarête sans changer le graphe canonique."""
+    baseline = strict_closure(edges, roots)
+    rows = []
+    for removed in edges:
+        remaining = [edge for edge in edges if edge.edge_id != removed.edge_id]
+        closure = strict_closure(remaining, roots)
+        rows.append({
+            "edge_id": removed.edge_id,
+            "reachable_after_ablation": len(closure),
+            "lost_vs_baseline": len(baseline - closure),
+            "lost_nodes": "|".join(sorted(baseline - closure)),
+            "all_unreachable": "|".join(sorted(all_nodes - closure)),
+        })
+    return rows
+
+
 def minimal_seed_sets(edges: list[Edge], roots: set[str], nodes: set[str], target: set[str]) -> list[dict]:
     candidates = sorted(target)
     complete: list[dict] = []
@@ -202,6 +219,7 @@ def main() -> None:
             "scientific_status": "hypothèse testable, non canonique",
         },
     ]
+    ablations = ablate_edges(edges, roots, all_nodes)
 
     payload = {
         "declared_roots": sorted(roots),
@@ -220,7 +238,37 @@ def main() -> None:
             "limit": "La fermeture mathématique n'établit ni l'occurrence naturelle de HC01, ni une séquence historique unique.",
         },
     }
-    (OUT / "diagnostic_fermeture.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (OUT / "diagnostic_fermeture.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+    hypotheses = {
+        "H0_cycle_physique_reel": {
+            "prediction": "aucune ouverture sans structure circulaire préalable",
+            "statut": "compatible_non_demontre",
+            "test_decisif": "trajectoire naturelle ou expérimentale unique couvrant H030-H031-H052-H053",
+        },
+        "H1_bootstrap_independant": {
+            "prediction": "altération, flux hydrothermal ou gradients produisent N030/N053 sans N029 préalable",
+            "statut": "candidat_a_sourcer",
+            "candidat": "HC01: N051|N028 -> N053|N030",
+        },
+        "H2_mauvais_decoupage": {
+            "prediction": "N030 et N053 sont deux sorties couplées d'un même processus",
+            "statut": "ferme_mathematiquement_non_valide_empiriquement",
+            "scenario": "R1",
+        },
+    }
+    (OUT / "HYPOTHESES_BOOTSTRAP.json").write_text(json.dumps(hypotheses, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    empirical = {
+        "verdict": "indetermine_faute_de_donnees",
+        "fermeture_canonique": {"reachable": len(baseline), "total": len(all_nodes)},
+        "fermeture_candidate": {"reachable": len(r1_closure), "total": len(all_nodes)},
+        "preuve_candidate_admise": False,
+        "motif": "la source actuelle ne démontre pas HC01/H052 dans une trajectoire unique avec flux, quantités, incertitudes et horizon temporel",
+    }
+    (OUT / "FERMETURE_EMPIRIQUE.json").write_text(json.dumps(empirical, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    with (OUT / "ABLATIONS_HYPERGRAPHE.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(ablations[0]), lineterminator="\n")
+        writer.writeheader(); writer.writerows(ablations)
 
     with (OUT / "scenarios_reparation.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=["scenario_id", "type", "reachable", "strictly_closed", "scientific_status", "description"], lineterminator="\n")
@@ -253,7 +301,8 @@ def main() -> None:
         "",
         "Le verrou courant est expliqué comme une circularité de représentation localisée. Une réparation minimale existe et ferme le graphe, mais elle reste une hypothèse de codage à valider contre les sources primaires. Le fichier canonique `hyperaretes.csv` n'est pas modifié.",
     ]
-    (OUT / "RAPPORT_VERROU_MATIERE.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    (OUT / "RAPPORT_VERROU_MATIERE.md").write_text("\n".join(report) + "\n", encoding="utf-8", newline="\n")
+    (OUT / "VERROU_HYPERGRAPHE.md").write_text("\n".join(report) + "\n", encoding="utf-8", newline="\n")
 
     candidate_rows = read_semicolon(BASE / "hyperaretes.csv")
     fieldnames = list(candidate_rows[0])

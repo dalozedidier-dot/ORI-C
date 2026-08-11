@@ -24,3 +24,11 @@ def test_recodage_h052_ferme_le_graphe_sans_modifier_le_canonique():
     assert nodes <= verrou.strict_closure(candidate, {"N036"})
     original = next(edge for edge in edges if edge.edge_id == "H052")
     assert "N030" in original.inputs
+
+
+def test_les_ablations_ne_peuvent_pas_ameliorer_la_fermeture():
+    edges = verrou.load_edges()
+    nodes = {row["node_id"] for row in verrou.read_semicolon(verrou.BASE / "noeuds.csv")}
+    rows = verrou.ablate_edges(edges, {"N036"}, nodes)
+    assert len(rows) == len(edges) == 53
+    assert all(row["reachable_after_ablation"] <= 46 for row in rows)

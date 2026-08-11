@@ -1613,12 +1613,36 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/analyser_verrou.py",
-      "size": 11522,
-      "sha256": "e663272a1daa095ee6f093e2979e7c2174da559d84f3fd86695dd08fb6c674bd",
+      "size": 14207,
+      "sha256": "5c7c89cb90a16ce10c1dfe04a37b3ffc50e0bde53f4201d3f57ae8a78c6619ad",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/ABLATIONS_HYPERGRAPHE.csv",
+      "size": 9414,
+      "sha256": "eb7575016ff230ecb839c8018c3b1bde828efa98e34dda40f9a7326ae63aa53a",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/FERMETURE_EMPIRIQUE.json",
+      "size": 366,
+      "sha256": "bd26697030cb31f998dd5e10553ee639411d9d698f103caa6ab2061e74ac862e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/HYPOTHESES_BOOTSTRAP.json",
+      "size": 681,
+      "sha256": "3c07925413b3c879098308271b8ea9c420837155d817f53fed7433a694418877",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/RAPPORT_VERROU_MATIERE.md",
+      "size": 1688,
+      "sha256": "c2aec9faa812601ebe8d435d9a309e9dc7dc0e6ff18c17c9d0d5c7221072a065",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/VERROU_HYPERGRAPHE.md",
       "size": 1688,
       "sha256": "c2aec9faa812601ebe8d435d9a309e9dc7dc0e6ff18c17c9d0d5c7221072a065",
       "storage": "inline"
@@ -1643,8 +1667,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests/test_verrou_matiere.py",
-      "size": 1107,
-      "sha256": "b7a1086026753d0eb886a8fd999a540371bff262bdfc1c7777652b125a28ef2a",
+      "size": 1461,
+      "sha256": "d54a10ff3c01f930e4501068b1cd40aff1d24077f2563d5a445b645eea399781",
       "storage": "inline"
     },
     {
@@ -5807,8 +5831,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 7639,
-      "sha256": "3c14b3d41cfe7723836e853038aeb2a788134ba49213aa8c760d80b046f7d62c",
+      "size": 8629,
+      "sha256": "8d2d82ecb066c0e4559e13ca1dfc2c4acb90288f3643b49fd9404641cea6ecb1",
       "storage": "inline"
     },
     {
@@ -6667,6 +6691,90 @@
       "path": "plan_directeur/audit_transversal.py",
       "size": 8012,
       "sha256": "0ac2ade498d9db2f42509510c2c297adfb0d02a356366e40cf4c4acb93042211",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/FALSIFICATION_ORI-C.md",
+      "size": 964,
+      "sha256": "2bf7a4bd045a36b81d0be407ac848d38f372a7015389b01dde1e1f9fb8cebbae",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/FORMALISME_QUANTITATIF.json",
+      "size": 1248,
+      "sha256": "63519f06b1969c1f27b0162a4b5f1a5e0fbce169d1d4a4a209e1bffc90b19581",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PLAN_CENTRAL.json",
+      "size": 3281,
+      "sha256": "141ff792ac4ce8ab654f8bd4cf68c61722bd4cb8cc2fc2f6aac7b3396f3d34de",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/README.md",
+      "size": 361,
+      "sha256": "baac257382219086b3bbc532a91ad207d80912123d4f0c9a97a96ec0b6b4f0fc",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/SCHEMA_PREDICTION.json",
+      "size": 348,
+      "sha256": "69e590c2b0197042446e3970e090e0361b4a2fab1643ae4f42f13533516a1405",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/README.md",
+      "size": 866,
+      "sha256": "8340df748db9840a9517c00eec9c3a8b6708b23619d1d9d26fc05ebaff42e5a3",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/REPLICATIONS.json",
+      "size": 1327,
+      "sha256": "4f0f06f921af242a8494eb291c85a648a50db64e90caff571974ca0172a46610",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/RESULTATS_NEGATIFS.md",
+      "size": 1227,
+      "sha256": "4254b29d2a5a92e185f506231115a21c710559d34daa916986d9fd19bc71b607",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ADMISSION_PALEO_HISTORY_01.json",
+      "size": 1251,
+      "sha256": "4f192d3e5ac9484624cf8ba39fc6119ce1522b3a96c660ba0ed6c543330050d3",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/DATASET_TEST_MATRIX.json",
+      "size": 24337,
+      "sha256": "40e99d5f1796ddb4f8c62ff15d045c9a13bc9e36672fc345b25478fca265f02f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/DEPENDANCES_SCIENTIFIQUES.json",
+      "size": 1061,
+      "sha256": "9add94866d7b6fb8232be225efae830b65d602f5cd5c50863302840b2c0542f0",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ETAT_CAMPAGNE.json",
+      "size": 308,
+      "sha256": "2b95f59e62e8548c50a2d095ae1107291a0600a748ff90e86e9085c379cc610c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
+      "size": 4855,
+      "sha256": "f521b29e9c87d73706af10ff3e05b3cb8aff3f3ab4dd54e33fe9ba2055df5fc1",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
+      "size": 1558,
+      "sha256": "f14df27f745ab374ccef43eee1799974fcf1d474d1e62094c5fcae5ddae11470",
       "storage": "inline"
     },
     {
