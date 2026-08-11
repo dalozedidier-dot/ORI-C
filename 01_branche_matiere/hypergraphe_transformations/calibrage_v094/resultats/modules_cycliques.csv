@@ -1,8 +1,0 @@
-cycle_id;taille;noeuds;labels;hyperaretes_associees;inclut_verrou_interfaces
-1;4;N029|N030|N053|N054;Inventaire accessible|Interfaces eau roche gaz|Systeme hydrothermal|Phosphates solubles carbonates et sels;H030|H031|H032|H033|H052|H053;true
-2;3;N008|N009|N010;Monomeres de poussiere|Agregats fractals|Agregats compactes et poreux;H005|H006|H007|H008|H014|H016|H047;false
-3;2;N017|N018;Reservoir NC|Reservoir CC;H017|H018|H019|H027|H028|H029|H051;false
-9;1;N006;CAI et AOA;H003|H004;false
-11;1;N011;Galets;H008|H009|H010|H011|H017;false
-25;1;N027;Manteau et croute;H025|H026|H030|H031|H050|H051;false
-32;1;N036;Inventaire baryonique net;H034|H035|H036;false
