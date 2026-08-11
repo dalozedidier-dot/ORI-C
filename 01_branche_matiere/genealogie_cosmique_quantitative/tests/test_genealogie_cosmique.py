@@ -274,9 +274,9 @@ def test_complete_quantitative_claim_artifacts_are_machine_readable():
 
 
 def test_complete_quantitative_authority_docs_state_current_corpus_and_verdict():
-    readme=(HERE/'README.md').read_text()
-    review=(HERE/'REVUE_QUANTITATIVE_EMPIRIQUE.md').read_text()
-    protocol=(HERE/'PROTOCOLE.md').read_text()
+    readme=(HERE/'README.md').read_text(encoding='utf-8')
+    review=(HERE/'REVUE_QUANTITATIVE_EMPIRIQUE.md').read_text(encoding='utf-8')
+    protocol=(HERE/'PROTOCOLE.md').read_text(encoding='utf-8')
     assert '48 sources/datasets empiriques admissibles' in readme
     assert '120 enregistrements empiriques' in readme
     assert '34,5 %' in readme and '2,30 %' in readme

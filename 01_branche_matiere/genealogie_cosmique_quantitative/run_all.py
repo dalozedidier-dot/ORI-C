@@ -12,6 +12,7 @@ from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
 from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
 from analyser_donnees_massives import analyse as analyse_donnees_massives
 from analyser_information_historique import write_outputs as write_information_outputs
+from analyser_distribution_26al import analyse as analyse_distribution_26al
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -191,6 +192,7 @@ def main():
     complete_q=analyse_quantitatif_complet(HERE)
     dump(out/'RESULTATS_QUANTITATIFS_COMPLETS.json',complete_q['result'])
     dump(out/'TESTS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-complete-tests','tests':complete_q['tests']})
+    dump(out/'DISTRIBUTION_ACCESSIBILITE_26AL.json', analyse_distribution_26al(complete_q['result']))
 
     # Claims quantitatifs individuels : même discipline que les claims empiriques de la branche.
     # Chaque résultat quantitatif possède ainsi son artefact, ses sources et son statut

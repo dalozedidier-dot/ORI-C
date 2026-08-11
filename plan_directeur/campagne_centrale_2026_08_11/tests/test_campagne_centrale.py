@@ -18,7 +18,9 @@ def test_paleo_refuse_une_execution_partielle() -> None:
     assert result["required_count"] == 9
     assert result["present_count"] == 9
     assert result["missing"] == []
-    assert "age_uncertainty_ka non validé pour chaque série" in result["schema_issues"]
+    assert result["normalized_dataset_count"] == 9
+    assert any("chronologique" in issue for issue in result["schema_issues"])
+    assert any("contrôle négatif" in issue for issue in result["schema_issues"])
 
 
 def test_les_30_axes_ont_un_statut() -> None:
@@ -33,6 +35,14 @@ def test_la_matrice_ne_presente_pas_un_deblocage_comme_un_resultat() -> None:
     assert all("borne supérieure" in row["warning"] for row in matrix["rows"])
     scores = [row["score_levier"] for row in matrix["rows"]]
     assert scores == sorted(scores, reverse=True)
+
+
+def test_benchmark_transversal_sans_remplissage_des_champs_absents() -> None:
+    benchmark, invariants = MODULE.benchmark_transversal()
+    assert 20 <= benchmark["case_count"] <= 30
+    assert all(case["artifact_present"] for case in benchmark["cases"])
+    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 0
+    assert all(test["status"] == "non_testable" for test in invariants["tests"])
 
 
 def test_aucune_prediction_retrospective_n_est_fabriquee() -> None:

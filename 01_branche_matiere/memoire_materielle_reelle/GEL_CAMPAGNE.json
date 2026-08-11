@@ -14,14 +14,15 @@
   "justification_du_niveau": "L'ablation physique — démagnétisation, recuit de restauration, remise en solution — est un témoin expérimental indépendant, pas un artefact statistique. C-MAT-MEM-03 atteint donc le niveau le plus haut de la hiérarchie, hors de portée de toute campagne à surrogats.",
   "alpha": 0.05,
   "paires_minimum": 6,
+  "statut_paires_minimum": "champ historique obsolète et supplanté par le calcul conditionnel au plan expérimental dans admettre_jeu.py ; aucun minimum universel n'est appliqué",
   "estimateur_de_p": "(1 + k) / (1 + N)",
   "controle_negatif_obligatoire": "Avant tout verdict, appliquer la même statistique a une grandeur du meme jeu connue par la physique pour ne pas porter l'histoire testee. Herite de la retractation de WP-CLIM-MEM-2026-B, ou le test accordait `soutient` a l'obliquite terrestre.",
   "aucune_donnee_inspectee": true,
   "empreintes": {
     "PROTOCOLE_CAMPAGNE.md": "908f15565a57879f5bc0f1c1e54b05a33f143665e44728f1d46db7b9f2d8a79a",
     "SCHEMA_EXTRACTION.json": "547ca5df979dca0a1bcfdb68307ea4b7979af3941aaea2032e5e96427be94020",
-    "admettre_jeu.py": "6750e450d58659c1a0817c62e1c864412902afb0603a218a6369ce382c96d23d",
+    "admettre_jeu.py": "3645ad992d42f5db0b0afcd7f8029ff2cd3839b3543bc510dcc9da6e220b7c21",
     "REGISTRE_JEUX_CANDIDATS.json": "5d6dabb92f29500d53415ecc83e13acde2ecfa470b36f7348f1e4247c3cd80d9"
   },
-  "note_de_rescellement": "Rescelle le 2026-08-09 : reduction des docstrings, aucun changement de logique ni de seuil."
+  "note_de_rescellement": "Rescellé le 2026-08-11 après exécution des fiches réelles : calcul multinomial rendu numériquement stable pour les grands effectifs. Aucun critère, seuil ou verdict scientifique n'est modifié. Le champ historique paires_minimum est explicitement déclaré obsolète."
 }

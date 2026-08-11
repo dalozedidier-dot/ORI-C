@@ -44,7 +44,7 @@
       "niveau_preuve": null,
       "portee": "campagne_empirique_partielle_sans_admission_complete",
       "artefact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
-      "artefact_sha256": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
+      "artefact_sha256": "05bb1316ed93953d6c86c8368d6a10b1bfc0a9114cf41e1aec510886e4388b2f",
       "source": null,
       "source_sha256": null,
       "limite_provenance": "certaines extractions primaires restent absentes de la CI ; le verdict transversal est reproductible depuis les tables dérivées versionnées"

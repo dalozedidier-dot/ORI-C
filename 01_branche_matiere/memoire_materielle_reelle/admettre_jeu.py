@@ -77,7 +77,13 @@ def p_minimal(plan: str, fiche: dict) -> tuple[float | None, str]:
         assignations = math.factorial(total)
         for taille in tailles:
             assignations //= math.factorial(taille)
-        return 2.0 / assignations, (
+        # `2.0 / assignations` force la conversion de l'entier arbitraire en
+        # float et déborde pour les grands jeux (par exemple IODP). La forme
+        # logarithmique conserve la décision d'atteignabilité sans exception.
+        log_p = math.log(2.0) - math.lgamma(total + 1)
+        log_p += sum(math.lgamma(taille + 1) for taille in tailles)
+        minimum = math.exp(log_p) if log_p > math.log(5e-324) else 5e-324
+        return minimum, (
             f"permutation des étiquettes sur des groupes de {tailles}, "
             f"{assignations} assignations distinctes"
         )

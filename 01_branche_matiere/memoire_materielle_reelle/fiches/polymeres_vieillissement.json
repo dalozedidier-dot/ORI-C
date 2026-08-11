@@ -1,0 +1,19 @@
+{
+  "nom": "Polyéthylènes biosourcés vieillis thermiquement",
+  "famille_physique": "verre_relaxation",
+  "doi": "source stable documentée dans donnees/PROVENANCE.json",
+  "data_kind": "mesure_experimentale",
+  "histoires_distinctes": 7,
+  "trace_metric_disponible": false,
+  "trace_metric_nom": null,
+  "response_metric_disponible": true,
+  "response_metric_nom": "température d'apparition de l'oxydation",
+  "stimulus_final_comparable": true,
+  "unites_independantes": 63,
+  "control_type": "histoire_nulle",
+  "plan_experimental": "groupes_independants",
+  "unites_par_groupe": [9, 9, 9, 9, 9, 9, 9],
+  "trace_before_response": false,
+  "time_since_history_disponible": true,
+  "bras_sans_histoire": true
+}

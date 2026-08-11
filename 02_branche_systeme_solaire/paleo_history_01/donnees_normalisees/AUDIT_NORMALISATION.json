@@ -1,0 +1,56 @@
+{
+  "schema": "oric.paleo-history-01.normalization.v1",
+  "datasets": {
+    "LR04": {
+      "rows": 1355,
+      "missing_age_uncertainty_rows": 1355,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/LR04.csv"
+    },
+    "pile_benthique_independante": {
+      "rows": 701,
+      "missing_age_uncertainty_rows": 701,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/pile_benthique_independante.csv"
+    },
+    "proxy_niveau_marin_independant": {
+      "rows": 799,
+      "missing_age_uncertainty_rows": 799,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/proxy_niveau_marin_independant.csv"
+    },
+    "EPICA_temperature": {
+      "rows": 5783,
+      "missing_age_uncertainty_rows": 5783,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_temperature.csv"
+    },
+    "EPICA_CO2": {
+      "rows": 1096,
+      "missing_age_uncertainty_rows": 1096,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_CO2.csv"
+    },
+    "EPICA_poussieres": {
+      "rows": 5162,
+      "missing_age_uncertainty_rows": 5162,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_poussieres.csv"
+    },
+    "Vostok": {
+      "rows": 3311,
+      "missing_age_uncertainty_rows": 3311,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/Vostok.csv"
+    },
+    "insolation_convention_1": {
+      "rows": 801,
+      "missing_age_uncertainty_rows": 0,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/insolation_convention_1.csv"
+    },
+    "insolation_convention_2": {
+      "rows": 801,
+      "missing_age_uncertainty_rows": 0,
+      "file": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/insolation_convention_2.csv"
+    }
+  },
+  "admissible": false,
+  "blocking_issues": [
+    "aucune distribution chronologique point par point n'est fournie pour les archives observées; les erreurs de proxy ne sont pas des erreurs d'âge",
+    "le contrôle négatif réel exigé par le protocole gelé n'est identifié ni dans PLAN_ANALYSE.json ni dans PROTOCOLE_GELE.md"
+  ],
+  "verdict": "non_testable"
+}

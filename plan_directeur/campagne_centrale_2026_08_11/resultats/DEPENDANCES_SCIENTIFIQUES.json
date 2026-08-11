@@ -51,7 +51,7 @@
     ]
   ],
   "critical_blockers": [
-    "PALEO-HISTORY-01: données obligatoires absentes",
+    "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
     "memoire_matiere: aucune chaîne complète admise",
     "P_acc: non mesuré transversalement"
   ]

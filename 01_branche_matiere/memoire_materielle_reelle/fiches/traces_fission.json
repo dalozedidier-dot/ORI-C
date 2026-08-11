@@ -1,0 +1,19 @@
+{
+  "nom": "Zircon ZAD, recuit de traces de fission",
+  "famille_physique": "traces_de_fission",
+  "doi": "source stable documentée dans donnees/PROVENANCE.json",
+  "data_kind": "mesure_experimentale",
+  "histoires_distinctes": 11,
+  "trace_metric_disponible": true,
+  "trace_metric_nom": "longueur moyenne de trace",
+  "response_metric_disponible": false,
+  "response_metric_nom": null,
+  "stimulus_final_comparable": false,
+  "unites_independantes": 11,
+  "control_type": "ablation_physique",
+  "plan_experimental": "groupes_independants",
+  "unites_par_groupe": [4, 4, 3],
+  "trace_before_response": true,
+  "time_since_history_disponible": true,
+  "bras_sans_histoire": false
+}

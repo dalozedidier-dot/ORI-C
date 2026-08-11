@@ -1,0 +1,20 @@
+{
+  "nom": "Fischer-Tropsch reconstruction de surface",
+  "famille_physique": "reconstruction_de_surface",
+  "doi": "source stable documentée dans donnees/PROVENANCE.json",
+  "data_kind": "compilation",
+  "histoires_distinctes": 2,
+  "trace_metric_disponible": true,
+  "trace_metric_nom": "mesures STM/XPS",
+  "response_metric_disponible": true,
+  "response_metric_nom": "réponse catalytique",
+  "stimulus_final_comparable": false,
+  "unites_independantes": 14,
+  "control_type": "aucun",
+  "plan_experimental": "groupes_independants",
+  "unites_par_groupe": [7, 7],
+  "trace_before_response": false,
+  "time_since_history_disponible": false,
+  "bras_sans_histoire": false,
+  "limite": "trace et réponse non appariées condition par condition"
+}

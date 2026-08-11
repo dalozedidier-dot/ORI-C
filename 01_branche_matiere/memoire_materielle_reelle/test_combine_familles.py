@@ -13,16 +13,22 @@ lieu d'imposer un signe numérique universel à des grandeurs hétérogènes.
 """
 from __future__ import annotations
 
+__test__ = False
+
 import csv
 import json
+import sys
 from math import comb
 from pathlib import Path
 
 import numpy as np
 
+ICI = Path(__file__).resolve().parent
+if str(ICI) not in sys.path:
+    sys.path.insert(0, str(ICI))
+
 from statistiques_rangs import spearman
 
-ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
 SORTIE = DERIVE / "RESULTAT_TEST_COMBINE.json"
 

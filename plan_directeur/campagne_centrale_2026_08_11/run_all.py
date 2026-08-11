@@ -2,12 +2,22 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 OUT = HERE / "resultats"
+
+
+def benchmark_transversal() -> tuple[dict, dict]:
+    path = HERE / "construire_benchmark_transversal.py"
+    spec = importlib.util.spec_from_file_location("oric_central_benchmark", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
 
 
 def dump(name: str, value: object) -> None:
@@ -39,12 +49,9 @@ def admission_paleo() -> dict:
         if path.exists():
             present[dataset] = {"path": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
     missing = [name for name in required if name not in present]
-    normalized = ROOT / "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees.csv"
-    schema_issues = [] if normalized.exists() else [
-        "table normalisée absente",
-        "age_uncertainty_ka non validé pour chaque série",
-        "unités, quality_flag et sha256_source non validés ligne par ligne",
-    ]
+    audit_path = ROOT / "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/AUDIT_NORMALISATION.json"
+    audit = json.loads(audit_path.read_text(encoding="utf-8")) if audit_path.exists() else None
+    schema_issues = ["normalisation non exécutée"] if audit is None else list(audit["blocking_issues"])
     return {
         "campaign_id": "PALEO-HISTORY-01",
         "verdict": "admis" if not missing and not schema_issues else "non_testable",
@@ -53,6 +60,8 @@ def admission_paleo() -> dict:
         "present": present,
         "missing": missing,
         "schema_issues": schema_issues,
+        "normalization_audit": audit_path.relative_to(ROOT).as_posix() if audit else None,
+        "normalized_dataset_count": len(audit["datasets"]) if audit else 0,
         "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont présentes et conformes au schéma; le gel n'est pas assoupli",
     }
 
@@ -97,7 +106,7 @@ def dependency_graph() -> dict:
             ["P_acc", "benchmark_transversal"], ["benchmark_transversal", "invariants"],
             ["invariants", "predictions_prospectives"]
         ],
-        "critical_blockers": ["PALEO-HISTORY-01: données obligatoires absentes", "memoire_matiere: aucune chaîne complète admise", "P_acc: non mesuré transversalement"]
+        "critical_blockers": ["PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents", "memoire_matiere: aucune chaîne complète admise", "P_acc: non mesuré transversalement"]
     }
 
 
@@ -106,14 +115,19 @@ def main() -> int:
     dump("ADMISSION_PALEO_HISTORY_01.json", paleo)
     dump("DATASET_TEST_MATRIX.json", dataset_matrix())
     dump("DEPENDANCES_SCIENTIFIQUES.json", dependency_graph())
+    benchmark, invariants = benchmark_transversal()
+    dump("BENCHMARK_TRANSVERSAL.json", benchmark)
+    dump("AUDIT_INVARIANTS.json", invariants)
     plan = json.loads((HERE / "PLAN_CENTRAL.json").read_text(encoding="utf-8"))
     dump("ETAT_CAMPAGNE.json", {
         "schema": "oric.central-campaign-status.v1",
         "paleo_history_01": paleo["verdict"],
         "axes_total": len(plan["axes"]),
         "axes_documentes": sum("statut" in axis for axis in plan["axes"]),
+        "benchmark_cases": benchmark["case_count"],
+        "invariant_cases_complete": invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"],
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_gate": "normalisation et validation des incertitudes chronologiques de PALEO-HISTORY-01",
+        "next_executable_gate": "obtenir les distributions chronologiques publiées et préenregistrer un contrôle négatif dans PALEO-HISTORY-02",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")
     return 0

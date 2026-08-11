@@ -3,9 +3,11 @@ from pathlib import Path
 from oric_solar_history.config import load_config
 from oric_solar_history.experiment import run_experiment
 
+ROOT = Path(__file__).resolve().parents[1]
+
 
 def test_end_to_end_pipeline(tmp_path: Path):
-    config = load_config("configs/smoke_surrogate.yaml")
+    config = load_config(ROOT / "configs" / "smoke_surrogate.yaml")
     config["experiment"]["output_dir"] = str(tmp_path / "run")
     config["experiment"]["duration_years"] = 500_000
     config["spectrum"]["max_period_years"] = 400_000

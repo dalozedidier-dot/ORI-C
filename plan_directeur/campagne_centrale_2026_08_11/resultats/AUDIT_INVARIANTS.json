@@ -1,0 +1,35 @@
+{
+  "schema": "oric.transversal-invariants-audit.v1",
+  "cases_total": 20,
+  "cases_complete_X_H_m_Theta_tau_Pacc_R": 0,
+  "eligible_case_ids": [],
+  "tests": [
+    {
+      "id": "INV-A",
+      "hypothesis": "Delta m -> Delta P_acc",
+      "status": "non_testable"
+    },
+    {
+      "id": "INV-B",
+      "hypothesis": "tau_m/tau_T -> force historique",
+      "status": "non_testable"
+    },
+    {
+      "id": "INV-C",
+      "hypothesis": "transitions irréversibles ferment et ouvrent des possibles",
+      "status": "non_testable"
+    },
+    {
+      "id": "INV-D",
+      "hypothesis": "information historique décroît ou change de support",
+      "status": "non_testable"
+    },
+    {
+      "id": "INV-E",
+      "hypothesis": "interfaces disproportionnées",
+      "status": "non_testable"
+    }
+  ],
+  "verdict": "aucun invariant transversal calculable sans redéfinition post-hoc des variables",
+  "rule": "l'hétérogénéité des métriques n'est pas masquée par une standardisation arbitraire"
+}

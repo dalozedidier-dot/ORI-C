@@ -5,9 +5,11 @@ import pandas as pd
 from oric_solar_history.catalog import default_catalog_path, load_catalog
 from oric_solar_history.config import load_config
 
+ROOT = Path(__file__).resolve().parents[1]
+
 
 def test_smoke_config_is_valid():
-    config = load_config(Path("configs/smoke_surrogate.yaml"))
+    config = load_config(ROOT / "configs" / "smoke_surrogate.yaml")
     assert config["experiment"]["backend"] == "surrogate"
     assert any(s["name"] == "baseline" for s in config["scenarios"])
 

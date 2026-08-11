@@ -28,6 +28,15 @@ ICI = Path(__file__).resolve().parent
 DERIVE = ICI / "derive"
 
 
+def statut_admission() -> str:
+    chemin = ICI / "ADMISSION.json"
+    if not chemin.exists():
+        return "admission non exécutée"
+    jeux = json.loads(chemin.read_text(encoding="utf-8")).get("jeux", [])
+    admis = sum(bool(jeu.get("admis")) for jeu in jeux)
+    return f"{len(jeux)} jeux inspectés via fiches/, {admis} admis"
+
+
 def executer(titre: str, arguments: list[str], obligatoire: bool = True,
              source_primaire_requise: bool = False) -> dict:
     debut = time.monotonic()
@@ -162,7 +171,7 @@ def ecrire_synthese_versionnee(transversal: dict) -> Path:
     synthese_versionnee = {
         "campagne": "WP-MAT-MEM-2026",
         "separation_des_portees": {
-            "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+            "confirmatoire": statut_admission(),
             "partielle": (
                 "les jeux analysés sont publiés comme preuves partielles hors "
                 "chaîne confirmatoire admise"
@@ -209,7 +218,7 @@ def main() -> int:
     print("WP-MAT-MEM-2026 — admission confirmatoire et analyses partielles séparées")
     print()
     etapes = [executer(
-        "admission confirmatoire (aucune fiche admise à ce jour)",
+        "admission confirmatoire des jeux existants",
         ["admettre_jeu.py", "--toutes"],
     )]
     if etapes[-1]["code"] != 0:
@@ -279,7 +288,7 @@ def main() -> int:
     rapport = {
         "campagne": "WP-MAT-MEM-2026",
         "separation_des_portees": {
-            "confirmatoire": "aucun jeu inspecté et admis via fiches/",
+            "confirmatoire": statut_admission(),
             "partielle": (
                 "IODP, FABEST, polymères, traces de fission, aciers et surface "
                 "sont analysés hors chaîne confirmatoire admise"

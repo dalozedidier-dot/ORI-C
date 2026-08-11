@@ -1,0 +1,269 @@
+{
+  "alpha": 0.05,
+  "jeux": [
+    {
+      "nom": "FABEST fatigue oligocyclique",
+      "famille_physique": "plasticite",
+      "doi": "source stable documentée dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "2 condition(s) non remplie(s)",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 2.1129338260809092e-10,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [8, 8, 8], 9465511770 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "3 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": false,
+          "detail": "aucune trace déclarée"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": false,
+          "detail": "amplitude de contrainte ultérieure"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "24 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": true,
+          "detail": "control_type = echantillon_de_reference"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-02": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-03": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-04": "hors campagne — 2 condition(s) non remplie(s)"
+      }
+    },
+    {
+      "nom": "Fischer-Tropsch reconstruction de surface",
+      "famille_physique": "reconstruction_de_surface",
+      "doi": "source stable documentée dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 0.0005827505827505811,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [7, 7], 3432 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "2 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": true,
+          "detail": "mesures STM/XPS"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": false,
+          "detail": "réponse catalytique"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "14 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": false,
+          "detail": "control_type = aucun"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-02": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-03": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-04": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests."
+      }
+    },
+    {
+      "nom": "IODP rémanence et démagnétisation",
+      "famille_physique": "magnetisme",
+      "doi": "compilation multi-expéditions IODP, identifiants dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 5e-324,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [2499, 2499], 398509373212001994321620772388457463306943747291640762780411554492194373437023196796539638424527926139409160338457348327647892713143540696595084028169548351952858852348949733430177181589895059624249643965955422546335467152539431197341820946994534986537279762728194047424011689610261716539321298321560412437565124393299145221669344474543960247256104613623971082237071429485217236920795621196601817391735597831807820524560479919123038473065694456657741263255866441733096424034024563702465292722114068406508721162058935979553989329500372339381311165924001587363511090728754633931125009942739059422931964056229271211011196011766959985179934511458146986940881751742770477414291610224690127835991665954216079506852812184522082890988747026040778949528354413045054812602268608696595685455169764344096191581534790822569897845141400114671080239477525979385936649042108986912281896281524979835958074394806557185681124367653702461439938542641239241965889024075327363859605877625201602445188761942824717383783695203437238480214387309959781586522659054865382667201653669118418179307135162113644659167930383578723328355374906347887235293360471151092637729251216358527423721405295029558108006848050000044071961031728437369169577371553193104335388386141372430320254017062032385146780984915636071090762431131152592989631262386244395258262399366527421373255615895091596646232687886019620721771053554895358748707963758426728543303108936625292257828356506201447106997369297689351033367826742358768928697157847371293354600000 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "2 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": true,
+          "detail": "aimantation rémanente"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": true,
+          "detail": "rémanence après paliers de démagnétisation"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "4998 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": true,
+          "detail": "control_type = ablation_physique"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-02": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-03": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests.",
+        "C-MAT-MEM-04": "hors campagne — data_kind = 'compilation'. Seule une mesure expérimentale entre dans les tests."
+      }
+    },
+    {
+      "nom": "Acier Medium-Mn traitement thermique",
+      "famille_physique": "transition_de_phase",
+      "doi": "source stable documentée dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "2 condition(s) non remplie(s)",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 0.0001202501202501204,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [5, 5, 2], 16632 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "2 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": true,
+          "detail": "fraction de phase"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": false,
+          "detail": "dureté"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "12 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": false,
+          "detail": "control_type = aucun"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-02": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-03": "hors campagne — 2 condition(s) non remplie(s)",
+        "C-MAT-MEM-04": "hors campagne — 2 condition(s) non remplie(s)"
+      }
+    },
+    {
+      "nom": "Polyéthylènes biosourcés vieillis thermiquement",
+      "famille_physique": "verre_relaxation",
+      "doi": "source stable documentée dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "1 condition(s) non remplie(s)",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 8.358614624209655e-49,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [9, 9, 9, 9, 9, 9, 9], 2392741010223442438553822446842770682716580000000 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "7 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": false,
+          "detail": "aucune trace déclarée"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": true,
+          "detail": "température d'apparition de l'oxydation"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "63 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": true,
+          "detail": "control_type = histoire_nulle"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-02": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-03": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-04": "hors campagne — 1 condition(s) non remplie(s)"
+      }
+    },
+    {
+      "nom": "Zircon ZAD, recuit de traces de fission",
+      "famille_physique": "traces_de_fission",
+      "doi": "source stable documentée dans donnees/PROVENANCE.json",
+      "admis": false,
+      "motif": "1 condition(s) non remplie(s)",
+      "statut": "source_documentaire",
+      "plan_experimental": "groupes_independants",
+      "p_minimal_atteignable": 0.00017316017316017256,
+      "lecture_de_l_atteignabilite": "permutation des étiquettes sur des groupes de [4, 4, 3], 11550 assignations distinctes",
+      "conditions": [
+        {
+          "condition": "au moins deux histoires distinctes documentées",
+          "satisfaite": true,
+          "detail": "11 histoire(s) déclarée(s)"
+        },
+        {
+          "condition": "trace physique persistante mesurée",
+          "satisfaite": true,
+          "detail": "longueur moyenne de trace"
+        },
+        {
+          "condition": "réponse ultérieure sous stimulus final comparable",
+          "satisfaite": false,
+          "detail": "aucune réponse déclarée"
+        },
+        {
+          "condition": "unités expérimentales indépendantes identifiables",
+          "satisfaite": true,
+          "detail": "11 unité(s)"
+        },
+        {
+          "condition": "témoin réel disponible",
+          "satisfaite": true,
+          "detail": "control_type = ablation_physique"
+        }
+      ],
+      "criteres": {
+        "C-MAT-MEM-01": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-02": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-03": "hors campagne — 1 condition(s) non remplie(s)",
+        "C-MAT-MEM-04": "hors campagne — 1 condition(s) non remplie(s)"
+      }
+    }
+  ]
+}

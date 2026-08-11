@@ -43,9 +43,10 @@
   },
   "missing": [],
   "schema_issues": [
-    "table normalisée absente",
-    "age_uncertainty_ka non validé pour chaque série",
-    "unités, quality_flag et sha256_source non validés ligne par ligne"
+    "aucune distribution chronologique point par point n'est fournie pour les archives observées; les erreurs de proxy ne sont pas des erreurs d'âge",
+    "le contrôle négatif réel exigé par le protocole gelé n'est identifié ni dans PLAN_ANALYSE.json ni dans PROTOCOLE_GELE.md"
   ],
+  "normalization_audit": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/AUDIT_NORMALISATION.json",
+  "normalized_dataset_count": 9,
   "rule": "l'analyse ne démarre que si les neuf familles obligatoires sont présentes et conformes au schéma; le gel n'est pas assoupli"
 }

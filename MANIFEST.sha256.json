@@ -1090,6 +1090,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/DISTRIBUTION_ACCESSIBILITE_26AL.json",
+      "size": 6065,
+      "sha256": "a07e79d591b0f10205cd4a9d0d81f1420072c49036a59f3c7cbde719ff7c8087",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/FERMETURE_RELATIONS_EMPIRIQUES.csv",
       "size": 1965,
       "sha256": "2d53d847bf1bb91a05e84140a42243858f6aefee6516eeefa42be23ca15b952e",
@@ -1163,8 +1169,8 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS.sha256",
-      "size": 6103,
-      "sha256": "bb26bf695cf6ef4f349cc93adf8279f0dbce7aa90d32d1f0c5ebc3d3033bcfe3",
+      "size": 6206,
+      "sha256": "9d6e9f1ad7fe233a186a060b6722e237567011cbb9a99753dac7b0fd21774d5f",
       "storage": "inline"
     },
     {
@@ -1415,14 +1421,20 @@
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/run_all.py",
-      "size": 34151,
-      "sha256": "df4c203456b4ea79703a38df8737ff2bf323b6a68d21bac021053972b56f0f6e",
+      "size": 34329,
+      "sha256": "152342d84bcf26f5dd9d8850b81362851f8f7b4faba7a48ea840f632275767a5",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_approfondissement_empirique.py",
       "size": 3377,
       "sha256": "f2ddb53a76d98da6c9631a712da358a5a606bbab95c66647eaa2b3e0eefe0ddf",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/src/analyser_distribution_26al.py",
+      "size": 2445,
+      "sha256": "1f5c26274135f205a9038bbd808e59ea37baf1a97ba66b5b23b1cfa0ee9a920c",
       "storage": "inline"
     },
     {
@@ -1456,9 +1468,15 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/tests/test_distribution_26al.py",
+      "size": 1119,
+      "sha256": "a43b16670bc7c87fed5089cb9f1addf85554023744b2474419d2e5b8130b6790",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/tests/test_genealogie_cosmique.py",
-      "size": 22288,
-      "sha256": "ddeb3133919fac63f6c6bb65a600fd77948b53a82a36d4ee31adbc63aab4961a",
+      "size": 22336,
+      "sha256": "461728ee868288391c11ad630755e97613665f2a1881b45e5a026b1908660566",
       "storage": "inline"
     },
     {
@@ -2044,9 +2062,15 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/ADMISSION.json",
+      "size": 12422,
+      "sha256": "2795482375ea0efc006a804ef4d1036ceeeac5c9551afe75fe91e574db36dfea",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/GEL_CAMPAGNE.json",
-      "size": 1753,
-      "sha256": "a692c89c54f5412599a0cf6e8add295479a974d49b78e81830b84bed883f2f2d",
+      "size": 2118,
+      "sha256": "11ae0d68285e0af344034df95855194099e46baba0a8237c353255e80721c8ec",
       "storage": "inline"
     },
     {
@@ -2093,8 +2117,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/admettre_jeu.py",
-      "size": 10281,
-      "sha256": "6750e450d58659c1a0817c62e1c864412902afb0603a218a6369ce382c96d23d",
+      "size": 10702,
+      "sha256": "3645ad992d42f5db0b0afcd7f8029ff2cd3839b3543bc510dcc9da6e220b7c21",
       "storage": "inline"
     },
     {
@@ -2165,8 +2189,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
-      "size": 3288,
-      "sha256": "4cada6a6e803088c46f94747c13f53d9b1a0460a98612188eea92234a62cbda1",
+      "size": 3286,
+      "sha256": "05bb1316ed93953d6c86c8368d6a10b1bfc0a9114cf41e1aec510886e4388b2f",
       "storage": "inline"
     },
     {
@@ -2302,6 +2326,42 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/fabest_plasticite.json",
+      "size": 682,
+      "sha256": "5988689b9f47126b8f68d90a5ce4b4987b922e670e6cb8c0de8580fac26ccf53",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/fischer_tropsch.json",
+      "size": 749,
+      "sha256": "845648544f83a705323bbb52a0252f87a7e4a656beb2c9dd731afa292b4a1bd2",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/iodp_magnetisme.json",
+      "size": 848,
+      "sha256": "107d7029c390f23266af07e52119e9bd47fd678fdb0b79d2eae580be7da25a5e",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/medium_mn.json",
+      "size": 666,
+      "sha256": "90e24089d22ff4f217f62d7d251f1211dab14daddaa51060ee68cca4f1b7ee43",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/polymeres_vieillissement.json",
+      "size": 715,
+      "sha256": "6a2025f6fc04514520df86ec82ecb6c2d6386449b6e75d703ba9aada76a902c9",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/fiches/traces_fission.json",
+      "size": 683,
+      "sha256": "4b24a343e4277d9275e5ec5599903d2da220024325c640e65f3aad337e59aa69",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/inspecter_jeu.py",
       "size": 10892,
       "sha256": "0b536e83aa868fc33c057a728ce9fbaf330454d4c9a9f7eeebd6971f3fdd1321",
@@ -2327,8 +2387,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/run_all.py",
-      "size": 14337,
-      "sha256": "f96c37e35fd54df949579999e244b89462cf9d53e880e9a5cc7bc528b96e3aec",
+      "size": 14613,
+      "sha256": "a09a25689540efaaabb3455b1028a6f11feb8c77afcc20ca23bfcc9895aa4f9c",
       "storage": "inline"
     },
     {
@@ -2345,8 +2405,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/test_combine_familles.py",
-      "size": 9220,
-      "sha256": "fb820be162b24157e8ad3670f1746923771d4de70986bd4e6c1851a2b101f6f5",
+      "size": 9312,
+      "sha256": "206a8520176f8892bf4266c9a83fc4c0a0d3d9abcfe00ee65a173238c519197e",
       "storage": "inline"
     },
     {
@@ -2365,6 +2425,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/tester_meme_etat_histoire_differente.py",
       "size": 7153,
       "sha256": "1d0017c7e0487bdd53fe2dd333a99e8e4c8c3a09cbbe015f0a03cdadd1f16101",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/tests/test_admissions_reelles.py",
+      "size": 1109,
+      "sha256": "1f1e5e6dce764bf0053bb8288f4e68c5698996794f79b60965ce49765f67f421",
       "storage": "inline"
     },
     {
@@ -2939,8 +3005,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/tests/test_config.py",
-      "size": 1007,
-      "sha256": "98a7d2f6e454a0818071d1027b587e84c2ef68b0263d9ff58383ec18e5bfe356",
+      "size": 1056,
+      "sha256": "e95be6c3baf18985f8366684a4598757533391b9c5d989b41af2f2e248337dbe",
       "storage": "inline"
     },
     {
@@ -2957,8 +3023,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/tests/test_pipeline.py",
-      "size": 694,
-      "sha256": "55dc05c573aada4a5106d978928efe66f6878f1c96d10ad3ce95db947e114963",
+      "size": 749,
+      "sha256": "a9e3e8da390e355337231b084abec358176b1fce222f51055cd88fc9344df2d8",
       "storage": "inline"
     },
     {
@@ -5368,6 +5434,78 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/AUDIT_NORMALISATION.json",
+      "size": 2235,
+      "sha256": "068c344419c560181cc3cf2a604d788a30b84a28d5756a67d25c48fe27ccc959",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_CO2.csv",
+      "size": 224249,
+      "sha256": "121a2e62d60c5b8096cb2d97206e650118df21db24d9db5221bfc6d05497480e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_poussieres.csv",
+      "size": 1164217,
+      "sha256": "95ba45b860d8f433d731d5ed39881423597efd748c58650eaaca120e2fb8e0d9",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/EPICA_temperature.csv",
+      "size": 1476110,
+      "sha256": "266ee35a76c908c5978c20768fe14ec3b14179121a25faece5eb509b3909a56b",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/LR04.csv",
+      "size": 276374,
+      "sha256": "141db7da9dc620fd13714639faad84ae69ee982e7ee68ed0b530b6d6404d8e2f",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/Vostok.csv",
+      "size": 702946,
+      "sha256": "0ab65af4c04afb79922dcde8167bf6c92de8ed18abb79b3060ddf8d43161addc",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/insolation_convention_1.csv",
+      "size": 176908,
+      "sha256": "bff2451b7df34d5146ffed612ae9254552d4130b4d6616e750b563080f475cb5",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/insolation_convention_2.csv",
+      "size": 179334,
+      "sha256": "3e63ea88ed9b04700a6cf572a4207a72cfaa8e93797c070e121fa6309b53b4d6",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/pile_benthique_independante.csv",
+      "size": 180782,
+      "sha256": "a855da689bdc6a44fae41c7d41ec5869db563d92b57961ae074092b5d8b8d27d",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/proxy_niveau_marin_independant.csv",
+      "size": 203609,
+      "sha256": "d7027581c9a477ac4d29d269dc0374923680bfceaeef28dd1984429655350ab2",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/normaliser_donnees.py",
+      "size": 7019,
+      "sha256": "ee7b1045531255a9db50a1f26546e61448f8ee6957e6d82101aab24cada5aa5e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_01/tests/test_normalisation.py",
+      "size": 1337,
+      "sha256": "4b7a35328c564f9aed0bdd0aba3727c992371e4cb500ebd51daa4e49898d243d",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/paleo_history_01/verifier_gel.py",
       "size": 729,
       "sha256": "ddfbc3957c92ba5a1aeb8911e320595191f2c0b07fee3c5e030aa2ede8aa735f",
@@ -5556,7 +5694,7 @@
     {
       "path": "03_branche_vivant/benchmark_externe_card2019/resultats/benchmark_temporel.csv",
       "size": 270,
-      "sha256": "d0b86fc850911110fc36a8dbdf8fdaaf75fedff4e7eeafe65ddfc67524208ed5",
+      "sha256": "b1d2827874373be8e228492f45dd6fa11d6a9a11e1bf89b232ec737da9ebb3e2",
       "storage": "inline"
     },
     {
@@ -5568,7 +5706,7 @@
     {
       "path": "03_branche_vivant/benchmark_externe_card2019/resultats/predictions_hors_echantillon.csv",
       "size": 3858,
-      "sha256": "8bc9898c55fe566f9fda950905094d66c57af47240cdefc409d8ba099809bdd7",
+      "sha256": "5f75d7ed5f415b32fd38d86c80a57d202d99e71d62f2a1e56c5eec21f10963f1",
       "storage": "inline"
     },
     {
@@ -6803,8 +6941,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PLAN_CENTRAL.json",
-      "size": 3281,
-      "sha256": "141ff792ac4ce8ab654f8bd4cf68c61722bd4cb8cc2fc2f6aac7b3396f3d34de",
+      "size": 3504,
+      "sha256": "0f55662a18fadafb19b649ff7b2195755af0c6990b6fbb41e460486c46cdf96d",
       "storage": "inline"
     },
     {
@@ -6821,8 +6959,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/README.md",
-      "size": 866,
-      "sha256": "8340df748db9840a9517c00eec9c3a8b6708b23619d1d9d26fc05ebaff42e5a3",
+      "size": 1411,
+      "sha256": "36d2aebf7f8180937c47dfae534cb714d4eca7a9c2b1a9c89b44428a26bfde3d",
       "storage": "inline"
     },
     {
@@ -6838,9 +6976,27 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/construire_benchmark_transversal.py",
+      "size": 4247,
+      "sha256": "874623e65f72e2ddbae809d842ce0d0f82bdac0cd7537c7e7e2494a3485401aa",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ADMISSION_PALEO_HISTORY_01.json",
-      "size": 2345,
-      "sha256": "50a2cd42041b9b5d5211491a8c3f65dbdaa3ede69a12ebd1d0ccea9aaeadd975",
+      "size": 2617,
+      "sha256": "d8cf15a0bfdf4a7594f465b75c6644751309823a626d2b96111c92ce839278a8",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INVARIANTS.json",
+      "size": 1005,
+      "sha256": "cacc79509754ffe1f2deb320fbe6dce4613f87732f2a504362aab08665ba959d",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/BENCHMARK_TRANSVERSAL.json",
+      "size": 17603,
+      "sha256": "17821c5b1261cfc29b63fafe75d2b822cf18b5b182457e625af43c6243236d4c",
       "storage": "inline"
     },
     {
@@ -6851,26 +7007,26 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/DEPENDANCES_SCIENTIFIQUES.json",
-      "size": 1061,
-      "sha256": "9add94866d7b6fb8232be225efae830b65d602f5cd5c50863302840b2c0542f0",
+      "size": 1093,
+      "sha256": "869d19f43dfba0cf2457064335cbd0b34d62e7da7db7d30f2134d55e3ef1fa89",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ETAT_CAMPAGNE.json",
-      "size": 314,
-      "sha256": "b6ddf3c6929b2ef252439aea9ca543444bb830db2de6d25e657ff0fefba2c6b7",
+      "size": 406,
+      "sha256": "516a952980cee35e1e32996ec1a45f3fc7ad475d97fe40acc8723857ba9d9bc1",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 5804,
-      "sha256": "a585d206a3e88ac50ecb240aedc6ef5349dd2965901975fafa5859651628ded6",
+      "size": 6673,
+      "sha256": "830c53944b1b9b3ee6e0a9ea1d92d56e8ed8fa94c01bf9540acaef000e65b205",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
-      "size": 1882,
-      "sha256": "5cfc6a104f7f1ff20e463eaf16872c0c88d72a6b297429a24790b29b3f7a346a",
+      "size": 2411,
+      "sha256": "1ac8e52a5a1611fa124858753a377c19b2d69348654ddab880720849816b6eea",
       "storage": "inline"
     },
     {
@@ -6947,8 +7103,8 @@
     },
     {
       "path": "plan_directeur/campagne_maximale_trois_branches/resultats/vivant_robustesse.json",
-      "size": 22716,
-      "sha256": "f618615f72e10eb0797e061ce7625b621607dd0a5a9317d8e9c844536a50486b",
+      "size": 22710,
+      "sha256": "538545554fc4997b5c1bb2fbce5cc2588a3d79ac5e940ec1e888c7db2d23c8fd",
       "storage": "inline"
     },
     {
@@ -7446,7 +7602,7 @@
     {
       "path": "plateforme/campagne_maximale_reelle/CERTIFICATIONS_SPECIALISEES.json",
       "size": 3343,
-      "sha256": "56dfd7ce4862111c90c7953f7f560fb6420be5e2a5e73772228c68667cee9db4",
+      "sha256": "3830da9268e1a86930cc20adf6403f3ac8e729cac2a4deb331ace35f5d0bc6ce",
       "storage": "inline"
     },
     {
@@ -7530,7 +7686,7 @@
     {
       "path": "plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json",
       "size": 4759,
-      "sha256": "ddb30c356bd61c09b9281f212bddb34bb1d158b4d67b5d33b979fa313f968d1b",
+      "sha256": "27f011ac379ec5002b7ac36c3071215b8aff2dcabc8dbc45e06cd346678586a8",
       "storage": "inline"
     },
     {
@@ -9270,7 +9426,7 @@
     {
       "path": "preuves/PREUVES.json",
       "size": 44099,
-      "sha256": "759590ad6842769bd9c0f5480a3ecaaad34c925643215768128af09c9e791cc0",
+      "sha256": "c57bb7abeef54dfdbb5beb3833c2df979f954e84e3376054a40ec25ad29aa8d6",
       "storage": "inline"
     },
     {

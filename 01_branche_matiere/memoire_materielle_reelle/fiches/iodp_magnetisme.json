@@ -1,0 +1,20 @@
+{
+  "nom": "IODP rémanence et démagnétisation",
+  "famille_physique": "magnetisme",
+  "doi": "compilation multi-expéditions IODP, identifiants dans donnees/PROVENANCE.json",
+  "data_kind": "compilation",
+  "histoires_distinctes": 2,
+  "trace_metric_disponible": true,
+  "trace_metric_nom": "aimantation rémanente",
+  "response_metric_disponible": true,
+  "response_metric_nom": "rémanence après paliers de démagnétisation",
+  "stimulus_final_comparable": true,
+  "unites_independantes": 4998,
+  "control_type": "ablation_physique",
+  "plan_experimental": "groupes_independants",
+  "unites_par_groupe": [2499, 2499],
+  "trace_before_response": true,
+  "time_since_history_disponible": false,
+  "bras_sans_histoire": false,
+  "limite": "l'histoire naturelle n'est pas assignée expérimentalement et le jeu agrège plusieurs expéditions"
+}

@@ -1,0 +1,19 @@
+{
+  "nom": "Acier Medium-Mn traitement thermique",
+  "famille_physique": "transition_de_phase",
+  "doi": "source stable documentée dans donnees/PROVENANCE.json",
+  "data_kind": "mesure_experimentale",
+  "histoires_distinctes": 2,
+  "trace_metric_disponible": true,
+  "trace_metric_nom": "fraction de phase",
+  "response_metric_disponible": true,
+  "response_metric_nom": "dureté",
+  "stimulus_final_comparable": false,
+  "unites_independantes": 12,
+  "control_type": "aucun",
+  "plan_experimental": "groupes_independants",
+  "unites_par_groupe": [5, 5, 2],
+  "trace_before_response": false,
+  "time_since_history_disponible": true,
+  "bras_sans_histoire": false
+}
