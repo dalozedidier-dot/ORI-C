@@ -67,7 +67,7 @@ def valider(rows):
 def main():
     argparse.ArgumentParser(description="Vérifie la généalogie détaillée de la matière").parse_args()
     report = valider(lire(CSV_PATH))
-    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if report["cloture_genealogique"] else 1
 

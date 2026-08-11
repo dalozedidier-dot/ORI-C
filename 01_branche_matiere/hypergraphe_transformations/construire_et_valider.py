@@ -170,6 +170,6 @@ report = {
     "unreachable_nodes": orphelins_stricts,
     "scope": "Hypergraphe mécanistique initial. La connectivité de sa projection et sa fermeture hypergraphique stricte sont distinctes. Il ne valide pas ORI-C ni ne remplace une mesure quantitative d'inventaire accessible."
 }
-(HERE / "validation_hypergraphe.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+(HERE / "validation_hypergraphe.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 print(json.dumps(report, ensure_ascii=False, indent=2))
 if errors: raise SystemExit(1)

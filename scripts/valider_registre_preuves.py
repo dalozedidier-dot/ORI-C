@@ -3,12 +3,14 @@ from __future__ import annotations
 import hashlib,json,math,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; errors=[]
+if hasattr(sys.stdout, "reconfigure"):
+ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def pointer(obj,p):
  for part in p.strip('/').split('/') if p.strip('/') else []:
   part=part.replace('~1','/').replace('~0','~'); obj=obj[int(part)] if isinstance(obj,list) else obj[part]
  return obj
-reg=json.loads((ROOT/'preuves/PREUVES.json').read_text())
+reg=json.loads((ROOT/'preuves/PREUVES.json').read_text(encoding='utf-8'))
 ids=set()
 for e in reg['entries']:
  if e['id'] in ids: errors.append(f"preuve dupliquée {e['id']}")
@@ -16,15 +18,15 @@ for e in reg['entries']:
  if not p.is_file(): errors.append(f"artefact absent {e['id']}: {e['artefact']}")
  elif e.get('empreinte_sortie') and sha(p)!=e['empreinte_sortie']: errors.append(f"empreinte preuve divergente {e['id']}")
 # Les 5 certifications doivent être identiques en statut au registre certifié.
-cert=json.loads((ROOT/'plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json').read_text())
+cert=json.loads((ROOT/'plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json').read_text(encoding='utf-8'))
 for c in cert['resultats']:
  e=next((x for x in reg['entries'] if x['id']==c['criterion_id']),None)
  if not e or e['statut']!='certifie' or e['verdict']!=c['verdict'] or e['niveau_preuve']!=c['niveau_preuve']: errors.append(f"certification désynchronisée {c['criterion_id']}")
-nums=json.loads((ROOT/'preuves/CHIFFRES.json').read_text())
+nums=json.loads((ROOT/'preuves/CHIFFRES.json').read_text(encoding='utf-8'))
 for n in nums['valeurs']:
  p=ROOT/n['source']
  try:
-  src=pointer(json.loads(p.read_text()),n['pointer'])
+  src=pointer(json.loads(p.read_text(encoding='utf-8')),n['pointer'])
   if n.get('transform')=='len': src=len(src)
   elif n.get('transform')=='count_intervariable_unique':
    pairs=set()
