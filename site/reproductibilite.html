@@ -73,8 +73,8 @@ python verifier_dossier.py --allow-lfs-pointers</code></pre>
     <section class="section alt" id="publication-stable">
       <div class="wrap">
         <div class="section-heading split-heading">
-          <div><p class="eyebrow">Snapshot citable</p><h2>Publication stable 0.9.5-research</h2></div>
-          <p>Le tag de release fige code, données, résultats et limites. Le workflow de publication réexécute les validations, reconstruit les sous-manifestes mémoire et revue systématique, puis le manifeste racine en dernier.</p>
+          <div><p class="eyebrow">Snapshot citable</p><h2>Publication stable 0.9.5</h2></div>
+          <p>Le tag technique <code>v0.9.5-research</code> correspond à la version stable 0.9.5 et fige code, données, résultats et limites. Le workflow de publication réexécute les validations, reconstruit les sous-manifestes mémoire et revue systématique, puis le manifeste racine en dernier.</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card"><h3>Système solaire complet</h3><p>N-corps, spin-orbite et mémoire historique restent séparés. La reproductibilité spin utilise un vérificateur dédié qui distingue la trajectoire stricte et les agrégats longue durée de l’ablation lunaire.</p></article>
@@ -101,6 +101,7 @@ python verifier_dossier.py --allow-lfs-pointers</code></pre>
           <a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/03_branche_vivant/benchmark_histoire_antibiotique_2026"><strong>Antibiotiques</strong><span>Séries transversales et longitudinales</span></a>
         </div>
         <p class="data-note">La provenance, les empreintes et les limites de chaque jeu sont regroupées dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/data/REAL_DATA_COVERAGE.json"><code>REAL_DATA_COVERAGE.json</code></a> et dans les fichiers <code>SOURCE.json</code> associés.</p>
+        <p class="data-note"><strong>Généalogie cosmique :</strong> les données massives réellement retenues et leurs exclusions sont décrites dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION_V4.json">manifeste de sélection des données</a>. Les résultats du recalcul sont dans <a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats"><code>resultats/</code></a> et dans l’artefact du workflow dédié.</p>
       </div>
     </section>
 
@@ -141,6 +142,8 @@ python -m pytest -q plan_directeur/campagne_maximale_trois_branches/tests</code>
 python -m pytest -q 01_branche_matiere/hypergraphe_transformations/calibrage_v094/tests</code></pre><p>Fermeture, ablations, dépendance aux sources et transfert stellaire.</p></article>
           <article class="feature-card"><h3>Recherche suivante</h3><pre><code>python plan_directeur/campagne_recherche_suivante/run_all.py
 python scripts/valider_recherche_suivante.py</code></pre><p>H011, Pacc, spéléothèmes, vésicules et histoire antibiotique.</p></article>
+          <article class="feature-card"><h3>Généalogie cosmique — données réelles</h3><pre><code>python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
+python 01_branche_matiere/genealogie_cosmique_quantitative/run_all.py</code></pre><p>Le workflow dédié recalcule la campagne, compare les sorties à tolérance zéro, affiche les résultats numériques dans le résumé du run et publie l’artefact <code>genealogie-cosmique-resultats</code>.</p></article>
         </div>
       </div>
     </section>
@@ -149,6 +152,7 @@ python scripts/valider_recherche_suivante.py</code></pre><p>H011, Pacc, spéléo
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">GitHub Actions</p><h2>Workflows à lancer</h2></div>
         <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-genealogie-cosmique.yml"><strong>Généalogie cosmique — données réelles</strong><span>29 tests, recalcul strict, résumé scientifique du run et artefact des résultats</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml"><strong>Campagne maximale ORI-C, trois branches</strong><span>Validation cumulative et analyses transversales</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Analyse des données réelles</strong><span>Intégration des tables et exécution des 683 entrées</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-systeme-solaire.yml"><strong>Système solaire</strong><span>Couche mémoire et calculs astronomiques</span></a>
@@ -178,7 +182,7 @@ python scripts/valider_recherche_suivante.py</code></pre><p>H011, Pacc, spéléo
       <div>
         <strong>ORI-C</strong>
         <p>Le possible a une histoire.</p>
-        <p class="build-meta">Publication stable : <code>v0.9.5-research</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+        <p class="build-meta">Version stable : <code>0.9.5</code> · main prépare <code>0.9.6</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
       </div>
       <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
       <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>

@@ -24,7 +24,7 @@ if r.returncode:
 proof=(ROOT/'site/preuves.html').read_text(encoding='utf-8')
 repro=(ROOT/'site/reproductibilite.html').read_text(encoding='utf-8')
 # Présence de concepts/sections seulement ; les nombres associés sont contrôlés par CHIFFRES.json.
-for needle in ['tolérance','Trajectoires réelles','H011','MESA']:
+for needle in ['tolérance','Trajectoires réelles','H011','MESA','Généalogie cosmique quantitative','11 467','41 / 41','prépare <code>0.9.6</code>']:
     if needle not in proof+repro: errors.append(f'page publique incomplète: {needle}')
 current_text='\n'.join([(ROOT/'README.md').read_text(encoding='utf-8'),(ROOT/'ETAT_DES_PREUVES.md').read_text(encoding='utf-8'),proof])
 for required in ['13 / 15','1 / 10',version]:

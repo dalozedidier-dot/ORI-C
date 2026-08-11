@@ -45,6 +45,7 @@
     <section class="section compact">
       <div class="wrap narrow">
         <p class="data-note"><strong>Règle de lecture :</strong> chaque verdict reste attaché à son protocole. Les résultats D’Onofrio, amikacine, Card 2019, ARN et vésicules utilisent des données différentes et ne peuvent pas être fusionnés en un verdict unique sur toute la branche vivant.</p>
+        <p class="data-note"><strong>Versions :</strong> 0.9.5 reste la dernière version propre publiée. Les résultats de généalogie cosmique ci-dessous appartiennent au travail courant de <code>main</code> qui prépare 0.9.6.</p>
       </div>
     </section>
 
@@ -58,6 +59,9 @@
           <article class="metric"><strong>0 / 635</strong><span>soutien dans la matrice générique</span><small>ce compteur n'inclut pas les protocoles spécialisés</small></article>
           <article class="metric"><strong>4 + 1</strong><span>critères spécialisés certifiés</span><small>4 soutiens, 1 non-soutien</small></article>
           <article class="metric"><strong>0</strong><span>échec ou erreur</span><small>campagne technique finale</small></article>
+          <article class="metric"><strong>11 467</strong><span>lignes réelles analysées</span><small>généalogie cosmique quantitative</small></article>
+          <article class="metric"><strong>11 207</strong><span>grains présolaires admissibles</span><small>données publiées</small></article>
+          <article class="metric"><strong>41 / 41</strong><span>classification NC/CC</span><small>11 systèmes isotopiques</small></article>
         </div>
       </div>
     </section>
@@ -101,6 +105,59 @@
                 <div><dt>Découverte</dt><dd>La dépendance au chemin et la mémoire durable peuvent désormais être testées séparément.</dd></div>
               </dl>
               <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/02_branche_systeme_solaire/couche_memoire_historique">Couche mémoire</a><a href="methode.html#inscription">Critère d’inscription</a></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="evidence-group" id="genealogie-cosmique">
+          <div class="group-heading"><p class="eyebrow">Branche matière · développement sur main</p><h2>Généalogie cosmique quantitative : résultats sur données réelles</h2><p>Les tests ci-dessous utilisent des mesures publiées et des échantillons réels. Les simulations, données synthétiques et valeurs imputées sont exclues du registre probant.</p></div>
+          <div class="evidence-grid">
+            <article class="evidence-card" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Populations présolaires</span><span class="evidence-id">GCQ-T17</span></div>
+              <h3>Des milliers de grains conservent des signatures de populations distinctes</h3>
+              <p class="claim">11 207 grains présolaires publiés ou partiellement publiés sont admissibles. Chez les SiC, la médiane 26Al/27Al des grains X est 252,69 fois celle des grains M.</p>
+              <dl><div><dt>SiC admissibles</dt><dd>8 865 grains.</dd></div><div><dt>Graphites</dt><dd>2 342 grains.</dd></div><div><dt>Exclusion</dt><dd>11 567 lignes SiC non publiées ne participent pas aux verdicts.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json">Résultats machine</a><a href="https://github.com/dalozedidier-dot/ORI-C/tree/main/01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles">Données normalisées</a></div>
+            </article>
+
+            <article class="evidence-card" id="gc-nccc" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Séparation isotopique</span><span class="evidence-id">GCQ-T18</span></div>
+              <h3>La dichotomie NC/CC est redondante sur plusieurs systèmes isotopiques</h3>
+              <p class="claim">La classification leave-one-out déterministe attribue correctement 41 groupes sur 41 à NC ou CC en utilisant uniquement les valeurs observées.</p>
+              <dl><div><dt>Systèmes isotopiques</dt><dd>11.</dd></div><div><dt>Imputation</dt><dd>0 valeur.</dd></div><div><dt>Effet</dt><dd>Les 11 systèmes testés présentent chacun un contraste NC/CC marqué dans le corpus retenu.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json">Résultat NC/CC</a></div>
+            </article>
+
+            <article class="evidence-card" id="gc-allende" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Hétérogénéité intra-météorite</span><span class="evidence-id">GCQ-T19 / T20</span></div>
+              <h3>Allende contient des histoires isotopiques mesurables à plusieurs échelles</h3>
+              <p class="claim">Les différences entre chondres et entre sous-échantillons dépassent fréquemment les incertitudes analytiques.</p>
+              <dl><div><dt>ε54Cr</dt><dd>221 / 300 paires de chondres > 3σ.</dd></div><div><dt>ε50Ti</dt><dd>313 / 351 > 3σ.</dd></div><div><dt>Δ17O</dt><dd>169 / 231 > 3σ.</dd></div><div><dt>Sous-échantillons</dt><dd>55 / 66 paires > 2σ ; maximum 36,07σ.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json">Distributions calculées</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Échantillon retourné</span><span class="evidence-id">GCQ-T21</span></div>
+              <h3>Bennu conserve plusieurs signatures isotopiques dans un même matériau retourné</h3>
+              <p class="claim">52 grains présolaires individuels et 18 spots isotopiques O sont intégrés. Le diopside est séparé de chacun des 17 autres spots réfractaires avec z ≥ 9,99.</p>
+              <dl><div><dt>Grains présolaires</dt><dd>52.</dd></div><div><dt>Spots O</dt><dd>18.</dd></div><div><dt>Limite</dt><dd>Cette hétérogénéité ne détermine pas à elle seule le trajet dynamique des composants.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json">Résultats Bennu</a></div>
+            </article>
+
+            <article class="evidence-card" id="gc-26al" data-status="supported">
+              <div class="evidence-top"><span class="status supported">Accessibilité radiogénique</span><span class="evidence-id">GCQ-T09</span></div>
+              <h3>Le moment d’incorporation change quantitativement l’inventaire de 26Al encore disponible</h3>
+              <p class="claim">À partir de la référence canonique mesurée et de la demi-vie évaluée, la fraction restante décroît fortement entre des événements réellement datés.</p>
+              <dl><div><dt>Angrite</dt><dd>34,53 %.</dd></div><div><dt>EC 002</dt><dd>18,60 %.</dd></div><div><dt>Chondre jeune</dt><dd>8,18 %.</dd></div><div><dt>Carbonate CM</dt><dd>2,30 %.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/INVENTAIRE_26AL_PAR_EVENEMENT.csv">Inventaire par événement</a><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json">Résultats complets</a></div>
+            </article>
+
+            <article class="evidence-card" data-status="inconclusive">
+              <div class="evidence-top"><span class="status inconclusive">Limite explicite</span><span class="evidence-id">GCQ-OPEN</span></div>
+              <h3>La chaîne causale unique du primordial au présent reste ouverte</h3>
+              <p class="claim">Une chaîne stricte existe des produits stellaires vers l’endpoint planétaire actuel, mais le raccord strict depuis la baseline primordiale n’est pas fermé.</p>
+              <dl><div><dt>Produits stellaires → présent</dt><dd>Chemin strict disponible.</dd></div><div><dt>Primordial → présent</dt><dd>Chemin strict non fermé.</dd></div><div><dt>Histoire orbitale unique</dt><dd>Non reconstruite.</dd></div></dl>
+              <div class="evidence-links"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/01_branche_matiere/genealogie_cosmique_quantitative/resultats/VERROUS_BOUT_EN_BOUT.json">Verrous de bout en bout</a></div>
             </article>
           </div>
         </div>
@@ -408,7 +465,7 @@
       <div>
         <strong>ORI-C</strong>
         <p>Le possible a une histoire.</p>
-        <p class="build-meta">Publication stable : <code>v0.9.5-research</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
+        <p class="build-meta">Version stable : <code>0.9.5</code> · main prépare <code>0.9.6</code> · Build : <a data-build-link href="https://github.com/dalozedidier-dot/ORI-C/commits/main"><code data-build-commit>commit courant</code></a> · <time data-build-date>date du déploiement</time></p>
       </div>
       <div><a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a></div>
       <div><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a></div>

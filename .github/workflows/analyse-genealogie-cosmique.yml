@@ -20,7 +20,7 @@ env:
 
 jobs:
   genealogie-cosmique:
-    name: Généalogie cosmique empirique
+    name: Généalogie cosmique — données réelles
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -67,3 +67,77 @@ jobs:
           assert d['imputed_rows']==0
           print('pare-feu empirique: 0 simulation, 0 synthétique, 0 imputation')
           PY
+      - name: Publier le résumé scientifique du run
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          result_dir = Path(os.environ['RUNNER_TEMP']) / 'gc-candidate'
+          rich = json.loads((result_dir / 'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text(encoding='utf-8'))
+          complete = json.loads((result_dir / 'RESULTATS_QUANTITATIFS_COMPLETS.json').read_text(encoding='utf-8'))
+          audit = rich['audit']
+          nc = rich['NC_CC']
+          pg = rich['presolar_grains']
+          allende = rich['Allende_chondrules']['metrics']
+          sub = rich['Allende_subsamples']
+          bennu = rich['Bennu_returned_samples']
+          inv = {row['event']: row for row in complete['radiogenic_inventory']}
+          graph = complete['graph_closure']
+
+          def pct(x):
+              return f"{100*x:.2f} %".replace('.', ',')
+          def dec(x, n=2):
+              return f"{x:.{n}f}".replace('.', ',')
+
+          lines = [
+              '# Généalogie cosmique — résultats sur données réelles',
+              '',
+              '## Corpus analysé',
+              '',
+              '| Mesure | Résultat |',
+              '|---|---:|',
+              f"| Lignes utiles normalisées | **{audit['imported_rows']:,}** |".replace(',', ' '),
+              f"| Grains présolaires admissibles | **{audit['published_presolar_grains']:,}** |".replace(',', ' '),
+              f"| Simulations utilisées comme preuve | **{audit['simulation_rows_used']}** |",
+              f"| Données synthétiques | **{audit['synthetic_rows_used']}** |",
+              f"| Valeurs imputées | **{audit['imputed_rows_used']}** |",
+              '',
+              '## Résultats principaux',
+              '',
+              f"- **NC/CC : {nc['leave_one_out_correct']}/{nc['leave_one_out_total']}** groupes correctement classés en leave-one-out sur **{nc['isotope_systems']} systèmes isotopiques**, sans imputation.",
+              f"- **Grains SiC :** le rapport médian 26Al/27Al des types X est **{dec(pg['X_to_M_median_26Al_27Al_factor'], 2)}×** celui des types M.",
+              f"- **Allende ε54Cr : {allende['epsilon54Cr']['pairs_gt_3sigma']}/{allende['epsilon54Cr']['pair_count']}** paires > 3σ.",
+              f"- **Allende ε50Ti : {allende['epsilon50Ti']['pairs_gt_3sigma']}/{allende['epsilon50Ti']['pair_count']}** paires > 3σ.",
+              f"- **Allende Δ17O : {allende['Delta17O']['pairs_gt_3sigma']}/{allende['Delta17O']['pair_count']}** paires > 3σ.",
+              f"- **Sous-échantillons d’Allende : {sub['pairs_gt_2sigma']}/{sub['pair_count']}** paires > 2σ ; séparation maximale **{dec(sub['max_pairwise']['z'], 2)}σ**.",
+              f"- **Bennu :** {bennu['Bennu_2025_individual_presolar_grains']} grains présolaires individuels et {bennu['Bennu_2026_O_isotope_spots']} spots O ; le diopside est séparé des 17 autres spots avec **z min = {dec(bennu['diopside_vs_each_refractory_min_z'], 2)}**.",
+              '',
+              '## Effet du temps sur l’inventaire radiogénique de référence',
+              '',
+              f"- Angrite : **{pct(inv['angrite']['remaining_26Al_fraction_of_CAI_inventory'])}** de l’inventaire canonique de 26Al restant.",
+              f"- EC 002 : **{pct(inv['EC002']['remaining_26Al_fraction_of_CAI_inventory'])}**.",
+              f"- Chondre jeune : **{pct(inv['youngest_chondrule']['remaining_26Al_fraction_of_CAI_inventory'])}**.",
+              f"- Carbonate CM : **{pct(inv['CM_carbonate']['remaining_26Al_fraction_of_CAI_inventory'])}**.",
+              '',
+              '## Limite actuelle',
+              '',
+              f"- Chaîne stricte produits stellaires → endpoint actuel : **{'oui' if graph['strict_path_stellar_products_to_present_endpoint'] else 'non'}**.",
+              f"- Chaîne stricte baseline primordiale → endpoint actuel : **{'oui' if graph['strict_path_primordial_baseline_to_present_endpoint'] else 'non'}**.",
+              '- Le run ne reconstruit pas une histoire orbitale unique de bout en bout.',
+              '',
+              '> Les fichiers complets du recalcul sont disponibles dans l’artefact **genealogie-cosmique-resultats** du run.',
+              '',
+          ]
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(chr(10).join(lines), encoding='utf-8')
+          PY
+      - name: Publier les fichiers de résultats du run
+        uses: actions/upload-artifact@v6
+        with:
+          name: genealogie-cosmique-resultats
+          path: |
+            ${{ runner.temp }}/gc-candidate
+            01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION_V4.json
+          if-no-files-found: error
+          retention-days: 30

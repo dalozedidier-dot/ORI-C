@@ -6,6 +6,8 @@ on:
     paths:
       - 'site/**'
       - 'preuves/**'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/resultats/**'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION_V4.json'
       - 'VERSION'
       - 'scripts/valider_publication_stable.py'
       - 'scripts/valider_registre_preuves.py'

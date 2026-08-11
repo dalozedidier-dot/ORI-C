@@ -243,7 +243,7 @@ jobs:
 
 
   genealogie-cosmique:
-    name: Généalogie cosmique empirique
+    name: Généalogie cosmique — données réelles
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -278,4 +278,27 @@ jobs:
           assert d['synthetic_rows']==0
           assert d['imputed_rows']==0
           print('pare-feu empirique: 0 simulation, 0 synthétique, 0 imputation')
+          PY
+      - name: Résumé scientifique généalogie cosmique
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          r=Path(os.environ['RUNNER_TEMP'])/'gc-candidate'
+          d=json.loads((r/'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text(encoding='utf-8'))
+          c=json.loads((r/'RESULTATS_QUANTITATIFS_COMPLETS.json').read_text(encoding='utf-8'))
+          a=d['audit']; nc=d['NC_CC']; pg=d['presolar_grains']; al=d['Allende_chondrules']['metrics']; b=d['Bennu_returned_samples']
+          lines=[
+            '# Généalogie cosmique — données réelles', '',
+            f"- **{a['imported_rows']:,}** lignes utiles normalisées".replace(',', ' '),
+            f"- **{a['published_presolar_grains']:,}** grains présolaires admissibles".replace(',', ' '),
+            f"- NC/CC : **{nc['leave_one_out_correct']}/{nc['leave_one_out_total']}** sur {nc['isotope_systems']} systèmes isotopiques, sans imputation",
+            f"- SiC X/M, médiane 26Al/27Al : **{pg['X_to_M_median_26Al_27Al_factor']:.2f}×**",
+            f"- Allende >3σ : ε54Cr **{al['epsilon54Cr']['pairs_gt_3sigma']}/{al['epsilon54Cr']['pair_count']}**, ε50Ti **{al['epsilon50Ti']['pairs_gt_3sigma']}/{al['epsilon50Ti']['pair_count']}**, Δ17O **{al['Delta17O']['pairs_gt_3sigma']}/{al['Delta17O']['pair_count']}**",
+            f"- Bennu : **{b['Bennu_2025_individual_presolar_grains']}** grains présolaires, **{b['Bennu_2026_O_isotope_spots']}** spots O, z min diopside/autres = **{b['diopside_vs_each_refractory_min_z']:.2f}**",
+            f"- Chaîne primordiale → présent fermée : **{'oui' if c['graph_closure']['strict_path_primordial_baseline_to_present_endpoint'] else 'non'}**",
+          ]
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a', encoding='utf-8') as f:
+              f.write(chr(10).join(lines)+chr(10))
           PY

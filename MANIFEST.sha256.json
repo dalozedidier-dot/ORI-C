@@ -23,8 +23,8 @@
     },
     {
       "path": ".github/workflows/analyse-genealogie-cosmique.yml",
-      "size": 2624,
-      "sha256": "69657e5e155e4681aacc60c9ac284e61f0c61ff9c08f950c81c4a052c914cab9",
+      "size": 7429,
+      "sha256": "d62269d62c7dcbd9ab18a33f8715f24d6dcc3a928e6f65688a53ad13cb3a77f9",
       "storage": "inline"
     },
     {
@@ -65,14 +65,14 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 12670,
-      "sha256": "2c103ad4c371d867afb807f906c9def5e91b75c83533db8a56129d4115f7cd28",
+      "size": 14598,
+      "sha256": "f41da87de97f6766b45bf1d820b61f9997e66c76812fde0a6c5fee93f09b3b76",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 1877,
-      "sha256": "f688d3ab19805933a60f26355ea904f8b66369c0d102ee5b4b22c99827624762",
+      "size": 2061,
+      "sha256": "b3e38276b23d1f9d101b342c67dcb2c6ce1e8fcc5132d8015014adbac4191682",
       "storage": "inline"
     },
     {
@@ -5915,8 +5915,8 @@
     },
     {
       "path": "README.md",
-      "size": 30201,
-      "sha256": "38e0472e8ceb8eaefdbc7f9dc683e4abd0ad40ba1d35c5323a30a2da365a3dbe",
+      "size": 30217,
+      "sha256": "ade7326cd1f311edf08230f4d6585dde2da0adfa83248bfefbabb86415242a73",
       "storage": "inline"
     },
     {
@@ -9209,8 +9209,8 @@
     },
     {
       "path": "scripts/valider_publication_stable.py",
-      "size": 3180,
-      "sha256": "47cc08614e6802f1445664eadf68de1d79f19a37951d0e17e5dd3054892201b3",
+      "size": 3266,
+      "sha256": "c60a8b2e4542d7d82925537ec6bdd78e10c39b716100e688687df3a2b937974e",
       "storage": "inline"
     },
     {
@@ -9287,26 +9287,26 @@
     },
     {
       "path": "site/index.html",
-      "size": 15275,
-      "sha256": "cfaada098381d332f70ce3e39b38d5dd9b2f42c229b7a6b466835b161f266419",
+      "size": 18259,
+      "sha256": "671a84c8b40998ed59401cf974e97e3a6bfd085b94773a2eee6ebd1ef8a065ec",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
-      "size": 13910,
-      "sha256": "106edf5b6257f3638d57caf27648cf8089e07e999353f708881679e5b72e438c",
+      "size": 15561,
+      "sha256": "b86a19a6bc4edb4eecbf898b67b76dd3d3627fb2719215bc4700298a85d980c7",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 34264,
-      "sha256": "01136beb78b5db7a9be5ff18295b655c9e90e362235be31172e7f4988984aa18",
+      "size": 41922,
+      "sha256": "c3817e0467c367b28fdacd89ae1570ad4b166b4750146acfe3d0d38973eff377",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 16511,
-      "sha256": "8c8a0e9c9537ef79db8cf877519afcc1d1b3f6a6832ac845501a0ad482d70b52",
+      "size": 17946,
+      "sha256": "3fd5fe45d0b477cb68ecb82800e50a5997ccdac7080c0f7304113dd39645cb8f",
       "storage": "inline"
     },
     {

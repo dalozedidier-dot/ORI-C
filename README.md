@@ -5,7 +5,7 @@
 [![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
 
-Didier Daloze | Version 0.9.5-research | 10 août 2026
+Didier Daloze | Version stable 0.9.5 | 10 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -74,15 +74,15 @@ séparés.
 ```
 
 
-## Développement post-v0.9.5 — généalogie cosmique quantitative
+## Développement sur main — préparation de 0.9.6 — généalogie cosmique quantitative
 
-Le tag `v0.9.5-research` reste un snapshot immuable. Sur `main`, la cible `0.10.0-research` développe le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
+La version 0.9.5 reste le dernier état propre publié. Sur `main`, le travail courant prépare 0.9.6 et développe le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
 
 La couche `01_branche_matiere/genealogie_cosmique_quantitative/` applique désormais un **pare-feu empirique strict** : aucune simulation, donnée synthétique, donnée construite, imputation, sortie de rendement stellaire, sortie thermochimique ou intégration orbitale ne peut entrer dans ses verdicts. Les articles mixtes observation/modèle sont admissibles uniquement pour leurs mesures explicitement transcrites ; leur partie modélisée est déclarée dans `portion_excluded`.
 
-L'état courant porte **20 stades, 22 liens qualifiés, 48 sources/datasets empiriques admissibles et 120 enregistrements empiriques de synthèse**. Il produit **16 claims empiriques machine : 15 soutenus et 1 explicitement indéterminé**, **8 claims quantitatifs v3** (`GCQ-T09` à `GCQ-T16`) et **5 claims data-rich v4** (`GCQ-T17` à `GCQ-T21`). La campagne v3 quantifie notamment la fraction de `26Al` encore disponible à des événements datés : **34,5 %** à l'archive angritique, **18,6 %** à EC 002, **8,18 %** au chondre jeune sélectionné et **2,30 %** au carbonate CM. La v4 ajoute **11 467 lignes utiles normalisées**, dont **11 207 grains présolaires publiés**, et teste directement des distributions isotopiques NC/CC et des hétérogénéités intra-météorite, toujours sans simulation, donnée synthétique ni imputation.
+L'état courant porte **20 stades, 22 liens qualifiés, 48 sources/datasets empiriques admissibles et 120 enregistrements empiriques de synthèse**. Il produit **16 claims empiriques machine : 15 soutenus et 1 explicitement indéterminé**, **13 claims quantitatifs supplémentaires** (`GCQ-T09` à `GCQ-T21`). La campagne quantitative quantifie notamment la fraction de `26Al` encore disponible à des événements datés : **34,5 %** à l'archive angritique, **18,6 %** à EC 002, **8,18 %** au chondre jeune sélectionné et **2,30 %** au carbonate CM. L’analyse enrichie en données ajoute **11 467 lignes utiles normalisées**, dont **11 207 grains présolaires publiés**, et teste directement des distributions isotopiques NC/CC et des hétérogénéités intra-météorite, toujours sans simulation, donnée synthétique ni imputation.
 
-Le verdict empirique initial reste `supports_empirical_historical_accessibility_mechanism`. Le verdict quantitatif v3 est `quantified_history_dependent_accessibility_with_explicit_open_links` : **le moment historique modifie quantitativement au moins un inventaire physique hérité qui reste accessible aux transformations suivantes**, tandis que des porteurs matériels et des architectures isotopiques persistent à travers ces changements. Ces résultats sont des extensions empiriques rétrospectives, pas une certification générale d'ORI-C.
+Le verdict empirique initial reste `supports_empirical_historical_accessibility_mechanism`. Le verdict quantitatif courant est `quantified_history_dependent_accessibility_with_explicit_open_links` : **le moment historique modifie quantitativement au moins un inventaire physique hérité qui reste accessible aux transformations suivantes**, tandis que des porteurs matériels et des architectures isotopiques persistent à travers ces changements. Ces résultats sont des extensions empiriques rétrospectives, pas une certification générale d'ORI-C.
 
 Le problème inverse orbital reste `undetermined_empirical_only`. Le chemin strict produits stellaires → endpoint actuel existe dans le graphe documenté, mais le chemin strict baseline primordiale → endpoint actuel reste ouvert. La provenance terrestre reste elle aussi `empirically_contested_not_closed`. Aucun de ces verrous n'est fermé artificiellement par C-AST ou par une simulation. `C-AST-01` reste une preuve séparée au niveau modèle sur les conséquences d'une architecture donnée.
 
@@ -333,9 +333,9 @@ Le dépôt exécute désormais, sans reclasser rétroactivement les preuves cert
 
 Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
 
-## Publication stable v0.9.5-research
+## Publication stable 0.9.5
 
-La version `0.9.5-research` fige l’état scientifique du 10 août 2026 après le run complet du Système solaire. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée.
+La version 0.9.5 fige l’état scientifique du 10 août 2026 après le run complet du Système solaire. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée.
 
 La chaîne modèle désormais exécutée est :
 
