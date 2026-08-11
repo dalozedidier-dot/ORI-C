@@ -83,6 +83,12 @@ Les données nécessaires à ces tests sont intégrées et les analyses s’exé
 
 Les ponts vers théorie de la viabilité, PID, états causaux finis, Chemical Organization Theory, topologie persistante, CCM, LTEE et Assembly Theory sont des **extensions méthodologiques**. Ils ne modifient pas les certifications `C-AST-01`, `C-ANT-01`, `C-VES-02`, `C-VES-03` ou le verdict négatif `C-MAT-MEM-05`. Le PCMCI+ est isolé dans une CI dédiée et reste exploratoire. M2 reste fermé dans sa formulation testée.
 
+## Développement post-publication : généalogie cosmique quantitative
+
+`01_branche_matiere/genealogie_cosmique_quantitative/` est une extension de recherche de la branche matière, pas une nouvelle certification globale et pas une modification rétroactive de `v0.9.5-research`. Elle relie 23 stades depuis les produits de nucléosynthèse stellaire jusqu'au raccordement avec l'architecture orbitale actuelle. Les sources et sorties distinguent systématiquement échantillon direct, chronométrie/reconstruction isotopique, analogue astrophysique, simulation et modèle.
+
+La présence de grains présolaires, d'hétérogénéités isotopiques, de glaces héritées ou de mécanismes de formation des planétésimaux soutient des maillons locaux. Elle n'établit pas une histoire unique du Système solaire. Les scénarios de structuration du disque, de croissance des géantes, de migration et d'instabilité restent concurrents dans `MODELES_CONCURRENTS.csv`. Le verdict end-to-end reste `open_not_certified` et l'interface `HANDOFF_SYSTEME_SOLAIRE.json` reste `open` tant que la branche ne dérive pas les conditions initiales de `C-AST-01` avec leurs incertitudes.
+
 ## Snapshot stable 0.9.5-research
 
 La publication stable du 10 août 2026 conserve explicitement la dissymétrie des résultats : la couche astronomique N-corps reste à **13/15**, tandis que la formulation paléoclimatique M2 reste à **1/10** et `does_not_support` dans son protocole. La couche spin-orbite est exécutée au niveau modèle mais ne résout pas la Lune en N-corps ni les marées. Le résultat PCMCI+ est exploratoire, fondé sur des p-values brutes dans la configuration publiée, et ne modifie pas M2. Les formalismes externes ne reclassent aucune certification par leur seule exécution.

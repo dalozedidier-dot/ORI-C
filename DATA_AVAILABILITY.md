@@ -32,6 +32,12 @@ dans `masses_reservoirs.csv`, jamais dans la saisie. Les colonnes non
 contraintes restent vides : le validateur refuse tout inventaire accessible
 chiffré dont les deux facteurs ne sont pas renseignés.
 
+## Généalogie cosmique quantitative — provenance de la littérature
+
+La couche `01_branche_matiere/genealogie_cosmique_quantitative/` ne redistribue aucun PDF d'article. `SOURCES_PRIMAIRES.csv` conserve DOI, URL, type de source, mode de preuve, stade concerné, apport et caveat. Les valeurs numériques explicitement transcrites sont isolées dans `data/OBSERVATIONS_CLEFS.csv` avec un statut épistémique (`mesure échantillon`, `chronométrie isotopique`, `reconstruction isotopique`, `observation analogue externe`, `sortie de modèle` ou `inférence de modèle`).
+
+Les calculs locaux utilisent seulement des données déjà versionnées dans le dépôt : rendements de nucléosynthèse élémentaires/isotopiques, grille thermochimique et résultat H011. Le filtre `ACCESSIBILITE_PHASES.json` est volontairement stoichiométrique : il vérifie la disponibilité des constituants et ne requalifie pas la grille thermochimique en simulation du disque protosolaire. Le raccordement final vers la branche Système solaire reste `open`.
+
 ## Trois formes de livraison à distinguer
 
 1. **Dépôt Git avec Git LFS hydraté.** Les fichiers volumineux sont récupérés

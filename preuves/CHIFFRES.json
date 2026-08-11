@@ -233,9 +233,8 @@
     },
     {
       "id": "MANIFEST_FILES",
-      "source": "MANIFEST.sha256.json",
-      "pointer": "/files",
-      "transform": "len",
+      "source": "preuves/snapshots/v0.9.5-research.json",
+      "pointer": "/file_count",
       "value": 1451,
       "tolerance": 0,
       "display": "1 451",
@@ -243,6 +242,106 @@
         "site/index.html",
         "site/reproductibilite.html"
       ]
+    },
+    {
+      "id": "GC_STAGES",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/stages",
+      "value": 23,
+      "tolerance": 0,
+      "display": "23 stades",
+      "targets": []
+    },
+    {
+      "id": "GC_SOURCES",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/sources",
+      "value": 41,
+      "tolerance": 0,
+      "display": "41 sources",
+      "targets": []
+    },
+    {
+      "id": "GC_CLAIMS",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/claims",
+      "value": 12,
+      "tolerance": 0,
+      "display": "12 claims",
+      "targets": []
+    },
+    {
+      "id": "GC_OBSERVATIONS",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/curated_observation_records",
+      "value": 24,
+      "tolerance": 0,
+      "display": "24 enregistrements",
+      "targets": []
+    },
+    {
+      "id": "GC_STELLAR_ELEMENTS",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/stellar_yield_elements",
+      "value": 84,
+      "tolerance": 0,
+      "display": "84 éléments",
+      "targets": []
+    },
+    {
+      "id": "GC_STELLAR_ISOTOPES",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/stellar_yield_isotopes",
+      "value": 5258,
+      "tolerance": 0,
+      "display": "5 258 isotopes",
+      "targets": []
+    },
+    {
+      "id": "GC_ELEMENTS_BEYOND_BBN",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/elements_beyond_bbn_baseline",
+      "value": 81,
+      "tolerance": 0,
+      "display": "81 éléments au-delà du baseline BBN",
+      "targets": []
+    },
+    {
+      "id": "GC_PHASE_TABLE",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/thermochemical_phase_compositions",
+      "value": 1026,
+      "tolerance": 0,
+      "display": "1 026 compositions de phases",
+      "targets": []
+    },
+    {
+      "id": "GC_PHASE_BBN_ADMISSIBLE",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/bbn_stoichiometrically_admissible_phases",
+      "value": 0,
+      "tolerance": 0,
+      "display": "0 phase stoichiométriquement admissible dans cette table avec H/He/Li seuls",
+      "targets": []
+    },
+    {
+      "id": "GC_PHASE_ENRICHED_ADMISSIBLE",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json",
+      "pointer": "/enriched_stoichiometrically_admissible_phases",
+      "value": 1015,
+      "tolerance": 0,
+      "display": "1 015 phases stoichiométriquement admissibles avec l’inventaire enrichi",
+      "targets": []
+    },
+    {
+      "id": "MAIN_MANIFEST_FILES",
+      "source": "MANIFEST.sha256.json",
+      "pointer": "/files",
+      "transform": "len",
+      "value": 1497,
+      "tolerance": 0,
+      "display": "1 497",
+      "targets": []
     }
   ]
 }

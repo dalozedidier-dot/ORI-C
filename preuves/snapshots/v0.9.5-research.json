@@ -1,0 +1,8 @@
+{
+  "schema": "oric.stable-snapshot.v1",
+  "version": "0.9.5-research",
+  "tag": "v0.9.5-research",
+  "commit": "631399c3b4fb71db56ec89531874117bb10d612a",
+  "file_count": 1451,
+  "purpose": "Valeurs figées de la publication stable. Elles ne décrivent pas le contenu évolutif de main après le tag."
+}

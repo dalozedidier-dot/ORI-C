@@ -74,6 +74,14 @@ séparés.
 ```
 
 
+## Développement post-v0.9.5 — généalogie cosmique quantitative
+
+Le tag `v0.9.5-research` reste un snapshot immuable. Sur `main`, le front de recherche autorisé vise désormais le raccordement quantitatif **nucléosynthèse stellaire → enrichissement interstellaire → héritage nuage/disque → solides primitifs → planétésimaux → embryons → planètes → architecture du Système solaire**. Il est implémenté dans `01_branche_matiere/genealogie_cosmique_quantitative/`, avec une cible de développement `0.10.0-research`.
+
+La branche encode **23 stades et 40 dépendances**, s'appuie actuellement sur **41 sources** distinguant mesures directes, chronométrie/isotopes, observations d'analogues astrophysiques et modèles, et conserve **24 enregistrements quantitatifs** avec leur statut épistémique. Les tables de nucléosynthèse déjà versionnées couvrent **84 éléments et 5 258 isotopes** dans six familles de modèles, dont **81 éléments au-delà du baseline élémentaire BBN H/He/Li**. Douze claims locaux sont produits sous forme machine. Ils ne sont pas des certifications héritées.
+
+Le résultat de bout en bout est volontairement `open_not_certified`. Le fichier `resultats/HANDOFF_SYSTEME_SOLAIRE.json` reste `open` : aucune simulation de formation planétaire du dépôt ne produit encore, avec incertitudes, les conditions initiales orbitales utilisées par `C-AST-01`. Le raccordement au résultat astronomique **13/15** est donc explicite mais non fermé. Cette règle empêche de transformer une succession documentée de mécanismes en une trajectoire historique unique prétendument démontrée.
+
 ## Résultats établis dans l’état courant du dépôt
 
 ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.

@@ -240,3 +240,31 @@ jobs:
           python scripts/verifier_reproductibilite_resultats.py \
             --reference "$RUNNER_TEMP/campagne-reference" \
             --candidate plan_directeur/campagne_maximale_trois_branches/resultats
+
+
+  genealogie-cosmique:
+    name: Généalogie cosmique quantitative
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Tests généalogie cosmique
+        run: python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
+      - name: Recalcul isolé et reproductibilité stricte
+        run: |
+          mkdir -p "$RUNNER_TEMP/gc-candidate"
+          python 01_branche_matiere/genealogie_cosmique_quantitative/run_all.py --output-dir "$RUNNER_TEMP/gc-candidate"
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference 01_branche_matiere/genealogie_cosmique_quantitative/resultats \
+            --candidate "$RUNNER_TEMP/gc-candidate" \
+            --relative-tolerance 0 --absolute-tolerance 0 --ignorer-suffixes .sha256
+          (cd 01_branche_matiere/genealogie_cosmique_quantitative/resultats && sha256sum -c RESULTATS.sha256)

@@ -1,0 +1,25 @@
+obs_id;source_id;stage;variable;value;uncertainty_low;uncertainty_high;unit;status;interpretation
+OBS-GC-001;SRC-GC-011;GC-004;Bennu_presolar_O_rich_grains_count;7;;;count;mesure échantillon;Grains O-rich présolaires identifiés par anomalies isotopiques.
+OBS-GC-002;SRC-GC-011;GC-004;Bennu_presolar_SiC_grains_count;39;;;count;mesure échantillon;Grains SiC présolaires identifiés.
+OBS-GC-003;SRC-GC-011;GC-004;Bennu_presolar_graphite_grains_count;6;;;count;mesure échantillon;Grains graphite présolaires identifiés.
+OBS-GC-004;SRC-GC-011;GC-004;Bennu_presolar_SiC_abundance;25;4;5;ppm;mesure échantillon;Abondance SiC présolaire rapportée.
+OBS-GC-005;SRC-GC-011;GC-004;Bennu_presolar_graphite_abundance;12;5;7;ppm;mesure échantillon;Abondance graphite présolaire rapportée.
+OBS-GC-006;SRC-GC-011;GC-004;Bennu_presolar_O_rich_abundance;4;2;2;ppm;mesure échantillon;Abondance grains O-rich présolaires rapportée.
+OBS-GC-007;SRC-GC-013;GC-008;V883_Ori_D2O_over_H2O;3.2e-5;1.2e-5;1.2e-5;ratio;observation analogue externe;"Ratio compatible avec héritage de glace; deux ordres de grandeur au-dessus du scénario de reformation cité par l’article."
+OBS-GC-008;SRC-GC-018;GC-017;Al26_initial_spatial_heterogeneity_factor;3.5;0.5;0.5;factor, intervalle 3–4;inférence isotopique;Hétérogénéité spatiale initiale de 26Al proposée par l’analyse.
+OBS-GC-009;SRC-GC-014;GC-009;late_infall_outer_disk_mass_fraction_lower_bound;0.30;;;fraction, >;inférence de modèle;"Fraction >30 % pour les briques de la région d’accrétion des géantes dans le modèle de l’article; ne pas traiter comme mesure directe."
+OBS-GC-010;SRC-GC-021;GC-019;Mars_half_growth_timescale_upper_bound;2;;;Myr, <=;reconstruction isotopique;Mars atteint environ la moitié de sa taille actuelle en <=2 Myr selon l’interprétation Hf-W-Th.
+OBS-GC-011;SRC-GC-026;GC-014;inner_planetesimal_ring_location;1;;;AU, approx;sortie de modèle;Anneau interne proche de 1 AU dans le scénario à bosses de pression.
+OBS-GC-012;SRC-GC-026;GC-014;middle_planetesimal_ring_inner_edge;3.5;0.5;0.5;AU, approx;sortie de modèle;Bord interne ~3–4 AU.
+OBS-GC-013;SRC-GC-026;GC-014;middle_planetesimal_ring_outer_edge_range;15;5;5;AU, approx 10–20;sortie de modèle;Anneau médian s’étendant approximativement à 10–20 AU.
+OBS-GC-014;SRC-GC-026;GC-014;outer_planetesimal_ring_range_midpoint;32.5;12.5;12.5;AU, approx 20–45;sortie de modèle;Anneau externe du scénario.
+OBS-GC-015;SRC-GC-029;GC-007;protostellar_streamer_length_lower_bound;10500;;;AU, >;observation analogue externe;Flux de matière observé depuis l’extérieur du cœur dense jusqu’aux échelles proches du disque.
+OBS-GC-016;SRC-GC-030;GC-008;young_disk_age_upper_bound;0.5;;;Myr, <;observation analogue externe;Sous-structures annulaires observées dans un disque protostellaire âgé de moins de 0,5 Myr.
+OBS-GC-017;SRC-GC-030;GC-009;young_disk_annular_structures_count;4;;;count;observation analogue externe;"Quatre structures annulaires résolues; mécanisme non identifié de manière unique."
+OBS-GC-018;SRC-GC-031;GC-009;NC_CC_reservoir_separation_start;1;;;Myr, approx;reconstruction isotopique;Début approximatif de la coexistence de deux réservoirs météoritiques distincts dans l’interprétation Mo-W.
+OBS-GC-019;SRC-GC-031;GC-009;NC_CC_reservoir_separation_end;3.5;0.5;0.5;Myr, approx 3–4;reconstruction isotopique;Durée de séparation des deux réservoirs jusqu’à ~3–4 Myr.
+OBS-GC-020;SRC-GC-031;GC-021;Jupiter_core_mass_by_1Myr_model_inference;20;;;Earth masses, approx;inférence de modèle;"Interprétation de Kruijer et al.; non utilisée comme mesure directe ni comme mécanisme unique."
+OBS-GC-021;SRC-GC-028;GC-005;supernova_dust_grain_capture_efficiency_model;0.4;;;fraction, >=;sortie de modèle;"Dans ce modèle, les grains suffisamment grands peuvent enrichir rapidement le gaz dense; scénario non certifié pour le Soleil."
+OBS-GC-022;SRC-GC-028;GC-005;supernova_dust_effective_radius_threshold;1;;;micrometre, >=;sortie de modèle;"Seuil de taille du scénario simulé pour pénétration efficace du nuage; dépend du modèle."
+OBS-GC-023;SRC-GC-034;GC-009;DSHARP_disk_sample_size;20;;;disks;observation analogue externe;"Échantillon DSHARP; sélection de disques proches, grands et brillants."
+OBS-GC-024;SRC-GC-036;GC-018;angrite_PbPb_age;4.5662;0.0001;0.0001;Gyr;chronométrie isotopique;"Âge Pb-Pb de basaltes angritiques différenciés; contrainte directe sur une différenciation planétésimale très précoce."

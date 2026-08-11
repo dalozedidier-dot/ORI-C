@@ -1,0 +1,16 @@
+{
+  "claim_id": "C-GC-11",
+  "counterfactual": "Déjà réalisé dans C-AST.",
+  "directness": "modèle causal aval",
+  "evidence_mode": "certification ORI-C existante",
+  "limitation": "Ne prouve pas comment l’architecture actuelle s’est formée.",
+  "mechanism": "Interventions sur masse/axe de Jupiter/Saturne dans C-AST.",
+  "question": "L’architecture actuelle du Système solaire a-t-elle une efficacité causale mesurée en aval ?",
+  "schema": "oric.gc.claim.v1",
+  "scope": "Le résultat certifié C-AST reste inchangé et sert de point aval.",
+  "source_ids": [],
+  "stages": [
+    "GC-023"
+  ],
+  "verdict": "linked_to_C_AST_13_of_15_E4_model"
+}

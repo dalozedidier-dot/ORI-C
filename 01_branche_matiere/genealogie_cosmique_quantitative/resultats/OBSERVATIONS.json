@@ -1,0 +1,14 @@
+{
+  "record_count": 24,
+  "rule": "Les valeurs gardent le statut epistemique de leur source; une inférence de modèle ne devient pas une mesure directe.",
+  "schema": "oric.gc.observations.v1",
+  "status_counts": {
+    "chronométrie isotopique": 1,
+    "inférence de modèle": 2,
+    "inférence isotopique": 1,
+    "mesure échantillon": 6,
+    "observation analogue externe": 5,
+    "reconstruction isotopique": 3,
+    "sortie de modèle": 6
+  }
+}

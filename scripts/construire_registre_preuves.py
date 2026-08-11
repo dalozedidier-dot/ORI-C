@@ -23,6 +23,19 @@ extra=[
  ('ASSEMBLY-BRIDGE-01','comparaison ORI-C / Assembly Theory sur objets appariés','non_concluant','not_evaluable_missing_paired_observables','comparaison_formelle','comparaisons_externes/assembly_theory/DIAGNOSTIC.json')]
 for id,q,statut,verdict,portee,p in extra:
  entries.append({'id':id,'question':q,'statut':statut,'verdict':verdict,'niveau_preuve':None,'portee':portee,'artefact':p,'empreinte_sortie':sha(p),'source':None,'mesures':None,'supersede_par':None})
+
+# Généalogie cosmique quantitative : extensions locales, jamais certifications héritées.
+gc_path=ROOT/'01_branche_matiere/genealogie_cosmique_quantitative/resultats/CLAIMS.json'
+if gc_path.is_file():
+ gc=json.loads(gc_path.read_text(encoding='utf-8'))
+ if gc.get('schema')!='oric.gc.claims.v1': raise ValueError('schéma CLAIMS généalogie cosmique inattendu')
+ for c in gc['claims']:
+  cid=c['claim_id']; artefact=f'01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/{cid}.json'
+  if cid=='C-GC-11': statut='liaison_certification_existante'
+  elif c['verdict'].startswith('open_'): statut='ouvert'
+  else: statut='extension_genealogique'
+  entries.append({'id':cid,'question':c['question'],'statut':statut,'verdict':c['verdict'],'niveau_preuve':None,'portee':f"{c['directness']} — {c['scope']}",'artefact':artefact,'empreinte_sortie':sha(artefact),'source':c.get('source_ids'),'mesures':{'stages':c.get('stages'),'mechanism':c.get('mechanism')},'supersede_par':None})
+
 out={'schema':'oric.proofs-registry.v1','authority':'machine-readable registry; certified entries are imported byte-for-byte in status from RESULTATS_SCIENTIFIQUES_CERTIFIES.json','entries':entries}
 (ROOT/'preuves/PREUVES.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 # Markdown généré
@@ -32,6 +45,6 @@ for e in entries:
 lines += ['', '## Extensions exécutées sans reclassement des certifications','', '| ID | Statut | Verdict technique | Portée |','|---|---|---|---|']
 for e in entries:
  if e['statut']!='certifie': lines.append(f"| `{e['id']}` | {e['statut']} | {e['verdict']} | {e['portee']} |")
-lines += ['', '## Règle de lecture','', 'Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires.','']
+lines += ['', '## Règle de lecture','', 'Un calcul exploratoire ne devient pas une preuve certifiée par sa simple présence dans ce registre. `C-MAT-MEM-05` reste négatif, M2 reste non réussi, et `C-AST-01` reste limité au niveau modèle. Les ponts vers la théorie de la viabilité, la PID, la mécanique computationnelle, COT, CCM, LTEE et Assembly Theory sont des extensions méthodologiques ou des analyses supplémentaires. La généalogie cosmique quantitative enregistre séparément ses claims locaux et conserve son handoff vers C-AST ouvert tant que les conditions initiales orbitales ne sont pas dérivées avec leurs incertitudes.','']
 (ROOT/'ETAT_DES_PREUVES.md').write_text('\n'.join(lines),encoding='utf-8')
 print(f"PREUVES.json: {len(entries)} entrées; ETAT_DES_PREUVES.md généré")

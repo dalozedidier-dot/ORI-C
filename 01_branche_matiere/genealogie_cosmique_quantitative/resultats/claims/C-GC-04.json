@@ -1,0 +1,28 @@
+{
+  "claim_id": "C-GC-04",
+  "counterfactual": "Un disque parfaitement homogénéisé effacerait les contrastes nucléosynthétiques persistants.",
+  "directness": "archive historique reconstruite",
+  "evidence_mode": "isotopes de météorites/échantillons + modèles concurrents",
+  "limitation": "Le modèle 2026 d’infall tardif >30 % est une interprétation spécifique et non un fait brut universel.",
+  "mechanism": "Infall, transport radial, tri thermique et mélange incomplet.",
+  "question": "L’histoire d’alimentation et de traitement du disque laisse-t-elle des réservoirs isotopiques distincts ?",
+  "schema": "oric.gc.claim.v1",
+  "scope": "Les hétérogénéités isotopiques sont réelles; leur mécanisme exact n’est pas unique.",
+  "source_ids": [
+    "SRC-GC-014",
+    "SRC-GC-015",
+    "SRC-GC-016",
+    "SRC-GC-025",
+    "SRC-GC-027",
+    "SRC-GC-030",
+    "SRC-GC-031",
+    "SRC-GC-034",
+    "SRC-GC-040"
+  ],
+  "stages": [
+    "GC-008",
+    "GC-009",
+    "GC-012"
+  ],
+  "verdict": "supports_history_dependent_disk_structure"
+}

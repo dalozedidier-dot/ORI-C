@@ -1,0 +1,85 @@
+{
+  "bbn_available_elements": [
+    "H",
+    "He",
+    "Li"
+  ],
+  "bbn_stoichiometrically_admissible_phase_compositions": 0,
+  "enriched_available_elements": 84,
+  "enriched_stoichiometrically_admissible_phase_compositions": 1015,
+  "examples": [
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "Al2O3",
+      "elements": [
+        "Al",
+        "O"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "corundum"
+    },
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "MgSiO3",
+      "elements": [
+        "Mg",
+        "O",
+        "Si"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "enstatite"
+    },
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "Fe2SiO4",
+      "elements": [
+        "Fe",
+        "O",
+        "Si"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "fayalite"
+    },
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "Mg2SiO4",
+      "elements": [
+        "Mg",
+        "O",
+        "Si"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "forsterite"
+    },
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "SiO2",
+      "elements": [
+        "O",
+        "Si"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "quartz,beta"
+    },
+    {
+      "bbn_stoichiometrically_admissible": false,
+      "composition": "MgAl2O4",
+      "elements": [
+        "Al",
+        "Mg",
+        "O"
+      ],
+      "enriched_stoichiometrically_admissible": true,
+      "phase": "spinel"
+    }
+  ],
+  "interpretation": "Ce filtre teste uniquement une condition nécessaire de composition: une phase ne peut être construite si ses éléments ne sont pas disponibles. Il ne calcule ni équilibre de condensation, ni activité, ni cinétique, ni réalisation historique dans le disque protosolaire.",
+  "newly_stoichiometrically_admissible_after_stellar_inventory": 1015,
+  "parsed_nonempty_phase_compositions": 1026,
+  "schema": "oric.gc.phase-accessibility.v1",
+  "source_rows": 64512,
+  "source_table": "plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv",
+  "status": "set_theoretic_constituent_filter_only",
+  "stellar_yield_elements": 84,
+  "unique_phase_compositions": 1026
+}

@@ -1,6 +1,6 @@
-# Gel du périmètre ORI-C
+# Périmètre de recherche ORI-C après v0.9.5
 
-ORI-C cesse d’ajouter des domaines et des concepts. Le travail courant porte sur cinq livrables, en tenant compte des résultats déjà obtenus.
+Le tag `v0.9.5-research` reste gelé. Le développement de `main` n'ajoute pas de domaines opportunistes : il ouvre un front explicitement autorisé, la **généalogie cosmique quantitative** qui manquait entre l'enrichissement stellaire et l'architecture du Système solaire. Les cinq livrables antérieurs restent valides, mais ce raccordement amont devient la priorité scientifique structurante.
 
 | Livrable | État courant | Prochaine étape utile |
 |---|---|---|
@@ -37,6 +37,10 @@ Le format, le validateur et le moteur commun se trouvent dans `methodologie_puis
 ## Nouveau front d'intégration formelle
 
 Les tâches purement prospectives ont été remplacées par des modules exécutables lorsque les données le permettent : viabilité de trajectoire sur spin-orbite, PID D'Onofrio, états prédictifs finis, topologie persistante, puissance conjointe matière, CCM et réanalyse LTEE. COT et Assembly Theory restent explicitement non évaluables sur les objets courants faute de stœchiométrie ou d'observables appariées. Les deux hypothèses séparantes du cadre sont enregistrées comme candidates et non comme lois.
+
+### Priorité structurante : fermer le raccordement Big Bang chaud → architecture solaire
+
+La nouvelle couche `01_branche_matiere/genealogie_cosmique_quantitative/` porte 23 stades, des sources primaires/reconstructions/modèles explicitement séparés, des claims machine, des contrôles de non-surinterprétation et une reproductibilité stricte. Elle reprend sans modifier la généalogie qualitative existante et l'étend jusqu'au handoff vers `C-AST-01`. Ce handoff doit rester `open` tant qu'aucun modèle de formation ne produit les conditions initiales orbitales du calcul N-corps avec incertitudes.
 
 ## Frontière après publication stable 0.9.5-research
 

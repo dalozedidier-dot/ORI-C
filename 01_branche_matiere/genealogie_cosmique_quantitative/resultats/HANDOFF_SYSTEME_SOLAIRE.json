@@ -1,0 +1,18 @@
+{
+  "downstream_evidence_level": "E4_modele",
+  "downstream_model": "C-AST-01",
+  "downstream_passed_criteria": 13,
+  "downstream_total_criteria": 15,
+  "downstream_verdict": "supports",
+  "formation_endpoint": "GC-023",
+  "non_claim": "Le succès aval de C-AST ne constitue pas une reconstruction de la formation du Système solaire.",
+  "reason": "Aucun pipeline de formation planétaire de cette branche ne produit encore avec incertitudes les conditions initiales J2000 utilisées par C-AST.",
+  "required_future_closure": [
+    "modèle formation-disque→planètes",
+    "sortie masses+éléments orbitaux avec incertitudes",
+    "comparaison à plusieurs observables indépendantes",
+    "handoff explicite vers les variables C-AST"
+  ],
+  "schema": "oric.gc.handoff-solar-system.v1",
+  "status": "open"
+}

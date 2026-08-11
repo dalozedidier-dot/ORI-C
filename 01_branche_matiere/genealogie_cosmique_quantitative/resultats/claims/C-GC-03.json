@@ -1,0 +1,21 @@
+{
+  "claim_id": "C-GC-03",
+  "counterfactual": "Le scénario de reset chimique produit des ratios d’isotopologues différents.",
+  "directness": "directe dans un autre système",
+  "evidence_mode": "observation ALMA d’un analogue externe",
+  "limitation": "Ce n’est pas une observation du disque solaire disparu.",
+  "mechanism": "Survie partielle pendant effondrement et formation du disque.",
+  "question": "Des molécules/glaces formées avant le disque peuvent-elles rester disponibles dans un disque planétaire ?",
+  "schema": "oric.gc.claim.v1",
+  "scope": "V883 Ori fournit un test observationnel de l’héritage eau nuage→disque.",
+  "source_ids": [
+    "SRC-GC-013",
+    "SRC-GC-029"
+  ],
+  "stages": [
+    "GC-006",
+    "GC-007",
+    "GC-008"
+  ],
+  "verdict": "supports_external_analogue"
+}

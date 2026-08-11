@@ -111,6 +111,8 @@ la capacité de former des corps planétaires.
 Les régimes 5 à 8 restent présents dans l'article sous forme de passages de
 liaison. Leur développement complet est dans les branches 2 et 3.
 
+Depuis la publication `v0.9.5-research`, cette liaison est développée comme une couche quantitative dédiée dans `01_branche_matiere/genealogie_cosmique_quantitative/`. Elle conserve la généalogie qualitative antérieure intacte, mais explicite 23 stades, leurs dépendances, leurs sources, leurs observables, les mécanismes concurrents et les limites de chaque flèche. Son point aval est un contrat `HANDOFF_SYSTEME_SOLAIRE.json` vers `C-AST-01`; ce contrat reste ouvert tant qu'un modèle de formation ne produit pas les conditions initiales orbitales avec incertitudes.
+
 **Liaison vers la branche 2** — héritage matériel et organisationnel :
 
 ```text

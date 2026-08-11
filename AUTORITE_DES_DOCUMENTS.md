@@ -167,6 +167,18 @@ incorporent deux corrections de niveau faites après lecture des violations :
 elles sont explicitement marquées exploratoires et ne doivent jamais être
 citées comme une validation.
 
+### Généalogie cosmique quantitative post-v0.9.5
+
+| Rôle | Fichier | Statut |
+|---|---|---|
+| Protocole de raccordement cosmique → Système solaire | `01_branche_matiere/genealogie_cosmique_quantitative/PROTOCOLE.md` | canonique pour le nouveau front de recherche |
+| Chaîne et provenance | `CHAINE_GENEALOGIQUE.csv`, `SOURCES_PRIMAIRES.csv`, `MATRICE_PREUVES.csv` dans ce dossier | registres sources ; séparent données, analogues, reconstructions et modèles |
+| Résultat machine | `01_branche_matiere/genealogie_cosmique_quantitative/resultats/SYNTHESE.json` | généré, prime sur les résumés rédigés |
+| Claims locaux | `.../resultats/claims/C-GC-*.json` | extensions locales ; aucune certification héritée |
+| Raccordement à C-AST | `.../resultats/HANDOFF_SYSTEME_SOLAIRE.json` | **doit rester `open` tant que les conditions initiales orbitales ne sont pas dérivées avec incertitudes** |
+
+La nouvelle couche ne modifie pas les 22 transitions de `01_branche_matiere/genealogie/genealogie_matiere.csv` : leur SHA-256 de référence est testé à chaque exécution. Elle développe leur raccordement quantitatif sans transformer une succession de mécanismes établis ou modélisés en histoire unique certifiée.
+
 ## Branche 2 — Système solaire
 
 | Rôle | Fichier | Statut |

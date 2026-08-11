@@ -1,0 +1,20 @@
+{
+  "claim_id": "C-GC-06",
+  "counterfactual": "Un seul événement instantané et sans remaniement ne reproduirait pas la diversité des âges/textures.",
+  "directness": "directe sur archives solides",
+  "evidence_mode": "géochronologie et pétrologie",
+  "limitation": "Le mécanisme de chauffage des chondres n’est pas unique.",
+  "mechanism": "Condensation/fusion, remaniement et chronométrie des solides.",
+  "question": "Les CAI et chondres enregistrent-ils une succession de transformations du disque ?",
+  "schema": "oric.gc.claim.v1",
+  "scope": "Les solides primitifs enregistrent des événements distincts dans le temps.",
+  "source_ids": [
+    "SRC-GC-017",
+    "SRC-GC-018"
+  ],
+  "stages": [
+    "GC-011",
+    "GC-012"
+  ],
+  "verdict": "supports_historical_record"
+}

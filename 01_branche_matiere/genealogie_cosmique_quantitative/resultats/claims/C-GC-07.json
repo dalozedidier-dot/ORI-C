@@ -1,0 +1,23 @@
+{
+  "claim_id": "C-GC-07",
+  "counterfactual": "Modifier turbulence/rapport solides-gaz change le seuil de concentration.",
+  "directness": "modèle causal",
+  "evidence_mode": "simulation mécanistique",
+  "limitation": "La réalisation historique exacte dans le disque solaire n’est pas observée directement.",
+  "mechanism": "Streaming/turbulence → surdensité → auto-gravité.",
+  "question": "La concentration collective des solides peut-elle ouvrir la formation gravitationnelle de planétésimaux ?",
+  "schema": "oric.gc.claim.v1",
+  "scope": "Cohérent avec H011 du dépôt, ratio de seuil 3,33 entre conditions comparées.",
+  "source_ids": [
+    "SRC-GC-019",
+    "SRC-GC-020",
+    "SRC-GC-032",
+    "SRC-GC-034"
+  ],
+  "stages": [
+    "GC-014",
+    "GC-015",
+    "GC-016"
+  ],
+  "verdict": "supports_model"
+}

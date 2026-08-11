@@ -1,0 +1,59 @@
+name: Analyse généalogie cosmique ORI-C
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '01_branche_matiere/genealogie_cosmique_quantitative/**'
+      - '01_branche_matiere/genealogie/genealogie_matiere.csv'
+      - 'plateforme/campagne_maximale_reelle/data/nucleosynthesis_yields.csv'
+      - 'plateforme/campagne_maximale_reelle/data/nucleosynthesis_isotope_yields.csv'
+      - '01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json'
+      - 'scripts/verifier_reproductibilite_resultats.py'
+      - '.github/workflows/analyse-genealogie-cosmique.yml'
+
+permissions:
+  contents: read
+
+env:
+  PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  genealogie-cosmique:
+    name: Généalogie cosmique quantitative
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - name: Hydrater Git LFS
+        run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - name: Installer les dépendances
+        run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Tests de structure, provenance et non-surinterprétation
+        run: python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
+      - name: Recalculer dans un dossier isolé
+        run: |
+          mkdir -p "$RUNNER_TEMP/gc-candidate"
+          python 01_branche_matiere/genealogie_cosmique_quantitative/run_all.py \
+            --output-dir "$RUNNER_TEMP/gc-candidate"
+      - name: Reproductibilité octet à octet des sorties numériques et documentaires
+        run: |
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference 01_branche_matiere/genealogie_cosmique_quantitative/resultats \
+            --candidate "$RUNNER_TEMP/gc-candidate" \
+            --relative-tolerance 0 \
+            --absolute-tolerance 0 \
+            --ignorer-suffixes .sha256
+      - name: Vérifier les empreintes locales
+        working-directory: 01_branche_matiere/genealogie_cosmique_quantitative/resultats
+        run: sha256sum -c RESULTATS.sha256
