@@ -1,0 +1,25 @@
+record_id,stage_id,source_id,evidence_mode,quantity,value_numeric,uncertainty_minus,uncertainty_plus,unit,sample_n,value_text,scope_note
+M001,GC-E00,S001,astronomical_observation,primordial_D_over_H,2.527e-05,3e-07,3e-07,ratio,7,,Combinaison de sept mesures D/H haute précision homogénéisées.
+M002,GC-E00,S002,astronomical_observation,primordial_helium_mass_fraction,0.2448,0.0033,0.0033,fraction,7,,Sept régions H II extragalactiques pauvres en métaux.
+M005,GC-E01,S003,astronomical_observation,Ti44_initial_mass,0.00031,8e-05,8e-05,solar_mass,,,
+M006,GC-E01,S004,astronomical_observation,CasA_K_detection_sigma,6.0,,,sigma,,>6,
+M009,GC-E04,S005,astronomical_observation,dense_cloud_ice_budget_min,2,,,percent,,,
+M012,GC-E04,S006,astronomical_observation,dense_cloud_grain_scale,1,,,micrometre,,micrometre-scale,Article: les grains atteignent des tailles micrométriques avant la phase protostellaire.
+M013,GC-E05,S007,astronomical_observation,streamer_length_lower_bound,10500,,,au,,>10500,
+M014,GC-E06,S008,astronomical_observation,V883_D2O_over_H2O,3.2e-05,1.2e-05,1.2e-05,ratio,,,
+M016,GC-E06,S009,spacecraft_observation,67P_HDO_over_H2O,0.00105,0.00014,0.00014,ratio,,,
+M018,GC-E03,S010,returned_sample_measurement,Bennu_O_rich_presolar_grains,7,,,count,,,
+M019,GC-E03,S010,returned_sample_measurement,Bennu_SiC_presolar_grains,39,,,count,,,
+M020,GC-E03,S010,returned_sample_measurement,Bennu_graphite_presolar_grains,6,,,count,,,
+M026,GC-E08,S013,meteorite_isotope_measurement,NC_CC_separation_start,1,,,Myr_after_solar_start,,~1,
+M028,GC-E08,S013,meteorite_isotope_measurement,NC_CC_separation_end_max,4,,,Myr_after_solar_start,,~4,
+M030,GC-E08,S014,meteorite_isotope_measurement,Al26_heterogeneity_factor_min,3,,,factor,,3–4,
+M033,GC-E10,S016,meteoritic_chronometry,CAI_PbPb_age,4567.3,0.16,0.16,Ma,,,
+M035,GC-E10,S016,meteoritic_chronometry,chondrule_youngest_PbPb_age,4564.71,0.3,0.3,Ma,,,
+M036,GC-E13,S017,meteoritic_chronometry,angrite_PbPb_age,4566.2,0.1,0.1,Ma,,,4.5662 ± 0.0001 Gyr converti en Ma.
+M038,GC-E14,S018,meteoritic_chronometry,CM_carbonate_age,4563.4,0.5,0.4,Ma,,,
+M041,GC-E11,S019,laboratory_experiment,erosion_threshold_velocity,0.5,0.1,0.1,m_per_s,,,
+M042,GC-E12,S020,laboratory_experiment,instability_min_observed_wavelength,3,,,cm,,~3,
+M050,GC-E15,S023,astronomical_observation,DSHARP_disks,20,,,count,,,
+M055,GC-E16,S025,astronomical_observation,PDS70_accreting_protoplanets,2,,,count,,,
+M058,GC-E19,S028,official_observation_product,Solar_System_planets,8,,,count,,,

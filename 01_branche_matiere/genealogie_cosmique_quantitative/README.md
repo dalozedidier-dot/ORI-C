@@ -45,3 +45,9 @@ python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
 ```
 
 Le recalcul doit être byte-for-byte reproductible à partir des tables empiriques versionnées.
+## Approfondissement quantitatif conservateur
+
+Une seconde couche analytique est ajoutée **sans remplacer la branche empirique d’autorité** : `DAG_EMPIRIQUE_APPROFONDI.csv` décrit 23 stades analytiques, `RELATIONS_EMPIRIQUES_APPROFONDIES.csv` 40 relations qualifiées, `data/OBSERVATIONS_QUANTITATIVES_SELECTION.csv` sélectionne 24 enregistrements copiés depuis les 76 mesures réelles, et `CLAIMS_QUANTITATIFS_EMPIRIQUES.csv` fournit 12 synthèses machine.
+
+Cette couche respecte le même pare-feu : 0 simulation, 0 donnée synthétique, 0 imputation, 0 rendement théorique et 0 sortie thermochimique. Les 16 claims `C-GC-E*` restent l’autorité scientifique de la branche. Les 12 claims `C-GC-Q*` sont des synthèses quantitatives secondaires et ne doublent pas le registre central des preuves.
+

@@ -1,0 +1,18 @@
+{
+  "all_analytical_stages_empirically_anchored": true,
+  "analytical_stages": 23,
+  "authoritative_empirical_claims_preserved": 16,
+  "dag_acyclic": true,
+  "imputed_rows": 0,
+  "interpretation": "Approfondissement quantitatif dérivé exclusivement de la couche empirique; il ne remplace ni les 16 claims empiriques d’autorité ni leur limite sur l’histoire orbitale unique.",
+  "primary_or_official_sources": 33,
+  "qualified_relations": 40,
+  "quantitative_synthesis_claims": 12,
+  "schema": "oric.gc.deep-empirical-quantitative.v1",
+  "selected_quantitative_observations": 24,
+  "simulations_used": 0,
+  "supported_authoritative_empirical_claims_preserved": 15,
+  "synthetic_rows": 0,
+  "underlying_empirical_measurement_records": 76,
+  "unresolved_authoritative_empirical_claims_preserved": 1
+}

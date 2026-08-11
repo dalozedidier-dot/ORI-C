@@ -1,0 +1,186 @@
+{
+  "claims": [
+    {
+      "claim_id": "C-GC-Q01",
+      "mechanism": "baseline_primordiale_observationnelle",
+      "record_ids": [
+        "M001",
+        "M002"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E01"
+      ],
+      "verdict": "supports_observed_primordial_baseline"
+    },
+    {
+      "claim_id": "C-GC-Q02",
+      "mechanism": "produits_stellaires_observes",
+      "record_ids": [
+        "M005",
+        "M006"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E01"
+      ],
+      "verdict": "supports_direct_stellar_products"
+    },
+    {
+      "claim_id": "C-GC-Q03",
+      "mechanism": "poussiere_stellaire_persistante",
+      "record_ids": [
+        "M059",
+        "M060",
+        "M061",
+        "M062"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E02"
+      ],
+      "verdict": "supports_observed_stellar_dust"
+    },
+    {
+      "claim_id": "C-GC-Q04",
+      "mechanism": "grains_presolaires_repliques",
+      "record_ids": [
+        "M018",
+        "M019",
+        "M020",
+        "M063",
+        "M064",
+        "M065",
+        "M066",
+        "M067",
+        "M071"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E03"
+      ],
+      "verdict": "supports_direct_presolar_inheritance"
+    },
+    {
+      "claim_id": "C-GC-Q05",
+      "mechanism": "traitement_prestellaire_mesure",
+      "record_ids": [
+        "M009",
+        "M010",
+        "M012"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E04"
+      ],
+      "verdict": "supports_observed_prestellar_processing"
+    },
+    {
+      "claim_id": "C-GC-Q06",
+      "mechanism": "transfert_nuage_disque_observe",
+      "record_ids": [
+        "M013"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E05"
+      ],
+      "verdict": "supports_observed_cloud_disk_supply"
+    },
+    {
+      "claim_id": "C-GC-Q07",
+      "mechanism": "continuite_moleculaire_observationnelle",
+      "record_ids": [
+        "M014",
+        "M016",
+        "M017",
+        "M074",
+        "M075"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E06"
+      ],
+      "verdict": "supports_observational_molecular_inheritance"
+    },
+    {
+      "claim_id": "C-GC-Q08",
+      "mechanism": "heterogeneite_nebulaire_mesuree",
+      "record_ids": [
+        "M026",
+        "M027",
+        "M028",
+        "M030",
+        "M031",
+        "M032"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E08"
+      ],
+      "verdict": "supports_measured_nebular_heterogeneity"
+    },
+    {
+      "claim_id": "C-GC-Q09",
+      "mechanism": "chronologie_solides_mesuree",
+      "record_ids": [
+        "M033",
+        "M034",
+        "M035",
+        "M036",
+        "M038"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E10",
+        "C-GC-E12"
+      ],
+      "verdict": "supports_measured_solid_chronology"
+    },
+    {
+      "claim_id": "C-GC-Q10",
+      "mechanism": "mecanismes_granulaires_mesures",
+      "record_ids": [
+        "M041",
+        "M042",
+        "M043"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E11"
+      ],
+      "verdict": "supports_laboratory_dust_mechanisms"
+    },
+    {
+      "claim_id": "C-GC-Q11",
+      "mechanism": "sequence_disque_protoplanetes_observee",
+      "record_ids": [
+        "M048",
+        "M050",
+        "M055",
+        "M076"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E13"
+      ],
+      "verdict": "supports_observed_disk_protoplanet_sequence"
+    },
+    {
+      "claim_id": "C-GC-Q12",
+      "mechanism": "endpoint_sans_histoire_orbitale_unique",
+      "record_ids": [
+        "M056",
+        "M057",
+        "M058"
+      ],
+      "scope": "Synthèse quantitative dérivée exclusivement de mesures réelles déjà admises par le pare-feu empirique; aucune simulation, donnée synthétique ou imputation.",
+      "supporting_empirical_claim_ids": [
+        "C-GC-E14",
+        "C-GC-E16"
+      ],
+      "verdict": "open_unique_orbital_history_empirical_only"
+    }
+  ],
+  "schema": "oric.gc.quantitative-empirical-claims.v1"
+}

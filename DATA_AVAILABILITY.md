@@ -101,3 +101,7 @@ Le corpus externe `DONNEES_REELLES_ORI-C_2026-08-07(1).zip` est enregistré par 
 La mise à jour retient une compilation GEOROC de traceurs, une grille thermodynamique calculée depuis des paramètres publiés, un inventaire volatil documentaire, un jeu climatique GISTEMP/HadCRUT5 et quatre séries paléoclimatiques longues EPICA/Vostok/LR04. Leur présence ne suffit pas à produire un verdict. `EMPIRICAL_POLICY.json` est la politique fail-closed qui décide, test par test, si une ressource peut être utilisée comme entrée empirique.
 
 Les sources paléoclimatiques longues sont conservées pour un futur protocole préenregistré ; aucun test orbital-climat n'est débloqué automatiquement. `planetary_histories.csv` reste volontairement absent faute de provenance primaire complète par cellule.
+
+### Généalogie cosmique — approfondissement quantitatif empirique
+La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (33 sources, 76 mesures, 16 claims) et ajoute une vue analytique 23 stades / 40 relations / 24 observations sélectionnées / 12 synthèses machine, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
+

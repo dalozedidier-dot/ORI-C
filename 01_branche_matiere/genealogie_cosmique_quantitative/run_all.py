@@ -7,6 +7,7 @@ HERE=Path(__file__).resolve().parent
 SRC=HERE/'src'
 sys.path.insert(0,str(SRC))
 from analyser_empirique import read_csv, validate_empirical_only, derive, evaluate_claims, ALLOWED_MODES
+from analyser_approfondissement_empirique import analyse as analyse_approfondissement
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -142,6 +143,10 @@ def main():
       'Ce verdict ne prouve pas une trajectoire cosmologique ou orbitale unique. Le problème inverse des éléments orbitaux précis actuels reste `undetermined_empirical_only`; il n’est pas fermé par une simulation puisque les simulations sont hors preuve dans cette branche.'
     ]
     (out/'RAPPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    deep=analyse_approfondissement(HERE)
+    dump(out/'APPROFONDISSEMENT_EMPIRIQUE.json',deep['summary'])
+    dump(out/'CLAIMS_QUANTITATIFS.json',{'schema':'oric.gc.quantitative-empirical-claims.v1','claims':deep['claims']})
+    write_csv(out/'COUVERTURE_DAG_EMPIRIQUE.csv',['stage_id','anchor_stage_id','measurement_records_in_anchor','covered'],deep['coverage'])
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]
     for p in files:

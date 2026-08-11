@@ -98,3 +98,7 @@ L'endpoint planétaire actuel est observé. Le chemin orbital précis qui y cond
 ## Snapshot stable 0.9.5-research
 
 La publication stable du 10 août 2026 conserve explicitement la dissymétrie des résultats : la couche astronomique N-corps reste à **13/15**, tandis que la formulation paléoclimatique M2 reste à **1/10** et `does_not_support` dans son protocole. La couche spin-orbite est exécutée au niveau modèle mais ne résout pas la Lune en N-corps ni les marées. Le résultat PCMCI+ est exploratoire, fondé sur des p-values brutes dans la configuration publiée, et ne modifie pas M2. Les formalismes externes ne reclassent aucune certification par leur seule exécution.
+
+### Généalogie cosmique — approfondissement quantitatif empirique
+La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (33 sources, 76 mesures, 16 claims) et ajoute une vue analytique 23 stades / 40 relations / 24 observations sélectionnées / 12 synthèses machine, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
+

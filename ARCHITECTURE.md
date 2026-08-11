@@ -293,3 +293,7 @@ Tant que ce maillon reste hypothétique, la continuité affichée entre la branc
 2 et la branche 3 est une continuité de vocabulaire et de conditions
 matérielles, pas une continuité démontrée de mécanisme. Le renforcer suppose
 des travaux expérimentaux qui n'appartiennent à aucun des documents actuels.
+
+### Généalogie cosmique — approfondissement quantitatif empirique
+La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (33 sources, 76 mesures, 16 claims) et ajoute une vue analytique 23 stades / 40 relations / 24 observations sélectionnées / 12 synthèses machine, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
+

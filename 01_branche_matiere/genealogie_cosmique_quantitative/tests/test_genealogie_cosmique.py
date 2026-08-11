@@ -101,3 +101,22 @@ def test_result_manifest():
         h,rel=line.split('  ',1); listed[rel]=h
     files={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256'}
     assert listed==files
+
+
+def test_deep_quantitative_layer_is_empirical_only():
+    d=json.loads((HERE/'resultats/APPROFONDISSEMENT_EMPIRIQUE.json').read_text())
+    assert d['analytical_stages']==23
+    assert d['qualified_relations']==40
+    assert d['selected_quantitative_observations']==24
+    assert d['quantitative_synthesis_claims']==12
+    assert d['underlying_empirical_measurement_records']==76
+    assert d['primary_or_official_sources']==33
+    assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0
+    assert d['dag_acyclic'] is True and d['all_analytical_stages_empirically_anchored'] is True
+    assert d['authoritative_empirical_claims_preserved']==16
+    sel=rows(HERE/'data/OBSERVATIONS_QUANTITATIVES_SELECTION.csv')
+    allowed={'astronomical_observation','spacecraft_observation','returned_sample_measurement','meteorite_isotope_measurement','meteoritic_chronometry','laboratory_experiment','planetary_isotope_reconstruction','official_observation_product'}
+    assert len(sel)==24 and all(x['evidence_mode'] in allowed for x in sel)
+    assert len(rows(HERE/'DAG_EMPIRIQUE_APPROFONDI.csv'))==23
+    assert len(rows(HERE/'RELATIONS_EMPIRIQUES_APPROFONDIES.csv'))==40
+    assert len(rows(HERE/'CLAIMS_QUANTITATIFS_EMPIRIQUES.csv'))==12

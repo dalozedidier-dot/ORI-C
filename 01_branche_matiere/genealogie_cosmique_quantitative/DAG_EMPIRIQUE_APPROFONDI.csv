@@ -1,0 +1,24 @@
+stage_id,order,label,anchor_stage_id,empirical_anchor,history_carrier
+GC-QE01,1,Inventaire primordial observationnel,GC-E00,D/H primordial et Yp reconstruits depuis spectres réels,baseline_elementaire_mesuree
+GC-QE02,2,Produits stellaires observés,GC-E01,"44Ti dans SN1987A; P, Cl et K dans Cas A",noyaux_stellaires_mesures
+GC-QE03,3,Poussière formée dans des éjecta stellaires,GC-E02,poussière froide mesurée dans SN1987A,poussiere_stellaire_mesuree
+GC-QE04,4,Grains présolaires conservés,GC-E03,"Bennu, Ryugu et Wild 2",grains_presolaires_conserves
+GC-QE05,5,Inventaire de glaces préstellaires,GC-E04,glaces de nuages denses observées avec JWST,glaces_prestellaires
+GC-QE06,6,Croissance de grains avant la phase protostellaire,GC-E04,grains glacés atteignant l’échelle micrométrique,grains_prestellaires_croissance
+GC-QE07,7,Apport matériel nuage vers disque,GC-E05,streamer protostellaire observé sur >10 500 au,flux_nuage_disque
+GC-QE08,8,Signatures moléculaires héritables dans les disques,GC-E06,"D2O V883 Ori, 67P et CH3OH TW Hya",signatures_moleculaires_isotopiques
+GC-QE09,9,Solides réfractaires dans un disque jeune,GC-E07,SiO chaud et silicates cristallins HOPS-315,solides_refractaires_observes
+GC-QE10,10,Réservoirs isotopiques du disque solaire,GC-E08,"Genesis, Pd, Mo/W et Si-Mg météoritiques",reservoirs_isotopiques
+GC-QE11,11,Hétérogénéité temporelle et 26Al,GC-E08,EC 002 et rapport 26Al/26Mg,horloges_et_heterogeneite_26Al
+GC-QE12,12,Redistribution de matériaux enregistrée dans Wild 2,GC-E09,matériaux haute température et stardust dans une comète,redistribution_materielle
+GC-QE13,13,Chronologie CAI,GC-E10,âge Pb-Pb de la référence CAI,horloge_CAI
+GC-QE14,14,Chronologie des chondres,GC-E10,intervalle Pb-Pb mesuré des chondres,horloge_chondres
+GC-QE15,15,Agrégation de poussières en laboratoire,GC-E11,croissance et seuil d’érosion mesurés en microgravité,agregation_granulaire
+GC-QE16,16,Organisation collective poussière-gaz en laboratoire,GC-E12,longueur d’onde et fréquences observées,instabilite_collective_experimentale
+GC-QE17,17,Petits corps différenciés précoces,GC-E13,angrites datées et excès radiogénique,differenciation_precoce
+GC-QE18,18,Petits corps hydratés plus tardifs,GC-E14,carbonates CM datés,alteration_aqueuse_tardive
+GC-QE19,19,Croissance et sous-structures dans des disques jeunes,GC-E15,"TMC1A, IRS63 et DSHARP",architecture_disques_observee
+GC-QE20,20,Protoplanètes en accrétion observées,GC-E16,PDS 70 b et c en Hα,protoplanetes_en_croissance
+GC-QE21,21,Croissance de Mars reconstruite isotopiquement,GC-E17,Hf-W-Th: moitié de la taille en ≤2 Ma,histoire_accretion_mars
+GC-QE22,22,Accrétion hétérogène de la Terre,GC-E18,Mo terrestre entre réservoirs NC et CC,histoire_accretion_terre
+GC-QE23,23,Architecture actuelle observée,GC-E19,"huit planètes, endpoint observationnel JPL",architecture_terminale_observee
