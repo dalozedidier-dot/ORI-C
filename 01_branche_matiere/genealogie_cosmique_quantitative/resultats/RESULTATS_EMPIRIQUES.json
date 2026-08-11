@@ -49,7 +49,7 @@
   "imputed_rows": 0,
   "link_count": 22,
   "observed_records": 120,
-  "schema": "oric.gc.empirical-results.v3",
+  "schema": "oric.gc.empirical-results",
   "simulations_used": 0,
   "source_count": 48,
   "stage_count": 20,

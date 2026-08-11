@@ -470,17 +470,17 @@
       "value": 12
     },
     {
-      "display": "8 tests quantitatifs v3",
-      "id": "GCQ_V3_TESTS",
-      "pointer": "/new_v3_tests",
+      "display": "8 tests quantitatifs complets",
+      "id": "GCQ_COMPLETE_TESTS",
+      "pointer": "/complete_quantitative_tests",
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
       "targets": [],
       "tolerance": 0,
       "value": 8
     },
     {
-      "display": "8/8 critères v3 satisfaits",
-      "id": "GCQ_V3_CRITERIA_MET",
+      "display": "8/8 critères quantitatifs complets satisfaits",
+      "id": "GCQ_COMPLETE_CRITERIA_MET",
       "pointer": "/criteria_met",
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_COMPLETS.json",
       "targets": [],
@@ -633,63 +633,63 @@
     },
     {
       "display": "11 467 lignes utiles normalisées",
-      "id": "GCQ_V4_IMPORTED_ROWS",
+      "id": "GCQ_MASSIVE_IMPORTED_ROWS",
       "pointer": "/audit/imported_rows",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 0,
       "value": 11467
     },
     {
       "display": "11 207 grains présolaires publiés admissibles",
-      "id": "GCQ_V4_PRESOLAR_GRAINS",
+      "id": "GCQ_MASSIVE_PRESOLAR_GRAINS",
       "pointer": "/presolar_grains/admissible_grains_total",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 0,
       "value": 11207
     },
     {
       "display": "11 567 SiC non publiés exclus",
-      "id": "GCQ_V4_SIC_UNPUBLISHED_EXCLUDED",
+      "id": "GCQ_MASSIVE_SIC_UNPUBLISHED_EXCLUDED",
       "pointer": "/presolar_grains/SiC_unpublished_rows_excluded",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 0,
       "value": 11567
     },
     {
       "display": "facteur 252,69 entre médianes 26Al/27Al SiC X et M",
-      "id": "GCQ_V4_X_M_26AL_FACTOR",
+      "id": "GCQ_MASSIVE_X_M_26AL_FACTOR",
       "pointer": "/presolar_grains/X_to_M_median_26Al_27Al_factor",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 1e-12,
       "value": 252.6946107784431
     },
     {
       "display": "41/41 groupes NC/CC classés",
-      "id": "GCQ_V4_NCCC_LOO_CORRECT",
+      "id": "GCQ_MASSIVE_NCCC_LOO_CORRECT",
       "pointer": "/NC_CC/leave_one_out_correct",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 0,
       "value": 41
     },
     {
       "display": "55/66 paires Allende >2σ",
-      "id": "GCQ_V4_WOLFER_GT2SIGMA",
+      "id": "GCQ_MASSIVE_WOLFER_GT2SIGMA",
       "pointer": "/Allende_subsamples/pairs_gt_2sigma",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 0,
       "value": 55
     },
     {
       "display": "z minimal 9,99 diopside vs autres réfractaires Bennu",
-      "id": "GCQ_V4_BENNU_MIN_Z",
+      "id": "GCQ_MASSIVE_BENNU_MIN_Z",
       "pointer": "/Bennu_returned_samples/diopside_vs_each_refractory_min_z",
-      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json",
       "targets": [],
       "tolerance": 1e-12,
       "value": 9.988123086397183

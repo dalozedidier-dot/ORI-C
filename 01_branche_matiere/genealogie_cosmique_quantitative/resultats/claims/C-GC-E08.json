@@ -17,7 +17,7 @@
   "mechanism": "isotopic_reservoirs_and_time_order_are_recorded_in_solids",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Les archives réelles du disque solaire montrent-elles une architecture isotopique et temporelle non homogène ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Les causes dynamiques exactes de la séparation NC/CC et de l’hétérogénéité ne sont pas imposées.",
   "source_ids": [
     "S011",

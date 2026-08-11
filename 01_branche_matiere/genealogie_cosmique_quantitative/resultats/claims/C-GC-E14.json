@@ -13,7 +13,7 @@
   "mechanism": "present_planets_retain_isotopic_constraints_on_distinct_growth_histories",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Des planètes du Système solaire portent-elles aujourd’hui des histoires d’accrétion différentes mesurables ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Mars conserve une contrainte temporelle Hf-W-Th et la Terre plusieurs contraintes Mo. Les reconstructions de provenance terrestre sont désormais explicitement contradictoires: ORI-C conserve ce conflit au lieu de choisir une histoire. Les scénarios orbitaux restent exclus.",
   "source_ids": [
     "S026",

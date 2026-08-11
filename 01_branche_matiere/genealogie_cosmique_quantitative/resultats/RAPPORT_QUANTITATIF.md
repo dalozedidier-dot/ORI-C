@@ -1,6 +1,6 @@
 # Rapport quantitatif réel — généalogie cosmique
 
-**Autorité v2 : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**
+**Autorité quantitative réelle : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**
 
 - Sources primaires/officielles : 48
 - Enregistrements de mesures réelles : 120

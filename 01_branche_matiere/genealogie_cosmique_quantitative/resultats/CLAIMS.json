@@ -470,5 +470,5 @@
     }
   ],
   "policy": "empirical_only_non_preregistered_initial_synthesis",
-  "schema": "oric.gc.claims.v3"
+  "schema": "oric.gc.claims"
 }

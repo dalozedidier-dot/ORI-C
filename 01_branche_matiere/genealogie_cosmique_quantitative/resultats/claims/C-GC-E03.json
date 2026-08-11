@@ -11,7 +11,7 @@
   "mechanism": "stellar_material_survives_as_presolar_grains",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "De la matière formée avant le Système solaire est-elle encore mesurable dans plusieurs corps primitifs retournés ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Transmission matérielle directe observée indépendamment dans Bennu, Ryugu et Wild 2. Le total de grains est un minimum de détections des études citées, pas une abondance combinée comparable.",
   "source_ids": [
     "S010",

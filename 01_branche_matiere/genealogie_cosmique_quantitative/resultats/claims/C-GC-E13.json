@@ -11,7 +11,7 @@
   "mechanism": "disk_substructure_and_planetary_accretion_are_observed_stages",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Observe-t-on dans de vrais systèmes une séquence allant de disques jeunes structurés à des protoplanètes en accrétion ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Le contexte général utilise plusieurs systèmes observés, mais PDS 70 fournit en plus un raccord dans le même système entre une cavité de disque et deux protoplanètes Hα en accrétion; aucune structure annulaire n’est automatiquement attribuée à une planète et aucune migration/résonance n’est utilisée comme preuve.",
   "source_ids": [
     "S021",

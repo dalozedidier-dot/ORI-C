@@ -182,5 +182,5 @@
       "verdict": "open_unique_orbital_history_empirical_only"
     }
   ],
-  "schema": "oric.gc.quantitative-empirical-claims.v1"
+  "schema": "oric.gc.quantitative-empirical-claims"
 }

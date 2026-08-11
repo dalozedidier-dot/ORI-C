@@ -9,7 +9,7 @@
   "mechanism": "hot_gas_and_crystalline_refractory_solids_are_observed_and_crystalline_state_changes_with_burst",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "La formation de solides réfractaires est-elle directement observable dans un disque planétaire jeune ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "HOPS-315 fournit une détection de solides réfractaires dans un jeune disque. EC 53 ajoute un contraste temporel du même objet: forstérite et enstatite sont absentes en quiescence et détectées pendant le burst. Les modèles de transport restent exclus.",
   "source_ids": [
     "S024",

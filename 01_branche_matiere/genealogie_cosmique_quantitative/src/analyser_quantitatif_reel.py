@@ -76,7 +76,7 @@ def analyse(base: Path):
     links=read_csv(base/'LIENS_EMPIRIQUES.csv')
     measures=read_csv(base/'data/MESURES_EMPIRIQUES.csv')
     sources=read_csv(base/'SOURCES_EMPIRIQUES.csv')
-    freeze=json.loads((base/'GEL_ANALYSE_QUANTITATIVE_V2.json').read_text(encoding='utf-8'))
+    freeze=json.loads((base/'GEL_ANALYSE_QUANTITATIVE_REELLE.json').read_text(encoding='utf-8'))
     byq={r['quantity']:r for r in measures}
     byid={r['record_id']:r for r in measures}
     source_by={s['source_id']:s for s in sources}
@@ -219,7 +219,7 @@ def analyse(base: Path):
 
     single=[x for x in redundancy if x['single_source_bottleneck']]
     verdict={
-        'schema':'oric.gc.quantitative-real-verdict.v2',
+        'schema':'oric.gc.quantitative-real-verdict',
         'data_policy':'empirical_measurements_only',
         'sources':len(sources),'measurement_records':len(measures),'tests':len(tests),'tests_passed':sum(t['passed'] for t in tests),
         'simulations_used':0,'synthetic_rows':0,'imputed_rows':0,

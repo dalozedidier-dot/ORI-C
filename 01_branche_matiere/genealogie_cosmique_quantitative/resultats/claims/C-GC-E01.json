@@ -10,7 +10,7 @@
   "mechanism": "composition_available_changes_across_cosmic_history",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Les observations réelles montrent-elles que la composition disponible change entre l’inventaire primordial léger et les produits stellaires ultérieurs ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Contraste empirique entre abondances primordiales reconstruites depuis spectres et noyaux produits par des étoiles/explosions détectés directement; aucune table de rendement théorique n’est utilisée.",
   "source_ids": [
     "S001",

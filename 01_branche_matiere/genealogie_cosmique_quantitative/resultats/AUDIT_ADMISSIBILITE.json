@@ -19,7 +19,7 @@
   "model_outputs_used_as_evidence": 0,
   "orbital_integrations_used_as_genealogy_evidence": 0,
   "policy": "strict_empirical_only",
-  "schema": "oric.gc.empirical-admissibility-audit.v1",
+  "schema": "oric.gc.empirical-admissibility-audit",
   "simulations_used_as_evidence": 0,
   "source_mode_counts": {
     "astronomical_observation": 18,

@@ -1,5 +1,5 @@
 {
-  "schema": "oric.gc.quantitative-complete-tests.v3",
+  "schema": "oric.gc.quantitative-complete-tests",
   "tests": [
     {
       "criterion_met": true,

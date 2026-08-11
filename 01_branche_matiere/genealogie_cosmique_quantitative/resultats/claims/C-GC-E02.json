@@ -14,7 +14,7 @@
   "mechanism": "stellar_ejecta_produce_persistent_solid_dust",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Observe-t-on directement la conversion d’éjecta stellaires enrichis en poussière solide ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "SN1987A fournit un cas observationnel où les produits de l’explosion et une grande masse de poussière froide sont mesurés dans les éjecta. La masse est issue de la photométrie publiée; aucun rendement simulé n’est utilisé.",
   "source_ids": [
     "S003",

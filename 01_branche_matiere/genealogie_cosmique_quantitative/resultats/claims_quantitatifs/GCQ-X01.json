@@ -1,0 +1,42 @@
+{
+  "claim_id": "GCQ-X01",
+  "criterion_met": null,
+  "data_policy": "real_measurements_and_official_empirical_data_only",
+  "executed": true,
+  "interpretation_limit": "Contrôle post-hoc déterministe. Le délai ~2 Myr ne reçoit aucune incertitude inventée et aucun test de significativité indépendant n’est revendiqué.",
+  "preregistered": false,
+  "question": "La décroissance canonique temporelle suffit-elle à représenter un inventaire 26Al local unique?",
+  "result": {
+    "CAI2_minimum_deficit_vs_decay_only_reference_percent": 84.1374607010665,
+    "CAI2_upper_bound_fraction_of_decay_only_reference": 0.158625392989335,
+    "approximate_delay_myr_after_CAI": 2.0,
+    "canonical_decay_only_reference_26Al_27Al": 7.56499307825627e-06,
+    "canonical_decay_only_reference_fraction": 0.1446461391635998,
+    "crosscheck_id": "GCQ-X01",
+    "independent_reported_26Al_heterogeneity_factor_range": [
+      3.0,
+      4.0
+    ],
+    "interpretation": "Measured local 26Al/27Al values can depart substantially from the homogeneous canonical decay-only reference. Time dependence is real, but reservoir/mixing history also constrains local inventory.",
+    "measured_CAI1_deficit_vs_decay_only_reference_percent": 37.87172107917712,
+    "measured_CAI1_fraction_of_decay_only_reference": 0.6212827892082288,
+    "measured_chondrule_bearing_CAI1_26Al_27Al": 4.7e-06,
+    "measured_chondrule_bearing_CAI2_26Al_27Al_upper_bound": 1.2e-06,
+    "no_significance_test_reason": "The ~2 Myr delay is approximate and is not assigned an invented uncertainty; this is a deterministic ratio cross-check, not an independent significance test.",
+    "result": "canonical_decay_curve_is_time_reference_not_unique_local_inventory",
+    "status": "posthoc_empirical_crosscheck_not_frozen_test"
+  },
+  "schema": "oric.gc.quantitative-crosscheck",
+  "source_ids": [
+    "S014",
+    "S038",
+    "S039",
+    "S040"
+  ],
+  "stage_ids": [
+    "GC-E08",
+    "GC-E10"
+  ],
+  "status": "posthoc_empirical_crosscheck_not_frozen_test",
+  "verdict": "canonical_decay_curve_is_time_reference_not_unique_local_inventory"
+}

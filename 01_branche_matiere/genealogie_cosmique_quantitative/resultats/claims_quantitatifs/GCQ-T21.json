@@ -1,0 +1,44 @@
+{
+  "analysis_status": "retrospective_data_rich_extension",
+  "claim_id": "GCQ-T21",
+  "criterion_met": true,
+  "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation",
+  "executed": true,
+  "preregistered": false,
+  "question": "Les échantillons retournés de Bennu contiennent-ils des composants individuels isotopiquement distincts à plusieurs niveaux ?",
+  "result": {
+    "Bennu_2025_individual_presolar_grains": 52,
+    "Bennu_2025_phase_counts": {
+      "SiC": 22,
+      "graphite": 6,
+      "likely SiC": 17,
+      "not_determined": 3,
+      "oxide": 1,
+      "silicate": 3
+    },
+    "Bennu_2026_O_isotope_spots": 18,
+    "Bennu_2026_mineral_counts": {
+      "diopside": 1,
+      "hibonite": 1,
+      "olivine": 12,
+      "spinel": 4
+    },
+    "diopside_Delta17O": -3.9419958257172816,
+    "diopside_vs_each_refractory_max_z": 18.996253543108217,
+    "diopside_vs_each_refractory_min_z": 9.988123086397183,
+    "interpretation_limit": "This establishes isotopic heterogeneity among measured returned-sample components; it does not by itself prove the dynamical path or transport distance.",
+    "number_refractory_spots_all_gt_3sigma_from_diopside": 17,
+    "refractory_spinel_hibonite_olivine_Delta17O_median": -23.698141329107997
+  },
+  "schema": "oric.gc.quantitative-claim",
+  "source_ids": [
+    "S010",
+    "S048"
+  ],
+  "stage_ids": [
+    "GC-E03",
+    "GC-E07",
+    "GC-E10"
+  ],
+  "verdict": "supports_returned_sample_multiscale_isotopic_heterogeneity"
+}

@@ -10,7 +10,7 @@
   "mechanism": "formation_time_associates_with_differentiated_vs_hydrous_records",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "L’ordre temporel mesuré est-il associé à des destins matériels différents des petits corps ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Association chronologique empirique entre archives de corps différenciés précoces et carbonates hydratés plus tardifs; aucun calcul thermique n’est utilisé comme preuve.",
   "source_ids": [
     "S017",

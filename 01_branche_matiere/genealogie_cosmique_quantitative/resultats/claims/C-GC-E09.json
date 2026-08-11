@@ -9,7 +9,7 @@
   "mechanism": "high_temperature_and_presolar_material_coexist_in_outer_comet",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Des échantillons cométaires retournés enregistrent-ils une redistribution de matériaux formés dans des régimes thermiques différents ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "La coexistence de stardust et de matériaux réfractaires/haute température dans Wild 2 soutient un mélange/transport à grande échelle. Aucun scénario dynamique ni distance de transport n’est calculé ici.",
   "source_ids": [
     "S031",

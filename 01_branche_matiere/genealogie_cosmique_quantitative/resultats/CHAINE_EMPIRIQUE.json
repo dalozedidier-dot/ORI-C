@@ -133,7 +133,7 @@
       "to_stage": "GC-E19"
     }
   ],
-  "schema": "oric.gc.empirical-chain.v3",
+  "schema": "oric.gc.empirical-chain",
   "stages": [
     {
       "empirical_anchor": "D/H primordial et Yp reconstruits à partir de spectres réels",

@@ -45,7 +45,7 @@ def analyse(base: Path):
         claimdocs.append({**c,'record_ids':recs,'supporting_empirical_claim_ids':sups})
     return {
       'summary':{
-        'schema':'oric.gc.deep-empirical-quantitative.v1','analytical_stages':23,'qualified_relations':40,'selected_quantitative_observations':24,'quantitative_synthesis_claims':12,
+        'schema':'oric.gc.deep-empirical-quantitative','analytical_stages':23,'qualified_relations':40,'selected_quantitative_observations':24,'quantitative_synthesis_claims':12,
         'underlying_empirical_measurement_records':len(measures),'primary_or_official_sources':len(sources),'simulations_used':0,'synthetic_rows':0,'imputed_rows':0,
         'dag_acyclic':True,'all_analytical_stages_empirically_anchored':True,'authoritative_empirical_claims_preserved':16,'supported_authoritative_empirical_claims_preserved':15,'unresolved_authoritative_empirical_claims_preserved':1,
         'interpretation':'Approfondissement quantitatif dérivé exclusivement de la couche empirique; il ne remplace ni les 16 claims empiriques d’autorité ni leur limite sur l’histoire orbitale unique.'},

@@ -253,7 +253,7 @@
       "niveau_preuve": null,
       "portee": "direct_observation_plus_observational_reconstruction — Contraste empirique entre abondances primordiales reconstruites depuis spectres et noyaux produits par des étoiles/explosions détectés directement; aucune table de rendement théorique n’est utilisée.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E01.json",
-      "empreinte_sortie": "9c6c95d216192e9cdb50ddea2776492b0f58898221be8a33e08b804e35c82fc6",
+      "empreinte_sortie": "c75b3b0a62dac8182c919c9a381300e38783349df24b3000981aea309ceeb756",
       "source": [
         "S001",
         "S002",
@@ -278,7 +278,7 @@
       "niveau_preuve": null,
       "portee": "same_object_astronomical_observation — SN1987A fournit un cas observationnel où les produits de l’explosion et une grande masse de poussière froide sont mesurés dans les éjecta. La masse est issue de la photométrie publiée; aucun rendement simulé n’est utilisé.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E02.json",
-      "empreinte_sortie": "4a874014c385d3a877491f82def9a6d104cdbecfe8294cae7d5574e85e59fb60",
+      "empreinte_sortie": "433f7dda485ea272a317b54c9e53db8f2439e12a0312f8eba4c2bcd0f2ab830b",
       "source": [
         "S003",
         "S029"
@@ -301,7 +301,7 @@
       "niveau_preuve": null,
       "portee": "multi_mission_returned_sample_direct_measurement — Transmission matérielle directe observée indépendamment dans Bennu, Ryugu et Wild 2. Le total de grains est un minimum de détections des études citées, pas une abondance combinée comparable.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E03.json",
-      "empreinte_sortie": "811e5259c9643705e221e8c32db5fd1b8006129bc44d08d0eba6d113f61f50d8",
+      "empreinte_sortie": "5c5ce0877e0b7eee1ea1ca8aacaec42d588318a4b808a3ad9cb34bed6fedf744",
       "source": [
         "S010",
         "S030",
@@ -325,7 +325,7 @@
       "niveau_preuve": null,
       "portee": "direct_astronomical_observation — Analogue astrophysique de l’amont de systèmes planétaires, pas observation du nuage protosolaire historique.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E04.json",
-      "empreinte_sortie": "55d1e54fc884334f047eeb31886c106d007978d8ea93174fd674799e62277b0a",
+      "empreinte_sortie": "97a8fe080fbf08cb82535eeb8d92ff6436ce6129e2d7d2c92e9e6b91682bd619",
       "source": [
         "S005",
         "S006"
@@ -347,7 +347,7 @@
       "niveau_preuve": null,
       "portee": "replicated_direct_astronomical_observation — Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E05.json",
-      "empreinte_sortie": "3180593307109f250b225df84ea32e3f45180f63b18b0846373e93b6efa45f14",
+      "empreinte_sortie": "d9e77dc4b3b39bff0c25bf4b00dd8c3c5f785151be321779eff262a9a52468ed",
       "source": [
         "S007",
         "S036"
@@ -369,7 +369,7 @@
       "niveau_preuve": null,
       "portee": "cross_system_observational_consistency — V883 Ori/67P testent la continuité isotopique de l’eau; TW Hya apporte une détection indépendante de CH3OH. Les abondances modélisées de TW Hya sont exclues.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E06.json",
-      "empreinte_sortie": "2108c484bb7e598de7a911b50a87a2a8a0982e28ec8a6a91e51f868266e827e6",
+      "empreinte_sortie": "f7c9f9fdf83bb988387e5c48030371c3d966d68ce034bcd144c12dbd78033feb",
       "source": [
         "S008",
         "S009",
@@ -393,7 +393,7 @@
       "niveau_preuve": null,
       "portee": "direct_astronomical_observation_plus_same_object_time_domain_contrast — HOPS-315 fournit une détection de solides réfractaires dans un jeune disque. EC 53 ajoute un contraste temporel du même objet: forstérite et enstatite sont absentes en quiescence et détectées pendant le burst. Les modèles de transport restent exclus.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E07.json",
-      "empreinte_sortie": "95de3c4712c024deac0d58b3a195a67c8defb9d1c19eecc6e86666abb89021d0",
+      "empreinte_sortie": "c2b69440e23ff7cd85aaceeec83be66eadee99fc3c4e5da4242061eea6c18959",
       "source": [
         "S024",
         "S034"
@@ -415,7 +415,7 @@
       "niveau_preuve": null,
       "portee": "returned_sample_and_meteorite_measurements — Les causes dynamiques exactes de la séparation NC/CC et de l’hétérogénéité ne sont pas imposées.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E08.json",
-      "empreinte_sortie": "09581e121b3e4a4a44e5bf1e95788641443c5361a4493db3941dc6584ab4b659",
+      "empreinte_sortie": "8f6e1ef1894f28ceadca952fc690729f393ed76795dba717dcd72e919067226e",
       "source": [
         "S011",
         "S012",
@@ -442,7 +442,7 @@
       "niveau_preuve": null,
       "portee": "returned_sample_mineralogy_and_isotopes — La coexistence de stardust et de matériaux réfractaires/haute température dans Wild 2 soutient un mélange/transport à grande échelle. Aucun scénario dynamique ni distance de transport n’est calculé ici.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E09.json",
-      "empreinte_sortie": "4fe5cad4e76921b64832d6151b7df3327fb4f842b807295cd5ca261cffcf74db",
+      "empreinte_sortie": "90a445c7841b42becc48fc2340976599ce5552cb184d544cbda9f17785526d6f",
       "source": [
         "S031",
         "S032"
@@ -464,7 +464,7 @@
       "niveau_preuve": null,
       "portee": "meteoritic_chronometry — Âges Pb-Pb U-corrigés mesurés sur inclusions et chondres; aucune horloge synthétique n’est utilisée.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E10.json",
-      "empreinte_sortie": "e5a283b3c887a415f37f618adb26a5af79307cbee75217e0c257f38b5dcaf508",
+      "empreinte_sortie": "f4e27d0c9e3bcf2924bf23468c539c63076fe516018eda6a3dfcbb38f11e6f4a",
       "source": [
         "S016"
       ],
@@ -485,7 +485,7 @@
       "niveau_preuve": null,
       "portee": "laboratory_experiment — Seules les mesures expérimentales entrent dans les résultats; toute section numérique des articles est exclue.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E11.json",
-      "empreinte_sortie": "9bb0f75caa94c11a2707899474c25d3c14312a9def742df5eb0f6e71f5c8e0a4",
+      "empreinte_sortie": "31e491f54b2d84b5154a4379e373cce5b5529eeda8d6023f7f8e106c99248e30",
       "source": [
         "S019",
         "S020"
@@ -508,7 +508,7 @@
       "niveau_preuve": null,
       "portee": "meteoritic_chronometry — Association chronologique empirique entre archives de corps différenciés précoces et carbonates hydratés plus tardifs; aucun calcul thermique n’est utilisé comme preuve.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E12.json",
-      "empreinte_sortie": "cbe309f8d0e5a412903e4de5dc934dc9fefe0011580f11a17541e4a3139ef877",
+      "empreinte_sortie": "ee7d2e5986a21491f0a58105b89de807549b47c146a473cabf32f307608c4b24",
       "source": [
         "S017",
         "S018"
@@ -531,7 +531,7 @@
       "niveau_preuve": null,
       "portee": "astronomical_observation — Le contexte général utilise plusieurs systèmes observés, mais PDS 70 fournit en plus un raccord dans le même système entre une cavité de disque et deux protoplanètes Hα en accrétion; aucune structure annulaire n’est automatiquement attribuée à une planète et aucune migration/résonance n’est utilisée comme preuve.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E13.json",
-      "empreinte_sortie": "07c4f6430e16a088fbd5aee3bdda4cb88d87b44b09f1eacd28bd61f62a52916a",
+      "empreinte_sortie": "cec0a431aab6417521d9730d7b3436fa5a6f1fffa689f1c150c764eaf8b348f7",
       "source": [
         "S021",
         "S022",
@@ -556,7 +556,7 @@
       "niveau_preuve": null,
       "portee": "planetary_isotope_reconstruction_plus_observed_endpoint — Mars conserve une contrainte temporelle Hf-W-Th et la Terre plusieurs contraintes Mo. Les reconstructions de provenance terrestre sont désormais explicitement contradictoires: ORI-C conserve ce conflit au lieu de choisir une histoire. Les scénarios orbitaux restent exclus.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E14.json",
-      "empreinte_sortie": "a4fbce3448328730d0385ae9d8004169c19d0452620e40d46ca7cd5a7cfd66ef",
+      "empreinte_sortie": "7fa5eb604be83fdb666c23e4a5eb323ee52e90a78a00ee792f8930b258582a98",
       "source": [
         "S026",
         "S027",
@@ -583,7 +583,7 @@
       "niveau_preuve": null,
       "portee": "cross_domain_empirical_synthesis — Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
-      "empreinte_sortie": "d4c9b2209d38328480e56f462698abee09c02539353c9d1a8c7a226498a48447",
+      "empreinte_sortie": "1cafe88a0a4f654bdcfb7b38ef2a159df1c927fc21aeb10a1536882c6e74c423",
       "source": [
         "S001",
         "S002",
@@ -670,7 +670,7 @@
       "niveau_preuve": null,
       "portee": "explicit_limit — Les archives empiriques atteignent l’architecture présente et contraignent des histoires de croissance, mais elles ne sélectionnent pas une unique trajectoire orbitale détaillée. Aucune simulation n’est substituée pour fermer artificiellement ce problème inverse.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E16.json",
-      "empreinte_sortie": "3b9989d9073a6392578f13ee1d97a84ff1630348d4b2f90416e915ef7578b7b6",
+      "empreinte_sortie": "1ed8efd917ae574da1473ff93d15412138b5f646f4f810fa5cb2cb21200a6746",
       "source": [
         "S028"
       ],
@@ -690,8 +690,8 @@
       "verdict": "supports_strong_time_dependence_of_radiogenic_accessibility",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T09.json",
-      "empreinte_sortie": "f1511812df0d5b364a1e66b78ec3b5c7efa13afb9ab07da2bfc9e4caabc898f0",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T09.json",
+      "empreinte_sortie": "d82e282bc6e2f479121bd7c83637db9b9d41b4915067d84cd51adc7595f8a238",
       "source": [
         "S016",
         "S017",
@@ -720,8 +720,8 @@
       "verdict": "supports_earlier_differentiation_archive_during_higher_26Al_inventory",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T10.json",
-      "empreinte_sortie": "5766956f0aec23ee1ea2e6cccb545acb20b03a11a179a529b278ff2951964496",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T10.json",
+      "empreinte_sortie": "fe8bbe239c7b7b4871fdf45cdf6e2d3129c9c5d0acf1eed966fb127227a0847b",
       "source": [
         "S041",
         "S039",
@@ -746,8 +746,8 @@
       "verdict": "supports_persistent_isotopic_architecture_across_large_inventory_change",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T11.json",
-      "empreinte_sortie": "7f810a98a8f8a43297480cac5807e19ac8e1a8a9fde9e891bfb8ae954b9c1f57",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T11.json",
+      "empreinte_sortie": "713b941136e773958d181818b0f30d0de725c5ddb8af424d31ece897e8de385d",
       "source": [
         "S013",
         "S039",
@@ -771,8 +771,8 @@
       "verdict": "supports_gigayear_material_memory_carrier",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T12.json",
-      "empreinte_sortie": "83d6715a4bc70557602187e5824609c2b2260d2052728ef261280ff62124812a",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T12.json",
+      "empreinte_sortie": "e04e889d4cdd787b8e5e60f86c835fabfe2f04ed21cfe45f92288bbe0874ffdd",
       "source": [
         "S010",
         "S030",
@@ -798,8 +798,8 @@
       "verdict": "supports_late_reactivation_of_old_material_memory_by_unresolved_later_process",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T13.json",
-      "empreinte_sortie": "fb94f0985dff4a31dc5c55de1399f929489ed200d8a6c0dde53f150b4a77b374",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T13.json",
+      "empreinte_sortie": "1aa61be5b42734922c4e025667090b5ad870d95e4e1bd1a02c01887aafda892a",
       "source": [
         "S035",
         "S040"
@@ -821,8 +821,8 @@
       "verdict": "contested_not_closed",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T14.json",
-      "empreinte_sortie": "1e5db4fc6e5f6c16c1e0384fbc4ef91455595d8b144b259b9cba3eeb80d30cfa",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T14.json",
+      "empreinte_sortie": "cdf9dc5df82f342de4c926362f31c7041364f4065bf0595aa8944338332a9493",
       "source": [
         "S027",
         "S042",
@@ -845,8 +845,8 @@
       "verdict": "endpoint_quantified_history_not_reconstructed",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T15.json",
-      "empreinte_sortie": "03a9f0783ecf659e5595601c2b1dbb09696c19996dc3dcfd49f9bbb9b74a8670",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T15.json",
+      "empreinte_sortie": "55c89e6a97d690215db14557f545917fe039369fa037a60c606e46960ea87033",
       "source": [
         "S028"
       ],
@@ -867,8 +867,8 @@
       "verdict": "strict_stellar_to_endpoint_chain_exists_but_primordial_end_to_end_closure_open",
       "niveau_preuve": null,
       "portee": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-T16.json",
-      "empreinte_sortie": "4595822d61da3a81c89262176647c1756d7af5c1374be9d928df8161b6095b27",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T16.json",
+      "empreinte_sortie": "569daa08655061b07394eddc8e764e8b8f707ce6a2cd554a95ca181398dd780f",
       "source": [],
       "mesures": {
         "stages": [
@@ -894,8 +894,8 @@
       "verdict": "canonical_decay_curve_is_time_reference_not_unique_local_inventory",
       "niveau_preuve": null,
       "portee": "contrôle post-hoc déterministe — non compté parmi les tests gelés",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v3/GCQ-X01.json",
-      "empreinte_sortie": "a85bf4b8631b7c966708e0c850caa6945c8ad37e65ad9dfabfc0573edfe98929",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-X01.json",
+      "empreinte_sortie": "1714b89dff83be08d727da6a31bfac9918b8fd8eef22c8f50fa89152eb3e6494",
       "source": [
         "S014",
         "S038",
@@ -916,12 +916,12 @@
     {
       "id": "GCQ-T17",
       "question": "Les bases publiées de grains présolaires révèlent-elles des populations isotopiques quantitativement distinctes ?",
-      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "statut": "extension_quantitative_empirique_donnees_massives_non_preregistered",
       "verdict": "supports_published_presolar_grain_population_structure",
       "niveau_preuve": null,
       "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T17.json",
-      "empreinte_sortie": "3b8932107f049e2c7da17953e465f42fcd85c16dd0321913a317008f029b799b",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T17.json",
+      "empreinte_sortie": "8ecf20968e645b1977964b2e6e32e6905d989a117abd83811c6501a5d6f4d585",
       "source": [
         "S044",
         "S045"
@@ -941,12 +941,12 @@
     {
       "id": "GCQ-T18",
       "question": "La dichotomie NC/CC reste-t-elle quantitativement séparable à travers plusieurs systèmes isotopiques mesurés sans imputation ?",
-      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "statut": "extension_quantitative_empirique_donnees_massives_non_preregistered",
       "verdict": "supports_multisystem_NC_CC_isotopic_separation",
       "niveau_preuve": null,
       "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T18.json",
-      "empreinte_sortie": "f793609c3d6ab7cd6c4b5185e41523401ca98c42465b91c97c72292745ebf654",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T18.json",
+      "empreinte_sortie": "8d97473c3b152483e6899b0926361842a1e689b9f44d81845a2c70c1483b9d56",
       "source": [
         "S043"
       ],
@@ -964,12 +964,12 @@
     {
       "id": "GCQ-T19",
       "question": "Des chondres d’une même météorite montrent-ils une hétérogénéité O-Cr-Ti résolue au-delà des incertitudes ?",
-      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "statut": "extension_quantitative_empirique_donnees_massives_non_preregistered",
       "verdict": "supports_within_meteorite_chondrule_isotopic_heterogeneity",
       "niveau_preuve": null,
       "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T19.json",
-      "empreinte_sortie": "18400baa6a632cf35b1433069919d44864061e5a406950407249dfd38489314e",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T19.json",
+      "empreinte_sortie": "0460c461e05b8b93df22cb1d7d2b9fd77c3bc0358d4b5fea319eb44adfd627b7",
       "source": [
         "S047"
       ],
@@ -987,12 +987,12 @@
     {
       "id": "GCQ-T20",
       "question": "Des sous-échantillons d’Allende mesurés dans une même étude montrent-ils une hétérogénéité Ti spatialement résolue ?",
-      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "statut": "extension_quantitative_empirique_donnees_massives_non_preregistered",
       "verdict": "supports_within_meteorite_subsample_Ti_heterogeneity",
       "niveau_preuve": null,
       "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T20.json",
-      "empreinte_sortie": "c5e8658547d9564aa72125da02e0984e14882dfcc7a7f7c1bc453d072d8587e0",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T20.json",
+      "empreinte_sortie": "c1b0c6205502710c1a98d798802c22f1233d59b61856caa3440ff06b1d270372",
       "source": [
         "S046"
       ],
@@ -1010,12 +1010,12 @@
     {
       "id": "GCQ-T21",
       "question": "Les échantillons retournés de Bennu contiennent-ils des composants individuels isotopiquement distincts à plusieurs niveaux ?",
-      "statut": "extension_quantitative_empirique_data_rich_non_preregistered",
+      "statut": "extension_quantitative_empirique_donnees_massives_non_preregistered",
       "verdict": "supports_returned_sample_multiscale_isotopic_heterogeneity",
       "niveau_preuve": null,
       "portee": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats",
-      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs_v4/GCQ-T21.json",
-      "empreinte_sortie": "8ab797e5950fdd02c6c74b915cbea8f97f613c55eead16284ef8febb84902576",
+      "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T21.json",
+      "empreinte_sortie": "e74f8c65972ea76bcad8735d319141c5c317b1200ce8f7af0b580b117ffdad68",
       "source": [
         "S010",
         "S048"

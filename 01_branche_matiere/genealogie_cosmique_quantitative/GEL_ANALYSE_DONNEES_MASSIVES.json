@@ -1,0 +1,23 @@
+{
+  "schema": "oric.gc.quantitative-massive-data-freeze",
+  "preregistered": false,
+  "status": "retrospective_data_rich_extension",
+  "evidence_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation",
+  "canonical_pgd_format": "CSV",
+  "excluded_as_independent_evidence": [
+    "duplicate_xlsx_of_pgd_csv",
+    "PGD_Data_Published_no",
+    "synthetic_prior",
+    "imputed_value",
+    "monte_carlo_generated_sample",
+    "simulation_output",
+    "model_only_conclusion"
+  ],
+  "tests": [
+    "GCQ-T17",
+    "GCQ-T18",
+    "GCQ-T19",
+    "GCQ-T20",
+    "GCQ-T21"
+  ]
+}

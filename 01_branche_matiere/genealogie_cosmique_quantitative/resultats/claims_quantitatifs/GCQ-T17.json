@@ -1,0 +1,170 @@
+{
+  "analysis_status": "retrospective_data_rich_extension",
+  "claim_id": "GCQ-T17",
+  "criterion_met": true,
+  "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation",
+  "executed": true,
+  "preregistered": false,
+  "question": "Les bases publiées de grains présolaires révèlent-elles des populations isotopiques quantitativement distinctes ?",
+  "result": {
+    "SiC_admissible_published_or_partial_rows": 8865,
+    "SiC_total_database_rows": 20432,
+    "SiC_type_counts": {
+      "AB": 546,
+      "AB1": 60,
+      "AB2": 53,
+      "C": 18,
+      "C2": 4,
+      "D": 2,
+      "M": 6918,
+      "N": 28,
+      "U": 104,
+      "X": 566,
+      "X0": 6,
+      "X1": 53,
+      "X2": 25,
+      "Y": 287,
+      "Z": 195
+    },
+    "SiC_unpublished_rows_excluded": 11567,
+    "X_to_M_median_26Al_27Al_factor": 252.6946107784431,
+    "admissible_grains_total": 11207,
+    "criterion": "at_least_10000_published_grains_and_X_M_26Al_median_factor_gt_100_and_opposite_Si_median_signs",
+    "graphite": {
+      "12C/13C": {
+        "max": 7768.0,
+        "median": 97.75,
+        "min": 1.41,
+        "n": 2308
+      },
+      "14N/15N": {
+        "max": 1436.97480266693,
+        "median": 267.4,
+        "min": 28.0,
+        "n": 1662
+      },
+      "26Al/27Al": {
+        "max": 0.806499594873386,
+        "median": 0.01937,
+        "min": 1e-05,
+        "n": 176
+      },
+      "d(29Si/28Si)": {
+        "max": 1340.8606886233,
+        "median": -14.7047991222867,
+        "min": -547.0,
+        "n": 1207
+      },
+      "d(30Si/28Si)": {
+        "max": 1964.0,
+        "median": -17.0,
+        "min": -887.0,
+        "n": 1225
+      }
+    },
+    "graphite_admissible_rows": 2342,
+    "selected_SiC_type_isotope_medians": {
+      "AB": {
+        "12C/13C": {
+          "median": 5.37834,
+          "n": 546
+        },
+        "26Al/27Al": {
+          "median": 0.0021187097142857,
+          "n": 110
+        },
+        "d(29Si/28Si)": {
+          "median": 25.0,
+          "n": 487
+        },
+        "d(30Si/28Si)": {
+          "median": 33.575675000000004,
+          "n": 488
+        }
+      },
+      "M": {
+        "12C/13C": {
+          "median": 52.4895,
+          "n": 6808
+        },
+        "26Al/27Al": {
+          "median": 0.000835,
+          "n": 120
+        },
+        "d(29Si/28Si)": {
+          "median": 34.9797,
+          "n": 6247
+        },
+        "d(30Si/28Si)": {
+          "median": 41.232110000000006,
+          "n": 6258
+        }
+      },
+      "X": {
+        "12C/13C": {
+          "median": 168.442900870726,
+          "n": 393
+        },
+        "26Al/27Al": {
+          "median": 0.211,
+          "n": 133
+        },
+        "d(29Si/28Si)": {
+          "median": -295.0,
+          "n": 536
+        },
+        "d(30Si/28Si)": {
+          "median": -409.073891858526,
+          "n": 548
+        }
+      },
+      "Y": {
+        "12C/13C": {
+          "median": 123.0,
+          "n": 287
+        },
+        "26Al/27Al": {
+          "median": 0.0006850000000000001,
+          "n": 36
+        },
+        "d(29Si/28Si)": {
+          "median": -3.77185539696367,
+          "n": 254
+        },
+        "d(30Si/28Si)": {
+          "median": 37.628479861721445,
+          "n": 254
+        }
+      },
+      "Z": {
+        "12C/13C": {
+          "median": 54.35465,
+          "n": 191
+        },
+        "26Al/27Al": {
+          "median": 0.0008031693478701825,
+          "n": 24
+        },
+        "d(29Si/28Si)": {
+          "median": -69.4999862291381,
+          "n": 195
+        },
+        "d(30Si/28Si)": {
+          "median": 68.02356,
+          "n": 195
+        }
+      }
+    }
+  },
+  "schema": "oric.gc.quantitative-claim",
+  "source_ids": [
+    "S044",
+    "S045"
+  ],
+  "stage_ids": [
+    "GC-E03",
+    "GC-E08",
+    "GC-E10"
+  ],
+  "verdict": "supports_published_presolar_grain_population_structure"
+}

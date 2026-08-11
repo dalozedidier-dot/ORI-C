@@ -1,5 +1,5 @@
 {
-  "schema": "oric.gc.quantitative-real-tests.v2",
+  "schema": "oric.gc.quantitative-real-tests",
   "tests": [
     {
       "name": "replication_presolar_returned_samples",

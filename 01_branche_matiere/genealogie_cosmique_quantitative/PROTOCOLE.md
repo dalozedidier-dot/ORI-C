@@ -42,26 +42,26 @@ La synthèse globale est positive seulement si plusieurs porteurs indépendants 
 
 L’architecture actuelle du Système solaire est observée. Ses histoires de croissance sont partiellement contraintes par des archives isotopiques. Une trajectoire orbitale détaillée unique depuis le disque jusqu’aux orbites actuelles n’est pas directement enregistrée. Sans recours aux simulations, cette question doit rester ouverte.
 
-## Campagne quantitative v2
+## Campagne quantitative réelle
 
-La couche quantitative d’autorité est définie par `GEL_ANALYSE_QUANTITATIVE_V2.json`. Ce gel est **prospectif uniquement pour les ajouts futurs** : les tests v2 ont été définis sur le corpus déjà connu et ne sont donc pas présentés comme préenregistrés pour les données actuelles.
+La couche quantitative d’autorité est définie par `GEL_ANALYSE_QUANTITATIVE_REELLE.json`. Ce gel est **prospectif uniquement pour les ajouts futurs** : les tests de la campagne quantitative réelle ont été définis sur le corpus déjà connu et ne sont donc pas présentés comme préenregistrés pour les données actuelles.
 
 Les huit tests/audits couvrent : réplication inter-missions, compatibilité isotopologique, ordre chronométrique avec propagation d’incertitudes, contraste temporel du même objet, réplication de streamers, réactivation tardive d’un corps retourné, robustesse du graphe empirique et ablations par famille de preuve.
 
 Un test quantitatif n’est déclaré positif que selon le critère enregistré dans le gel. Un résultat positif ne relève jamais automatiquement le niveau de causalité au-delà de la `directness` documentée par les sources.
 
 
-## Campagne quantitative complète v3
+## Campagne quantitative complète
 
-`GEL_ANALYSE_QUANTITATIVE_V3.json` fige les règles de la campagne finale. Le gel est rétrospectif : le corpus existait avant la définition des tests, donc aucun résultat v3 ne doit être décrit comme préenregistré.
+`GEL_ANALYSE_QUANTITATIVE_COMPLETE.json` fige les règles de la campagne finale. Le gel est rétrospectif : le corpus existait avant la définition des tests, donc aucun résultat de la campagne complète ne doit être décrit comme préenregistré.
 
 Les calculs déterministes dérivés sont autorisés uniquement lorsque toutes les entrées numériques proviennent de mesures publiées ou de produits empiriques officiels. Les incertitudes sont propagées analytiquement au premier ordre ou par intervalles. Aucun tirage Monte-Carlo, aucune imputation et aucune population synthétique ne sont autorisés comme preuve.
 
-Chaque test `GCQ-T09` à `GCQ-T16` doit produire : un verdict machine, un artefact individuel sous `resultats/claims_quantitatifs_v3/`, les sources utilisées, les stades concernés, le résultat numérique et une limite d’interprétation. Les claims v3 sont des extensions quantitatives empiriques non préenregistrées, jamais des certifications historiques automatiques.
+Chaque test `GCQ-T09` à `GCQ-T16` doit produire : un verdict machine, un artefact individuel sous `resultats/claims_quantitatifs/`, les sources utilisées, les stades concernés, le résultat numérique et une limite d’interprétation. Les claims quantitatifs complets sont des extensions quantitatives empiriques non préenregistrées, jamais des certifications historiques automatiques.
 
 Le critère de fermeture de bout en bout est strict : une chaîne n’est déclarée fermée que si un chemin composé exclusivement de relations d’archive, de continuité matérielle ou de séquence empirique documentée relie les deux endpoints. Un analogue inter-système ou un pont mécanisme→observation ne ferme jamais artificiellement un maillon.
 
 
-## Campagne data-rich v4
+## Extension par données massives réelles
 
-Extension rétrospective au niveau grain/échantillon. Les fichiers bruts sont sélectionnés avant analyse et consignés dans `data_massives_reelles/IMPORT_SELECTION_V4.json`. Un format canonique unique est retenu pour chaque base afin d’éviter le double comptage. Pour PGD SiC, seules les lignes `Data Published = full|partial` sont admissibles. Toute ligne non publiée, synthétique, imputée, simulée ou issue d’un prior/Monte-Carlo reste hors verdict. Les analyses sont déterministes et n’inventent aucune valeur manquante.
+Extension rétrospective au niveau grain/échantillon. Les fichiers bruts sont sélectionnés avant analyse et consignés dans `data_massives_reelles/IMPORT_SELECTION.json`. Un format canonique unique est retenu pour chaque base afin d’éviter le double comptage. Pour PGD SiC, seules les lignes `Data Published = full|partial` sont admissibles. Toute ligne non publiée, synthétique, imputée, simulée ou issue d’un prior/Monte-Carlo reste hors verdict. Les analyses sont déterministes et n’inventent aucune valeur manquante.

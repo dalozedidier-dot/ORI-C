@@ -146,7 +146,7 @@
       "to_stage": "GC-E19"
     }
   ],
-  "schema": "oric.gc.end-to-end-locks.v3",
+  "schema": "oric.gc.end-to-end-locks",
   "strict_path_primordial_baseline_to_present_endpoint": false,
   "strict_path_stellar_products_to_present_endpoint": true
 }

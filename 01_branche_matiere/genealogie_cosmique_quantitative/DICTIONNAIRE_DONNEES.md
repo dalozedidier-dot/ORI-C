@@ -21,14 +21,14 @@
 `AUDIT_ADMISSIBILITE.json` doit afficher zéro simulation, zéro ligne synthétique et zéro imputation. `CLAIMS.json` porte les verdicts. `SYNTHESE.json` contient seulement les nombres canoniques destinés à la synchronisation du dépôt.
 
 
-## Sorties quantitatives v3
+## Sorties quantitatives complètes
 
-- `RESULTATS_QUANTITATIFS_COMPLETS.json` : résultats numériques des huit tests physiques/fermeture v3.
+- `RESULTATS_QUANTITATIFS_COMPLETS.json` : résultats numériques des huit tests physiques/fermeture complets.
 - `TESTS_QUANTITATIFS_COMPLETS.json` : critères d’exécution et verdicts `GCQ-T09` à `GCQ-T16`.
-- `CLAIMS_QUANTITATIFS_COMPLETS.json` : agrégat machine des claims v3 avec sources, stades et limites.
-- `claims_quantitatifs_v3/*.json` : artefacts individuels des huit claims quantitatifs.
+- `CLAIMS_QUANTITATIFS_COMPLETS.json` : agrégat machine des claims quantitatifs complets avec sources, stades et limites.
+- `claims_quantitatifs/*.json` : artefacts individuels des huit claims quantitatifs.
 - `INVENTAIRE_26AL_PAR_EVENEMENT.csv` : temps après CAI, fraction restante et propagation analytique d’incertitude.
 - `FERMETURE_RELATIONS_EMPIRIQUES.csv` : statut strict/ouvert de chaque relation et redondance source/mesure aux deux extrémités.
 - `VERROUS_BOUT_EN_BOUT.json` : nœuds/relations critiques et raccords restant ouverts.
-- `RAPPORT_QUANTITATIF_COMPLET.md` : rendu humain généré de la campagne v3.
+- `RAPPORT_QUANTITATIF_COMPLET.md` : rendu humain généré de la campagne complète.
 - `CROSSCHECK_HETEROGENEITE_26AL.json` : contrôle post-hoc de la référence canonique de décroissance face aux rapports `26Al/27Al` locaux mesurés.

@@ -11,7 +11,7 @@
   "mechanism": "ice_inventory_and_grain_growth_precede_protostar",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Les grains et glaces sont-ils déjà transformés dans les nuages denses avant la phase protostellaire ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Analogue astrophysique de l’amont de systèmes planétaires, pas observation du nuage protosolaire historique.",
   "source_ids": [
     "S005",

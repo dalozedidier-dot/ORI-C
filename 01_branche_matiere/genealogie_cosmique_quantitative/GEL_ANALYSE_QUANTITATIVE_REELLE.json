@@ -1,0 +1,64 @@
+{
+  "schema": "oric.gc.quantitative-analysis-freeze",
+  "date": "2026-08-11",
+  "status": "frozen_for_future_source_additions_not_preregistered_for_current_data",
+  "scope": "Analyse quantitative descriptive et de robustesse sur mesures empiriques versionnées uniquement.",
+  "evidence_policy": {
+    "simulations": 0,
+    "synthetic_data": 0,
+    "imputation": 0,
+    "theoretical_yields": 0,
+    "thermochemical_model_outputs": 0,
+    "orbital_integrations": 0
+  },
+  "tests": [
+    {
+      "test_id": "GCQ-T01",
+      "name": "replication_presolar_returned_samples",
+      "criterion": "standardized descriptive difference < 2 for comparable SiC and O-rich abundances in Bennu versus Ryugu",
+      "interpretation_limit": "Descriptive cross-mission consistency, not a population meta-analysis."
+    },
+    {
+      "test_id": "GCQ-T02",
+      "name": "water_isotopologue_cross_system_consistency",
+      "criterion": "V883 Ori versus 67P derived D2O/H2O standardized difference < 2",
+      "interpretation_limit": "Cross-system compatibility does not prove direct lineage."
+    },
+    {
+      "test_id": "GCQ-T03",
+      "name": "early_solar_chronological_order",
+      "criterion": "Four selected age gaps preserve the stated ordering at > 5 conservative combined sigma",
+      "interpretation_limit": "Chronological ordering does not by itself identify the heating mechanism."
+    },
+    {
+      "test_id": "GCQ-T04",
+      "name": "same_object_event_linked_state_change",
+      "criterion": "EC 53 crystalline forsterite and enstatite features absent in quiescence and detected during burst",
+      "interpretation_limit": "Direct temporal association; outward transport remains unobserved."
+    },
+    {
+      "test_id": "GCQ-T05",
+      "name": "streamer_observation_replication",
+      "criterion": "At least two independent observed protostellar systems with streamers >= 1000 au",
+      "interpretation_limit": "Replicates the physical channel class, not the protosolar history."
+    },
+    {
+      "test_id": "GCQ-T06",
+      "name": "long_term_parent_body_reactivation",
+      "criterion": "Returned Ryugu samples retain a measured late fluid-flow archive > 1000 Myr after formation",
+      "interpretation_limit": "Cause of the late event is not used as evidence."
+    },
+    {
+      "test_id": "GCQ-T07",
+      "name": "empirical_graph_robustness",
+      "criterion": "Report strict archive-sequence reachability and all analogue/non-unique bottlenecks without forcing closure",
+      "interpretation_limit": "Graph reachability is an evidence audit, not a physical simulation."
+    },
+    {
+      "test_id": "GCQ-T08",
+      "name": "evidence_family_ablation",
+      "criterion": "Remove each evidence mode in turn and report lost stage coverage and strict-path loss",
+      "interpretation_limit": "Sensitivity analysis of the evidence base only."
+    }
+  ]
+}

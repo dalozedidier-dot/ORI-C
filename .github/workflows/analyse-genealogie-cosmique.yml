@@ -75,7 +75,7 @@ jobs:
           from pathlib import Path
 
           result_dir = Path(os.environ['RUNNER_TEMP']) / 'gc-candidate'
-          rich = json.loads((result_dir / 'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text(encoding='utf-8'))
+          rich = json.loads((result_dir / 'RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text(encoding='utf-8'))
           complete = json.loads((result_dir / 'RESULTATS_QUANTITATIFS_COMPLETS.json').read_text(encoding='utf-8'))
           audit = rich['audit']
           nc = rich['NC_CC']
@@ -132,12 +132,19 @@ jobs:
           ]
           Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(chr(10).join(lines), encoding='utf-8')
           PY
+      - name: Préparer l’artefact de résultats
+        run: |
+          rm -rf .ci-artifacts/genealogie-cosmique-resultats
+          mkdir -p .ci-artifacts/genealogie-cosmique-resultats/genealogie_cosmique_quantitative/resultats
+          mkdir -p .ci-artifacts/genealogie-cosmique-resultats/genealogie_cosmique_quantitative/data_massives_reelles
+          cp -a "$RUNNER_TEMP/gc-candidate/." \
+            .ci-artifacts/genealogie-cosmique-resultats/genealogie_cosmique_quantitative/resultats/
+          cp 01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION.json \
+            .ci-artifacts/genealogie-cosmique-resultats/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION.json
       - name: Publier les fichiers de résultats du run
         uses: actions/upload-artifact@v6
         with:
           name: genealogie-cosmique-resultats
-          path: |
-            ${{ runner.temp }}/gc-candidate
-            01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION_V4.json
+          path: .ci-artifacts/genealogie-cosmique-resultats
           if-no-files-found: error
           retention-days: 30

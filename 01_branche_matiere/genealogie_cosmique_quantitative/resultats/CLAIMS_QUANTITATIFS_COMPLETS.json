@@ -60,7 +60,7 @@
           }
         ]
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S016",
         "S017",
@@ -107,7 +107,7 @@
         ],
         "remaining_fraction_at_youngest_chondrule": 0.08177063413384472
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S041",
         "S039",
@@ -156,7 +156,7 @@
         ],
         "separation_start_myr_after_solar_start": 1.0
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S013",
         "S039",
@@ -188,7 +188,7 @@
           "S031"
         ]
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S010",
         "S030",
@@ -219,7 +219,7 @@
         "log10_upper_bound_on_remaining_primordial_26Al_fraction": -419.84657693721226,
         "result": "late_reactivation_is_physically_separated_from_primordial_26Al_clock"
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S035",
         "S040"
@@ -264,7 +264,7 @@
         "reason_S043_conclusion_excluded": "Its published multivariate workflow inserts synthetic priors for missing ratios and uses Monte-Carlo regression; only the reported empirical BSE Mo values are retained under the branch policy.",
         "status": "empirically_contested_not_closed"
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S027",
         "S042",
@@ -337,7 +337,7 @@
         "semimajor_axis_span_factor": 77.68013295400945,
         "source": "JPL Table 1 fitted Keplerian elements valid 1800-2050"
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [
         "S028"
       ],
@@ -398,7 +398,7 @@
         "strict_path_primordial_baseline_to_present_endpoint": false,
         "strict_path_stellar_products_to_present_endpoint": true
       },
-      "schema": "oric.gc.quantitative-claim.v3",
+      "schema": "oric.gc.quantitative-claim",
       "source_ids": [],
       "stage_ids": [
         "GC-E01",
@@ -443,7 +443,7 @@
         "result": "canonical_decay_curve_is_time_reference_not_unique_local_inventory",
         "status": "posthoc_empirical_crosscheck_not_frozen_test"
       },
-      "schema": "oric.gc.quantitative-crosscheck.v3",
+      "schema": "oric.gc.quantitative-crosscheck",
       "source_ids": [
         "S014",
         "S038",
@@ -458,5 +458,5 @@
       "verdict": "canonical_decay_curve_is_time_reference_not_unique_local_inventory"
     }
   ],
-  "schema": "oric.gc.quantitative-claims.v3"
+  "schema": "oric.gc.quantitative-claims-complete"
 }

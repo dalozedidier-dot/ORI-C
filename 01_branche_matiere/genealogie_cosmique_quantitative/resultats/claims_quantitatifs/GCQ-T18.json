@@ -1,0 +1,84 @@
+{
+  "analysis_status": "retrospective_data_rich_extension",
+  "claim_id": "GCQ-T18",
+  "criterion_met": true,
+  "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation",
+  "executed": true,
+  "preregistered": false,
+  "question": "La dichotomie NC/CC reste-t-elle quantitativement séparable à travers plusieurs systèmes isotopiques mesurés sans imputation ?",
+  "result": {
+    "accuracy": 1.0,
+    "classifier": "deterministic_nearest_centroid_using_only_observed_features",
+    "effect_sizes": {
+      "100Ru": {
+        "CC_minus_NC_Cohen_d": -3.323034795405651,
+        "CC_n": 13,
+        "NC_n": 18
+      },
+      "17O": {
+        "CC_minus_NC_Cohen_d": -2.35200084600964,
+        "CC_n": 8,
+        "NC_n": 23
+      },
+      "48Ca": {
+        "CC_minus_NC_Cohen_d": 5.825812401062168,
+        "CC_n": 5,
+        "NC_n": 13
+      },
+      "50Ti": {
+        "CC_minus_NC_Cohen_d": 5.576262943723878,
+        "CC_n": 9,
+        "NC_n": 18
+      },
+      "54Cr": {
+        "CC_minus_NC_Cohen_d": 4.727104367391188,
+        "CC_n": 9,
+        "NC_n": 22
+      },
+      "54Fe": {
+        "CC_minus_NC_Cohen_d": 2.0146934000003425,
+        "CC_n": 10,
+        "NC_n": 14
+      },
+      "64Ni": {
+        "CC_minus_NC_Cohen_d": 2.5276499189069974,
+        "CC_n": 10,
+        "NC_n": 15
+      },
+      "66Zn": {
+        "CC_minus_NC_Cohen_d": 7.1195025042010585,
+        "CC_n": 6,
+        "NC_n": 11
+      },
+      "94Mo": {
+        "CC_minus_NC_Cohen_d": 1.9898995349974042,
+        "CC_n": 12,
+        "NC_n": 24
+      },
+      "95Mo": {
+        "CC_minus_NC_Cohen_d": 3.818899858295018,
+        "CC_n": 12,
+        "NC_n": 24
+      },
+      "96Zr": {
+        "CC_minus_NC_Cohen_d": 5.845567142661538,
+        "CC_n": 9,
+        "NC_n": 16
+      }
+    },
+    "isotope_systems": 11,
+    "leave_one_out_correct": 41,
+    "leave_one_out_total": 41,
+    "missing_values_imputed": 0,
+    "rows": 41
+  },
+  "schema": "oric.gc.quantitative-claim",
+  "source_ids": [
+    "S043"
+  ],
+  "stage_ids": [
+    "GC-E08",
+    "GC-E10"
+  ],
+  "verdict": "supports_multisystem_NC_CC_isotopic_separation"
+}

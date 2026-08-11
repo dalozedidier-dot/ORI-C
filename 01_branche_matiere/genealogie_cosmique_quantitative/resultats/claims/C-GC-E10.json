@@ -10,7 +10,7 @@
   "mechanism": "absolute_PbPb_ages_record_time_order_and_duration",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "La succession CAI/chondres est-elle quantitativement ordonnée par chronométrie directe ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Âges Pb-Pb U-corrigés mesurés sur inclusions et chondres; aucune horloge synthétique n’est utilisée.",
   "source_ids": [
     "S016"

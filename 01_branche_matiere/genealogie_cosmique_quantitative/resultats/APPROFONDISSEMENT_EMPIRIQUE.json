@@ -8,7 +8,7 @@
   "primary_or_official_sources": 48,
   "qualified_relations": 40,
   "quantitative_synthesis_claims": 12,
-  "schema": "oric.gc.deep-empirical-quantitative.v1",
+  "schema": "oric.gc.deep-empirical-quantitative",
   "selected_quantitative_observations": 24,
   "simulations_used": 0,
   "supported_authoritative_empirical_claims_preserved": 15,

@@ -1,0 +1,43 @@
+{
+  "schema": "oric.gc.quantitative-complete-freeze",
+  "status": "retrospective_empirical_rules_frozen_before_final_execution",
+  "preregistered": false,
+  "reason_not_preregistered": "Le corpus existait avant la définition de cette campagne complète. Les règles ci-dessous sont figées avant l'exécution finale, mais la campagne reste rétrospective et ne doit pas être présentée comme préenregistrée.",
+  "data_policy": "real_measurements_and_official_empirical_data_only",
+  "forbidden_as_evidence": [
+    "simulation",
+    "synthetic_data",
+    "imputation",
+    "theoretical_stellar_yield",
+    "thermochemical_model_output",
+    "orbital_integration",
+    "n_body_history",
+    "monte_carlo_generated_samples"
+  ],
+  "deterministic_derived_calculations_allowed": true,
+  "uncertainty_rule": "analytic_first_order_or_interval_propagation_only_no_random_sampling",
+  "primary_questions": [
+    "Quelle fraction de l'inventaire radiogenique 26Al mesure reste accessible aux evenements dates?",
+    "Une architecture isotopique peut-elle persister pendant une transformation majeure de cet inventaire?",
+    "Des porteurs materiels conservent-ils une trace historique sur des durees tres superieures aux temps physiques initiaux?",
+    "Les reconstructions empiriques de la provenance terrestre convergent-elles ou restent-elles contradictoires?",
+    "Quels maillons stricts rendent la chaine empirique fragile et quels raccords restent ouverts?"
+  ],
+  "scientific_tests": [
+    "radiogenic_inventory_by_dated_event",
+    "early_core_formation_radiogenic_window",
+    "NC_CC_reservoir_persistence_across_26Al_decay",
+    "presolar_carrier_persistence_lower_bound",
+    "Ryugu_late_reactivation_after_extinction_of_primordial_26Al",
+    "Earth_provenance_competing_empirical_reconstructions",
+    "present_endpoint_architecture_vector",
+    "strict_chain_bottleneck_and_closure_audit"
+  ],
+  "claim_discipline": {
+    "derived_decay_fraction_is_not_a_thermal_model": true,
+    "published_approximate_intervals_are_not_given_invented_uncertainties": true,
+    "cross_system_analogues_are_not_promoted_to_direct_solar_genealogy": true,
+    "contradictory_empirical_reconstructions_produce_contested_or_undetermined_verdict": true,
+    "current_orbital_elements_are_endpoint_descriptors_not_reconstructed_history": true
+  }
+}

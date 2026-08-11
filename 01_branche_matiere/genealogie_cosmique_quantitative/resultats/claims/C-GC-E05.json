@@ -10,7 +10,7 @@
   "mechanism": "large_scale_material_stream_feeds_disk_scales",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Observe-t-on un transfert réel de matière du nuage vers les échelles du disque ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
   "source_ids": [
     "S007",

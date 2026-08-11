@@ -1,4 +1,5 @@
 {
+  "complete_quantitative_tests": 8,
   "criteria_met": 8,
   "data_policy": "real_measurements_and_official_empirical_data_only",
   "early_core_formation_window": {
@@ -101,7 +102,7 @@
     "semimajor_axis_span_factor": 77.68013295400945,
     "source": "JPL Table 1 fitted Keplerian elements valid 1800-2050"
   },
-  "freeze_status": "retrospective_empirical_rules_frozen_before_final_v3_execution",
+  "freeze_status": "retrospective_empirical_rules_frozen_before_final_execution",
   "global_result": {
     "Earth_provenance_closed": false,
     "history_carriers_persist_across_multiple_timescales": true,
@@ -164,7 +165,6 @@
     "result": "late_reactivation_is_physically_separated_from_primordial_26Al_clock"
   },
   "measurement_records_total": 120,
-  "new_v3_tests": 8,
   "posthoc_crosschecks": 1,
   "presolar_memory": {
     "basis": "Presolar grains predate the Solar System and are measured in returned material; CAI age is used only as a conservative lower time anchor.",
@@ -275,7 +275,7 @@
     ],
     "separation_start_myr_after_solar_start": 1.0
   },
-  "schema": "oric.gc.quantitative-complete-results.v3",
+  "schema": "oric.gc.quantitative-complete-results",
   "simulations_used": 0,
   "sources_total": 48,
   "synthetic_rows": 0

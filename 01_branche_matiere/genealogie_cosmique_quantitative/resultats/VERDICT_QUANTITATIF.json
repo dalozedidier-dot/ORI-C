@@ -10,7 +10,7 @@
     "direct_protosolar_observation_for_analogue_stages",
     "simulation_based_closure"
   ],
-  "schema": "oric.gc.quantitative-real-verdict.v2",
+  "schema": "oric.gc.quantitative-real-verdict",
   "simulations_used": 0,
   "single_source_stage_bottlenecks": 5,
   "single_source_stage_ids": [

@@ -1,10 +1,10 @@
-# Revue quantitative empirique complète — v3
+# Revue quantitative empirique complète
 
-Cette revue décrit l’autorité quantitative courante de `genealogie_cosmique_quantitative`. La v1 et la v2 restent conservées pour provenance, mais leurs comptages et audits ne constituent plus le résultat final de la campagne.
+Cette revue décrit l’autorité quantitative courante de `genealogie_cosmique_quantitative`. Les étapes méthodologiques antérieures restent conservées pour provenance, mais leurs comptages et audits ne constituent plus le résultat final de la campagne.
 
 ## Politique de données
 
-Le corpus v3 contient **48 sources/datasets empiriques admissibles** et **120 enregistrements empiriques**. Les verdicts utilisent 0 simulation, 0 donnée synthétique, 0 imputation et 0 échantillonnage aléatoire. Les sorties théoriques, thermochimiques et N-corps sont exclues. Lorsqu’une publication combine mesures et traitement dépendant de données synthétiques ou de Monte-Carlo, seule la portion empirique explicitement admissible est conservée.
+Le corpus courant contient **48 sources/datasets empiriques admissibles** et **120 enregistrements empiriques**. Les verdicts utilisent 0 simulation, 0 donnée synthétique, 0 imputation et 0 échantillonnage aléatoire. Les sorties théoriques, thermochimiques et N-corps sont exclues. Lorsqu’une publication combine mesures et traitement dépendant de données synthétiques ou de Monte-Carlo, seule la portion empirique explicitement admissible est conservée.
 
 ## Résultat 1 — transformation quantitative d’un inventaire hérité
 
@@ -45,9 +45,9 @@ L’endpoint officiel retenu comprend huit corps et couvre un facteur **77,68** 
 
 L’ablation exacte des relations documentées identifie **6 nœuds critiques** et **6 relations critiques** pour le chemin strict produits stellaires → endpoint actuel. Ce chemin existe. En revanche, le chemin strict baseline primordiale → endpoint actuel reste ouvert. La branche transforme ainsi un ancien « trou » narratif en liste machine de verrous localisés.
 
-## Claims machine v3
+## Claims machine
 
-Les huit tests `GCQ-T09` à `GCQ-T16` sont générés individuellement sous `resultats/claims_quantitatifs_v3/` et agrégés dans `resultats/CLAIMS_QUANTITATIFS_COMPLETS.json`. Chaque claim contient son verdict, ses sources, ses stades, ses données de résultat et sa limite d’interprétation.
+Les huit tests `GCQ-T09` à `GCQ-T16` sont générés individuellement sous `resultats/claims_quantitatifs/` et agrégés dans `resultats/CLAIMS_QUANTITATIFS_COMPLETS.json`. Chaque claim contient son verdict, ses sources, ses stades, ses données de résultat et sa limite d’interprétation.
 
 ## Verdict global
 
@@ -56,8 +56,8 @@ Les huit tests `GCQ-T09` à `GCQ-T16` sont générés individuellement sous `res
 La campagne démontre quantitativement, sur des entrées empiriques, qu’un changement de moment historique modifie une ressource physique accessible et que des porteurs/architectures peuvent persister à travers ce changement. Elle ne certifie ni une trajectoire orbitale unique ni une chaîne primordiale→présent entièrement fermée.
 
 
-## Extension data-rich v4
+## Extension par données massives réelles
 
-La branche exploite désormais des distributions au niveau grain/échantillon, sans remplacer les résultats v3. Le corpus d’autorité comprend 48 sources/datasets empiriques admissibles. La couche massive importe 11 467 lignes utiles normalisées, dont 11 207 grains présolaires publiés ou partiellement publiés. Les 11 567 lignes SiC marquées `Data Published = no` sont exclues des claims. Les doublons XLSX/CSV, valeurs synthétiques, priors, Monte-Carlo, imputations et sorties de simulation ne comptent pas comme preuves.
+La branche exploite désormais des distributions au niveau grain/échantillon, sans remplacer les résultats de la campagne complète. Le corpus d’autorité comprend 48 sources/datasets empiriques admissibles. La couche massive importe 11 467 lignes utiles normalisées, dont 11 207 grains présolaires publiés ou partiellement publiés. Les 11 567 lignes SiC marquées `Data Published = no` sont exclues des claims. Les doublons XLSX/CSV, valeurs synthétiques, priors, Monte-Carlo, imputations et sorties de simulation ne comptent pas comme preuves.
 
-Les nouveaux claims `GCQ-T17` à `GCQ-T21` testent les distributions présolaires, la séparation multivariée NC/CC, l’hétérogénéité O-Cr-Ti des chondres d’Allende, l’hétérogénéité ε50Ti de sous-échantillons d’Allende et des contrastes isotopiques individuels dans les échantillons retournés de Bennu. Le rapport d’autorité est `resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md`.
+Les nouveaux claims `GCQ-T17` à `GCQ-T21` testent les distributions présolaires, la séparation multivariée NC/CC, l’hétérogénéité O-Cr-Ti des chondres d’Allende, l’hétérogénéité ε50Ti de sous-échantillons d’Allende et des contrastes isotopiques individuels dans les échantillons retournés de Bennu. Le rapport d’autorité est `resultats/RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md`.

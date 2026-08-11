@@ -11,7 +11,7 @@
   "mechanism": "molecular_and_isotopic_signatures_survive_across_formation_stages",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Des signatures moléculaires formées en phase froide sont-elles observées jusque dans les disques et compatibles avec des matériaux cométaires ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "V883 Ori/67P testent la continuité isotopique de l’eau; TW Hya apporte une détection indépendante de CH3OH. Les abondances modélisées de TW Hya sont exclues.",
   "source_ids": [
     "S008",

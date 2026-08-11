@@ -286,7 +286,7 @@ jobs:
           import os
           from pathlib import Path
           r=Path(os.environ['RUNNER_TEMP'])/'gc-candidate'
-          d=json.loads((r/'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text(encoding='utf-8'))
+          d=json.loads((r/'RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text(encoding='utf-8'))
           c=json.loads((r/'RESULTATS_QUANTITATIFS_COMPLETS.json').read_text(encoding='utf-8'))
           a=d['audit']; nc=d['NC_CC']; pg=d['presolar_grains']; al=d['Allende_chondrules']['metrics']; b=d['Bennu_returned_samples']
           lines=[

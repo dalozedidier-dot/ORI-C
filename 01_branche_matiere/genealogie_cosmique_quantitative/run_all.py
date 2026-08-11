@@ -10,7 +10,7 @@ from analyser_empirique import read_csv, validate_empirical_only, derive, evalua
 from analyser_approfondissement_empirique import analyse as analyse_approfondissement
 from analyser_quantitatif_reel import analyse as analyse_quantitatif_reel
 from analyser_quantitatif_complet import analyse as analyse_quantitatif_complet
-from analyser_donnees_massives_v4 import analyse as analyse_donnees_massives_v4
+from analyser_donnees_massives import analyse as analyse_donnees_massives
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -39,7 +39,7 @@ def main():
     stage_record_counts=Counter(m['stage_id'] for m in measures)
     stage_source_counts={sid:len({m['source_id'] for m in measures if m['stage_id']==sid}) for sid in [s['stage_id'] for s in stages]}
     audit={
-      'schema':'oric.gc.empirical-admissibility-audit.v1',
+      'schema':'oric.gc.empirical-admissibility-audit',
       'policy':'strict_empirical_only',
       'sources_total':len(sources),'measurement_records_total':len(measures),'stages_total':len(stages),'links_total':len(links),
       'sources_primary_peer_reviewed':sum(s['source_class']=='primary_peer_reviewed' for s in sources),
@@ -64,24 +64,24 @@ def main():
     }
     dump(out/'AUDIT_ADMISSIBILITE.json',audit)
     empirical={
-      'schema':'oric.gc.empirical-results.v3',
+      'schema':'oric.gc.empirical-results',
       'data_policy':'published_or_direct_empirical_measurements_only',
       'observed_records':len(measures),'source_count':len(sources),'stage_count':len(stages),'link_count':len(links),
       'simulations_used':0,'synthetic_rows':0,'imputed_rows':0,
       'derived_from_observations':d,'evidence_mode_counts':d['source_mode_counts'],
     }
     dump(out/'RESULTATS_EMPIRIQUES.json',empirical)
-    claimdoc={'schema':'oric.gc.claims.v3','policy':'empirical_only_non_preregistered_initial_synthesis','claims':claims}
+    claimdoc={'schema':'oric.gc.claims','policy':'empirical_only_non_preregistered_initial_synthesis','claims':claims}
     dump(out/'CLAIMS.json',claimdoc)
-    for c in claims: dump(out/'claims'/f"{c['claim_id']}.json",{'schema':'oric.gc.claim.v3',**c})
+    for c in claims: dump(out/'claims'/f"{c['claim_id']}.json",{'schema':'oric.gc.claim',**c})
     source_by_stage={s['stage_id']:[] for s in stages}
     for src in sources:
       for sid in src['stage_ids'].split(';'):
         if sid in source_by_stage: source_by_stage[sid].append(src['source_id'])
-    chain={'schema':'oric.gc.empirical-chain.v3','stages':[{**s,'source_ids':sorted(source_by_stage[s['stage_id']]),'measurement_count':stage_record_counts[s['stage_id']]} for s in stages], 'links':links}
+    chain={'schema':'oric.gc.empirical-chain','stages':[{**s,'source_ids':sorted(source_by_stage[s['stage_id']]),'measurement_count':stage_record_counts[s['stage_id']]} for s in stages], 'links':links}
     dump(out/'CHAINE_EMPIRIQUE.json',chain)
     summary={
-      'schema':'oric.gc.empirical-summary.v3','stages':len(stages),'links':len(links),'primary_or_official_sources':len(sources),
+      'schema':'oric.gc.empirical-summary','stages':len(stages),'links':len(links),'primary_or_official_sources':len(sources),
       'empirical_measurement_records':len(measures),'claims':len(claims),'supported_claims':len(positive),'unresolved_claims':len(unresolved),
       'simulations_used':0,'synthetic_rows':0,'imputed_rows':0,
       'global_empirical_verdict':next(c['verdict'] for c in claims if c['claim_id']=='C-GC-E15'),
@@ -104,7 +104,7 @@ def main():
     }
     dump(out/'SYNTHESE.json',summary)
     handoff={
-      'schema':'oric.gc.empirical-handoff.v3','status':'empirical_endpoint_reached_unique_orbital_history_unresolved',
+      'schema':'oric.gc.empirical-handoff','status':'empirical_endpoint_reached_unique_orbital_history_unresolved',
       'endpoint':'current_solar_system_architecture','endpoint_source':'S028','observed_planet_count':summary['present_solar_system_planets'],
       'empirical_chain_status':'supported_at_mechanism_level',
       'what_is_established':'Des archives empiriques indépendantes relient enrichissement stellaire, poussières, grains présolaires, glaces et molécules, réservoirs isotopiques, chronométrie, croissance de petits corps, protoplanètes observées et histoires d’accrétion jusqu’à l’architecture présente.',
@@ -148,53 +148,53 @@ def main():
     (out/'RAPPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     deep=analyse_approfondissement(HERE)
     dump(out/'APPROFONDISSEMENT_EMPIRIQUE.json',deep['summary'])
-    dump(out/'CLAIMS_QUANTITATIFS.json',{'schema':'oric.gc.quantitative-empirical-claims.v1','claims':deep['claims']})
+    dump(out/'CLAIMS_QUANTITATIFS.json',{'schema':'oric.gc.quantitative-empirical-claims','claims':deep['claims']})
     write_csv(out/'COUVERTURE_DAG_EMPIRIQUE.csv',['stage_id','anchor_stage_id','measurement_records_in_anchor','covered'],deep['coverage'])
 
-    # Couche quantitative v2: résultats réels calculés directement sur les mesures empiriques.
-    q2=analyse_quantitatif_reel(HERE)
-    dump(out/'TESTS_QUANTITATIFS_REELS.json',{'schema':'oric.gc.quantitative-real-tests.v2','tests':q2['tests']})
-    dump(out/'ROBUSTESSE_GRAPHE.json',q2['graph'])
-    dump(out/'VERDICT_QUANTITATIF.json',q2['verdict'])
-    write_csv(out/'REPLICATION_ECHANTILLONS.csv',list(q2['replication'][0].keys()),q2['replication'])
-    write_csv(out/'CHRONOLOGIE_QUANTITATIVE.csv',list(q2['chronology'][0].keys()),q2['chronology'])
-    write_csv(out/'REDONDANCE_PAR_STAGE.csv',list(q2['redundancy'][0].keys()),q2['redundancy'])
-    write_csv(out/'ABLATIONS_FAMILLES_PREUVES.csv',list(q2['ablations'][0].keys()),q2['ablations'])
-    qby={t['test_id']:t for t in q2['tests']}
-    qlines=[
+    # Couche quantitative réelle : résultats calculés directement sur les mesures empiriques.
+    real_q=analyse_quantitatif_reel(HERE)
+    dump(out/'TESTS_QUANTITATIFS_REELS.json',{'schema':'oric.gc.quantitative-real-tests','tests':real_q['tests']})
+    dump(out/'ROBUSTESSE_GRAPHE.json',real_q['graph'])
+    dump(out/'VERDICT_QUANTITATIF.json',real_q['verdict'])
+    write_csv(out/'REPLICATION_ECHANTILLONS.csv',list(real_q['replication'][0].keys()),real_q['replication'])
+    write_csv(out/'CHRONOLOGIE_QUANTITATIVE.csv',list(real_q['chronology'][0].keys()),real_q['chronology'])
+    write_csv(out/'REDONDANCE_PAR_STAGE.csv',list(real_q['redundancy'][0].keys()),real_q['redundancy'])
+    write_csv(out/'ABLATIONS_FAMILLES_PREUVES.csv',list(real_q['ablations'][0].keys()),real_q['ablations'])
+    real_by={t['test_id']:t for t in real_q['tests']}
+    real_lines=[
       '# Rapport quantitatif réel — généalogie cosmique', '',
-      '**Autorité v2 : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**','',
-      f"- Sources primaires/officielles : {q2['verdict']['sources']}",
-      f"- Enregistrements de mesures réelles : {q2['verdict']['measurement_records']}",
-      f"- Tests quantitatifs/audits : {q2['verdict']['tests']} ({q2['verdict']['tests_passed']} exécutés conformément aux critères gelés pour les mises à jour futures).", '',
+      '**Autorité quantitative réelle : mesures empiriques uniquement. Aucun résultat de simulation, aucune donnée synthétique et aucune imputation.**','',
+      f"- Sources primaires/officielles : {real_q['verdict']['sources']}",
+      f"- Enregistrements de mesures réelles : {real_q['verdict']['measurement_records']}",
+      f"- Tests quantitatifs/audits : {real_q['verdict']['tests']} ({real_q['verdict']['tests_passed']} exécutés conformément aux critères gelés pour les mises à jour futures).", '',
       '## Résultats quantitatifs', '',
-      f"- Réplication grains présolaires : SiC Bennu/Ryugu z descriptif = {qby['GCQ-T01']['result']['pairs'][0]['standardized_descriptive_difference']:.3f}; O-rich z = {qby['GCQ-T01']['result']['pairs'][1]['standardized_descriptive_difference']:.3f}.",
-      f"- Eau lourde V883 Ori / 67P : écart standardisé = {qby['GCQ-T02']['result']['standardized_difference']:.3f}.",
-      f"- Chronologie : quatre écarts temporels sélectionnés sont résolus à >5σ avec propagation conservative des incertitudes publiées; un second chronomètre Al-Mg apporte en plus un cross-check indépendant d’environ {qby['GCQ-T03']['result']['independent_AlMg_crosscheck']['remelting_delay_myr_after_canonical_CAI']:.0f} Myr après les CAI canoniques.",
+      f"- Réplication grains présolaires : SiC Bennu/Ryugu z descriptif = {real_by['GCQ-T01']['result']['pairs'][0]['standardized_descriptive_difference']:.3f}; O-rich z = {real_by['GCQ-T01']['result']['pairs'][1]['standardized_descriptive_difference']:.3f}.",
+      f"- Eau lourde V883 Ori / 67P : écart standardisé = {real_by['GCQ-T02']['result']['standardized_difference']:.3f}.",
+      f"- Chronologie : quatre écarts temporels sélectionnés sont résolus à >5σ avec propagation conservative des incertitudes publiées; un second chronomètre Al-Mg apporte en plus un cross-check indépendant d’environ {real_by['GCQ-T03']['result']['independent_AlMg_crosscheck']['remelting_delay_myr_after_canonical_CAI']:.0f} Myr après les CAI canoniques.",
       f"- EC 53 : deux espèces cristallines (forstérite, enstatite) absentes en quiescence et détectées pendant le burst du même objet.",
-      f"- Streamers : deux systèmes indépendants observés, longueurs ~{qby['GCQ-T05']['result']['streamer_lengths_au'][1]:.0f} au et >{qby['GCQ-T05']['result']['streamer_lengths_au'][0]:.0f} au.",
-      f"- Ryugu : archive Lu-Hf d’une circulation de fluide >{qby['GCQ-T06']['result']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation.", '',
+      f"- Streamers : deux systèmes indépendants observés, longueurs ~{real_by['GCQ-T05']['result']['streamer_lengths_au'][1]:.0f} au et >{real_by['GCQ-T05']['result']['streamer_lengths_au'][0]:.0f} au.",
+      f"- Ryugu : archive Lu-Hf d’une circulation de fluide >{real_by['GCQ-T06']['result']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation.", '',
       '## Robustesse et limites', '',
-      f"- Graphe empirique : {q2['graph']['strict_archive_or_same_history_edges']} liens stricts d’archive/séquence sur {q2['graph']['total_edges']} liens; {q2['graph']['analogue_or_nonunique_edges']} liens restent analogues ou non uniques.",
-      f"- Une séquence stricte d’archives relie les produits stellaires à un endpoint planétaire actuel : {str(q2['graph']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
-      f"- Fermeture stricte depuis la baseline primordiale jusqu’à l’endpoint actuel : {q2['graph']['end_to_end_strict_closure']}.",
-      f"- Stades à source unique : {q2['verdict']['single_source_stage_bottlenecks']} ({', '.join(q2['verdict']['single_source_stage_ids'])}).",
+      f"- Graphe empirique : {real_q['graph']['strict_archive_or_same_history_edges']} liens stricts d’archive/séquence sur {real_q['graph']['total_edges']} liens; {real_q['graph']['analogue_or_nonunique_edges']} liens restent analogues ou non uniques.",
+      f"- Une séquence stricte d’archives relie les produits stellaires à un endpoint planétaire actuel : {str(real_q['graph']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
+      f"- Fermeture stricte depuis la baseline primordiale jusqu’à l’endpoint actuel : {real_q['graph']['end_to_end_strict_closure']}.",
+      f"- Stades à source unique : {real_q['verdict']['single_source_stage_bottlenecks']} ({', '.join(real_q['verdict']['single_source_stage_ids'])}).",
       '- Les ablations par famille de preuve sont enregistrées dans `ABLATIONS_FAMILLES_PREUVES.csv`; elles auditent la dépendance de la chaîne aux familles de mesures et ne simulent aucun processus physique.', '',
       '## Verdict', '',
-      f"`{q2['verdict']['global_quantitative_verdict']}`", '',
+      f"`{real_q['verdict']['global_quantitative_verdict']}`", '',
       'La branche dispose maintenant de résultats quantitatifs falsifiables/descriptifs sur les mesures elles-mêmes. La fermeture généalogique stricte de bout en bout reste ouverte là où les données ne permettent pas de remplacer honnêtement un analogue ou une relation non unique.'
     ]
-    (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(qlines)+'\n',encoding='utf-8')
+    (out/'RAPPORT_QUANTITATIF.md').write_text('\n'.join(real_lines)+'\n',encoding='utf-8')
 
-    # Couche quantitative v3 complète: transformation historique quantifiée, sans simulation.
-    q3=analyse_quantitatif_complet(HERE)
-    dump(out/'RESULTATS_QUANTITATIFS_COMPLETS.json',q3['result'])
-    dump(out/'TESTS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-complete-tests.v3','tests':q3['tests']})
+    # Couche quantitative complète: transformation historique quantifiée, sans simulation.
+    complete_q=analyse_quantitatif_complet(HERE)
+    dump(out/'RESULTATS_QUANTITATIFS_COMPLETS.json',complete_q['result'])
+    dump(out/'TESTS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-complete-tests','tests':complete_q['tests']})
 
-    # Claims v3 individuels : même discipline que les claims empiriques de la branche.
+    # Claims quantitatifs individuels : même discipline que les claims empiriques de la branche.
     # Chaque résultat quantitatif possède ainsi son artefact, ses sources et son statut
     # sans être promu à une certification historique du dépôt.
-    q3_claim_meta={
+    complete_claim_meta={
       'GCQ-T09':('Le moment mesuré d’un événement change-t-il la fraction de 26Al encore physiquement disponible?', ['S016','S017','S014','S018','S039','S040'], ['GC-E10','GC-E13','GC-E08','GC-E14']),
       'GCQ-T10':('La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?', ['S041','S039','S040','S016'], ['GC-E10','GC-E13']),
       'GCQ-T11':('La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?', ['S013','S039','S040'], ['GC-E08','GC-E10']),
@@ -204,12 +204,12 @@ def main():
       'GCQ-T15':('Quel endpoint orbital actuel est directement décrit par le produit observationnel officiel retenu?', ['S028'], ['GC-E19']),
       'GCQ-T16':('Quels nœuds et relations documentés contrôlent la fermeture stricte de la chaîne empirique?', [], ['GC-E01','GC-E02','GC-E03','GC-E08','GC-E10','GC-E13','GC-E17','GC-E19']),
     }
-    q3_claims=[]
-    q3_claim_dir=out/'claims_quantitatifs_v3'; q3_claim_dir.mkdir(exist_ok=True)
-    for t in q3['tests']:
-      question,src_ids,stage_ids=q3_claim_meta[t['test_id']]
+    complete_claims=[]
+    quantitative_claim_dir=out/'claims_quantitatifs'; quantitative_claim_dir.mkdir(exist_ok=True)
+    for t in complete_q['tests']:
+      question,src_ids,stage_ids=complete_claim_meta[t['test_id']]
       c={
-        'schema':'oric.gc.quantitative-claim.v3',
+        'schema':'oric.gc.quantitative-claim',
         'claim_id':t['test_id'],
         'question':question,
         'verdict':t['scientific_verdict'],
@@ -223,10 +223,10 @@ def main():
         'result':t['result'],
         'interpretation_limit':'Le verdict reste limité à la relation explicitement testée; aucune simulation ni donnée synthétique ne complète les raccords manquants.'
       }
-      q3_claims.append(c); dump(q3_claim_dir/f"{t['test_id']}.json",c)
-    x=q3['crosschecks'][0]
+      complete_claims.append(c); dump(quantitative_claim_dir/f"{t['test_id']}.json",c)
+    x=complete_q['crosschecks'][0]
     xclaim={
-      'schema':'oric.gc.quantitative-crosscheck.v3',
+      'schema':'oric.gc.quantitative-crosscheck',
       'claim_id':'GCQ-X01',
       'question':'La décroissance canonique temporelle suffit-elle à représenter un inventaire 26Al local unique?',
       'verdict':x['result'],
@@ -240,30 +240,30 @@ def main():
       'result':x,
       'interpretation_limit':'Contrôle post-hoc déterministe. Le délai ~2 Myr ne reçoit aucune incertitude inventée et aucun test de significativité indépendant n’est revendiqué.'
     }
-    dump(q3_claim_dir/'GCQ-X01.json',xclaim)
-    dump(out/'CLAIMS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-claims.v3','claims':q3_claims,'posthoc_crosschecks':[xclaim]})
+    dump(quantitative_claim_dir/'GCQ-X01.json',xclaim)
+    dump(out/'CLAIMS_QUANTITATIFS_COMPLETS.json',{'schema':'oric.gc.quantitative-claims-complete','claims':complete_claims,'posthoc_crosschecks':[xclaim]})
     dump(out/'CROSSCHECK_HETEROGENEITE_26AL.json',x)
 
-    write_csv(out/'INVENTAIRE_26AL_PAR_EVENEMENT.csv',list(q3['inventory'][0].keys()),q3['inventory'])
-    write_csv(out/'FERMETURE_RELATIONS_EMPIRIQUES.csv',list(q3['closure'][0].keys()),q3['closure'])
+    write_csv(out/'INVENTAIRE_26AL_PAR_EVENEMENT.csv',list(complete_q['inventory'][0].keys()),complete_q['inventory'])
+    write_csv(out/'FERMETURE_RELATIONS_EMPIRIQUES.csv',list(complete_q['closure'][0].keys()),complete_q['closure'])
     dump(out/'VERROUS_BOUT_EN_BOUT.json',{
-      'schema':'oric.gc.end-to-end-locks.v3',
-      'strict_path_stellar_products_to_present_endpoint':q3['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint'],
-      'strict_path_primordial_baseline_to_present_endpoint':q3['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint'],
-      'critical_nodes':q3['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'],
-      'critical_edges':q3['result']['graph_closure']['critical_edges_for_stellar_to_endpoint_path'],
-      'Earth_provenance_status':q3['result']['earth_provenance']['status'],
-      'open_links':[x for x in q3['closure'] if x['closure_status']!='strict_documented_relation']
+      'schema':'oric.gc.end-to-end-locks',
+      'strict_path_stellar_products_to_present_endpoint':complete_q['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint'],
+      'strict_path_primordial_baseline_to_present_endpoint':complete_q['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint'],
+      'critical_nodes':complete_q['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'],
+      'critical_edges':complete_q['result']['graph_closure']['critical_edges_for_stellar_to_endpoint_path'],
+      'Earth_provenance_status':complete_q['result']['earth_provenance']['status'],
+      'open_links':[x for x in complete_q['closure'] if x['closure_status']!='strict_documented_relation']
     })
-    q3by={t['test_id']:t for t in q3['tests']}
-    inv={x['event']:x for x in q3['result']['radiogenic_inventory']}
-    rr=q3['result']['reservoir_persistence']; core=q3['result']['early_core_formation_window']; ep=q3['result']['endpoint_architecture']
+    complete_by={t['test_id']:t for t in complete_q['tests']}
+    inv={x['event']:x for x in complete_q['result']['radiogenic_inventory']}
+    rr=complete_q['result']['reservoir_persistence']; core=complete_q['result']['early_core_formation_window']; ep=complete_q['result']['endpoint_architecture']
     complete_lines=[
-      '# Généalogie cosmique quantitative — résultats physiques complets v3','',
+      '# Généalogie cosmique quantitative — résultats physiques complets','',
       '**Corpus: données réelles et produits empiriques officiels uniquement. 0 simulation, 0 donnée synthétique, 0 imputation, 0 échantillonnage aléatoire.**','',
-      f"- Sources: {q3['result']['sources_total']}",
-      f"- Enregistrements empiriques: {q3['result']['measurement_records_total']}",
-      f"- Nouveaux tests physiques/fermeture v3: {q3['result']['new_v3_tests']} ({q3['result']['criteria_met']} critères d'exécution satisfaits).",'',
+      f"- Sources: {complete_q['result']['sources_total']}",
+      f"- Enregistrements empiriques: {complete_q['result']['measurement_records_total']}",
+      f"- Tests physiques/fermeture complets: {complete_q['result']['complete_quantitative_tests']} ({complete_q['result']['criteria_met']} critères d'exécution satisfaits).",'',
       '## 1. L’histoire change quantitativement un inventaire physique accessible','',
       f"- À l’archive angritique, t = {inv['angrite']['time_after_CAI_myr']:.2f} ± {inv['angrite']['time_sigma_myr']:.2f} Myr après le repère CAI, il reste {100*inv['angrite']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% de l’inventaire initial de 26Al.",
       f"- À EC 002, t = {inv['EC002']['time_after_CAI_myr']:.2f} ± {inv['EC002']['time_sigma_myr']:.2f} Myr: {100*inv['EC002']['remaining_26Al_fraction_of_CAI_inventory']:.1f}% reste.",
@@ -283,36 +283,36 @@ def main():
       f"- Une autre archive du corpus rapporte indépendamment une hétérogénéité 26Al d’un facteur {x['independent_reported_26Al_heterogeneity_factor_range'][0]:.0f}–{x['independent_reported_26Al_heterogeneity_factor_range'][1]:.0f}.",
       '- Ce contrôle est explicitement post-hoc et ne compte pas parmi les huit tests gelés. Il montre que la décroissance temporelle est une référence nécessaire mais pas un inventaire local unique : l’histoire de réservoir/mélange intervient aussi.','',
       '## 4. Mémoire matérielle sur plusieurs échelles de temps','',
-      f"- Les grains présolaires mesurés dans Bennu, Ryugu et Wild 2 imposent une borne conservatrice de persistance matérielle >{q3['result']['presolar_memory']['conservative_persistence_lower_bound_gyr']:.3f} Gyr.",
-      f"- Ryugu enregistre une réactivation fluide >{q3['result']['late_reactivation']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation, soit >{q3['result']['late_reactivation']['elapsed_26Al_half_lives_lower_bound']:.0f} demi-vies de 26Al; la cause tardive reste non identifiée ici.",'',
+      f"- Les grains présolaires mesurés dans Bennu, Ryugu et Wild 2 imposent une borne conservatrice de persistance matérielle >{complete_q['result']['presolar_memory']['conservative_persistence_lower_bound_gyr']:.3f} Gyr.",
+      f"- Ryugu enregistre une réactivation fluide >{complete_q['result']['late_reactivation']['late_fluid_flow_lower_bound_myr_after_formation']:.0f} Myr après formation, soit >{complete_q['result']['late_reactivation']['elapsed_26Al_half_lives_lower_bound']:.0f} demi-vies de 26Al; la cause tardive reste non identifiée ici.",'',
       '## 5. Terre: le résultat correct est un conflit empirique, pas une histoire forcée','',
       '- Budde et al. 2019 soutiennent une composante CC tardive à partir du Mo; Bermingham et al. 2025 concluent au contraire que les 10–20 derniers % massiques sont dominés par du matériel NC, avec une petite contribution CC encore possible dans les 0,5–1 derniers %.',
       '- Les valeurs Mo BSE rapportées en 2026 sont conservées, mais la conclusion multivariée de cette étude n’est pas utilisée comme preuve car son pipeline publié emploie des priors synthétiques et du Monte-Carlo.',
-      f"- Verdict ORI-C sur la provenance terrestre: `{q3['result']['earth_provenance']['status']}`.",'',
+      f"- Verdict ORI-C sur la provenance terrestre: `{complete_q['result']['earth_provenance']['status']}`.",'',
       '## 6. Endpoint mesuré et verrou de reconstruction','',
       f"- Les 8 corps de l’endpoint JPL couvrent un facteur {ep['semimajor_axis_span_factor']:.2f} en demi-grand axe (Mercure → Neptune) dans la table utilisée.",
-      f"- Chaîne stricte produits stellaires → endpoint actuel: {str(q3['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
-      f"- Chaîne stricte baseline primordiale → endpoint actuel: {str(q3['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint']).lower()}.",
-      f"- Nœuds critiques de la chaîne stricte: {', '.join(q3['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'])}.",'',
+      f"- Chaîne stricte produits stellaires → endpoint actuel: {str(complete_q['result']['graph_closure']['strict_path_stellar_products_to_present_endpoint']).lower()}.",
+      f"- Chaîne stricte baseline primordiale → endpoint actuel: {str(complete_q['result']['graph_closure']['strict_path_primordial_baseline_to_present_endpoint']).lower()}.",
+      f"- Nœuds critiques de la chaîne stricte: {', '.join(complete_q['result']['graph_closure']['critical_nodes_for_stellar_to_endpoint_path'])}.",'',
       '## Verdict global','',
-      f"`{q3['result']['global_result']['verdict']}`",'',
+      f"`{complete_q['result']['global_result']['verdict']}`",'',
       'Le résultat central est désormais quantitatif: le moment d’incorporation transforme directement la fraction d’un inventaire radiogénique mesuré qui reste physiquement disponible. Des architectures isotopiques et des porteurs matériels persistent pendant ces changements, mais plusieurs raccords de bout en bout et la provenance terrestre restent explicitement ouverts ou contestés.'
     ]
     (out/'RAPPORT_QUANTITATIF_COMPLET.md').write_text('\n'.join(complete_lines)+'\n',encoding='utf-8')
 
-    # Couche v4 data-rich : distributions individuelles publiées/mesurées uniquement.
-    q4res,q4tests,q4claims,q4audit=analyse_donnees_massives_v4(HERE)
-    dump(out/'RESULTATS_QUANTITATIFS_DATA_RICH_V4.json',q4res)
-    dump(out/'TESTS_QUANTITATIFS_DATA_RICH_V4.json',q4tests)
-    dump(out/'CLAIMS_QUANTITATIFS_DATA_RICH_V4.json',q4claims)
-    dump(out/'AUDIT_DONNEES_MASSIVES_V4.json',q4audit)
-    q4dir=out/'claims_quantitatifs_v4'; q4dir.mkdir(exist_ok=True)
-    for c in q4claims['claims']:
-        one={'schema':'oric.gc.quantitative-claim.v4',**c}
-        dump(q4dir/f"{c['claim_id']}.json",one)
-    p=q4res['presolar_grains'];n=q4res['NC_CC'];ch=q4res['Allende_chondrules'];w=q4res['Allende_subsamples'];b=q4res['Bennu_returned_samples']
-    v4lines=[
-      '# Généalogie cosmique quantitative — extension data-rich v4','',
+    # Couche de données massives réelles : distributions individuelles publiées/mesurées uniquement.
+    massive_res,massive_tests,massive_claims,massive_audit=analyse_donnees_massives(HERE)
+    dump(out/'RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json',massive_res)
+    dump(out/'TESTS_QUANTITATIFS_DONNEES_MASSIVES.json',massive_tests)
+    dump(out/'CLAIMS_QUANTITATIFS_DONNEES_MASSIVES.json',massive_claims)
+    dump(out/'AUDIT_DONNEES_MASSIVES.json',massive_audit)
+    quantitative_claim_dir=out/'claims_quantitatifs'; quantitative_claim_dir.mkdir(exist_ok=True)
+    for c in massive_claims['claims']:
+        one={'schema':'oric.gc.quantitative-claim',**c}
+        dump(quantitative_claim_dir/f"{c['claim_id']}.json",one)
+    p=massive_res['presolar_grains'];n=massive_res['NC_CC'];ch=massive_res['Allende_chondrules'];w=massive_res['Allende_subsamples'];b=massive_res['Bennu_returned_samples']
+    massive_lines=[
+      '# Généalogie cosmique quantitative — extension par données massives réelles','',
       '**Données réelles au niveau grain, échantillon ou groupe mesuré. 0 simulation, 0 synthétique, 0 imputation. Les doublons de format et les lignes PGD non publiées sont exclus des claims.**','',
       f"- Grains présolaires admissibles : {p['admissible_grains_total']} ({p['SiC_admissible_published_or_partial_rows']} SiC publiés/partiellement publiés + {p['graphite_admissible_rows']} graphites).",
       f"- SiC non publiés explicitement exclus : {p['SiC_unpublished_rows_excluded']}.",
@@ -324,7 +324,7 @@ def main():
       '`distribution_level_history_encoding_supported_with_open_end_to_end_genealogy`','',
       'Les nouveaux jeux ne ferment pas une trajectoire cosmique unique. Ils changent toutefois le niveau de preuve : les signatures historiques ne reposent plus seulement sur quelques valeurs résumées, mais sur des distributions de milliers de grains, des groupes isotopiques multivariés et des hétérogénéités intra-météorite résolues au-delà des erreurs publiées.'
     ]
-    (out/'RAPPORT_QUANTITATIF_DATA_RICH_V4.md').write_text('\n'.join(v4lines)+'\n',encoding='utf-8')
+    (out/'RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md').write_text('\n'.join(massive_lines)+'\n',encoding='utf-8')
 
     files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
     rels=[]

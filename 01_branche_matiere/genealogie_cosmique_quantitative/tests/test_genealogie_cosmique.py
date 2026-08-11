@@ -69,7 +69,7 @@ def test_chronology_and_laboratory_results():
 
 def test_claims_have_fifteen_positive_results_and_one_explicit_limit():
     d=json.loads((HERE/'resultats/CLAIMS.json').read_text())
-    assert d['schema']=='oric.gc.claims.v3'
+    assert d['schema']=='oric.gc.claims'
     by={x['claim_id']:x for x in d['claims']}
     assert len(d['claims'])==16
     assert sum(x['verdict'].startswith('supports_') for x in d['claims'])==15
@@ -125,10 +125,10 @@ def test_deep_quantitative_layer_is_empirical_only():
     assert len(rows(HERE/'CLAIMS_QUANTITATIFS_EMPIRIQUES.csv'))==12
 
 
-def test_quantitative_v2_has_real_calculations_not_count_only():
+def test_quantitative_real_has_real_calculations_not_count_only():
     v=json.loads((HERE/'resultats/VERDICT_QUANTITATIF.json').read_text())
     t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_REELS.json').read_text())
-    assert v['schema']=='oric.gc.quantitative-real-verdict.v2'
+    assert v['schema']=='oric.gc.quantitative-real-verdict'
     assert v['sources']==48 and v['measurement_records']==120
     assert v['tests']==8 and v['tests_passed']==8
     assert v['simulations_used']==0 and v['synthetic_rows']==0 and v['imputed_rows']==0
@@ -148,7 +148,7 @@ def test_quantitative_v2_has_real_calculations_not_count_only():
     assert by['GCQ-T06']['result']['late_fluid_flow_lower_bound_myr_after_formation']>=1000
 
 
-def test_quantitative_v2_ablation_and_bottlenecks_are_explicit():
+def test_quantitative_real_ablation_and_bottlenecks_are_explicit():
     g=json.loads((HERE/'resultats/ROBUSTESSE_GRAPHE.json').read_text())
     assert g['total_edges']==22
     assert g['strict_archive_or_same_history_edges']==12
@@ -185,12 +185,12 @@ def test_new_empirical_sources_are_firewalled():
     assert math.isclose(float(m['M090']['value_numeric']),1.2e-6,rel_tol=0,abs_tol=1e-16)
 
 
-def test_quantitative_v3_complete_physical_results_are_real_and_deterministic():
+def test_quantitative_complete_physical_results_are_real_and_deterministic():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     t=json.loads((HERE/'resultats/TESTS_QUANTITATIFS_COMPLETS.json').read_text())
-    assert d['schema']=='oric.gc.quantitative-complete-results.v3'
+    assert d['schema']=='oric.gc.quantitative-complete-results'
     assert d['sources_total']==48 and d['measurement_records_total']==120
-    assert d['new_v3_tests']==8 and d['criteria_met']==8
+    assert d['complete_quantitative_tests']==8 and d['criteria_met']==8
     assert d['simulations_used']==0 and d['synthetic_rows']==0 and d['imputed_rows']==0 and d['random_sampling_used']==0
     assert d['global_result']['history_changes_quantified_accessible_physical_inventory'] is True
     assert d['global_result']['primordial_to_present_strict_chain_closed'] is False
@@ -204,7 +204,7 @@ def test_quantitative_v3_complete_physical_results_are_real_and_deterministic():
     assert all(x['executed'] and x['criterion_met'] for x in by.values())
 
 
-def test_quantitative_v3_reservoir_memory_and_reactivation_are_quantified():
+def test_quantitative_complete_reservoir_memory_and_reactivation_are_quantified():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     r=d['reservoir_persistence']
     assert r['minimum_persistence_myr']==2 and r['maximum_persistence_myr']==3
@@ -215,7 +215,7 @@ def test_quantitative_v3_reservoir_memory_and_reactivation_are_quantified():
     assert d['late_reactivation']['log10_upper_bound_on_remaining_primordial_26Al_fraction'] < -400
 
 
-def test_quantitative_v3_earth_conflict_is_not_artificially_closed():
+def test_quantitative_complete_earth_conflict_is_not_artificially_closed():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     e=d['earth_provenance']
     assert e['earlier_result_CC_late_addition_supported'] is True
@@ -225,7 +225,7 @@ def test_quantitative_v3_earth_conflict_is_not_artificially_closed():
     assert e['minor_CC_still_possible_final_mass_interval_wt_percent']==[0.5,1.0]
 
 
-def test_quantitative_v3_endpoint_and_strict_bottlenecks():
+def test_quantitative_complete_endpoint_and_strict_bottlenecks():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     ep=d['endpoint_architecture']
     assert ep['body_count']==8 and ep['history_reconstructed'] is False
@@ -237,7 +237,7 @@ def test_quantitative_v3_endpoint_and_strict_bottlenecks():
     assert set(g['critical_nodes_for_stellar_to_endpoint_path'])=={'GC-E02','GC-E03','GC-E08','GC-E10','GC-E13','GC-E17'}
 
 
-def test_new_v3_sources_and_measurements_are_explicitly_firewalled():
+def test_complete_sources_and_measurements_are_explicitly_firewalled():
     s={x['source_id']:x for x in rows(HERE/'SOURCES_EMPIRIQUES.csv')}
     m={x['record_id']:x for x in rows(HERE/'data/MESURES_EMPIRIQUES.csv')}
     assert s['S039']['doi']=='10.1016/j.epsl.2008.05.003'
@@ -252,14 +252,14 @@ def test_new_v3_sources_and_measurements_are_explicitly_firewalled():
     assert m['M102']['value_text']=='true'
     assert float(m['M105']['value_numeric'])==0.38709927
     assert float(m['M119']['value_numeric'])==30.06992276
-    freeze=json.loads((HERE/'GEL_ANALYSE_QUANTITATIVE_V3.json').read_text())
+    freeze=json.loads((HERE/'GEL_ANALYSE_QUANTITATIVE_COMPLETE.json').read_text())
     assert freeze['preregistered'] is False
     assert 'monte_carlo_generated_samples' in freeze['forbidden_as_evidence']
 
 
-def test_quantitative_v3_claim_artifacts_are_complete_and_machine_readable():
+def test_complete_quantitative_claim_artifacts_are_machine_readable():
     d=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_COMPLETS.json').read_text())
-    assert d['schema']=='oric.gc.quantitative-claims.v3'
+    assert d['schema']=='oric.gc.quantitative-claims-complete'
     claims=d['claims']
     assert len(claims)==8
     assert {c['claim_id'] for c in claims}=={f'GCQ-T{i:02d}' for i in range(9,17)}
@@ -267,13 +267,13 @@ def test_quantitative_v3_claim_artifacts_are_complete_and_machine_readable():
     assert all(c['preregistered'] is False for c in claims)
     assert all(c['data_policy']=='real_measurements_and_official_empirical_data_only' for c in claims)
     for c in claims:
-        p=HERE/'resultats/claims_quantitatifs_v3'/f"{c['claim_id']}.json"
+        p=HERE/'resultats/claims_quantitatifs'/f"{c['claim_id']}.json"
         assert p.is_file()
         one=json.loads(p.read_text())
         assert one==c
 
 
-def test_quantitative_v3_authority_docs_state_current_corpus_and_verdict():
+def test_complete_quantitative_authority_docs_state_current_corpus_and_verdict():
     readme=(HERE/'README.md').read_text()
     review=(HERE/'REVUE_QUANTITATIVE_EMPIRIQUE.md').read_text()
     protocol=(HERE/'PROTOCOLE.md').read_text()
@@ -283,13 +283,13 @@ def test_quantitative_v3_authority_docs_state_current_corpus_and_verdict():
     assert 'quantified_history_dependent_accessibility_with_explicit_open_links' in readme
     assert '48 sources/datasets empiriques admissibles' in review
     assert 'GCQ-T09' in review and 'GCQ-T16' in review
-    assert 'Campagne quantitative complète v3' in protocol
+    assert 'Campagne quantitative complète' in protocol
 
 
 def test_posthoc_26Al_crosscheck_is_explicit_and_not_counted_as_frozen_test():
     d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_COMPLETS.json').read_text())
     x=d['radiogenic_heterogeneity_crosscheck']
-    assert d['new_v3_tests']==8 and d['posthoc_crosschecks']==1
+    assert d['complete_quantitative_tests']==8 and d['posthoc_crosschecks']==1
     assert x['crosscheck_id']=='GCQ-X01'
     assert x['status']=='posthoc_empirical_crosscheck_not_frozen_test'
     assert 7.5e-6 < x['canonical_decay_only_reference_26Al_27Al'] < 7.7e-6
@@ -299,11 +299,11 @@ def test_posthoc_26Al_crosscheck_is_explicit_and_not_counted_as_frozen_test():
     agg=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_COMPLETS.json').read_text())
     assert len(agg['claims'])==8 and len(agg['posthoc_crosschecks'])==1
     assert agg['posthoc_crosschecks'][0]['claim_id']=='GCQ-X01'
-    assert (HERE/'resultats/claims_quantitatifs_v3/GCQ-X01.json').is_file()
+    assert (HERE/'resultats/claims_quantitatifs/GCQ-X01.json').is_file()
 
 
-def test_v4_massive_input_selection_excludes_duplicates_unpublished_and_synthetic():
-    sel=json.loads((HERE/'data_massives_reelles/IMPORT_SELECTION_V4.json').read_text())
+def test_massive_input_selection_excludes_duplicates_unpublished_and_synthetic():
+    sel=json.loads((HERE/'data_massives_reelles/IMPORT_SELECTION.json').read_text())
     assert sel['pgd_sic_total_rows']==20432
     assert sel['pgd_sic_unpublished_excluded']==11567
     assert sel['pgd_sic_admissible_rows']==8865
@@ -316,10 +316,10 @@ def test_v4_massive_input_selection_excludes_duplicates_unpublished_and_syntheti
     assert 'included_sheet' in decisions.values()
 
 
-def test_v4_presolar_population_result_uses_published_grains_only():
-    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
+def test_massive_presolar_population_result_uses_published_grains_only():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text())
     p=d['presolar_grains']
-    assert d['schema']=='oric.gc.quantitative-data-rich-results.v4'
+    assert d['schema']=='oric.gc.quantitative-massive-data-results'
     assert d['tests_total']==5 and d['criteria_met']==5 and d['all_criteria_met']
     assert d['audit']['synthetic_rows_used']==0 and d['audit']['imputed_rows_used']==0 and d['audit']['simulation_rows_used']==0
     assert p['admissible_grains_total']==11207
@@ -329,16 +329,16 @@ def test_v4_presolar_population_result_uses_published_grains_only():
     assert p['selected_SiC_type_isotope_medians']['X']['d(29Si/28Si)']['median']<0
 
 
-def test_v4_NC_CC_multisystem_separation_has_no_imputation():
-    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())['NC_CC']
+def test_massive_NC_CC_multisystem_separation_has_no_imputation():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text())['NC_CC']
     assert d['rows']==41 and d['isotope_systems']==11
     assert d['leave_one_out_correct']==41 and d['leave_one_out_total']==41
     assert d['missing_values_imputed']==0
     assert min(abs(v['CC_minus_NC_Cohen_d']) for v in d['effect_sizes'].values())>1.9
 
 
-def test_v4_allende_heterogeneity_is_distribution_level():
-    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
+def test_massive_allende_heterogeneity_is_distribution_level():
+    d=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text())
     c=d['Allende_chondrules']; w=d['Allende_subsamples']
     assert c['Allende_chondrules']==34
     assert all(x['fraction_gt_3sigma']>0.70 for x in c['metrics'].values())
@@ -348,21 +348,21 @@ def test_v4_allende_heterogeneity_is_distribution_level():
     assert w['literature_Table4_used'] is False
 
 
-def test_v4_bennu_individual_measurements_show_resolved_component_contrast():
-    b=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DATA_RICH_V4.json').read_text())['Bennu_returned_samples']
+def test_massive_bennu_individual_measurements_show_resolved_component_contrast():
+    b=json.loads((HERE/'resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text())['Bennu_returned_samples']
     assert b['Bennu_2025_individual_presolar_grains']==52
     assert b['Bennu_2026_O_isotope_spots']==18
     assert b['number_refractory_spots_all_gt_3sigma_from_diopside']==17
     assert b['diopside_vs_each_refractory_min_z']>9.9
 
 
-def test_v4_claim_artifacts_and_authority_report_exist():
-    d=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_DATA_RICH_V4.json').read_text())
-    assert d['schema']=='oric.gc.quantitative-claims.v4'
+def test_massive_claim_artifacts_and_authority_report_exist():
+    d=json.loads((HERE/'resultats/CLAIMS_QUANTITATIFS_DONNEES_MASSIVES.json').read_text())
+    assert d['schema']=='oric.gc.quantitative-massive-data-claims'
     assert {c['claim_id'] for c in d['claims']}=={f'GCQ-T{i}' for i in range(17,22)}
     assert all(c['criterion_met'] for c in d['claims'])
     for c in d['claims']:
-        assert (HERE/'resultats/claims_quantitatifs_v4'/f"{c['claim_id']}.json").is_file()
-    report=(HERE/'resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md').read_text()
+        assert (HERE/'resultats/claims_quantitatifs'/f"{c['claim_id']}.json").is_file()
+    report=(HERE/'resultats/RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md').read_text()
     assert '11207' not in report  # guard against hidden control characters
     assert '11207' in report and '41/41' in report and '55/66' in report

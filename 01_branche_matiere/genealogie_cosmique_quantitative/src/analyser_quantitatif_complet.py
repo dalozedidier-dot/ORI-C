@@ -68,7 +68,7 @@ def analyse(base: Path):
     sources=read_csv(base/'SOURCES_EMPIRIQUES.csv')
     links=read_csv(base/'LIENS_EMPIRIQUES.csv')
     stages=read_csv(base/'CHAINE_EMPIRIQUE.csv')
-    freeze=json.loads((base/'GEL_ANALYSE_QUANTITATIVE_V3.json').read_text(encoding='utf-8'))
+    freeze=json.loads((base/'GEL_ANALYSE_QUANTITATIVE_COMPLETE.json').read_text(encoding='utf-8'))
     q={r['quantity']:r for r in measures}
     v={k:fnum(r) for k,r in q.items() if fnum(r) is not None}
 
@@ -141,7 +141,7 @@ def analyse(base: Path):
 
     # Post-hoc X01 — the canonical decay curve is a time reference, not a unique local inventory.
     # This cross-check was added after the frozen T09-T16 set and is therefore never counted
-    # among the eight frozen v3 criteria. It uses already-versioned measured ratios only.
+    # among the eight frozen complete-analysis criteria. It uses already-versioned measured ratios only.
     krot_delay=v['chondrule_bearing_CAI_remelting_delay_after_canonical_CAI']
     decay_ref_at_krot=decay_fraction(krot_delay,half)
     ratio_ref_at_krot=r0*decay_ref_at_krot
@@ -267,10 +267,10 @@ def analyse(base: Path):
         {'test_id':'GCQ-T16','name':'strict_chain_bottleneck_and_closure_audit','executed':True,'criterion_met':t16_pass,'scientific_verdict':'strict_stellar_to_endpoint_chain_exists_but_primordial_end_to_end_closure_open','result':graph},
     ]
     result={
-        'schema':'oric.gc.quantitative-complete-results.v3',
+        'schema':'oric.gc.quantitative-complete-results',
         'data_policy':'real_measurements_and_official_empirical_data_only',
         'sources_total':len(sources),'measurement_records_total':len(measures),
-        'new_v3_tests':len(tests),'criteria_met':sum(t['criterion_met'] for t in tests),
+        'complete_quantitative_tests':len(tests),'criteria_met':sum(t['criterion_met'] for t in tests),
         'simulations_used':0,'synthetic_rows':0,'imputed_rows':0,'random_sampling_used':0,
         'radiogenic_inventory':inventory,'early_core_formation_window':core_window,'reservoir_persistence':reservoir,
         'radiogenic_heterogeneity_crosscheck':heterogeneity,

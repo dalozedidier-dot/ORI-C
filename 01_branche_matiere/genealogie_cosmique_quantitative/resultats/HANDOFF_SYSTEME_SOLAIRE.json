@@ -5,7 +5,7 @@
   "endpoint_source": "S028",
   "model_firewall": "Aucun résultat C-AST, aucune intégration N-corps et aucune simulation de formation planétaire ne sont comptés comme preuve de cette branche.",
   "observed_planet_count": 8,
-  "schema": "oric.gc.empirical-handoff.v3",
+  "schema": "oric.gc.empirical-handoff",
   "status": "empirical_endpoint_reached_unique_orbital_history_unresolved",
   "what_is_established": "Des archives empiriques indépendantes relient enrichissement stellaire, poussières, grains présolaires, glaces et molécules, réservoirs isotopiques, chronométrie, croissance de petits corps, protoplanètes observées et histoires d’accrétion jusqu’à l’architecture présente.",
   "what_is_not_claimed": "Les données empiriques seules ne sélectionnent pas une trajectoire orbitale unique donnant les éléments orbitaux précis actuels."

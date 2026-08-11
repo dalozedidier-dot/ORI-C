@@ -10,7 +10,7 @@
   "mechanism": "grain_aggregation_and_dust_gas_collective_structure",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "Des expériences physiques réelles montrent-elles des étapes de croissance et de structuration collectives de poussière ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Seules les mesures expérimentales entrent dans les résultats; toute section numérique des articles est exclue.",
   "source_ids": [
     "S019",

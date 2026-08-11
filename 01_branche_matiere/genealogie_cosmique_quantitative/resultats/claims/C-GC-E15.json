@@ -26,7 +26,7 @@
   "mechanism": "history_is_physically_carried_by_material_isotopic_chemical_temporal_and_architectural_state",
   "preregistration": "non_preregistered_initial_empirical_synthesis",
   "question": "L’ensemble des données empiriques soutient-il le mécanisme ORI-C selon lequel l’histoire modifie les constituants, traces, contraintes ou architectures disponibles pour les étapes suivantes ?",
-  "schema": "oric.gc.claim.v3",
+  "schema": "oric.gc.claim",
   "scope": "Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
   "source_ids": [
     "S001",

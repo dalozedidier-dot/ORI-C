@@ -46,19 +46,19 @@ python -m pytest -q 01_branche_matiere/genealogie_cosmique_quantitative/tests
 
 Le recalcul doit être byte-for-byte reproductible à partir des tables empiriques versionnées.
 
-## Campagne quantitative réelle v2
+## Campagne quantitative réelle
 
-La couche quantitative ne prend plus comme résultat scientifique le simple comptage « 23 stades / 40 relations / 24 observations / 12 synthèses ». Ces fichiers v1 sont conservés pour provenance et leur statut est documenté dans `STATUT_APPROFONDISSEMENT_V1.md`.
+La couche quantitative ne prend plus comme résultat scientifique le simple comptage « 23 stades / 40 relations / 24 observations / 12 synthèses ». Ces fichiers initiaux sont conservés pour provenance et leur statut est documenté dans `STATUT_APPROFONDISSEMENT_INITIAL.md`.
 
-L’autorité quantitative est désormais `GEL_ANALYSE_QUANTITATIVE_V2.json` + `src/analyser_quantitatif_reel.py`. Elle calcule huit tests/audits directement sur les mesures empiriques : réplication Bennu/Ryugu, comparaison V883 Ori/67P, chronologie avec propagation d’incertitudes, contraste temporel EC 53, réplication de streamers, réactivation tardive de Ryugu, robustesse du graphe et ablations par famille de preuve.
+L’autorité quantitative est désormais `GEL_ANALYSE_QUANTITATIVE_REELLE.json` + `src/analyser_quantitatif_reel.py`. Elle calcule huit tests/audits directement sur les mesures empiriques : réplication Bennu/Ryugu, comparaison V883 Ori/67P, chronologie avec propagation d’incertitudes, contraste temporel EC 53, réplication de streamers, réactivation tardive de Ryugu, robustesse du graphe et ablations par famille de preuve.
 
 Les sorties d’autorité sont `resultats/TESTS_QUANTITATIFS_REELS.json`, `CHRONOLOGIE_QUANTITATIVE.csv`, `REPLICATION_ECHANTILLONS.csv`, `ROBUSTESSE_GRAPHE.json`, `REDONDANCE_PAR_STAGE.csv`, `ABLATIONS_FAMILLES_PREUVES.csv`, `VERDICT_QUANTITATIF.json` et `RAPPORT_QUANTITATIF.md`.
 
-Le corpus v3 contient **48 sources/datasets empiriques admissibles et 120 enregistrements empiriques**. La v2 reste conservée comme étape méthodologique, mais l’autorité quantitative courante est désormais `GEL_ANALYSE_QUANTITATIVE_V3.json` + `src/analyser_quantitatif_complet.py`.
+Le corpus courant contient **48 sources/datasets empiriques admissibles et 120 enregistrements empiriques**. La campagne quantitative réelle reste conservée comme étape méthodologique, mais l’autorité quantitative courante est désormais `GEL_ANALYSE_QUANTITATIVE_COMPLETE.json` + `src/analyser_quantitatif_complet.py`.
 
-## Campagne quantitative complète v3
+## Campagne quantitative complète
 
-La v3 ne se contente plus de tester la cohérence du corpus. Elle quantifie directement des transformations historiques à partir d’entrées mesurées ou de produits empiriques officiels, avec propagation analytique des incertitudes et sans échantillonnage aléatoire.
+La campagne complète ne se contente plus de tester la cohérence du corpus. Elle quantifie directement des transformations historiques à partir d’entrées mesurées ou de produits empiriques officiels, avec propagation analytique des incertitudes et sans échantillonnage aléatoire.
 
 Les huit résultats `GCQ-T09` à `GCQ-T16` établissent notamment :
 
@@ -72,13 +72,13 @@ Les huit résultats `GCQ-T09` à `GCQ-T16` établissent notamment :
 - un endpoint orbital actuel quantifié sans le transformer en reconstruction historique ;
 - six nœuds et six relations critiques dans la chaîne stricte produits stellaires → endpoint, tandis que la fermeture stricte baseline primordiale → endpoint reste ouverte.
 
-Les artefacts d’autorité v3 sont `resultats/RESULTATS_QUANTITATIFS_COMPLETS.json`, `TESTS_QUANTITATIFS_COMPLETS.json`, `CLAIMS_QUANTITATIFS_COMPLETS.json`, `resultats/claims_quantitatifs_v3/`, `INVENTAIRE_26AL_PAR_EVENEMENT.csv`, `FERMETURE_RELATIONS_EMPIRIQUES.csv`, `VERROUS_BOUT_EN_BOUT.json` et `RAPPORT_QUANTITATIF_COMPLET.md`.
+Les artefacts d’autorité de la campagne complète sont `resultats/RESULTATS_QUANTITATIFS_COMPLETS.json`, `TESTS_QUANTITATIFS_COMPLETS.json`, `CLAIMS_QUANTITATIFS_COMPLETS.json`, `resultats/claims_quantitatifs/`, `INVENTAIRE_26AL_PAR_EVENEMENT.csv`, `FERMETURE_RELATIONS_EMPIRIQUES.csv`, `VERROUS_BOUT_EN_BOUT.json` et `RAPPORT_QUANTITATIF_COMPLET.md`.
 
-Le verdict v3 est `quantified_history_dependent_accessibility_with_explicit_open_links`. Il signifie que la dépendance au chemin est désormais **quantifiée sur au moins un inventaire physique réel**, tout en conservant explicitement ouverts les raccords que les données ne ferment pas.
+Le verdict de la campagne complète est `quantified_history_dependent_accessibility_with_explicit_open_links`. Il signifie que la dépendance au chemin est désormais **quantifiée sur au moins un inventaire physique réel**, tout en conservant explicitement ouverts les raccords que les données ne ferment pas.
 
 
-## Extension data-rich v4
+## Extension par données massives réelles
 
-La branche exploite désormais des distributions au niveau grain/échantillon, sans remplacer les résultats v3. Le corpus d’autorité comprend 48 sources/datasets empiriques admissibles. La couche massive importe 11 467 lignes utiles normalisées, dont 11 207 grains présolaires publiés ou partiellement publiés. Les 11 567 lignes SiC marquées `Data Published = no` sont exclues des claims. Les doublons XLSX/CSV, valeurs synthétiques, priors, Monte-Carlo, imputations et sorties de simulation ne comptent pas comme preuves.
+La branche exploite désormais des distributions au niveau grain/échantillon, sans remplacer les résultats de la campagne complète. Le corpus d’autorité comprend 48 sources/datasets empiriques admissibles. La couche massive importe 11 467 lignes utiles normalisées, dont 11 207 grains présolaires publiés ou partiellement publiés. Les 11 567 lignes SiC marquées `Data Published = no` sont exclues des claims. Les doublons XLSX/CSV, valeurs synthétiques, priors, Monte-Carlo, imputations et sorties de simulation ne comptent pas comme preuves.
 
-Les nouveaux claims `GCQ-T17` à `GCQ-T21` testent les distributions présolaires, la séparation multivariée NC/CC, l’hétérogénéité O-Cr-Ti des chondres d’Allende, l’hétérogénéité ε50Ti de sous-échantillons d’Allende et des contrastes isotopiques individuels dans les échantillons retournés de Bennu. Le rapport d’autorité est `resultats/RAPPORT_QUANTITATIF_DATA_RICH_V4.md`.
+Les nouveaux claims `GCQ-T17` à `GCQ-T21` testent les distributions présolaires, la séparation multivariée NC/CC, l’hétérogénéité O-Cr-Ti des chondres d’Allende, l’hétérogénéité ε50Ti de sous-échantillons d’Allende et des contrastes isotopiques individuels dans les échantillons retournés de Bennu. Le rapport d’autorité est `resultats/RAPPORT_QUANTITATIF_DONNEES_MASSIVES.md`.

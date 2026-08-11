@@ -1,10 +1,10 @@
-# Généalogie cosmique quantitative — résultats physiques complets v3
+# Généalogie cosmique quantitative — résultats physiques complets
 
 **Corpus: données réelles et produits empiriques officiels uniquement. 0 simulation, 0 donnée synthétique, 0 imputation, 0 échantillonnage aléatoire.**
 
 - Sources: 48
 - Enregistrements empiriques: 120
-- Nouveaux tests physiques/fermeture v3: 8 (8 critères d'exécution satisfaits).
+- Tests physiques/fermeture complets: 8 (8 critères d'exécution satisfaits).
 
 ## 1. L’histoire change quantitativement un inventaire physique accessible
 
