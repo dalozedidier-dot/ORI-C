@@ -60,7 +60,7 @@ def _compare_values(
 
         absolute_difference = abs(reference_float - candidate_float)
         denominator = max(abs(reference_float), abs(candidate_float), absolute_tolerance)
-        relative_difference = absolute_difference / denominator
+        relative_difference = 0.0 if denominator == 0.0 else absolute_difference / denominator
         if absolute_difference > state.maximum_absolute_difference:
             state.maximum_absolute_difference = absolute_difference
             state.maximum_relative_difference = relative_difference

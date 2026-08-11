@@ -345,11 +345,12 @@
       "statut": "extension_empirique_non_preregistered",
       "verdict": "supports_observed_cloud_to_disk_supply",
       "niveau_preuve": null,
-      "portee": "direct_astronomical_observation — Observation d’un autre système protostellaire; démontre l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
+      "portee": "replicated_direct_astronomical_observation — Deux systèmes protostellaires indépendants montrent des streamers à l’échelle de milliers d’au. Cela réplique l’existence physique du canal d’apport sans reconstruire l’histoire particulière du Soleil.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E05.json",
-      "empreinte_sortie": "4884a78f231a1186c47be8797ba5e5ac28c9802d8d17529e43c18565def00791",
+      "empreinte_sortie": "3180593307109f250b225df84ea32e3f45180f63b18b0846373e93b6efa45f14",
       "source": [
-        "S007"
+        "S007",
+        "S036"
       ],
       "mesures": {
         "stages": [
@@ -390,17 +391,18 @@
       "statut": "extension_empirique_non_preregistered",
       "verdict": "supports_observed_refractory_solid_formation",
       "niveau_preuve": null,
-      "portee": "direct_astronomical_observation — HOPS-315 est un analogue astrophysique observé; la comparaison à des modèles de condensation publiée dans l’article n’est pas utilisée comme donnée de cette campagne.",
+      "portee": "direct_astronomical_observation_plus_same_object_time_domain_contrast — HOPS-315 fournit une détection de solides réfractaires dans un jeune disque. EC 53 ajoute un contraste temporel du même objet: forstérite et enstatite sont absentes en quiescence et détectées pendant le burst. Les modèles de transport restent exclus.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E07.json",
-      "empreinte_sortie": "9e029ff2505626508e2fdd440ace2784bd73f35dd965c2a89d3dfb94698b11ab",
+      "empreinte_sortie": "95de3c4712c024deac0d58b3a195a67c8defb9d1c19eecc6e86666abb89021d0",
       "source": [
-        "S024"
+        "S024",
+        "S034"
       ],
       "mesures": {
         "stages": [
           "GC-E07"
         ],
-        "mechanism": "hot_gas_and_crystalline_refractory_solids_coexist_in_embedded_disk",
+        "mechanism": "hot_gas_and_crystalline_refractory_solids_are_observed_and_crystalline_state_changes_with_burst",
         "preregistration": "non_preregistered_initial_empirical_synthesis"
       },
       "supersede_par": null
@@ -579,7 +581,7 @@
       "niveau_preuve": null,
       "portee": "cross_domain_empirical_synthesis — Synthèse initiale non préenregistrée. Le verdict est calculé à partir des quatorze résultats locaux précédents. Il porte sur le mécanisme de transmission historique, pas sur une loi universelle ni sur une trajectoire cosmologique/orbitale unique.",
       "artefact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims/C-GC-E15.json",
-      "empreinte_sortie": "7b67521a464c982e88f5a0978e665f39a16dc56c29f7dba9cc8876f18eb8da31",
+      "empreinte_sortie": "bfd16ec5329577d94bace2b849a42c042ef1aa1678effe20d2380df2a75474bb",
       "source": [
         "S001",
         "S002",
@@ -613,7 +615,12 @@
         "S030",
         "S031",
         "S032",
-        "S033"
+        "S033",
+        "S034",
+        "S035",
+        "S036",
+        "S037",
+        "S038"
       ],
       "mesures": {
         "stages": [
