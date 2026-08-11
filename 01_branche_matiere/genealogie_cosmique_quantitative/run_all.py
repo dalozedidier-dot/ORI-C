@@ -333,7 +333,10 @@ def main():
     # sorties afin que le test d'identité et le manifeste local les couvrent.
     write_information_outputs(out)
 
-    files=sorted(p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256')
+    files=sorted(
+      (p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256'),
+      key=lambda p: p.relative_to(out).as_posix(),
+    )
     rels=[]
     for p in files:
       rel=p.relative_to(out).as_posix(); rels.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {rel}")
