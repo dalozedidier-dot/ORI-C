@@ -6928,6 +6928,18 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/DONNEES_EXTERNES_A_ACQUERIR.json",
+      "size": 5310,
+      "sha256": "f7a360175c98fb79ffc00e08022d52f958c84d547b9753e35f9d1cd7d31fa6b1",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/DONNEES_EXTERNES_A_ACQUERIR.md",
+      "size": 1509,
+      "sha256": "6fad02c394f67a702760a69a393467f0aa193e073fd77b6e91e9bb287cf6f1d2",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/FALSIFICATION_ORI-C.md",
       "size": 964,
       "sha256": "2bf7a4bd045a36b81d0be407ac848d38f372a7015389b01dde1e1f9fb8cebbae",
@@ -6941,8 +6953,32 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PLAN_CENTRAL.json",
-      "size": 3504,
-      "sha256": "0f55662a18fadafb19b649ff7b2195755af0c6990b6fbb41e460486c46cdf96d",
+      "size": 3610,
+      "sha256": "a7270c2fb7c861ba2154c52224b391a204d0d88ff5b204397a756d9d7286e575",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-COSMOS-NCCC-001.json",
+      "size": 1004,
+      "sha256": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-ABLATION-001.json",
+      "size": 1038,
+      "sha256": "6da67d433eccc06681e8b29174fd20f6e1c22cb8068d3f0feb323cc42c539770",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-PALEO-HISTORY-02.json",
+      "size": 1176,
+      "sha256": "a7557b8cc540c14b054a5fc48db24f70d993e7aab16001e0957a0b67c2fe3065",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-VIVANT-HISTOIRE-001.json",
+      "size": 1013,
+      "sha256": "822953f4549e4c0bcd580dbbc8fe49401ce587d6a38f14a8e0059e4413b58ce6",
       "storage": "inline"
     },
     {
@@ -6959,8 +6995,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/README.md",
-      "size": 1411,
-      "sha256": "36d2aebf7f8180937c47dfae534cb714d4eca7a9c2b1a9c89b44428a26bfde3d",
+      "size": 1997,
+      "sha256": "6b9dcf5639a906726e84d75967687fddf09f89363cc0f8a1dd1a31ded7cfda4c",
       "storage": "inline"
     },
     {
@@ -6979,6 +7015,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/construire_benchmark_transversal.py",
       "size": 4247,
       "sha256": "874623e65f72e2ddbae809d842ce0d0f82bdac0cd7537c7e7e2494a3485401aa",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/executer_quantification_commune.py",
+      "size": 5987,
+      "sha256": "2c0c3ed9799e01dd00c5df650037b6ee39dc03b059a21d9f210c77a311da48a2",
       "storage": "inline"
     },
     {
@@ -7018,15 +7060,27 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/MESURES_COMMUNES_EXECUTEES.json",
+      "size": 3450,
+      "sha256": "5e1bdf9bedf59e0e590f6499dde324d6ce8e1e8929ce964d62b460e8bb209ee6",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/REGISTRE_BIFURCATIONS.json",
+      "size": 1812,
+      "sha256": "986d2410683cc0ef9a9b535d4866a45cb9e25615b6dcdc82d473c731e355fb21",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 6673,
-      "sha256": "830c53944b1b9b3ee6e0a9ea1d92d56e8ed8fa94c01bf9540acaef000e65b205",
+      "size": 7176,
+      "sha256": "44844b900f82e11413cd049717df1ace68a603c16e14c5cd4762693b1e7f716c",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
-      "size": 2411,
-      "sha256": "1ac8e52a5a1611fa124858753a377c19b2d69348654ddab880720849816b6eea",
+      "size": 3278,
+      "sha256": "557e52754fdb3e08f2b75b627f85cb05b98fe1adbe47aadb0ba1888db78c6200",
       "storage": "inline"
     },
     {
@@ -9420,7 +9474,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 24418,
-      "sha256": "58c562053134929a835e71645dfb977726849fd4d83f7d08798dab2cea450ecc",
+      "sha256": "77b0c72e9869026d927819cb830fd5e796a18456baff484dc89ec6cc38721ecf",
       "storage": "inline"
     },
     {

@@ -1,0 +1,51 @@
+{
+  "schema": "oric.bifurcation-register.v1",
+  "entries": [
+    {
+      "id": "BIF-MAT-H011",
+      "domain": "matter_model",
+      "control_variable": "turbulence",
+      "threshold_measure": "critical metallicity",
+      "history": "simulation initial conditions",
+      "after_state": "mechanistic threshold crossed",
+      "threshold_ratio_high_low": 3.3333333333333335,
+      "reversibility": "not tested",
+      "relaxation_time": null,
+      "evidence": "mechanistic_threshold_supported_in_simulations",
+      "natural_measurement": false
+    },
+    {
+      "id": "BIF-COS-26AL",
+      "domain": "cosmic_chronology",
+      "control_variable": "time after CAI",
+      "threshold_measure": [
+        0.25,
+        0.1,
+        0.01
+      ],
+      "after_state": "lower radiogenic-inventory accessibility class",
+      "history": "three declared sensitivity scenarios, not probabilities",
+      "reversibility": "irreversible radioactive decay",
+      "relaxation_time": 0.717,
+      "evidence": "retrospective_analytic_sensitivity_not_preregistered",
+      "natural_measurement": true
+    },
+    {
+      "id": "BIF-ORB-INTERVENTIONS",
+      "domain": "orbital_model",
+      "control_variable": "planet mass or semimajor axis",
+      "threshold_measure": "reference numerical envelope exceeded on >=2 metrics",
+      "after_state": "different accessible orbital response class",
+      "history": "architecture intervention",
+      "reversibility": "not a natural intervention",
+      "relaxation_time": "2 Myr observation horizon",
+      "evidence": "measured_with_non_saturated_dimension_score",
+      "natural_measurement": false
+    }
+  ],
+  "unmeasured_fields": [
+    "L_t and G_t as enumerated physical sets",
+    "relaxation time after paired histories",
+    "cross-domain normalized threshold"
+  ]
+}

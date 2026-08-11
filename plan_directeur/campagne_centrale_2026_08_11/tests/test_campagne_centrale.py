@@ -47,7 +47,22 @@ def test_benchmark_transversal_sans_remplissage_des_champs_absents() -> None:
 
 def test_aucune_prediction_retrospective_n_est_fabriquee() -> None:
     directory = HERE / "PREDICTIONS_PROSPECTIVES"
-    assert {p.name for p in directory.iterdir()} == {"README.md", "SCHEMA_PREDICTION.json"}
+    predictions = [json.loads(p.read_text(encoding="utf-8")) for p in directory.glob("PRED-*.json")]
+    assert predictions
+    assert all(p["resultat"] is None and p["date_ouverture"] is None for p in predictions)
+    assert all(p["statut"] == "frozen_locally_awaiting_external_data" for p in predictions)
+    for prediction in predictions:
+        declared = prediction.pop("empreinte_avant_ouverture")
+        canonical = json.dumps(prediction, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        assert declared == "sha256:" + hashlib.sha256(canonical).hexdigest()
+
+
+def test_quantification_commune_ne_fabrique_pas_un_invariant() -> None:
+    measures, bifurcations = MODULE.quantification_commune()
+    assert len(measures["measures"]) >= 4
+    assert measures["comparability_status"] == "local_definitions_only_not_cross_domain_invariant"
+    assert len(bifurcations["entries"]) >= 3
+    assert bifurcations["unmeasured_fields"]
 
 
 def test_les_nouvelles_sources_paleo_sont_scellees() -> None:

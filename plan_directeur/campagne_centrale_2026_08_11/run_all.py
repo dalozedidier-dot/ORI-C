@@ -20,6 +20,15 @@ def benchmark_transversal() -> tuple[dict, dict]:
     return module.build()
 
 
+def quantification_commune() -> tuple[dict, dict]:
+    path = HERE / "executer_quantification_commune.py"
+    spec = importlib.util.spec_from_file_location("oric_common_quantification", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
+
+
 def dump(name: str, value: object) -> None:
     OUT.mkdir(exist_ok=True)
     (OUT / name).write_text(
@@ -118,6 +127,9 @@ def main() -> int:
     benchmark, invariants = benchmark_transversal()
     dump("BENCHMARK_TRANSVERSAL.json", benchmark)
     dump("AUDIT_INVARIANTS.json", invariants)
+    measures, bifurcations = quantification_commune()
+    dump("MESURES_COMMUNES_EXECUTEES.json", measures)
+    dump("REGISTRE_BIFURCATIONS.json", bifurcations)
     plan = json.loads((HERE / "PLAN_CENTRAL.json").read_text(encoding="utf-8"))
     dump("ETAT_CAMPAGNE.json", {
         "schema": "oric.central-campaign-status.v1",

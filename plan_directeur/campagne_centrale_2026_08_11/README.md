@@ -10,8 +10,11 @@ peut réfuter une hypothèse importante.
 
 Le lanceur produit l'admission de `PALEO-HISTORY-01`, une matrice
 dataset→tests pondérée, un benchmark transversal de 20 cas, l'audit des cinq
-invariants et un état d'exécution des 30 axes. Les expériences et acquisitions
-absentes restent `bloque_externe`, sans résultat synthétique.
+invariants, quatre mesures locales non homogénéisées, un registre de trois
+bifurcations et un état d'exécution des 30 axes. Les expériences et acquisitions
+absentes restent `bloque_externe`, sans résultat synthétique. Quatre prédictions
+sont gelées localement avec empreinte SHA-256 ; elles ne sont ni ouvertes ni
+présentées comme des préinscriptions publiques.
 
 État après exécution : les neuf familles paléoclimatiques sont normalisées mais
 le protocole 01 reste `non_testable` faute de distributions chronologiques
@@ -20,6 +23,12 @@ dans le gel. Le benchmark transversal contient 20 cas réels ou explicitement
 classés comme résultats de modèle ; aucun ne renseigne encore simultanément
 `X,H,m,Theta,tau,P_acc,R`. Les invariants restent donc `non_testable`, et non
 « réfutés ».
+
+Les données qui peuvent être téléchargées, celles qui nécessitent un accès
+manuel et celles qui doivent encore être produites sont séparées dans
+`DONNEES_EXTERNES_A_ACQUERIR.json`. L'inspection de l'archive magnétique légère
+du dépôt Zenodo 17522856 ne montre pas les cinq bras appariés requis et ne crée
+donc pas une septième admission.
 
 ```bash
 python plan_directeur/campagne_centrale_2026_08_11/run_all.py

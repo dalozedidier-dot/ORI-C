@@ -1,0 +1,17 @@
+{
+  "id": "PRED-VIVANT-HISTOIRE-001",
+  "date_gel": "2026-08-11",
+  "hypothese": "Dans une replication longitudinale independante de D'Onofrio, l'histoire ameliore la prediction de la MIC au-dela de l'etat present.",
+  "donnees_vues": ["jeu D'Onofrio analyse dans ORI-C"],
+  "donnees_interdites": ["jeu de replication independant et ses resultats"],
+  "variable_predite": "gain relatif de RMSE du modele etat plus histoire sur etat seul",
+  "valeur_ou_intervalle": ">= 5 %",
+  "modele_concurrent": "etat present seul et histoire permutee dans les groupes",
+  "critere_succes": "gain >= 5 %, intervalle bootstrap du gain > 0 et permutation p <= 0.05",
+  "critere_echec": "gain < 5 % ou intervalle bootstrap incluant 0 ou permutation p > 0.05",
+  "empreinte_avant_ouverture": "sha256:cf5aa2c12f1f0eeea3cea83cb0d7d10335aca67cb847afd59df5c5465ea33b4f",
+  "date_ouverture": null,
+  "resultat": null,
+  "statut": "frozen_locally_awaiting_external_data",
+  "portee": "prediction locale, non preregistree publiquement"
+}

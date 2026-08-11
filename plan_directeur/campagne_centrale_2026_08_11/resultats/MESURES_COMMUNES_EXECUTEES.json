@@ -1,0 +1,115 @@
+{
+  "schema": "oric.common-measures.v1",
+  "comparability_status": "local_definitions_only_not_cross_domain_invariant",
+  "measures": [
+    {
+      "id": "PACC-ORB-01",
+      "domain": "orbital_model",
+      "metric": "P_acc",
+      "value": 0.9444444444444444,
+      "numerator": 17,
+      "denominator": 18,
+      "X": "baseline_2myr_dt5",
+      "H": "intervention on architecture",
+      "Theta": [
+        "baseline_2myr_dt4p8828125",
+        "baseline_2myr_elements_dt5",
+        "full_la2010_bodies_2myr_dt5"
+      ],
+      "tau": "2 Myr",
+      "uncertainty": {
+        "earth_eccentricity_mean": 0.0004883961134625019,
+        "earth_eccentricity_std": 0.00015159386720229977,
+        "earth_eccentricity_max": 0.00011208930886159874
+      },
+      "scope": "fraction of computed intervention-metric cells, not a natural probability"
+    },
+    {
+      "id": "PACC-26AL-01",
+      "domain": "cosmic_chronology",
+      "metric": "P_acc_partition",
+      "value": {
+        "angrite": [
+          0.1,
+          0.01
+        ],
+        "EC002": [
+          0.1,
+          0.01
+        ],
+        "youngest_chondrule": [
+          0.01
+        ],
+        "CM_carbonate": []
+      },
+      "partition": [
+        0.25,
+        0.1,
+        0.01
+      ],
+      "H": "three declared sensitivity scenarios, not probabilities",
+      "tau": "time after CAI with published sigma",
+      "uncertainty": "q025-q975 analytic age propagation",
+      "scope": "physical inventory accessibility; not thermal response probability"
+    },
+    {
+      "id": "DELTA-H-ANT-01",
+      "domain": "living_antibiotic",
+      "metric": "history_predictive_gain",
+      "value_percent": 28.88576287953,
+      "X": "present limitation + antibiotic",
+      "H": "ancestor/history label",
+      "R": "MIC",
+      "tau": "experimental endpoint",
+      "model_state_only_rmse": 1.13089812488,
+      "model_history_rmse": 0.8042295741181,
+      "permutation_p": 0.004975124378109,
+      "P_acc": null,
+      "scope": "future response information, not an accessible-set measure"
+    },
+    {
+      "id": "I-H-COSMOS-01",
+      "domain": "cosmic_isotopes",
+      "metric": "decodable_historical_information",
+      "value": [
+        {
+          "dataset": "reservoir_NC_CC",
+          "status": "information_decodable",
+          "loo_accuracy": 1.0,
+          "normalized_mi_mean": 0.9184642994794249
+        },
+        {
+          "dataset": "grains_SiC",
+          "status": "information_decodable",
+          "loo_accuracy": 0.44208037825059104,
+          "normalized_mi_mean": 0.331584614571617
+        },
+        {
+          "dataset": "grains_graphite",
+          "status": "non_decodable_par_ce_test",
+          "loo_accuracy": 0.5073529411764706,
+          "normalized_mi_mean": 0.06336123006087
+        },
+        {
+          "dataset": "chondres",
+          "status": "non_testable",
+          "loo_accuracy": null,
+          "normalized_mi_mean": null
+        },
+        {
+          "dataset": "Bennu_refractaires",
+          "status": "non_decodable_par_ce_test",
+          "loo_accuracy": 0.1875,
+          "normalized_mi_mean": 0.4742987103307921
+        }
+      ],
+      "scope": "within-stage provenance decoding; no same-carrier inter-stage information curve"
+    }
+  ],
+  "missing_for_transversal_test": [
+    "common finite P_acc partition",
+    "measured m in all cases",
+    "tau_m in all cases",
+    "paired ablation A in at least three domains"
+  ]
+}

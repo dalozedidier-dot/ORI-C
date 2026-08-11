@@ -1,0 +1,17 @@
+{
+  "id": "PRED-MATIERE-ABLATION-001",
+  "date_gel": "2026-08-11",
+  "hypothese": "Dans une experience appariee, l'ablation physique de la trace reduit l'ecart de reponse entre deux histoires controlees.",
+  "donnees_vues": ["resultats partiels IODP, FABEST, polymeres et traces de fission"],
+  "donnees_interdites": ["experience appariee histoire-trace-reponse-ablation a venir"],
+  "variable_predite": "A = 1 - abs(delta_R_apres) / abs(delta_R_avant)",
+  "valeur_ou_intervalle": ">= 0.50",
+  "modele_concurrent": "ablation factice appariee et absence d'interaction histoire fois ablation",
+  "critere_succes": "delta_R_avant non nul, A >= 0.50 et interaction preregistree p <= 0.05",
+  "critere_echec": "delta_R_avant non detecte, A < 0.50 ou interaction p > 0.05",
+  "empreinte_avant_ouverture": "sha256:58981d83c20d36718a95f1db1533de0090ca58a980dd21f73071adc8c560ae69",
+  "date_ouverture": null,
+  "resultat": null,
+  "statut": "frozen_locally_awaiting_external_data",
+  "portee": "prediction locale, non preregistree publiquement"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "PRED-PALEO-HISTORY-02",
+  "date_gel": "2026-08-11",
+  "hypothese": "Avec des incertitudes chronologiques ponctuelles et un controle negatif reel, H apporte une information predictive sur R_future conditionnellement a X.",
+  "donnees_vues": ["neuf familles PALEO-HISTORY-01 normalisees, 19809 observations"],
+  "donnees_interdites": ["distributions chronologiques ponctuelles et controle negatif acquis apres ce gel"],
+  "variable_predite": "gain hors echantillon de X plus H sur X seul dans des blocs chronologiques",
+  "valeur_ou_intervalle": ">= 5 % dans au moins 3 blocs sur 4",
+  "modele_concurrent": "X seul, H permute dans les strates et controle negatif preregistre",
+  "critere_succes": "gain >= 5 % dans au moins 3/4 blocs et controle negatif non significatif",
+  "critere_echec": "moins de 3/4 blocs au seuil ou controle negatif significatif",
+  "empreinte_avant_ouverture": "sha256:64951c0b21d2d7f040975f0617be57368c1dcdd1de266ee116397acf2faf7cf9",
+  "date_ouverture": null,
+  "resultat": null,
+  "statut": "frozen_locally_awaiting_external_data",
+  "portee": "prediction locale; non testable tant que les deux donnees manquantes ne sont pas acquises"
+}

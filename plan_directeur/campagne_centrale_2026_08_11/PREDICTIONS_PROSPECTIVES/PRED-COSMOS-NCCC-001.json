@@ -1,0 +1,17 @@
+{
+  "id": "PRED-COSMOS-NCCC-001",
+  "date_gel": "2026-08-11",
+  "hypothese": "Une cohorte meteoritique independante conserve une information de reservoir NC/CC decodable au-dessus du hasard.",
+  "donnees_vues": ["SOSSI et jeux isotopiques deja versionnes dans ORI-C"],
+  "donnees_interdites": ["Toute nouvelle cohorte publiee ou acquise apres ce gel"],
+  "variable_predite": "balanced accuracy de classification NC/CC en validation reservee",
+  "valeur_ou_intervalle": ">= 0.70",
+  "modele_concurrent": "classification permutee et modele sans variables isotopiques de provenance",
+  "critere_succes": "borne basse bootstrap 95 % > 0.50 et accuracy >= 0.70",
+  "critere_echec": "borne basse bootstrap 95 % <= 0.50 ou accuracy < 0.70",
+  "empreinte_avant_ouverture": "sha256:d829edf4c500f4a2b114245295dba5228fda28d14305319cf2815a9e3d00afd1",
+  "date_ouverture": null,
+  "resultat": null,
+  "statut": "frozen_locally_awaiting_external_data",
+  "portee": "prediction locale, non preregistree publiquement"
+}
