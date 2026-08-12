@@ -106,3 +106,10 @@ La publication stable du 12 août 2026 conserve explicitement la dissymétrie de
 ### Généalogie cosmique — approfondissement quantitatif empirique
 La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (48 sources/datasets admissibles, 120 enregistrements historiques et 16 claims empiriques initiaux) et ajoute une couche quantitative fondée sur 11 467 lignes utiles normalisées, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
 
+## Pacc causal : validation de l'outil et prochain test empirique
+
+La définition `PACC-INT-CHALLENGE-V1` est l'estimateur strict pour les futurs tests causaux d'accessibilité. Son test de sanité sur `EXO-DOM-01` reproduit exactement le contraste modèle déjà gelé, sans modifier son niveau de preuve. Aucun proxy rétrospectif et aucun résultat de modèle ne compte comme mesure empirique de la condition 9 du §XIV.
+
+Le cas vésiculaire historique reste un cas empirique rétrospectif complet mais non prospectif pour `P_acc`. `VES-PACC-INT-01` fixe désormais la porte du prochain essai : contrôle, `do(m)` et sham appariés, `X/Theta/A` non ciblés appariés, défis et seuils gelés, réponse future mesurée, unités indépendantes et plan de puissance. L'opérateur physique sur `m` doit encore être spécifié avant préenregistrement et acquisition.
+
+Les quatre prédictions prospectives locales ne pourront recevoir le statut de réussite hors échantillon qu'avec une registration publique antérieure aux données de test. Cette exigence est maintenant vérifiée par l'audit exécutable du §XIV.

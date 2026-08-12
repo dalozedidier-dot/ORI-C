@@ -95,6 +95,10 @@ n’inscrit rien. Une statistique nouvelle reste à construire pour l’hypothè
 
 **Règle causale transversale.** Un gain prédictif de l'histoire ne suffit pas à attribuer un effet causal à `m`. Une telle attribution exige une intervention ou une ablation ciblée de la trace, avec `X` et les composantes non visées de `A` appariés selon des tolérances gelées, puis une réponse future supérieure au témoin de complexité appariée et au plancher de bruit. La causalité sur `A` exige de la même manière une intervention explicite sur l'architecture. `C-AST-01` est le prototype méthodologique actuel dans un modèle réduit, pas une preuve transférable aux autres branches.
 
+**Règle Pacc stricte.** Pour les futurs tests causaux, `PACC-INT-CHALLENGE-V1` est la définition de référence. Son test de sanité sur `EXO-DOM-01` valide l'outil mais ne compte pas comme mesure empirique du §XIV-9. Un cas réel ne peut être qualifié que si contrôle, `do(m)` et sham sont appariés, si les défis et seuils sont gelés avant les données, et si la réponse est future. Les vésicules historiques restent rétrospectives ; `VES-PACC-INT-01` gouverne leur prochain test prospectif.
+
+**Règle de préenregistrement prospectif.** Une prédiction ne peut compter pour le §XIV-3 que si son protocole gelé a reçu un enregistrement public horodaté avant ouverture des données de test. Les champs d'URL/DOI/date ajoutés après publication sont des métadonnées et ne peuvent modifier l'hypothèse, le seuil, le témoin ou la règle de décision.
+
 **Règle d’or pour tout nouveau résultat.** Les avancées viennent des pipelines ciblés, jamais de la matrice générique. L’ordre est contraignant et ne se réarrange pas :
 
 1. écrire le critère exact et la liste des variables obligatoires ;

@@ -165,3 +165,10 @@ Le programme n'a franchi ni le premier seuil ni, a fortiori, le seuil fort.
 | histoire antibiotique 2026 | **acquisition et analyse automatisées** | souche exclue de l'apprentissage, témoin d'état et histoire permutée de même complexité |
 
 Les trois derniers blocs restent en attente lors d'une exécution sans accès aux jeux externes. Le workflow `Recherche suivante ORI-C` télécharge les sources, écrit leur provenance et exécute les analyses complètes.
+
+## Mise à jour exécutable — Pacc causal et OSF (13 août 2026)
+
+- **Test de sanité Pacc : fait.** `PACC-INT-CHALLENGE-V1` restitue sur `EXO-DOM-01` `0,91 -> 0,87`, `Delta=-0,04`, sham nul. Le résultat est enregistré dans `do_m_trace/resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json` et reste un contrôle d'outil au niveau modèle.
+- **Vésicules : protocole causal prospectif installé, non exécuté.** `VES-PACC-INT-01` interdit toute requalification des 11 760 couples déjà vus. Il exige une nouvelle donnée ou une tranche réservée et un opérateur `do(m)` spécifié avant préenregistrement.
+- **Prédictions prospectives : paquets OSF prêts.** Les quatre fiches restent `package_ready_external_account_required` jusqu'à dépôt public. L'audit §XIV exige maintenant une registration publique antérieure aux données pour compter une réussite prospective.
+- **Seuil scientifique : inchangé.** **7/12**, verrous `3, 4, 9, 10, 11`.

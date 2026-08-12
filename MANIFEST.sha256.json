@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/campagne-centrale-invariant.yml",
-      "size": 10096,
-      "sha256": "13c5ecfb4c9d177c450f228f8f4fddd18334c21e282877358e0cd85f76ebb245",
+      "size": 11738,
+      "sha256": "56614b211bff06929d6f70a8235b137617f230f22f29306a373bba04f786bfad",
       "storage": "inline"
     },
     {
@@ -4289,8 +4289,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
-      "size": 18949,
-      "sha256": "e9dc8e92a67b8193b13104e7ef040c6c4a053bf21f1ff553fae0f934896aea5d",
+      "size": 19303,
+      "sha256": "784fb4314275e592caac10e55f00f46da9fd106a2a92b6ec763dcc1dee37c405",
       "storage": "inline"
     },
     {
@@ -4414,6 +4414,12 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json",
+      "size": 2808,
+      "sha256": "a426a20a08565a554ab45904fba9e949747638c8ab6334d149ea5f17a3086288",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/run_do_m.py",
       "size": 10544,
       "sha256": "d6cea49c8211740913b7de9bc6580a4beb4b8476f1a5cac6cfb1a42137c095f6",
@@ -4423,6 +4429,18 @@
       "path": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/tests/test_do_m.py",
       "size": 1753,
       "sha256": "56b22472ce86d1d555ee5251f60a21437d0ae8b871204054a000e8ca571929e1",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/tests/test_pacc_interventionnel_v1.py",
+      "size": 699,
+      "sha256": "35e8bb4fd5f70841001f1e3fa4cd9a7385315c678970bfd98dae1fc25005e48c",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/valider_pacc_interventionnel_v1.py",
+      "size": 5821,
+      "sha256": "fd19911723e37fa13ad0cfbadcbe070d55a3cba3bf978667f51e83bbca82271f",
       "storage": "inline"
     },
     {
@@ -5914,6 +5932,18 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json",
+      "size": 3707,
+      "sha256": "89906f8365a3ac0045df7a1e8585519aaa95774278ecbe3f8e4c088792c5c1f6",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.md",
+      "size": 2307,
+      "sha256": "4ef152683486781aac1dba0215a1a924b6205f6535c5d86464ce734bd9fdd8de",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/RECHERCHE_JEUX_INDEPENDANTS_2026-08-08.md",
       "size": 3705,
       "sha256": "b200d64494ef170c68ff373daddf9c249b904a7d0ec3897ca126ca0c804d5f0a",
@@ -5935,6 +5965,12 @@
       "path": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "size": 26399,
       "sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py",
+      "size": 684,
+      "sha256": "69afdbb779e6e3483bc4fd094f165a3580b4cfb53eb112cafe55dc26ee7e718d",
       "storage": "inline"
     },
     {
@@ -6053,8 +6089,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 32582,
-      "sha256": "4a4cddf82b8dddc80f66682916d286fe3d136ff39b1b23444d485328278a815b",
+      "size": 33452,
+      "sha256": "c0e193cfcda4d19070dae0bcb51a4e48832cdec808694b74db03253b59bee0b5",
       "storage": "inline"
     },
     {
@@ -6143,8 +6179,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 11127,
-      "sha256": "5cd79a52e3563102c23139cc7ca0f7d3925270d435bd1d73388cae8b4c279812",
+      "size": 12440,
+      "sha256": "de1c207cd21ceb6d9e7150e2ac265ef622ffe88281b195ea28fac5c30bebe54b",
       "storage": "inline"
     },
     {
@@ -6293,8 +6329,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 12433,
-      "sha256": "920a664f3ff77b69146366778ad9221b41c8d2a9bd4ee5caa3d41c08dcea9a2e",
+      "size": 13551,
+      "sha256": "c1f3a0bb8bae0bcd371592d531ab7f5830d6f4b2fbffcb2a75f5a320f93f83ec",
       "storage": "inline"
     },
     {
@@ -7061,8 +7097,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 13214,
-      "sha256": "4ed24441fe6b715d6717ce0f862adb4abdfb0d478a2337095c069dccd38584e9",
+      "size": 14170,
+      "sha256": "bbb62a67813b5b9ffe2361131ab004a4706106cae0e9dda0008d8754eb3c9d32",
       "storage": "inline"
     },
     {
@@ -7192,6 +7228,18 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/README_OSF.md",
+      "size": 1385,
+      "sha256": "90313e64c7def45274dd2985d37cd6eb608c9dc0f534aecad6c35b15d0ad7436",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/appliquer_enregistrement_osf.py",
+      "size": 2701,
+      "sha256": "3e26dc09097dbaf8e014535d82f47c35f1067b248c9b251178c70f96b6721b00",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-COSMOS-NCCC-001.json",
       "size": 1004,
       "sha256": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
@@ -7271,8 +7319,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_seuil_xiv.py",
-      "size": 15018,
-      "sha256": "f503b861e1dd769f8a4865ec213859445a0d1d73fe5a9dbe1c76f3cf3cacb60a",
+      "size": 17054,
+      "sha256": "408e2db7e5a44a5b31c5bd42c11a77486ba08da9dc08923843e4c3b842b991f1",
       "storage": "inline"
     },
     {
@@ -7361,14 +7409,14 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PACC_QUALIFICATION_STRICTE.json",
-      "size": 2097,
-      "sha256": "b1887a004dc5086b00b8f7e170d005015a605e538eaa1049c5a309cabc0dbc94",
+      "size": 2663,
+      "sha256": "11d8c9f74698ade274c7bc0e3a41cc600694397a272b47fb4fc2bd754fd071eb",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PREDICTIONS_HORS_ECHANTILLON_AUDIT.json",
-      "size": 1467,
-      "sha256": "42488f50c6ce91280da4c2f9308e1cd17140a7ea517f29328f7e006d19373085",
+      "size": 2127,
+      "sha256": "6893d467e248a6301c9533f421930965a8c10b2d9f2d04f7a4453cf77c14d211",
       "storage": "inline"
     },
     {
@@ -7405,6 +7453,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
       "size": 6890,
       "sha256": "2a9e7eacda5b0a559cdf3f391f162d3e12bd22b51396da4cf451612fbffcf043",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_osf_preregistration.py",
+      "size": 1310,
+      "sha256": "41a6ea1530c869ed22bf307e3fc2a7040137536562f0a75cd8a2a346be0a8d4a",
       "storage": "inline"
     },
     {
@@ -9810,7 +9864,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "a0713f6bb06d8b4d590852d37fb857f96fa60dee27b9fa4317375b1865040b3f",
+      "sha256": "d4da0f64a963bc86bd27680e6152940e1729256bbae2b15bfb75c4a4b13be573",
       "storage": "inline"
     },
     {

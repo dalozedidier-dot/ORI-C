@@ -1,6 +1,6 @@
 {
   "schema": "oric.section-xiv.prediction-audit.v1",
-  "strict_success_definition": "résultat hors échantillon sur test indépendant, protocole gelé avant les données, et témoin apparié battu",
+  "strict_success_definition": "résultat hors échantillon sur test indépendant, protocole gelé et enregistré publiquement avant les données, et témoin apparié battu",
   "predictions": [
     {
       "id": "PRED-COSMOS-NCCC-001",
@@ -9,7 +9,10 @@
       "data_opened": false,
       "result_present": false,
       "strict_success": false,
-      "matched_control_declared": true
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
     },
     {
       "id": "PRED-MATIERE-ABLATION-001",
@@ -18,7 +21,10 @@
       "data_opened": false,
       "result_present": false,
       "strict_success": false,
-      "matched_control_declared": true
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
     },
     {
       "id": "PRED-PALEO-HISTORY-02",
@@ -27,7 +33,10 @@
       "data_opened": false,
       "result_present": false,
       "strict_success": false,
-      "matched_control_declared": true
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
     },
     {
       "id": "PRED-VIVANT-HISTOIRE-001",
@@ -36,7 +45,10 @@
       "data_opened": false,
       "result_present": false,
       "strict_success": false,
-      "matched_control_declared": true
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
     }
   ],
   "strict_success_count": 0,

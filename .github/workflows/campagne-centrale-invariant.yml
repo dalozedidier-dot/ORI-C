@@ -13,6 +13,8 @@ on:
       - 'methodologie_puissance/tests/test_pacc_causal.py'
       - 'protocoles_geles/PACC_INTERVENTIONNEL_V1.md'
       - '02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/**'
+      - '03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.*'
+      - '03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py'
       - '.github/workflows/campagne-centrale-invariant.yml'
 
 permissions:
@@ -97,6 +99,22 @@ jobs:
             --candidate "$RUNNER_TEMP/do-m-candidate" \
             | tee "$OUT/logs/reproductibilite_do_m.log"
 
+      - name: Valider PACC-INT-CHALLENGE-V1 sur EXO-DOM-01
+        run: |
+          python 02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/valider_pacc_interventionnel_v1.py \
+            | tee "$OUT/logs/validation_pacc_interventionnel_v1.log"
+          python - <<'PY' | tee "$OUT/logs/controle_validation_pacc.log"
+          import json
+          from pathlib import Path
+          path = Path('02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json')
+          result = json.loads(path.read_text(encoding='utf-8'))
+          if result.get('passed') is not True:
+              raise SystemExit(f"validation PACC échouée: {result}")
+          if result.get('counts_for_section_xiv_condition_9') is not False:
+              raise SystemExit('le test de sanité modèle ne doit jamais fermer §XIV-9')
+          print('PACC-INT-CHALLENGE-V1 reproduit EXO-DOM-01 sans relèvement de preuve.')
+          PY
+
       - name: Exécuter la campagne centrale
         run: |
           python plan_directeur/campagne_centrale_2026_08_11/run_all.py \
@@ -106,6 +124,7 @@ jobs:
         run: |
           python -m pytest -q \
             plan_directeur/campagne_centrale_2026_08_11/tests \
+            03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py \
             | tee "$OUT/logs/tests_campagne_centrale.log"
 
       - name: Vérifier les résultats INV-A attendus
@@ -210,7 +229,13 @@ jobs:
             02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/PROTOCOLE.json \
             02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/PROTOCOLE.md \
             02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json \
             "$OUT/do_m_exoplanetaire/" 2>/dev/null || true
+          mkdir -p "$OUT/vesicules"
+          cp \
+            03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.md \
+            03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json \
+            "$OUT/vesicules/" 2>/dev/null || true
           git diff --binary -- \
             plan_directeur/campagne_centrale_2026_08_11/resultats \
             02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats \

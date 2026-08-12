@@ -1,0 +1,72 @@
+{
+  "schema": "oric.pacc.exo-dom-sanity.v1",
+  "id": "PACC-SANITY-EXO-DOM-01",
+  "definition_id": "PACC-INT-CHALLENGE-V1",
+  "status": "passed_model_sanity_check",
+  "passed": true,
+  "scientific_scope": "validation technique de l'estimateur sur un modèle déjà exécuté; aucun relèvement de niveau de preuve",
+  "evidence_level": "E4_modele",
+  "counts_for_section_xiv_condition_9": false,
+  "reference_result": "RESULTAT_DO_M.json",
+  "reference_values": {
+    "P_acc_control_median": 0.91,
+    "P_acc_do_m_median": 0.87,
+    "Delta_P_acc_signed_median": -0.040000000000000036,
+    "sham_max_abs_Delta": 0.0
+  },
+  "checks": {
+    "control_matches_reference": true,
+    "intervention_matches_reference": true,
+    "delta_matches_reference": true,
+    "sham_matches_reference": true,
+    "strict_estimator_qualifies_internal_model_test": true
+  },
+  "estimate": {
+    "schema": "oric.pacc.matched-intervention.v1",
+    "definition_id": "PACC-INT-CHALLENGE-V1",
+    "definition": "fraction pondérée des cellules défi×dimension dont la réponse future s'écarte de X d'au moins un seuil de matérialité pré-déclaré",
+    "denominator_cells": 100,
+    "independent_units": 120,
+    "challenges": 25,
+    "response_dimensions": 4,
+    "P_acc_control_mean": 0.91,
+    "P_acc_control_median": 0.9099999999999999,
+    "P_acc_intervention_mean": 0.8699999999999997,
+    "P_acc_intervention_median": 0.87,
+    "Delta_P_acc_mean": -0.039999999999999925,
+    "Delta_P_acc_median": -0.039999999999999925,
+    "Delta_P_acc_bootstrap_q025": -0.039999999999999925,
+    "Delta_P_acc_bootstrap_q975": -0.039999999999999925,
+    "fraction_units_with_nonzero_Delta": 1.0,
+    "fraction_control_units_non_extreme": 1.0,
+    "fraction_intervention_units_non_extreme": 1.0,
+    "matching": {
+      "required_flags": {
+        "X_matched": true,
+        "Theta_matched": true,
+        "architecture_matched": true,
+        "m_targeted_only": true,
+        "independent_units": true,
+        "challenge_set_predeclared": true,
+        "thresholds_predeclared": true,
+        "future_response_after_intervention": true
+      },
+      "all_required_matching_conditions_met": true,
+      "failed_or_missing_flags": []
+    },
+    "sham": {
+      "available": true,
+      "P_acc_mean": 0.91,
+      "Delta_vs_control_mean": 0.0,
+      "max_abs_Delta_vs_control": 0.0,
+      "mean_abs_Delta_vs_control": 0.0,
+      "tolerance": 1e-12,
+      "passes": true
+    },
+    "causal_qualified": true,
+    "causal_effect_nonzero_at_95pct": true,
+    "status": "qualified_matched_intervention",
+    "cross_domain_magnitude_comparison_allowed": false,
+    "comparability_rule": "comparer directement les amplitudes seulement si défis, dimensions, seuils, poids et unité de réplication ont la même construction pré-déclarée"
+  }
+}

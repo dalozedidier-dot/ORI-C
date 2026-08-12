@@ -1,0 +1,84 @@
+{
+  "schema": "oric.vesicle-pacc-prospective-design.v1",
+  "id": "VES-PACC-INT-01",
+  "branch": "vivant",
+  "target": "section_XIV_condition_9_and_direct_INV_A",
+  "status": "design_gate_ready_not_preregistered_not_executed",
+  "strict_definition_id": "PACC-INT-CHALLENGE-V1",
+  "prior_dataset": {
+    "source": "Sokolskyi et Baum, Dryad 10.5061/dryad.fbg79cp99",
+    "pairs_already_analysed": 11760,
+    "allowed_use": "calibration_and_design_only",
+    "forbidden_use": "cannot_be_relabelled_as_prospective_or_as_section_XIV_condition_9_success"
+  },
+  "independent_unit": "lignée ou réplication expérimentale physiquement indépendante, déclarée avant acquisition",
+  "X": {
+    "definition": "vecteur d'état présent non ciblé mesuré juste avant l'intervention sur m",
+    "rule": "aucune composante de m ne peut être recopiée dans X pour fabriquer l'appariement",
+    "matching": "mêmes distributions de X entre contrôle, do(m) et sham dans la tolérance préenregistrée"
+  },
+  "m": {
+    "definition": "trace matérielle mesurée du parent, distincte de X, susceptible d'être modifiée sans changer l'architecture non ciblée",
+    "candidate_from_existing_case": "composition parentale mesurée immédiatement avant transfert",
+    "operator": null,
+    "target_levels": null,
+    "blocking_rule": "l'opérateur physique ou quasi-physique do(m) et ses niveaux doivent être définis et gelés publiquement avant toute nouvelle donnée de test"
+  },
+  "Theta": {
+    "definition": "ensemble de défis futurs identiques appliqués aux bras contrôle, do(m) et sham",
+    "challenge_set": null,
+    "blocking_rule": "les défis, leur ordre éventuel, leur durée et leurs doses doivent être gelés avant ouverture des données de test"
+  },
+  "R": {
+    "definition": "réponse future mesurée après intervention et après application de chaque défi",
+    "response_dimensions": null,
+    "blocking_rule": "les dimensions et fenêtres de lecture doivent être gelées avant acquisition"
+  },
+  "P_acc": {
+    "definition_id": "PACC-INT-CHALLENGE-V1",
+    "materiality_thresholds": null,
+    "threshold_source_allowed": [
+      "précision instrumentale indépendante",
+      "SESOI justifié biologiquement",
+      "calibration sur données antérieures explicitement exclues du test"
+    ],
+    "weights": "uniformes par défaut, sauf justification gelée avant données",
+    "bootstrap_unit": "independent_unit"
+  },
+  "arms_required": [
+    "control",
+    "do(m)",
+    "sham"
+  ],
+  "matching_required": [
+    "X_matched",
+    "Theta_matched",
+    "architecture_matched",
+    "m_targeted_only",
+    "independent_units",
+    "challenge_set_predeclared",
+    "thresholds_predeclared",
+    "future_response_after_intervention"
+  ],
+  "qualification_rules": {
+    "section_XIV_condition_9_local_branch_measurement": "causal_qualified == true sur un système empirique réel; le signe de Delta_P_acc peut être positif, négatif ou nul",
+    "direct_INV_A_support": "causal_qualified == true et l'intervalle 95 % apparié de Delta_P_acc exclut 0",
+    "direct_INV_A_non_support": "causal_qualified == true et l'effet ne satisfait pas la règle de soutien préenregistrée",
+    "no_retroactive_redefinition": true
+  },
+  "preregistration_gate": {
+    "required_before_execution": [
+      "m.operator",
+      "m.target_levels",
+      "Theta.challenge_set",
+      "R.response_dimensions",
+      "P_acc.materiality_thresholds",
+      "tolérances d'appariement",
+      "taille et définition des unités indépendantes",
+      "SESOI et plan de puissance",
+      "règle de décision finale",
+      "URL publique OSF ou identifiant équivalent"
+    ],
+    "current_gate_open": false
+  }
+}

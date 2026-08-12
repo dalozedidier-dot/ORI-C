@@ -57,5 +57,18 @@
     "vivant"
   ],
   "condition_9_satisfied": false,
+  "tool_sanity_validation": {
+    "id": "PACC-SANITY-EXO-DOM-01",
+    "status": "passed_model_sanity_check",
+    "passed": true,
+    "counts_for_condition_9": false,
+    "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json"
+  },
+  "next_empirical_candidate": {
+    "id": "VES-PACC-INT-01",
+    "status": "design_gate_ready_not_preregistered_not_executed",
+    "preregistration_gate_open": false,
+    "source": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
+  },
   "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique"
 }

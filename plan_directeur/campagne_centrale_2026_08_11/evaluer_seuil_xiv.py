@@ -42,9 +42,17 @@ def branch_for_prediction(identifier: str) -> str:
 
 def prediction_audit() -> dict:
     rows = []
+    registration_dir = PRED_DIR / "ENREGISTREMENTS_PUBLICS"
     for path in sorted(PRED_DIR.glob("PRED-*.json")):
         item = json.loads(path.read_text(encoding="utf-8"))
         result = item.get("resultat")
+        registration_path = registration_dir / f"{item['id']}.registration.json"
+        registration = json.loads(registration_path.read_text(encoding="utf-8")) if registration_path.exists() else {}
+        public_preregistration = bool(
+            registration.get("status") == "publicly_registered"
+            and registration.get("public_url")
+            and registration.get("registered_at")
+        )
         success = bool(
             isinstance(result, dict)
             and result.get("success") is True
@@ -52,6 +60,7 @@ def prediction_audit() -> dict:
             and result.get("independent_test") is True
             and result.get("matched_control_beaten") is True
             and result.get("protocol_frozen_before_data") is True
+            and public_preregistration
         )
         rows.append({
             "id": item["id"],
@@ -61,6 +70,9 @@ def prediction_audit() -> dict:
             "result_present": result is not None,
             "strict_success": success,
             "matched_control_declared": bool(item.get("modele_concurrent")),
+            "public_preregistration_present": public_preregistration,
+            "registration_status": registration.get("status", "missing"),
+            "registration_public_url": registration.get("public_url"),
         })
     successes = [row for row in rows if row["strict_success"]]
     successful_branches = sorted({row["branch"] for row in successes})
@@ -68,8 +80,8 @@ def prediction_audit() -> dict:
     return {
         "schema": "oric.section-xiv.prediction-audit.v1",
         "strict_success_definition": (
-            "résultat hors échantillon sur test indépendant, protocole gelé avant les données, "
-            "et témoin apparié battu"
+            "résultat hors échantillon sur test indépendant, protocole gelé et enregistré publiquement "
+            "avant les données, et témoin apparié battu"
         ),
         "predictions": rows,
         "strict_success_count": len(successes),
@@ -90,6 +102,15 @@ def pacc_strict_audit() -> dict:
         "DISTRIBUTION_ACCESSIBILITE_26AL.json"
     )
     pid = load("03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json")
+    sanity_path = ROOT / (
+        "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/"
+        "resultats/VALIDATION_PACC_INTERVENTIONNEL_V1.json"
+    )
+    sanity = json.loads(sanity_path.read_text(encoding="utf-8")) if sanity_path.exists() else {
+        "status": "not_executed", "passed": False
+    }
+    vesicle_design_path = ROOT / "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
+    vesicle_design = json.loads(vesicle_design_path.read_text(encoding="utf-8")) if vesicle_design_path.exists() else {}
 
     candidates = [
         {
@@ -151,6 +172,19 @@ def pacc_strict_audit() -> dict:
         "qualified_branch_count": sum(bool(value) for value in qualified_by_branch.values()),
         "branches_required": branches,
         "condition_9_satisfied": all(qualified_by_branch[branch] for branch in branches),
+        "tool_sanity_validation": {
+            "id": sanity.get("id"),
+            "status": sanity.get("status"),
+            "passed": sanity.get("passed", False),
+            "counts_for_condition_9": False,
+            "source": sanity_path.relative_to(ROOT).as_posix() if sanity_path.exists() else None,
+        },
+        "next_empirical_candidate": {
+            "id": vesicle_design.get("id", "VES-PACC-INT-01"),
+            "status": vesicle_design.get("status", "missing"),
+            "preregistration_gate_open": vesicle_design.get("preregistration_gate", {}).get("current_gate_open", False),
+            "source": vesicle_design_path.relative_to(ROOT).as_posix() if vesicle_design_path.exists() else None,
+        },
         "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique",
     }
 

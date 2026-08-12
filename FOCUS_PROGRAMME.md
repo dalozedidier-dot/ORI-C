@@ -74,3 +74,11 @@ Le travail prioritaire n’est plus d’ajouter des scénarios de formation. Il 
 ## Frontière de publication stable 0.9.7-research
 
 Le snapshot stable du 12 août conserve N-corps **13/15**, spin-orbite exécuté et reproductible, M2 **1/10** et non soutenu. Il porte désormais le benchmark transversal à **21 cas**, **6 claims complets** et **5 systèmes distincts**, dont **2 systèmes avec intervention directe sur `m`**. `EXO-DOM-01` soutient un effet local `do(m) -> Delta P_acc` au niveau modèle avec `X/Theta/A` appariés ; la porte transversale générale reste fermée. Les prochains travaux doivent viser une nouvelle réplication empirique `do(m)` indépendante, sans réécrire les verdicts existants.
+
+## Mise à jour opérationnelle du 13 août 2026 — Pacc causal et préenregistrement
+
+`PACC-INT-CHALLENGE-V1` a désormais passé un test de sanité machine sur `EXO-DOM-01`. La nouvelle implémentation restitue `P_acc = 0,91 -> 0,87`, `Delta P_acc = -0,04` et sham nul à partir des réponses défi×dimension. Ce contrôle valide le comportement de l'outil sur un cas modèle déjà connu ; il ne relève pas `EXO-DOM-01` au-dessus de `E4_modele` et ne ferme pas le §XIV-9.
+
+La priorité empirique vivant est `VES-PACC-INT-01`. Le protocole prospectif est installé dans `03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.*`. Les 11 760 couples historiques restent calibration/conception uniquement. La porte de préenregistrement reste fermée tant que l'opérateur `do(m)`, les niveaux ciblés, les défis `Theta`, les dimensions `R`, les seuils, le SESOI, la puissance et les unités indépendantes ne sont pas gelés.
+
+Les quatre prédictions prospectives disposent de paquets de registration OSF. Pour qu'un futur résultat compte comme réussite stricte du §XIV-3, le protocole doit désormais être non seulement gelé avant les données, mais aussi enregistré publiquement avant leur ouverture. Le §XIV reste donc à **7/12**, avec les verrous `3, 4, 9, 10, 11` inchangés.
