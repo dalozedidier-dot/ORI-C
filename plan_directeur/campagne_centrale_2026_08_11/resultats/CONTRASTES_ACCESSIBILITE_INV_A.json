@@ -20,6 +20,8 @@
     {
       "claim_id": "C-VES-03",
       "system_id": "sokolskyi_baum_vesicles",
+      "branch": "vivant",
+      "empirical": true,
       "control_class": "m_ablation",
       "target_lever": "parental_trace",
       "Delta_acc_signed": -0.0375,
@@ -91,6 +93,29 @@
       },
       "direct_INV_A_m_ablation": false,
       "interpretation": "relation physique temporelle et partition locale sans intervention sur m"
+    },
+    {
+      "claim_id": "EXO-DOM-01",
+      "system_id": "exoplanet_reduced_climate_direct_m",
+      "branch": "systeme_solaire",
+      "empirical": false,
+      "evidence_level": "E4_modele",
+      "control_class": "m_ablation",
+      "target_lever": "regolith_fraction_and_carbon_memory",
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_acc_signed": -0.040000000000000036,
+      "D_acc_abs": 0.040000000000000036,
+      "epsilon_acc": 0.01,
+      "bootstrap_abs_q025": 0.040000000000000036,
+      "bootstrap_abs_q975": 0.040000000000000036,
+      "sham_max_abs_Delta": 0.0,
+      "X_exact_by_construction": true,
+      "same_architecture": true,
+      "same_future_forcing": true,
+      "direct_INV_A_m_ablation": true,
+      "direct_INV_A_support": true,
+      "interpretation": "intervention directe ponctuelle sur m dans le modèle réduit; effet local non nul sans transfert au Système solaire réel"
     },
     {
       "claim_id": "C-VES-02",

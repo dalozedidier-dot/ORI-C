@@ -24,6 +24,7 @@ Les certifications historiques restent inchangées. Les nouvelles analyses impor
 | `PACC-ANT-01` | exploratoire | retrospective_history_conditioned_support_narrower_than_shuffled | empirique_externe_secondaire |
 | `PACC-VES-ABL-01` | resultat_negatif | does_not_support_positive_Pacc_ablation_contrast | empirique_externe_secondaire |
 | `M-ORB-01` | exploratoire | model_retrospective_dynamic_trace_proxy | modele_reduit |
+| `EXO-DOM-01` | exploratoire | supports_local_nonzero_delta_Pacc_under_direct_m_reset | modele_reduit |
 | `M-26AL-01` | exploratoire | derived_physical_history_trace_from_empirical_ages | quantitatif_empirique_retroactif |
 | `GCQ-INTERSTAGE-01` | non_concluant | no_conservation_claim_after_publication_control | quantitatif_empirique_retroactif |
 | `CSTATE-01` | exploratoire | executed_finite_proxy | methodologique |

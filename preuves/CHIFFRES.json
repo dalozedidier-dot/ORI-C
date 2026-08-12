@@ -232,7 +232,7 @@
       "value": 1
     },
     {
-      "display": "1 662",
+      "display": "1 668",
       "id": "MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
@@ -241,18 +241,18 @@
         "site/reproductibilite.html"
       ],
       "tolerance": 0,
-      "value": 1662,
+      "value": 1668,
       "transform": "len"
     },
     {
-      "display": "1 662",
+      "display": "1 668",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1662
+      "value": 1668
     },
     {
       "display": "20 stades",
@@ -769,10 +769,21 @@
       "value": 0.472263868066
     },
     {
-      "display": "5 cas",
+      "display": "6 cas",
       "id": "TRANSVERSAL_FIELD_COMPLETE_CASES",
       "pointer": "/field_complete_cases",
-      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_20_CAS.json",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_21_CAS.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 6
+    },
+    {
+      "display": "5 systèmes",
+      "id": "TRANSVERSAL_FIELD_COMPLETE_SYSTEMS",
+      "pointer": "/field_complete_unique_systems",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_21_CAS.json",
       "targets": [
         "site/preuves.html"
       ],
@@ -780,15 +791,37 @@
       "value": 5
     },
     {
-      "display": "4 systèmes",
-      "id": "TRANSVERSAL_FIELD_COMPLETE_SYSTEMS",
-      "pointer": "/field_complete_unique_systems",
-      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_20_CAS.json",
+      "display": "0,91",
+      "id": "EXO_DOM_PACC_CTRL",
+      "pointer": "/P_acc/control_median",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
       "targets": [
         "site/preuves.html"
       ],
-      "tolerance": 0,
-      "value": 4
+      "tolerance": 1e-12,
+      "value": 0.91
+    },
+    {
+      "display": "0,87",
+      "id": "EXO_DOM_PACC_DO_M",
+      "pointer": "/P_acc/do_m_median",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.87
+    },
+    {
+      "display": "0,04",
+      "id": "EXO_DOM_DELTA_ABS",
+      "pointer": "/P_acc/abs_Delta_median",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.040000000000000036
     }
   ]
 }

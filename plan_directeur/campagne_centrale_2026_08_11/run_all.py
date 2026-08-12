@@ -129,7 +129,7 @@ def dependency_graph() -> dict:
             "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
             "memoire_matiere: aucune chaîne complète admise",
             "P_acc: plusieurs mesures locales existent; les contrastes sont normalisés localement mais aucune échelle de magnitude interdomaines n'est validée",
-            "INV-A: un seul système possède actuellement un contraste P_acc direct sous ablation de m, et ce contraste ne soutient pas la direction positive gelée",
+            "INV-A: deux systèmes possèdent maintenant un do(m) direct; le vivant est négatif sur son contraste local et EXO-DOM-01 soutient un effet non nul au niveau modèle; la branche matière empirique reste à fermer",
             "réplications indépendantes: résultats vivants positifs encore non répliqués sur jeux indépendants"
         ]
     }
@@ -167,7 +167,7 @@ def main() -> int:
     dump("DEPENDANCES_SCIENTIFIQUES.json", dependency_graph())
     benchmark, invariants = benchmark_transversal()
     dump("BENCHMARK_TRANSVERSAL.json", benchmark)
-    dump("COMPLETUDE_20_CAS.json", completeness_report(benchmark))
+    dump("COMPLETUDE_21_CAS.json", completeness_report(benchmark))
     dump("AUDIT_INVARIANTS.json", invariants)
     measures, bifurcations = quantification_commune()
     dump("MESURES_COMMUNES_EXECUTEES.json", measures)
@@ -188,7 +188,7 @@ def main() -> int:
         "inv_a_direct_m_ablation_systems": inv_a["direct_m_ablation_system_count"],
         "inv_a_direct_positive_m_ablation_systems": inv_a["direct_positive_m_ablation_system_count"],
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_without_new_data": "conserver les contrastes locaux séparés et préparer un protocole futur do(m) avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
+        "next_executable_without_new_data": "conserver EXO-DOM-01 comme réplication modèle et cibler un do(m) empirique matière avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
         "next_confirmatory_gate": "obtenir des réplications indépendantes pré-gelées de do(m)->Delta P_acc; la porte transversale exige trois systèmes indépendants dans les trois branches dont au moins deux empiriques",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")

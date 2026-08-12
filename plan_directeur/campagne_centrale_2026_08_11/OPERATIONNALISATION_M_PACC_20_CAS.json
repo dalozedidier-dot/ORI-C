@@ -121,6 +121,12 @@
       "m": "courbe de conservation/perte d'information",
       "P_acc": "fraction des trajectoires étoile-grain-disque-corps-planète compatibles",
       "measurement_status": "requires_full_interstage_curve"
+    },
+    {
+      "id": "EXO-DOM-01",
+      "m": "état lent du modèle (fraction de régolithe, mémoire carbone) mesuré à t=50 Ma puis remis ponctuellement à la référence (0.5,0.5)",
+      "P_acc": "fraction des 100 cellules scénario×dimension où la réponse future dépasse le seuil de matérialité préexistant, sous 25 challenges identiques contrôle/do(m)",
+      "measurement_status": "complete_model_direct_m_intervention_measured_with_exact_X_Theta_A_matching"
     }
   ]
 }

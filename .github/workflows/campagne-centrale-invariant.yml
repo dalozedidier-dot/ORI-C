@@ -9,6 +9,7 @@ on:
       - '00_socle/CODEBOOK.md'
       - 'plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md'
       - 'plan_directeur/campagne_centrale_2026_08_11/**'
+      - '02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/**'
       - '.github/workflows/campagne-centrale-invariant.yml'
 
 permissions:
@@ -61,10 +62,14 @@ jobs:
           mkdir -p \
             "$RUNNER_TEMP/oric-campagne-centrale-invariant/logs" \
             "$RUNNER_TEMP/oric-campagne-centrale-invariant/resultats" \
-            "$RUNNER_TEMP/campagne-centrale-reference"
+            "$RUNNER_TEMP/campagne-centrale-reference" \
+            "$RUNNER_TEMP/do-m-reference"
           cp -R \
             plan_directeur/campagne_centrale_2026_08_11/resultats/. \
             "$RUNNER_TEMP/campagne-centrale-reference/"
+          cp \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json \
+            "$RUNNER_TEMP/do-m-reference/"
 
       - name: Vérifier l'intégrité initiale
         run: |
@@ -72,6 +77,22 @@ jobs:
             | tee "$OUT/logs/integrite_initiale.log"
           python scripts/valider_tout.py \
             | tee "$OUT/logs/validation_rapide.log"
+
+      - name: Exécuter le do(m) direct du modèle exoplanétaire
+        run: |
+          python 02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/run_do_m.py \
+            | tee "$OUT/logs/do_m_exoplanetaire.log"
+          python -m pytest -q \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/tests \
+            | tee "$OUT/logs/tests_do_m_exoplanetaire.log"
+          mkdir -p "$RUNNER_TEMP/do-m-candidate"
+          cp \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json \
+            "$RUNNER_TEMP/do-m-candidate/"
+          python scripts/verifier_reproductibilite_resultats.py \
+            --reference "$RUNNER_TEMP/do-m-reference" \
+            --candidate "$RUNNER_TEMP/do-m-candidate" \
+            | tee "$OUT/logs/reproductibilite_do_m.log"
 
       - name: Exécuter la campagne centrale
         run: |
@@ -96,7 +117,7 @@ jobs:
               'DATASET_TEST_MATRIX.json',
               'DEPENDANCES_SCIENTIFIQUES.json',
               'BENCHMARK_TRANSVERSAL.json',
-              'COMPLETUDE_20_CAS.json',
+              'COMPLETUDE_21_CAS.json',
               'AUDIT_INVARIANTS.json',
               'MESURES_COMMUNES_EXECUTEES.json',
               'REGISTRE_BIFURCATIONS.json',
@@ -170,8 +191,15 @@ jobs:
           cp \
             plan_directeur/campagne_centrale_2026_08_11/FALSIFICATION_ORI-C.md \
             "$OUT/" 2>/dev/null || true
+          mkdir -p "$OUT/do_m_exoplanetaire"
+          cp \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/PROTOCOLE.json \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/PROTOCOLE.md \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json \
+            "$OUT/do_m_exoplanetaire/" 2>/dev/null || true
           git diff --binary -- \
             plan_directeur/campagne_centrale_2026_08_11/resultats \
+            02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats \
             > "$OUT/regeneration.diff" || true
           python - <<'PY'
           import json

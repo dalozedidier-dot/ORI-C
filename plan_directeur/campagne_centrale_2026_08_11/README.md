@@ -22,7 +22,7 @@ le protocole 01 reste `non_testable` faute de distributions chronologiques
 point par point et parce que son contrôle négatif réel n'a pas été identifié
 dans le gel. Le benchmark transversal contient 20 cas réels ou explicitement
 classés comme résultats de modèle. **Cinq claims renseignent désormais les sept
-champs `X,H,m,Theta,tau,P_acc,R`, représentant quatre systèmes distincts**.
+champs `X,H,m,Theta,tau,P_acc,R`, représentant désormais cinq systèmes distincts**. `EXO-DOM-01` ajoute un `do(m)` direct au niveau modèle avec appariement exact de `X`, `Theta` et de l’architecture.
 Cette complétude de champs ne vaut ni indépendance des cas, ni chaîne causale
 commune. `INV-A` est maintenant formalisé comme candidat `Delta m -> Delta P_acc`
 avec séparation stricte entre permutation de `H`, ablation de `m` et intervention

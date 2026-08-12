@@ -59,11 +59,14 @@ intervention sur `A` sont conservées comme classes de preuve distinctes. Les
 claims d'un même système ne sont pas comptés comme des réplications
 indépendantes.
 
-L'état actuel reste exploratoire : cinq claims renseignent les sept champs mais
-ils ne représentent que quatre systèmes ; le contraste `P_acc` direct sous
-ablation de `m` actuellement exécuté ne soutient pas la direction positive
-gelée. La définition complète est dans `00_socle/INVARIANT_TRANSVERSAL.md` et le
-protocole futur dans `plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md`.
+L'état courant sur `main` reste exploratoire : six claims renseignent les sept
+champs pour cinq systèmes. Deux systèmes possèdent maintenant un `do(m)` direct.
+Le contraste vésiculaire empirique conserve son résultat négatif local, tandis
+que `EXO-DOM-01` montre au niveau modèle qu'un reset ciblé de la trace modifie
+`P_acc` avec `X`, `Theta` et l'architecture appariés. Ce succès modèle ne compte
+pas comme réplication empirique. La définition complète est dans
+`00_socle/INVARIANT_TRANSVERSAL.md` et le protocole futur dans
+`plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md`.
 
 Cette lecture condensée se déploie dans la boucle canonique suivante :
 

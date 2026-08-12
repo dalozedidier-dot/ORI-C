@@ -249,7 +249,7 @@ Cette liste définit une porte de test, pas un résultat actuel.
 
 ## 11. État courant
 
-Le benchmark actuel renseigne cinq claims à sept champs pour quatre systèmes.
+Le benchmark courant sur `main` renseigne six claims à sept champs pour cinq systèmes. Deux systèmes portent maintenant une intervention directe sur `m` : le cas vésiculaire empirique et `EXO-DOM-01` au niveau modèle.
 Ce nombre ne signifie pas cinq réplications.
 
 - `C-VES-03` fournit actuellement le test le plus proche de `do(m) -> Delta

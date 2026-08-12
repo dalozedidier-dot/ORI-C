@@ -41,9 +41,9 @@ def test_benchmark_transversal_distingue_completude_et_validation() -> None:
     benchmark, invariants = MODULE.benchmark_transversal()
     assert 20 <= benchmark["case_count"] <= 30
     assert all(case["artifact_present"] for case in benchmark["cases"])
-    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 5
-    assert invariants["eligible_case_ids"] == ["C-VES-02", "C-VES-03", "C-AST-01", "PID-ANT-01", "GCQ-T09"]
-    assert benchmark["field_complete_unique_system_count"] == 4
+    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 6
+    assert invariants["eligible_case_ids"] == ["C-VES-02", "C-VES-03", "C-AST-01", "PID-ANT-01", "GCQ-T09", "EXO-DOM-01"]
+    assert benchmark["field_complete_unique_system_count"] == 5
     assert invariants["tests"][0]["status"] == "exploratory_comparison_ready_not_confirmatory"
     assert invariants["tests"][1]["status"] == "non_testable"
     assert invariants["verdict"].startswith("la complétude opérationnelle progresse")
@@ -91,10 +91,14 @@ def test_inv_a_separe_les_leviers_et_compte_les_systemes() -> None:
     assert entries["PID-ANT-01"]["direct_INV_A_m_ablation"] is False
     assert entries["C-AST-01"]["control_class"] == "architecture_intervention"
     assert entries["C-AST-01"]["direct_INV_A_m_ablation"] is False
+    assert entries["EXO-DOM-01"]["control_class"] == "m_ablation"
+    assert entries["EXO-DOM-01"]["direct_INV_A_m_ablation"] is True
+    assert entries["EXO-DOM-01"]["direct_INV_A_support"] is True
+    assert entries["EXO-DOM-01"]["X_exact_by_construction"] is True
     assert audit["replication_unit"] == "independent_system_not_claim"
-    assert audit["field_complete_unique_system_count"] == 4
-    assert audit["direct_m_ablation_system_count"] == 1
-    assert audit["direct_positive_m_ablation_system_count"] == 0
+    assert audit["field_complete_unique_system_count"] == 5
+    assert audit["direct_m_ablation_system_count"] == 2
+    assert audit["direct_positive_m_ablation_system_count"] == 1
     assert audit["future_gate_satisfied"] is False
     assert audit["current_status"] == "candidate_operationalized_exploratory_not_validated"
 
@@ -107,6 +111,8 @@ def test_tau_m_ne_se_confond_pas_avec_un_horizon() -> None:
     assert cases["PID-ANT-01"]["tau_quality"]["tau_m_measured"] is False
     assert cases["GCQ-T09"]["tau_quality"]["kind"] == "tau_decay_local"
     assert cases["GCQ-T09"]["tau_quality"]["cross_domain_comparable"] is False
+    assert cases["EXO-DOM-01"]["tau_quality"]["kind"] == "tau_m_local_effective"
+    assert cases["EXO-DOM-01"]["tau_quality"]["tau_m_measured"] is True
 
 
 def test_formalisme_inv_a_refuse_l_homogeneisation_forcee() -> None:

@@ -1,0 +1,2097 @@
+{
+  "schema": "oric.exoplanet-direct-m-intervention.result.v1",
+  "id": "EXO-DOM-01",
+  "status": "exploratory_frozen_for_reexecution_not_preregistered",
+  "evidence_level": "E4_modele",
+  "system_id": "exoplanet_reduced_climate_direct_m",
+  "matching": {
+    "X_exact_by_construction": true,
+    "max_abs_X_difference_control_vs_do_m": {
+      "temperature_k": 0.0,
+      "ice_fraction": 0.0,
+      "co2_ppm": 0.0
+    },
+    "same_architecture": true,
+    "same_future_forcing": true,
+    "targeted_variables_only": [
+      "regolith_fraction",
+      "carbon_memory"
+    ]
+  },
+  "P_acc": {
+    "definition": "fraction des 100 cellules scénario×dimension où la réponse future s'écarte de X d'au moins le seuil de matérialité préexistant de la dimension",
+    "denominator": 100,
+    "resolution": 0.01,
+    "epsilon_acc": 0.01,
+    "control_median": 0.91,
+    "do_m_median": 0.87,
+    "Delta_signed_median": -0.040000000000000036,
+    "Delta_signed_mean": -0.040000000000000036,
+    "abs_Delta_median": 0.040000000000000036,
+    "abs_Delta_bootstrap_q025": 0.040000000000000036,
+    "abs_Delta_bootstrap_q975": 0.040000000000000036,
+    "fraction_nonzero": 1.0,
+    "sham_max_abs_Delta": 0.0
+  },
+  "tau_m": {
+    "regolith_fraction": {
+      "initial_abs_trace_difference": 0.23141126430753334,
+      "abs_trace_difference_at_240_myr": 1.2906342661267445e-14,
+      "retained_fraction_at_240_myr": 5.57723181708026e-14,
+      "efolding_myr": 7.88682819155042
+    },
+    "carbon_memory": {
+      "initial_abs_trace_difference": 0.07906130209614716,
+      "abs_trace_difference_at_240_myr": 2.7755575615628914e-17,
+      "retained_fraction_at_240_myr": 3.5106398300745297e-16,
+      "efolding_myr": 7.007333625200787
+    }
+  },
+  "direct_INV_A_m_intervention": true,
+  "direct_INV_A_support": true,
+  "signed_direction": "decrease",
+  "interpretation": "do(m) modifie localement P_acc dans le modèle à X/Theta/A appariés; le signe est publié sans être universalisé",
+  "scope": "intervention causale interne au modèle réduit; aucune intervention sur le vrai Système solaire et aucune réplication empirique",
+  "units": [
+    {
+      "history": "A",
+      "replicate": 0,
+      "m_control": {
+        "regolith_fraction": 0.3263693994003294,
+        "carbon_memory": 0.42017707568250817
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 1,
+      "m_control": {
+        "regolith_fraction": 0.33238881889123717,
+        "carbon_memory": 0.42131093837880723
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 2,
+      "m_control": {
+        "regolith_fraction": 0.3330221787815723,
+        "carbon_memory": 0.42143238279597744
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 3,
+      "m_control": {
+        "regolith_fraction": 0.3861459514950713,
+        "carbon_memory": 0.43182573463375307
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 4,
+      "m_control": {
+        "regolith_fraction": 0.34109581825204194,
+        "carbon_memory": 0.4230840275943837
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 5,
+      "m_control": {
+        "regolith_fraction": 0.3334352487094582,
+        "carbon_memory": 0.42157905784703076
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 6,
+      "m_control": {
+        "regolith_fraction": 0.3690176079695635,
+        "carbon_memory": 0.42847994530653294
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 7,
+      "m_control": {
+        "regolith_fraction": 0.33777467665808747,
+        "carbon_memory": 0.42241290193874753
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 8,
+      "m_control": {
+        "regolith_fraction": 0.3768531170943246,
+        "carbon_memory": 0.4299731123690463
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 9,
+      "m_control": {
+        "regolith_fraction": 0.3280214927751645,
+        "carbon_memory": 0.42042620913403306
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 10,
+      "m_control": {
+        "regolith_fraction": 0.35537067193491423,
+        "carbon_memory": 0.4258006961954749
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 11,
+      "m_control": {
+        "regolith_fraction": 0.34969172962637113,
+        "carbon_memory": 0.4247617686319655
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 12,
+      "m_control": {
+        "regolith_fraction": 0.3404975888858157,
+        "carbon_memory": 0.422887062508142
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 13,
+      "m_control": {
+        "regolith_fraction": 0.33229467002179913,
+        "carbon_memory": 0.4213353967543114
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 14,
+      "m_control": {
+        "regolith_fraction": 0.37753202037853206,
+        "carbon_memory": 0.4301351428654733
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 15,
+      "m_control": {
+        "regolith_fraction": 0.3858920704728201,
+        "carbon_memory": 0.4317570672793863
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 16,
+      "m_control": {
+        "regolith_fraction": 0.3782556443798185,
+        "carbon_memory": 0.4302690109372101
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 17,
+      "m_control": {
+        "regolith_fraction": 0.3400045136792483,
+        "carbon_memory": 0.4228006571259646
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 18,
+      "m_control": {
+        "regolith_fraction": 0.3400683863654491,
+        "carbon_memory": 0.422880499123749
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 19,
+      "m_control": {
+        "regolith_fraction": 0.35810689796993694,
+        "carbon_memory": 0.4263549644662376
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 20,
+      "m_control": {
+        "regolith_fraction": 0.37043803022527255,
+        "carbon_memory": 0.4288173462969069
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 21,
+      "m_control": {
+        "regolith_fraction": 0.3510743559761733,
+        "carbon_memory": 0.4250224788377103
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 22,
+      "m_control": {
+        "regolith_fraction": 0.3706108360388599,
+        "carbon_memory": 0.4287844538557848
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 23,
+      "m_control": {
+        "regolith_fraction": 0.37223411489438624,
+        "carbon_memory": 0.4291625252555915
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 24,
+      "m_control": {
+        "regolith_fraction": 0.3735284585069892,
+        "carbon_memory": 0.42931333432338314
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 25,
+      "m_control": {
+        "regolith_fraction": 0.34533803527091017,
+        "carbon_memory": 0.4238759657776766
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 26,
+      "m_control": {
+        "regolith_fraction": 0.32682915134592877,
+        "carbon_memory": 0.4202034380652424
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 27,
+      "m_control": {
+        "regolith_fraction": 0.36285013480727313,
+        "carbon_memory": 0.4272599150132067
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 28,
+      "m_control": {
+        "regolith_fraction": 0.3646666729230052,
+        "carbon_memory": 0.42765255548389997
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 29,
+      "m_control": {
+        "regolith_fraction": 0.3598605427229906,
+        "carbon_memory": 0.42668179973961
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 30,
+      "m_control": {
+        "regolith_fraction": 0.3304029319986914,
+        "carbon_memory": 0.4209719300466148
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 31,
+      "m_control": {
+        "regolith_fraction": 0.37239855047558024,
+        "carbon_memory": 0.4291281798630327
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 32,
+      "m_control": {
+        "regolith_fraction": 0.32472213706798775,
+        "carbon_memory": 0.41982463459946856
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 33,
+      "m_control": {
+        "regolith_fraction": 0.35947146089504645,
+        "carbon_memory": 0.4266754693612622
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 34,
+      "m_control": {
+        "regolith_fraction": 0.32633580318133715,
+        "carbon_memory": 0.42013439125780166
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 35,
+      "m_control": {
+        "regolith_fraction": 0.3240071989814799,
+        "carbon_memory": 0.41966061826421475
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 36,
+      "m_control": {
+        "regolith_fraction": 0.3833659926222814,
+        "carbon_memory": 0.4312213082724425
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 37,
+      "m_control": {
+        "regolith_fraction": 0.336473541985967,
+        "carbon_memory": 0.4221511990045284
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 38,
+      "m_control": {
+        "regolith_fraction": 0.3573243440228662,
+        "carbon_memory": 0.426224193426454
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 39,
+      "m_control": {
+        "regolith_fraction": 0.3362071006051859,
+        "carbon_memory": 0.4221390551552571
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 40,
+      "m_control": {
+        "regolith_fraction": 0.3529735600303717,
+        "carbon_memory": 0.4253159258771062
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 41,
+      "m_control": {
+        "regolith_fraction": 0.33743709872064864,
+        "carbon_memory": 0.4223311409094464
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 42,
+      "m_control": {
+        "regolith_fraction": 0.3318292887000994,
+        "carbon_memory": 0.42125601138474567
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 43,
+      "m_control": {
+        "regolith_fraction": 0.3343318181972076,
+        "carbon_memory": 0.4216687281812554
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 44,
+      "m_control": {
+        "regolith_fraction": 0.3274156723856445,
+        "carbon_memory": 0.4203838461744491
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 45,
+      "m_control": {
+        "regolith_fraction": 0.37190091245073004,
+        "carbon_memory": 0.42909413576741096
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 46,
+      "m_control": {
+        "regolith_fraction": 0.35262122859258943,
+        "carbon_memory": 0.4252531044145545
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 47,
+      "m_control": {
+        "regolith_fraction": 0.3557194688502197,
+        "carbon_memory": 0.42595190214558953
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 48,
+      "m_control": {
+        "regolith_fraction": 0.36721190184294233,
+        "carbon_memory": 0.4281878811489153
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 49,
+      "m_control": {
+        "regolith_fraction": 0.3710086120780109,
+        "carbon_memory": 0.42890114414354663
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 50,
+      "m_control": {
+        "regolith_fraction": 0.361720835499672,
+        "carbon_memory": 0.42708157466663577
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 51,
+      "m_control": {
+        "regolith_fraction": 0.370721098977116,
+        "carbon_memory": 0.42884897645943043
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 52,
+      "m_control": {
+        "regolith_fraction": 0.3526705987539837,
+        "carbon_memory": 0.42528915641690573
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 53,
+      "m_control": {
+        "regolith_fraction": 0.3724477633076754,
+        "carbon_memory": 0.4291979624999215
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 54,
+      "m_control": {
+        "regolith_fraction": 0.33426661004060476,
+        "carbon_memory": 0.4217353959140437
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 55,
+      "m_control": {
+        "regolith_fraction": 0.3436294667745167,
+        "carbon_memory": 0.42348782265642493
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 56,
+      "m_control": {
+        "regolith_fraction": 0.36767078809374465,
+        "carbon_memory": 0.42822756991729694
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 57,
+      "m_control": {
+        "regolith_fraction": 0.3503304612288079,
+        "carbon_memory": 0.42490390621445895
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 58,
+      "m_control": {
+        "regolith_fraction": 0.34072300733695565,
+        "carbon_memory": 0.4229757692784182
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "A",
+      "replicate": 59,
+      "m_control": {
+        "regolith_fraction": 0.34704199887744513,
+        "carbon_memory": 0.4241768032661959
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 0,
+      "m_control": {
+        "regolith_fraction": 0.1789902012862625,
+        "carbon_memory": 0.4144625562885634
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 1,
+      "m_control": {
+        "regolith_fraction": 0.17913335426798685,
+        "carbon_memory": 0.41455376534530536
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 2,
+      "m_control": {
+        "regolith_fraction": 0.179145673321053,
+        "carbon_memory": 0.41456165421771335
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 3,
+      "m_control": {
+        "regolith_fraction": 0.17997263364472607,
+        "carbon_memory": 0.41509281385903446
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 4,
+      "m_control": {
+        "regolith_fraction": 0.17922088539727593,
+        "carbon_memory": 0.4146113956573013
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 5,
+      "m_control": {
+        "regolith_fraction": 0.17909653652648222,
+        "carbon_memory": 0.41453131253855025
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 6,
+      "m_control": {
+        "regolith_fraction": 0.17972056364529296,
+        "carbon_memory": 0.4149310328382901
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 7,
+      "m_control": {
+        "regolith_fraction": 0.17918395993669928,
+        "carbon_memory": 0.41458722539122345
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 8,
+      "m_control": {
+        "regolith_fraction": 0.17987005723076646,
+        "carbon_memory": 0.4150261199145488
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 9,
+      "m_control": {
+        "regolith_fraction": 0.1790832240464966,
+        "carbon_memory": 0.41452097439089347
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 10,
+      "m_control": {
+        "regolith_fraction": 0.17951844217369053,
+        "carbon_memory": 0.41480103453818257
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 11,
+      "m_control": {
+        "regolith_fraction": 0.17936536331356548,
+        "carbon_memory": 0.41470419599595904
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 12,
+      "m_control": {
+        "regolith_fraction": 0.17927960735969548,
+        "carbon_memory": 0.4146475552546813
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 13,
+      "m_control": {
+        "regolith_fraction": 0.1790949582564778,
+        "carbon_memory": 0.4145298977663097
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 14,
+      "m_control": {
+        "regolith_fraction": 0.1798547910763814,
+        "carbon_memory": 0.41501699838235623
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 15,
+      "m_control": {
+        "regolith_fraction": 0.17998525242355745,
+        "carbon_memory": 0.41510046170243714
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 16,
+      "m_control": {
+        "regolith_fraction": 0.17987140310673008,
+        "carbon_memory": 0.41502750097317515
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 17,
+      "m_control": {
+        "regolith_fraction": 0.1792626345031698,
+        "carbon_memory": 0.4146368529448852
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 18,
+      "m_control": {
+        "regolith_fraction": 0.17920509955199296,
+        "carbon_memory": 0.4146012147176301
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 19,
+      "m_control": {
+        "regolith_fraction": 0.1795453519932404,
+        "carbon_memory": 0.41481871663430075
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 20,
+      "m_control": {
+        "regolith_fraction": 0.17968828025523056,
+        "carbon_memory": 0.4149116932546837
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 21,
+      "m_control": {
+        "regolith_fraction": 0.1793961889236431,
+        "carbon_memory": 0.4147238051098114
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 22,
+      "m_control": {
+        "regolith_fraction": 0.17975022430769996,
+        "carbon_memory": 0.4149499264293512
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 23,
+      "m_control": {
+        "regolith_fraction": 0.17972130710264378,
+        "carbon_memory": 0.4149327468781598
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 24,
+      "m_control": {
+        "regolith_fraction": 0.17982973049757836,
+        "carbon_memory": 0.4149999996366319
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 25,
+      "m_control": {
+        "regolith_fraction": 0.17932371247137335,
+        "carbon_memory": 0.41467673772172153
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 26,
+      "m_control": {
+        "regolith_fraction": 0.17905311009345157,
+        "carbon_memory": 0.41450182068171565
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 27,
+      "m_control": {
+        "regolith_fraction": 0.17963898860690208,
+        "carbon_memory": 0.41487833824002546
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 28,
+      "m_control": {
+        "regolith_fraction": 0.1796336851295871,
+        "carbon_memory": 0.41487578334417735
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 29,
+      "m_control": {
+        "regolith_fraction": 0.17958679249798995,
+        "carbon_memory": 0.4148449777957974
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 30,
+      "m_control": {
+        "regolith_fraction": 0.17905600137023078,
+        "carbon_memory": 0.4145049838070782
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 31,
+      "m_control": {
+        "regolith_fraction": 0.1797822005471289,
+        "carbon_memory": 0.4149703171686957
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 32,
+      "m_control": {
+        "regolith_fraction": 0.17898685101922418,
+        "carbon_memory": 0.41445984945416176
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 33,
+      "m_control": {
+        "regolith_fraction": 0.17951931453091907,
+        "carbon_memory": 0.414803162938958
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 34,
+      "m_control": {
+        "regolith_fraction": 0.17902100166264184,
+        "carbon_memory": 0.4144816882773413
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 35,
+      "m_control": {
+        "regolith_fraction": 0.17899531989668285,
+        "carbon_memory": 0.4144648392030521
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 36,
+      "m_control": {
+        "regolith_fraction": 0.17998672253562106,
+        "carbon_memory": 0.4151003603373245
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 37,
+      "m_control": {
+        "regolith_fraction": 0.179168106904268,
+        "carbon_memory": 0.4145768954437678
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 38,
+      "m_control": {
+        "regolith_fraction": 0.17951374296030795,
+        "carbon_memory": 0.4147988932562221
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 39,
+      "m_control": {
+        "regolith_fraction": 0.1791288878333925,
+        "carbon_memory": 0.4145524525649372
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 40,
+      "m_control": {
+        "regolith_fraction": 0.1794940479361446,
+        "carbon_memory": 0.41478502809308554
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 41,
+      "m_control": {
+        "regolith_fraction": 0.179192529919986,
+        "carbon_memory": 0.4145924107499544
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 42,
+      "m_control": {
+        "regolith_fraction": 0.17907617406556514,
+        "carbon_memory": 0.4145180577847521
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 43,
+      "m_control": {
+        "regolith_fraction": 0.17918556095483204,
+        "carbon_memory": 0.4145868949157864
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 44,
+      "m_control": {
+        "regolith_fraction": 0.17900778580389914,
+        "carbon_memory": 0.41447388242444283
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 45,
+      "m_control": {
+        "regolith_fraction": 0.17971943077949562,
+        "carbon_memory": 0.41493146126496033
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 46,
+      "m_control": {
+        "regolith_fraction": 0.17948270110068346,
+        "carbon_memory": 0.41477788510804614
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 47,
+      "m_control": {
+        "regolith_fraction": 0.17945226973339126,
+        "carbon_memory": 0.4147602792103287
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 48,
+      "m_control": {
+        "regolith_fraction": 0.17963833388130424,
+        "carbon_memory": 0.41487963575553616
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 49,
+      "m_control": {
+        "regolith_fraction": 0.1797220196598216,
+        "carbon_memory": 0.41493271129265386
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 50,
+      "m_control": {
+        "regolith_fraction": 0.17958321716748885,
+        "carbon_memory": 0.4148435035791324
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 51,
+      "m_control": {
+        "regolith_fraction": 0.1797143475518214,
+        "carbon_memory": 0.4149278686666733
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 52,
+      "m_control": {
+        "regolith_fraction": 0.17946126599807596,
+        "carbon_memory": 0.41476466096521597
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 53,
+      "m_control": {
+        "regolith_fraction": 0.17972965189360768,
+        "carbon_memory": 0.4149379730692829
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 54,
+      "m_control": {
+        "regolith_fraction": 0.17911670278217287,
+        "carbon_memory": 0.414544149548319
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 55,
+      "m_control": {
+        "regolith_fraction": 0.17934243788271287,
+        "carbon_memory": 0.41468766115136907
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 56,
+      "m_control": {
+        "regolith_fraction": 0.17969041198964628,
+        "carbon_memory": 0.4149119287246978
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 57,
+      "m_control": {
+        "regolith_fraction": 0.1793600208959645,
+        "carbon_memory": 0.41470113150137555
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 58,
+      "m_control": {
+        "regolith_fraction": 0.1792456982334772,
+        "carbon_memory": 0.4146266346473231
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    },
+    {
+      "history": "B",
+      "replicate": 59,
+      "m_control": {
+        "regolith_fraction": 0.17938062677060782,
+        "carbon_memory": 0.4147126172679741
+      },
+      "m_do": {
+        "regolith_fraction": 0.5,
+        "carbon_memory": 0.5
+      },
+      "P_acc_control": 0.91,
+      "P_acc_do_m": 0.87,
+      "Delta_P_acc_signed": -0.040000000000000036,
+      "abs_Delta_P_acc": 0.040000000000000036,
+      "P_acc_sham": 0.91
+    }
+  ]
+}

@@ -1,17 +1,19 @@
 {
   "schema": "oric.transversal-invariants-audit.v2",
-  "cases_total": 20,
-  "cases_complete_X_H_m_Theta_tau_Pacc_R": 5,
+  "cases_total": 21,
+  "cases_complete_X_H_m_Theta_tau_Pacc_R": 6,
   "eligible_case_ids": [
     "C-VES-02",
     "C-VES-03",
     "C-AST-01",
     "PID-ANT-01",
-    "GCQ-T09"
+    "GCQ-T09",
+    "EXO-DOM-01"
   ],
   "unique_complete_systems": [
     "cosmic_26Al",
     "donofrio_antibiotic",
+    "exoplanet_reduced_climate_direct_m",
     "sokolskyi_baum_vesicles",
     "solar_system_model"
   ],
@@ -20,7 +22,7 @@
       "id": "INV-A",
       "hypothesis": "Delta m -> Delta P_acc",
       "status": "exploratory_comparison_ready_not_confirmatory",
-      "reason": "plusieurs systèmes ont m et P_acc, mais les leviers sont hétérogènes; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée, et les autres cas sont informationnels, rétrospectifs ou architecturaux",
+      "reason": "deux systèmes ont désormais une intervention directe sur m: le contraste vésiculaire ne soutient pas sa direction positive locale, tandis que EXO-DOM-01 produit un effet non nul au niveau modèle avec X/Theta/A appariés; cela ne constitue pas une réplication empirique transversale",
       "companion_audit": "resultats/AUDIT_INV_A.json"
     },
     {

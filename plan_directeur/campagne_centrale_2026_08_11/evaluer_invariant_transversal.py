@@ -36,6 +36,7 @@ def build() -> tuple[dict, dict]:
     orbital = load("02_branche_systeme_solaire/tests_suivants/resultats/PACC_ASTRONOMIQUE.json")
     al26 = load("01_branche_matiere/genealogie_cosmique_quantitative/resultats/DISTRIBUTION_ACCESSIBILITE_26AL.json")
     exoplanet = load("02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json")
+    exo_do_m = load("02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json")
 
     ant = antibiotic["P_acc_retrospective"]
     ant_null = ant["same_complexity_history_permutation"]
@@ -80,6 +81,8 @@ def build() -> tuple[dict, dict]:
             {
                 "claim_id": "C-VES-03",
                 "system_id": "sokolskyi_baum_vesicles",
+                "branch": "vivant",
+                "empirical": True,
                 "control_class": "m_ablation",
                 "target_lever": "parental_trace",
                 "Delta_acc_signed": ves_delta,
@@ -115,6 +118,29 @@ def build() -> tuple[dict, dict]:
                 "interpretation": "relation physique temporelle et partition locale sans intervention sur m",
             },
             {
+                "claim_id": "EXO-DOM-01",
+                "system_id": "exoplanet_reduced_climate_direct_m",
+                "branch": "systeme_solaire",
+                "empirical": False,
+                "evidence_level": exo_do_m["evidence_level"],
+                "control_class": "m_ablation",
+                "target_lever": "regolith_fraction_and_carbon_memory",
+                "P_acc_control": exo_do_m["P_acc"]["control_median"],
+                "P_acc_do_m": exo_do_m["P_acc"]["do_m_median"],
+                "Delta_acc_signed": exo_do_m["P_acc"]["Delta_signed_median"],
+                "D_acc_abs": exo_do_m["P_acc"]["abs_Delta_median"],
+                "epsilon_acc": exo_do_m["P_acc"]["epsilon_acc"],
+                "bootstrap_abs_q025": exo_do_m["P_acc"]["abs_Delta_bootstrap_q025"],
+                "bootstrap_abs_q975": exo_do_m["P_acc"]["abs_Delta_bootstrap_q975"],
+                "sham_max_abs_Delta": exo_do_m["P_acc"]["sham_max_abs_Delta"],
+                "X_exact_by_construction": exo_do_m["matching"]["X_exact_by_construction"],
+                "same_architecture": exo_do_m["matching"]["same_architecture"],
+                "same_future_forcing": exo_do_m["matching"]["same_future_forcing"],
+                "direct_INV_A_m_ablation": True,
+                "direct_INV_A_support": exo_do_m["direct_INV_A_support"],
+                "interpretation": "intervention directe ponctuelle sur m dans le modèle réduit; effet local non nul sans transfert au Système solaire réel",
+            },
+            {
                 "claim_id": "C-VES-02",
                 "system_id": "sokolskyi_baum_vesicles",
                 "control_class": "retrospective_lineage_observation",
@@ -143,6 +169,19 @@ def build() -> tuple[dict, dict]:
             "tau_m_cross_domain_comparable": False,
         },
         {
+            "id": "TAU-EXO-DOM-01",
+            "system_id": "exoplanet_reduced_climate_direct_m",
+            "kind": "tau_m_local_effective",
+            "values_myr": {
+                key: value["efolding_myr"] for key, value in exo_do_m["tau_m"].items()
+            },
+            "retained_fraction_at_240_myr": {
+                key: value["retained_fraction_at_240_myr"] for key, value in exo_do_m["tau_m"].items()
+            },
+            "tau_m_cross_domain_comparable": False,
+            "interpretation": "persistance locale de la trace ciblée mesurée directement après do(m) dans le modèle",
+        },
+        {
             "id": "TAU-EXO-RELAX-01",
             "system_id": "exoplanet_history_model",
             "kind": "tau_relax",
@@ -162,20 +201,38 @@ def build() -> tuple[dict, dict]:
     complete_ids = set(bench["field_complete_unique_system_ids"])
     direct_entries = [entry for entry in contrasts["entries"] if entry["direct_INV_A_m_ablation"]]
     direct_systems = sorted({entry["system_id"] for entry in direct_entries})
-    direct_positive = [entry for entry in direct_entries if entry.get("direct_INV_A_support") is True]
-    direct_positive_systems = sorted({entry["system_id"] for entry in direct_positive})
+    direct_support = [entry for entry in direct_entries if entry.get("direct_INV_A_support") is True]
+    direct_support_systems = sorted({entry["system_id"] for entry in direct_support})
+    direct_branches = sorted({entry.get("branch") for entry in direct_entries if entry.get("branch")})
+    empirical_direct = [entry for entry in direct_entries if entry.get("empirical") is True]
+    empirical_support = [entry for entry in direct_support if entry.get("empirical") is True]
 
     roles = {
         "direct_m_ablation": direct_systems,
-        "direct_positive_m_ablation": direct_positive_systems,
+        "direct_supporting_m_ablation": direct_support_systems,
+        "direct_empirical_m_ablation": sorted({entry["system_id"] for entry in empirical_direct}),
+        "direct_supporting_empirical_m_ablation": sorted({entry["system_id"] for entry in empirical_support}),
         "information_only_or_proxy": ["donofrio_antibiotic"],
         "architecture_intervention_prototype": ["solar_system_model"],
         "retrospective_physical_history": ["cosmic_26Al"],
         "observational_lineage_support": ["sokolskyi_baum_vesicles"],
     }
 
+    gate_failures = []
+    if len(direct_systems) < spec["future_transversal_gate"]["independent_systems_min"]:
+        gate_failures.append("fewer_than_3_independent_direct_m_ablation_systems")
+    if len(direct_branches) < spec["future_transversal_gate"]["branches_required"]:
+        gate_failures.append("three_branches_not_replicated_with_do_m")
+    if len({entry["system_id"] for entry in empirical_support}) < spec["future_transversal_gate"]["empirical_systems_min"]:
+        gate_failures.append("fewer_than_2_supporting_empirical_direct_m_ablation_systems")
+    gate_failures.extend([
+        "future_or_reserved_validation_data_still_required",
+        "tau_m_not_comparable_cross_domain",
+        "no_common_validated_B_acc_construction",
+    ])
+
     audit = {
-        "schema": "oric.transversal-invariant-audit.inv-a.v1",
+        "schema": "oric.transversal-invariant-audit.inv-a.v2",
         "invariant": spec,
         "field_complete_claim_count": bench["field_complete_case_count"],
         "field_complete_unique_system_count": bench["field_complete_unique_system_count"],
@@ -183,19 +240,17 @@ def build() -> tuple[dict, dict]:
         "replication_unit": "independent_system_not_claim",
         "roles": roles,
         "direct_m_ablation_system_count": len(direct_systems),
-        "direct_positive_m_ablation_system_count": len(direct_positive_systems),
-        "future_gate_satisfied": False,
-        "gate_failures": [
-            "fewer_than_3_independent_direct_m_ablation_systems",
-            "three_branches_not_replicated_with_do_m",
-            "fewer_than_2_positive_empirical_direct_m_ablation_systems",
-            "tau_m_not_comparable_cross_domain",
-            "no_common_validated_B_acc_construction",
-        ],
+        "direct_supporting_m_ablation_system_count": len(direct_support_systems),
+        "direct_positive_m_ablation_system_count": len(direct_support_systems),
+        "direct_empirical_m_ablation_system_count": len({entry["system_id"] for entry in empirical_direct}),
+        "direct_supporting_empirical_m_ablation_system_count": len({entry["system_id"] for entry in empirical_support}),
+        "direct_m_ablation_branches": direct_branches,
+        "future_gate_satisfied": len(gate_failures) == 0,
+        "gate_failures": gate_failures,
         "tau_inventory": tau_inventory,
         "current_status": "candidate_operationalized_exploratory_not_validated",
-        "current_verdict": "INV-A n'est pas validé; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée",
-        "rule": "les résultats négatifs, les proxies informationnels et les interventions architecturales restent séparés",
+        "current_verdict": "INV-A possède maintenant deux tests directs de do(m): le test vésiculaire ne soutient pas son contraste P_acc local, tandis que EXO-DOM-01 soutient un effet non nul au niveau modèle avec X/Theta/A appariés; la réplication empirique transversale reste ouverte",
+        "rule": "un succès modèle ne remplace pas une réplication empirique; les résultats négatifs et les effets signés restent conservés",
     }
     return contrasts, audit
 

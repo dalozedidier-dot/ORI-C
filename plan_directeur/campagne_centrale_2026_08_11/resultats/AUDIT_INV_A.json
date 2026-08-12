@@ -1,5 +1,5 @@
 {
-  "schema": "oric.transversal-invariant-audit.inv-a.v1",
+  "schema": "oric.transversal-invariant-audit.inv-a.v2",
   "invariant": {
     "schema": "oric.transversal-invariant.inv-a.v1",
     "id": "INV-A",
@@ -55,20 +55,28 @@
     },
     "current_claim": "no_general_transversal_invariant_validated"
   },
-  "field_complete_claim_count": 5,
-  "field_complete_unique_system_count": 4,
+  "field_complete_claim_count": 6,
+  "field_complete_unique_system_count": 5,
   "field_complete_unique_system_ids": [
     "cosmic_26Al",
     "donofrio_antibiotic",
+    "exoplanet_reduced_climate_direct_m",
     "sokolskyi_baum_vesicles",
     "solar_system_model"
   ],
   "replication_unit": "independent_system_not_claim",
   "roles": {
     "direct_m_ablation": [
+      "exoplanet_reduced_climate_direct_m",
       "sokolskyi_baum_vesicles"
     ],
-    "direct_positive_m_ablation": [],
+    "direct_supporting_m_ablation": [
+      "exoplanet_reduced_climate_direct_m"
+    ],
+    "direct_empirical_m_ablation": [
+      "sokolskyi_baum_vesicles"
+    ],
+    "direct_supporting_empirical_m_ablation": [],
     "information_only_or_proxy": [
       "donofrio_antibiotic"
     ],
@@ -82,13 +90,21 @@
       "sokolskyi_baum_vesicles"
     ]
   },
-  "direct_m_ablation_system_count": 1,
-  "direct_positive_m_ablation_system_count": 0,
+  "direct_m_ablation_system_count": 2,
+  "direct_supporting_m_ablation_system_count": 1,
+  "direct_positive_m_ablation_system_count": 1,
+  "direct_empirical_m_ablation_system_count": 1,
+  "direct_supporting_empirical_m_ablation_system_count": 0,
+  "direct_m_ablation_branches": [
+    "systeme_solaire",
+    "vivant"
+  ],
   "future_gate_satisfied": false,
   "gate_failures": [
     "fewer_than_3_independent_direct_m_ablation_systems",
     "three_branches_not_replicated_with_do_m",
-    "fewer_than_2_positive_empirical_direct_m_ablation_systems",
+    "fewer_than_2_supporting_empirical_direct_m_ablation_systems",
+    "future_or_reserved_validation_data_still_required",
     "tau_m_not_comparable_cross_domain",
     "no_common_validated_B_acc_construction"
   ],
@@ -100,6 +116,21 @@
       "value_myr": 0.717,
       "physical_trace": "26Al inventory",
       "tau_m_cross_domain_comparable": false
+    },
+    {
+      "id": "TAU-EXO-DOM-01",
+      "system_id": "exoplanet_reduced_climate_direct_m",
+      "kind": "tau_m_local_effective",
+      "values_myr": {
+        "regolith_fraction": 7.88682819155042,
+        "carbon_memory": 7.007333625200787
+      },
+      "retained_fraction_at_240_myr": {
+        "regolith_fraction": 5.57723181708026e-14,
+        "carbon_memory": 3.5106398300745297e-16
+      },
+      "tau_m_cross_domain_comparable": false,
+      "interpretation": "persistance locale de la trace ciblée mesurée directement après do(m) dans le modèle"
     },
     {
       "id": "TAU-EXO-RELAX-01",
@@ -122,6 +153,6 @@
     }
   ],
   "current_status": "candidate_operationalized_exploratory_not_validated",
-  "current_verdict": "INV-A n'est pas validé; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée",
-  "rule": "les résultats négatifs, les proxies informationnels et les interventions architecturales restent séparés"
+  "current_verdict": "INV-A possède maintenant deux tests directs de do(m): le test vésiculaire ne soutient pas son contraste P_acc local, tandis que EXO-DOM-01 soutient un effet non nul au niveau modèle avec X/Theta/A appariés; la réplication empirique transversale reste ouverte",
+  "rule": "un succès modèle ne remplace pas une réplication empirique; les résultats négatifs et les effets signés restent conservés"
 }

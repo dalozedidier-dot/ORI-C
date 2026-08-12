@@ -14,7 +14,7 @@ SELECTED = [
     "C-ANT-01", "C-VES-02", "C-VES-03", "C-MAT-MEM-05", "C-AST-01",
     "MPT-M2-01", "PID-ANT-01", "GCQ-T09", "GCQ-T10", "GCQ-T11",
     "GCQ-T12", "GCQ-T13", "GCQ-T14", "GCQ-T15", "GCQ-T16", "GCQ-T17",
-    "GCQ-T18", "GCQ-T19", "GCQ-T20", "GCQ-T21",
+    "GCQ-T18", "GCQ-T19", "GCQ-T20", "GCQ-T21", "EXO-DOM-01",
 ]
 FIELDS = ["X", "H", "m", "Theta", "tau", "P_acc", "R"]
 
@@ -28,6 +28,7 @@ COVERAGE = {
     "MPT-M2-01": {"X", "H", "Theta", "tau", "R"},
     "PID-ANT-01": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
     "GCQ-T09": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
+    "EXO-DOM-01": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
 }
 
 SYSTEM_ID = {
@@ -39,6 +40,7 @@ SYSTEM_ID = {
     "C-AST-01": "solar_system_model",
     "MPT-M2-01": "paleoclimate_M2",
     "GCQ-T09": "cosmic_26Al",
+    "EXO-DOM-01": "exoplanet_reduced_climate_direct_m",
 }
 
 SUPPLEMENTAL = {
@@ -47,6 +49,7 @@ SUPPLEMENTAL = {
     "PID-ANT-01": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
     "C-AST-01": "02_branche_systeme_solaire/tests_suivants/resultats/TRACE_ORBITALE_M.json",
     "GCQ-T09": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/DISTRIBUTION_ACCESSIBILITE_26AL.json",
+    "EXO-DOM-01": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
 }
 
 QUALITY = {
@@ -55,6 +58,7 @@ QUALITY = {
     "PID-ANT-01": {"m": "historical_state_label_not_isolated_physical_trace", "P_acc": "retrospective_observed_MIC_support", "ablation": False},
     "C-AST-01": {"m": "retrospective_model_spectral_trace", "P_acc": "model_intervention_accessibility", "ablation": True},
     "GCQ-T09": {"m": "derived_continuous_radiogenic_inventory_from_empirical_ages", "P_acc": "thresholded_physical_inventory_accessibility", "ablation": False},
+    "EXO-DOM-01": {"m": "direct_model_slow_state_targeted_reset", "P_acc": "model_future_challenge_accessibility", "ablation": True},
 }
 
 CAUSAL_CLASS = {
@@ -63,6 +67,7 @@ CAUSAL_CLASS = {
     "PID-ANT-01": "history_permutation",
     "C-AST-01": "architecture_intervention",
     "GCQ-T09": "retrospective_physical_history",
+    "EXO-DOM-01": "m_ablation",
 }
 
 INV_A_ROLE = {
@@ -71,6 +76,7 @@ INV_A_ROLE = {
     "PID-ANT-01": "information_proxy_m_not_physical_isolated",
     "C-AST-01": "architecture_causal_prototype_not_m_ablation",
     "GCQ-T09": "physical_history_trace_without_m_intervention",
+    "EXO-DOM-01": "direct_model_m_reset_with_exact_X_Theta_A_matching",
 }
 
 TAU_QUALITY = {
@@ -79,6 +85,7 @@ TAU_QUALITY = {
     "PID-ANT-01": {"kind": "experimental_endpoint", "tau_m_measured": False, "cross_domain_comparable": False},
     "C-AST-01": {"kind": "observation_horizon", "tau_m_measured": False, "cross_domain_comparable": False},
     "GCQ-T09": {"kind": "tau_decay_local", "tau_m_measured": True, "cross_domain_comparable": False},
+    "EXO-DOM-01": {"kind": "tau_m_local_effective", "tau_m_measured": True, "cross_domain_comparable": False},
 }
 
 NEXT_ACTION = {
@@ -139,7 +146,7 @@ def build() -> tuple[dict, dict]:
     )
     benchmark = {
         "schema": "oric.transversal-benchmark.v2",
-        "selection": "20 cas réels ou résultats de modèle explicitement qualifiés, sélectionnés avant tout test transversal",
+        "selection": "21 cas réels ou résultats de modèle explicitement qualifiés; EXO-DOM-01 est une extension exploratoire postérieure explicitement étiquetée",
         "case_count": len(cases),
         "required_fields": FIELDS,
         "operational_definitions_complete": len(op_by_id) == len(SELECTED),
@@ -164,7 +171,7 @@ def build() -> tuple[dict, dict]:
             {
                 "id": "INV-A", "hypothesis": "Delta m -> Delta P_acc",
                 "status": "exploratory_comparison_ready_not_confirmatory",
-                "reason": "plusieurs systèmes ont m et P_acc, mais les leviers sont hétérogènes; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée, et les autres cas sont informationnels, rétrospectifs ou architecturaux",
+                "reason": "deux systèmes ont désormais une intervention directe sur m: le contraste vésiculaire ne soutient pas sa direction positive locale, tandis que EXO-DOM-01 produit un effet non nul au niveau modèle avec X/Theta/A appariés; cela ne constitue pas une réplication empirique transversale",
                 "companion_audit": "resultats/AUDIT_INV_A.json",
             },
             {"id": "INV-B", "hypothesis": "tau_m/tau_T -> force historique", "status": "non_testable", "reason": "tau_m n'est pas mesuré de façon comparable"},

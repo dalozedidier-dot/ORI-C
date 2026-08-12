@@ -1,0 +1,55 @@
+{
+  "schema": "oric.exoplanet-direct-m-intervention.v1",
+  "id": "EXO-DOM-01",
+  "status": "exploratory_frozen_for_reexecution_not_preregistered",
+  "reason_not_confirmatory": "le modèle, ses paramètres et ses résultats antérieurs étaient déjà connus avant la définition de ce test; aucune préinscription rétrospective n'est revendiquée",
+  "system_id": "exoplanet_reduced_climate_direct_m",
+  "branch": "systeme_solaire",
+  "evidence_level": "E4_modele",
+  "hypothesis": "une intervention ciblée sur m modifie P_acc lorsque X, Theta et l'architecture non ciblée sont strictement identiques",
+  "X": ["temperature_k", "ice_fraction", "co2_ppm", "productivity"],
+  "m": ["regolith_fraction", "carbon_memory"],
+  "architecture": "équations et paramètres M2 inchangés",
+  "history_generation": {
+    "histories": ["A", "B"],
+    "source": "controlled_histories",
+    "history_myr": 50.0,
+    "step_myr": 0.02,
+    "ensemble_seed": 729,
+    "ensemble_size": 60
+  },
+  "intervention": {
+    "type": "targeted_m_reset",
+    "operator": "do(m=(0.5,0.5)) à t=50 Ma puis dynamique M2 normale",
+    "reference_values_source": "valeurs de référence déjà utilisées par le mode ablated du modèle",
+    "changes_X": false,
+    "changes_architecture": false,
+    "changes_future_forcing": false,
+    "sham": "reconstruction du même état avec m inchangé"
+  },
+  "future_challenge_set": {
+    "obliquity_deg": [10.0, 23.5, 40.0, 55.0, 70.0],
+    "eccentricity": [0.01, 0.05, 0.1, 0.2, 0.3],
+    "cartesian_count": 25,
+    "forcing_shape": "constant over each challenge",
+    "horizon_myr": 10.0,
+    "final_window_myr": 2.0
+  },
+  "P_acc": {
+    "definition": "fraction des 100 cellules scénario×dimension où la réponse future s'écarte de X d'au moins le seuil de matérialité préexistant de la dimension",
+    "dimensions": ["temperature_k", "ice_fraction", "co2_ppm", "productivity"],
+    "threshold_source": "MATERIALITY_THRESHOLDS du test exoplanétaire existant",
+    "denominator": 100,
+    "resolution": 0.01,
+    "epsilon_acc": 0.01
+  },
+  "R": "moyenne des quatre variables de réponse sur les 2 dernières Ma de chaque challenge",
+  "tau_m": "e-folding local de l'écart de regolith_fraction et carbon_memory après reset sous forçage final de référence",
+  "decision_rule": {
+    "direct_INV_A_support": "median_abs_Delta_P_acc >= epsilon_acc et bootstrap95_lower >= epsilon_acc et sham_max_abs_Delta_P_acc == 0 dans la tolérance numérique",
+    "bootstrap_seed": 20260812,
+    "bootstrap_draws": 5000,
+    "numerical_tolerance": 1e-12
+  },
+  "cross_domain_P_acc_magnitude_comparison_allowed": false
+}

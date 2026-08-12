@@ -1,7 +1,7 @@
 {
   "schema": "oric.transversal-benchmark.v2",
-  "selection": "20 cas réels ou résultats de modèle explicitement qualifiés, sélectionnés avant tout test transversal",
-  "case_count": 20,
+  "selection": "21 cas réels ou résultats de modèle explicitement qualifiés; EXO-DOM-01 est une extension exploratoire postérieure explicitement étiquetée",
+  "case_count": 21,
   "required_fields": [
     "X",
     "H",
@@ -12,11 +12,12 @@
     "R"
   ],
   "operational_definitions_complete": true,
-  "field_complete_case_count": 5,
-  "field_complete_unique_system_count": 4,
+  "field_complete_case_count": 6,
+  "field_complete_unique_system_count": 5,
   "field_complete_unique_system_ids": [
     "cosmic_26Al",
     "donofrio_antibiotic",
+    "exoplanet_reduced_climate_direct_m",
     "sokolskyi_baum_vesicles",
     "solar_system_model"
   ],
@@ -928,6 +929,48 @@
       ],
       "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
+    },
+    {
+      "id": "EXO-DOM-01",
+      "system_id": "exoplanet_reduced_climate_direct_m",
+      "question": "intervention ciblée sur la trace lente m à X, Theta et architecture appariés dans le modèle exoplanétaire",
+      "verdict": "supports_local_nonzero_delta_Pacc_under_direct_m_reset",
+      "evidence_level": null,
+      "scope": "modele_reduit",
+      "artifact": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+      "artifact_present": true,
+      "artifact_sha256": "c4fca9540ac195f67de8eae06e0c3cc331e1c2fa6c49438c6edfb53f7de49707",
+      "supplemental_measurement_artifact": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+      "supplemental_measurement_sha256": "c4fca9540ac195f67de8eae06e0c3cc331e1c2fa6c49438c6edfb53f7de49707",
+      "m_operational_definition": "état lent du modèle (fraction de régolithe, mémoire carbone) mesuré à t=50 Ma puis remis ponctuellement à la référence (0.5,0.5)",
+      "P_acc_operational_definition": "fraction des 100 cellules scénario×dimension où la réponse future dépasse le seuil de matérialité préexistant, sous 25 challenges identiques contrôle/do(m)",
+      "m_P_acc_measurement_status": "complete_model_direct_m_intervention_measured_with_exact_X_Theta_A_matching",
+      "measurement_quality": {
+        "m": "direct_model_slow_state_targeted_reset",
+        "P_acc": "model_future_challenge_accessibility",
+        "ablation": true
+      },
+      "causal_test_class": "m_ablation",
+      "inv_a_role": "direct_model_m_reset_with_exact_X_Theta_A_matching",
+      "tau_quality": {
+        "kind": "tau_m_local_effective",
+        "tau_m_measured": true,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "exoplanet_reduced_climate_direct_m",
+      "field_coverage": {
+        "X": true,
+        "H": true,
+        "m": true,
+        "Theta": true,
+        "tau": true,
+        "P_acc": true,
+        "R": true
+      },
+      "field_completeness_fraction": 1.0,
+      "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
+      "eligible_for_common_invariant": true
     }
   ]
 }

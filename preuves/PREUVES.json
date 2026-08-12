@@ -168,6 +168,19 @@
       "supersede_par": null
     },
     {
+      "id": "EXO-DOM-01",
+      "question": "intervention ciblée sur la trace lente m à X, Theta et architecture appariés dans le modèle exoplanétaire",
+      "statut": "exploratoire",
+      "verdict": "supports_local_nonzero_delta_Pacc_under_direct_m_reset",
+      "niveau_preuve": null,
+      "portee": "modele_reduit",
+      "artefact": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+      "empreinte_sortie": "c4fca9540ac195f67de8eae06e0c3cc331e1c2fa6c49438c6edfb53f7de49707",
+      "source": null,
+      "mesures": null,
+      "supersede_par": null
+    },
+    {
       "id": "M-26AL-01",
       "question": "inventaire radiogénique résiduel continu comme trace m dérivée des âges empiriques",
       "statut": "exploratoire",
