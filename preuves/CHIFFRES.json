@@ -232,7 +232,7 @@
       "value": 1
     },
     {
-      "display": "1 661",
+      "display": "1 662",
       "id": "MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
@@ -241,18 +241,18 @@
         "site/reproductibilite.html"
       ],
       "tolerance": 0,
-      "value": 1661,
+      "value": 1662,
       "transform": "len"
     },
     {
-      "display": "1 661",
+      "display": "1 662",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1661
+      "value": 1662
     },
     {
       "display": "20 stades",

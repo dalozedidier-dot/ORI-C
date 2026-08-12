@@ -58,6 +58,12 @@
       "storage": "inline"
     },
     {
+      "path": ".github/workflows/campagne-centrale-invariant.yml",
+      "size": 7664,
+      "sha256": "dce1e981b3cfd8a19e0dca975e024d20607685b00526facdea6659b41aaab973",
+      "storage": "inline"
+    },
+    {
       "path": ".github/workflows/campagne-matiere.yml",
       "size": 4147,
       "sha256": "203a38dee283d1c5f236d1fa97ae4ec766432e514aae44ff313db7a9eb315f92",
@@ -9702,7 +9708,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 27483,
-      "sha256": "662decd6e364003b46180b963ef2d683899876562096ef969062345c877969ae",
+      "sha256": "c44427da7d2c10c31fb6231da73e0bedb34da197907ba092cfa2f8cc39bfe165",
       "storage": "inline"
     },
     {
@@ -9930,7 +9936,7 @@
     {
       "path": "site/index.html",
       "size": 18128,
-      "sha256": "de88099355d1fef7e55e72eb8144faabc29fc0cd7a576ca8246250fc5a6da91b",
+      "sha256": "340130742df7791111650ff96186c102a6980bd06d39c379d266189d2b686915",
       "storage": "inline"
     },
     {
@@ -9948,7 +9954,7 @@
     {
       "path": "site/reproductibilite.html",
       "size": 17907,
-      "sha256": "1a256c36d74b58ae705802868ea1aae4dd443732931edcfd0ad0784544f9eb33",
+      "sha256": "a3285541f2b1f06b3c08368f454494e4f689152f1f727e152524a5fac556de02",
       "storage": "inline"
     },
     {
