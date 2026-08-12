@@ -37,13 +37,19 @@ def test_la_matrice_ne_presente_pas_un_deblocage_comme_un_resultat() -> None:
     assert scores == sorted(scores, reverse=True)
 
 
-def test_benchmark_transversal_admet_un_premier_cas_complet_mesure() -> None:
+def test_benchmark_transversal_distingue_completude_et_validation() -> None:
     benchmark, invariants = MODULE.benchmark_transversal()
     assert 20 <= benchmark["case_count"] <= 30
     assert all(case["artifact_present"] for case in benchmark["cases"])
-    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 1
-    assert invariants["eligible_case_ids"] == ["C-VES-02"]
-    assert all(test["status"] == "non_testable" for test in invariants["tests"])
+    assert invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"] == 5
+    assert invariants["eligible_case_ids"] == ["C-VES-02", "C-VES-03", "C-AST-01", "PID-ANT-01", "GCQ-T09"]
+    assert benchmark["field_complete_unique_system_count"] == 4
+    assert invariants["tests"][0]["status"] == "exploratory_comparison_ready_not_confirmatory"
+    assert invariants["tests"][1]["status"] == "non_testable"
+    assert invariants["verdict"].startswith("la complétude opérationnelle progresse")
+    # La présence des sept champs ne doit jamais être assimilée à une preuve causale commune.
+    pid = next(case for case in benchmark["cases"] if case["id"] == "PID-ANT-01")
+    assert pid["measurement_quality"]["m"] == "historical_state_label_not_isolated_physical_trace"
 
 
 def test_aucune_prediction_retrospective_n_est_fabriquee() -> None:
@@ -61,7 +67,7 @@ def test_aucune_prediction_retrospective_n_est_fabriquee() -> None:
 def test_quantification_commune_ne_fabrique_pas_un_invariant() -> None:
     measures, bifurcations = MODULE.quantification_commune()
     assert len(measures["measures"]) >= 4
-    assert measures["comparability_status"] == "local_definitions_only_not_cross_domain_invariant"
+    assert measures["comparability_status"] == "multiple_local_measurements_available_but_no_common_cross_domain_scale"
     assert len(bifurcations["entries"]) >= 3
     assert bifurcations["unmeasured_fields"]
 

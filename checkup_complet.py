@@ -103,7 +103,9 @@ def resolve_path(value: Any, config_path: Path, base_dir: Path | None) -> Path |
 
 def load_config(path: Path) -> dict[str, Path | None]:
     if not path.exists():
-        raise FileNotFoundError(f"configuration absente : {path}")
+        # Le dépôt reste entièrement contrôlable sans données externes locales.
+        # Leur réinspection est alors explicitement SKIP, jamais considérée réussie.
+        return {key: None for key in EXTERNAL_KEYS}
     raw = load_json(path)
     if not isinstance(raw, dict):
         raise ValueError("la configuration doit être un objet JSON")
@@ -462,7 +464,10 @@ def main(argv: list[str] | None = None) -> int:
         return 1 if any(step.status == "FAIL" for step in runner.steps) else 0
 
     runner.run("manifeste initial", [sys.executable, "build_manifest.py", "verify"])
-    runner.run("validation rapide stricte", [sys.executable, "scripts/valider_tout.py", "--strict-lfs"], timeout=max(args.timeout, 900))
+    if args.quick:
+        runner.record("validation stricte initiale", "SKIP", "mode --quick; la validation stricte finale est conservée")
+    else:
+        runner.run("validation rapide stricte", [sys.executable, "scripts/valider_tout.py", "--strict-lfs"], timeout=max(args.timeout, 900))
 
     run_external_source_audit(config, runner)
     run_palmod_audit(config, runner)
@@ -496,6 +501,28 @@ def main(argv: list[str] | None = None) -> int:
         "généalogie cosmique — tests" + (" rapides" if args.quick else ""),
         gcq_test_command,
         timeout=max(args.timeout, 1800),
+    )
+
+    runner.run(
+        "système solaire — trace orbitale m",
+        [sys.executable, "02_branche_systeme_solaire/tests_suivants/mesurer_trace_orbitale.py"],
+    )
+    runner.run(
+        "mesures locales — tests trace orbitale",
+        [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider",
+         "02_branche_systeme_solaire/tests_suivants/tests/test_suivants.py"],
+        timeout=max(args.timeout, 900),
+    )
+    runner.run(
+        "campagne recherche suivante — recalcul PID/vésicules et autres protocoles",
+        [sys.executable, "plan_directeur/campagne_recherche_suivante/run_all.py"],
+        timeout=max(args.timeout, 1200),
+    )
+    runner.run(
+        "campagne recherche suivante — tests",
+        [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider",
+         "plan_directeur/campagne_recherche_suivante/tests"],
+        timeout=max(args.timeout, 900),
     )
 
     runner.run(
@@ -534,6 +561,10 @@ def main(argv: list[str] | None = None) -> int:
     else:
         run_state_suites(runner)
 
+    runner.run(
+        "certifications spécialisées",
+        [sys.executable, "plateforme/campagne_maximale_reelle/certifier_resultats_specialises.py"],
+    )
     runner.run("reconstruction registre de preuves", [sys.executable, "scripts/construire_registre_preuves.py"])
     runner.run("validation registre de preuves", [sys.executable, "scripts/valider_registre_preuves.py"])
     runner.run("validation finale stricte", [sys.executable, "scripts/valider_tout.py", "--strict-lfs"], timeout=max(args.timeout, 900))

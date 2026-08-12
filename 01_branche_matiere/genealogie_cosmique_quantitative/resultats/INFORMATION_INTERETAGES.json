@@ -16,7 +16,102 @@
       "normalized_I_stellar_type_host": 0.050419643117984754,
       "global_label_permutation_p": 0.0004997501249375312,
       "publication_stratified_permutation_p": 0.47226386806596704,
-      "publication_stratified_null_mean": 0.05037548492725508,
+      "publication_stratified_null_mean": 0.05037548492725509,
+      "publication_robustness": {
+        "leave_one_publication_out": {
+          "runs": 97,
+          "min_normalized_I": 0.02974556708054737,
+          "median_normalized_I": 0.050507937178541754,
+          "max_normalized_I": 0.06720806177600552,
+          "most_reducing_publications": [
+            {
+              "reference": "Lin et al. (2002) ApJ 575:257",
+              "rows_removed": 37,
+              "remaining_rows": 8828,
+              "normalized_I": 0.02974556708054737,
+              "delta_vs_full": -0.020674076037437383
+            },
+            {
+              "reference": "Zinner et al. (2007) GCA 71:4786",
+              "rows_removed": 91,
+              "remaining_rows": 8774,
+              "normalized_I": 0.044618930253668955,
+              "delta_vs_full": -0.005800712864315799
+            },
+            {
+              "reference": "Alexander (1993) GCA 57:2869",
+              "rows_removed": 242,
+              "remaining_rows": 8623,
+              "normalized_I": 0.048645680950557775,
+              "delta_vs_full": -0.001773962167426979
+            },
+            {
+              "reference": "Gao & Nittler (1997) LPS 28:393 (#1769)",
+              "rows_removed": 5,
+              "remaining_rows": 8860,
+              "normalized_I": 0.04897739157753223,
+              "delta_vs_full": -0.0014422515404525216
+            },
+            {
+              "reference": "Barosch et al. (2022) GCA 335:169",
+              "rows_removed": 79,
+              "remaining_rows": 8786,
+              "normalized_I": 0.04925905043535567,
+              "delta_vs_full": -0.0011605926826290872
+            }
+          ],
+          "most_increasing_publications": [
+            {
+              "reference": "Nittler & Alexander (2003) GCA 67:4961",
+              "rows_removed": 3343,
+              "remaining_rows": 5522,
+              "normalized_I": 0.06720806177600552,
+              "delta_vs_full": 0.01678841865802077
+            },
+            {
+              "reference": "Nguyen et al. (2018) GCA 221:162",
+              "rows_removed": 1549,
+              "remaining_rows": 7316,
+              "normalized_I": 0.05873507964073183,
+              "delta_vs_full": 0.008315436522747077
+            },
+            {
+              "reference": "Liu et al. (2024) ApJL 961:L22",
+              "rows_removed": 39,
+              "remaining_rows": 8826,
+              "normalized_I": 0.05629891041966319,
+              "delta_vs_full": 0.005879267301678433
+            },
+            {
+              "reference": "Hoppe et al. (1996) GCA 60:883",
+              "rows_removed": 794,
+              "remaining_rows": 8071,
+              "normalized_I": 0.0542841165242539,
+              "delta_vs_full": 0.0038644734062691435
+            },
+            {
+              "reference": "Amari et al. (2001) ApJ 559: 463",
+              "rows_removed": 124,
+              "remaining_rows": 8741,
+              "normalized_I": 0.05342420837294276,
+              "delta_vs_full": 0.003004565254958007
+            }
+          ]
+        },
+        "publication_cluster_bootstrap": {
+          "repeats": 1000,
+          "seed": 20260812,
+          "q025": 0.01820042992904695,
+          "median": 0.05664630057077412,
+          "q975": 0.14425213066621356
+        },
+        "sampling_concentration": {
+          "largest_publication": "Nittler & Alexander (2003) GCA 67:4961",
+          "largest_publication_rows": 3343,
+          "largest_publication_fraction": 0.37710095882684713,
+          "top5_publication_fraction": 0.6955442752397067
+        }
+      },
       "status": "association_not_separable_from_publication_sampling"
     },
     {
@@ -29,6 +124,101 @@
       "global_label_permutation_p": 0.0004997501249375312,
       "publication_stratified_permutation_p": 1.0,
       "publication_stratified_null_mean": 0.15308484558985927,
+      "publication_robustness": {
+        "leave_one_publication_out": {
+          "runs": 18,
+          "min_normalized_I": 0.08437668809403068,
+          "median_normalized_I": 0.15251272431015567,
+          "max_normalized_I": 0.19490038187084072,
+          "most_reducing_publications": [
+            {
+              "reference": "Jadhav et al. (2013) GCA 113:193",
+              "rows_removed": 337,
+              "remaining_rows": 1948,
+              "normalized_I": 0.08437668809403068,
+              "delta_vs_full": -0.06870815749582862
+            },
+            {
+              "reference": "Xu et al. (2016) ApJ 825:111",
+              "rows_removed": 44,
+              "remaining_rows": 2241,
+              "normalized_I": 0.12492688220753957,
+              "delta_vs_full": -0.028157963382319726
+            },
+            {
+              "reference": "Groopman (2015) Dissertation; St. Louis",
+              "rows_removed": 27,
+              "remaining_rows": 2258,
+              "normalized_I": 0.14787749455807764,
+              "delta_vs_full": -0.00520735103178166
+            },
+            {
+              "reference": "Groopman et al. (2012) ApJL 754:L8",
+              "rows_removed": 14,
+              "remaining_rows": 2271,
+              "normalized_I": 0.14953786428862026,
+              "delta_vs_full": -0.0035469813012390383
+            },
+            {
+              "reference": "Heck et al. (2009) ApJ 701:1415",
+              "rows_removed": 46,
+              "remaining_rows": 2239,
+              "normalized_I": 0.15097603077034663,
+              "delta_vs_full": -0.0021088148195126666
+            }
+          ],
+          "most_increasing_publications": [
+            {
+              "reference": "Hoppe et al. (1995) GCA 59:4029",
+              "rows_removed": 646,
+              "remaining_rows": 1639,
+              "normalized_I": 0.19490038187084072,
+              "delta_vs_full": 0.04181553628098142
+            },
+            {
+              "reference": "Travaglio et al. (1999) ApJ 510:325",
+              "rows_removed": 81,
+              "remaining_rows": 2204,
+              "normalized_I": 0.1844175625351709,
+              "delta_vs_full": 0.03133271694531159
+            },
+            {
+              "reference": "Amari et al. (2014) GCA 59:479",
+              "rows_removed": 909,
+              "remaining_rows": 1376,
+              "normalized_I": 0.17832945051798296,
+              "delta_vs_full": 0.025244604928123665
+            },
+            {
+              "reference": "Amari et al. (1996) ApJL 470:L101",
+              "rows_removed": 5,
+              "remaining_rows": 2280,
+              "normalized_I": 0.15467121249211332,
+              "delta_vs_full": 0.0015863669022540272
+            },
+            {
+              "reference": "Nittler et al. (1996) ApJL 462:L31",
+              "rows_removed": 4,
+              "remaining_rows": 2281,
+              "normalized_I": 0.15421601981123592,
+              "delta_vs_full": 0.001131174221376624
+            }
+          ]
+        },
+        "publication_cluster_bootstrap": {
+          "repeats": 1000,
+          "seed": 20260812,
+          "q025": 0.02838855672824063,
+          "median": 0.14944137922334844,
+          "q975": 0.34342086462247234
+        },
+        "sampling_concentration": {
+          "largest_publication": "Amari et al. (2014) GCA 59:479",
+          "largest_publication_rows": 909,
+          "largest_publication_fraction": 0.3978118161925602,
+          "top5_publication_fraction": 0.9076586433260394
+        }
+      },
       "status": "association_not_separable_from_publication_sampling"
     }
   ],
@@ -36,6 +226,7 @@
   "limits": [
     "le type stellaire et le corps hôte sont portés par la même ligne/grain, mais les grains ne sont pas suivis expérimentalement avant et après chaque étage",
     "la permutation dans chaque publication contrôle le ciblage d'échantillons et d'analyses propre à chaque étude",
+    "les analyses leave-one-publication-out et bootstrap par publication quantifient la dépendance à la composition du corpus sans créer de nouvelles observations",
     "cette mesure n'est pas une courbe complète étoile-grain-disque-corps-planète"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema": "oric.transversal-benchmark.v1",
+  "schema": "oric.transversal-benchmark.v2",
   "selection": "20 cas réels ou résultats de modèle explicitement qualifiés, sélectionnés avant tout test transversal",
   "case_count": 20,
   "required_fields": [
@@ -12,10 +12,101 @@
     "R"
   ],
   "operational_definitions_complete": true,
-  "warning": "définition opérationnelle complète ne signifie pas mesure disponible",
+  "field_complete_case_count": 5,
+  "field_complete_unique_system_count": 4,
+  "field_complete_unique_system_ids": [
+    "cosmic_26Al",
+    "donofrio_antibiotic",
+    "sokolskyi_baum_vesicles",
+    "solar_system_model"
+  ],
+  "warning": "complétude des champs ne signifie ni indépendance des cas, ni chaîne mécanistique causale, ni comparabilité métrique entre domaines",
+  "priority_completion_queue": [
+    {
+      "id": "C-ANT-01",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "isoler une trace biologique m distincte de l'étiquette d'histoire et mesurer P_acc sur le panneau brut"
+    },
+    {
+      "id": "C-MAT-MEM-05",
+      "missing_fields": [
+        "X",
+        "P_acc"
+      ],
+      "next_action": "obtenir un état X apparié et un P_acc après ablation sur au moins une famille matérielle complète"
+    },
+    {
+      "id": "GCQ-T10",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T11",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T12",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T13",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T14",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T15",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T16",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    },
+    {
+      "id": "GCQ-T17",
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse"
+    }
+  ],
   "cases": [
     {
       "id": "C-ANT-01",
+      "system_id": "donofrio_antibiotic",
       "question": "RMSE(etat+histoire) inferieure a RMSE(etat seul) ET a RMSE(histoire permutee de meme complexite), p<0,01.",
       "verdict": "supports",
       "evidence_level": "E2",
@@ -23,9 +114,12 @@
       "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
       "artifact_present": true,
       "artifact_sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "paramètres d'histoire de lignée mesurés avant MIC",
       "P_acc_operational_definition": "fraction des antibiotiques/doses du panneau dont la croissance dépasse le seuil gelé",
       "m_P_acc_measurement_status": "m_available_Pacc_requires_raw_growth_panel",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -35,24 +129,34 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "isoler une trace biologique m distincte de l'étiquette d'histoire et mesurer P_acc sur le panneau brut",
       "eligible_for_common_invariant": false
     },
     {
       "id": "C-VES-02",
+      "system_id": "sokolskyi_baum_vesicles",
       "question": "Pente de regression parent vers descendant significativement positive et superieure au temoin de melange aleatoire.",
       "verdict": "supports",
       "evidence_level": "E2",
       "scope": "empirique_externe",
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
-      "artifact_sha256": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
+      "artifact_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
+      "supplemental_measurement_artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "supplemental_measurement_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
       "m_operational_definition": "composition parentale pré-division",
       "P_acc_operational_definition": "fraction des quatre classes compositionnelles préfixées effectivement occupées par les descendants dans chaque condition, bras et transition",
       "m_P_acc_measurement_status": "complete_empirical_retrospective_case_measured_from_raw_lineages",
+      "measurement_quality": {
+        "m": "direct_parent_measurement",
+        "P_acc": "retrospective_observed_support",
+        "ablation": false
+      },
       "field_coverage": {
         "X": true,
         "H": true,
@@ -62,37 +166,48 @@
         "P_acc": true,
         "R": true
       },
+      "field_completeness_fraction": 1.0,
       "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
       "eligible_for_common_invariant": true
     },
     {
       "id": "C-VES-03",
+      "system_id": "sokolskyi_baum_vesicles",
       "question": "Le gain de selection chute significativement quand le transfert de vesicules intactes est empeche.",
       "verdict": "supports",
       "evidence_level": "E4",
       "scope": "empirique_externe",
       "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
       "artifact_present": true,
-      "artifact_sha256": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
+      "artifact_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
+      "supplemental_measurement_artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "supplemental_measurement_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
       "m_operational_definition": "trace parentale ciblée avant ablation",
-      "P_acc_operational_definition": "fraction des classes descendantes accessibles après intervention",
-      "m_P_acc_measurement_status": "m_partial_Pacc_requires_intervention",
+      "P_acc_operational_definition": "fraction des quatre classes descendantes occupées sous chaque régime/bras, avec contraste P_acc(selection-drift) FR moins moyenne FU/UR/UU",
+      "m_P_acc_measurement_status": "complete_empirical_retrospective_ablation_Pacc_measured_negative_direction",
+      "measurement_quality": {
+        "m": "targeted_parent_trace",
+        "P_acc": "retrospective_observed_support_under_ablation_controls",
+        "ablation": true
+      },
       "field_coverage": {
         "X": true,
         "H": true,
         "m": true,
         "Theta": true,
         "tau": true,
-        "P_acc": false,
+        "P_acc": true,
         "R": true
       },
-      "missing_fields": [
-        "P_acc"
-      ],
-      "eligible_for_common_invariant": false
+      "field_completeness_fraction": 1.0,
+      "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
+      "eligible_for_common_invariant": true
     },
     {
       "id": "C-MAT-MEM-05",
+      "system_id": "material_memory_families",
       "question": "Le schema histoire vers trace persistante vers reponse modifiee est soutenu independamment dans au moins trois familles physiques distinctes, a mecanismes materiels differents.",
       "verdict": "does_not_support",
       "evidence_level": null,
@@ -100,9 +215,12 @@
       "artifact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
       "artifact_present": true,
       "artifact_sha256": "05bb1316ed93953d6c86c8368d6a10b1bfc0a9114cf41e1aec510886e4388b2f",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "trace matérielle distincte mesurée avant réponse",
       "P_acc_operational_definition": "fraction des classes de réponse atteignables sous stimulus final commun",
       "m_P_acc_measurement_status": "definitions_complete_no_admitted_complete_family",
+      "measurement_quality": {},
       "field_coverage": {
         "X": false,
         "H": true,
@@ -112,14 +230,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "X",
         "P_acc"
       ],
+      "next_action": "obtenir un état X apparié et un P_acc après ablation sur au moins une famille matérielle complète",
       "eligible_for_common_invariant": false
     },
     {
       "id": "C-AST-01",
+      "system_id": "solar_system_model",
       "question": "Effet interventionnel minimal superieur ou egal a 1000 fois les ecarts numeriques et au moins 12 criteres sur 15 reussis.",
       "verdict": "supports",
       "evidence_level": "E4_modele",
@@ -127,25 +248,33 @@
       "artifact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
       "artifact_present": true,
       "artifact_sha256": "7b4e433524321005b2aabe9a593330cdd1ded1a7a72e29d61e0a8a224a2561f8",
-      "m_operational_definition": "architecture orbitale initiale et modes propres",
+      "supplemental_measurement_artifact": "02_branche_systeme_solaire/tests_suivants/resultats/TRACE_ORBITALE_M.json",
+      "supplemental_measurement_sha256": "7a0104a9d1867c3ed8211710a0635b6e4581f38037dd8050b347cd60ce072a8c",
+      "m_operational_definition": "empreinte spectrale de l'excentricité terrestre dans les bandes 95 kyr, 125 kyr, 405 kyr et 2.4 Myr sous architecture interventionnelle",
       "P_acc_operational_definition": "fraction des cellules orbitales stables accessibles à l'horizon gelé",
-      "m_P_acc_measurement_status": "Pacc_model_available_m_modes_to_extract",
+      "m_P_acc_measurement_status": "complete_model_retrospective_trace_and_Pacc",
+      "measurement_quality": {
+        "m": "retrospective_model_spectral_trace",
+        "P_acc": "model_intervention_accessibility",
+        "ablation": true
+      },
       "field_coverage": {
         "X": true,
         "H": true,
-        "m": false,
+        "m": true,
         "Theta": true,
         "tau": true,
         "P_acc": true,
         "R": true
       },
-      "missing_fields": [
-        "m"
-      ],
-      "eligible_for_common_invariant": false
+      "field_completeness_fraction": 1.0,
+      "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
+      "eligible_for_common_invariant": true
     },
     {
       "id": "MPT-M2-01",
+      "system_id": "paleoclimate_M2",
       "question": "formulation paléoclimatique M2 contre M1 et témoin apparié M1P",
       "verdict": "does_not_support",
       "evidence_level": null,
@@ -153,9 +282,12 @@
       "artifact": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
       "artifact_present": true,
       "artifact_sha256": "04c6d500a77a6287d92a8e80de446d357495ea9fb85e9a97e52104b44a09df7a",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "variable lente interne du modèle M2",
       "P_acc_operational_definition": "fraction des régimes glaciaires accessibles dans l'ensemble chronologique",
       "m_P_acc_measurement_status": "m_model_available_Pacc_requires_age_ensembles",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -165,40 +297,51 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "ne pas prolonger M2; conserver le résultat négatif et déplacer l'effort vers PALEO-HISTORY",
       "eligible_for_common_invariant": false
     },
     {
       "id": "PID-ANT-01",
-      "question": "information unique de l’histoire et synergie X×m sur D’Onofrio",
-      "verdict": "executed",
+      "system_id": "donofrio_antibiotic",
+      "question": "information unique de l’histoire, synergie X×m et support P_acc rétrospectif sur D’Onofrio",
+      "verdict": "executed_with_retrospective_Pacc",
       "evidence_level": null,
       "scope": "empirique_externe_secondaire",
       "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
       "artifact_present": true,
-      "artifact_sha256": "33c1b1443d23efdaa5eb570c68ea362246d81ccde404b8ff3e9cc8e10ac345af",
+      "artifact_sha256": "76ba9fb773d565d96d56c096ee88d4554635feea4b0422e50e91b2de2f0e2153",
+      "supplemental_measurement_artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "supplemental_measurement_sha256": "76ba9fb773d565d96d56c096ee88d4554635feea4b0422e50e91b2de2f0e2153",
       "m_operational_definition": "état historique de lignée utilisé par le modèle",
-      "P_acc_operational_definition": "fraction des classes MIC futures accessibles conditionnellement à X,H",
-      "m_P_acc_measurement_status": "m_available_Pacc_computable",
+      "P_acc_operational_definition": "fraction du support des classes MIC observées sous X=(limitation, antibiotique) encore occupée après conditionnement par H=ancêtre",
+      "m_P_acc_measurement_status": "complete_information_case_proxy_Pacc_m_not_isolated_physical_trace",
+      "measurement_quality": {
+        "m": "historical_state_label_not_isolated_physical_trace",
+        "P_acc": "retrospective_observed_MIC_support",
+        "ablation": false
+      },
       "field_coverage": {
         "X": true,
         "H": true,
         "m": true,
         "Theta": true,
         "tau": true,
-        "P_acc": false,
+        "P_acc": true,
         "R": true
       },
-      "missing_fields": [
-        "P_acc"
-      ],
-      "eligible_for_common_invariant": false
+      "field_completeness_fraction": 1.0,
+      "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
+      "eligible_for_common_invariant": true
     },
     {
       "id": "GCQ-T09",
+      "system_id": "cosmic_26Al",
       "question": "Le moment mesuré d’un événement change-t-il la fraction de 26Al encore physiquement disponible?",
       "verdict": "supports_strong_time_dependence_of_radiogenic_accessibility",
       "evidence_level": null,
@@ -206,25 +349,33 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T09.json",
       "artifact_present": true,
       "artifact_sha256": "d82e282bc6e2f479121bd7c83637db9b9d41b4915067d84cd51adc7595f8a238",
-      "m_operational_definition": "signature isotopique du réservoir/porteur",
-      "P_acc_operational_definition": "fraction des classes de provenance compatibles avec incertitudes",
-      "m_P_acc_measurement_status": "m_and_Pacc_local_available",
+      "supplemental_measurement_artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/DISTRIBUTION_ACCESSIBILITE_26AL.json",
+      "supplemental_measurement_sha256": "3d37f1701fdcd33c261734aa8e4c06284bf496527edac165cff3bb520cfd89ed",
+      "m_operational_definition": "fraction continue d’inventaire radiogénique 26Al résiduel dérivée des âges empiriques et de la demi-vie, avant discrétisation en seuils",
+      "P_acc_operational_definition": "seuils de fraction d’inventaire 26Al encore accessibles sous scénario de réservoir déclaré",
+      "m_P_acc_measurement_status": "complete_empirical_age_derived_m_and_threshold_Pacc",
+      "measurement_quality": {
+        "m": "derived_continuous_radiogenic_inventory_from_empirical_ages",
+        "P_acc": "thresholded_physical_inventory_accessibility",
+        "ablation": false
+      },
       "field_coverage": {
         "X": true,
         "H": true,
-        "m": false,
+        "m": true,
         "Theta": true,
         "tau": true,
         "P_acc": true,
         "R": true
       },
-      "missing_fields": [
-        "m"
-      ],
-      "eligible_for_common_invariant": false
+      "field_completeness_fraction": 1.0,
+      "missing_fields": [],
+      "next_action": "aucune extension prioritaire sans nouvelle mesure indépendante",
+      "eligible_for_common_invariant": true
     },
     {
       "id": "GCQ-T10",
+      "system_id": "GCQ-T10",
       "question": "La différenciation précoce documentée se place-t-elle dans une fenêtre où davantage de 26Al subsiste?",
       "verdict": "supports_earlier_differentiation_archive_during_higher_26Al_inventory",
       "evidence_level": null,
@@ -232,9 +383,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T10.json",
       "artifact_present": true,
       "artifact_sha256": "fe8bbe239c7b7b4871fdf45cdf6e2d3129c9c5d0acf1eed966fb127227a0847b",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature isotopique ou minéralogique héritée",
       "P_acc_operational_definition": "fraction des réservoirs sources compatibles",
       "m_P_acc_measurement_status": "requires_individual_carrier_data",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -244,14 +398,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T11",
+      "system_id": "GCQ-T11",
       "question": "La séparation isotopique NC/CC persiste-t-elle pendant une forte diminution de l’inventaire de 26Al?",
       "verdict": "supports_persistent_isotopic_architecture_across_large_inventory_change",
       "evidence_level": null,
@@ -259,9 +416,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T11.json",
       "artifact_present": true,
       "artifact_sha256": "713b941136e773958d181818b0f30d0de725c5ddb8af424d31ece897e8de385d",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature du grain présolaire",
       "P_acc_operational_definition": "fraction des classes stellaires sources compatibles",
       "m_P_acc_measurement_status": "m_partial_Pacc_computable",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -271,14 +431,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T12",
+      "system_id": "GCQ-T12",
       "question": "Des porteurs matériels présolaires persistent-ils jusqu’aux échantillons retournés actuels?",
       "verdict": "supports_gigayear_material_memory_carrier",
       "evidence_level": null,
@@ -286,9 +449,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T12.json",
       "artifact_present": true,
       "artifact_sha256": "e04e889d4cdd787b8e5e60f86c835fabfe2f04ed21cfe45f92288bbe0874ffdd",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "Q26 et contexte du réservoir",
       "P_acc_operational_definition": "fraction des trajectoires thermiques compatibles",
       "m_P_acc_measurement_status": "requires_joint_Q26_time_reservoir_distribution",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -298,14 +464,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T13",
+      "system_id": "GCQ-T13",
       "question": "Ryugu enregistre-t-il une réactivation tardive physiquement séparée de l’horloge primordiale 26Al?",
       "verdict": "supports_late_reactivation_of_old_material_memory_by_unresolved_later_process",
       "evidence_level": null,
@@ -313,9 +482,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T13.json",
       "artifact_present": true,
       "artifact_sha256": "1aa61be5b42734922c4e025667090b5ad870d95e4e1bd1a02c01887aafda892a",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature isotopique héritée du disque",
       "P_acc_operational_definition": "fraction des réservoirs NC/CC accessibles",
       "m_P_acc_measurement_status": "requires_linked_carriers",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -325,14 +497,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T14",
+      "system_id": "GCQ-T14",
       "question": "Les reconstructions empiriques de la provenance terrestre convergent-elles?",
       "verdict": "contested_not_closed",
       "evidence_level": null,
@@ -340,9 +515,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T14.json",
       "artifact_present": true,
       "artifact_sha256": "cdf9dc5df82f342de4c926362f31c7041364f4065bf0595aa8944338332a9493",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature du porteur entre disque et corps",
       "P_acc_operational_definition": "fraction des corps parents compatibles",
       "m_P_acc_measurement_status": "requires_linked_carriers",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -352,14 +530,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T15",
+      "system_id": "GCQ-T15",
       "question": "Quel endpoint orbital actuel est directement décrit par le produit observationnel officiel retenu?",
       "verdict": "endpoint_quantified_history_not_reconstructed",
       "evidence_level": null,
@@ -367,9 +548,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T15.json",
       "artifact_present": true,
       "artifact_sha256": "55c89e6a97d690215db14557f545917fe039369fa037a60c606e46960ea87033",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "trace isotopique dans le corps parent",
       "P_acc_operational_definition": "fraction des chemins d'altération/échauffement compatibles",
       "m_P_acc_measurement_status": "requires_paired_chronology_trace",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -379,14 +563,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T16",
+      "system_id": "GCQ-T16",
       "question": "Quels nœuds et relations documentés contrôlent la fermeture stricte de la chaîne empirique?",
       "verdict": "strict_stellar_to_endpoint_chain_exists_but_primordial_end_to_end_closure_open",
       "evidence_level": null,
@@ -394,9 +581,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T16.json",
       "artifact_present": true,
       "artifact_sha256": "569daa08655061b07394eddc8e764e8b8f707ce6a2cd554a95ca181398dd780f",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "trace conservée après différenciation",
       "P_acc_operational_definition": "fraction des réservoirs planétaires compatibles",
       "m_P_acc_measurement_status": "requires_information_retention_curve",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -406,14 +596,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T17",
+      "system_id": "GCQ-T17",
       "question": "Les bases publiées de grains présolaires révèlent-elles des populations isotopiques quantitativement distinctes ?",
       "verdict": "supports_published_presolar_grain_population_structure",
       "evidence_level": null,
@@ -421,9 +614,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T17.json",
       "artifact_present": true,
       "artifact_sha256": "8ecf20968e645b1977964b2e6e32e6905d989a117abd83811c6501a5d6f4d585",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature manteau-croûte héritée",
       "P_acc_operational_definition": "fraction des trajectoires géochimiques compatibles",
       "m_P_acc_measurement_status": "requires_probabilistic_provenance_model",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -433,14 +629,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T18",
+      "system_id": "GCQ-T18",
       "question": "La dichotomie NC/CC reste-t-elle quantitativement séparable à travers plusieurs systèmes isotopiques mesurés sans imputation ?",
       "verdict": "supports_multisystem_NC_CC_isotopic_separation",
       "evidence_level": null,
@@ -448,9 +647,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T18.json",
       "artifact_present": true,
       "artifact_sha256": "8d97473c3b152483e6899b0926361842a1e689b9f44d81845a2c70c1483b9d56",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "trace de provenance terrestre",
       "P_acc_operational_definition": "fraction des modèles de provenance non rejetés",
       "m_P_acc_measurement_status": "requires_reserved_validation",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -460,14 +662,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T19",
+      "system_id": "GCQ-T19",
       "question": "Des chondres d’une même météorite montrent-ils une hétérogénéité O-Cr-Ti résolue au-delà des incertitudes ?",
       "verdict": "supports_within_meteorite_chondrule_isotopic_heterogeneity",
       "evidence_level": null,
@@ -475,9 +680,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T19.json",
       "artifact_present": true,
       "artifact_sha256": "0460c461e05b8b93df22cb1d7d2b9fd77c3bc0358d4b5fea319eb44adfd627b7",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "signature du goulet mono-source",
       "P_acc_operational_definition": "fraction des sources indépendantes compatibles",
       "m_P_acc_measurement_status": "requires_independent_replications",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -487,14 +695,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T20",
+      "system_id": "GCQ-T20",
       "question": "Des sous-échantillons d’Allende mesurés dans une même étude montrent-ils une hétérogénéité Ti spatialement résolue ?",
       "verdict": "supports_within_meteorite_subsample_Ti_heterogeneity",
       "evidence_level": null,
@@ -502,9 +713,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T20.json",
       "artifact_present": true,
       "artifact_sha256": "c1b0c6205502710c1a98d798802c22f1233d59b61856caa3440ff06b1d270372",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "information portée d'un étage au suivant",
       "P_acc_operational_definition": "fraction des états du prochain étage compatibles",
       "m_P_acc_measurement_status": "requires_same_carrier_multistage_tracking",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -514,14 +728,17 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     },
     {
       "id": "GCQ-T21",
+      "system_id": "GCQ-T21",
       "question": "Les échantillons retournés de Bennu contiennent-ils des composants individuels isotopiquement distincts à plusieurs niveaux ?",
       "verdict": "supports_returned_sample_multiscale_isotopic_heterogeneity",
       "evidence_level": null,
@@ -529,9 +746,12 @@
       "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T21.json",
       "artifact_present": true,
       "artifact_sha256": "e74f8c65972ea76bcad8735d319141c5c317b1200ce8f7af0b580b117ffdad68",
+      "supplemental_measurement_artifact": null,
+      "supplemental_measurement_sha256": null,
       "m_operational_definition": "courbe de conservation/perte d'information",
       "P_acc_operational_definition": "fraction des trajectoires étoile-grain-disque-corps-planète compatibles",
       "m_P_acc_measurement_status": "requires_full_interstage_curve",
+      "measurement_quality": {},
       "field_coverage": {
         "X": true,
         "H": true,
@@ -541,10 +761,12 @@
         "P_acc": false,
         "R": true
       },
+      "field_completeness_fraction": 0.7142857142857143,
       "missing_fields": [
         "m",
         "P_acc"
       ],
+      "next_action": "mesurer d'abord m sans compléter les autres champs par hypothèse",
       "eligible_for_common_invariant": false
     }
   ]

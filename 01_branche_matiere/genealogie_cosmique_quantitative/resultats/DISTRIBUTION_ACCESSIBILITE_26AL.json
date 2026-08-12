@@ -164,6 +164,46 @@
     "les facteurs 3 et 4 sont des scénarios de sensibilité tirés de l'hétérogénéité publiée, sans poids probabiliste",
     "la distribution conditionnelle complète P(Q26|t,H_reservoir) reste ouverte faute de distribution mesurée de H_reservoir"
   ],
+  "m_trace": {
+    "canonical_reservoir_trace": [
+      {
+        "event": "angrite",
+        "m_remaining_fraction_median": 0.34527788709029344,
+        "m_remaining_fraction_q025": 0.2414945258667906,
+        "m_remaining_fraction_q975": 0.4936626156871893,
+        "time_after_CAI_myr": 1.1000000000003638,
+        "time_sigma_myr": 0.18867962264113208
+      },
+      {
+        "event": "EC002",
+        "m_remaining_fraction_median": 0.18598030522615255,
+        "m_remaining_fraction_q025": 0.12731809215848724,
+        "m_remaining_fraction_q975": 0.2716713182361894,
+        "time_after_CAI_myr": 1.7399999999997817,
+        "time_sigma_myr": 0.2
+      },
+      {
+        "event": "youngest_chondrule",
+        "m_remaining_fraction_median": 0.08177063413384472,
+        "m_remaining_fraction_q025": 0.04293552206656944,
+        "m_remaining_fraction_q975": 0.15573204388394535,
+        "time_after_CAI_myr": 2.5900000000001455,
+        "time_sigma_myr": 0.33999999999999997
+      },
+      {
+        "event": "CM_carbonate",
+        "m_remaining_fraction_median": 0.023046148180010835,
+        "m_remaining_fraction_q025": 0.008523221082958094,
+        "m_remaining_fraction_q975": 0.06231504976410662,
+        "time_after_CAI_myr": 3.9000000000005457,
+        "time_sigma_myr": 0.5249761899362675
+      }
+    ],
+    "definition": "inventaire radiogénique résiduel continu dérivé des âges empiriques et de la demi-vie 26Al, avant discrétisation en classes P_acc",
+    "distinction_from_P_acc": "m conserve la fraction continue résiduelle et son intervalle analytique; P_acc ne conserve que les seuils d'accessibilité franchis",
+    "limitation": "trace dérivée sous modèle de décroissance et scénario de réservoir déclaré; elle n'est pas une mesure locale directe de 26Al dans chaque événement",
+    "status": "derived_physical_history_trace_from_empirical_ages"
+  },
   "quantity": "fraction de l'inventaire CAI de référence restant physiquement disponible",
   "reservoir_history_model": "three declared sensitivity scenarios, not probabilities",
   "schema": "oric.gc.26al-accessibility-distribution.v1",

@@ -244,14 +244,14 @@
       "value": 1451
     },
     {
-      "display": "1 649",
+      "display": "1 654",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1649
+      "value": 1654
     },
     {
       "display": "20 stades",
@@ -693,6 +693,101 @@
       "targets": [],
       "tolerance": 1e-12,
       "value": 9.988123086397183
+    },
+    {
+      "display": "0,4993",
+      "id": "ANT_PACC_MEAN",
+      "pointer": "/P_acc_retrospective/mean_P_acc",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.4993055555556
+    },
+    {
+      "display": "0,5758",
+      "id": "ANT_PACC_NULL_MEAN",
+      "pointer": "/P_acc_retrospective/same_complexity_history_permutation/null_mean_P_acc",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.575828125
+    },
+    {
+      "display": "0,00100",
+      "id": "ANT_PACC_PERM_P",
+      "pointer": "/P_acc_retrospective/same_complexity_history_permutation/p_one_sided_observed_support_narrower_than_shuffled",
+      "source": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-15,
+      "value": 0.0009995002498751
+    },
+    {
+      "display": "0,66",
+      "id": "VES_PACC_MEAN",
+      "pointer": "/P_acc_measurement/mean_P_acc",
+      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.66
+    },
+    {
+      "display": "−0,0375",
+      "id": "VES_PACC_ABLATION_CONTRAST",
+      "pointer": "/P_acc_ablation_test/mechanism_P_acc_ablation_contrast",
+      "source": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": -0.0375
+    },
+    {
+      "display": "0,1707",
+      "id": "ORB_M_DISTANCE_MEDIAN",
+      "pointer": "/distance_summary/median",
+      "source": "02_branche_systeme_solaire/tests_suivants/resultats/TRACE_ORBITALE_M.json",
+      "targets": [],
+      "tolerance": 1e-12,
+      "value": 0.17071244179537984
+    },
+    {
+      "display": "0,4723",
+      "id": "GCQ_INTERSTAGE_SIC_STRATIFIED_P",
+      "pointer": "/results/0/publication_stratified_permutation_p",
+      "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/INFORMATION_INTERETAGES.json",
+      "targets": [],
+      "tolerance": 1e-15,
+      "value": 0.47226386806596704
+    },
+    {
+      "display": "5 cas",
+      "id": "TRANSVERSAL_FIELD_COMPLETE_CASES",
+      "pointer": "/field_complete_cases",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_20_CAS.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 5
+    },
+    {
+      "display": "4 systèmes",
+      "id": "TRANSVERSAL_FIELD_COMPLETE_SYSTEMS",
+      "pointer": "/field_complete_unique_systems",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_20_CAS.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 4
     }
   ]
 }

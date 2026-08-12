@@ -1,0 +1,206 @@
+{
+  "schema": "oric.orbital-history-trace.v1",
+  "status": "model_retrospective_dynamic_trace_proxy",
+  "m_definition": "empreinte spectrale séculaire de l'excentricité terrestre sous une architecture donnée, mesurée dans les bandes 95 kyr, 125 kyr, 405 kyr et 2.4 Myr déjà gelées dans la validation astronomique",
+  "baseline": "baseline_20myr_dt10 for reference band fingerprint; counterfactual jobs use their existing 2 Myr spectra",
+  "bands": [
+    "95 kyr",
+    "125 kyr",
+    "405 kyr",
+    "2.4 Myr"
+  ],
+  "baseline_fingerprint": {
+    "95 kyr": {
+      "normalized_band_power": 0.3181570637639083,
+      "peak_period_years": 95242.85714285714
+    },
+    "125 kyr": {
+      "normalized_band_power": 0.2111093448013156,
+      "peak_period_years": 124229.81366459628
+    },
+    "405 kyr": {
+      "normalized_band_power": 0.332665689230448,
+      "peak_period_years": 408183.67346938775
+    },
+    "2.4 Myr": {
+      "normalized_band_power": 0.0236421516044602,
+      "peak_period_years": 2000100.0
+    }
+  },
+  "interventions": [
+    {
+      "intervention": "jupiter_a_minus_0p5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.1383346560027752,
+          "power_ratio_vs_baseline": 0.4390922446663201,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.1686337696093288,
+          "power_ratio_vs_baseline": 0.7039163697293576,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.8948030707175254,
+      "finite_power_ratio_bands": 2
+    },
+    {
+      "intervention": "jupiter_a_plus_0p5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.3117141139529943,
+          "power_ratio_vs_baseline": 0.9894212625001756,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.2769015487758915,
+          "power_ratio_vs_baseline": 1.1558511289780211,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.14522691261640483,
+      "finite_power_ratio_bands": 2
+    },
+    {
+      "intervention": "jupiter_mass_minus_5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.2868267807515334,
+          "power_ratio_vs_baseline": 0.9104256202298188,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.2597490286364667,
+          "power_ratio_vs_baseline": 1.0842525414814297,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.12389451899220223,
+      "finite_power_ratio_bands": 2
+    },
+    {
+      "intervention": "jupiter_mass_plus_5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.2571121107034405,
+          "power_ratio_vs_baseline": 0.8161073810557219,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.1872862318563332,
+          "power_ratio_vs_baseline": 0.7817760626120038,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.3192209998412301,
+      "finite_power_ratio_bands": 2
+    },
+    {
+      "intervention": "saturn_mass_minus_5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.3405037436125339,
+          "power_ratio_vs_baseline": 1.0808033028044195,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.2000706472764049,
+          "power_ratio_vs_baseline": 0.8351411703982858,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.19619797097435485,
+      "finite_power_ratio_bands": 2
+    },
+    {
+      "intervention": "saturn_mass_plus_5pct_2myr",
+      "spectral_fingerprint": {
+        "95 kyr": {
+          "normalized_band_power": 0.2896106760408741,
+          "power_ratio_vs_baseline": 0.9192620670525736,
+          "peak_period_years": 105315.7894736842
+        },
+        "125 kyr": {
+          "normalized_band_power": 0.2632653268391909,
+          "power_ratio_vs_baseline": 1.0989303837160052,
+          "peak_period_years": 111166.66666666669
+        },
+        "405 kyr": {
+          "normalized_band_power": 0.0,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": 400200.0
+        },
+        "2.4 Myr": {
+          "normalized_band_power": null,
+          "power_ratio_vs_baseline": null,
+          "peak_period_years": null
+        }
+      },
+      "m_log_power_distance_from_baseline": 0.12643766339385812,
+      "finite_power_ratio_bands": 2
+    }
+  ],
+  "intervention_count": 6,
+  "distance_summary": {
+    "min": 0.12389451899220223,
+    "median": 0.17071244179537984,
+    "max": 0.8948030707175254
+  },
+  "interpretation": "les architectures interventionnelles laissent des empreintes spectrales différentes dans les sorties déjà calculées; ce vecteur fournit un m de niveau modèle distinct du comptage P_acc des cellules accessibles",
+  "limits": [
+    "ce m est un proxy dynamique rétrospectif de niveau modèle, pas une trace empirique d'une histoire orbitale naturelle unique",
+    "les fréquences propres g_i/s_i complètes ne sont pas extraites ici; la mesure utilise uniquement les bandes déjà présentes dans les artefacts validés",
+    "les bandes non résolues sur l'horizon 2 Myr restent nulles ou absentes et ne sont pas inventées"
+  ]
+}

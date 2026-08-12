@@ -145,3 +145,21 @@ def test_pacc_uses_prefixed_composition_classes():
     assert result["strata_count"] == 1
     assert result["mean_P_acc"] == 1.0
     assert result["strata"][0]["occupied_classes"] == [0, 1, 2, 3]
+
+
+def test_pacc_ablation_contrast_keeps_separate_verdict():
+    module = load()
+    rows = []
+    for transition in range(4):
+        for condition in ("FR", "FU", "UR", "UU"):
+            drift = 0.75
+            selection = 0.75
+            if condition == "FR":
+                selection = 0.50
+            rows.extend([
+                {"condition": condition, "arm": "drift", "transition": transition, "P_acc": drift},
+                {"condition": condition, "arm": "selection", "transition": transition, "P_acc": selection},
+            ])
+    result = module.pacc_ablation_contrast({"strata": rows}, repeats=200)
+    assert result["mechanism_P_acc_ablation_contrast"] < 0
+    assert result["verdict"] == "does_not_support_positive_Pacc_ablation_contrast"

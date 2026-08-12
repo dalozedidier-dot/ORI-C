@@ -84,3 +84,11 @@ def test_speleothem_source_reference_is_portable():
     reference = module.source_reference(source)
     assert reference == "donnees_externes/speleothemes_noaa_0_22ka/extracted/speleothem-d18o-0-22k.csv"
     assert not Path(reference).is_absolute()
+
+
+def test_orbital_trace_exposes_model_m_without_claiming_natural_history():
+    result = load("mesurer_trace_orbitale").main()
+    assert result["status"] == "model_retrospective_dynamic_trace_proxy"
+    assert result["intervention_count"] == 6
+    assert all(row["finite_power_ratio_bands"] >= 2 for row in result["interventions"])
+    assert any("pas une trace empirique" in limit for limit in result["limits"])

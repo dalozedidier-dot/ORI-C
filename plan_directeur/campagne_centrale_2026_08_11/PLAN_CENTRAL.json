@@ -2,41 +2,225 @@
   "schema": "oric.central-program.v1",
   "objectif": "fermer_mecanismes_mesurer_possibles_tester_invariants_predire",
   "campagnes": [
-    {"id": "I", "nom": "fermeture_mecanistique", "axes": [1,2,3,4,5,6,18,19], "critere_fin": "au moins trois branches avec H→m→ΔP→R"},
-    {"id": "II", "nom": "quantification", "axes": [7,8,9,10,13,14,15], "critere_fin": "lois quantitatives locales avec incertitudes"},
-    {"id": "III", "nom": "transversalite", "axes": [11,12,25,27,28,29], "critere_fin": "benchmark de 20 à 30 cas et invariants testés"},
-    {"id": "IV", "nom": "prediction", "axes": [21,22,23,24,26], "critere_fin": "prédictions gelées sur données non vues"}
+    {
+      "id": "I",
+      "nom": "fermeture_mecanistique",
+      "axes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        18,
+        19
+      ],
+      "critere_fin": "au moins trois branches avec H→m→ΔP→R"
+    },
+    {
+      "id": "II",
+      "nom": "quantification",
+      "axes": [
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "critere_fin": "lois quantitatives locales avec incertitudes"
+    },
+    {
+      "id": "III",
+      "nom": "transversalite",
+      "axes": [
+        11,
+        12,
+        25,
+        27,
+        28,
+        29
+      ],
+      "critere_fin": "benchmark de 20 à 30 cas et invariants testés"
+    },
+    {
+      "id": "IV",
+      "nom": "prediction",
+      "axes": [
+        21,
+        22,
+        23,
+        24,
+        26
+      ],
+      "critere_fin": "prédictions gelées sur données non vues"
+    }
   ],
   "axes": [
-    {"id":1,"nom":"hypergraphe_matiere","statut":"partiel","sortie":"01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json","prochaine_condition":"source primaire démontrant H052/HC01 dans un système unique"},
-    {"id":2,"nom":"memoire_materielle","statut":"6_jeux_inspectes_0_admis_candidat_AB_ablation_identifie_donnees_brutes_absentes","prochaine_condition":"obtenir les courbes des 13 fragments Vervelidou ou exécuter MAG-PAIR-001 avec réponse finale indépendante"},
-    {"id":3,"nom":"genealogie_cosmique","statut":"premiere_information_interetages_memes_grains_executee_non_robuste_au_controle_publication","prochaine_condition":"acquérir un suivi multi-étages indépendant du plan d'échantillonnage des publications"},
-    {"id":4,"nom":"systeme_solaire","statut":"E4_modele","prochaine_condition":"interventions symétriques et contraintes observationnelles"},
-    {"id":5,"nom":"climat","statut":"PALMOD_475_URL_ensembles_identifiees_1000_tirages_verifies_sur_premier_site_controle_negatif_absent"},
-    {"id":6,"nom":"vivant","statut":"premier_cas_complet_retrospectif_vesicules_replication_stricte_absente"},
-    {"id":7,"nom":"domaine_possibles","statut":"mesures_locales_astronomie_et_26Al_non_comparables"},
-    {"id":8,"nom":"temps_memoire","statut":"formalise_non_transversal"},
-    {"id":9,"nom":"force_trace","statut":"formalise_non_teste"},
-    {"id":10,"nom":"ablation_universelle","statut":"formalise_partiel"},
-    {"id":11,"nom":"benchmark_transversal","statut":"20_cas_construits_1_complet_sur_schema_commun_C_VES_02_retrospectif"},
-    {"id":12,"nom":"invariants","statut":"5_hypotheses_auditees_non_testables"},
-    {"id":13,"nom":"information_historique","statut":"mesuree_localement_cosmos_et_antibiotiques_non_conditionnelle_inter_etages"},
-    {"id":14,"nom":"irreversibilite","statut":"partition_26Al_locale_mesuree_autres_domaines_non_mesures"},
-    {"id":15,"nom":"bifurcations","statut":"3_entrees_locales_documentees_non_transversales"},
-    {"id":16,"nom":"tests_bloques","statut":"matrice_generee"},
-    {"id":17,"nom":"acquisition_donnees","statut":"priorisee"},
-    {"id":18,"nom":"interventions","statut":"partiel_par_branche"},
-    {"id":19,"nom":"replications","statut":"registre_cree"},
-    {"id":20,"nom":"resultats_negatifs","statut":"registre_cree"},
-    {"id":21,"nom":"predictions_prospectives","statut":"4_predictions_gelees_localement_non_preregistrees"},
-    {"id":22,"nom":"premieres_predictions","statut":"gelees_en_attente_de_donnees_externes"},
-    {"id":23,"nom":"test_aveugle","statut":"workflow_defini_non_execute"},
-    {"id":24,"nom":"validation_externe","statut":"bloque_nouvelles_donnees"},
-    {"id":25,"nom":"modeles_concurrents","statut":"obligatoire_dans_formalisme"},
-    {"id":26,"nom":"falsification","statut":"criteres_crees"},
-    {"id":27,"nom":"architecture_preuve","statut":"champs_obligatoires_definis"},
-    {"id":28,"nom":"hierarchie_claims","statut":"E0_E6_existant"},
-    {"id":29,"nom":"dependances_scientifiques","statut":"graphe_genere"},
-    {"id":30,"nom":"gouvernance","statut":"regle_active"}
+    {
+      "id": 1,
+      "nom": "hypergraphe_matiere",
+      "statut": "partiel",
+      "sortie": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
+      "prochaine_condition": "source primaire démontrant H052/HC01 dans un système unique"
+    },
+    {
+      "id": 2,
+      "nom": "memoire_materielle",
+      "statut": "6_jeux_inspectes_0_admis_candidat_AB_ablation_identifie_donnees_brutes_absentes",
+      "prochaine_condition": "obtenir les courbes des 13 fragments Vervelidou ou exécuter MAG-PAIR-001 avec réponse finale indépendante"
+    },
+    {
+      "id": 3,
+      "nom": "genealogie_cosmique",
+      "statut": "premiere_information_interetages_memes_grains_executee_controle_publication_non_concluant_LOO_bootstrap",
+      "prochaine_condition": "acquérir un suivi multi-étages indépendant du plan d'échantillonnage des publications"
+    },
+    {
+      "id": 4,
+      "nom": "systeme_solaire",
+      "statut": "E4_modele_trace_m_spectrale_retrospective_ajoutee",
+      "prochaine_condition": "extraire les modes g_i/s_i explicitement et obtenir une réplication indépendante avant toute généralisation"
+    },
+    {
+      "id": 5,
+      "nom": "climat",
+      "statut": "9_familles_normalisees_PALMOD_ensembles_identifies_premier_site_verifie_acquisition_exhaustive_et_controle_negatif_absents",
+      "prochaine_condition": "acquérir les ensembles chronologiques requis hors dépôt et préenregistrer un contrôle négatif physique réel"
+    },
+    {
+      "id": 6,
+      "nom": "vivant",
+      "statut": "5_claims_champs_complets_dont_vesicules_et_antibiotique_avec_proxies_retrospectifs_replications_independantes_absentes",
+      "prochaine_condition": "répliquer indépendamment D'Onofrio et les vésicules; isoler m physiquement dans le vivant"
+    },
+    {
+      "id": 7,
+      "nom": "domaine_possibles",
+      "statut": "Pacc_local_astronomie_26Al_antibiotique_vesicules_sans_echelle_commune",
+      "prochaine_condition": "définir une comparaison inter-domaines qui conserve les unités et la nature de chaque domaine sans normalisation arbitraire"
+    },
+    {
+      "id": 8,
+      "nom": "temps_memoire",
+      "statut": "formalise_non_transversal"
+    },
+    {
+      "id": 9,
+      "nom": "force_trace",
+      "statut": "m_mesure_localement_26Al_et_modele_orbital_force_trace_transversale_non_testee",
+      "prochaine_condition": "relier une variation de m à une variation de P_acc dans plusieurs systèmes sans confondre proxy et trace physique"
+    },
+    {
+      "id": 10,
+      "nom": "ablation_universelle",
+      "statut": "ablation_reponse_vesicules_positive_Pacc_ablation_exploratoire_direction_negative_matiere_incomplete",
+      "prochaine_condition": "conserver les deux résultats distincts et obtenir une ablation matérielle H→m→ΔP_acc→ΔR"
+    },
+    {
+      "id": 11,
+      "nom": "benchmark_transversal",
+      "statut": "20_cas_construits_5_claims_complets_4_systemes_heterogenes",
+      "prochaine_condition": "augmenter le nombre de systèmes indépendants et qualifier la comparabilité avant tout méta-test"
+    },
+    {
+      "id": 12,
+      "nom": "invariants",
+      "statut": "INV_A_exploratoire_INV_C_partiel_aucun_invariant_general_valide",
+      "prochaine_condition": "tester seulement les comparaisons supportées par des définitions compatibles et conserver les échecs"
+    },
+    {
+      "id": 13,
+      "nom": "information_historique",
+      "statut": "information_historique_mesuree_cosmos_antibiotiques_interetages_cosmique_non_separable_echantillonnage_publication",
+      "prochaine_condition": "obtenir une information inter-étages robuste à la provenance des publications ou conclure non identifiable avec le corpus actuel"
+    },
+    {
+      "id": 14,
+      "nom": "irreversibilite",
+      "statut": "partition_26Al_locale_mesuree_autres_domaines_non_mesures"
+    },
+    {
+      "id": 15,
+      "nom": "bifurcations",
+      "statut": "3_entrees_locales_documentees_non_transversales"
+    },
+    {
+      "id": 16,
+      "nom": "tests_bloques",
+      "statut": "matrice_generee"
+    },
+    {
+      "id": 17,
+      "nom": "acquisition_donnees",
+      "statut": "priorisee"
+    },
+    {
+      "id": 18,
+      "nom": "interventions",
+      "statut": "partiel_par_branche"
+    },
+    {
+      "id": 19,
+      "nom": "replications",
+      "statut": "registre_cree"
+    },
+    {
+      "id": 20,
+      "nom": "resultats_negatifs",
+      "statut": "registre_negatifs_et_non_concluants_mis_a_jour_Pacc_vesicules_et_interetages",
+      "prochaine_condition": "préserver les résultats négatifs sans retuning orienté vers un succès"
+    },
+    {
+      "id": 21,
+      "nom": "predictions_prospectives",
+      "statut": "4_predictions_gelees_localement_non_preregistrees"
+    },
+    {
+      "id": 22,
+      "nom": "premieres_predictions",
+      "statut": "gelees_en_attente_de_donnees_externes"
+    },
+    {
+      "id": 23,
+      "nom": "test_aveugle",
+      "statut": "workflow_defini_non_execute"
+    },
+    {
+      "id": 24,
+      "nom": "validation_externe",
+      "statut": "bloque_nouvelles_donnees"
+    },
+    {
+      "id": 25,
+      "nom": "modeles_concurrents",
+      "statut": "obligatoire_dans_formalisme"
+    },
+    {
+      "id": 26,
+      "nom": "falsification",
+      "statut": "criteres_crees"
+    },
+    {
+      "id": 27,
+      "nom": "architecture_preuve",
+      "statut": "champs_obligatoires_definis"
+    },
+    {
+      "id": 28,
+      "nom": "hierarchie_claims",
+      "statut": "E0_E6_existant"
+    },
+    {
+      "id": 29,
+      "nom": "dependances_scientifiques",
+      "statut": "graphe_genere"
+    },
+    {
+      "id": 30,
+      "nom": "gouvernance",
+      "statut": "regle_active"
+    }
   ]
 }

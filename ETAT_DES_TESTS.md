@@ -10,6 +10,8 @@ Dernière exécution : 2026-08-10
 
 Environnement : Python 3.13.5, numpy 2.3.5, scipy 1.17.0, numba 0.65.1, pandas 2.2.3
 
+Mise à jour ciblée : 2026-08-12 — `recherche-suivante` rejouée dans le même environnement que le dernier relevé complet.
+
 Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une exécution locale n'est pas nécessairement un fichier périmé : comparez d'abord les versions ci-dessus.
 
 ## Suites exécutables
@@ -21,7 +23,7 @@ Les compteurs dépendent de l'environnement. Un écart entre ce fichier et une e
 | Campagne maximale, trois branches | 21 | 0 | 0 | 0 |
 | Priorités v0.9.3 | 11 | 0 | 0 | 0 |
 | Calibrage matière v0.9.4 | 5 | 0 | 0 | 0 |
-| Recherche suivante | 32 | 0 | 0 | 0 |
+| Recherche suivante | 37 | 0 | 0 | 0 |
 | Couche astronomique | 12 | 0 | 2 | 0 |
 | Couche spin-orbite | 4 | 0 | 0 | 0 |
 | Formalismes externes intégrés | 16 | 0 | 0 | 0 |

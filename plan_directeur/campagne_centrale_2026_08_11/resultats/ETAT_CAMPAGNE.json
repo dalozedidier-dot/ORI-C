@@ -4,7 +4,9 @@
   "axes_total": 30,
   "axes_documentes": 30,
   "benchmark_cases": 20,
-  "invariant_cases_complete": 1,
+  "invariant_cases_complete": 5,
+  "field_complete_unique_systems": 4,
   "claim_general": "ORI-C n'est pas validé comme théorie générale",
-  "next_executable_gate": "obtenir les distributions chronologiques publiées et préenregistrer un contrôle négatif dans PALEO-HISTORY-02"
+  "next_executable_without_new_data": "auditer la comparabilité des m et P_acc des systèmes complets sans imposer de normalisation universelle",
+  "next_confirmatory_gate": "obtenir une réplication indépendante ou une nouvelle donnée prospective, et débloquer PALEO-HISTORY par chronologies probabilistes + contrôle négatif gelé"
 }

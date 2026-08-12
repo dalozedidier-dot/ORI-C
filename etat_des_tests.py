@@ -666,6 +666,14 @@ def main() -> int:
         help=argparse.SUPPRESS,
     )
     parseur.add_argument(
+        "--actualiser-suite",
+        choices=sorted(SUITES_ISOLEES),
+        help=(
+            "rejoue une seule suite et actualise uniquement sa ligne dans "
+            "ETAT_DES_TESTS.md si l'environnement correspond au dernier relevé complet"
+        ),
+    )
+    parseur.add_argument(
         "--rejouer-analyse", action="store_true",
         help=(
             "réexécute analyse_exhaustive.py. Réécrit quatre fichiers archivés "
@@ -681,6 +689,60 @@ def main() -> int:
 
     cible = RACINE / "ETAT_DES_TESTS.md"
 
+    if arguments.actualiser_suite:
+        if not cible.exists():
+            print("ETAT_DES_TESTS.md absent ; exécutez d'abord un relevé complet.")
+            return 1
+        texte = cible.read_text(encoding="utf-8")
+        ancien_env = re.search(r"Environnement : (.*)", texte)
+        courant = environnement_courant()
+        if not ancien_env or ancien_env.group(1).strip() != courant:
+            print("Actualisation ciblée refusée : environnement différent du relevé complet.")
+            print(f"  fichier : {ancien_env.group(1).strip() if ancien_env else 'inconnu'}")
+            print(f"  courant : {courant}")
+            return 1
+        resultat = SUITES_ISOLEES[arguments.actualiser_suite]()
+        if resultat.get("code_retour", 1) != 0 or resultat.get("echoues", 0):
+            print(json.dumps(resultat, ensure_ascii=False))
+            print("Actualisation ciblée refusée : la suite n'est pas verte.")
+            return 1
+        labels = {
+            "socle": "Socle, `00_socle/tests`",
+            "memoire": "Couche mémoire historique",
+            "trois-branches": "Campagne maximale, trois branches",
+            "priorites": "Priorités v0.9.3",
+            "calibrage": "Calibrage matière v0.9.4",
+            "recherche-suivante": "Recherche suivante",
+            "astronomie": "Couche astronomique",
+            "spin-orbite": "Couche spin-orbite",
+            "formalismes-externes": "Formalismes externes intégrés",
+        }
+        label = labels[arguments.actualiser_suite]
+        ignores = int(resultat.get("ignores", 0))
+        xfail = int(resultat.get("echecs_attendus", 0))
+        nouvelle_ligne = (
+            f"| {label} | {int(resultat.get('reussis', 0))} | "
+            f"{int(resultat.get('echoues', 0))} | {ignores} | {xfail} |"
+        )
+        motif = re.compile(rf"^\| {re.escape(label)} \|.*$", re.MULTILINE)
+        texte, n = motif.subn(nouvelle_ligne, texte, count=1)
+        if n != 1:
+            print(f"Ligne de suite introuvable : {label}")
+            return 1
+        note = (
+            f"Mise à jour ciblée : {date.today().isoformat()} — `{arguments.actualiser_suite}` "
+            "rejouée dans le même environnement que le dernier relevé complet."
+        )
+        texte = re.sub(r"^Mise à jour ciblée : .*\n", "", texte, flags=re.MULTILINE)
+        position = re.search(r"^Environnement : .*\n", texte, flags=re.MULTILINE)
+        if position:
+            texte = texte[:position.end()] + "\n" + note + "\n" + texte[position.end():]
+        cible.write_text(texte, encoding="utf-8", newline="\n")
+        print(json.dumps(resultat, ensure_ascii=False))
+        print(f"écrit : {cible}")
+        print(f"manifeste : {actualiser_manifeste(cible)}")
+        return 0
+
     if arguments.verifier:
         # Mode lecture seule : ne rejoue pas l'analyse exhaustive, qui
         # réécrirait quatre fichiers archivés et invaliderait le manifeste.
@@ -692,7 +754,8 @@ def main() -> int:
 
         def normaliser(texte: str) -> str:
             texte = re.sub(r"Dernière exécution : .*", "", texte)
-            return re.sub(r"Environnement : .*", "", texte)
+            texte = re.sub(r"Environnement : .*", "", texte)
+            return re.sub(r"Mise à jour ciblée : .*", "", texte)
 
         if normaliser(ancien) == normaliser(contenu):
             print("ETAT_DES_TESTS.md est à jour.")

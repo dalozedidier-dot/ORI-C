@@ -20,9 +20,11 @@ présentées comme des préinscriptions publiques.
 le protocole 01 reste `non_testable` faute de distributions chronologiques
 point par point et parce que son contrôle négatif réel n'a pas été identifié
 dans le gel. Le benchmark transversal contient 20 cas réels ou explicitement
-classés comme résultats de modèle ; aucun ne renseigne encore simultanément
-`X,H,m,Theta,tau,P_acc,R`. Les invariants restent donc `non_testable`, et non
-« réfutés ».
+classés comme résultats de modèle. **Cinq claims renseignent désormais les sept
+champs `X,H,m,Theta,tau,P_acc,R`, représentant quatre systèmes distincts**.
+Cette complétude de champs ne vaut ni indépendance des cas, ni chaîne causale
+commune : `INV-A` devient seulement `exploratory_comparison_ready_not_confirmatory`,
+`INV-C` est partiellement opérationnalisé, et aucun invariant général n’est validé.
 
 Les données qui peuvent être téléchargées, celles qui nécessitent un accès
 manuel et celles qui doivent encore être produites sont séparées dans

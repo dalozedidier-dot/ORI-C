@@ -17,6 +17,7 @@ MODULES = [
     ("speleothemes", ROOT / "02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py"),
     ("vesicules", ROOT / "03_branche_vivant/lignees_vesicules/analyser_lignees.py"),
     ("antibiotique_2026", ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py"),
+    ("antibiotique_pid", ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_pid.py"),
 ]
 
 
@@ -66,6 +67,7 @@ def main() -> int:
     (OUT / "SYNTHESE.json").write_text(
         json.dumps(synthesis, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     lines = ["# Synthèse de la campagne de recherche suivante", ""]
     lines.extend(f"- **{name}** : `{status_of(result)}`" for name, result in results.items())
@@ -76,7 +78,7 @@ def main() -> int:
             f"Blocs en attente de données externes : **{synthesis['waiting_for_external_data']}**.",
         ]
     )
-    (OUT / "RAPPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (OUT / "RAPPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(synthesis, indent=2, ensure_ascii=False))
     return 1 if errors else 0
 

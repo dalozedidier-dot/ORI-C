@@ -22,7 +22,7 @@
       "niveau_preuve": "E2",
       "portee": "empirique_externe",
       "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "artefact_sha256": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
+      "artefact_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
       "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636"
     },
@@ -33,7 +33,7 @@
       "niveau_preuve": "E4",
       "portee": "empirique_externe",
       "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "artefact_sha256": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
+      "artefact_sha256": "3789e4d449f566e75cf03b0a894af9a0c9da8ddf3c49457198a557eae60a3cb2",
       "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "source_sha256": "c9bb76da46e2e4fc2332ae80a0234303f221ab4a93f81dc8a6089a7f493ac636"
     },

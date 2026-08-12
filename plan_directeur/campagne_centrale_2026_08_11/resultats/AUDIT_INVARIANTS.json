@@ -1,30 +1,44 @@
 {
-  "schema": "oric.transversal-invariants-audit.v1",
+  "schema": "oric.transversal-invariants-audit.v2",
   "cases_total": 20,
-  "cases_complete_X_H_m_Theta_tau_Pacc_R": 1,
+  "cases_complete_X_H_m_Theta_tau_Pacc_R": 5,
   "eligible_case_ids": [
-    "C-VES-02"
+    "C-VES-02",
+    "C-VES-03",
+    "C-AST-01",
+    "PID-ANT-01",
+    "GCQ-T09"
+  ],
+  "unique_complete_systems": [
+    "cosmic_26Al",
+    "donofrio_antibiotic",
+    "sokolskyi_baum_vesicles",
+    "solar_system_model"
   ],
   "tests": [
     {
       "id": "INV-A",
       "hypothesis": "Delta m -> Delta P_acc",
-      "status": "non_testable"
+      "status": "exploratory_comparison_ready_not_confirmatory",
+      "reason": "plusieurs systèmes ont maintenant m et P_acc, mais les échelles de m et les partitions P_acc restent hétérogènes et certains m/P_acc sont des proxies rétrospectifs"
     },
     {
       "id": "INV-B",
       "hypothesis": "tau_m/tau_T -> force historique",
-      "status": "non_testable"
+      "status": "non_testable",
+      "reason": "tau_m n'est pas mesuré de façon comparable"
     },
     {
       "id": "INV-C",
       "hypothesis": "transitions irréversibles ferment et ouvrent des possibles",
-      "status": "non_testable"
+      "status": "partially_operationalized",
+      "reason": "26Al et vésicules possèdent des partitions locales, mais L_t/G_t ne sont pas énumérés transversalement"
     },
     {
       "id": "INV-D",
       "hypothesis": "information historique décroît ou change de support",
-      "status": "non_testable"
+      "status": "partial_nonconclusive",
+      "reason": "l'analyse inter-étages cosmique est exécutée mais ne sépare pas l'association de l'échantillonnage par publication"
     },
     {
       "id": "INV-E",
@@ -32,6 +46,6 @@
       "status": "non_testable"
     }
   ],
-  "verdict": "un premier cas empirique rétrospectif est complet; aucun invariant transversal n'est testable sur un cas unique",
-  "rule": "l'hétérogénéité des métriques n'est pas masquée par une standardisation arbitraire"
+  "verdict": "la complétude opérationnelle progresse sur plusieurs systèmes, mais aucun invariant transversal général n'est validé",
+  "rule": "l'hétérogénéité des métriques et la dépendance entre claims d'un même système ne sont pas masquées"
 }

@@ -115,7 +115,37 @@ def dependency_graph() -> dict:
             ["P_acc", "benchmark_transversal"], ["benchmark_transversal", "invariants"],
             ["invariants", "predictions_prospectives"]
         ],
-        "critical_blockers": ["PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents", "memoire_matiere: aucune chaîne complète admise", "P_acc: non mesuré transversalement"]
+        "critical_blockers": [
+            "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
+            "memoire_matiere: aucune chaîne complète admise",
+            "P_acc: plusieurs mesures locales existent désormais mais aucune échelle commune interdomaines n'est validée",
+            "réplications indépendantes: résultats vivants positifs encore non répliqués sur jeux indépendants"
+        ]
+    }
+
+
+def completeness_report(benchmark: dict) -> dict:
+    rows = []
+    for case in benchmark["cases"]:
+        rows.append({
+            "id": case["id"],
+            "system_id": case["system_id"],
+            "field_completeness_fraction": case["field_completeness_fraction"],
+            "missing_fields": case["missing_fields"],
+            "field_complete": case["eligible_for_common_invariant"],
+            "measurement_quality": case["measurement_quality"],
+            "next_action": case["next_action"],
+        })
+    rows.sort(key=lambda row: (-row["field_completeness_fraction"], len(row["missing_fields"]), row["id"]))
+    return {
+        "schema": "oric.transversal-completeness.v1",
+        "required_fields": ["X", "H", "m", "Theta", "tau", "P_acc", "R"],
+        "cases_total": len(rows),
+        "field_complete_cases": sum(row["field_complete"] for row in rows),
+        "field_complete_unique_systems": len({row["system_id"] for row in rows if row["field_complete"]}),
+        "cases_missing_one_field": sum(len(row["missing_fields"]) == 1 for row in rows),
+        "warning": "un cas à 7/7 peut rester rétrospectif, dérivé ou de niveau modèle; la complétude n'est pas un niveau de preuve",
+        "rows": rows,
     }
 
 
@@ -126,6 +156,7 @@ def main() -> int:
     dump("DEPENDANCES_SCIENTIFIQUES.json", dependency_graph())
     benchmark, invariants = benchmark_transversal()
     dump("BENCHMARK_TRANSVERSAL.json", benchmark)
+    dump("COMPLETUDE_20_CAS.json", completeness_report(benchmark))
     dump("AUDIT_INVARIANTS.json", invariants)
     measures, bifurcations = quantification_commune()
     dump("MESURES_COMMUNES_EXECUTEES.json", measures)
@@ -138,8 +169,10 @@ def main() -> int:
         "axes_documentes": sum("statut" in axis for axis in plan["axes"]),
         "benchmark_cases": benchmark["case_count"],
         "invariant_cases_complete": invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"],
+        "field_complete_unique_systems": benchmark["field_complete_unique_system_count"],
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_gate": "obtenir les distributions chronologiques publiées et préenregistrer un contrôle négatif dans PALEO-HISTORY-02",
+        "next_executable_without_new_data": "auditer la comparabilité des m et P_acc des systèmes complets sans imposer de normalisation universelle",
+        "next_confirmatory_gate": "obtenir une réplication indépendante ou une nouvelle donnée prospective, et débloquer PALEO-HISTORY par chronologies probabilistes + contrôle négatif gelé",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")
     return 0

@@ -10,5 +10,8 @@ obtenir un verdict positif.
 | Card 2019 | ne soutient pas la réplication antibiotique | histoire linéaire moins bonne dans les quatre groupes | conserver comme réplication externe négative |
 | Mémoire matérielle transversale | `does_not_support` | 0 famille réalise la chaîne complète, minimum 3 | acquérir une expérience H→m→persistance→ΔR→ablation |
 | Hypergraphe 46/53 | non fermé | réparation 53/53 mathématique mais non prouvée empiriquement | chercher un système unique ou conclure verrou réel |
-| PALEO-HISTORY-01 | non testable au 2026-08-11 | 5 familles obligatoires manquent | acquérir et valider les données manquantes, sans assouplir le gel |
+| PALEO-HISTORY-01 | non testable | les 9 familles sont présentes et normalisées ; les ensembles chronologiques PALMOD sont identifiés et vérifiés sur un premier site, mais l’acquisition exhaustive locale et le contrôle négatif physique gelé restent absents | acquérir les ensembles nécessaires hors dépôt et préenregistrer le contrôle négatif réel, sans assouplir le gel |
 
+
+| `PACC-VES-ABL-01` | ne soutient pas la direction positive attendue | contraste FR moins contrôles = −0,0375 ; bootstrap 95 % [−0,1458 ; 0,0625] | conserver séparé du contraste de réponse `C-VES-03`, qui reste soutenu sur son critère propre |
+| `GCQ-INTERSTAGE-01` | non concluant pour une conservation inter-étages | l’association globale même-grain n’est pas séparable de l’échantillonnage par publication : SiC p stratifié = 0,4723, graphite p = 1,0 | chercher un suivi multi-étages indépendant ou accepter la non-identifiabilité avec le corpus actuel |

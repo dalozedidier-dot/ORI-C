@@ -30,3 +30,12 @@ def test_accessibilite_decroit_avec_l_histoire_temporelle() -> None:
     assert medians == sorted(medians, reverse=True)
     assert medians[0] > 0.25
     assert medians[-1] < 0.10
+
+
+def test_m_trace_is_continuous_and_distinct_from_threshold_Pacc() -> None:
+    value = result()
+    trace = value["m_trace"]
+    assert trace["status"] == "derived_physical_history_trace_from_empirical_ages"
+    medians = [row["m_remaining_fraction_median"] for row in trace["canonical_reservoir_trace"]]
+    assert medians == sorted(medians, reverse=True)
+    assert "P_acc" in trace["distinction_from_P_acc"]

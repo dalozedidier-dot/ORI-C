@@ -336,6 +336,1229 @@
         "permutation_p_one_sided": 0.0004997501249375,
         "permutations": 2000
       },
+      "P_acc_measurement": {
+        "definition": "fraction des 4 classes [0,.25), [.25,.5), [.5,.75), [.75,+inf) occupées par les descendants",
+        "status": "empirical_retrospective_support_proxy",
+        "strata": [
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 10,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 11,
+            "n_pairs": 48,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 12,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 13,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 14,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 15,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 16,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 17,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 18,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "drift",
+            "transition": 19,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 10,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 11,
+            "n_pairs": 48,
+            "occupied_classes": [
+              1,
+              2
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 12,
+            "n_pairs": 48,
+            "occupied_classes": [
+              1,
+              2
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 13,
+            "n_pairs": 48,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 14,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 15,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 16,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 17,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 18,
+            "n_pairs": 48,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "FR",
+            "arm": "selection",
+            "transition": 19,
+            "n_pairs": 48,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 3,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 4,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 5,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 6,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 7,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 8,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "drift",
+            "transition": 9,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 2,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 3,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 4,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 5,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 6,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 7,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 8,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "FU",
+            "arm": "selection",
+            "transition": 9,
+            "n_pairs": 96,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "drift",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              1,
+              2,
+              3
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UR",
+            "arm": "selection",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "P_acc": 1.0
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1,
+              2
+            ],
+            "P_acc": 0.75
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "drift",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 0,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 1,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 2,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 3,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 4,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 5,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 6,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 7,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0,
+              1
+            ],
+            "P_acc": 0.5
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 8,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          },
+          {
+            "condition": "UU",
+            "arm": "selection",
+            "transition": 9,
+            "n_pairs": 144,
+            "occupied_classes": [
+              0
+            ],
+            "P_acc": 0.25
+          }
+        ],
+        "strata_count": 100,
+        "mean_P_acc": 0.66,
+        "min_P_acc": 0.25,
+        "max_P_acc": 1.0
+      },
+      "P_acc_ablation_test": {
+        "definition": "moyenne des écarts P_acc(selection)-P_acc(drift) par transition; contraste FR moins moyenne FU/UR/UU",
+        "status": "empirical_retrospective_ablation_support_test",
+        "per_condition": {
+          "FR": {
+            "matched_transitions": 20,
+            "mean_delta_P_acc_selection_minus_drift": -0.0125,
+            "median_delta_P_acc_selection_minus_drift": 0.0
+          },
+          "FU": {
+            "matched_transitions": 10,
+            "mean_delta_P_acc_selection_minus_drift": 0.025,
+            "median_delta_P_acc_selection_minus_drift": 0.0
+          },
+          "UR": {
+            "matched_transitions": 10,
+            "mean_delta_P_acc_selection_minus_drift": 0.05,
+            "median_delta_P_acc_selection_minus_drift": 0.0
+          },
+          "UU": {
+            "matched_transitions": 10,
+            "mean_delta_P_acc_selection_minus_drift": 0.0,
+            "median_delta_P_acc_selection_minus_drift": 0.0
+          }
+        },
+        "mechanism_P_acc_ablation_contrast": -0.0375,
+        "bootstrap_transitions": {
+          "repeats": 5000,
+          "seed": 20260812,
+          "q025": -0.1458333333333,
+          "q975": 0.0625,
+          "fraction_positive": 0.2412
+        },
+        "direction_expected_if_complete_regime_opens_more_classes": "positive",
+        "direction_observed": "negative",
+        "verdict": "does_not_support_positive_Pacc_ablation_contrast",
+        "limitation": "ce test porte sur le support discret observé des descendants; il ne remplace pas le contraste de réponse C-VES-03 et ne transforme pas P_acc en probabilité naturelle"
+      },
+      "complete_case_X_H_m_Theta_tau_Pacc_R": {
+        "X": "condition expérimentale et bras drift/selection au départ de la transition",
+        "H": "suite codée des transferts donneur-receveur avant la transition",
+        "m": "composition mesurée du parent immédiatement avant transfert",
+        "Theta": "régime expérimental FR, FU, UR ou UU et protocole de sélection",
+        "tau": "indice de génération et transition parent-descendant",
+        "P_acc": "support empirique des classes descendantes; voir P_acc_measurement",
+        "R": "composition mesurée du descendant et réponse moyenne à la sélection",
+        "status": "complete_empirical_retrospective_case",
+        "limitation": "P_acc est une mesure rétrospective du support observé, pas encore une prédiction prospective ni l'ensemble contrefactuel complet"
+      },
       "decision_components": {
         "selection_response_FR_positive": true,
         "FR_exceeds_ablation_mean": true,
@@ -372,6 +1595,1052 @@
       },
       "verdict": "history_supported_against_both_controls",
       "limit": "Le jeu est externe mais public avant l'analyse ORI-C. Le test est confirmatoire dans sa structure, sans être une collecte prospective aveugle."
+    },
+    "antibiotique_pid": {
+      "status": "exploratory_additional_analysis",
+      "method": "Williams-Beer I_min PID on discretely observed variables",
+      "scope": "Does not alter C-ANT-01 certification; X=Limitation|Antibiotic, M=Ancestor, Y=observed MIC level.",
+      "rows": 288,
+      "strain_groups": 24,
+      "permutations": 2000,
+      "seed": 20260810,
+      "observed": {
+        "I_X_Y_bits": 0.8691616334432,
+        "I_M_Y_bits": 0.5061474711996,
+        "I_XM_Y_bits": 1.770749673129,
+        "redundancy_Imin_bits": 0.4115991252725,
+        "unique_X_bits": 0.4575625081707,
+        "unique_M_history_bits": 0.0945483459271,
+        "synergy_XM_bits": 0.8070396937583
+      },
+      "null": {
+        "unique_M_history_bits": {
+          "mean": 0.009073413601813,
+          "q025": -5.551115123126e-17,
+          "q975": 0.03774019102731,
+          "p_one_sided_ge_observed": 0.0004997501249375
+        },
+        "synergy_XM_bits": {
+          "mean": 0.6513106687834,
+          "q025": 0.5807602012548,
+          "q975": 0.74324354872,
+          "p_one_sided_ge_observed": 0.0009995002498751
+        },
+        "I_XM_Y_bits": {
+          "mean": 1.529545715828,
+          "q025": 1.456695283363,
+          "q975": 1.631694566669,
+          "p_one_sided_ge_observed": 0.0004997501249375
+        }
+      },
+      "P_acc_retrospective": {
+        "definition": "pour X=(limitation, antibiotique), fraction des classes MIC observées sous X encore occupées après conditionnement par H=ancêtre",
+        "status": "empirical_retrospective_support_proxy",
+        "rows": [
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "4",
+              "8"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "0.25",
+              "0.5"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Ampicillin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "64",
+              "128"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "4",
+              "16"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "64",
+              "128"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Erythromycin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "64"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 1,
+            "P_acc": 0.2
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.25",
+              "0.5"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tetracycline",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "0.25",
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 4,
+            "P_acc": 0.8
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Carbon",
+            "antibiotic": "Tobramycin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2",
+              "4"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "4",
+              "8"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2",
+              "4"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 3,
+            "P_acc": 0.6
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 2,
+            "P_acc": 0.4
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 4,
+            "P_acc": 0.8
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Ampicillin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "history_occupied_classes": [
+              "2"
+            ],
+            "state_support_size": 5,
+            "history_support_size": 1,
+            "P_acc": 0.2
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64",
+              "128"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 3,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "4",
+              "8",
+              "16",
+              "32"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 4,
+            "P_acc": 0.6666666666667
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "16",
+              "32",
+              "64"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 3,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Erythromycin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "4",
+              "8",
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "history_occupied_classes": [
+              "32",
+              "64"
+            ],
+            "state_support_size": 6,
+            "history_support_size": 2,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 4,
+            "P_acc": 1.0
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tetracycline",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.25",
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 4,
+            "history_support_size": 2,
+            "P_acc": 0.5
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-1",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 3,
+            "P_acc": 1.0
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-2",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 1,
+            "P_acc": 0.3333333333333
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-4",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "0.5",
+              "1"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 2,
+            "P_acc": 0.6666666666667
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-5",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 2,
+            "P_acc": 0.6666666666667
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "A-6",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 2,
+            "P_acc": 0.6666666666667
+          },
+          {
+            "limitation": "Nitrogen",
+            "antibiotic": "Tobramycin",
+            "ancestor": "REL606",
+            "rows": 6,
+            "state_support_classes": [
+              "0.5",
+              "1",
+              "2"
+            ],
+            "history_occupied_classes": [
+              "1",
+              "2"
+            ],
+            "state_support_size": 3,
+            "history_support_size": 2,
+            "P_acc": 0.6666666666667
+          }
+        ],
+        "strata_count": 48,
+        "global_observed_MIC_classes": [
+          "0.25",
+          "0.5",
+          "1",
+          "2",
+          "4",
+          "8",
+          "16",
+          "32",
+          "64",
+          "128"
+        ],
+        "mean_P_acc": 0.4993055555556,
+        "median_P_acc": 0.5,
+        "mean_contraction_fraction": 0.5006944444444,
+        "same_complexity_history_permutation": {
+          "unit": "Strain within Limitation",
+          "permutations": 2000,
+          "seed": 20260812,
+          "null_mean_P_acc": 0.575828125,
+          "null_q025": 0.5381944444444,
+          "null_q975": 0.6059027777778,
+          "p_one_sided_observed_support_narrower_than_shuffled": 0.0009995002498751,
+          "relative_support_contraction_vs_null_percent": 13.28913370538
+        },
+        "interpretation": "Le véritable regroupement historique concentre le support MIC observé davantage qu'un étiquetage d'histoire permuté de même complexité si le p unilatéral est petit.",
+        "limitation": "P_acc mesure le support empirique rétrospectif dans le panneau MIC observé; ce n'est ni une probabilité naturelle, ni une prédiction prospective, ni l'ensemble contrefactuel complet des réponses possibles."
+      },
+      "complete_case_X_H_m_Theta_tau_Pacc_R": {
+        "X": "limitation présente et antibiotique testé",
+        "H": "ascendance expérimentale de la lignée",
+        "m": "étiquette d'état historique de lignée utilisée dans le PID; trace biologique physique distincte non isolée",
+        "Theta": "panneau MIC, limitation et protocole expérimental publiés",
+        "tau": "endpoint expérimental MIC du jeu publié",
+        "P_acc": "support MIC empirique rétrospectif conditionné par X,H; voir P_acc_retrospective",
+        "R": "niveau MIC observé",
+        "status": "complete_retrospective_information_case_with_proxy_Pacc",
+        "limitation": "m est ici un état historique de lignée utilisé comme variable informationnelle, pas une trace physique isolée ni ablatable; P_acc est un support observé rétrospectif et ne démontre pas une médiation causale."
+      },
+      "warning": "PID I_min is one redundancy definition among several; results are exploratory and discretization-specific."
     }
   },
   "execution_errors": 0,

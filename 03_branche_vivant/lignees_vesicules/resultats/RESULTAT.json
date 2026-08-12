@@ -1238,6 +1238,44 @@
     "min_P_acc": 0.25,
     "max_P_acc": 1.0
   },
+  "P_acc_ablation_test": {
+    "definition": "moyenne des écarts P_acc(selection)-P_acc(drift) par transition; contraste FR moins moyenne FU/UR/UU",
+    "status": "empirical_retrospective_ablation_support_test",
+    "per_condition": {
+      "FR": {
+        "matched_transitions": 20,
+        "mean_delta_P_acc_selection_minus_drift": -0.0125,
+        "median_delta_P_acc_selection_minus_drift": 0.0
+      },
+      "FU": {
+        "matched_transitions": 10,
+        "mean_delta_P_acc_selection_minus_drift": 0.025,
+        "median_delta_P_acc_selection_minus_drift": 0.0
+      },
+      "UR": {
+        "matched_transitions": 10,
+        "mean_delta_P_acc_selection_minus_drift": 0.05,
+        "median_delta_P_acc_selection_minus_drift": 0.0
+      },
+      "UU": {
+        "matched_transitions": 10,
+        "mean_delta_P_acc_selection_minus_drift": 0.0,
+        "median_delta_P_acc_selection_minus_drift": 0.0
+      }
+    },
+    "mechanism_P_acc_ablation_contrast": -0.0375,
+    "bootstrap_transitions": {
+      "repeats": 5000,
+      "seed": 20260812,
+      "q025": -0.1458333333333,
+      "q975": 0.0625,
+      "fraction_positive": 0.2412
+    },
+    "direction_expected_if_complete_regime_opens_more_classes": "positive",
+    "direction_observed": "negative",
+    "verdict": "does_not_support_positive_Pacc_ablation_contrast",
+    "limitation": "ce test porte sur le support discret observé des descendants; il ne remplace pas le contraste de réponse C-VES-03 et ne transforme pas P_acc en probabilité naturelle"
+  },
   "complete_case_X_H_m_Theta_tau_Pacc_R": {
     "X": "condition expérimentale et bras drift/selection au départ de la transition",
     "H": "suite codée des transferts donneur-receveur avant la transition",

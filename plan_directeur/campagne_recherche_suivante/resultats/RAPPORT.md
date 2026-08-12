@@ -7,6 +7,7 @@
 - **speleothemes** : `audited`
 - **vesicules** : `analysed`
 - **antibiotique_2026** : `analysed`
+- **antibiotique_pid** : `exploratory_additional_analysis`
 
 Erreurs d'exécution : **0**.
 Blocs en attente de données externes : **0**.

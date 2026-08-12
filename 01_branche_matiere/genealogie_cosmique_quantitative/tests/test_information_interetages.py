@@ -20,3 +20,13 @@ def test_real_tables_preserve_same_grain_rows():
     assert len(result["results"]) == 2
     assert sum(row["same_carrier_rows"] for row in result["results"]) > 10_000
     assert all(0 <= row["normalized_I_stellar_type_host"] <= 1 for row in result["results"])
+
+
+def test_publication_robustness_is_reported_without_upgrading_claim() -> None:
+    result = MODULE.analyse(Path(__file__).parents[1])
+    for row in result["results"]:
+        robustness = row["publication_robustness"]
+        assert robustness["leave_one_publication_out"]["runs"] > 0
+        assert robustness["publication_cluster_bootstrap"]["repeats"] == 1000
+        assert 0.0 < robustness["sampling_concentration"]["largest_publication_fraction"] <= 1.0
+    assert "no_conservation_claim" in result["verdict"]

@@ -53,6 +53,7 @@
   "critical_blockers": [
     "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
     "memoire_matiere: aucune chaîne complète admise",
-    "P_acc: non mesuré transversalement"
+    "P_acc: plusieurs mesures locales existent désormais mais aucune échelle commune interdomaines n'est validée",
+    "réplications indépendantes: résultats vivants positifs encore non répliqués sur jeux indépendants"
   ]
 }

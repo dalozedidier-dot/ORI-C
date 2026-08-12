@@ -37,10 +37,28 @@ def analyse(complete: dict) -> dict:
                 "accessible_thresholds_robust_q025": [threshold for threshold in THRESHOLDS if q025 >= threshold],
             }
         events.append(base)
+    canonical_trace = [
+        {
+            "event": event["event"],
+            "time_after_CAI_myr": event["time_after_CAI_myr"],
+            "time_sigma_myr": event["time_sigma_myr"],
+            "m_remaining_fraction_median": event["reservoir_scenarios"]["canonique_homogene"]["remaining_fraction_median"],
+            "m_remaining_fraction_q025": event["reservoir_scenarios"]["canonique_homogene"]["remaining_fraction_q025"],
+            "m_remaining_fraction_q975": event["reservoir_scenarios"]["canonique_homogene"]["remaining_fraction_q975"],
+        }
+        for event in events
+    ]
     return {
         "schema": "oric.gc.26al-accessibility-distribution.v1",
         "status": "retrospective_analytic_sensitivity_not_preregistered",
         "quantity": "fraction de l'inventaire CAI de référence restant physiquement disponible",
+        "m_trace": {
+            "definition": "inventaire radiogénique résiduel continu dérivé des âges empiriques et de la demi-vie 26Al, avant discrétisation en classes P_acc",
+            "status": "derived_physical_history_trace_from_empirical_ages",
+            "canonical_reservoir_trace": canonical_trace,
+            "distinction_from_P_acc": "m conserve la fraction continue résiduelle et son intervalle analytique; P_acc ne conserve que les seuils d'accessibilité franchis",
+            "limitation": "trace dérivée sous modèle de décroissance et scénario de réservoir déclaré; elle n'est pas une mesure locale directe de 26Al dans chaque événement",
+        },
         "half_life_myr": HALF_LIFE_MYR,
         "age_model": "normal approximation from published event age and sigma",
         "reservoir_history_model": "three declared sensitivity scenarios, not probabilities",

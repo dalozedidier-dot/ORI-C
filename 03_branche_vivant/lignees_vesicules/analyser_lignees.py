@@ -356,6 +356,68 @@ def accessible_descendant_classes(data: pd.DataFrame) -> dict[str, object]:
     }
 
 
+
+def pacc_ablation_contrast(p_acc: dict[str, object], repeats: int = 5000) -> dict[str, object]:
+    """Compare le support descendant sous régime complet et contrôles d'ablation.
+
+    Le contraste reprend exactement la logique de C-VES-03 : FR est le régime
+    complet et FU/UR/UU sont les régimes où une composante du mécanisme est
+    retirée. P_acc reste ici un support empirique rétrospectif sur quatre
+    classes, pas un ensemble contrefactuel complet.
+    """
+    rows = p_acc["strata"]
+    by_key = {(row["condition"], row["arm"], int(row["transition"])): float(row["P_acc"]) for row in rows}
+    transitions = sorted({int(row["transition"]) for row in rows})
+    per_condition: dict[str, dict[str, object]] = {}
+    deltas: dict[str, list[float]] = {}
+    for condition in ("FR", "FU", "UR", "UU"):
+        paired = []
+        for transition in transitions:
+            drift = by_key.get((condition, "drift", transition))
+            selection = by_key.get((condition, "selection", transition))
+            if drift is None or selection is None:
+                continue
+            paired.append(float(selection - drift))
+        deltas[condition] = paired
+        per_condition[condition] = {
+            "matched_transitions": len(paired),
+            "mean_delta_P_acc_selection_minus_drift": float(np.mean(paired)) if paired else None,
+            "median_delta_P_acc_selection_minus_drift": float(np.median(paired)) if paired else None,
+        }
+
+    control_means = [per_condition[c]["mean_delta_P_acc_selection_minus_drift"] for c in ("FU", "UR", "UU")]
+    contrast = float(per_condition["FR"]["mean_delta_P_acc_selection_minus_drift"] - np.mean(control_means))
+
+    rng = np.random.default_rng(20260812)
+    bootstrap = np.empty(repeats, dtype=float)
+    arrays = {condition: np.asarray(values, dtype=float) for condition, values in deltas.items()}
+    for i in range(repeats):
+        fr_values = arrays["FR"]
+        fr = np.mean(fr_values[rng.integers(0, len(fr_values), size=len(fr_values))])
+        controls = []
+        for condition in ("FU", "UR", "UU"):
+            values = arrays[condition]
+            controls.append(np.mean(values[rng.integers(0, len(values), size=len(values))]))
+        bootstrap[i] = fr - np.mean(controls)
+
+    return {
+        "definition": "moyenne des écarts P_acc(selection)-P_acc(drift) par transition; contraste FR moins moyenne FU/UR/UU",
+        "status": "empirical_retrospective_ablation_support_test",
+        "per_condition": per_condition,
+        "mechanism_P_acc_ablation_contrast": contrast,
+        "bootstrap_transitions": {
+            "repeats": repeats,
+            "seed": 20260812,
+            "q025": float(np.quantile(bootstrap, 0.025)),
+            "q975": float(np.quantile(bootstrap, 0.975)),
+            "fraction_positive": float(np.mean(bootstrap > 0.0)),
+        },
+        "direction_expected_if_complete_regime_opens_more_classes": "positive",
+        "direction_observed": "positive" if contrast > 0 else ("negative" if contrast < 0 else "zero"),
+        "verdict": "supports_positive_Pacc_ablation_contrast" if contrast > 0 else "does_not_support_positive_Pacc_ablation_contrast",
+        "limitation": "ce test porte sur le support discret observé des descendants; il ne remplace pas le contraste de réponse C-VES-03 et ne transforme pas P_acc en probabilité naturelle",
+    }
+
 def main() -> dict[str, object]:
     files = {
         condition: [path for replicate in (1, 2, 3) if (path := locate(f"{condition}{replicate}_log.xlsx"))]
@@ -390,6 +452,7 @@ def main() -> dict[str, object]:
         mechanism_contrast = float(selection_response["FR"] - np.mean(ablation_controls))
         lineage_test = lineage_permutation_test(data)
         p_acc = accessible_descendant_classes(data)
+        p_acc_ablation = pacc_ablation_contrast(p_acc)
         result = {
             "status": "analysed",
             "pairs": int(len(data)),
@@ -398,6 +461,7 @@ def main() -> dict[str, object]:
             "mechanism_ablation_contrast": mechanism_contrast,
             "lineage_permutation_test": lineage_test,
             "P_acc_measurement": p_acc,
+            "P_acc_ablation_test": p_acc_ablation,
             "complete_case_X_H_m_Theta_tau_Pacc_R": {
                 "X": "condition expérimentale et bras drift/selection au départ de la transition",
                 "H": "suite codée des transferts donneur-receveur avant la transition",
