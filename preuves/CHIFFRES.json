@@ -765,7 +765,7 @@
       "source": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/INFORMATION_INTERETAGES.json",
       "targets": [],
       "tolerance": 1e-15,
-      "value": 0.47226386806596704
+      "value": 0.472263868066
     },
     {
       "display": "5 cas",

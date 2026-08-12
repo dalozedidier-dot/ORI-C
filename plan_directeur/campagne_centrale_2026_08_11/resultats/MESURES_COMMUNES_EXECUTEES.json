@@ -191,19 +191,19 @@
       "value": [
         {
           "dataset": "PGD_SiC_PUBLISHED_SELECTED.csv",
-          "normalized_I": 0.050419643117984754,
-          "publication_stratified_p": 0.47226386806596704,
-          "loo_min": 0.02974556708054737,
-          "loo_max": 0.06720806177600552,
-          "largest_publication_fraction": 0.37710095882684713
+          "normalized_I": 0.050419643118,
+          "publication_stratified_p": 0.472263868066,
+          "loo_min": 0.029745567081,
+          "loo_max": 0.067208061776,
+          "largest_publication_fraction": 0.377100958827
         },
         {
           "dataset": "PGD_GRAPHITE_PUBLISHED_SELECTED.csv",
-          "normalized_I": 0.1530848455898593,
+          "normalized_I": 0.15308484559,
           "publication_stratified_p": 1.0,
-          "loo_min": 0.08437668809403068,
-          "loo_max": 0.19490038187084072,
-          "largest_publication_fraction": 0.3978118161925602
+          "loo_min": 0.084376688094,
+          "loo_max": 0.194900381871,
+          "largest_publication_fraction": 0.397811816193
         }
       ],
       "scope": "association inter-étages mesurée mais non séparable de la stratégie d'échantillonnage par publication"

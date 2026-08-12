@@ -198,7 +198,26 @@ def analyse(root: Path) -> dict[str, object]:
     }
 
 
+def _stable_json_numbers(value: object, decimals: int = 12) -> object:
+    """Quantifie uniquement la sérialisation pour une identité inter-plateforme.
+
+    Les calculs restent en double précision. La quantification à 12 décimales
+    intervient seulement avant l'écriture JSON afin d'éviter que des différences
+    de quelques ULP (CPU/libm/NumPy) cassent le test de reconstruction byte-à-byte.
+    """
+    if isinstance(value, float):
+        return round(value, decimals) if math.isfinite(value) else value
+    if isinstance(value, dict):
+        return {key: _stable_json_numbers(item, decimals) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_stable_json_numbers(item, decimals) for item in value]
+    if isinstance(value, tuple):
+        return [_stable_json_numbers(item, decimals) for item in value]
+    return value
+
+
 def write_output(root: Path, output: Path) -> dict[str, object]:
     result = analyse(root)
-    output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    return result
+    stable_result = _stable_json_numbers(result)
+    output.write_text(json.dumps(stable_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    return stable_result

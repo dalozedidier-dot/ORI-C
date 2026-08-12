@@ -30,3 +30,9 @@ def test_publication_robustness_is_reported_without_upgrading_claim() -> None:
         assert robustness["publication_cluster_bootstrap"]["repeats"] == 1000
         assert 0.0 < robustness["sampling_concentration"]["largest_publication_fraction"] <= 1.0
     assert "no_conservation_claim" in result["verdict"]
+
+
+def test_stable_json_numbers_absorb_last_bit_platform_drift() -> None:
+    a = MODULE._stable_json_numbers({"value": 0.47226386806596704})
+    b = MODULE._stable_json_numbers({"value": 0.47226386806599704})
+    assert a == b == {"value": 0.472263868066}
