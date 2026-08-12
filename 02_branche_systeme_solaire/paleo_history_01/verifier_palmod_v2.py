@@ -90,7 +90,9 @@ def main() -> int:
     if args.write_catalog:
         catalog = build_ensemble_catalog(args.lipd_zip)
         args.write_catalog.write_text(
-            json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
         )
         result["catalog_written"] = str(args.write_catalog)
     if args.ensemble:

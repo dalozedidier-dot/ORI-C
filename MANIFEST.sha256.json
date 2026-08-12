@@ -5585,8 +5585,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/paleo_history_01/verifier_palmod_v2.py",
-      "size": 4028,
-      "sha256": "a8e4ee52b304a8ed4f3a085210a2e240c9993d9057fb1d93c8a54e8eedb158aa",
+      "size": 4067,
+      "sha256": "2bf251edbafb04f711cba976559151fcbac58012b1f9c3f9847ca2bb39ee7210",
       "storage": "inline"
     },
     {
@@ -6292,6 +6292,18 @@
       "storage": "inline"
     },
     {
+      "path": "checkup_complet.paths.example.json",
+      "size": 195,
+      "sha256": "e7696e1eb1772aa601265c909a2c7bb2a5dd1de2aad9898bc4edfe1df0af7618",
+      "storage": "inline"
+    },
+    {
+      "path": "checkup_complet.py",
+      "size": 21748,
+      "sha256": "ddab94b8f6dd951c48e4942d9faf2bcf1a8952525f5a7ec97b06ebaba6b2026e",
+      "storage": "inline"
+    },
+    {
       "path": "comparaisons_externes/SOURCES_FORMALISMES.md",
       "size": 1729,
       "sha256": "3cc9b84ca34d2ffa22f6012d93c0269bf2f4a017ccf3620e8fd0597aa5314630",
@@ -6329,8 +6341,8 @@
     },
     {
       "path": "construire_dossier.py",
-      "size": 89165,
-      "sha256": "19accf9e244fe122d78cbb5a55165895415a34d46e6df91f9adeb9632a7452d2",
+      "size": 89179,
+      "sha256": "0cc7821d66dad136b085a9e1eae4558fd3bda92810aba9142c3a502084066fb1",
       "storage": "inline"
     },
     {
@@ -6809,14 +6821,14 @@
     },
     {
       "path": "enregistrer_environnement.py",
-      "size": 5562,
-      "sha256": "dd1062fd9944ee5593fc1ac26cc36e3b3500af7710c27aad94255d299027a35f",
+      "size": 5576,
+      "sha256": "15c85a0ac3ecd894841eae051593f2bb41630fdbaaf91458477106b858794d8c",
       "storage": "inline"
     },
     {
       "path": "etat_des_tests.py",
-      "size": 29364,
-      "sha256": "a564398c03e6214165499863cebfa9c5be5d17db717e908dd88fe00148ba1346",
+      "size": 29378,
+      "sha256": "a62da37d167785b1f73e15124e2e7829740225ff063c126a81aa2c72a3a2a044",
       "storage": "inline"
     },
     {
@@ -7001,8 +7013,8 @@
     },
     {
       "path": "plan_directeur/audit_transversal.json",
-      "size": 5752,
-      "sha256": "60ee7776f7bb359fca7c765ffc5ff29dc33340ded375d5d2d0dbbe75b07c8d19",
+      "size": 5815,
+      "sha256": "fd13e28d61efa4b15183e52a3810dfdda2cf9e151f7d8473d3a34b7dc4d2acfc",
       "storage": "inline"
     },
     {
@@ -7139,8 +7151,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/analyser_sources_recuperees.py",
-      "size": 8090,
-      "sha256": "6e63dc538eac9694bd7e9021581cf7fde18d03eda16dcd5a1de326a31f52c0da",
+      "size": 8135,
+      "sha256": "ee879f69dac72d8b09d2f5d8a6dd58ed58eae60288e6b15810d8959fc026a84a",
       "storage": "inline"
     },
     {
@@ -9618,7 +9630,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 24418,
-      "sha256": "17be24f6e14f4ac15f66bcdcfaca22adb05eb662eb08fa790dbd12a0910ad949",
+      "sha256": "af71e7b76c4d876cc5bbd20f26da537986f9f257f3c1c98f5ffbe4c5f725d081",
       "storage": "inline"
     },
     {

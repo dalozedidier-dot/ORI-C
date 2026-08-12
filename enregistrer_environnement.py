@@ -126,7 +126,7 @@ def main() -> int:
     donnees = collecter()
 
     if not arguments.verifier:
-        CIBLE.write_text(rendre(donnees), encoding="utf-8")
+        CIBLE.write_text(rendre(donnees), encoding="utf-8", newline="\n")
         print(f"{CIBLE.name} écrit.")
         return 0
 

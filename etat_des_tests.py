@@ -709,7 +709,7 @@ def main() -> int:
         return 1
 
     contenu = composer(rejouer=arguments.rejouer_analyse)
-    cible.write_text(contenu, encoding="utf-8")
+    cible.write_text(contenu, encoding="utf-8", newline="\n")
     print(f"écrit : {cible}")
     print(f"manifeste : {actualiser_manifeste(cible)}")
     if arguments.rejouer_analyse:

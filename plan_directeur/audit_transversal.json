@@ -73,11 +73,12 @@
       },
       "Pth et Pacc(T,C,epsilon)": {
         "branches_ou_une_mesure_existe": [
-          "branche 2 système solaire"
+          "branche 2 système solaire",
+          "branche 3 vivant"
         ],
-        "nombre_de_branches": 1,
+        "nombre_de_branches": 2,
         "produit_une_mesure": true,
-        "traverse_deux_branches_ou_plus": false
+        "traverse_deux_branches_ou_plus": true
       },
       "séparation X m A": {
         "branches_ou_une_mesure_existe": [],
@@ -138,6 +139,7 @@
       "séparation X m A"
     ],
     "notions_traversant_au_moins_deux_branches": [
+      "Pth et Pacc(T,C,epsilon)",
       "dépendance au chemin",
       "fenêtre longue devant les constantes de temps",
       "liens typés de la carte",

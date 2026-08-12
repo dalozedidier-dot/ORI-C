@@ -1089,7 +1089,7 @@ def ecrire_manifeste(destination: Path) -> int:
         digest = hashlib.sha256(chemin.read_bytes()).hexdigest()
         lignes.append(f"{digest}  {chemin.relative_to(destination).as_posix()}")
     (destination / "MANIFEST.sha256").write_text(
-        "\n".join(lignes) + "\n", encoding="utf-8"
+        "\n".join(lignes) + "\n", encoding="utf-8", newline="\n"
     )
     return len(lignes)
 
