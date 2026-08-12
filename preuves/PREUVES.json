@@ -28,7 +28,7 @@
       "niveau_preuve": "E2",
       "portee": "empirique_externe",
       "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "empreinte_sortie": "e5587a71ed8ba5cdf4498b09850315a7506f7ffd93023669a5c6b5c615fe9620",
+      "empreinte_sortie": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
       "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "mesures": {
         "observed_parent_offspring_r": 0.7642621398381,
@@ -46,7 +46,7 @@
       "niveau_preuve": "E4",
       "portee": "empirique_externe",
       "artefact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
-      "empreinte_sortie": "e5587a71ed8ba5cdf4498b09850315a7506f7ffd93023669a5c6b5c615fe9620",
+      "empreinte_sortie": "b837b561019c3ff10dd6bf891b58513a6ccd0fd53e5fe1fff33f4c301ff75990",
       "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "mesures": {
         "reponse_selection_FR": 0.05441770833333,

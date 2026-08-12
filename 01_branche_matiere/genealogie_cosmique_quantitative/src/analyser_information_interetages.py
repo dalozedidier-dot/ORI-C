@@ -92,5 +92,5 @@ def analyse(root: Path) -> dict[str, object]:
 
 def write_output(root: Path, output: Path) -> dict[str, object]:
     result = analyse(root)
-    output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     return result
