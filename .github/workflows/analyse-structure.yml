@@ -164,6 +164,19 @@ jobs:
           python chaine_filtres.py \
             | tee "$OUT/logs/chaine_filtres.log"
 
+      - name: Vérifier les sorties structurelles déterministes
+        run: |
+          git diff --exit-code -- \
+            00_socle/carte_relationnelle/resultats_analyse/analyse_graphe.json \
+            00_socle/genealogie/cloture_arbre.json \
+            01_branche_matiere/genealogie/cloture_genealogie.json \
+            01_branche_matiere/hypergraphe_transformations/validation_hypergraphe.json \
+            01_branche_matiere/hypergraphe_transformations/inventaire_accessible_resultats.json \
+            01_branche_matiere/hypergraphe_transformations/test_hierarchie_resultats.json \
+            01_branche_matiere/inventaire_hierarchique/manques_detectes.json \
+            01_branche_matiere/inventaire_hierarchique/carte_causale.json \
+            01_branche_matiere/inventaire_hierarchique/chaine_filtres_azote.json
+
       - name: Recalculer l'audit transversal
         run: |
           mkdir -p "$RUNNER_TEMP/audit-reference"

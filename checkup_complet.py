@@ -170,6 +170,7 @@ class Runner:
         cwd: Path = ROOT,
         timeout: int | None = None,
         allow_failure: bool = False,
+        success_codes: tuple[int, ...] = (0,),
     ) -> Step:
         self.counter += 1
         safe = "".join(c if c.isalnum() or c in "-_" else "_" for c in name.lower())[:80]
@@ -193,7 +194,7 @@ class Runner:
                 terminate_process_tree(process)
                 returncode = 124
         elapsed = time.monotonic() - started
-        status = "PASS" if returncode == 0 else ("WARN" if allow_failure else "FAIL")
+        status = "PASS" if returncode in success_codes else ("WARN" if allow_failure else "FAIL")
         detail = f"code={returncode}, {elapsed:.1f}s"
         if timed_out:
             detail += ", délai dépassé"
@@ -326,6 +327,91 @@ def run_palmod_audit(config: dict[str, Path | None], runner: Runner) -> None:
         "PASS" if actual == expected else "FAIL",
         f"sha256={actual}" + ("" if actual == expected else f", attendu={expected}"),
     )
+
+
+def run_structural_rebuild(runner: Runner, quick: bool) -> None:
+    """Rejoue les sorties structurelles déterministes.
+
+    Cette couche est exécutée avant les campagnes scientifiques : le manifeste
+    final doit détecter toute sortie structurelle versionnée devenue obsolète.
+    """
+    runner.run(
+        "structure — arbre généalogique du socle",
+        [sys.executable, "00_socle/genealogie/arbre_genealogique.py"],
+    )
+    runner.run(
+        "structure — généalogie matière",
+        [sys.executable, "01_branche_matiere/genealogie/construire_genealogie.py"],
+    )
+    hyper = ROOT / "01_branche_matiere" / "hypergraphe_transformations"
+    runner.run(
+        "structure — hypergraphe matière",
+        [sys.executable, "construire_et_valider.py"],
+        cwd=hyper,
+    )
+    runner.run(
+        "structure — inventaire accessible",
+        [sys.executable, "analyser_inventaire.py"],
+        cwd=hyper,
+    )
+    if quick:
+        runner.record(
+            "structure — hiérarchie et inventaire étendu",
+            "SKIP",
+            "mode --quick; les sorties structurales centrales restent recalculées",
+        )
+        return
+
+    inventaire = ROOT / "01_branche_matiere" / "inventaire_hierarchique"
+    runner.run(
+        "structure — détection des manques",
+        [sys.executable, "detecter_manques.py"],
+        cwd=inventaire,
+    )
+    runner.run(
+        "structure — carte causale",
+        [sys.executable, "carte_causale.py"],
+        cwd=inventaire,
+    )
+    runner.run(
+        "structure — chaîne de filtres",
+        [sys.executable, "chaine_filtres.py"],
+        cwd=inventaire,
+    )
+
+
+def check_git_clean(runner: Runner) -> None:
+    """Échoue si Git contient encore des changements ou fichiers non suivis."""
+    if not shutil.which("git") or not (ROOT / ".git").exists():
+        runner.record("état Git final", "SKIP", "Git ou .git absent")
+        return
+    step = runner.run(
+        "état Git final — lecture",
+        ["git", "status", "--porcelain", "--untracked-files=all"],
+    )
+    if step.status != "PASS" or not step.log:
+        return
+    try:
+        lines = [
+            line for line in Path(step.log).read_text(
+                encoding="utf-8", errors="replace"
+            ).splitlines()
+            if line.strip()
+        ]
+    except OSError as exc:
+        runner.record("état Git final", "FAIL", f"journal illisible : {exc}")
+        return
+    if lines:
+        preview = ", ".join(lines[:8])
+        if len(lines) > 8:
+            preview += f", … (+{len(lines) - 8})"
+        runner.record(
+            "état Git final",
+            "FAIL",
+            f"{len(lines)} changement(s) Git/non suivi(s) : {preview}",
+        )
+    else:
+        runner.record("état Git final", "PASS", "arbre de travail propre")
 
 
 def run_state_suites(runner: Runner) -> None:
@@ -472,6 +558,8 @@ def main(argv: list[str] | None = None) -> int:
     run_external_source_audit(config, runner)
     run_palmod_audit(config, runner)
 
+    run_structural_rebuild(runner, args.quick)
+
     runner.run(
         "normalisation paléoclimatique",
         [sys.executable, "02_branche_systeme_solaire/paleo_history_01/normaliser_donnees.py"],
@@ -570,10 +658,7 @@ def main(argv: list[str] | None = None) -> int:
     runner.run("validation finale stricte", [sys.executable, "scripts/valider_tout.py", "--strict-lfs"], timeout=max(args.timeout, 900))
     runner.run("manifeste final", [sys.executable, "build_manifest.py", "verify"])
 
-    if shutil.which("git") and (ROOT / ".git").exists():
-        runner.run("état Git final", ["git", "status", "--short"], allow_failure=True)
-    else:
-        runner.record("état Git final", "SKIP", "Git ou .git absent")
+    check_git_clean(runner)
 
     json_report, md_report = write_report(runner, config_path, config)
     failures = [step for step in runner.steps if step.status == "FAIL"]

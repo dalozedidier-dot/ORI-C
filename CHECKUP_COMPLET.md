@@ -11,10 +11,12 @@ python checkup_complet.py
 ```
 
 Le lanceur vérifie le manifeste initial, l'intégrité stricte, les données
-externes déclarées si leurs chemins sont fournis, le paléoclimat, la généalogie
-cosmique, les mesures locales `m/P_acc`, la campagne de recherche suivante, la
-campagne centrale, la campagne maximale trois branches, l'audit transversal,
-les certifications, le registre de preuves et le manifeste final.
+externes déclarées si leurs chemins sont fournis, les sorties structurelles déterministes (généalogies, hypergraphe et
+inventaires), le
+paléoclimat, la généalogie cosmique, les mesures locales `m/P_acc`, la campagne
+de recherche suivante, la campagne centrale, la campagne maximale trois
+branches, l'audit transversal, les certifications, le registre de preuves et le
+manifeste final.
 
 Deux variantes existent :
 
@@ -56,3 +58,17 @@ Le check-up **vérifie** les manifestes ; il ne les reconstruit pas pour masquer
 une divergence. Si un recalcul modifie un artefact versionné, le contrôle final
 doit échouer jusqu'à ce que la différence soit examinée, scientifiquement
 acceptée, puis scellée volontairement dans une mise à jour.
+
+## Synchronisation structurelle
+
+Le check-up rejoue désormais les sorties structurelles versionnées avant les
+campagnes scientifiques. Une source ajoutée à `sources.csv`, une relation modifiée
+ou un inventaire recalculé qui n'aurait pas été répercuté dans son JSON dérivé
+fera donc échouer le manifeste final. Le workflow `analyse-structure.yml` applique
+le même principe et échoue immédiatement si une sortie structurelle déterministe
+présente un `git diff`. Les sorties numériques explicitement contrôlées à
+tolérance (calibrage, audit transversal) conservent leur comparaison spécialisée.
+
+Le contrôle Git final ne se contente plus d'exécuter `git status` : toute sortie
+non commise ou tout fichier non suivi restant dans le dépôt est désormais un
+échec du check-up.
