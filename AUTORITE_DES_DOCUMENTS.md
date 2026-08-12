@@ -28,7 +28,7 @@ ci-dessous.
    recalculé à chaque exécution.
 2. Un **erratum** prime sur l'article qu'il accompagne.
 3. Un **article** prime sur ses variantes et versions antérieures.
-4. En dernier ressort, `preuves/PREUVES.json` fixe le statut machine de chaque résultat. `ETAT_DES_PREUVES.md` en est la vue générée destinée à la lecture humaine. `preuves/CHIFFRES.json` fixe les nombres canoniques rendus publiquement. Pour la publication `0.9.6-research`, **13/15 en astronomie et M2 à 1/10 sont des invariants documentaires contrôlés par CI**.
+4. En dernier ressort, `preuves/PREUVES.json` fixe le statut machine de chaque résultat. `ETAT_DES_PREUVES.md` en est la vue générée destinée à la lecture humaine. `preuves/CHIFFRES.json` fixe les nombres canoniques rendus publiquement. Pour la publication `0.9.7-research`, **13/15 en astronomie et M2 à 1/10 restent des invariants documentaires contrôlés par CI** ; les nouveaux résultats `INV-A` ne peuvent pas les reclasser.
 
 ## Règles de lecture et de mise à jour
 
@@ -284,9 +284,9 @@ climatiques exécutés au titre du WP-C1, sept concluent à une réfutation.
 
 En cas de désaccord entre une prose et `preuves/PREUVES.json`, le registre machine tranche. `ETAT_DES_PREUVES.md` doit être régénéré depuis ce registre ; une divergence entre les deux est une erreur de CI.
 
-## Publication stable 0.9.6-research
+## Publication stable 0.9.7-research
 
-`PUBLICATION_STABLE.md` fixe la procédure de publication du snapshot du 12 août 2026. `RELEASE_NOTES_v0.9.6-research.md` décrit ce snapshot mais ne prime jamais sur les sorties machine. La publication doit conserver simultanément les résultats positifs et les résultats négatifs, notamment **13/15** pour la couche astronomique et **1/10** pour M2.
+`PUBLICATION_STABLE.md` fixe la procédure de publication du snapshot du 12 août 2026. `RELEASE_NOTES_v0.9.7-research.md` décrit le snapshot courant mais ne prime jamais sur les sorties machine. `RELEASE_NOTES_v0.9.6-research.md` reste l’archive du snapshot antérieur. La publication doit conserver simultanément les résultats positifs et négatifs, notamment **13/15** pour la couche astronomique, **1/10** pour M2 et le contraste vésiculaire `P_acc` tel qu’il a été mesuré.
 
 `02_branche_systeme_solaire/couche_memoire_historique/exploratoire_causalite/resultats/PCMCI_PLUS_RESULTAT.json` est une sortie exploratoire du run complet. Elle ne constitue ni un préenregistrement confirmatoire ni une correction du verdict M2.
 

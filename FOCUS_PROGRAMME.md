@@ -1,4 +1,4 @@
-# Périmètre de recherche ORI-C — publication v0.9.6-research
+# Périmètre de recherche ORI-C — publication v0.9.7-research
 
 ## Plan directeur central actif
 
@@ -19,7 +19,7 @@ mesurent `P_acc`, testent un invariant, ajoutent une intervention, fournissent
 une réplication, produisent une prédiction prospective ou peuvent falsifier une
 hypothèse importante. Le reste demeure dans le backlog.
 
-Le tag `v0.9.5-research` reste gelé comme snapshot antérieur. La publication `v0.9.6-research` intègre le front explicitement autorisé de **généalogie cosmique quantitative** qui manquait entre l'enrichissement stellaire et l'architecture du Système solaire. Les cinq livrables antérieurs restent valides et ce raccordement amont devient une priorité scientifique structurante.
+Le tag `v0.9.6-research` reste gelé comme snapshot antérieur. La publication `v0.9.7-research` conserve la généalogie cosmique quantitative introduite en 0.9.6 et ajoute l’opérationnalisation exécutable de `INV-A`, avec un second système `do(m)` au niveau modèle (`EXO-DOM-01`). Les verdicts antérieurs restent inchangés et cette extension ne transforme pas le résultat modèle en réplication empirique.
 
 | Livrable | État courant | Prochaine étape utile |
 |---|---|---|
@@ -65,6 +65,6 @@ Le travail prioritaire n’est plus d’ajouter des scénarios de formation. Il 
 
 `C-AST-01` demeure séparé : il teste l’efficacité causale d’une architecture déjà donnée au niveau modèle et ne sert pas de preuve de sa genèse.
 
-## Frontière de publication stable 0.9.6-research
+## Frontière de publication stable 0.9.7-research
 
-Le snapshot stable du 12 août intègre les développements validés depuis la publication précédente : N-corps **13/15**, spin-orbite exécuté et reproductible selon son vérificateur dédié, M2 **1/10** et non soutenu. Les prochains travaux scientifiques doivent partir de cette frontière sans réécrire ces verdicts. Les priorités restent la réplication indépendante, les interventions symétriques Uranus/Neptune, une Terre-Lune explicitement résolue si les marées deviennent l’objet du test, et des prédictions séparantes du cadre.
+Le snapshot stable du 12 août conserve N-corps **13/15**, spin-orbite exécuté et reproductible, M2 **1/10** et non soutenu. Il porte désormais le benchmark transversal à **21 cas**, **6 claims complets** et **5 systèmes distincts**, dont **2 systèmes avec intervention directe sur `m`**. `EXO-DOM-01` soutient un effet local `do(m) -> Delta P_acc` au niveau modèle avec `X/Theta/A` appariés ; la porte transversale générale reste fermée. Les prochains travaux doivent viser une nouvelle réplication empirique `do(m)` indépendante, sans réécrire les verdicts existants.

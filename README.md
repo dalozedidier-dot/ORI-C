@@ -74,9 +74,9 @@ séparés.
 ```
 
 
-## Publication stable 0.9.6 — généalogie cosmique quantitative
+## Apport introduit dans 0.9.6 — généalogie cosmique quantitative
 
-La version 0.9.6 intègre le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
+La version 0.9.6 a intégré le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
 
 La couche `01_branche_matiere/genealogie_cosmique_quantitative/` applique désormais un **pare-feu empirique strict** : aucune simulation, donnée synthétique, donnée construite, imputation, sortie de rendement stellaire, sortie thermochimique ou intégration orbitale ne peut entrer dans ses verdicts. Les articles mixtes observation/modèle sont admissibles uniquement pour leurs mesures explicitement transcrites ; leur partie modélisée est déclarée dans `portion_excluded`.
 
@@ -333,18 +333,13 @@ Le dépôt exécute désormais, sans reclasser rétroactivement les preuves cert
 
 Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
 
-## Publication stable 0.9.6
+## Publication stable 0.9.7
 
-La version 0.9.6 fige l’état scientifique du 12 août 2026 au tag technique `v0.9.6-research`. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée. Elle intègre aussi la généalogie cosmique quantitative, le benchmark transversal à sept champs et leurs limites explicites, sans transformer leur présence en validation d’un invariant général.
+La version 0.9.7 fige l’état scientifique du 12 août 2026 au tag technique `v0.9.7-research`. Elle conserve les verdicts antérieurs, notamment **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée, ainsi que le pare-feu empirique de la généalogie cosmique quantitative.
 
-Le candidat transversal `INV-A : Delta m -> Delta P_acc` est désormais formalisé
-comme objet testable, avec domaine d'applicabilité, séparation des classes de
-contrôle, contraste d'accessibilité local, sémantique explicite de `tau_m` et
-unité de réplication au niveau du système indépendant. Cette formalisation
-**n'ajoute aucun résultat positif** : le seul contraste `P_acc` direct sous
-ablation de `m` actuellement exécuté ne soutient pas la direction positive
-gelée. Voir `00_socle/INVARIANT_TRANSVERSAL.md` et
-`plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INV_A.json`.
+Le benchmark transversal compte désormais **21 cas**, dont **6 claims complets** sur `X, H, m, Θ, τ, P_acc, R`, répartis sur **5 systèmes distincts**. Deux systèmes possèdent une intervention directe sur `m`. Le cas vésiculaire conserve son résultat local tel quel. Le nouveau cas `EXO-DOM-01`, au niveau `E4_modele`, maintient `X`, `Θ` et l’architecture identiques par construction, modifie uniquement les traces lentes `m`, puis applique les mêmes forçages futurs. Il mesure `P_acc = 0,91` contre `0,87` sous `do(m)`, soit `|Delta P_acc| = 0,04` avec sham `= 0`. Le signe est une contraction et n’est pas universalisé.
+
+`INV-A : Delta m -> Delta P_acc` est ainsi opérationnalisé et auditable avec séparation stricte entre permutation d’histoire, `do(m)` et intervention architecturale. Son statut reste `candidate_operationalized_exploratory_not_validated` : **aucun invariant transversal général n’est déclaré validé**. Voir `00_socle/INVARIANT_TRANSVERSAL.md`, `02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/` et `plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INV_A.json`.
 
 La chaîne modèle désormais exécutée est :
 

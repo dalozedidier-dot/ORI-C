@@ -1,12 +1,12 @@
 {
   "title": "ORI-C : architecture, mémoire et futurs accessibles",
-  "description": "Snapshot stable 0.9.6-research du programme ORI-C. La publication conserve les résultats positifs et négatifs, notamment 13/15 critères pour la couche astronomique N-corps et 1/10 pour la formulation paléoclimatique M2. Elle intègre la généalogie cosmique quantitative sous pare-feu empirique strict, avec 48 sources/datasets admissibles, 120 enregistrements empiriques historiques et 11 467 lignes utiles normalisées, sans simulation, donnée synthétique ni imputation comme preuve. Aucun invariant transversal général ORI-C n'est revendiqué comme validé. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
+  "description": "Snapshot stable 0.9.7-research du programme ORI-C. La publication conserve les résultats positifs et négatifs, notamment 13/15 critères pour la couche astronomique N-corps et 1/10 pour la formulation paléoclimatique M2. Le benchmark transversal compte 21 cas, dont 6 claims complets sur X, H, m, Θ, τ, P_acc et R, pour 5 systèmes distincts. Deux systèmes possèdent une intervention directe sur m. EXO-DOM-01, au niveau E4_modele, garde X, Θ et l'architecture appariés et mesure P_acc=0,91 contre 0,87 sous do(m), soit |Δ|=0,04 avec sham=0. Ce résultat n'est pas une réplication empirique et aucun invariant transversal général ORI-C n'est revendiqué comme validé. La généalogie cosmique quantitative conserve son pare-feu empirique strict, sans simulation, donnée synthétique ni imputation comme preuve. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
   "creators": [
     {
       "name": "Daloze, Didier"
     }
   ],
-  "version": "0.9.6-research",
+  "version": "0.9.7-research",
   "publication_date": "2026-08-12",
   "license": "MIT",
   "upload_type": "software",
