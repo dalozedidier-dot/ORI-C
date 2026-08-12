@@ -1,0 +1,12 @@
+{
+  "schema": "oric.stable-snapshot-metadata.v1",
+  "version": "0.9.7-research",
+  "tag": "v0.9.7-research",
+  "commit": "c6d5a3112c944cd32b2a0ab020b1f8d15ac8c6df",
+  "publication_date": "2026-08-12",
+  "manifest_files": 1669,
+  "canonical_archive": "ORI-C-0.9.7-research-canonique.zip",
+  "canonical_archive_sha256": "e7038479cbae955421574c89942bf1d8da79f2559d66ddd4be290cc123a34bfc",
+  "immutable_historical_snapshot": true,
+  "note": "Ce fichier décrit le tag publié. Le manifeste racine de main peut évoluer sans réécrire ce compteur historique."
+}

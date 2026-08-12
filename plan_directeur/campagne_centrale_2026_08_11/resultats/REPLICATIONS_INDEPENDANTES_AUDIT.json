@@ -1,0 +1,16 @@
+{
+  "schema": "oric.section-xiv.replication-audit.v1",
+  "strict_reproduced_results": [],
+  "strict_reproduced_result_count": 0,
+  "required": 2,
+  "card2019": {
+    "dataset": "Card et al. 2019",
+    "doi": "10.5061/dryad.g41hg96",
+    "target": "histoire LTEE vers susceptibilité antibiotique",
+    "verdict": "does_not_support",
+    "interpretation": "une réplication indépendante négative existe déjà pour la famille antibiotique; elle ne reproduit pas le gain D'Onofrio"
+  },
+  "search_status": "no_new_strict_independent_replication_completed",
+  "condition_10_satisfied": false,
+  "rule": "une réplication négative de famille ou une réplication conceptuelle ne compte pas comme reproduction stricte d'un résultat positif"
+}

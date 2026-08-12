@@ -81,7 +81,7 @@ sur 35 hypothèses enregistrées, les résultats réfutés et non concluants res
 8. **Robustesse de la branche matière** : la projection paire à paire atteint 53 nœuds, mais la fermeture hypergraphique stricte n'en atteint que 46. Sur cet ensemble accessible, 34 hyperarêtes sur 53 sont critiques. Le recouvrement du carbone résiste aux retraits unitaires, celui de l'azote dépend d'une mesure publiée, l'hydrogène reste non évaluable et le désaccord du soufre est robuste.
 9. **Séparation astronomique** : le plus petit effet des six interventions reste 4 964 fois supérieur au plus grand écart numérique sélectionné. Les perturbations appariées montrent une réponse souvent asymétrique et parfois non antisymétrique.
 10. **Verrou des 100 ka** : selon le modèle, environ 98,6 à 99,3 % de la part observée de la bande de 100 ka reste descriptivement inexpliquée sur la fenêtre de prédiction.
-11. **Robustesse antibiotique** : le modèle historique gagne légèrement en validation groupée, mais la version sans pente fait mieux et le test de dernière transition inverse le classement. Le gain face au témoin n’est pas significatif dans le test apparié exact, p = 0,2266. Retirer la pente améliore le résultat, p = 0,0078, et la distribution nulle à 1 000 permutations donne p = 0,0649.
+11. **Robustesse du benchmark longitudinal amikacine** : ce bloc est distinct de D’Onofrio. Le modèle historique gagne légèrement en validation groupée, mais la version sans pente fait mieux et le test de dernière transition inverse le classement. Le gain face au témoin n’est pas significatif dans le test apparié exact, p = 0,2266. Retirer la pente améliore le résultat, p = 0,0078, et la distribution nulle à 1 000 permutations donne p = 0,0649. **Ces trois p-values ne portent pas sur D’Onofrio**, dont le benchmark séparé conserve RMSE 1,1309 contre 0,8042 et permutation p = 0,004975, tout en restant rétrospectif et non répliqué indépendamment.
 12. **ARN catalytique** : la branche 71-89 montre une hausse de diversité du sous-ensemble suivi, p exact = 0,0117. Les données décrivent une composition au fil des cycles, pas une filiation prébiotique.
 13. **Campagne maximale trois branches** : 21 tests de régression verrouillent les calculs, les ablations et leurs limites dans `plan_directeur/campagne_maximale_trois_branches/`.
 
@@ -130,14 +130,13 @@ Le plan fixe douze conditions. État :
 | 6. dépendance au chemin à conditions finales vérifiées | **fait** |
 | 7. persistance au-delà des constantes de temps | **fait** |
 | 8. `D`, `H`, `L` publiés séparément | **fait** dans le banc synthétique |
-| 9. `Pacc` mesuré dans un système par branche | **non** — le proxy observationnel est saturé et non causal |
+| 9. `Pacc` mesuré dans un système réel par branche | **non** — plusieurs mesures locales existent, mais aucune définition causale empirique qualifiée n’est instanciée dans les trois branches : le proxy observationnel historique est saturé, le support vésiculaire est rétrospectif et EXO-DOM-01 reste un modèle |
 | 10. deux résultats reproduits par des équipes indépendantes | **non** |
 | 11. un résultat traversant deux branches sans redéfinition | **non** |
 | 12. résultats négatifs visibles et versionnés | **fait** |
 
 **Sept conditions sur douze sont remplies.** Les cinq manquantes — 3, 4, 9, 10,
-11 — sont précisément celles qui exigent un résultat **positif**, une mesure de
-`Pacc` sur un système réel, et une réplication externe.
+11 — sont précisément celles qui exigent un résultat **positif hors échantillon**, un témoin apparié battu, une mesure causale de `Pacc` sur système réel, une réplication externe et un transfert sans redéfinition. L’état est désormais aussi généré par `campagne_centrale_2026_08_11/evaluer_seuil_xiv.py`; cette porte machine doit rester fail-closed.
 
 Le programme n'a franchi ni le premier seuil ni, a fortiori, le seuil fort.
 ## Phase v0.9.4 - calibrage de la branche matière

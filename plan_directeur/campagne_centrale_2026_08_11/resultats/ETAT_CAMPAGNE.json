@@ -9,7 +9,15 @@
   "inv_a_status": "candidate_operationalized_exploratory_not_validated",
   "inv_a_direct_m_ablation_systems": 2,
   "inv_a_direct_positive_m_ablation_systems": 1,
+  "section_xiv_passed": 7,
+  "section_xiv_missing": [
+    3,
+    4,
+    9,
+    10,
+    11
+  ],
   "claim_general": "ORI-C n'est pas validé comme théorie générale",
-  "next_executable_without_new_data": "conserver EXO-DOM-01 comme réplication modèle et cibler un do(m) empirique matière avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
-  "next_confirmatory_gate": "obtenir des réplications indépendantes pré-gelées de do(m)->Delta P_acc; la porte transversale exige trois systèmes indépendants dans les trois branches dont au moins deux empiriques"
+  "next_executable_without_new_data": "maintenir les portes machine §XIV et appliquer PACC-INT-CHALLENGE-V1 uniquement aux jeux interventionnels réellement appariés; aucun recalcul rétrospectif ne ferme les conditions 3, 9, 10 ou 11",
+  "next_confirmatory_gate": "conditions §XIV 3+4, 9, 10 et 11: prédiction hors échantillon battant un témoin apparié, Pacc causal empirique, réplication externe stricte et transfert sans redéfinition"
 }

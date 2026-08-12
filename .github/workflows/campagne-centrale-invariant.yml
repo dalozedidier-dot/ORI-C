@@ -9,6 +9,9 @@ on:
       - '00_socle/CODEBOOK.md'
       - 'plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md'
       - 'plan_directeur/campagne_centrale_2026_08_11/**'
+      - 'methodologie_puissance/pacc_causal.py'
+      - 'methodologie_puissance/tests/test_pacc_causal.py'
+      - 'protocoles_geles/PACC_INTERVENTIONNEL_V1.md'
       - '02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/**'
       - '.github/workflows/campagne-centrale-invariant.yml'
 
@@ -123,6 +126,12 @@ jobs:
               'REGISTRE_BIFURCATIONS.json',
               'CONTRASTES_ACCESSIBILITE_INV_A.json',
               'AUDIT_INV_A.json',
+              'SEUIL_XIV.json',
+              'PACC_QUALIFICATION_STRICTE.json',
+              'PREDICTIONS_HORS_ECHANTILLON_AUDIT.json',
+              'REPLICATIONS_INDEPENDANTES_AUDIT.json',
+              'TRANSFERT_SANS_REDEFINITION_AUDIT.json',
+              'ANTIBIOTIQUES_SPECIFICATIONS_AUDIT.json',
               'ETAT_CAMPAGNE.json',
           ]
 
@@ -136,6 +145,10 @@ jobs:
           audit = loaded['AUDIT_INV_A.json']
           etat = loaded['ETAT_CAMPAGNE.json']
           benchmark = loaded['BENCHMARK_TRANSVERSAL.json']
+          section_xiv = loaded['SEUIL_XIV.json']
+
+          if section_xiv.get('passed_count') != 7 or section_xiv.get('missing_ids') != [3, 4, 9, 10, 11]:
+              raise SystemExit(f"État §XIV inattendu : {section_xiv}")
 
           for key in [
               'current_status',
@@ -161,6 +174,7 @@ jobs:
               f"{audit['direct_positive_m_ablation_system_count']}"
           )
           print(f"Cas benchmark : {benchmark['case_count']}")
+          print(f"§XIV : {section_xiv['passed_count']}/12; verrous={section_xiv['missing_ids']}")
           PY
 
       - name: Vérifier la reproductibilité des sorties centrales

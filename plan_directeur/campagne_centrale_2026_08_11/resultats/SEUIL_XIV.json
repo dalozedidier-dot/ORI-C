@@ -1,0 +1,133 @@
+{
+  "schema": "oric.section-xiv-audit.v1",
+  "conditions_total": 12,
+  "passed_count": 7,
+  "passed_ids": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    12
+  ],
+  "missing_ids": [
+    3,
+    4,
+    9,
+    10,
+    11
+  ],
+  "conditions": [
+    {
+      "id": 1,
+      "label": "identifiant et statut pour chaque affirmation majeure",
+      "passed": true,
+      "evidence": {
+        "registered_hypotheses": 35
+      }
+    },
+    {
+      "id": 2,
+      "label": "base de données de la branche matière",
+      "passed": true,
+      "evidence": {
+        "transition_rows": 40,
+        "scope": "schéma construit, complétude distincte"
+      }
+    },
+    {
+      "id": 3,
+      "label": "une prédiction propre réussissant hors échantillon par branche",
+      "passed": false,
+      "evidence": {
+        "strict_success_count": 0,
+        "successful_branches": []
+      }
+    },
+    {
+      "id": 4,
+      "label": "chaque réussite bat un témoin apparié",
+      "passed": false,
+      "status": "not_applicable_no_successful_prediction",
+      "evidence": {
+        "strict_success_count": 0
+      }
+    },
+    {
+      "id": 5,
+      "label": "chaque mécanisme soutenu par une ablation",
+      "passed": true,
+      "status": "pass_documented_in_section_XIV",
+      "evidence": [
+        "CHM",
+        "MEM",
+        "interventions astronomiques"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "dépendance au chemin à conditions finales vérifiées",
+      "passed": true,
+      "status": "pass_documented_in_section_XIV"
+    },
+    {
+      "id": 7,
+      "label": "persistance au-delà des constantes de temps",
+      "passed": true,
+      "status": "pass_documented_in_section_XIV"
+    },
+    {
+      "id": 8,
+      "label": "D, H, L publiés séparément",
+      "passed": true,
+      "status": "pass_documented_in_section_XIV",
+      "evidence": "banc synthétique"
+    },
+    {
+      "id": 9,
+      "label": "Pacc mesuré causalement dans un système réel par branche",
+      "passed": false,
+      "evidence": {
+        "qualified_branch_count": 0,
+        "qualified_by_branch": {
+          "matiere": [],
+          "systeme_solaire": [],
+          "vivant": []
+        }
+      }
+    },
+    {
+      "id": 10,
+      "label": "deux résultats reproduits par des équipes indépendantes",
+      "passed": false,
+      "evidence": {
+        "strict_reproduced_result_count": 0
+      }
+    },
+    {
+      "id": 11,
+      "label": "un résultat traverse deux branches sans redéfinition",
+      "passed": false,
+      "evidence": {}
+    },
+    {
+      "id": 12,
+      "label": "résultats négatifs visibles et versionnés",
+      "passed": true,
+      "evidence": [
+        "FALSIFICATION_ORI-C.md",
+        "RESULTATS_NEGATIFS.md"
+      ]
+    }
+  ],
+  "first_threshold_satisfied": false,
+  "strong_threshold_satisfied": false,
+  "current_reading": "le verrou n'est plus l'existence d'une méthode; les conditions ouvertes exigent prédiction hors échantillon, Pacc causal empirique, réplication indépendante et transfert sans redéfinition",
+  "critical_targets": [
+    "3+4: obtenir une prédiction propre hors échantillon qui bat un témoin apparié",
+    "9: mesurer PACC-INT-CHALLENGE-V1 dans un système réel de chaque branche",
+    "10: obtenir deux reproductions strictes par équipes indépendantes",
+    "11: instancier une même définition qualifiée dans au moins deux branches"
+  ]
+}

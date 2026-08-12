@@ -73,6 +73,10 @@ def main() -> int:
         "antibiotics": antibiotics(),
         "paleoclimate": climate(),
         "status": "observational_proxy_not_causal_pacc",
+        "causal_qualification": False,
+        "deprecated_for_section_xiv_condition_9": True,
+        "replacement_definition_id": "PACC-INT-CHALLENGE-V1",
+        "replacement_protocol": "protocoles_geles/PACC_INTERVENTIONNEL_V1.md",
         "limitation": "No matched intervention set I; observed reachability cannot identify counterfactual accessibility.",
     }
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

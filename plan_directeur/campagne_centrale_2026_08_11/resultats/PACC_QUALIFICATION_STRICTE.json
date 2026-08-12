@@ -1,0 +1,61 @@
+{
+  "schema": "oric.section-xiv.pacc-strict-audit.v1",
+  "strict_definition_id_for_future_tests": "PACC-INT-CHALLENGE-V1",
+  "strict_definition_file": "protocoles_geles/PACC_INTERVENTIONNEL_V1.md",
+  "candidates": [
+    {
+      "id": "PACC-VES-RETRO-01",
+      "branch": "vivant",
+      "empirical": true,
+      "definition_class": "observed_descendant_class_support",
+      "value": 0.66,
+      "m_intervention_present": true,
+      "causal_Pacc_qualified": false,
+      "reason": "le contraste d'ablation est empirique, mais Pacc est défini par le support rétrospectif des classes descendantes et non par un ensemble de défis futurs gelé"
+    },
+    {
+      "id": "PACC-EXO-DOM-01",
+      "branch": "systeme_solaire",
+      "empirical": false,
+      "definition_class": "predeclared_challenge_dimension_materiality",
+      "value_control": 0.91,
+      "value_do_m": 0.87,
+      "m_intervention_present": true,
+      "causal_Pacc_qualified": false,
+      "reason": "intervention causale interne au modèle réduit, pas mesure dans un système réel"
+    },
+    {
+      "id": "PACC-26AL-01",
+      "branch": "matiere",
+      "empirical": true,
+      "definition_class": "radiogenic_threshold_partition",
+      "thresholds": null,
+      "m_intervention_present": false,
+      "causal_Pacc_qualified": false,
+      "reason": "partition physique rétrospective; aucune intervention ciblée sur m"
+    },
+    {
+      "id": "PACC-DONOFRIO-PID-01",
+      "branch": "vivant",
+      "empirical": true,
+      "definition_class": "retrospective_predictive_support",
+      "value": 0.4993055555556,
+      "m_intervention_present": false,
+      "causal_Pacc_qualified": false,
+      "reason": "permutation de H; m physique non isolé et non manipulé"
+    }
+  ],
+  "qualified_by_branch": {
+    "matiere": [],
+    "systeme_solaire": [],
+    "vivant": []
+  },
+  "qualified_branch_count": 0,
+  "branches_required": [
+    "matiere",
+    "systeme_solaire",
+    "vivant"
+  ],
+  "condition_9_satisfied": false,
+  "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique"
+}

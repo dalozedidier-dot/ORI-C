@@ -1,0 +1,22 @@
+{
+  "schema": "oric.antibiotic-specification-separation.v1",
+  "same_dataset": false,
+  "donofrio": {
+    "source_file": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+    "rows": 288,
+    "groups": 24,
+    "rmse_state_only": 1.13089812488,
+    "rmse_state_plus_history": 0.8042295741181,
+    "permutation_p": 0.004975124378109,
+    "verdict": "history_supported_against_both_controls",
+    "qualification": "external_retrospective_positive_not_prospective_not_independently_replicated"
+  },
+  "legacy_amikacin_longitudinal": {
+    "prediction_rows": 358,
+    "paired_history_vs_equal_complexity_p": 0.2265625,
+    "slope_ablation_p": 0.0078125,
+    "ordered_history_null_p": 0.06493506493506493,
+    "qualification": "exploratory_nonconclusive_specification_sensitive"
+  },
+  "rule": "les tests de robustesse du benchmark longitudinal amikacine ne sont jamais attribués au jeu D'Onofrio"
+}

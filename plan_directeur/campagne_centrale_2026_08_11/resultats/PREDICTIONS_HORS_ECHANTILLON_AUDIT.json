@@ -1,0 +1,50 @@
+{
+  "schema": "oric.section-xiv.prediction-audit.v1",
+  "strict_success_definition": "résultat hors échantillon sur test indépendant, protocole gelé avant les données, et témoin apparié battu",
+  "predictions": [
+    {
+      "id": "PRED-COSMOS-NCCC-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true
+    },
+    {
+      "id": "PRED-MATIERE-ABLATION-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true
+    },
+    {
+      "id": "PRED-PALEO-HISTORY-02",
+      "branch": "systeme_solaire",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true
+    },
+    {
+      "id": "PRED-VIVANT-HISTOIRE-001",
+      "branch": "vivant",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true
+    }
+  ],
+  "strict_success_count": 0,
+  "successful_branches": [],
+  "branches_required": [
+    "matiere",
+    "systeme_solaire",
+    "vivant"
+  ],
+  "all_branches_have_success": false
+}

@@ -38,6 +38,15 @@ def invariant_transversal() -> tuple[dict, dict]:
     return module.build()
 
 
+def seuil_xiv() -> tuple[dict, dict]:
+    path = HERE / "evaluer_seuil_xiv.py"
+    spec = importlib.util.spec_from_file_location("oric_section_xiv", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
+
+
 def dump(name: str, value: object) -> None:
     OUT.mkdir(exist_ok=True)
     (OUT / name).write_text(
@@ -175,6 +184,13 @@ def main() -> int:
     contrasts, inv_a = invariant_transversal()
     dump("CONTRASTES_ACCESSIBILITE_INV_A.json", contrasts)
     dump("AUDIT_INV_A.json", inv_a)
+    section_xiv, diagnostics_xiv = seuil_xiv()
+    dump("SEUIL_XIV.json", section_xiv)
+    dump("PACC_QUALIFICATION_STRICTE.json", diagnostics_xiv["pacc"])
+    dump("PREDICTIONS_HORS_ECHANTILLON_AUDIT.json", diagnostics_xiv["prediction"])
+    dump("REPLICATIONS_INDEPENDANTES_AUDIT.json", diagnostics_xiv["replication"])
+    dump("TRANSFERT_SANS_REDEFINITION_AUDIT.json", diagnostics_xiv["cross_branch"])
+    dump("ANTIBIOTIQUES_SPECIFICATIONS_AUDIT.json", diagnostics_xiv["antibiotics"])
     plan = json.loads((HERE / "PLAN_CENTRAL.json").read_text(encoding="utf-8"))
     dump("ETAT_CAMPAGNE.json", {
         "schema": "oric.central-campaign-status.v1",
@@ -187,9 +203,11 @@ def main() -> int:
         "inv_a_status": inv_a["current_status"],
         "inv_a_direct_m_ablation_systems": inv_a["direct_m_ablation_system_count"],
         "inv_a_direct_positive_m_ablation_systems": inv_a["direct_positive_m_ablation_system_count"],
+        "section_xiv_passed": section_xiv["passed_count"],
+        "section_xiv_missing": section_xiv["missing_ids"],
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_without_new_data": "conserver EXO-DOM-01 comme réplication modèle et cibler un do(m) empirique matière avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
-        "next_confirmatory_gate": "obtenir des réplications indépendantes pré-gelées de do(m)->Delta P_acc; la porte transversale exige trois systèmes indépendants dans les trois branches dont au moins deux empiriques",
+        "next_executable_without_new_data": "maintenir les portes machine §XIV et appliquer PACC-INT-CHALLENGE-V1 uniquement aux jeux interventionnels réellement appariés; aucun recalcul rétrospectif ne ferme les conditions 3, 9, 10 ou 11",
+        "next_confirmatory_gate": "conditions §XIV 3+4, 9, 10 et 11: prédiction hors échantillon battant un témoin apparié, Pacc causal empirique, réplication externe stricte et transfert sans redéfinition",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")
     return 0

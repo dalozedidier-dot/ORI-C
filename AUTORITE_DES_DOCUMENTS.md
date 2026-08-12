@@ -267,6 +267,8 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Avancement | `plan_directeur/AVANCEMENT_DU_PLAN.md` | généré ; descriptif, ne fixe aucun statut |
 | Grille de l'Étape 2 | `plan_directeur/GRILLE_ETAPE_2.md` | généré ; audit, ne fixe aucun statut |
 | Audit transversal | `plan_directeur/AUDIT_TRANSVERSAL.md` | généré, prime ; **exploratoire** |
+| Audit du seuil scientifique §XIV | `plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json` | généré ; diagnostique les 12 conditions, **ne crée aucun verdict scientifique** ; état courant 7/12, verrous 3, 4, 9, 10, 11 |
+| Qualification stricte de `Pacc` | `plan_directeur/campagne_centrale_2026_08_11/resultats/PACC_QUALIFICATION_STRICTE.json` et `protocoles_geles/PACC_INTERVENTIONNEL_V1.md` | fail-closed ; distingue support rétrospectif, causalité de modèle et `Pacc` causal empirique |
 | Contrôles d’intégrité | `CONTROLES_INTEGRITE.md` | décrit les contrôles de structure et de livraison |
 | Puissance a priori | `methodologie_puissance/README.md`, le `POWER_PLAN.json` du protocole et sa sortie JSON | le plan gelé prime pour le SESOI, l’unité indépendante, les témoins et la règle de succès |
 | Campagne réelle consolidée | `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md` | prime pour les compteurs et l’interprétation de la réexécution finale |

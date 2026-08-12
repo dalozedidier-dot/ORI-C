@@ -1,0 +1,7 @@
+{
+  "schema": "oric.section-xiv.cross-branch-audit.v1",
+  "common_qualified_definitions": {},
+  "condition_11_satisfied": false,
+  "future_common_definition": "PACC-INT-CHALLENGE-V1",
+  "rule": "même définition et même règle de décision; aucune redéfinition après résultat"
+}

@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/campagne-centrale-invariant.yml",
-      "size": 9301,
-      "sha256": "4b22f644e791453bd3fde393abd7687e2cd88f4f63d5a0f786f17ff7ef1947bc",
+      "size": 10096,
+      "sha256": "13c5ecfb4c9d177c450f228f8f4fddd18334c21e282877358e0cd85f76ebb245",
       "storage": "inline"
     },
     {
@@ -6053,8 +6053,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 32066,
-      "sha256": "161859e017299a746618b6a7670d001b9d541ffa388a15851bffa6ee062d2099",
+      "size": 32582,
+      "sha256": "4a4cddf82b8dddc80f66682916d286fe3d136ff39b1b23444d485328278a815b",
       "storage": "inline"
     },
     {
@@ -6143,8 +6143,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 9742,
-      "sha256": "65c186d02b8e9e9e813297b9c6e8a14d2b9377d238bc2fec95030b3fda7c4ab7",
+      "size": 11127,
+      "sha256": "5cd79a52e3563102c23139cc7ca0f7d3925270d435bd1d73388cae8b4c279812",
       "storage": "inline"
     },
     {
@@ -6293,8 +6293,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 11565,
-      "sha256": "23f5f0ae4303676d0a4d82329cd519d91ee7fa7a9697724ce4f06a4f1359025a",
+      "size": 12433,
+      "sha256": "920a664f3ff77b69146366778ad9221b41c8d2a9bd4ee5caa3d41c08dcea9a2e",
       "storage": "inline"
     },
     {
@@ -7000,6 +7000,12 @@
       "storage": "inline"
     },
     {
+      "path": "methodologie_puissance/pacc_causal.py",
+      "size": 9795,
+      "sha256": "59be3e01088ba64ad0f76427064ebc427a8fb66442f4e1eff13be633807df00c",
+      "storage": "inline"
+    },
+    {
       "path": "methodologie_puissance/power_monte_carlo.py",
       "size": 19863,
       "sha256": "c0dc88fe19a81755ec322a905f3ddc4120d903fb1db01f291e00ff0fc3b1f094",
@@ -7021,6 +7027,12 @@
       "path": "methodologie_puissance/schema_power_plan.json",
       "size": 3026,
       "sha256": "fe844894838095e3fce59bb4675359c2cb2a15b391da8712eb2196361e07b627",
+      "storage": "inline"
+    },
+    {
+      "path": "methodologie_puissance/tests/test_pacc_causal.py",
+      "size": 3326,
+      "sha256": "c0eac106966b6d8f05bcb57fa4dd15daff3678c2f5221f7873ed6838024842a3",
       "storage": "inline"
     },
     {
@@ -7049,8 +7061,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 12506,
-      "sha256": "9862af23e12f9d94e34c29766555cd744f20483f3919fedc893c902f370f6289",
+      "size": 13214,
+      "sha256": "4ed24441fe6b715d6717ce0f862adb4abdfb0d478a2337095c069dccd38584e9",
       "storage": "inline"
     },
     {
@@ -7258,6 +7270,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_seuil_xiv.py",
+      "size": 15018,
+      "sha256": "f503b861e1dd769f8a4865ec213859445a0d1d73fe5a9dbe1c76f3cf3cacb60a",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/executer_quantification_commune.py",
       "size": 11055,
       "sha256": "f883aa595d6a98076fa82a54f3240a2ad77b95b68e38ffaa142801ccd867d337",
@@ -7267,6 +7285,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ADMISSION_PALEO_HISTORY_01.json",
       "size": 2617,
       "sha256": "d8cf15a0bfdf4a7594f465b75c6644751309823a626d2b96111c92ce839278a8",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ANTIBIOTIQUES_SPECIFICATIONS_AUDIT.json",
+      "size": 948,
+      "sha256": "e555f40ec0e7cdf59fa6991d503796193b32a091e91b3f5a651925796d2f427b",
       "storage": "inline"
     },
     {
@@ -7319,8 +7343,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ETAT_CAMPAGNE.json",
-      "size": 888,
-      "sha256": "6d2631bdab58cd2b0daf0c7a6c747322d37535fb8e79b99820fe12b306c8ae77",
+      "size": 1006,
+      "sha256": "2f406e435463c66260565b6f0905513584a9af15a20fa5f15caa9252bfeca3b8",
       "storage": "inline"
     },
     {
@@ -7336,21 +7360,57 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PACC_QUALIFICATION_STRICTE.json",
+      "size": 2097,
+      "sha256": "b1887a004dc5086b00b8f7e170d005015a605e538eaa1049c5a309cabc0dbc94",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PREDICTIONS_HORS_ECHANTILLON_AUDIT.json",
+      "size": 1467,
+      "sha256": "42488f50c6ce91280da4c2f9308e1cd17140a7ea517f29328f7e006d19373085",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/REGISTRE_BIFURCATIONS.json",
       "size": 1812,
       "sha256": "986d2410683cc0ef9a9b535d4866a45cb9e25615b6dcdc82d473c731e355fb21",
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/REPLICATIONS_INDEPENDANTES_AUDIT.json",
+      "size": 741,
+      "sha256": "f11d1619aaf37ea741fc736634aadcd58ab56d58576fb91e042000b86602ad9c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json",
+      "size": 3423,
+      "sha256": "d0e0126f4ef9867f3dc7ff6233e3df3d96ae8bea82176ff9e30895aa152551f2",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/TRANSFERT_SANS_REDEFINITION_AUDIT.json",
+      "size": 284,
+      "sha256": "65460de193ab8c62891a660951ad237f33017a362372a48ea768d08194b38cb2",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 10213,
-      "sha256": "7c10d39206a744b7e4d39221608349667f5b5730a2b5b5e2686138aed4fd629a",
+      "size": 11148,
+      "sha256": "51266eb202675b235e0a5d80b69ba03b6be237d2be278030a7b633f2dada7cd9",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
       "size": 6890,
       "sha256": "2a9e7eacda5b0a559cdf3f391f162d3e12bd22b51396da4cf451612fbffcf043",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_seuil_xiv.py",
+      "size": 2637,
+      "sha256": "bb934cb4a755c4f62b816d13a507d06f87dbae9cfb1868e6975b07afa58935dc",
       "storage": "inline"
     },
     {
@@ -8435,8 +8495,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/pacc_observationnel_deux_branches.json",
-      "size": 2599,
-      "sha256": "269c918c2801845de54166e7ae59133a031c988b2eb8fe9815fe68c43bb7a42a",
+      "size": 2811,
+      "sha256": "9c292792dc9c651df285b41714a37ea02e630c70d2468740476373e39aca750c",
       "storage": "inline"
     },
     {
@@ -8609,8 +8669,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/scripts/pacc_observationnel_deux_branches.py",
-      "size": 3401,
-      "sha256": "d19936297e45dbfe147e101c6e404e31befc05a7ceeb25ddf87edd3952a857ca",
+      "size": 3637,
+      "sha256": "e992c153a336df2c3861d9c3b2225ff8ad3c81e00eae88212b188fdaad5a64bc",
       "storage": "inline"
     },
     {
@@ -9749,8 +9809,8 @@
     },
     {
       "path": "preuves/CHIFFRES.json",
-      "size": 28479,
-      "sha256": "fef67a468a0cb74da9ebd23c5277534bcc34104a6ce96bbfd856aa969b9444e2",
+      "size": 28476,
+      "sha256": "a0713f6bb06d8b4d590852d37fb857f96fa60dee27b9fa4317375b1865040b3f",
       "storage": "inline"
     },
     {
@@ -9763,6 +9823,12 @@
       "path": "preuves/README.md",
       "size": 550,
       "sha256": "f78a5bf68315b82acb86cc4fa8c6b6027c1b3b6f2bf29cfce3574c4681f4f6bd",
+      "storage": "inline"
+    },
+    {
+      "path": "preuves/SNAPSHOT_STABLE_0.9.7.json",
+      "size": 558,
+      "sha256": "67151749a1c65ec9bcd1afed7843e8e2096910293f662522bf114cd04a54767f",
       "storage": "inline"
     },
     {
@@ -9811,6 +9877,12 @@
       "path": "protocoles_geles/PACC_DEFINITION.md",
       "size": 832,
       "sha256": "b805283b1378624d1f38b79b49f78c94234def896ba1c9dc9e1cbb83f377c307",
+      "storage": "inline"
+    },
+    {
+      "path": "protocoles_geles/PACC_INTERVENTIONNEL_V1.md",
+      "size": 2288,
+      "sha256": "2b2ff151b2b3c4b4f2f98cc8f90be74bf239273c6d31f61ec2335833ce9d743d",
       "storage": "inline"
     },
     {

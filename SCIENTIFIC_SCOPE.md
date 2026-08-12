@@ -12,6 +12,10 @@ La couche astronomique conserve l’intégration N-corps et ses validations sép
 
 La campagne consolidée reste exploratoire lorsque aucun critère confirmatoire n’a été gelé. Une réussite technique signifie qu’un moteur a traité ses données. Elle ne vaut pas soutien scientifique d’ORI-C.
 
+Le seuil scientifique interne du §XIV est maintenant audité par machine. L’état courant reste **7/12** : les conditions 3, 4, 9, 10 et 11 sont ouvertes. Aucune validation croisée sur un jeu déjà publié n’est comptée comme prédiction prospective propre. Aucun proxy de classes observées n’est compté comme `Pacc` causal. Un résultat de modèle ne ferme pas une condition empirique et une réplication conceptuelle ne remplace pas une reproduction stricte par une équipe indépendante.
+
+La définition interventionnelle `PACC-INT-CHALLENGE-V1` fixe pour les futurs tests causaux un dénominateur de défis × dimensions déclaré avant observation, avec `X`, `Theta` et l’architecture non ciblée appariés, intervention sur `m`, sham et unités indépendantes. Elle ne requalifie pas les mesures rétrospectives déjà présentes dans le dépôt.
+
 ## Portée de la campagne maximale sur les trois branches
 
 La campagne `plan_directeur/campagne_maximale_trois_branches/` est une
