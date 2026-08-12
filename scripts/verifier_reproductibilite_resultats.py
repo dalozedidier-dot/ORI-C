@@ -30,6 +30,14 @@ def _is_number(value: Any) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool)
 
 
+VOLATILE_JSON_LOCATIONS = frozenset({
+    # Métadonnée du runner GitHub/Azure : le patch du noyau peut changer entre
+    # deux exécutions sans modifier le code, les dépendances ni les résultats.
+    # Toutes les autres clés de environment.json restent comparées strictement.
+    "environment.json.platform",
+})
+
+
 def _compare_values(
     reference: Any,
     candidate: Any,
@@ -40,6 +48,8 @@ def _compare_values(
     state: ComparisonState,
     errors: list[str],
 ) -> None:
+    if location in VOLATILE_JSON_LOCATIONS:
+        return
     if _is_number(reference) and _is_number(candidate):
         if isinstance(reference, int) and isinstance(candidate, int):
             if reference != candidate:
