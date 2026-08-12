@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 errors=[]
 version=(ROOT/'VERSION').read_text(encoding='utf-8').strip()
+short_version=version.split('-',1)[0]
 if not re.fullmatch(r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.]+)?', version): errors.append(f'VERSION invalide: {version}')
 release_notes=f'RELEASE_NOTES_v{version}.md'
 for p in ['CITATION.cff','.zenodo.json','LICENSE','LICENSING.md',release_notes,'PUBLICATION_STABLE.md','.github/workflows/release.yml','preuves/PREUVES.json','preuves/CHIFFRES.json']:
@@ -24,17 +25,17 @@ if r.returncode:
 proof=(ROOT/'site/preuves.html').read_text(encoding='utf-8')
 repro=(ROOT/'site/reproductibilite.html').read_text(encoding='utf-8')
 # Présence de concepts/sections seulement ; les nombres associés sont contrôlés par CHIFFRES.json.
-for needle in ['tolérance','Trajectoires réelles','H011','MESA','Généalogie cosmique quantitative','11 467','41 / 41','prépare <code>0.9.6</code>']:
+for needle in ['tolérance','Trajectoires réelles','H011','MESA','Généalogie cosmique quantitative','11 467','41 / 41',f'Publication stable {short_version}',f'Version stable : <code>{short_version}</code>']:
     if needle not in proof+repro: errors.append(f'page publique incomplète: {needle}')
 current_text='\n'.join([(ROOT/'README.md').read_text(encoding='utf-8'),(ROOT/'ETAT_DES_PREUVES.md').read_text(encoding='utf-8'),proof])
-for required in ['13 / 15','1 / 10',version]:
+for required in ['13 / 15','1 / 10',short_version]:
     if required not in current_text + repro:
         errors.append(f'frontière stable absente du rendu public: {required}')
 if 'MPT-M2-01' not in (ROOT/'preuves/PREUVES.json').read_text(encoding='utf-8'):
     errors.append('M2 absent du registre PREUVES.json')
 if 'PCMCI-CLIM-01' not in (ROOT/'preuves/PREUVES.json').read_text(encoding='utf-8'):
     errors.append('PCMCI+ exploratoire absent du registre PREUVES.json')
-for stale in ['Le vivant montre un petit signal exploratoire','Lignées de vésicules | **En attente','Histoire antibiotique 2026 | **En attente',"La grille reste une preuve de concept. Sur l'amikacine",'298 réussites techniques, 337 blocages','<strong>298</strong><span>analyses exécutées</span>']:
+for stale in ['main prépare <code>0.9.6</code>','préparation de 0.9.6','Le vivant montre un petit signal exploratoire','Lignées de vésicules | **En attente','Histoire antibiotique 2026 | **En attente',"La grille reste une preuve de concept. Sur l'amikacine",'298 réussites techniques, 337 blocages','<strong>298</strong><span>analyses exécutées</span>']:
     if stale in current_text: errors.append(f'formulation périmée présente: {stale}')
 print(json.dumps({'version':version,'errors':errors,'status':'ok' if not errors else 'error'},ensure_ascii=False,indent=2))
 raise SystemExit(1 if errors else 0)

@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Daloze
     given-names: Didier
-version: "0.9.5-research"
-date-released: 2026-08-10
+version: "0.9.6-research"
+date-released: 2026-08-12
 repository-code: "https://github.com/dalozedidier-dot/ORI-C"
 url: "https://dalozedidier-dot.github.io/ORI-C/"
 abstract: >-
@@ -15,8 +15,10 @@ abstract: >-
   N-corps réussit 13 critères préenregistrés sur 15, la formulation
   paléoclimatique M2 réussit 1 critère sur 10 et reste non soutenue, et la
   couche spin-orbite propage le forçage orbital jusqu'à l'obliquité et
-  l'insolation au niveau d'un modèle séculaire réduit. Les extensions
-  informationnelles et causales externes restent séparées des certifications.
+  l'insolation au niveau d'un modèle séculaire réduit. La généalogie cosmique
+  quantitative ajoute une couche empirique à pare-feu strict, avec 48 sources
+  admissibles, 120 enregistrements historiques et 11 467 lignes utiles. Aucun
+  invariant transversal général ORI-C n'est revendiqué comme validé.
 keywords:
   - ORI-C
   - architecture historique

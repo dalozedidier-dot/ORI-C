@@ -5,7 +5,7 @@
 [![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
 
-Didier Daloze | Version stable 0.9.5 | 10 août 2026
+Didier Daloze | Version stable 0.9.6 | 12 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -74,9 +74,9 @@ séparés.
 ```
 
 
-## Développement sur main — préparation de 0.9.6 — généalogie cosmique quantitative
+## Publication stable 0.9.6 — généalogie cosmique quantitative
 
-La version 0.9.5 reste le dernier état propre publié. Sur `main`, le travail courant prépare 0.9.6 et développe le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
+La version 0.9.6 intègre le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
 
 La couche `01_branche_matiere/genealogie_cosmique_quantitative/` applique désormais un **pare-feu empirique strict** : aucune simulation, donnée synthétique, donnée construite, imputation, sortie de rendement stellaire, sortie thermochimique ou intégration orbitale ne peut entrer dans ses verdicts. Les articles mixtes observation/modèle sont admissibles uniquement pour leurs mesures explicitement transcrites ; leur partie modélisée est déclarée dans `portion_excluded`.
 
@@ -333,9 +333,9 @@ Le dépôt exécute désormais, sans reclasser rétroactivement les preuves cert
 
 Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
 
-## Publication stable 0.9.5
+## Publication stable 0.9.6
 
-La version 0.9.5 fige l’état scientifique du 10 août 2026 après le run complet du Système solaire. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée.
+La version 0.9.6 fige l’état scientifique du 12 août 2026 au tag technique `v0.9.6-research`. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée. Elle intègre aussi la généalogie cosmique quantitative, le benchmark transversal à sept champs et leurs limites explicites, sans transformer leur présence en validation d’un invariant général.
 
 La chaîne modèle désormais exécutée est :
 

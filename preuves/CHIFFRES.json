@@ -232,26 +232,27 @@
       "value": 1
     },
     {
-      "display": "1 451",
+      "display": "1 655",
       "id": "MANIFEST_FILES",
-      "pointer": "/file_count",
-      "source": "preuves/snapshots/v0.9.5-research.json",
+      "pointer": "/files",
+      "source": "MANIFEST.sha256.json",
       "targets": [
         "site/index.html",
         "site/reproductibilite.html"
       ],
       "tolerance": 0,
-      "value": 1451
+      "value": 1655,
+      "transform": "len"
     },
     {
-      "display": "1 654",
+      "display": "1 655",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1654
+      "value": 1655
     },
     {
       "display": "20 stades",

@@ -83,22 +83,22 @@ Les données nécessaires à ces tests sont intégrées et les analyses s’exé
 
 Les ponts vers théorie de la viabilité, PID, états causaux finis, Chemical Organization Theory, topologie persistante, CCM, LTEE et Assembly Theory sont des **extensions méthodologiques**. Ils ne modifient pas les certifications `C-AST-01`, `C-ANT-01`, `C-VES-02`, `C-VES-03` ou le verdict négatif `C-MAT-MEM-05`. Le PCMCI+ est isolé dans une CI dédiée et reste exploratoire. M2 reste fermé dans sa formulation testée.
 
-## Développement post-publication : généalogie cosmique quantitative
+## Généalogie cosmique quantitative intégrée à 0.9.6-research
 
-`01_branche_matiere/genealogie_cosmique_quantitative/` est une extension empirique de la branche matière. Elle ne modifie pas rétroactivement `v0.9.5-research` et ne transforme aucune certification existante.
+`01_branche_matiere/genealogie_cosmique_quantitative/` est une extension empirique de la branche matière, développée après `v0.9.5-research` et intégrée à `v0.9.6-research`. Elle ne transforme aucune certification existante.
 
 **Politique de preuve : données réelles uniquement.** Sont admis les observations astronomiques/spatiales, échantillons retournés, mesures isotopiques et chronométriques, expériences de laboratoire, reconstructions planétaires fondées sur des isotopes mesurés et produits observationnels officiels. Sont exclus des verdicts : simulation, donnée synthétique ou construite, imputation, sortie numérique de modèle, rendement stellaire théorique, calcul thermochimique et intégration orbitale.
 
-La couche courante couvre **20 stades, 22 liens, 33 sources primaires/officielles et 76 enregistrements empiriques**. Elle produit **15 résultats locaux/synthétiques soutenus et 1 limite ouverte**. Les continuités matérielles directes, les archives du même Système solaire, les analogues astrophysiques et les expériences de laboratoire sont marqués séparément ; un analogue inter-systèmes n'est jamais présenté comme l'histoire observée du Soleil.
+La couche courante couvre **20 stades, 22 liens qualifiés, 48 sources/datasets empiriques admissibles et 120 enregistrements empiriques historiques**. Elle ajoute **11 467 lignes utiles normalisées**, dont **11 207 grains présolaires admissibles**, et conserve **15 résultats empiriques initiaux soutenus et 1 limite ouverte**. Les continuités matérielles directes, les archives du même Système solaire, les analogues astrophysiques et les expériences de laboratoire sont marqués séparément ; un analogue inter-systèmes n'est jamais présenté comme l'histoire observée du Soleil.
 
 Le résultat global `supports_empirical_historical_accessibility_mechanism` signifie que des constituants, poussières, grains présolaires, molécules, isotopes, réservoirs, âges, structures et histoires d'accrétion conservent des conséquences mesurables d'étapes antérieures. Il soutient le mécanisme d'inscription historique formulé par ORI-C. Il ne démontre ni une loi universelle ni une trajectoire cosmologique/orbitale unique.
 
 L'endpoint planétaire actuel est observé. Le chemin orbital précis qui y conduit reste `undetermined_empirical_only`. `C-AST-01` et les autres résultats de modèle restent hors du décompte empirique de cette branche.
 
-## Snapshot stable 0.9.5-research
+## Snapshot stable 0.9.6-research
 
-La publication stable du 10 août 2026 conserve explicitement la dissymétrie des résultats : la couche astronomique N-corps reste à **13/15**, tandis que la formulation paléoclimatique M2 reste à **1/10** et `does_not_support` dans son protocole. La couche spin-orbite est exécutée au niveau modèle mais ne résout pas la Lune en N-corps ni les marées. Le résultat PCMCI+ est exploratoire, fondé sur des p-values brutes dans la configuration publiée, et ne modifie pas M2. Les formalismes externes ne reclassent aucune certification par leur seule exécution.
+La publication stable du 12 août 2026 conserve explicitement la dissymétrie des résultats : la couche astronomique N-corps reste à **13/15**, tandis que la formulation paléoclimatique M2 reste à **1/10** et `does_not_support` dans son protocole. La couche spin-orbite est exécutée au niveau modèle mais ne résout pas la Lune en N-corps ni les marées. Le résultat PCMCI+ est exploratoire, fondé sur des p-values brutes dans la configuration publiée, et ne modifie pas M2. Les formalismes externes ne reclassent aucune certification par leur seule exécution.
 
 ### Généalogie cosmique — approfondissement quantitatif empirique
-La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (33 sources, 76 mesures, 16 claims) et ajoute une vue analytique 23 stades / 40 relations / 24 observations sélectionnées / 12 synthèses machine, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
+La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (48 sources/datasets admissibles, 120 enregistrements historiques et 16 claims empiriques initiaux) et ajoute une couche quantitative fondée sur 11 467 lignes utiles normalisées, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
 

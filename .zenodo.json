@@ -1,13 +1,13 @@
 {
   "title": "ORI-C : architecture, mémoire et futurs accessibles",
-  "description": "Snapshot stable 0.9.5-research du programme ORI-C. La publication conserve les résultats positifs et négatifs, notamment 13/15 critères pour la couche astronomique N-corps et 1/10 pour la formulation paléoclimatique M2. Elle inclut la couche spin-orbite réduite, les registres machine PREUVES/CHIFFRES et les formalismes externes exploratoires. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
+  "description": "Snapshot stable 0.9.6-research du programme ORI-C. La publication conserve les résultats positifs et négatifs, notamment 13/15 critères pour la couche astronomique N-corps et 1/10 pour la formulation paléoclimatique M2. Elle intègre la généalogie cosmique quantitative sous pare-feu empirique strict, avec 48 sources/datasets admissibles, 120 enregistrements empiriques historiques et 11 467 lignes utiles normalisées, sans simulation, donnée synthétique ni imputation comme preuve. Aucun invariant transversal général ORI-C n'est revendiqué comme validé. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
   "creators": [
     {
       "name": "Daloze, Didier"
     }
   ],
-  "version": "0.9.5-research",
-  "publication_date": "2026-08-10",
+  "version": "0.9.6-research",
+  "publication_date": "2026-08-12",
   "license": "MIT",
   "upload_type": "software",
   "keywords": [
