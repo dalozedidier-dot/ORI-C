@@ -29,6 +29,15 @@ def quantification_commune() -> tuple[dict, dict]:
     return module.build()
 
 
+def invariant_transversal() -> tuple[dict, dict]:
+    path = HERE / "evaluer_invariant_transversal.py"
+    spec = importlib.util.spec_from_file_location("oric_transversal_invariant", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
+
+
 def dump(name: str, value: object) -> None:
     OUT.mkdir(exist_ok=True)
     (OUT / name).write_text(
@@ -106,19 +115,21 @@ def dataset_matrix() -> dict:
 def dependency_graph() -> dict:
     return {
         "schema": "oric.scientific-dependencies.v1",
-        "nodes": ["hypergraphe", "memoire_matiere", "genealogie_cosmique", "PALEO-HISTORY-01", "replication_antibiotique", "replication_vesicules", "P_acc", "benchmark_transversal", "invariants", "predictions_prospectives"],
+        "nodes": ["hypergraphe", "memoire_matiere", "genealogie_cosmique", "PALEO-HISTORY-01", "replication_antibiotique", "replication_vesicules", "P_acc", "contrastes_P_acc_locaux", "benchmark_transversal", "INV-A", "invariants", "predictions_prospectives"],
         "edges": [
             ["hypergraphe", "P_acc"], ["memoire_matiere", "P_acc"],
             ["genealogie_cosmique", "P_acc"], ["PALEO-HISTORY-01", "P_acc"],
             ["replication_antibiotique", "benchmark_transversal"],
             ["replication_vesicules", "benchmark_transversal"],
-            ["P_acc", "benchmark_transversal"], ["benchmark_transversal", "invariants"],
+            ["P_acc", "contrastes_P_acc_locaux"], ["contrastes_P_acc_locaux", "benchmark_transversal"],
+            ["benchmark_transversal", "INV-A"], ["INV-A", "invariants"],
             ["invariants", "predictions_prospectives"]
         ],
         "critical_blockers": [
             "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
             "memoire_matiere: aucune chaîne complète admise",
-            "P_acc: plusieurs mesures locales existent désormais mais aucune échelle commune interdomaines n'est validée",
+            "P_acc: plusieurs mesures locales existent; les contrastes sont normalisés localement mais aucune échelle de magnitude interdomaines n'est validée",
+            "INV-A: un seul système possède actuellement un contraste P_acc direct sous ablation de m, et ce contraste ne soutient pas la direction positive gelée",
             "réplications indépendantes: résultats vivants positifs encore non répliqués sur jeux indépendants"
         ]
     }
@@ -161,6 +172,9 @@ def main() -> int:
     measures, bifurcations = quantification_commune()
     dump("MESURES_COMMUNES_EXECUTEES.json", measures)
     dump("REGISTRE_BIFURCATIONS.json", bifurcations)
+    contrasts, inv_a = invariant_transversal()
+    dump("CONTRASTES_ACCESSIBILITE_INV_A.json", contrasts)
+    dump("AUDIT_INV_A.json", inv_a)
     plan = json.loads((HERE / "PLAN_CENTRAL.json").read_text(encoding="utf-8"))
     dump("ETAT_CAMPAGNE.json", {
         "schema": "oric.central-campaign-status.v1",
@@ -170,9 +184,12 @@ def main() -> int:
         "benchmark_cases": benchmark["case_count"],
         "invariant_cases_complete": invariants["cases_complete_X_H_m_Theta_tau_Pacc_R"],
         "field_complete_unique_systems": benchmark["field_complete_unique_system_count"],
+        "inv_a_status": inv_a["current_status"],
+        "inv_a_direct_m_ablation_systems": inv_a["direct_m_ablation_system_count"],
+        "inv_a_direct_positive_m_ablation_systems": inv_a["direct_positive_m_ablation_system_count"],
         "claim_general": "ORI-C n'est pas validé comme théorie générale",
-        "next_executable_without_new_data": "auditer la comparabilité des m et P_acc des systèmes complets sans imposer de normalisation universelle",
-        "next_confirmatory_gate": "obtenir une réplication indépendante ou une nouvelle donnée prospective, et débloquer PALEO-HISTORY par chronologies probabilistes + contrôle négatif gelé",
+        "next_executable_without_new_data": "conserver les contrastes locaux séparés et préparer un protocole futur do(m) avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
+        "next_confirmatory_gate": "obtenir des réplications indépendantes pré-gelées de do(m)->Delta P_acc; la porte transversale exige trois systèmes indépendants dans les trois branches dont au moins deux empiriques",
     })
     print(f"30 axes suivis; PALEO-HISTORY-01={paleo['verdict']}; {len(paleo['missing'])} familles manquantes")
     return 0

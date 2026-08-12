@@ -49,6 +49,22 @@ terrestre très supérieure aux écarts numériques sélectionnés. Ce résultat
 preuve à la matière, au climat ou au vivant. Le protocole transversal est
 défini dans `plan_directeur/PROTOCOLE_CAUSALITE_ARCHITECTURALE_XMA.md`.
 
+### Invariant transversal candidat
+
+Le patron causal ne vaut pas encore invariant général. Le candidat quantitatif
+actuel est `INV-A : Delta m -> Delta P_acc`. Il teste si une intervention ciblée
+sur une trace `m`, à état présent et contraintes appariés, modifie une mesure
+locale du domaine accessible. Permutation de l'histoire, ablation de `m` et
+intervention sur `A` sont conservées comme classes de preuve distinctes. Les
+claims d'un même système ne sont pas comptés comme des réplications
+indépendantes.
+
+L'état actuel reste exploratoire : cinq claims renseignent les sept champs mais
+ils ne représentent que quatre systèmes ; le contraste `P_acc` direct sous
+ablation de `m` actuellement exécuté ne soutient pas la direction positive
+gelée. La définition complète est dans `00_socle/INVARIANT_TRANSVERSAL.md` et le
+protocole futur dans `plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md`.
+
 Cette lecture condensée se déploie dans la boucle canonique suivante :
 
 ```text

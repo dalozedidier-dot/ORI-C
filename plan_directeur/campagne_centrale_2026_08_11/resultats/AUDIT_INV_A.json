@@ -1,0 +1,127 @@
+{
+  "schema": "oric.transversal-invariant-audit.inv-a.v1",
+  "invariant": {
+    "schema": "oric.transversal-invariant.inv-a.v1",
+    "id": "INV-A",
+    "status": "candidate_operationalized_not_validated",
+    "hypothesis": "Delta m -> Delta P_acc",
+    "domain": "systems_where_X_H_m_Theta_tau_Pacc_R_are_operationalizable",
+    "operator": "P_acc = A_acc[X,m,Theta;T,C,epsilon]",
+    "null": "D_acc(P_acc_ctrl,P_acc_do_m) <= epsilon_acc",
+    "alternative": "D_acc(P_acc_ctrl,P_acc_do_m) > epsilon_acc",
+    "rules": {
+      "m_must_be_distinct_from_H": true,
+      "X_and_non_target_architecture_must_be_matched": true,
+      "permutation_is_not_m_ablation": true,
+      "architecture_intervention_is_not_m_ablation": true,
+      "tau_observation_is_not_tau_m": true,
+      "raw_P_acc_values_are_not_cross_domain_comparable": true,
+      "claims_from_same_system_count_once_for_replication": true,
+      "negative_results_are_retained": true
+    },
+    "local_contrast": {
+      "delta": "D_acc(P_acc_ctrl,P_acc_int)",
+      "normalized_if_reference_exists": "C_acc = Delta_acc / B_acc",
+      "B_acc_allowed": [
+        "numerical_reference_envelope",
+        "predeclared_null_distribution_scale",
+        "experimental_uncertainty",
+        "predeclared_SESOI"
+      ],
+      "cross_domain_magnitude_comparison_allowed": false,
+      "allowed_transversal_question": "does_the_local_effect_exceed_its_own_predeclared_reference"
+    },
+    "tau_semantics": {
+      "tau_obs": "observation_horizon",
+      "tau_relax": "local_relaxation_time",
+      "tau_decay": "physical_decay_scale",
+      "tau_m": "persistence_of_the_target_trace_under_declared_final_conditions",
+      "cross_domain_tau_m_comparison_ready": false
+    },
+    "control_classes": [
+      "history_permutation",
+      "m_ablation",
+      "architecture_intervention",
+      "retrospective_physical_history",
+      "negative_real_control"
+    ],
+    "future_transversal_gate": {
+      "independent_systems_min": 3,
+      "branches_required": 3,
+      "empirical_systems_min": 2,
+      "requires_future_or_reserved_validation_data": true,
+      "requires_pre_frozen_decision_rule": true,
+      "current_results_cannot_be_retroactively_preregistered": true
+    },
+    "current_claim": "no_general_transversal_invariant_validated"
+  },
+  "field_complete_claim_count": 5,
+  "field_complete_unique_system_count": 4,
+  "field_complete_unique_system_ids": [
+    "cosmic_26Al",
+    "donofrio_antibiotic",
+    "sokolskyi_baum_vesicles",
+    "solar_system_model"
+  ],
+  "replication_unit": "independent_system_not_claim",
+  "roles": {
+    "direct_m_ablation": [
+      "sokolskyi_baum_vesicles"
+    ],
+    "direct_positive_m_ablation": [],
+    "information_only_or_proxy": [
+      "donofrio_antibiotic"
+    ],
+    "architecture_intervention_prototype": [
+      "solar_system_model"
+    ],
+    "retrospective_physical_history": [
+      "cosmic_26Al"
+    ],
+    "observational_lineage_support": [
+      "sokolskyi_baum_vesicles"
+    ]
+  },
+  "direct_m_ablation_system_count": 1,
+  "direct_positive_m_ablation_system_count": 0,
+  "future_gate_satisfied": false,
+  "gate_failures": [
+    "fewer_than_3_independent_direct_m_ablation_systems",
+    "three_branches_not_replicated_with_do_m",
+    "fewer_than_2_positive_empirical_direct_m_ablation_systems",
+    "tau_m_not_comparable_cross_domain",
+    "no_common_validated_B_acc_construction"
+  ],
+  "tau_inventory": [
+    {
+      "id": "TAU-26AL-01",
+      "system_id": "cosmic_26Al",
+      "kind": "tau_decay",
+      "value_myr": 0.717,
+      "physical_trace": "26Al inventory",
+      "tau_m_cross_domain_comparable": false
+    },
+    {
+      "id": "TAU-EXO-RELAX-01",
+      "system_id": "exoplanet_history_model",
+      "kind": "tau_relax",
+      "values_myr": {
+        "temperature_k": 7.024011067403678,
+        "ice_fraction": 7.797236239145111,
+        "co2_ppm": 7.281812283229533,
+        "productivity": 17.6608740286107
+      },
+      "retained_fraction_at_longest_hold": {
+        "temperature_k": 0.0,
+        "ice_fraction": 0.0,
+        "co2_ppm": 0.0,
+        "productivity": 1.4778879930758756e-13
+      },
+      "tau_m_cross_domain_comparable": false,
+      "interpretation": "temps de relaxation local d'une différence historique, pas preuve d'une mémoire persistante commune"
+    }
+  ],
+  "current_status": "candidate_operationalized_exploratory_not_validated",
+  "current_verdict": "INV-A n'est pas validé; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée",
+  "rule": "les résultats négatifs, les proxies informationnels et les interventions architecturales restent séparés"
+}

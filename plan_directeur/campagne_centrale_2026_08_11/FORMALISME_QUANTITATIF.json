@@ -1,6 +1,6 @@
 {
-  "schema": "oric.quantitative-history.v1",
-  "objet": "P_acc(X,H,Theta,tau)",
+  "schema": "oric.quantitative-history.v2",
+  "objet": "P_acc = A_acc[X,m,Theta;T,C,epsilon]",
   "definitions": {
     "delta_H_P": "D(P_acc(X,H1,Theta,tau), P_acc(X,H2,Theta,tau))",
     "temps_memoire": "tau_m, durée caractéristique pendant laquelle H conserve une influence détectable",
@@ -10,17 +10,48 @@
     "information_trace": "I(H;X_t)",
     "information_fonctionnelle": "I(H;P_future | X_t)",
     "possibles_perdus": "L_t = P_t \\ P_(t+1)",
-    "possibles_gagnes": "G_t = P_(t+1) \\ P_t"
+    "possibles_gagnes": "G_t = P_(t+1) \\ P_t",
+    "delta_acc": "D_acc(P_acc^ctrl, P_acc^int), divergence locale définie avant analyse",
+    "plancher_local_B_acc": "B_acc, échelle locale indépendante: enveloppe numérique, distribution nulle, incertitude ou SESOI préenregistré",
+    "contraste_local_C_acc": "C_acc = Delta_acc / B_acc si B_acc > 0; sa magnitude ne devient pas universellement comparable",
+    "tau_obs": "horizon d observation du protocole",
+    "tau_relax": "temps de relaxation local d une différence historique sous conditions finales déclarées",
+    "tau_decay": "échelle locale d une loi physique de décroissance",
+    "tau_m": "persistance de la trace cible m; ne se déduit pas automatiquement de tau_obs, tau_relax ou d une date",
+    "non_reductibilite_informationnelle": "I(R;H|X)>0 ou gain prédictif équivalent; ne démontre pas à lui seul H->m->P_acc->R"
   },
   "champs_obligatoires_par_mesure": [
-    "X", "H", "m", "Theta", "tau", "partition_de_P_acc", "distance_D",
-    "incertitude", "modele_etat_seul", "modele_concurrent", "provenance"
+    "X",
+    "H",
+    "m",
+    "Theta",
+    "tau",
+    "partition_de_P_acc",
+    "distance_D",
+    "incertitude",
+    "modele_etat_seul",
+    "modele_concurrent",
+    "provenance",
+    "classe_intervention",
+    "unite_replication",
+    "tau_semantics",
+    "B_acc_or_reason_unavailable"
   ],
   "regles": [
     "P_acc doit être défini sur un ensemble fini ou une mesure explicitement normalisée",
     "une fraction d'interventions calculées n'est pas une probabilité naturelle",
     "les valeurs de domaines différents ne sont comparées qu'après test d'invariance de la définition",
-    "une trace I(H;X_t)>0 n'implique pas une pertinence future I(H;P_future|X_t)>0"
-  ]
+    "une trace I(H;X_t)>0 n'implique pas une pertinence future I(H;P_future|X_t)>0",
+    "un horizon d observation ou une date ne doit pas être rebaptisé tau_m sans mesure de persistance de la trace",
+    "permutation de H, ablation de m et intervention sur A sont des classes de preuve distinctes",
+    "les claims issus du même système comptent une seule fois comme unité de réplication transversale",
+    "C_acc ne compare des magnitudes entre domaines que si la construction de B_acc a été validée comme commune",
+    "un résultat négatif direct de do(m) est conservé dans l audit de l invariant et ne peut pas être remplacé par un proxy positif"
+  ],
+  "intervention_classes": {
+    "history_permutation": "contrôle informationnel; ne compte pas comme intervention physique sur m",
+    "m_ablation": "intervention directe pertinente pour INV-A si X, Theta et A non visée restent appariés",
+    "architecture_intervention": "test de A; prototype causal distinct de INV-A",
+    "retrospective_physical_history": "relation physique historique sans intervention; non confirmatoire pour do(m)"
+  }
 }
-

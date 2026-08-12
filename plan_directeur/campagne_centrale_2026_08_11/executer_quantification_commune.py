@@ -24,6 +24,7 @@ def build() -> tuple[dict, dict]:
     vesicles = load("03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json")
     orbital_trace = load("02_branche_systeme_solaire/tests_suivants/resultats/TRACE_ORBITALE_M.json")
     h011 = load("01_branche_matiere/tests_causaux/resultats/H011_RESULTAT.json")
+    exoplanet = load("02_branche_systeme_solaire/couche_memoire_historique/results_stress/exoplanet/b_report.json")
 
     pacc_ant = pid_antibiotic["P_acc_retrospective"]
     pacc_ves_ablation = vesicles["P_acc_ablation_test"]
@@ -83,6 +84,20 @@ def build() -> tuple[dict, dict]:
                 "scope": pacc_ves_ablation["limitation"],
             },
             {
+                "id": "TAU-26AL-01", "domain": "cosmic_chronology", "metric": "tau_decay",
+                "value_myr": al26["half_life_myr"],
+                "trace": "26Al radiogenic inventory",
+                "tau_m_cross_domain_comparable": False,
+                "scope": "échelle de décroissance physique locale; ne définit pas à elle seule une persistance universelle de m",
+            },
+            {
+                "id": "TAU-EXO-RELAX-01", "domain": "exoplanet_history_model", "metric": "tau_relax",
+                "values_myr": {key: value["efolding_myr"] for key, value in exoplanet["relaxation"].items()},
+                "retained_fraction_at_longest_hold": {key: value["retained_fraction"] for key, value in exoplanet["relaxation"].items()},
+                "tau_m_cross_domain_comparable": False,
+                "scope": "temps de relaxation local d'une différence historique; la convergence vers zéro exclut une mémoire persistante sur l'horizon long de ce modèle",
+            },
+            {
                 "id": "I-H-COSMOS-01", "domain": "cosmic_isotopes", "metric": "decodable_historical_information",
                 "value": [{"dataset": r["dataset"], "status": r["status"], "loo_accuracy": r.get("loo_accuracy"), "normalized_mi_mean": r.get("normalized_mi_mean")} for r in information["results"]],
                 "scope": "within-stage provenance decoding; no same-carrier full cosmic genealogy",
@@ -107,7 +122,7 @@ def build() -> tuple[dict, dict]:
         "missing_for_transversal_test": [
             "common finite P_acc partition or explicit mapping between local partitions",
             "physical m distinct from H in the antibiotic information case",
-            "tau_m measured on a comparable basis",
+            "tau_m measured on a comparable basis; local tau_decay and tau_relax are now inventoried but not equated",
             "paired causal ablation in at least three independent empirical domains",
             "independent replication of the living positive systems",
         ],

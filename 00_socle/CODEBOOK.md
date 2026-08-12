@@ -697,3 +697,58 @@ que les §6 à §8 : elles disent comment coder et comment vérifier, elles
 n'établissent aucun résultat. Leur instanciation sur un domaine réel, avec ses
 repères empiriques et ses niveaux de confiance, appartient à l'article
 d'application.
+
+### 13.9 Invariant transversal candidat et contraste local d'accessibilité
+
+Le socle distingue désormais la structure relationnelle commune d'un invariant
+quantitatif **candidat**. L'objet actuellement retenu est `INV-A` :
+
+```text
+Delta m -> Delta P_acc
+```
+
+Cette écriture ne signifie pas qu'une même loi physique relie toutes les
+branches. Elle signifie qu'une instanciation peut tester si une modification
+ciblée d'une trace `m`, à état présent et contraintes appariés, modifie le
+domaine accessible défini localement.
+
+L'opérateur est écrit :
+
+```text
+P_acc = A_acc[X,m,Theta ; T,C,epsilon]
+```
+
+avec une divergence locale :
+
+```text
+Delta_acc = D_acc(P_acc^ctrl, P_acc^int).
+```
+
+Si un plancher indépendant `B_acc > 0` existe :
+
+```text
+C_acc = Delta_acc / B_acc.
+```
+
+`B_acc` peut être une enveloppe numérique, une distribution nulle, une
+incertitude ou un SESOI préenregistré. `C_acc` sert d'abord à décider si l'effet
+franchit **son propre témoin local**. La magnitude de `C_acc` ne devient pas une
+échelle interdomaines tant que la construction de `B_acc` n'a pas été validée
+comme commune.
+
+Trois classes restent séparées : permutation de `H`, intervention `do(m)` et
+intervention `do(A)`. Seule la seconde constitue un test direct de `INV-A`.
+Une non-réductibilité informationnelle telle que `I(R;H|X)>0` peut motiver la
+recherche d'une trace, mais ne démontre pas à elle seule `H->m->P_acc->R`.
+
+La variable temporelle est également qualifiée : `tau_obs` est un horizon,
+`tau_relax` un temps de relaxation, `tau_decay` une échelle de décroissance et
+`tau_m` la persistance de la trace ciblée. Elles ne sont pas substituables.
+
+Enfin, l'unité de réplication transversale est le **système indépendant**. Deux
+claims issus du même jeu ou du même système ne comptent pas comme deux
+réplications d'un invariant.
+
+La définition complète, les critères de réfutation et l'état courant sont dans
+`00_socle/INVARIANT_TRANSVERSAL.md`. Le protocole de future validation est dans
+`plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md`.

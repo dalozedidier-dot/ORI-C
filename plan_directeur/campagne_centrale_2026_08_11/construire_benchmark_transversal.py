@@ -57,6 +57,30 @@ QUALITY = {
     "GCQ-T09": {"m": "derived_continuous_radiogenic_inventory_from_empirical_ages", "P_acc": "thresholded_physical_inventory_accessibility", "ablation": False},
 }
 
+CAUSAL_CLASS = {
+    "C-VES-02": "retrospective_lineage_observation",
+    "C-VES-03": "m_ablation",
+    "PID-ANT-01": "history_permutation",
+    "C-AST-01": "architecture_intervention",
+    "GCQ-T09": "retrospective_physical_history",
+}
+
+INV_A_ROLE = {
+    "C-VES-02": "observational_support_not_direct_test",
+    "C-VES-03": "direct_m_ablation_Pacc_test_negative_expected_direction",
+    "PID-ANT-01": "information_proxy_m_not_physical_isolated",
+    "C-AST-01": "architecture_causal_prototype_not_m_ablation",
+    "GCQ-T09": "physical_history_trace_without_m_intervention",
+}
+
+TAU_QUALITY = {
+    "C-VES-02": {"kind": "tau_obs", "tau_m_measured": False, "cross_domain_comparable": False},
+    "C-VES-03": {"kind": "tau_obs", "tau_m_measured": False, "cross_domain_comparable": False},
+    "PID-ANT-01": {"kind": "experimental_endpoint", "tau_m_measured": False, "cross_domain_comparable": False},
+    "C-AST-01": {"kind": "observation_horizon", "tau_m_measured": False, "cross_domain_comparable": False},
+    "GCQ-T09": {"kind": "tau_decay_local", "tau_m_measured": True, "cross_domain_comparable": False},
+}
+
 NEXT_ACTION = {
     "C-ANT-01": "isoler une trace biologique m distincte de l'étiquette d'histoire et mesurer P_acc sur le panneau brut",
     "C-MAT-MEM-05": "obtenir un état X apparié et un P_acc après ablation sur au moins une famille matérielle complète",
@@ -97,6 +121,10 @@ def build() -> tuple[dict, dict]:
             "P_acc_operational_definition": op["P_acc"],
             "m_P_acc_measurement_status": op["measurement_status"],
             "measurement_quality": QUALITY.get(case_id, {}),
+            "causal_test_class": CAUSAL_CLASS.get(case_id, "not_classified_for_INV_A"),
+            "inv_a_role": INV_A_ROLE.get(case_id, "not_directly_mapped"),
+            "tau_quality": TAU_QUALITY.get(case_id, {"kind": "declared_tau_not_audited", "tau_m_measured": False, "cross_domain_comparable": False}),
+            "replication_unit": SYSTEM_ID.get(case_id, case_id),
             "field_coverage": {field: field in covered for field in FIELDS},
             "field_completeness_fraction": len(covered) / len(FIELDS),
             "missing_fields": missing,
@@ -136,7 +164,8 @@ def build() -> tuple[dict, dict]:
             {
                 "id": "INV-A", "hypothesis": "Delta m -> Delta P_acc",
                 "status": "exploratory_comparison_ready_not_confirmatory",
-                "reason": "plusieurs systèmes ont maintenant m et P_acc, mais les échelles de m et les partitions P_acc restent hétérogènes et certains m/P_acc sont des proxies rétrospectifs",
+                "reason": "plusieurs systèmes ont m et P_acc, mais les leviers sont hétérogènes; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée, et les autres cas sont informationnels, rétrospectifs ou architecturaux",
+                "companion_audit": "resultats/AUDIT_INV_A.json",
             },
             {"id": "INV-B", "hypothesis": "tau_m/tau_T -> force historique", "status": "non_testable", "reason": "tau_m n'est pas mesuré de façon comparable"},
             {"id": "INV-C", "hypothesis": "transitions irréversibles ferment et ouvrent des possibles", "status": "partially_operationalized", "reason": "26Al et vésicules possèdent des partitions locales, mais L_t/G_t ne sont pas énumérés transversalement"},

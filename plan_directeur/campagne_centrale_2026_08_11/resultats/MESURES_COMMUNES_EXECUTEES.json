@@ -147,6 +147,34 @@
       "scope": "ce test porte sur le support discret observé des descendants; il ne remplace pas le contraste de réponse C-VES-03 et ne transforme pas P_acc en probabilité naturelle"
     },
     {
+      "id": "TAU-26AL-01",
+      "domain": "cosmic_chronology",
+      "metric": "tau_decay",
+      "value_myr": 0.717,
+      "trace": "26Al radiogenic inventory",
+      "tau_m_cross_domain_comparable": false,
+      "scope": "échelle de décroissance physique locale; ne définit pas à elle seule une persistance universelle de m"
+    },
+    {
+      "id": "TAU-EXO-RELAX-01",
+      "domain": "exoplanet_history_model",
+      "metric": "tau_relax",
+      "values_myr": {
+        "temperature_k": 7.024011067403678,
+        "ice_fraction": 7.797236239145111,
+        "co2_ppm": 7.281812283229533,
+        "productivity": 17.6608740286107
+      },
+      "retained_fraction_at_longest_hold": {
+        "temperature_k": 0.0,
+        "ice_fraction": 0.0,
+        "co2_ppm": 0.0,
+        "productivity": 1.4778879930758756e-13
+      },
+      "tau_m_cross_domain_comparable": false,
+      "scope": "temps de relaxation local d'une différence historique; la convergence vers zéro exclut une mémoire persistante sur l'horizon long de ce modèle"
+    },
+    {
       "id": "I-H-COSMOS-01",
       "domain": "cosmic_isotopes",
       "metric": "decodable_historical_information",
@@ -218,7 +246,7 @@
   "missing_for_transversal_test": [
     "common finite P_acc partition or explicit mapping between local partitions",
     "physical m distinct from H in the antibiotic information case",
-    "tau_m measured on a comparable basis",
+    "tau_m measured on a comparable basis; local tau_decay and tau_relax are now inventoried but not equated",
     "paired causal ablation in at least three independent empirical domains",
     "independent replication of the living positive systems"
   ]

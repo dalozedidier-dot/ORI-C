@@ -337,6 +337,15 @@ Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. 
 
 La version 0.9.6 fige l’état scientifique du 12 août 2026 au tag technique `v0.9.6-research`. Elle conserve explicitement les deux côtés du bilan : **13 / 15** critères astronomiques réussis et **M2 à 1 critère sur 10**, non soutenu dans sa formulation testée. Elle intègre aussi la généalogie cosmique quantitative, le benchmark transversal à sept champs et leurs limites explicites, sans transformer leur présence en validation d’un invariant général.
 
+Le candidat transversal `INV-A : Delta m -> Delta P_acc` est désormais formalisé
+comme objet testable, avec domaine d'applicabilité, séparation des classes de
+contrôle, contraste d'accessibilité local, sémantique explicite de `tau_m` et
+unité de réplication au niveau du système indépendant. Cette formalisation
+**n'ajoute aucun résultat positif** : le seul contraste `P_acc` direct sous
+ablation de `m` actuellement exécuté ne soutient pas la direction positive
+gelée. Voir `00_socle/INVARIANT_TRANSVERSAL.md` et
+`plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INV_A.json`.
+
 La chaîne modèle désormais exécutée est :
 
 `architecture N-corps → dynamique orbitale → spin séculaire → obliquité → insolation à 65°N`.

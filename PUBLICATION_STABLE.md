@@ -10,7 +10,7 @@ Cette publication est un **snapshot stable et citable du programme**, pas une va
 - D’Onofrio et vésicules : certifications spécialisées conservées ; les mesures locales de `P_acc` restent rétrospectives ou spécifiques à leur protocole.
 - Matière : `C-MAT-MEM-05` reste `does_not_support` ; les relations partielles positives ne sont pas converties en chaîne complète.
 - Généalogie cosmique quantitative : **48 sources/datasets empiriques admissibles**, **120 enregistrements empiriques historiques**, **11 467 lignes utiles** dont **11 207 grains présolaires admissibles**. L’audit impose **0 simulation, 0 donnée synthétique, 0 imputation comme preuve**.
-- Benchmark transversal : **5 claims sur 20** renseignent les sept champs `X, H, m, Θ, τ, P_acc, R`, représentant **4 systèmes distincts**. Cette complétude n’est pas un niveau de preuve et **aucun invariant transversal général ORI-C n’est validé**.
+- Benchmark transversal : **5 claims sur 20** renseignent les sept champs `X, H, m, Θ, τ, P_acc, R`, représentant **4 systèmes distincts**. Cette complétude n’est pas un niveau de preuve. `INV-A : Delta m -> Delta P_acc` possède désormais une définition et un audit machine séparant permutation, ablation de `m` et intervention architecturale ; le seul contraste `P_acc` direct sous ablation de `m` actuellement exécuté ne soutient pas la direction positive gelée. **Aucun invariant transversal général ORI-C n’est validé**.
 - Formalismes externes et PCMCI+ : exploratoires ou méthodologiques, sans reclassement automatique des certifications.
 
 ## Autorité machine

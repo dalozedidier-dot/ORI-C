@@ -20,7 +20,8 @@
       "id": "INV-A",
       "hypothesis": "Delta m -> Delta P_acc",
       "status": "exploratory_comparison_ready_not_confirmatory",
-      "reason": "plusieurs systèmes ont maintenant m et P_acc, mais les échelles de m et les partitions P_acc restent hétérogènes et certains m/P_acc sont des proxies rétrospectifs"
+      "reason": "plusieurs systèmes ont m et P_acc, mais les leviers sont hétérogènes; le seul contraste P_acc direct sous ablation de m actuellement exécuté ne soutient pas la direction positive gelée, et les autres cas sont informationnels, rétrospectifs ou architecturaux",
+      "companion_audit": "resultats/AUDIT_INV_A.json"
     },
     {
       "id": "INV-B",

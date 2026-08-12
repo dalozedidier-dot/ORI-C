@@ -1,0 +1,112 @@
+{
+  "schema": "oric.local-accessibility-contrasts.inv-a.v1",
+  "invariant_id": "INV-A",
+  "rule": "contrastes calculés dans l'échelle locale; aucune comparaison de magnitude interdomaines",
+  "cross_domain_magnitude_comparison_allowed": false,
+  "entries": [
+    {
+      "claim_id": "PID-ANT-01",
+      "system_id": "donofrio_antibiotic",
+      "control_class": "history_permutation",
+      "target_lever": "H_label_proxy_not_physical_m",
+      "P_acc_observed": 0.4993055555556,
+      "P_acc_reference": 0.575828125,
+      "Delta_acc_signed": -0.0765225694444,
+      "relative_Delta_acc_vs_reference": -0.13289133705374326,
+      "permutation_p": 0.0009995002498751,
+      "direct_INV_A_m_ablation": false,
+      "interpretation": "non-réductibilité informationnelle et contraction rétrospective du support; m physique non isolé"
+    },
+    {
+      "claim_id": "C-VES-03",
+      "system_id": "sokolskyi_baum_vesicles",
+      "control_class": "m_ablation",
+      "target_lever": "parental_trace",
+      "Delta_acc_signed": -0.0375,
+      "bootstrap_q025": -0.1458333333333,
+      "bootstrap_q975": 0.0625,
+      "zero_in_bootstrap_interval": true,
+      "predeclared_expected_direction": "positive",
+      "verdict": "does_not_support_positive_Pacc_ablation_contrast",
+      "direct_INV_A_m_ablation": true,
+      "direct_INV_A_support": false,
+      "interpretation": "test direct de P_acc sous ablation; la direction positive attendue n'est pas soutenue"
+    },
+    {
+      "claim_id": "C-AST-01",
+      "system_id": "solar_system_model",
+      "control_class": "architecture_intervention",
+      "target_lever": "A",
+      "P_acc_dimensions": 0.9444444444444444,
+      "effect_over_local_reference_envelope_min": 0.6157202186295766,
+      "effect_over_local_reference_envelope_median": 3.327454853216153,
+      "effect_over_local_reference_envelope_max": 71.65642198030399,
+      "direct_INV_A_m_ablation": false,
+      "interpretation": "prototype causal d'intervention architecturale; ne compte pas comme réplication de do(m)"
+    },
+    {
+      "claim_id": "GCQ-T09",
+      "system_id": "cosmic_26Al",
+      "control_class": "retrospective_physical_history",
+      "target_lever": "derived_radiogenic_trace",
+      "m_trace": [
+        {
+          "event": "angrite",
+          "m_remaining_fraction_median": 0.34527788709029344,
+          "m_remaining_fraction_q025": 0.2414945258667906,
+          "m_remaining_fraction_q975": 0.4936626156871893,
+          "time_after_CAI_myr": 1.1000000000003638,
+          "time_sigma_myr": 0.18867962264113208
+        },
+        {
+          "event": "EC002",
+          "m_remaining_fraction_median": 0.18598030522615255,
+          "m_remaining_fraction_q025": 0.12731809215848724,
+          "m_remaining_fraction_q975": 0.2716713182361894,
+          "time_after_CAI_myr": 1.7399999999997817,
+          "time_sigma_myr": 0.2
+        },
+        {
+          "event": "youngest_chondrule",
+          "m_remaining_fraction_median": 0.08177063413384472,
+          "m_remaining_fraction_q025": 0.04293552206656944,
+          "m_remaining_fraction_q975": 0.15573204388394535,
+          "time_after_CAI_myr": 2.5900000000001455,
+          "time_sigma_myr": 0.33999999999999997
+        },
+        {
+          "event": "CM_carbonate",
+          "m_remaining_fraction_median": 0.023046148180010835,
+          "m_remaining_fraction_q025": 0.008523221082958094,
+          "m_remaining_fraction_q975": 0.06231504976410662,
+          "time_after_CAI_myr": 3.9000000000005457,
+          "time_sigma_myr": 0.5249761899362675
+        }
+      ],
+      "robust_accessible_threshold_count_by_event": {
+        "angrite": 2,
+        "EC002": 2,
+        "youngest_chondrule": 1,
+        "CM_carbonate": 0
+      },
+      "direct_INV_A_m_ablation": false,
+      "interpretation": "relation physique temporelle et partition locale sans intervention sur m"
+    },
+    {
+      "claim_id": "C-VES-02",
+      "system_id": "sokolskyi_baum_vesicles",
+      "control_class": "retrospective_lineage_observation",
+      "target_lever": "none",
+      "P_acc_mean": 0.66,
+      "P_acc_min": 0.25,
+      "P_acc_max": 1.0,
+      "direct_INV_A_m_ablation": false,
+      "interpretation": "support observé et trace parentale directe; pas d'intervention P_acc propre à ce claim"
+    }
+  ],
+  "normalization": {
+    "definition": "C_acc = Delta_acc / B_acc uniquement si B_acc est défini indépendamment",
+    "C_acc_current_cross_domain_values": null,
+    "reason": "les témoins locaux ne fournissent pas encore un B_acc construit de manière comparable dans tous les domaines"
+  }
+}

@@ -8,7 +8,9 @@
     "replication_antibiotique",
     "replication_vesicules",
     "P_acc",
+    "contrastes_P_acc_locaux",
     "benchmark_transversal",
+    "INV-A",
     "invariants",
     "predictions_prospectives"
   ],
@@ -39,10 +41,18 @@
     ],
     [
       "P_acc",
+      "contrastes_P_acc_locaux"
+    ],
+    [
+      "contrastes_P_acc_locaux",
       "benchmark_transversal"
     ],
     [
       "benchmark_transversal",
+      "INV-A"
+    ],
+    [
+      "INV-A",
       "invariants"
     ],
     [
@@ -53,7 +63,8 @@
   "critical_blockers": [
     "PALEO-HISTORY-01: chronologies probabilistes et contrôle négatif gelé absents",
     "memoire_matiere: aucune chaîne complète admise",
-    "P_acc: plusieurs mesures locales existent désormais mais aucune échelle commune interdomaines n'est validée",
+    "P_acc: plusieurs mesures locales existent; les contrastes sont normalisés localement mais aucune échelle de magnitude interdomaines n'est validée",
+    "INV-A: un seul système possède actuellement un contraste P_acc direct sous ablation de m, et ce contraste ne soutient pas la direction positive gelée",
     "réplications indépendantes: résultats vivants positifs encore non répliqués sur jeux indépendants"
   ]
 }

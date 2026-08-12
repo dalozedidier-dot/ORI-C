@@ -101,8 +101,8 @@
     },
     {
       "path": "00_socle/CODEBOOK.md",
-      "size": 33324,
-      "sha256": "da64b3ab014a30b387e557a9a8385cd8b65e9bd7e6a91f86ee8f71d20933bb56",
+      "size": 35412,
+      "sha256": "5d50263ee92e3423771807c7778dcd9dce79a89a925127e1b715dddfbd8af1ec",
       "storage": "inline"
     },
     {
@@ -115,6 +115,12 @@
       "path": "00_socle/ECHELLE_PREUVE_E0_E6.md",
       "size": 1920,
       "sha256": "75d9a2fb6058e732a0fdae733ae3050378a98e5d0ee0c7a5067e0e7ab22cbc02",
+      "storage": "inline"
+    },
+    {
+      "path": "00_socle/INVARIANT_TRANSVERSAL.md",
+      "size": 9444,
+      "sha256": "720558aab85f6922b46b6573dbc18c89bae403ddcea9d19eb9e9422182f7f943",
       "storage": "inline"
     },
     {
@@ -5993,8 +5999,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "size": 15624,
-      "sha256": "c43fbe7c02fa0f4dd88ffc13975d66481441bb00b6dff3284f9984cba70eb8ba",
+      "size": 16548,
+      "sha256": "433fbea3ddfcc6e70cc3968da9beba5ccd5b5172d59e8cb673a12df7e96e10c8",
       "storage": "inline"
     },
     {
@@ -6191,8 +6197,8 @@
     },
     {
       "path": "PUBLICATION_STABLE.md",
-      "size": 3547,
-      "sha256": "5d173b4172120c3b15643cc305952d9e4461fcda58994f9940b5b974b35177dd",
+      "size": 3829,
+      "sha256": "b3c18c7475120b8b1dcf67f4f702be4af1b9452978e190ad8e4612524ff62882",
       "storage": "inline"
     },
     {
@@ -6209,8 +6215,8 @@
     },
     {
       "path": "README.md",
-      "size": 30297,
-      "sha256": "c8eeb557bc27a49849bf836c45715251346096351ad70287d656348f5eb05741",
+      "size": 30901,
+      "sha256": "a42bda8551d772d6c12bf13d9ed2675b7708f038a7285e164702f02dd551baf1",
       "storage": "inline"
     },
     {
@@ -6233,8 +6239,8 @@
     },
     {
       "path": "RELEASE_NOTES_v0.9.6-research.md",
-      "size": 2473,
-      "sha256": "b68250b3c8355819576e94c1d21fbdc7e9c6bdf6dcf5b3c11bd981eddcb1d46a",
+      "size": 2850,
+      "sha256": "8225830980ea84aa8a10ef0aed40751db4f9dac3ed29a5bb95f26ec2fabfeae9",
       "storage": "inline"
     },
     {
@@ -7030,6 +7036,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/PROTOCOLE_INVARIANT_TRANSVERSAL_INV_A.md",
+      "size": 3763,
+      "sha256": "f6260818a3519154581968efee864f10854965a88c253cbbea2228e14c0012ae",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
       "size": 29332,
       "sha256": "2844c18695f7657096dc275229685e22278bf7ca0fbdad3f3e7bdcee2a7ea6e8",
@@ -7067,14 +7079,20 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/FALSIFICATION_ORI-C.md",
-      "size": 964,
-      "sha256": "2bf7a4bd045a36b81d0be407ac848d38f372a7015389b01dde1e1f9fb8cebbae",
+      "size": 3167,
+      "sha256": "90e885d757d7ae1924c24c027fb0f7e454e18d19ae11dd89f5e6b1fc03bbbc2c",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/FORMALISME_QUANTITATIF.json",
-      "size": 1248,
-      "sha256": "63519f06b1969c1f27b0162a4b5f1a5e0fbce169d1d4a4a209e1bffc90b19581",
+      "size": 3287,
+      "sha256": "16bea7f7e8bdcebc363b427ae00fb778cb76ab94882c108ab3ffbac0e87bc246",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/INVARIANT_TRANSVERSAL_INV_A.json",
+      "size": 2119,
+      "sha256": "fca9d48e8b9f2395f88a8139529681568d3aa8cec674f5b15f90a87795cbe3e2",
       "storage": "inline"
     },
     {
@@ -7163,8 +7181,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/README.md",
-      "size": 2241,
-      "sha256": "56af0ff0bddabdf6de98c633596cfd50a4591cefba729b4948b174a8fcc631ce",
+      "size": 2686,
+      "sha256": "7fec35065033420f6a18c70383e4cac4286e5c20652d85460fd3e883bef94cc0",
       "storage": "inline"
     },
     {
@@ -7187,14 +7205,20 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/construire_benchmark_transversal.py",
-      "size": 8996,
-      "sha256": "1c4547be5587600c5053c19faeee99093cd3199093893ccd81e0bc449c67c01d",
+      "size": 10646,
+      "sha256": "848bd583ceec2fd1136de648e4eb91468aff56acca78270736db0a9800f6e421",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_invariant_transversal.py",
+      "size": 10295,
+      "sha256": "aa0144b504d69ccd71fc04e9a11575ccceff78151f274d31acc3cdc685b320f5",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/executer_quantification_commune.py",
-      "size": 9846,
-      "sha256": "013c0e97d295e5182c0cd18b53a6fe28dabfe4e0f69ece3b9fc9b6e3368fba2b",
+      "size": 11055,
+      "sha256": "f883aa595d6a98076fa82a54f3240a2ad77b95b68e38ffaa142801ccd867d337",
       "storage": "inline"
     },
     {
@@ -7205,20 +7229,32 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INVARIANTS.json",
-      "size": 1861,
-      "sha256": "e35fd6c37c641109bc2af896cde799a764c65c863f06e8253775a05fa0514e93",
+      "size": 2012,
+      "sha256": "92f514489c6fc3dfb0e367407d5f3b91d0ff73d0e2d0bd2a78120c4626c264e2",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INV_A.json",
+      "size": 4676,
+      "sha256": "86557b83df666eb0e92d9b254f71f95de209ab1e4095785730e4f5185bbbf4f2",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/BENCHMARK_TRANSVERSAL.json",
-      "size": 33253,
-      "sha256": "f26445f9f34d84f6bb580d2c72b8bc0fda91c594473e7b7ed5810ddee17e6190",
+      "size": 39121,
+      "sha256": "20e1f10bce5f4584fb99ed731d937847f6447560e938250a84c5a5205ba5feab",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_20_CAS.json",
       "size": 7911,
       "sha256": "3a37701e5925819307736361f824e4a4bced5be6aa514a6e47857c453a241c4c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/CONTRASTES_ACCESSIBILITE_INV_A.json",
+      "size": 4596,
+      "sha256": "6f09b5e25f164be48dc735f7c69ef2c60464119c0a03d0f838a1f451abd1a66c",
       "storage": "inline"
     },
     {
@@ -7229,14 +7265,14 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/DEPENDANCES_SCIENTIFIQUES.json",
-      "size": 1279,
-      "sha256": "f511d54936cbc78c0417ec43598ba5f394b5750bcb0b45af328ed355392d0643",
+      "size": 1641,
+      "sha256": "7945b9a16a7f67fd60d0efd7b88247a4b0456ac9c0edfc95891e8d369586f446",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/ETAT_CAMPAGNE.json",
-      "size": 641,
-      "sha256": "2b8e918f8683cf6c78d22a5e3969688b5f176a563e89c12a52d174d367273723",
+      "size": 882,
+      "sha256": "0ac8febc27b388e65540235cd0bded2ddebb018a33136eed276ac5d77a914b82",
       "storage": "inline"
     },
     {
@@ -7247,8 +7283,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/MESURES_COMMUNES_EXECUTEES.json",
-      "size": 7897,
-      "sha256": "03836a2df6e8c78e868ed969efd0a53fc47e21ccd68c3292b11bfb877a194bf1",
+      "size": 9017,
+      "sha256": "aa91208d415cf93e70cd65ebc571fd02a27e654c4011efefe0d66ce3c609fea6",
       "storage": "inline"
     },
     {
@@ -7259,14 +7295,14 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 9022,
-      "sha256": "5cd4c2f09bfc449f2e2a381ed7f79c946d9f51bc6e890344df9beb8e3ed8b8cc",
+      "size": 10147,
+      "sha256": "83da26517480d8457af00de806a55323d1db8367029578c0f4c4b1339c9739ac",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_campagne_centrale.py",
-      "size": 3913,
-      "sha256": "a2536488ea2cb0a8f14a8b065ce4c6004212f57a9356c6b612f71993fa06c8f0",
+      "size": 6456,
+      "sha256": "5dab216732434e9886d5575178695e5f3d16fd23c0f7a6395f869619c3646adf",
       "storage": "inline"
     },
     {
@@ -9666,7 +9702,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 27483,
-      "sha256": "1e55e49665a8826e4feeae93641d50f8cf15e3283ceb035511f997d2fdb1ec81",
+      "sha256": "662decd6e364003b46180b963ef2d683899876562096ef969062345c877969ae",
       "storage": "inline"
     },
     {
@@ -9894,7 +9930,7 @@
     {
       "path": "site/index.html",
       "size": 18128,
-      "sha256": "6d8d467fec3e9aaffca8ce8796ba14c88ad288b94b09cbf04379ed1eedc22ca4",
+      "sha256": "de88099355d1fef7e55e72eb8144faabc29fc0cd7a576ca8246250fc5a6da91b",
       "storage": "inline"
     },
     {
@@ -9912,7 +9948,7 @@
     {
       "path": "site/reproductibilite.html",
       "size": 17907,
-      "sha256": "4111c0e59e437de27e4b4bd760be4de7c66e5f754400aa6376c73d1e2b47e49b",
+      "sha256": "1a256c36d74b58ae705802868ea1aae4dd443732931edcfd0ad0784544f9eb33",
       "storage": "inline"
     },
     {

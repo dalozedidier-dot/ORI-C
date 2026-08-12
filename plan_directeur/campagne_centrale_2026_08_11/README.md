@@ -10,8 +10,9 @@ peut réfuter une hypothèse importante.
 
 Le lanceur produit l'admission de `PALEO-HISTORY-01`, une matrice
 dataset→tests pondérée, un benchmark transversal de 20 cas, l'audit des cinq
-invariants, quatre mesures locales non homogénéisées, un registre de trois
-bifurcations et un état d'exécution des 30 axes. Les expériences et acquisitions
+invariants, des mesures locales non homogénéisées, un registre de trois
+bifurcations, un registre de contrastes `P_acc` pour `INV-A`, un audit dédié de
+`INV-A` et un état d'exécution des 30 axes. Les expériences et acquisitions
 absentes restent `bloque_externe`, sans résultat synthétique. Quatre prédictions
 sont gelées localement avec empreinte SHA-256 ; elles ne sont ni ouvertes ni
 présentées comme des préinscriptions publiques.
@@ -23,8 +24,12 @@ dans le gel. Le benchmark transversal contient 20 cas réels ou explicitement
 classés comme résultats de modèle. **Cinq claims renseignent désormais les sept
 champs `X,H,m,Theta,tau,P_acc,R`, représentant quatre systèmes distincts**.
 Cette complétude de champs ne vaut ni indépendance des cas, ni chaîne causale
-commune : `INV-A` devient seulement `exploratory_comparison_ready_not_confirmatory`,
-`INV-C` est partiellement opérationnalisé, et aucun invariant général n’est validé.
+commune. `INV-A` est maintenant formalisé comme candidat `Delta m -> Delta P_acc`
+avec séparation stricte entre permutation de `H`, ablation de `m` et intervention
+sur `A`. L'audit dédié compte les systèmes indépendants et conserve le résultat
+négatif du contraste `P_acc` vésiculaire sous ablation. `INV-A` reste
+`exploratory_comparison_ready_not_confirmatory`, `INV-C` est partiellement
+opérationnalisé, et aucun invariant général n’est validé.
 
 Les données qui peuvent être téléchargées, celles qui nécessitent un accès
 manuel et celles qui doivent encore être produites sont séparées dans
@@ -34,5 +39,6 @@ donc pas une septième admission.
 
 ```bash
 python plan_directeur/campagne_centrale_2026_08_11/run_all.py
+python plan_directeur/campagne_centrale_2026_08_11/evaluer_invariant_transversal.py
 python -m pytest -q plan_directeur/campagne_centrale_2026_08_11/tests
 ```

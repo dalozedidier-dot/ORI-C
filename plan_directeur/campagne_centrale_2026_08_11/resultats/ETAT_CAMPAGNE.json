@@ -6,7 +6,10 @@
   "benchmark_cases": 20,
   "invariant_cases_complete": 5,
   "field_complete_unique_systems": 4,
+  "inv_a_status": "candidate_operationalized_exploratory_not_validated",
+  "inv_a_direct_m_ablation_systems": 1,
+  "inv_a_direct_positive_m_ablation_systems": 0,
   "claim_general": "ORI-C n'est pas validé comme théorie générale",
-  "next_executable_without_new_data": "auditer la comparabilité des m et P_acc des systèmes complets sans imposer de normalisation universelle",
-  "next_confirmatory_gate": "obtenir une réplication indépendante ou une nouvelle donnée prospective, et débloquer PALEO-HISTORY par chronologies probabilistes + contrôle négatif gelé"
+  "next_executable_without_new_data": "conserver les contrastes locaux séparés et préparer un protocole futur do(m) avec X/Theta/A appariés; aucune homogénéisation de magnitude interdomaines",
+  "next_confirmatory_gate": "obtenir des réplications indépendantes pré-gelées de do(m)->Delta P_acc; la porte transversale exige trois systèmes indépendants dans les trois branches dont au moins deux empiriques"
 }

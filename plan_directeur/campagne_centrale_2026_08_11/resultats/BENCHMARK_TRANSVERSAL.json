@@ -120,6 +120,14 @@
       "P_acc_operational_definition": "fraction des antibiotiques/doses du panneau dont la croissance dépasse le seuil gelé",
       "m_P_acc_measurement_status": "m_available_Pacc_requires_raw_growth_panel",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "donofrio_antibiotic",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -157,6 +165,14 @@
         "P_acc": "retrospective_observed_support",
         "ablation": false
       },
+      "causal_test_class": "retrospective_lineage_observation",
+      "inv_a_role": "observational_support_not_direct_test",
+      "tau_quality": {
+        "kind": "tau_obs",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "sokolskyi_baum_vesicles",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -191,6 +207,14 @@
         "P_acc": "retrospective_observed_support_under_ablation_controls",
         "ablation": true
       },
+      "causal_test_class": "m_ablation",
+      "inv_a_role": "direct_m_ablation_Pacc_test_negative_expected_direction",
+      "tau_quality": {
+        "kind": "tau_obs",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "sokolskyi_baum_vesicles",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -221,6 +245,14 @@
       "P_acc_operational_definition": "fraction des classes de réponse atteignables sous stimulus final commun",
       "m_P_acc_measurement_status": "definitions_complete_no_admitted_complete_family",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "material_memory_families",
       "field_coverage": {
         "X": false,
         "H": true,
@@ -258,6 +290,14 @@
         "P_acc": "model_intervention_accessibility",
         "ablation": true
       },
+      "causal_test_class": "architecture_intervention",
+      "inv_a_role": "architecture_causal_prototype_not_m_ablation",
+      "tau_quality": {
+        "kind": "observation_horizon",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "solar_system_model",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -288,6 +328,14 @@
       "P_acc_operational_definition": "fraction des régimes glaciaires accessibles dans l'ensemble chronologique",
       "m_P_acc_measurement_status": "m_model_available_Pacc_requires_age_ensembles",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "paleoclimate_M2",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -325,6 +373,14 @@
         "P_acc": "retrospective_observed_MIC_support",
         "ablation": false
       },
+      "causal_test_class": "history_permutation",
+      "inv_a_role": "information_proxy_m_not_physical_isolated",
+      "tau_quality": {
+        "kind": "experimental_endpoint",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "donofrio_antibiotic",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -359,6 +415,14 @@
         "P_acc": "thresholded_physical_inventory_accessibility",
         "ablation": false
       },
+      "causal_test_class": "retrospective_physical_history",
+      "inv_a_role": "physical_history_trace_without_m_intervention",
+      "tau_quality": {
+        "kind": "tau_decay_local",
+        "tau_m_measured": true,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "cosmic_26Al",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -389,6 +453,14 @@
       "P_acc_operational_definition": "fraction des réservoirs sources compatibles",
       "m_P_acc_measurement_status": "requires_individual_carrier_data",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T10",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -422,6 +494,14 @@
       "P_acc_operational_definition": "fraction des classes stellaires sources compatibles",
       "m_P_acc_measurement_status": "m_partial_Pacc_computable",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T11",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -455,6 +535,14 @@
       "P_acc_operational_definition": "fraction des trajectoires thermiques compatibles",
       "m_P_acc_measurement_status": "requires_joint_Q26_time_reservoir_distribution",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T12",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -488,6 +576,14 @@
       "P_acc_operational_definition": "fraction des réservoirs NC/CC accessibles",
       "m_P_acc_measurement_status": "requires_linked_carriers",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T13",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -521,6 +617,14 @@
       "P_acc_operational_definition": "fraction des corps parents compatibles",
       "m_P_acc_measurement_status": "requires_linked_carriers",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T14",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -554,6 +658,14 @@
       "P_acc_operational_definition": "fraction des chemins d'altération/échauffement compatibles",
       "m_P_acc_measurement_status": "requires_paired_chronology_trace",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T15",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -587,6 +699,14 @@
       "P_acc_operational_definition": "fraction des réservoirs planétaires compatibles",
       "m_P_acc_measurement_status": "requires_information_retention_curve",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T16",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -620,6 +740,14 @@
       "P_acc_operational_definition": "fraction des trajectoires géochimiques compatibles",
       "m_P_acc_measurement_status": "requires_probabilistic_provenance_model",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T17",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -653,6 +781,14 @@
       "P_acc_operational_definition": "fraction des modèles de provenance non rejetés",
       "m_P_acc_measurement_status": "requires_reserved_validation",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T18",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -686,6 +822,14 @@
       "P_acc_operational_definition": "fraction des sources indépendantes compatibles",
       "m_P_acc_measurement_status": "requires_independent_replications",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T19",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -719,6 +863,14 @@
       "P_acc_operational_definition": "fraction des états du prochain étage compatibles",
       "m_P_acc_measurement_status": "requires_same_carrier_multistage_tracking",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T20",
       "field_coverage": {
         "X": true,
         "H": true,
@@ -752,6 +904,14 @@
       "P_acc_operational_definition": "fraction des trajectoires étoile-grain-disque-corps-planète compatibles",
       "m_P_acc_measurement_status": "requires_full_interstage_curve",
       "measurement_quality": {},
+      "causal_test_class": "not_classified_for_INV_A",
+      "inv_a_role": "not_directly_mapped",
+      "tau_quality": {
+        "kind": "declared_tau_not_audited",
+        "tau_m_measured": false,
+        "cross_domain_comparable": false
+      },
+      "replication_unit": "GCQ-T21",
       "field_coverage": {
         "X": true,
         "H": true,

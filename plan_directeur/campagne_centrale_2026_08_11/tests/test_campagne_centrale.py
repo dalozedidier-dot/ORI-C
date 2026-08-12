@@ -78,3 +78,44 @@ def test_les_nouvelles_sources_paleo_sont_scellees() -> None:
     for source in manifest["sources"]:
         actual = hashlib.sha256((source_dir / source["file"]).read_bytes()).hexdigest()
         assert actual == source["sha256"]
+
+
+def test_inv_a_separe_les_leviers_et_compte_les_systemes() -> None:
+    contrasts, audit = MODULE.invariant_transversal()
+    entries = {entry["claim_id"]: entry for entry in contrasts["entries"]}
+    assert contrasts["cross_domain_magnitude_comparison_allowed"] is False
+    assert entries["C-VES-03"]["control_class"] == "m_ablation"
+    assert entries["C-VES-03"]["direct_INV_A_m_ablation"] is True
+    assert entries["C-VES-03"]["direct_INV_A_support"] is False
+    assert entries["PID-ANT-01"]["control_class"] == "history_permutation"
+    assert entries["PID-ANT-01"]["direct_INV_A_m_ablation"] is False
+    assert entries["C-AST-01"]["control_class"] == "architecture_intervention"
+    assert entries["C-AST-01"]["direct_INV_A_m_ablation"] is False
+    assert audit["replication_unit"] == "independent_system_not_claim"
+    assert audit["field_complete_unique_system_count"] == 4
+    assert audit["direct_m_ablation_system_count"] == 1
+    assert audit["direct_positive_m_ablation_system_count"] == 0
+    assert audit["future_gate_satisfied"] is False
+    assert audit["current_status"] == "candidate_operationalized_exploratory_not_validated"
+
+
+def test_tau_m_ne_se_confond_pas_avec_un_horizon() -> None:
+    benchmark, _ = MODULE.benchmark_transversal()
+    cases = {case["id"]: case for case in benchmark["cases"]}
+    assert cases["C-AST-01"]["tau_quality"]["kind"] == "observation_horizon"
+    assert cases["C-AST-01"]["tau_quality"]["tau_m_measured"] is False
+    assert cases["PID-ANT-01"]["tau_quality"]["tau_m_measured"] is False
+    assert cases["GCQ-T09"]["tau_quality"]["kind"] == "tau_decay_local"
+    assert cases["GCQ-T09"]["tau_quality"]["cross_domain_comparable"] is False
+
+
+def test_formalisme_inv_a_refuse_l_homogeneisation_forcee() -> None:
+    formalism = json.loads((HERE / "FORMALISME_QUANTITATIF.json").read_text(encoding="utf-8"))
+    spec = json.loads((HERE / "INVARIANT_TRANSVERSAL_INV_A.json").read_text(encoding="utf-8"))
+    assert formalism["schema"] == "oric.quantitative-history.v2"
+    assert formalism["intervention_classes"]["history_permutation"].startswith("contrôle informationnel")
+    assert spec["status"] == "candidate_operationalized_not_validated"
+    assert spec["local_contrast"]["cross_domain_magnitude_comparison_allowed"] is False
+    assert spec["future_transversal_gate"]["independent_systems_min"] == 3
+    assert spec["future_transversal_gate"]["branches_required"] == 3
+    assert spec["future_transversal_gate"]["current_results_cannot_be_retroactively_preregistered"] is True

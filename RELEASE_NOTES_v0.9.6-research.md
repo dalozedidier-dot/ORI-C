@@ -25,7 +25,7 @@ Les claims quantitatifs mesurent notamment la dépendance temporelle de l’inve
 
 La campagne centrale compare 20 cas selon les sept champs `X, H, m, Θ, τ, P_acc, R`. **5 claims** remplissent les sept champs, pour **4 systèmes distincts** : vésicules, antibiotique, Système solaire au niveau modèle et `26Al` cosmique.
 
-Cette complétude est une opérationnalisation, pas un niveau de preuve. **Aucun invariant transversal général ORI-C n’est validé** dans cette version. `INV-A` reste au mieux prêt pour une comparaison exploratoire.
+Cette complétude est une opérationnalisation, pas un niveau de preuve. **Aucun invariant transversal général ORI-C n’est validé** dans cette version. `INV-A : Delta m -> Delta P_acc` est désormais formalisé avec domaine d'applicabilité, distinction entre permutation de `H`, ablation de `m` et intervention sur `A`, sémantique de `tau_m`, unité de réplication au niveau du système et contraste d'accessibilité local. L'audit dédié conserve explicitement que le seul contraste `P_acc` direct sous ablation de `m` actuellement exécuté ne soutient pas la direction positive gelée.
 
 ## Reproductibilité et intégrité
 
