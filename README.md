@@ -5,7 +5,7 @@
 [![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
 
-Didier Daloze | Version stable 0.9.6 | 12 août 2026
+Didier Daloze | Version stable 0.9.7 | 12 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
