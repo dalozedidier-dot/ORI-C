@@ -18,7 +18,6 @@ MODULES = [
     ("vesicules", ROOT / "03_branche_vivant/lignees_vesicules/analyser_lignees.py"),
     ("antibiotique_2026", ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py"),
     ("antibiotique_pid", ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_pid.py"),
-    ("santos_lopez_benchmark", ROOT / "03_branche_vivant/benchmark_externe_santos_lopez_2021/analyser_benchmark.py"),
 ]
 
 

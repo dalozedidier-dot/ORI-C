@@ -2641,49 +2641,6 @@
         "limitation": "m est ici un état historique de lignée utilisé comme variable informationnelle, pas une trace physique isolée ni ablatable; P_acc est un support observé rétrospectif et ne démontre pas une médiation causale."
       },
       "warning": "PID I_min is one redundancy definition among several; results are exploratory and discretization-specific."
-    },
-    "santos_lopez_benchmark": {
-      "schema": "oric.external-benchmark-result.v1",
-      "id": "SANTOS-LOPEZ-HISTORY-BENCH-01",
-      "reference_prediction": "PRED-VIVANT-HISTOIRE-001",
-      "dataset": "Santos-Lopez et al. 2021, eLife 10:e70676, Figure 1 source data 2",
-      "opened_on": "2026-08-13",
-      "n_independent_units": 36,
-      "metrics": {
-        "RMSE_state_only": 0.9374820345860344,
-        "RMSE_state_plus_history": 0.732491587271193,
-        "relative_RMSE_gain": 0.2186606673538649,
-        "relative_RMSE_gain_percent": 21.86606673538649,
-        "bootstrap_95pct_gain": [
-          0.07235080080496507,
-          0.3396651389396815
-        ],
-        "permutation_p_one_sided": 0.0001999600079984003,
-        "n_permutations": 5000,
-        "n_bootstrap": 5000
-      },
-      "by_antibiotic": {
-        "Ceftazidime": {
-          "n": 18,
-          "RMSE_state_only": 0.9560537641773493,
-          "RMSE_state_plus_history": 0.7346868060881511,
-          "relative_gain": 0.23154237385350052,
-          "relative_gain_percent": 23.15423738535005
-        },
-        "Imipenem": {
-          "n": 18,
-          "RMSE_state_only": 0.9185348824870304,
-          "RMSE_state_plus_history": 0.7302897697531678,
-          "relative_gain": 0.20494062481782838,
-          "relative_gain_percent": 20.494062481782837
-        }
-      },
-      "reference_numeric_rule_support": true,
-      "strict_prediction_success": false,
-      "counts_for_section_XIV_condition_3": false,
-      "counts_for_section_XIV_condition_10": false,
-      "status": "external_retrospective_benchmark_not_strict_preregistered_replication",
-      "reason": "dataset-specific mapping and analysis specification were fixed after this public dataset had been selected/opened; no public preregistration preceded opening"
     }
   },
   "execution_errors": 0,

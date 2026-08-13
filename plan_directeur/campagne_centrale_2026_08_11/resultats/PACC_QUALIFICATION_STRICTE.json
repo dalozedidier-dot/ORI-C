@@ -66,12 +66,8 @@
   },
   "next_empirical_candidate": {
     "id": "VES-PACC-INT-01",
-    "status": "scientific_design_frozen_ready_for_public_preregistration_not_executed",
-    "scientific_fields_complete": true,
-    "public_preregistration_present": false,
+    "status": "design_gate_ready_not_preregistered_not_executed",
     "preregistration_gate_open": false,
-    "registration_status": "package_ready_external_account_required",
-    "registration_public_url": null,
     "source": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
   },
   "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique"

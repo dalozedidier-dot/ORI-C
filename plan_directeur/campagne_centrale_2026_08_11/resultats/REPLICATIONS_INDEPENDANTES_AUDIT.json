@@ -10,14 +10,7 @@
     "verdict": "does_not_support",
     "interpretation": "une réplication indépendante négative existe déjà pour la famille antibiotique; elle ne reproduit pas le gain D'Onofrio"
   },
-  "santos_lopez_2021": {
-    "status": "external_retrospective_benchmark_not_strict_preregistered_replication",
-    "reference_numeric_rule_support": true,
-    "strict_prediction_success": false,
-    "counts_for_condition_10": false,
-    "source": "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json"
-  },
-  "search_status": "no_new_strict_independent_replication_completed_santos_lopez_retained_as_external_benchmark",
+  "search_status": "no_new_strict_independent_replication_completed",
   "condition_10_satisfied": false,
-  "rule": "une réplication négative de famille, une réplication conceptuelle ou un benchmark ouvert sans préenregistrement complet ne compte pas comme reproduction stricte d'un résultat positif"
+  "rule": "une réplication négative de famille ou une réplication conceptuelle ne compte pas comme reproduction stricte d'un résultat positif"
 }
