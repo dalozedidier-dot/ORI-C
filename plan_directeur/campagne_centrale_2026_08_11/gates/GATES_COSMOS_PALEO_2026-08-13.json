@@ -1,0 +1,37 @@
+{
+  "schema": "oric.external-data-gates.v1",
+  "checked_on": "2026-08-13",
+  "cosmos": {
+    "prediction_id": "PRED-COSMOS-NCCC-001",
+    "status": "closed_waiting_for_new_independent_cohort",
+    "opened": false,
+    "search_result": "aucune cohorte clairement nouvelle, publique, indépendante et postérieure au gel du 11 août 2026 n'a été identifiée comme jeu de test admissible lors de cette vérification",
+    "excluded_from_opening": [
+      "articles et jeux publiés avant le gel du 11 août 2026",
+      "résumés de congrès sans cohorte de données publique figée",
+      "données déjà intégrées ou vues dans ORI-C"
+    ],
+    "examples_seen_but_not_opened": [
+      "Nature Astronomy 2026, Homogeneous accretion of the Earth in the inner Solar System, publié avant le gel",
+      "Meteoritical Society 2026 abstracts du 11 août 2026, non utilisés comme cohorte de test"
+    ],
+    "next_action": "attendre une nouvelle cohorte isotopique NC/CC publique et indépendante; enregistrer son DOI/URL et son horodatage avant toute inspection des étiquettes/résultats"
+  },
+  "paleo": {
+    "prediction_id": "PRED-PALEO-HISTORY-02",
+    "status": "closed_one_of_two_data_gates_now_identified",
+    "opened": false,
+    "chronology_gate": {
+      "status": "candidate_resource_identified_not_ingested",
+      "resource": "PALMOD 130k marine palaeoclimate data synthesis v2, PANGAEA 10.1594/PANGAEA.984602",
+      "evidence": "2286 séries, 475 sites, modèles âge-profondeur BACON et 1000 modèles postérieurs d'âge par site/série lorsque disponibles",
+      "action": "ne pas télécharger/ouvrir pour le test tant que le contrôle négatif physique n'est pas gelé"
+    },
+    "negative_control_gate": {
+      "status": "missing",
+      "requirement": "un contrôle négatif réel, physiquement justifié et préenregistré, distinct d'une permutation de H ou d'un bruit synthétique",
+      "action": "ne pas inventer ou choisir le contrôle après inspection des performances de la cible"
+    },
+    "next_action": "laisser PRED-PALEO-HISTORY-02 fermé jusqu'à ce que le contrôle négatif physique soit acquis et défini; seulement alors enregistrer ensemble le contrôle et la ressource chronologique avant ouverture"
+  }
+}

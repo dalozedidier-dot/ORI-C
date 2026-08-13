@@ -1,0 +1,26 @@
+{
+  "schema": "oric.external-replication-analysis-spec.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "dataset": "Santos-Lopez et al. 2021 eLife 10:e70676",
+  "opened_on": "2026-08-13",
+  "relationship_to_frozen_prediction": "the prediction threshold and success criteria were frozen 2026-08-11 before this dataset was selected/opened for ORI-C replication",
+  "X": "median log2 MIC at day 3 for the antibiotic under selection",
+  "R_future": "median log2 MIC at day 12 for the same antibiotic",
+  "H": "six ancestral histories B1,B2,B3,P1,P2,P3",
+  "unit": "evolved population",
+  "n": 36,
+  "technical_replicates": "median of three MIC readings before log2 transform",
+  "folds": "hold out population-replicate index 1, 2, or 3 across all histories and both drugs",
+  "models": {
+    "state_only": "ridge alpha=1: X + drug",
+    "state_plus_history": "ridge alpha=1: X + drug + H"
+  },
+  "bootstrap": "5000 resamples of independent evolved populations stratified by drug",
+  "permutation": "5000 permutations of H within drug × replicate-index strata",
+  "frozen_rule": {
+    "gain_relative_RMSE_min": 0.05,
+    "bootstrap_lower_gt": 0,
+    "permutation_p_max": 0.05
+  },
+  "no_posthoc_threshold_change": true
+}

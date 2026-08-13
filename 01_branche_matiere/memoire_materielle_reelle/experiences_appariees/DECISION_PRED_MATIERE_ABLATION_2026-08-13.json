@@ -1,0 +1,35 @@
+{
+  "schema": "oric.material-ablation-execution-decision.v1",
+  "prediction_id": "PRED-MATIERE-ABLATION-001",
+  "decided_on": "2026-08-13",
+  "selected_protocol": "MAG-PAIR-001",
+  "status": "selected_for_physical_execution_not_executed",
+  "reason": [
+    "la variable de trace est directement physique et vectorielle : rémanence magnétique",
+    "l'ablation est spécifiée avant données : démagnétisation AF réduisant la trace d'au moins 80 %",
+    "le sham est spécifié : même manipulation et même durée avec AF nul",
+    "les mesures sont appariées avant/après sur la même éprouvette avec jumelles de bloc",
+    "la règle primaire correspond exactement à la prédiction gelée : écart avant, A normalisée >=0,50 et interaction histoire×ablation p<=0,05",
+    "contrairement à POLY-PAIR-001, aucun traitement actif n'est choisi après un pilote",
+    "contrairement au candidat Vervelidou 2023, le protocole exige une réponse finale indépendante et les courbes machine complètes"
+  ],
+  "mapping_to_frozen_prediction": {
+    "histories": ["IRM_positive_saturee", "IRM_negative_saturee"],
+    "delta_R_before": "écart entre histoires dans la projection de rémanence sous le champ test sous-coercitif avant ablation",
+    "ablation": "démagnétisation AF au palier préenregistré réduisant la trace >=80 %",
+    "delta_R_after": "même écart de réponse après ablation sous le même champ test",
+    "A_formula": "1 - abs(delta_R_after) / abs(delta_R_before)",
+    "success": "delta_R_before non nul; A>=0,50; interaction histoire×ablation bilatérale p<=0,05; sham ne reproduit pas la chute"
+  },
+  "minimum_independent_units": 48,
+  "required_before_execution": [
+    "laboratoire disposant d'un magnétomètre et d'une démagnétisation AF contrôlée",
+    "palier AF exact et champ test sous-coercitif exact gelés publiquement avant les mesures de test",
+    "randomisation des éprouvettes et codes d'aveugle gelés",
+    "fichier d'analyse et règle d'interaction gelés",
+    "préenregistrement public de l'exécution si l'expérience est produite spécifiquement pour ORI-C"
+  ],
+  "frozen_prediction_source_must_remain_unchanged": true,
+  "public_dataset_already_qualifying_found": false,
+  "public_candidate_note": "Vervelidou 2023 reste à fort levier mais ne ferme pas le test : les courbes brutes des 13 fragments de basalte ne sont pas dans le jeu public audité et la réponse finale indépendante de la trace n'est pas disponible."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "oric.prediction-replication-result.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "dataset": "Santos-Lopez et al. 2021, eLife 10:e70676, Figure 1 source data 2",
+  "opened_on": "2026-08-13",
+  "analysis_spec": {
+    "X": "median log2 MIC at day 3 under the same antibiotic used for experimental evolution",
+    "R_future": "median log2 MIC at day 12 under that antibiotic",
+    "H": "six ancestral-history identities B1,B2,B3,P1,P2,P3",
+    "independent_unit": "evolved population (ancestor × antibiotic × population replicate)",
+    "n_independent_units": 36,
+    "technical_replicates": "3 MIC readings collapsed by median before log2 transform",
+    "out_of_sample": "3 folds, each holding out population replicate index 1, 2 or 3 across all histories and both antibiotics",
+    "models": "ridge alpha=1 fixed; state=X+antibiotic; history=X+antibiotic+six-level ancestral history",
+    "permutation": "5000 permutations of H within antibiotic × population-replicate strata",
+    "bootstrap": "5000 stratified resamples of independent lines within antibiotic"
+  },
+  "metrics": {
+    "RMSE_state_only": 0.9374820345860344,
+    "RMSE_state_plus_history": 0.732491587271193,
+    "relative_RMSE_gain": 0.2186606673538649,
+    "relative_RMSE_gain_percent": 21.86606673538649,
+    "bootstrap_95pct_gain": [
+      0.07235080080496507,
+      0.3396651389396815
+    ],
+    "permutation_p_one_sided": 0.0001999600079984003,
+    "n_permutations": 5000,
+    "n_bootstrap": 5000
+  },
+  "secondary_prespecified_guard_diagnostics": {
+    "by_antibiotic": {
+      "Ceftazidime": {
+        "n": 18,
+        "RMSE_state_only": 0.9560537641773493,
+        "RMSE_state_plus_history": 0.7346868060881511,
+        "relative_gain": 0.23154237385350052,
+        "relative_gain_percent": 23.15423738535005
+      },
+      "Imipenem": {
+        "n": 18,
+        "RMSE_state_only": 0.9185348824870304,
+        "RMSE_state_plus_history": 0.7302897697531678,
+        "relative_gain": 0.20494062481782838,
+        "relative_gain_percent": 20.494062481782837
+      }
+    }
+  },
+  "frozen_success_rule": {
+    "gain_min": 0.05,
+    "bootstrap_gain_lower_gt": 0.0,
+    "permutation_p_max": 0.05
+  },
+  "success": true,
+  "verdict": "success",
+  "scope": "external blind validation on public pre-existing data; not newly collected prospective data"
+}

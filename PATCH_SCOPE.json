@@ -1,0 +1,19 @@
+{
+  "schema": "oric.science-next-gates.patch-scope.v1",
+  "prepared_on": "2026-08-13",
+  "base_context": {
+    "main_commit_reported_by_user": "1b9688347b569f2ea5bf18a7570ecc244be3dc03",
+    "stable_release": "v0.9.7-research",
+    "stable_archive_sha256": "e7038479cbae955421574c89942bf1d8da79f2559d66ddd4be290cc123a34bfc"
+  },
+  "policy": "scientific source predictions remain immutable; this bundle adds a finalized VES protocol, one external replication result, one matter execution decision, and two closed data gates",
+  "frozen_prediction_files_modified": false,
+  "frozen_prediction_reference_file_sha256": {
+    "PRED-COSMOS-NCCC-001.json": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
+    "PRED-MATIERE-ABLATION-001.json": "6da67d433eccc06681e8b29174fd20f6e1c22cb8068d3f0feb323cc42c539770",
+    "PRED-PALEO-HISTORY-02.json": "a7557b8cc540c14b054a5fc48db24f70d993e7aab16001e0957a0b67c2fe3065",
+    "PRED-VIVANT-HISTOIRE-001.json": "822953f4549e4c0bcd580dbbc8fe49401ce587d6a38f14a8e0059e4413b58ce6"
+  },
+  "no_release_requested": true,
+  "no_osf_registration_mutation_in_bundle": true
+}
