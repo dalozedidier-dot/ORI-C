@@ -1,0 +1,97 @@
+{
+  "schema": "oric.ves-pacc-int-raw-input.v1",
+  "protocol_id": "VES-PACC-INT-01",
+  "purpose": "machine-readable handoff from laboratory tables to the frozen analysis-ready NPZ; no scientific threshold is defined here",
+  "files": {
+    "parents.csv": {
+      "unit": "one row per independent parent vesicle population",
+      "required_columns": [
+        "parent_id",
+        "anchor_A400",
+        "anchor_NR640",
+        "anchor_NR_RATIO",
+        "anchor_CALCEIN",
+        "X_pH",
+        "X_temperature_C",
+        "X_total_amphiphile_mM"
+      ]
+    },
+    "arms.csv": {
+      "unit": "one row per parent_id x arm after control/do(m)/sham handling and before future challenges",
+      "required_columns": [
+        "parent_id",
+        "arm",
+        "post_z_average_nm",
+        "post_pdi",
+        "post_pH",
+        "temperature_C",
+        "total_amphiphile_mM",
+        "final_volume_uL",
+        "elapsed_handling_min"
+      ],
+      "allowed_arms": [
+        "control",
+        "do_m",
+        "sham"
+      ]
+    },
+    "responses.csv": {
+      "unit": "one row per parent_id x arm x preregistered future challenge",
+      "required_columns": [
+        "parent_id",
+        "arm",
+        "challenge_id",
+        "A400",
+        "NR640",
+        "NR_RATIO",
+        "CALCEIN"
+      ],
+      "challenge_ids": [
+        "AMPH-30mM-T0p5h",
+        "AMPH-30mM-T1p5h",
+        "AMPH-30mM-T5h",
+        "AMPH-30mM-T24h",
+        "AMPH-60mM-T0p5h",
+        "AMPH-60mM-T1p5h",
+        "AMPH-60mM-T5h",
+        "AMPH-60mM-T24h",
+        "AMPH-90mM-T0p5h",
+        "AMPH-90mM-T1p5h",
+        "AMPH-90mM-T5h",
+        "AMPH-90mM-T24h"
+      ],
+      "response_dimension_order": [
+        "R1_A400",
+        "R2_NR640",
+        "R3_NR_RATIO",
+        "R4_CALCEIN"
+      ]
+    },
+    "execution_log.json": {
+      "required_fields": [
+        "m_targeted_only_confirmed_before_decoding",
+        "responses_collected_after_intervention",
+        "protocol_deviations",
+        "randomization_seed_recorded",
+        "blinding_preserved_until_analysis_table_freeze"
+      ],
+      "rule": "protocol_deviations must be empty for strict matching; declarations are procedural and may not be changed after outcome inspection"
+    }
+  },
+  "normalization": {
+    "A400": "future A400 / parent anchor_A400",
+    "NR640": "future NR640 / parent anchor_NR640",
+    "NR_RATIO": "future NR_RATIO / parent anchor_NR_RATIO",
+    "CALCEIN": "future CALCEIN / parent anchor_CALCEIN"
+  },
+  "fidelity_and_matching_source": "all numerical tolerances and target levels are read from PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json; this schema contains no competing threshold",
+  "output": {
+    "npz": "ves_pacc_int_01_analysis_ready.npz",
+    "metadata": "ves_pacc_int_01_analysis_ready.metadata.json",
+    "arrays": [
+      "control_response",
+      "intervention_response",
+      "sham_response"
+    ]
+  }
+}

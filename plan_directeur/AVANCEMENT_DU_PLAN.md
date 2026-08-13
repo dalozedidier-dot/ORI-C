@@ -175,3 +175,5 @@ Les trois derniers blocs restent en attente lors d'une exécution sans accès au
 - **Matière : `MAG-PAIR-001` retenu pour l’exécution physique.** Le protocole reste un plan, sans mesure confirmatoire. Le laboratoire, le palier AF, le champ test, la randomisation, l’aveugle et l’analyse doivent être gelés avant la première mesure.
 - **Cosmos et paléo : portes inchangées.** `PRED-COSMOS-NCCC-001` attend un nouveau cohort météoritique indépendant. `PRED-PALEO-HISTORY-02` reste fermé tant que les incertitudes chronologiques ponctuelles et le vrai contrôle négatif manquants ne sont pas acquis.
 - **Seuil scientifique : inchangé.** **7/12**, verrous `3, 4, 9, 10, 11`.
+- **VES-PACC-INT-01 — chaîne laboratoire → analyse prête.** Le schéma `SCHEMA_ENTREE_VES_PACC_INT_01.json` et `preparer_ves_pacc_int_01.py` imposent la structure parent/bras/défi, calculent la normalisation vers les cubes `n×12×4`, dérivent les contrôles de fidélité et d’appariement depuis le protocole gelé et restent bloqués pour toute donnée réelle tant que l’enregistrement public n’est pas attesté. Aucun seuil scientifique ni verdict §XIV n’est modifié.
+

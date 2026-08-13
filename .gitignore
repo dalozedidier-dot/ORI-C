@@ -26,3 +26,7 @@ plateforme/campagne_maximale_reelle/sources_brutes/*
 /*.zip
 /.claude/
 /01_branche_matiere/memoire_materielle_reelle/derive/execution/
+# Fichiers système locaux Windows : jamais des contenus scientifiques du dépôt.
+desktop.ini
+Thumbs.db
+
