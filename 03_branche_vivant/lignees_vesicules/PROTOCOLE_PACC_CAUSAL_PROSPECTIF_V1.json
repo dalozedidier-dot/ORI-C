@@ -1,55 +1,276 @@
 {
-  "schema": "oric.vesicle-pacc-prospective-design.v1",
+  "schema": "oric.vesicle-pacc-prospective-design.v2",
   "id": "VES-PACC-INT-01",
   "branch": "vivant",
   "target": "section_XIV_condition_9_and_direct_INV_A",
-  "status": "design_gate_ready_not_preregistered_not_executed",
+  "status": "scientific_design_frozen_ready_for_public_preregistration_not_executed",
+  "frozen_on": "2026-08-13",
   "strict_definition_id": "PACC-INT-CHALLENGE-V1",
   "prior_dataset": {
-    "source": "Sokolskyi et Baum, Dryad 10.5061/dryad.fbg79cp99",
+    "source": "Sokolskyi & Baum 2026; Dryad 10.5061/dryad.fbg79cp99",
     "pairs_already_analysed": 11760,
     "allowed_use": "calibration_and_design_only",
     "forbidden_use": "cannot_be_relabelled_as_prospective_or_as_section_XIV_condition_9_success"
   },
-  "independent_unit": "lignée ou réplication expérimentale physiquement indépendante, déclarée avant acquisition",
+  "experimental_system": {
+    "chemistry": "decanoic acid:decanol 2:1 vesicles in phosphate buffer, following the Sokolskyi–Baum FR chemistry as the reference system",
+    "parent_batch_per_independent_unit": "2.4 mL physically separate parent population incubated 24 h before intervention; scale is fixed for the prospective experiment and is not pooled across independent units",
+    "resuspension": "five complete aspiration/dispense cycles with a sterile large-volume pipette immediately before arm split",
+    "arm_split": "each parent batch is split into control, do(m), sham and assay reserve before any active manipulation"
+  },
+  "independent_unit": {
+    "definition": "one physically separate parent vesicle population/batch generated, incubated and handled independently from all other parent populations, then split within-unit across control, do(m) and sham",
+    "planned_n": 48,
+    "minimum_analyzable_n_for_primary_decision": 40,
+    "not_independent": [
+      "technical fluorescence replicates",
+      "repeated time readings",
+      "challenge aliquots",
+      "the three arms created from the same parent"
+    ],
+    "bootstrap_unit": "parent vesicle population",
+    "exclusion_rule": "no outcome-based exclusion; only preregistered catastrophic contamination, lost sample, complete instrument failure, or documented protocol violation before decoding"
+  },
   "X": {
-    "definition": "vecteur d'état présent non ciblé mesuré juste avant l'intervention sur m",
-    "rule": "aucune composante de m ne peut être recopiée dans X pour fabriquer l'appariement",
-    "matching": "mêmes distributions de X entre contrôle, do(m) et sham dans la tolérance préenregistrée"
+    "definition": "pre-intervention present-state vector measured on the common parent immediately before arm split; it excludes all DLS variables used to define m",
+    "components": [
+      "A400 turbidity",
+      "Nile Red I640",
+      "Nile Red 610/660 ratio",
+      "calcein retained-fluorescence fraction",
+      "pH",
+      "temperature",
+      "total amphiphile concentration"
+    ],
+    "P_acc_anchor_components": [
+      "A400",
+      "Nile Red I640",
+      "Nile Red 610/660 ratio",
+      "calcein retained-fluorescence fraction"
+    ],
+    "normalization": "for each independent unit and response dimension, the pre-intervention value is normalized to 1.0 and future R is expressed relative to that same anchor",
+    "rule": "DLS Z-average, DLS PDI and any direct m-derived statistic are forbidden from X",
+    "matching": "within-parent split gives exact biological pairing before manipulation; non-target chemistry and handling must also pass the preregistered tolerances"
   },
   "m": {
-    "definition": "trace matérielle mesurée du parent, distincte de X, susceptible d'être modifiée sans changer l'architecture non ciblée",
-    "candidate_from_existing_case": "composition parentale mesurée immédiatement avant transfert",
-    "operator": null,
-    "target_levels": null,
-    "blocking_rule": "l'opérateur physique ou quasi-physique do(m) et ses niveaux doivent être définis et gelés publiquement avant toute nouvelle donnée de test"
+    "definition": "physical seed-structure trace carried by the parental vesicle population, operationalized as the DLS size distribution and not as turbidity",
+    "measures": [
+      "DLS Z-average hydrodynamic diameter (nm)",
+      "DLS polydispersity index (PDI)"
+    ],
+    "control": "standard resuspended parental material; no membrane extrusion",
+    "operator": "after the common five-cycle resuspension, pass the do(m) aliquot 11 times through a 100 nm track-etched polycarbonate membrane in a hand-held mini-extruder; use the same buffer, apparatus family, temperature window, elapsed handling window and final collection side as the sham",
+    "target_levels": {
+      "control": "native post-resuspension size distribution",
+      "do(m)": "100 nm extrusion reset; population-level median post-operator Z-average must be 80–150 nm and median PDI <= 0.25",
+      "sham": "11 passes through a 5 µm track-etched polycarbonate membrane using the identical syringe/extruder sequence; population-level median Z-average change relative to control must be <=10% and absolute median PDI change <=0.05"
+    },
+    "manipulation_fidelity": "all units remain in intention-to-treat analysis. Failure of the population-level do(m) or sham fidelity criterion makes the strict causal qualification fail; it does not authorize a post-hoc operator change.",
+    "rationale": "100 nm extrusion is a direct physical reset of vesicle size structure. It does not replace feeding with preformed vesicles and therefore avoids the FR→UR architecture change."
+  },
+  "A_architecture": {
+    "definition": "non-target experimental architecture held equal across arms",
+    "matched": [
+      "same parent",
+      "same buffer lot",
+      "same amphiphile stock lot",
+      "same final volume",
+      "same challenge plate/block",
+      "same incubation temperature",
+      "same readout instruments",
+      "balanced randomized plate positions",
+      "matched elapsed handling time"
+    ],
+    "tolerances": {
+      "post_handling_pH_abs_difference_max": 0.05,
+      "temperature_abs_difference_C_max": 0.5,
+      "total_amphiphile_relative_difference_max": 0.02,
+      "final_volume_relative_difference_max": 0.01,
+      "elapsed_handling_abs_difference_minutes_max": 2.0
+    }
   },
   "Theta": {
-    "definition": "ensemble de défis futurs identiques appliqués aux bras contrôle, do(m) et sham",
-    "challenge_set": null,
-    "blocking_rule": "les défis, leur ordre éventuel, leur durée et leurs doses doivent être gelés avant ouverture des données de test"
+    "definition": "future amphiphile-feed challenges applied identically to control, do(m) and sham after intervention",
+    "challenge_set": [
+      {
+        "id": "AMPH-30mM-T0p5h",
+        "fresh_amphiphile_added_mM": 30,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 6,
+        "phosphate_buffer_uL": 114,
+        "final_volume_uL": 200,
+        "readout_hours": 0.5
+      },
+      {
+        "id": "AMPH-30mM-T1p5h",
+        "fresh_amphiphile_added_mM": 30,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 6,
+        "phosphate_buffer_uL": 114,
+        "final_volume_uL": 200,
+        "readout_hours": 1.5
+      },
+      {
+        "id": "AMPH-30mM-T5h",
+        "fresh_amphiphile_added_mM": 30,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 6,
+        "phosphate_buffer_uL": 114,
+        "final_volume_uL": 200,
+        "readout_hours": 5
+      },
+      {
+        "id": "AMPH-30mM-T24h",
+        "fresh_amphiphile_added_mM": 30,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 6,
+        "phosphate_buffer_uL": 114,
+        "final_volume_uL": 200,
+        "readout_hours": 24
+      },
+      {
+        "id": "AMPH-60mM-T0p5h",
+        "fresh_amphiphile_added_mM": 60,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 12,
+        "phosphate_buffer_uL": 108,
+        "final_volume_uL": 200,
+        "readout_hours": 0.5
+      },
+      {
+        "id": "AMPH-60mM-T1p5h",
+        "fresh_amphiphile_added_mM": 60,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 12,
+        "phosphate_buffer_uL": 108,
+        "final_volume_uL": 200,
+        "readout_hours": 1.5
+      },
+      {
+        "id": "AMPH-60mM-T5h",
+        "fresh_amphiphile_added_mM": 60,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 12,
+        "phosphate_buffer_uL": 108,
+        "final_volume_uL": 200,
+        "readout_hours": 5
+      },
+      {
+        "id": "AMPH-60mM-T24h",
+        "fresh_amphiphile_added_mM": 60,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 12,
+        "phosphate_buffer_uL": 108,
+        "final_volume_uL": 200,
+        "readout_hours": 24
+      },
+      {
+        "id": "AMPH-90mM-T0p5h",
+        "fresh_amphiphile_added_mM": 90,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 18,
+        "phosphate_buffer_uL": 102,
+        "final_volume_uL": 200,
+        "readout_hours": 0.5
+      },
+      {
+        "id": "AMPH-90mM-T1p5h",
+        "fresh_amphiphile_added_mM": 90,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 18,
+        "phosphate_buffer_uL": 102,
+        "final_volume_uL": 200,
+        "readout_hours": 1.5
+      },
+      {
+        "id": "AMPH-90mM-T5h",
+        "fresh_amphiphile_added_mM": 90,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 18,
+        "phosphate_buffer_uL": 102,
+        "final_volume_uL": 200,
+        "readout_hours": 5
+      },
+      {
+        "id": "AMPH-90mM-T24h",
+        "fresh_amphiphile_added_mM": 90,
+        "parent_transfer_uL": 80,
+        "stock_1M_uL": 18,
+        "phosphate_buffer_uL": 102,
+        "final_volume_uL": 200,
+        "readout_hours": 24
+      }
+    ],
+    "factorization": {
+      "fresh_amphiphile_added_mM": [
+        30,
+        60,
+        90
+      ],
+      "readout_hours": [
+        0.5,
+        1.5,
+        5,
+        24
+      ]
+    },
+    "common_rules": "80 µL parent-arm transfer into a 200 µL final challenge volume; use the same 1 M 2:1 decanoic acid:decanol stock; buffer volume is adjusted only to keep final volume constant",
+    "order": "challenge positions randomized within plate/block; all three arms from one parent remain in the same block"
   },
   "R": {
-    "definition": "réponse future mesurée après intervention et après application de chaque défi",
-    "response_dimensions": null,
-    "blocking_rule": "les dimensions et fenêtres de lecture doivent être gelées avant acquisition"
+    "definition": "future response after do(m) and challenge, measured in four preregistered dimensions",
+    "response_dimensions": [
+      {
+        "id": "R1_A400",
+        "measure": "A400 turbidity",
+        "transform": "future/pre-intervention anchor",
+        "materiality_threshold": 0.1
+      },
+      {
+        "id": "R2_NR640",
+        "measure": "Nile Red I640 fluorescence",
+        "transform": "future/pre-intervention anchor",
+        "materiality_threshold": 0.1
+      },
+      {
+        "id": "R3_NR_RATIO",
+        "measure": "Nile Red 610/660 ratio",
+        "transform": "future/pre-intervention anchor",
+        "materiality_threshold": 0.05
+      },
+      {
+        "id": "R4_CALCEIN",
+        "measure": "calcein retained-fluorescence fraction",
+        "transform": "future/pre-intervention anchor",
+        "materiality_threshold": 0.1
+      }
+    ],
+    "technical_replication": "technical readout replicates are averaged within the parent×arm×challenge cell before P_acc; they never increase n",
+    "blinding": "raw wells carry randomized codes; arm identity is withheld from the analyst until the immutable analysis table and exclusions are frozen"
   },
   "P_acc": {
     "definition_id": "PACC-INT-CHALLENGE-V1",
-    "materiality_thresholds": null,
-    "threshold_source_allowed": [
-      "précision instrumentale indépendante",
-      "SESOI justifié biologiquement",
-      "calibration sur données antérieures explicitement exclues du test"
+    "X_anchor_normalized": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
     ],
-    "weights": "uniformes par défaut, sauf justification gelée avant données",
-    "bootstrap_unit": "independent_unit"
+    "materiality_thresholds": [
+      0.1,
+      0.1,
+      0.05,
+      0.1
+    ],
+    "threshold_source": "prospective biological SESOI fixed as relative changes; no test-data calibration permitted",
+    "weights": "uniform across all 12 challenges × 4 dimensions",
+    "denominator_cells": 48,
+    "bootstrap_unit": "parent vesicle population",
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 20260813,
+    "sham_tolerance_max_abs_Delta_P_acc": 0.0625,
+    "sham_tolerance_interpretation": "no independent unit may differ from its control by more than 3 of the 48 accessibility cells under sham handling"
   },
-  "arms_required": [
-    "control",
-    "do(m)",
-    "sham"
-  ],
   "matching_required": [
     "X_matched",
     "Theta_matched",
@@ -60,25 +281,70 @@
     "thresholds_predeclared",
     "future_response_after_intervention"
   ],
-  "qualification_rules": {
-    "section_XIV_condition_9_local_branch_measurement": "causal_qualified == true sur un système empirique réel; le signe de Delta_P_acc peut être positif, négatif ou nul",
-    "direct_INV_A_support": "causal_qualified == true et l'intervalle 95 % apparié de Delta_P_acc exclut 0",
-    "direct_INV_A_non_support": "causal_qualified == true et l'effet ne satisfait pas la règle de soutien préenregistrée",
+  "SESOI_and_power": {
+    "primary_effect": "Delta_P_acc = P_acc_do(m) - P_acc_control",
+    "expected_direction": "negative",
+    "SESOI_abs_Delta_P_acc": 0.08,
+    "planning_SD_paired_Delta_P_acc": 0.15,
+    "alpha_two_sided": 0.05,
+    "target_power": 0.9,
+    "paired_t_approx_required_n": 39,
+    "power_at_n40_approx": 0.9081,
+    "power_at_n48_approx": 0.9514,
+    "planned_n": 48,
+    "note": "power calculation is planning only; final inference uses the preregistered paired bootstrap from PACC-INT-CHALLENGE-V1"
+  },
+  "decision_rule": {
+    "causal_qualified": "all matching flags true; n analyzable >=40; do(m) fidelity passes; sham structural fidelity passes; P_acc sham max-absolute tolerance passes",
+    "section_XIV_condition_9_local_branch_measurement": "satisfied locally if causal_qualified is true, regardless of the sign or size of Delta_P_acc",
+    "direct_INV_A_support": "causal_qualified AND mean Delta_P_acc <= -0.08 AND paired bootstrap 95% upper bound < 0",
+    "direct_INV_A_non_support": "causal_qualified but the preregistered support rule is not met",
+    "unqualified": "any strict matching, sham, intervention-fidelity or n>=40 gate fails; descriptive estimates are still published",
     "no_retroactive_redefinition": true
   },
+  "randomization_and_blinding": {
+    "randomization_seed": "generated and committed in the public preregistration before execution",
+    "arm_assignment": "within-parent randomized label mapping; physical control/do/sham processing follows the concealed map",
+    "plate_blocking": "parent population is the block; all arms and challenge doses remain represented within the same block",
+    "analysis_blinding": "decode only after raw-data freeze, exclusion log freeze and SHA-256 of the analysis-ready table"
+  },
   "preregistration_gate": {
+    "scientific_fields_complete": true,
+    "external_registration_required": true,
     "required_before_execution": [
-      "m.operator",
-      "m.target_levels",
-      "Theta.challenge_set",
-      "R.response_dimensions",
-      "P_acc.materiality_thresholds",
-      "tolérances d'appariement",
-      "taille et définition des unités indépendantes",
-      "SESOI et plan de puissance",
-      "règle de décision finale",
-      "URL publique OSF ou identifiant équivalent"
+      "public OSF registration URL or equivalent immutable registration identifier",
+      "registration timestamp preceding every new test datum",
+      "SHA-256 of this protocol JSON and its analysis script recorded in the registration sidecar and public registration"
     ],
-    "current_gate_open": false
+    "current_gate_open": false,
+    "gate_state_source": "VES-PACC-INT-01.registration.json; the frozen scientific protocol is never edited to open the gate",
+    "reason": "scientific design frozen; public registration metadata not yet attached. No new test data may be acquired before that step."
+  },
+  "sources": [
+    {
+      "citation": "Sokolskyi T, Baum D. Langmuir 2026. doi:10.1021/acs.langmuir.6c00275",
+      "role": "empirical vesicle system and FR transfer/readouts"
+    },
+    {
+      "citation": "Dryad doi:10.5061/dryad.fbg79cp99",
+      "role": "historical design/calibration only"
+    },
+    {
+      "citation": "Zhu TF, Budin I, Szostak JW. Methods Enzymol. 2013;533:275-282. doi:10.1016/B978-0-12-420067-8.00021-0",
+      "role": "11-pass 100 nm polycarbonate extrusion method"
+    },
+    {
+      "citation": "Misuraca L et al. Life. 2022;12:445. doi:10.3390/life12030445",
+      "role": "100 nm, 11-pass extrusion demonstrated for decanoic acid/decanol protomembranes"
+    },
+    {
+      "citation": "Blochliger E et al. J Phys Chem B. 1998;102:10383-10390. doi:10.1021/jp981234w",
+      "role": "pre-existing fatty-acid vesicle size can template subsequent vesicle size distribution"
+    }
+  ],
+  "files": {
+    "power_plan": "POWER_PLAN.json",
+    "analysis_script": "analyser_ves_pacc_int_01.py",
+    "registration_sidecar": "VES-PACC-INT-01.registration.json"
   }
 }

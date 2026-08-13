@@ -82,6 +82,7 @@ jobs:
             02_branche_systeme_solaire/tests_suivants/tests \
             03_branche_vivant/lignees_vesicules/tests \
             03_branche_vivant/benchmark_histoire_antibiotique_2026/tests \
+            03_branche_vivant/benchmark_externe_santos_lopez_2021/tests \
             plan_directeur/campagne_recherche_suivante/tests
           python scripts/valider_recherche_suivante.py
 
@@ -127,6 +128,7 @@ jobs:
             02_branche_systeme_solaire/tests_suivants/resultats
             03_branche_vivant/lignees_vesicules/resultats
             03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats
+            03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats
             donnees_externes/**/SOURCE.json
             donnees_externes/ACQUISITION_REPORT.json
           if-no-files-found: error

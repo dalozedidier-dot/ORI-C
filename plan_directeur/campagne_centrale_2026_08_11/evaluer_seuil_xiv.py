@@ -111,6 +111,13 @@ def pacc_strict_audit() -> dict:
     }
     vesicle_design_path = ROOT / "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
     vesicle_design = json.loads(vesicle_design_path.read_text(encoding="utf-8")) if vesicle_design_path.exists() else {}
+    vesicle_registration_path = ROOT / "03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.registration.json"
+    vesicle_registration = json.loads(vesicle_registration_path.read_text(encoding="utf-8")) if vesicle_registration_path.exists() else {}
+    vesicle_preregistered = bool(
+        vesicle_registration.get("status") == "publicly_registered"
+        and vesicle_registration.get("public_url")
+        and vesicle_registration.get("registered_at")
+    )
 
     candidates = [
         {
@@ -182,7 +189,11 @@ def pacc_strict_audit() -> dict:
         "next_empirical_candidate": {
             "id": vesicle_design.get("id", "VES-PACC-INT-01"),
             "status": vesicle_design.get("status", "missing"),
-            "preregistration_gate_open": vesicle_design.get("preregistration_gate", {}).get("current_gate_open", False),
+            "scientific_fields_complete": vesicle_design.get("preregistration_gate", {}).get("scientific_fields_complete", False),
+            "public_preregistration_present": vesicle_preregistered,
+            "preregistration_gate_open": vesicle_preregistered,
+            "registration_status": vesicle_registration.get("status", "missing"),
+            "registration_public_url": vesicle_registration.get("public_url"),
             "source": vesicle_design_path.relative_to(ROOT).as_posix() if vesicle_design_path.exists() else None,
         },
         "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique",
@@ -218,15 +229,24 @@ def antibiotic_specification_audit() -> dict:
 
 def replication_audit() -> dict:
     living = load("03_branche_vivant/lignees_vesicules/RECHERCHE_REPLICATION_INDEPENDANTE_2026-08-12.json")
+    santos_path = ROOT / "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json"
+    santos = json.loads(santos_path.read_text(encoding="utf-8")) if santos_path.exists() else {}
     return {
         "schema": "oric.section-xiv.replication-audit.v1",
         "strict_reproduced_results": [],
         "strict_reproduced_result_count": 0,
         "required": 2,
         "card2019": living.get("existing_independent_test"),
+        "santos_lopez_2021": {
+            "status": santos.get("status", "not_executed"),
+            "reference_numeric_rule_support": santos.get("reference_numeric_rule_support"),
+            "strict_prediction_success": santos.get("strict_prediction_success", False),
+            "counts_for_condition_10": santos.get("counts_for_section_XIV_condition_10", False),
+            "source": santos_path.relative_to(ROOT).as_posix() if santos_path.exists() else None,
+        },
         "search_status": living.get("overall_verdict"),
         "condition_10_satisfied": False,
-        "rule": "une réplication négative de famille ou une réplication conceptuelle ne compte pas comme reproduction stricte d'un résultat positif",
+        "rule": "une réplication négative de famille, une réplication conceptuelle ou un benchmark ouvert sans préenregistrement complet ne compte pas comme reproduction stricte d'un résultat positif",
     }
 
 

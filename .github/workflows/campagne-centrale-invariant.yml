@@ -15,6 +15,11 @@ on:
       - '02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/**'
       - '03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.*'
       - '03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py'
+      - '03_branche_vivant/lignees_vesicules/POWER_PLAN.json'
+      - '03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.registration.json'
+      - '03_branche_vivant/lignees_vesicules/analyser_ves_pacc_int_01.py'
+      - '03_branche_vivant/lignees_vesicules/RECHERCHE_REPLICATION_INDEPENDANTE_2026-08-12.json'
+      - '03_branche_vivant/benchmark_externe_santos_lopez_2021/**'
       - '.github/workflows/campagne-centrale-invariant.yml'
 
 permissions:
@@ -235,6 +240,9 @@ jobs:
           cp \
             03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.md \
             03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json \
+            03_branche_vivant/lignees_vesicules/POWER_PLAN.json \
+            03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.registration.json \
+            03_branche_vivant/lignees_vesicules/analyser_ves_pacc_int_01.py \
             "$OUT/vesicules/" 2>/dev/null || true
           git diff --binary -- \
             plan_directeur/campagne_centrale_2026_08_11/resultats \

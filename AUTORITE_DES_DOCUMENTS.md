@@ -273,6 +273,7 @@ résultat est une erreur, et le validateur l'annonce à chaque exécution.
 | Audit transversal | `plan_directeur/AUDIT_TRANSVERSAL.md` | généré, prime ; **exploratoire** |
 | Audit du seuil scientifique §XIV | `plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json` | généré ; diagnostique les 12 conditions, **ne crée aucun verdict scientifique** ; état courant 7/12, verrous 3, 4, 9, 10, 11 |
 | Qualification stricte de `Pacc` | `plan_directeur/campagne_centrale_2026_08_11/resultats/PACC_QUALIFICATION_STRICTE.json` et `protocoles_geles/PACC_INTERVENTIONNEL_V1.md` | fail-closed ; distingue support rétrospectif, causalité de modèle et `Pacc` causal empirique |
+| Protocole empirique VES-PACC-INT-01 | `03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json`, `POWER_PLAN.json`, `analyser_ves_pacc_int_01.py` et `VES-PACC-INT-01.registration.json` | les trois premiers sont gelés scientifiquement ; la fiche `.registration.json` ne reçoit ensuite que les métadonnées administratives du dépôt public |
 | Contrôles d’intégrité | `CONTROLES_INTEGRITE.md` | décrit les contrôles de structure et de livraison |
 | Puissance a priori | `methodologie_puissance/README.md`, le `POWER_PLAN.json` du protocole et sa sortie JSON | le plan gelé prime pour le SESOI, l’unité indépendante, les témoins et la règle de succès |
 | Campagne réelle consolidée | `plateforme/campagne_maximale_reelle/BILAN_CANONIQUE.md` | prime pour les compteurs et l’interprétation de la réexécution finale |

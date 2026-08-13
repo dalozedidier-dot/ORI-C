@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/campagne-centrale-invariant.yml",
-      "size": 11738,
-      "sha256": "56614b211bff06929d6f70a8235b137617f230f22f29306a373bba04f786bfad",
+      "size": 12346,
+      "sha256": "9ecb60a2f77f47e2237654ff6b188e97887cf96bac86555d811951c79601b927",
       "storage": "inline"
     },
     {
@@ -71,8 +71,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 14602,
-      "sha256": "cfcefa6e6e22537973fce2693568b614ba52692f2a25e841cc410de67ca3443d",
+      "size": 14832,
+      "sha256": "b6a172fd199b9867d9aeb200210cfce0352b1d7cab9c82b2172a1d57f894e77e",
       "storage": "inline"
     },
     {
@@ -83,8 +83,8 @@
     },
     {
       "path": ".github/workflows/recherche-suivante.yml",
-      "size": 4890,
-      "sha256": "46fa3449f5a47418ae5fc90345530728c4360c1c9c0e097296d87a28269863f1",
+      "size": 5040,
+      "sha256": "ebb0daa8ab444032b0aa7d91a3386a042bb30d3f89a6c06ff8e40f6a5b54175c",
       "storage": "inline"
     },
     {
@@ -2351,8 +2351,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/README.md",
-      "size": 1110,
-      "sha256": "77a28fdc23a6e2d46eda6ebb72d04aebd00ccfe8b2ff1e4466a8d3a5853fe788",
+      "size": 1860,
+      "sha256": "06036503ddd460a7c5ae42f9f6e2b2fb7b7a664f5f5b27c5d8cb0d81ad9fa6af",
       "storage": "inline"
     },
     {
@@ -5878,6 +5878,48 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/ANALYSIS_SPEC.json",
+      "size": 1685,
+      "sha256": "cd7e2b92d2442270c798d2a4ce1a77629991a6cea38c5ce6dbc72f014b776ab7",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/README.md",
+      "size": 1573,
+      "sha256": "8d85c33478a191dba028cb51493cf56999cf6b03a79c8e4f3a2c51b0984d0c4c",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/analyser_benchmark.py",
+      "size": 6330,
+      "sha256": "0c7be7a1f189ca278aa35b86151d1e359b3812af67a6848e440e15dc0f3d1728",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/data/elife-70676-fig1-data2-v2.csv",
+      "size": 26944,
+      "sha256": "ce3019f999c863082f357a201c69d31d44f8beeca3dd9998debc7e1df9142018",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json",
+      "size": 1618,
+      "sha256": "c05e04cd295cd3d366bdd177f081f102280bb9efa10e0c497321516882ac1a02",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/predictions_hors_echantillon.csv",
+      "size": 4952,
+      "sha256": "c87a4aa6eb42a5236718addef6659650f38dc388fa64da0bab278dda86177087",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/tests/test_benchmark.py",
+      "size": 748,
+      "sha256": "04e141c212e450e952a49666a65d84acd52bc57d1c4c622ff1c206820815dda2",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/POWER_PLAN.json",
       "size": 1477,
       "sha256": "cb8962c62bbeb73338b4536448e6bb9c80b63416cbf64db8ab5c26a6d347f900",
@@ -5926,6 +5968,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/lignees_vesicules/POWER_PLAN.json",
+      "size": 2297,
+      "sha256": "1154f0fcf5e862fea19f5b91daf4726391e8a6f036306ed775b55b93aff4570d",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE.md",
       "size": 601,
       "sha256": "a35da254d93a0c9b7bdc9fe3bda6448aa2bdd79ab26660e64920d7ca508a20a5",
@@ -5933,14 +5981,14 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json",
-      "size": 3707,
-      "sha256": "89906f8365a3ac0045df7a1e8585519aaa95774278ecbe3f8e4c088792c5c1f6",
+      "size": 14722,
+      "sha256": "30342b35525b32a54e287e5ac85844fbb15537f22e91c31bfc9aae4b92cd46fa",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.md",
-      "size": 2307,
-      "sha256": "4ef152683486781aac1dba0215a1a924b6205f6535c5d86464ce734bd9fdd8de",
+      "size": 5493,
+      "sha256": "8ae374cc6e65e9ab04a3a34d25c7828c0e56de5b7e746a1114d743b75a2024a8",
       "storage": "inline"
     },
     {
@@ -5951,14 +5999,26 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/RECHERCHE_REPLICATION_INDEPENDANTE_2026-08-12.json",
-      "size": 1850,
-      "sha256": "357d38f01dcd1ffde9a806906eb15bd33bd617f97d73e3a251391a386b458249",
+      "size": 2619,
+      "sha256": "549bc357e5eaf804e7e4d5881e03322df2ef0bc7108d8592e6cf67dc07082f3e",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.registration.json",
+      "size": 964,
+      "sha256": "e574ada1cecdd2dca92e91b2f88fd6cd7f558000faee49c5e7bc55cf6e9516ec",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
       "size": 22873,
       "sha256": "82f7c4b75cdfd7becf62ecaa7b29c07846b9e15fd1d0c1926cdffb00bf700069",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/analyser_ves_pacc_int_01.py",
+      "size": 4798,
+      "sha256": "0c399c22543f641cf896ed26977767ebf9ae83c26850f2e7a987202d8a0594f4",
       "storage": "inline"
     },
     {
@@ -5969,8 +6029,8 @@
     },
     {
       "path": "03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py",
-      "size": 684,
-      "sha256": "69afdbb779e6e3483bc4fd094f165a3580b4cfb53eb112cafe55dc26ee7e718d",
+      "size": 2956,
+      "sha256": "ca4f5de0be9653791f2c97bb419e0b8e72f2d60996892474d631e2ea0b28864d",
       "storage": "inline"
     },
     {
@@ -6089,8 +6149,8 @@
     },
     {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 33452,
-      "sha256": "c0e193cfcda4d19070dae0bcb51a4e48832cdec808694b74db03253b59bee0b5",
+      "size": 33819,
+      "sha256": "424cfe1e4a45b4c2e4f812175c59078ef14429c069dfe7d4283098bfd8d35347",
       "storage": "inline"
     },
     {
@@ -6179,8 +6239,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 12440,
-      "sha256": "de1c207cd21ceb6d9e7150e2ac265ef622ffe88281b195ea28fac5c30bebe54b",
+      "size": 12463,
+      "sha256": "3833324c14e9491ce79884367af351cff759ee0c277b68e96f0bdf00af9b7bbb",
       "storage": "inline"
     },
     {
@@ -6329,8 +6389,8 @@
     },
     {
       "path": "SCIENTIFIC_SCOPE.md",
-      "size": 13551,
-      "sha256": "c1f3a0bb8bae0bcd371592d531ab7f5830d6f4b2fbffcb2a75f5a320f93f83ec",
+      "size": 13640,
+      "sha256": "ca71508d8668908dd8fc5b7f5cdcd8425bb8f42f498c15c334ba676e4ecd37fd",
       "storage": "inline"
     },
     {
@@ -7024,6 +7084,12 @@
       "storage": "inline"
     },
     {
+      "path": "methodologie_puissance/adapters/vesicle_pacc_paired_pipeline.py",
+      "size": 1405,
+      "sha256": "6e14dfebd8dc44d97202aa8d8bce6ad4dc93e6cf04a94b180d3b808c43c6bfeb",
+      "storage": "inline"
+    },
+    {
       "path": "methodologie_puissance/examples/grouped_demo_adapter.py",
       "size": 4183,
       "sha256": "6cf2dcb90d3e6b39f35861b34d0051fe393f0957fccf3a5456a341ced8e95048",
@@ -7097,8 +7163,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 14170,
-      "sha256": "bbb62a67813b5b9ffe2361131ab004a4706106cae0e9dda0008d8754eb3c9d32",
+      "size": 15260,
+      "sha256": "fcd2a8110aa2cdc57d4be5019dd618c4f63fe595ff5955c38cae7dcca4153e18",
       "storage": "inline"
     },
     {
@@ -7319,8 +7385,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_seuil_xiv.py",
-      "size": 17054,
-      "sha256": "408e2db7e5a44a5b31c5bd42c11a77486ba08da9dc08923843e4c3b842b991f1",
+      "size": 18554,
+      "sha256": "9915c7adbe1f9a8eadcedf0d6534d4f7b4c40a9358e8944bd902339d6d21a6f6",
       "storage": "inline"
     },
     {
@@ -7409,8 +7475,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PACC_QUALIFICATION_STRICTE.json",
-      "size": 2663,
-      "sha256": "11d8c9f74698ade274c7bc0e3a41cc600694397a272b47fb4fc2bd754fd071eb",
+      "size": 2877,
+      "sha256": "75fc3dbb014bc056c530c40aeec7335cbcdcbe3fe8949bd695de3c9a6c131a71",
       "storage": "inline"
     },
     {
@@ -7427,8 +7493,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/REPLICATIONS_INDEPENDANTES_AUDIT.json",
-      "size": 741,
-      "sha256": "f11d1619aaf37ea741fc736634aadcd58ab56d58576fb91e042000b86602ad9c",
+      "size": 1171,
+      "sha256": "43e99597d22cb1acbfd372f42bfe907fa4b95e7fa89ef7dca46caed057fbaae4",
       "storage": "inline"
     },
     {
@@ -7793,14 +7859,14 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/resultats/RAPPORT.md",
-      "size": 524,
-      "sha256": "c4ed6ba2d302bbaa8400a45de553abcedc3f58c29164843a461c222f31095feb",
+      "size": 627,
+      "sha256": "e818cc1f300e574877d8bb2d610e0ceee307b1cf4089cb62a7e6d3789967c8b9",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
-      "size": 70929,
-      "sha256": "48e9bd009fd699073c84d105f014cb53dbfdec6b2a917f2e7f94597541ff6564",
+      "size": 72746,
+      "sha256": "4bd5161034e27a583aca03c7cc4ab9e78bf26a97925440de62fedfe1fbc65564",
       "storage": "inline"
     },
     {
@@ -7817,8 +7883,8 @@
     },
     {
       "path": "plan_directeur/campagne_recherche_suivante/run_all.py",
-      "size": 3372,
-      "sha256": "6644dc5ce424327c1c91d646bbde5bb754f401c355504680177cf018e9160b0f",
+      "size": 3490,
+      "sha256": "197cf58408d370ded982cb0b9dc3c9ec283893f71eef4a8a6496d61ea7830f36",
       "storage": "inline"
     },
     {
@@ -9864,7 +9930,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "d4da0f64a963bc86bd27680e6152940e1729256bbae2b15bfb75c4a4b13be573",
+      "sha256": "396eab9a70eb3c07f0b5cebbe734062bd807d3118fc078d80f186dedf944b52e",
       "storage": "inline"
     },
     {
@@ -10031,8 +10097,8 @@
     },
     {
       "path": "scripts/valider_recherche_suivante.py",
-      "size": 3479,
-      "sha256": "9eff05ce679d89e779df99da31e788727fe0d700e5c104fb16afedea149f6085",
+      "size": 4102,
+      "sha256": "6d20dbaa2a292c745cd3af19d623b915d316e72efdab89cd41b9cf7a50803bfb",
       "storage": "inline"
     },
     {

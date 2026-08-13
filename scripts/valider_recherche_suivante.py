@@ -29,6 +29,7 @@ def main() -> int:
         ROOT / "02_branche_systeme_solaire/tests_suivants/resultats/PROTOCOLE_C2B.json",
         CAMPAIGN / "resultats/SYNTHESE.json",
         CAMPAIGN / "resultats/VALIDATION_DONNEES_REELLES.json",
+        ROOT / "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json",
     ]
     for path in required:
         if not path.exists():
@@ -62,6 +63,12 @@ def main() -> int:
         real_data = load(CAMPAIGN / "resultats/VALIDATION_DONNEES_REELLES.json")
         if real_data.get("status") != "validated":
             errors.append("les trois jeux de données réelles ne sont pas validés")
+
+        santos = load(ROOT / "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json")
+        if santos.get("reference_numeric_rule_support") is not True:
+            errors.append("le benchmark Santos-Lopez ne reproduit plus son résultat numérique de référence")
+        if santos.get("strict_prediction_success") is not False or santos.get("counts_for_section_XIV_condition_3") is not False:
+            errors.append("le benchmark Santos-Lopez est requalifié à tort en réussite prospective")
 
         registry = load(CAMPAIGN / "sources_externes.json")
         if sum(bool(item.get("required_for_current_tests")) for item in registry["datasets"]) < 2:

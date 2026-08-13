@@ -1,6 +1,6 @@
 {
   "schema": "oric.independent-biological-replication-search.v2",
-  "checked_at": "2026-08-12",
+  "checked_at": "2026-08-13",
   "target": "réplication indépendante de Sokolskyi–Baum ou D'Onofrio",
   "existing_independent_test": {
     "dataset": "Card et al. 2019",
@@ -25,5 +25,19 @@
     "status": "division filmée mais aucune table mère-fille longitudinale identifiée",
     "verdict": "not_a_qualifying_replication_dataset"
   },
-  "overall_verdict": "no_new_strict_independent_replication_completed"
+  "overall_verdict": "no_new_strict_independent_replication_completed_santos_lopez_retained_as_external_benchmark",
+  "santos_lopez_2021_external_benchmark": {
+    "dataset": "Santos-Lopez et al. 2021, eLife 10:e70676, Figure 1 source data 2",
+    "result_file": "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json",
+    "relative_RMSE_gain_percent": 21.86606673538649,
+    "bootstrap_95pct_gain": [
+      0.07235080080496507,
+      0.3396651389396815
+    ],
+    "permutation_p_one_sided": 0.0001999600079984003,
+    "reference_numeric_rule_support": true,
+    "strict_prediction_eligible": false,
+    "counts_for_section_XIV": false,
+    "reason": "dataset-specific mapping and analysis specification were fixed after this public dataset had been selected/opened; no public preregistration preceded opening"
+  }
 }
