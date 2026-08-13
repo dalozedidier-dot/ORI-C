@@ -9,11 +9,23 @@ Didier Daloze | Version stable 0.9.7 | 12 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
+**Exploration interactive :** https://dalozedidier-dot.github.io/ORI-C/exploration.html
+
+**Roadmap de fermeture scientifique :** [`ROADMAP.md`](ROADMAP.md)
+
 ## Vérifier en deux minutes
 
 ```bash
 python demo_minimale.py
 ```
+
+Pour obtenir la même démonstration sous forme de rapport HTML autonome :
+
+```bash
+python scripts/demo_minimale_html.py --output demo_minimale_report.html
+```
+
+Un notebook prêt pour Google Colab est fourni dans [`notebooks/ORI-C_demo_colab.ipynb`](notebooks/ORI-C_demo_colab.ipynb).
 
 Une commande, aucun argument, aucun accès réseau. Elle **recalcule** les trois
 résultats phares depuis les données réelles du dépôt — interventions

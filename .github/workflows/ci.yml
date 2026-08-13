@@ -109,6 +109,54 @@ jobs:
       - name: Vérifier la publication stable
         run: python scripts/valider_publication_stable.py
 
+
+  preuves-phares:
+    name: Démonstration, registre et contrôle négatif
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+          fetch-depth: 1
+      - name: Hydrater Git LFS
+        run: git lfs pull
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: plateforme/source_corrigee/requirements-lock.txt
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
+      - name: Recalculer les trois résultats phares et produire le rapport HTML
+        run: python scripts/demo_minimale_html.py --output "$RUNNER_TEMP/demo-minimale.html"
+      - name: Valider le registre de preuves et les chiffres canoniques
+        run: python scripts/valider_registre_preuves.py
+      - name: Rejouer le contrôle négatif réel sans modifier le fichier versionné
+        run: |
+          python scripts/controle_negatif_reel_surrogats.py \
+            --surrogats 200 \
+            --sortie "$RUNNER_TEMP/controle-negatif-reel.json"
+      - name: Vérifier la vue interactive dérivée
+        run: |
+          python scripts/construire_exploration_site.py
+          git diff --exit-code -- site/data/exploration.json
+      - name: Publier les artefacts de vérification
+        uses: actions/upload-artifact@v6
+        with:
+          name: preuves-phares-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/demo-minimale.html
+            ${{ runner.temp }}/controle-negatif-reel.json
+          if-no-files-found: error
+          retention-days: 30
+
   # Les seize autres tâches tournent sur ubuntu-latest. Deux défauts ne
   # pouvaient donc jamais y apparaître : des fins de ligne converties en CRLF
   # au clonage, qui font diverger les empreintes du manifeste, et du code qui

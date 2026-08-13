@@ -83,3 +83,11 @@ Le snapshot stable du 12 août conserve N-corps **13/15**, spin-orbite exécuté
 La priorité empirique vivant est `VES-PACC-INT-01`. Le protocole prospectif est installé dans `03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.*`. Les 11 760 couples historiques restent calibration/conception uniquement. Les champs scientifiques sont désormais gelés : opérateur `do(m)`, sham, niveaux ciblés, défis `Theta`, dimensions `R`, seuils, SESOI, puissance et unités indépendantes. La porte d'exécution reste fermée uniquement tant que la fiche administrative n'atteste pas l'enregistrement public préalable. Le schéma d'entrée et le préparateur canonique des tables de laboratoire sont installés sans ouvrir cette porte ni produire de donnée de test.
 
 Les quatre prédictions prospectives disposent de paquets de registration OSF. Pour qu'un futur résultat compte comme réussite stricte du §XIV-3, le protocole doit désormais être non seulement gelé avant les données, mais aussi enregistré publiquement avant leur ouverture. Le §XIV reste donc à **7/12**, avec les verrous `3, 4, 9, 10, 11` inchangés.
+
+## Mise à jour opérationnelle du 14 août 2026 — fermeture et lisibilité
+
+La roadmap active est désormais `ROADMAP.md`. Elle réduit le programme à quatre fronts capables de changer le niveau de preuve : `VES-PACC-INT-01`, le verrou matière `H052/HC01`, `PRED-VIVANT-HISTOIRE-001` et `MAG-PAIR-001`. Cette couche d'orientation ne remplace ni les prédictions gelées ni l'audit §XIV.
+
+Le verrou `H052` a fait l'objet d'un audit ciblé dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.*`. Le verdict reste **46/53** : Okamoto et al. 2025 soutient un mécanisme auto-généré de fracture/permeabilité sur analogue expérimental, Alexander et al. 2026 soutient la création de perméabilité de croûte primitive au niveau modèle, mais aucune source ne suffit encore à promouvoir `HC01` comme relation empirique canonique.
+
+La couche publique gagne une page `site/exploration.html` qui expose uniquement des tables versionnées, des scénarios N-corps déjà calculés et un modèle jouet explicitement pédagogique. La CI vérifie désormais aussi la démonstration minimale reproductible, le registre de preuves, le contrôle négatif réel et la synchronisation des données de cette page interactive.

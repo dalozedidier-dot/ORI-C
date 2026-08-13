@@ -210,7 +210,16 @@ def main() -> int:
     analyseur = argparse.ArgumentParser(description=__doc__)
     analyseur.add_argument("--surrogats", type=int, default=200)
     analyseur.add_argument("--graine", type=int, default=20260808)
+    analyseur.add_argument(
+        "--sortie",
+        default=str(SORTIE),
+        help="fichier JSON de sortie; par défaut conserve le chemin canonique versionné",
+    )
     arguments = analyseur.parse_args()
+    sortie = Path(arguments.sortie)
+    if not sortie.is_absolute():
+        sortie = (RACINE / sortie).resolve()
+    sortie.parent.mkdir(parents=True, exist_ok=True)
 
     cadre = pd.read_csv(TABLE).sort_values("age_ka_bp").reset_index(drop=True)
     colonnes = [c for c in cadre.columns if c != "age_ka_bp"]
@@ -302,9 +311,13 @@ def main() -> int:
         "controles_negatifs_positifs_symetrique": faux_s,
         
     }
-    with SORTIE.open("w", encoding="utf-8", newline="") as flux:
+    with sortie.open("w", encoding="utf-8", newline="") as flux:
         flux.write(json.dumps(rapport, ensure_ascii=False, indent=2) + "\n")
-    print(f"\nÉcrit : {SORTIE.relative_to(RACINE).as_posix()}")
+    try:
+        affiche = sortie.relative_to(RACINE).as_posix()
+    except ValueError:
+        affiche = str(sortie)
+    print(f"\nÉcrit : {affiche}")
     return 0
 
 

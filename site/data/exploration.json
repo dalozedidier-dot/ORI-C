@@ -1,0 +1,2275 @@
+{
+  "authority": "vue interactive dérivée de fichiers versionnés; aucun verdict nouveau",
+  "genealogy": {
+    "links": [
+      {
+        "from_stage": "GC-E00",
+        "link_class": "empirical_historical_contrast",
+        "relation": "inventaire primordial léger → apparition ultérieure de noyaux stellaires mesurés",
+        "to_stage": "GC-E01"
+      },
+      {
+        "from_stage": "GC-E01",
+        "link_class": "same_event_observed_transformation",
+        "relation": "produits d’éjecta stellaires → poussière froide dans les éjecta",
+        "to_stage": "GC-E02"
+      },
+      {
+        "from_stage": "GC-E02",
+        "link_class": "direct_material_inheritance_class",
+        "relation": "poussières d’origine stellaire → grains présolaires conservés dans matériaux solaires",
+        "to_stage": "GC-E03"
+      },
+      {
+        "from_stage": "GC-E03",
+        "link_class": "measured_material_continuity",
+        "relation": "grains présolaires → hétérogénéités nucléosynthétiques conservées dans la matière solaire",
+        "to_stage": "GC-E08"
+      },
+      {
+        "from_stage": "GC-E04",
+        "link_class": "observed_analogue_bridge",
+        "relation": "nuage dense → alimentation protostellaire",
+        "to_stage": "GC-E05"
+      },
+      {
+        "from_stage": "GC-E04",
+        "link_class": "observed_analogue_bridge",
+        "relation": "glaces du nuage → molécules/glaces observées dans disques",
+        "to_stage": "GC-E06"
+      },
+      {
+        "from_stage": "GC-E05",
+        "link_class": "observed_analogue_bridge",
+        "relation": "apport de matière → disque jeune",
+        "to_stage": "GC-E06"
+      },
+      {
+        "from_stage": "GC-E06",
+        "link_class": "cross_system_empirical_consistency",
+        "relation": "héritage moléculaire/isotopique → réservoirs du disque solaire",
+        "to_stage": "GC-E08"
+      },
+      {
+        "from_stage": "GC-E07",
+        "link_class": "analogue_to_solar_archive",
+        "relation": "solides réfractaires observables dans jeunes disques → archives CAI/chondres solaires",
+        "to_stage": "GC-E10"
+      },
+      {
+        "from_stage": "GC-E08",
+        "link_class": "solar_sample_link",
+        "relation": "réservoirs solaires hétérogènes → matériaux redistribués conservés dans Wild 2",
+        "to_stage": "GC-E09"
+      },
+      {
+        "from_stage": "GC-E08",
+        "link_class": "solar_sample_link",
+        "relation": "réservoirs isotopiques → solides datés",
+        "to_stage": "GC-E10"
+      },
+      {
+        "from_stage": "GC-E09",
+        "link_class": "solar_sample_sequence",
+        "relation": "redistribution/recyclage de solides → coexistence d’archives thermiques différentes",
+        "to_stage": "GC-E10"
+      },
+      {
+        "from_stage": "GC-E10",
+        "link_class": "chronometric_sequence",
+        "relation": "solides primitifs → corps différenciés précoces",
+        "to_stage": "GC-E13"
+      },
+      {
+        "from_stage": "GC-E10",
+        "link_class": "chronometric_sequence",
+        "relation": "solides primitifs → corps hydratés plus tardifs",
+        "to_stage": "GC-E14"
+      },
+      {
+        "from_stage": "GC-E11",
+        "link_class": "laboratory_mechanism_stack",
+        "relation": "agrégats de poussière → comportement collectif poussière-gaz",
+        "to_stage": "GC-E12"
+      },
+      {
+        "from_stage": "GC-E12",
+        "link_class": "mechanism_to_observation_non_unique",
+        "relation": "mécanisme collectif possible → structures réelles de disques",
+        "to_stage": "GC-E15"
+      },
+      {
+        "from_stage": "GC-E15",
+        "link_class": "same_system_observed_sequence",
+        "relation": "disque de PDS 70 avec cavité → deux protoplanètes en accrétion détectées en Hα",
+        "to_stage": "GC-E16"
+      },
+      {
+        "from_stage": "GC-E13",
+        "link_class": "solar_chronometric_sequence",
+        "relation": "petits corps différenciés précoces → histoire d’un embryon planétaire",
+        "to_stage": "GC-E17"
+      },
+      {
+        "from_stage": "GC-E14",
+        "link_class": "solar_context_non_genealogical",
+        "relation": "archives hydratées/carbonées des petits corps → contexte empirique de matériaux volatils, sans filiation directe imposée vers la Terre",
+        "to_stage": "GC-E18"
+      },
+      {
+        "from_stage": "GC-E16",
+        "link_class": "analogue_endpoint_bridge",
+        "relation": "protoplanètes observées ailleurs → endpoint d’architecture planétaire",
+        "to_stage": "GC-E19"
+      },
+      {
+        "from_stage": "GC-E17",
+        "link_class": "same_body_history_to_endpoint",
+        "relation": "Mars reconstruit → Mars actuel",
+        "to_stage": "GC-E19"
+      },
+      {
+        "from_stage": "GC-E18",
+        "link_class": "same_body_history_to_endpoint",
+        "relation": "Terre reconstruite → Terre actuelle",
+        "to_stage": "GC-E19"
+      }
+    ],
+    "stages": [
+      {
+        "empirical_anchor": "D/H primordial et Yp reconstruits à partir de spectres réels",
+        "evidence_class": "reconstruction_observationnelle",
+        "history_carrier": "baseline_elementaire_mesuree",
+        "label": "Inventaire primordial contraint par observation",
+        "order": "0",
+        "stage_id": "GC-E00"
+      },
+      {
+        "empirical_anchor": "44Ti dans SN1987A; P/Cl/K dans Cas A",
+        "evidence_class": "observation_directe",
+        "history_carrier": "noyaux_stellaires_mesures",
+        "label": "Produits de nucléosynthèse stellaire observés",
+        "order": "1",
+        "stage_id": "GC-E01"
+      },
+      {
+        "empirical_anchor": "poussière froide directement détectée dans les éjecta de SN1987A",
+        "evidence_class": "observation_directe",
+        "history_carrier": "poussiere_stellaire_mesuree",
+        "label": "Éjecta stellaires convertis en poussières observées",
+        "order": "2",
+        "stage_id": "GC-E02"
+      },
+      {
+        "empirical_anchor": "grains présolaires Bennu, Ryugu et Wild 2 retournés",
+        "evidence_class": "mesure_echantillons_retournes",
+        "history_carrier": "grains_presolaires_conserves",
+        "label": "Matière présolaire incorporée aux corps primitifs",
+        "order": "3",
+        "stage_id": "GC-E03"
+      },
+      {
+        "empirical_anchor": "inventaire JWST de glaces et croissance de grains",
+        "evidence_class": "observation_directe",
+        "history_carrier": "glaces_et_grains_prestellaires",
+        "label": "Grains et glaces dans les nuages moléculaires denses",
+        "order": "4",
+        "stage_id": "GC-E04"
+      },
+      {
+        "empirical_anchor": "streamer protostellaire de ≥10 500 au",
+        "evidence_class": "observation_directe",
+        "history_carrier": "flux_materiel_nuage_disque",
+        "label": "Apport de matière du nuage vers les échelles du disque",
+        "order": "5",
+        "stage_id": "GC-E05"
+      },
+      {
+        "empirical_anchor": "D2O V883 Ori; CH3OH TW Hya; comparaison à 67P",
+        "evidence_class": "observations_multi_systemes",
+        "history_carrier": "signature_moleculaire_et_isotopique",
+        "label": "Molécules héritables observées dans les disques",
+        "order": "6",
+        "stage_id": "GC-E06"
+      },
+      {
+        "empirical_anchor": "SiO chaud et silicates cristallins dans HOPS-315",
+        "evidence_class": "observation_directe",
+        "history_carrier": "solides_refractaires",
+        "label": "Condensation de solides réfractaires observée dans un jeune disque",
+        "order": "7",
+        "stage_id": "GC-E07"
+      },
+      {
+        "empirical_anchor": "Genesis, météorites NC/CC, 26Al, Si-Mg et chronométrie",
+        "evidence_class": "mesures_echantillons",
+        "history_carrier": "reservoirs_isotopiques_persistants",
+        "label": "Architecture isotopique et temporelle de la nébuleuse solaire",
+        "order": "8",
+        "stage_id": "GC-E08"
+      },
+      {
+        "empirical_anchor": "particules Wild 2 avec matériaux haute température et présolaires",
+        "evidence_class": "mesure_echantillon_retourne",
+        "history_carrier": "transport_et_melange_enregistres",
+        "label": "Redistribution de matériaux dans le disque solaire enregistrée dans une comète",
+        "order": "9",
+        "stage_id": "GC-E09"
+      },
+      {
+        "empirical_anchor": "âges Pb-Pb U-corrigés de CAI et chondres",
+        "evidence_class": "chronometrie_meteoritique",
+        "history_carrier": "ordre_temporel_solides",
+        "label": "Chronologie CAI et chondres",
+        "order": "10",
+        "stage_id": "GC-E10"
+      },
+      {
+        "empirical_anchor": "croissance d’agrégats jusqu’à limite d’érosion",
+        "evidence_class": "experience_laboratoire",
+        "history_carrier": "architecture_granulaire",
+        "label": "Agrégation de poussières mesurée en microgravité",
+        "order": "11",
+        "stage_id": "GC-E11"
+      },
+      {
+        "empirical_anchor": "longueur d’onde et fréquences observées expérimentalement",
+        "evidence_class": "experience_laboratoire",
+        "history_carrier": "organisation_collective_poussiere_gaz",
+        "label": "Instabilité collective poussière-gaz mesurée en microgravité",
+        "order": "12",
+        "stage_id": "GC-E12"
+      },
+      {
+        "empirical_anchor": "angrites datées et excès radiogénique mesuré",
+        "evidence_class": "chronometrie_meteoritique",
+        "history_carrier": "differenciation_precoce",
+        "label": "Planétésimaux différenciés précoces",
+        "order": "13",
+        "stage_id": "GC-E13"
+      },
+      {
+        "empirical_anchor": "carbonates CM datés",
+        "evidence_class": "chronometrie_meteoritique",
+        "history_carrier": "alteration_aqueuse_plus_tardive",
+        "label": "Planétésimaux hydratés plus tardifs",
+        "order": "14",
+        "stage_id": "GC-E14"
+      },
+      {
+        "empirical_anchor": "TMC1A, IRS63 et DSHARP",
+        "evidence_class": "observation_directe",
+        "history_carrier": "architecture_disque_observee",
+        "label": "Disques jeunes avec croissance et sous-structures observées",
+        "order": "15",
+        "stage_id": "GC-E15"
+      },
+      {
+        "empirical_anchor": "PDS 70 b et c en Hα",
+        "evidence_class": "observation_directe",
+        "history_carrier": "protoplanetes_en_croissance",
+        "label": "Protoplanètes en accrétion observées",
+        "order": "16",
+        "stage_id": "GC-E16"
+      },
+      {
+        "empirical_anchor": "Hf-W-Th: Mars à ≥1/2 masse en ≤2 Ma",
+        "evidence_class": "reconstruction_isotopique",
+        "history_carrier": "histoire_accretion_mars",
+        "label": "Croissance rapide de Mars reconstruite isotopiquement",
+        "order": "17",
+        "stage_id": "GC-E17"
+      },
+      {
+        "empirical_anchor": "Mo du manteau terrestre entre réservoirs NC/CC",
+        "evidence_class": "reconstruction_isotopique",
+        "history_carrier": "histoire_accretion_terre",
+        "label": "Accrétion hétérogène de la Terre enregistrée isotopiquement",
+        "order": "18",
+        "stage_id": "GC-E18"
+      },
+      {
+        "empirical_anchor": "huit planètes, endpoint observationnel JPL",
+        "evidence_class": "produit_observationnel_officiel",
+        "history_carrier": "architecture_terminale_observee",
+        "label": "Architecture actuelle du Système solaire observée",
+        "order": "19",
+        "stage_id": "GC-E19"
+      }
+    ]
+  },
+  "nbody": {
+    "certified_min_effect_to_numeric_noise": 4964.415695208393,
+    "criteria_passed": 13,
+    "criteria_total": 15,
+    "evidence_level": "E4_modele",
+    "scenarios": [
+      {
+        "correlation_vs_baseline": 0.8097183991356375,
+        "id": "jupiter_a_minus_0p5pct_2myr",
+        "label": "Jupiter a −0,5 %",
+        "mean_eccentricity_delta": 0.0014180549554367455,
+        "rmse_vs_baseline": 0.00858871934743876,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 1.0294726566081174
+      },
+      {
+        "correlation_vs_baseline": 0.752096825104781,
+        "id": "jupiter_a_plus_0p5pct_2myr",
+        "label": "Jupiter a +0,5 %",
+        "mean_eccentricity_delta": 0.000603907554379949,
+        "rmse_vs_baseline": 0.009571109591753888,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 1.0069049738740714
+      },
+      {
+        "correlation_vs_baseline": 0.0662651372435859,
+        "id": "jupiter_mass_minus_5pct_2myr",
+        "label": "Masse de Jupiter −5 %",
+        "mean_eccentricity_delta": 0.0008897552071182105,
+        "rmse_vs_baseline": 0.018703420842196932,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 1.0224449591888833
+      },
+      {
+        "correlation_vs_baseline": -0.011229717644112326,
+        "id": "jupiter_mass_plus_5pct_2myr",
+        "label": "Masse de Jupiter +5 %",
+        "mean_eccentricity_delta": -0.0026395373919426666,
+        "rmse_vs_baseline": 0.018928950135853776,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 0.9493246391848019
+      },
+      {
+        "correlation_vs_baseline": 0.7599303621265296,
+        "id": "saturn_mass_minus_5pct_2myr",
+        "label": "saturn mass minus 5pct 2myr",
+        "mean_eccentricity_delta": -0.0010235425557441925,
+        "rmse_vs_baseline": 0.009242500160022621,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 0.9579320093082142
+      },
+      {
+        "correlation_vs_baseline": 0.7433506121060598,
+        "id": "saturn_mass_plus_5pct_2myr",
+        "label": "saturn mass plus 5pct 2myr",
+        "mean_eccentricity_delta": 0.001178924556685907,
+        "rmse_vs_baseline": 0.009895843241730954,
+        "samples": 2001,
+        "std_ratio_vs_baseline": 1.027656671839631
+      }
+    ],
+    "scope": "modele_physique_reduit_valide",
+    "warning": "scénarios pré-calculés uniquement; aucune interpolation arbitraire n'est présentée comme résultat scientifique"
+  },
+  "nc_cc": {
+    "classifier": "deterministic_nearest_centroid_using_only_observed_features",
+    "leave_one_out_correct": 41,
+    "leave_one_out_total": 41,
+    "systems": {
+      "100Ru": {
+        "cc_n": 13,
+        "cohen_d_cc_minus_nc": -3.323034795405651,
+        "nc_n": 18,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.13,
+            "value": -0.24
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.24,
+            "value": -0.69
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.45,
+            "value": -0.92
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.08,
+            "value": -1.06
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.09,
+            "value": -1.1
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.13,
+            "value": -0.95
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.13,
+            "value": -0.91
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.09,
+            "value": -1.05
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIC",
+            "uncertainty": 0.02,
+            "value": -1.0
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.05,
+            "value": -1.0
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIF",
+            "uncertainty": 0.05,
+            "value": -1.0
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIIF",
+            "uncertainty": 0.11,
+            "value": -0.91
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IVB",
+            "uncertainty": 0.02,
+            "value": -0.92
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.05,
+            "value": -0.3
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.13,
+            "value": -0.28
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.08,
+            "value": -0.08
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.05,
+            "value": -0.08
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.05,
+            "value": -0.3
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Lodranites",
+            "uncertainty": 0.11,
+            "value": -0.37
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.05,
+            "value": -0.33
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.18,
+            "value": 0.08
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.03,
+            "value": -0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.1,
+            "value": -0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.02,
+            "value": -0.42
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.03,
+            "value": -0.02
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.03,
+            "value": -0.28
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.02,
+            "value": -0.43
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.1,
+            "value": -0.5
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIE",
+            "uncertainty": 0.06,
+            "value": -0.51
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.07,
+            "value": -0.28
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.02,
+            "value": 0.02
+          }
+        ]
+      },
+      "17O": {
+        "cc_n": 8,
+        "cohen_d_cc_minus_nc": -2.35200084600964,
+        "nc_n": 23,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.11,
+            "value": 0.41
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.44,
+            "value": -2.92
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.26,
+            "value": -4.32
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.48,
+            "value": -3.62
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.21,
+            "value": -4.46
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.55,
+            "value": -1.48
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.27,
+            "value": -1.55
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.38,
+            "value": -2.14
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.05,
+            "value": 0.72
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.04,
+            "value": 1.03
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.06,
+            "value": 1.19
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.1,
+            "value": -0.03
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.07,
+            "value": -0.01
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Angrites",
+            "uncertainty": 0.11,
+            "value": -0.11
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.14,
+            "value": 0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.08,
+            "value": -0.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Kakangari",
+            "uncertainty": 0.35,
+            "value": -1.09
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.15,
+            "value": 2.64
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Lodranites",
+            "uncertainty": 0.21,
+            "value": -1.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.09,
+            "value": -0.99
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.08,
+            "value": -0.26
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.14,
+            "value": 0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.07,
+            "value": -0.49
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.03,
+            "value": -0.28
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.06,
+            "value": -0.24
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.03,
+            "value": 0.27
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.13,
+            "value": -0.66
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIE",
+            "uncertainty": 0.05,
+            "value": 0.57
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.04,
+            "value": -0.2
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.1,
+            "value": 1.17
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.0,
+            "value": 0.0
+          }
+        ]
+      },
+      "48Ca": {
+        "cc_n": 5,
+        "cohen_d_cc_minus_nc": 5.825812401062168,
+        "nc_n": 13,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.072,
+            "value": 2.07
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.14,
+            "value": 3.13
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.56,
+            "value": 3.87
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.02,
+            "value": 2.51
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.02,
+            "value": 2.1
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.29,
+            "value": -0.24
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.05,
+            "value": -0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.02,
+            "value": -0.36
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.02,
+            "value": -0.11
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.04,
+            "value": -0.18
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Angrites",
+            "uncertainty": 0.06,
+            "value": -0.89
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.05,
+            "value": -1.33
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.04,
+            "value": -0.99
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Kakangari",
+            "uncertainty": 0.25,
+            "value": -1.3
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.59,
+            "value": -0.44
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.09,
+            "value": -0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.02,
+            "value": -0.2
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.04,
+            "value": 0.01
+          }
+        ]
+      },
+      "50Ti": {
+        "cc_n": 9,
+        "cohen_d_cc_minus_nc": 5.576262943723878,
+        "nc_n": 18,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.06,
+            "value": 1.91
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.1,
+            "value": 2.95
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.35,
+            "value": 3.41
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.14,
+            "value": 3.35
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.51,
+            "value": 3.6
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.24,
+            "value": 2.22
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.17,
+            "value": 2.11
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.16,
+            "value": 1.85
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CL",
+            "uncertainty": 0.14,
+            "value": 2.59
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.09,
+            "value": -0.573
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.02,
+            "value": -0.631
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.05,
+            "value": -0.65
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.07,
+            "value": -0.12
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.06,
+            "value": -0.306
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Angrites",
+            "uncertainty": 0.02,
+            "value": -1.147
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.15,
+            "value": -1.97
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.08,
+            "value": -1.23
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.1,
+            "value": -0.47
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Lodranites",
+            "uncertainty": 0.31,
+            "value": -1.68
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.03,
+            "value": -1.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.13,
+            "value": -1.38
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.05,
+            "value": -0.054
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.11,
+            "value": -0.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.08,
+            "value": -1.37
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.1,
+            "value": -1.26
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.04,
+            "value": -0.44
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.05,
+            "value": 0.01
+          }
+        ]
+      },
+      "54Cr": {
+        "cc_n": 9,
+        "cohen_d_cc_minus_nc": 4.727104367391188,
+        "nc_n": 22,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.092,
+            "value": 1.474
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.059,
+            "value": 0.977
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.13,
+            "value": 0.84
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.03,
+            "value": 0.91
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.062,
+            "value": 0.52
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.06,
+            "value": 1.29
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.05,
+            "value": 1.49
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.046,
+            "value": 1.282
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CL",
+            "uncertainty": 0.061,
+            "value": 0.735
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.02,
+            "value": -0.382
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.06,
+            "value": -0.32
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.05,
+            "value": -0.424
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.07,
+            "value": 0.0
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.07,
+            "value": 0.03
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Angrites",
+            "uncertainty": 0.05,
+            "value": -0.43
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.04,
+            "value": -0.875
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.02,
+            "value": -0.71
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Kakangari",
+            "uncertainty": 0.04,
+            "value": -0.44
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.09,
+            "value": -0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.03,
+            "value": -0.746
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.06,
+            "value": -0.45
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.19,
+            "value": -0.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.04,
+            "value": -0.14
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.1,
+            "value": -0.72
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.06,
+            "value": -0.698
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.03,
+            "value": -0.18
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.03,
+            "value": -0.83
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIE",
+            "uncertainty": 0.13,
+            "value": -0.59
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.05,
+            "value": -0.81
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.06,
+            "value": -0.473
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.12,
+            "value": 0.1
+          }
+        ]
+      },
+      "54Fe": {
+        "cc_n": 10,
+        "cohen_d_cc_minus_nc": 2.0146934000003425,
+        "nc_n": 14,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.016,
+            "value": 0.031
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.027,
+            "value": 0.228
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.045,
+            "value": 0.163
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.036,
+            "value": 0.269
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.045,
+            "value": 0.27
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.046,
+            "value": 0.323
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.066,
+            "value": 0.155
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIC",
+            "uncertainty": 0.05,
+            "value": 0.35
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.03,
+            "value": 0.27
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IVB",
+            "uncertainty": 0.02,
+            "value": 0.286
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.047,
+            "value": 0.1156
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.05,
+            "value": 0.106
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.04,
+            "value": 0.129
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.03,
+            "value": 0.064
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.012,
+            "value": 0.149
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.025,
+            "value": 0.12
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.03,
+            "value": 0.064
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.02,
+            "value": 0.061
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.02,
+            "value": -0.01
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.05,
+            "value": 0.1
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.03,
+            "value": 0.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.05,
+            "value": 0.1
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.04,
+            "value": 0.1
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.019,
+            "value": -0.008
+          }
+        ]
+      },
+      "64Ni": {
+        "cc_n": 10,
+        "cohen_d_cc_minus_nc": 2.5276499189069974,
+        "nc_n": 15,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.1,
+            "value": 0.62
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.086,
+            "value": 0.367
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.11,
+            "value": 0.26
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.03,
+            "value": 0.3
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.15,
+            "value": 0.26
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.18,
+            "value": 0.19
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIC",
+            "uncertainty": 0.1,
+            "value": 0.39
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.22,
+            "value": 0.23
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIIF",
+            "uncertainty": 0.04,
+            "value": 0.12
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IVB",
+            "uncertainty": 0.04,
+            "value": 0.07
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.05,
+            "value": -0.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.06,
+            "value": -0.11
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.05,
+            "value": -0.18
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.03,
+            "value": 0.07
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.04,
+            "value": -0.05
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.21,
+            "value": -0.2
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.33,
+            "value": 0.14
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.11,
+            "value": 0.08
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.06,
+            "value": -0.06
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.09,
+            "value": -0.24
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.1,
+            "value": -0.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.07,
+            "value": -0.32
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIE",
+            "uncertainty": 0.08,
+            "value": -0.26
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.04,
+            "value": -0.28
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.02,
+            "value": 0.12
+          }
+        ]
+      },
+      "66Zn": {
+        "cc_n": 6,
+        "cohen_d_cc_minus_nc": 7.1195025042010585,
+        "nc_n": 11,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.07,
+            "value": 0.3
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.05,
+            "value": 0.25
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.02,
+            "value": 0.24
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.04,
+            "value": 0.29
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.03,
+            "value": 0.3
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.03,
+            "value": 0.23
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.05,
+            "value": -0.3
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.03,
+            "value": -0.25
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.03,
+            "value": -0.27
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.03,
+            "value": -0.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.04,
+            "value": -0.16
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.02,
+            "value": -0.34
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.09,
+            "value": -0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.03,
+            "value": -0.2
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.13,
+            "value": -0.19
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.05,
+            "value": -0.33
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.03,
+            "value": -0.07
+          }
+        ]
+      },
+      "94Mo": {
+        "cc_n": 12,
+        "cohen_d_cc_minus_nc": 1.9898995349974042,
+        "nc_n": 24,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.41,
+            "value": 0.79
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.9,
+            "value": 2.33
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.25,
+            "value": 1.31
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.04,
+            "value": 1.11
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.07,
+            "value": 1.62
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.27,
+            "value": 2.22
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.04,
+            "value": 1.33
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIC",
+            "uncertainty": 0.04,
+            "value": 2.38
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.07,
+            "value": 1.18
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIF",
+            "uncertainty": 0.08,
+            "value": 1.1
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIIF",
+            "uncertainty": 0.04,
+            "value": 1.18
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IVB",
+            "uncertainty": 0.04,
+            "value": 1.4
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.07,
+            "value": 0.67
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.19,
+            "value": 0.59
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.11,
+            "value": 0.62
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.08,
+            "value": 0.45
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.04,
+            "value": 0.27
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.04,
+            "value": 0.93
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.09,
+            "value": 0.42
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Lodranites",
+            "uncertainty": 0.09,
+            "value": 0.91
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.09,
+            "value": 0.91
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.08,
+            "value": 1.19
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.05,
+            "value": 0.47
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.06,
+            "value": 0.22
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.03,
+            "value": 1.0
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.08,
+            "value": 1.04
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.06,
+            "value": 0.33
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.05,
+            "value": 0.04
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.03,
+            "value": 0.88
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.02,
+            "value": 1.18
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIE",
+            "uncertainty": 0.05,
+            "value": 0.68
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.05,
+            "value": 1.02
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIICD",
+            "uncertainty": 0.03,
+            "value": 0.11
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIE",
+            "uncertainty": 0.06,
+            "value": 0.95
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.04,
+            "value": 0.79
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.05,
+            "value": 0.0
+          }
+        ]
+      },
+      "95Mo": {
+        "cc_n": 12,
+        "cohen_d_cc_minus_nc": 3.818899858295018,
+        "nc_n": 24,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.25,
+            "value": 0.69
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.22,
+            "value": 1.42
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.17,
+            "value": 0.75
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.03,
+            "value": 1.01
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.15,
+            "value": 1.22
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.19,
+            "value": 1.32
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.03,
+            "value": 1.14
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIC",
+            "uncertainty": 0.03,
+            "value": 1.57
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IID",
+            "uncertainty": 0.03,
+            "value": 1.01
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIF",
+            "uncertainty": 0.05,
+            "value": 0.96
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IIIF",
+            "uncertainty": 0.03,
+            "value": 0.95
+          },
+          {
+            "reservoir": "CC",
+            "sample": "IVB",
+            "uncertainty": 0.02,
+            "value": 1.0
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.04,
+            "value": 0.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.11,
+            "value": 0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.06,
+            "value": 0.2
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.06,
+            "value": 0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.04,
+            "value": 0.12
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Ureilites",
+            "uncertainty": 0.03,
+            "value": 0.42
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.05,
+            "value": 0.18
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Lodranites",
+            "uncertainty": 0.03,
+            "value": 0.49
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.03,
+            "value": 0.48
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Brachinites",
+            "uncertainty": 0.06,
+            "value": 0.58
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.06,
+            "value": 0.24
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.05,
+            "value": 0.09
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.02,
+            "value": 0.46
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.05,
+            "value": 0.46
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.04,
+            "value": 0.25
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IAB",
+            "uncertainty": 0.05,
+            "value": -0.04
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IC",
+            "uncertainty": 0.01,
+            "value": 0.34
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIAB",
+            "uncertainty": 0.02,
+            "value": 0.51
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIE",
+            "uncertainty": 0.03,
+            "value": 0.3
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIAB",
+            "uncertainty": 0.03,
+            "value": 0.44
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIICD",
+            "uncertainty": 0.04,
+            "value": -0.02
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IIIE",
+            "uncertainty": 0.04,
+            "value": 0.43
+          },
+          {
+            "reservoir": "NC",
+            "sample": "IVA",
+            "uncertainty": 0.03,
+            "value": 0.4
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.03,
+            "value": 0.03
+          }
+        ]
+      },
+      "96Zr": {
+        "cc_n": 9,
+        "cohen_d_cc_minus_nc": 5.845567142661538,
+        "nc_n": 16,
+        "points": [
+          {
+            "reservoir": "CC",
+            "sample": "CI",
+            "uncertainty": 0.16,
+            "value": 0.81
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CM",
+            "uncertainty": 0.07,
+            "value": 1.23
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CO",
+            "uncertainty": 0.07,
+            "value": 1.09
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CV",
+            "uncertainty": 0.16,
+            "value": 1.16
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CK",
+            "uncertainty": 0.05,
+            "value": 1.18
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CR",
+            "uncertainty": 0.09,
+            "value": 1.18
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CH",
+            "uncertainty": 0.09,
+            "value": 1.11
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CB",
+            "uncertainty": 0.15,
+            "value": 1.12
+          },
+          {
+            "reservoir": "CC",
+            "sample": "CL",
+            "uncertainty": 0.18,
+            "value": 0.89
+          },
+          {
+            "reservoir": "NC",
+            "sample": "H",
+            "uncertainty": 0.02,
+            "value": 0.34
+          },
+          {
+            "reservoir": "NC",
+            "sample": "L",
+            "uncertainty": 0.03,
+            "value": 0.297
+          },
+          {
+            "reservoir": "NC",
+            "sample": "LL",
+            "uncertainty": 0.02,
+            "value": 0.29
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EH",
+            "uncertainty": 0.05,
+            "value": 0.15
+          },
+          {
+            "reservoir": "NC",
+            "sample": "EL",
+            "uncertainty": 0.03,
+            "value": 0.17
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Angrites",
+            "uncertainty": 0.02,
+            "value": 0.5
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Vesta",
+            "uncertainty": 0.03,
+            "value": 0.38
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Kakangari",
+            "uncertainty": 0.04,
+            "value": 0.42
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Rumuruti",
+            "uncertainty": 0.05,
+            "value": 0.25
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Acapulcoite",
+            "uncertainty": 0.04,
+            "value": 0.32
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Aubrites",
+            "uncertainty": 0.04,
+            "value": 0.21
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Winonanites",
+            "uncertainty": 0.09,
+            "value": 0.02
+          },
+          {
+            "reservoir": "NC",
+            "sample": "MG Pallasites",
+            "uncertainty": 0.18,
+            "value": 0.43
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mesosiderite",
+            "uncertainty": 0.06,
+            "value": 0.35
+          },
+          {
+            "reservoir": "NC",
+            "sample": "Mars",
+            "uncertainty": 0.02,
+            "value": 0.27
+          },
+          {
+            "reservoir": "NC",
+            "sample": "BSE",
+            "uncertainty": 0.02,
+            "value": 0.02
+          }
+        ]
+      }
+    }
+  },
+  "schema": "oric.site-exploration.v1",
+  "section_xiv": {
+    "first_threshold_satisfied": false,
+    "open": [
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "passed": 7,
+    "total": 12
+  },
+  "sources": {
+    "genealogy": "01_branche_matiere/genealogie_cosmique_quantitative/CHAINE_EMPIRIQUE.csv",
+    "links": "01_branche_matiere/genealogie_cosmique_quantitative/LIENS_EMPIRIQUES.csv",
+    "nbody": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/analysis/counterfactual_effects.csv",
+    "nc_cc": "01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/SOSSI_NC_CC_MEASURED.csv",
+    "section_xiv": "plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json"
+  }
+}

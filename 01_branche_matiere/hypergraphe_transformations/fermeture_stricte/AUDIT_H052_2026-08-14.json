@@ -1,0 +1,48 @@
+{
+  "schema": "oric.h052-audit.v1",
+  "date": "2026-08-14",
+  "canonical_closure": {
+    "reachable_nodes": 46,
+    "total_nodes": 53,
+    "locked_core": ["N029", "N030", "N053", "N054"],
+    "downstream_locked": ["N031", "N032", "N035"]
+  },
+  "canonical_h052": {
+    "inputs": ["N051", "N028", "N030"],
+    "outputs": ["N053"]
+  },
+  "candidate_hc01_r1": {
+    "inputs": ["N051", "N028"],
+    "outputs": ["N053", "N030"],
+    "mathematical_closure_if_promoted": "53/53",
+    "status": "candidate_not_promoted"
+  },
+  "sources": [
+    {
+      "citation": "Shen et al. 2024, Nature Astronomy",
+      "doi": "10.1038/s41550-024-02373-x",
+      "evidence_type": "perspective",
+      "supports": "serpentinization_as_water_rock_interaction_and_habitability_context",
+      "does_not_establish": "H052_produces_N030_without_preexisting_interface",
+      "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Okamoto et al. 2025, Geochimica et Cosmochimica Acta",
+      "doi": "10.1016/j.gca.2025.06.018",
+      "evidence_type": "controlled_experiment",
+      "supports": "reaction_induced_fracturing_and_permeability_enhancement",
+      "does_not_establish": "primitive_earth_crust_context_N051",
+      "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Alexander, Marchi & Johnson 2026, AGU Advances",
+      "doi": "10.1029/2025AV002097",
+      "evidence_type": "impact_physics_model",
+      "supports": "impact_generated_early_earth_crustal_permeability_and_hydrothermal_activity",
+      "does_not_establish": "empirical_H052_relation",
+      "counts_for_canonical_promotion": false
+    }
+  ],
+  "verdict": "remain_46_of_53_fail_closed",
+  "next_discriminating_evidence": "primary empirical or controlled experimental evidence under primitive-crust-compatible conditions showing creation of fracture/permeability/interface without taking N030 as an independent precondition"
+}

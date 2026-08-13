@@ -120,3 +120,7 @@ l'accélération d'environ 18 fois de la réaction. L'audit détaillé est dans
 Cette source ferme le mécanisme sur analogue expérimental, mais pas encore le
 cas naturel de croûte primitive requis pour promouvoir HC01 dans l'hypergraphe
 canonique. Farough demeure insuffisant pour cette promotion.
+
+## Audit ciblé du 14 août 2026
+
+L'audit `AUDIT_H052_2026-08-14.md` ajoute Shen et al. 2024, Okamoto et al. 2025 et Alexander et al. 2026 à la lecture structurée. Le verdict reste fail-closed : **46/53**. Okamoto soutient le mécanisme auto-généré de fracture/permeabilité sur analogue expérimental ; Alexander soutient la création de perméabilité de croûte primitive au niveau modèle ; aucune de ces sources ne suffit encore à promouvoir `HC01` comme relation empirique canonique.

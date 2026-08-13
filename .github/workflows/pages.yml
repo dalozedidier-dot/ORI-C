@@ -8,6 +8,14 @@ on:
       - 'preuves/**'
       - '01_branche_matiere/genealogie_cosmique_quantitative/resultats/**'
       - '01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION.json'
+      - 'scripts/construire_exploration_site.py'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/CHAINE_EMPIRIQUE.csv'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/LIENS_EMPIRIQUES.csv'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/SOSSI_NC_CC_MEASURED.csv'
+      - '01_branche_matiere/genealogie_cosmique_quantitative/resultats/RESULTATS_QUANTITATIFS_DONNEES_MASSIVES.json'
+      - '02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/analysis/counterfactual_effects.csv'
+      - 'plateforme/campagne_maximale_reelle/RESULTATS_SCIENTIFIQUES_CERTIFIES.json'
+      - 'plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json'
       - 'VERSION'
       - 'scripts/valider_publication_stable.py'
       - 'scripts/valider_registre_preuves.py'
@@ -33,6 +41,10 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Valider les chiffres et statuts publiés
         run: python scripts/valider_publication_stable.py
+      - name: Reconstruire et vérifier les données de la page interactive
+        run: |
+          python scripts/construire_exploration_site.py
+          git diff --exit-code -- site/data/exploration.json
       - name: Écrire les métadonnées du déploiement
         env:
           BUILD_SHA: ${{ github.sha }}

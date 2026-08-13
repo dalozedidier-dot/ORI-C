@@ -177,3 +177,13 @@ Les trois derniers blocs restent en attente lors d'une exécution sans accès au
 - **Seuil scientifique : inchangé.** **7/12**, verrous `3, 4, 9, 10, 11`.
 - **VES-PACC-INT-01 — chaîne laboratoire → analyse prête.** Le schéma `SCHEMA_ENTREE_VES_PACC_INT_01.json` et `preparer_ves_pacc_int_01.py` imposent la structure parent/bras/défi, calculent la normalisation vers les cubes `n×12×4`, dérivent les contrôles de fidélité et d’appariement depuis le protocole gelé et restent bloqués pour toute donnée réelle tant que l’enregistrement public n’est pas attesté. Aucun seuil scientifique ni verdict §XIV n’est modifié.
 
+
+## Mise à jour d'industrialisation et de fermeture — 14 août 2026
+
+- **Roadmap courte installée.** `ROADMAP.md` limite les priorités actives à `VES-PACC-INT-01`, `H052/HC01`, `PRED-VIVANT-HISTOIRE-001` et `MAG-PAIR-001`.
+- **H052 audité sans promotion.** `AUDIT_H052_2026-08-14.md/.json` conserve la fermeture canonique à **46/53** et précise la preuve discriminante encore nécessaire pour justifier `HC01`.
+- **Démonstration reproductible renforcée.** `scripts/demo_minimale_html.py` transforme la sortie de `demo_minimale.py` en rapport HTML autonome sans changer l'analyse d'autorité.
+- **Contrôle négatif industrialisé.** `controle_negatif_reel_surrogats.py` accepte un chemin `--sortie` afin que la CI rejoue le contrôle sans modifier l'artefact versionné.
+- **Exploration GitHub Pages installée.** `scripts/construire_exploration_site.py` dérive une vue interactive déterministe de la généalogie cosmique, des mesures NC/CC, des scénarios N-corps pré-calculés et de l'état §XIV. Un modèle jouet séparé illustre le patron `Histoire → Architecture → Possibles` sans compter comme preuve.
+- **Notebook de démonstration ajouté.** `notebooks/ORI-C_demo_colab.ipynb` rejoue la démonstration minimale depuis un clonage propre avec Git LFS.
+- **Seuil scientifique inchangé.** §XIV reste **7/12**, verrous `3, 4, 9, 10, 11`.

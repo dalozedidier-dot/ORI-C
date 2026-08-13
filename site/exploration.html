@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exploration interactive ORI-C : généalogie cosmique, séparation isotopique NC/CC, scénarios N-corps pré-calculés et modèle jouet pédagogique.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dalozedidier-dot.github.io/ORI-C/exploration.html">
+  <meta property="og:title" content="ORI-C | Explorer les données et les modèles">
+  <meta property="og:description" content="Visualisations interactives séparant données empiriques, résultats de modèle et démonstration pédagogique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalozedidier-dot.github.io/ORI-C/exploration.html">
+  <meta name="theme-color" content="#07111f">
+  <title>ORI-C | Exploration interactive</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+  <script defer src="assets/exploration.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil ORI-C">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span><strong>ORI-C</strong><small>Architectures, histoire, futurs accessibles</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a href="reproductibilite.html">Reproductibilité</a><a aria-current="page" href="exploration.html">Explorer</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="wrap narrow">
+        <p class="eyebrow">Visualisation interactive · sans serveur</p>
+        <h1>Explorer sans confondre visualisation et preuve</h1>
+        <p>Cette page expose des tables versionnées et des scénarios déjà calculés. Elle ajoute aussi un modèle jouet pédagogique clairement séparé des résultats scientifiques. Aucun curseur ne transforme une interpolation en nouvelle preuve.</p>
+      </div>
+    </section>
+
+    <section class="section compact" aria-labelledby="xiv-title">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Porte scientifique</p><h2 id="xiv-title">État §XIV</h2></div>
+          <p>Le compteur est lu directement depuis la sortie machine de la campagne centrale.</p>
+        </div>
+        <div class="interactive-summary" id="xiv-summary" aria-live="polite"></div>
+        <p class="data-note">Les priorités actives sont détaillées dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/ROADMAP.md">ROADMAP.md</a>. La page interactive ne peut pas fermer un verrou scientifique.</p>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="genealogy-title">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Données empiriques</p><h2 id="genealogy-title">Généalogie cosmique : 20 stades navigables</h2></div>
+          <p>Cliquez sur un stade pour afficher son ancrage empirique, le porteur d'histoire et les relations documentées vers les stades voisins.</p>
+        </div>
+        <div class="genealogy-layout">
+          <div class="genealogy-strip" id="genealogy-strip" role="list" aria-label="Stades de la généalogie cosmique"></div>
+          <article class="interactive-panel" id="genealogy-detail" aria-live="polite"></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="nccc-title">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Mesures isotopiques réelles</p><h2 id="nccc-title">NC / CC : explorer 11 systèmes isotopiques</h2></div>
+          <p>Chaque point provient de la table mesurée versionnée. Les barres horizontales représentent l'incertitude publiée lorsqu'elle est disponible.</p>
+        </div>
+        <div class="control-row">
+          <label for="isotope-select">Système isotopique</label>
+          <select id="isotope-select"></select>
+        </div>
+        <div class="interactive-grid two">
+          <article class="interactive-panel">
+            <div id="isotope-stats" class="stat-line" aria-live="polite"></div>
+            <svg id="isotope-plot" class="data-plot" viewBox="0 0 920 420" role="img" aria-label="Distribution NC et CC"></svg>
+            <div class="plot-legend"><span><i class="legend-dot nc"></i>NC</span><span><i class="legend-dot cc"></i>CC</span></div>
+          </article>
+          <article class="interactive-panel">
+            <h3>Lecture autorisée</h3>
+            <p>Cette vue montre une séparation mesurée entre réservoirs pour le système choisi. Le score de classification et le Cohen d viennent des sorties quantitatives versionnées.</p>
+            <p><strong>Elle ne démontre pas à elle seule une trajectoire historique unique.</strong> La séparation isotopique est une architecture matérielle observée, pas une reconstruction orbitale.</p>
+            <p class="mono-note" id="nccc-source"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="nbody-title">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Résultat de modèle pré-calculé</p><h2 id="nbody-title">Scénarios N-corps Jupiter / Saturne</h2></div>
+          <p>Les six scénarios sont lus dans la table de contre-factuels existante. Ils peuvent être comparés, mais pas interpolés arbitrairement.</p>
+        </div>
+        <div class="control-row">
+          <label for="nbody-select">Scénario</label>
+          <select id="nbody-select"></select>
+        </div>
+        <div class="interactive-grid two">
+          <article class="interactive-panel" id="nbody-detail" aria-live="polite"></article>
+          <article class="interactive-panel">
+            <h3>Pourquoi il n'y a pas de curseur continu</h3>
+            <p>Un curseur donnant n'importe quelle masse ou position de planète demanderait de relancer réellement l'intégration. Interpoler entre six sorties donnerait une impression de précision non calculée.</p>
+            <p>Cette page reste donc un <strong>explorateur de scénarios calculés</strong>. Le dépôt conserve l'intégrateur complet pour les nouvelles expériences numériques.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sandbox-title">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Modèle jouet pédagogique</p><h2 id="sandbox-title">Bac à sable : Histoire → Architecture → Possibles</h2></div>
+          <p>Ce module n'utilise aucune donnée ORI-C et ne compte dans aucun résultat. Il sert uniquement à rendre la logique du cadre visible.</p>
+        </div>
+        <div class="sandbox-grid">
+          <article class="interactive-panel controls-panel">
+            <label>Histoire structurante <output id="history-out">0.50</output><input id="history-range" type="range" min="0" max="1" step="0.01" value="0.50"></label>
+            <label>Couplage architectural <output id="arch-out">0.70</output><input id="arch-range" type="range" min="0.1" max="1.5" step="0.01" value="0.70"></label>
+            <label>Forçage final commun <output id="force-out">1.00</output><input id="force-range" type="range" min="-2" max="2" step="0.02" value="1.00"></label>
+            <label class="toggle-line"><input id="ablation-toggle" type="checkbox"> Ablation de la trace historique</label>
+            <p class="scope-note">L'ablation annule l'effet de l'histoire sur les rigidités internes. Le même forçage final est alors appliqué à l'architecture réinitialisée.</p>
+          </article>
+          <article class="interactive-panel">
+            <svg id="sandbox-plot" class="data-plot" viewBox="0 0 920 420" role="img" aria-label="Modèle jouet de deux histoires sous même forçage"></svg>
+            <div id="sandbox-readout" class="stat-line" aria-live="polite"></div>
+          </article>
+        </div>
+        <p class="data-note"><strong>Statut :</strong> démonstration pédagogique uniquement. Elle montre qu'une architecture dépendante de l'histoire peut modifier une réponse future dans un modèle construit pour cela ; elle ne constitue pas une validation empirique d'ORI-C.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid"><div><strong>ORI-C</strong><p>Cadre de recherche ouvert et falsifiable.</p></div><div><a href="reproductibilite.html">Reproductibilité</a><a href="preuves.html">État des preuves</a><a href="https://github.com/dalozedidier-dot/ORI-C">GitHub</a></div></div>
+  </footer>
+</body>
+</html>

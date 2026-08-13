@@ -71,14 +71,14 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 14832,
-      "sha256": "b6a172fd199b9867d9aeb200210cfce0352b1d7cab9c82b2172a1d57f894e77e",
+      "size": 16695,
+      "sha256": "d0da1dbaf06f8d26126d699f20c7946df66f4ceace16a4651188e1481076a5ca",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 2058,
-      "sha256": "30253289931837fa98ffa8265b972a80ad483ba6db3072441647c2168186d10b",
+      "size": 2991,
+      "sha256": "ccce2ca94f52eecd00f4864a627cd497e5b6b91422b869bea9c95c47a54b507c",
       "storage": "inline"
     },
     {
@@ -1666,6 +1666,18 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.json",
+      "size": 1914,
+      "sha256": "e39ae1aafe4671fc44602c5988a3d5a323effcfacadf9cde51eb00f3608e7885",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md",
+      "size": 4571,
+      "sha256": "32f2eb08dfd76299cf4b2d30b132806cb791b74bc1bf36b621190d0b4c98e33a",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/PREUVE_PRIMAIRE_HC01_OKAMOTO_2025.md",
       "size": 1782,
       "sha256": "cc26c163af9142d4c6c67a95010ed3a25fc8fa1c29b0436b27d4e18fe42e3dea",
@@ -1685,8 +1697,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
-      "size": 6221,
-      "sha256": "e4dfcd1ed76560a3f8279eb8e85a366c048aeae76926711868fa3373a52f85fd",
+      "size": 6718,
+      "sha256": "370795ba94bef98f74199f8fd83b67a1ead87e92d52d29d408307e084367c238",
       "storage": "inline"
     },
     {
@@ -6263,8 +6275,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 12696,
-      "sha256": "078e1857a3c0348dc86e6c89214b8477954bc958c105216b1cf0b2d28d507428",
+      "size": 13956,
+      "sha256": "e026bf0c9cd9705c4a8957c1a7ee946d2b03c4b60ef374d34b94a8d07db6f6d9",
       "storage": "inline"
     },
     {
@@ -6371,8 +6383,8 @@
     },
     {
       "path": "README.md",
-      "size": 31308,
-      "sha256": "752e6655f7b62004706fe51f3430bec335f953f55bc00a7274436b3aba581347",
+      "size": 31751,
+      "sha256": "eb816341820eb3169389dfe847b674e7fdfa8fb55adef3c99e7515bf85a40985",
       "storage": "inline"
     },
     {
@@ -6409,6 +6421,12 @@
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
       "size": 9253,
       "sha256": "585025b5c0f2958af8204eeac290fa297f5ac1ed1bb56673fc42972d7917f850",
+      "storage": "inline"
+    },
+    {
+      "path": "ROADMAP.md",
+      "size": 4743,
+      "sha256": "5b5673da07542ae406cb4662d925bddce900d4777e169abb2d959d2e112634f5",
       "storage": "inline"
     },
     {
@@ -7180,6 +7198,12 @@
       "storage": "inline"
     },
     {
+      "path": "notebooks/ORI-C_demo_colab.ipynb",
+      "size": 2452,
+      "sha256": "d312be4e0dcd3db879cefee6bf8a5ac62943d17d534774bc29daf8bf9bd3c2e5",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
       "size": 3876,
       "sha256": "8406e902724f0fa80dd07481f7bc87b9a07946e9ca70628ed9b158eb6b66efd4",
@@ -7187,8 +7211,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 15751,
-      "sha256": "c7a46bf8e93e5d975bd3ccb57d22d104f5036207ddba05f72709ffcf994fe1d7",
+      "size": 17115,
+      "sha256": "f60e45f761e6a862942b50df8c2d9dbb4b3d5dfd6bc2dd8deb399d4878e59c7e",
       "storage": "inline"
     },
     {
@@ -9954,7 +9978,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "14e6cb396a8e4ee0da540e79e2a599a634cebfc10ca2ab53d1fd2fa105536714",
+      "sha256": "ef1de5216d1d77b65abe9e7687c1b4de9cfbd802c212162b6011556d7b7f7383",
       "storage": "inline"
     },
     {
@@ -10072,6 +10096,12 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/construire_exploration_site.py",
+      "size": 6230,
+      "sha256": "718ce0bd77932932ee1a614d1704e471b719aa668e2af796144e77d756109dd9",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/construire_registre_preuves.py",
       "size": 12728,
       "sha256": "c09290879cedcdcefb26c275b27eeba3180cb339dd9daf3472507cf0b24e2f17",
@@ -10085,8 +10115,14 @@
     },
     {
       "path": "scripts/controle_negatif_reel_surrogats.py",
-      "size": 16030,
-      "sha256": "f0de668f3b2b6bb2a14e716115ff15807ea013c189c490284fd039e5a5607071",
+      "size": 16460,
+      "sha256": "7c15b31654edb03e425031374b7b748c798e05a017575607ef57320b718b7aa6",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/demo_minimale_html.py",
+      "size": 7416,
+      "sha256": "75b856d7db08378e96e6a91de113ad680da9f66d1b3b614b43f644d64a017029",
       "storage": "inline"
     },
     {
@@ -10180,6 +10216,12 @@
       "storage": "inline"
     },
     {
+      "path": "site/assets/exploration.js",
+      "size": 10122,
+      "sha256": "11e0c036aeefb4bdae19a433f2dc3b6ab482d24e02b9be5633345ce1ccc62a91",
+      "storage": "inline"
+    },
+    {
       "path": "site/assets/favicon.svg",
       "size": 601,
       "sha256": "b9bae848df3e93f0959cce9b1ec53bb262b4b9e53c378d27bf27393dfe239665",
@@ -10187,32 +10229,44 @@
     },
     {
       "path": "site/assets/styles.css",
-      "size": 20859,
-      "sha256": "8211488549e43208c32001ea455fc89457e5b4af1b9ccda1ea5e9e1dc0bbd138",
+      "size": 25305,
+      "sha256": "8b4168625a1768176bfcfc819613ec66e67a2de1b22b4535ca405753a4849324",
+      "storage": "inline"
+    },
+    {
+      "path": "site/data/exploration.json",
+      "size": 60580,
+      "sha256": "b881924f3eb6947bb3fac58e66090fa026a0a7adf52ff0ff8047ed800102f0c9",
+      "storage": "inline"
+    },
+    {
+      "path": "site/exploration.html",
+      "size": 9429,
+      "sha256": "92e257ebbd1d632028b39fb30042396e289c8d07e61014103bc79863d3a45196",
       "storage": "inline"
     },
     {
       "path": "site/index.html",
-      "size": 18128,
-      "sha256": "0c194fbeae102fd344f4d26db32a90d772e575d36a897681cdafe1ac8c9fbbac",
+      "size": 18167,
+      "sha256": "90dbfa98e68e50b58913c246a6a3ca5640d4e7d1624e56b1c5fe44afdc6a78b9",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
-      "size": 15528,
-      "sha256": "b64f819d1aacf4d3ce60108ff8b7333792f24618e82ffade8ef852eb4a0f9e3d",
+      "size": 15567,
+      "sha256": "5946118e4c8a41809ccab9bb9504bc4dd5d875f177c9c911d73daf204316bbc3",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 43717,
-      "sha256": "114d0d4da7911d84e86f292e279978fb3dc03d2f70e520a03fffec79c2465ca8",
+      "size": 43756,
+      "sha256": "3b0cf8f72915c55568ecfebc21ca77b7678e334ece39bc1d56f2ccaa48e112df",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 18005,
-      "sha256": "239f460a47c4cbd73db7447357dea613b9f62e0eace160f96fffe11b58de11a6",
+      "size": 19415,
+      "sha256": "87234062f91797f90b5d87f8764a461e72f9df888465e9a6359c6695c3ce2cc9",
       "storage": "inline"
     },
     {
@@ -10223,8 +10277,8 @@
     },
     {
       "path": "site/sitemap.xml",
-      "size": 535,
-      "sha256": "58c2e33c33dbce9f10f540da7a5c3b2262ef525c7582e687714959279dca4b7e",
+      "size": 646,
+      "sha256": "7bb6fd1f3679b37eef8ea59cfdc2ef58fab50dfbb8d717a460cf028c509ade51",
       "storage": "inline"
     },
     {

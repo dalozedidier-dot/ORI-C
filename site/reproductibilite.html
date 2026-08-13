@@ -29,7 +29,7 @@
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
       <nav id="navigation" class="site-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a>
+        <a href="index.html">Accueil</a><a href="preuves.html">État des preuves</a><a href="methode.html">Méthode</a><a aria-current="page" href="reproductibilite.html">Reproductibilité</a><a href="exploration.html">Explorer</a><a class="nav-repo" href="https://github.com/dalozedidier-dot/ORI-C">Dépôt GitHub</a>
       </nav>
     </div>
   </header>
@@ -66,6 +66,23 @@
           <pre><code>python build_manifest.py verify
 python verifier_dossier.py --allow-lfs-pointers</code></pre>
           <p class="data-note">Le premier contrôle compare la liste, la taille et l’empreinte de chaque fichier. Le second vérifie aussi la structure du dossier et les objets LFS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo-rapide">
+      <div class="wrap two-column align-start">
+        <div>
+          <p class="eyebrow">Vérification rapide</p>
+          <h2>Rejouer les résultats phares et obtenir un rapport HTML</h2>
+          <p><code>demo_minimale.py</code> recalcule les trois résultats phares depuis les données versionnées. Le wrapper HTML ne change aucun calcul : il transforme la sortie de la démonstration en rapport autonome, puis la CI conserve ce rapport comme artefact.</p>
+          <p>Le notebook Colab fourni dans le dépôt reproduit le même chemin depuis un clonage propre avec Git LFS.</p>
+        </div>
+        <div>
+          <pre><code>python demo_minimale.py
+python scripts/demo_minimale_html.py \
+  --output demo_minimale_report.html</code></pre>
+          <p class="data-note"><a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/notebooks/ORI-C_demo_colab.ipynb">Ouvrir le notebook de démonstration</a> · <a href="exploration.html">Explorer les vues interactives</a></p>
         </div>
       </div>
     </section>
@@ -152,6 +169,7 @@ python 01_branche_matiere/genealogie_cosmique_quantitative/run_all.py</code></pr
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">GitHub Actions</p><h2>Workflows à lancer</h2></div>
         <div class="document-grid">
+          <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml"><strong>Démonstration, registre et contrôle négatif</strong><span>Rapport HTML de la démonstration minimale, registre de preuves, contrôle négatif réel et cohérence de la vue interactive</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-genealogie-cosmique.yml"><strong>Généalogie cosmique — données réelles</strong><span>29 tests, recalcul strict, résumé scientifique du run et artefact des résultats</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-maximale-trois-branches.yml"><strong>Campagne maximale ORI-C, trois branches</strong><span>Validation cumulative et analyses transversales</span></a>
           <a href="https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-donnees-reelles.yml"><strong>Analyse des données réelles</strong><span>Intégration des tables et exécution des 683 entrées</span></a>
