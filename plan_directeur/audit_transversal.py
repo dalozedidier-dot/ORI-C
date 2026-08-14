@@ -63,6 +63,48 @@ BRANCHES = {
 # documents rédigés.
 GENERES = {".json", ".csv", ".txt"}
 
+# Les artefacts ci-dessous décrivent une expérience future ou son exécution,
+# mais ne constituent pas une mesure obtenue. Ils doivent rester invisibles
+# pour WP-T2 tant qu'un fichier de résultat distinct n'existe pas.
+NON_RESULTAT_SUFFIXES = (
+    ".design.json",
+    ".execution.json",
+    ".registration.json",
+)
+NON_RESULTAT_NOMS = {
+    "POWER_PLAN.json",
+}
+NON_RESULTAT_PREFIXES = (
+    "PROTOCOLE_",
+    "SCHEMA_",
+    "LAB_CANDIDATES_",
+    "CANDIDAT_",
+    "TEMPLATE_",
+)
+
+
+def est_resultat_genere(chemin: Path) -> bool:
+    """Vrai seulement pour un artefact admissible comme mesure WP-T2.
+
+    Un design, une fiche d'exécution, un enregistrement ou un plan de puissance
+    peut contenir le nom d'une quantité sans que cette quantité ait été mesurée.
+    Les compter créerait un faux passage de branche avant l'expérience réelle.
+    """
+    if not chemin.is_file() or chemin.suffix.lower() not in GENERES:
+        return False
+    if "__pycache__" in chemin.parts:
+        return False
+
+    nom = chemin.name
+    nom_min = nom.lower()
+    if any(nom_min.endswith(suffixe) for suffixe in NON_RESULTAT_SUFFIXES):
+        return False
+    if nom in NON_RESULTAT_NOMS:
+        return False
+    if any(nom.startswith(prefixe) for prefixe in NON_RESULTAT_PREFIXES):
+        return False
+    return True
+
 
 def fichiers_generes(sous_dossiers: list[str]) -> list[Path]:
     sortie = []
@@ -71,9 +113,7 @@ def fichiers_generes(sous_dossiers: list[str]) -> list[Path]:
         if not base.is_dir():
             continue
         for chemin in base.rglob("*"):
-            if chemin.is_file() and chemin.suffix.lower() in GENERES:
-                if "__pycache__" in chemin.parts:
-                    continue
+            if est_resultat_genere(chemin):
                 sortie.append(chemin)
     return sortie
 
