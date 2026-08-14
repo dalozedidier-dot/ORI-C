@@ -8,11 +8,11 @@
     "test_field_mT": null,
     "temperature_target_c": null,
     "temperature_tolerance_c": null,
-    "randomization_seed": null,
-    "permutation_seed": null,
+    "randomization_seed": 2026081401,
+    "permutation_seed": 2026081402,
     "permutation_draws": 20000,
     "blind_code_key_sha256": null,
-    "exclusion_rule": null
+    "exclusion_rule": "No outcome-based exclusion. Exclude only documented specimen breakage/loss, instrument failure affecting the planned measurement, or a protocol deviation recorded before blind-code decoding; every exclusion and reason remains published."
   },
   "registration": {
     "service": "OSF Registries",
@@ -21,5 +21,20 @@
   },
   "execution_rule": "no confirmatory measurement file may exist before all frozen_fields are non-null, status=frozen_ready_for_registration, and the package is publicly registered before acquisition",
   "scientific_rule_inherited": "A = 1 - abs(delta_R_apres)/abs(delta_R_avant); success requires delta_R_avant nonzero, A >= 0.50 and preregistered bilateral interaction p <= 0.05",
-  "sham_role": "paired negative control included in the interaction and reported separately; no additional post-hoc threshold may be invented"
+  "sham_role": "paired negative control included in the interaction and reported separately; no additional post-hoc threshold may be invented",
+  "candidate_lab": {
+    "name": "Fort Hoofddijk Paleomagnetic Laboratory, Utrecht University",
+    "status": "candidate_not_contacted_or_confirmed",
+    "equipment_support": [
+      "2G cryogenic magnetometer",
+      "in-line AF demagnetization",
+      "ARM DC bias coil",
+      "IRM pulse-field coil"
+    ],
+    "sources": [
+      "https://forthoofddijk.geo.uu.nl/equipment-2/",
+      "doi:10.1002/2015GC006050"
+    ]
+  },
+  "remaining_lab_freeze_strategy": "Use a non-confirmatory sacrificial-sample pilot to set AF plateau, test field and temperature window; generate and retain the blind-code key off-repository, committing only its SHA-256 before registration."
 }

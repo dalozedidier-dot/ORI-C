@@ -4,10 +4,14 @@
     "reachable": 46,
     "total": 53
   },
-  "fermeture_candidate": {
+  "fermeture_candidate_hc01": {
+    "reachable": 53,
+    "total": 53
+  },
+  "fermeture_candidate_hc02": {
     "reachable": 53,
     "total": 53
   },
   "preuve_candidate_admise": false,
-  "motif": "la source actuelle ne démontre pas HC01/H052 dans une trajectoire unique avec flux, quantités, incertitudes et horizon temporel"
+  "motif": "HC01/H052 n'est pas démontrée dans une trajectoire unique. HC02 possède désormais un support expérimental direct pour l'interface croûte-H2O-CO2 et la chimie hydrothermale, mais la sémantique complète de N030 (notamment catalyse) reste ouverte."
 }

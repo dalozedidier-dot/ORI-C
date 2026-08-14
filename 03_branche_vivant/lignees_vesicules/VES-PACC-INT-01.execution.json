@@ -1,0 +1,55 @@
+{
+  "schema": "oric.ves-pacc-int-01.execution-readiness.v1",
+  "protocol_id": "VES-PACC-INT-01",
+  "status": "blocked_until_public_registration_and_confirmed_lab",
+  "scientific_protocol_unchanged": true,
+  "randomization_seed_for_public_plate_block_order": 2026081403,
+  "candidate_labs": [
+    {
+      "name": "Baum Lab / Wisconsin Institute for Discovery",
+      "institution": "University of Wisconsin-Madison",
+      "status": "candidate_original_system_lab_not_contacted",
+      "fit": "very_high_for_chemistry_and_assays",
+      "source_doi": "10.1021/acs.langmuir.6c00275"
+    },
+    {
+      "name": "Engineering of Molecular NanoSystems (EMNS)",
+      "institution": "Université libre de Bruxelles",
+      "status": "candidate_not_contacted",
+      "fit": "DLS_and_spectroscopy",
+      "verified_capabilities": [
+        "Malvern Zetasizer Ultra DLS",
+        "UV-Vis-NIR absorption",
+        "Fluoromax-4 emission spectrophotometer"
+      ],
+      "source": "https://inventaire.ulb.be/Site/unite/COMP819.php"
+    },
+    {
+      "name": "BioMatter Lab",
+      "institution": "Université libre de Bruxelles",
+      "status": "candidate_not_contacted",
+      "fit": "plate_readout_and_wet_lab",
+      "verified_capabilities": [
+        "TECAN Spark X UV/fluorescence/luminescence plate reader",
+        "pH meter",
+        "incubation and standard wet-lab equipment"
+      ],
+      "source": "https://biomatter.ulb.be/facilities/"
+    }
+  ],
+  "original_system_methods_verified": [
+    "A400 turbidity",
+    "Nile Red 610/640/660 nm fluorescence",
+    "calcein fluorescence",
+    "DLS Z-average with Zetasizer",
+    "2:1 decanoic acid:decanol system"
+  ],
+  "remaining_execution_blockers": [
+    "public preregistration metadata in VES-PACC-INT-01.registration.json",
+    "confirmed laboratory and instrument access",
+    "availability of 100 nm and 5 um track-etched membranes/extruder setup",
+    "offline blind-code key and committed SHA-256",
+    "scheduled acquisition window after registration"
+  ],
+  "strict_rule": "No prospective test datum may be acquired while the registration sidecar is not publicly_registered with URL/timestamp and unchanged frozen protocol/analysis hashes."
+}

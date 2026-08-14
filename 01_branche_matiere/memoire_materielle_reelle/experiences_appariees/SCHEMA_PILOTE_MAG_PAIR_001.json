@@ -1,0 +1,40 @@
+{
+  "schema": "oric.mag-pair-001.pilot-input.v1",
+  "protocol_id": "MAG-PAIR-001",
+  "confirmatory_credit": false,
+  "purpose": "freeze instrument-specific AF plateau, sub-coercive test field and temperature window without using confirmatory specimens",
+  "files": {
+    "af_sweep.csv": {
+      "required_columns": [
+        "specimen_id",
+        "history",
+        "af_mT",
+        "trace_before",
+        "trace_after",
+        "temperature_C"
+      ]
+    },
+    "test_field_sweep.csv": {
+      "required_columns": [
+        "specimen_id",
+        "history",
+        "test_field_mT",
+        "trace_before_test",
+        "trace_after_test",
+        "response_projection",
+        "instrument_noise_sd",
+        "temperature_C"
+      ]
+    }
+  },
+  "selection": {
+    "af_rule": "report the minimum tested AF level where the median trace-reduction fraction is >=0.80 in each history separately; do not extrapolate between untested levels",
+    "test_field_rule": "rank only measured candidate fields by trace overwrite and signal/noise; final acceptance thresholds are a laboratory freeze and must be declared before choosing the field",
+    "temperature_rule": "report observed range; target and tolerance are frozen jointly with the lab before confirmatory acquisition"
+  },
+  "forbidden": [
+    "confirmatory specimens",
+    "outcome-dependent tuning",
+    "using the pilot as PRED-MATIERE-ABLATION-001 evidence"
+  ]
+}

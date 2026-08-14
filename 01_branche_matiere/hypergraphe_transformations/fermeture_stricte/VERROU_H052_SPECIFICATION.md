@@ -128,3 +128,7 @@ L'audit `AUDIT_H052_2026-08-14.md` ajoute Shen et al. 2024, Okamoto et al. 2025 
 ## Mise à jour expérimentale — Lawal et al. 2026
 
 Lawal et al. (2026), DOI `10.1029/2025GL120883`, expérimente la serpentinisation de dunite riche en olivine et observe par micro-CT l’initiation et la propagation de microfissures associées à la réaction. Cela renforce directement le mécanisme `réaction eau-roche → création de fissures/interfaces`. Le verrou canonique reste néanmoins à **46/53** : l’expérience ne suffit pas à établir que le contexte représente `N051 Croûte primitive` ni que ces fissures initient à elles seules un `N053 Système hydrothermal` sans interface préalable.
+
+## Voie HC02 — bootstrap direct de N030
+
+Une voie plus conservatrice est maintenant testée : `HC02 = N051|N028 -> N030`. Elle laisse `H052` inchangée et atteint également 53/53 dans l'analyse de sensibilité. Hao & Li 2018 (`10.3389/feart.2018.00180`) apporte un test direct croûte primitive analogue–H2O/CO2 ; Ueda et al. 2021 (`10.1029/2021GC009827`) apporte la chimie hydrothermale temporelle ; Lazar et al. 2012 (`10.1016/j.chemgeo.2012.07.019`) apporte un contexte catalytique lors de la serpentinisation de komatiites. Le point encore ouvert est la couverture sémantique complète de `N030`, notamment « catalyse ». **Le canon reste 46/53.**

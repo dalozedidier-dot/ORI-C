@@ -9,7 +9,12 @@
     "statut": "candidat_a_sourcer",
     "candidat": "HC01: N051|N028 -> N053|N030"
   },
-  "H2_mauvais_decoupage": {
+  "H2_bootstrap_interface_directe": {
+    "prediction": "N051 et N028 suffisent à produire N030 avant H052",
+    "statut": "support_experimental_partiel_audite_non_promu",
+    "candidat": "HC02: N051|N028 -> N030"
+  },
+  "H3_mauvais_decoupage": {
     "prediction": "N030 et N053 sont deux sorties couplées d'un même processus",
     "statut": "ferme_mathematiquement_non_valide_empiriquement",
     "scenario": "R1"

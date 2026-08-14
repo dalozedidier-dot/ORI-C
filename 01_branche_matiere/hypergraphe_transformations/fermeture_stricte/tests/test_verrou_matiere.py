@@ -32,3 +32,17 @@ def test_les_ablations_ne_peuvent_pas_ameliorer_la_fermeture():
     rows = verrou.ablate_edges(edges, {"N036"}, nodes)
     assert len(rows) == len(edges) == 53
     assert all(row["reachable_after_ablation"] <= 46 for row in rows)
+
+def test_hc02_ferme_le_graphe_sans_toucher_h052():
+    edges = verrou.load_edges()
+    nodes = {row["node_id"] for row in verrou.read_semicolon(verrou.BASE / "noeuds.csv")}
+    hc02 = verrou.Edge(
+        edge_id="HC02", process="bootstrap interface",
+        inputs=frozenset({"N051", "N028"}), outputs=frozenset({"N030"}),
+        evidence="candidate", source_id="HC02_AUDIT"
+    )
+    assert nodes <= verrou.strict_closure(verrou.add_edge(edges, hc02), {"N036"})
+    original = next(edge for edge in edges if edge.edge_id == "H052")
+    assert original.inputs == frozenset({"N051", "N028", "N030"})
+    assert original.outputs == frozenset({"N053"})
+

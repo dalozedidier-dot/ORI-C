@@ -1,0 +1,52 @@
+{
+  "schema": "oric.hyperedge-candidate.v1",
+  "id": "HC02",
+  "title": "Formation directe d'une interface eau-roche-gaz à partir de la croûte primitive et de l'hydrosphère",
+  "inputs": [
+    "N051",
+    "N028"
+  ],
+  "outputs": [
+    "N030"
+  ],
+  "canonical_change": false,
+  "status": "candidate_experimental_support_semantic_audit_open",
+  "mathematical_closure_if_added": "53/53",
+  "rationale": "Cette voie conserve H052 intact. Elle teste si N030 peut être obtenu en amont par interaction directe entre une croûte primitive analogue et un réservoir H2O/CO2, ce qui casse ensuite le cycle canonique N029-N030-N053-N054.",
+  "semantic_target": {
+    "node": "N030",
+    "label": "Interfaces eau roche gaz",
+    "capacity": "gradients et catalyse",
+    "components": {
+      "water_rock_gas_interface": "supported_directly",
+      "reaction_products_and_fluid_chemistry": "supported_directly",
+      "chemical_gradients": "supported_by_time_resolved_hydrothermal_fluid_measurements",
+      "catalytic_capacity_same_chain": "not_yet_demonstrated_directly_enough_for_canonical_promotion"
+    }
+  },
+  "primary_sources": [
+    {
+      "citation": "Hao & Li 2018, Frontiers in Earth Science 6:180",
+      "doi": "10.3389/feart.2018.00180",
+      "role": "controlled_early_earth_crust_atmosphere_interaction",
+      "supports": "Komatiite, peridotite and basalt reacted with H2O-CO2 at 200-500 C; secondary clays/carbonates and gases were measured, directly instantiating a reactive crust-fluid-gas interface.",
+      "limitation": "Does not by itself demonstrate the full N030 capacity wording, especially catalysis, in one closed chain."
+    },
+    {
+      "citation": "Ueda et al. 2021, Geochemistry Geophysics Geosystems 22:e2021GC009827",
+      "doi": "10.1029/2021GC009827",
+      "role": "controlled_hadean_komatiite_seawater_hydrothermal_fluid_chemistry",
+      "supports": "Time-resolved hydrothermal experiments on synthetic komatiite and CO2-rich Hadean seawater measured evolving fluid chemistry under 100-350 C conditions, including H2-rich fluids.",
+      "limitation": "Hydrothermal conditions already impose a reacting water-rock system; source strengthens gradients/chemistry but is not alone a proof of the initial interface bootstrap."
+    },
+    {
+      "citation": "Lazar et al. 2012, Chemical Geology 326-327:102-112",
+      "doi": "10.1016/j.chemgeo.2012.07.019",
+      "role": "controlled_komatiite_serpentinization_methanogenesis",
+      "supports": "Natural komatiite produced substantially more labelled methane than synthetic komatiite during hydrothermal alteration; catalytic mineral candidates were investigated.",
+      "limitation": "Catalyst identity was inferred rather than isolated as the unique cause, so this is supporting context rather than a canonical HC02 promotion proof."
+    }
+  ],
+  "promotion_rule": "Promote only if the semantic audit concludes that the source set is sufficient for the complete N030 node meaning without silently weakening its capacity, and after an independent reviewer can trace each component to primary evidence.",
+  "current_verdict": "do_not_promote_yet"
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "oric.pred-vivant-histoire.execution-route.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "status": "candidate_route_not_yet_eligible",
+  "preferred_route": "new_MIC_measurements_on_archived_independent_LTEE_histories",
+  "logic": "Use viable frozen LTEE material whose evolutionary history is already fixed, while generating the registered MIC outcome only after public preregistration. This avoids waiting for a new long evolution experiment while preserving prospective outcome timing.",
+  "donofrio_founder_histories_already_used": [
+    "REL606 ancestor",
+    "Ara-1 50k",
+    "Ara-2 50k",
+    "Ara-4 50k",
+    "Ara-5 50k",
+    "Ara-6 50k"
+  ],
+  "candidate_material_rule": "Prefer LTEE populations/timepoints not used in the Donofrio dataset. Exact material remains ineligible until a metadata-only audit confirms that the registered target MIC values for that exact candidate have not been opened by ORI-C and the measuring team is independent.",
+  "target_antibiotics_from_original": [
+    "ampicillin",
+    "erythromycin",
+    "tetracycline",
+    "tobramycin"
+  ],
+  "official_archive_basis": {
+    "source": "https://the-ltee.org/about/",
+    "fact": "LTEE populations are cryo-archived every 500 generations and remain viable for revival"
+  },
+  "official_protocol_basis": {
+    "source": "https://the-ltee.org/resources/",
+    "fact": "LTEE experimental protocols and resources are publicly documented"
+  },
+  "candidate_independent_labs": [
+    {
+      "name": "MICA Lab",
+      "institution": "KU Leuven",
+      "status": "candidate_not_contacted",
+      "fit": [
+        "antimicrobial resistance",
+        "experimental evolution",
+        "academic collaboration platform"
+      ],
+      "source": "https://www.micalab.be/"
+    },
+    {
+      "name": "Laboratory of Pharmaceutical Microbiology",
+      "institution": "Ghent University",
+      "status": "candidate_not_contacted",
+      "fit": [
+        "experimental evolution",
+        "antibiotic susceptibility"
+      ],
+      "source_doi": "10.1099/mic.0.001715"
+    }
+  ],
+  "eligibility_gates": [
+    "material identity fixed before outcome measurement",
+    "independent measuring team",
+    "exact target MIC values not previously opened by ORI-C",
+    "analysis and success rule publicly registered before measurements",
+    "group/history identifiers fixed before MIC acquisition",
+    "raw MIC table hash frozen before ORI-C decoding"
+  ],
+  "strict_success_rule_inherited": "gain >= 5 %, bootstrap interval of gain > 0, permutation p <= 0.05",
+  "current_credit": "none"
+}

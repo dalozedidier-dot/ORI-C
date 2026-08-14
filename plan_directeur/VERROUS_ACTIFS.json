@@ -20,6 +20,8 @@
       "scientific_design_complete": true,
       "public_registration_status": "package_ready_external_account_required",
       "public_url_present": false,
+      "execution_package_status": "blocked_until_public_registration_and_confirmed_lab",
+      "candidate_lab_count": 3,
       "execution_open": false,
       "protocol_sha256": "30342b35525b32a54e287e5ac85844fbb15537f22e91c31bfc9aae4b92cd46fa",
       "targets": [
@@ -30,10 +32,12 @@
     },
     {
       "rank": 2,
-      "id": "H052-HC01",
+      "id": "H052-HC01-HC02",
       "branch": "matiere",
       "canonical_closure": "46/53",
       "candidate_status": "candidate_not_promoted",
+      "hc02_status": "candidate_experimental_support_semantic_audit_open",
+      "hc02_preferred_next_audit": true,
       "verdict": "remain_46_of_53_fail_closed",
       "targets": [
         "fermeture_hypergraphe_53_53"
@@ -46,6 +50,7 @@
       "status": "frozen_locally_awaiting_external_data",
       "data_opened": false,
       "result_present": false,
+      "new_MIC_route_status": "candidate_route_not_yet_eligible",
       "targets": [
         "XIV-3",
         "XIV-4",
@@ -58,6 +63,9 @@
       "branch": "matiere",
       "status": "protocol_ready_physical_execution_required",
       "minimum_independent_units": 48,
+      "execution_freeze_status": "blocked_missing_lab_freeze",
+      "remaining_lab_fields": 6,
+      "pilot_installed": true,
       "targets": [
         "XIV-9",
         "PRED-MATIERE-ABLATION-001"

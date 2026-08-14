@@ -71,8 +71,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 17785,
-      "sha256": "3571d81c2e622a30b3c8fd87ca1e053586e34c9d93b5267ef2ad303764656c18",
+      "size": 18196,
+      "sha256": "db50f03fa184dc7c7108da8cb38893e4e2dfa9f18a90188e03cce452e623ee85",
       "storage": "inline"
     },
     {
@@ -1667,14 +1667,26 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.json",
-      "size": 2756,
-      "sha256": "007ed65928ff00260946bff82afcbea37af13d72d085a38ff783f3e8021235bc",
+      "size": 4926,
+      "sha256": "25913a02ea01ab97588006c6a56be819bdeff9a07e1901dfb951d56bba1b421a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md",
-      "size": 5591,
-      "sha256": "46b795e6056620f48601fef35bc5864a61a77a45e8c7b8cd4eede2e3cd83cb2d",
+      "size": 6251,
+      "sha256": "4c394a63926a554c9c9c4ce39c80ea502000ed2bde4e589cb92e885b175539ca",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_CROUTE_HYDROSPHERE_INTERFACE.json",
+      "size": 3136,
+      "sha256": "6b5b3c12a04c6dafd253980762118ebb3b7b5d3710f654811435c0d64e42a124",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_CROUTE_HYDROSPHERE_INTERFACE.md",
+      "size": 2544,
+      "sha256": "1604fbc7b6b411142d69479abfec573ad69b54639df90d02738742992d38e274",
       "storage": "inline"
     },
     {
@@ -1697,14 +1709,14 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
-      "size": 7335,
-      "sha256": "5333411a3b524f19010a236cec4900b64e9291bf7d6e5929be2ec27f1e219a76",
+      "size": 7995,
+      "sha256": "d037e2acd90e45069ba344450b71149124350baacadb33469108a56a211ccaac",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/analyser_verrou.py",
-      "size": 14207,
-      "sha256": "5c7c89cb90a16ce10c1dfe04a37b3ffc50e0bde53f4201d3f57ae8a78c6619ad",
+      "size": 16387,
+      "sha256": "e90831de94454be89f62704e38b6c15f6752edfd995b323dfd7bd61046688efe",
       "storage": "inline"
     },
     {
@@ -1715,32 +1727,32 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/FERMETURE_EMPIRIQUE.json",
-      "size": 366,
-      "sha256": "bd26697030cb31f998dd5e10553ee639411d9d698f103caa6ab2061e74ac862e",
+      "size": 568,
+      "sha256": "c5db54fbe0f837a75c8512f247bbae86473deb09af4e8785bdddf7eef1dcc398",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/HYPOTHESES_BOOTSTRAP.json",
-      "size": 681,
-      "sha256": "3c07925413b3c879098308271b8ea9c420837155d817f53fed7433a694418877",
+      "size": 901,
+      "sha256": "6ba30a99d86fa8070e8c8192d9f109fb478b527a2098892d855ca574972d76b8",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/RAPPORT_VERROU_MATIERE.md",
-      "size": 1688,
-      "sha256": "c2aec9faa812601ebe8d435d9a309e9dc7dc0e6ff18c17c9d0d5c7221072a065",
+      "size": 2028,
+      "sha256": "0eda14d7a427744ca1540a64b0f0c6d974599063bd2fb5c270ce5600e5176d51",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/VERROU_HYPERGRAPHE.md",
-      "size": 1688,
-      "sha256": "c2aec9faa812601ebe8d435d9a309e9dc7dc0e6ff18c17c9d0d5c7221072a065",
+      "size": 2028,
+      "sha256": "0eda14d7a427744ca1540a64b0f0c6d974599063bd2fb5c270ce5600e5176d51",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
-      "size": 4506,
-      "sha256": "3ed3d9130c71f4a07624df9df1c621991cceae6cf7736851a136883617548b91",
+      "size": 5059,
+      "sha256": "c06d19fa6dbea39583a1c02dd3b767a8b6de1270fa10a776d9b5ab840c8ef480",
       "storage": "inline"
     },
     {
@@ -1751,14 +1763,14 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/scenarios_reparation.csv",
-      "size": 472,
-      "sha256": "b1512d8107d7a2fa23bc0ed7b4813e30c7b806edf5b467c6e0474c49c53aba57",
+      "size": 654,
+      "sha256": "6f0589e00077ca824c2290fc3097f622922a76d4fb7c1d426d2a38e574a9e5fa",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests/test_verrou_matiere.py",
-      "size": 1461,
-      "sha256": "d54a10ff3c01f930e4501068b1cd40aff1d24077f2563d5a445b645eea399781",
+      "size": 2116,
+      "sha256": "664a24f76d479375d936912f5a1c9e1ebbcaf9e97c36a1c67ba865cfaecf478b",
       "storage": "inline"
     },
     {
@@ -2350,9 +2362,15 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/LAB_CANDIDATES_MAG_PAIR_001.json",
+      "size": 899,
+      "sha256": "7aa956645023a30dda22ef03f9e872e65d29fbf384ec088232b9711b0e944700",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.execution.json",
-      "size": 1099,
-      "sha256": "85a3133970eef9fed3ae5c20ead6ff8c5f33630a416969aaf26a59f3ca8611fa",
+      "size": 2014,
+      "sha256": "7f8c2f575f31a2440e1646604912ecd4806389842c10853170af74c9e3fb79ef",
       "storage": "inline"
     },
     {
@@ -2374,6 +2392,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/PROTOCOLE_PILOTE_MAG_PAIR_001.md",
+      "size": 1418,
+      "sha256": "5a4a8ad3661ea34adb6e32646ba1843decc2f35f5ab4664d0fe0c514acf4fbff",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/README.md",
       "size": 1860,
       "sha256": "06036503ddd460a7c5ae42f9f6e2b2fb7b7a664f5f5b27c5d8cb0d81ad9fa6af",
@@ -2386,15 +2410,33 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/SCHEMA_PILOTE_MAG_PAIR_001.json",
+      "size": 1424,
+      "sha256": "536f36337ad45c28815f3dba067d826127a4ee93640d61bc11c64f6383afa53f",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/analyser_mag_pair_001.py",
       "size": 4011,
       "sha256": "483a47702706ba8d007e294c29c1e7f73b77c6097508c8b6576e8250223ecb98",
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/analyser_pilote_mag_pair_001.py",
+      "size": 2854,
+      "sha256": "dbb095883f365fc383e12ffe6502a8291834e73f9e7b691f0a450cf519c85977",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/preparer_mag_pair_001.py",
       "size": 4325,
       "sha256": "539a5c26b0bc2c1f47c865ffabedb79f1df2eba1af6890fa0445cf80bc11b18b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/tests/test_mag_pair_001_pilot.py",
+      "size": 1755,
+      "sha256": "cfa4a8b0994f4474186456be74efce9081a2a76ba41589a823a1e3c18038043f",
       "storage": "inline"
     },
     {
@@ -6028,6 +6070,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/lignees_vesicules/LAB_EXECUTION_PACKAGE_VES_PACC_INT_01.md",
+      "size": 1756,
+      "sha256": "64a1b8270583ef0743cea7f218848c0143e1e19454d16352eb73cd51817fe094",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/POWER_PLAN.json",
       "size": 2297,
       "sha256": "1154f0fcf5e862fea19f5b91daf4726391e8a6f036306ed775b55b93aff4570d",
@@ -6067,6 +6115,12 @@
       "path": "03_branche_vivant/lignees_vesicules/SCHEMA_ENTREE_VES_PACC_INT_01.json",
       "size": 2890,
       "sha256": "60f06a56ac3fcf703862b3f729ac589de8f1e179dc7540279426c85db545918e",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.execution.json",
+      "size": 2202,
+      "sha256": "ee6385f37ded4a6609a65a08ef24803a029403449034f417bb60b0f2af7fd38d",
       "storage": "inline"
     },
     {
@@ -6115,6 +6169,18 @@
       "path": "03_branche_vivant/lignees_vesicules/tests/test_preparer_ves_pacc_int_01.py",
       "size": 4204,
       "sha256": "64d097a23469066e52adee6287ad9e4b60d046cefa6b683c10dafc2356b83160",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/tests/test_ves_execution_gate.py",
+      "size": 607,
+      "sha256": "b769fc0673238e345455728ebd2169ed5200cead4cff30919f3f1809c971f683",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/valider_gate_ves_pacc_int_01.py",
+      "size": 1499,
+      "sha256": "2d88f26383fd2d2393dd312e37037c48e054d0428762388d8a75016a729640a4",
       "storage": "inline"
     },
     {
@@ -6323,8 +6389,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 15446,
-      "sha256": "8871f27874927b440f7d44f20fa4a812265ca07842748257d22c424c1ec6e230",
+      "size": 16275,
+      "sha256": "9b98920d551b1acf8c988096c60cf1a10849fc2c91b4b2cde8a211ad50cc8ac7",
       "storage": "inline"
     },
     {
@@ -6437,8 +6503,8 @@
     },
     {
       "path": "README.md",
-      "size": 32249,
-      "sha256": "5382c0c69eaef98cd3c27bd0dd9cfec62f895bc1a754b3c561133371684617b7",
+      "size": 32780,
+      "sha256": "0193435c90a03d5f42acfc401c6cd1a8dae7fe131b415eef15ff87529c813a5e",
       "storage": "inline"
     },
     {
@@ -6479,8 +6545,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "size": 5214,
-      "sha256": "b9df4c6640db6b60959b56e6b9c44990783584263a0b4b3f66b57ea36d77a3ff",
+      "size": 5414,
+      "sha256": "ea966cc6c95f0fd76177a9bc346eaff985ca8b47fa5d57f114859ea384c56025",
       "storage": "inline"
     },
     {
@@ -6799,6 +6865,24 @@
       "path": "documentation/dossier_scientifique/generer_dossier_scientifique.py",
       "size": 94344,
       "sha256": "ad50159d3af573753a7e629b6f2ef5876979a0f11879abaf8daa16b55a697002",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/execution_externe/ONE_PAGER_MAG_PAIR_001.md",
+      "size": 1042,
+      "sha256": "45f5bab377e14b03931a6d84f3007657e768f49d428e3169019bbf9597e4459e",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/execution_externe/ONE_PAGER_VES_PACC_INT_01.md",
+      "size": 866,
+      "sha256": "b19954ce8fd7d24fcd97428462eece99829db34d64bd0a9417d62f9a548ead1d",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/execution_externe/ONE_PAGER_VIVANT_NEW_MIC.md",
+      "size": 1042,
+      "sha256": "5f01c49d9bd122846306c47bff16f5fc829796ef0ce4acba02ac2d55aa5dd761",
       "storage": "inline"
     },
     {
@@ -7283,8 +7367,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 18384,
-      "sha256": "ea83e632df8a5018b36d3cc7fefb18f51da001d51e9b8fbfa48675ccc0de3748",
+      "size": 18835,
+      "sha256": "671dd170b44a7407d605282bd7984dfb581fdf4691bd3bc003160636175a21b8",
       "storage": "inline"
     },
     {
@@ -7331,8 +7415,8 @@
     },
     {
       "path": "plan_directeur/VERROUS_ACTIFS.json",
-      "size": 1530,
-      "sha256": "2bb3a3dad0c1d31393b4c4d1e6323c98d8fbbe0ba511bb8978b09e74d9803560",
+      "size": 1965,
+      "sha256": "2d5eb87d2316197f344f9f89866c86a59a084298abd114740fbd815c98e67b13",
       "storage": "inline"
     },
     {
@@ -7393,6 +7477,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/CANDIDAT_DATASET_VIVANT_TEMPLATE.json",
       "size": 712,
       "sha256": "909f0c448f1b67db74e38e09b616678a71015f91fb64279dea6a9c788564bb4e",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/CANDIDAT_LTEE_MIC_BLIND_TEMPLATE.json",
+      "size": 919,
+      "sha256": "34b1500181b9c96cab34bbb003c05f5d6eb640fc4791ba54b8131d84b2c672a6",
       "storage": "inline"
     },
     {
@@ -7469,8 +7559,20 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REGISTRE_ELIGIBILITE_DATASETS_VIVANT.json",
-      "size": 1619,
-      "sha256": "d990a80dd3e6d73af4bfa8e9b45b437941ceca3ff6740515419aa3922ab50bd9",
+      "size": 1983,
+      "sha256": "4d76e860d9224f52c2fa7b4afecd37d8e5e9cf14b93ee00bc0af431997ff4806",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REPLICATION_LTEE_NEW_MIC_PLAN.json",
+      "size": 2573,
+      "sha256": "213a55f2842e680dc93d438779fceca79f566532678a14f48ed9a29bdd5ee97b",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REPLICATION_LTEE_NEW_MIC_PLAN.md",
+      "size": 1746,
+      "sha256": "2647ac8378dc7af769ed5bb1295c5c583fe64f392d6e57e32bde91eb7a02d538",
       "storage": "inline"
     },
     {
@@ -10068,7 +10170,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "de2d9fa76eb4d7eb3536c2dfd4549080648aa64a8c33b9be0f53b105224b8392",
+      "sha256": "bcf404967ceb7fc3235fe040dc602c96652a08829ad1ca1794cbdf281180c975",
       "storage": "inline"
     },
     {
@@ -10211,8 +10313,8 @@
     },
     {
       "path": "scripts/construire_verrous_actifs.py",
-      "size": 2727,
-      "sha256": "6c951f7dfea060df66694a549adf7e7134a468187265e897563455bfcd5f0555",
+      "size": 3563,
+      "sha256": "4978df2ef0cbc296b0c6faf51484c6017e0466f9b771c544f830bb5e5c619a14",
       "storage": "inline"
     },
     {
@@ -10289,8 +10391,8 @@
     },
     {
       "path": "scripts/verifier_dataset_vivant_aveugle.py",
-      "size": 1648,
-      "sha256": "ea112b8b6a9f2cb6dcfa0f7881aaaab3b7839ad9c41fab08d3745301fe340141",
+      "size": 2380,
+      "sha256": "b5f63588313610d4f80fc636e34e88f726bac8f003edaccd9626819e44825e35",
       "storage": "inline"
     },
     {

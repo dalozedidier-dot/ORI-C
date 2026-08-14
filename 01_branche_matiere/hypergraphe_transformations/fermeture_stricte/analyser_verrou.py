@@ -187,6 +187,20 @@ def main() -> None:
     )
     r2_closure = strict_closure(add_edge(edges, r2_edge), roots)
 
+    # Scénario R3 / HC02 : H052 reste strictement canonique. Une étape
+    # antérieure produit seulement N030 à partir de la croûte primitive et
+    # de l'hydrosphère. Les sources primaires sont auditées séparément ;
+    # ce calcul ne vaut que sensibilité structurelle.
+    r3_edge = Edge(
+        edge_id="HC02",
+        process="Formation directe d'une interface eau-roche-gaz",
+        inputs=frozenset({"N051", "N028"}),
+        outputs=frozenset({"N030"}),
+        evidence="candidat_support_experimental_semantique_ouverte",
+        source_id="HC02_AUDIT",
+    )
+    r3_closure = strict_closure(add_edge(edges, r3_edge), roots)
+
     seed_sets = minimal_seed_sets(edges, roots, all_nodes, unreachable)
     components = dependency_scc(unreachable, edges)
 
@@ -218,6 +232,15 @@ def main() -> None:
             "strictly_closed": all_nodes <= r2_closure,
             "scientific_status": "hypothèse testable, non canonique",
         },
+        {
+            "scenario_id": "R3",
+            "type": "bootstrap d'interface indépendant",
+            "description": "Ajout séparé de HC02 : N051|N028 -> N030. H052 reste inchangée.",
+            "reachable": len(r3_closure),
+            "unreachable": sorted(all_nodes - r3_closure),
+            "strictly_closed": all_nodes <= r3_closure,
+            "scientific_status": "support expérimental partiel ; audit sémantique N030 encore ouvert",
+        },
     ]
     ablations = ablate_edges(edges, roots, all_nodes)
 
@@ -234,8 +257,8 @@ def main() -> None:
         "scenarios": scenarios,
         "interpretation": {
             "structural": "Le verrou est concentré dans une boucle N029-N030-N053-N054. N031, N032 et N035 sont bloqués en aval.",
-            "candidate_repair": "Un seul recodage de H052 suffit mathématiquement à rendre les 53 nœuds accessibles.",
-            "limit": "La fermeture mathématique n'établit ni l'occurrence naturelle de HC01, ni une séquence historique unique.",
+            "candidate_repair": "Deux voies minimales ferment mathématiquement le graphe : recoder H052 (HC01/R1-R2) ou ajouter en amont HC02 : N051|N028 -> N030 tout en conservant H052 canonique.",
+            "limit": "La fermeture mathématique n'établit ni l'occurrence naturelle de HC01/HC02, ni une séquence historique unique. HC02 reste non promue tant que la sémantique complète de N030 n'est pas couverte par les sources primaires.",
         },
     }
     (OUT / "diagnostic_fermeture.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
@@ -251,7 +274,12 @@ def main() -> None:
             "statut": "candidat_a_sourcer",
             "candidat": "HC01: N051|N028 -> N053|N030",
         },
-        "H2_mauvais_decoupage": {
+        "H2_bootstrap_interface_directe": {
+            "prediction": "N051 et N028 suffisent à produire N030 avant H052",
+            "statut": "support_experimental_partiel_audite_non_promu",
+            "candidat": "HC02: N051|N028 -> N030",
+        },
+        "H3_mauvais_decoupage": {
             "prediction": "N030 et N053 sont deux sorties couplées d'un même processus",
             "statut": "ferme_mathematiquement_non_valide_empiriquement",
             "scenario": "R1",
@@ -261,9 +289,10 @@ def main() -> None:
     empirical = {
         "verdict": "indetermine_faute_de_donnees",
         "fermeture_canonique": {"reachable": len(baseline), "total": len(all_nodes)},
-        "fermeture_candidate": {"reachable": len(r1_closure), "total": len(all_nodes)},
+        "fermeture_candidate_hc01": {"reachable": len(r1_closure), "total": len(all_nodes)},
+        "fermeture_candidate_hc02": {"reachable": len(r3_closure), "total": len(all_nodes)},
         "preuve_candidate_admise": False,
-        "motif": "la source actuelle ne démontre pas HC01/H052 dans une trajectoire unique avec flux, quantités, incertitudes et horizon temporel",
+        "motif": "HC01/H052 n'est pas démontrée dans une trajectoire unique. HC02 possède désormais un support expérimental direct pour l'interface croûte-H2O-CO2 et la chimie hydrothermale, mais la sémantique complète de N030 (notamment catalyse) reste ouverte.",
     }
     (OUT / "FERMETURE_EMPIRIQUE.json").write_text(json.dumps(empirical, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     with (OUT / "ABLATIONS_HYPERGRAPHE.csv").open("w", encoding="utf-8", newline="") as handle:
@@ -297,6 +326,8 @@ def main() -> None:
         "",
         f"Avec ce seul changement, la fermeture atteint **{len(r1_closure)} nœuds sur {len(all_nodes)}**. Le scénario `R2` conserve le graphe canonique et ajoute la même proposition sous la forme d'une hyperarête candidate séparée `HC01`.",
         "",
+        "Le scénario `R3/HC02` conserve aussi `H052` intacte et ajoute seulement `N051|N028 -> N030`. Il atteint lui aussi **53/53** mathématiquement. Cette voie est maintenant prioritaire car elle correspond plus directement aux expériences croûte primitive–H2O/CO2, mais son audit sémantique n'autorise pas encore une promotion canonique.",
+        "",
         "## Statut scientifique",
         "",
         "Le verrou courant est expliqué comme une circularité de représentation localisée. Une réparation minimale existe et ferme le graphe, mais elle reste une hypothèse de codage à valider contre les sources primaires. Le fichier canonique `hyperaretes.csv` n'est pas modifié.",
@@ -315,7 +346,7 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter=";", lineterminator="\n")
         writer.writeheader(); writer.writerows(candidate_rows)
 
-    print(json.dumps({"baseline": len(baseline), "R1": len(r1_closure), "R2": len(r2_closure), "minimal_seed_sets": seed_sets}, ensure_ascii=False))
+    print(json.dumps({"baseline": len(baseline), "R1": len(r1_closure), "R2": len(r2_closure), "R3_HC02": len(r3_closure), "minimal_seed_sets": seed_sets}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

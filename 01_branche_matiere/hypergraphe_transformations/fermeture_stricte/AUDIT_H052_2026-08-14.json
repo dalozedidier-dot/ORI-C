@@ -70,9 +70,46 @@
       "supports": "impact_generated_early_earth_crustal_permeability_and_hydrothermal_activity",
       "does_not_establish": "empirical_H052_relation",
       "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Hao & Li 2018, Frontiers in Earth Science 6:180",
+      "doi": "10.3389/feart.2018.00180",
+      "evidence_type": "controlled_early_earth_crust_atmosphere_interaction",
+      "supports": "Komatiite, peridotite and basalt reacted with H2O-CO2 at 200-500 C; secondary clays/carbonates and gases were measured, directly instantiating a reactive crust-fluid-gas interface.",
+      "does_not_establish": "Does not by itself demonstrate the full N030 capacity wording, especially catalysis, in one closed chain.",
+      "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Ueda et al. 2021, Geochemistry Geophysics Geosystems 22:e2021GC009827",
+      "doi": "10.1029/2021GC009827",
+      "evidence_type": "controlled_hadean_komatiite_seawater_hydrothermal_fluid_chemistry",
+      "supports": "Time-resolved hydrothermal experiments on synthetic komatiite and CO2-rich Hadean seawater measured evolving fluid chemistry under 100-350 C conditions, including H2-rich fluids.",
+      "does_not_establish": "Hydrothermal conditions already impose a reacting water-rock system; source strengthens gradients/chemistry but is not alone a proof of the initial interface bootstrap.",
+      "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Lazar et al. 2012, Chemical Geology 326-327:102-112",
+      "doi": "10.1016/j.chemgeo.2012.07.019",
+      "evidence_type": "controlled_komatiite_serpentinization_methanogenesis",
+      "supports": "Natural komatiite produced substantially more labelled methane than synthetic komatiite during hydrothermal alteration; catalytic mineral candidates were investigated.",
+      "does_not_establish": "Catalyst identity was inferred rather than isolated as the unique cause, so this is supporting context rather than a canonical HC02 promotion proof.",
+      "counts_for_canonical_promotion": false
     }
   ],
   "verdict": "remain_46_of_53_fail_closed",
-  "next_discriminating_evidence": "primary evidence linking primitive-crust-compatible water-rock reaction to creation of the permeability/interface required for hydrothermal circulation, without taking N030 as an independent precondition; Lawal 2026 narrows the gap but does not close that contextual mapping",
-  "mechanistic_progress": "primary experiments now support reaction-driven cracking in olivine-rich rock; remaining gap is contextual mapping to N051 and the exact self-starting H052 direction"
+  "next_discriminating_evidence": "complete the N030 semantic audit for HC02, especially direct catalytic capacity within the same primitive-crust water/gas interface; if sufficient, promote HC02 rather than rewrite H052",
+  "mechanistic_progress": "HC02 now gives a source-backed direct bootstrap route N051+N028 -> N030 and closes 53/53 mathematically while leaving H052 unchanged; canonical closure remains 46/53 until semantic promotion criteria are met",
+  "candidate_hc02_direct_interface": {
+    "inputs": [
+      "N051",
+      "N028"
+    ],
+    "outputs": [
+      "N030"
+    ],
+    "keeps_H052_canonical": true,
+    "mathematical_closure_if_added": "53/53",
+    "status": "candidate_experimental_support_semantic_audit_open",
+    "preferred_over_hc01_for_next_audit": true
+  }
 }

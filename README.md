@@ -103,6 +103,10 @@ Le verdict empirique initial reste `supports_empirical_historical_accessibility_
 
 Le problème inverse orbital reste `undetermined_empirical_only`. Le chemin strict produits stellaires → endpoint actuel existe dans le graphe documenté, mais le chemin strict baseline primordiale → endpoint actuel reste ouvert. La provenance terrestre reste elle aussi `empirically_contested_not_closed`. Aucun de ces verrous n'est fermé artificiellement par C-AST ou par une simulation. `C-AST-01` reste une preuve séparée au niveau modèle sur les conséquences d'une architecture donnée.
 
+## Routes d’exécution ouvertes
+
+Les quatre verrous prioritaires disposent maintenant de routes d'exécution séparées du canon : `HC02` pour tester le bootstrap direct de `N030`, un pilote instrumental pour `MAG-PAIR-001`, un paquet laboratoire pour `VES-PACC-INT-01` et une route de nouvelles MIC sur histoires LTEE archivées pour `PRED-VIVANT-HISTOIRE-001`. Ces routes n'ajoutent aucun succès §XIV tant qu'aucune acquisition préenregistrée n'a été réalisée. Voir `ROADMAP.md` et `documentation/execution_externe/`.
+
 ## Résultats établis dans l’état courant du dépôt
 
 ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.

@@ -18,6 +18,8 @@ Le scénario `R1` recode `H052` de `N051|N028|N030 -> N053` vers `N051|N028 -> N
 
 Avec ce seul changement, la fermeture atteint **53 nœuds sur 53**. Le scénario `R2` conserve le graphe canonique et ajoute la même proposition sous la forme d'une hyperarête candidate séparée `HC01`.
 
+Le scénario `R3/HC02` conserve aussi `H052` intacte et ajoute seulement `N051|N028 -> N030`. Il atteint lui aussi **53/53** mathématiquement. Cette voie est maintenant prioritaire car elle correspond plus directement aux expériences croûte primitive–H2O/CO2, mais son audit sémantique n'autorise pas encore une promotion canonique.
+
 ## Statut scientifique
 
 Le verrou courant est expliqué comme une circularité de représentation localisée. Une réparation minimale existe et ferme le graphe, mais elle reste une hypothèse de codage à valider contre les sources primaires. Le fichier canonique `hyperaretes.csv` n'est pas modifié.

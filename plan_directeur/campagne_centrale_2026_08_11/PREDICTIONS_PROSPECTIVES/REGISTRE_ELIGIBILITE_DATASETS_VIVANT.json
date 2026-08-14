@@ -35,5 +35,14 @@
     "analysis_protocol_frozen_before_opening": true,
     "public_registration_before_opening": true
   },
-  "eligible_candidates": []
+  "eligible_candidates": [],
+  "candidate_routes": [
+    {
+      "id": "LTEE-NEW-MIC-ROUTE-001",
+      "status": "metadata_route_ready_not_yet_eligible",
+      "plan": "REPLICATION_LTEE_NEW_MIC_PLAN.json",
+      "candidate_template": "CANDIDAT_LTEE_MIC_BLIND_TEMPLATE.json",
+      "reason": "new target measurements can be generated prospectively on archived independent histories"
+    }
+  ]
 }

@@ -99,3 +99,10 @@ La lecture externe courte est désormais `CORE_RESULTS.md` : 16 résultats tiré
 La démonstration astronomique distingue maintenant deux quantités auparavant présentées sous le même mot « plancher » : le ratio certifié de `C-AST-01` (**4 964,415...**) est recalculé depuis le plus grand écart numérique sélectionné de la campagne de robustesse, tandis que `effect_to_ensemble_floor_ratio` reste un diagnostic séparé du CSV contrefactuel. Les deux analyses biologiques continuent d’être réexécutées depuis les données versionnées.
 
 Côté causal prospectif, `MAG-PAIR-001` possède un paquet d’exécution machine complet jusqu’aux paramètres qui dépendent réellement du laboratoire. L’analyse et la préparation refusent toute donnée tant que le laboratoire, le palier AF, le champ test, les températures, la randomisation, l’aveugle et les règles opérationnelles ne sont pas gelés et enregistrés publiquement. `PRED-VIVANT-HISTOIRE-001` dispose en parallèle d’un registre des jeux déjà vus qui exclut explicitement D’Onofrio, Card 2019 et Santos-Lopez 2021 du futur test strict.
+
+## Mise à jour du 14 août 2026 — passage à l’exécution externe
+
+- `HC02 = N051|N028 -> N030` est maintenant évalué séparément : 53/53 en sensibilité, H052 inchangée, promotion encore fail-closed sur la sémantique complète de N030.
+- `MAG-PAIR-001` possède un pilote instrumental non confirmatoire ; seeds de randomisation/permutation et exclusion non-outcome sont gelés, les paramètres instrumentaux restent à mesurer avec le laboratoire.
+- `VES-PACC-INT-01` possède un paquet laboratoire et un gate prospectif explicite ; les capacités instrumentales compatibles sont documentées sans ouvrir le préenregistrement.
+- `PRED-VIVANT-HISTOIRE-001` possède une voie accélérée : nouvelles MIC sur histoires LTEE cryo-archivées, mesurées seulement après préenregistrement par une équipe indépendante.

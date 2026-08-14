@@ -1,0 +1,31 @@
+{
+  "schema": "oric.blind-new-mic-candidate.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "candidate_id": null,
+  "material_provider": null,
+  "measuring_lab": null,
+  "independent_from_donofrio_team": null,
+  "ltee_population_ids": [],
+  "ltee_generation_or_timepoint": null,
+  "target_antibiotics": [
+    "ampicillin",
+    "erythromycin",
+    "tetracycline",
+    "tobramycin"
+  ],
+  "exact_target_MIC_already_measured_for_candidate": null,
+  "exact_target_MIC_opened_by_ORI_C": false,
+  "history_metadata_available": null,
+  "present_state_metadata_available": null,
+  "grouping_available": null,
+  "public_registration_url": null,
+  "registered_at": null,
+  "raw_MIC_measurement_started_at": null,
+  "eligible_for_execution": false,
+  "forbidden_fields_before_measurement": [
+    "MIC_values",
+    "summary_statistics_of_target_MIC",
+    "effect_estimates",
+    "plots_or_tables_containing_target_MIC"
+  ]
+}

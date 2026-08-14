@@ -1,0 +1,23 @@
+{
+  "schema": "oric.lab-candidates.v1",
+  "protocol_id": "MAG-PAIR-001",
+  "status": "candidate_list_no_collaboration_claimed",
+  "candidates": [
+    {
+      "name": "Fort Hoofddijk Paleomagnetic Laboratory",
+      "institution": "Utrecht University",
+      "country": "Netherlands",
+      "fit": "high",
+      "verified_capabilities": [
+        "2G cryogenic magnetometer",
+        "automated in-line AF demagnetization",
+        "ARM remagnetization",
+        "IRM remagnetization"
+      ],
+      "official_equipment_page": "https://forthoofddijk.geo.uu.nl/equipment-2/",
+      "method_reference_doi": "10.1002/2015GC006050",
+      "contact_status": "not_contacted"
+    }
+  ],
+  "next_action": "send pilot protocol and ask the laboratory to define available AF grid, sub-coercive field candidates, temperature operating window and blind-code workflow before any confirmatory sample is measured"
+}

@@ -195,3 +195,7 @@ Le dépôt dispose désormais d’un noyau externe de 16 résultats (`preuves/CO
 `MAG-PAIR-001` possède maintenant un schéma de tables brutes, un préparateur, un script d’analyse et une gate d’exécution. La gate reste volontairement fermée : neuf paramètres de laboratoire sont encore `null` et aucun fichier de mesure prospectif n’est présent. Le script d’analyse ne s’ouvre qu’après gel de ces paramètres et attestation d’un enregistrement public préalable.
 
 Le verrou H052 reste à 46/53. Lawal et al. 2026 (`doi:10.1029/2025GL120883`) renforce toutefois la composante expérimentale en montrant une initiation/propagation de microfissures induite par serpentinisation dans une dunite riche en olivine. Le manque est désormais plus étroit : raccord exact à la croûte primitive `N051` et à l’auto-initiation de la circulation `H052`.
+
+## 14 août 2026 — quatre verrous convertis en routes d’exécution
+
+Le dépôt n'attend plus uniquement de nouveaux jeux publiés. `HC02` teste un bootstrap direct de l'interface matière, `MAG-PAIR-001` dispose d'un pilote instrumental, `VES-PACC-INT-01` d'un paquet d'exécution externe et `PRED-VIVANT-HISTOIRE-001` d'une route de nouvelles MIC sur matériel LTEE archivé. Aucun de ces éléments ne change encore le §XIV ni le canon 46/53.
