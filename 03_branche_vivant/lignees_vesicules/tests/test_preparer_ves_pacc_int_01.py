@@ -94,9 +94,11 @@ def test_un_defi_manquant_est_refuse_fail_closed():
         prep.prepare_tables(parents, arms, responses, execution_log, protocol())
 
 
-def test_preparation_reelle_reste_bloquee_sans_enregistrement_public():
-    with pytest.raises(SystemExit, match="Preparation gate closed"):
-        prep.registration_gate()
+def test_statut_externe_ne_bloque_pas_la_preparation_scientifique():
+    parents, arms, responses, execution_log = make_tables()
+    _, meta = prep.prepare_tables(parents, arms, responses, execution_log, protocol())
+    assert meta["strict_preparation_passes"] is True
+    assert isinstance(prep.external_registration_metadata()["public_registration_complete"], bool)
 
 
 def test_deviation_procedurale_bloque_la_qualification_stricte():

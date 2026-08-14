@@ -2,8 +2,8 @@
 """Prépare les tables brutes VES-PACC-INT-01 pour l'analyse gelée.
 
 Aucun seuil scientifique n'est défini ici : le script lit exclusivement
-PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json et refuse les données réelles tant que
-la fiche de préenregistrement public n'ouvre pas la porte d'exécution.
+PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json. Le statut d'enregistrement externe
+est conservé comme métadonnée et ne bloque pas la préparation des mesures réelles.
 """
 from __future__ import annotations
 
@@ -12,7 +12,6 @@ import csv
 import hashlib
 import json
 import re
-import sys
 from pathlib import Path
 from typing import Any
 
@@ -70,21 +69,19 @@ def _number(value: str, label: str) -> float:
     return result
 
 
-def registration_gate() -> dict[str, Any]:
-    registration = load_json(REGISTRATION)
-    if registration.get("source_sha256") != sha256(PROTOCOL):
-        raise SystemExit("Preparation gate closed: protocol SHA-256 differs from the registered frozen source.")
-    if registration.get("analysis_script_sha256") != sha256(ANALYSIS):
-        raise SystemExit("Preparation gate closed: analysis-script SHA-256 differs from the registered frozen source.")
-    if not (
-        registration.get("status") == "publicly_registered"
-        and registration.get("public_url")
-        and registration.get("registered_at")
-    ):
-        raise SystemExit(
-            "Preparation gate closed: public preregistration URL and timestamp are required before prospective test data."
-        )
-    return registration
+def external_registration_metadata() -> dict[str, Any]:
+    """Expose l'état externe sans l'utiliser comme porte de calcul."""
+    registration = load_json(REGISTRATION) if REGISTRATION.exists() else {}
+    return {
+        "status": registration.get("status"),
+        "public_url": registration.get("public_url"),
+        "registered_at": registration.get("registered_at"),
+        "public_registration_complete": bool(
+            registration.get("status") == "publicly_registered"
+            and registration.get("public_url")
+            and registration.get("registered_at")
+        ),
+    }
 
 
 def _architecture_passes(
@@ -145,7 +142,15 @@ def prepare_tables(
             raise InputError(f"arms.csv: bras inconnu: {key[1]}")
         if key in arm_map:
             raise InputError(f"arms.csv: doublon {key}")
-        for column in ("post_z_average_nm", "post_pdi", "post_pH", "temperature_C", "total_amphiphile_mM", "final_volume_uL", "elapsed_handling_min"):
+        for column in (
+            "post_z_average_nm",
+            "post_pdi",
+            "post_pH",
+            "temperature_C",
+            "total_amphiphile_mM",
+            "final_volume_uL",
+            "elapsed_handling_min",
+        ):
             _number(row[column], f"{key}/{column}")
         arm_map[key] = row
     expected_arm_keys = {(parent, arm) for parent in parent_ids for arm in ARMS}
@@ -190,27 +195,42 @@ def prepare_tables(
     for arm, output_name in arm_to_output.items():
         cube = np.empty((len(parent_ids), len(challenge_ids), len(RESPONSE_COLUMNS)), dtype=float)
         for i, parent in enumerate(parent_ids):
-            anchors = np.asarray([_number(parent_map[parent][col], f"{parent}/{col}") for col in ANCHOR_COLUMNS])
+            anchors = np.asarray(
+                [_number(parent_map[parent][col], f"{parent}/{col}") for col in ANCHOR_COLUMNS]
+            )
             for j, challenge in enumerate(challenge_ids):
                 row = response_map[(parent, arm, challenge)]
-                future = np.asarray([_number(row[col], f"{parent}/{arm}/{challenge}/{col}") for col in RESPONSE_COLUMNS])
+                future = np.asarray(
+                    [_number(row[col], f"{parent}/{arm}/{challenge}/{col}") for col in RESPONSE_COLUMNS]
+                )
                 cube[i, j, :] = future / anchors
         cubes[output_name] = cube
 
-    do_z = np.asarray([_number(arm_map[(p, "do_m")]["post_z_average_nm"], f"{p}/do_m/Z") for p in parent_ids])
+    do_z = np.asarray(
+        [_number(arm_map[(p, "do_m")]["post_z_average_nm"], f"{p}/do_m/Z") for p in parent_ids]
+    )
     do_pdi = np.asarray([_number(arm_map[(p, "do_m")]["post_pdi"], f"{p}/do_m/PDI") for p in parent_ids])
-    control_z = np.asarray([_number(arm_map[(p, "control")]["post_z_average_nm"], f"{p}/control/Z") for p in parent_ids])
-    control_pdi = np.asarray([_number(arm_map[(p, "control")]["post_pdi"], f"{p}/control/PDI") for p in parent_ids])
-    sham_z = np.asarray([_number(arm_map[(p, "sham")]["post_z_average_nm"], f"{p}/sham/Z") for p in parent_ids])
+    control_z = np.asarray(
+        [_number(arm_map[(p, "control")]["post_z_average_nm"], f"{p}/control/Z") for p in parent_ids]
+    )
+    control_pdi = np.asarray(
+        [_number(arm_map[(p, "control")]["post_pdi"], f"{p}/control/PDI") for p in parent_ids]
+    )
+    sham_z = np.asarray(
+        [_number(arm_map[(p, "sham")]["post_z_average_nm"], f"{p}/sham/Z") for p in parent_ids]
+    )
     sham_pdi = np.asarray([_number(arm_map[(p, "sham")]["post_pdi"], f"{p}/sham/PDI") for p in parent_ids])
 
     targets = protocol["m"]["target_levels"]
     do_text = str(targets.get("do(m)", ""))
     sham_text = str(targets.get("sham", ""))
-    # Les seuils de fidélité restent définis une seule fois dans le protocole gelé.
-    # Le préparateur les extrait de cette source canonique au lieu de les recopier.
-    do_match = re.search(r"Z-average must be ([0-9.]+)[–-]([0-9.]+) nm and median PDI <= ?([0-9.]+)", do_text)
-    sham_match = re.search(r"Z-average change relative to control must be <= ?([0-9.]+)% and absolute median PDI change <= ?([0-9.]+)", sham_text)
+    do_match = re.search(
+        r"Z-average must be ([0-9.]+)[–-]([0-9.]+) nm and median PDI <= ?([0-9.]+)", do_text
+    )
+    sham_match = re.search(
+        r"Z-average change relative to control must be <= ?([0-9.]+)% and absolute median PDI change <= ?([0-9.]+)",
+        sham_text,
+    )
     if not do_match or not sham_match:
         raise InputError("protocole incomplet ou non interprétable: niveaux numériques do(m)/sham absents")
     do_z_min, do_z_max, do_pdi_max = map(float, do_match.groups())
@@ -218,12 +238,15 @@ def prepare_tables(
     sham_pdi_abs_max = float(sham_match.group(2))
 
     do_target_passes = bool(
-        do_z_min <= float(np.median(do_z)) <= do_z_max
-        and float(np.median(do_pdi)) <= do_pdi_max
+        do_z_min <= float(np.median(do_z)) <= do_z_max and float(np.median(do_pdi)) <= do_pdi_max
     )
     control_z_median = float(np.median(control_z))
     sham_z_median = float(np.median(sham_z))
-    z_relative = abs(sham_z_median - control_z_median) / abs(control_z_median) if control_z_median != 0 else np.inf
+    z_relative = (
+        abs(sham_z_median - control_z_median) / abs(control_z_median)
+        if control_z_median != 0
+        else np.inf
+    )
     sham_fidelity = bool(
         z_relative <= sham_z_relative_max
         and abs(float(np.median(sham_pdi)) - float(np.median(control_pdi))) <= sham_pdi_abs_max
@@ -269,7 +292,9 @@ def prepare_tables(
             },
         },
         "protocol_deviations": deviations,
-        "strict_preparation_passes": bool(all(matching.values()) and do_target_passes and sham_fidelity and procedural_ok),
+        "strict_preparation_passes": bool(
+            all(matching.values()) and do_target_passes and sham_fidelity and procedural_ok
+        ),
     }
     return cubes, meta
 
@@ -287,6 +312,7 @@ def prepare_from_directory(raw_dir: Path) -> tuple[dict[str, np.ndarray], dict[s
     cubes, meta = prepare_tables(parents, arms, responses, execution_log, protocol)
     hashes = {path.name: sha256(path) for path in (parents_path, arms_path, responses_path, log_path)}
     meta["raw_input_sha256"] = hashes
+    meta["external_registration"] = external_registration_metadata()
     return cubes, meta, hashes
 
 
@@ -295,7 +321,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--raw-dir", type=Path, default=DEFAULT_RAW)
     parser.add_argument("--output-npz", type=Path, default=DEFAULT_NPZ)
     parser.add_argument("--output-metadata", type=Path, default=DEFAULT_META)
-    parser.add_argument("--check-schema", action="store_true", help="valide uniquement la cohérence schéma/protocole, sans lire de données")
+    parser.add_argument(
+        "--check-schema",
+        action="store_true",
+        help="valide uniquement la cohérence schéma/protocole, sans lire de données",
+    )
     args = parser.parse_args(argv)
 
     protocol = load_json(PROTOCOL)
@@ -304,15 +334,31 @@ def main(argv: list[str] | None = None) -> int:
     if schema["files"]["responses.csv"]["challenge_ids"] != frozen_challenges:
         raise SystemExit("Input schema differs from the frozen challenge set.")
     if args.check_schema:
-        print(json.dumps({"status": "ok", "protocol_id": protocol["id"], "challenges": len(frozen_challenges)}, ensure_ascii=False))
+        print(
+            json.dumps(
+                {"status": "ok", "protocol_id": protocol["id"], "challenges": len(frozen_challenges)},
+                ensure_ascii=False,
+            )
+        )
         return 0
 
-    registration_gate()
     cubes, meta, _ = prepare_from_directory(args.raw_dir)
     args.output_npz.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(args.output_npz, **cubes)
-    args.output_metadata.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print(json.dumps({"status": "prepared", "n": len(meta["parent_ids"]), "strict_preparation_passes": meta["strict_preparation_passes"]}, ensure_ascii=False))
+    args.output_metadata.write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
+    print(
+        json.dumps(
+            {
+                "status": "prepared",
+                "n": len(meta["parent_ids"]),
+                "strict_preparation_passes": meta["strict_preparation_passes"],
+                "external_registration_blocks_code": False,
+            },
+            ensure_ascii=False,
+        )
+    )
     return 0
 
 

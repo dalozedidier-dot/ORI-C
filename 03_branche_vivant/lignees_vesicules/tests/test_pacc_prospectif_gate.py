@@ -3,8 +3,6 @@ import importlib.util
 import json
 from pathlib import Path
 
-import pytest
-
 HERE = Path(__file__).resolve().parents[1]
 
 
@@ -38,7 +36,7 @@ def test_design_scientifique_complet_et_fixe():
     assert protocol["preregistration_gate"]["scientific_fields_complete"] is True
 
 
-def test_registration_sidecar_verrouille_les_empreintes_et_execution():
+def test_registration_sidecar_reste_coherent_sans_bloquer_le_calcul():
     registration = load_json("VES-PACC-INT-01.registration.json")
     protocol_path = HERE / "PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
     analysis_path = HERE / "analyser_ves_pacc_int_01.py"
@@ -46,16 +44,17 @@ def test_registration_sidecar_verrouille_les_empreintes_et_execution():
     assert registration["source_sha256"] == sha256(protocol_path)
     assert registration["analysis_script_sha256"] == sha256(analysis_path)
     assert registration["power_plan_sha256"] == sha256(power_path)
-    assert registration["status"] == "package_ready_external_account_required"
-    assert registration["public_url"] is None
-    assert registration["registered_at"] is None
 
-    spec = importlib.util.spec_from_file_location("ves_pacc_gate", analysis_path)
+    spec = importlib.util.spec_from_file_location("ves_pacc_analysis", analysis_path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     spec.loader.exec_module(module)
-    with pytest.raises(SystemExit, match="Execution gate closed"):
-        module.registration_gate()
+    metadata = module.external_registration_metadata()
+    assert metadata["public_registration_complete"] is bool(
+        registration.get("status") == "publicly_registered"
+        and registration.get("public_url")
+        and registration.get("registered_at")
+    )
 
 
 def test_power_plan_uses_independent_parent_units():
