@@ -208,3 +208,11 @@ Le dépôt n'attend plus uniquement de nouveaux jeux publiés. `HC02` teste un b
 - **Réplication MIC** : deux voies sont distinguées. La route A reproduit un traitement aval avant nouvelles MIC et vise §XIV-10. La route B produit rapidement de nouvelles MIC sur histoires LTEE archivées et vise une généralisation prospective ; elle ne compte pas automatiquement comme réplication stricte.
 - **Exécution externe** : le registre public de candidats documente Fort Hoofddijk pour MAG, Baum Lab/ULB/UGent pour VES, LTEE + MICA/UGent pour les nouvelles MIC. Aucun contact ni accord n'est présumé.
 - **§XIV** : reste **7/12**. Le dépôt publie maintenant une carte d'action explicite pour 3, 4, 9, 10 et 11.
+
+## 14 août 2026 — check-up intégral, Wong–Seguin et format commun
+
+- **Validation locale complète** : compilation, validations rapides et suite globale passent ; 489 tests passés, 2 ignorés et 1 échec attendu.
+- **Benchmark transversal** : 21 cas, 6 cas complets sur les sept champs, 5 systèmes uniques. La complétude ne change pas le niveau de preuve.
+- **Wong & Seguin 2015** : source Dryad officielle inspectée puis rejetée comme réplication stricte de D'Onofrio. Le génotype progéniteur ne reproduit pas le traitement historique C/N gelé et les variables terminales ne sont pas des covariables d'état prétraitement.
+- **Format commun** : `SCHEMA_RESULTAT_COMMUN.json` et `RESULTATS_COMMUNS.json` rendent les champs obligatoires explicites et gardent les mesures absentes à `missing`. L'audit INV-A lit désormais ce bundle.
+- **Portes expérimentales** : VES et MAG restent correctement fermées faute de mesures physiques et de gel instrumental réel. Aucun crédit §XIV n'est ajouté.

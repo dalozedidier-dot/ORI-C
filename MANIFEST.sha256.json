@@ -6058,6 +6058,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/AUDIT_WONG_SEGUIN_2015.json",
+      "size": 3784,
+      "sha256": "516c39932d8fcacc73d651aacd42a55ad6fea5ee22cefb641d036e08a8c5447a",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/POWER_PLAN.json",
       "size": 1477,
       "sha256": "cb8962c62bbeb73338b4536448e6bb9c80b63416cbf64db8ab5c26a6d347f900",
@@ -7433,8 +7439,14 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 20276,
-      "sha256": "15ffb4b606e53b8875ff3f4d9baf75b769dd3b66bf863dec25c38ed460293585",
+      "size": 21290,
+      "sha256": "2f69621f281ea47e5c76087ac5506dbb6bf1a35316de46f9b89477e17d4057b1",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/CHECKUP_COMPLET_2026-08-14.md",
+      "size": 4171,
+      "sha256": "e55c3bf07ed3f932ab4ff23eff410eefee1f7273e11efbb0c68c3bb628d26111",
       "storage": "inline"
     },
     {
@@ -7696,6 +7708,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/SCHEMA_RESULTAT_COMMUN.json",
+      "size": 1523,
+      "sha256": "4f8ba9a20a471a1fa6afd2580d822a7f5e4ae277bb4c60e86261ca742a954b3f",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/analyser_sources_recuperees.py",
       "size": 8135,
       "sha256": "ee879f69dac72d8b09d2f5d8a6dd58ed58eae60288e6b15810d8959fc026a84a",
@@ -7708,9 +7726,15 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/construire_resultats_communs.py",
+      "size": 4320,
+      "sha256": "5f70f38f10ea6af9b94b6b9327fc974aab8191c211d98f656b7f6fa95ba54d80",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_invariant_transversal.py",
-      "size": 14134,
-      "sha256": "449542681145281089b507061df1738b93cd2e31f6171f903409e6d0b6edd463",
+      "size": 14697,
+      "sha256": "cc7bba3de9e4e91f9d7873c4216376759e111b8bdd0f6175cc90bd42c553edf1",
       "storage": "inline"
     },
     {
@@ -7745,8 +7769,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/AUDIT_INV_A.json",
-      "size": 5941,
-      "sha256": "7d333f855aadff38fd97bd6de09847feb0c067e656292820fe83cac19c5508f1",
+      "size": 6084,
+      "sha256": "de1409d84519208dca335b5b3f66239aff88eb91dba71262233d6802ee1f2bbe",
       "storage": "inline"
     },
     {
@@ -7828,6 +7852,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/RESULTATS_COMMUNS.json",
+      "size": 37987,
+      "sha256": "10f2f0141598cce91faa53eb44be4e3c66a8203c1b98c4cb6843dff9172a4cbd",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json",
       "size": 3423,
       "sha256": "d0e0126f4ef9867f3dc7ff6233e3df3d96ae8bea82176ff9e30895aa152551f2",
@@ -7841,8 +7871,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/run_all.py",
-      "size": 11148,
-      "sha256": "51266eb202675b235e0a5d80b69ba03b6be237d2be278030a7b633f2dada7cd9",
+      "size": 11554,
+      "sha256": "84b88ce07de8a31ee5d83c15784d5726fe1d326ca0da6615b015f4bc66350d87",
       "storage": "inline"
     },
     {
@@ -7855,6 +7885,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_osf_preregistration.py",
       "size": 1310,
       "sha256": "41a6ea1530c869ed22bf307e3fc2a7040137536562f0a75cd8a2a346be0a8d4a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_resultats_communs.py",
+      "size": 895,
+      "sha256": "a575ad0cd5da9b5aaaf57815626b382d8346ae5817823c743fae213c6854d404",
       "storage": "inline"
     },
     {
@@ -10260,7 +10296,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "6d250615d1e3d023f3a5cb3b858d88a478bf409290c205b4a475cd7472ca0f47",
+      "sha256": "a8a250ba88797f274948d0e168529d3516a67ec7379a8f91d00080f39ec3cc5b",
       "storage": "inline"
     },
     {

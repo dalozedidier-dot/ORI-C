@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ori-c.example/schemas/common-result-v1.json",
+  "title": "ORI-C common result",
+  "type": "object",
+  "required": [
+    "id", "system", "dataset", "provenance", "X", "H", "m", "Theta",
+    "tau", "P_acc", "R", "intervention", "control", "independent_unit",
+    "frozen_threshold", "result", "verdict", "sha256"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "system": {"type": "string", "minLength": 1},
+    "dataset": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object", "required": ["artifact", "scope"]},
+    "X": {"$ref": "#/$defs/field"},
+    "H": {"$ref": "#/$defs/field"},
+    "m": {"$ref": "#/$defs/field"},
+    "Theta": {"$ref": "#/$defs/field"},
+    "tau": {"$ref": "#/$defs/field"},
+    "P_acc": {"$ref": "#/$defs/field"},
+    "R": {"$ref": "#/$defs/field"},
+    "intervention": {"type": ["object", "null"]},
+    "control": {"type": ["object", "null"]},
+    "independent_unit": {"type": "string", "minLength": 1},
+    "frozen_threshold": {"type": ["object", "null"]},
+    "result": {"type": "object"},
+    "verdict": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "field": {
+      "type": "object",
+      "required": ["status", "definition"],
+      "properties": {
+        "status": {"enum": ["measured", "derived", "declared", "missing"]},
+        "definition": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

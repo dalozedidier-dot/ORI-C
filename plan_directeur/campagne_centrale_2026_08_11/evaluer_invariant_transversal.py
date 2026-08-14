@@ -26,9 +26,19 @@ def benchmark() -> dict:
     return result
 
 
+def common_results() -> dict:
+    path = HERE / "construire_resultats_communs.py"
+    spec = importlib.util.spec_from_file_location("oric_common_results_for_invariant", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
+
+
 def build() -> tuple[dict, dict]:
     spec = json.loads((HERE / "INVARIANT_TRANSVERSAL_INV_A.json").read_text(encoding="utf-8"))
     bench = benchmark()
+    common = common_results()
     by_id = {case["id"]: case for case in bench["cases"]}
 
     vesicles = load("03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json")
@@ -234,6 +244,9 @@ def build() -> tuple[dict, dict]:
     audit = {
         "schema": "oric.transversal-invariant-audit.inv-a.v2",
         "invariant": spec,
+        "common_result_bundle_schema": common["schema"],
+        "common_result_items_read": common["counts"]["total"],
+        "common_result_field_complete_cases": common["counts"]["field_complete_cases"],
         "field_complete_claim_count": bench["field_complete_case_count"],
         "field_complete_unique_system_count": bench["field_complete_unique_system_count"],
         "field_complete_unique_system_ids": sorted(complete_ids),

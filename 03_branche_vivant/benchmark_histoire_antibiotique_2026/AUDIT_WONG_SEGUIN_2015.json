@@ -1,0 +1,51 @@
+{
+  "schema": "oric.independent-biological-dataset-admission.v1",
+  "checked_at": "2026-08-14",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "dataset": {
+    "title": "Data from: Effects of genotype on rates of substitution during experimental evolution",
+    "authors": ["Alex Wong", "Kimberley Seguin"],
+    "publication_doi": "10.1111/evo.12700",
+    "dataset_doi": "10.5061/dryad.36td2",
+    "landing_page": "https://datadryad.org/dataset/doi%3A10.5061/dryad.36td2",
+    "license": "CC0-1.0",
+    "dryad_version": 1,
+    "dryad_publication_date": "2015-06-09"
+  },
+  "official_files": [
+    {"name": "Data_by_progenitor.tsv", "file_id": 55347, "size": 1176, "md5": "1ab348a1963940aac89375bff79ca71e", "direct_url": "https://datadryad.org/downloads/file_stream/55347"},
+    {"name": "Fitness_evolved.tsv", "file_id": 55345, "size": 4841, "md5": "62eadadb821b0511803b97fa80f86540", "direct_url": "https://datadryad.org/downloads/file_stream/55345"},
+    {"name": "MIC-data.tsv", "file_id": 55346, "size": 631, "md5": "b4eb9cc74b8306486b5c47689f5a5b15", "direct_url": "https://datadryad.org/downloads/file_stream/55346"},
+    {"name": "README_for_Data_by_progenitor.txt", "file_id": 55348, "size": 1614, "md5": "4e58e8b86307d58df2a62e0aefc0cdf6", "direct_url": "https://datadryad.org/downloads/file_stream/55348"},
+    {"name": "TableS1.xlsx", "file_id": 55349, "size": 21051, "md5": "eb7f1880e2b461fd02039cb28632563a", "direct_url": "https://datadryad.org/downloads/file_stream/55349"}
+  ],
+  "inspection": {
+    "method": "official Dryad API metadata plus rendered previews of the three tabular files",
+    "MIC_rows": 53,
+    "evolved_populations": 46,
+    "progenitor_histories": 6,
+    "MIC_columns": ["Strain", "MIC (ng/mL)", "Fold-MIC", "Progenitor"],
+    "fitness_columns": ["Population", "S1", "W1", "S2", "W2", "S3", "W3", "Progenitor", "Progenitor_gene", "Progenitor_mutation", "hc_fixed", "hc_poly", "hc_total"],
+    "history_candidate": "founding ciprofloxacin-resistance genotype",
+    "outcome_candidate": "endpoint ciprofloxacin MIC",
+    "present_state_candidates": ["endpoint competitive fitness", "endpoint mutation counts"],
+    "independent_unit_candidate": "evolved population"
+  },
+  "admission_gates": {
+    "real_external_data": true,
+    "at_least_five_independent_groups": true,
+    "history_defined_before_outcome": true,
+    "history_distinct_from_endpoint_state": true,
+    "clean_group_kfold_for_repeated_rows": false,
+    "valid_between_group_history_permutation_for_frozen_model": false,
+    "construct_matches_donofrio_history_treatment": false,
+    "raw_files_preserved_and_hash_verified_locally": false
+  },
+  "verdict": "structurally_inadmissible_as_strict_donofrio_replication",
+  "reason": "Each evolved population contributes one endpoint MIC. The candidate history is a founding resistance genotype, not the frozen downstream C/N treatment history used by the D'Onofrio prediction. Endpoint fitness and mutation summaries are outcomes or mediators measured after evolution, so treating them as present-state covariates would change the construct and risk post-treatment adjustment. GroupKFold by population would also have one outcome row per group and would not reproduce the repeated-measure prediction design.",
+  "analysis_executed": false,
+  "thresholds_changed": false,
+  "section_XIV_credit": false,
+  "next_route": "Use the already frozen LTEE new-MIC route or another dataset with repeated endpoint outcomes, a pre-outcome history label and state variables measured independently of that history and outcome.",
+  "download_note": "Dryad exposed public metadata and previews, but automated file endpoints returned an anti-bot validation page during this run. No HTML challenge response is stored or represented as source data."
+}

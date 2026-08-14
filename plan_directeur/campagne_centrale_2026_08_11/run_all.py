@@ -38,6 +38,15 @@ def invariant_transversal() -> tuple[dict, dict]:
     return module.build()
 
 
+def resultats_communs() -> dict:
+    path = HERE / "construire_resultats_communs.py"
+    spec = importlib.util.spec_from_file_location("oric_common_results", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
+
+
 def seuil_xiv() -> tuple[dict, dict]:
     path = HERE / "evaluer_seuil_xiv.py"
     spec = importlib.util.spec_from_file_location("oric_section_xiv", path)
@@ -178,6 +187,8 @@ def main() -> int:
     dump("BENCHMARK_TRANSVERSAL.json", benchmark)
     dump("COMPLETUDE_21_CAS.json", completeness_report(benchmark))
     dump("AUDIT_INVARIANTS.json", invariants)
+    common_results = resultats_communs()
+    dump("RESULTATS_COMMUNS.json", common_results)
     measures, bifurcations = quantification_commune()
     dump("MESURES_COMMUNES_EXECUTEES.json", measures)
     dump("REGISTRE_BIFURCATIONS.json", bifurcations)
