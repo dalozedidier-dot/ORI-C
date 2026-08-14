@@ -21,13 +21,12 @@
     "next": "non_confirmatory_instrument_pilot"
   },
   "ves_pacc_int_01": {
-    "status": "blocked_until_public_registration_and_confirmed_lab",
+    "status": "blocked_until_confirmed_lab_and_material_access",
     "remaining_execution_blockers": [
-      "public preregistration metadata in VES-PACC-INT-01.registration.json",
       "confirmed laboratory and instrument access",
       "availability of 100 nm and 5 um track-etched membranes/extruder setup",
       "offline blind-code key and committed SHA-256",
-      "scheduled acquisition window after registration"
+      "scheduled acquisition window"
     ],
     "next": "confirm_single_lab_then_public_registration"
   },
