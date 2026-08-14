@@ -1,0 +1,51 @@
+{
+  "schema": "oric.wong-seguin-real-retrospective.v1",
+  "status": "analysed_real_external_retrospective_dataset",
+  "dataset_doi": "10.5061/dryad.36td2",
+  "source": "donnees_externes/wong_seguin_2015/SOURCE.json",
+  "analysis_ready_table": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/WONG_SEGUIN_2015_ANALYSIS_READY.tsv",
+  "analysis_ready_sha256": "b37e2132e21d20ade3144df19c777a7c06a5b482a8b66bb63002552945ba2bb3",
+  "mapping": {
+    "independent_unit": "evolved population",
+    "n_independent_units": 46,
+    "outcome_R": "endpoint evolved-population ciprofloxacin MIC (ng/mL), log2 transformed",
+    "present_state_X": [
+      "progenitor ciprofloxacin MIC",
+      "progenitor target gene"
+    ],
+    "history_H": "exact founding resistance mutation",
+    "history_defined_before_outcome": true,
+    "history_distinct_from_X": true
+  },
+  "method": {
+    "validation": "five-fold held-out evolved populations",
+    "model": "ridge alpha=1 with training-fold scaling and one-hot encoding",
+    "bootstrap": "5000 resamples of evolved populations",
+    "permutation": "5000 shuffles of founding mutation within progenitor-MIC × target-gene strata",
+    "seed": 20260814
+  },
+  "results": {
+    "rmse_state_only_log2_MIC": 1.0104683798763718,
+    "rmse_state_plus_history_log2_MIC": 1.0680052618787335,
+    "history_gain_percent": -5.6940804035254535,
+    "bootstrap_gain_q025_percent": -16.815866603912518,
+    "bootstrap_gain_q975_percent": 2.7804676784915023,
+    "permutation_p_one_sided": 0.5782843431313738,
+    "permutation_null_gain_mean_percent": -4.279340064703589
+  },
+  "decision_components": {
+    "history_gain_positive": false,
+    "bootstrap_lower_bound_positive": false,
+    "permutation_p_at_most_0_05": false
+  },
+  "verdict": "does_not_support_incremental_founder_mutation_information",
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "post_hoc_dataset_specific_analysis": true,
+    "strict_donofrio_replication": false,
+    "prediction_PRED_VIVANT_HISTOIRE_001_credit": false,
+    "section_XIV_credit": false,
+    "reason": "founding genotype is not the frozen C/N treatment-history construct and this mapping was specified after the public data were inspected"
+  }
+}

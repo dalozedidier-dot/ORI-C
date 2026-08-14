@@ -14,6 +14,13 @@
       "status": "rejected_before_analysis",
       "audit": "AUDIT_WONG_SEGUIN_2015.json",
       "reason": "founder genotype is not the frozen C/N treatment-history construct; one endpoint MIC per evolved population and endpoint covariates do not reproduce the grouped repeated-measure design",
+      "compatible_retrospective_analysis": {
+        "result": "resultats/RESULTAT_WONG_SEGUIN_2015.json",
+        "history_gain_percent": -5.6940804035254535,
+        "bootstrap_gain_interval_percent": [-16.815866603912518, 2.7804676784915023],
+        "permutation_p": 0.5782843431313738,
+        "verdict": "does_not_support_incremental_founder_mutation_information"
+      },
       "section_XIV_10_credit": false
     },
     {

@@ -56,6 +56,10 @@ plateforme/campagne_maximale_reelle/data/volatile_inventory.csv -text
 # Corpus externe du 7 août 2026 : préserver les octets sources (y compris CRLF/Latin-1).
 donnees_externes/donnees_reelles_2026_08_07/** -text
 
+# Wong–Seguin 2015 : préserver exactement les octets distribués par Dryad.
+donnees_externes/wong_seguin_2015/raw/** -text
+donnees_externes/wong_seguin_2015/extracted/** -text
+
 # Instantane gele du preenregistrement WP-EXO-PACC-2026. Son SHA-256 est
 # inscrit dans PROTOCOLE.json et verifie avant execution : ses octets ne
 # doivent jamais etre normalises.

@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 2988,
-      "sha256": "b747106a04e0b8e2c6618cd445904218aca4e6a2cd17e45742a9aa821aef7d86",
+      "size": 3168,
+      "sha256": "40a7d9f754392350f4a52c511f8f80c45dc16ef0a2e74830bc85e9a0ac91940c",
       "storage": "inline"
     },
     {
@@ -6059,14 +6059,14 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/AUDIT_WONG_SEGUIN_2015.json",
-      "size": 3898,
-      "sha256": "37d0c9ffbe7ed7529f367ba8ae6b41299f26458b1163baf3b1f8eaee5e0079ba",
+      "size": 4517,
+      "sha256": "9f4b0994e661408f5e80b66b1d443394f36984d1eb52cb5c0c583ce4ed92f737",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/CHAINE_REPLICATION_INDEPENDANTE.json",
-      "size": 2515,
-      "sha256": "a7b613623912744822bda99faf2a71e19a06cf267962d36af5a1626d3828247e",
+      "size": 2894,
+      "sha256": "7ba2cead87f08dc99cd69179efa310e088c05e600d84c71c9b22af3c758acd0f",
       "storage": "inline"
     },
     {
@@ -6100,6 +6100,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_wong_seguin_2015.py",
+      "size": 9884,
+      "sha256": "98e790e73535aefeaec524a49c1efaa3f7fa675e1db0b0d30977168f84dcfd9a",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
       "size": 24199,
       "sha256": "76ba9fb773d565d96d56c096ee88d4554635feea4b0422e50e91b2de2f0e2153",
@@ -6109,6 +6115,18 @@
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
       "size": 1086,
       "sha256": "b54c5c12ce8b09f61e5b34be480f65c4ffdb97b0b31baa3291e35e4f7d32f717",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT_WONG_SEGUIN_2015.json",
+      "size": 2311,
+      "sha256": "6d692bdc7f716429b1a532884cdde8f04026d357b49fb0fda27e8efb5570c2ad",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/WONG_SEGUIN_2015_ANALYSIS_READY.tsv",
+      "size": 1522,
+      "sha256": "b37e2132e21d20ade3144df19c777a7c06a5b482a8b66bb63002552945ba2bb3",
       "storage": "inline"
     },
     {
@@ -6127,6 +6145,12 @@
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_pid_pacc.py",
       "size": 1560,
       "sha256": "91052f13eb817f42e11a9bb8b831f295dd1eb261c9ad0c904f068c4390509f00",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_wong_seguin_real.py",
+      "size": 2016,
+      "sha256": "926a7a6e4adff8ce9f3eb1654e5e7f2b4333ba8e975eb80fe2c822a39dfb9a72",
       "storage": "inline"
     },
     {
@@ -6461,8 +6485,8 @@
     },
     {
       "path": "EXTERNAL_DATA_MANIFEST.csv",
-      "size": 6299,
-      "sha256": "de3317e5ca97df9cb5da6874f9ff9e6f5841db66a3f3fc26f0d6cb2605ebd4ef",
+      "size": 7457,
+      "sha256": "b9d5e706d4f101cb9dd2856346a6e5ddf61465600a46d91722b59a198778e650",
       "storage": "inline"
     },
     {
@@ -7493,8 +7517,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 21647,
-      "sha256": "6f2e40c58589a47ea36bf56379a2cae2ce6a0f2d4f5b65137e8cf3473ea1e426",
+      "size": 22252,
+      "sha256": "c79ee780ca29104d279e23fc69a9e879b9eb3c4f58a541c589c14c282a5a7433",
       "storage": "inline"
     },
     {
@@ -7757,8 +7781,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/RESULTATS_NEGATIFS.md",
-      "size": 2046,
-      "sha256": "290867d11b9e07801a2698f7595bd21d462d251a4c9ad0a044329351ba5d2f45",
+      "size": 2360,
+      "sha256": "2309fce18600609b8ae1219cb80b728161d6fad6acee8e223889e0b9350a1fea",
       "storage": "inline"
     },
     {
@@ -10368,7 +10392,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "b2264afd19a9d37f795f6fb7b5e06b5a03aba4b625a6bdbb17997e38c6e53b31",
+      "sha256": "31e9c9c3fd7259d649980c84181c76bdf006fcb98b70582e6b4eaed024865261",
       "storage": "inline"
     },
     {
