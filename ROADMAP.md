@@ -2,7 +2,7 @@
 
 État de travail : **14 août 2026**. Cette roadmap ne crée aucun nouveau verdict et ne modifie aucune prédiction gelée. Elle réduit le programme actif aux verrous qui peuvent changer le niveau de preuve du dépôt.
 
-Le seuil §XIV reste à **7/12**. Les conditions ouvertes sont **3, 4, 9, 10 et 11** : prédiction prospective hors échantillon, victoire contre témoin apparié, `P_acc` causal dans un système réel, réplications indépendantes strictes et transfert sans redéfinition.
+Le fichier machine `plan_directeur/VERROUS_ACTIFS.json` est reconstruit en CI à partir des sorties d’autorité afin d’empêcher la roadmap de dériver. Le seuil §XIV reste à **7/12**. Les conditions ouvertes sont **3, 4, 9, 10 et 11** : prédiction prospective hors échantillon, victoire contre témoin apparié, `P_acc` causal dans un système réel, réplications indépendantes strictes et transfert sans redéfinition.
 
 ## Les quatre fronts actifs
 
@@ -17,7 +17,7 @@ Le seuil §XIV reste à **7/12**. Les conditions ouvertes sont **3, 4, 9, 10 et 
 
 La fermeture 46/53 n'est pas un manque diffus de documentation. Le graphe est bloqué par une boucle de quatre nœuds. Une réparation minimale existe : recoder `H052` afin que `N051 + N028` produise `N053 + N030`, au lieu d'exiger `N030` en entrée. Cette réparation ferme mathématiquement les 53 nœuds, mais elle reste **non canonique** tant que la source ne justifie pas explicitement la direction causale nécessaire.
 
-L'audit courant est dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md` et sa version machine dans `AUDIT_H052_2026-08-14.json`.
+L'audit courant est dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md` et sa version machine dans `AUDIT_H052_2026-08-14.json`. Une expérience primaire supplémentaire, Lawal et al. 2026 (`doi:10.1029/2025GL120883`), montre une fissuration induite par serpentinisation dans une dunite riche en olivine. Elle renforce le mécanisme, mais le raccord exact à `N051` et à l’auto-initiation de `H052` reste ouvert ; le verdict demeure 46/53.
 
 ## Ce qui reste fermé et ne doit pas être relancé sous le même identifiant
 

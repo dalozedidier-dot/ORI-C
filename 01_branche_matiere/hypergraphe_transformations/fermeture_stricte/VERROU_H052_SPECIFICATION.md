@@ -124,3 +124,7 @@ canonique. Farough demeure insuffisant pour cette promotion.
 ## Audit ciblé du 14 août 2026
 
 L'audit `AUDIT_H052_2026-08-14.md` ajoute Shen et al. 2024, Okamoto et al. 2025 et Alexander et al. 2026 à la lecture structurée. Le verdict reste fail-closed : **46/53**. Okamoto soutient le mécanisme auto-généré de fracture/permeabilité sur analogue expérimental ; Alexander soutient la création de perméabilité de croûte primitive au niveau modèle ; aucune de ces sources ne suffit encore à promouvoir `HC01` comme relation empirique canonique.
+
+## Mise à jour expérimentale — Lawal et al. 2026
+
+Lawal et al. (2026), DOI `10.1029/2025GL120883`, expérimente la serpentinisation de dunite riche en olivine et observe par micro-CT l’initiation et la propagation de microfissures associées à la réaction. Cela renforce directement le mécanisme `réaction eau-roche → création de fissures/interfaces`. Le verrou canonique reste néanmoins à **46/53** : l’expérience ne suffit pas à établir que le contexte représente `N051 Croûte primitive` ni que ces fissures initient à elles seules un `N053 Système hydrothermal` sans interface préalable.

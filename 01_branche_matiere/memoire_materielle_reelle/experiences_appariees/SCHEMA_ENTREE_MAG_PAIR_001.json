@@ -1,0 +1,20 @@
+{
+  "schema": "oric.mag-pair-001.input-schema.v1",
+  "protocol_id": "MAG-PAIR-001",
+  "files": {
+    "mag_pair_001_units.csv": {
+      "one_row_per": "independent_unit",
+      "required_columns": ["unit_id", "block_id", "history", "arm", "randomization_code", "blind_code"],
+      "allowed_history": ["IRM_positive_saturee", "IRM_negative_saturee"],
+      "allowed_arm": ["ablation", "sham"]
+    },
+    "mag_pair_001_measurements.csv": {
+      "one_row_per": "measurement",
+      "required_columns": ["unit_id", "stage", "reading_index", "remanence_x", "remanence_y", "remanence_z", "response_projection", "temperature_c", "timestamp_utc", "af_field_mT", "test_field_mT"],
+      "required_stages": ["trace_initial", "trace_day7", "trace_post_ablation", "response_pre", "response_post"],
+      "trace_day7_required_readings_per_unit": 10
+    }
+  },
+  "no_test_data_before_gate": true,
+  "analysis_ready_output": "mag_pair_001_analysis_ready.csv"
+}

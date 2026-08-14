@@ -71,14 +71,14 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 16695,
-      "sha256": "d0da1dbaf06f8d26126d699f20c7946df66f4ceace16a4651188e1481076a5ca",
+      "size": 17785,
+      "sha256": "3571d81c2e622a30b3c8fd87ca1e053586e34c9d93b5267ef2ad303764656c18",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/pages.yml",
-      "size": 2991,
-      "sha256": "ccce2ca94f52eecd00f4864a627cd497e5b6b91422b869bea9c95c47a54b507c",
+      "size": 3380,
+      "sha256": "27686036c015b09f9535d30643fd25b069fb6590cdf8004c9618569124ff23c8",
       "storage": "inline"
     },
     {
@@ -185,8 +185,8 @@
     },
     {
       "path": "00_socle/carte_relationnelle/data/relations_oric_47_provisoires.csv",
-      "size": 21878,
-      "sha256": "c74262675d8c7f50cff483b7df94b6a340984a89d3747e09319752d2176257b3",
+      "size": 22034,
+      "sha256": "d7f00e0c2e6fb5cd2216a5d7fff8ad738bb346466b4585f2666a5a3845bfb2f5",
       "storage": "inline"
     },
     {
@@ -377,8 +377,8 @@
     },
     {
       "path": "00_socle/sources/RAPPORT_DURCISSEMENT_TESTS.md",
-      "size": 18297,
-      "sha256": "e3bef331ddff2a1e89b8041e1a511cbce2b6500667be51cbdb8aad497cfc549c",
+      "size": 18413,
+      "sha256": "22bbdc94ec2803b088a5c3ba80971a7dc26106e24cb108499b2207adba196cc2",
       "storage": "inline"
     },
     {
@@ -545,8 +545,8 @@
     },
     {
       "path": "00_socle/tests/test_carte_relationnelle.py",
-      "size": 13436,
-      "sha256": "705f0434f1f73c365ab5ca82a9a2d004128aa1e42ac3f34ba4d81e10568ac6bf",
+      "size": 13184,
+      "sha256": "147d737c74aa3a2fdd739fa088547e9e0fd8822355fa5d5e956ec07b9a00b2b2",
       "storage": "inline"
     },
     {
@@ -1667,14 +1667,14 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.json",
-      "size": 1914,
-      "sha256": "e39ae1aafe4671fc44602c5988a3d5a323effcfacadf9cde51eb00f3608e7885",
+      "size": 2756,
+      "sha256": "007ed65928ff00260946bff82afcbea37af13d72d085a38ff783f3e8021235bc",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md",
-      "size": 4571,
-      "sha256": "32f2eb08dfd76299cf4b2d30b132806cb791b74bc1bf36b621190d0b4c98e33a",
+      "size": 5591,
+      "sha256": "46b795e6056620f48601fef35bc5864a61a77a45e8c7b8cd4eede2e3cd83cb2d",
       "storage": "inline"
     },
     {
@@ -1697,8 +1697,8 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
-      "size": 6718,
-      "sha256": "370795ba94bef98f74199f8fd83b67a1ead87e92d52d29d408307e084367c238",
+      "size": 7335,
+      "sha256": "5333411a3b524f19010a236cec4900b64e9291bf7d6e5929be2ec27f1e219a76",
       "storage": "inline"
     },
     {
@@ -2344,6 +2344,18 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/EXECUTION_MAG_PAIR_001.md",
+      "size": 1903,
+      "sha256": "2315591065910ea1328b9b4770b03c93e66cf925b213afbc44066092976900f5",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.execution.json",
+      "size": 1099,
+      "sha256": "85a3133970eef9fed3ae5c20ead6ff8c5f33630a416969aaf26a59f3ca8611fa",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.json",
       "size": 1382,
       "sha256": "e0655568779d875f05fd5624e096deed5f957e5650797e354e8b762c662555cf",
@@ -2365,6 +2377,36 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/README.md",
       "size": 1860,
       "sha256": "06036503ddd460a7c5ae42f9f6e2b2fb7b7a664f5f5b27c5d8cb0d81ad9fa6af",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/SCHEMA_ENTREE_MAG_PAIR_001.json",
+      "size": 947,
+      "sha256": "c2911519cd474412f6a79058c5e19d6c343750aa911889f961e32d4d6873400c",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/analyser_mag_pair_001.py",
+      "size": 4011,
+      "sha256": "483a47702706ba8d007e294c29c1e7f73b77c6097508c8b6576e8250223ecb98",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/preparer_mag_pair_001.py",
+      "size": 4325,
+      "sha256": "539a5c26b0bc2c1f47c865ffabedb79f1df2eba1af6890fa0445cf80bc11b18b",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/tests/test_mag_pair_001_pipeline.py",
+      "size": 955,
+      "sha256": "880595083cc7e3c950a1aacc3557d882543ea693b0f8c9f79a65d51b45235332",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_gate_mag_pair_001.py",
+      "size": 1444,
+      "sha256": "9a8fe64e741101750bbb566e2df139d63dcf88eac601ef4f47241b07bd5779b8",
       "storage": "inline"
     },
     {
@@ -6220,6 +6262,12 @@
       "storage": "inline"
     },
     {
+      "path": "CORE_RESULTS.md",
+      "size": 4198,
+      "sha256": "707c3950a813305c15e349b38474d068f466af80ae9e1d6457f94a16b8734322",
+      "storage": "inline"
+    },
+    {
       "path": "CORRECTIONS_AUDIT_2026-08-04.md",
       "size": 3842,
       "sha256": "309c3710f09cd198120929982d78e39ae24ff61909415996884e86d88e7e328b",
@@ -6275,8 +6323,14 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 13956,
-      "sha256": "e026bf0c9cd9705c4a8957c1a7ee946d2b03c4b60ef374d34b94a8d07db6f6d9",
+      "size": 15446,
+      "sha256": "8871f27874927b440f7d44f20fa4a812265ca07842748257d22c424c1ec6e230",
+      "storage": "inline"
+    },
+    {
+      "path": "GETTING_STARTED_10_MIN.md",
+      "size": 2246,
+      "sha256": "18e4250d8f644de57118fd37d749e5bca06a144ebd7ba21ff4ed9a88e750ab40",
       "storage": "inline"
     },
     {
@@ -6383,8 +6437,8 @@
     },
     {
       "path": "README.md",
-      "size": 31751,
-      "sha256": "eb816341820eb3169389dfe847b674e7fdfa8fb55adef3c99e7515bf85a40985",
+      "size": 32249,
+      "sha256": "5382c0c69eaef98cd3c27bd0dd9cfec62f895bc1a754b3c561133371684617b7",
       "storage": "inline"
     },
     {
@@ -6425,8 +6479,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "size": 4743,
-      "sha256": "5b5673da07542ae406cb4662d925bddce900d4777e169abb2d959d2e112634f5",
+      "size": 5214,
+      "sha256": "b9df4c6640db6b60959b56e6b9c44990783584263a0b4b3f66b57ea36d77a3ff",
       "storage": "inline"
     },
     {
@@ -6563,8 +6617,8 @@
     },
     {
       "path": "demo_minimale.py",
-      "size": 9446,
-      "sha256": "645d61b2b3957f420cf1585c4ff67b68785d3472cc15338b0e4521698d8969e4",
+      "size": 10940,
+      "sha256": "572232f97d2321b5fee0d7d632ecd85ccde8220e624928c2302394a0c7a088fd",
       "storage": "inline"
     },
     {
@@ -7204,6 +7258,24 @@
       "storage": "inline"
     },
     {
+      "path": "notebooks/branche_matiere_26Al.ipynb",
+      "size": 1535,
+      "sha256": "f4cc0bd15d9fac5ef64e43772558db1d341bbdf18502b2b84e012d8dbee1c5a0",
+      "storage": "inline"
+    },
+    {
+      "path": "notebooks/branche_systeme_solaire_interventions.ipynb",
+      "size": 1455,
+      "sha256": "acec3c3ca6ab7b410659031c39097fdb29d4283eef9961a9da2bcd30a3ea29cc",
+      "storage": "inline"
+    },
+    {
+      "path": "notebooks/branche_vivant_histoire.ipynb",
+      "size": 1189,
+      "sha256": "56e002cde52e3b554be04c08bddef60bc0332b4786abe0f2ad5af4cb74cbd763",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
       "size": 3876,
       "sha256": "8406e902724f0fa80dd07481f7bc87b9a07946e9ca70628ed9b158eb6b66efd4",
@@ -7211,8 +7283,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 17115,
-      "sha256": "f60e45f761e6a862942b50df8c2d9dbb4b3d5dfd6bc2dd8deb399d4878e59c7e",
+      "size": 18384,
+      "sha256": "ea83e632df8a5018b36d3cc7fefb18f51da001d51e9b8fbfa48675ccc0de3748",
       "storage": "inline"
     },
     {
@@ -7255,6 +7327,12 @@
       "path": "plan_directeur/REGISTRE_HYPOTHESES.csv",
       "size": 21403,
       "sha256": "a55281adb73f9accb917504e8bb195f0b0ec7924de3d89c5ffe3253d132bc066",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/VERROUS_ACTIFS.json",
+      "size": 1530,
+      "sha256": "2bb3a3dad0c1d31393b4c4d1e6323c98d8fbbe0ba511bb8978b09e74d9803560",
       "storage": "inline"
     },
     {
@@ -7309,6 +7387,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PLAN_CENTRAL.json",
       "size": 6834,
       "sha256": "e45b5d474faea21d31aa0ba80d25f871d36f79b14aeae0cf8e7ac0c25947ff31",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/CANDIDAT_DATASET_VIVANT_TEMPLATE.json",
+      "size": 712,
+      "sha256": "909f0c448f1b67db74e38e09b616678a71015f91fb64279dea6a9c788564bb4e",
       "storage": "inline"
     },
     {
@@ -7381,6 +7465,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/README.md",
       "size": 361,
       "sha256": "baac257382219086b3bbc532a91ad207d80912123d4f0c9a97a96ec0b6b4f0fc",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REGISTRE_ELIGIBILITE_DATASETS_VIVANT.json",
+      "size": 1619,
+      "sha256": "d990a80dd3e6d73af4bfa8e9b45b437941ceca3ff6740515419aa3922ab50bd9",
       "storage": "inline"
     },
     {
@@ -9809,8 +9899,8 @@
     },
     {
       "path": "plateforme/source_corrigee/src/oric_full/models.py",
-      "size": 3447,
-      "sha256": "ec62bdb986374fdaf3ef046845c1a49ec0596df377fde874de21d3b78dfd8ffe",
+      "size": 3553,
+      "sha256": "85817fccd6f06592d0b19ada15e39f510787c7913e962f2fb375fe85a9ae244e",
       "storage": "inline"
     },
     {
@@ -9978,7 +10068,13 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "ef1de5216d1d77b65abe9e7687c1b4de9cfbd802c212162b6011556d7b7f7383",
+      "sha256": "de2d9fa76eb4d7eb3536c2dfd4549080648aa64a8c33b9be0f53b105224b8392",
+      "storage": "inline"
+    },
+    {
+      "path": "preuves/CORE_RESULTS.json",
+      "size": 10476,
+      "sha256": "331b46757a465691141c5394310d79ddeb6d4a8efc0aa5e7cb99173522ad94f6",
       "storage": "inline"
     },
     {
@@ -10096,6 +10192,12 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/construire_core_results.py",
+      "size": 4306,
+      "sha256": "8f020aac70cfd669d7771ec1fd6c2a979c9515c21c28bc521a677155fe3460b0",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/construire_exploration_site.py",
       "size": 6230,
       "sha256": "718ce0bd77932932ee1a614d1704e471b719aa668e2af796144e77d756109dd9",
@@ -10105,6 +10207,12 @@
       "path": "scripts/construire_registre_preuves.py",
       "size": 12728,
       "sha256": "c09290879cedcdcefb26c275b27eeba3180cb339dd9daf3472507cf0b24e2f17",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/construire_verrous_actifs.py",
+      "size": 2727,
+      "sha256": "6c951f7dfea060df66694a549adf7e7134a468187265e897563455bfcd5f0555",
       "storage": "inline"
     },
     {
@@ -10121,8 +10229,8 @@
     },
     {
       "path": "scripts/demo_minimale_html.py",
-      "size": 7416,
-      "sha256": "75b856d7db08378e96e6a91de113ad680da9f66d1b3b614b43f644d64a017029",
+      "size": 7730,
+      "sha256": "f4814bd25f841e99bb466ae7e040a98fa484198fc961feeb268abf08c854aa81",
       "storage": "inline"
     },
     {
@@ -10141,6 +10249,12 @@
       "path": "scripts/valider_barriere_empirique.py",
       "size": 6950,
       "sha256": "883a9a668c05fa5317f73b409fd1635175fec3a34800c9249ce93b0bf5b53b1c",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/valider_core_results.py",
+      "size": 2657,
+      "sha256": "060f504e9bb722e717d79d41ec11c1a25494339003ac99508827bdb7075b393b",
       "storage": "inline"
     },
     {
@@ -10171,6 +10285,12 @@
       "path": "scripts/valider_tout.py",
       "size": 1722,
       "sha256": "a06977232e80ba6b8c340a191fe2b7300eac589a3bcdfd8fd55d139d3a73777f",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/verifier_dataset_vivant_aveugle.py",
+      "size": 1648,
+      "sha256": "ea112b8b6a9f2cb6dcfa0f7881aaaab3b7839ad9c41fab08d3745301fe340141",
       "storage": "inline"
     },
     {
@@ -10234,6 +10354,12 @@
       "storage": "inline"
     },
     {
+      "path": "site/core.html",
+      "size": 9846,
+      "sha256": "e7b064f8167ee40b448dd3d0329aa24b899ce4f345e989a1f6e4d1a8811daad8",
+      "storage": "inline"
+    },
+    {
       "path": "site/data/exploration.json",
       "size": 60580,
       "sha256": "b881924f3eb6947bb3fac58e66090fa026a0a7adf52ff0ff8047ed800102f0c9",
@@ -10241,32 +10367,32 @@
     },
     {
       "path": "site/exploration.html",
-      "size": 9429,
-      "sha256": "92e257ebbd1d632028b39fb30042396e289c8d07e61014103bc79863d3a45196",
+      "size": 9487,
+      "sha256": "35b89c385420052fcd27fde0e74a122ebdb2b876896466ea3db96255e93f74c1",
       "storage": "inline"
     },
     {
       "path": "site/index.html",
-      "size": 18167,
-      "sha256": "90dbfa98e68e50b58913c246a6a3ca5640d4e7d1624e56b1c5fe44afdc6a78b9",
+      "size": 18225,
+      "sha256": "076875d7ca89b46ea394094eba7590f75ca65327660930a7634bbbb2dc3d223b",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
-      "size": 15567,
-      "sha256": "5946118e4c8a41809ccab9bb9504bc4dd5d875f177c9c911d73daf204316bbc3",
+      "size": 15625,
+      "sha256": "2b7f5d774a635293d40f4d3bbed15b2ef4330a48aad610749c256fa5ad740240",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 43756,
-      "sha256": "3b0cf8f72915c55568ecfebc21ca77b7678e334ece39bc1d56f2ccaa48e112df",
+      "size": 43814,
+      "sha256": "e0b3bb47faa77793e6adafdabc9abfda8be6685f2f026f4d353040fd66ac4abd",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 19415,
-      "sha256": "87234062f91797f90b5d87f8764a461e72f9df888465e9a6359c6695c3ce2cc9",
+      "size": 19638,
+      "sha256": "4f1e8c3979a0dbbac3da33952666c74568319aa33f26ca70fc5b5ce21500ba68",
       "storage": "inline"
     },
     {
@@ -10277,8 +10403,8 @@
     },
     {
       "path": "site/sitemap.xml",
-      "size": 646,
-      "sha256": "7bb6fd1f3679b37eef8ea59cfdc2ef58fab50dfbb8d717a460cf028c509ade51",
+      "size": 721,
+      "sha256": "2808cd56fe09a5724bba7d49a3ce3327621a31026eee7328116a55b96584a80d",
       "storage": "inline"
     },
     {

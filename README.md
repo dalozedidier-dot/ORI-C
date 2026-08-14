@@ -27,15 +27,20 @@ python scripts/demo_minimale_html.py --output demo_minimale_report.html
 
 Un notebook prêt pour Google Colab est fourni dans [`notebooks/ORI-C_demo_colab.ipynb`](notebooks/ORI-C_demo_colab.ipynb).
 
-Une commande, aucun argument, aucun accès réseau. Elle **recalcule** les trois
-résultats phares depuis les données réelles du dépôt — interventions
-astronomiques, antibiotiques D'Onofrio, lignées de vésicules — et compare chaque
-valeur obtenue à la valeur publiée. Douze contrôles, une trentaine de secondes.
+Une commande, aucun argument, aucun accès réseau. Elle reproduit les trois
+résultats phares avec une règle désormais explicite : les analyses biologiques
+D'Onofrio et vésicules sont **réexécutées depuis les données versionnées**, tandis
+que la métrique astronomique `C-AST-01` est **recalculée depuis les sorties
+numériques de robustesse**. Le ratio certifié intervention/bruit numérique est
+séparé du diagnostic `effect_to_ensemble_floor_ratio`, qui utilise un autre
+plancher. Douze contrôles restent exigés.
 
 Elle affiche aussi, dans le même rapport, **ce qui ne marche pas** : le résultat
 paléoclimatique négatif, la dissolution de la dépendance au chemin à 600 Ma, et
 les critères dont la puissance est nulle. Un dossier qui ne montrerait que ses
 succès ne serait pas vérifiable.
+
+Pour une lecture extérieure courte : [`GETTING_STARTED_10_MIN.md`](GETTING_STARTED_10_MIN.md) puis [`CORE_RESULTS.md`](CORE_RESULTS.md). Le premier donne le chemin de vérification minimal ; le second expose 16 résultats à fort levier sans masquer les résultats négatifs ni les limites.
 
 Installation complète, si le dépôt vient d'être cloné :
 

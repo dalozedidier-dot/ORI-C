@@ -1,0 +1,25 @@
+{
+  "schema": "oric.mag-pair-001.execution-freeze.v1",
+  "protocol_id": "MAG-PAIR-001",
+  "status": "blocked_missing_lab_freeze",
+  "frozen_fields": {
+    "laboratory_id": null,
+    "af_plateau_mT": null,
+    "test_field_mT": null,
+    "temperature_target_c": null,
+    "temperature_tolerance_c": null,
+    "randomization_seed": null,
+    "permutation_seed": null,
+    "permutation_draws": 20000,
+    "blind_code_key_sha256": null,
+    "exclusion_rule": null
+  },
+  "registration": {
+    "service": "OSF Registries",
+    "public_url": null,
+    "registered_at": null
+  },
+  "execution_rule": "no confirmatory measurement file may exist before all frozen_fields are non-null, status=frozen_ready_for_registration, and the package is publicly registered before acquisition",
+  "scientific_rule_inherited": "A = 1 - abs(delta_R_apres)/abs(delta_R_avant); success requires delta_R_avant nonzero, A >= 0.50 and preregistered bilateral interaction p <= 0.05",
+  "sham_role": "paired negative control included in the interaction and reported separately; no additional post-hoc threshold may be invented"
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "oric.active-bottlenecks.v1",
+  "generated_from_authority": true,
+  "section_XIV": {
+    "passed_count": 7,
+    "conditions_total": 12,
+    "missing_ids": [
+      3,
+      4,
+      9,
+      10,
+      11
+    ]
+  },
+  "fronts": [
+    {
+      "rank": 1,
+      "id": "VES-PACC-INT-01",
+      "branch": "vivant",
+      "scientific_design_complete": true,
+      "public_registration_status": "package_ready_external_account_required",
+      "public_url_present": false,
+      "execution_open": false,
+      "protocol_sha256": "30342b35525b32a54e287e5ac85844fbb15537f22e91c31bfc9aae4b92cd46fa",
+      "targets": [
+        "XIV-9",
+        "XIV-3",
+        "XIV-4"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "H052-HC01",
+      "branch": "matiere",
+      "canonical_closure": "46/53",
+      "candidate_status": "candidate_not_promoted",
+      "verdict": "remain_46_of_53_fail_closed",
+      "targets": [
+        "fermeture_hypergraphe_53_53"
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "PRED-VIVANT-HISTOIRE-001",
+      "branch": "vivant",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "targets": [
+        "XIV-3",
+        "XIV-4",
+        "XIV-10"
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "MAG-PAIR-001",
+      "branch": "matiere",
+      "status": "protocol_ready_physical_execution_required",
+      "minimum_independent_units": 48,
+      "targets": [
+        "XIV-9",
+        "PRED-MATIERE-ABLATION-001"
+      ]
+    }
+  ]
+}

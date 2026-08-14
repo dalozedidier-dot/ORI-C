@@ -187,3 +187,11 @@ Les trois derniers blocs restent en attente lors d'une exécution sans accès au
 - **Exploration GitHub Pages installée.** `scripts/construire_exploration_site.py` dérive une vue interactive déterministe de la généalogie cosmique, des mesures NC/CC, des scénarios N-corps pré-calculés et de l'état §XIV. Un modèle jouet séparé illustre le patron `Histoire → Architecture → Possibles` sans compter comme preuve.
 - **Notebook de démonstration ajouté.** `notebooks/ORI-C_demo_colab.ipynb` rejoue la démonstration minimale depuis un clonage propre avec Git LFS.
 - **Seuil scientifique inchangé.** §XIV reste **7/12**, verrous `3, 4, 9, 10, 11`.
+
+### 14 août 2026 — noyau externe, portes de données et préparation MAG
+
+Le dépôt dispose désormais d’un noyau externe de 16 résultats (`preuves/CORE_RESULTS.json` / `CORE_RESULTS.md`) validé contre `preuves/PREUVES.json`, d’un état machine des quatre verrous actifs (`plan_directeur/VERROUS_ACTIFS.json`) et d’un registre fail-closed des jeux biologiques déjà vus afin qu’aucun benchmark rétrospectif ne puisse être réutilisé comme test prospectif strict.
+
+`MAG-PAIR-001` possède maintenant un schéma de tables brutes, un préparateur, un script d’analyse et une gate d’exécution. La gate reste volontairement fermée : neuf paramètres de laboratoire sont encore `null` et aucun fichier de mesure prospectif n’est présent. Le script d’analyse ne s’ouvre qu’après gel de ces paramètres et attestation d’un enregistrement public préalable.
+
+Le verrou H052 reste à 46/53. Lawal et al. 2026 (`doi:10.1029/2025GL120883`) renforce toutefois la composante expérimentale en montrant une initiation/propagation de microfissures induite par serpentinisation dans une dunite riche en olivine. Le manque est désormais plus étroit : raccord exact à la croûte primitive `N051` et à l’auto-initiation de la circulation `H052`.

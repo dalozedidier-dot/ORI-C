@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """ORI-C en deux minutes — les trois résultats phares, recalculés devant vous.
 
-Cette démonstration ne lit aucun résultat archivé. Elle **réexécute** les
-analyses depuis les données réelles du dépôt et compare ce qu'elle obtient aux
-valeurs publiées. Si un chiffre du dossier était faux ou périmé, cette
-commande le montrerait.
+Cette démonstration reproduit trois résultats phares avec une règle explicite :
+les deux analyses biologiques sont **réexécutées** depuis les données du dépôt,
+tandis que la métrique astronomique certifiée est **recalculée depuis les sorties
+numériques versionnées** de la campagne de robustesse. Les valeurs obtenues sont
+comparées aux valeurs publiées. Si un chiffre du dossier diverge, la commande le
+montre.
 
     python demo_minimale.py
 
@@ -59,34 +61,65 @@ def charger(nom: str, chemin: Path):
 
 
 def interventions_astronomiques() -> list[bool]:
-    """Résultat de modèle : les interventions dépassent-elles le plancher numérique ?"""
+    """Résultat de modèle : reproduit la métrique certifiée sans confondre deux planchers.
+
+    Le ratio public 4 964,415... compare l'effet interventionnel minimal au
+    *plus grand écart numérique sélectionné* (pas/intégrateur) dans la campagne
+    de robustesse. Le CSV des contrefactuels contient en plus un autre diagnostic,
+    `effect_to_ensemble_floor_ratio`, beaucoup plus grand. Les deux métriques
+    étaient auparavant affichées sous le même mot « plancher » dans la démo.
+    """
     titre("1. INTERVENTIONS SUR JUPITER ET SATURNE — résultat de modèle")
-    print("  Six interventions sur l'architecture du Système solaire, propagées en")
-    print("  N-corps depuis les positions mesurées de JPL Horizons DE441.")
-    print("  Question : leur effet dépasse-t-il le bruit numérique de l'intégrateur ?")
+    print("  Six interventions sur l'architecture du Système solaire sont comparées")
+    print("  aux écarts numériques sélectionnés de la campagne de robustesse.")
+    print("  La métrique certifiée et le plancher d'ensemble sont affichés séparément.")
     print()
+
+    robustesse_path = (
+        RACINE / "plan_directeur" / "campagne_maximale_trois_branches"
+        / "resultats" / "systeme_solaire_robustesse.json"
+    )
+    robustesse = json.loads(robustesse_path.read_text(encoding="utf-8"))
+    sep = robustesse["numerical_effect_separation"]
+    bruit = float(sep["largest_selected_numerical_rmse"])
+    ratios_recalcules = [
+        float(item["intervention_rmse"]) / bruit
+        for item in sep["intervention_to_numerical_ratios"]
+    ]
+    ratio_certifie_recalcule = min(ratios_recalcules)
+    accords = [
+        compare(
+            "ratio min. intervention / bruit numérique",
+            ratio_certifie_recalcule,
+            4964.415695208393,
+            1e-12,
+        )
+    ]
+    print(f"  Bruit numérique sélectionné maximal : {bruit:.12g}")
+    print("  Cette métrique est celle publiée dans C-AST-01.")
+
     chemin = (
         RACINE / "02_branche_systeme_solaire" / "couche_astronomique" / "resultats"
         / "real_science_max" / "analysis" / "counterfactual_effects.csv"
     )
     with chemin.open(encoding="utf-8-sig", newline="") as flux:
         lignes = [r for r in csv.DictReader(flux) if r.get("job")]
-    rapports = []
+    diagnostics = []
     for enregistrement in lignes:
         valeur = enregistrement.get("effect_to_ensemble_floor_ratio")
         if valeur:
-            rapports.append((enregistrement["job"], float(valeur)))
-    rapports.sort(key=lambda x: x[1])
-    for nom, rapport in rapports:
-        print(f"      {nom:<40} {rapport:>12.1f} fois le plancher")
-    minimum = min(r for _, r in rapports)
+            diagnostics.append((enregistrement["job"], float(valeur)))
+    diagnostics.sort(key=lambda x: x[1])
     print()
-    print(f"  Rapport minimal sur les {len(rapports)} interventions : {minimum:.0f}")
-    print("  Toutes dépassent le plancher numérique de plusieurs ordres de grandeur.")
+    print("  Diagnostic distinct : effet / plancher d'ensemble du CSV contrefactuel")
+    for nom, rapport in diagnostics:
+        print(f"      {nom:<40} {rapport:>12.1f} fois le plancher d'ensemble")
+    if diagnostics:
+        print(f"  Minimum de ce diagnostic distinct : {min(r for _, r in diagnostics):.1f}")
     print()
     print("  CE QUE CELA NE DIT PAS : c'est une expérience numérique. Les conditions")
     print("  initiales sont mesurées, la trajectoire qu'on en tire ne l'est pas.")
-    return [minimum > 100]
+    return accords
 
 
 def antibiotiques_donofrio() -> list[bool]:
@@ -180,7 +213,7 @@ def main() -> int:
     depart = time.time()
     print()
     print("ORI-C — démonstration minimale reproductible")
-    print("Les trois résultats sont RECALCULÉS depuis les données, pas relus.")
+    print("Biologie : analyses réexécutées. Astronomie : métrique recalculée depuis les sorties numériques.")
 
     accords: list[bool] = []
     accords += interventions_astronomiques()

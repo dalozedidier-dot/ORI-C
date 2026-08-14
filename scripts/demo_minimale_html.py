@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COMPARE_RE = re.compile(
     r"^\s*(OK|!!)\s+(.+?)\s+([-+0-9.eE]+)\s+publié\s+([-+0-9.eE]+)\s*$"
 )
-INTERVENTION_RE = re.compile(r"^\s+([a-z0-9_]+)\s+([0-9.]+)\s+fois le plancher\s*$")
+INTERVENTION_RE = re.compile(r"^\s+([a-z0-9_]+)\s+([0-9.]+)\s+fois le plancher d[’\']ensemble\s*$")
 BILAN_RE = re.compile(r"^\s*(\d+)\s*/\s*(\d+)\s+contrôles reproduisent")
 
 
@@ -114,11 +114,11 @@ pre{{white-space:pre-wrap;background:#050b12;border:1px solid var(--line);paddin
 @media(max-width:760px){{table{{font-size:.82rem}}th:nth-child(4),td:nth-child(4){{display:none}}}}
 </style></head><body><main>
 <p>ORI-C · rapport CI reproductible</p><h1>Démonstration minimale</h1>
-<p class="lead">Ce rapport est une vue de la sortie de <code>demo_minimale.py</code>. Les analyses sont recalculées depuis les données versionnées ; ce fichier HTML ne remplace aucun résultat d'autorité.</p>
+<p class="lead">Ce rapport est une vue de la sortie de <code>demo_minimale.py</code>. Les analyses biologiques sont réexécutées depuis les données versionnées ; la métrique astronomique certifiée est recalculée depuis les sorties numériques de robustesse. Ce fichier HTML ne remplace aucun résultat d'autorité.</p>
 <div class="summary"><div class="card"><span>Contrôles</span><strong>{bilan[0]} / {bilan[1]}</strong></div><div class="card"><span>Comparaisons numériques</span><strong>{len(comparaisons)}</strong></div><div class="card"><span>Scénarios N-corps affichés</span><strong>{len(interventions)}</strong></div></div>
 <h2>Valeurs recalculées vs publiées</h2><p class="legend"><span><i class="dot obt-dot"></i>obtenu</span><span><i class="dot pub-dot"></i>publié</span></p>
 <table><thead><tr><th>Mesure</th><th>Obtenu</th><th>Publié</th><th>Écart</th><th>Statut</th><th>Vue</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
-<h2>Interventions astronomiques pré-calculées</h2><p>Rapport effet / plancher numérique affiché par la démonstration courante. Il s'agit de résultats de modèle, pas d'observations directes.</p><ul class="scenarios">{int_rows}</ul>
+<h2>Diagnostic astronomique secondaire</h2><p>Les valeurs ci-dessous sont les rapports <code>effect_to_ensemble_floor_ratio</code> du CSV contrefactuel. Elles sont volontairement séparées du ratio certifié <code>intervention / plus grand écart numérique sélectionné</code> affiché dans le tableau ci-dessus. Il s'agit de résultats de modèle, pas d'observations directes.</p><ul class="scenarios">{int_rows}</ul>
 <h2>Sortie complète</h2><pre>{safe_output}</pre>
 </main></body></html>"""
 

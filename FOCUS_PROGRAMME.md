@@ -91,3 +91,11 @@ La roadmap active est désormais `ROADMAP.md`. Elle réduit le programme à quat
 Le verrou `H052` a fait l'objet d'un audit ciblé dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.*`. Le verdict reste **46/53** : Okamoto et al. 2025 soutient un mécanisme auto-généré de fracture/permeabilité sur analogue expérimental, Alexander et al. 2026 soutient la création de perméabilité de croûte primitive au niveau modèle, mais aucune source ne suffit encore à promouvoir `HC01` comme relation empirique canonique.
 
 La couche publique gagne une page `site/exploration.html` qui expose uniquement des tables versionnées, des scénarios N-corps déjà calculés et un modèle jouet explicitement pédagogique. La CI vérifie désormais aussi la démonstration minimale reproductible, le registre de preuves, le contrôle négatif réel et la synchronisation des données de cette page interactive.
+
+## Mise à jour opérationnelle du 14 août 2026 — noyau externe et portes fail-closed
+
+La lecture externe courte est désormais `CORE_RESULTS.md` : 16 résultats tirés du registre d’autorité, avec succès, résultats négatifs, non-concluants et résultats de modèle conservés sous leur statut exact. `GETTING_STARTED_10_MIN.md` donne le chemin minimal de reproduction et trois notebooks de branche complètent le notebook général.
+
+La démonstration astronomique distingue maintenant deux quantités auparavant présentées sous le même mot « plancher » : le ratio certifié de `C-AST-01` (**4 964,415...**) est recalculé depuis le plus grand écart numérique sélectionné de la campagne de robustesse, tandis que `effect_to_ensemble_floor_ratio` reste un diagnostic séparé du CSV contrefactuel. Les deux analyses biologiques continuent d’être réexécutées depuis les données versionnées.
+
+Côté causal prospectif, `MAG-PAIR-001` possède un paquet d’exécution machine complet jusqu’aux paramètres qui dépendent réellement du laboratoire. L’analyse et la préparation refusent toute donnée tant que le laboratoire, le palier AF, le champ test, les températures, la randomisation, l’aveugle et les règles opérationnelles ne sont pas gelés et enregistrés publiquement. `PRED-VIVANT-HISTOIRE-001` dispose en parallèle d’un registre des jeux déjà vus qui exclut explicitement D’Onofrio, Card 2019 et Santos-Lopez 2021 du futur test strict.

@@ -43,6 +43,9 @@ class ScientificVerdict(StrEnum):
 
 @dataclass(frozen=True)
 class TestSpec:
+    # Pytest otherwise tries to collect this imported domain model as a test class.
+    __test__ = False
+
     test_id: str
     wp: str
     section: str

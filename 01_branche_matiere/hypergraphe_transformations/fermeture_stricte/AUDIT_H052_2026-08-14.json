@@ -4,16 +4,37 @@
   "canonical_closure": {
     "reachable_nodes": 46,
     "total_nodes": 53,
-    "locked_core": ["N029", "N030", "N053", "N054"],
-    "downstream_locked": ["N031", "N032", "N035"]
+    "locked_core": [
+      "N029",
+      "N030",
+      "N053",
+      "N054"
+    ],
+    "downstream_locked": [
+      "N031",
+      "N032",
+      "N035"
+    ]
   },
   "canonical_h052": {
-    "inputs": ["N051", "N028", "N030"],
-    "outputs": ["N053"]
+    "inputs": [
+      "N051",
+      "N028",
+      "N030"
+    ],
+    "outputs": [
+      "N053"
+    ]
   },
   "candidate_hc01_r1": {
-    "inputs": ["N051", "N028"],
-    "outputs": ["N053", "N030"],
+    "inputs": [
+      "N051",
+      "N028"
+    ],
+    "outputs": [
+      "N053",
+      "N030"
+    ],
     "mathematical_closure_if_promoted": "53/53",
     "status": "candidate_not_promoted"
   },
@@ -35,6 +56,14 @@
       "counts_for_canonical_promotion": false
     },
     {
+      "citation": "Lawal et al. 2026, Geophysical Research Letters",
+      "doi": "10.1029/2025GL120883",
+      "evidence_type": "controlled_experiment_ultramafic_dunite",
+      "supports": "serpentinization_driven_microcrack_initiation_and_propagation_in_olivine_rich_rock",
+      "does_not_establish": "primitive_crust_N051_mapping_or_self_starting_sustained_hydrothermal_circulation",
+      "counts_for_canonical_promotion": false
+    },
+    {
       "citation": "Alexander, Marchi & Johnson 2026, AGU Advances",
       "doi": "10.1029/2025AV002097",
       "evidence_type": "impact_physics_model",
@@ -44,5 +73,6 @@
     }
   ],
   "verdict": "remain_46_of_53_fail_closed",
-  "next_discriminating_evidence": "primary empirical or controlled experimental evidence under primitive-crust-compatible conditions showing creation of fracture/permeability/interface without taking N030 as an independent precondition"
+  "next_discriminating_evidence": "primary evidence linking primitive-crust-compatible water-rock reaction to creation of the permeability/interface required for hydrothermal circulation, without taking N030 as an independent precondition; Lawal 2026 narrows the gap but does not close that contextual mapping",
+  "mechanistic_progress": "primary experiments now support reaction-driven cracking in olivine-rich rock; remaining gap is contextual mapping to N051 and the exact self-starting H052 direction"
 }

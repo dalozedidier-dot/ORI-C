@@ -50,6 +50,7 @@ jobs:
             01_branche_matiere/hypergraphe_transformations/tests \
             01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests
           python -m pytest -q 01_branche_matiere/inventaire_hierarchique/tests
+          python -m pytest -q 01_branche_matiere/memoire_materielle_reelle/experiences_appariees/tests
       # Les sorties régénérées sont comparées avec la même tolérance numérique
       # que partout ailleurs. Un `git diff` brut compare des octets : il casse
       # dès qu'une version mineure de scipy déplace un optimum de 1e-9, sans
@@ -138,6 +139,22 @@ jobs:
         run: python scripts/demo_minimale_html.py --output "$RUNNER_TEMP/demo-minimale.html"
       - name: Valider le registre de preuves et les chiffres canoniques
         run: python scripts/valider_registre_preuves.py
+      - name: Valider le noyau externe et les portes prospectives
+        run: |
+          python scripts/valider_core_results.py
+          python scripts/verifier_dataset_vivant_aveugle.py
+          python 01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_gate_mag_pair_001.py
+      - name: Vérifier les vues dérivées du noyau et des verrous
+        run: |
+          python scripts/construire_core_results.py
+          python scripts/construire_verrous_actifs.py
+          git diff --exit-code -- CORE_RESULTS.md site/core.html plan_directeur/VERROUS_ACTIFS.json
+      - name: Valider les notebooks d’entrée
+        run: |
+          python -m json.tool notebooks/ORI-C_demo_colab.ipynb > /dev/null
+          python -m json.tool notebooks/branche_matiere_26Al.ipynb > /dev/null
+          python -m json.tool notebooks/branche_systeme_solaire_interventions.ipynb > /dev/null
+          python -m json.tool notebooks/branche_vivant_histoire.ipynb > /dev/null
       - name: Rejouer le contrôle négatif réel sans modifier le fichier versionné
         run: |
           python scripts/controle_negatif_reel_surrogats.py \

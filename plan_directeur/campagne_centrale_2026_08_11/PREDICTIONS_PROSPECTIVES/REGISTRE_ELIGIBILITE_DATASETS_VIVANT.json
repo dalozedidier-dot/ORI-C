@@ -1,0 +1,39 @@
+{
+  "schema": "oric.blind-dataset-eligibility.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "rule": "un jeu ne peut compter pour le test prospectif strict s'il a été ouvert/analyse avant le gel complet et l'enregistrement public du protocole applicable",
+  "known_seen_datasets": [
+    {
+      "id": "DONOFRIO-2026-DRYAD",
+      "identifier": "doi:10.5061/dryad.1zcrjdg68",
+      "status": "seen_and_analyzed",
+      "eligible_for_strict_future_test": false,
+      "reason": "dataset used for the original retrospective ORI-C benchmark"
+    },
+    {
+      "id": "CARD-2019-DRYAD",
+      "identifier": "doi:10.5061/dryad.g41hg96",
+      "status": "seen_and_analyzed",
+      "eligible_for_strict_future_test": false,
+      "reason": "independent retrospective family replication already analyzed; negative result retained"
+    },
+    {
+      "id": "SANTOS-LOPEZ-2021-ELIFE",
+      "identifier": "doi:10.7554/eLife.70676",
+      "status": "seen_and_analyzed",
+      "eligible_for_strict_future_test": false,
+      "reason": "external retrospective benchmark opened before strict prospective registration"
+    }
+  ],
+  "future_candidate_requirements": {
+    "independent_longitudinal_dataset": true,
+    "not_previously_opened_by_ORI_C": true,
+    "lineage_or_history_variable_available": true,
+    "present_state_predictors_available": true,
+    "future_MIC_or_equivalent_registered_target_available": true,
+    "grouping_for_within_group_history_permutation_available": true,
+    "analysis_protocol_frozen_before_opening": true,
+    "public_registration_before_opening": true
+  },
+  "eligible_candidates": []
+}

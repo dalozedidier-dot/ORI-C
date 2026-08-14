@@ -6,6 +6,10 @@ on:
     paths:
       - 'site/**'
       - 'preuves/**'
+      - 'CORE_RESULTS.md'
+      - 'GETTING_STARTED_10_MIN.md'
+      - 'scripts/construire_core_results.py'
+      - 'plan_directeur/VERROUS_ACTIFS.json'
       - '01_branche_matiere/genealogie_cosmique_quantitative/resultats/**'
       - '01_branche_matiere/genealogie_cosmique_quantitative/data_massives_reelles/IMPORT_SELECTION.json'
       - 'scripts/construire_exploration_site.py'
@@ -41,6 +45,11 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Valider les chiffres et statuts publiés
         run: python scripts/valider_publication_stable.py
+      - name: Reconstruire et vérifier le noyau public
+        run: |
+          python scripts/valider_core_results.py
+          python scripts/construire_core_results.py
+          git diff --exit-code -- CORE_RESULTS.md site/core.html
       - name: Reconstruire et vérifier les données de la page interactive
         run: |
           python scripts/construire_exploration_site.py

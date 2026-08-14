@@ -289,15 +289,14 @@ présence dans un manifeste de provenance rend celui-ci invérifiable ailleurs.
 
 *Corrigé — voir 5.3.*
 
-### 4.6 Deux liens portent une référence non datable — **ouvert**
+### 4.6 Références non datables de la carte — **fermé le 14 août 2026**
 
 | Lien | Référence actuelle |
 | --- | --- |
-| TR-021 → TR-028 | « Observations minéralogiques naturelles et expériences de haute pression. » |
-| TR-024 → TR-023 | « Modèles climatiques planétaires; aucune hydrosphère détectée sur TRAPPIST-1e. » |
+| TR-021 → TR-028 | **corrigé le 14 août 2026** : Putnis & Price 1979, doi:10.1038/280217a0 + Okuchi et al. 2021, doi:10.1038/s41467-021-24633-4 |
+| TR-024 → TR-023 | **corrigé le 14 août 2026** : Massol et al. 2023, doi:10.1029/2023JE007848 |
 
-Les 45 autres portent une année, un DOI ou un identifiant arXiv. Un test de
-non-régression interdit toute lacune supplémentaire.
+Les **47 relations** portent désormais un ancrage datable dans `reference_cle`. Le test n’est plus `xfail` et le verrou de non-régression interdit toute réintroduction d’une référence générique.
 
 ### 4.7 L'article mêle deux apostrophes
 

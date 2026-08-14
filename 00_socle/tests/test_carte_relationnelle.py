@@ -110,17 +110,12 @@ def test_tous_les_champs_documentaires_sont_renseignes(liens) -> None:
     assert not manquants, f"Champs documentaires vides : {manquants}"
 
 
-LACUNES_DE_REFERENCE_CONNUES = {("TR-021", "TR-028"), ("TR-024", "TR-023")}
+# Toutes les références clés ont désormais un ancrage datable (année ou DOI).
+# Garder ce set vide permet au test de non-régression de signaler immédiatement
+# toute nouvelle référence générique réintroduite dans la carte.
+LACUNES_DE_REFERENCE_CONNUES: set[tuple[str, str]] = set()
 
 
-@pytest.mark.xfail(
-    reason="Deux liens portent une référence générique, sans année, DOI ni arXiv : "
-           "TR-021 -> TR-028 (« Observations minéralogiques naturelles et expériences "
-           "de haute pression. ») et TR-024 -> TR-023 (« Modèles climatiques "
-           "planétaires; aucune hydrosphère détectée sur TRAPPIST-1e. »). "
-           "Le test passera au vert dès qu'une source datable leur sera attachée.",
-    strict=False,
-)
 def test_chaque_reference_cle_est_datable(liens) -> None:
     """Une référence sans année ni DOI n'est pas vérifiable par un lecteur."""
     sans_ancrage = [

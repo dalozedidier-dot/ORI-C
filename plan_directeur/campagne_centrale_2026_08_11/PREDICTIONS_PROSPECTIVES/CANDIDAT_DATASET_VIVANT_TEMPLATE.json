@@ -1,0 +1,17 @@
+{
+  "schema": "oric.blind-dataset-candidate.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "candidate_id": null,
+  "bibliographic_identifier_only": null,
+  "metadata_checked_without_opening_outcomes": false,
+  "independent_longitudinal_dataset": null,
+  "lineage_or_history_variable_available": null,
+  "present_state_predictors_available": null,
+  "future_target_available": null,
+  "within_group_permutation_possible": null,
+  "dataset_outcomes_opened": false,
+  "analysis_protocol_frozen_before_opening": false,
+  "public_registration_before_opening": false,
+  "eligible_for_strict_test": false,
+  "notes": "Do not paste outcome values or inspect target columns while eligibility is being assessed."
+}
