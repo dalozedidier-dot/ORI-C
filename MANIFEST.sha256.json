@@ -6059,8 +6059,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/AUDIT_WONG_SEGUIN_2015.json",
-      "size": 3784,
-      "sha256": "516c39932d8fcacc73d651aacd42a55ad6fea5ee22cefb641d036e08a8c5447a",
+      "size": 3898,
+      "sha256": "37d0c9ffbe7ed7529f367ba8ae6b41299f26458b1163baf3b1f8eaee5e0079ba",
       "storage": "inline"
     },
     {
@@ -6977,8 +6977,8 @@
     },
     {
       "path": "donnees_externes/.gitignore",
-      "size": 523,
-      "sha256": "f5394ec068bd5b674f8d6f3eb163e986d16f8caebf3ccafa4a44bc9c506e6043",
+      "size": 563,
+      "sha256": "7f42333bd59bdc75aef3b93dad7cb853cd46620f83672f1a966cb67ebff174a1",
       "storage": "inline"
     },
     {
@@ -7255,6 +7255,48 @@
       "path": "donnees_externes/vesicules_sokolskyi_baum_2026/raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip",
       "size": 1494941,
       "sha256": "2cf96ae6906c5d41a889d8deced000237cb1da2e083a1df526dc730130687863",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/SOURCE.json",
+      "size": 2297,
+      "sha256": "5e8e5ece0dee6c677569092c9930a6eec2c15cc905a316b27378d653d23939c1",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/extracted/Data_by_progenitor.tsv",
+      "size": 1176,
+      "sha256": "518a4f71329fb00e5fefd2880fc09afb81a56f254062c9fe1ddf55dabfa139ac",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/extracted/Fitness_evolved.tsv",
+      "size": 4841,
+      "sha256": "a0966a2614f5ca7ea7669205e5b9149bac1163df6a12b5cf9362b31ee7359785",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/extracted/MIC-data.tsv",
+      "size": 631,
+      "sha256": "994ec7609044296e384c391497e3e80dfaed8315a916a42a57025053ed57a030",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/extracted/README_for_Data_by_progenitor.txt",
+      "size": 1614,
+      "sha256": "753a53dbd8399608579c553e2a33b3315ced3e9c5992ab365e782bcad4d4ecc8",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/extracted/TableS1.xlsx",
+      "size": 21051,
+      "sha256": "615cf08cd8eeceaa638a2c507fc6be13adaffcaff118d1b4aceca37d2f6275ff",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/wong_seguin_2015/raw/doi_10_5061_dryad_36td2__v20150609.zip",
+      "size": 29991,
+      "sha256": "837f740baa465e62bf3356d676de33464d82af2a71a89068cc703a2583ab4cb8",
       "storage": "inline"
     },
     {

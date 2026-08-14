@@ -39,7 +39,7 @@
     "clean_group_kfold_for_repeated_rows": false,
     "valid_between_group_history_permutation_for_frozen_model": false,
     "construct_matches_donofrio_history_treatment": false,
-    "raw_files_preserved_and_hash_verified_locally": false
+    "raw_files_preserved_and_hash_verified_locally": true
   },
   "verdict": "structurally_inadmissible_as_strict_donofrio_replication",
   "reason": "Each evolved population contributes one endpoint MIC. The candidate history is a founding resistance genotype, not the frozen downstream C/N treatment history used by the D'Onofrio prediction. Endpoint fitness and mutation summaries are outcomes or mediators measured after evolution, so treating them as present-state covariates would change the construct and risk post-treatment adjustment. GroupKFold by population would also have one outcome row per group and would not reproduce the repeated-measure prediction design.",
@@ -47,5 +47,5 @@
   "thresholds_changed": false,
   "section_XIV_credit": false,
   "next_route": "Use the already frozen LTEE new-MIC route or another dataset with repeated endpoint outcomes, a pre-outcome history label and state variables measured independently of that history and outcome.",
-  "download_note": "Dryad exposed public metadata and previews, but automated file endpoints returned an anti-bot validation page during this run. No HTML challenge response is stored or represented as source data."
+  "download_note": "The complete official Dryad archive was supplied manually, preserved unchanged under donnees_externes/wong_seguin_2015/raw and extracted locally. All five member sizes and MD5 hashes match the official Dryad metadata; the three separately downloaded TSV files also matched their archive members byte for byte."
 }

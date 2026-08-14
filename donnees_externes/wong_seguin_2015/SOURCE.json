@@ -1,0 +1,61 @@
+{
+  "schema": 2,
+  "id": "wong_seguin_2015",
+  "provider": "Dryad",
+  "title": "Data from: Effects of genotype on rates of substitution during experimental evolution",
+  "publication_doi": "10.1111/evo.12700",
+  "dataset_doi": "10.5061/dryad.36td2",
+  "license": "CC0-1.0",
+  "acquisition_method": "manual_full_archive_supplied_by_user",
+  "archive_provenance": {
+    "name": "doi_10_5061_dryad_36td2__v20150609.zip",
+    "local_path": "raw/doi_10_5061_dryad_36td2__v20150609.zip",
+    "sha256": "837f740baa465e62bf3356d676de33464d82af2a71a89068cc703a2583ab4cb8",
+    "size_bytes": 29991
+  },
+  "file_provenance": [
+    {
+      "name": "Data_by_progenitor.tsv",
+      "local_path": "extracted/Data_by_progenitor.tsv",
+      "size_bytes": 1176,
+      "md5": "1ab348a1963940aac89375bff79ca71e",
+      "sha256": "518a4f71329fb00e5fefd2880fc09afb81a56f254062c9fe1ddf55dabfa139ac"
+    },
+    {
+      "name": "Fitness_evolved.tsv",
+      "local_path": "extracted/Fitness_evolved.tsv",
+      "size_bytes": 4841,
+      "md5": "62eadadb821b0511803b97fa80f86540",
+      "sha256": "a0966a2614f5ca7ea7669205e5b9149bac1163df6a12b5cf9362b31ee7359785"
+    },
+    {
+      "name": "MIC-data.tsv",
+      "local_path": "extracted/MIC-data.tsv",
+      "size_bytes": 631,
+      "md5": "b4eb9cc74b8306486b5c47689f5a5b15",
+      "sha256": "994ec7609044296e384c391497e3e80dfaed8315a916a42a57025053ed57a030"
+    },
+    {
+      "name": "README_for_Data_by_progenitor.txt",
+      "local_path": "extracted/README_for_Data_by_progenitor.txt",
+      "size_bytes": 1614,
+      "md5": "4e58e8b86307d58df2a62e0aefc0cdf6",
+      "sha256": "753a53dbd8399608579c553e2a33b3315ced3e9c5992ab365e782bcad4d4ecc8"
+    },
+    {
+      "name": "TableS1.xlsx",
+      "local_path": "extracted/TableS1.xlsx",
+      "size_bytes": 21051,
+      "md5": "eb7f1880e2b461fd02039cb28632563a",
+      "sha256": "615cf08cd8eeceaa638a2c507fc6be13adaffcaff118d1b4aceca37d2f6275ff"
+    }
+  ],
+  "verification": {
+    "archive_opened_successfully": true,
+    "all_official_members_present": true,
+    "all_official_sizes_match": true,
+    "all_official_md5_match": true,
+    "separate_tsv_downloads_match_archive_members": true
+  },
+  "scientific_qualification": "real_external_experimental_data_but_structurally_inadmissible_as_strict_donofrio_replication"
+}
