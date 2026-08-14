@@ -107,6 +107,10 @@ Le problème inverse orbital reste `undetermined_empirical_only`. Le chemin stri
 
 Les quatre verrous prioritaires disposent maintenant de routes d'exécution séparées du canon : `HC02` pour tester le bootstrap direct de `N030`, un pilote instrumental pour `MAG-PAIR-001`, un paquet laboratoire pour `VES-PACC-INT-01` et une route de nouvelles MIC sur histoires LTEE archivées pour `PRED-VIVANT-HISTOIRE-001`. Ces routes n'ajoutent aucun succès §XIV tant qu'aucune acquisition préenregistrée n'a été réalisée. Voir `ROADMAP.md` et `documentation/execution_externe/`.
 
+### Quatre verrous actifs — état exécutable
+
+`ACTION_VERROUS_2026-08-14.md` et `plan_directeur/READINESS_VERROUS.json` donnent l’état machine des quatre fronts prioritaires. La branche matière conserve son baseline scellé **46/53** et publie séparément l’extension empirique `HC02-E1`, qui atteint **53/53** sans recoder `H052`. MAG, VES et la réplication MIC restent fail-closed jusqu’à exécution externe réelle. `PACC-MAG-INT-01` prépare en parallèle un transfert matière↔vivant sous la même définition `PACC-INT-CHALLENGE-V1`, sans crédit avant acquisition.
+
 ## Résultats établis dans l’état courant du dépôt
 
 ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.
@@ -224,7 +228,7 @@ Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écar
 
 ## Ce que le dossier établit, en une phrase par branche
 
-**Branche 1, matière.** L’hypergraphe relie 53 nœuds, en atteint 46 en fermeture stricte et localise un noyau cyclique précis. Trente-quatre hyperarêtes sont critiques pour la fermeture, quarante modifient au moins une métrique et l’échelle des capacités porte 0,595 bit d’information nette. H011 fournit un seuil quantitatif dont le rapport extrême vaut 3,33 sous variation de la turbulence.
+**Branche 1, matière.** L’hypergraphe relie 53 nœuds, en atteint 46 dans le baseline gelé et 53/53 dans l’extension HC02-E1 empiriquement qualifiée et localise un noyau cyclique précis. Trente-quatre hyperarêtes sont critiques pour la fermeture, quarante modifient au moins une métrique et l’échelle des capacités porte 0,595 bit d’information nette. H011 fournit un seuil quantitatif dont le rapport extrême vaut 3,33 sous variation de la turbulence.
 
 **Branche 2, Système solaire.** La couche dynamique réduite réussit 13 critères préenregistrés sur 15. Les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés. Le test de relaxation à 600 Ma distingue une dépendance temporaire au chemin d’une mémoire persistante, avec un temps caractéristique de 7,02 Ma.
 
@@ -233,7 +237,7 @@ Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écar
 
 ## Nouveaux travaux v0.9.3
 
-- **Matière.** Le noyau du verrou 46/53 est isolé sur `N029`, `N030`, `N053` et `N054`. Une réparation candidate ferme 53/53, mais reste hors graphe canonique car la littérature disponible ne démontre pas l'hyperarête exacte proposée.
+- **Matière.** Le baseline 46/53 reste gelé. `HC02-E1 = N051|N028 → N030` est maintenant qualifiée par trois expériences primaires complémentaires et ferme 53/53 en extension auditable, sans recoder H052. Cette clôture est structurelle et ne change pas le §XIV.
 - **Transfert climatique.** Le signal d'excentricité N-corps est injecté dans un modèle intermédiaire. Il améliore la RMSE dans trois fenêtres temporelles sur trois, de 3,12 % en moyenne, mais il s'agit d'une prédiction à un pas utilisant l'état climatique observé. Ce test ne remplace ni Terre-Lune complet, ni marées, ni GCM.
 - **Mémoire.** M2 et son témoin apparié M2P possèdent chacun deux bassins dans les régimes testés. Des boucles d'hystérèse apparaissent à 30 degrés, mais aucun état matériellement différent ne subsiste après le retour complet au faible forçage.
 - **Vivant.** Le jeu Card 2019 fournit une réplication externe temporelle. Le modèle état + histoire est moins bon dans chacun des quatre groupes de test et le bootstrap groupé conserve un écart défavorable. Le protocole prospectif suivant est gelé avant acquisition du prochain jeu.

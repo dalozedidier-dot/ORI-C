@@ -2,4 +2,4 @@ scenario_id,type,reachable,strictly_closed,scientific_status,description
 R0,canonique,46,False,résultat courant,Hypergraphe inchangé
 R1,recodage d'une hyperarête,53,True,"réparation structurelle candidate, non preuve historique","H052 devient N051|N028 -> N053|N030, sans présupposer l'interface qu'elle entretient."
 R2,hyperarête alternative,53,True,"hypothèse testable, non canonique","Ajout séparé de HC01 : N051|N028 -> N053|N030, source S14 à réévaluer."
-R3,bootstrap d'interface indépendant,53,True,support expérimental partiel ; audit sémantique N030 encore ouvert,Ajout séparé de HC02 : N051|N028 -> N030. H052 reste inchangée.
+R3,bootstrap d'interface indépendant,53,True,extension empirique qualifiée ; baseline gelé inchangé,Ajout séparé de HC02 : N051|N028 -> N030. H052 reste inchangée.

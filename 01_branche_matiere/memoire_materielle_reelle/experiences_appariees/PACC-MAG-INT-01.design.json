@@ -1,0 +1,47 @@
+{
+  "schema": "oric.pacc-mag-prospective-design.v1",
+  "id": "PACC-MAG-INT-01",
+  "parent_protocol": "MAG-PAIR-001",
+  "definition_id": "PACC-INT-CHALLENGE-V1",
+  "status": "design_mapping_ready_pending_nonconfirmatory_pilot_freeze",
+  "purpose": [
+    "matter_branch_real_Pacc_route",
+    "cross_branch_transfer_with_VES_without_redefinition"
+  ],
+  "scientific_protocol_change_to_MAG_PAIR_001": false,
+  "reuse_rule": "May analyse the same future confirmatory acquisition only if this PACC mapping, thresholds and decision rule are publicly frozen before any confirmatory datum. It is a parallel registered analysis, not a post-hoc reinterpretation.",
+  "independent_unit": "same physical independent unit/blocking structure as MAG-PAIR-001",
+  "X_anchor": "pre-intervention vector-remanence response summary, measured before active AF ablation and before the future challenge readout",
+  "m_intervention": "AF demagnetization at the pilot-frozen plateau reducing the trace by >=80%; sham follows MAG-PAIR-001",
+  "challenge_design": {
+    "status": "pilot_values_not_yet_frozen",
+    "rule": "challenge amplitude(s) and orientation(s) must be selected from sacrificial pilot data and frozen before confirmatory acquisition; no confirmatory outcome may tune them",
+    "minimum_challenges": 1
+  },
+  "response_dimensions": [
+    "projection of remanence on the frozen challenge-field axis",
+    "orthogonal remanence magnitude",
+    "total remanence magnitude"
+  ],
+  "materiality_thresholds": {
+    "status": "pilot_values_not_yet_frozen",
+    "rule": "one positive threshold per response dimension, fixed from instrument precision plus scientific SESOI using sacrificial pilot specimens only"
+  },
+  "matching_required": [
+    "X_matched",
+    "Theta_matched",
+    "architecture_matched",
+    "m_targeted_only",
+    "independent_units",
+    "challenge_set_predeclared",
+    "thresholds_predeclared",
+    "future_response_after_intervention"
+  ],
+  "decision_rule": {
+    "causal_qualified": "same PACC-INT-CHALLENGE-V1 rule: all matching flags true and preregistered sham passes",
+    "causal_effect_nonzero": "paired bootstrap 95% interval for Delta_P_acc excludes 0",
+    "no_cross_domain_magnitude_claim": true
+  },
+  "cross_branch_rule": "Condition XIV-11 is targeted only if VES-PACC-INT-01 and PACC-MAG-INT-01 both qualify under the same definition_id and same causal decision rule before results; domain-specific raw response dimensions are not numerically equated.",
+  "current_credit": "none"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "oric.active-lock-readiness.v1",
+  "generated_from_versioned_state": true,
+  "hc02": {
+    "status": "evidence_qualified_extension",
+    "baseline": "46/53",
+    "extension": "53/53",
+    "next": "independent_semantic_review"
+  },
+  "mag_pair_001": {
+    "status": "blocked_missing_lab_freeze",
+    "missing_lab_fields": [
+      "laboratory_id",
+      "af_plateau_mT",
+      "test_field_mT",
+      "temperature_target_c",
+      "temperature_tolerance_c",
+      "blind_code_key_sha256"
+    ],
+    "missing_count": 6,
+    "next": "non_confirmatory_instrument_pilot"
+  },
+  "ves_pacc_int_01": {
+    "status": "blocked_until_public_registration_and_confirmed_lab",
+    "remaining_execution_blockers": [
+      "public preregistration metadata in VES-PACC-INT-01.registration.json",
+      "confirmed laboratory and instrument access",
+      "availability of 100 nm and 5 um track-etched membranes/extruder setup",
+      "offline blind-code key and committed SHA-256",
+      "scheduled acquisition window after registration"
+    ],
+    "next": "confirm_single_lab_then_public_registration"
+  },
+  "vivant_new_mic": {
+    "status": "actionable_two_route_plan_no_outcome_opened",
+    "strict_route": "partner_and_material_required",
+    "fast_route": "material_request_ready",
+    "next": "choose_strict_or_fast_route_before_outcome_access"
+  },
+  "cross_branch_pacc": {
+    "definition_id": "PACC-INT-CHALLENGE-V1",
+    "status": "design_mapping_ready_pending_nonconfirmatory_pilot_freeze",
+    "target": "XIV-11 after both matter and living qualify"
+  },
+  "section_XIV": "unchanged_7_of_12_until_real_execution_or_replication"
+}

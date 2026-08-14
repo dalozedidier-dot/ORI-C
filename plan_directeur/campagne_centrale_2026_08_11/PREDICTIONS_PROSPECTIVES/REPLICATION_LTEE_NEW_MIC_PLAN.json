@@ -1,7 +1,7 @@
 {
   "schema": "oric.pred-vivant-histoire.execution-route.v1",
   "prediction_id": "PRED-VIVANT-HISTOIRE-001",
-  "status": "candidate_route_not_yet_eligible",
+  "status": "actionable_two_route_plan_no_outcome_opened",
   "preferred_route": "new_MIC_measurements_on_archived_independent_LTEE_histories",
   "logic": "Use viable frozen LTEE material whose evolutionary history is already fixed, while generating the registered MIC outcome only after public preregistration. This avoids waiting for a new long evolution experiment while preserving prospective outcome timing.",
   "donofrio_founder_histories_already_used": [
@@ -37,7 +37,9 @@
         "experimental evolution",
         "academic collaboration platform"
       ],
-      "source": "https://www.micalab.be/"
+      "source": "https://www.micalab.be/",
+      "verified_2026_08_14": true,
+      "current_fit_evidence": "official lab research includes antimicrobial resistance and experimental evolution; platform open to academic partners"
     },
     {
       "name": "Laboratory of Pharmaceutical Microbiology",
@@ -47,7 +49,9 @@
         "experimental evolution",
         "antibiotic susceptibility"
       ],
-      "source_doi": "10.1099/mic.0.001715"
+      "source_doi": "10.1099/mic.0.001715",
+      "verified_2026_08_14": true,
+      "current_fit_evidence": "official Ghent staff page documents experimental evolution focused on reduced antibiotic susceptibility"
     }
   ],
   "eligibility_gates": [
@@ -59,5 +63,27 @@
     "raw MIC table hash frozen before ORI-C decoding"
   ],
   "strict_success_rule_inherited": "gain >= 5 %, bootstrap interval of gain > 0, permutation p <= 0.05",
-  "current_credit": "none"
+  "current_credit": "none",
+  "routes": {
+    "A_strict_replication": {
+      "purpose": [
+        "XIV-10 strict independent replication",
+        "PRED-VIVANT-HISTOIRE-001"
+      ],
+      "design": "Use LTEE founder histories not used in the original benchmark, reproduce a predeclared downstream evolution/treatment design sufficiently close to the frozen D'Onofrio relation, then measure new MIC outcomes after public registration.",
+      "advantage": "strongest independence and construct match",
+      "cost": "requires new biological propagation before MIC",
+      "status": "partner_and_material_required"
+    },
+    "B_fast_prospective_generalisation": {
+      "purpose": [
+        "prospective history->MIC generalisation",
+        "potential XIV-3/4 branch progress after eligibility audit"
+      ],
+      "design": "Select archived LTEE histories using metadata only and generate new MIC outcomes after public registration under a common standardized assay, without replaying the 1000-generation C/N step.",
+      "advantage": "much faster because history is already physically archived",
+      "limit": "must not be called a strict D'Onofrio replication for XIV-10 unless the independent replication audit explicitly accepts the construct match before outcomes",
+      "status": "material_request_ready"
+    }
+  }
 }

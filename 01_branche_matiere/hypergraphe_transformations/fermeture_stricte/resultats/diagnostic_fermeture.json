@@ -196,12 +196,21 @@
       "reachable": 53,
       "unreachable": [],
       "strictly_closed": true,
-      "scientific_status": "support expérimental partiel ; audit sémantique N030 encore ouvert"
+      "scientific_status": "extension empiriquement qualifiée par trois expériences primaires; baseline gelée inchangée"
     }
   ],
   "interpretation": {
     "structural": "Le verrou est concentré dans une boucle N029-N030-N053-N054. N031, N032 et N035 sont bloqués en aval.",
-    "candidate_repair": "Deux voies minimales ferment mathématiquement le graphe : recoder H052 (HC01/R1-R2) ou ajouter en amont HC02 : N051|N028 -> N030 tout en conservant H052 canonique.",
-    "limit": "La fermeture mathématique n'établit ni l'occurrence naturelle de HC01/HC02, ni une séquence historique unique. HC02 reste non promue tant que la sémantique complète de N030 n'est pas couverte par les sources primaires."
+    "candidate_repair": "HC02-E1 est désormais la voie retenue : N051|N028 -> N030, ajoutée en extension auditable sans modifier H052 ni le baseline v0.9.3.",
+    "limit": "La couche HC02-E1 ferme la reachabilité stricte 53/53. Elle ne démontre ni une séquence historique unique, ni H033, ni une loi générale ORI-C."
+  },
+  "evidence_qualified_extension": {
+    "id": "HC02-E1",
+    "edge": "N051|N028 -> N030",
+    "reachable": 53,
+    "total": 53,
+    "strictly_closed": true,
+    "status": "evidence_qualified_non_destructive_extension",
+    "frozen_baseline_reachable": 46
   }
 }

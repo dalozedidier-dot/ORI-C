@@ -1,0 +1,47 @@
+{
+  "schema": "oric.section-xiv.action-map.v1",
+  "baseline": "7/12",
+  "open_conditions": {
+    "3": {
+      "target": "proper out-of-sample prediction success by branch",
+      "routes": [
+        "VES prospective result for living",
+        "PRED-MATIERE-ABLATION-001/MAG for matter",
+        "existing solar-system prospective package when genuinely held-out data become available"
+      ],
+      "note": "one successful experiment does not close the global condition if other branches remain without success"
+    },
+    "4": {
+      "target": "each strict success beats a matched control",
+      "routes": [
+        "VES sham/control frozen",
+        "MAG sham AF=0 frozen",
+        "MIC state-only + within-group history permutation frozen"
+      ]
+    },
+    "9": {
+      "target": "causal P_acc in a real system per branch",
+      "routes": [
+        "VES-PACC-INT-01 -> living",
+        "PACC-MAG-INT-01 -> matter"
+      ],
+      "remaining_hard_lock": "systeme_solaire real-system causal P_acc has no physically executable intervention route yet"
+    },
+    "10": {
+      "target": "two results reproduced by independent teams",
+      "routes": [
+        "Route A strict new-MIC replication",
+        "run VES confirmatory at an independent lab rather than the originating Baum Lab if method transfer succeeds"
+      ]
+    },
+    "11": {
+      "target": "same qualified result across two branches without redefinition",
+      "routes": [
+        "PACC-INT-CHALLENGE-V1 in VES + PACC-MAG-INT-01"
+      ],
+      "rule": "same definition and same causal decision rule fixed before both results"
+    }
+  },
+  "priority": "HC02 independent review now; then MAG pilot and independent-lab VES/MIC execution in parallel",
+  "no_credit_until_execution": true
+}

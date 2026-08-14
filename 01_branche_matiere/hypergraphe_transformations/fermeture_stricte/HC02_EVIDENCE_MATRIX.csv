@@ -1,0 +1,5 @@
+component;required_semantics;primary_source;doi;direct_support;verdict
+interface;interface eau-roche-gaz issue de N051+N028;Hao & Li 2018;10.3389/feart.2018.00180;interaction contrôlée croûte primitive analogue + H2O-CO2 avec produits secondaires et gaz;supported
+fluid_chemistry;chimie produite par interaction eau-roche;Ueda et al. 2021;10.1029/2021GC009827;espèces dissoutes pH et H2 suivis dans le temps sur komatiite + eau de mer primitive;supported
+gradients;gradients physicochimiques à l interface;Ueda et al. 2021;10.1029/2021GC009827;contraste fluides alcalins riches en H2 vs eau de mer acide/neutre et potentiel électrochimique;supported
+catalysis;capacité catalytique de phases compatibles avec l altération primitive;Zhong et al. 2026;10.1038/s41467-026-71130-7;carbonates/phyllosilicates avec métaux traces catalysent réduction abiotique du CO2 sous conditions pertinentes;supported

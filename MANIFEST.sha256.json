@@ -71,8 +71,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 18196,
-      "sha256": "db50f03fa184dc7c7108da8cb38893e4e2dfa9f18a90188e03cce452e623ee85",
+      "size": 18507,
+      "sha256": "1845bf7904ccb4522282d751d92b57c383a6ee28c21f1397bf633ae29fed5caf",
       "storage": "inline"
     },
     {
@@ -1667,26 +1667,44 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.json",
-      "size": 4926,
-      "sha256": "25913a02ea01ab97588006c6a56be819bdeff9a07e1901dfb951d56bba1b421a",
+      "size": 6245,
+      "sha256": "5f70eb1090540aeabce9920298995a2f99841aa423190b3df9ed026d03ba5a8a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.md",
-      "size": 6251,
-      "sha256": "4c394a63926a554c9c9c4ce39c80ea502000ed2bde4e589cb92e885b175539ca",
+      "size": 7367,
+      "sha256": "be0bda8af9dc474510625c212193046dd15fb6c32b025a57625191e18cbe27c3",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_CROUTE_HYDROSPHERE_INTERFACE.json",
-      "size": 3136,
-      "sha256": "6b5b3c12a04c6dafd253980762118ebb3b7b5d3710f654811435c0d64e42a124",
+      "size": 3324,
+      "sha256": "4c1384d7ed50a67183520d9b050803b2cac6c69d73003bc19678b5e1af47717a",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_CROUTE_HYDROSPHERE_INTERFACE.md",
-      "size": 2544,
-      "sha256": "1604fbc7b6b411142d69479abfec573ad69b54639df90d02738742992d38e274",
+      "size": 1921,
+      "sha256": "0619a0430788501aa496d169b725192cd1dfaf38f8058781be6fd003441530ef",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_EVIDENCE_MATRIX.csv",
+      "size": 908,
+      "sha256": "691af123a0eb1ed67a18bee82bc5b4e278009be8fd8c7b2f60e3151e78fefbc7",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/HC02_PRIMARY_SOURCE_AUDIT_2026-08-14.md",
+      "size": 1279,
+      "sha256": "a700ce4f3b8ba8f6e04f59dddf50c1ae09316e93743a5520fdc0de2182d9640c",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/POLITIQUE_EXTENSION_EMPIRIQUE.md",
+      "size": 1334,
+      "sha256": "2bd296b58b3820ad1cc3b1804319e022577cfc123bf3f1f06a6dba3bac52b452",
       "storage": "inline"
     },
     {
@@ -1702,6 +1720,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/SOURCES_HC02_EXTENSION.csv",
+      "size": 503,
+      "sha256": "b5458146e77383d222945595840077c664152b0e660d20c6314014a2d47a1be8",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VALIDATION_SOURCE_R1.md",
       "size": 1182,
       "sha256": "dd3a26b72a3ef033c1b7669a1533bf83e36d0d84be0babba76807ffb0e4dea39",
@@ -1709,14 +1733,14 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/VERROU_H052_SPECIFICATION.md",
-      "size": 7995,
-      "sha256": "d037e2acd90e45069ba344450b71149124350baacadb33469108a56a211ccaac",
+      "size": 7938,
+      "sha256": "edaaf8a3eb6207df7bd7cea7db74920a3b2727abf9dc2ea9a3c6f55882fd4a15",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/analyser_verrou.py",
-      "size": 16387,
-      "sha256": "e90831de94454be89f62704e38b6c15f6752edfd995b323dfd7bd61046688efe",
+      "size": 16598,
+      "sha256": "2dae408c7e936e610234c76868e32539f5b68c3d1e8b4b48eddd356146bc62de",
       "storage": "inline"
     },
     {
@@ -1727,32 +1751,32 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/FERMETURE_EMPIRIQUE.json",
-      "size": 568,
-      "sha256": "c5db54fbe0f837a75c8512f247bbae86473deb09af4e8785bdddf7eef1dcc398",
+      "size": 770,
+      "sha256": "1e1b8e8cf18cca4d83c64459594faec400563abe2530708f9964218f203c35d3",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/HYPOTHESES_BOOTSTRAP.json",
-      "size": 901,
-      "sha256": "6ba30a99d86fa8070e8c8192d9f109fb478b527a2098892d855ca574972d76b8",
+      "size": 986,
+      "sha256": "e06ffc7b29569f23274669916f42b66465091058b635f61d83aba83fc8b00753",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/RAPPORT_VERROU_MATIERE.md",
-      "size": 2028,
-      "sha256": "0eda14d7a427744ca1540a64b0f0c6d974599063bd2fb5c270ce5600e5176d51",
+      "size": 2125,
+      "sha256": "291119043143c1610a9e0f2a5c7470684ade3938b0cbeccd4ad7bfdb1578f2c2",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/VERROU_HYPERGRAPHE.md",
-      "size": 2028,
-      "sha256": "0eda14d7a427744ca1540a64b0f0c6d974599063bd2fb5c270ce5600e5176d51",
+      "size": 2125,
+      "sha256": "291119043143c1610a9e0f2a5c7470684ade3938b0cbeccd4ad7bfdb1578f2c2",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/diagnostic_fermeture.json",
-      "size": 5059,
-      "sha256": "c06d19fa6dbea39583a1c02dd3b767a8b6de1270fa10a776d9b5ab840c8ef480",
+      "size": 5239,
+      "sha256": "c9404698d9c478d24907b303b4921810835f4452df66b0ef764e11ead18903e2",
       "storage": "inline"
     },
     {
@@ -1763,14 +1787,20 @@
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/scenarios_reparation.csv",
-      "size": 654,
-      "sha256": "6f0589e00077ca824c2290fc3097f622922a76d4fb7c1d426d2a38e574a9e5fa",
+      "size": 643,
+      "sha256": "d3f2f9c5f3004414e567b15774608f30cc66287f3e3a504e1b5377915748a891",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests/test_verrou_matiere.py",
-      "size": 2116,
-      "sha256": "664a24f76d479375d936912f5a1c9e1ebbcaf9e97c36a1c67ba865cfaecf478b",
+      "size": 3130,
+      "sha256": "92f6a7e4a782652f710a2116b7be3c5a899719ae150b59f0bf8d2c00eb865922",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/valider_hc02_extension.py",
+      "size": 1633,
+      "sha256": "c1c1b58821e670e4fb71a5e7c4a66d1ed7200056dc9dfaf2fab836e32ed9b0d7",
       "storage": "inline"
     },
     {
@@ -2363,8 +2393,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/LAB_CANDIDATES_MAG_PAIR_001.json",
-      "size": 899,
-      "sha256": "7aa956645023a30dda22ef03f9e872e65d29fbf384ec088232b9711b0e944700",
+      "size": 1521,
+      "sha256": "db5533edde2c16c72c357662610a751bb5af1d6b31d86542e2a81a5e65985020",
       "storage": "inline"
     },
     {
@@ -2377,6 +2407,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.json",
       "size": 1382,
       "sha256": "e0655568779d875f05fd5624e096deed5f957e5650797e354e8b762c662555cf",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/PACC-MAG-INT-01.design.json",
+      "size": 2508,
+      "sha256": "163e59b5e4d47e31286322e631e309ef68f9f1f7ca5cefbd4ab48b6062d36ab0",
       "storage": "inline"
     },
     {
@@ -2449,6 +2485,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_gate_mag_pair_001.py",
       "size": 1444,
       "sha256": "9a8fe64e741101750bbb566e2df139d63dcf88eac601ef4f47241b07bd5779b8",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_pacc_mag_design.py",
+      "size": 920,
+      "sha256": "3588645a49cddf41cc7044584fd86ff804bd8e7c8e0c4816c2678ec857fa754b",
       "storage": "inline"
     },
     {
@@ -6070,6 +6112,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/lignees_vesicules/LAB_CANDIDATES_VES_PACC_INT_01.json",
+      "size": 1877,
+      "sha256": "9fbb0f6a130e34a5aef89b09b3c726f283c6657e27ceaf61f2aeaa460cb337c6",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/LAB_EXECUTION_PACKAGE_VES_PACC_INT_01.md",
       "size": 1756,
       "sha256": "64a1b8270583ef0743cea7f218848c0143e1e19454d16352eb73cd51817fe094",
@@ -6274,6 +6322,12 @@
       "storage": "inline"
     },
     {
+      "path": "ACTION_VERROUS_2026-08-14.md",
+      "size": 2417,
+      "sha256": "1563362245e050bbbb665fb5fdde102532106a6332b40a402545529c939a9e2b",
+      "storage": "inline"
+    },
+    {
       "path": "ARCHITECTURE.md",
       "size": 16750,
       "sha256": "320400b8257d524e070594499c249188bd5aa030666c59ae1e75888efe0b9825",
@@ -6389,8 +6443,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 16275,
-      "sha256": "9b98920d551b1acf8c988096c60cf1a10849fc2c91b4b2cde8a211ad50cc8ac7",
+      "size": 16352,
+      "sha256": "161abb6a27bcd92c7b7bb52f9f9320cb619e6de31b2c299e9727f6a37c9d81bd",
       "storage": "inline"
     },
     {
@@ -6503,8 +6557,8 @@
     },
     {
       "path": "README.md",
-      "size": 32780,
-      "sha256": "0193435c90a03d5f42acfc401c6cd1a8dae7fe131b415eef15ff87529c813a5e",
+      "size": 33461,
+      "sha256": "a86757cbc3f7e357da1e063e4703b796c2db7ac912884b449beebf0168bb213d",
       "storage": "inline"
     },
     {
@@ -6545,8 +6599,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "size": 5414,
-      "sha256": "ea966cc6c95f0fd76177a9bc346eaff985ca8b47fa5d57f114859ea384c56025",
+      "size": 5457,
+      "sha256": "986564e6be438b1df27a9b319c5a17a860c7713af23d144b59deda6beedfbc32",
       "storage": "inline"
     },
     {
@@ -6868,6 +6922,12 @@
       "storage": "inline"
     },
     {
+      "path": "documentation/execution_externe/CONTACTS_EXECUTION_2026-08-14.json",
+      "size": 2481,
+      "sha256": "d811995b5a26b832e17e9e489f6d4cdb8d6ae26da25636de6387b65bbafcde04",
+      "storage": "inline"
+    },
+    {
       "path": "documentation/execution_externe/ONE_PAGER_MAG_PAIR_001.md",
       "size": 1042,
       "sha256": "45f5bab377e14b03931a6d84f3007657e768f49d428e3169019bbf9597e4459e",
@@ -6875,14 +6935,14 @@
     },
     {
       "path": "documentation/execution_externe/ONE_PAGER_VES_PACC_INT_01.md",
-      "size": 866,
-      "sha256": "b19954ce8fd7d24fcd97428462eece99829db34d64bd0a9417d62f9a548ead1d",
+      "size": 1163,
+      "sha256": "7b181d205716274a99f448800b4c97eae51b58d2952d10ccc45f16ce549c0720",
       "storage": "inline"
     },
     {
       "path": "documentation/execution_externe/ONE_PAGER_VIVANT_NEW_MIC.md",
-      "size": 1042,
-      "sha256": "5f01c49d9bd122846306c47bff16f5fc829796ef0ce4acba02ac2d55aa5dd761",
+      "size": 1233,
+      "sha256": "600ce0f50ce8fed458b4c86aee2b68362a71e9cc1f6cf3bf43ee3dcb5240814d",
       "storage": "inline"
     },
     {
@@ -7367,8 +7427,8 @@
     },
     {
       "path": "plan_directeur/AVANCEMENT_DU_PLAN.md",
-      "size": 18835,
-      "sha256": "671dd170b44a7407d605282bd7984dfb581fdf4691bd3bc003160636175a21b8",
+      "size": 20276,
+      "sha256": "15ffb4b606e53b8875ff3f4d9baf75b769dd3b66bf863dec25c38ed460293585",
       "storage": "inline"
     },
     {
@@ -7402,6 +7462,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/READINESS_VERROUS.json",
+      "size": 1637,
+      "sha256": "0013c2cdb9654dd8a042b1c0286f68a2067a50d0a910b62eb0851cf77fa5749b",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/REGISTRE_CRITERES_2026-08-08.json",
       "size": 29332,
       "sha256": "2844c18695f7657096dc275229685e22278bf7ca0fbdad3f3e7bdcee2a7ea6e8",
@@ -7414,9 +7480,21 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/TRANSFERT_PACC_MATIERE_VIVANT_PLAN.json",
+      "size": 893,
+      "sha256": "839abb659fc1eb5081fcb4b110b22105d28175225b58cb03a9e55db27e0652a9",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/VERROUS_ACTIFS.json",
-      "size": 1965,
-      "sha256": "2d5eb87d2316197f344f9f89866c86a59a084298abd114740fbd815c98e67b13",
+      "size": 2101,
+      "sha256": "e0b2e21327b64b034cc55c5b77b20556aaac98c0caeb53561d173ff08f37f9b2",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/XIV_OPEN_CONDITIONS_ACTION_MAP.json",
+      "size": 1762,
+      "sha256": "aee214cb26d64d19452802a734aedfcb61f6b13f13f48a804208f6363f47bcd1",
       "storage": "inline"
     },
     {
@@ -7528,6 +7606,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/LTEE_MATERIAL_AND_CONTACT_ROUTE_2026-08-14.json",
+      "size": 2326,
+      "sha256": "1f36fe2bfcca331a48190b241bd225031477bf1d5b4473d9484525ec4e0d5771",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-COSMOS-NCCC-001.json",
       "size": 1004,
       "sha256": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
@@ -7565,8 +7649,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REPLICATION_LTEE_NEW_MIC_PLAN.json",
-      "size": 2573,
-      "sha256": "213a55f2842e680dc93d438779fceca79f566532678a14f48ed9a29bdd5ee97b",
+      "size": 4244,
+      "sha256": "4ed7d3fb795d517728ac0ef2d3208172adf7761952994cbb53215cdcedb4269b",
       "storage": "inline"
     },
     {
@@ -10313,8 +10397,8 @@
     },
     {
       "path": "scripts/construire_verrous_actifs.py",
-      "size": 3563,
-      "sha256": "4978df2ef0cbc296b0c6faf51484c6017e0466f9b771c544f830bb5e5c619a14",
+      "size": 3815,
+      "sha256": "c9bbc5484d81a7d5418744a13906ccdf95b0b4191008277ace616a0712dc834a",
       "storage": "inline"
     },
     {
@@ -10333,6 +10417,12 @@
       "path": "scripts/demo_minimale_html.py",
       "size": 7730,
       "sha256": "f4814bd25f841e99bb466ae7e040a98fa484198fc961feeb268abf08c854aa81",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/evaluer_readiness_verrous.py",
+      "size": 2287,
+      "sha256": "073be5c78b6db0e9c6799ab187f19208a381bd03bc96832f3e764d9b91376571",
       "storage": "inline"
     },
     {

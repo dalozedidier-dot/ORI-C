@@ -1,25 +1,23 @@
-# HC02 — croûte primitive + hydrosphère → interface eau-roche-gaz
+# HC02 — extension qualifiée croûte primitive + hydrosphère → interface eau-roche-gaz
 
-`HC02` est une **hyperarête candidate non canonique**. Elle ne modifie ni `hyperaretes.csv` ni le résultat 46/53.
+`HC02` reste séparée de `hyperaretes.csv`, qui demeure le baseline gelé v0.9.3. La nouveauté est que l'audit sémantique de `N030` est maintenant couvert par un faisceau de **trois expériences primaires**.
 
-## Pourquoi cette voie est plus propre que le recodage de H052
-
-Le cycle canonique exige `N030` pour déclencher `H052`. Au lieu de demander à `H052` de produire l'interface qu'elle entretient, `HC02` teste une étape antérieure et indépendante :
+## Relation
 
 `N051 Croûte primitive + N028 Atmosphère/hydrosphère → N030 Interfaces eau-roche-gaz`.
 
-Si cette relation est admissible, le reste de la fermeture suit les hyperarêtes canoniques déjà présentes : `H052 → N053`, `H053 → N054`, `H030 → N029`, puis les nœuds aval. L'ajout de `HC02` ferme mathématiquement 53/53 sans toucher à `H052`.
+L'ajout non destructif de cette relation à la fermeture stricte produit **53/53**, sans recoder `H052`.
 
-## Sources primaires actuellement pertinentes
+## Couverture de N030
 
-**Hao & Li 2018 — doi:10.3389/feart.2018.00180.** Des expériences en autoclave font réagir komatiite, péridotite et basalte avec un système H2O-CO2 entre 200 et 500 °C pour simuler l'interaction entre la croûte rocheuse post-océan magmatique et la proto-atmosphère. Des phases secondaires et des gaz sont mesurés. C'est le support le plus direct pour l'existence expérimentale d'une interface réactive croûte-fluides-gaz dans un contexte explicitement Terre primitive.
+- **Interface eau-roche-gaz** : Hao & Li 2018 fait réagir komatiite, péridotite et basalte avec H2O-CO2 dans un dispositif explicitement conçu comme analogue croûte/proto-atmosphère de la Terre primitive.
+- **Chimie de l'interface et gradients** : Ueda et al. 2021 suit pH, H2 et espèces dissoutes lors de réactions hydrothermales komatiite/eau de mer primitive et documente le contraste entre fluides hydrothermaux alcalins riches en H2 et eau de mer hadéenne acide/neutre.
+- **Catalyse** : Zhong et al. 2026 montre expérimentalement que des carbonates et phyllosilicates, précisément les familles de phases attendues lors de l'altération ultramafique/mafique primitive, acquièrent une activité catalytique de réduction du CO2 en présence de métaux traces; un dispositif H2 reproduit en plus le contexte géoélectrochimique hydrothermal.
 
-**Ueda et al. 2021 — doi:10.1029/2021GC009827.** Des expériences hydrothermales sur komatiite synthétique et eau de mer hadéenne riche en CO2 suivent la chimie des fluides à plusieurs températures. Elles renforcent la partie « gradients / chimie de l'interface ».
+La matrice traçable est `HC02_EVIDENCE_MATRIX.csv`.
 
-**Lazar et al. 2012 — doi:10.1016/j.chemgeo.2012.07.019.** La serpentinisation expérimentale de komatiites produit du méthane abiotique et explore le rôle catalytique de minéraux accessoires. Cette source soutient la plausibilité d'une capacité catalytique, sans isoler assez proprement un mécanisme unique pour promouvoir HC02 à elle seule.
+## Verdict
 
-## Ce qui manque encore pour une promotion canonique
+`HC02` passe de **candidat sémantique ouvert** à **extension empiriquement qualifiée**. Le baseline historique reste 46/53 parce qu'il est gelé. La couche d'extension atteint **53/53 en fermeture stricte**.
 
-Le label `N030` est « Interfaces eau roche gaz » mais sa capacité principale est « gradients et catalyse ». Les sources ci-dessus soutiennent fortement l'interface réactive et la chimie/les gradients. Le mot **catalyse** doit encore être relié de façon suffisamment directe à la même chaîne, sans affaiblir silencieusement la définition du nœud.
-
-Le verdict courant reste donc : **HC02 candidat, 46/53 canonique**. Le test de sensibilité 53/53 est un résultat structurel, pas une preuve de l'occurrence naturelle complète.
+Ce 53/53 signifie seulement que la circularité de représentation est levée par une relation appuyée expérimentalement. Il ne démontre ni une histoire naturelle unique, ni la chimie prébiotique `H033`, ni l'invariant transversal complet.

@@ -143,6 +143,8 @@ jobs:
         run: |
           python scripts/valider_core_results.py
           python scripts/verifier_dataset_vivant_aveugle.py
+          python 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/valider_hc02_extension.py
+          python 01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_pacc_mag_design.py
           python 01_branche_matiere/memoire_materielle_reelle/experiences_appariees/valider_gate_mag_pair_001.py
           python 03_branche_vivant/lignees_vesicules/valider_gate_ves_pacc_int_01.py
           python -m pytest -q 01_branche_matiere/hypergraphe_transformations/fermeture_stricte/tests/test_verrou_matiere.py
@@ -152,7 +154,8 @@ jobs:
         run: |
           python scripts/construire_core_results.py
           python scripts/construire_verrous_actifs.py
-          git diff --exit-code -- CORE_RESULTS.md site/core.html plan_directeur/VERROUS_ACTIFS.json
+          python scripts/evaluer_readiness_verrous.py
+          git diff --exit-code -- CORE_RESULTS.md site/core.html plan_directeur/VERROUS_ACTIFS.json plan_directeur/READINESS_VERROUS.json
       - name: Valider les notebooks d’entrée
         run: |
           python -m json.tool notebooks/ORI-C_demo_colab.ipynb > /dev/null

@@ -198,4 +198,13 @@ Le verrou H052 reste à 46/53. Lawal et al. 2026 (`doi:10.1029/2025GL120883`) re
 
 ## 14 août 2026 — quatre verrous convertis en routes d’exécution
 
-Le dépôt n'attend plus uniquement de nouveaux jeux publiés. `HC02` teste un bootstrap direct de l'interface matière, `MAG-PAIR-001` dispose d'un pilote instrumental, `VES-PACC-INT-01` d'un paquet d'exécution externe et `PRED-VIVANT-HISTOIRE-001` d'une route de nouvelles MIC sur matériel LTEE archivé. Aucun de ces éléments ne change encore le §XIV ni le canon 46/53.
+Le dépôt n'attend plus uniquement de nouveaux jeux publiés. `HC02` teste un bootstrap direct de l'interface matière, `MAG-PAIR-001` dispose d'un pilote instrumental, `VES-PACC-INT-01` d'un paquet d'exécution externe et `PRED-VIVANT-HISTOIRE-001` d'une route de nouvelles MIC sur matériel LTEE archivé. HC02-E1 change la couche d’extension matière à 53/53 sans réécrire le baseline gelé 46/53. Les portes VES, MAG et MIC restent, elles, sans changement du §XIV tant qu’aucune nouvelle donnée n’est acquise.
+
+
+## 14 août 2026 — HC02-E1 qualifiée et stratégie §XIV élargie
+
+- **HC02-E1** : `N051|N028 -> N030` passe en `evidence_qualified_extension`. Hao & Li 2018, Ueda et al. 2021 et Zhong et al. 2026 couvrent respectivement interface/produits, gradients hydrothermaux et catalyse ; la matrice est 4/4. Baseline scellé : **46/53**. Extension auditable : **53/53**.
+- **Transfert Pacc matière↔vivant** : `PACC-MAG-INT-01` est installé avant données avec la même définition `PACC-INT-CHALLENGE-V1` et la même règle causale que VES. Les seuils et paramètres magnétiques restent à figer sur pilote sacrificiel. Aucun crédit §XIV avant exécution.
+- **Réplication MIC** : deux voies sont distinguées. La route A reproduit un traitement aval avant nouvelles MIC et vise §XIV-10. La route B produit rapidement de nouvelles MIC sur histoires LTEE archivées et vise une généralisation prospective ; elle ne compte pas automatiquement comme réplication stricte.
+- **Exécution externe** : le registre public de candidats documente Fort Hoofddijk pour MAG, Baum Lab/ULB/UGent pour VES, LTEE + MICA/UGent pour les nouvelles MIC. Aucun contact ni accord n'est présumé.
+- **§XIV** : reste **7/12**. Le dépôt publie maintenant une carte d'action explicite pour 3, 4, 9, 10 et 11.

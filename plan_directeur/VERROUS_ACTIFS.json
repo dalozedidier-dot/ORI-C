@@ -21,9 +21,9 @@
       "public_registration_status": "package_ready_external_account_required",
       "public_url_present": false,
       "execution_package_status": "blocked_until_public_registration_and_confirmed_lab",
-      "candidate_lab_count": 3,
+      "candidate_lab_count": 4,
       "execution_open": false,
-      "protocol_sha256": "30342b35525b32a54e287e5ac85844fbb15537f22e91c31bfc9aae4b92cd46fa",
+      "protocol_sha256": "89906f8365a3ac0045df7a1e8585519aaa95774278ecbe3f8e4c088792c5c1f6",
       "targets": [
         "XIV-9",
         "XIV-3",
@@ -36,9 +36,10 @@
       "branch": "matiere",
       "canonical_closure": "46/53",
       "candidate_status": "candidate_not_promoted",
-      "hc02_status": "candidate_experimental_support_semantic_audit_open",
-      "hc02_preferred_next_audit": true,
-      "verdict": "remain_46_of_53_fail_closed",
+      "hc02_status": "evidence_qualified_extension",
+      "hc02_preferred_next_audit": false,
+      "verdict": "baseline_46_of_53_preserved_hc02_extension_53_of_53_evidence_qualified",
+      "extension_closure": "53/53",
       "targets": [
         "fermeture_hypergraphe_53_53"
       ]
@@ -50,7 +51,7 @@
       "status": "frozen_locally_awaiting_external_data",
       "data_opened": false,
       "result_present": false,
-      "new_MIC_route_status": "candidate_route_not_yet_eligible",
+      "new_MIC_route_status": "actionable_two_route_plan_no_outcome_opened",
       "targets": [
         "XIV-3",
         "XIV-4",
@@ -66,8 +67,10 @@
       "execution_freeze_status": "blocked_missing_lab_freeze",
       "remaining_lab_fields": 6,
       "pilot_installed": true,
+      "parallel_pacc_design": "PACC-MAG-INT-01",
       "targets": [
         "XIV-9",
+        "XIV-11",
         "PRED-MATIERE-ABLATION-001"
       ]
     }

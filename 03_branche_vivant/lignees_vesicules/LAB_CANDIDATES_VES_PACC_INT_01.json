@@ -1,0 +1,49 @@
+{
+  "schema": "oric.ves-lab-candidates.v1",
+  "protocol_id": "VES-PACC-INT-01",
+  "status": "candidate_facilities_not_contacted",
+  "candidates": [
+    {
+      "name": "Baum Lab, University of Wisconsin-Madison",
+      "priority": 1,
+      "reason": "originating experimental system; current lab explicitly studies prebiotic vesicles",
+      "contacts": [
+        "dbaum@wisc.edu",
+        "sokolskyi@wisc.edu"
+      ],
+      "source": "https://baumlab.botany.wisc.edu/current-lab-members/",
+      "verified_current_members": true
+    },
+    {
+      "name": "ULB Engineering of Molecular NanoSystems (EMNS)",
+      "priority": 2,
+      "reason": "Malvern Zetasizer Ultra, UV-Vis absorption and Fluoromax-4 emission available",
+      "source": "https://inventaire.ulb.be/Site/unite/COMP819.php",
+      "verified_capabilities": [
+        "Malvern Zetasizer Ultra",
+        "UV-Vis-NIR absorption",
+        "Fluoromax-4 emission"
+      ]
+    },
+    {
+      "name": "ULB BioMatter",
+      "priority": 3,
+      "reason": "TECAN Spark X UV/fluorescence/luminescence plate reader and wet-lab infrastructure",
+      "source": "https://biomatter.ulb.be/facilities/"
+    },
+    {
+      "name": "Ghent University MoBi / particle infrastructure",
+      "priority": 4,
+      "reason": "DLS, UV-Vis, microfluidics and fluorescence microscopy listed",
+      "source": "https://www.ugent.be/bw/biotechnology/en/research-units/mobi/services/scientific-infrastructure",
+      "verified_capabilities": [
+        "DLS",
+        "UV-Vis",
+        "microfluidics",
+        "fluorescence microscopy"
+      ]
+    }
+  ],
+  "selection_rule": "Prefer one site capable of DLS plus absorbance/fluorescence in one frozen chain. Baum Lab is first scientific-contact route because it created the experimental system; ULB/UGent are instrument-access fallback candidates only.",
+  "verified_on": "2026-08-14"
+}

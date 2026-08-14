@@ -46,3 +46,22 @@ def test_hc02_ferme_le_graphe_sans_toucher_h052():
     assert original.inputs == frozenset({"N051", "N028", "N030"})
     assert original.outputs == frozenset({"N053"})
 
+
+
+def test_hc02_est_qualifiee_en_extension_sans_recrire_le_baseline():
+    import json
+    cfg = json.loads((MODULE.parent / "HC02_CROUTE_HYDROSPHERE_INTERFACE.json").read_text(encoding="utf-8"))
+    assert cfg["status"] == "evidence_qualified_extension"
+    assert set(cfg["semantic_target"]["components"].values())
+    assert all(str(v).startswith("supported") for v in cfg["semantic_target"]["components"].values())
+    assert cfg["canonical_change"] is False
+    assert cfg["mathematical_closure_if_added"] == "53/53"
+
+
+def test_hc02_matrice_primaire_4_sur_4():
+    import csv
+    with (MODULE.parent / "HC02_EVIDENCE_MATRIX.csv").open(encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f, delimiter=";"))
+    assert {r["component"] for r in rows} == {"interface", "fluid_chemistry", "gradients", "catalysis"}
+    assert all(r["verdict"] == "supported" for r in rows)
+    assert {"10.3389/feart.2018.00180", "10.1029/2021GC009827", "10.1038/s41467-026-71130-7"} <= {r["doi"] for r in rows}

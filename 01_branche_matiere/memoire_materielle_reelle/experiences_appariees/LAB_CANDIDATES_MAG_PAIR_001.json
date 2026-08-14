@@ -19,5 +19,26 @@
       "contact_status": "not_contacted"
     }
   ],
-  "next_action": "send pilot protocol and ask the laboratory to define available AF grid, sub-coercive field candidates, temperature operating window and blind-code workflow before any confirmatory sample is measured"
+  "next_action": "Send pilot-only request: determine AF plateau giving >=80% trace reduction, non-rewriting sub-coercive test field, instrument temperature window and feasible specimen geometry. No confirmatory specimen may be measured in pilot.",
+  "verified_2026_08_14": [
+    {
+      "name": "Fort Hoofddijk Paleomagnetic Laboratory, Utrecht University",
+      "fit": "high",
+      "equipment": [
+        "2G cryogenic magnetometer",
+        "robotised 2G magnetometer",
+        "AF demagnetization workflow"
+      ],
+      "contacts": [
+        "l.v.degroot@uu.nl",
+        "m.j.dekkers@uu.nl"
+      ],
+      "status": "candidate_not_contacted",
+      "sources": [
+        "https://forthoofddijk.geo.uu.nl/equipment-2/",
+        "https://www.uu.nl/staff/LVdeGroot/Contact",
+        "https://www.uu.nl/staff/MJDekkers"
+      ]
+    }
+  ]
 }

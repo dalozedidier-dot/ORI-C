@@ -1,5 +1,5 @@
 {
-  "verdict": "indetermine_faute_de_donnees",
+  "verdict": "supports_empirical_bootstrap_extension_hc02",
   "fermeture_canonique": {
     "reachable": 46,
     "total": 53
@@ -12,6 +12,12 @@
     "reachable": 53,
     "total": 53
   },
-  "preuve_candidate_admise": false,
-  "motif": "HC01/H052 n'est pas démontrée dans une trajectoire unique. HC02 possède désormais un support expérimental direct pour l'interface croûte-H2O-CO2 et la chimie hydrothermale, mais la sémantique complète de N030 (notamment catalyse) reste ouverte."
+  "preuve_candidate_admise": true,
+  "motif": "HC02-E1 couvre interface, chimie/gradients et capacité catalytique de N030 par trois expériences primaires complémentaires. Le baseline gelé reste 46/53; l extension auditable ferme 53/53 sans recoder H052.",
+  "fermeture_extension_hc02": {
+    "reachable": 53,
+    "total": 53,
+    "strictly_closed": true
+  },
+  "limite": "Fermeture structurelle en extension, non preuve d une trajectoire naturelle unique et sans changement du §XIV."
 }

@@ -88,7 +88,7 @@ Les quatre prédictions prospectives disposent de paquets de registration OSF. P
 
 La roadmap active est désormais `ROADMAP.md`. Elle réduit le programme à quatre fronts capables de changer le niveau de preuve : `VES-PACC-INT-01`, le verrou matière `H052/HC01`, `PRED-VIVANT-HISTOIRE-001` et `MAG-PAIR-001`. Cette couche d'orientation ne remplace ni les prédictions gelées ni l'audit §XIV.
 
-Le verrou `H052` a fait l'objet d'un audit ciblé dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.*`. Le verdict reste **46/53** : Okamoto et al. 2025 soutient un mécanisme auto-généré de fracture/permeabilité sur analogue expérimental, Alexander et al. 2026 soutient la création de perméabilité de croûte primitive au niveau modèle, mais aucune source ne suffit encore à promouvoir `HC01` comme relation empirique canonique.
+Le verrou `H052` a fait l'objet d'un audit ciblé dans `01_branche_matiere/hypergraphe_transformations/fermeture_stricte/AUDIT_H052_2026-08-14.*`. `HC01` reste non promue, mais la voie indépendante `HC02-E1 = N051|N028 -> N030` est désormais **qualifiée en extension empirique** : Hao & Li 2018 couvre l'interface primitive, Ueda et al. 2021 les gradients hydrothermaux, Zhong et al. 2026 la capacité catalytique des carbonates/phyllosilicates. Le baseline scellé reste **46/53** ; l'extension non destructive atteint **53/53**.
 
 La couche publique gagne une page `site/exploration.html` qui expose uniquement des tables versionnées, des scénarios N-corps déjà calculés et un modèle jouet explicitement pédagogique. La CI vérifie désormais aussi la démonstration minimale reproductible, le registre de preuves, le contrôle négatif réel et la synchronisation des données de cette page interactive.
 
@@ -102,7 +102,7 @@ Côté causal prospectif, `MAG-PAIR-001` possède un paquet d’exécution machi
 
 ## Mise à jour du 14 août 2026 — passage à l’exécution externe
 
-- `HC02 = N051|N028 -> N030` est maintenant évalué séparément : 53/53 en sensibilité, H052 inchangée, promotion encore fail-closed sur la sémantique complète de N030.
+- `HC02-E1 = N051|N028 -> N030` est qualifiée en extension empirique : 4/4 composantes de N030 sont couvertes par des expériences primaires, H052 reste inchangée, baseline 46/53 et extension 53/53.
 - `MAG-PAIR-001` possède un pilote instrumental non confirmatoire ; seeds de randomisation/permutation et exclusion non-outcome sont gelés, les paramètres instrumentaux restent à mesurer avec le laboratoire.
 - `VES-PACC-INT-01` possède un paquet laboratoire et un gate prospectif explicite ; les capacités instrumentales compatibles sont documentées sans ouvrir le préenregistrement.
 - `PRED-VIVANT-HISTOIRE-001` possède une voie accélérée : nouvelles MIC sur histoires LTEE cryo-archivées, mesurées seulement après préenregistrement par une équipe indépendante.

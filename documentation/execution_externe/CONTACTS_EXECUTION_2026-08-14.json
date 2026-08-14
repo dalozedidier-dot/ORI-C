@@ -1,0 +1,98 @@
+{
+  "schema": "oric.external-execution-contacts.v1",
+  "verified_on": "2026-08-14",
+  "status": "public_candidates_not_contacted",
+  "contacts": [
+    {
+      "front": "MAG-PAIR-001",
+      "institution": "Utrecht University Fort Hoofddijk",
+      "names": [
+        "Lennart de Groot",
+        "Mark Dekkers"
+      ],
+      "emails": [
+        "l.v.degroot@uu.nl",
+        "m.j.dekkers@uu.nl"
+      ],
+      "fit": [
+        "rock magnetism",
+        "AF demagnetization",
+        "IRM/ARM"
+      ],
+      "source": "https://www.uu.nl/organisatie/faculteit-geowetenschappen/onderzoeksfaciliteiten/paleomagnetisch-laboratorium"
+    },
+    {
+      "front": "VES-PACC-INT-01",
+      "institution": "Baum Lab, UW-Madison",
+      "names": [
+        "David Baum",
+        "Tymofii Sokolskyi"
+      ],
+      "emails": [
+        "dbaum@wisc.edu",
+        "sokolskyi@wisc.edu"
+      ],
+      "fit": [
+        "originating vesicle system",
+        "origin-of-life vesicle experiments"
+      ],
+      "source": "https://baumlab.botany.wisc.edu/current-lab-members/"
+    },
+    {
+      "front": "VES-PACC-INT-01",
+      "institution": "ULB EMNS",
+      "names": [],
+      "emails": [],
+      "fit": [
+        "DLS",
+        "UV-Vis",
+        "fluorescence"
+      ],
+      "source": "https://inventaire.ulb.be/Site/unite/COMP819.php"
+    },
+    {
+      "front": "PRED-VIVANT-HISTOIRE-001",
+      "institution": "LTEE",
+      "names": [
+        "Jeffrey Barrick",
+        "Richard Lenski",
+        "Dominique Schneider"
+      ],
+      "emails": [],
+      "fit": [
+        "material/history routing"
+      ],
+      "source": "https://the-ltee.org/researchers/"
+    },
+    {
+      "front": "PRED-VIVANT-HISTOIRE-001",
+      "institution": "MICA Lab, KU Leuven",
+      "names": [
+        "Hans Steenackers"
+      ],
+      "emails": [],
+      "fit": [
+        "antimicrobial resistance",
+        "experimental evolution",
+        "academic collaboration platform"
+      ],
+      "source": "https://www.micalab.be/research"
+    },
+    {
+      "front": "PRED-VIVANT-HISTOIRE-001",
+      "institution": "Ghent University Laboratory of Pharmaceutical Microbiology",
+      "names": [
+        "Tom Coenye",
+        "Fauve Vergauwe"
+      ],
+      "emails": [
+        "Fauve.Vergauwe@ugent.be"
+      ],
+      "fit": [
+        "antibiotic susceptibility",
+        "experimental evolution"
+      ],
+      "source": "https://www.ugent.be/fw/pharmaceutical-analysis/en/research/micro/staff/fauve"
+    }
+  ]
+}

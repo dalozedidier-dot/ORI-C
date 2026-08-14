@@ -1,0 +1,17 @@
+{
+  "schema": "oric.cross-branch-pacc-plan.v1",
+  "definition_id": "PACC-INT-CHALLENGE-V1",
+  "status": "prospective_transfer_route_installed_not_executed",
+  "branch_protocols": {
+    "vivant": "VES-PACC-INT-01",
+    "matiere": "PACC-MAG-INT-01"
+  },
+  "same_decision_rule": "causal qualification requires predeclared challenge/thresholds, matched X/Theta/architecture, targeted m intervention, independent units, future response and passing preregistered sham; nonzero effect requires paired bootstrap interval excluding zero",
+  "forbidden": [
+    "post-result redefinition of P_acc",
+    "numerical comparison of raw response magnitudes across domains",
+    "using pilot specimens as confirmatory units"
+  ],
+  "condition_11_route": "If both branch protocols qualify under this exact definition and decision rule, audit XIV-11 without redefining the result.",
+  "current_credit": "none"
+}

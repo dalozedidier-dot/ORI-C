@@ -11,8 +11,9 @@
   },
   "H2_bootstrap_interface_directe": {
     "prediction": "N051 et N028 suffisent à produire N030 avant H052",
-    "statut": "support_experimental_partiel_audite_non_promu",
-    "candidat": "HC02: N051|N028 -> N030"
+    "statut": "support_experimental_composite_qualifie_en_extension",
+    "candidat": "HC02: N051|N028 -> N030",
+    "extension": "HC02-E1; 53/53 strict reachability; baseline gelée 46/53"
   },
   "H3_mauvais_decoupage": {
     "prediction": "N030 et N053 sont deux sorties couplées d'un même processus",

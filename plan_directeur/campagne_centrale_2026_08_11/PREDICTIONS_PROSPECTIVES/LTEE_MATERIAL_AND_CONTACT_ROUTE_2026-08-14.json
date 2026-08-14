@@ -1,0 +1,44 @@
+{
+  "schema": "oric.ltee-material-route.v1",
+  "target": "PRED-VIVANT-HISTOIRE-001",
+  "status": "actionable_contact_route_no_data_opened",
+  "facts": {
+    "archive_interval_generations": 500,
+    "mixed_population_samples_stored_indefinitely": true,
+    "strain_catalog_available": true,
+    "protocols_public": true
+  },
+  "primary_contact_route": {
+    "project": "Long-Term Evolution Experiment",
+    "current_public_researcher_page": "https://the-ltee.org/researchers/",
+    "current_material_context": "https://the-ltee.org/resources/",
+    "note": "LTEE site documents strain sharing and extensive frozen archives; request must state project before any result-bearing data are opened.",
+    "primary_contacts_from_ltee_site": [
+      "Jeffrey Barrick",
+      "Richard Lenski",
+      "Dominique Schneider"
+    ],
+    "institution_note": "Use the current LTEE researchers page as authority for routing; do not hard-code an institution into the eligibility decision."
+  },
+  "blind_request": "Request archived strains/populations with generation, lineage and treatment metadata only. Do not request or inspect MIC/antibiotic susceptibility outcomes. Generate the target MIC measurements prospectively after public registration.",
+  "eligibility_gate": [
+    "lineage/history metadata available before MIC",
+    "target MIC not previously opened by ORI-C",
+    "independent biological units identifiable",
+    "new MIC measurement date after registration",
+    "state variables sufficient for frozen predictor"
+  ],
+  "forbidden": [
+    "D'Onofrio outcome reuse",
+    "Card 2019 outcome reuse",
+    "Santos-Lopez outcome reuse",
+    "screening candidate MIC values before eligibility decision"
+  ],
+  "verified_on": "2026-08-14",
+  "strategy": "Fastest strict route: select archived history-bearing material using metadata only, publicly register the frozen MIC prediction, then generate new MIC outcomes after registration. Existing susceptibility outcomes remain forbidden.",
+  "two_route_use": {
+    "strict_replication": "material can seed a new predeclared downstream evolution/treatment experiment before new MIC",
+    "fast_generalisation": "material can be assayed prospectively for new MIC directly after metadata-only selection",
+    "credit_boundary": "fast route is not automatically XIV-10 replication"
+  }
+}

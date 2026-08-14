@@ -2,7 +2,7 @@
 
 **But** : tester prospectivement si l'histoire améliore la prédiction de la MIC au-delà de l'état présent, sur un jeu réellement indépendant.
 
-**Voie accélérée** : utiliser des lignées LTEE cryo-archivées dont l'histoire est déjà fixée, mais produire les MIC cibles seulement après préenregistrement. Cela évite de refaire des dizaines de milliers de générations.
+**Deux voies** : (A) réplication stricte, en repartant d'histoires LTEE archivées puis en reproduisant un traitement aval préenregistré avant nouvelles MIC ; (B) généralisation prospective rapide, en produisant directement de nouvelles MIC sur histoires archivées sélectionnées sur métadonnées seulement. La voie B n'est jamais appelée réplication stricte pour §XIV-10 sans audit préalable du construct match.
 
 **Mesures cibles** : ampicilline, érythromycine, tétracycline, tobramycine. **Règle déjà gelée** : gain RMSE ≥5 %, intervalle bootstrap du gain >0, permutation p≤0,05.
 

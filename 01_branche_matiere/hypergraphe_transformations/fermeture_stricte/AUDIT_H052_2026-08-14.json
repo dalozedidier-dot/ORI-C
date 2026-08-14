@@ -1,5 +1,5 @@
 {
-  "schema": "oric.h052-audit.v1",
+  "schema": "oric.h052-audit.v2",
   "date": "2026-08-14",
   "canonical_closure": {
     "reachable_nodes": 46,
@@ -77,7 +77,9 @@
       "evidence_type": "controlled_early_earth_crust_atmosphere_interaction",
       "supports": "Komatiite, peridotite and basalt reacted with H2O-CO2 at 200-500 C; secondary clays/carbonates and gases were measured, directly instantiating a reactive crust-fluid-gas interface.",
       "does_not_establish": "Does not by itself demonstrate the full N030 capacity wording, especially catalysis, in one closed chain.",
-      "counts_for_canonical_promotion": false
+      "counts_for_canonical_promotion": false,
+      "counts_for_hc02_extension_qualification": true,
+      "counts_for_frozen_baseline_rewrite": false
     },
     {
       "citation": "Ueda et al. 2021, Geochemistry Geophysics Geosystems 22:e2021GC009827",
@@ -85,7 +87,9 @@
       "evidence_type": "controlled_hadean_komatiite_seawater_hydrothermal_fluid_chemistry",
       "supports": "Time-resolved hydrothermal experiments on synthetic komatiite and CO2-rich Hadean seawater measured evolving fluid chemistry under 100-350 C conditions, including H2-rich fluids.",
       "does_not_establish": "Hydrothermal conditions already impose a reacting water-rock system; source strengthens gradients/chemistry but is not alone a proof of the initial interface bootstrap.",
-      "counts_for_canonical_promotion": false
+      "counts_for_canonical_promotion": false,
+      "counts_for_hc02_extension_qualification": true,
+      "counts_for_frozen_baseline_rewrite": false
     },
     {
       "citation": "Lazar et al. 2012, Chemical Geology 326-327:102-112",
@@ -94,11 +98,20 @@
       "supports": "Natural komatiite produced substantially more labelled methane than synthetic komatiite during hydrothermal alteration; catalytic mineral candidates were investigated.",
       "does_not_establish": "Catalyst identity was inferred rather than isolated as the unique cause, so this is supporting context rather than a canonical HC02 promotion proof.",
       "counts_for_canonical_promotion": false
+    },
+    {
+      "citation": "Zhong et al. 2026, Nature Communications 17:3229",
+      "doi": "10.1038/s41467-026-71130-7",
+      "evidence_type": "controlled_primitive_seafloor_geoelectrochemistry",
+      "supports": "carbonate_and_phyllosilicate_minerals_with_trace_transition_metals_catalyse_abiotic_CO2_reduction_under_early_seawater_or_serpentinization_relevant_conditions",
+      "does_not_establish": "unique_natural_history_or_H033",
+      "counts_for_hc02_extension_qualification": true,
+      "counts_for_frozen_baseline_rewrite": false
     }
   ],
-  "verdict": "remain_46_of_53_fail_closed",
-  "next_discriminating_evidence": "complete the N030 semantic audit for HC02, especially direct catalytic capacity within the same primitive-crust water/gas interface; if sufficient, promote HC02 rather than rewrite H052",
-  "mechanistic_progress": "HC02 now gives a source-backed direct bootstrap route N051+N028 -> N030 and closes 53/53 mathematically while leaving H052 unchanged; canonical closure remains 46/53 until semantic promotion criteria are met",
+  "verdict": "baseline_46_of_53_preserved_hc02_extension_53_of_53_evidence_qualified",
+  "next_discriminating_evidence": "No additional source is required for HC02 semantic coverage. Remaining scientific work is independent review/replication and empirical execution of MAG/VES; H033 remains outside this closure claim.",
+  "mechanistic_progress": "HC02-E1 provides a component-wise primary-experimental evidence chain for N051+N028 -> N030 and closes 53/53 in a non-destructive extension while H052 and the frozen 46/53 baseline remain unchanged.",
   "candidate_hc02_direct_interface": {
     "inputs": [
       "N051",
@@ -109,7 +122,23 @@
     ],
     "keeps_H052_canonical": true,
     "mathematical_closure_if_added": "53/53",
-    "status": "candidate_experimental_support_semantic_audit_open",
-    "preferred_over_hc01_for_next_audit": true
+    "status": "evidence_qualified_extension",
+    "preferred_over_hc01_for_next_audit": false,
+    "extension_id": "HC02-E1",
+    "semantic_components_supported": "4/4",
+    "next_action": "independent_semantic_review_not_more_source_hunting"
+  },
+  "hc02_extension": {
+    "edge": "N051|N028 -> N030",
+    "status": "evidence_qualified_extension",
+    "strict_closure": "53/53",
+    "baseline_unchanged": "46/53",
+    "semantic_components_supported": 4,
+    "semantic_components_total": 4,
+    "primary_evidence_dois": [
+      "10.3389/feart.2018.00180",
+      "10.1029/2021GC009827",
+      "10.1038/s41467-026-71130-7"
+    ]
   }
 }
