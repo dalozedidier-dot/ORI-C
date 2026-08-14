@@ -50,3 +50,10 @@ def test_result_remains_negative_and_non_confirmatory():
     assert result["qualification"]["synthetic_or_simulated_scientific_data"] is False
     assert result["qualification"]["strict_donofrio_replication"] is False
     assert result["qualification"]["section_XIV_credit"] is False
+
+
+def test_result_writer_forces_lf_on_windows(tmp_path):
+    path = tmp_path / "result.json"
+    load_module().write_json_lf(path, {"value": "réel"})
+    assert b"\r\n" not in path.read_bytes()
+    assert path.read_bytes().endswith(b"\n")

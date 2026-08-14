@@ -30,6 +30,15 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def write_json_lf(path: Path, payload: dict[str, object]) -> None:
+    """Écrit un JSON canonique sans traduction CRLF sous Windows."""
+    path.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def prepare() -> pd.DataFrame:
     mic = pd.read_csv(SOURCE / "MIC-data.tsv", sep="\t")
     fitness = pd.read_csv(SOURCE / "Fitness_evolved.tsv", sep="\t")
@@ -202,7 +211,7 @@ def main() -> dict[str, object]:
             "reason": "founding genotype is not the frozen C/N treatment-history construct and this mapping was specified after the public data were inspected",
         },
     }
-    OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    write_json_lf(OUTPUT, result)
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result
 

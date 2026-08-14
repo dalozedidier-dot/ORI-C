@@ -75,12 +75,10 @@ def main() -> int:
     entrees = manifeste.get("entries") or manifeste.get("files") or []
     inscrits = [e["path"] for e in entrees]
 
-    suivis = set(
-        subprocess.run(
-            ["git", "ls-files"], cwd=RACINE, capture_output=True, text=True, check=True
-        ).stdout.splitlines()
-    )
-    chemins = sorted(set(inscrits) & suivis)
+    # Contrôler aussi les nouveaux fichiers déjà inscrits au manifeste mais pas
+    # encore indexés. C'est précisément avant `git add` que ce garde-fou doit
+    # détecter une sortie Windows en CRLF promise en LF par `.gitattributes`.
+    chemins = sorted(set(inscrits))
     if not chemins:
         print("Aucun fichier suivi à vérifier.")
         return 0

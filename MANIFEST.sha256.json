@@ -6101,8 +6101,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_wong_seguin_2015.py",
-      "size": 9884,
-      "sha256": "98e790e73535aefeaec524a49c1efaa3f7fa675e1db0b0d30977168f84dcfd9a",
+      "size": 10101,
+      "sha256": "2a0bba3556d43ac77099404d1703b891b720220386e87a70610ce3d032bcb80a",
       "storage": "inline"
     },
     {
@@ -6119,8 +6119,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT_WONG_SEGUIN_2015.json",
-      "size": 2311,
-      "sha256": "6d692bdc7f716429b1a532884cdde8f04026d357b49fb0fda27e8efb5570c2ad",
+      "size": 2270,
+      "sha256": "c2fef6a25d372619a0df0d9328574bdd89c50df8ec2214f9336d85c57a16dcce",
       "storage": "inline"
     },
     {
@@ -6149,8 +6149,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/tests/test_wong_seguin_real.py",
-      "size": 2016,
-      "sha256": "926a7a6e4adff8ce9f3eb1654e5e7f2b4333ba8e975eb80fe2c822a39dfb9a72",
+      "size": 2256,
+      "sha256": "de4332674cb5c44009a43fe1afd00514d21103d3f5de4754de4636a0ee82fca7",
       "storage": "inline"
     },
     {
@@ -10625,8 +10625,8 @@
     },
     {
       "path": "scripts/verifier_fins_de_ligne.py",
-      "size": 4732,
-      "sha256": "5a22df9fc8465bdecf7e3c36452872e84f7a6dc404105a0f6885c673b69443f6",
+      "size": 4800,
+      "sha256": "94b5da6fa797a01febb71836b6143e31fb603b56ae715c8a76001f0a860b1799",
       "storage": "inline"
     },
     {
