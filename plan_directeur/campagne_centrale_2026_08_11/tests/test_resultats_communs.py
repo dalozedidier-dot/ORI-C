@@ -24,3 +24,8 @@ def test_common_results_are_complete_without_filling_missing_measurements():
     assert by_id["C-MAT-MEM-05"]["P_acc"]["status"] == "missing"
     assert by_id["C-AST-01"]["result"]["field_complete"] is True
     assert by_id["C-AST-01"]["result"]["evidence_level"] == "E4_modele"
+    assert {item["branch"] for item in bundle["items"]} == {"matiere", "systeme_solaire", "vivant"}
+    matrix, proofs = load_module().derive_views(bundle)
+    assert set(matrix["branches"]) == {"matiere", "systeme_solaire", "vivant"}
+    assert len(proofs["items"]) == 21
+    assert "PID-ANT-01" not in matrix["branches"]["vivant"]["direct_intervention_cases"]

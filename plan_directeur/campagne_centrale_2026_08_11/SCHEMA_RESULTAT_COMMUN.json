@@ -4,14 +4,20 @@
   "title": "ORI-C common result",
   "type": "object",
   "required": [
-    "id", "system", "dataset", "provenance", "X", "H", "m", "Theta",
+    "id", "branch", "system", "dataset", "provenance", "X", "H", "m", "Theta",
     "tau", "P_acc", "R", "intervention", "control", "independent_unit",
     "frozen_threshold", "result", "verdict", "sha256"
   ],
   "properties": {
     "id": {"type": "string", "minLength": 1},
+    "branch": {"enum": ["matiere", "systeme_solaire", "vivant"]},
     "system": {"type": "string", "minLength": 1},
-    "dataset": {"type": "string", "minLength": 1},
+    "dataset": {
+      "oneOf": [
+        {"type": "string", "minLength": 1},
+        {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      ]
+    },
     "provenance": {"type": "object", "required": ["artifact", "scope"]},
     "X": {"$ref": "#/$defs/field"},
     "H": {"$ref": "#/$defs/field"},

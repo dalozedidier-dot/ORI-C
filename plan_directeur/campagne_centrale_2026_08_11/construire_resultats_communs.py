@@ -15,6 +15,15 @@ SCHEMA_PATH = HERE / "SCHEMA_RESULTAT_COMMUN.json"
 FIELDS = ["X", "H", "m", "Theta", "tau", "P_acc", "R"]
 
 
+def _branch(case: dict) -> str:
+    artifact = case["artifact"]
+    if artifact.startswith("01_branche_matiere/"):
+        return "matiere"
+    if artifact.startswith("02_branche_systeme_solaire/") or case["id"].startswith(("C-AST", "MPT", "EXO")):
+        return "systeme_solaire"
+    return "vivant"
+
+
 def _benchmark() -> dict:
     path = HERE / "construire_benchmark_transversal.py"
     spec = importlib.util.spec_from_file_location("oric_benchmark_for_common_results", path)
@@ -41,8 +50,11 @@ def _definition(case: dict, field: str) -> str | None:
 
 def build() -> dict:
     benchmark = _benchmark()
+    registry = json.loads((ROOT / "preuves/PREUVES.json").read_text(encoding="utf-8"))
+    authority = {entry["id"]: entry for entry in registry["entries"]}
     items = []
     for case in benchmark["cases"]:
+        evidence = authority[case["id"]]
         fields = {}
         for field in FIELDS:
             covered = case["field_coverage"][field]
@@ -54,13 +66,19 @@ def build() -> dict:
                 status = "measured"
             fields[field] = {"status": status, "definition": _definition(case, field) if covered else None}
         causal = case["causal_test_class"]
+        direct_intervention = causal in {"m_ablation", "architecture_intervention"}
         items.append({
             "id": case["id"],
+            "branch": _branch(case),
             "system": case["system_id"],
-            "dataset": case["artifact"],
-            "provenance": {"artifact": case["artifact"], "scope": case["scope"]},
+            "dataset": evidence.get("source") or case["artifact"],
+            "provenance": {
+                "artifact": case["artifact"],
+                "source": evidence.get("source"),
+                "scope": case["scope"]
+            },
             **fields,
-            "intervention": None if causal.startswith("retrospective") or causal == "not_classified_for_INV_A" else {"class": causal},
+            "intervention": {"class": causal} if direct_intervention else None,
             "control": None if causal == "not_classified_for_INV_A" else {"class": causal},
             "independent_unit": case["replication_unit"],
             "frozen_threshold": None,
@@ -95,12 +113,55 @@ def build() -> dict:
     }
 
 
+def derive_views(bundle: dict) -> tuple[dict, dict]:
+    branches = {}
+    for branch in ("matiere", "systeme_solaire", "vivant"):
+        rows = [item for item in bundle["items"] if item["branch"] == branch]
+        branches[branch] = {
+            "cases": len(rows),
+            "field_complete_cases": sum(row["result"]["field_complete"] for row in rows),
+            "systems": sorted({row["system"] for row in rows}),
+            "direct_intervention_cases": [row["id"] for row in rows if row["intervention"] is not None],
+            "missing_by_field": {
+                field: [row["id"] for row in rows if row[field]["status"] == "missing"]
+                for field in FIELDS
+            },
+        }
+    matrix = {
+        "schema": "oric.common-branch-matrix.v1",
+        "source_schema": bundle["schema"],
+        "branches": branches,
+        "rule": "Les comptes de complétude ne fusionnent pas les niveaux de preuve ni les unités physiques."
+    }
+    proofs = {
+        "schema": "oric.common-associated-evidence.v1",
+        "items": [
+            {
+                "id": row["id"],
+                "branch": row["branch"],
+                "artifact": row["provenance"]["artifact"],
+                "source": row["provenance"].get("source"),
+                "sha256": row["sha256"],
+                "verdict": row["verdict"],
+                "field_complete": row["result"]["field_complete"]
+            }
+            for row in bundle["items"]
+        ],
+        "rule": "Chaque preuve reste reliée à son artefact d'autorité et à son empreinte; aucun nom de fichier ne décide seul du verdict."
+    }
+    return matrix, proofs
+
+
 def main() -> int:
     bundle = build()
+    matrix, proofs = derive_views(bundle)
     OUT.mkdir(exist_ok=True)
-    (OUT / "RESULTATS_COMMUNS.json").write_text(
-        json.dumps(bundle, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
-    )
+    for name, value in (
+        ("RESULTATS_COMMUNS.json", bundle),
+        ("MATRICE_BRANCHES_COMMUNE.json", matrix),
+        ("PREUVES_ASSOCIEES_COMMUNES.json", proofs),
+    ):
+        (OUT / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"résultats communs: {bundle['counts']['field_complete_cases']}/{bundle['counts']['total']} cas complets")
     return 0
 

@@ -1,0 +1,31 @@
+{
+  "schema": "oric.experimental-execution-readiness.v1",
+  "VES-PACC-INT-01": {
+    "status": "blocked_until_confirmed_lab_and_material_access",
+    "scientific_protocol_unchanged": true,
+    "blockers": [
+      "confirmed laboratory and instrument access",
+      "availability of 100 nm and 5 um track-etched membranes/extruder setup",
+      "offline blind-code key and committed SHA-256",
+      "scheduled acquisition window"
+    ],
+    "result_present": false
+  },
+  "MAG-PAIR-001": {
+    "status": "blocked_missing_lab_freeze",
+    "null_frozen_fields": [
+      "laboratory_id",
+      "af_plateau_mT",
+      "test_field_mT",
+      "temperature_target_c",
+      "temperature_tolerance_c",
+      "blind_code_key_sha256"
+    ],
+    "result_present": false
+  },
+  "PRED-VIVANT-HISTOIRE-001": {
+    "status": "no_strict_independent_positive_replication_completed",
+    "next_action": "publicly register the unchanged analysis before new MIC acquisition, then use independent LTEE material and an independent measuring laboratory"
+  },
+  "rule": "Aucun statut ready, résultat ou crédit scientifique n'est déduit d'un protocole seul."
+}

@@ -8,7 +8,7 @@ intégrale, validation rapide et **489 tests passés, 2 ignorés, 1 échec atten
 Les trois avertissements observés proviennent d'un cas synthétique à tableau vide
 et de la détection du nombre de cœurs sous Windows ; aucun ne modifie un résultat.
 Après ajout des six livrables de ce check-up, le manifeste racine passe de
-**1 768 à 1 774 fichiers**, sans charge brute ni installateur ajouté au dépôt.
+**1 768 à 1 779 fichiers**, sans charge brute ni installateur ajouté au dépôt.
 
 Le dépôt a scientifiquement avancé depuis les états précédents :
 

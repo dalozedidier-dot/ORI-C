@@ -74,5 +74,23 @@
     "registration_public_url": null,
     "source": "03_branche_vivant/lignees_vesicules/PROTOCOLE_PACC_CAUSAL_PROSPECTIF_V1.json"
   },
+  "next_empirical_candidates": [
+    {
+      "id": "VES-PACC-INT-01",
+      "branch": "vivant",
+      "status": "scientific_design_frozen_ready_for_public_preregistration_not_executed",
+      "execution_status": "blocked_until_confirmed_lab_and_material_access",
+      "public_preregistration_present": false,
+      "result_present": false
+    },
+    {
+      "id": "PACC-MAG-INT-01",
+      "branch": "matiere",
+      "status": "design_mapping_ready_pending_nonconfirmatory_pilot_freeze",
+      "execution_status": "blocked_missing_lab_freeze",
+      "pilot_fields_frozen": false,
+      "result_present": false
+    }
+  ],
   "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique"
 }

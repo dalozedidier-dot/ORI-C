@@ -1,0 +1,116 @@
+{
+  "schema": "oric.common-branch-matrix.v1",
+  "source_schema": "oric.common-results-bundle.v1",
+  "branches": {
+    "matiere": {
+      "cases": 14,
+      "field_complete_cases": 1,
+      "systems": [
+        "GCQ-T10",
+        "GCQ-T11",
+        "GCQ-T12",
+        "GCQ-T13",
+        "GCQ-T14",
+        "GCQ-T15",
+        "GCQ-T16",
+        "GCQ-T17",
+        "GCQ-T18",
+        "GCQ-T19",
+        "GCQ-T20",
+        "GCQ-T21",
+        "cosmic_26Al",
+        "material_memory_families"
+      ],
+      "direct_intervention_cases": [],
+      "missing_by_field": {
+        "X": [
+          "C-MAT-MEM-05"
+        ],
+        "H": [],
+        "m": [
+          "GCQ-T10",
+          "GCQ-T11",
+          "GCQ-T12",
+          "GCQ-T13",
+          "GCQ-T14",
+          "GCQ-T15",
+          "GCQ-T16",
+          "GCQ-T17",
+          "GCQ-T18",
+          "GCQ-T19",
+          "GCQ-T20",
+          "GCQ-T21"
+        ],
+        "Theta": [],
+        "tau": [],
+        "P_acc": [
+          "C-MAT-MEM-05",
+          "GCQ-T10",
+          "GCQ-T11",
+          "GCQ-T12",
+          "GCQ-T13",
+          "GCQ-T14",
+          "GCQ-T15",
+          "GCQ-T16",
+          "GCQ-T17",
+          "GCQ-T18",
+          "GCQ-T19",
+          "GCQ-T20",
+          "GCQ-T21"
+        ],
+        "R": []
+      }
+    },
+    "systeme_solaire": {
+      "cases": 3,
+      "field_complete_cases": 2,
+      "systems": [
+        "exoplanet_reduced_climate_direct_m",
+        "paleoclimate_M2",
+        "solar_system_model"
+      ],
+      "direct_intervention_cases": [
+        "C-AST-01",
+        "EXO-DOM-01"
+      ],
+      "missing_by_field": {
+        "X": [],
+        "H": [],
+        "m": [
+          "MPT-M2-01"
+        ],
+        "Theta": [],
+        "tau": [],
+        "P_acc": [
+          "MPT-M2-01"
+        ],
+        "R": []
+      }
+    },
+    "vivant": {
+      "cases": 4,
+      "field_complete_cases": 3,
+      "systems": [
+        "donofrio_antibiotic",
+        "sokolskyi_baum_vesicles"
+      ],
+      "direct_intervention_cases": [
+        "C-VES-03"
+      ],
+      "missing_by_field": {
+        "X": [],
+        "H": [],
+        "m": [
+          "C-ANT-01"
+        ],
+        "Theta": [],
+        "tau": [],
+        "P_acc": [
+          "C-ANT-01"
+        ],
+        "R": []
+      }
+    }
+  },
+  "rule": "Les comptes de complétude ne fusionnent pas les niveaux de preuve ni les unités physiques."
+}

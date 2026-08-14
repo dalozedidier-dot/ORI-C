@@ -153,6 +153,31 @@ def dependency_graph() -> dict:
     }
 
 
+def experimental_readiness() -> dict:
+    ves = json.loads((ROOT / "03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.execution.json").read_text(encoding="utf-8"))
+    mag = json.loads((ROOT / "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.execution.json").read_text(encoding="utf-8"))
+    replication = json.loads((ROOT / "03_branche_vivant/benchmark_histoire_antibiotique_2026/CHAINE_REPLICATION_INDEPENDANTE.json").read_text(encoding="utf-8"))
+    return {
+        "schema": "oric.experimental-execution-readiness.v1",
+        "VES-PACC-INT-01": {
+            "status": ves["status"],
+            "scientific_protocol_unchanged": ves["scientific_protocol_unchanged"],
+            "blockers": ves["remaining_execution_blockers"],
+            "result_present": False
+        },
+        "MAG-PAIR-001": {
+            "status": mag["status"],
+            "null_frozen_fields": [key for key, value in mag["frozen_fields"].items() if value is None],
+            "result_present": False
+        },
+        "PRED-VIVANT-HISTOIRE-001": {
+            "status": replication["current_verdict"],
+            "next_action": replication["next_action"]
+        },
+        "rule": "Aucun statut ready, résultat ou crédit scientifique n'est déduit d'un protocole seul."
+    }
+
+
 def completeness_report(benchmark: dict) -> dict:
     rows = []
     for case in benchmark["cases"]:
@@ -183,12 +208,21 @@ def main() -> int:
     dump("ADMISSION_PALEO_HISTORY_01.json", paleo)
     dump("DATASET_TEST_MATRIX.json", dataset_matrix())
     dump("DEPENDANCES_SCIENTIFIQUES.json", dependency_graph())
+    dump("EXECUTION_EXPERIMENTALE_READINESS.json", experimental_readiness())
     benchmark, invariants = benchmark_transversal()
     dump("BENCHMARK_TRANSVERSAL.json", benchmark)
     dump("COMPLETUDE_21_CAS.json", completeness_report(benchmark))
     dump("AUDIT_INVARIANTS.json", invariants)
     common_results = resultats_communs()
     dump("RESULTATS_COMMUNS.json", common_results)
+    common_path = HERE / "construire_resultats_communs.py"
+    common_spec = importlib.util.spec_from_file_location("oric_common_views", common_path)
+    common_module = importlib.util.module_from_spec(common_spec)
+    assert common_spec.loader is not None
+    common_spec.loader.exec_module(common_module)
+    branch_matrix, associated_proofs = common_module.derive_views(common_results)
+    dump("MATRICE_BRANCHES_COMMUNE.json", branch_matrix)
+    dump("PREUVES_ASSOCIEES_COMMUNES.json", associated_proofs)
     measures, bifurcations = quantification_commune()
     dump("MESURES_COMMUNES_EXECUTEES.json", measures)
     dump("REGISTRE_BIFURCATIONS.json", bifurcations)

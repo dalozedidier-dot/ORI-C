@@ -1,6 +1,12 @@
 {
   "schema": "oric.section-xiv-audit.v1",
   "conditions_total": 12,
+  "common_result_bundle": {
+    "schema": "oric.common-results-bundle.v1",
+    "items_read": 21,
+    "field_complete_cases": 6,
+    "field_complete_unique_systems": 5
+  },
   "passed_count": 7,
   "passed_ids": [
     1,

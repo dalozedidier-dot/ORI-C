@@ -1,0 +1,52 @@
+{
+  "schema": "oric.pred-vivant-histoire.replication-chain.v1",
+  "prediction_id": "PRED-VIVANT-HISTOIRE-001",
+  "frozen_rule": {
+    "gain_percent_min": 5.0,
+    "bootstrap_lower_bound_strictly_positive": true,
+    "permutation_p_max": 0.05,
+    "thresholds_moved": false
+  },
+  "candidates_in_order": [
+    {
+      "dataset": "Wong & Seguin 2015",
+      "dataset_doi": "10.5061/dryad.36td2",
+      "status": "rejected_before_analysis",
+      "audit": "AUDIT_WONG_SEGUIN_2015.json",
+      "reason": "founder genotype is not the frozen C/N treatment-history construct; one endpoint MIC per evolved population and endpoint covariates do not reproduce the grouped repeated-measure design",
+      "section_XIV_10_credit": false
+    },
+    {
+      "dataset": "Santos-Lopez et al. 2021",
+      "dataset_doi": "10.7554/eLife.70676",
+      "status": "analysed_external_retrospective_benchmark",
+      "result": "../benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json",
+      "history_gain_percent": 21.86606673538649,
+      "bootstrap_gain_interval_percent": [7.235080080496507, 33.96651389396815],
+      "permutation_p": 0.0001999600079984003,
+      "numeric_rule_support": true,
+      "strict_replication": false,
+      "reason": "dataset-specific mapping and analysis were frozen only after this already-public dataset was opened",
+      "section_XIV_10_credit": false
+    },
+    {
+      "dataset": "Card et al. 2019",
+      "dataset_doi": "10.5061/dryad.g41hg96",
+      "status": "analysed_independent_negative_family_test",
+      "strict_replication": false,
+      "reason": "independent family result does not reproduce the positive D'Onofrio gain under an identical protocol",
+      "section_XIV_10_credit": false
+    },
+    {
+      "dataset": "new MIC measurements on archived independent LTEE histories",
+      "status": "next_prospective_route_material_and_independent_lab_required",
+      "execution_plan": "../../plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REPLICATION_LTEE_NEW_MIC_PLAN.json",
+      "strict_replication_possible": true,
+      "result": null,
+      "section_XIV_10_credit": false
+    }
+  ],
+  "current_verdict": "no_strict_independent_positive_replication_completed",
+  "next_action": "publicly register the unchanged analysis before new MIC acquisition, then use independent LTEE material and an independent measuring laboratory",
+  "rule": "An inadmissible or previously opened dataset is documented and retained, never forced through the frozen analysis."
+}

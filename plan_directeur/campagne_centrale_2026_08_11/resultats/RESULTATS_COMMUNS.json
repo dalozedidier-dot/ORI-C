@@ -4,10 +4,12 @@
   "items": [
     {
       "id": "C-ANT-01",
+      "branch": "vivant",
       "system": "donofrio_antibiotic",
-      "dataset": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+      "dataset": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
       "provenance": {
         "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/RESULTAT.json",
+        "source": "donnees_externes/histoire_antibiotique_donofrio_2026/SOURCE.json",
         "scope": "empirique_externe"
       },
       "X": {
@@ -53,10 +55,12 @@
     },
     {
       "id": "C-VES-02",
+      "branch": "vivant",
       "system": "sokolskyi_baum_vesicles",
-      "dataset": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "dataset": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "provenance": {
         "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+        "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
         "scope": "empirique_externe"
       },
       "X": {
@@ -108,10 +112,12 @@
     },
     {
       "id": "C-VES-03",
+      "branch": "vivant",
       "system": "sokolskyi_baum_vesicles",
-      "dataset": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+      "dataset": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
       "provenance": {
         "artifact": "03_branche_vivant/lignees_vesicules/resultats/RESULTAT.json",
+        "source": "donnees_externes/vesicules_sokolskyi_baum_2026/SOURCE.json",
         "scope": "empirique_externe"
       },
       "X": {
@@ -165,10 +171,12 @@
     },
     {
       "id": "C-MAT-MEM-05",
+      "branch": "matiere",
       "system": "material_memory_families",
       "dataset": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
       "provenance": {
         "artifact": "01_branche_matiere/memoire_materielle_reelle/derive/SYNTHESE_CAMPAGNE.json",
+        "source": null,
         "scope": "campagne_empirique_partielle_sans_admission_complete"
       },
       "X": {
@@ -214,10 +222,12 @@
     },
     {
       "id": "C-AST-01",
+      "branch": "systeme_solaire",
       "system": "solar_system_model",
-      "dataset": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+      "dataset": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
       "provenance": {
         "artifact": "plan_directeur/campagne_maximale_trois_branches/resultats/systeme_solaire_robustesse.json",
+        "source": "02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/suite_metadata.json",
         "scope": "modele_physique_reduit_valide"
       },
       "X": {
@@ -271,10 +281,12 @@
     },
     {
       "id": "MPT-M2-01",
+      "branch": "systeme_solaire",
       "system": "paleoclimate_M2",
       "dataset": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
       "provenance": {
         "artifact": "02_branche_systeme_solaire/couche_memoire_historique/results/mpt/summary.json",
+        "source": null,
         "scope": "modele_paleoclimatique_orbitally_tuned"
       },
       "X": {
@@ -320,10 +332,12 @@
     },
     {
       "id": "PID-ANT-01",
+      "branch": "vivant",
       "system": "donofrio_antibiotic",
       "dataset": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
       "provenance": {
         "artifact": "03_branche_vivant/benchmark_histoire_antibiotique_2026/resultats/PID_X_M_A.json",
+        "source": null,
         "scope": "empirique_externe_secondaire"
       },
       "X": {
@@ -354,9 +368,7 @@
         "status": "measured",
         "definition": "réponse ou résultat défini par l'artefact d'autorité"
       },
-      "intervention": {
-        "class": "history_permutation"
-      },
+      "intervention": null,
       "control": {
         "class": "history_permutation"
       },
@@ -377,10 +389,26 @@
     },
     {
       "id": "GCQ-T09",
+      "branch": "matiere",
       "system": "cosmic_26Al",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T09.json",
+      "dataset": [
+        "S016",
+        "S017",
+        "S014",
+        "S018",
+        "S039",
+        "S040"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T09.json",
+        "source": [
+          "S016",
+          "S017",
+          "S014",
+          "S018",
+          "S039",
+          "S040"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -432,10 +460,22 @@
     },
     {
       "id": "GCQ-T10",
+      "branch": "matiere",
       "system": "GCQ-T10",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T10.json",
+      "dataset": [
+        "S041",
+        "S039",
+        "S040",
+        "S016"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T10.json",
+        "source": [
+          "S041",
+          "S039",
+          "S040",
+          "S016"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -481,10 +521,20 @@
     },
     {
       "id": "GCQ-T11",
+      "branch": "matiere",
       "system": "GCQ-T11",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T11.json",
+      "dataset": [
+        "S013",
+        "S039",
+        "S040"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T11.json",
+        "source": [
+          "S013",
+          "S039",
+          "S040"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -530,10 +580,22 @@
     },
     {
       "id": "GCQ-T12",
+      "branch": "matiere",
       "system": "GCQ-T12",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T12.json",
+      "dataset": [
+        "S010",
+        "S030",
+        "S031",
+        "S016"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T12.json",
+        "source": [
+          "S010",
+          "S030",
+          "S031",
+          "S016"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -579,10 +641,18 @@
     },
     {
       "id": "GCQ-T13",
+      "branch": "matiere",
       "system": "GCQ-T13",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T13.json",
+      "dataset": [
+        "S035",
+        "S040"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T13.json",
+        "source": [
+          "S035",
+          "S040"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -628,10 +698,20 @@
     },
     {
       "id": "GCQ-T14",
+      "branch": "matiere",
       "system": "GCQ-T14",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T14.json",
+      "dataset": [
+        "S027",
+        "S042",
+        "S043"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T14.json",
+        "source": [
+          "S027",
+          "S042",
+          "S043"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -677,10 +757,16 @@
     },
     {
       "id": "GCQ-T15",
+      "branch": "matiere",
       "system": "GCQ-T15",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T15.json",
+      "dataset": [
+        "S028"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T15.json",
+        "source": [
+          "S028"
+        ],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -726,10 +812,12 @@
     },
     {
       "id": "GCQ-T16",
+      "branch": "matiere",
       "system": "GCQ-T16",
       "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T16.json",
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T16.json",
+        "source": [],
         "scope": "quantitatif empirique rétrospectif — sans simulation/synthétique/imputation"
       },
       "X": {
@@ -775,10 +863,18 @@
     },
     {
       "id": "GCQ-T17",
+      "branch": "matiere",
       "system": "GCQ-T17",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T17.json",
+      "dataset": [
+        "S044",
+        "S045"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T17.json",
+        "source": [
+          "S044",
+          "S045"
+        ],
         "scope": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats"
       },
       "X": {
@@ -824,10 +920,16 @@
     },
     {
       "id": "GCQ-T18",
+      "branch": "matiere",
       "system": "GCQ-T18",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T18.json",
+      "dataset": [
+        "S043"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T18.json",
+        "source": [
+          "S043"
+        ],
         "scope": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats"
       },
       "X": {
@@ -873,10 +975,16 @@
     },
     {
       "id": "GCQ-T19",
+      "branch": "matiere",
       "system": "GCQ-T19",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T19.json",
+      "dataset": [
+        "S047"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T19.json",
+        "source": [
+          "S047"
+        ],
         "scope": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats"
       },
       "X": {
@@ -922,10 +1030,16 @@
     },
     {
       "id": "GCQ-T20",
+      "branch": "matiere",
       "system": "GCQ-T20",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T20.json",
+      "dataset": [
+        "S046"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T20.json",
+        "source": [
+          "S046"
+        ],
         "scope": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats"
       },
       "X": {
@@ -971,10 +1085,18 @@
     },
     {
       "id": "GCQ-T21",
+      "branch": "matiere",
       "system": "GCQ-T21",
-      "dataset": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T21.json",
+      "dataset": [
+        "S010",
+        "S048"
+      ],
       "provenance": {
         "artifact": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/claims_quantitatifs/GCQ-T21.json",
+        "source": [
+          "S010",
+          "S048"
+        ],
         "scope": "distributions réelles grain/échantillon — sans simulation/synthétique/imputation ni double comptage de formats"
       },
       "X": {
@@ -1020,10 +1142,12 @@
     },
     {
       "id": "EXO-DOM-01",
+      "branch": "systeme_solaire",
       "system": "exoplanet_reduced_climate_direct_m",
       "dataset": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
       "provenance": {
         "artifact": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json",
+        "source": null,
         "scope": "modele_reduit"
       },
       "X": {

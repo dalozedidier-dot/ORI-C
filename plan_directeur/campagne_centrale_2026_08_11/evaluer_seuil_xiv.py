@@ -8,6 +8,7 @@ et détaille les cinq verrous restant ouverts.
 from __future__ import annotations
 
 import csv
+import importlib.util
 import json
 from pathlib import Path
 
@@ -18,6 +19,15 @@ PRED_DIR = HERE / "PREDICTIONS_PROSPECTIVES"
 
 def load(relative: str) -> dict:
     return json.loads((ROOT / relative).read_text(encoding="utf-8"))
+
+
+def common_results() -> dict:
+    path = HERE / "construire_resultats_communs.py"
+    spec = importlib.util.spec_from_file_location("oric_common_results_for_xiv", path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module.build()
 
 
 def registry_count() -> int:
@@ -118,6 +128,10 @@ def pacc_strict_audit() -> dict:
         and vesicle_registration.get("public_url")
         and vesicle_registration.get("registered_at")
     )
+    mag_design_path = ROOT / "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/PACC-MAG-INT-01.design.json"
+    mag_execution_path = ROOT / "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.execution.json"
+    mag_design = json.loads(mag_design_path.read_text(encoding="utf-8"))
+    mag_execution = json.loads(mag_execution_path.read_text(encoding="utf-8"))
 
     candidates = [
         {
@@ -196,6 +210,24 @@ def pacc_strict_audit() -> dict:
             "registration_public_url": vesicle_registration.get("public_url"),
             "source": vesicle_design_path.relative_to(ROOT).as_posix() if vesicle_design_path.exists() else None,
         },
+        "next_empirical_candidates": [
+            {
+                "id": vesicle_design.get("id", "VES-PACC-INT-01"),
+                "branch": "vivant",
+                "status": vesicle_design.get("status", "missing"),
+                "execution_status": load("03_branche_vivant/lignees_vesicules/VES-PACC-INT-01.execution.json")["status"],
+                "public_preregistration_present": vesicle_preregistered,
+                "result_present": False
+            },
+            {
+                "id": mag_design.get("id", "PACC-MAG-INT-01"),
+                "branch": "matiere",
+                "status": mag_design.get("status", "missing"),
+                "execution_status": mag_execution["status"],
+                "pilot_fields_frozen": all(value is not None for key, value in mag_execution["frozen_fields"].items() if key not in {"randomization_seed", "permutation_seed", "permutation_draws", "exclusion_rule"}),
+                "result_present": False
+            }
+        ],
         "rule": "un proxy observationnel ou un résultat de modèle ne ferme pas la condition empirique",
     }
 
@@ -269,6 +301,7 @@ def cross_branch_audit(pacc: dict) -> dict:
 
 
 def build() -> tuple[dict, dict]:
+    common = common_results()
     prediction = prediction_audit()
     pacc = pacc_strict_audit()
     replication = replication_audit()
@@ -301,6 +334,12 @@ def build() -> tuple[dict, dict]:
     audit = {
         "schema": "oric.section-xiv-audit.v1",
         "conditions_total": 12,
+        "common_result_bundle": {
+            "schema": common["schema"],
+            "items_read": common["counts"]["total"],
+            "field_complete_cases": common["counts"]["field_complete_cases"],
+            "field_complete_unique_systems": common["counts"]["field_complete_unique_systems"]
+        },
         "passed_count": len(passed_ids),
         "passed_ids": passed_ids,
         "missing_ids": missing_ids,
