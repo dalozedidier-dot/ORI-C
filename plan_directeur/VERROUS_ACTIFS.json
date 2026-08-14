@@ -23,7 +23,7 @@
       "execution_package_status": "blocked_until_public_registration_and_confirmed_lab",
       "candidate_lab_count": 4,
       "execution_open": false,
-      "protocol_sha256": "89906f8365a3ac0045df7a1e8585519aaa95774278ecbe3f8e4c088792c5c1f6",
+      "protocol_sha256": "30342b35525b32a54e287e5ac85844fbb15537f22e91c31bfc9aae4b92cd46fa",
       "targets": [
         "XIV-9",
         "XIV-3",
