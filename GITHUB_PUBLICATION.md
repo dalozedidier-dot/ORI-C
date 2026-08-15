@@ -40,15 +40,16 @@ déterministe et écrit son SHA-256.
 Utiliser des messages décrivant réellement la modification, par exemple :
 
 ```text
-fix: distinguish strict hypergraph closure
-docs: align platform engine counts
-data: publish hydrated LFS release bundle
-test: add three-branch regression campaign
+release: prepare v0.9.8-research
 ```
 
-Créer ensuite un tag annoté, par exemple :
+Créer ensuite le tag annoté de la publication :
 
 ```bash
-git tag -a v0.9.7-research -m "ORI-C v0.9.7-research"
+git tag -a v0.9.8-research -m "ORI-C v0.9.8-research"
 git push origin main --follow-tags
 ```
+
+Le tag déclenche `.github/workflows/release.yml`. Le workflow valide le tag, hydrate Git LFS, reconstruit les manifestes dans l’ordre imposé, construit l’archive canonique puis crée la release GitHub avec `RELEASE_NOTES_v0.9.8-research.md`.
+
+Après publication effective, ajouter sur `main` le snapshot historique `preuves/SNAPSHOT_STABLE_0.9.8.json` avec le commit exact du tag et le SHA-256 réel de l’archive publiée. Cette étape post-release ne modifie pas le tag.

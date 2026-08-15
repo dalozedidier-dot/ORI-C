@@ -5,23 +5,24 @@ type: software
 authors:
   - family-names: Daloze
     given-names: Didier
-version: "0.9.7-research"
-date-released: 2026-08-12
+version: "0.9.8-research"
+date-released: 2026-08-15
 repository-code: "https://github.com/dalozedidier-dot/ORI-C"
 url: "https://dalozedidier-dot.github.io/ORI-C/"
 abstract: >-
-  Snapshot stable du programme de recherche ORI-C. Cette version conserve
-  explicitement les résultats positifs et négatifs : la couche astronomique
-  N-corps réussit 13 critères préenregistrés sur 15 et la formulation
-  paléoclimatique M2 réussit 1 critère sur 10 et reste non soutenue. Le
-  benchmark transversal compte 21 cas, dont 6 claims complets sur les sept
-  champs X, H, m, Theta, tau, P_acc et R, pour 5 systèmes distincts. Deux
-  systèmes possèdent une intervention directe sur m. Le cas EXO-DOM-01, au
-  niveau E4_modele, garde X, Theta et l'architecture appariés et mesure
-  P_acc=0,91 contre 0,87 sous do(m), soit |Delta|=0,04 avec sham=0. Ce résultat
-  n'est pas une réplication empirique et aucun invariant transversal général
-  ORI-C n'est revendiqué comme validé. La généalogie cosmique quantitative
-  conserve son pare-feu empirique strict.
+  Snapshot stable du programme de recherche ORI-C. Cette version étend fortement
+  l'exploitation de données réelles, porte le benchmark transversal à 24 cas et
+  le registre machine à 56 preuves. Six cas renseignent les sept champs X, H, m,
+  Theta, tau, P_acc et R pour cinq systèmes distincts. Trois analyses réelles
+  supplémentaires sont intégrées avec qualification fail-closed : dépendance à
+  l'origine ancestrale sous limitation azotée, information prédictive de NBO/T
+  dans le partage du carbone et divergence de trajectoires ARN. Le seuil
+  scientifique interne reste à 7/12, avec les conditions 3, 4, 9, 10 et 11
+  ouvertes. INV-A reste candidat opérationnalisé exploratoire et aucun invariant
+  transversal général ORI-C n'est revendiqué comme validé. La couche
+  astronomique N-corps reste à 13/15 et la formulation paléoclimatique M2 à
+  1/10, non soutenue. La généalogie cosmique quantitative conserve son pare-feu
+  empirique strict.
 keywords:
   - ORI-C
   - architecture historique

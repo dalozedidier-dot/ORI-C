@@ -113,8 +113,8 @@
     },
     {
       "path": ".zenodo.json",
-      "size": 1521,
-      "sha256": "89b6e34624308f86331c43bb51d919296289369be064fb8aa7edd6c07e0313ac",
+      "size": 1552,
+      "sha256": "2418d1d84afbcdd646e1aeb7f4fc68fbcc3d25c188c5a3bea9b94d1b8b11d48b",
       "storage": "inline"
     },
     {
@@ -6617,8 +6617,8 @@
     },
     {
       "path": "CITATION.cff",
-      "size": 1393,
-      "sha256": "d63960ac72d21f4e8ae632542ffb79d47c94827730f24f5d3991e7566bc42cef",
+      "size": 1488,
+      "sha256": "be892076456e1bee9cd77c1999f20a149a477bd6ca2676d74934c7080c7662eb",
       "storage": "inline"
     },
     {
@@ -6707,8 +6707,8 @@
     },
     {
       "path": "GITHUB_PUBLICATION.md",
-      "size": 1512,
-      "sha256": "03675ff74d61bb4eb8a5cff7f0215a3d68f3c8ac9fec46d4a90f52ad641994f6",
+      "size": 1868,
+      "sha256": "5be313583dc23b27b6e4220ac86f7e97887d1a937743f47208d6811a179c10c3",
       "storage": "inline"
     },
     {
@@ -6791,8 +6791,8 @@
     },
     {
       "path": "PUBLICATION_STABLE.md",
-      "size": 3950,
-      "sha256": "3783ff9348299c0a7ebb600034fa06ae6056c5e44cea15b71a770b654721821c",
+      "size": 5224,
+      "sha256": "cebc0c48f0eb21ba2de5a6408e014371acb8e098622f190924091d90c31d6a80",
       "storage": "inline"
     },
     {
@@ -6809,8 +6809,8 @@
     },
     {
       "path": "README.md",
-      "size": 33461,
-      "sha256": "a86757cbc3f7e357da1e063e4703b796c2db7ac912884b449beebf0168bb213d",
+      "size": 34615,
+      "sha256": "577654bf093afec396ec78baf5461df4d6bdf39ef5fd3af442a3bdbc73898170",
       "storage": "inline"
     },
     {
@@ -6841,6 +6841,12 @@
       "path": "RELEASE_NOTES_v0.9.7-research.md",
       "size": 3063,
       "sha256": "06142db31fe92d75ca4cd4a4da52491ebb04053e723297ded07d479886edb321",
+      "storage": "inline"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.9.8-research.md",
+      "size": 5857,
+      "sha256": "a263d08d81e1c905fc13da104bf9daa57f112a1a06d8db3df5639a9de146a983",
       "storage": "inline"
     },
     {
@@ -6876,7 +6882,7 @@
     {
       "path": "VERSION",
       "size": 15,
-      "sha256": "3e02d55c0713adc7f95126dd2f329baea5e6076ad074731d769f2e348ab18513",
+      "sha256": "6da4da5df053d4d7fc773732583cca4905e0217230818b990931665011685c40",
       "storage": "inline"
     },
     {
@@ -10715,8 +10721,8 @@
     },
     {
       "path": "preuves/CHIFFRES.json",
-      "size": 28476,
-      "sha256": "edfa8a3317d878cb885996344b8c2a64b117d213fda3eb7cf79b0e4e954094bf",
+      "size": 30887,
+      "sha256": "825375b046f7c25e102cfb838417a35f9d0493e563901f000431c38cc600902f",
       "storage": "inline"
     },
     {
@@ -10931,8 +10937,8 @@
     },
     {
       "path": "scripts/valider_publication_stable.py",
-      "size": 3426,
-      "sha256": "641c231685ef2f18c3b8d19ab1c7c083b5f62ad06dca9a45e07755e5d9ef2b93",
+      "size": 3726,
+      "sha256": "d9a809b0da387a983c8ba4715a0920e020607422ce0e271424433b439c3f4be4",
       "storage": "inline"
     },
     {
@@ -11039,26 +11045,26 @@
     },
     {
       "path": "site/index.html",
-      "size": 18225,
-      "sha256": "076875d7ca89b46ea394094eba7590f75ca65327660930a7634bbbb2dc3d223b",
+      "size": 20193,
+      "sha256": "47d26b5120bc8a7eeae980b036ed1ad8a4d498ced4d239819f020413ddead931",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
       "size": 15625,
-      "sha256": "2b7f5d774a635293d40f4d3bbed15b2ef4330a48aad610749c256fa5ad740240",
+      "sha256": "8b8e03835fab296e0c43ae5576a2504f2d82db2ea59a6c7890eea2e0bdc952cc",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
-      "size": 44153,
-      "sha256": "74430c7b03e41077dd76363bf7a7ddb1ba1d020c2bd61244b424c03d135d9bed",
+      "size": 47711,
+      "sha256": "8f983d5e82c9f2f5cebcd1d712fd2d64837efc2777165556f943db7ab5fdb149",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
       "size": 19638,
-      "sha256": "4f1e8c3979a0dbbac3da33952666c74568319aa33f26ca70fc5b5ce21500ba68",
+      "sha256": "10bafa5a1dace8137fc51d48ac05bbfae218acfc23ab1c34f215424a7c5a8a23",
       "storage": "inline"
     },
     {
@@ -11070,7 +11076,7 @@
     {
       "path": "site/sitemap.xml",
       "size": 721,
-      "sha256": "2808cd56fe09a5724bba7d49a3ce3327621a31026eee7328116a55b96584a80d",
+      "sha256": "3b1616b573359fc93ba89487e48e77989e9b285b6b53ff43e57d1f53fb6a0901",
       "storage": "inline"
     },
     {

@@ -232,26 +232,27 @@
       "value": 1
     },
     {
-      "display": "1 669",
+      "display": "1 847",
       "id": "MANIFEST_FILES",
-      "pointer": "/manifest_files",
-      "source": "preuves/SNAPSHOT_STABLE_0.9.7.json",
+      "pointer": "/files",
+      "source": "MANIFEST.sha256.json",
       "targets": [
         "site/index.html",
         "site/reproductibilite.html"
       ],
       "tolerance": 0,
-      "value": 1669
+      "value": 1847,
+      "transform": "len"
     },
     {
-      "display": "1 846",
+      "display": "1 847",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1846
+      "value": 1847
     },
     {
       "display": "20 stades",
@@ -821,6 +822,87 @@
       ],
       "tolerance": 1e-12,
       "value": 0.040000000000000036
+    },
+    {
+      "display": "24 cas",
+      "id": "TRANSVERSAL_CASES_TOTAL",
+      "pointer": "/cases_total",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/COMPLETUDE_21_CAS.json",
+      "targets": [
+        "site/index.html",
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 24
+    },
+    {
+      "display": "56 preuves",
+      "id": "PROOFS_REGISTRY_COUNT",
+      "pointer": "/entries",
+      "source": "preuves/PREUVES.json",
+      "targets": [
+        "site/index.html",
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "transform": "len",
+      "value": 56
+    },
+    {
+      "display": "7 / 12",
+      "id": "XIV_PASSED_COUNT",
+      "pointer": "/passed_count",
+      "source": "plan_directeur/campagne_centrale_2026_08_11/resultats/SEUIL_XIV.json",
+      "targets": [
+        "site/index.html",
+        "site/preuves.html"
+      ],
+      "tolerance": 0,
+      "value": 7
+    },
+    {
+      "display": "0,03069",
+      "id": "FIT_ORIGIN_N_EXACT_P",
+      "pointer": "/results_by_limitation/Nitrogen/exact_pairing/p_value",
+      "source": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_FITNESS_ORIGINE.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.030687830687830688
+    },
+    {
+      "display": "28,27 %",
+      "id": "PARTITION_NBOT_RMSE_GAIN",
+      "pointer": "/result/relative_rmse_gain",
+      "source": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_PARTITION_CARBONE.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-09,
+      "value": 0.282721747
+    },
+    {
+      "display": "0,001999",
+      "id": "PARTITION_NBOT_PERM_P",
+      "pointer": "/result/permutation_one_sided_p",
+      "source": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_PARTITION_CARBONE.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 0.0019990005
+    },
+    {
+      "display": "17,733 log2",
+      "id": "RNA_PAP_MAX_DIVERGENCE",
+      "pointer": "/branch_divergence/max_absolute_difference_log2",
+      "source": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_RNA_PAPASTAVROU.json",
+      "targets": [
+        "site/preuves.html"
+      ],
+      "tolerance": 1e-12,
+      "value": 17.733
     }
   ]
 }

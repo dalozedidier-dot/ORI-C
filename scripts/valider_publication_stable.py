@@ -17,17 +17,20 @@ workflow=(ROOT/'.github/workflows/release.yml').read_text(encoding='utf-8')
 if 'RELEASE_NOTES_${GITHUB_REF_NAME}.md' not in workflow: errors.append('workflow release encore lié à une version fixe')
 for bad in ['MISE_A_JOUR_SITE.diff','LICENSE_PENDING.md','plateforme/requirements-lock.txt']:
     if (ROOT/bad).exists(): errors.append(f'fichier obsolète présent: {bad}')
-# Les affirmations numériques sont désormais validées source -> registre -> rendu,
-# jamais par une liste de nombres codés en dur dans ce script.
+# Les affirmations numériques sont validées source -> registre -> rendu.
 r=subprocess.run([sys.executable,str(ROOT/'scripts/valider_registre_preuves.py')],cwd=ROOT,capture_output=True,text=True)
 if r.returncode:
     errors.append('registre preuves/chiffres invalide: '+(r.stdout+r.stderr).strip())
 proof=(ROOT/'site/preuves.html').read_text(encoding='utf-8')
 repro=(ROOT/'site/reproductibilite.html').read_text(encoding='utf-8')
+index=(ROOT/'site/index.html').read_text(encoding='utf-8')
 # Présence de concepts/sections seulement ; les nombres associés sont contrôlés par CHIFFRES.json.
 for needle in ['tolérance','Trajectoires réelles','H011','MESA','Généalogie cosmique quantitative','11 467','41 / 41',f'Publication stable {short_version}',f'Version stable : <code>{short_version}</code>']:
-    if needle not in proof+repro: errors.append(f'page publique incomplète: {needle}')
-current_text='\n'.join([(ROOT/'README.md').read_text(encoding='utf-8'),(ROOT/'ETAT_DES_PREUVES.md').read_text(encoding='utf-8'),proof])
+    if needle not in proof+repro+index: errors.append(f'page publique incomplète: {needle}')
+# Frontière 0.9.8 : les nouveaux résultats et la porte §XIV doivent être visibles publiquement.
+for needle in ['24 cas','56 preuves','7 / 12','FIT-ORIGIN-N-01','MAT-NBOT-PART-01','RNA-PAP-TRAJ-01']:
+    if needle not in proof+index: errors.append(f'avancée 0.9.8 absente du rendu public: {needle}')
+current_text='\n'.join([(ROOT/'README.md').read_text(encoding='utf-8'),(ROOT/'ETAT_DES_PREUVES.md').read_text(encoding='utf-8'),proof,index])
 for required in ['13 / 15','1 / 10',short_version]:
     if required not in current_text + repro:
         errors.append(f'frontière stable absente du rendu public: {required}')
