@@ -20,7 +20,7 @@ Cette publication est un **snapshot stable et citable du programme**, pas une va
 
 `preuves/PREUVES.json` porte les statuts et empreintes. `preuves/CHIFFRES.json` relie les chiffres publics aux sorties machine. `ETAT_DES_PREUVES.md` est généré. Une divergence source → registre → rendu public est une erreur de publication.
 
-Le snapshot de préparation du tag contient **1 847 contenus manifestés**, **56 preuves** et **90 chiffres canoniques**. Le fichier historique `preuves/SNAPSHOT_STABLE_0.9.8.json` sera ajouté après la publication effective afin d’y inscrire le commit exact du tag et le SHA-256 réel de l’archive canonique, sans valeur inventée.
+Le snapshot de préparation du tag contient **1 847 contenus manifestés**, **56 preuves** et **90 chiffres canoniques**. Le fichier historique `preuves/SNAPSHOT_STABLE_0.9.8.json` est ajouté sur `main` après la publication effective avec le commit exact du tag et le SHA-256 réel de l’archive canonique. Il décrit le snapshot immuable publié et ne modifie pas le tag.
 
 ## Automatisation
 

@@ -6791,8 +6791,8 @@
     },
     {
       "path": "PUBLICATION_STABLE.md",
-      "size": 5224,
-      "sha256": "cebc0c48f0eb21ba2de5a6408e014371acb8e098622f190924091d90c31d6a80",
+      "size": 5262,
+      "sha256": "eabcf6a5c74792209ef6d3035a9737ac1b4983020814d3371b1d29c5f930fd1f",
       "storage": "inline"
     },
     {
@@ -10722,7 +10722,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30887,
-      "sha256": "825375b046f7c25e102cfb838417a35f9d0493e563901f000431c38cc600902f",
+      "sha256": "cbbe16e947e41ac6cd004afa50ef27ec34170187e5295adc08198355ffe61ab0",
       "storage": "inline"
     },
     {
@@ -10747,6 +10747,12 @@
       "path": "preuves/SNAPSHOT_STABLE_0.9.7.json",
       "size": 558,
       "sha256": "67151749a1c65ec9bcd1afed7843e8e2096910293f662522bf114cd04a54767f",
+      "storage": "inline"
+    },
+    {
+      "path": "preuves/SNAPSHOT_STABLE_0.9.8.json",
+      "size": 558,
+      "sha256": "1bf2eeb629d21b0fb8636fdfe8f7bc62074746544ea18f49af85a77a41d5199b",
       "storage": "inline"
     },
     {
