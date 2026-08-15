@@ -59,6 +59,22 @@ def test_petrungaro_reports_antibiotics_separately():
     assert result["phenotype_by_antibiotic"]["TMP"]["bootstrap_gain_q025_percent"] < 0
 
 
+def test_petrungaro_nit_deepening_keeps_cohorts_and_claims_separate():
+    result = load("03_branche_vivant/benchmark_petrungaro_2026/resultats/RESULTAT_PETRUNGARO_NIT_APPROFONDI.json")
+    assert result["phenotype_replicability"]["n_populations"] == 803
+    assert result["m_to_mutation_path_to_R"]["n_sequenced_populations"] == 102
+    assert result["m_to_mutation_path_to_R"]["mutation_incremental_prediction_verdict"] == "does_not_support_bootstrap_crosses_zero"
+    assert result["qualification"]["causal_mediation_claimed"] is False
+
+
+def test_petrungaro_external_prediction_is_frozen_but_not_claimed_public_or_tested():
+    frozen = load("protocoles_geles/PETRUNGARO_NIT_VALIDATION_INDEPENDANTE_01.json")
+    assert frozen["status"] == "frozen_locally_not_public_not_tested"
+    assert frozen["public_registration"]["registered"] is False
+    assert frozen["eligible_external_dataset"]["minimum_independent_populations"] == 30
+    assert "synthetic data" in frozen["forbidden_validation_data"]
+
+
 def test_comparative_table_has_required_fields():
     table = pd.read_csv(ROOT / "03_branche_vivant/synthese_donnees_reelles_2026/COMPARAISON_ETUDES_REELLES.csv")
     required = {"independent_unit", "X", "H_or_m", "Theta", "future_R", "n_independent_units", "effect", "uncertainty_low", "uncertainty_high", "uncertainty_type", "permutation_p", "verdict"}

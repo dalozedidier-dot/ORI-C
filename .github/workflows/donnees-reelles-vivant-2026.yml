@@ -81,6 +81,7 @@ jobs:
           python 03_branche_vivant/benchmark_externe_card2019/auditer_archive_complete.py
           python 03_branche_vivant/benchmark_lamrabet_2019/analyser.py
           python 03_branche_vivant/benchmark_petrungaro_2026/analyser.py
+          python 03_branche_vivant/benchmark_petrungaro_2026/approfondir_nit.py
           python 03_branche_vivant/lignees_vesicules/nader_2026/analyser.py
           python 03_branche_vivant/synthese_donnees_reelles_2026/construire.py
 

@@ -77,8 +77,8 @@
     },
     {
       "path": ".github/workflows/donnees-reelles-vivant-2026.yml",
-      "size": 5544,
-      "sha256": "58fbb778338491469e73a9b1a47025f5fd7689dd5bd2be99b9be61e7e258dcac",
+      "size": 5624,
+      "sha256": "cc634bb51491613ab9eeb10d5b99482ccd11361b131039c07ba634085757f207",
       "storage": "inline"
     },
     {
@@ -6208,9 +6208,15 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/RAPPORT_NIT_APPROFONDI.md",
+      "size": 2677,
+      "sha256": "eb5629dbf89023ea0a7d44d52dbd9a05c309cbdae6fe306470e032296e48315c",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/benchmark_petrungaro_2026/README.md",
-      "size": 779,
-      "sha256": "0e9943ad71fd3c7877b0fb68ca5bf5c75327b5587b82c895d394b8b4054e9636",
+      "size": 1806,
+      "sha256": "2be76076ce02d8f030195848ba72d37b8fe420046222ae6ce3b938483c15b8c1",
       "storage": "inline"
     },
     {
@@ -6220,9 +6226,33 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/approfondir_nit.py",
+      "size": 11663,
+      "sha256": "6461a0153372678fe3b1465ca5d4e9f370234cc77ec9acd56605b8df54cd63b8",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/PETRUNGARO_MUTATION_PATHWAYS.csv",
       "size": 74180,
       "sha256": "e970630b40c7d06c34f5e580573884ee455561174afb7252b4726bd3f8bedd18",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/PETRUNGARO_NIT_BACKGROUND_EFFECTS.csv",
+      "size": 31906,
+      "sha256": "d6d97047a8a12bada3ebb09a283ce3daf52b2f73cddb681cfe198f57810bcda6",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/PETRUNGARO_NIT_BACKGROUND_FAMILIES.csv",
+      "size": 922,
+      "sha256": "086aa898ef19665ec5ebfce3e39ead5be2528fd16352d114abfe692b6f40e7c5",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/PETRUNGARO_NIT_SEQUENCED_CHAIN.csv",
+      "size": 24839,
+      "sha256": "eb5598ddc503931f3d1f70956c4af70582f185394eada798d893f0cb82c31f1f",
       "storage": "inline"
     },
     {
@@ -6241,6 +6271,12 @@
       "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/RESULTAT_PETRUNGARO_2026.json",
       "size": 3062,
       "sha256": "b96ea224061fe5434286be7ce114976be9b70b9bea7dbbf0c3378fa7c655aa25",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_petrungaro_2026/resultats/RESULTAT_PETRUNGARO_NIT_APPROFONDI.json",
+      "size": 3148,
+      "sha256": "f9b148de5363becbd8935abf212d02ed6c3b0e3930798b187a94dbde291a3267",
       "storage": "inline"
     },
     {
@@ -6527,8 +6563,8 @@
     },
     {
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/test_analyses.py",
-      "size": 3482,
-      "sha256": "e5cef7b11097e3a7ef0a435b393c9af6cc4e2621e0929ac2d006851a5d14b600",
+      "size": 4485,
+      "sha256": "c6aad0e07395325712d3d925c13b2fdfc75bef76815869a556a7548571a8c060",
       "storage": "inline"
     },
     {
@@ -7951,6 +7987,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-PALEO-HISTORY-02.json",
       "size": 1176,
       "sha256": "a7557b8cc540c14b054a5fc48db24f70d993e7aab16001e0957a0b67c2fe3065",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-PETRUNGARO-NIT-001.json",
+      "size": 1628,
+      "sha256": "961e6066df8c61aacfb003fb5ea255dcb6ab5d742d7b75949d0732de7cea2342",
       "storage": "inline"
     },
     {
@@ -10699,6 +10741,18 @@
       "path": "protocoles_geles/PACC_INTERVENTIONNEL_V1.md",
       "size": 2288,
       "sha256": "2b2ff151b2b3c4b4f2f98cc8f90be74bf239273c6d31f61ec2335833ce9d743d",
+      "storage": "inline"
+    },
+    {
+      "path": "protocoles_geles/PETRUNGARO_NIT_VALIDATION_INDEPENDANTE_01.json",
+      "size": 2356,
+      "sha256": "fc325b93ef3054174bc75f7fb6bf54619742f2bee1e3943742f398afbfab0956",
+      "storage": "inline"
+    },
+    {
+      "path": "protocoles_geles/PETRUNGARO_NIT_VALIDATION_INDEPENDANTE_01.md",
+      "size": 1427,
+      "sha256": "11a56ad0bd2178f998754cbce7cd73528ba5b4d100aca76488999a917c5c97c1",
       "storage": "inline"
     },
     {

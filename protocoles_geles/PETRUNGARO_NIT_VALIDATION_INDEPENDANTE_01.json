@@ -1,0 +1,64 @@
+{
+  "schema": "oric.prospective-prediction-freeze.v1",
+  "prediction_id": "PETRUNGARO-NIT-EXT-01",
+  "frozen_on": "2026-08-15",
+  "status": "frozen_locally_not_public_not_tested",
+  "discovery_data": "Petrungaro 2026 NIT populations",
+  "forbidden_validation_data": [
+    "all Petrungaro 2026 files already opened",
+    "synthetic data",
+    "simulated data",
+    "a re-export or subset of the discovery cohort"
+  ],
+  "eligible_external_dataset": {
+    "organism": "Escherichia coli",
+    "environment": "nitrofurantoin selection",
+    "required_real_measurements": [
+      "population identifier",
+      "initial quantitative resistance X",
+      "initial genetic background m fixed before evolution",
+      "future quantitative resistance R",
+      "independent replicate identifier"
+    ],
+    "minimum_independent_populations": 30,
+    "minimum_genetic_backgrounds": 10,
+    "minimum_replicates_per_background": 2,
+    "exclusion": "no criterion may be changed after opening outcome R"
+  },
+  "frozen_primary_analysis": {
+    "unit": "independently evolved population",
+    "outcome": "future log10 resistance",
+    "baseline": "ridge X only",
+    "candidate": "same ridge X plus initial genetic background m",
+    "validation": "replicate-position folds within background; no population crosses folds",
+    "primary_metric": "100 * (RMSE_X - RMSE_X_plus_m) / RMSE_X",
+    "bootstrap_unit": "genetic background",
+    "permutation": "m within initial-resistance strata",
+    "permutations": 999
+  },
+  "quantitative_prediction": {
+    "expected_relative_RMSE_gain_percent": 31.762332649091753,
+    "predicted_external_range_percent": [
+      20.0,
+      45.0
+    ],
+    "predicted_replicate_ICC_minimum": 0.6
+  },
+  "success_rule_all_required": [
+    "relative RMSE gain is at least 20 percent",
+    "95 percent genetic-background bootstrap interval excludes zero",
+    "one-sided stratified permutation p is at most 0.05",
+    "replicate ICC is at least 0.60",
+    "effect direction is positive in every prespecified experimental batch"
+  ],
+  "decision_states": [
+    "supports_independent_prediction",
+    "does_not_support",
+    "non_testable"
+  ],
+  "public_registration": {
+    "registered": false,
+    "reason": "repository change has not been pushed or archived publicly",
+    "must_precede": "opening any eligible external outcome data"
+  }
+}

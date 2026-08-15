@@ -1,0 +1,88 @@
+{
+  "schema": "oric.petrungaro-nit-deepening.v1",
+  "status": "retrospective_real_data_analysis",
+  "phenotype_replicability": {
+    "n_populations": 803,
+    "n_backgrounds": 258,
+    "background_effect_range_log10_IC50": [
+      -1.0213196671165738,
+      0.6999763504851099
+    ],
+    "replicate_ICC_future_log10_IC50": 0.7156024767164632,
+    "replicate_ICC_background_bootstrap_ci95": [
+      0.6379628282604727,
+      0.7783262893490552
+    ],
+    "unit_of_bootstrap": "genetic background"
+  },
+  "m_to_mutation_path_to_R": {
+    "n_sequenced_populations": 102,
+    "n_genetic_backgrounds": 36,
+    "n_recurrent_mutated_genes_encoded": 31,
+    "gene_eligibility": "observed in at least two independent sequenced populations; singleton genes excluded before modelling",
+    "cross_validation": "replicate-position folds within genetic background; ridge penalty fixed at 1",
+    "rmse_log10_IC50": {
+      "X": 0.42516916968276863,
+      "X_plus_m": 0.35837158216886067,
+      "X_plus_mutations": 0.4183832947190128,
+      "X_plus_m_plus_mutations": 0.4005811840825169
+    },
+    "mutation_incremental_gain_vs_X_percent": 1.5960411637605252,
+    "mutation_gain_background_bootstrap_ci95_percent": [
+      -21.75470341842216,
+      18.811778599883514
+    ],
+    "mutation_profile_permutation_p_one_sided_within_initial_IC50_bins": 0.005,
+    "mutation_profile_permutations": 199,
+    "minimum_attainable_permutation_p": 0.005,
+    "m_incremental_rmse_before_mutations": 0.06679758751390796,
+    "m_incremental_rmse_after_mutations": 0.017802110636495894,
+    "m_effect_attenuation_after_mutations_percent": 73.349171281389,
+    "replicated_background_families_ranked_by_effect_after_X": [
+      {
+        "background_COG_family": "E",
+        "n_backgrounds": 2,
+        "mean_effect_after_X": 0.25951326766166594
+      },
+      {
+        "background_COG_family": "D",
+        "n_backgrounds": 2,
+        "mean_effect_after_X": 0.10669127273910284
+      },
+      {
+        "background_COG_family": "L",
+        "n_backgrounds": 8,
+        "mean_effect_after_X": 0.0977488589032761
+      },
+      {
+        "background_COG_family": "O",
+        "n_backgrounds": 5,
+        "mean_effect_after_X": -0.104456464577292
+      },
+      {
+        "background_COG_family": "M",
+        "n_backgrounds": 2,
+        "mean_effect_after_X": -0.17580859037375798
+      },
+      {
+        "background_COG_family": "K",
+        "n_backgrounds": 3,
+        "mean_effect_after_X": -0.21139869503022202
+      },
+      {
+        "background_COG_family": "Φ",
+        "n_backgrounds": 5,
+        "mean_effect_after_X": -0.27921607653990915
+      }
+    ],
+    "mutation_incremental_prediction_verdict": "does_not_support_bootstrap_crosses_zero",
+    "chain_verdict": "indeterminate_associative_attenuation_without_robust_mutation_increment",
+    "interpretation_limit": "retrospective predictive decomposition; mutations are post-treatment and this is not causal mediation"
+  },
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "independent_external_validation": false,
+    "causal_mediation_claimed": false
+  }
+}
