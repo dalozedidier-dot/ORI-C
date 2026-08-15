@@ -11051,8 +11051,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 20193,
-      "sha256": "47d26b5120bc8a7eeae980b036ed1ad8a4d498ced4d239819f020413ddead931",
+      "size": 20204,
+      "sha256": "05206b82c4fbfcb79ceaac4385dca0411c10226fd8a6b9c07c1bcc2192656a6b",
       "storage": "inline"
     },
     {
@@ -11069,8 +11069,8 @@
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 19638,
-      "sha256": "10bafa5a1dace8137fc51d48ac05bbfae218acfc23ab1c34f215424a7c5a8a23",
+      "size": 19643,
+      "sha256": "2a4d0881ea9fec86cebe37a5ab23c0daa46d4e0cd6a6a88af7918931ff4652c5",
       "storage": "inline"
     },
     {
