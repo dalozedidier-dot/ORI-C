@@ -61,6 +61,6 @@ def test_petrungaro_reports_antibiotics_separately():
 
 def test_comparative_table_has_required_fields():
     table = pd.read_csv(ROOT / "03_branche_vivant/synthese_donnees_reelles_2026/COMPARAISON_ETUDES_REELLES.csv")
-    required = {"independent_unit", "X", "H_or_m", "Theta", "future_R", "n_independent_units", "effect", "uncertainty_interval", "permutation_p", "verdict"}
+    required = {"independent_unit", "X", "H_or_m", "Theta", "future_R", "n_independent_units", "effect", "uncertainty_low", "uncertainty_high", "uncertainty_type", "permutation_p", "verdict"}
     assert required <= set(table.columns)
     assert {"D'Onofrio", "Card 2019", "Wong & Seguin 2015", "Lamrabet 2019", "Petrungaro 2026", "Nader AVT"} <= set(table.study)

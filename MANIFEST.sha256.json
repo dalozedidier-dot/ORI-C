@@ -6503,8 +6503,8 @@
     },
     {
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/COMPARAISON_ETUDES_REELLES.csv",
-      "size": 2292,
-      "sha256": "670b3f8121b905104ba890b52797b5dfe26db19f055e62d93ed1b2bf5a41b284",
+      "size": 2521,
+      "sha256": "19e52577751d252ce3c7057c1098a659433bdf1234690c7645bc49fa1c39e94a",
       "storage": "inline"
     },
     {
@@ -6521,14 +6521,14 @@
     },
     {
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/construire.py",
-      "size": 5899,
-      "sha256": "94b2150626e4939c98849068dd68796480c29815fb9ebdbdd0652b73d4da9d49",
+      "size": 6308,
+      "sha256": "daebfd641f8aa155fc7d5f47e8fd4736dee8f8e2bc73f6079f6822f121c02533",
       "storage": "inline"
     },
     {
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/test_analyses.py",
-      "size": 3447,
-      "sha256": "5f867fb8f2e50a03fd47a44d1d164b645901d03cbcd12b998723d2bf4b4fdf5b",
+      "size": 3482,
+      "sha256": "e5cef7b11097e3a7ef0a435b393c9af6cc4e2621e0929ac2d006851a5d14b600",
       "storage": "inline"
     },
     {
