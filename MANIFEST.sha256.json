@@ -10,6 +10,12 @@
       "storage": "inline"
     },
     {
+      "path": ".github/workflows/analyse-donnees-reelles-etendues.yml",
+      "size": 3185,
+      "sha256": "36516f3f43c77cbd30015016f529249826a14c81325e2e614d0106a943af919a",
+      "storage": "inline"
+    },
+    {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
       "size": 7656,
       "sha256": "6e22ac76be70dfdcd999f12954f87f6172ee296e7f3a5bb373b0e0d59d09d918",
@@ -8650,6 +8656,48 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/README.md",
+      "size": 2274,
+      "sha256": "e8db23b5256b616bfb7091b50dc4de484c525fbef661a04c5387b7b7c110f25c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/analyser.py",
+      "size": 16040,
+      "sha256": "f0ebc038d08ef2a54c8525d57961da2298c9f27bfe6ec2a76a438ddb883c3240",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_FITNESS_ORIGINE.json",
+      "size": 2622,
+      "sha256": "6c608d8b37bede0082964501e4c840cae0cc08eb7f93e8b0d649154f043c1eed",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_PARTITION_CARBONE.json",
+      "size": 2826,
+      "sha256": "763aae76fa87baf0e0ec512ef7c4ac6ae3fbcbf6913aeb116ab0bb65abc54bfb",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_RNA_PAPASTAVROU.json",
+      "size": 1635,
+      "sha256": "24d0c613411b5670b852325fd231a25a9bfb38fb234de6db18b298893d43e2ef",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/SYNTHESE.json",
+      "size": 893,
+      "sha256": "4577d2370c313bfe2831fe413301f336c7f79e2ee52cbb125a3c1ce67f7b3a4e",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/tests/test_analyser.py",
+      "size": 2413,
+      "sha256": "985ab98b24d3a7175f59631c1fb990e8a33a604739476178ac457ff3f855f6bf",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json",
       "size": 1536,
       "sha256": "f9637b9725e7cf6d8936e7038114c1543f7356a871ff80b5d1c3dc561086e3f7",
@@ -10668,7 +10716,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "e5de679fb98a9e7f07e6e8c9b4cfc66bc441bd59d42a42fd529a0b4afdb76acd",
+      "sha256": "edfa8a3317d878cb885996344b8c2a64b117d213fda3eb7cf79b0e4e954094bf",
       "storage": "inline"
     },
     {
