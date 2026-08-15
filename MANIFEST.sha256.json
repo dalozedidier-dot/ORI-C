@@ -6209,8 +6209,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_petrungaro_2026/RAPPORT_NIT_APPROFONDI.md",
-      "size": 2677,
-      "sha256": "eb5629dbf89023ea0a7d44d52dbd9a05c309cbdae6fe306470e032296e48315c",
+      "size": 2684,
+      "sha256": "99f7c722ce047e07a6529df2211fbf650a0ae68702f17c2d5a657748621b4056",
       "storage": "inline"
     },
     {
@@ -7925,8 +7925,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/INDEX.json",
-      "size": 712,
-      "sha256": "c336fbfe9bd38904ef8f0979dd921c51728e709eeaf73e9daf07fc40c866a131",
+      "size": 898,
+      "sha256": "7c781688943f0b32df791d10aa7ba7c19878d529050a598069c8d6ea4871f0ac",
       "storage": "inline"
     },
     {
@@ -7951,6 +7951,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/PRED-VIVANT-HISTOIRE-001.registration.json",
       "size": 1203,
       "sha256": "054022cfc6e2e6232aecffd33591d54fdc3c3ba15ac768c544d185dce89804f5",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/PRED-VIVANT-PETRUNGARO-NIT-001.registration.json",
+      "size": 1674,
+      "sha256": "5d021c53c5a6a3e0dbfd2e220b8e40977bcac4674456dfb69a3e120eb11b8a0f",
       "storage": "inline"
     },
     {
@@ -7990,15 +7996,15 @@
       "storage": "inline"
     },
     {
-      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-PETRUNGARO-NIT-001.json",
-      "size": 1628,
-      "sha256": "961e6066df8c61aacfb003fb5ea255dcb6ab5d742d7b75949d0732de7cea2342",
-      "storage": "inline"
-    },
-    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-VIVANT-HISTOIRE-001.json",
       "size": 1013,
       "sha256": "822953f4549e4c0bcd580dbbc8fe49401ce587d6a38f14a8e0059e4413b58ce6",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-VIVANT-PETRUNGARO-NIT-001.json",
+      "size": 1635,
+      "sha256": "795a9762c48d0ccde165231d2b6120d4ad71814e1f71448033feb48dd2f4699b",
       "storage": "inline"
     },
     {
@@ -8033,8 +8039,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/preparer_enregistrements_publics.py",
-      "size": 1928,
-      "sha256": "2b5eda94b6179d3694ba42adae23fdbeb07d43edd5cd51679bc9d1996c3a4aa0",
+      "size": 1953,
+      "sha256": "1a9bdb3973cf0813c9656d93e46bf7ef6ecc81351d7b1c51fbd5875e2f227fb9",
       "storage": "inline"
     },
     {
@@ -8249,8 +8255,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_osf_preregistration.py",
-      "size": 1310,
-      "sha256": "41a6ea1530c869ed22bf307e3fc2a7040137536562f0a75cd8a2a346be0a8d4a",
+      "size": 1409,
+      "sha256": "97ba4e272d8cd2094595dccd192b24abbacc2d2b09e40c81f674c19f23b39c98",
       "storage": "inline"
     },
     {
@@ -10662,7 +10668,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 28476,
-      "sha256": "1fd4ca1e461068f017bd335d7ea5a973a330abc3a0eede3fa78385bdd83105ee",
+      "sha256": "e5de679fb98a9e7f07e6e8c9b4cfc66bc441bd59d42a42fd529a0b4afdb76acd",
       "storage": "inline"
     },
     {
@@ -10745,14 +10751,14 @@
     },
     {
       "path": "protocoles_geles/PETRUNGARO_NIT_VALIDATION_INDEPENDANTE_01.json",
-      "size": 2356,
-      "sha256": "fc325b93ef3054174bc75f7fb6bf54619742f2bee1e3943742f398afbfab0956",
+      "size": 2365,
+      "sha256": "9476e3212d97660ec236bbc95d1110d8f0dc32e82de2883c8402749771b4958d",
       "storage": "inline"
     },
     {
       "path": "protocoles_geles/PETRUNGARO_NIT_VALIDATION_INDEPENDANTE_01.md",
-      "size": 1427,
-      "sha256": "11a56ad0bd2178f998754cbce7cd73528ba5b4d100aca76488999a917c5c97c1",
+      "size": 1436,
+      "sha256": "4b101c597e7a702571842bc9e1398e2777e8d74dec003c1fee94dca9ff0e4498",
       "storage": "inline"
     },
     {

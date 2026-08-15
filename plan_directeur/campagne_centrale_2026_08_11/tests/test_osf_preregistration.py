@@ -7,9 +7,10 @@ PRED = HERE / 'PREDICTIONS_PROSPECTIVES'
 REG = PRED / 'ENREGISTREMENTS_PUBLICS'
 
 
-def test_quatre_paquets_osf_conservent_empreinte_scientifique():
+def test_tous_les_paquets_osf_conservent_empreinte_scientifique():
     index = json.loads((REG / 'INDEX.json').read_text(encoding='utf-8'))
-    assert len(index['registrations']) == 4
+    expected_ids = {path.stem for path in PRED.glob('PRED-*.json')}
+    assert {row['id'] for row in index['registrations']} == expected_ids
     for row in index['registrations']:
         identifier = row['id']
         registration = json.loads((REG / f'{identifier}.registration.json').read_text(encoding='utf-8'))

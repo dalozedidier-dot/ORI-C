@@ -1,4 +1,4 @@
-# PETRUNGARO-NIT-EXT-01 — prédiction indépendante gelée localement
+# PRED-VIVANT-PETRUNGARO-NIT-001 — prédiction indépendante gelée localement
 
 Statut : **gelée localement le 15 août 2026, non publique, non testée**.
 

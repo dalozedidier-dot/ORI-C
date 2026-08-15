@@ -36,7 +36,7 @@ def main() -> int:
         index.append({"id": pred["id"], "package": output.name, "status": package["status"]})
     (OUT / "INDEX.json").write_text(json.dumps({"registrations": index}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"{len(index)} paquets prêts; 0 publication revendiquée")
-    return 0 if len(index) == 4 else 1
+    return 0 if index and len(index) == len(predictions) else 1
 
 
 if __name__ == "__main__":

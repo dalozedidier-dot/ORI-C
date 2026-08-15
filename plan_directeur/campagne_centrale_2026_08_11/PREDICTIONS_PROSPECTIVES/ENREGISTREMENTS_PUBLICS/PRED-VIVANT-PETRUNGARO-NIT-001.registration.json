@@ -1,0 +1,27 @@
+{
+  "schema": "oric.public-blind-registration-package.v1",
+  "prediction_id": "PRED-VIVANT-PETRUNGARO-NIT-001",
+  "source_file": "PRED-VIVANT-PETRUNGARO-NIT-001.json",
+  "source_sha256": "795a9762c48d0ccde165231d2b6120d4ad71814e1f71448033feb48dd2f4699b",
+  "frozen_on": "2026-08-15",
+  "hypothesis": "Dans une experience independante reelle d'Escherichia coli sous nitrofurantoine, le fond genetique initial ameliore la prediction de la resistance future au-dela de la resistance initiale seule.",
+  "seen_data": [
+    "Petrungaro 2026 NIT: 803 populations phenotypees",
+    "Petrungaro 2026 NIT: 102 populations sequencees"
+  ],
+  "forbidden_or_hidden_data": [
+    "tout fichier Petrungaro 2026 deja ouvert",
+    "donnees synthetiques ou simulees",
+    "resultats du futur jeu externe avant enregistrement public"
+  ],
+  "predicted_variable": "gain relatif de RMSE de X plus m sur X seul pour la resistance future log10",
+  "prediction": "valeur attendue 31.762332649091753 %, plage predite 20-45 %, ICC entre repetitions >= 0.60",
+  "competitor": "ridge X seul, avec permutation de m dans les strates de resistance initiale",
+  "success": "gain >= 20 %, IC95 bootstrap par fond excluant 0, permutation p <= 0.05, ICC >= 0.60 et direction positive dans chaque lot prespecifie",
+  "failure": "au moins une condition de succes echoue; non_testable si moins de 30 populations, 10 fonds ou 2 repetitions par fond",
+  "registration_service": "OSF Registries",
+  "public_url": null,
+  "registered_at": null,
+  "status": "package_ready_external_account_required",
+  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse"
+}

@@ -1,5 +1,5 @@
 {
-  "id": "PRED-PETRUNGARO-NIT-001",
+  "id": "PRED-VIVANT-PETRUNGARO-NIT-001",
   "date_gel": "2026-08-15",
   "hypothese": "Dans une experience independante reelle d'Escherichia coli sous nitrofurantoine, le fond genetique initial ameliore la prediction de la resistance future au-dela de la resistance initiale seule.",
   "donnees_vues": [
@@ -16,7 +16,7 @@
   "modele_concurrent": "ridge X seul, avec permutation de m dans les strates de resistance initiale",
   "critere_succes": "gain >= 20 %, IC95 bootstrap par fond excluant 0, permutation p <= 0.05, ICC >= 0.60 et direction positive dans chaque lot prespecifie",
   "critere_echec": "au moins une condition de succes echoue; non_testable si moins de 30 populations, 10 fonds ou 2 repetitions par fond",
-  "empreinte_avant_ouverture": "sha256:fb35fcfc2ffc9fa46aabc98063f555f004b55c66aee2222a79a45a28c0256918",
+  "empreinte_avant_ouverture": "sha256:11e095f46e4cb66744929192272d38f8ba7ce2de67016191c54549e517961464",
   "date_ouverture": null,
   "resultat": null,
   "statut": "frozen_locally_awaiting_external_data",

@@ -44,7 +44,7 @@ fonds séquencés ; elles ne doivent pas être généralisées aux 258 fonds.
 
 ## Prédiction indépendante
 
-`PRED-PETRUNGARO-NIT-001` fige une réplication quantitative sur un futur jeu
+`PRED-VIVANT-PETRUNGARO-NIT-001` fige une réplication quantitative sur un futur jeu
 réel indépendant : gain RMSE attendu 31,762 %, plage prédite 20–45 %, seuil
 minimal 20 %, bootstrap par fond excluant zéro, permutation `p ≤ 0,05`, ICC
 `≥ 0,60` et signe positif dans chaque lot préspécifié.

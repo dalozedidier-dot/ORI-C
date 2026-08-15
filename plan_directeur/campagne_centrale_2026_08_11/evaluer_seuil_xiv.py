@@ -179,6 +179,45 @@ def pacc_strict_audit() -> dict:
             "reason": "permutation de H; m physique non isolé et non manipulé",
         },
     ]
+    prospective_results = [
+        (
+            ROOT / "03_branche_vivant/lignees_vesicules/resultats/RESULTAT_VES_PACC_INT_01.json",
+            ROOT / "03_branche_vivant/lignees_vesicules/ves_pacc_int_01_analysis_ready.npz",
+            "vivant",
+            "VES-PACC-INT-01",
+        ),
+        (
+            ROOT / "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/MAG-PAIR-001.result.json",
+            ROOT / "01_branche_matiere/memoire_materielle_reelle/experiences_appariees/mag_pair_001_analysis_ready.csv",
+            "matiere",
+            "PACC-MAG-INT-01",
+        ),
+    ]
+    for result_path, real_bundle_path, branch, identifier in prospective_results:
+        if not result_path.exists():
+            continue
+        result = json.loads(result_path.read_text(encoding="utf-8"))
+        qualified = bool(
+            real_bundle_path.exists()
+            and result.get("definition_id") == "PACC-INT-CHALLENGE-V1"
+            and result.get("strict_causal_qualified") is True
+            and result.get("decision_rule_applied_without_redefinition") is True
+            and result.get("prospective_preregistered_label_available") is True
+        )
+        candidates.append({
+            "id": identifier,
+            "branch": branch,
+            "empirical": bool(real_bundle_path.exists()),
+            "definition_class": result.get("definition_id"),
+            "m_intervention_present": True,
+            "causal_Pacc_qualified": qualified,
+            "reason": (
+                "résultat prospectif réel qualifié sous PACC-INT-CHALLENGE-V1"
+                if qualified
+                else "résultat présent mais au moins une porte stricte données/définition/décision/enregistrement reste fermée"
+            ),
+            "source": result_path.relative_to(ROOT).as_posix(),
+        })
     branches = ["matiere", "systeme_solaire", "vivant"]
     qualified_by_branch = {
         branch: [row["id"] for row in candidates if row["branch"] == branch and row["causal_Pacc_qualified"]]

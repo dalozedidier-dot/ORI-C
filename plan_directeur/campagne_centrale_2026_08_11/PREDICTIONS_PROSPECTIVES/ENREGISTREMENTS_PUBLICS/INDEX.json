@@ -19,6 +19,11 @@
       "id": "PRED-VIVANT-HISTOIRE-001",
       "package": "PRED-VIVANT-HISTOIRE-001.registration.json",
       "status": "package_ready_external_account_required"
+    },
+    {
+      "id": "PRED-VIVANT-PETRUNGARO-NIT-001",
+      "package": "PRED-VIVANT-PETRUNGARO-NIT-001.registration.json",
+      "status": "package_ready_external_account_required"
     }
   ]
 }

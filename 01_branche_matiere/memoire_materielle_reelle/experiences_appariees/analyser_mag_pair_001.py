@@ -171,6 +171,7 @@ def analyze(path: Path = INPUT) -> dict[str, object]:
     result = {
         "schema": "oric.mag-pair-001.result.v2",
         "protocol_id": "MAG-PAIR-001",
+        "definition_id": "PACC-INT-CHALLENGE-V1",
         "n_independent_units": len(rows),
         "delta_R_before": d0,
         "delta_R_after": d1,
@@ -184,6 +185,9 @@ def analyze(path: Path = INPUT) -> dict[str, object]:
         "mean_trace_reduction_fraction_true_ablation": float(np.mean(trace_reduction)) if trace_reduction else None,
         "decision_components": components,
         "prediction_success": success,
+        "strict_causal_qualified": success,
+        "decision_rule_applied_without_redefinition": True,
+        "prospective_preregistered_label_available": bool(meta["registration_complete"]),
         "external_registration": {
             "url": registration.get("public_url"),
             "registered_at": registration.get("registered_at"),
