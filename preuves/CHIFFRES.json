@@ -234,15 +234,14 @@
     {
       "display": "1 847",
       "id": "MANIFEST_FILES",
-      "pointer": "/files",
-      "source": "MANIFEST.sha256.json",
+      "pointer": "/manifest_files",
+      "source": "preuves/SNAPSHOT_STABLE_0.9.8.json",
       "targets": [
         "site/index.html",
         "site/reproductibilite.html"
       ],
       "tolerance": 0,
-      "value": 1847,
-      "transform": "len"
+      "value": 1847
     },
     {
       "display": "1 848",
