@@ -1,6 +1,6 @@
 {
   "schema": "oric.transversal-invariants-audit.v2",
-  "cases_total": 21,
+  "cases_total": 24,
   "cases_complete_X_H_m_Theta_tau_Pacc_R": 6,
   "eligible_case_ids": [
     "C-VES-02",

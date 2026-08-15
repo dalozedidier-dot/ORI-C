@@ -15,6 +15,7 @@ SELECTED = [
     "MPT-M2-01", "PID-ANT-01", "GCQ-T09", "GCQ-T10", "GCQ-T11",
     "GCQ-T12", "GCQ-T13", "GCQ-T14", "GCQ-T15", "GCQ-T16", "GCQ-T17",
     "GCQ-T18", "GCQ-T19", "GCQ-T20", "GCQ-T21", "EXO-DOM-01",
+    "FIT-ORIGIN-N-01", "MAT-NBOT-PART-01", "RNA-PAP-TRAJ-01",
 ]
 FIELDS = ["X", "H", "m", "Theta", "tau", "P_acc", "R"]
 
@@ -29,6 +30,9 @@ COVERAGE = {
     "PID-ANT-01": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
     "GCQ-T09": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
     "EXO-DOM-01": {"X", "H", "m", "Theta", "tau", "P_acc", "R"},
+    "FIT-ORIGIN-N-01": {"X", "H", "Theta", "tau", "R"},
+    "MAT-NBOT-PART-01": {"X", "Theta", "R"},
+    "RNA-PAP-TRAJ-01": {"X", "H", "Theta", "tau", "R"},
 }
 
 SYSTEM_ID = {
@@ -41,6 +45,9 @@ SYSTEM_ID = {
     "MPT-M2-01": "paleoclimate_M2",
     "GCQ-T09": "cosmic_26Al",
     "EXO-DOM-01": "exoplanet_reduced_climate_direct_m",
+    "FIT-ORIGIN-N-01": "antibiotic_fitness_origin_nitrogen",
+    "MAT-NBOT-PART-01": "carbon_metal_silicate_partition_nbo_t",
+    "RNA-PAP-TRAJ-01": "papastavrou_prebiotic_rna_branches",
 }
 
 SUPPLEMENTAL = {
@@ -59,6 +66,9 @@ QUALITY = {
     "C-AST-01": {"m": "retrospective_model_spectral_trace", "P_acc": "model_intervention_accessibility", "ablation": True},
     "GCQ-T09": {"m": "derived_continuous_radiogenic_inventory_from_empirical_ages", "P_acc": "thresholded_physical_inventory_accessibility", "ablation": False},
     "EXO-DOM-01": {"m": "direct_model_slow_state_targeted_reset", "P_acc": "model_future_challenge_accessibility", "ablation": True},
+    "FIT-ORIGIN-N-01": {"H": "ancestral_population_origin_proxy", "m": "missing", "P_acc": "missing", "ablation": False},
+    "MAT-NBOT-PART-01": {"X": "P_T_deltaIW_plus_NBO_T_structural_state", "m": "missing", "P_acc": "missing", "ablation": False},
+    "RNA-PAP-TRAJ-01": {"H": "branch_specific_experimental_trajectory", "m": "missing", "P_acc": "missing", "ablation": False},
 }
 
 CAUSAL_CLASS = {
@@ -68,6 +78,9 @@ CAUSAL_CLASS = {
     "C-AST-01": "architecture_intervention",
     "GCQ-T09": "retrospective_physical_history",
     "EXO-DOM-01": "m_ablation",
+    "FIT-ORIGIN-N-01": "retrospective_history_pairing",
+    "MAT-NBOT-PART-01": "retrospective_cross_source_prediction",
+    "RNA-PAP-TRAJ-01": "two_branch_retrospective_trajectory",
 }
 
 INV_A_ROLE = {
@@ -77,6 +90,9 @@ INV_A_ROLE = {
     "C-AST-01": "architecture_causal_prototype_not_m_ablation",
     "GCQ-T09": "physical_history_trace_without_m_intervention",
     "EXO-DOM-01": "direct_model_m_reset_with_exact_X_Theta_A_matching",
+    "FIT-ORIGIN-N-01": "retrospective_history_dependence_not_direct_m_test",
+    "MAT-NBOT-PART-01": "structural_state_support_not_history_or_m_test",
+    "RNA-PAP-TRAJ-01": "descriptive_history_divergence_not_direct_m_test",
 }
 
 TAU_QUALITY = {
@@ -86,12 +102,36 @@ TAU_QUALITY = {
     "C-AST-01": {"kind": "observation_horizon", "tau_m_measured": False, "cross_domain_comparable": False},
     "GCQ-T09": {"kind": "tau_decay_local", "tau_m_measured": True, "cross_domain_comparable": False},
     "EXO-DOM-01": {"kind": "tau_m_local_effective", "tau_m_measured": True, "cross_domain_comparable": False},
+    "FIT-ORIGIN-N-01": {"kind": "experimental_endpoint", "tau_m_measured": False, "cross_domain_comparable": False},
+    "MAT-NBOT-PART-01": {"kind": "not_applicable_no_historical_timescale", "tau_m_measured": False, "cross_domain_comparable": False},
+    "RNA-PAP-TRAJ-01": {"kind": "experimental_round_horizon", "tau_m_measured": False, "cross_domain_comparable": False},
 }
 
 NEXT_ACTION = {
     "C-ANT-01": "isoler une trace biologique m distincte de l'étiquette d'histoire et mesurer P_acc sur le panneau brut",
     "C-MAT-MEM-05": "obtenir un état X apparié et un P_acc après ablation sur au moins une famille matérielle complète",
     "MPT-M2-01": "ne pas prolonger M2; conserver le résultat négatif et déplacer l'effort vers PALEO-HISTORY",
+    "FIT-ORIGIN-N-01": "isoler une trace physique m distincte de l'origine ancestrale avant tout test causal de P_acc",
+    "MAT-NBOT-PART-01": "ajouter une histoire H et une intervention ciblée sur une trace m avant toute qualification INV-A ou P_acc",
+    "RNA-PAP-TRAJ-01": "augmenter les unités indépendantes et isoler m avant toute inférence causale ou mesure P_acc",
+}
+
+EXTRA_OPERATIONALIZATION = {
+    "FIT-ORIGIN-N-01": {
+        "m": "non mesuré; l'origine de population ancestrale est conservée comme proxy de H et n'est pas requalifiée en trace physique m",
+        "P_acc": "non mesuré; aucun ensemble de défis futurs gelé ni support causal P_acc n'est défini dans cette analyse rétrospective",
+        "measurement_status": "retrospective_history_proxy_and_response_measured_no_isolated_m_no_Pacc",
+    },
+    "MAT-NBOT-PART-01": {
+        "m": "non mesuré; NBO/T est traité comme état structural courant X et non comme trace historique m",
+        "P_acc": "non mesuré; le gain prédictif de logD hors source n'est pas une mesure de P_acc",
+        "measurement_status": "structural_state_predictor_only_no_history_no_m_no_tau_no_Pacc",
+    },
+    "RNA-PAP-TRAJ-01": {
+        "m": "non isolé; l'identité de branche et la trajectoire observée décrivent H sans identifier une trace physique m distincte",
+        "P_acc": "non mesuré; aucune partition de défis futurs ou accessibilité causale n'est définie",
+        "measurement_status": "two_branch_retrospective_trajectory_no_isolated_m_no_Pacc",
+    },
 }
 
 
@@ -108,7 +148,7 @@ def build() -> tuple[dict, dict]:
         artifact = ROOT / entry["artefact"]
         present = artifact.is_file()
         covered = COVERAGE.get(case_id, {"X", "H", "Theta", "tau", "R"})
-        op = op_by_id[case_id]
+        op = op_by_id[case_id] if case_id in op_by_id else EXTRA_OPERATIONALIZATION[case_id]
         missing = [field for field in FIELDS if field not in covered]
         supplemental_rel = SUPPLEMENTAL.get(case_id)
         supplemental = ROOT / supplemental_rel if supplemental_rel else None
@@ -146,10 +186,10 @@ def build() -> tuple[dict, dict]:
     )
     benchmark = {
         "schema": "oric.transversal-benchmark.v2",
-        "selection": "21 cas réels ou résultats de modèle explicitement qualifiés; EXO-DOM-01 est une extension exploratoire postérieure explicitement étiquetée",
+        "selection": "24 cas réels ou résultats de modèle explicitement qualifiés; les trois extensions du 15 août sont rétrospectives et n'ajoutent aucun crédit §XIV",
         "case_count": len(cases),
         "required_fields": FIELDS,
-        "operational_definitions_complete": len(op_by_id) == len(SELECTED),
+        "operational_definitions_complete": all(case_id in op_by_id or case_id in EXTRA_OPERATIONALIZATION for case_id in SELECTED),
         "field_complete_case_count": len(complete),
         "field_complete_unique_system_count": len(complete_systems),
         "field_complete_unique_system_ids": complete_systems,

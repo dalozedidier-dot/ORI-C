@@ -17,7 +17,7 @@ FIELDS = ["X", "H", "m", "Theta", "tau", "P_acc", "R"]
 
 def _branch(case: dict) -> str:
     artifact = case["artifact"]
-    if artifact.startswith("01_branche_matiere/"):
+    if artifact.startswith("01_branche_matiere/") or case["id"] == "MAT-NBOT-PART-01":
         return "matiere"
     if artifact.startswith("02_branche_systeme_solaire/") or case["id"].startswith(("C-AST", "MPT", "EXO")):
         return "systeme_solaire"

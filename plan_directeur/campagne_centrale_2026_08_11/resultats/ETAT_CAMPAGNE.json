@@ -3,7 +3,7 @@
   "paleo_history_01": "non_testable",
   "axes_total": 30,
   "axes_documentes": 30,
-  "benchmark_cases": 21,
+  "benchmark_cases": 24,
   "invariant_cases_complete": 6,
   "field_complete_unique_systems": 5,
   "inv_a_status": "candidate_operationalized_exploratory_not_validated",

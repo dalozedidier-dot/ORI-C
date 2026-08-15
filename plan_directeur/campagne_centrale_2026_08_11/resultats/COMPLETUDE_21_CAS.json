@@ -9,7 +9,7 @@
     "P_acc",
     "R"
   ],
-  "cases_total": 21,
+  "cases_total": 24,
   "field_complete_cases": 6,
   "field_complete_unique_systems": 5,
   "cases_missing_one_field": 0,
@@ -116,6 +116,23 @@
       "field_complete": false,
       "measurement_quality": {},
       "next_action": "obtenir un état X apparié et un P_acc après ablation sur au moins une famille matérielle complète"
+    },
+    {
+      "id": "FIT-ORIGIN-N-01",
+      "system_id": "antibiotic_fitness_origin_nitrogen",
+      "field_completeness_fraction": 0.7142857142857143,
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "field_complete": false,
+      "measurement_quality": {
+        "H": "ancestral_population_origin_proxy",
+        "m": "missing",
+        "P_acc": "missing",
+        "ablation": false
+      },
+      "next_action": "isoler une trace physique m distincte de l'origine ancestrale avant tout test causal de P_acc"
     },
     {
       "id": "GCQ-T10",
@@ -272,6 +289,42 @@
       "field_complete": false,
       "measurement_quality": {},
       "next_action": "ne pas prolonger M2; conserver le résultat négatif et déplacer l'effort vers PALEO-HISTORY"
+    },
+    {
+      "id": "RNA-PAP-TRAJ-01",
+      "system_id": "papastavrou_prebiotic_rna_branches",
+      "field_completeness_fraction": 0.7142857142857143,
+      "missing_fields": [
+        "m",
+        "P_acc"
+      ],
+      "field_complete": false,
+      "measurement_quality": {
+        "H": "branch_specific_experimental_trajectory",
+        "m": "missing",
+        "P_acc": "missing",
+        "ablation": false
+      },
+      "next_action": "augmenter les unités indépendantes et isoler m avant toute inférence causale ou mesure P_acc"
+    },
+    {
+      "id": "MAT-NBOT-PART-01",
+      "system_id": "carbon_metal_silicate_partition_nbo_t",
+      "field_completeness_fraction": 0.42857142857142855,
+      "missing_fields": [
+        "H",
+        "m",
+        "tau",
+        "P_acc"
+      ],
+      "field_complete": false,
+      "measurement_quality": {
+        "X": "P_T_deltaIW_plus_NBO_T_structural_state",
+        "m": "missing",
+        "P_acc": "missing",
+        "ablation": false
+      },
+      "next_action": "ajouter une histoire H et une intervention ciblée sur une trace m avant toute qualification INV-A ou P_acc"
     }
   ]
 }

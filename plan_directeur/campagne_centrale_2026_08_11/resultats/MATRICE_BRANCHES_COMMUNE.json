@@ -3,7 +3,7 @@
   "source_schema": "oric.common-results-bundle.v1",
   "branches": {
     "matiere": {
-      "cases": 14,
+      "cases": 15,
       "field_complete_cases": 1,
       "systems": [
         "GCQ-T10",
@@ -18,6 +18,7 @@
         "GCQ-T19",
         "GCQ-T20",
         "GCQ-T21",
+        "carbon_metal_silicate_partition_nbo_t",
         "cosmic_26Al",
         "material_memory_families"
       ],
@@ -26,7 +27,9 @@
         "X": [
           "C-MAT-MEM-05"
         ],
-        "H": [],
+        "H": [
+          "MAT-NBOT-PART-01"
+        ],
         "m": [
           "GCQ-T10",
           "GCQ-T11",
@@ -39,10 +42,13 @@
           "GCQ-T18",
           "GCQ-T19",
           "GCQ-T20",
-          "GCQ-T21"
+          "GCQ-T21",
+          "MAT-NBOT-PART-01"
         ],
         "Theta": [],
-        "tau": [],
+        "tau": [
+          "MAT-NBOT-PART-01"
+        ],
         "P_acc": [
           "C-MAT-MEM-05",
           "GCQ-T10",
@@ -56,7 +62,8 @@
           "GCQ-T18",
           "GCQ-T19",
           "GCQ-T20",
-          "GCQ-T21"
+          "GCQ-T21",
+          "MAT-NBOT-PART-01"
         ],
         "R": []
       }
@@ -88,10 +95,12 @@
       }
     },
     "vivant": {
-      "cases": 4,
+      "cases": 6,
       "field_complete_cases": 3,
       "systems": [
+        "antibiotic_fitness_origin_nitrogen",
         "donofrio_antibiotic",
+        "papastavrou_prebiotic_rna_branches",
         "sokolskyi_baum_vesicles"
       ],
       "direct_intervention_cases": [
@@ -101,12 +110,16 @@
         "X": [],
         "H": [],
         "m": [
-          "C-ANT-01"
+          "C-ANT-01",
+          "FIT-ORIGIN-N-01",
+          "RNA-PAP-TRAJ-01"
         ],
         "Theta": [],
         "tau": [],
         "P_acc": [
-          "C-ANT-01"
+          "C-ANT-01",
+          "FIT-ORIGIN-N-01",
+          "RNA-PAP-TRAJ-01"
         ],
         "R": []
       }

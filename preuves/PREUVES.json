@@ -1109,6 +1109,66 @@
         "data_policy": "published_or_primary_measured_rows_only_no_simulation_no_synthetic_no_imputation"
       },
       "supersede_par": null
+    },
+    {
+      "id": "FIT-ORIGIN-N-01",
+      "question": "Sous limitation azotée, les changements de fitness de souches évoluées indépendamment sont-ils plus similaires lorsqu’elles partagent la même population ancestrale que sous appariement aléatoire exhaustif ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_retrospective_ancestral_origin_dependence_under_nitrogen",
+      "niveau_preuve": null,
+      "portee": "empirique rétrospectif — origine ancestrale comme proxy de H; aucune trace physique m isolée et aucun P_acc causal",
+      "artefact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_FITNESS_ORIGINE.json",
+      "empreinte_sortie": "0d71a39c6d9a3288e08f7c90f8c4001c01e862dbada2f2292e0207a484a82ab9",
+      "source": "plateforme/campagne_maximale_reelle/data/antibiotic_fitness_real.csv",
+      "mesures": {
+        "nitrogen_exact_pairing_p": 0.030687830687830688,
+        "carbon_exact_pairing_p": 0.13044733044733045,
+        "nitrogen_independent_evolved_strains": 10,
+        "carbon_independent_evolved_strains": 12,
+        "section_XIV_credit": false
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "MAT-NBOT-PART-01",
+      "question": "NBO/T ajoute-t-il une information prédictive hors source sur logD du carbone au-delà de P, T et ΔIW ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_cross_source_structural_state_prediction_with_nbo_t",
+      "niveau_preuve": null,
+      "portee": "empirique rétrospectif — NBO/T classé comme état structural X, pas comme trace historique m; aucune ablation de m ni P_acc causal",
+      "artefact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_PARTITION_CARBONE.json",
+      "empreinte_sortie": "af1a3c783955823a6e264153c776f4e7c41a1cf3b300d27051d5b5d0d954913c",
+      "source": "plateforme/campagne_maximale_reelle/data/partition_experiments.csv",
+      "mesures": {
+        "n_experiments": 32,
+        "n_independent_source_groups": 7,
+        "relative_rmse_gain": 0.282721747,
+        "permutation_one_sided_p": 0.0019990005,
+        "rmse_baseline": 0.7389475442,
+        "rmse_plus_nbo_t": 0.5300310038,
+        "section_XIV_credit": false
+      },
+      "supersede_par": null
+    },
+    {
+      "id": "RNA-PAP-TRAJ-01",
+      "question": "Les deux branches expérimentales d’ARN prébiotique suivent-elles des trajectoires de fréquence distinctes sur huit cycles ?",
+      "statut": "extension_empirique_non_preregistered",
+      "verdict": "supports_descriptive_branch_specific_rna_trajectory_divergence",
+      "niveau_preuve": null,
+      "portee": "empirique rétrospectif descriptif — deux branches seulement; H/trajectoire observée mais m non isolé et aucun P_acc causal",
+      "artefact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_RNA_PAPASTAVROU.json",
+      "empreinte_sortie": "a2aa40d5758946d4cc932303b94ff5f17f3c3676c50d8eae63963432f5d12cf1",
+      "source": "plateforme/campagne_maximale_reelle/data/prebiotic_rna_evolution.csv",
+      "mesures": {
+        "records": 80,
+        "branches": 2,
+        "rounds": 8,
+        "max_absolute_difference_log2": 17.733,
+        "sequence_with_max_difference": "Seq5",
+        "section_XIV_credit": false
+      },
+      "supersede_par": null
     }
   ]
 }

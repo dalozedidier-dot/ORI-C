@@ -16,8 +16,9 @@ def test_seuil_xiv_reproduit_le_diagnostic_canonique() -> None:
     assert audit["passed_count"] == 7
     assert audit["passed_ids"] == [1, 2, 5, 6, 7, 8, 12]
     assert audit["missing_ids"] == [3, 4, 9, 10, 11]
-    assert audit["common_result_bundle"]["items_read"] == 21
+    assert audit["common_result_bundle"]["items_read"] == 24
     assert audit["common_result_bundle"]["field_complete_cases"] == 6
+    assert audit["common_result_bundle"]["field_complete_unique_systems"] == 5
     assert audit["first_threshold_satisfied"] is False
 
 

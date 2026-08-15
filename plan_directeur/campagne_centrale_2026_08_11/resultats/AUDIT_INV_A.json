@@ -56,7 +56,7 @@
     "current_claim": "no_general_transversal_invariant_validated"
   },
   "common_result_bundle_schema": "oric.common-results-bundle.v1",
-  "common_result_items_read": 21,
+  "common_result_items_read": 24,
   "common_result_field_complete_cases": 6,
   "field_complete_claim_count": 6,
   "field_complete_unique_system_count": 5,

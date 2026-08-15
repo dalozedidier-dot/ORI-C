@@ -1198,10 +1198,184 @@
       },
       "verdict": "supports_local_nonzero_delta_Pacc_under_direct_m_reset",
       "sha256": "c4fca9540ac195f67de8eae06e0c3cc331e1c2fa6c49438c6edfb53f7de49707"
+    },
+    {
+      "id": "FIT-ORIGIN-N-01",
+      "branch": "vivant",
+      "system": "antibiotic_fitness_origin_nitrogen",
+      "dataset": "plateforme/campagne_maximale_reelle/data/antibiotic_fitness_real.csv",
+      "provenance": {
+        "artifact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_FITNESS_ORIGINE.json",
+        "source": "plateforme/campagne_maximale_reelle/data/antibiotic_fitness_real.csv",
+        "scope": "empirique rétrospectif — origine ancestrale comme proxy de H; aucune trace physique m isolée et aucun P_acc causal"
+      },
+      "X": {
+        "status": "measured",
+        "definition": "état présent apparié défini par le protocole source"
+      },
+      "H": {
+        "status": "measured",
+        "definition": "histoire antérieure définie par le protocole source"
+      },
+      "m": {
+        "status": "missing",
+        "definition": null
+      },
+      "Theta": {
+        "status": "measured",
+        "definition": "conditions et paramètres du protocole source"
+      },
+      "tau": {
+        "status": "measured",
+        "definition": "experimental_endpoint"
+      },
+      "P_acc": {
+        "status": "missing",
+        "definition": null
+      },
+      "R": {
+        "status": "measured",
+        "definition": "réponse ou résultat défini par l'artefact d'autorité"
+      },
+      "intervention": null,
+      "control": {
+        "class": "retrospective_history_pairing"
+      },
+      "independent_unit": "antibiotic_fitness_origin_nitrogen",
+      "frozen_threshold": null,
+      "result": {
+        "evidence_level": null,
+        "measurement_status": "retrospective_history_proxy_and_response_measured_no_isolated_m_no_Pacc",
+        "field_complete": false,
+        "measurement_quality": {
+          "H": "ancestral_population_origin_proxy",
+          "m": "missing",
+          "P_acc": "missing",
+          "ablation": false
+        }
+      },
+      "verdict": "supports_retrospective_ancestral_origin_dependence_under_nitrogen",
+      "sha256": "0d71a39c6d9a3288e08f7c90f8c4001c01e862dbada2f2292e0207a484a82ab9"
+    },
+    {
+      "id": "MAT-NBOT-PART-01",
+      "branch": "matiere",
+      "system": "carbon_metal_silicate_partition_nbo_t",
+      "dataset": "plateforme/campagne_maximale_reelle/data/partition_experiments.csv",
+      "provenance": {
+        "artifact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_PARTITION_CARBONE.json",
+        "source": "plateforme/campagne_maximale_reelle/data/partition_experiments.csv",
+        "scope": "empirique rétrospectif — NBO/T classé comme état structural X, pas comme trace historique m; aucune ablation de m ni P_acc causal"
+      },
+      "X": {
+        "status": "measured",
+        "definition": "état présent apparié défini par le protocole source"
+      },
+      "H": {
+        "status": "missing",
+        "definition": null
+      },
+      "m": {
+        "status": "missing",
+        "definition": null
+      },
+      "Theta": {
+        "status": "measured",
+        "definition": "conditions et paramètres du protocole source"
+      },
+      "tau": {
+        "status": "missing",
+        "definition": null
+      },
+      "P_acc": {
+        "status": "missing",
+        "definition": null
+      },
+      "R": {
+        "status": "measured",
+        "definition": "réponse ou résultat défini par l'artefact d'autorité"
+      },
+      "intervention": null,
+      "control": {
+        "class": "retrospective_cross_source_prediction"
+      },
+      "independent_unit": "carbon_metal_silicate_partition_nbo_t",
+      "frozen_threshold": null,
+      "result": {
+        "evidence_level": null,
+        "measurement_status": "structural_state_predictor_only_no_history_no_m_no_tau_no_Pacc",
+        "field_complete": false,
+        "measurement_quality": {
+          "X": "P_T_deltaIW_plus_NBO_T_structural_state",
+          "m": "missing",
+          "P_acc": "missing",
+          "ablation": false
+        }
+      },
+      "verdict": "supports_cross_source_structural_state_prediction_with_nbo_t",
+      "sha256": "af1a3c783955823a6e264153c776f4e7c41a1cf3b300d27051d5b5d0d954913c"
+    },
+    {
+      "id": "RNA-PAP-TRAJ-01",
+      "branch": "vivant",
+      "system": "papastavrou_prebiotic_rna_branches",
+      "dataset": "plateforme/campagne_maximale_reelle/data/prebiotic_rna_evolution.csv",
+      "provenance": {
+        "artifact": "plan_directeur/exploitation_donnees_reelles_2026_08_15/resultats/RESULTAT_RNA_PAPASTAVROU.json",
+        "source": "plateforme/campagne_maximale_reelle/data/prebiotic_rna_evolution.csv",
+        "scope": "empirique rétrospectif descriptif — deux branches seulement; H/trajectoire observée mais m non isolé et aucun P_acc causal"
+      },
+      "X": {
+        "status": "measured",
+        "definition": "état présent apparié défini par le protocole source"
+      },
+      "H": {
+        "status": "measured",
+        "definition": "histoire antérieure définie par le protocole source"
+      },
+      "m": {
+        "status": "missing",
+        "definition": null
+      },
+      "Theta": {
+        "status": "measured",
+        "definition": "conditions et paramètres du protocole source"
+      },
+      "tau": {
+        "status": "measured",
+        "definition": "experimental_round_horizon"
+      },
+      "P_acc": {
+        "status": "missing",
+        "definition": null
+      },
+      "R": {
+        "status": "measured",
+        "definition": "réponse ou résultat défini par l'artefact d'autorité"
+      },
+      "intervention": null,
+      "control": {
+        "class": "two_branch_retrospective_trajectory"
+      },
+      "independent_unit": "papastavrou_prebiotic_rna_branches",
+      "frozen_threshold": null,
+      "result": {
+        "evidence_level": null,
+        "measurement_status": "two_branch_retrospective_trajectory_no_isolated_m_no_Pacc",
+        "field_complete": false,
+        "measurement_quality": {
+          "H": "branch_specific_experimental_trajectory",
+          "m": "missing",
+          "P_acc": "missing",
+          "ablation": false
+        }
+      },
+      "verdict": "supports_descriptive_branch_specific_rna_trajectory_divergence",
+      "sha256": "a2aa40d5758946d4cc932303b94ff5f17f3c3676c50d8eae63963432f5d12cf1"
     }
   ],
   "counts": {
-    "total": 21,
+    "total": 24,
     "field_complete_cases": 6,
     "field_complete_unique_systems": 5,
     "empirical_or_model_levels_preserved": true
