@@ -24,7 +24,7 @@ TR-022;TR-024;ENVR;transformation_environnementale;transformation environnementa
 TR-021;TR-025;ENBL;condition_ouverture;ouverture ou dépendance;Plausible;Houchin et al., PNAS 123, e2525466123 (2026), doi:10.1073/pnas.2525466123.
 TR-023;TR-026;ENBL;condition_ouverture;ouverture ou dépendance;Établi;"Wilde et al. (2001); Hazen et al., American Mineralogist 93, 1693-1720 (2008), doi:10.2138/am.2008.2955."
 TR-023;TR-027;ENBL;condition_ouverture;ouverture ou dépendance;Établi;"Archives sédimentaires et géochimiques; Hazen et al. (2008)."
-TR-021;TR-028;ENBL;condition_ouverture;ouverture ou dépendance;Établi;Observations minéralogiques naturelles et expériences de haute pression.
+TR-021;TR-028;ENBL;condition_ouverture;ouverture ou dépendance;Établi;Putnis & Price, Nature 280, 217-218 (1979), doi:10.1038/280217a0
 TR-038;TR-029;ENVR;transformation_environnementale;transformation environnementale;Fortement inféré;Planavsky et al., Nature Geoscience 7, 283-286 (2014), doi:10.1038/ngeo2122.
 TR-036;TR-030;DEPG;dependance_non_genealogique;dépendance fonctionnelle générale, non causale historiquement;Établi;"de la Torre & Chin, Nature Reviews Genetics 22, 169-184 (2021), doi:10.1038/s41576-020-00307-7; littérature sur la biominéralisation."
 TR-026;TR-031;CATL;condition_ouverture;contribution catalytique;Plausible;"Patel et al., Nature Chemistry 7, 301-307 (2015), doi:10.1038/nchem.2202; scénarios minéraux candidats."
@@ -41,7 +41,7 @@ TR-009;TR-016;MATR;filiation_materielle;fourniture de constituants;Établi;"Zinn
 TR-013;TR-014;MATR;filiation_materielle;fourniture de constituants;Établi;"Galli & Palla (2013); observations de glaces interstellaires."
 TR-017;TR-018;INCO;transmission_trace_historique;incorporation ou trace historique, non causale;Établi;"Krot et al., Nature 434, 998-1001 (2005), doi:10.1038/nature03470; Connelly et al. (2012)."
 TR-018;TR-019;MATR;filiation_materielle;fourniture de constituants;Plausible;"Connelly et al. (2012); Johansen et al. (2007)."
-TR-024;TR-023;STAB;condition_ouverture;stabilisation;Plausible;"Modèles climatiques planétaires; aucune hydrosphère détectée sur TRAPPIST-1e."
+TR-024;TR-023;STAB;condition_ouverture;stabilisation;Plausible;"Massol et al., JGR Planets 128 (2023), doi:10.1029/2023JE007848; scénario climatique, aucune hydrosphère de TRAPPIST-1e n’est utilisée comme observation."
 TR-023;TR-025;CONT;condition_ouverture;contribution possible, non suffisante;Hypothétique;Green et al., Nature 467, 448-451 (2010), doi:10.1038/nature09369.
 TR-033;TR-034;STAB;condition_ouverture;stabilisation;Plausible;Adamala et al., Nature Communications 7, 11041 (2016), doi:10.1038/ncomms11041.
 TR-029;TR-038;FEED;transformation_environnementale;rétroaction;Plausible;Planavsky et al. (2014), doi:10.1038/ngeo2122.

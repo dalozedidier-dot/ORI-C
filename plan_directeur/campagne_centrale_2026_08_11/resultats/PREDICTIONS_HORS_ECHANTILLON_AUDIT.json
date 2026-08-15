@@ -49,6 +49,18 @@
       "public_preregistration_present": false,
       "registration_status": "package_ready_external_account_required",
       "registration_public_url": null
+    },
+    {
+      "id": "PRED-VIVANT-PETRUNGARO-NIT-001",
+      "branch": "vivant",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
     }
   ],
   "strict_success_count": 0,

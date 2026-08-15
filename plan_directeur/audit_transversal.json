@@ -66,9 +66,11 @@
         "traverse_deux_branches_ou_plus": true
       },
       "diagnostic D-H-L": {
-        "branches_ou_une_mesure_existe": [],
-        "nombre_de_branches": 0,
-        "produit_une_mesure": false,
+        "branches_ou_une_mesure_existe": [
+          "branche 3 vivant"
+        ],
+        "nombre_de_branches": 1,
+        "produit_une_mesure": true,
         "traverse_deux_branches_ou_plus": false
       },
       "Pth et Pacc(T,C,epsilon)": {
@@ -135,7 +137,6 @@
     "notions_sans_aucune_mesure": [
       "chaîne ORI-C",
       "critère d'altération architecturale",
-      "diagnostic D-H-L",
       "séparation X m A"
     ],
     "notions_traversant_au_moins_deux_branches": [
