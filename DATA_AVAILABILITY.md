@@ -105,3 +105,16 @@ Les sources paléoclimatiques longues sont conservées pour un futur protocole p
 ### Généalogie cosmique — approfondissement quantitatif empirique
 La branche `01_branche_matiere/genealogie_cosmique_quantitative/` conserve son autorité empirique (33 sources, 76 mesures, 16 claims) et ajoute une vue analytique 23 stades / 40 relations / 24 observations sélectionnées / 12 synthèses machine, toutes dérivées exclusivement de mesures admises. Aucune simulation, donnée synthétique, imputation, rendement théorique ou sortie thermochimique n’entre dans ces résultats.
 
+## Corpus biologiques réels du 15 août 2026
+
+Les sources Lamrabet 2019, Petrungaro 2026, Nader AVT et l'archive structurée
+Card 2019 sont conservées sous `donnees_externes/` avec leurs empreintes. Les
+archives volumineuses utilisées sont destinées à Git LFS. Les 296,8 Mo de
+photographies de plaques Card et les images TEM Nader ne sont pas dupliqués :
+ils n'ajoutent aucune table quantitative à l'analyse et leurs empreintes sont
+conservées dans les fichiers `SOURCE.json`.
+
+Les tables canoniques, résultats et limites sont regroupés dans
+`03_branche_vivant/synthese_donnees_reelles_2026/`. Le workflow
+`donnees-reelles-vivant-2026.yml` réextrait les sources, recalcule les sorties
+et vérifie qu'aucun résultat scientifique synthétique ou simulé n'est admis.

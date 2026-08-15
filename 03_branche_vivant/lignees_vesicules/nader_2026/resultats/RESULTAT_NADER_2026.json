@@ -1,0 +1,50 @@
+{
+  "schema": "oric.nader-avt-real-characterisation.v1",
+  "status": "real_physical_characterisation_only",
+  "source_sha256": "4df3a6ba57a1ccc0e68cabdaf7c0af7469100b1fdcf0e2abc4af168b4e4f5aab",
+  "quantitative_extraction": {
+    "n_empirical_numeric_cells": 152663,
+    "excluded_sheet": "FigS6 (theoretical travel-time calculation; not empirical data)",
+    "n_chromatogram_measurements": 12864,
+    "n_2_to_1_decanoic_acid_decanol_measurements": 4002,
+    "encoded_concentration_range_mM": [
+      0.0,
+      40.0
+    ],
+    "encoded_concentrations_mM": [
+      0.0,
+      0.5,
+      1.0,
+      2.5,
+      5.0,
+      10.0,
+      20.0,
+      40.0
+    ]
+  },
+  "observed_particle_sizes": {
+    "n_particles": 1558,
+    "min_nm": 201.85,
+    "median_nm": 374.24,
+    "q025_nm": 204.98,
+    "q975_nm": 1135.5912500000002,
+    "max_nm": 1749.1699999999998
+  },
+  "comparison_with_VES_PACC_INT_01": {
+    "protocol_target": "100 nm extrusion; required population median Z-average 80-150 nm and median PDI <= 0.25",
+    "fraction_observed_particles_between_80_and_150_nm": 0.0,
+    "direct_comparability": false,
+    "reason": "Nader reports transformed-particle microscopy sizes; VES-PACC-INT-01 targets a population DLS Z-average and PDI after a 100 nm extrusion operator"
+  },
+  "fields_requested_but_not_paired_in_workbook": {
+    "pH": "not found as a sample-level quantitative field",
+    "time_resolved_stability": "not paired to the chromatogram samples",
+    "DLS_PDI": "not reported"
+  },
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "may_replace_control_do_m_sham": false,
+    "use": "physical calibration of observed vesicle formation and size ranges only"
+  }
+}

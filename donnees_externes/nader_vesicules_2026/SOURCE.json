@@ -1,0 +1,17 @@
+{
+  "title": "S. Nader aerosol-to-vesicle transformation raw data",
+  "article_doi": "10.1021/acsearthspacechem.2c00328",
+  "source_file": "S. Nader AVT raw data.xlsx",
+  "sha256": "4df3a6ba57a1ccc0e68cabdaf7c0af7469100b1fdcf0e2abc4af168b4e4f5aab",
+  "scientific_data": "real measured chromatography, aerosol and particle-size data",
+  "synthetic_or_simulated": false,
+  "excluded_from_empirical_counts": "FigS6 theoretical calculation",
+  "ancillary_image_archive": {
+    "name": "S. Nader TEM raw images.zip",
+    "sha256": "d76669902a369f98e79a3c380fe5ada5e9cb9ea9fb52babd0f63389d8d76a397",
+    "size_bytes": 6843504,
+    "entries": 8,
+    "imported_into_repository": false,
+    "reason": "raw TEM images are not an additional tabular measurement set; published individual sizes are already extracted from FigS15"
+  }
+}

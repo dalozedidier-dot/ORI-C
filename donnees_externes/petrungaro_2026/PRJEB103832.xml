@@ -1,0 +1,49 @@
+<PROJECT_SET>
+<PROJECT accession="PRJEB103832" alias="ed44beb1-272c-4960-9773-e886e622d15a" center_name="Institut for Biological Physics">
+  <IDENTIFIERS>
+    <PRIMARY_ID>PRJEB103832</PRIMARY_ID>
+    <SECONDARY_ID>ERP185184</SECONDARY_ID>
+    <SUBMITTER_ID namespace="Institut for Biological Physics">ed44beb1-272c-4960-9773-e886e622d15a</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <NAME>Function-specific epistasis shapes evolutionary trajectories towards antibiotic resistance</NAME>
+  <TITLE>Sequenced samples from tightly controlled evolution experiments in E coli gene-deletion strains under strong antibiotic selection reveal that perturbations of specific cellular functions lead to novel trajectories of resistance evolution far from the expected global path</TITLE>
+  <DESCRIPTION>Pre-existing mutations can create contingencies that influence subsequent evolution by constraining or opening evolutionary pathways through epistatic interactions. In some cases, global epistasis allows evolutionary pathways to be predicted from the fitness of the genetic background alone. In other cases idiosyncratic epistasis makes evolution less predictable. Here, we show that the evolution of antibiotic resistance is highly repeatable, following a common path across most genetic backgrounds. However, rather than being predictable from global epistasis, deviations from this pattern are modulated by function-specific epistasis: perturbations of specific cellular functions lead to novel trajectories of resistance evolution far from the common path. Using tightly controlled robotic evolution experiments, we quantitatively analyzed resistance trajectories for three clinically relevant antibiotics across multiple genetic backgrounds, including hundreds of Escherichia coli gene-deletion strains and several clinical isolates from urinary-tract infections. We show that disrupting distinct sets of cellular functions alters evolutionary trajectories for specific drugs and across different drugs, and we identify genetic changes defining these alternative trajectories. Importantly, this function-specific epistasis often slows down resistance evolution. Some of these effects can also be induced by small-molecule inhibitors of the identified targets, suggesting that function-specific epistasis can be exploited to improve drug treatments.</DESCRIPTION>
+  <SUBMISSION_PROJECT>
+    <SEQUENCING_PROJECT/>
+  </SUBMISSION_PROJECT>
+  <PROJECT_LINKS>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>ERA35199202</ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB103832&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB103832&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+  </PROJECT_LINKS>
+  <PROJECT_ATTRIBUTES>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-FIRST-PUBLIC</TAG>
+      <VALUE>2026-06-11</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-LAST-UPDATE</TAG>
+      <VALUE>2026-06-11</VALUE>
+    </PROJECT_ATTRIBUTE>
+  </PROJECT_ATTRIBUTES>
+</PROJECT>
+</PROJECT_SET>

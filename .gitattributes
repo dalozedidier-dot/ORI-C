@@ -60,6 +60,12 @@ donnees_externes/donnees_reelles_2026_08_07/** -text
 donnees_externes/wong_seguin_2015/raw/** -text
 donnees_externes/wong_seguin_2015/extracted/** -text
 
+# Sources primaires importees le 15 aout 2026. Les archives restent dans LFS;
+# les classeurs bruts gardent strictement leurs octets d'origine.
+donnees_externes/lamrabet_2019/*.xls -text
+donnees_externes/nader_vesicules_2026/*.xlsx -text
+donnees_externes/petrungaro_2026/*.xml -text
+
 # Instantane gele du preenregistrement WP-EXO-PACC-2026. Son SHA-256 est
 # inscrit dans PROTOCOLE.json et verifie avant execution : ses octets ne
 # doivent jamais etre normalises.

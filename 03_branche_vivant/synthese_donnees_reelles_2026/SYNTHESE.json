@@ -1,0 +1,20 @@
+{
+  "schema": "oric.real-biological-studies-comparison.v1",
+  "row_count": 8,
+  "robust_positive_incremental_history_or_background": [
+    "D'Onofrio",
+    "Petrungaro 2026 / NIT"
+  ],
+  "negative_or_non_robust": [
+    "Card 2019",
+    "Wong & Seguin 2015",
+    "Lamrabet 2019 persistence at alpha=0.05",
+    "Petrungaro 2026 / MEC",
+    "Petrungaro 2026 / TMP"
+  ],
+  "physical_characterisation_only": [
+    "Nader AVT"
+  ],
+  "cross_dataset_reproducibility": "Multiple real datasets show history/background dependence, but constructs and interventions differ; this is not yet a common confirmatory ORI-C test.",
+  "synthetic_or_simulated_scientific_data": false
+}

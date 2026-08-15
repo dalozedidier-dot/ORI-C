@@ -1,0 +1,35 @@
+{
+  "schema": "oric.card-2019-complete-archive-audit.v1",
+  "archive_sha256": "064cc89c6907cb195e9e99e2b73ce99075afe8dff47e02d1dcfcd87d3a751165",
+  "archive_entry_count": 10,
+  "structured_files": [
+    "Cell counts.csv",
+    "MICs of LTEE ancestral and derived strains.csv",
+    "MICs of strains from Ara+5 population.csv",
+    "Mutant colony counts.csv"
+  ],
+  "comparison_with_ORI_C": {
+    "Ara_plus_5_table_semantically_identical": true,
+    "existing_analysis_rerun": false,
+    "reason": "the already-used table has identical rows and values; only filename bytes/encoding differ"
+  },
+  "additional_tables": {
+    "LTEE_ancestral_and_derived_MIC_rows": 64,
+    "cell_count_rows": 24,
+    "mutant_colony_count_rows": 168,
+    "analysis": "descriptive log2 daughter/parent MIC only",
+    "inferential_limit": "paired assay rows and technical counts are not independent evolutionary lineages; no inflated p-value is computed"
+  },
+  "plate_photo_archive": {
+    "sha256": "572ec0f67bfa012ea6f06a619560a763bf984f89eba0bd8c9331825ebed4de6b",
+    "size_bytes": 296767159,
+    "entry_count": 319,
+    "imported_into_repository": false,
+    "reason": "ancillary plate photographs contain no additional structured measurement table and would add about 297 MB"
+  },
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "new_confirmatory_result": false
+  }
+}

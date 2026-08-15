@@ -1,0 +1,75 @@
+{
+  "schema": "oric.petrungaro-2026-real-evolution.v1",
+  "status": "analysed_real_external_population_data",
+  "sources": {
+    "source_data_archive_sha256": "98526cbd6b391f56ecb5bd317be45586879a618e37fa3a61f5e7f242aab208e8",
+    "mutation_table_sha256": "ba6baa558844a811ebda209689f36e5eb91e5d07919dd6e9466daf56e6815f9c",
+    "sequencing_accession": "PRJEB103832"
+  },
+  "mapping": {
+    "independent_unit": "independently evolved plate-well population",
+    "X": "initial log10 IC50 reconstructed from published endpoint IC50/fold increase",
+    "m": "initial gene-deletion genetic background",
+    "Theta": "antibiotic MEC, NIT or TMP",
+    "R": "future endpoint log10 IC50",
+    "growth_trajectory": "published selection-response time series, retained separately and not substituted for IC50"
+  },
+  "phenotype_by_antibiotic": {
+    "MEC": {
+      "n_populations": 809,
+      "n_genetic_backgrounds": 258,
+      "rmse_X_log10_IC50": 0.5269873188923372,
+      "rmse_X_plus_m_log10_IC50": 0.5070333610755124,
+      "relative_gain_percent": 3.7864208684879777,
+      "bootstrap_gain_q025_percent": -0.24852818359835566,
+      "bootstrap_gain_q975_percent": 7.630383808667216,
+      "background_permutation_p_one_sided": 0.002
+    },
+    "NIT": {
+      "n_populations": 803,
+      "n_genetic_backgrounds": 258,
+      "rmse_X_log10_IC50": 0.2855011139430046,
+      "rmse_X_plus_m_log10_IC50": 0.194819300415565,
+      "relative_gain_percent": 31.762332649091753,
+      "bootstrap_gain_q025_percent": 27.533685652766394,
+      "bootstrap_gain_q975_percent": 36.050870776650775,
+      "background_permutation_p_one_sided": 0.002
+    },
+    "TMP": {
+      "n_populations": 809,
+      "n_genetic_backgrounds": 258,
+      "rmse_X_log10_IC50": 0.6301505004083728,
+      "rmse_X_plus_m_log10_IC50": 0.6239742806684577,
+      "relative_gain_percent": 0.9801181996860394,
+      "bootstrap_gain_q025_percent": -2.760815128783299,
+      "bootstrap_gain_q975_percent": 4.654966596938336,
+      "background_permutation_p_one_sided": 0.002
+    }
+  },
+  "mutation_pathways_by_antibiotic": {
+    "MEC": {
+      "n_sequenced_populations": 91,
+      "same_minus_different_background_jaccard": 0.10040673918481363,
+      "permutation_p_one_sided_controlling_initial_IC50_bins": 0.002
+    },
+    "NIT": {
+      "n_sequenced_populations": 102,
+      "same_minus_different_background_jaccard": 0.030235760988971627,
+      "permutation_p_one_sided_controlling_initial_IC50_bins": 0.034
+    },
+    "TMP": {
+      "n_sequenced_populations": 108,
+      "same_minus_different_background_jaccard": 0.024335950661997605,
+      "permutation_p_one_sided_controlling_initial_IC50_bins": 0.002
+    }
+  },
+  "n_temporal_measurements": 7349,
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "retrospective": true,
+    "not_a_direct_do_m_ablation": true,
+    "initial_growth_covariate_complete": false,
+    "reason_initial_growth": "no population-level initial-growth field is paired to every Fig2a endpoint; it is not invented or imputed"
+  }
+}

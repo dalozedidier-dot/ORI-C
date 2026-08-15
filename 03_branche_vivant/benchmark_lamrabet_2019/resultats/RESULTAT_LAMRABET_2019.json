@@ -1,0 +1,40 @@
+{
+  "schema": "oric.lamrabet-2019-longitudinal-real.v1",
+  "status": "analysed_real_external_longitudinal_dataset",
+  "source": "donnees_externes/lamrabet_2019/mbio.00189-19-sd001.xls",
+  "source_sha256": "3af477cbe29f708e02706a496a3db4195a4db5aa6389b3c9c510cca9affb53dc",
+  "independent_unit": "LTEE lineage",
+  "n_independent_units": 12,
+  "n_antibiotics": 15,
+  "n_raw_MIC_measurements": 1125,
+  "generations": [
+    0,
+    2000,
+    50000
+  ],
+  "method": {
+    "cell_summary": "median of three MIC replicates",
+    "effect_scale": "log2 MIC ratio relative to shared ancestor",
+    "persistence": "Spearman across the 12 lineages between generations 2000 and 50000",
+    "permutation": "whole 50000-generation lineage profiles permuted; antibiotics never treated as independent units",
+    "bootstrap": "LTEE lineages resampled as complete antibiotic profiles",
+    "seed": 20260815
+  },
+  "global": {
+    "spearman_profile_persistence": 0.564521958476899,
+    "bootstrap_q025": 0.43840680660422326,
+    "bootstrap_q975": 0.6595292665168692,
+    "permutation_p_two_sided": 0.07649235076492351,
+    "antibiotics_with_nonzero_50k_divergence": 14,
+    "antibiotics_with_at_least_twofold_50k_range": 14,
+    "same_direction_fraction_all_cells": 0.55,
+    "inversion_fraction_all_cells": 0.06111111111111111
+  },
+  "verdict": "lineages_from_the_same_ancestor_remain_divergent_but_cross_antibiotic_long_term_persistence_requires_the_reported_permutation_result",
+  "qualification": {
+    "real_data": true,
+    "synthetic_or_simulated_scientific_data": false,
+    "causal_history_intervention": false,
+    "reason": "lineage identity indexes realized evolutionary histories; it was not experimentally assigned as a trace ablation"
+  }
+}

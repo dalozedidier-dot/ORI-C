@@ -1,0 +1,10 @@
+{
+  "title": "Changes in Intrinsic Antibiotic Susceptibility during a Long-Term Evolution Experiment with Escherichia coli",
+  "authors": ["Lamrabet et al."],
+  "year": 2019,
+  "article_doi": "10.1128/mBio.00189-19",
+  "source_file": "mbio.00189-19-sd001.xls",
+  "sha256": "3af477cbe29f708e02706a496a3db4195a4db5aa6389b3c9c510cca9affb53dc",
+  "scientific_data": "real measured MIC replicates",
+  "synthetic_or_simulated": false
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_doi": "10.5061/dryad.g41hg96",
+  "archive_file": "Card_et_al_2019_Data_and_R_Notebook.zip",
+  "archive_sha256": "064cc89c6907cb195e9e99e2b73ce99075afe8dff47e02d1dcfcd87d3a751165",
+  "license": "CC0-1.0",
+  "scientific_data": "real measured MIC, cell-count and mutant-colony tables",
+  "synthetic_or_simulated": false,
+  "excluded_ancillary_archive": {
+    "name": "Card_et_al._(2019)_-_Experimental_plate_photos.zip",
+    "sha256": "572ec0f67bfa012ea6f06a619560a763bf984f89eba0bd8c9331825ebed4de6b",
+    "size_bytes": 296767159,
+    "reason": "no additional structured data; not imported to avoid repository bloat"
+  }
+}

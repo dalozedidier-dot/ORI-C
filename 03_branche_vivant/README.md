@@ -89,4 +89,21 @@ Deux bancs externes sont ajoutés sans modifier les verdicts antérieurs.
 
 `benchmark_histoire_antibiotique_2026/` évalue la MIC avec séparation groupée par souche. Le modèle historique doit battre le modèle d'état présent et un témoin de même complexité où l'ascendance est permutée.
 
+## Données réelles ajoutées le 15 août 2026
+
+- `benchmark_lamrabet_2019/` extrait 1 125 MIC réelles et analyse les 12
+  lignées comme unités indépendantes pour 15 antibiotiques.
+- `benchmark_petrungaro_2026/` compare `X` et `X+m` sur les populations
+  évolutives, séparément pour MEC, NIT et TMP, puis relie le fond initial aux
+  chemins mutationnels observés.
+- `lignees_vesicules/nader_2026/` caractérise les plages physiques observées
+  sans remplacer l'expérience prospective `control / do(m) / sham`.
+- `synthese_donnees_reelles_2026/` réunit D'Onofrio, Card, Wong & Seguin,
+  Lamrabet, Petrungaro et Nader dans une table unique qui conserve les
+  résultats négatifs et les limites d'indépendance.
+
+Ces analyses n'utilisent aucune donnée scientifique synthétique ou simulée.
+Les permutations servent uniquement à construire des distributions nulles à
+partir des unités expérimentales réelles.
+
 Les jeux externes requis sont intégrés avec leur provenance. S’ils sont retirés ou invalides, les deux bancs retournent `waiting_for_external_data`. Ce statut n’est pas un résultat.

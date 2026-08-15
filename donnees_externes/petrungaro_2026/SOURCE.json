@@ -1,0 +1,13 @@
+{
+  "title": "Petrungaro et al. 2026 source data",
+  "article_doi": "10.1038/s41467-026-76025-1",
+  "files": {
+    "41467_2026_76025_MOESM3_ESM.csv": "ba6baa558844a811ebda209689f36e5eb91e5d07919dd6e9466daf56e6815f9c",
+    "41467_2026_76025_MOESM4_ESM.csv": "5d83bee91b48d7113f8bb04382c8d8bbb0379a9b9d26a8e7100607e0e1753951",
+    "41467_2026_76025_MOESM7_ESM.zip": "98526cbd6b391f56ecb5bd317be45586879a618e37fa3a61f5e7f242aab208e8",
+    "PRJEB103832.xml": "3d04a8d4f33b8beea045c8c4e0f35b58ee035ecb4166097e96a28976622e5dd7"
+  },
+  "scientific_data": "real experimental evolution phenotypes and mutations",
+  "synthetic_or_simulated": false,
+  "license": "CC-BY-4.0"
+}
