@@ -22,6 +22,7 @@ EXCLUDED_PARTS = {
 }
 EXCLUDED_ROOT_FILES = {"MANIFEST.sha256", "MANIFEST.sha256.json"}
 EXCLUDED_PATH_PREFIXES = ("donnees_externes/lot_scientifique_maximal_2026_08_05/raw/",)
+CANONICAL_NUMBERS = ROOT / "preuves/CHIFFRES.json"
 LFS_PATTERN = re.compile(
     rb"\Aversion https://git-lfs\.github\.com/spec/v1\n"
     rb"oid sha256:([0-9a-f]{64})\n"
@@ -115,8 +116,32 @@ def entry(path: Path) -> dict[str, object]:
     }
 
 
+def synchronize_manifest_file_count(count: int) -> None:
+    """Synchronise le chiffre dérivé avant d'empreindre le registre.
+
+    Le nombre de fichiers est une propriété du manifeste en cours de
+    construction. Le maintenir manuellement désynchronisait CHIFFRES.json à
+    chaque ajout de livrable et faisait échouer toutes les CI consommatrices.
+    """
+    if not CANONICAL_NUMBERS.is_file():
+        return
+    document = json.loads(CANONICAL_NUMBERS.read_text(encoding="utf-8"))
+    item = next((value for value in document.get("valeurs", []) if value.get("id") == "MAIN_MANIFEST_FILES"), None)
+    if item is None:
+        raise SystemExit("Chiffre canonique MAIN_MANIFEST_FILES absent")
+    item["value"] = count
+    item["display"] = f"{count:,}".replace(",", " ")
+    CANONICAL_NUMBERS.write_text(
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def build() -> list[dict[str, object]]:
-    entries = [entry(path) for path in files()]
+    paths = files()
+    synchronize_manifest_file_count(len(paths))
+    entries = [entry(path) for path in paths]
     (ROOT / "MANIFEST.sha256").write_text(
         "".join(f"{item['sha256']}  {item['path']}\n" for item in entries),
         encoding="utf-8",
