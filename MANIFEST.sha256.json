@@ -6286,6 +6286,30 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/benchmark_yen_papin_2017/README.md",
+      "size": 1210,
+      "sha256": "9731b7483c91bda1a5e2449a71d5626cd22da73e5b8414cd0f94cd57ba0ddbc5",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_yen_papin_2017/analyser.py",
+      "size": 10873,
+      "sha256": "5e4901384eb675b64f78dc56d73d7d957972a9bf174e8f728035d79eb05f7f56",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_yen_papin_2017/donnees/pbio.2001586.s018.xlsx",
+      "size": 71076,
+      "sha256": "d5252d90b522238a7bea3ab3846183755ac7e60fea80088290b5e3e53226d599",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_yen_papin_2017/resultats/RESULTAT.json",
+      "size": 2262,
+      "sha256": "b7f4680085458a1990b869de6f28f9585182576d0500f5a096fe7477e848091e",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/EXECUTION_VES_PACC_INT_01.md",
       "size": 3302,
       "sha256": "7a09339cc1ba435a5592779a36176a2cdcc3afadb6d887766e6a648b7b4eb1de",
@@ -6481,6 +6505,30 @@
       "path": "03_branche_vivant/ltee_replay_history/tests/test_ltee.py",
       "size": 325,
       "sha256": "baf5cbcaeea5d8b573ab517041518817178cc47f64fa1b16e6cba55654ba8c37",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/README.md",
+      "size": 1162,
+      "sha256": "6367f04ed8e00a396e2548016f7c4ce4a82a255699f18bea2be0d8dab6fc6a70",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/analyser.py",
+      "size": 7510,
+      "sha256": "221dfc3ff2d46f27eb3e234edb5b2e28b08a3212a7c8021d5e961b25ddb1460c",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/donnees/gajrani_dryad_v20250804.zip",
+      "size": 77937,
+      "sha256": "402ca4b0e7b908a6e88f64802ab5bf20ddcec7c28e98a64959b827a57f5607dd",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT.json",
+      "size": 4656,
+      "sha256": "83eb799bcb2d655ea0fe95a27d53a9329d04c8f07388b7d9730527f9a4c97175",
       "storage": "inline"
     },
     {
@@ -7816,6 +7864,24 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json",
+      "size": 1549,
+      "sha256": "082ad9c09fe973b74bb42caf228516c90aebfec36490f510e96c026f290ecfb9",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR_2026_08_16.md",
+      "size": 4131,
+      "sha256": "ffa7468b7b6b0da97bd1137572d99a5a7c8b04a006fb124481a03f9b83a8d407",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/PALEO_AGE_ENSEMBLE_ROUTE.json",
+      "size": 1352,
+      "sha256": "725d944cb38d2eb6a7a079ac88f06a9cebb307204e6c64427cbe1a4bcbf9f682",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/PLAN_DIRECTEUR_TESTS.md",
       "size": 49835,
       "sha256": "2062150e52b1588cc5473f923e96d5a9686ba92af0d112781b1ef735df106f88",
@@ -7835,8 +7901,8 @@
     },
     {
       "path": "plan_directeur/READINESS_VERROUS.json",
-      "size": 1536,
-      "sha256": "2dd39eaa3486a35c967aa11667d1a21a868584d9416e085e14f187f3d0cd13da",
+      "size": 3268,
+      "sha256": "85da67792504e1203cd57349bb99908b35eb1965aa61b0f6606642998bf8593a",
       "storage": "inline"
     },
     {
@@ -7859,8 +7925,8 @@
     },
     {
       "path": "plan_directeur/VERROUS_ACTIFS.json",
-      "size": 2097,
-      "sha256": "be78cf2888e4517533c4a2b7dff8826b7087f84641cd4450c6c933075f14cf80",
+      "size": 3559,
+      "sha256": "519cf9bf6f7fc1dbd30d455cca0c0298788f942d0f57f02e8b9f40b1cf187d04",
       "storage": "inline"
     },
     {
@@ -7999,6 +8065,12 @@
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-ABLATION-001.json",
       "size": 1038,
       "sha256": "6da67d433eccc06681e8b29174fd20f6e1c22cb8068d3f0feb323cc42c539770",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json",
+      "size": 2115,
+      "sha256": "0cd2c1b423f3c9a84c60ae488be4a1a2e16e85265951b34652544acc43c0b215",
       "storage": "inline"
     },
     {
@@ -10722,7 +10794,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "05f3660ceb06206deb28da8b80f1caa6451805703b2df60951692df0d571db2e",
+      "sha256": "564f8ecf74b198f5b6fd032560b81e5268ce67795c34b31e411a8d1b056b90d0",
       "storage": "inline"
     },
     {

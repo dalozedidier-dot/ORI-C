@@ -12,9 +12,43 @@
       11
     ]
   },
+  "scientific_core": {
+    "claim": "same or sufficiently matched X with different H matters only when H survives rich-X control or is carried by manipulable m changing R/P_acc",
+    "status": "sharpened_not_yet_transversally_validated",
+    "new_evidence_ids": [
+      "YEN-PAPIN-HIST-01",
+      "GAJRANI-EXTMEM-01"
+    ]
+  },
   "fronts": [
     {
       "rank": 1,
+      "id": "PRED-MATIERE-WAVE-HISTORY-001",
+      "branch": "matiere",
+      "status": "frozen_before_raw_ORI_C_analysis_pending_public_commit",
+      "raw_data_opened_by_ORI_C": false,
+      "source_doi": "10.5281/zenodo.21476531",
+      "purpose": "test rich-X versus temporal-history information on a real bistable metamaterial",
+      "targets": [
+        "H-to-R material discrimination",
+        "future matter protocol design"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "PALEO-AGE-ENSEMBLE-ROUTE",
+      "branch": "systeme_solaire",
+      "status": "published_chronology_ensemble_and_untuned_model_identified_not_opened",
+      "source_doi": "10.5281/zenodo.14796413",
+      "age_model_ensembles": 1000,
+      "purpose": "replace fabricated LR04 age uncertainty with published chronology ensembles in a new frozen prediction ID",
+      "targets": [
+        "solar-system H-versus-X test",
+        "chronology uncertainty propagation"
+      ]
+    },
+    {
+      "rank": 3,
       "id": "VES-PACC-INT-01",
       "branch": "vivant",
       "scientific_design_complete": true,
@@ -31,34 +65,6 @@
       ]
     },
     {
-      "rank": 2,
-      "id": "H052-HC01-HC02",
-      "branch": "matiere",
-      "canonical_closure": "46/53",
-      "candidate_status": "candidate_not_promoted",
-      "hc02_status": "evidence_qualified_extension",
-      "hc02_preferred_next_audit": false,
-      "verdict": "baseline_46_of_53_preserved_hc02_extension_53_of_53_evidence_qualified",
-      "extension_closure": "53/53",
-      "targets": [
-        "fermeture_hypergraphe_53_53"
-      ]
-    },
-    {
-      "rank": 3,
-      "id": "PRED-VIVANT-HISTOIRE-001",
-      "branch": "vivant",
-      "status": "frozen_locally_awaiting_external_data",
-      "data_opened": false,
-      "result_present": false,
-      "new_MIC_route_status": "actionable_two_route_plan_no_outcome_opened",
-      "targets": [
-        "XIV-3",
-        "XIV-4",
-        "XIV-10"
-      ]
-    },
-    {
       "rank": 4,
       "id": "MAG-PAIR-001",
       "branch": "matiere",
@@ -72,6 +78,36 @@
         "XIV-9",
         "XIV-11",
         "PRED-MATIERE-ABLATION-001"
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "PRED-VIVANT-HISTOIRE-001",
+      "branch": "vivant",
+      "status": "frozen_prediction_not_supported_by_two_external_history_datasets_so_far",
+      "latest_controls": {
+        "windels": "negative",
+        "yen_papin": "1.945_percent_gain_below_5_percent; rich_X_residual_0.265_percent_not_significant"
+      },
+      "new_MIC_route_status": "actionable_two_route_plan_no_outcome_opened",
+      "targets": [
+        "XIV-3",
+        "XIV-4",
+        "XIV-10"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "H052-HC01-HC02",
+      "branch": "matiere",
+      "canonical_closure": "46/53",
+      "candidate_status": "candidate_not_promoted",
+      "hc02_status": "evidence_qualified_extension",
+      "hc02_preferred_next_audit": false,
+      "verdict": "baseline_46_of_53_preserved_hc02_extension_53_of_53_evidence_qualified",
+      "extension_closure": "53/53",
+      "targets": [
+        "fermeture_hypergraphe_53_53"
       ]
     }
   ]

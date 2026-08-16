@@ -36,10 +36,46 @@
     "fast_route": "material_request_ready",
     "next": "choose_strict_or_fast_route_before_outcome_access"
   },
+  "yen_papin_2017": {
+    "status": "executed_real_data_negative_for_frozen_threshold",
+    "history_gain_percent": 1.9451091404891567,
+    "rich_X_history_gain_percent": 0.26494108131658217,
+    "rich_X_permutation_p": 0.1048951048951049,
+    "section_XIV_credit": false,
+    "lesson": "history signal must survive a sufficiently rich current-state X"
+  },
+  "gajrani_2025": {
+    "status": "executed_real_data_supports_externalized_trace_intervention_retrospectively",
+    "mild_dilution_threshold_shift_percentage_points": 40.724392501000004,
+    "supernatant_only_threshold_shift_percentage_points": 91.913733815,
+    "strict_pacc_qualified": false,
+    "section_XIV_credit": false,
+    "lesson": "physical environmental trace m can transmit H into future R"
+  },
+  "matter_wave_history_001": {
+    "status": "frozen_before_raw_ORI_C_analysis_pending_public_commit",
+    "dataset_doi": "10.5281/zenodo.21476531",
+    "raw_data_opened_by_ORI_C": false,
+    "strict_new_data_prospective_credit": false,
+    "next": "publish_frozen_mapping_before_opening_exp_zip"
+  },
   "cross_branch_pacc": {
     "definition_id": "PACC-INT-CHALLENGE-V1",
     "status": "design_mapping_ready_pending_nonconfirmatory_pilot_freeze",
     "target": "XIV-11 after both matter and living qualify"
   },
-  "section_XIV": "unchanged_7_of_12_until_real_execution_or_replication"
+  "invariant_H_m_R": {
+    "status": "sharpened_by_one_negative_X_enrichment_control_and_one_positive_physical_trace_intervention",
+    "authority": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json",
+    "next": "replicate the same two-filter logic in matter and then solar-system branch without weakening gates"
+  },
+  "section_XIV": "unchanged_7_of_12_until_real_execution_or_replication",
+  "paleo_age_ensemble_route": {
+    "status": "identified_not_opened_in_ORI_C",
+    "dataset_doi": "10.5281/zenodo.14796413",
+    "age_model_ensembles": 1000,
+    "untuned_age_model_available": true,
+    "old_pred_paleo_history_02_unchanged": true,
+    "next": "freeze_new_prediction_ID_around_published_age_ensembles_before_value_analysis"
+  }
 }
