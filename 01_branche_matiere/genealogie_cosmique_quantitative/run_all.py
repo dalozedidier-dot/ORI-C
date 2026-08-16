@@ -14,6 +14,7 @@ from analyser_donnees_massives import analyse as analyse_donnees_massives
 from analyser_information_historique import write_outputs as write_information_outputs
 from analyser_distribution_26al import analyse as analyse_distribution_26al
 from analyser_information_interetages import write_output as write_interstage_output
+from auditer_accretion_tardive import analyse as audit_late_accretion
 
 def dump(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -334,6 +335,7 @@ def main():
     # sorties afin que le test d'identité et le manifeste local les couvrent.
     write_information_outputs(out)
     write_interstage_output(HERE, out/'INFORMATION_INTERETAGES.json')
+    audit_late_accretion(out/'AUDIT_ACCRETION_TARDIVE_MULTITRACEUR.json')
 
     files=sorted(
       (p for p in out.rglob('*') if p.is_file() and p.name!='RESULTATS.sha256'),
