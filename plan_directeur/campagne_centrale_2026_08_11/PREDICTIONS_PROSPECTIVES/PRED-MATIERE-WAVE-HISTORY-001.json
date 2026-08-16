@@ -1,6 +1,9 @@
 {
   "id": "PRED-MATIERE-WAVE-HISTORY-001",
-  "status": "frozen_before_raw_ORI_C_analysis_pending_public_commit",
+  "statut": "frozen_locally_awaiting_external_data",
+  "date_ouverture": null,
+  "resultat": null,
+  "route_status": "frozen_before_raw_ORI_C_analysis_pending_public_commit",
   "source": {
     "study": "Watkins et al. — Arbitrary mechanical memory encoding via nonlinear waves in bistable metamaterials",
     "article_doi": "10.1103/pkk5-dykb",
@@ -45,5 +48,6 @@
   "failure_rule": "gain < 10 percentage points or bootstrap lower bound <= 0 or permutation p > 0.05",
   "non_testable_rule": "if trial-level H and R cannot be reconstructed from exp.zip, report non_testable without metric substitution",
   "simulation_credit": false,
-  "thresholds_moved_after_opening": false
+  "thresholds_moved_after_opening": false,
+  "empreinte_avant_ouverture": "sha256:81f381e6a71eeaa51dfb6db528ff66fa780289ab75c99d66324acd6d19ecc0da"
 }

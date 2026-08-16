@@ -1,0 +1,25 @@
+{
+  "schema": "oric.public-blind-registration-package.v1",
+  "prediction_id": "PRED-MATIERE-WAVE-HISTORY-001",
+  "source_file": "PRED-MATIERE-WAVE-HISTORY-001.json",
+  "source_sha256": "1d0f6c344e9693768f4bc6517fd24d3df431ba7466f4e7c2d8bc1eb4e3dd4e83",
+  "frozen_on": "2026-08-16",
+  "hypothesis": "For physical experimental trials, the measured temporal shape of the input carries predictive information about the final three-bit state beyond initial state and nominal static forcing descriptors.",
+  "seen_data": [
+    "published qualitative article information and public dataset metadata only",
+    "raw experimental archive exp.zip not opened by ORI-C before this package"
+  ],
+  "forbidden_or_hidden_data": [
+    "trial-level experimental values in exp.zip until the frozen package is committed publicly"
+  ],
+  "predicted_variable": "exact-match accuracy of final three-bit state",
+  "prediction": "X+H exact-match accuracy improves by at least 10 percentage points over X-only",
+  "competitor": "X-only and same-complexity H permuted within initial-state strata",
+  "success": "gain >= 10 percentage points, bootstrap 95% lower bound > 0 and H-permutation p <= 0.05",
+  "failure": "gain < 10 percentage points or bootstrap lower bound <= 0 or permutation p > 0.05",
+  "registration_service": "OSF Registries",
+  "public_url": null,
+  "registered_at": null,
+  "status": "package_ready_external_account_required",
+  "blindness_rule": "do not open exp.zip before an explicit public registration URL and timestamp exist if the result is to be treated as prospectively registered"
+}

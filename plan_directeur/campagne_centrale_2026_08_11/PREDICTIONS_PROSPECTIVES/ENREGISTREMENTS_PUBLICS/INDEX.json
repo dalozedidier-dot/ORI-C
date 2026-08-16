@@ -11,6 +11,11 @@
       "status": "package_ready_external_account_required"
     },
     {
+      "id": "PRED-MATIERE-WAVE-HISTORY-001",
+      "package": "PRED-MATIERE-WAVE-HISTORY-001.registration.json",
+      "status": "package_ready_external_account_required"
+    },
+    {
       "id": "PRED-PALEO-HISTORY-02",
       "package": "PRED-PALEO-HISTORY-02.registration.json",
       "status": "package_ready_external_account_required"
