@@ -17,16 +17,28 @@
       "id": "GAJRANI-EXTMEM-01",
       "branch": "vivant",
       "artifact": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT.json",
+      "supplemental_Pacc_artifact": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT_PACC_RETROSPECTIF.json",
       "verdict": "supports_direct_environmental_trace_intervention_H_to_m_to_R_retrospectively",
+      "section_XIV_credit": false
+    },
+    {
+      "id": "WATKINS-WAVE-HIST-01",
+      "branch": "matiere",
+      "artifact": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json",
+      "verdict": "negative_for_frozen_10pp_prediction_gain; permutation_gate_only_passes",
       "section_XIV_credit": false
     }
   ],
   "new_frozen_route": {
     "id": "PRED-MATIERE-WAVE-HISTORY-001",
     "branch": "matiere",
-    "raw_data_opened_by_ORI_C": false,
+    "raw_data_opened_by_ORI_C": true,
+    "opening_date": "2026-08-16",
     "artifact": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json",
-    "source_doi": "10.5281/zenodo.21476531"
+    "result_artifact": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json",
+    "source_doi": "10.5281/zenodo.21476531",
+    "outcome": "negative",
+    "strict_new_data_prospective_credit": false
   },
   "section_XIV": {
     "passed": 7,

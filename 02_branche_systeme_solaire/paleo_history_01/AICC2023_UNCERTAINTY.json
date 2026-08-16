@@ -1,0 +1,151 @@
+{
+  "schema": "oric.aicc2023-age-uncertainty-audit.v1",
+  "analysis_status": "freshly_reproduced_from_external_archive_2026-08-16",
+  "source": {
+    "archive": "AICC2023.zip",
+    "sha256": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41",
+    "archive_in_repository": false,
+    "tables": [
+      "EDC_chronology.tab",
+      "EDML_chronology.tab",
+      "NGRIP_chronology.tab",
+      "TALDICE_chronology.tab",
+      "VOSTOK_chronology.tab"
+    ]
+  },
+  "cores": {
+    "EDML": {
+      "n": 2399,
+      "age_max_ka": 145.2779,
+      "sigma_median_ka": 0.072,
+      "sigma_max_ka": 9.295,
+      "sigma_by_age_bin": {
+        "0-100": {
+          "n": 2146,
+          "sigma_median_ka": 0.049,
+          "sigma_q95_ka": 1.236
+        },
+        "100-300": {
+          "n": 253,
+          "sigma_median_ka": 1.023,
+          "sigma_q95_ka": 5.885799999999994
+        }
+      },
+      "AICC2023_minus_2012_median_ka": -0.000500000000000167,
+      "AICC2023_minus_2012_abs_q95_ka": 2.2543499999999947,
+      "AICC2023_minus_2012_abs_max_ka": 2.7184999999999917
+    },
+    "VOSTOK": {
+      "n": 3273,
+      "age_max_ka": 408.4258,
+      "sigma_median_ka": 1.017,
+      "sigma_max_ka": 4.317,
+      "sigma_by_age_bin": {
+        "0-100": {
+          "n": 1395,
+          "sigma_median_ka": 0.428,
+          "sigma_q95_ka": 1.1413
+        },
+        "100-300": {
+          "n": 1579,
+          "sigma_median_ka": 1.285,
+          "sigma_q95_ka": 1.6611
+        },
+        "300-600": {
+          "n": 296,
+          "sigma_median_ka": 1.4855,
+          "sigma_q95_ka": 3.1405
+        }
+      },
+      "AICC2023_minus_2012_median_ka": -0.08740000000000236,
+      "AICC2023_minus_2012_abs_q95_ka": 2.1434799999999976,
+      "AICC2023_minus_2012_abs_max_ka": 2.5027999999999935
+    },
+    "TALDICE": {
+      "n": 1598,
+      "age_max_ka": 491.5923,
+      "sigma_median_ka": 0.083,
+      "sigma_max_ka": 39.415,
+      "sigma_by_age_bin": {
+        "0-100": {
+          "n": 1351,
+          "sigma_median_ka": 0.067,
+          "sigma_q95_ka": 0.8394999999999999
+        },
+        "100-300": {
+          "n": 178,
+          "sigma_median_ka": 1.7085,
+          "sigma_q95_ka": 2.2719
+        },
+        "300-600": {
+          "n": 60,
+          "sigma_median_ka": 6.9905,
+          "sigma_q95_ka": 35.16824999999999
+        }
+      },
+      "AICC2023_minus_2012_median_ka": -0.000800000000000356,
+      "AICC2023_minus_2012_abs_q95_ka": 0.688870000000004,
+      "AICC2023_minus_2012_abs_max_ka": 2.4266999999999967
+    },
+    "EDC": {
+      "n": 5806,
+      "age_max_ka": 813.4067,
+      "sigma_median_ka": 0.871,
+      "sigma_max_ka": 5.822,
+      "sigma_by_age_bin": {
+        "0-100": {
+          "n": 2472,
+          "sigma_median_ka": 0.066,
+          "sigma_q95_ka": 1.102
+        },
+        "100-300": {
+          "n": 2009,
+          "sigma_median_ka": 0.932,
+          "sigma_q95_ka": 1.246
+        },
+        "300-600": {
+          "n": 990,
+          "sigma_median_ka": 1.4255,
+          "sigma_q95_ka": 2.3202999999999996
+        },
+        "600-850": {
+          "n": 327,
+          "sigma_median_ka": 2.37,
+          "sigma_q95_ka": 3.0147999999999993
+        }
+      },
+      "AICC2023_minus_2012_median_ka": 0.0003000000000001335,
+      "AICC2023_minus_2012_abs_q95_ka": 2.383349999999986,
+      "AICC2023_minus_2012_abs_max_ka": 5.46569999999997
+    },
+    "NGRIP": {
+      "n": 3075,
+      "age_max_ka": 124.9524,
+      "sigma_median_ka": 0.013,
+      "sigma_max_ka": 1.698,
+      "sigma_by_age_bin": {
+        "0-100": {
+          "n": 2827,
+          "sigma_median_ka": 0.009,
+          "sigma_q95_ka": 1.2233999999999996
+        },
+        "100-300": {
+          "n": 242,
+          "sigma_median_ka": 0.9864999999999999,
+          "sigma_q95_ka": 1.3857
+        }
+      },
+      "AICC2023_minus_2012_median_ka": 0.0,
+      "AICC2023_minus_2012_abs_q95_ka": 2.298539999999997,
+      "AICC2023_minus_2012_abs_max_ka": 5.192399999999992
+    }
+  },
+  "paleo_status": {
+    "age_uncertainty_lock": "partially_lifted_for_AICC2023_ice_core_chronologies",
+    "full_ORI_C_test_status": "still_open",
+    "remaining_requirements": [
+      "independent target",
+      "negative chronology control"
+    ]
+  }
+}

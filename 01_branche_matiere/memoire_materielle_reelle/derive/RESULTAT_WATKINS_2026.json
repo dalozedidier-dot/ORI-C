@@ -1,0 +1,69 @@
+{
+  "schema": "oric.watkins-wave-history-analysis.v2",
+  "source": {
+    "study": "Watkins et al. — Arbitrary mechanical memory encoding via nonlinear waves in bistable metamaterials",
+    "article_doi": "10.1103/pkk5-dykb",
+    "dataset_doi": "10.5281/zenodo.21476531",
+    "archive": "exp.zip",
+    "archive_sha256": "a7f3e778e8440142e9d8c3839a897fcaada1c0c22040119353eb71aa3e2f0737",
+    "archive_size_bytes": 52824735,
+    "archive_in_repository": false
+  },
+  "opening": {
+    "opened_after_local_freeze": true,
+    "date": "2026-08-16",
+    "already_published_experiment": true,
+    "strict_new_data_prospective_credit": false,
+    "thresholds_moved_after_opening": false
+  },
+  "label_reconstruction": {
+    "status": "freshly_reproduced_from_raw_archive",
+    "n_trials": 209,
+    "endpoint_rule": "median x-position over final 20 marker-history frames",
+    "pairs": "(2-1),(4-3),(6-5)",
+    "toggle_threshold_raw": 25.0,
+    "max_abs_no_toggle": 0.9986572265625,
+    "min_abs_toggle": 48.799896240234375
+  },
+  "classifier": {
+    "status": "historical_result_preserved_not_freshly_rerun_exactly",
+    "reason": "exact original feature-extraction/classifier script from the prior analysis is unavailable",
+    "model": "multinomial logistic regression, standardized, deterministic 5-fold held-out trials",
+    "X_features": [
+      "x0",
+      "x1",
+      "x2",
+      "amp_nom",
+      "freq_nom"
+    ],
+    "H_features": [
+      "duration",
+      "energy",
+      "area_asym",
+      "amp_asym",
+      "time_center",
+      "time_spread",
+      "time_skew",
+      "peak_count",
+      "off_fund_power",
+      "spectral_entropy",
+      "resid_ratio"
+    ],
+    "accuracy_X": 0.2679425837320574,
+    "accuracy_X_plus_H": 0.3062200956937799,
+    "gain_percentage_points": 3.8277511961722466,
+    "bootstrap95_gain_pp": [
+      -2.8708133971291865,
+      10.526315789473683
+    ],
+    "permutation_repeats": 199,
+    "permutation_p_one_sided": 0.005,
+    "success_threshold_gain_pp": 10.0,
+    "gain_gate_pass": false,
+    "bootstrap_gate_pass": false,
+    "permutation_gate_pass": true
+  },
+  "frozen_prediction_overall": false,
+  "interpretation": "The exact frozen 10 percentage-point gain criterion is not met and the bootstrap lower bound is not positive. The permutation gate alone passes. The result is retained as a negative discriminating material benchmark, not as §XIV prospective credit.",
+  "section_XIV_credit": false
+}

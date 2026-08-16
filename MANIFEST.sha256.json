@@ -982,6 +982,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/auditer_accretion_tardive.py",
+      "size": 1966,
+      "sha256": "42b471ad498b6d080ca460f84b150d327300d61584c82d3ff7fbc2d0534e43b5",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/data/MESURES_EMPIRIQUES.csv",
       "size": 17002,
       "sha256": "8feda952f0c5c81d13df093ca3a36655ce08c63330e9804c12840f96b7a70a71",
@@ -1051,6 +1057,12 @@
       "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/APPROFONDISSEMENT_EMPIRIQUE.json",
       "size": 803,
       "sha256": "12e701ce5445a422cbd38d75a4f9585c75daebba5c587df262c3e6c31e1cbce0",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/genealogie_cosmique_quantitative/resultats/AUDIT_ACCRETION_TARDIVE_MULTITRACEUR.json",
+      "size": 961,
+      "sha256": "87ac1a4dfe5b04e3074b6f0a3482ce6469a47935348bce86fad57f0b479efcd5",
       "storage": "inline"
     },
     {
@@ -2287,6 +2299,12 @@
       "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_VIEILLISSEMENT_POLYMERE.json",
       "size": 2306,
       "sha256": "b5263dcfde06fe997e0188ad484ccf9785a5e7ac7400ac221cb1f5301c56a50a",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json",
+      "size": 2439,
+      "sha256": "51b1137d5721de76e34fb897e77a989bb9611630a714aa488d7b39854f59a79d",
       "storage": "inline"
     },
     {
@@ -5680,6 +5698,12 @@
       "storage": "inline"
     },
     {
+      "path": "02_branche_systeme_solaire/paleo_history_01/AICC2023_UNCERTAINTY.json",
+      "size": 4227,
+      "sha256": "83dfa49bc3dc50e1e780cfb25067635d279b57ee35f68a8d2acc8649d2a0e27e",
+      "storage": "inline"
+    },
+    {
       "path": "02_branche_systeme_solaire/paleo_history_01/GEL_PALEO_HISTORY_01.json",
       "size": 580,
       "sha256": "388cd980f8f1a29aa195200b14576070f3e8184dcf94cb764109c608ca260e46",
@@ -6382,6 +6406,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/lignees_vesicules/analyser_dynamique_temporelle.py",
+      "size": 6515,
+      "sha256": "7990a3c40318895b2f461c06347b826c4b638c6f8660536671978b6608d32fb9",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/lignees_vesicules/analyser_lignees.py",
       "size": 22873,
       "sha256": "82f7c4b75cdfd7becf62ecaa7b29c07846b9e15fd1d0c1926cdffb00bf700069",
@@ -6439,6 +6469,12 @@
       "path": "03_branche_vivant/lignees_vesicules/preparer_ves_pacc_int_01.py",
       "size": 15304,
       "sha256": "aab65d5c34ec0ca3a3edc0ab205b9ac7ed85b09f7084efdd940c9cf64f49cbf3",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/lignees_vesicules/resultats/DYNAMIQUE_TEMPORELLE.json",
+      "size": 11185,
+      "sha256": "b3d80c0be8f49d7dd749225f025b196903e2278e5126339d3bf0cf4b3876c676",
       "storage": "inline"
     },
     {
@@ -6520,6 +6556,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/analyser_pacc.py",
+      "size": 4907,
+      "sha256": "95fabcf88904ebb8c376c6abf7e3c36643f70219a05590204a86f045386fc5bc",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/donnees/gajrani_dryad_v20250804.zip",
       "size": 77937,
       "sha256": "402ca4b0e7b908a6e88f64802ab5bf20ddcec7c28e98a64959b827a57f5607dd",
@@ -6529,6 +6571,12 @@
       "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT.json",
       "size": 4656,
       "sha256": "83eb799bcb2d655ea0fe95a27d53a9329d04c8f07388b7d9730527f9a4c97175",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT_PACC_RETROSPECTIF.json",
+      "size": 11455,
+      "sha256": "52f5c0a0e48f4b97c3be095bb879a2929a9f470d19050f474d44aba80f28abfc",
       "storage": "inline"
     },
     {
@@ -6598,6 +6646,12 @@
       "storage": "inline"
     },
     {
+      "path": "03_branche_vivant/synthese_donnees_reelles_2026/ENDOSYMBIOSE_RETENTION_MODULAIRE.json",
+      "size": 3626,
+      "sha256": "fe17eb9f5b2ca977b4ae68fc95c32ba5055f4df6d4611fb610f3bf2a433e81e1",
+      "storage": "inline"
+    },
+    {
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/RAPPORT.md",
       "size": 2512,
       "sha256": "0ce16130c921d37cb0ea2ec36528dbbf62130ba4f64d9542fd65dfeb4980d47e",
@@ -6607,6 +6661,12 @@
       "path": "03_branche_vivant/synthese_donnees_reelles_2026/SYNTHESE.json",
       "size": 666,
       "sha256": "38780231def83bd3ac8e6ccaeeb2af3df58957afeb51536c2c697be2ad0107d9",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/synthese_donnees_reelles_2026/analyser_endosymbiose.py",
+      "size": 3758,
+      "sha256": "5b1f95ba0e1202654315d6278a0f620f9538fcf2d7700d6a88de4e2c1890d46a",
       "storage": "inline"
     },
     {
@@ -7865,14 +7925,14 @@
     },
     {
       "path": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json",
-      "size": 1549,
-      "sha256": "082ad9c09fe973b74bb42caf228516c90aebfec36490f510e96c026f290ecfb9",
+      "size": 2197,
+      "sha256": "1cab4c139f03f7f8475484b1140190bd91be625371b56d14f359c9127c3bebcd",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR_2026_08_16.md",
-      "size": 4131,
-      "sha256": "ffa7468b7b6b0da97bd1137572d99a5a7c8b04a006fb124481a03f9b83a8d407",
+      "size": 5057,
+      "sha256": "c1b1725ab378c8e783c332becf960a4d2a75452861047e8ae76500a119588dd3",
       "storage": "inline"
     },
     {
@@ -10800,7 +10860,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "86e2cedc94e123a144d188423030d91d0d6fb7bbf83ac33e31365315b713972b",
+      "sha256": "6f96e9803398510b2c340b1ba4ffb7cb104cfaf6d68a34d0f3e888b5096c69f0",
       "storage": "inline"
     },
     {
