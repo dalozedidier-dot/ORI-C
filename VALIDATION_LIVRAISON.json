@@ -1,0 +1,8 @@
+{
+  "files": 113,
+  "bytes_excluding_manifest": 117677144,
+  "blocked_repo_root_names_absent": true,
+  "bad_commit": "f5fc7447277abc25eee04662cdb536a626c449e2",
+  "healthy_parent": "6993cfd6d0e76df9541834ffe7113a125bdac160",
+  "payload_prefix": "plan_directeur/exploitation_donnees_existantes_2026_08_16/"
+}

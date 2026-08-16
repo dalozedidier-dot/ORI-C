@@ -1,0 +1,112 @@
+{
+  "schema": "oric.corrected-delivery-provenance.v1",
+  "created_date": "2026-08-16",
+  "purpose": "repair the incomplete 39 KB delivery from the previous conversation without pretending to reconstruct unavailable repository bytes",
+  "full_repository_status": "NOT_INCLUDED",
+  "reason_full_repository_not_included": "The exact complete base archive used in the previous conversation, ORI-C-main-20260815T193827Z-1-001.zip, is referenced in conversation history but its bytes are no longer accessible in the current file library. No substitute repository was fetched or silently substituted.",
+  "previous_exact_base_reference": {
+    "name": "ORI-C-main-20260815T193827Z-1-001.zip",
+    "availability_now": false
+  },
+  "stable_release_reference": {
+    "version": "0.9.8-research",
+    "archive_sha256": "ad98da32bd94a3201477ae9526b9b371c4c7cfc0fe827abbc27966b1fd0c04d6",
+    "commit": "ed2179dbf6d6e21fc280213bb4cdc48f6c3839f8",
+    "historical_manifest_files": 1847
+  },
+  "bad_delivery_reference": {
+    "name": "ORI-C_EXPLOITATION_DONNEES_EXISTANTES_7_AXES.zip",
+    "bytes": 39198,
+    "sha256": "a235d4fc19344761dd00b856ba1438903f8612a2eab3f9b6b9314e90ef1fb1d8"
+  },
+  "campaign_payload_recovery": {
+    "expected_files": 47,
+    "recovered_exact_files": 43,
+    "missing_exact_payloads": [
+      {
+        "file": "REAL_DATA_COVERAGE.json",
+        "bytes": 20431,
+        "sha256": "578c254c0962416540a0c6518ff2a688e7bca17474d6ad0a47fe98d6ac1385cc",
+        "rows": null,
+        "columns": null
+      },
+      {
+        "file": "nucleosynthesis_isotope_yields.csv",
+        "bytes": 10062765,
+        "sha256": "3ac45bfba3576c29c6387a52c272b062c9942ecd6727925f2bfc2e2bade08317",
+        "rows": 56507,
+        "columns": [
+          "source_id",
+          "model_family",
+          "mass_solar",
+          "metallicity",
+          "element",
+          "isotope",
+          "yield_mass",
+          "uncertainty",
+          "initial_abundance_reference",
+          "citation"
+        ]
+      },
+      {
+        "file": "partition_experiments.csv",
+        "bytes": 5956,
+        "sha256": "3f393df5d37d8e31848ebf7a8ddb0d514d3fc5d5da8e4099b4579a1921234af1",
+        "rows": 41,
+        "columns": [
+          "experiment_id",
+          "element",
+          "pressure_gpa",
+          "temperature_k",
+          "delta_iw",
+          "logD",
+          "uncertainty",
+          "D_original",
+          "pressure_min_gpa",
+          "pressure_max_gpa",
+          "temperature_min_k",
+          "temperature_max_k",
+          "oxygen_fugacity_original",
+          "condition_original",
+          "source_id",
+          "value_type",
+          "source_status",
+          "nbo_t",
+          "h2o",
+          "source_file"
+        ]
+      },
+      {
+        "file": "prebiotic_timecourse_summary.csv",
+        "bytes": 57393,
+        "sha256": "d0c126b52860a7f7374faf0e68afd883782485736963b0e1c02fd7d6a7a7d19c",
+        "rows": 576,
+        "columns": [
+          "source_file",
+          "condition",
+          "generation",
+          "well",
+          "well_index",
+          "n",
+          "initial",
+          "maximum",
+          "final",
+          "linear_slope_per_hour",
+          "peak_gain",
+          "post_peak_loss"
+        ]
+      }
+    ],
+    "policy": "older payloads with non-matching SHA-256 were not substituted"
+  },
+  "external_inputs": {
+    "AICC2023.zip": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41",
+    "exp.zip": "a7f3e778e8440142e9d8c3839a897fcaada1c0c22040119353eb71aa3e2f0737",
+    "gajrani_dryad_v20250804.zip": "402ca4b0e7b908a6e88f64802ab5bf20ddcec7c28e98a64959b827a57f5607dd",
+    "pbio.2001586.s018.xlsx": "d5252d90b522238a7bea3ab3846183755ac7e60fea80088290b5e3e53226d599"
+  },
+  "windels_policy": "numerical MIC outcomes remain unopened; only the proposed frozen protocol is carried forward",
+  "watkins_policy": "raw data and final-label reconstruction are reproducible; historical classifier metrics are preserved separately because the exact original feature/classifier script is unavailable",
+  "yen_papin_policy": "raw data, analyzer and historical result are included; analyzer exceeded the current execution limit during this repair, so its historical output is not mislabeled as a fresh rerun",
+  "no_current_repository_fetch": true
+}

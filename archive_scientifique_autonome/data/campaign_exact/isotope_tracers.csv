@@ -1,0 +1,363 @@
+sample_id,group,tracer,value,uncertainty,compound_group,compound_class,compound_type,reference,doi
+Titan|CH4|1,Saturn|Titan|Titan|Titan,D/H,0.000158,1.6e-05,CH4,VOC,volatile,"Abbas et al., 2009",https://doi.org/10.1088/0004-637X/708/1/342
+Ivuna|bulk|2,Meteorites|CC|CI|CI1,D/H,0.0003081724,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Orgueil|bulk|3,Meteorites|CC|CI|CI1,D/H,0.00030723759999999996,0.0001561116,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET01070|bulk|4,Meteorites|CC|CM|CM1,D/H,0.0002637694,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALH83100|bulk|5,Meteorites|CC|CM|CM1/2,D/H,0.00026844339999999996,0.00015751379999999997,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Cold Bokk|bulk|6,Meteorites|CC|CM|CM2,D/H,0.0002701572,0.00015985079999999998,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+DOM03183|bulk|7,Meteorites|CC|CM|CM2,D/H,0.0002553562,0.00015657899999999998,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Kivesvaara|bulk|8,Meteorites|CC|CM|CM2,D/H,0.0002659506,0.00015689059999999998,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Mighei|bulk|9,Meteorites|CC|CM|CM2,D/H,0.0002809074,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Murchison|bulk|10,Meteorites|CC|CM|CM2,D/H,0.0002768566,0.0001600066,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Murray|bulk|11,Meteorites|CC|CM|CM2,D/H,0.0002949294,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALHA77307|bulk|12,Meteorites|CC|CO|CO3,D/H,0.0002047212,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Colony|bulk|13,Meteorites|CC|CO|CO3,D/H,0.0002724942,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Y81020|bulk|14,Meteorites|CC|CO|CO3,D/H,0.0002184316,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Kainsaz|bulk|15,Meteorites|CC|CO|CO3.2,D/H,0.000223573,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Y791717|bulk|16,Meteorites|CC|CO|CO3.3,D/H,0.000208772,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALH83108|bulk|17,Meteorites|CC|CO|CO3.5,D/H,0.0002207686,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALHA77003|bulk|18,Meteorites|CC|CO|CO3.6,D/H,0.0001763656,0.00015720219999999996,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95577|bulk|19,Meteorites|CC|CR|CR1,D/H,0.0006189934,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Acfer 059|bulk|20,Meteorites|CC|CR|CR2,D/H,0.000174496,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Acfer 186|bulk|21,Meteorites|CC|CR|CR2,D/H,0.00022248239999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Acfer 209|bulk|22,Meteorites|CC|CR|CR2,D/H,0.00018244179999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+EET92042|bulk|23,Meteorites|CC|CR|CR2,D/H,0.0006235116,0.0001576696,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+El Djouf|bulk|24,Meteorites|CC|CR|CR2,D/H,0.0001905434,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRA95229|bulk|25,Meteorites|CC|CR|CR2,D/H,0.0006090221999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET00426|bulk|26,Meteorites|CC|CR|CR2,D/H,0.0006316132,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+QUE99177|bulk|27,Meteorites|CC|CR|CR2,D/H,0.0006448561999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Al Rais|bulk|28,Meteorites|CC|CR|CR2-an,D/H,0.0005638402,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALH84028|bulk|29,Meteorites|CC|CV|CV3,D/H,0.00019303619999999996,0.000157358,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Allende|bulk|30,Meteorites|CC|CV|CV3,D/H,0.0001860252,0.00015782539999999997,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Bali|bulk|31,Meteorites|CC|CV|CV3,D/H,0.00018072799999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Kaba|bulk|32,Meteorites|CC|CV|CV3,D/H,0.0001883622,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET00430|bulk|33,Meteorites|CC|CV|CV3,D/H,0.0001654596,0.000157358,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Mokoia|bulk|34,Meteorites|CC|CV|CV3,D/H,0.00020892779999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Efremovka|bulk|35,Meteorites|CC|CV|CV3,D/H,0.00028651619999999997,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Leoville|bulk|36,Meteorites|CC|CV|CV3,D/H,0.00036784379999999997,0.0001639016,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Vigarano|bulk|37,Meteorites|CC|CV|CV3,D/H,0.00028651619999999997,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET01017|bulk|38,Meteorites|CC|CV|CV3-an,D/H,0.0001469194,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALHA77295|bulk|39,Meteorites|EC|EC|EH3,D/H,0.00015221659999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95517|bulk|40,Meteorites|EC|EC|EH3,D/H,0.000137883,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+PCA91238|bulk|41,Meteorites|EC|EC|EH3,D/H,0.00013087199999999998,0.00015595579999999997,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+EET87746|bulk|42,Meteorites|EC|EC|EH4,D/H,0.0002023842,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Indarch|bulk|43,Meteorites|EC|EC|EH4,D/H,0.0001430244,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MAC02837|bulk|44,Meteorites|EC|EC|EL3,D/H,0.00013881779999999998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+PCA91020|bulk|45,Meteorites|EC|EC|EL3,D/H,0.00013725979999999998,0.00015626739999999997,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+WSG95300|bulk|46,Meteorites|OC|H|H3.3,D/H,0.0011187998,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET00506|bulk|47,Meteorites|OC|H|H3.4,D/H,0.0007646663999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET00452|bulk|48,Meteorites|OC|L|L3.05,D/H,0.0005730323999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET00526|bulk|49,Meteorites|OC|L|L3.05,D/H,0.0008609507999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+QUE97008|bulk|50,Meteorites|OC|L|L3.05,D/H,0.0006542042,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+LEW86018|bulk|51,Meteorites|OC|L|L3.1,D/H,0.0005501298,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET96503|bulk|52,Meteorites|OC|L|L3.10,D/H,0.0007765071999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95502|bulk|53,Meteorites|OC|L|L3.2,D/H,0.0006694726,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95505|bulk|54,Meteorites|OC|L|L3.4,D/H,0.0007804022,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95504|bulk|55,Meteorites|OC|L|L3.5,D/H,0.0006503091999999999,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+MET96515|bulk|56,Meteorites|OC|L|L3.5,D/H,0.0007785326,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Semarkona|bulk|57,Meteorites|OC|LL|LL3,D/H,0.0005175676,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Bishunpur|bulk|58,Meteorites|OC|LL|LL3.15,D/H,0.0005840942,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Krymka|bulk|59,Meteorites|OC|LL|LL3.2,D/H,0.00045446859999999996,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+ALH83010|bulk|60,Meteorites|OC|LL|LL3.3,D/H,0.00020970680000000002,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Chainpur|bulk|61,Meteorites|OC|LL|LL3.4,D/H,0.0005777064,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Bells|bulk|62,Meteorites|CC|CM|CM2-ung,D/H,0.0006672913999999999,0.0001558,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+GRO95577|bulk|63,Meteorites|CC|CR|CR1,D/H,0.0006189934,,organic,IOM,organic,"Alexander et al., 2007",https://doi.org/10.1016/j.gca.2007.06.052
+Orgueil Smith.|bulk|64,Meteorites|CC|CI|CI1,D/H,0.00016681895499999998,0.00015597186088895382,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Ivuna|bulk|65,Meteorites|CC|CI|CI1,D/H,0.000168184542,0.0001558539819458884,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Orgueil BM|bulk|66,Meteorites|CC|CI|CI1,D/H,0.00016887384015,0.000156196488919216,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+SCO 06043 II|bulk|67,Meteorites|CC|CM|CM1,D/H,0.0001217407957,0.00015641550435037505,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 84042|bulk|68,Meteorites|CC|CM|CM2,D/H,0.0001269327528,0.00015588438810316607,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 84029|bulk|69,Meteorites|CC|CM|CM2,D/H,0.0001271162852,0.0001561842633209427,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 84034|bulk|70,Meteorites|CC|CM|CM2,D/H,0.00012731087939999998,0.00015624838065259104,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Nagoya II|bulk|71,Meteorites|CC|CM|CM2,D/H,0.0001275268182,0.00015595445446558529,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 84044|bulk|72,Meteorites|CC|CM|CM2,D/H,0.000127645382,0.00015609546852831733,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+SCO 06014|bulk|73,Meteorites|CC|CM|CM2,D/H,0.0001305673331,0.0001561083580949883,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 85013|bulk|74,Meteorites|CC|CM|CM2,D/H,0.0001343686194,0.0001558786594068672,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+DOM 08003|bulk|75,Meteorites|CC|CM|CM2,D/H,0.00013445555579999998,0.00015752389691689068,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+QUE 99355|bulk|76,Meteorites|CC|CM|CM2,D/H,0.0001363205597,0.00015615969602720132,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 03785|bulk|77,Meteorites|CC|CM|CM2,D/H,0.0001365497415,0.00015592790416158681,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 87022|bulk|78,Meteorites|CC|CM|CM2,D/H,0.0001382157109,0.00015616652639586514,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+MAC 88176|bulk|79,Meteorites|CC|CM|CM2,D/H,0.00013906077009999998,0.00015622645737252584,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 87148|bulk|80,Meteorites|CC|CM|CM2,D/H,0.0001398822256,0.00015649779927604714,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 90500|bulk|81,Meteorites|CC|CM|CM2,D/H,0.00014093917279999998,0.00015625477035230868,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+EET 96006|bulk|82,Meteorites|CC|CM|CM2,D/H,0.0001417574344,0.00015589408281997812,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+EET 96016|bulk|83,Meteorites|CC|CM|CM2,D/H,0.0001418591718,0.00015581850809573395,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Murchison|bulk|84,Meteorites|CC|CM|CM2,D/H,0.0001461853483,0.0001562762529634278,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 88001|bulk|85,Meteorites|CC|CM|CM2,D/H,0.0001479736986,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 02239|bulk|86,Meteorites|CC|CM|CM2,D/H,0.0001501907326,0.00015590245552995325,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Banten|bulk|87,Meteorites|CC|CM|CM2,D/H,0.0001507538717,0.00015592393814107248,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 87016|bulk|88,Meteorites|CC|CM|CM2,D/H,0.0001517472525,0.00015611474779470583,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+GRO 95566|bulk|89,Meteorites|CC|CM|CM2,D/H,0.0001528760235,0.0001559743947353935,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+MCY 05230|bulk|90,Meteorites|CC|CM|CM2,D/H,0.000153058699,0.0001563770559848334,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+GRA 98074|bulk|91,Meteorites|CC|CM|CM2,D/H,0.0001536105426,0.00015646474910509448,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+DNG 06004|bulk|92,Meteorites|CC|CM|CM2,D/H,0.0001552743308,0.00015597604724394115,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 02333|bulk|93,Meteorites|CC|CM|CM2,D/H,0.0001554504627,0.00015651685820796318,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 03718|bulk|94,Meteorites|CC|CM|CM2,D/H,0.0001560673528,0.00015636670026460158,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 02336|bulk|95,Meteorites|CC|CM|CM2,D/H,0.0001566503564,0.000156160467197857,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LON 94102|bulk|96,Meteorites|CC|CM|CM2,D/H,0.0001591792241,0.0001559104977382184,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+MAC 88101|bulk|97,Meteorites|CC|CM|CM2,D/H,0.00016125596019999998,0.00015659893279916225,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+MET 00432|bulk|98,Meteorites|CC|CM|CM2,D/H,0.00016285291019999998,0.00015583481284673663,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+DOM 08013|bulk|99,Meteorites|CC|CM|CM2,D/H,0.00016314908599999997,0.0001561679585699396,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+TIL 91722|bulk|100,Meteorites|CC|CM|CM2,D/H,0.00016416427879999997,0.00015590664188494063,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 85311|bulk|101,Meteorites|CC|CM|CM2,D/H,0.00017440267580000001,0.00015625609235914671,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LEW 85312|bulk|102,Meteorites|CC|CM|CM2,D/H,0.0001754831488,0.00015644139365095455,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Bells clean|bulk|103,Meteorites|CC|CM|CM2,D/H,0.0002033443175,0.00015606164718670853,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Bells water|bulk|104,Meteorites|CC|CM|CM2,D/H,0.00020708608819999997,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+ALH 77307|bulk|105,Meteorites|CC|CO|CO3,D/H,0.0001482888041,0.0001564844690404296,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+GRO 95577|bulk|106,Meteorites|CC|CR|CR1,D/H,0.00019731049509999997,0.00015649702810539108,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+PCA 91082|bulk|107,Meteorites|CC|CR|CR2,D/H,0.0002456780598,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+EET 96286|bulk|108,Meteorites|CC|CR|CR2,D/H,0.0002509458915,0.00016107645979259185,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+MET 00426|bulk|109,Meteorites|CC|CR|CR2,D/H,0.0002512183078,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+GRA 95229|bulk|110,Meteorites|CC|CR|CR2,D/H,0.00025778870540000003,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+QUE 99177|bulk|111,Meteorites|CC|CR|CR2,D/H,0.00025904351859999995,0.0001558,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 02342|bulk|112,Meteorites|CC|CR|CR2,D/H,0.0002635381928,0.0001577984336702702,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Renazzo|bulk|113,Meteorites|CC|CR|CR2,D/H,0.0002652516033,0.0001577366298505898,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Al Rais|bulk|114,Meteorites|CC|CR|CR2,D/H,0.0002703852912,0.00015692943450868762,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+EET 92042|bulk|115,Meteorites|CC|CR|CR2,D/H,0.00027304098009999997,0.00015812574052993862,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+LAP 04720|bulk|116,Meteorites|CC|CR|CR2,D/H,0.0002746938363333333,0.0001572207769611945,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Kaba|bulk|117,Meteorites|CC|CV|CV3,D/H,0.0001578977691,0.00015700864475173875,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Semarkona|bulk|118,Meteorites|OC|LL|LL3.0/S2,D/H,0.0004075627509,0.00015874500949999697,bulk,bulk,bulk,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Orgueil / Ivuna|water|119,Meteorites|CC|CI|CI,D/H,6.43e-05,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Orgueil / Ivuna|water|120,Meteorites|CC|CI|CI,D/H,9.76e-05,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+average of CMs|water|121,Meteorites|CC|CM|CM,D/H,8.65e-05,3.6e-06,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+primitive COs|water|122,Meteorites|CC|CO|CO,D/H,4.89e-05,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+primitive COs|water|123,Meteorites|CC|CO|CO,D/H,0.000132,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+average of CRs|water|124,Meteorites|CC|CR|CR,D/H,0.000171,1.7e-05,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Kaba|water|125,Meteorites|CC|CV|CV,D/H,8.2e-05,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Semarkona|water|126,Meteorites|OC|LL|LL,D/H,0.00028,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+Semarkona|water|127,Meteorites|OC|LL|LL,D/H,0.000344,,water,water,water,"Alexander et al., 2012",https://doi.org/10.1126/science.1223474
+67P/Churyumov-Gerasimenko|NH3|128,Comets|Comet Tails|Comet Tails|Comets,D/H,0.0011,0.0002,NH3,NH3,volatile,"Altwegg et al, 2019",https://doi.org/10.1146/annurev-astro-091918-104409
+67P/Churyumov-Gerasimenko|water|129,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00053,7e-05,water,water,volatile,"Altwegg et al., 2015",https://doi.org/10.1126/science.1261952
+MIL 090001|glycine|130,Meteorites|CC|CR|CR2.4,D/H,0.000307705,0.0001757424,organic,SOM,amino acids,"Aponte et al., 2020",https://doi.org/10.1111/maps.13586
+MIL 090001|D-alanine|131,Meteorites|CC|CR|CR2.4,D/H,0.00039355079999999995,0.0001726264,organic,SOM,amino acids,"Aponte et al., 2020",https://doi.org/10.1111/maps.13586
+MIL 090001|L-alanine|132,Meteorites|CC|CR|CR2.4,D/H,0.0005174118,0.00017153579999999998,organic,SOM,amino acids,"Aponte et al., 2020",https://doi.org/10.1111/maps.13586
+1P/Halley|H2DO+|133,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000308,5.3e-05,water,water,volatile,"Balsiger et al., 1995",https://doi.org/10.1029/94JA02936
+C/2014|water|134,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00014,4e-05,water,water,volatile,"Biver et al., 2016",https://doi.org/10.1051/0004-6361/201528041
+C/2012|water|135,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00065,0.00016,water,water,volatile,"Biver et al., 2016",https://doi.org/10.1051/0004-6361/201528041
+C/1996 B2 (Hyakutake)|HDO|136,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00029,0.0001,water,water,volatile,"Bockelée-Morvan et al., 1998",https://doi.org/10.1006/icar.1998.5916
+C/2009 P1 (Garradd)|HDO|137,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000206,2.2e-05,water,water,volatile,"Bockelée-Morvan et al., 2012",https://doi.org/10.1051/0004-6361/201219744
+1P/Halley|water|138,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000308,5e-05,water,water,volatile,"Bockelée-Morvan et al., 2015",https://doi.org/10.1007/s11214-015-0156-9
+1P/Halley|H2DO+|139,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00021,3e-05,water,water,volatile,"Brown et al., 2012",https://doi.org/10.1016/j.pss.2011.07.023
+Murchison|bulk|140,Meteorites|CC|CM|CM2,D/H,0.000426892,0.000199424,organic,IOM,organic,"Busemann et al., 2006",https://doi.org/10.1126/science.1123878
+Bells|hotspot|141,Meteorites|CC|CM|CM2-ung,D/H,0.0016670599999999997,0.00048298,organic,IOM,organic,"Busemann et al., 2006",https://doi.org/10.1126/science.1123878
+GRO95517|hotspot|142,Meteorites|CC|CR|CR1,D/H,0.0031783199999999997,0.0008724799999999999,organic,IOM,organic,"Busemann et al., 2006",https://doi.org/10.1126/science.1123878
+Al Rais|hotspot|143,Meteorites|CC|CR|CR2,D/H,0.00238374,0.00076342,organic,IOM,organic,"Busemann et al., 2006",https://doi.org/10.1126/science.1123878
+EET92042|hotspot|144,Meteorites|CC|CR|CR2,D/H,0.00269534,0.00048298,organic,IOM,organic,"Busemann et al., 2006",https://doi.org/10.1126/science.1123878
+L2036|bulk|145,IDPs|IDPs|IDPs|IDP,D/H,0.00022123599999999998,0.00018228599999999998,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|bulk|146,IDPs|IDPs|IDPs|IDP,D/H,0.00024460599999999997,0.00018695999999999999,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|bulk|147,IDPs|IDPs|IDPs|IDP,D/H,0.00028978799999999997,0.000190076,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|bulk|148,IDPs|IDPs|IDPs|IDP,D/H,0.000395732,0.000200982,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|149,IDPs|IDPs|IDPs|IDP,D/H,0.0008272979999999999,0.00022746799999999998,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|150,IDPs|IDPs|IDPs|IDP,D/H,0.0015112599999999997,0.0003116,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|151,IDPs|IDPs|IDPs|IDP,D/H,0.0008459939999999999,0.000230584,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|152,IDPs|IDPs|IDPs|IDP,D/H,0.000369246,0.00018695999999999999,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|153,IDPs|IDPs|IDPs|IDP,D/H,0.00018540199999999998,0.000172938,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|154,IDPs|IDPs|IDPs|IDP,D/H,0.0005453,0.000208772,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|bulk|155,IDPs|IDPs|IDPs|IDP,D/H,0.00056088,0.000177612,bulk,bulk,bulk,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|hotspot|156,IDPs|IDPs|IDPs|IDP,D/H,0.00035833999999999996,0.00022590999999999998,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|hotspot|157,IDPs|IDPs|IDPs|IDP,D/H,0.00048298,0.00024928,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|hotspot|158,IDPs|IDPs|IDPs|IDP,D/H,0.000330296,0.00020254,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2036|hotspot|159,IDPs|IDPs|IDPs|IDP,D/H,0.0006387799999999999,0.0002337,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|160,IDPs|IDPs|IDPs|IDP,D/H,0.0016359,0.00065436,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|161,IDPs|IDPs|IDPs|IDP,D/H,0.00472074,0.0010594399999999998,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|162,IDPs|IDPs|IDPs|IDP,D/H,0.00216562,0.00043623999999999996,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|163,IDPs|IDPs|IDPs|IDP,D/H,0.0006013879999999999,0.000230584,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|164,IDPs|IDPs|IDPs|IDP,D/H,0.00213446,0.00045181999999999997,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|165,IDPs|IDPs|IDPs|IDP,D/H,0.0035055,0.0007166799999999999,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|166,IDPs|IDPs|IDPs|IDP,D/H,0.0007945799999999999,0.00021811999999999998,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|167,IDPs|IDPs|IDPs|IDP,D/H,0.0007945799999999999,0.00021811999999999998,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|168,IDPs|IDPs|IDPs|IDP,D/H,0.00169822,0.00034276,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|169,IDPs|IDPs|IDPs|IDP,D/H,0.00472074,0.00213446,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|170,IDPs|IDPs|IDPs|IDP,D/H,0.00084132,0.00028823,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+L2054|hotspot|171,IDPs|IDPs|IDPs|IDP,D/H,0.00472074,0.0010594399999999998,organic,organic matter,organic,"Busemann et al., 2009",https://doi.org/10.1016/j.epsl.2009.09.007
+En_N|unknown|172,Saturn|En_N|En_N|Enceladus_North,D/H,0.00022,6e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+En_S|unknown|173,Saturn|En_S|En_S|Enceladus_South,D/H,0.00019,6e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+Hyperion|unknown|174,Saturn|Hyperion|Hyperion|Hyperion,D/H,0.0002,6e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+Hyperion|unknown|175,Saturn|Hyperion|Hyperion|Hyperion,D/H,0.00023,6e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+Iapetus|unknown|176,Saturn|Iapetus|Iapetus|Iapetus,D/H,0.00017,3e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+Phoebe|unknown|177,Saturn|Phoebe|Phoebe|Phoebe,D/H,0.0013,0.0003,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+Rhea|unknown|178,Saturn|Rhea|Rhea|Rhea,D/H,0.00018,3e-05,water,water,surface,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+B ring|water|179,Saturn|B ring|B ring|Saturn B ring,D/H,0.00016,3e-05,water,water,volatile,"Clark et al., 2019",https://doi.org/10.1016/j.icarus.2018.11.029
+C/1995 O1 (Hale-Bopp)|HCN|180,Comets|Comet Tails|Comet Tails|Comets,D/H,0.0023,0.0006,organic,VOC,organic,"Crovisier et al., 2004",https://doi.org/10.1051/0004-6361:20035688
+81P/Wild2|hotspot|181,"Comets|SD|SD|FC3,0,2,4,5",D/H,0.0003116,0.00018228599999999998,organic,IOM,organic,"De Gregorio et al., 2010",https://doi.org/10.1016/j.gca.2010.05.010
+DC06-09-119|hotspot|182,Comets|UCAMM|UCAMM|UCAMM,D/H,0.0046,0.0005,organic,organic matter,organic,"Duprat et al., 2010",https://doi.org/10.1126/science.1184832
+DC06-09-19 & DC06-09-119|bulk|183,Comets|UCAMM|UCAMM|UCAMM,D/H,0.001,,organic,organic matter,organic,"Duprat et al., 2010",https://doi.org/10.1126/science.1184832
+DC06-09-19 & DC06-09-119|bulk|184,Comets|UCAMM|UCAMM|UCAMM,D/H,0.0014,,organic,organic matter,organic,"Duprat et al., 2010",https://doi.org/10.1126/science.1184832
+GRA 95229|glycine|185,Meteorites|CC|CR|CR2.7,D/H,0.0002907228,0.000165148,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+GRA 95229|D-alanine|186,Meteorites|CC|CR|CR2.7,D/H,0.0003711155999999999,0.00019724279999999998,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+GRA 95229|L-alanine|187,Meteorites|CC|CR|CR2.7,D/H,0.0003938624,0.00017340539999999998,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+GRA 95229|isovaline|188,Meteorites|CC|CR|CR2.7,D/H,0.0007498654000000001,0.0001952174,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+GRA 95229|D-valine|189,Meteorites|CC|CR|CR2.7,D/H,0.000493107,0.0002036306,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+GRA 95229|L-valine|190,Meteorites|CC|CR|CR2.7,D/H,0.00048079879999999995,0.00020955099999999999,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+EET 92042|glycine|191,Meteorites|CC|CR|CR2.8,D/H,0.000322506,0.0001685756,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+EET 92042|D-alanine|192,Meteorites|CC|CR|CR2.8,D/H,0.0004195694,0.000169822,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+EET 92042|L-alanine|193,Meteorites|CC|CR|CR2.8,D/H,0.0003994712,0.000168264,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+EET 92042|isovaline|194,Meteorites|CC|CR|CR2.8,D/H,0.0010932486,0.000217341,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+EET 92042|L-valine|195,Meteorites|CC|CR|CR2.8,D/H,0.0006710306000000001,0.00019989139999999997,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+QUE 99177|glycine|196,Meteorites|CC|CR|CR2.8,D/H,0.0003491478,0.00018945279999999998,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+QUE 99177|D-alanine|197,Meteorites|CC|CR|CR2.8,D/H,0.0004991832,0.00016405739999999998,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+QUE 99177|L-alanine|198,Meteorites|CC|CR|CR2.8,D/H,0.0005158538,0.00023260939999999997,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+QUE 99177|isovaline|199,Meteorites|CC|CR|CR2.8,D/H,0.0009279448,0.0001646806,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+QUE 99177|L-valine|200,Meteorites|CC|CR|CR2.8,D/H,0.00043966759999999996,0.000170601,organic,SOM,amino acids,"Elsila et al., 2012",https://doi.org/10.1111/j.1945-5100.2012.01415.x
+Mommsen|hotspot|201,IDPs|IDPs|IDPs|IDP,D/H,0.000143336,0.000168264,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Prudhomme|hotspot|202,IDPs|IDPs|IDPs|IDP,D/H,0.00020254,0.00017138,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Prudhomme|hotspot|203,IDPs|IDPs|IDPs|IDP,D/H,0.00019475,0.000169822,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Hemingway|hotspot|204,IDPs|IDPs|IDPs|IDP,D/H,0.00018540199999999998,0.000168264,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Russell|hotspot|205,IDPs|IDPs|IDPs|IDP,D/H,0.0007166799999999999,0.0002337,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Russell|hotspot|206,IDPs|IDPs|IDPs|IDP,D/H,0.00021500399999999998,0.00019475,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Lagerkvist|hotspot|207,IDPs|IDPs|IDPs|IDP,D/H,0.00012931399999999998,0.000166706,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Lagerkvist|hotspot|208,IDPs|IDPs|IDPs|IDP,D/H,0.000138662,0.00016359,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Lagerkvist|hotspot|209,IDPs|IDPs|IDPs|IDP,D/H,0.000174496,0.000166706,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Laxness|hotspot|210,IDPs|IDPs|IDPs|IDP,D/H,0.000169822,0.000165148,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Laxness|hotspot|211,IDPs|IDPs|IDPs|IDP,D/H,0.00014489399999999999,0.000165148,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Faulkner|hotspot|212,IDPs|IDPs|IDPs|IDP,D/H,0.00028978799999999997,0.000172938,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Faulkner|hotspot|213,IDPs|IDPs|IDPs|IDP,D/H,0.000190076,0.000169822,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Pasternak|hotspot|214,IDPs|IDPs|IDPs|IDP,D/H,0.00011685,0.00018072799999999998,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Pasternak|hotspot|215,IDPs|IDPs|IDPs|IDP,D/H,0.00014645199999999999,0.00018851799999999999,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Mauriac|hotspot|216,IDPs|IDPs|IDPs|IDP,D/H,0.000239932,0.000208772,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Bjornson|hotspot|217,IDPs|IDPs|IDPs|IDP,D/H,0.000174496,0.00017138,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Bjornson|hotspot|218,IDPs|IDPs|IDPs|IDP,D/H,0.000160474,0.000169822,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Kipling|hotspot|219,IDPs|IDPs|IDPs|IDP,D/H,0.00022902599999999999,0.000174496,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Kipling|hotspot|220,IDPs|IDPs|IDPs|IDP,D/H,0.00030380999999999995,0.000177612,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Kipling|hotspot|221,IDPs|IDPs|IDPs|IDP,D/H,0.00026797599999999996,0.00017605399999999998,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Kipling|hotspot|222,IDPs|IDPs|IDPs|IDP,D/H,0.00027265,0.00017605399999999998,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Kipling|hotspot|223,IDPs|IDPs|IDPs|IDP,D/H,0.00027265,0.000177612,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Carducci|hotspot|224,IDPs|IDPs|IDPs|IDP,D/H,0.000154242,0.00017138,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Eucken|hotspot|225,IDPs|IDPs|IDPs|IDP,D/H,7.6342e-05,0.000162032,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Eucken|hotspot|226,IDPs|IDPs|IDPs|IDP,D/H,0.00014645199999999999,0.000168264,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Sienkiewicz|hotspot|227,IDPs|IDPs|IDPs|IDP,D/H,0.000199424,0.00017138,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Sienkiewicz|hotspot|228,IDPs|IDPs|IDPs|IDP,D/H,0.000165148,0.000168264,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Mistral F.|hotspot|229,IDPs|IDPs|IDPs|IDP,D/H,0.00012464,0.000166706,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Mistral F.|hotspot|230,IDPs|IDPs|IDPs|IDP,D/H,0.00010594399999999999,0.000165148,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Mistral F.|hotspot|231,IDPs|IDPs|IDPs|IDP,D/H,0.000118408,0.000165148,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Echegaray|hotspot|232,IDPs|IDPs|IDPs|IDP,D/H,0.00022746799999999998,0.00018228599999999998,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Echegaray|hotspot|233,IDPs|IDPs|IDPs|IDP,D/H,0.000172938,0.000169822,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+Echegaray|hotspot|234,IDPs|IDPs|IDPs|IDP,D/H,0.00018228599999999998,0.000172938,organic,organic matter,organic,"Floss et al., 2006",https://doi.org/10.1016/j.gca.2006.01.023
+PSN|PSN|235,std|PSN|PSN|PSN,D/H,2e-05,3.5e-06,PSN,PSN,PSN,"Geiss and Gloeckler, 2003",https://doi.org/10.1023/A:1024651232758
+VSMOW|water|236,std|VSMOW|VSMOW|VSMOW,D/H,0.00015576,5e-08,water,water,volatile,"Gonfiantini, 1978",https://doi.org/10.1038/271534a0
+103P/Hartley 2|HDO|237,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000161,2.4e-05,water,water,volatile,"Hartogh et al., 2011",https://doi.org/10.1038/nature10519
+103P/Hartley2|water|238,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000161,2.4e-05,water,water,volatile,"Hartogh et al., 2011",https://doi.org/10.1038/nature10519
+C/2002 T7 (LINEAR)|OD|239,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00025,0.00014,water,water,volatile,"Hutsemékers et al., 2008",https://doi.org/10.1051/0004-6361:200810833
+Jupiter|HD|240,Jupiter|Jupiter|Jupiter|Jupiter,D/H,2.4e-05,4e-06,H2,H2,volatile,"Lellouch et al., 2001",https://doi.org/10.1051/0004-6361:20010259
+Saturn|HD|241,Saturn|Saturn|Saturn|Saturn,D/H,1.85e-05,8.5e-06,H2,H2,volatile,"Lellouch et al., 2001",https://doi.org/10.1051/0004-6361:20010259
+Jupiter|CH4|242,Jupiter|Jupiter|Jupiter|Jupiter,D/H,2.2e-05,7e-06,CH4,VOC,organic,"Lellouch et al., 2001",https://doi.org/10.1051/0004-6361:20010259
+Jupiter|CH4|243,Jupiter|Jupiter|Jupiter|Jupiter,D/H,2.4e-05,7e-06,CH4,VOC,organic,"Lellouch et al., 2001",https://doi.org/10.1051/0004-6361:20010259
+Saturn|CH4|244,Saturn|Saturn|Saturn|Saturn,D/H,2e-05,1.4e-05,CH4,VOC,volatile,"Lellouch et al., 2001",https://doi.org/10.1051/0004-6361:20010259
+46P/Wirtanen|water|245,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000161,6.5e-05,water,water,volatile,"Lis et al., 2019",https://doi.org/10.1051/0004-6361/201935554
+Jupiter|H2|246,Jupiter|Jupiter|Jupiter|Jupiter,D/H,2.6e-05,7e-06,H2,H2,volatile,"Mahaffy et al., 1998",https://doi.org/10.1007/978-94-011-4778-1_137
+81P/Wild2|organic|247,Comets|SD|SD|Ada,D/H,0.00025083799999999997,0.0001953732,organic,organic matter,organic,"Matrajt et al., 2008",https://doi.org/10.1111/j.1945-5100.2008.tb00625.x
+81P/Wild2|organic|248,Comets|SD|SD|Al foil C2013N_2,D/H,0.000451,0.000165,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|249,Comets|SD|SD|Al foil C2037N,D/H,0.000183,1.8e-05,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|250,Comets|SD|SD|Al foil C2037N #56,D/H,0.000299,8.4e-05,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|251,Comets|SD|SD|Al foil C2037N #56_2,D/H,0.000119,2e-05,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|252,Comets|SD|SD|Al foil C2037N_2,D/H,0.000413,0.000105,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|253,Comets|SD|SD|Al foil C2086N,D/H,0.000505,0.000153,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|254,Comets|SD|SD|Al foil C2086N_2,D/H,0.000373,0.000131,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|organic|255,"Comets|SD|SD|FC9,0,13,1,0",D/H,0.000296,5.5e-05,organic,organic matter,organic,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+81P/Wild2|water|256,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000118,0.000498,water,water,volatile,"McKeegan et al., 2006",https://doi.org/10.1126/science.1135992
+C/1995 O1 (Hale-Bopp)|HDO|257,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00033,8e-05,water,water,volatile,"Meier et al., 1998a",https://doi.org/10.1126/science.279.5352.842
+C/1995 O1 (Hale-Bopp)|HCN|258,Comets|Comet Tails|Comet Tails|Comets,D/H,0.0023,0.0004,organic,VOC,organic,"Meier et al., 1998b",https://doi.org/10.1126/science.279.5357.1707
+67P/Churyumov-Gerasimenko|CH4|259,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00241,0.00029,CH4,VOC,volatile,"Müller et al., 2022",https://doi.org/10.1051/0004-6361/202142922
+67P/Churyumov-Gerasimenko|C2H6|260,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00237,0.00027,organic,VOC,volatile,"Müller et al., 2022",https://doi.org/10.1051/0004-6361/202142922
+67P/Churyumov-Gerasimenko|C3H8|261,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00216,0.00026,organic,VOC,volatile,"Müller et al., 2022",https://doi.org/10.1051/0004-6361/202142922
+67P/Churyumov-Gerasimenko|C4H10|262,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00205,0.00038,organic,VOC,volatile,"Müller et al., 2022",https://doi.org/10.1051/0004-6361/202142922
+67P/Churyumov-Gerasimenko|water|263,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000501,4.1e-05,water,water,volatile,"Müller et al., 2022",https://doi.org/10.1051/0004-6361/202142922
+Saturn|CH4|264,Saturn|Saturn|Saturn|Saturn,D/H,1.7e-05,1.7e-05,CH4,VOC,volatile,"Owen et al., 1986",https://doi.org/10.1038/320244a0
+C/2014Q2 (Lovejoy)|water|265,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000302,8.7e-05,water,water,volatile,"Paganini et al, 2017",https://doi.org/10.3847/2041-8213/aa5cb3
+67P/Churyumov-Gerasimenko|IOM|266,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00157,0.00054,organic,IOM,organic,"Paquette et al, 2021",https://doi.org/10.1093/mnras/stab1028
+Jupiter|HD|267,Jupiter|Jupiter|Jupiter|Jupiter,D/H,2.95e-05,5.5e-06,H2,H2,volatile,"Pierel et al., 2017",https://doi.org/10.3847/1538-3881/aa899d
+Saturn|HD|268,Saturn|Saturn|Saturn|Saturn,D/H,2.1e-05,1.3e-06,H2,H2,volatile,"Pierel et al., 2017",https://doi.org/10.3847/1538-3881/aa899d
+GRA 95229|isovaline|269,Meteorites|CC|CR|CR2,D/H,0.00125419,,organic,SOM,amino acids,"Pizzarello and Holmes, 2009",https://doi.org/10.1016/j.gca.2009.01.022
+GRA 95229|glutamic acid|270,Meteorites|CC|CR|CR2,D/H,0.0003204806,0.00017605399999999998,organic,SOM,amino acids,"Pizzarello and Holmes, 2009",https://doi.org/10.1016/j.gca.2009.01.022
+Murray|glycine|271,Meteorites|CC|CM|CM2,D/H,0.0002179642,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|D-alanine|272,Meteorites|CC|CM|CM2,D/H,0.0002514612,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|L-alanine|273,Meteorites|CC|CM|CM2,D/H,0.000235258,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|DL-isovaline|274,Meteorites|CC|CM|CM2,D/H,0.0006513997999999999,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|L-isovaline|275,Meteorites|CC|CM|CM2,D/H,0.0006671356,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|D-valine|276,Meteorites|CC|CM|CM2,D/H,0.0005347056,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|L-valine|277,Meteorites|CC|CM|CM2,D/H,0.0005088428,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|L-isoleucine|278,Meteorites|CC|CM|CM2,D/H,0.00043920019999999996,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|D-glutamic acid|279,Meteorites|CC|CM|CM2,D/H,0.00019023180000000002,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|L-glutamic acid|280,Meteorites|CC|CM|CM2,D/H,0.0001651056,0.00016012128,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murray|proline|281,Meteorites|CC|CM|CM2,D/H,0.00023027239999999998,,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|D-alanine|282,Meteorites|CC|CM|CM2,D/H,0.00022258104,0.00017554152,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|L-alanine|283,Meteorites|CC|CM|CM2,D/H,0.0002118336,0.0001775664,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|DL-isovaline|284,Meteorites|CC|CM|CM2,D/H,0.00068830344,0.00017413968,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|D-glutamic acid|285,Meteorites|CC|CM|CM2,D/H,0.0002294348,0.000163548,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|L-glutamic acid|286,Meteorites|CC|CM|CM2,D/H,0.00020124192,0.00016713048,organic,SOM,amino acids,"Pizzarello and Huang, 2005",https://doi.org/10.1016/j.gca.2004.07.031
+Murchison|aspartic acid|287,Meteorites|CC|CM|CM2,D/H,0.000253954,,organic,SOM,amino acids,"Pizzarello et al., 1991",https://doi.org/10.1016/0016-7037(91)90350-E
+Murchison|glutamic acid|288,Meteorites|CC|CM|CM2,D/H,0.00031362539999999997,,organic,SOM,amino acids,"Pizzarello et al., 1991",https://doi.org/10.1016/0016-7037(91)90350-E
+GRA 95229|glycine|289,Meteorites|CC|CR|CR2,D/H,0.0002910344,0.00017916999999999998,organic,SOM,amino acids,"Pizzarello et al., 2008",https://doi.org/10.1073/pnas.0709909105
+GRA 95229|D-alanine|290,Meteorites|CC|CR|CR2,D/H,0.00033995559999999995,0.00016561539999999998,organic,SOM,amino acids,"Pizzarello et al., 2008",https://doi.org/10.1073/pnas.0709909105
+GRA 95229|L-alanine|291,Meteorites|CC|CR|CR2,D/H,0.00033637219999999994,0.00016436899999999998,organic,SOM,amino acids,"Pizzarello et al., 2008",https://doi.org/10.1073/pnas.0709909105
+GRA 95229|D-glutamic acid|292,Meteorites|CC|CR|CR2,D/H,0.00031611819999999996,0.0001696662,organic,SOM,amino acids,"Pizzarello et al., 2008",https://doi.org/10.1073/pnas.0709909105
+GRA 95229|L-glutamic acid|293,Meteorites|CC|CR|CR2,D/H,0.0002950852,0.00016841979999999998,organic,SOM,amino acids,"Pizzarello et al., 2008",https://doi.org/10.1073/pnas.0709909105
+Murchison|glycolic|294,Meteorites|CC|CM|CM2,D/H,0.00043499359999999993,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|D-lactic|295,Meteorites|CC|CM|CM2,D/H,0.00031611819999999996,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|L-lactic|296,Meteorites|CC|CM|CM2,D/H,0.0003201689999999999,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|D-2-OH butyric|297,Meteorites|CC|CM|CM2,D/H,0.0003352816,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|2-OH-caproic|298,Meteorites|CC|CM|CM2,D/H,0.00021905480000000002,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|2-OH isobutyric|299,Meteorites|CC|CM|CM2,D/H,0.00041551859999999996,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|L-2-OH-2-methylbutyric|300,Meteorites|CC|CM|CM2,D/H,0.000528941,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|2-OH-3-methylbutryric|301,Meteorites|CC|CM|CM2,D/H,0.00022684479999999997,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|beta-lactic|302,Meteorites|CC|CM|CM2,D/H,0.000281998,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Murchison|3-OH butyric|303,Meteorites|CC|CM|CM2,D/H,0.0003961994,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|glycolic|304,Meteorites|CC|CR|CR2,D/H,0.0005675793999999999,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|D-lactic|305,Meteorites|CC|CR|CR2,D/H,0.00048780979999999997,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|L-lactic|306,Meteorites|CC|CR|CR2,D/H,0.0005498182,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|D-2-OH butyric|307,Meteorites|CC|CR|CR2,D/H,0.000507908,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|2-OH isobutyric|308,Meteorites|CC|CR|CR2,D/H,0.0006492185999999999,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|L-2-OH-2-methylbutyric|309,Meteorites|CC|CR|CR2,D/H,0.000688636,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+GRA 95229|beta-lactic|310,Meteorites|CC|CR|CR2,D/H,0.0003387092,,organic,SOM,hydroxy acids,"Pizzarello et al., 2010",https://doi.org/10.1016/j.gca.2010.08.013
+Abee|bulk|311,Meteorites|EC|EC|EH5,D/H,0.0001048,4e-06,organic,IOM,organic,"Remusat et al., 2012",https://doi.org/10.1016/j.gca.2012.07.031
+8P/Tuttle|HDO|312,Comets|Comet Tails|Comet Tails|Comets,D/H,0.000409,0.000145,water,water,volatile,"Villanueva et al., 2009",https://doi.org/10.1088/0004-637X/690/1/L5
+En_Plume|unknown|313,Saturn|En_Plume|En_Plume|Enceladus_Plume,D/H,0.00029,0.00015,water,water,plume,"Waite et al., 2009",https://doi.org/10.1038/nature08153
+C/2001 Q4 (NEAT)|D|314,Comets|Comet Tails|Comet Tails|Comets,D/H,0.00046,0.00014,water,water,volatile,"Weaver et al., 2008",https://ui.adsabs.harvard.edu/abs/2008LPICo1405.8216W/abstract
+Orgueil|bulk|315,Meteorites|CC|CI|CI1,D/H,0.0001632784,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Orgueil|bulk|316,Meteorites|CC|CI|CI1,D/H,0.0001905434,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Cold Bokkeveld|bulk|317,Meteorites|CC|CM|CM2,D/H,0.0001399084,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Renazzo|bulk|318,Meteorites|CC|CR|CR2,D/H,0.0003137812,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Allende|bulk|319,Meteorites|CC|CV|CV3,D/H,0.0001657712,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Abee|bulk|320,Meteorites|EC|EC|E4,D/H,0.000134767,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Abee|bulk|321,Meteorites|EC|EC|E4,D/H,0.0001304046,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bishunpur|bulk|322,Meteorites|OD|L|L3.1,D/H,0.00047503419999999995,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Khohar|bulk|323,Meteorites|OD|L|L3.6,D/H,0.000142557,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Carraweena-magnetic|bulk|324,Meteorites|OD|L|L3.9,D/H,0.0001360134,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Carraweena-nonmagnetic|bulk|325,Meteorites|OD|L|L3.9,D/H,0.00013570179999999998,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Goodland|bulk|326,Meteorites|OD|L|L4,D/H,0.0001436476,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bruderheim|bulk|327,Meteorites|OD|L|L6,D/H,0.00013242999999999998,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bruderheim|bulk|328,Meteorites|OD|L|L6,D/H,0.0001361692,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Semarkona|bulk|329,Meteorites|OD|LL|LL3.0,D/H,0.0008377365999999999,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Semarkona|bulk|330,Meteorites|OD|LL|LL3.0,D/H,0.0004402908,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Semarkona|bulk|331,Meteorites|OD|LL|LL3.0,D/H,0.0005504414,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Chainpur|bulk|332,Meteorites|OD|LL|LL3.4,D/H,0.0001484774,,bulk,bulk,bulk,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Orgueil|bulk|333,Meteorites|CC|CI|CI1,D/H,0.0003235966,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Orgueil|bulk|334,Meteorites|CC|CI|CI1,D/H,0.00031705300000000003,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Murchison|bulk|335,Meteorites|CC|CM|CM2,D/H,0.00032188279999999995,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Murray|bulk|336,Meteorites|CC|CM|CM2,D/H,0.0002957084,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Renazzo|bulk|337,Meteorites|CC|CR|CR2,D/H,0.00048298,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Abee|bulk|338,Meteorites|EC|EC|E4,D/H,7.96138e-05,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Broken Bow|bulk|339,Meteorites|OC|H|H4,D/H,0.000151126,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Broken Bow|bulk|340,Meteorites|OC|H|H4,D/H,0.0001617204,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Adrian|bulk|341,Meteorites|OC|H|H4,D/H,0.0001466078,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Adrian|bulk|342,Meteorites|OC|H|H4,D/H,0.0001757424,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Pantar|bulk|343,Meteorites|OC|H|H5,D/H,0.0001450498,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Plain View|bulk|344,Meteorites|OC|H|H5,D/H,0.0001405316,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Plain View|bulk|345,Meteorites|OC|H|H5,D/H,0.0001385062,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Coldwater|bulk|346,Meteorites|OC|H|H5,D/H,0.0001397526,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Coldwater|bulk|347,Meteorites|OC|H|H5,D/H,0.0001335206,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Pultusk|bulk|348,Meteorites|OC|H|H5,D/H,0.0001445824,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Pultusk|bulk|349,Meteorites|OC|H|H5,D/H,0.0001467636,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bishunpur|bulk|350,Meteorites|OC|L|L3.1,D/H,0.000215783,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Khohar|bulk|351,Meteorites|OC|L|L3.6,D/H,0.00014193379999999999,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Khohar|bulk|352,Meteorites|OC|L|L3.6,D/H,0.00014022,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Mezo-Madaras|bulk|353,Meteorites|OC|L|L3.7,D/H,0.0002752986,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Carraweena|bulk|354,Meteorites|OC|L|L3.9,D/H,0.00022840279999999997,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Carraweena|bulk|355,Meteorites|OC|L|L3.9,D/H,0.0002553562,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Godland|bulk|356,Meteorites|OC|L|L4,D/H,0.00015065859999999998,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bruderheim|bulk|357,Meteorites|OC|L|L6,D/H,0.00015844859999999999,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Bruderheim|bulk|358,Meteorites|OC|L|L6,D/H,0.00017028939999999998,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Hamlet|bulk|359,Meteorites|OC|LL|LL3.4,D/H,0.0001639016,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Parnnallee|bulk|360,Meteorites|OC|LL|LL3.6,D/H,0.00014878899999999997,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Arcadia|bulk|361,Meteorites|OC|LL|LL6,D/H,0.00014754259999999998,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1
+Arcadia|bulk|362,Meteorites|OC|LL|LL6,D/H,0.0001447382,,organic,IOM,organic,"Yang and Epstein, 1983",https://doi.org/10.1016/0016-7037(83)90043-1

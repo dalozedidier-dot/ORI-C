@@ -1,0 +1,112 @@
+{
+  "schema": "oric.external-benchmark.v1",
+  "benchmark_id": "GAJRANI-2025-EXTERNALIZED-MEMORY",
+  "source": {
+    "doi": "10.5061/dryad.ksn02v7hp",
+    "article_doi": "10.1093/ismejo/wraf173",
+    "archive": "gajrani_dryad_v20250804.zip",
+    "sha256": "402ca4b0e7b908a6e88f64802ab5bf20ddcec7c28e98a64959b827a57f5607dd"
+  },
+  "design": {
+    "system": "Lactobacillus plantarum + Corynebacterium ammoniagenes",
+    "X": "similar initial two-species composition",
+    "H": "which species had previously modified its environment",
+    "m": "persistent extracellular environmental modification retained or removed by washing; supernatant transfer tests sufficiency",
+    "Theta": "common future co-culture conditions with daily dilution",
+    "R": "final community composition/CFU after common future",
+    "source_defined_switch_rule": "Ca winner when final relative abundance >50%"
+  },
+  "quantification": {
+    "retained_memory_threshold_gap_percentage_points": {
+      "1/2x": {
+        "ca_memory_threshold_median": 5.417750514,
+        "lp_memory_threshold_median": 46.142143015,
+        "threshold_gap_median": 40.724392501000004,
+        "threshold_gap_min": 40.724392501000004,
+        "threshold_gap_max": 40.724392501000004
+      },
+      "1/6x": {
+        "ca_memory_threshold_median": 11.117899286,
+        "lp_memory_threshold_median": 46.142143015,
+        "threshold_gap_median": 35.024243729000005,
+        "threshold_gap_min": 35.024243729000005,
+        "threshold_gap_max": 35.024243729000005
+      },
+      "1/20x": {
+        "ca_memory_threshold_median": 27.57539142,
+        "lp_memory_threshold_median": 46.142143015,
+        "threshold_gap_median": 18.566751595000003,
+        "threshold_gap_min": 18.566751595000003,
+        "threshold_gap_max": 18.566751595000003
+      },
+      "1/100x": {
+        "ca_memory_threshold_median": 67.99358712,
+        "lp_memory_threshold_median": 75.850843445,
+        "threshold_gap_median": 7.8572563249999945,
+        "threshold_gap_min": 7.8572563249999945,
+        "threshold_gap_max": 7.8572563249999945
+      }
+    },
+    "memory_gap_reduction_from_1_2x_to_1_100x_percent": 80.70626510927804,
+    "supernatant_only_both_cells_washed_threshold_gap_percentage_points": {
+      "1/2x": {
+        "ca_memory_threshold_median": 1.95353248,
+        "lp_memory_threshold_median": 93.86726629500001,
+        "threshold_gap_median": 91.913733815,
+        "threshold_gap_min": 82.744271965,
+        "threshold_gap_max": 91.913733815
+      },
+      "1/6x": {
+        "ca_memory_threshold_median": 1.95353248,
+        "lp_memory_threshold_median": 44.41315847,
+        "threshold_gap_median": 42.45962599,
+        "threshold_gap_min": 40.992738612,
+        "threshold_gap_max": 42.45962599
+      },
+      "1/20x": {
+        "ca_memory_threshold_median": 24.558927150000002,
+        "lp_memory_threshold_median": null,
+        "threshold_gap_median": null,
+        "threshold_gap_min": null,
+        "threshold_gap_max": null
+      },
+      "1/100x": {
+        "ca_memory_threshold_median": 74.553751235,
+        "lp_memory_threshold_median": null,
+        "threshold_gap_median": null,
+        "threshold_gap_min": null,
+        "threshold_gap_max": null
+      }
+    }
+  },
+  "key_effects": {
+    "mild_dilution_1_2x": {
+      "Ca_memory_Ca_win_threshold_percent": 5.417750514,
+      "Lp_memory_Ca_win_threshold_percent": 46.142143015,
+      "history_memory_shift_percentage_points": 40.724392501000004
+    },
+    "high_dilution_1_100x": {
+      "history_memory_shift_percentage_points": 7.8572563249999945,
+      "shift_reduction_vs_1_2x_percent": 80.70626510927804
+    },
+    "supernatant_rescue_1_2x": {
+      "both_cells_washed": true,
+      "Ca_supernatant_Ca_win_threshold_percent": 1.95353248,
+      "Lp_supernatant_Ca_win_threshold_percent": 93.86726629500001,
+      "median_threshold_gap_percentage_points": 91.913733815,
+      "range_across_three_sets_percentage_points": [
+        82.744271965,
+        91.913733815
+      ]
+    }
+  },
+  "classification": {
+    "empirical_do_m_relevant": true,
+    "memory_location_external_environment_supported": true,
+    "necessity_and_sufficiency_design_present": true,
+    "strict_PACC_INT_CHALLENGE_V1_qualified": false,
+    "reason_not_strict_pacc": "ORI-C future challenge cells, epsilon thresholds, weights and sham were not preregistered before this already-public dataset; protocol explicitly forbids retrospective requalification.",
+    "counts_for_section_XIV_condition_9": false,
+    "recommended_ORI_C_role": "strong retrospective causal benchmark for H/m/R and direct environmental-memory intervention; do not promote to strict Pacc"
+  }
+}

@@ -1,0 +1,17 @@
+import json
+from pathlib import Path
+from common import HERE, DATA, EXT, sha256
+meta_path=HERE.parent/'EXPECTED_INPUTS.json'
+meta=json.loads(meta_path.read_text(encoding='utf-8'))
+errors=[]
+for f,h in meta['campaign'].items():
+    p=DATA/f
+    if not p.exists(): errors.append(f'missing campaign {p}')
+    elif sha256(p)!=h: errors.append(f'hash mismatch campaign {f}')
+for f,h in meta['external'].items():
+    p=EXT/f
+    if not p.exists(): errors.append(f'missing external {p}')
+    elif sha256(p)!=h: errors.append(f'hash mismatch external {f}')
+if errors:
+    print('\n'.join(errors)); raise SystemExit(1)
+print(f"INPUTS OK: {len(meta['campaign'])} core campaign inputs and {len(meta['external'])} external inputs verified by SHA-256")
