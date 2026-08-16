@@ -6628,12 +6628,6 @@
       "storage": "inline"
     },
     {
-      "path": "APPLIQUER_CORRECTIF_HMR.py",
-      "size": 1679,
-      "sha256": "d66574144e637bd2e04665cbb12fff46967ffec78e1912957a1b2d15a90222e7",
-      "storage": "inline"
-    },
-    {
       "path": "ARCHITECTURE.md",
       "size": 16750,
       "sha256": "320400b8257d524e070594499c249188bd5aa030666c59ae1e75888efe0b9825",
@@ -10806,7 +10800,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "6517a328674b506b33078b7831af8d622ce68920f5bf190db0409557ee8ed0be",
+      "sha256": "86e2cedc94e123a144d188423030d91d0d6fb7bbf83ac33e31365315b713972b",
       "storage": "inline"
     },
     {
