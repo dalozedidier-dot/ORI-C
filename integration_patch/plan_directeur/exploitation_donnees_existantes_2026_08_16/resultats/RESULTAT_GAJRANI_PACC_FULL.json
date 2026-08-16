@@ -1,0 +1,478 @@
+{
+  "schema": "oric.gajrani-community-pacc-retrospective.v1.1-strict-json",
+  "definition": "Pacc_retention = fraction of the 8 species with median CFU > 0 across technical triplicates. For each independent initial community composition, intervention Pacc is averaged across the 8 species-supernatant challenges; control Pacc is averaged across all no-supernatant control columns. Delta = intervention-control.",
+  "days": {
+    "5": {
+      "n_independent_community_compositions": 6,
+      "delta_Pacc_retention_mean": null,
+      "delta_units": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "bootstrap95": [
+        null,
+        null
+      ],
+      "control_split_sham_delta_mean_descriptive": null,
+      "control_split_sham_max_abs_descriptive": null
+    },
+    "10": {
+      "n_independent_community_compositions": 6,
+      "delta_Pacc_retention_mean": null,
+      "delta_units": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "bootstrap95": [
+        null,
+        null
+      ],
+      "control_split_sham_delta_mean_descriptive": null,
+      "control_split_sham_max_abs_descriptive": null
+    },
+    "12": {
+      "n_independent_community_compositions": 6,
+      "delta_Pacc_retention_mean": -0.08072916666666667,
+      "delta_units": [
+        -0.046875,
+        -0.109375,
+        -0.125,
+        -0.078125,
+        -0.125,
+        0.0
+      ],
+      "bootstrap95": [
+        -0.11458333333333333,
+        -0.041666666666666664
+      ],
+      "control_split_sham_delta_mean_descriptive": 0.015625,
+      "control_split_sham_max_abs_descriptive": 0.03125
+    }
+  },
+  "units": [
+    {
+      "day": 5,
+      "community": 1,
+      "pacc_sup_mean": 0.375,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.25,
+        "Sup6": 0.375,
+        "Sup27": 0.375,
+        "Sup66": 0.375,
+        "Sup79": 0.5,
+        "Sup81": 0.375,
+        "Sup107": 0.375,
+        "SupMyb27": 0.375
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 5,
+      "community": 2,
+      "pacc_sup_mean": 0.328125,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.375,
+        "Sup6": 0.25,
+        "Sup27": 0.375,
+        "Sup66": 0.5,
+        "Sup79": 0.25,
+        "Sup81": 0.25,
+        "Sup107": 0.25,
+        "SupMyb27": 0.375
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 5,
+      "community": 3,
+      "pacc_sup_mean": 0.453125,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.375,
+        "Sup27": 0.5,
+        "Sup66": 0.375,
+        "Sup79": 0.375,
+        "Sup81": 0.5,
+        "Sup107": 0.5,
+        "SupMyb27": 0.5
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 5,
+      "community": 4,
+      "pacc_sup_mean": 0.453125,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.5,
+        "Sup66": 0.375,
+        "Sup79": 0.5,
+        "Sup81": 0.5,
+        "Sup107": 0.25,
+        "SupMyb27": 0.5
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 5,
+      "community": 5,
+      "pacc_sup_mean": 0.453125,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.375,
+        "Sup6": 0.375,
+        "Sup27": 0.5,
+        "Sup66": 0.5,
+        "Sup79": 0.25,
+        "Sup81": 0.5,
+        "Sup107": 0.5,
+        "SupMyb27": 0.625
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 5,
+      "community": 6,
+      "pacc_sup_mean": 0.390625,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.375,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.375,
+        "Sup79": 0.375,
+        "Sup81": 0.375,
+        "Sup107": 0.375,
+        "SupMyb27": 0.375
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 1,
+      "pacc_sup_mean": 0.375,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.25,
+        "Sup66": 0.375,
+        "Sup79": 0.375,
+        "Sup81": 0.375,
+        "Sup107": 0.5,
+        "SupMyb27": 0.125
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 2,
+      "pacc_sup_mean": 0.453125,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.375,
+        "Sup27": 0.375,
+        "Sup66": 0.375,
+        "Sup79": 0.5,
+        "Sup81": 0.5,
+        "Sup107": 0.625,
+        "SupMyb27": 0.375
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 3,
+      "pacc_sup_mean": 0.515625,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.5,
+        "Sup79": 0.5,
+        "Sup81": 0.625,
+        "Sup107": 0.5,
+        "SupMyb27": 0.625
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 4,
+      "pacc_sup_mean": 0.484375,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.5,
+        "Sup66": 0.5,
+        "Sup79": 0.5,
+        "Sup81": 0.375,
+        "Sup107": 0.5,
+        "SupMyb27": 0.5
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 5,
+      "pacc_sup_mean": 0.5,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.625,
+        "Sup66": 0.375,
+        "Sup79": 0.375,
+        "Sup81": 0.625,
+        "Sup107": 0.375,
+        "SupMyb27": 0.625
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 10,
+      "community": 6,
+      "pacc_sup_mean": 0.34375,
+      "pacc_control_mean": null,
+      "delta_retention": null,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.25,
+        "Sup79": 0.25,
+        "Sup81": 0.125,
+        "Sup107": 0.5,
+        "SupMyb27": 0.25
+      },
+      "pacc_control_by_rep": {},
+      "n_sup": 8,
+      "n_control": 0
+    },
+    {
+      "day": 12,
+      "community": 1,
+      "pacc_sup_mean": 0.265625,
+      "pacc_control_mean": 0.3125,
+      "delta_retention": -0.046875,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.25,
+        "Sup6": 0.375,
+        "Sup27": 0.375,
+        "Sup66": 0.25,
+        "Sup79": 0.25,
+        "Sup81": 0.125,
+        "Sup107": 0.375,
+        "SupMyb27": 0.125
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.375,
+        "noSup2": 0.25,
+        "noSup3": 0.375,
+        "noSup4": 0.25,
+        "noSup5": 0.25,
+        "noSup6": 0.375,
+        "noSup7": 0.375,
+        "noSup8": 0.25
+      },
+      "n_sup": 8,
+      "n_control": 8
+    },
+    {
+      "day": 12,
+      "community": 2,
+      "pacc_sup_mean": 0.4375,
+      "pacc_control_mean": 0.546875,
+      "delta_retention": -0.109375,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.375,
+        "Sup79": 0.625,
+        "Sup81": 0.375,
+        "Sup107": 0.5,
+        "SupMyb27": 0.25
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.625,
+        "noSup2": 0.5,
+        "noSup3": 0.5,
+        "noSup4": 0.625,
+        "noSup5": 0.375,
+        "noSup6": 0.5,
+        "noSup7": 0.625,
+        "noSup8": 0.625
+      },
+      "n_sup": 8,
+      "n_control": 8
+    },
+    {
+      "day": 12,
+      "community": 3,
+      "pacc_sup_mean": 0.453125,
+      "pacc_control_mean": 0.578125,
+      "delta_retention": -0.125,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.625,
+        "Sup6": 0.625,
+        "Sup27": 0.375,
+        "Sup66": 0.375,
+        "Sup79": 0.5,
+        "Sup81": 0.375,
+        "Sup107": 0.5,
+        "SupMyb27": 0.25
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.625,
+        "noSup2": 0.5,
+        "noSup3": 0.625,
+        "noSup4": 0.625,
+        "noSup5": 0.5,
+        "noSup6": 0.625,
+        "noSup7": 0.625,
+        "noSup8": 0.5
+      },
+      "n_sup": 8,
+      "n_control": 8
+    },
+    {
+      "day": 12,
+      "community": 4,
+      "pacc_sup_mean": 0.46875,
+      "pacc_control_mean": 0.546875,
+      "delta_retention": -0.078125,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.5,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.5,
+        "Sup79": 0.5,
+        "Sup81": 0.5,
+        "Sup107": 0.625,
+        "SupMyb27": 0.25
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.625,
+        "noSup2": 0.625,
+        "noSup3": 0.5,
+        "noSup4": 0.5,
+        "noSup5": 0.5,
+        "noSup6": 0.5,
+        "noSup7": 0.625,
+        "noSup8": 0.5
+      },
+      "n_sup": 8,
+      "n_control": 8
+    },
+    {
+      "day": 12,
+      "community": 5,
+      "pacc_sup_mean": 0.5,
+      "pacc_control_mean": 0.625,
+      "delta_retention": -0.125,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.625,
+        "Sup6": 0.625,
+        "Sup27": 0.5,
+        "Sup66": 0.25,
+        "Sup79": 0.625,
+        "Sup81": 0.375,
+        "Sup107": 0.5,
+        "SupMyb27": 0.5
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.625,
+        "noSup2": 0.625,
+        "noSup3": 0.625,
+        "noSup4": 0.625,
+        "noSup5": 0.625,
+        "noSup6": 0.625,
+        "noSup7": 0.625,
+        "noSup8": 0.625
+      },
+      "n_sup": 8,
+      "n_control": 8
+    },
+    {
+      "day": 12,
+      "community": 6,
+      "pacc_sup_mean": 0.40625,
+      "pacc_control_mean": 0.40625,
+      "delta_retention": 0.0,
+      "pacc_sup_by_challenge": {
+        "Sup4": 0.375,
+        "Sup6": 0.5,
+        "Sup27": 0.375,
+        "Sup66": 0.125,
+        "Sup79": 0.5,
+        "Sup81": 0.375,
+        "Sup107": 0.625,
+        "SupMyb27": 0.375
+      },
+      "pacc_control_by_rep": {
+        "noSup1": 0.375,
+        "noSup2": 0.5,
+        "noSup3": 0.375,
+        "noSup4": 0.375,
+        "noSup5": 0.375,
+        "noSup6": 0.375,
+        "noSup7": 0.375,
+        "noSup8": 0.5
+      },
+      "n_sup": 8,
+      "n_control": 8
+    }
+  ],
+  "strict_PACC_INT_CHALLENGE_V1_qualified": false,
+  "reason_not_strict": "retrospective mapping after public data; thresholds/challenge weights/sham not preregistered. Use only for field completeness and mechanistic exploration."
+}

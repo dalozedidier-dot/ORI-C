@@ -1,0 +1,24 @@
+{
+  "schema": "oric.late-accretion-existing-data-audit.v1",
+  "rows": 122159,
+  "source_sha256": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a",
+  "unique_samples": 56614,
+  "candidate_source_labels": 45,
+  "tracers": {
+    "MO": 33713,
+    "W": 28868,
+    "PD": 9194,
+    "PT": 9039,
+    "OS": 7980,
+    "IR": 7515,
+    "AU": 7374,
+    "RE": 7185,
+    "RU": 6695,
+    "RH": 4596
+  },
+  "uncertainty_nonmissing_fraction": 0.0,
+  "samples_with_2plus_tracers": 29461,
+  "samples_with_4plus_tracers": 7827,
+  "max_tracers_per_sample": 9,
+  "interpretation": "Large multitracer coverage exists and was underexploited, but candidate_source is a geological-family label rather than a late-accretion mixing endmember and per-measurement uncertainties are absent. The table can support fingerprint/sensitivity work, not a calibrated late-accretion mixing claim."
+}

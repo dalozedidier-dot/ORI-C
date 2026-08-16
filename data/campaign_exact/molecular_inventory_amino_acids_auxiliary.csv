@@ -1,0 +1,1388 @@
+environment_id,species,abundance,uncertainty,environment_class,inventory_kind
+Bennu (CI) (Glavin+25),Glycine,44.0,1.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Alanine,7.9,0.848528137,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),beta-Alanine,3.3,0.5,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Serine,0.18,0.03,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Isoserine,0.053,0.005656854,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Aspartic Acid,2.57,0.184390889,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L-a-ABA",0.8,0.02,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),beta-ABA,1.08,0.113137085,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),gamma-ABA,3.03,0.13,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),alpha-AIB,0.61,0.05,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),beta-AIB,0.32,0.014142136,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Glutamic Acid,0.79,0.06,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Valine,0.48,0.060827625,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Isovaline,0.154,0.009219544,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Norvaline,0.103,0.006403124,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),(R)-3-APA,0.146,0.0036055512754639895,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L- and D,L-allo-3-A-2-MBA",0.25,0.01,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),3-A-3-MBA,0.1,0.1,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"3-A-2,2-DMPA",0.125,0.002,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L-3-A-2-EPA",0.121,0.001,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L-4-APA",0.5,0.003,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L-4-A-2-MBA",0.51,0.01,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),"D,L-4-A-3-MBA",0.046,0.001,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),5-APA,1.01,0.04,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Leucine,0.09,0.01,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Isoleucine,0.069,0.005,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),epsi-Amino- n-caproic acid,0.19,0.07,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Bennu (CI) (Glavin+25),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Glycine,80.0,10.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Alanine,53.6,5.015974481593781,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),beta-Alanine,103.0,4.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Serine,125.0,7.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),beta-ABA,6.1,0.223606797749979,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),gamma-ABA,285.0,25.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),alpha-AIB,1.0,0.1,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Glutamic Acid,18.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Valine,31.7,1.886796226411321,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),(R)-3-APA,3.6,1.2020815280171306,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",2.1,0.2,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"3-A-2,2-DMPA",3.1,0.6,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L-4-APA",0.2,0.1,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),"D,L-4-A-3-MBA",0.3,0.1,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),5-APA,51.0,1.0,1,amino_acid_abundance_compilation
+ALHA 77257 (U) (Burton+12),epsi-Amino- n-caproic acid,1368.0,23.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Glycine,7.4,2.4,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Alanine,0.8,0.14142135623730953,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),beta-Alanine,91.0,11.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Serine,1.2,0.9,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),beta-ABA,0.7,0.223606797749979,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),gamma-ABA,575.0,53.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),alpha-AIB,0.3,1.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Glutamic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Valine,91.0,1.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),5-APA,4.4,0.3,1,amino_acid_abundance_compilation
+EET 83309 (U) (Burton+12),epsi-Amino- n-caproic acid,1060.0,130.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Glycine,63.0,3.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Alanine,5.5,0.7615773105863908,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),beta-Alanine,158.0,14.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Serine,4.1,1.6031219541881399,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Aspartic Acid,3.0999999999999996,1.252996408614167,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L-a-ABA",0.4,0.2,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),beta-ABA,1.1,0.28284271247461906,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),gamma-ABA,815.0,142.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),alpha-AIB,0.2,0.1,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Glutamic Acid,28.2,5.554277630799527,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Valine,0.6,0.1,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Isovaline,0.3,0.2,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"3-A-2,2-DMPA",0.1,0.1,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L-4-APA",1.5,0.2,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),"D,L-4-A-3-MBA",0.9,0.8,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),5-APA,71.0,1.0,1,amino_acid_abundance_compilation
+LEW 85328 (U) (Burton+12),epsi-Amino- n-caproic acid,960.0,227.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Glycine,36.0,2.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Alanine,9.7,1.118033988749895,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),beta-Alanine,161.0,13.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Serine,5.9,0.6,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Aspartic Acid,5.6,3.228002478313795,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L-a-ABA",0.5,0.3,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),beta-ABA,2.5,0.223606797749979,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),gamma-ABA,561.0,68.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),alpha-AIB,0.2,0.1,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Glutamic Acid,41.0,6.809552114493288,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Valine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.8,0.3,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"3-A-2,2-DMPA",0.6,0.2,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),"D,L-4-A-3-MBA",1.4,0.2,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),5-APA,66.0,6.0,1,amino_acid_abundance_compilation
+GRA 95205 (U) (Burton+12),epsi-Amino- n-caproic acid,1317.0,70.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Glycine,24.0,1.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Alanine,7.3,0.9219544457292888,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),beta-Alanine,102.0,6.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Serine,1.3,0.4,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L-a-ABA",0.4,0.2,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),beta-ABA,0.5,0.14142135623730953,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),gamma-ABA,558.0,91.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),alpha-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Glutamic Acid,12.3,3.6,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Valine,3.3,1.5,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),(R)-3-APA,1.3,0.7071067811865476,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"3-A-2,2-DMPA",0.7,0.4,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L-4-APA",8.7,0.7,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),5-APA,151.0,2.0,1,amino_acid_abundance_compilation
+LAR 04315 (U) (Burton+12),epsi-Amino- n-caproic acid,710.0,234.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Glycine,19.0,4.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Alanine,9.4,1.4866068747318506,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),beta-Alanine,112.0,7.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Serine,2.1,1.1,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L-a-ABA",0.7,0.5,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),beta-ABA,0.3,0.2,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),gamma-ABA,158.0,5.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),alpha-AIB,1.7,1.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),beta-AIB,14.0,1.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Glutamic Acid,7.199999999999999,1.9235384061671343,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Valine,2.2,1.104536101718726,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L-4-APA",0.3,0.2,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),5-APA,41.0,11.0,1,amino_acid_abundance_compilation
+ALH 84028 (CV3) (Burton+12),epsi-Amino- n-caproic acid,611.0,262.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Glycine,56.0,2.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Alanine,11.5,1.6763054614240211,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),beta-Alanine,144.0,8.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Serine,2.7,0.2,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Aspartic Acid,8.3,3.5902646142032486,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L-a-ABA",0.4,0.3,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),beta-ABA,0.2,0.1,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),gamma-ABA,979.0,211.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),alpha-AIB,0.5,0.1,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Glutamic Acid,22.5,2.5,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Valine,3.3,0.7615773105863908,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"3-A-2,2-DMPA",1.4,0.7,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L-4-APA",0.8,0.3,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),5-APA,77.0,5.0,1,amino_acid_abundance_compilation
+EET 96026 (CV3) (Burton+12),epsi-Amino- n-caproic acid,1880.0,338.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Glycine,120.0,16.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Alanine,12.0,1.3453624047073711,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),beta-Alanine,271.0,32.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Serine,14.7,0.3,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L-a-ABA",0.3,0.1,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),beta-ABA,0.2,0.1,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),gamma-ABA,1110.0,250.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),alpha-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Glutamic Acid,9.600000000000001,1.5811388300841898,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Valine,7.0,1.6278820596099708,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),(R)-3-APA,1.8,0.7071067811865476,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.3,0.1,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L-4-APA",0.9,0.2,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),"D,L-4-A-3-MBA",1.0,0.9,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),5-APA,93.0,1.0,1,amino_acid_abundance_compilation
+LAP 02206 (CV3) (Burton+12),epsi-Amino- n-caproic acid,1560.0,429.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Glycine,49.0,5.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Alanine,15.2,2.3259406699226015,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),beta-Alanine,181.0,17.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Serine,7.3,3.9,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),beta-ABA,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),gamma-ABA,229.0,72.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),alpha-AIB,0.4,0.1,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Glutamic Acid,1.3,0.36055512754639896,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Valine,2.1,0.5,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),5-APA,7.9,0.4,1,amino_acid_abundance_compilation
+LAR 06317 (CV3) (Burton+12),epsi-Amino- n-caproic acid,315.0,81.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Glycine,7.5,0.7,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Alanine,11.0,0.8062257748298549,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),beta-Alanine,279.0,30.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Serine,14.0,1.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Aspartic Acid,2.6,1.077032961426901,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),beta-ABA,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),gamma-ABA,781.0,140.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),alpha-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Glutamic Acid,1.7,0.1,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Valine,6.6,1.1704699910719625,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L-4-APA",0.2,0.1,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),5-APA,38.0,2.0,1,amino_acid_abundance_compilation
+ALHA 77307 (CO3) (Burton+12),epsi-Amino- n-caproic acid,1290.0,281.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Glycine,13.0,5.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Alanine,4.0,0.8062257748298549,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),beta-Alanine,13.0,1.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Serine,3.5,1.4,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Aspartic Acid,2.8,0.14142135623730953,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L-a-ABA",0.8,0.4,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),beta-ABA,2.5,0.5385164807134505,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),gamma-ABA,5.0,0.8,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),alpha-AIB,0.5,0.1,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),beta-AIB,23.0,3.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Glutamic Acid,14.0,0.6708203932499369,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Valine,4.8,0.806225774829855,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"3-A-2,2-DMPA",0.3,0.2,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),5-APA,1.6,0.9,1,amino_acid_abundance_compilation
+MIL 05013 (CO3) (Burton+12),epsi-Amino- n-caproic acid,190.0,34.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Glycine,19.0,3.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Alanine,6.4,2.7294688127912363,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),beta-Alanine,58.0,3.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Serine,17.1,2.0024984394500787,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Aspartic Acid,1.2999999999999998,0.6082762530298219,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L-a-ABA",0.8,0.2,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),beta-ABA,3.2,0.28284271247461906,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),gamma-ABA,81.0,15.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),alpha-AIB,2.3,1.1,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),beta-AIB,9.2,1.3,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Glutamic Acid,6.9,1.6643316977093237,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Valine,2.5,0.5385164807134505,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Isovaline,2.0,1.3341664064126335,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"3-A-2,2-DMPA",0.3,2.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),5-APA,25.0,4.0,1,amino_acid_abundance_compilation
+DOM 08006 (CO3) (Burton+12),epsi-Amino- n-caproic acid,550.0,213.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Glycine,39.0,6.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Alanine,13.7,3.2310988842807022,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),beta-Alanine,25.0,1.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Serine,27.8,8.050465825031493,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Aspartic Acid,17.0,5.000999900019995,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),beta-ABA,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),gamma-ABA,72.0,6.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),alpha-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Glutamic Acid,51.0,2.23606797749979,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Valine,9.5,1.3038404810405297,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),5-APA,5.2,1.2,1,amino_acid_abundance_compilation
+MAC 02675 (CBb) (Burton+13),epsi-Amino- n-caproic acid,532.0,86.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Glycine,80.0,2.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Alanine,20.0,1.920937271,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),beta-Alanine,29.2,3.8,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Serine,4.14,0.605309838,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Isoserine,1.02,0.028284271,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Aspartic Acid,7.5,0.670820393,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Threonine,14.2,4.019950248,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L-a-ABA",3.23,0.08,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),beta-ABA,6.2,0.640312424,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),gamma-ABA,9.2,0.7,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),alpha-AIB,21.0,1.2,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),beta-AIB,2.55,0.092195445,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Glutamic Acid,14.1,1.140175425,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Valine,5.94,0.203960781,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Isovaline,11.87,1.063014581,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Norvaline,0.491,0.008485281,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),(R)-3-APA,1.4100000000000001,0.05,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L- and D,L-allo-3-A-2-MBA",2.08,0.03,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),3-A-3-MBA,0.25,0.05,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"3-A-2,2-DMPA",2.5,0.01,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L-3-A-2-EPA",0.98,0.01,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L-4-APA",1.37,0.02,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L-4-A-2-MBA",1.62,0.06,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),"D,L-4-A-3-MBA",0.19,0.003,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),5-APA,6.4,0.3,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Leucine,2.2,0.538516481,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Isoleucine,2.7,0.223606798,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),epsi-Amino- n-caproic acid,0.9,0.1,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Murchison (CM2) (Glavin+25),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Glycine,11.2,0.5,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Alanine,2.55,0.072111026,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),beta-Alanine,3.8,0.2,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Serine,0.99,0.031622777,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Aspartic Acid,1.37,0.031622777,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L-a-ABA",0.19,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),beta-ABA,1.18,0.028284271,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),gamma-ABA,2.9,0.1,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),alpha-AIB,0.54,0.03,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Glutamic Acid,7.83,0.145602198,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Valine,0.86,0.014142136,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Isovaline,0.08,0.014142136,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),(R)-3-APA,0.12,0.01414213562373095,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L- and D,L-allo-3-A-2-MBA",1.1,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),3-A-3-MBA,0.23,0.05,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"3-A-2,2-DMPA",0.05,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L-3-A-2-EPA",0.0,,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L-4-APA",0.14,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L-4-A-2-MBA",0.11,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),"D,L-4-A-3-MBA",0.03,0.01,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),5-APA,1.26,0.02,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),epsi-Amino- n-caproic acid,0.0,,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Tarda (C2-ung) (Glavin+25),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Glycine,11.5,6.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Alanine,2.0,0.355105618,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),beta-Alanine,30.7,7.6,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Serine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Aspartic Acid,0.82,0.31144823,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L-a-ABA",0.69,0.48,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),beta-ABA,3.9,1.252996409,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),gamma-ABA,2.7,1.3,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),alpha-AIB,3.3,1.4,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Glutamic Acid,0.88,0.186010752,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Valine,0.67,0.053851648,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Isovaline,0.73,0.036055513,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Norvaline,0.23,0.014142136,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),(R)-3-APA,1.6,0.1,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L- and D,L-allo-3-A-2-MBA",0.55,0.03,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),3-A-3-MBA,0.0,,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"3-A-2,2-DMPA",0.59,0.03,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L-3-A-2-EPA",1.5,0.1,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L-4-APA",2.4,0.2,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L-4-A-2-MBA",1.5,0.1,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),"D,L-4-A-3-MBA",2.8,0.1,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),5-APA,1.2,0.2,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),epsi-Amino- n-caproic acid,0.82,0.79,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Orgueil (CI1) (Glavin+25),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Glycine,0.46,0.05,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Alanine,0.025,0.006,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),beta-Alanine,3.3,0.1,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Serine,0.24,0.031622777,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Aspartic Acid,0.02,0.01,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),"D,L-a-ABA",0.0,,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),beta-ABA,0.64,0.014142136,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),gamma-ABA,3.5,0.2,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),alpha-AIB,0.38,0.02,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),beta-AIB,0.37,0.02236068,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Glutamic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Valine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),"3-A-2,2-DMPA",0.055,0.002,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),"D,L-4-A-2-MBA",0.0,,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),5-APA,1.2,0.1,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),epsi-Amino- n-caproic acid,4.5,2.6,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Ryugu (CI) (Glavin+25),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Glycine,26875.0,1176.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Alanine,47077.0,689.8238906,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),beta-Alanine,3005.0,95.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Serine,742.0,42.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Aspartic Acid,991.0,104.0048076,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),beta-ABA,3094.0,149.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),gamma-ABA,1975.0,176.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),alpha-AIB,57856.0,2030.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),beta-AIB,1526.0,88.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Glutamic Acid,6298.0,352.6045944,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Valine,7297.0,128.7012043,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),3-A-3-MBA,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),5-APA,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),epsi-Amino- n-caproic acid,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+EET 92042 (CR2) (Martins+07),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Glycine,57796.0,358.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Alanine,101403.0,2914.278127,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),beta-Alanine,2910.0,277.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Serine,1807.0,84.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Aspartic Acid,1365.0,11.40175425,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L-a-ABA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),beta-ABA,5986.0,83.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),gamma-ABA,2848.0,146.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),alpha-AIB,27679.0,1113.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),beta-AIB,1645.0,61.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Glutamic Acid,6673.0,330.3891645,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Valine,11789.0,254.0177159,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),3-A-3-MBA,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),5-APA,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),epsi-Amino- n-caproic acid,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+GRA 95229 (CR2) (Martins+07),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Glycine,344.1,11.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Alanine,1080.6,17.42297334,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),beta-Alanine,218.9,6.3,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Serine,2.5,0.3,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Isoserine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Aspartic Acid,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Threonine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L-a-ABA",38.2,3.2,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),beta-ABA,26.5,0.3,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),gamma-ABA,53.4,9.9,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),alpha-AIB,3.9,0.1,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),beta-AIB,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Glutamic Acid,20.8,3.4525353,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Valine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Isovaline,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Norvaline,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),3-A-3-MBA,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"3-A-2,2-DMPA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L-3-A-2-EPA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L-4-APA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L-4-A-2-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),"D,L-4-A-3-MBA",0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),5-APA,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Isoleucine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),epsi-Amino- n-caproic acid,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Phenylalanine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Methionine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Lysine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Arginine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Histidine,0.0,0.0,1,amino_acid_abundance_compilation
+Kebukawa UPLC (SYN) (Kebukawa+17),Tyrosine,0.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Glycine,2000.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Alanine,1685.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Serine,29.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Aspartic Acid,15.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),"D,L-a-ABA",388.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Glutamic Acid,34.0,0.0,1,amino_acid_abundance_compilation
+Enceladus Abiotic (SYN) (Klenner+20),Valine,641.0,0.0,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Glycine,155.0,3.0,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Alanine,51.0,1.414213562,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),beta-Alanine,13.1,0.6,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Serine,4.0,0.086023253,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Aspartic Acid,3.5,0.223606798,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),"D,L-a-ABA",15.0,1.0,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),beta-ABA,6.55,0.122065556,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),gamma-ABA,2.0,0.1,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),alpha-AIB,17.0,0.2,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Glutamic Acid,1.53,0.122065556,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Valine,10.8,0.223606798,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Isovaline,8.0,0.360555128,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),Norvaline,2.9,0.070710678,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),(R)-3-APA,0.0,0.0,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),"D,L- and D,L-allo-3-A-2-MBA",1.4,0.04,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),3-A-3-MBA,0.92,0.04,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),"3-A-2,2-DMPA",0.98,0.05,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),"D,L-4-APA",0.46,0.07,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),"D,L-4-A-3-MBA",0.05,0.01,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),5-APA,0.64,0.04,1,amino_acid_abundance_compilation
+Asuka (CM2.9) (Glavin+20),epsi-Amino- n-caproic acid,1.16,0.05,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Glycine,110.0,5.0,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Alanine,18.8,0.6403124237432849,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),beta-Alanine,14.0,2.0,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Aspartic Acid,2.51,0.0565685424949238,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),"D,L-a-ABA",2.97,0.07,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),beta-ABA,0.0,0.0,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),alpha-AIB,3.0,0.1,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Glutamic Acid,12.3,0.6403124237432849,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Valine,10.100000000000001,0.223606797749979,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),Leucine,0.0,0.0,1,amino_acid_abundance_compilation
+Paris (CM2.7) (Glavin+20),epsi-Amino- n-caproic acid,0.0,0.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Glycine,4531.0,429.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Alanine,1765.0,68.59300255857006,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),beta-Alanine,1093.0,67.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Serine,292.0,31.016124838541646,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Aspartic Acid,372.0,41.23105625617661,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L-a-ABA",470.0,32.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),beta-ABA,228.0,14.142135623730951,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),gamma-ABA,1996.0,407.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),alpha-AIB,58.0,4.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),beta-AIB,137.0,28.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Glutamic Acid,2076.0,133.00375934536586,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Valine,478.0,48.507731342539614,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Isovaline,88.0,7.280109889280518,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),Norvaline,75.0,15.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),(R)-3-APA,73.0,3.1622776601683795,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",59.0,10.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"3-A-2,2-DMPA",38.0,4.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L-3-A-2-EPA",40.0,2.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L-4-APA",245.0,9.219544457292887,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L-4-A-2-MBA",616.0,114.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),"D,L-4-A-3-MBA",1036.0,101.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),5-APA,553.0,45.0,1,amino_acid_abundance_compilation
+ALH 85085 (CH3) (Burton+13),epsi-Amino- n-caproic acid,3879.0,203.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Glycine,4609.0,718.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Alanine,457.0,45.34313619501854,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),beta-Alanine,3818.0,342.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Serine,149.0,14.317821063276353,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Aspartic Acid,330.0,41.677331968349414,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L-a-ABA",297.0,59.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),beta-ABA,717.0,94.76286192385707,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),gamma-ABA,542.0,57.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),alpha-AIB,139.0,20.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),beta-AIB,467.0,58.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Glutamic Acid,781.0,82.46211251235322,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Valine,159.0,49.49747468305833,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Isovaline,92.0,7.810249675906654,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),Norvaline,24.0,3.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),(R)-3-APA,108.0,8.06225774829855,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",61.0,9.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"3-A-2,2-DMPA",64.0,6.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L-3-A-2-EPA",93.0,4.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L-4-APA",81.0,6.4031242374328485,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L-4-A-2-MBA",25.0,1.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),"D,L-4-A-3-MBA",261.0,30.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),5-APA,85.0,9.0,1,amino_acid_abundance_compilation
+PCA 91467 (CH3) (Burton+13),epsi-Amino- n-caproic acid,2446.0,896.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Glycine,5747.0,838.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Alanine,711.0,101.86265262597475,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),beta-Alanine,4218.0,290.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Serine,239.0,41.10960958218893,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Aspartic Acid,405.0,61.29437168288782,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L-a-ABA",375.0,52.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),beta-ABA,792.0,61.554853586049575,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),gamma-ABA,809.0,72.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),alpha-AIB,195.0,26.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),beta-AIB,464.0,81.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Glutamic Acid,967.0,75.69015788066504,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Valine,122.0,9.219544457292887,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Isovaline,101.0,14.212670403551895,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),Norvaline,21.0,1.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),(R)-3-APA,92.0,6.4031242374328485,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",46.0,3.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"3-A-2,2-DMPA",85.0,6.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L-3-A-2-EPA",72.0,6.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L-4-APA",63.0,2.8284271247461903,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L-4-A-2-MBA",19.0,7.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),"D,L-4-A-3-MBA",222.0,14.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),5-APA,124.0,21.0,1,amino_acid_abundance_compilation
+PAT 91546 (CH3) (Burton+13),epsi-Amino- n-caproic acid,5702.0,2478.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Glycine,900.0,96.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Alanine,272.0,19.4164878389476,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),beta-Alanine,267.0,32.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Serine,33.0,9.055385138137417,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Aspartic Acid,87.0,6.708203932499369,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L-a-ABA",69.0,6.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),beta-ABA,62.0,6.4031242374328485,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),gamma-ABA,177.0,13.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),alpha-AIB,57.0,8.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),beta-AIB,21.0,9.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Glutamic Acid,101.0,6.4031242374328485,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Valine,35.0,2.23606797749979,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Isovaline,37.0,1.4142135623730951,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),Norvaline,4.0,1.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),(R)-3-APA,10.0,1.4142135623730951,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",11.0,1.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"3-A-2,2-DMPA",22.0,1.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L-3-A-2-EPA",16.0,3.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L-4-APA",30.0,2.23606797749979,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L-4-A-2-MBA",18.0,3.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),"D,L-4-A-3-MBA",63.0,7.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),5-APA,30.0,5.0,1,amino_acid_abundance_compilation
+MIL 05082 (CB) (Burton+13),epsi-Amino- n-caproic acid,2811.0,915.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Glycine,55.0,5.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Alanine,15.0,1.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),beta-Alanine,28.0,1.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Serine,9.9,1.5132745950421556,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Aspartic Acid,16.4,1.118033988749895,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L-a-ABA",13.0,1.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),beta-ABA,11.2,3.8275318418009276,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),gamma-ABA,29.0,3.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),alpha-AIB,6.0,1.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),beta-AIB,15.0,1.0,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Glutamic Acid,37.0,2.23606797749979,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Valine,10.1,0.5385164807134505,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Isovaline,5.1,0.36055512754639896,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),Norvaline,0.9,0.2,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),(R)-3-APA,1.4,0.28284271247461906,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L- and D,L-allo-3-A-2-MBA",1.6,0.3,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"3-A-2,2-DMPA",1.4,0.2,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L-3-A-2-EPA",2.5,0.8,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L-4-APA",3.5,0.223606797749979,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L-4-A-2-MBA",1.0,0.2,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),"D,L-4-A-3-MBA",3.6,0.6,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),5-APA,6.4,0.7,1,amino_acid_abundance_compilation
+MIL 07411 (CB) (Burton+13),epsi-Amino- n-caproic acid,249.0,22.0,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Glycine,10.7,0.8,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Alanine,4.8,1.8681541692269406,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),beta-Alanine,29.2,8.1,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Serine,0.56,0.03162277660168379,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Aspartic Acid,1.19,0.05,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L-a-ABA",0.4,0.02,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),beta-ABA,4.300000000000001,0.223606797749979,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),gamma-ABA,3.9,1.0,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),alpha-AIB,2.6,0.3,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),beta-AIB,2.6,0.2,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Glutamic Acid,0.37,0.03162277660168379,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Valine,0.11,0.01414213562373095,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Isovaline,0.41000000000000003,0.044721359549995794,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),Norvaline,0.06,0.01,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),(R)-3-APA,0.44,0.022360679774997897,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L- and D,L-allo-3-A-2-MBA",0.39,0.04,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),3-A-3-MBA,0.0,0.0,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"3-A-2,2-DMPA",0.27,0.01,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L-3-A-2-EPA",0.05,0.01,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L-4-APA",0.92,0.03,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L-4-A-2-MBA",0.75,0.03,1,amino_acid_abundance_compilation
+Ivuna (CI) (Burton+14),"D,L-4-A-3-MBA",0.98,0.08,1,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Glycine,47.0,1.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Alanine,280.5,63.08636936771683,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),beta-Alanine,5.0,2.7,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Serine,29.0,5.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Aspartic Acid,18.0,3.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L-a-ABA",0.4,0.1,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),beta-ABA,0.6,0.14142135623730953,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),gamma-ABA,41.0,2.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),alpha-AIB,0.7,0.1,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Glutamic Acid,16.0,4.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Valine,8.9,0.9848857801796105,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),Norvaline,0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),(R)-3-APA,0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"3-A-2,2-DMPA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L-4-APA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),"D,L-4-A-3-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),5-APA,5.0,1.1,2,amino_acid_abundance_compilation
+GRA 06101 (CV3) (Burton+12),epsi-Amino- n-caproic acid,211.0,68.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Glycine,851.0,87.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Alanine,907.0,53.36665625650534,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),beta-Alanine,295.0,23.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Serine,774.0,69.6419413859206,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Aspartic Acid,1255.0,237.6930794112441,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L-a-ABA",15.0,3.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),beta-ABA,11.7,2.6907248094147422,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),gamma-ABA,104.0,6.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),alpha-AIB,6.4,1.6,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),beta-AIB,0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Glutamic Acid,1433.0,431.4255439818092,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Valine,400.0,16.55294535724685,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),Norvaline,1.3,0.1,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),(R)-3-APA,0.5,0.07071067811865477,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"3-A-2,2-DMPA",1.0,1.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L-3-A-2-EPA",0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L-4-APA",0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L-4-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),"D,L-4-A-3-MBA",0.4,0.1,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),5-APA,33.0,1.0,2,amino_acid_abundance_compilation
+Allende (CV3) (Burton+12),epsi-Amino- n-caproic acid,50.0,9.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Glycine,66.5,9.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Alanine,9.07,0.54,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),beta-Alanine,2.55,0.15,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Serine,9.37,0.42,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Isoserine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Aspartic Acid,4.12,0.19,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Threonine,5.9,0.35,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L-a-ABA",1.8,0.25,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),beta-ABA,1.8,0.25,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),gamma-ABA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),alpha-AIB,5.0,0.8,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),beta-AIB,2.9,0.3,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Glutamic Acid,6.56,0.28,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Valine,5.47,0.35,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Isovaline,3.1,0.16,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Norvaline,0.31,0.03,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),(R)-3-APA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),3-A-3-MBA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"3-A-2,2-DMPA",0.82,0.02,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L-3-A-2-EPA",0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L-4-APA",1.05,0.06,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L-4-A-2-MBA",1.06,0.26,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),"D,L-4-A-3-MBA",0.16,0.01,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),5-APA,1.45,0.07,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Leucine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Isoleucine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),epsi-Amino- n-caproic acid,2.3,0.4,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Phenylalanine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Methionine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Lysine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Arginine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Histidine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2741 (CM2) (Glavin+21),Tyrosine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Glycine,75.0,6.5,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Alanine,10.45,0.52,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),beta-Alanine,2.45,0.14,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Serine,10.7,0.49,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Isoserine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Aspartic Acid,4.55,0.23,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Threonine,6.45,0.33,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L-a-ABA",1.9,0.27,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),beta-ABA,1.9,0.27,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),gamma-ABA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),alpha-AIB,9.0,0.9,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),beta-AIB,2.9,0.3,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Glutamic Acid,11.0,0.4,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Valine,5.5,0.4,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Isovaline,4.5,0.2,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Norvaline,0.38,0.04,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),(R)-3-APA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),3-A-3-MBA,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"3-A-2,2-DMPA",0.85,0.03,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L-3-A-2-EPA",0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L-4-APA",1.15,0.07,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L-4-A-2-MBA",1.1,0.25,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),"D,L-4-A-3-MBA",0.18,0.02,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),5-APA,1.5,0.08,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Leucine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Isoleucine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),epsi-Amino- n-caproic acid,2.5,0.42,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Phenylalanine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Methionine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Lysine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Arginine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Histidine,0.0,0.0,2,amino_acid_abundance_compilation
+UA 2746 (CM2) (Glavin+21),Tyrosine,0.0,0.0,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Glycine,327.0,1.0,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Alanine,73.0,16.2788206,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),beta-Alanine,100.0,15.0,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Serine,102.0,37.33630941,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Isoserine,0.0,0.0,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Aspartic Acid,86.0,13.89244399,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),gamma-ABA,99.0,11.0,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),Glutamic Acid,322.0,11.40175425,2,amino_acid_abundance_compilation
+Nakhla (Glavin+99),(R)-3-APA,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Glycine,136.0,14.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Alanine,170.0,29.73213749,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),beta-Alanine,122.0,6.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Serine,50.0,11.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Isoserine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Aspartic Acid,32.0,4.472135955,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Threonine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L-a-ABA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),beta-ABA,49.0,5.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),gamma-ABA,54.0,6.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),alpha-AIB,48.0,3.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),beta-AIB,30.0,2.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Glutamic Acid,56.0,6.708203932,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Valine,21.0,5.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Norvaline,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),(R)-3-APA,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),3-A-3-MBA,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"3-A-2,2-DMPA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L-3-A-2-EPA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L-4-APA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L-4-A-2-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),"D,L-4-A-3-MBA",0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),5-APA,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Leucine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Isoleucine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),epsi-Amino- n-caproic acid,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Phenylalanine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Methionine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Lysine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Arginine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Histidine,0.0,0.0,2,amino_acid_abundance_compilation
+GRO 95577 (CR1) (Martins+07),Tyrosine,0.0,0.0,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Glycine,465.0,32.951176,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Alanine,1055.0,76.50895372,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Serine,2165.0,154.8563851,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Aspartic Acid,211.0,19.3747258,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Threonine,545.0,386.7874093,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Glutamic Acid,455.5,32.88046533,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Valine,1179.5,83.93357493,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Leucine,1418.0,111.0157646,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Methionine,495.5,37.12310601,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Lysine,1272.0,89.94398257,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Arginine,1651.5,119.076782,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Histidine,4832.0,418.6072145,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Tyrosine,506.0,38.89087297,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Glutamine,455.0,32.88046533,2,amino_acid_abundance_compilation
+Logat Diff. (MIX) (Klevenz+10),Asparagine,898.0,63.42747827,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Glycine,40.6,2.598076211,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Alanine,28.6,2.078460969,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Serine,38.6,2.419097628,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Aspartic Acid,17.0,0.98726896,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Threonine,9.3,0.577350269,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Glutamic Acid,23.6,1.420281662,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Valine,9.3,0.554256258,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Leucine,6.0,0.369504172,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Lysine,12.0,0.75055535,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Arginine,7.0,0.542709253,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Histidine,7.6,0.484974226,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Tyrosine,6.3,0.375277675,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Glutamine,5.0,0.288675135,2,amino_acid_abundance_compilation
+WA/CC Diff. (MIX) (Klevenz+10),Asparagine,3.0,0.190525589,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Glycine,2.26,0.27,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Alanine,0.6,0.19697715603592209,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),beta-Alanine,0.51,0.18,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Serine,1.11,0.11045361017187261,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Aspartic Acid,0.64,0.0565685424949238,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Threonine,0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),"D,L-a-ABA",0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),beta-ABA,0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),gamma-ABA,0.06,0.03,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),alpha-AIB,0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Glutamic Acid,0.96,0.05385164807134505,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Valine,0.32,0.09,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),"3-A-2,2-DMPA",0.0,0.0,2,amino_acid_abundance_compilation
+SM2 (CM2) (Burton+14),epsi-Amino- n-caproic acid,0.74,0.2,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Glycine,2.96,0.76,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Alanine,1.39,0.15297058540778355,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),beta-Alanine,0.53,0.04,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Serine,1.61,0.022360679774997897,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Aspartic Acid,1.1600000000000001,0.12083045973594572,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Threonine,0.66,0.08,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),"D,L-a-ABA",0.01,0.01,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),beta-ABA,0.04,0.01414213562373095,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),gamma-ABA,0.38,0.3,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),alpha-AIB,0.0,0.0,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Glutamic Acid,3.2399999999999998,0.16278820596099708,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Valine,1.04,0.09433981132056604,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),"3-A-2,2-DMPA",0.0,0.0,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),5-APA,0.06,0.03,2,amino_acid_abundance_compilation
+SM12 (CM2) (Burton+14),epsi-Amino- n-caproic acid,1.5,0.65,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Glycine,12.8,3.1,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Alanine,9.129999999999999,1.7441330224498361,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),beta-Alanine,2.04,0.33,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Serine,9.17,1.670748335327616,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Aspartic Acid,10.75,1.0890362712049586,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Threonine,5.9,0.81,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),"D,L-a-ABA",0.21,0.16,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),beta-ABA,0.06,0.01414213562373095,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),gamma-ABA,5.98,1.74,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),alpha-AIB,0.0,0.0,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Glutamic Acid,19.68,5.721022635858033,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Valine,7.4799999999999995,1.4322360140703068,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),Isovaline,0.0,0.0,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),"3-A-2,2-DMPA",0.0,0.0,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),5-APA,0.13,0.05,2,amino_acid_abundance_compilation
+SM51 (CM2) (Burton+14),epsi-Amino- n-caproic acid,1.65,0.55,2,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Glycine,1.23,0.7,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Alanine,0.95,0.24,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Serine,0.91,0.16,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Aspartic Acid,1.3,0.39,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Threonine,0.66,0.16,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Glutamic Acid,0.8,0.22,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Valine,1.0,0.33,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Leucine,0.12,0.08,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Isoleucine,0.65,0.11,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Phenylalanine,1.42,0.4,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Methionine,0.6,0.33,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Lysine,0.47,0.15,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Arginine,0.33,0.11,3,amino_acid_abundance_compilation
+Izena Cauldron (MIX) (Fuchida+14),Histidine,0.14,0.02,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Glycine,58.6,7.46,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Alanine,39.69,2.68,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Serine,13.0,1.6,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Aspartic Acid,17.47,3.9,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Threonine,9.24,0.82,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Glutamic Acid,16.0,1.45,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Valine,8.32,1.79,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Leucine,25.22,1.75,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Isoleucine,3.84,1.93,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Phenylalanine,25.82,1.94,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Methionine,2.33,1.2,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Lysine,37.37,3.94,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Arginine,13.25,2.19,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Histidine,20.71,2.3,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Tyrosine,2.4,2.4,3,amino_acid_abundance_compilation
+LB Strom. (MIC) (Ballarini+94),Cya,3.86,0.57,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Glycine,186.74,5.02,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Alanine,36.29,1.22,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Serine,66.03,2.64,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Aspartic Acid,31.61,1.83,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Threonine,23.13,1.56,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Glutamic Acid,55.91,2.52,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Valine,26.81,0.65,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Leucine,30.56,0.57,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Isoleucine,30.22,0.9,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Phenylalanine,51.52,1.14,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Arginine,19.11,0.04,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Histidine,18.06,18.06,3,amino_acid_abundance_compilation
+Burmese Amber (EUK) (McCoy+19),Tyrosine,6.18,1.14,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Glycine,478.4,12.87,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Alanine,94.43,3.17,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Serine,182.62,7.31,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Aspartic Acid,128.89,7.5,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Threonine,57.8,3.91,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Glutamic Acid,188.29,8.5,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Valine,94.54,2.31,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Leucine,216.71,4.05,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Isoleucine,116.27,3.42,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Phenylalanine,99.99,2.22,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Arginine,65.63,0.14,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Histidine,27.5,27.5,3,amino_acid_abundance_compilation
+Baltic Amber (EUK) (McCoy+19),Tyrosine,18.76,3.46,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Glycine,61.5,6.09,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Alanine,158.25,3.565,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Serine,11.0,0.575,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Aspartic Acid,6.5,0.29,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Threonine,11.5,0.65,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Glutamic Acid,117.0,9.75,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Valine,69.25,7.53,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Leucine,35.5,7.63,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Isoleucine,67.0,4.375,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Phenylalanine,35.0,5.43,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Arginine,4.75,0.25,3,amino_acid_abundance_compilation
+M. megad. A; OF (EUK) (Saitta+24),Tyrosine,12.25,1.6,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Glycine,397.0,6.4,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Alanine,785.0,13.45,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Serine,69.5,0.35,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Aspartic Acid,93.5,1.05,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Glutamic Acid,1790.5,31.5,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Valine,457.5,23.7,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Leucine,163.5,2.5,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Isoleucine,177.5,1.75,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Arginine,31.0,0.705,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Histidine,33.5,0.35,3,amino_acid_abundance_compilation
+M. megad. B (EUK) (Saitta+24),Tyrosine,52.5,0.35,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Glycine,6.8,0.318433667,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Alanine,7.6,0.387835876,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Aspartic Acid,18.6,0.804249132,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Threonine,2.83,0.122474487,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Glutamic Acid,26.3,1.551343504,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Valine,4.3,0.204124145,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Leucine,8.5,0.70218706,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Methionine,0.83,0.048989795,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Lysine,5.3,0.228619043,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Arginine,1.5,0.073484692,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Histidine,4.0,0.212289111,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Tyrosine,2.6,0.114309521,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Glutamine,4.33,0.244948974,3,amino_acid_abundance_compilation
+Logat Hot (MIC) (Klevenz+10),Asparagine,1.5,0.081649658,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Glycine,7.3,0.45033321,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Alanine,65.6,5.658032638,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Serine,19.3,1.120059522,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Aspartic Acid,16.3,0.952627944,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Glutamic Acid,26.3,1.633901262,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Valine,7.6,0.444559707,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Leucine,4.66,0.271354627,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Methionine,1.0,0.098149546,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Lysine,11.6,0.704367328,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Arginine,12.3,0.96417495,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Histidine,2.6,0.167431578,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Tyrosine,5.6,0.334863156,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Glutamine,4.0,0.242487113,3,amino_acid_abundance_compilation
+TP Hot (MIC) (Klevenz+10),Asparagine,2.3,0.132790562,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Glycine,78.0,7.8,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Alanine,52.0,5.2,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Serine,99.0,9.9,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Aspartic Acid,1.0,0.1,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Glutamic Acid,15.0,1.5,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Valine,24.0,2.4,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Leucine,18.0,1.8,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Methionine,3.0,0.3,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Lysine,13.0,1.3,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Arginine,7.0,0.7,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Histidine,21.0,2.1,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Tyrosine,15.0,1.5,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Glutamine,2.0,0.2,3,amino_acid_abundance_compilation
+RL Hot (MIC) (Klevenz+10),Asparagine,6.0,0.6,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Glycine,9.2,0.644,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Alanine,6.6,0.462,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),beta-Alanine,1.0,0.07,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Serine,2.4,0.168,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Isoserine,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Aspartic Acid,5.5,0.385,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Threonine,2.3,0.161,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L-a-ABA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),beta-ABA,0.9,0.063,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),gamma-ABA,0.4,0.028,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),alpha-AIB,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),beta-AIB,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Glutamic Acid,5.77,0.4,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Valine,2.45,0.171,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Isovaline,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Norvaline,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),(R)-3-APA,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L- and D,L-allo-3-A-2-MBA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),3-A-3-MBA,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"3-A-2,2-DMPA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L-3-A-2-EPA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L-4-APA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L-4-A-2-MBA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),"D,L-4-A-3-MBA",0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),5-APA,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Leucine,2.6,0.182,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Isoleucine,1.5,0.105,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),epsi-Amino- n-caproic acid,0.0,0.0,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Phenylalanine,0.9,0.063,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Methionine,0.4,0.028,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Lysine,0.65,0.045,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Arginine,0.4,0.028,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Histidine,0.5,0.035,3,amino_acid_abundance_compilation
+Bitter Springs Chert (MIC) (Schopf+67),Tyrosine,0.6,0.042,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Glycine,2.8,0.224,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Alanine,2.7,0.216,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),beta-Alanine,0.8,0.064,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Serine,1.5,0.12,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Aspartic Acid,1.7,0.136,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Threonine,1.0,0.08,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),beta-ABA,0.0,0.0,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),gamma-ABA,0.0,0.0,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),alpha-AIB,0.0,0.0,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),beta-AIB,0.0,0.0,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Glutamic Acid,1.9,0.152,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Valine,1.2,0.096,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Leucine,0.9,0.072,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Isoleucine,0.6,0.048,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Phenylalanine,0.35,0.028,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Methionine,0.2,0.016,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Lysine,0.08,0.0064,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Arginine,0.34,0.0272,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Histidine,0.44,0.0352,3,amino_acid_abundance_compilation
+Gunflint Chert (MIC) (Schopf+67),Tyrosine,0.17,0.0136,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Glycine,3.2,0.32,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Alanine,0.95,0.095,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),beta-Alanine,0.73,0.073,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Serine,1.2,0.12,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Aspartic Acid,0.14,0.014,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Threonine,0.5,0.05,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),beta-ABA,0.09,0.009,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Glutamic Acid,0.54,0.054,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Valine,0.79,0.079,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Leucine,0.87,0.087,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Isoleucine,0.56,0.056,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Phenylalanine,0.44,0.044,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Methionine,0.42,0.042,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Lysine,0.01,0.001,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Arginine,0.23,0.023,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Histidine,0.33,0.033,3,amino_acid_abundance_compilation
+Fig Tree Chert (MIC) (Schopf+67),Tyrosine,0.29,0.029,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Glycine,27.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Serine,29.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Aspartic Acid,8.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Lysine,3.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Arginine,3.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Tyrosine,11.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Cit,11.0,,3,amino_acid_abundance_compilation
+Enceladus Biotic (SYN) (Klenner+20),Orn,8.0,,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Glycine,155.0,4.65,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Alanine,230.0,6.9,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Serine,18.0,0.54,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Aspartic Acid,273.0,8.19,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Threonine,11.0,0.33,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Glutamic Acid,168.0,5.04,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Valine,99.0,2.97,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Leucine,49.0,1.47,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Isoleucine,35.0,1.05,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),Proline,115.0,3.54,3,amino_acid_abundance_compilation
+V21-16 GDe (EUK) (King+72),allo-Ile,0.0,1.68,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Glycine,164.0,4.92,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Alanine,265.0,7.95,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Serine,15.0,0.45,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Aspartic Acid,398.0,11.94,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Threonine,11.0,0.33,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Glutamic Acid,193.0,5.79,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Valine,129.0,3.87,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Leucine,65.0,1.95,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Isoleucine,43.0,1.29,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),Proline,118.0,4.17,3,amino_acid_abundance_compilation
+V21-16 GA (EUK) (King+72),allo-Ile,56.0,1.38,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Glycine,273.0,8.19,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Alanine,215.0,6.45,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Serine,166.0,4.98,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Aspartic Acid,467.0,14.01,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Threonine,172.0,5.16,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Glutamic Acid,252.0,7.56,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Valine,136.0,4.08,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Leucine,95.0,2.85,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Isoleucine,81.0,2.43,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),Proline,139.0,35.4,3,amino_acid_abundance_compilation
+GDu Recent (EUK) (King+72),allo-Ile,46.0,,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Glycine,16.81,1.16,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Alanine,15.4,0.98,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Serine,6.0,0.92,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Aspartic Acid,13.41,3.28,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Threonine,7.13,0.77,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Glutamic Acid,6.02,1.143,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Valine,13.34,2.66,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Leucine,6.35,0.88,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Isoleucine,2.53,,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Phenylalanine,4.36,,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Methionine,1.25,,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Arginine,5.34,1.3,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Histidine,1.17,0.12,3,amino_acid_abundance_compilation
+Changjiang Est. B6 (MIX) (Wei+22),Tyrosine,0.82,,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Glycine,16.5,0.37,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Alanine,19.5,0.53,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Serine,4.45,0.19,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Aspartic Acid,14.5,0.7,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Threonine,5.52,0.16,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Glutamic Acid,6.22,0.3,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Valine,12.64,0.6,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Leucine,4.98,0.12,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Isoleucine,2.42,0.08,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Phenylalanine,3.54,0.158,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Methionine,0.98,0.24,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Arginine,7.39,0.31,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Histidine,0.81,0.05,3,amino_acid_abundance_compilation
+Changjiang Est. A5-6 (MIX) (Wei+22),Tyrosine,0.5,0.06,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),Glycine,2168.0,73.0,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),Alanine,1038.0,62.96824597,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),beta-Alanine,598.0,142.0,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),Serine,604.0,149.6028075,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),Aspartic Acid,1118.0,73.81734214,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),gamma-ABA,205.0,10.0,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),Glutamic Acid,1311.0,143.0139853,3,amino_acid_abundance_compilation
+Nile Delta (MIX) (Glavin+99),(R)-3-APA,0.0,0.0,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Glycine,0.025,0.003,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Alanine,0.046,0.004,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Serine,0.021,0.004,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Aspartic Acid,0.052,0.009,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Threonine,0.028,0.001,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Glutamic Acid,0.049,0.007,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Valine,0.033,0.003,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Leucine,0.05,0.007,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Isoleucine,0.026,0.002,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Phenylalanine,0.028,0.002,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Methionine,0.018,,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Lysine,0.036,0.002,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Arginine,0.052,0.006,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Histidine,0.012,0.003,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Tyrosine,0.016,0.003,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Proline,0.022,,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Cysteine,0.01,,3,amino_acid_abundance_compilation
+E. Coli (MIC) (Simensen+22),Tryptophan,0.012,,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Glycine,0.266,0.021,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Alanine,0.347,0.005,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Serine,0.226,0.02,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Aspartic Acid,0.179,0.017,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Threonine,0.219,0.018,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Glutamic Acid,0.369,0.013,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Valine,0.179,0.014,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Leucine,0.332,0.033,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Isoleucine,0.168,0.012,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Phenylalanine,0.144,0.014,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Methionine,0.008,0.0,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Lysine,0.27,0.026,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Arginine,0.226,0.015,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Histidine,0.061,0.006,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Tyrosine,0.02,0.003,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Proline,0.194,0.018,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Glutamine,0.369,0.013,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Asparagine,0.179,0.017,3,amino_acid_abundance_compilation
+M. thermophila (MIC) (Jiang+24),Cysteine,0.004,0.001,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Glycine,0.77,0.0,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Alanine,0.98,0.0,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Serine,0.38,0.0,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Aspartic Acid,0.79,0.0,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Threonine,0.48,0.0,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Glutamic Acid,1.14,0.057,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Valine,0.64,0.032,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Leucine,0.72,0.036,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Isoleucine,0.47,0.0235,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Phenylalanine,0.29,0.0145,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Methionine,0.21,0.0105,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Lysine,0.58,0.029,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Tyrosine,0.25,0.0125,3,amino_acid_abundance_compilation
+Geobacillus LC300 (MIC) (Cordova+17),Proline,0.37,0.0185,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Glycine,0.98,0.049,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Alanine,1.02,0.051,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Serine,0.49,0.0245,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Aspartic Acid,0.61,0.0305,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Threonine,0.51,0.0255,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Glutamic Acid,0.99,0.0495,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Valine,0.65,0.0325,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Leucine,0.92,0.046,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Isoleucine,0.26,0.013,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Phenylalanine,0.33,0.0165,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Methionine,0.15,0.0075,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Lysine,0.49,0.0245,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Tyrosine,0.33,0.0165,3,amino_acid_abundance_compilation
+Thermus thermophilus HB8 (MIC) (Cordova+17),Proline,0.55,0.0275,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Glycine,0.82,0.041,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Alanine,0.9,0.045,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Serine,0.47,0.0235,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Aspartic Acid,0.71,0.0355,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Threonine,0.54,0.027,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Glutamic Acid,1.09,0.0545,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Valine,0.62,0.031,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Leucine,0.8,0.04,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Isoleucine,0.41,0.0205,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Phenylalanine,0.31,0.0155,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Methionine,0.2,0.01,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Lysine,0.45,0.0225,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Tyrosine,0.3,0.015,3,amino_acid_abundance_compilation
+Rhodothermus marinus DSM 4252 (MIC) (Cordova+17),Proline,0.53,0.0265,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Glycine,4.55,0.64,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Alanine,6.96,0.4,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Serine,3.83,0.39,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Aspartic Acid,10.7,0.3,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Threonine,4.97,0.5,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Glutamic Acid,13.76,0.12,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Valine,6.8,0.06,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Leucine,9.84,0.25,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Isoleucine,5.06,0.05,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Phenylalanine,4.49,0.21,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Methionine,2.96,0.23,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Lysine,6.99,0.98,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Arginine,7.38,0.53,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Histidine,2.3,0.07,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Tyrosine,4.31,0.17,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Proline,3.32,1.81,3,amino_acid_abundance_compilation
+Methanococcus maripaludis (MIC) (Wang+24),Cysteine,1.48,1.12,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Glycine,10.2,2.9,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Alanine,12.0,1.4,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Serine,4.9,1.6,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Aspartic Acid,9.7,3.3,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Threonine,5.2,0.7,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Glutamic Acid,12.5,2.6,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Valine,5.8,1.0,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Leucine,8.6,2.0,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Isoleucine,4.4,3.0,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Phenylalanine,3.9,0.7,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Methionine,1.9,,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Lysine,4.6,0.1,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Arginine,6.0,0.6,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Histidine,1.4,9.8,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Tyrosine,1.8,10.6,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Proline,4.5,5.3,3,amino_acid_abundance_compilation
+Synechococcus 7002 (MIC) (Beck+18),Cysteine,1.0,,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Glycine,9.6,0.3,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Alanine,11.8,0.9,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Serine,5.6,0.6,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Aspartic Acid,9.5,1.0,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Threonine,6.2,0.5,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Glutamic Acid,11.3,0.8,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Valine,8.1,0.5,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Leucine,7.3,0.2,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Isoleucine,3.9,0.5,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Phenylalanine,2.8,1.0,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Methionine,2.6,,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Lysine,3.8,1.1,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Arginine,5.6,1.9,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Histidine,1.7,1.8,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Tyrosine,3.0,1.1,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Proline,4.8,0.8,3,amino_acid_abundance_compilation
+A. acidocaldarius (MIC) (Beck+18),Cysteine,0.9,,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Glycine,14.167222222222223,0.3577700137183793,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Alanine,10.198888888888888,0.26448952113481433,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),beta-Alanine,0.2488888888888889,0.0308983298921391,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Serine,8.082777777777778,0.20225140967629707,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Aspartic Acid,11.732777777777777,0.16522314690019949,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Threonine,6.444999999999999,0.14682992807250764,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),gamma-ABA,0.4033333333333334,0.07980879929208586,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Glutamic Acid,11.812222222222223,0.1508266828900144,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Valine,6.170000000000001,0.15104037355768302,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Leucine,7.838333333333334,0.1601648456365434,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Isoleucine,4.5505555555555555,0.08607750240192308,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Phenylalanine,3.761666666666667,0.0722361097758978,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Methionine,0.9177777777777778,0.07412972446584916,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Lysine,5.440555555555556,0.072267080086285,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Arginine,4.509444444444444,0.06439593480766544,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Histidine,1.5333333333333334,0.047820555784678566,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Tyrosine,2.0044444444444443,0.15947710660425277,3,amino_acid_abundance_compilation
+Kara Sea Surf. (MIX),Orn,0.18055555555555555,0.019972975569163946,3,amino_acid_abundance_compilation

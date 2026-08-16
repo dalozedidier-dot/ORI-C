@@ -1,0 +1,70 @@
+{
+  "schema": "oric.corrected-delivery-validation.v1",
+  "date": "2026-08-16",
+  "input_verification": "passed",
+  "campaign_exact_recovery": {
+    "recovered": 43,
+    "expected": 47,
+    "missing_exact": 4
+  },
+  "reproduction_checks": {
+    "AICC2023": {
+      "status": "reproduced_exactly",
+      "matches_previous_json": true
+    },
+    "endosymbiosis": {
+      "status": "reproduced_exactly",
+      "matches_previous_json": true
+    },
+    "late_accretion": {
+      "status": "reproduced_exactly",
+      "matches_previous_json": true
+    },
+    "vesicles": {
+      "status": "reproduced_with_explicit_historical_Pacc_provenance",
+      "all_previous_fields_match": true
+    },
+    "gajrani_pacc": {
+      "status": "reproduced_strict_json",
+      "day12_delta": -0.08072916666666667,
+      "day12_bootstrap95": [
+        -0.11458333333333333,
+        -0.041666666666666664
+      ],
+      "difference_from_previous": "NaN fields for days 5 and 10 replaced by JSON null"
+    },
+    "gajrani_causal_H_m_R": {
+      "status": "rerun_from_included_raw_data",
+      "source_sha256": "402ca4b0e7b908a6e88f64802ab5bf20ddcec7c28e98a64959b827a57f5607dd"
+    },
+    "watkins_labels": {
+      "status": "reproduced_exactly",
+      "n_trials": 209,
+      "max_abs_no_toggle": 0.9986572265625,
+      "min_abs_toggle": 48.799896240234375
+    },
+    "watkins_classifier": {
+      "status": "historical_not_rerun",
+      "historical_accuracy_X": 0.2679425837320574,
+      "historical_accuracy_X_plus_H": 0.3062200956937799,
+      "reason": "exact prior feature-extraction/classifier script unavailable"
+    },
+    "yen_papin": {
+      "status": "historical_result_with_raw_data_and_analyzer_included",
+      "reason": "full analyzer exceeded current execution limit; not relabeled as fresh rerun"
+    },
+    "windels": {
+      "status": "kept_blind",
+      "strict_credit": false
+    }
+  },
+  "historical_test_campaign": {
+    "passed": 51,
+    "failed": 0,
+    "xfailed": 1,
+    "status": "historical_only_not_reasserted_as_new_package_test"
+  },
+  "full_repository_included": false,
+  "full_repository_reason": "exact base ORI-C-main-20260815T193827Z-1-001.zip unavailable in current file library",
+  "false_full_repo_claim_prevented": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "oric.paleo-age-ensemble-route.v1",
+  "status": "identified_not_opened_in_ORI_C",
+  "problem_solved": "replace ad-hoc chronological-error assignment with published age-model ensembles and an untuned chronology in the solar-system/paleoclimate branch",
+  "source": {
+    "dataset": "North Atlantic benthic d18O stack data",
+    "doi": "10.5281/zenodo.14796413",
+    "age_ensemble_file": "NA-stack_age-samples.txt",
+    "age_ensemble_count": 1000,
+    "age_ensemble_size_mb": 4.0,
+    "untuned_file": "NA-stack_untuned_age_model.txt",
+    "untuned_file_size_kb": 199.8
+  },
+  "scientific_use": {
+    "primary": "propagate published chronology ensembles through H-versus-X predictive tests instead of inventing LR04 age errors",
+    "negative_control_candidate": "untuned composite-depth age model compared with astronomy-tuned chronology",
+    "caveat": "median BIGMACS age model used LR04 as an initial target; independence must be assessed with the untuned representation and documented age controls"
+  },
+  "relationship_to_PRED_PALEO_HISTORY_02": {
+    "does_not_retroactively_change_frozen_protocol": true,
+    "old_LR04_uncertainty_lock": "remains for the frozen ID",
+    "recommended_action": "new prediction ID using published age ensembles rather than fabricating uncertainty for LR04"
+  },
+  "raw_values_opened_by_ORI_C": false
+}

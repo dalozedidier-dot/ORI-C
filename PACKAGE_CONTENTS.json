@@ -1,0 +1,20 @@
+{
+  "file_count_excluding_manifest_and_contents": 122,
+  "bytes_excluding_manifest_and_contents": 117845252,
+  "top_level": [
+    "APPLIQUER_SUR_BASE_EXACTE.py",
+    "EXPECTED_INPUTS.json",
+    "MANIFEST.sha256",
+    "PROVENANCE.json",
+    "README.md",
+    "SYNTHESE_7_AXES_CORRIGEE.md",
+    "benchmarks",
+    "data",
+    "integration_patch",
+    "protocoles",
+    "requirements.txt",
+    "results",
+    "scripts",
+    "validation"
+  ]
+}

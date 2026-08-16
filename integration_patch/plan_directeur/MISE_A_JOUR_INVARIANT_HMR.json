@@ -1,0 +1,37 @@
+{
+  "schema": "oric.invariant-hmr-update.v1",
+  "core_claim": "history matters only when information survives a sufficiently rich current state X or is carried by a manipulable physical trace m that changes future response/accessibility",
+  "operational_filters": {
+    "conditional_history": "I(R;H|X) > 0 after reasonable enrichment of X",
+    "physical_trace": "targeted intervention do(m) changes R or P_acc with X, Theta and untargeted architecture matched"
+  },
+  "new_evidence": [
+    {
+      "id": "YEN-PAPIN-HIST-01",
+      "branch": "vivant",
+      "artifact": "03_branche_vivant/benchmark_yen_papin_2017/resultats/RESULTAT.json",
+      "verdict": "negative_for_frozen_5_percent_prediction_and_history_not_independent_of_rich_current_state",
+      "section_XIV_credit": false
+    },
+    {
+      "id": "GAJRANI-EXTMEM-01",
+      "branch": "vivant",
+      "artifact": "03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT.json",
+      "verdict": "supports_direct_environmental_trace_intervention_H_to_m_to_R_retrospectively",
+      "section_XIV_credit": false
+    }
+  ],
+  "new_frozen_route": {
+    "id": "PRED-MATIERE-WAVE-HISTORY-001",
+    "branch": "matiere",
+    "raw_data_opened_by_ORI_C": false,
+    "artifact": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json",
+    "source_doi": "10.5281/zenodo.21476531"
+  },
+  "section_XIV": {
+    "passed": 7,
+    "total": 12,
+    "unchanged": true,
+    "reason": "no criterion weakened or retroactively requalified"
+  }
+}

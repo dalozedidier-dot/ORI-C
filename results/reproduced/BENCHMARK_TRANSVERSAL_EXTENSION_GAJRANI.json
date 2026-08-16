@@ -1,0 +1,59 @@
+{
+  "schema": "oric.transversal-benchmark-extension.v1",
+  "id": "GAJRANI-EXTMEM-01",
+  "system_id": "gajrani_externalized_bacterial_community_memory",
+  "field_coverage": {
+    "X": true,
+    "H": true,
+    "m": true,
+    "Theta": true,
+    "tau": true,
+    "P_acc": true,
+    "R": true
+  },
+  "operationalization": {
+    "X": "initial community composition identity; quantitative initial abundances are not present in the uploaded day-5/10/12 CFU tables and this limits matching quality",
+    "H": "identity of the species that previously modified the extracellular environment",
+    "m": "filtered extracellular supernatant/environmental modification; washing/removal and supernatant rescue provide intervention relevance",
+    "Theta": "common subsequent dilution/co-culture challenge regime",
+    "tau": "observed community horizons days 5, 10 and 12; not intrinsic tau_m",
+    "P_acc": "retrospective species-retention support at day 12 across eight supernatant challenges relative to no-supernatant controls",
+    "R": "eight-species final CFU vector/community state"
+  },
+  "day12_delta_Pacc_retention_mean": -0.08072916666666667,
+  "day12_bootstrap95": [
+    -0.11458333333333333,
+    -0.041666666666666664
+  ],
+  "strict_PACC_INT_CHALLENGE_V1_qualified": false,
+  "causal_H_m_R_benchmark": true,
+  "reason_not_strict": "Pacc challenge cells, thresholds, weights and sham were not frozen before this already-public data were inspected; initial X is incompletely represented in the uploaded output tables.",
+  "benchmark_effects": {
+    "mild_dilution_1_2x": {
+      "Ca_memory_Ca_win_threshold_percent": 5.417750514,
+      "Lp_memory_Ca_win_threshold_percent": 46.142143015,
+      "history_memory_shift_percentage_points": 40.724392501000004
+    },
+    "high_dilution_1_100x": {
+      "history_memory_shift_percentage_points": 7.8572563249999945,
+      "shift_reduction_vs_1_2x_percent": 80.70626510927804
+    },
+    "supernatant_rescue_1_2x": {
+      "both_cells_washed": true,
+      "Ca_supernatant_Ca_win_threshold_percent": 1.95353248,
+      "Lp_supernatant_Ca_win_threshold_percent": 93.86726629500001,
+      "median_threshold_gap_percentage_points": 91.913733815,
+      "range_across_three_sets_percentage_points": [
+        82.744271965,
+        91.913733815
+      ]
+    }
+  },
+  "effect_on_transversal_count_if_added_as_extension": {
+    "complete_cases_before": 6,
+    "unique_complete_systems_before": 5,
+    "complete_cases_after": 7,
+    "unique_complete_systems_after": 6
+  },
+  "section_XIV_credit": false
+}

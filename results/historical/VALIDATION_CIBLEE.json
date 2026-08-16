@@ -1,0 +1,17 @@
+{
+  "schema": "oric.targeted-validation.v1",
+  "command_scope": [
+    "material-memory tests",
+    "paired-material experiments tests",
+    "hypergraph tests",
+    "central-campaign tests"
+  ],
+  "passed": 51,
+  "xfailed": 1,
+  "failed": 0,
+  "expected_xfail": {
+    "test": "test_monotonie_des_capacites_sur_les_aretes_de_progression",
+    "reason": "monotonicity of object capability levels across progression edges is explicitly refuted; the hierarchy orders objects, not processes, and the negative test is intentionally preserved"
+  },
+  "global_pytest_note": "the full repository suite was also started and reached 28 percent with no failure before the 45 s execution limit; this is not reported as a full-suite pass."
+}

@@ -1,0 +1,14 @@
+sample_id,group,tracer,value,uncertainty
+"12002, 122 (olivine basalt)",Low-Ti basalt,delta44_40Ca_permil,0.8231998333154561,0.019808223651821062
+"15555, 19",Low-Ti basalt,delta44_40Ca_permil,0.8694628537359063,0.01962921409491964
+"10017, 282  (ilmenite basalt)",High-Ti basalt,delta44_40Ca_permil,0.7798977856338827,0.039480629592060015
+"70035, 200  (ilmenite basalt)",High-Ti basalt,delta44_40Ca_permil,0.8223022087415036,0.04857375248697158
+"71569, 69  (ilmenite basalt)",High-Ti basalt,delta44_40Ca_permil,0.8223214453799111,0.009926337998866016
+"10044, 652  (ilmenite basalt)",High-Ti basalt,delta44_40Ca_permil,0.8020438178627997,0.0488125419246323
+"74275, 344  (ilmenite basalt)",High-Ti basalt,delta44_40Ca_permil,0.8552239989735279,0.05736389383933722
+70215,High-Ti basalt,delta44_40Ca_permil,0.8387177974480866,0.024203903084718186
+"60025, 901 (ferroan anorthosite)",Highland rock,delta44_40Ca_permil,0.7042463905246354,0.02817092450909714
+"62236, 64 (ferroan anorthosite)",Highland rock,delta44_40Ca_permil,0.7620758795165954,0.009981430854606808
+"60015, 761 (cataclastic anorthosite)",Highland rock,delta44_40Ca_permil,0.7822703556514495,0.08202162171484188
+Olivine (low-Ti basalt 12021),Lunar minerals,delta44_40Ca_permil,1.0915995834994445,0.028619692126342175
+Plagioclase (troctolite 76535),Lunar minerals,delta44_40Ca_permil,0.7767737923333861,0.06437245623102114
