@@ -8740,6 +8740,138 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/EXPECTED_INPUTS.json",
+      "size": 929,
+      "sha256": "1b076ae68f287c47c997e57f9bc4c65ab2b1e7f8db7cb2b3c9ff2df4f1306c4b",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/PROVENANCE_ENTREES.json",
+      "size": 1358,
+      "sha256": "cc956c5bda63870103039adb975314cfb4207228233f72b529103a0c8cc597b0",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/README_RESULTATS.md",
+      "size": 4625,
+      "sha256": "5d6569ab866cb7c9394290067f8d62cee0b7e7ffbd0f36a18e7b6b0eaa7180f9",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/protocoles/PRED-MATIERE-WAVE-HISTORY-001.json",
+      "size": 2115,
+      "sha256": "0cd2c1b423f3c9a84c60ae488be4a1a2e16e85265951b34652544acc43c0b215",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/protocoles/PRED-VIVANT-WINDELS-TRAJECTORY-001.proposed.json",
+      "size": 2182,
+      "sha256": "c473a056ef1e9ff0743ae627a5c24067ea378cb91559c730d672e43eda845a96",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/ACCRETION_TARDIVE_AUDIT_MULTITRACEUR.json",
+      "size": 877,
+      "sha256": "95ddd5be8b107d7cb196b3f9ce180a52576e5e0f34fb8a9a654079fbf660071d",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/BENCHMARK_TRANSVERSAL_EXTENSION_GAJRANI.json",
+      "size": 2531,
+      "sha256": "750e250a50f674fafbc8eefa404893c76d4d840fbaf545829f0f4e2a5fb382fb",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/ENDOSYMBIOSE_RETENTION_MODULAIRE.json",
+      "size": 3435,
+      "sha256": "be463f31bd1f3b471dba2eed26e7a3d52ee32132a121644fcac1e5cc360a8663",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_AICC2023_UNCERTAINTY.json",
+      "size": 3237,
+      "sha256": "3e1c719bbd4dc9844d0512301f55aeb0920f872c7c52717080ec48c72e0bc3d0",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_GAJRANI_2025.json",
+      "size": 4656,
+      "sha256": "83eb799bcb2d655ea0fe95a27d53a9329d04c8f07388b7d9730527f9a4c97175",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_GAJRANI_PACC_FULL.json",
+      "size": 11224,
+      "sha256": "e34bb22331525e4d47faf04934387c8e2c8f8412ff8a538691927994b137d4fe",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_WATKINS_LABELS_REPRODUCED.json",
+      "size": 86489,
+      "sha256": "fb8219c0099392416f6340408fcca8425cd17526e893c851e39f9cff5a9c0199",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/VESICULES_DYNAMIQUE_TEMPORELLE.json",
+      "size": 11159,
+      "sha256": "9594d0d78c2d7ff7641bd52b3fd85e1d63bb1b908aca023ca88975d103276537",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_aicc2023.py",
+      "size": 2011,
+      "sha256": "00b4aa27db5d5dcd4004c0be8e94b6c82034b7e84925380d450ee1a905211454",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_endosymbiose.py",
+      "size": 2355,
+      "sha256": "c86772812411dd57691033561589e7977735fb012a91b19f07f5af75232fa69c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_gajrani_pacc.py",
+      "size": 3446,
+      "sha256": "2173ece8381ee7ccd73cb17c1ea0d5bc0cfe6ce31d5820ae5a53cb87255e31f3",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_vesicules.py",
+      "size": 4235,
+      "sha256": "6921c22fb181e107f980d00d06d7d74368fa644b2e1e0d1a2b9673a9cb51451a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_watkins_labels.py",
+      "size": 1980,
+      "sha256": "91e38cf4e752bbeba68c2b1fb5e88e718d8fada5874e5162522d5c7ea1ca630a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/audit_accretion.py",
+      "size": 1136,
+      "sha256": "7f81b240cceaeb1f66a4b9848682b6f0980a9b744b7f06dcfac59d8e0c81888f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/common.py",
+      "size": 1954,
+      "sha256": "304d407ddb213740eb90b0e526ef05f7c3cb03a465ee77da773c1f92fce29b23",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/run_all.py",
+      "size": 1222,
+      "sha256": "529d1b20619ea73f739ab08e189eded85b21de9c63dbd2b0e4747a1c1ba8e800",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/verify_inputs.py",
+      "size": 1416,
+      "sha256": "327e632de722803bd55b3391cf0c907b689f97c4ba7cd3b2479951d500e0a511",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/README.md",
       "size": 2274,
       "sha256": "e8db23b5256b616bfb7091b50dc4de484c525fbef661a04c5387b7b7c110f25c",
@@ -10800,7 +10932,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "86e2cedc94e123a144d188423030d91d0d6fb7bbf83ac33e31365315b713972b",
+      "sha256": "bedad3b561a06587083a0c39b1877562b538f2fd0f2bd3ee7fcc0f2301f29969",
       "storage": "inline"
     },
     {
