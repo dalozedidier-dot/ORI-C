@@ -7336,6 +7336,12 @@
       "storage": "inline"
     },
     {
+      "path": "donnees_externes/aicc2023/AICC2023.zip",
+      "size": 649133,
+      "sha256": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41",
+      "storage": "inline"
+    },
+    {
       "path": "donnees_externes/card_2019_complet/Card_et_al_2019_Data_and_R_Notebook.zip",
       "size": 502043,
       "sha256": "064cc89c6907cb195e9e99e2b73ce99075afe8dff47e02d1dcfcd87d3a751165",
@@ -7663,6 +7669,12 @@
       "path": "donnees_externes/vesicules_sokolskyi_baum_2026/raw/doi_10_5061_dryad_fbg79cp99__v20260309.zip",
       "size": 1494941,
       "sha256": "2cf96ae6906c5d41a889d8deced000237cb1da2e083a1df526dc730130687863",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/watkins_2026/exp.zip",
+      "size": 52824735,
+      "sha256": "a7f3e778e8440142e9d8c3839a897fcaada1c0c22040119353eb71aa3e2f0737",
       "storage": "inline"
     },
     {
@@ -8797,6 +8809,228 @@
       "path": "plan_directeur/construire_registre.py",
       "size": 35763,
       "sha256": "a9c312899b1663f4a3dafdead6ba86db0e9ac2e442f43264078ed0dd6d26c106",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/EXPECTED_INPUTS.json",
+      "size": 929,
+      "sha256": "1b076ae68f287c47c997e57f9bc4c65ab2b1e7f8db7cb2b3c9ff2df4f1306c4b",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/README_RESULTATS.md",
+      "size": 3604,
+      "sha256": "4a1c5052380026fb68c431bc9472f60ae1d7937c9ed60938c1e1c3a5050476a5",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/VALIDATION_PACKAGE.json",
+      "size": 2235,
+      "sha256": "5e6f8bec8f61d73ff8df928dfefeb130d11f2081d2866c6d5a41f643728672ba",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/APPLIQUER_SUR_BASE_EXACTE.py",
+      "size": 2197,
+      "sha256": "d91a28f476324a1ec1335317eab39f219b54565d4c9ae37507ac932f95d74dfb",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/MISE_A_JOUR_INVARIANT_HMR.import.json",
+      "size": 1549,
+      "sha256": "082ad9c09fe973b74bb42caf228516c90aebfec36490f510e96c026f290ecfb9",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/MISE_A_JOUR_INVARIANT_HMR_2026_08_16.import.md",
+      "size": 4131,
+      "sha256": "ffa7468b7b6b0da97bd1137572d99a5a7c8b04a006fb124481a03f9b83a8d407",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/PACKAGE_CONTENTS.json",
+      "size": 438,
+      "sha256": "3fc4dfecf0fed81f0cbea596377a2e47efd01243ce053f570630dc10209be29f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/PRED-MATIERE-WAVE-HISTORY-001.import.json",
+      "size": 2115,
+      "sha256": "0cd2c1b423f3c9a84c60ae488be4a1a2e16e85265951b34652544acc43c0b215",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/PROVENANCE.json",
+      "size": 4304,
+      "sha256": "9a3c42c32d3b324afae6aee743c8a20f5394b3ed18c36f1adcc1bf5aad196016",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/README_APPLIQUER.md",
+      "size": 687,
+      "sha256": "f63addb886d84140165d3c5681734ae42ace4879f0f7bd80c8084a3d504574bb",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/RECOVERY_STATUS.json",
+      "size": 12952,
+      "sha256": "be11f38c790a746d288351021d9897b8e950132b1380b3bd71a6c22f7f887dae",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/SYNTHESE_7_AXES_CORRIGEE.md",
+      "size": 3604,
+      "sha256": "4a1c5052380026fb68c431bc9472f60ae1d7937c9ed60938c1e1c3a5050476a5",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/resultats/AUDIT_CORPUS_ORIGINAL.json",
+      "size": 58796,
+      "sha256": "a90b6dbda25b280e10d1b60ebc0c09e4f8f2ef9e595ae743ca5191f1384518ab",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/resultats/RESULTAT_GAJRANI_2025.json",
+      "size": 4656,
+      "sha256": "83eb799bcb2d655ea0fe95a27d53a9329d04c8f07388b7d9730527f9a4c97175",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/resultats/RESULTAT_WATKINS_WAVE_HISTORY.json",
+      "size": 1342,
+      "sha256": "06650fbf56489e9174d6203adc2f219eb3913eb2d3096678fc66d874e8bf9c5f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/resultats/RESULTAT_YEN_PAPIN_2017.json",
+      "size": 2262,
+      "sha256": "b7f4680085458a1990b869de6f28f9585182576d0500f5a096fe7477e848091e",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/historique_import/resultats/VALIDATION_CIBLEE.json",
+      "size": 727,
+      "sha256": "5c4184df16368d3b21d83a8dc8b915fa797ce1243cf22ae69750cf0f82f2b521",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/protocoles/PRED-MATIERE-WAVE-HISTORY-001.json",
+      "size": 2115,
+      "sha256": "0cd2c1b423f3c9a84c60ae488be4a1a2e16e85265951b34652544acc43c0b215",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/protocoles/PRED-VIVANT-WINDELS-TRAJECTORY-001.proposed.json",
+      "size": 2182,
+      "sha256": "c473a056ef1e9ff0743ae627a5c24067ea378cb91559c730d672e43eda845a96",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/requirements.txt",
+      "size": 41,
+      "sha256": "16aaf4732b2bb926d01df797334a56165985cc4564dbe68f9588244ffc5db02d",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/ACCRETION_TARDIVE_AUDIT_MULTITRACEUR.json",
+      "size": 877,
+      "sha256": "95ddd5be8b107d7cb196b3f9ce180a52576e5e0f34fb8a9a654079fbf660071d",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/BENCHMARK_TRANSVERSAL_EXTENSION_GAJRANI.json",
+      "size": 2531,
+      "sha256": "750e250a50f674fafbc8eefa404893c76d4d840fbaf545829f0f4e2a5fb382fb",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/ENDOSYMBIOSE_RETENTION_MODULAIRE.json",
+      "size": 3435,
+      "sha256": "be463f31bd1f3b471dba2eed26e7a3d52ee32132a121644fcac1e5cc360a8663",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_AICC2023_UNCERTAINTY.json",
+      "size": 3237,
+      "sha256": "3e1c719bbd4dc9844d0512301f55aeb0920f872c7c52717080ec48c72e0bc3d0",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_GAJRANI_2025.json",
+      "size": 4656,
+      "sha256": "83eb799bcb2d655ea0fe95a27d53a9329d04c8f07388b7d9730527f9a4c97175",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_GAJRANI_PACC_FULL.json",
+      "size": 11224,
+      "sha256": "e34bb22331525e4d47faf04934387c8e2c8f8412ff8a538691927994b137d4fe",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/RESULTAT_WATKINS_LABELS_REPRODUCED.json",
+      "size": 86489,
+      "sha256": "fb8219c0099392416f6340408fcca8425cd17526e893c851e39f9cff5a9c0199",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/resultats/VESICULES_DYNAMIQUE_TEMPORELLE.json",
+      "size": 11159,
+      "sha256": "9594d0d78c2d7ff7641bd52b3fd85e1d63bb1b908aca023ca88975d103276537",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_aicc2023.py",
+      "size": 2009,
+      "sha256": "9947402eca9bb6135fb1b59955056af7f4548b2f3a73cb0e18add8282bdb9551",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_endosymbiose.py",
+      "size": 2355,
+      "sha256": "c86772812411dd57691033561589e7977735fb012a91b19f07f5af75232fa69c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_gajrani_pacc.py",
+      "size": 3444,
+      "sha256": "c25ccdcb7a292ffc2161228bd4356d4d5f7787fdf862dc6b62c0ed26aa536dd1",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_vesicules.py",
+      "size": 4235,
+      "sha256": "6921c22fb181e107f980d00d06d7d74368fa644b2e1e0d1a2b9673a9cb51451a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/analyse_watkins_labels.py",
+      "size": 1978,
+      "sha256": "ef7915c17f478a360ef8cebad92ebb66f557d400299317ef45ff1fc6bc2cf852",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/audit_accretion.py",
+      "size": 1136,
+      "sha256": "7f81b240cceaeb1f66a4b9848682b6f0980a9b744b7f06dcfac59d8e0c81888f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/common.py",
+      "size": 1440,
+      "sha256": "095c2304f38163bfa013d50be3e9355c8a647cde1860d50629af7ebead9e072e",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/run_all.py",
+      "size": 512,
+      "sha256": "08417163448755692e5cf799be3247ec09646e376c39c5debf4b3501a01cd513",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/exploitation_donnees_existantes_2026_08_16/scripts/verify_inputs.py",
+      "size": 761,
+      "sha256": "15f21edc74f7a5c1c9272102ae94ab3253305e3c6d18849b40ac7364e3d25e11",
       "storage": "inline"
     },
     {
@@ -10860,7 +11094,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "6f96e9803398510b2c340b1ba4ffb7cb104cfaf6d68a34d0f3e888b5096c69f0",
+      "sha256": "89f5c684c6c88f562952e02eb266bed37aab10cc030741eae14224cf2214f02c",
       "storage": "inline"
     },
     {
@@ -10984,6 +11218,42 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/analyse_aicc2023.py",
+      "size": 2009,
+      "sha256": "9947402eca9bb6135fb1b59955056af7f4548b2f3a73cb0e18add8282bdb9551",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/analyse_endosymbiose.py",
+      "size": 2355,
+      "sha256": "c86772812411dd57691033561589e7977735fb012a91b19f07f5af75232fa69c",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/analyse_gajrani_pacc.py",
+      "size": 3444,
+      "sha256": "c25ccdcb7a292ffc2161228bd4356d4d5f7787fdf862dc6b62c0ed26aa536dd1",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/analyse_vesicules.py",
+      "size": 4235,
+      "sha256": "6921c22fb181e107f980d00d06d7d74368fa644b2e1e0d1a2b9673a9cb51451a",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/analyse_watkins_labels.py",
+      "size": 1978,
+      "sha256": "ef7915c17f478a360ef8cebad92ebb66f557d400299317ef45ff1fc6bc2cf852",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/audit_accretion.py",
+      "size": 1136,
+      "sha256": "7f81b240cceaeb1f66a4b9848682b6f0980a9b744b7f06dcfac59d8e0c81888f",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/auditer_atteignabilite_criteres.py",
       "size": 9868,
       "sha256": "ef7ca4eedf500aaa5735981851a07c54c815da2ce5523aa64a594f90f208b06e",
@@ -10993,6 +11263,12 @@
       "path": "scripts/auditer_donnees_reelles_2026_08_07.py",
       "size": 7385,
       "sha256": "724ab24d9a1fbafb7a79aee44fdab45ab75a325d32c9ef9e0e1771001c7aee2c",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/common.py",
+      "size": 1143,
+      "sha256": "4890eaa13a881abab3d36e381f45cd23332c7d0fc3cb930a0255e4f640390bbf",
       "storage": "inline"
     },
     {
@@ -11053,6 +11329,12 @@
       "path": "scripts/importer_bundle_donnees_reelles.py",
       "size": 3061,
       "sha256": "c3ea2683ee08191f97e46f60a1805bc14141583cd1ba4b442b54bf9a8b093eab",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/run_all.py",
+      "size": 512,
+      "sha256": "08417163448755692e5cf799be3247ec09646e376c39c5debf4b3501a01cd513",
       "storage": "inline"
     },
     {
@@ -11137,6 +11419,12 @@
       "path": "scripts/verifier_reproductibilite_spin_orbite.py",
       "size": 8972,
       "sha256": "a74cc7126e3962310e6a3b20b546f2089106da256bb31918616700eaf180e20b",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/verify_inputs.py",
+      "size": 816,
+      "sha256": "16b24d95b9f7772d5b92848f15d3787be0a730a7b24235a9b02a1a285ba1e4dd",
       "storage": "inline"
     },
     {
