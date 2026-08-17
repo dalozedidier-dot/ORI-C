@@ -9,6 +9,8 @@ import pytest
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CAMPAIGN = ROOT / "plateforme" / "campagne_maximale_reelle"
+PLAN_DIR = ROOT / "plan_directeur"
+CENTRAL_DIR = PLAN_DIR / "campagne_centrale_2026_08_11"
 if str(CAMPAIGN) not in sys.path:
     sys.path.insert(0, str(CAMPAIGN))
 
@@ -18,6 +20,16 @@ from analyser_protocoles_instruments_v2 import PROTOCOL_DIR, compute_all_protoco
 @pytest.fixture(scope="session")
 def result() -> dict:
     return compute_all_protocols()
+
+
+@pytest.fixture(scope="session")
+def action_map() -> dict:
+    return json.loads((PLAN_DIR / "XIV_OPEN_CONDITIONS_ACTION_MAP.json").read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="session")
+def inv_a() -> dict:
+    return json.loads((CENTRAL_DIR / "INVARIANT_TRANSVERSAL_INV_A.json").read_text(encoding="utf-8"))
 
 
 def test_les_sept_protocoles_sont_geles_et_sans_credit_xiv() -> None:
@@ -110,3 +122,64 @@ def test_constraint_regime_est_paire_par_temperature_et_soutient_un_candidat_de_
 def test_compteur_xiv_reste_inchange(result: dict) -> None:
     assert result["section_XIV"] == {"passed":7,"total":12,"unchanged":True}
     assert all(x["section_XIV_credit"] is False for x in result["results"].values())
+
+
+
+def test_action_map_post_v2_garde_exactement_les_cinq_verrous_sans_credit(action_map: dict) -> None:
+    assert action_map["baseline"] == "7/12"
+    assert set(action_map["open_conditions"]) == {"3", "4", "9", "10", "11"}
+    assert action_map["post_v2_learning"]["baseline_remains"] == "7/12"
+    assert action_map["post_v2_learning"]["open_conditions_remain"] == [3, 4, 9, 10, 11]
+    assert action_map["post_v2_learning"]["section_XIV_credit_added"] == 0
+    assert all(action_map["open_conditions"][i]["post_v2"]["section_XIV_credit"] is False for i in ["3", "4", "9", "10", "11"])
+
+
+def test_condition_3_utilise_l_enveloppe_orbitale_pour_geler_la_prediction_pas_pour_la_crediter(action_map: dict, result: dict) -> None:
+    d = action_map["open_conditions"]["3"]["post_v2"]
+    r = result["results"]["ORBIT-VALIDITY-ENVELOPE-001"]
+    assert d["findings"]["eccentricity_horizons_ka"] == r["eccentricity_horizons_ka"]
+    assert d["findings"]["precession_horizons_ka"] == r["precession_horizons_ka"]
+    assert d["findings"]["orbit_coverage_target_met"] is r["uncertainty_calibration"]["coverage_target_met"] is False
+    assert d["direct_domain_use"] == {"ORBIT-VALIDITY-ENVELOPE-001": "systeme_solaire"}
+    assert set(d["methodological_transfer_only"]) == {"HMR-X-LADDER-001", "H-DEPTH-LADDER-001"}
+
+
+def test_condition_4_durcit_le_témoin_apparié_sans_le_rendre_applicable(action_map: dict, result: dict) -> None:
+    d = action_map["open_conditions"]["4"]["post_v2"]
+    h = result["results"]["HMR-X-LADDER-001"]
+    c = result["results"]["CLIMATE-MATCHED-STATE-FROZEN-001"]
+    reg = result["results"]["CONSTRAINT-REGIME-001"]
+    assert d["findings"]["richest_X_history_survives"] is h["richest_X_history_survives"] is False
+    assert d["findings"]["climate_adjacent_mean_sign_changes"] == c["adjacent_mean_sign_changes"]
+    assert d["findings"]["constraint_regime_candidate"] is reg["regime_separation_candidate"] is True
+    assert "same X richness and feature availability" in d["matched_control_gate"]
+    assert "condition 4 stays not applicable" in d["remaining_lock"]
+
+
+def test_condition_9_remplace_le_scalaire_par_un_pacc_structuré_et_garde_le_verrou_solaire(action_map: dict, result: dict) -> None:
+    d = action_map["open_conditions"]["9"]["post_v2"]
+    p = result["results"]["PACC-VECTOR-001"]
+    assert d["findings"]["scalar_masking_detected"] is p["scalar_masking_detected"] is True
+    assert d["findings"]["causal_Pacc_measured"] is p["causal_Pacc_measured"] is False
+    assert "vector or local P_acc retained when scalar aggregation masks directions" in d["P_acc_future_gate"]
+    assert "systeme_solaire real-system causal P_acc" in action_map["open_conditions"]["9"]["remaining_hard_lock"]
+
+
+def test_condition_10_v2_ne_compte_jamais_comme_replication_independante(action_map: dict) -> None:
+    d = action_map["open_conditions"]["10"]["post_v2"]
+    assert d["replication_credit_from_v2"] is False
+    assert d["section_XIV_credit"] is False
+    assert "independent team and independently executed experiment or dataset acquisition" in d["replication_freeze_gate"]
+
+
+def test_condition_11_et_inv_a_partagent_la_meme_regle_sans_classement_scalaire(action_map: dict, inv_a: dict) -> None:
+    d = action_map["open_conditions"]["11"]["post_v2"]
+    gate = inv_a["post_v2_comparability_gate"]
+    assert d["common_decision_rule"] == gate["common_decision_rule"]
+    assert d["cross_domain_raw_P_acc_comparison_allowed"] is False
+    assert d["cross_domain_scalar_ranking_allowed"] is gate["cross_domain_scalar_ranking_allowed"] is False
+    assert gate["applies_to_section_XIV_conditions"] == [9, 11]
+    assert gate["requirements"]["structured_P_acc_required_if_scalar_masking_detected"] is True
+    assert gate["requirements"]["same_decision_rule_version_across_branches"] is True
+    assert gate["section_XIV_credit"] is False
+    assert inv_a["current_claim"] == "no_general_transversal_invariant_validated"

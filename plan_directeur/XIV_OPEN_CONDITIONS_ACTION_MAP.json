@@ -9,7 +9,57 @@
         "PRED-MATIERE-ABLATION-001/MAG for matter",
         "existing solar-system prospective package when genuinely held-out data become available"
       ],
-      "note": "one successful experiment does not close the global condition if other branches remain without success"
+      "note": "one successful experiment does not close the global condition if other branches remain without success",
+      "post_v2": {
+        "status": "open_better_bounded",
+        "section_XIV_credit": false,
+        "instruments": [
+          "ORBIT-VALIDITY-ENVELOPE-001",
+          "HMR-X-LADDER-001",
+          "H-DEPTH-LADDER-001"
+        ],
+        "direct_domain_use": {
+          "ORBIT-VALIDITY-ENVELOPE-001": "systeme_solaire"
+        },
+        "methodological_transfer_only": [
+          "HMR-X-LADDER-001",
+          "H-DEPTH-LADDER-001"
+        ],
+        "findings": {
+          "eccentricity_horizons_ka": {
+            "0.0001": 62.0,
+            "0.0005": 286.0,
+            "0.001": 1112.0,
+            "0.002": 2119.0,
+            "0.005": 6049.0
+          },
+          "precession_horizons_ka": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.25": 2.0,
+            "0.5": 4.0,
+            "1.0": 7.0
+          },
+          "orbit_coverage_target_met": false,
+          "history_gain_percent_by_X_richness": [
+            3.739712806303,
+            1.149055455739,
+            -0.10722653677
+          ],
+          "effective_history_depth_at_2pct_increment": 1
+        },
+        "what_is_now_excluded": "declaring a solar-system prediction without a frozen observable-specific tolerance/horizon, or treating retrospective V2 calibration as held-out success",
+        "new_discriminating_gate": [
+          "protocol and decision rule frozen before unseen data",
+          "state representation X frozen at the declared richness",
+          "historical depth H frozen before evaluation",
+          "for solar-system predictions, observable, tolerance and validity horizon frozen from the calibration envelope",
+          "test data genuinely held out and independent"
+        ],
+        "remaining_lock": "no branch-wide set of proper out-of-sample successes exists yet",
+        "next_action": "freeze branch-specific prospective protocols using these calibration limits, then evaluate only on genuinely unseen data"
+      }
     },
     "4": {
       "target": "each strict success beats a matched control",
@@ -17,7 +67,33 @@
         "VES sham/control frozen",
         "MAG sham AF=0 frozen",
         "MIC state-only + within-group history permutation frozen"
-      ]
+      ],
+      "post_v2": {
+        "status": "open_better_bounded",
+        "section_XIV_credit": false,
+        "instruments": [
+          "HMR-X-LADDER-001",
+          "CLIMATE-MATCHED-STATE-FROZEN-001",
+          "CONSTRAINT-REGIME-001"
+        ],
+        "findings": {
+          "richest_X_history_survives": false,
+          "climate_adjacent_mean_sign_changes": 2,
+          "constraint_regime_candidate": true,
+          "constraint_empirical_causal_status": false
+        },
+        "what_is_now_excluded": "using an under-specified state-only model, a different constraint regime, or a post-hoc control as the matched comparator",
+        "matched_control_gate": [
+          "same X richness and feature availability",
+          "same non-target architecture and constraint regime",
+          "same observable and observation horizon",
+          "same data split and model capacity where applicable",
+          "only the targeted history or m intervention differs",
+          "control fixed before the result is opened"
+        ],
+        "remaining_lock": "condition 4 stays not applicable until condition 3 contains at least one strict successful prediction",
+        "next_action": "attach the matched-control gate to each prospective route before any new result is opened"
+      }
     },
     "9": {
       "target": "causal P_acc in a real system per branch",
@@ -25,22 +101,121 @@
         "VES-PACC-INT-01 -> living",
         "PACC-MAG-INT-01 -> matter"
       ],
-      "remaining_hard_lock": "systeme_solaire real-system causal P_acc has no physically executable intervention route yet"
+      "remaining_hard_lock": "systeme_solaire real-system causal P_acc has no physically executable intervention route yet",
+      "post_v2": {
+        "status": "open_better_bounded",
+        "section_XIV_credit": false,
+        "instruments": [
+          "PACC-VECTOR-001",
+          "HMR-X-LADDER-001",
+          "CONSTRAINT-REGIME-001"
+        ],
+        "findings": {
+          "scalar_masking_detected": true,
+          "route_cosine_similarity": 0.426812137794,
+          "route_L2_distance_log2": 3.581636589739,
+          "causal_Pacc_measured": false,
+          "richest_X_history_survives": false,
+          "constraint_regime_candidate": true,
+          "constraint_empirical_causal_status": false
+        },
+        "what_is_now_excluded": "crediting an observational scalar P_acc, a history effect absorbed by richer X, or a model-only regime contrast as causal P_acc in a real system",
+        "P_acc_future_gate": [
+          "real-system targeted do(m) intervention",
+          "same X, Theta and non-target architecture across intervention levels",
+          "at least three m levels including true ablation when physically meaningful",
+          "at least three independent replicates per level",
+          "vector or local P_acc retained when scalar aggregation masks directions",
+          "any scalar aggregation rule frozen before data",
+          "constraint regime declared and held matched unless it is the intervention target"
+        ],
+        "remaining_lock": "living and matter routes are executable but have no qualifying result; solar-system real intervention remains physically unavailable",
+        "next_action": "execute VES-PACC-INT-01 and PACC-MAG-INT-01 under the structured P_acc gate; keep the solar branch explicitly blocked rather than substituting a model intervention"
+      }
     },
     "10": {
       "target": "two results reproduced by independent teams",
       "routes": [
         "Route A strict new-MIC replication",
         "run VES confirmatory at an independent lab rather than the originating Baum Lab if method transfer succeeds"
-      ]
+      ],
+      "post_v2": {
+        "status": "open_better_bounded",
+        "section_XIV_credit": false,
+        "replication_credit_from_v2": false,
+        "instruments": [
+          "HMR-X-LADDER-001",
+          "H-DEPTH-LADDER-001",
+          "PACC-VECTOR-001"
+        ],
+        "what_is_now_excluded": "calling a re-analysis, a changed representation, or a same-team V2 calibration an independent reproduction",
+        "replication_freeze_gate": [
+          "same target claim and same success criterion",
+          "same declared X richness class",
+          "same declared historical depth when H is part of the claim",
+          "same P_acc representation or pre-frozen mapping to the common decision rule",
+          "independent team and independently executed experiment or dataset acquisition",
+          "negative or non-reproducing outcomes retained"
+        ],
+        "remaining_lock": "zero new V2 calibrations count as independent-team replications",
+        "next_action": "freeze the representation/control choices before Route A new-MIC and independent-lab VES execution; count only external reproductions of the same qualified result"
+      }
     },
     "11": {
       "target": "same qualified result across two branches without redefinition",
       "routes": [
         "PACC-INT-CHALLENGE-V1 in VES + PACC-MAG-INT-01"
       ],
-      "rule": "same definition and same causal decision rule fixed before both results"
+      "rule": "same definition and same causal decision rule fixed before both results",
+      "post_v2": {
+        "status": "open_better_bounded",
+        "section_XIV_credit": false,
+        "instruments": [
+          "PACC-VECTOR-001",
+          "HMR-X-LADDER-001",
+          "H-DEPTH-LADDER-001",
+          "CONSTRAINT-REGIME-001"
+        ],
+        "findings": {
+          "pacc_scalar_masking_detected": true,
+          "richest_X_history_survives": false,
+          "effective_history_depth_at_2pct_increment": 1,
+          "constraint_regime_candidate": true,
+          "constraint_empirical_causal_status": false
+        },
+        "common_decision_rule": "D_acc(P_acc_ctrl,P_acc_do_m) > epsilon_acc under a pre-frozen local reference",
+        "comparability_tuple": [
+          "X_richness_class",
+          "H_depth_if_used",
+          "m_intervention_class",
+          "P_acc_representation",
+          "local_reference_definition",
+          "constraint_regime",
+          "causal_class",
+          "decision_rule_version"
+        ],
+        "cross_domain_raw_P_acc_comparison_allowed": false,
+        "cross_domain_scalar_ranking_allowed": false,
+        "what_is_now_excluded": "forcing raw P_acc magnitudes into one scale, averaging away vector directions, or redefining success after seeing one branch",
+        "remaining_lock": "no same frozen causal P_acc definition has yet produced qualifying results in two branches",
+        "next_action": "freeze PACC-INT-CHALLENGE-V1 plus the comparability tuple once, then execute VES and MAG without branch-specific post-hoc redefinition",
+        "same_causal_qualification_schema_across_branches": true
+      }
     }
+  },
+  "post_v2_learning": {
+    "source": "plateforme/campagne_maximale_reelle/resultats_consolides/PROTOCOLES_INSTRUMENTS_V2_CALIBRATION.json",
+    "protocol_count": 7,
+    "baseline_remains": "7/12",
+    "open_conditions_remain": [
+      3,
+      4,
+      9,
+      10,
+      11
+    ],
+    "section_XIV_credit_added": 0,
+    "rule": "retrospective V2 calibration can tighten a future test, control or representation but cannot itself close a §XIV condition"
   },
   "priority": "HC02 independent review now; then MAG pilot and independent-lab VES/MIC execution in parallel",
   "no_credit_until_execution": true

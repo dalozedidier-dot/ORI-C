@@ -51,5 +51,39 @@
     "requires_pre_frozen_decision_rule": true,
     "current_results_cannot_be_retroactively_preregistered": true
   },
+  "post_v2_comparability_gate": {
+    "status": "required_for_future_section_XIV_9_and_11_tests",
+    "applies_to_section_XIV_conditions": [
+      9,
+      11
+    ],
+    "source_protocols": [
+      "HMR-X-LADDER-001",
+      "H-DEPTH-LADDER-001",
+      "PACC-VECTOR-001",
+      "CONSTRAINT-REGIME-001"
+    ],
+    "requirements": {
+      "X_richness_class_must_be_frozen": true,
+      "H_depth_must_be_frozen_if_used": true,
+      "structured_P_acc_required_if_scalar_masking_detected": true,
+      "local_reference_definition_must_be_frozen": true,
+      "constraint_regime_must_be_declared": true,
+      "causal_class_must_be_explicit": true,
+      "same_decision_rule_version_across_branches": true,
+      "retrospective_calibration_cannot_supply_section_XIV_credit": true
+    },
+    "common_decision_rule": "D_acc(P_acc_ctrl,P_acc_do_m) > epsilon_acc under a pre-frozen local reference",
+    "current_v2_findings": {
+      "richest_X_history_survives": false,
+      "effective_history_depth_at_2pct_increment": 1,
+      "pacc_scalar_masking_detected": true,
+      "constraint_regime_candidate": true,
+      "constraint_empirical_causal_status": false
+    },
+    "cross_domain_raw_P_acc_comparison_allowed": false,
+    "cross_domain_scalar_ranking_allowed": false,
+    "section_XIV_credit": false
+  },
   "current_claim": "no_general_transversal_invariant_validated"
 }
