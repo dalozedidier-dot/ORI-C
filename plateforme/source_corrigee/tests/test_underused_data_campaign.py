@@ -478,3 +478,77 @@ def test_partage_carbone_brut_est_normalise_sans_perte_sur_champs_coeur(result: 
     assert analysis["exact_records_on_core_fields"] == 32
     assert analysis["exact_record_fraction"] == pytest.approx(1.0)
     assert max(analysis["max_abs_difference_core_fields"].values()) == pytest.approx(0.0)
+
+
+def test_resolution_etat_X_distingue_signal_historique_et_etat_enrichi(result: dict) -> None:
+    analysis = result["analyses"]["state_enrichment_resolution"]
+    antibiotic = analysis["antibiotic"]
+    vesicle = analysis["vesicle"]
+    assert antibiotic["derived_X_history_gain_balanced_accuracy_pp"] > 5.0
+    assert antibiotic["rich_X_previous_state_gain_percent"] <= 0.0
+    assert antibiotic["history_survives_rich_X"] is False
+    assert vesicle["parent_state_gain_percent"] > 5.0
+    assert vesicle["deeper_history_survives_parent_state"] is False
+    assert analysis["section_XIV_credit"] is False
+
+
+def test_profondeur_temporelle_separe_parent_et_ascendance_profonde(result: dict) -> None:
+    analysis = result["analyses"]["temporal_depth_resolution"]
+    assert analysis["effective_depth_class"] == "immediate_parent_dominated"
+    assert analysis["transition_count"] == 20
+    assert analysis["positive_transition_count"] > 0
+    assert analysis["negative_transition_count"] > 0
+    assert analysis["overall_to_median_transition_abs_ratio"] > 2.0
+    assert analysis["aggregation_guard_triggered"] is True
+
+
+def test_espace_accessible_est_vectoriel_et_anisotrope(result: dict) -> None:
+    analysis = result["analyses"]["accessible_space_geometry"]
+    assert analysis["scalar_is_near_one"] is True
+    assert analysis["vector_contains_contraction_and_expansion"] is True
+    for route in analysis["routes"].values():
+        assert len(route["median_fold_vector"]) == 3
+        assert len(route["log2_fold_vector"]) == 3
+        assert route["anisotropy_log2_span"] > 1.0
+        assert route["max_over_min_fold_ratio"] > 3.0
+    assert analysis["section_XIV_credit"] is False
+
+
+def test_cibles_thermochimiques_preparent_un_solveur_de_surface(result: dict) -> None:
+    analysis = result["analyses"]["thermochemical_threshold_targets"]
+    assert analysis["crystalline_compositions"] >= 600
+    assert analysis["multiwinner_compositions"] >= 40
+    assert 0.0 < analysis["multiwinner_fraction"] < 0.2
+    assert analysis["minimum_priority_candidates"] >= 4
+    assert analysis["surface_solver_priority_candidates"][0]["composition"] == "SiO2"
+    assert analysis["current_grid_is_full_multiphase_equilibrium"] is False
+
+
+def test_enveloppe_orbitale_est_specifique_a_observable_et_precision(result: dict) -> None:
+    analysis = result["analyses"]["orbital_validity_envelope"]
+    horizons = analysis["eccentricity_rmse_budget_to_horizon_ka"]
+    assert horizons["0.0001"] < horizons["0.001"] < horizons["0.005"]
+    assert analysis["short_horizon_JPL_span_ka"] < horizons["0.0001"]
+    assert analysis["short_horizon_JPL_rmse"] < 1e-4
+    assert analysis["precession_0p1rad_horizon_ka"] <= 10.0
+    assert analysis["uncertainty_envelope_calibrated_to_95_percent"] is False
+
+
+def test_route_climatique_appariee_est_non_monotone(result: dict) -> None:
+    analysis = result["analyses"]["climate_route_resolution"]
+    assert analysis["warming_level_order_C"] == ["1.5", "2.0", "2.5", "3.0"]
+    assert analysis["adjacent_sign_change_count"] >= 1
+    assert analysis["nonmonotonic_route_response"] is True
+    directions = {item["direction"] for item in analysis["bootstrap_excludes_zero"]}
+    assert "positive" in directions
+    assert "negative" in directions
+    assert analysis["section_XIV_credit"] is False
+
+
+def test_regime_murchison_separe_changement_de_domaine_et_intensite(result: dict) -> None:
+    analysis = result["analyses"]["constraint_regime_resolution"]
+    assert analysis["mean_vacuum_to_oxidising_JS_bits"] > 0.5
+    assert analysis["intermediate_to_strong_JS_bits"] < 0.1
+    assert analysis["major_to_within_oxidising_ratio"] > 5.0
+    assert analysis["regime_separation_candidate"] is True
+    assert analysis["section_XIV_credit"] is False
