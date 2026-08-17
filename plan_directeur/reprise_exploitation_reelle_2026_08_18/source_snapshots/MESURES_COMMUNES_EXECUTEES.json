@@ -1,0 +1,253 @@
+{
+  "schema": "oric.common-measures.v2",
+  "comparability_status": "multiple_local_measurements_available_but_no_common_cross_domain_scale",
+  "measures": [
+    {
+      "id": "PACC-ORB-01",
+      "domain": "orbital_model",
+      "metric": "P_acc",
+      "value": 0.9444444444444444,
+      "numerator": 17,
+      "denominator": 18,
+      "X": "baseline_2myr_dt5",
+      "H": "intervention on architecture",
+      "Theta": [
+        "baseline_2myr_dt4p8828125",
+        "baseline_2myr_elements_dt5",
+        "full_la2010_bodies_2myr_dt5"
+      ],
+      "tau": "2 Myr",
+      "uncertainty": {
+        "earth_eccentricity_mean": 0.0004883961134625019,
+        "earth_eccentricity_std": 0.00015159386720229977,
+        "earth_eccentricity_max": 0.00011208930886159874
+      },
+      "scope": "fraction of computed intervention-metric cells, not a natural probability"
+    },
+    {
+      "id": "M-ORB-01",
+      "domain": "orbital_model",
+      "metric": "m_spectral_trace",
+      "value": {
+        "min": 0.12389451899220223,
+        "median": 0.17071244179537984,
+        "max": 0.8948030707175254
+      },
+      "bands": [
+        "95 kyr",
+        "125 kyr",
+        "405 kyr",
+        "2.4 Myr"
+      ],
+      "interventions": 6,
+      "scope": "retrospective model spectral fingerprint distinct from P_acc; not a natural-history reconstruction"
+    },
+    {
+      "id": "PACC-26AL-01",
+      "domain": "cosmic_chronology",
+      "metric": "P_acc_partition",
+      "value": {
+        "angrite": [
+          0.1,
+          0.01
+        ],
+        "EC002": [
+          0.1,
+          0.01
+        ],
+        "youngest_chondrule": [
+          0.01
+        ],
+        "CM_carbonate": []
+      },
+      "partition": [
+        0.25,
+        0.1,
+        0.01
+      ],
+      "H": "three declared sensitivity scenarios, not probabilities",
+      "tau": "time after CAI with published sigma",
+      "uncertainty": "q025-q975 analytic age propagation",
+      "scope": "physical inventory accessibility; not thermal response probability"
+    },
+    {
+      "id": "M-26AL-01",
+      "domain": "cosmic_chronology",
+      "metric": "m_continuous_radiogenic_inventory",
+      "value": [
+        {
+          "event": "angrite",
+          "m_remaining_fraction_median": 0.34527788709029344,
+          "m_remaining_fraction_q025": 0.2414945258667906,
+          "m_remaining_fraction_q975": 0.4936626156871893,
+          "time_after_CAI_myr": 1.1000000000003638,
+          "time_sigma_myr": 0.18867962264113208
+        },
+        {
+          "event": "EC002",
+          "m_remaining_fraction_median": 0.18598030522615255,
+          "m_remaining_fraction_q025": 0.12731809215848724,
+          "m_remaining_fraction_q975": 0.2716713182361894,
+          "time_after_CAI_myr": 1.7399999999997817,
+          "time_sigma_myr": 0.2
+        },
+        {
+          "event": "youngest_chondrule",
+          "m_remaining_fraction_median": 0.08177063413384472,
+          "m_remaining_fraction_q025": 0.04293552206656944,
+          "m_remaining_fraction_q975": 0.15573204388394535,
+          "time_after_CAI_myr": 2.5900000000001455,
+          "time_sigma_myr": 0.33999999999999997
+        },
+        {
+          "event": "CM_carbonate",
+          "m_remaining_fraction_median": 0.023046148180010835,
+          "m_remaining_fraction_q025": 0.008523221082958094,
+          "m_remaining_fraction_q975": 0.06231504976410662,
+          "time_after_CAI_myr": 3.9000000000005457,
+          "time_sigma_myr": 0.5249761899362675
+        }
+      ],
+      "scope": "trace dérivée sous modèle de décroissance et scénario de réservoir déclaré; elle n'est pas une mesure locale directe de 26Al dans chaque événement"
+    },
+    {
+      "id": "DELTA-H-ANT-01",
+      "domain": "living_antibiotic",
+      "metric": "history_predictive_gain",
+      "value_percent": 28.88576287953,
+      "X": "present limitation + antibiotic",
+      "H": "ancestor/history label",
+      "R": "MIC",
+      "tau": "experimental endpoint",
+      "model_state_only_rmse": 1.13089812488,
+      "model_history_rmse": 0.8042295741181,
+      "permutation_p": 0.004975124378109,
+      "P_acc": 0.4993055555556,
+      "scope": "predictive gain plus retrospective observed MIC-support proxy"
+    },
+    {
+      "id": "PACC-ANT-01",
+      "domain": "living_antibiotic",
+      "metric": "P_acc_retrospective_MIC_support",
+      "value": 0.4993055555556,
+      "median": 0.5,
+      "history_shuffled_null_mean": 0.575828125,
+      "p_narrower_than_shuffled": 0.0009995002498751,
+      "relative_contraction_vs_null_percent": 13.28913370538,
+      "scope": "P_acc mesure le support empirique rétrospectif dans le panneau MIC observé; ce n'est ni une probabilité naturelle, ni une prédiction prospective, ni l'ensemble contrefactuel complet des réponses possibles."
+    },
+    {
+      "id": "PACC-VES-ABL-01",
+      "domain": "living_vesicles",
+      "metric": "P_acc_ablation_contrast",
+      "value": -0.0375,
+      "bootstrap_q025": -0.1458333333333,
+      "bootstrap_q975": 0.0625,
+      "verdict": "does_not_support_positive_Pacc_ablation_contrast",
+      "scope": "ce test porte sur le support discret observé des descendants; il ne remplace pas le contraste de réponse C-VES-03 et ne transforme pas P_acc en probabilité naturelle"
+    },
+    {
+      "id": "TAU-26AL-01",
+      "domain": "cosmic_chronology",
+      "metric": "tau_decay",
+      "value_myr": 0.717,
+      "trace": "26Al radiogenic inventory",
+      "tau_m_cross_domain_comparable": false,
+      "scope": "échelle de décroissance physique locale; ne définit pas à elle seule une persistance universelle de m"
+    },
+    {
+      "id": "TAU-EXO-RELAX-01",
+      "domain": "exoplanet_history_model",
+      "metric": "tau_relax",
+      "values_myr": {
+        "temperature_k": 7.024011067403678,
+        "ice_fraction": 7.797236239145111,
+        "co2_ppm": 7.281812283229533,
+        "productivity": 17.6608740286107
+      },
+      "retained_fraction_at_longest_hold": {
+        "temperature_k": 0.0,
+        "ice_fraction": 0.0,
+        "co2_ppm": 0.0,
+        "productivity": 1.4778879930758756e-13
+      },
+      "tau_m_cross_domain_comparable": false,
+      "scope": "temps de relaxation local d'une différence historique; la convergence vers zéro exclut une mémoire persistante sur l'horizon long de ce modèle"
+    },
+    {
+      "id": "I-H-COSMOS-01",
+      "domain": "cosmic_isotopes",
+      "metric": "decodable_historical_information",
+      "value": [
+        {
+          "dataset": "reservoir_NC_CC",
+          "status": "information_decodable",
+          "loo_accuracy": 1.0,
+          "normalized_mi_mean": 0.9184642994794249
+        },
+        {
+          "dataset": "grains_SiC",
+          "status": "information_decodable",
+          "loo_accuracy": 0.44208037825059104,
+          "normalized_mi_mean": 0.331584614571617
+        },
+        {
+          "dataset": "grains_graphite",
+          "status": "non_decodable_par_ce_test",
+          "loo_accuracy": 0.5073529411764706,
+          "normalized_mi_mean": 0.06336123006087
+        },
+        {
+          "dataset": "chondres",
+          "status": "non_testable",
+          "loo_accuracy": null,
+          "normalized_mi_mean": null
+        },
+        {
+          "dataset": "Bennu_refractaires",
+          "status": "non_decodable_par_ce_test",
+          "loo_accuracy": 0.1875,
+          "normalized_mi_mean": 0.4742987103307921
+        }
+      ],
+      "scope": "within-stage provenance decoding; no same-carrier full cosmic genealogy"
+    },
+    {
+      "id": "I-H-COSMOS-INTERSTAGE-01",
+      "domain": "cosmic_isotopes",
+      "metric": "same_carrier_interstage_information_robustness",
+      "value": [
+        {
+          "dataset": "PGD_SiC_PUBLISHED_SELECTED.csv",
+          "normalized_I": 0.050419643118,
+          "publication_stratified_p": 0.472263868066,
+          "loo_min": 0.029745567081,
+          "loo_max": 0.067208061776,
+          "largest_publication_fraction": 0.377100958827
+        },
+        {
+          "dataset": "PGD_GRAPHITE_PUBLISHED_SELECTED.csv",
+          "normalized_I": 0.15308484559,
+          "publication_stratified_p": 1.0,
+          "loo_min": 0.084376688094,
+          "loo_max": 0.194900381871,
+          "largest_publication_fraction": 0.397811816193
+        }
+      ],
+      "scope": "association inter-étages mesurée mais non séparable de la stratégie d'échantillonnage par publication"
+    }
+  ],
+  "field_complete_systems_now": [
+    "sokolskyi_baum_vesicles",
+    "donofrio_antibiotic",
+    "solar_system_model",
+    "cosmic_26Al"
+  ],
+  "missing_for_transversal_test": [
+    "common finite P_acc partition or explicit mapping between local partitions",
+    "physical m distinct from H in the antibiotic information case",
+    "tau_m measured on a comparable basis; local tau_decay and tau_relax are now inventoried but not equated",
+    "paired causal ablation in at least three independent empirical domains",
+    "independent replication of the living positive systems"
+  ]
+}

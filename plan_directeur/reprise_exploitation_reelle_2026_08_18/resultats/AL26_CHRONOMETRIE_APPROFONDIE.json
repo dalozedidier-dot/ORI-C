@@ -1,0 +1,244 @@
+{
+  "schema": "oric.26al-chronometry-deep-sensitivity.v2",
+  "analysis_status": "retrospective_analytic_sensitivity",
+  "half_life_myr": 0.717,
+  "events": [
+    {
+      "event": "angrite",
+      "time_after_CAI_myr": 1.1000000000003638,
+      "time_sigma_myr": 0.18867962264113208,
+      "canonical": {
+        "median": 0.34527788709029344,
+        "q025": 0.2414945258667906,
+        "q975": 0.4936626156871893
+      },
+      "reservoir_scenarios": {
+        "canonical": {
+          "factor": 1.0,
+          "median": 0.34527788709029344,
+          "q025": 0.2414945258667906,
+          "q975": 0.4936626156871893,
+          "thresholds_at_median": [
+            0.25,
+            0.1,
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.1,
+            0.01
+          ]
+        },
+        "depleted_x3": {
+          "factor": 3.0,
+          "median": 0.11509262903009781,
+          "q025": 0.0804981752889302,
+          "q975": 0.16455420522906308,
+          "thresholds_at_median": [
+            0.1,
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        },
+        "depleted_x4": {
+          "factor": 4.0,
+          "median": 0.08631947177257336,
+          "q025": 0.06037363146669765,
+          "q975": 0.12341565392179732,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        }
+      },
+      "thresholds_robust_across_all_declared_reservoir_scenarios": [
+        0.01
+      ]
+    },
+    {
+      "event": "EC002",
+      "time_after_CAI_myr": 1.7399999999997817,
+      "time_sigma_myr": 0.2,
+      "canonical": {
+        "median": 0.18598030522615255,
+        "q025": 0.12731809215848722,
+        "q975": 0.27167131823618934
+      },
+      "reservoir_scenarios": {
+        "canonical": {
+          "factor": 1.0,
+          "median": 0.18598030522615255,
+          "q025": 0.12731809215848722,
+          "q975": 0.27167131823618934,
+          "thresholds_at_median": [
+            0.1,
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.1,
+            0.01
+          ]
+        },
+        "depleted_x3": {
+          "factor": 3.0,
+          "median": 0.061993435075384185,
+          "q025": 0.042439364052829075,
+          "q975": 0.09055710607872978,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        },
+        "depleted_x4": {
+          "factor": 4.0,
+          "median": 0.04649507630653814,
+          "q025": 0.031829523039621804,
+          "q975": 0.06791782955904734,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        }
+      },
+      "thresholds_robust_across_all_declared_reservoir_scenarios": [
+        0.01
+      ]
+    },
+    {
+      "event": "youngest_chondrule",
+      "time_after_CAI_myr": 2.5900000000001455,
+      "time_sigma_myr": 0.33999999999999997,
+      "canonical": {
+        "median": 0.08177063413384472,
+        "q025": 0.04293552206656941,
+        "q975": 0.1557320438839453
+      },
+      "reservoir_scenarios": {
+        "canonical": {
+          "factor": 1.0,
+          "median": 0.08177063413384472,
+          "q025": 0.04293552206656941,
+          "q975": 0.1557320438839453,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        },
+        "depleted_x3": {
+          "factor": 3.0,
+          "median": 0.027256878044614907,
+          "q025": 0.014311840688856471,
+          "q975": 0.05191068129464843,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        },
+        "depleted_x4": {
+          "factor": 4.0,
+          "median": 0.02044265853346118,
+          "q025": 0.010733880516642353,
+          "q975": 0.03893301097098632,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": [
+            0.01
+          ]
+        }
+      },
+      "thresholds_robust_across_all_declared_reservoir_scenarios": [
+        0.01
+      ]
+    },
+    {
+      "event": "CM_carbonate",
+      "time_after_CAI_myr": 3.9000000000005457,
+      "time_sigma_myr": 0.5249761899362675,
+      "canonical": {
+        "median": 0.02304614818001083,
+        "q025": 0.00852322108295809,
+        "q975": 0.062315049764106636
+      },
+      "reservoir_scenarios": {
+        "canonical": {
+          "factor": 1.0,
+          "median": 0.02304614818001083,
+          "q025": 0.00852322108295809,
+          "q975": 0.062315049764106636,
+          "thresholds_at_median": [
+            0.01
+          ],
+          "thresholds_robust_q025": []
+        },
+        "depleted_x3": {
+          "factor": 3.0,
+          "median": 0.007682049393336944,
+          "q025": 0.0028410736943193632,
+          "q975": 0.020771683254702213,
+          "thresholds_at_median": [],
+          "thresholds_robust_q025": []
+        },
+        "depleted_x4": {
+          "factor": 4.0,
+          "median": 0.005761537045002708,
+          "q025": 0.0021308052707395223,
+          "q975": 0.015578762441026659,
+          "thresholds_at_median": [],
+          "thresholds_robust_q025": []
+        }
+      },
+      "thresholds_robust_across_all_declared_reservoir_scenarios": []
+    }
+  ],
+  "adjacent_event_separation": [
+    {
+      "earlier_event": "angrite",
+      "later_event": "EC002",
+      "median_fraction_ratio_earlier_over_later": 1.8565293065329396,
+      "95pct_fraction_intervals_overlap": true,
+      "overlap_width": 0.03017679236939874
+    },
+    {
+      "earlier_event": "EC002",
+      "later_event": "youngest_chondrule",
+      "median_fraction_ratio_earlier_over_later": 2.2744143688764136,
+      "95pct_fraction_intervals_overlap": true,
+      "overlap_width": 0.028413951725458075
+    },
+    {
+      "earlier_event": "youngest_chondrule",
+      "later_event": "CM_carbonate",
+      "median_fraction_ratio_earlier_over_later": 3.54812585145004,
+      "95pct_fraction_intervals_overlap": true,
+      "overlap_width": 0.019379527697537223
+    }
+  ],
+  "heterogeneity_crosscheck": {
+    "canonical_reference": 7.56499307825627e-06,
+    "CAI1_fraction_of_reference": 0.6212827892082288,
+    "CAI1_deficit_percent": 37.87172107917712,
+    "CAI2_upper_bound_fraction_of_reference": 0.158625392989335,
+    "CAI2_minimum_deficit_percent": 84.1374607010665,
+    "interpretation": "Time sets a decay reference, but local reservoir/mixing history can strongly modify local 26Al inventory.",
+    "guard": "posthoc deterministic cross-check; no invented uncertainty or significance test"
+  },
+  "key_limits": [
+    "Canonical median inventory decreases monotonically, but every adjacent pair has overlapping propagated 95% intervals.",
+    "Threshold accessibility changes under the declared reservoir depletion scenarios; time alone is not a unique local-inventory predictor.",
+    "The cross-check is deterministic and post hoc; no significance test is invented.",
+    "This is not a thermal simulation, a heating probability, or a do(m) intervention."
+  ],
+  "section_XIV_credit": false
+}

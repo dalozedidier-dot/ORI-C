@@ -9130,6 +9130,138 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/PROVENANCE.json",
+      "size": 916,
+      "sha256": "ee3faeeb34fbe72e3b237d5bd5c7293e7e53f5775bd1fb5cdc88c8dbc81b1529",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/README.md",
+      "size": 5978,
+      "sha256": "b86570fe2b31e587ddb9cfea4469b392c305e7504ba4cd93a0730d4d06c30d25",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/data/AICC2023.zip",
+      "size": 649133,
+      "sha256": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/data/al26_config.json",
+      "size": 1318,
+      "sha256": "9ef1f60a891d066ab8452292f9817b2c4a052b0777d1e77559c94738346420c2",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/data/late_accretion_tracers.csv",
+      "size": 11962067,
+      "sha256": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/data/prebiotic_lineages.csv",
+      "size": 2685427,
+      "sha256": "45239f4b8d33827deda589d8a43e695dc0558ed578c0740dc7660daafbd74fba",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/data/prebiotic_timecourses.csv",
+      "size": 2799709,
+      "sha256": "d6efa7b5ee8a78989a41b7f097722a1de9be28f1420676188401cbc5b57d48fc",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/requirements.txt",
+      "size": 32,
+      "sha256": "a820dbb8415a1cfd1a33d6b1f90d7311b3071b5d11a0b471e0eba157ade66647",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/resultats/ACCRETION_MULTITRACEUR_APPROFONDIE.json",
+      "size": 13783,
+      "sha256": "ee59cd53b79955541233b199988ced9443eb28454221f7e447dc9bb05a6fae35",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/resultats/AICC2023_CHRONOLOGIE_APPROFONDIE.json",
+      "size": 6038,
+      "sha256": "48fb56b5fd38a0b9591f5b8c7d71192d661369aa0fcfe48cc869cdba4c989ddd",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/resultats/AL26_CHRONOMETRIE_APPROFONDIE.json",
+      "size": 7282,
+      "sha256": "a8345526be7124f208a54fa6a8b1c30d294b310c3e4f1d8f90ea51252cfbfe3b",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/resultats/DONOFRIO_REANALYSE_RECUPEREE.json",
+      "size": 1449,
+      "sha256": "e9c01dd2fcd44566b5f16669eee324c90de67034ad85b79d1430f3a3047f1bc4",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/resultats/VESICULES_HISTOIRE_CONTEXTE.json",
+      "size": 17474,
+      "sha256": "6f5e1663f40571ea3b3e47b65a32d90cd2006b63338b7935997fed154d06f244",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/analyse_26al_sensibilite.py",
+      "size": 3097,
+      "sha256": "9e9da1539dff9944e14434ca9ad0e1353cae947147313768861bb2c7435ea449",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/analyse_accretion_multitraceur.py",
+      "size": 3120,
+      "sha256": "e83fe8a85dc46a851b4adb454467257c534f476cee01f0529a8e708d003f0b29",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/analyse_aicc_chronologie.py",
+      "size": 2982,
+      "sha256": "4f7b721585d0253181005d336bab38ba6de1c892849a07e0a5801e75cd2c7dc9",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/analyse_vesicules_histoire.py",
+      "size": 7303,
+      "sha256": "1c8ec88c94a1079f6e7570f8ef600c6d5bef121cfa99e952f68d9b2b95a21d06",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/run_all.py",
+      "size": 313,
+      "sha256": "b9dc3d37f675b1b9cc78df8a809a37edf8bc9cdc2a9c28040fea0192d6305e6a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/scripts/verify_package.py",
+      "size": 2023,
+      "sha256": "6e4ea33e70d86e9f9c05d857361d3e27567b3c37bb2e7b1bca577e2c13834286",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/source_snapshots/CONTRASTES_ACCESSIBILITE_INV_A.json",
+      "size": 5582,
+      "sha256": "b2cd1cae7286141826a028e9dad356bd3de7820658cec148c13d21b7696f5377",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/source_snapshots/MESURES_COMMUNES_EXECUTEES.json",
+      "size": 9017,
+      "sha256": "aa91208d415cf93e70cd65ebc571fd02a27e654c4011efefe0d66ce3c609fea6",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/reprise_exploitation_reelle_2026_08_18/source_snapshots/VESICULES_DYNAMIQUE_TEMPORELLE_v1.json",
+      "size": 11185,
+      "sha256": "b3d80c0be8f49d7dd749225f025b196903e2278e5126339d3bf0cf4b3876c676",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/revue_systematique/CARTE_CORPUS.md",
       "size": 862,
       "sha256": "1e0d67a8d246aea666ebd6951000b2e7bbb9929c44a999785909750eaa69a57d",
@@ -11172,7 +11304,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "920281bd9214186af4174352db71ab3b02ce72cbdd41056ec022e337c3b99a49",
+      "sha256": "9af6f154065461bd3019dd56d6c6d571cd123307bba5dcd1154b00d69f6c312c",
       "storage": "inline"
     },
     {
