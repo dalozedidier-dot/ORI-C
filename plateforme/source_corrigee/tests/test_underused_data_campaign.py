@@ -271,3 +271,210 @@ def test_mesures_auxiliaires_vesicules_sont_informatives_mais_non_portables(
         "p_two_sided"
     ] < 1e-10
     assert analysis["section_XIV_credit"] is False
+
+
+def test_couverture_exhaustive_des_44_csv_canoniques(result: dict) -> None:
+    coverage = result["dataset_coverage"]
+    assert coverage["canonical_csv_count"] == 44
+    assert coverage["consumed_csv_count"] == 44
+    assert coverage["uncovered"] == []
+    assert all(coverage["used_by"].values())
+
+
+def test_design_antibiotique_raccorde_exactement_aux_trajectoires(result: dict) -> None:
+    analysis = result["analyses"]["antibiotic_design_coverage"]
+    assert analysis["design_cells"] == 10
+    assert analysis["declared_replicates_total"] == 203
+    assert analysis["observed_unique_lineages"] == 203
+    assert analysis["cells_with_exact_replicate_count"] == 10
+    assert analysis["cells_with_exact_cycle_bounds"] == 10
+
+
+def test_fitness_reelle_ancetre_evoluee_est_exploitee_sans_surcredit(result: dict) -> None:
+    analysis = result["analyses"]["antibiotic_real_fitness"]
+    assert analysis["rows"] == 72
+    assert analysis["complete_rows"] == 66
+    assert analysis["missing_paired_rows"] == 6
+    assert analysis["overall_positive_fraction"] > 0.7
+    assert analysis["by_limitation"]["Nitrogen"]["mean_change"] > analysis["by_limitation"]["Carbon"]["mean_change"]
+    assert analysis["section_XIV_credit"] is False
+
+
+def test_biology_cases_est_audite_comme_table_derivee(result: dict) -> None:
+    analysis = result["analyses"]["biology_case_integrity"]
+    assert analysis["rows"] == 14_777
+    assert analysis["case_id_duplicates"] == 0
+    assert set(analysis["domains"]) == {"vesicle", "antibiotic", "antibiotic_longitudinal", "rna_evolution"}
+    assert 0.0 < analysis["fraction_test_feature_tuples_seen_in_train"] < 0.2
+
+
+def test_architecture_cellulaire_reste_descriptive(result: dict) -> None:
+    analysis = result["analyses"]["cell_architecture_scope"]
+    assert analysis["rows"] == 13
+    assert analysis["dependency_nonmissing"] == 0
+    assert analysis["confirmed_fraction"] == pytest.approx(1.0)
+    assert analysis["evidence_level_counts"] == {"3": 13}
+
+
+def test_modeles_H_C_quantifient_une_forte_dispersion_de_scenario(result: dict) -> None:
+    analysis = result["analyses"]["core_bulk_hc_model_spread"]
+    assert analysis["rows"] == 3
+    assert analysis["largest_fold_spread"] > 5.0
+    assert len(analysis["core_C_over_H_ratios"]["this_study_C_over_H_core"]) == 3
+
+
+def test_matrice_endosymbiotique_complete_confirme_reduction_modulaire(result: dict) -> None:
+    analysis = result["analyses"]["endosymbiosis_full_matrix"]
+    assert analysis["hmm_rows"] == 15_810
+    assert analysis["events"] == 85
+    assert analysis["matched_accessions"] == 85
+    retention = analysis["section_retention_mean"]
+    assert retention["translation"] > retention["transcription"] > retention["envelope"]
+    assert analysis["metabolic_integration_vs_global_retention_spearman"]["rho"] > 0.95
+
+
+def test_ephemerides_et_conditions_initiales_sont_identiques(result: dict) -> None:
+    analysis = result["analyses"]["ephemerides_initial_consistency"]
+    assert analysis["matched_bodies"] == 15
+    assert all(value == pytest.approx(0.0) for value in analysis["coordinate_max_abs_difference"].values())
+    assert analysis["barycentric_position_norm"] < 1e-5
+
+
+def test_ivuna_montre_heterogeneite_superieure_aux_incertitudes(result: dict) -> None:
+    analysis = result["analyses"]["ivuna_cr_heterogeneity"]
+    assert analysis["rows"] == 9
+    assert analysis["I2"] > 0.8
+    assert analysis["samples_more_than_3_sigma_from_weighted_mean"] >= 3
+
+
+def test_calcium_lunaire_conserve_structure_de_groupe_sans_surinterpreter(result: dict) -> None:
+    analysis = result["analyses"]["lunar_ca_group_structure"]
+    assert analysis["rows"] == 13
+    assert analysis["group_count"] == 4
+    assert analysis["weighted_group_mean_span"] > 0.2
+
+
+def test_graphe_transitions_relations_est_totalement_raccorde(result: dict) -> None:
+    analysis = result["analyses"]["transition_relation_graph"]
+    assert analysis["transitions"] == 40
+    assert analysis["relations"] == 47
+    assert analysis["relation_nodes_missing_from_transition_table"] == []
+    assert analysis["nontrivial_strongly_connected_components"] == [["TR-029", "TR-038"]]
+    assert analysis["is_acyclic"] is False
+
+
+def test_compilation_acides_amines_est_exploitee_par_classe_environnementale(result: dict) -> None:
+    analysis = result["analyses"]["amino_acid_inventory_structure"]
+    assert analysis["rows"] == 1_387
+    assert analysis["environments"] == 69
+    assert analysis["species"] == 43
+    assert analysis["uncertainty_nonmissing_fraction"] > 0.95
+    assert analysis["richness_kruskal"]["p"] < 1e-5
+    assert analysis["shannon_kruskal"]["p"] < 1e-6
+
+
+def test_reference_orbitale_est_precise_mais_incertitude_sous_couvre(result: dict) -> None:
+    analysis = result["analyses"]["orbital_reference_consistency"]
+    assert analysis["reference_rows"] == 1_381
+    assert analysis["common_rows"] == 1_381
+    assert analysis["correlation"] > 0.9999
+    assert analysis["eccentricity_rmse"] < 3e-5
+    assert analysis["fraction_within_2_sigma"] < 0.6
+
+
+def test_design_prebiotique_documente_exactement_son_perimetre(result: dict) -> None:
+    analysis = result["analyses"]["prebiotic_design_coverage"]
+    assert analysis["design_rows"] == 32
+    assert analysis["condition_ids"] == analysis["lineage_condition_ids"] == 32
+    assert analysis["conditions_missing_from_design"] == []
+    assert analysis["design_conditions_without_lineages"] == []
+    assert set(analysis["empty_mechanistic_factor_columns"]) == {"temperature", "ph", "wet_dry_cycles", "uv_flux", "mineral"}
+
+
+def test_paires_parent_descendant_quantifient_continuite_et_heterogeneite(result: dict) -> None:
+    analysis = result["analyses"]["parent_offspring_direct"]
+    assert analysis["rows"] == 13_680
+    assert analysis["source_files"] == 16
+    assert analysis["overall_spearman"]["rho"] > 0.7
+    assert analysis["by_condition_arm"]["UU:drift"]["rho"] > analysis["by_condition_arm"]["FR:drift"]["rho"]
+    lo, hi = analysis["transition_rho_range"]
+    assert lo < 0.0 < hi
+
+
+def test_59328_mesures_reconstruisent_576_resumes(result: dict) -> None:
+    analysis = result["analyses"]["timecourse_summary_consistency"]
+    assert analysis["raw_rows"] == 59_328
+    assert analysis["stored_summary_rows"] == 576
+    assert analysis["rebuilt_summary_rows"] == 576
+    assert analysis["matched_summary_rows"] == 576
+    assert analysis["all_summary_metrics_reconstructed_within_1e_minus_12"] is True
+    assert max(float(v) for v in analysis["max_abs_difference"].values()) <= 1e-12
+
+
+def test_couverture_csv_reelle_du_depot_ne_laisse_aucun_orphelin(result: dict) -> None:
+    central = result["dataset_coverage"]
+    assert central["canonical_csv_count"] == 44
+    assert central["consumed_csv_count"] == 44
+    assert central["uncovered"] == []
+    repo = result["repository_real_data_csv_coverage"]
+    assert repo["data_path_csv_total"] == 110
+    assert repo["central_directly_consumed"] == 44
+    assert repo["branch_data_paths"] == 28
+    assert repo["branch_direct_cross_analysed"] == 7
+    assert repo["branch_already_consumed_by_dedicated_pipelines"] == 19
+    assert repo["branch_duplicate_paths"] == 2
+    assert repo["orphaned_real_data_paths"] == []
+
+
+def test_jpl_horizons_valide_etat_initial_et_court_horizon(result: dict) -> None:
+    analysis = result["analyses"]["jpl_cross_validation"]
+    assert analysis["j2000_state_rows"] == 15
+    assert analysis["matched_initial_condition_bodies"] == 15
+    assert all(value == pytest.approx(0.0) for value in analysis["j2000_state_max_abs_difference"].values())
+    assert analysis["earth_reference_rows"] == 61
+    assert analysis["short_horizon_eccentricity_rmse"] < 5e-5
+    assert analysis["short_horizon_eccentricity_correlation"] > 0.998
+
+
+def test_archive_nasa_brute_est_tracee_dans_normalisation_exoplanetes(result: dict) -> None:
+    analysis = result["analyses"]["nasa_archive_normalization"]
+    assert analysis["raw_rows"] == 40_052
+    assert analysis["normalized_rows"] == 6_333
+    assert analysis["normalized_planets_missing_from_raw"] == []
+    assert len(analysis["raw_planets_not_in_normalized"]) == 3
+    assert analysis["system_planet_count_exact_match_fraction"] == pytest.approx(1.0)
+    assert all(
+        field["fraction"] == pytest.approx(1.0)
+        for field in analysis["field_value_preservation"].values()
+    )
+
+
+def test_card2019_parent_daughter_est_exploite_sans_credit_prospectif(result: dict) -> None:
+    analysis = result["analyses"]["card2019_parent_daughter"]
+    assert analysis["rows"] == 130
+    assert analysis["strains"] == 13
+    assert analysis["row_level_daughter_over_parent_ratio_median"] == pytest.approx(2.0)
+    assert analysis["row_fraction_daughter_gt_parent"] > 0.9
+    assert analysis["section_XIV_credit"] is False
+
+
+def test_santos_lopez_separe_resistance_directe_et_reponses_collaterales(result: dict) -> None:
+    analysis = result["analyses"]["santos_lopez_cross_resistance"]
+    assert analysis["raw_rows"] == 1_080
+    assert analysis["numeric_rows"] == 540
+    assert analysis["day12_population_level_ratios"] == 108
+    assert analysis["direct_resistance_median_fold"] > 5.0
+    assert analysis["direct_resistance_fraction_gt_1"] == pytest.approx(1.0)
+    assert 0.5 < analysis["collateral_response_median_fold"] < 1.5
+    assert analysis["collateral_fraction_lt_1"] > 0.2
+    assert analysis["collateral_fraction_gt_1"] > 0.4
+
+
+def test_partage_carbone_brut_est_normalise_sans_perte_sur_champs_coeur(result: dict) -> None:
+    analysis = result["analyses"]["carbon_partition_raw_normalization"]
+    assert analysis["raw_source_blocks"] == 7
+    assert analysis["raw_numeric_carbon_records_extracted"] == 32
+    assert analysis["normalized_carbon_records_from_raw_file"] == 32
+    assert analysis["exact_records_on_core_fields"] == 32
+    assert analysis["exact_record_fraction"] == pytest.approx(1.0)
+    assert max(analysis["max_abs_difference_core_fields"].values()) == pytest.approx(0.0)

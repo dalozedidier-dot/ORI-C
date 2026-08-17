@@ -9377,8 +9377,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/analyser_donnees_sous_exploitees.py",
-      "size": 60929,
-      "sha256": "814275632d27cb1b35d7794c64ee0f6669792528add4af67ff9587c197add6f4",
+      "size": 116736,
+      "sha256": "8dac5772515327d36c698328aa46ca821f474729b7b0119ac9178612d5d8d9bc",
       "storage": "inline"
     },
     {
@@ -9761,8 +9761,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/DONNEES_SOUS_EXPLOITEES.json",
-      "size": 29869,
-      "sha256": "330d4e76f5df7a75369b9892596efe8e2e8b34fdbf57fdcfabebc6958b61c2cc",
+      "size": 70434,
+      "sha256": "0d50e079b799a711e689f0974a7e2df76d6262c6ffebe673afc695abc558a87f",
       "storage": "inline"
     },
     {
@@ -11093,8 +11093,8 @@
     },
     {
       "path": "plateforme/source_corrigee/tests/test_underused_data_campaign.py",
-      "size": 10544,
-      "sha256": "b2da10f36941e8d6a7c7f238db5be7344148eefd2838ce12f24ab20bbbba0089",
+      "size": 20522,
+      "sha256": "a9a6dcba40fbbb8977cd9231ab3e990ee438e0b1b4d4c22d94498c15853c2466",
       "storage": "inline"
     },
     {
