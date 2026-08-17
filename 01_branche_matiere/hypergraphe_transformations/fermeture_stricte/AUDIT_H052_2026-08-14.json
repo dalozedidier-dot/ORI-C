@@ -110,7 +110,7 @@
     }
   ],
   "verdict": "baseline_46_of_53_preserved_hc02_extension_53_of_53_evidence_qualified",
-  "next_discriminating_evidence": "No additional source is required for HC02 semantic coverage. Remaining scientific work is independent review/replication and empirical execution of MAG/VES; H033 remains outside this closure claim.",
+  "next_discriminating_evidence": "Secondary semantic review completed on 2026-08-17 with explicit source-role separation and circularity guard. No additional source is required for current HC02 semantic coverage; external human/team review remains optional corroboration. Empirical MAG/VES execution remains external, and H033 remains outside this closure claim.",
   "mechanistic_progress": "HC02-E1 provides a component-wise primary-experimental evidence chain for N051+N028 -> N030 and closes 53/53 in a non-destructive extension while H052 and the frozen 46/53 baseline remain unchanged.",
   "candidate_hc02_direct_interface": {
     "inputs": [
@@ -126,7 +126,7 @@
     "preferred_over_hc01_for_next_audit": false,
     "extension_id": "HC02-E1",
     "semantic_components_supported": "4/4",
-    "next_action": "independent_semantic_review_not_more_source_hunting"
+    "next_action": "secondary_semantic_review_completed_not_external_replication"
   },
   "hc02_extension": {
     "edge": "N051|N028 -> N030",
@@ -140,5 +140,37 @@
       "10.1029/2021GC009827",
       "10.1038/s41467-026-71130-7"
     ]
+  },
+  "semantic_review_2026_08_17": {
+    "status": "passed_with_role_separation",
+    "review_type": "secondary_semantic_review_not_external_replication",
+    "scope": "logical_and_semantic_consistency_of_HC02_E1_against_N030_and_cited_primary_experimental_roles",
+    "genealogical_bootstrap": {
+      "source": "Hao & Li 2018",
+      "doi": "10.3389/feart.2018.00180",
+      "role": "direct_support_for_N051_plus_N028_to_reactive_water_rock_gas_interface"
+    },
+    "capacity_qualification": [
+      {
+        "source": "Ueda et al. 2021",
+        "doi": "10.1029/2021GC009827",
+        "role": "fluid_chemistry_and_gradient_capacity_only",
+        "genealogical_parent_allowed": false
+      },
+      {
+        "source": "Zhong et al. 2026",
+        "doi": "10.1038/s41467-026-71130-7",
+        "role": "catalytic_capacity_of_compatible_alteration_phases_only",
+        "genealogical_parent_allowed": false
+      }
+    ],
+    "circularity_guard": "Ueda hydrothermal conditions may qualify N030 gradients and fluid chemistry but may not be used as an undeclared N053 parent; Zhong qualifies catalytic capacity but not the bootstrap origin of N030.",
+    "undeclared_intermediate_required": false,
+    "baseline_closure": "46/53",
+    "extension_closure": "53/53",
+    "section_XIV_credit": false,
+    "external_team_replication": false,
+    "verdict": "HC02-E1 remains evidence_qualified_extension",
+    "next_action": "external_human_or_team_semantic_review_only_if_independent_corroboration_is_required; no_more_source_hunting_for_current_HC02_coverage"
   }
 }
