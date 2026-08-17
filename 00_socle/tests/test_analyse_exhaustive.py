@@ -204,9 +204,8 @@ def test_la_validite_biologique_n_est_jamais_revendiquee() -> None:
 
 # --- Sorties ---------------------------------------------------------------
 def test_le_rapport_exhaustif_est_complet(racine: Path) -> None:
-    chemin = racine / "03_test_interventionnel/resultats_exhaustifs/analyse_exhaustive.json"
-    if not chemin.exists():
-        pytest.skip("Analyse exhaustive non exécutée ; lancer analyse_exhaustive.py.")
+    chemin = racine / "test_interventionnel/resultats_exhaustifs/analyse_exhaustive.json"
+    assert chemin.exists(), "Rapport exhaustif manquant ; lancer analyse_exhaustive.py."
     rapport = json.loads(chemin.read_text(encoding="utf-8"))
     assert rapport["sections_totales"] == 11
     assert rapport["toutes_reussies"]
