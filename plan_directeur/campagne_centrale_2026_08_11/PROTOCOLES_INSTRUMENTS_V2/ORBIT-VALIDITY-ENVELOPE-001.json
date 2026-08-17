@@ -1,0 +1,77 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "ORBIT-VALIDITY-ENVELOPE-001",
+  "branch": "systeme_solaire",
+  "purpose": "Définir une enveloppe de validité par observable, horizon temporel et budget d’erreur au lieu d’un verdict global sur le modèle orbital.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/orbital_timeseries.csv",
+    "plateforme/campagne_maximale_reelle/data/orbital_timeseries_nbody_dossier.csv",
+    "plateforme/campagne_maximale_reelle/data/orbital_reference.csv"
+  ],
+  "eccentricity_rmse_budgets": [
+    0.0001,
+    0.0005,
+    0.001,
+    0.002,
+    0.005
+  ],
+  "precession_circular_rmse_budgets_rad": [
+    0.01,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "time_bins_ka": [
+    [
+      0,
+      10
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      50,
+      100
+    ],
+    [
+      100,
+      500
+    ],
+    [
+      500,
+      1000
+    ],
+    [
+      1000,
+      5000
+    ],
+    [
+      5000,
+      10000
+    ],
+    [
+      10000,
+      20000
+    ]
+  ],
+  "uncertainty_calibration": {
+    "coverage_target_at_2sigma": 0.9,
+    "report_empirical_95pct_sigma_multiplier": true
+  },
+  "primary_metrics": [
+    "cumulative_RMSE_horizons",
+    "binwise_RMSE",
+    "fraction_within_1sigma",
+    "fraction_within_2sigma",
+    "empirical_95pct_sigma_multiplier"
+  ],
+  "interpretation_guard": "Chaque observable conserve sa propre enveloppe. La précession simplifiée et l’excentricité ne partagent pas le même horizon utile.",
+  "status": "frozen_v1"
+}

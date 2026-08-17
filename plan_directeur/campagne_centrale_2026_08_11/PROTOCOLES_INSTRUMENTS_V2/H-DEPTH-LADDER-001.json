@@ -1,0 +1,45 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "H-DEPTH-LADDER-001",
+  "branch": "vivant",
+  "purpose": "Mesurer la profondeur temporelle effective de l’information ancestrale avec un échantillon commun à toutes les profondeurs.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/prebiotic_lineages.csv"
+  ],
+  "target": "yield",
+  "grouped_cv": {
+    "group": "source_file",
+    "folds": 5
+  },
+  "context_numeric": [
+    "generation",
+    "generation_duration_h"
+  ],
+  "context_categorical": [
+    "condition",
+    "arm",
+    "fed",
+    "resuspended"
+  ],
+  "ancestor_depths": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "common_sample_rule": "require complete ancestor yields through depth 4",
+  "primary_metrics": [
+    "RMSE_by_depth",
+    "incremental_RMSE_gain_percent",
+    "effective_depth_at_2pct_increment"
+  ],
+  "future_depth_rule": {
+    "minimum_incremental_gain_percent": 2.0
+  },
+  "interpretation_guard": "Une corrélation globale parent-descendant ne suffit pas. La profondeur est évaluée avec la même population, les mêmes groupes de validation et des ajouts ancestraux successifs.",
+  "status": "frozen_v1"
+}

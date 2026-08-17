@@ -1,0 +1,37 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "CONSTRAINT-REGIME-001",
+  "branch": "matiere",
+  "purpose": "Tester si la réponse à la contrainte se structure en domaines séparés plutôt qu’en simple gradient d’intensité.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/murchison_degassing_profiles.csv"
+  ],
+  "distance": "Jensen-Shannon divergence in bits over normalized species distributions",
+  "paired_unit": "temperature_k",
+  "domain_A": [
+    "vacuum"
+  ],
+  "domain_B": [
+    "intermediate_oxidizing",
+    "strong_oxidizing"
+  ],
+  "primary_contrast": "mean(JS(vacuum,intermediate),JS(vacuum,strong))-JS(intermediate,strong)",
+  "primary_metrics": [
+    "contrast_mean_bits",
+    "contrast_bootstrap95",
+    "positive_temperature_fraction",
+    "wilcoxon_greater_p",
+    "within_domain_mean_JS_bits"
+  ],
+  "candidate_rule": {
+    "contrast_bootstrap95_lower_min_bits": 0.2,
+    "positive_temperature_fraction_min": 0.9,
+    "within_domain_mean_JS_max_bits": 0.1
+  },
+  "interpretation_guard": "Le jeu est une sortie thermochimique de modèle. Une séparation de domaine ici guide une expérience physique future et ne vaut pas démonstration empirique causale.",
+  "status": "frozen_v1"
+}

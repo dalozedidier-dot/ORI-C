@@ -1,0 +1,68 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "HMR-X-LADDER-001",
+  "branch": "vivant",
+  "purpose": "Mesurer combien du signal attribué à H survit à un enrichissement progressif et gelé de l’état courant X sur la même cible et les mêmes partitions.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/antibiotic_cycles.csv",
+    "plateforme/campagne_maximale_reelle/data/antibiotic_measurements.csv"
+  ],
+  "target": "next_survival",
+  "grouped_cv": {
+    "group": "lineage_id",
+    "folds": 5
+  },
+  "history_feature": "previous_survival",
+  "state_ladder": [
+    {
+      "id": "X0",
+      "numeric": [
+        "cycle"
+      ],
+      "categorical": [
+        "antibiotic"
+      ]
+    },
+    {
+      "id": "X1",
+      "numeric": [
+        "cycle",
+        "dose",
+        "duration",
+        "recovery_duration"
+      ],
+      "categorical": [
+        "antibiotic"
+      ]
+    },
+    {
+      "id": "X2",
+      "numeric": [
+        "cycle",
+        "dose",
+        "duration",
+        "recovery_duration",
+        "survival"
+      ],
+      "categorical": [
+        "antibiotic"
+      ]
+    }
+  ],
+  "primary_metrics": [
+    "RMSE_X",
+    "RMSE_X_plus_H",
+    "relative_RMSE_gain_percent",
+    "paired_squared_error_gain_bootstrap95"
+  ],
+  "future_survival_rule": {
+    "minimum_relative_gain_percent": 5.0,
+    "paired_squared_error_gain_bootstrap95_lower_must_exceed": 0.0
+  },
+  "interpretation_guard": "Le test mesure l’information résiduelle de H conditionnellement à chaque représentation de X. Un gain qui disparaît à mesure que X s’enrichit est classé comme information compressible dans l’état courant.",
+  "status": "frozen_v1"
+}

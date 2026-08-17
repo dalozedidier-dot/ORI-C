@@ -1,0 +1,42 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "CLIMATE-MATCHED-STATE-FROZEN-001",
+  "branch": "systeme_solaire",
+  "purpose": "Geler une comparaison de route climatique à état global apparié et tester sa robustesse intermodèle sans sélectionner a posteriori un seul niveau de réchauffement.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/modern_climate_ensemble.csv"
+  ],
+  "scenarios": [
+    "historical-ssp245",
+    "historical-ssp585"
+  ],
+  "global_state_variable": "near_surface_air_temperature_C",
+  "response_variable": "NASST_anomaly",
+  "baseline_years": [
+    1850,
+    1900
+  ],
+  "smoothing_years": 11,
+  "warming_levels_C": [
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "pairing": "within model; first crossing of identical global warming level in each scenario",
+  "primary_metrics": [
+    "paired_mean_effect_C",
+    "median_effect_C",
+    "bootstrap95",
+    "positive_fraction",
+    "leave_one_model_out_mean_range"
+  ],
+  "robust_direction_rule": "bootstrap95 excludes zero and leave-one-model-out mean range keeps the same sign",
+  "future_use": "Appliquer sans modification à un ensemble externe ou à de nouveaux modèles non ouverts au moment du gel.",
+  "interpretation_guard": "La calibration actuelle utilise des sorties de modèles déjà ouvertes. Elle prépare un test gelé futur et ne crée aucun crédit prospectif rétroactif.",
+  "status": "frozen_v1"
+}

@@ -1,0 +1,428 @@
+{
+  "schema": "oric.instruments-v2-protocol-results.v1",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "freeze_date": "2026-08-17",
+  "protocol_count": 7,
+  "results": {
+    "HMR-X-LADDER-001": {
+      "protocol_id": "HMR-X-LADDER-001",
+      "status": "retrospective_calibration",
+      "rows_common": 538,
+      "rungs": [
+        {
+          "id": "X0",
+          "rows": 538,
+          "lineages": 180,
+          "RMSE_X": 0.686675326416,
+          "RMSE_X_plus_H": 0.660995641297,
+          "relative_RMSE_gain_percent": 3.739712806303,
+          "paired_squared_error_gain_mean": 0.034607766096,
+          "paired_squared_error_gain_bootstrap95": [
+            0.005689045119,
+            0.068478636536
+          ],
+          "history_survives_frozen_future_rule": false
+        },
+        {
+          "id": "X1",
+          "rows": 538,
+          "lineages": 180,
+          "RMSE_X": 0.634984327818,
+          "RMSE_X_plus_H": 0.627688005756,
+          "relative_RMSE_gain_percent": 1.149055455739,
+          "paired_squared_error_gain_mean": 0.009212864004,
+          "paired_squared_error_gain_bootstrap95": [
+            -0.006629061714,
+            0.027621011696
+          ],
+          "history_survives_frozen_future_rule": false
+        },
+        {
+          "id": "X2",
+          "rows": 538,
+          "lineages": 180,
+          "RMSE_X": 0.578354937914,
+          "RMSE_X_plus_H": 0.578975087885,
+          "relative_RMSE_gain_percent": -0.10722653677,
+          "paired_squared_error_gain_mean": -0.000717718181,
+          "paired_squared_error_gain_bootstrap95": [
+            -0.003813127099,
+            0.002360613364
+          ],
+          "history_survives_frozen_future_rule": false
+        }
+      ],
+      "gain_attenuation_X0_to_X2_pp": 3.846939343073,
+      "gain_monotonically_decreases_with_X_richness": true,
+      "richest_X_history_survives": false,
+      "section_XIV_credit": false
+    },
+    "H-DEPTH-LADDER-001": {
+      "protocol_id": "H-DEPTH-LADDER-001",
+      "status": "retrospective_calibration",
+      "rows_common_through_depth4": 1044,
+      "source_files": 15,
+      "levels": [
+        {
+          "depth": 0,
+          "RMSE": 0.118860148097,
+          "incremental_gain_percent": null
+        },
+        {
+          "depth": 1,
+          "RMSE": 0.116123606351,
+          "incremental_gain_percent": 2.302320660426
+        },
+        {
+          "depth": 2,
+          "RMSE": 0.117232309015,
+          "incremental_gain_percent": -0.954760792119
+        },
+        {
+          "depth": 3,
+          "RMSE": 0.117812210801,
+          "incremental_gain_percent": -0.494660380992
+        },
+        {
+          "depth": 4,
+          "RMSE": 0.118048915072,
+          "incremental_gain_percent": -0.200916585433
+        }
+      ],
+      "effective_depth_at_2pct_increment": 1,
+      "deeper_than_parent_adds_2pct_increment": false,
+      "section_XIV_credit": false
+    },
+    "PACC-VECTOR-001": {
+      "protocol_id": "PACC-VECTOR-001",
+      "status": "retrospective_proxy_geometry_calibration",
+      "routes": {
+        "Ceftazidime": {
+          "median_fold_vector": [
+            10.6,
+            0.510625,
+            2.833333333333
+          ],
+          "log2_fold_vector": [
+            3.405992359676,
+            -0.969663921629,
+            1.502500340529
+          ],
+          "direction_labels": [
+            "expanded",
+            "contracted",
+            "expanded"
+          ],
+          "anisotropy_log2_span": 4.375656281305,
+          "max_over_min_fold_ratio": 20.758873929009,
+          "vector_L2_norm": 3.846886968494
+        },
+        "Imipenem": {
+          "median_fold_vector": [
+            1.0,
+            0.751875,
+            5.5
+          ],
+          "log2_fold_vector": [
+            0.0,
+            -0.411435262599,
+            2.459431618637
+          ],
+          "direction_labels": [
+            "near_neutral",
+            "contracted",
+            "expanded"
+          ],
+          "anisotropy_log2_span": 2.870866881236,
+          "max_over_min_fold_ratio": 7.315045719036,
+          "vector_L2_norm": 2.493608401907
+        }
+      },
+      "route_cosine_similarity": 0.426812137794,
+      "route_L2_distance_log2": 3.581636589739,
+      "scalar_collateral_median_fold": 1.0025,
+      "scalar_neutral": true,
+      "mixed_expansion_and_contraction_within_route": true,
+      "scalar_masking_detected": true,
+      "causal_Pacc_measured": false,
+      "section_XIV_credit": false
+    },
+    "THRESHOLD-SURFACE-001": {
+      "protocol_id": "THRESHOLD-SURFACE-001",
+      "status": "retrospective_surface_calibration",
+      "compositions": {
+        "SiO2": {
+          "winner_phases": [
+            "coesite",
+            "cristobalite,beta",
+            "quartz,beta",
+            "tridymite,high"
+          ],
+          "grid_points": 91,
+          "boundary_edge_count": 26,
+          "boundary_point_count": 39,
+          "phase_pair_counts": {
+            "coesite | quartz,beta": 16,
+            "quartz,beta | tridymite,high": 4,
+            "cristobalite,beta | quartz,beta": 3,
+            "cristobalite,beta | tridymite,high": 3
+          },
+          "boundary_median_gap": 928.832999999984,
+          "interior_median_gap": 2695.003000000026,
+          "boundary_to_interior_gap_ratio": 0.344650080167,
+          "boundary_coherence_candidate": true
+        },
+        "Al2SiO5": {
+          "winner_phases": [
+            "andalusite",
+            "kyanite",
+            "sillimanite"
+          ],
+          "grid_points": 91,
+          "boundary_edge_count": 20,
+          "boundary_point_count": 27,
+          "phase_pair_counts": {
+            "kyanite | sillimanite": 10,
+            "andalusite | kyanite": 6,
+            "andalusite | sillimanite": 4
+          },
+          "boundary_median_gap": 769.585999999661,
+          "interior_median_gap": 6796.279500000179,
+          "boundary_to_interior_gap_ratio": 0.113236367045,
+          "boundary_coherence_candidate": true
+        },
+        "MgSiO3": {
+          "winner_phases": [
+            "enstatite",
+            "enstatite,clino",
+            "enstatite,proto"
+          ],
+          "grid_points": 91,
+          "boundary_edge_count": 16,
+          "boundary_point_count": 25,
+          "phase_pair_counts": {
+            "enstatite | enstatite,clino": 9,
+            "enstatite | enstatite,proto": 7
+          },
+          "boundary_median_gap": 163.918999999994,
+          "interior_median_gap": 481.28600000008,
+          "boundary_to_interior_gap_ratio": 0.340585431531,
+          "boundary_coherence_candidate": true
+        },
+        "CaCO3": {
+          "winner_phases": [
+            "aragonite",
+            "calcite"
+          ],
+          "grid_points": 91,
+          "boundary_edge_count": 15,
+          "boundary_point_count": 26,
+          "phase_pair_counts": {
+            "aragonite | calcite": 15
+          },
+          "boundary_median_gap": 895.731000000145,
+          "interior_median_gap": 3688.07200000016,
+          "boundary_to_interior_gap_ratio": 0.242872427653,
+          "boundary_coherence_candidate": true
+        }
+      },
+      "all_priority_candidates_coherent": true,
+      "full_multiphase_equilibrium_solved": false,
+      "section_XIV_credit": false
+    },
+    "ORBIT-VALIDITY-ENVELOPE-001": {
+      "protocol_id": "ORBIT-VALIDITY-ENVELOPE-001",
+      "status": "retrospective_validation_envelope",
+      "common_nbody_points": 20001,
+      "eccentricity_horizons_ka": {
+        "0.0001": 62.0,
+        "0.0005": 286.0,
+        "0.001": 1112.0,
+        "0.002": 2119.0,
+        "0.005": 6049.0
+      },
+      "precession_horizons_ka": {
+        "0.01": 1.0,
+        "0.05": 1.0,
+        "0.1": 1.0,
+        "0.25": 2.0,
+        "0.5": 4.0,
+        "1.0": 7.0
+      },
+      "time_bins": [
+        {
+          "range_ka": [
+            0,
+            10
+          ],
+          "n": 10,
+          "eccentricity_RMSE": 8.03044e-07,
+          "precession_circular_RMSE_rad": 1.285159600026
+        },
+        {
+          "range_ka": [
+            10,
+            50
+          ],
+          "n": 40,
+          "eccentricity_RMSE": 8.6145452e-05,
+          "precession_circular_RMSE_rad": 1.96309141449
+        },
+        {
+          "range_ka": [
+            50,
+            100
+          ],
+          "n": 50,
+          "eccentricity_RMSE": 0.00014093436,
+          "precession_circular_RMSE_rad": 1.837441833557
+        },
+        {
+          "range_ka": [
+            100,
+            500
+          ],
+          "n": 400,
+          "eccentricity_RMSE": 0.000753612626,
+          "precession_circular_RMSE_rad": 1.804068480076
+        },
+        {
+          "range_ka": [
+            500,
+            1000
+          ],
+          "n": 500,
+          "eccentricity_RMSE": 0.001157123213,
+          "precession_circular_RMSE_rad": 1.819999257051
+        },
+        {
+          "range_ka": [
+            1000,
+            5000
+          ],
+          "n": 4000,
+          "eccentricity_RMSE": 0.004896715734,
+          "precession_circular_RMSE_rad": 1.807028714129
+        },
+        {
+          "range_ka": [
+            5000,
+            10000
+          ],
+          "n": 5000,
+          "eccentricity_RMSE": 0.009991695539,
+          "precession_circular_RMSE_rad": 1.806978186896
+        },
+        {
+          "range_ka": [
+            10000,
+            20000
+          ],
+          "n": 10000,
+          "eccentricity_RMSE": 0.017050770059,
+          "precession_circular_RMSE_rad": 1.813261958419
+        }
+      ],
+      "uncertainty_calibration": {
+        "reference_rows": 1381,
+        "fraction_within_1sigma": 0.266666666667,
+        "fraction_within_2sigma": 0.473913043478,
+        "median_abs_z": 2.184560316937,
+        "empirical_95pct_sigma_multiplier": 9.942340824679,
+        "coverage_target_met": false
+      },
+      "section_XIV_credit": false
+    },
+    "CLIMATE-MATCHED-STATE-FROZEN-001": {
+      "protocol_id": "CLIMATE-MATCHED-STATE-FROZEN-001",
+      "status": "retrospective_calibration_frozen_for_external_reuse",
+      "eligible_models": 10,
+      "levels": {
+        "1.5": {
+          "n_models": 10,
+          "mean_effect_C": -0.007237449806,
+          "median_effect_C": -0.055744568508,
+          "bootstrap95": [
+            -0.062476064041,
+            0.061469640416
+          ],
+          "positive_fraction": 0.2,
+          "leave_one_model_out_mean_range": [
+            -0.028973679877,
+            0.003946161762
+          ],
+          "robust_direction": false
+        },
+        "2.0": {
+          "n_models": 10,
+          "mean_effect_C": 0.073977924432,
+          "median_effect_C": 0.093947884212,
+          "bootstrap95": [
+            0.006465023444,
+            0.137610385632
+          ],
+          "positive_fraction": 0.6,
+          "leave_one_model_out_mean_range": [
+            0.060581160131,
+            0.090298130077
+          ],
+          "robust_direction": true
+        },
+        "2.5": {
+          "n_models": 7,
+          "mean_effect_C": 0.116460026425,
+          "median_effect_C": 0.045040827683,
+          "bootstrap95": [
+            -0.042560356294,
+            0.313440740002
+          ],
+          "positive_fraction": 0.571428571429,
+          "leave_one_model_out_mean_range": [
+            0.034029902023,
+            0.155448798347
+          ],
+          "robust_direction": false
+        },
+        "3.0": {
+          "n_models": 4,
+          "mean_effect_C": -0.085704365265,
+          "median_effect_C": -0.085704672292,
+          "bootstrap95": [
+            -0.121824138932,
+            -0.049584591599
+          ],
+          "positive_fraction": 0.0,
+          "leave_one_model_out_mean_range": [
+            -0.100078510289,
+            -0.071330424927
+          ],
+          "robust_direction": true
+        }
+      },
+      "adjacent_mean_sign_changes": 2,
+      "section_XIV_credit": false
+    },
+    "CONSTRAINT-REGIME-001": {
+      "protocol_id": "CONSTRAINT-REGIME-001",
+      "status": "retrospective_model_regime_calibration",
+      "temperatures": 32,
+      "contrast_mean_bits": 0.647517124689,
+      "contrast_median_bits": 0.555302587124,
+      "contrast_bootstrap95": [
+        0.594210325754,
+        0.703849591172
+      ],
+      "positive_temperature_fraction": 1.0,
+      "wilcoxon_greater_p": 2.33e-10,
+      "within_oxidising_mean_JS_bits": 0.059643338396,
+      "regime_separation_candidate": true,
+      "empirical_causal_status": false,
+      "section_XIV_credit": false
+    }
+  },
+  "section_XIV": {
+    "passed": 7,
+    "total": 12,
+    "unchanged": true
+  }
+}

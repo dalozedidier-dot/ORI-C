@@ -1,0 +1,40 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "THRESHOLD-SURFACE-001",
+  "branch": "matiere",
+  "purpose": "Passer du simple comptage de changements de phase à une cartographie locale des frontières où deux organisations thermodynamiques deviennent concurrentes.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/data/thermochemical_phases.csv"
+  ],
+  "state_filter": "cr",
+  "priority_compositions": [
+    "SiO2",
+    "Al2SiO5",
+    "MgSiO3",
+    "CaCO3"
+  ],
+  "grid_axes": [
+    "temperature",
+    "log10_pressure"
+  ],
+  "boundary_definition": "two adjacent grid points have different minimum-G winning phases",
+  "local_gap_definition": "G(second best)-G(best) at each grid point",
+  "primary_metrics": [
+    "boundary_edge_count",
+    "boundary_point_count",
+    "phase_pair_counts",
+    "boundary_median_gap",
+    "interior_median_gap",
+    "boundary_to_interior_gap_ratio"
+  ],
+  "candidate_rule": {
+    "minimum_boundary_edges": 10,
+    "maximum_boundary_to_interior_gap_ratio": 0.5
+  },
+  "interpretation_guard": "La frontière de grille localise une zone de compétition. Elle ne remplace pas un équilibre multiphase avec activités et bilans de matière.",
+  "status": "frozen_v1"
+}

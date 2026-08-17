@@ -8206,6 +8206,48 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/CLIMATE-MATCHED-STATE-FROZEN-001.json",
+      "size": 1602,
+      "sha256": "9e3bebd5eb5c4c9a8f43e356001df57cc16b1098b88c599a8a9e031ef2ef41e7",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/CONSTRAINT-REGIME-001.json",
+      "size": 1418,
+      "sha256": "432e19d821aa47a907c51d7ee2a984cdb86897a85bb4f9ea6cf06c723ef6622c",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/H-DEPTH-LADDER-001.json",
+      "size": 1337,
+      "sha256": "445a3d889f09040b7350b68723461cb47a8c61d6e0c2ddea0f9c62a3afbd2382",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/HMR-X-LADDER-001.json",
+      "size": 1868,
+      "sha256": "fee7eaa210fb854d10447941cc1d84c1722f98afbb0633938573c62f1277de0e",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/ORBIT-VALIDITY-ENVELOPE-001.json",
+      "size": 1704,
+      "sha256": "bbbd9b1de92e9a8c33fe1d68e72783963a457d63da5e83b7aeeeeb7a0acb2f9a",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/PACC-VECTOR-001.json",
+      "size": 1398,
+      "sha256": "f8301505739b6af5827cc1fc14cf5ff970cf57a916d12a8244cac0856e17308f",
+      "storage": "inline"
+    },
+    {
+      "path": "plan_directeur/campagne_centrale_2026_08_11/PROTOCOLES_INSTRUMENTS_V2/THRESHOLD-SURFACE-001.json",
+      "size": 1402,
+      "sha256": "f45d66c0078eaedea7f70068410b17fdfc4c56d59e6955161c188aeb034798cf",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/campagne_centrale_2026_08_11/README.md",
       "size": 2814,
       "sha256": "8097ece85d7adaaaa842c1331a68c5e5d1107f3fbedda5449bb79a83c013a42d",
@@ -9382,6 +9424,12 @@
       "storage": "inline"
     },
     {
+      "path": "plateforme/campagne_maximale_reelle/analyser_protocoles_instruments_v2.py",
+      "size": 19785,
+      "sha256": "4690aa92cc5f5154b43dd92dd99a81ef337d376a5eb94e564d6888bcc5a3bf59",
+      "storage": "inline"
+    },
+    {
       "path": "plateforme/campagne_maximale_reelle/analyser_puissance_vallee.py",
       "size": 5215,
       "sha256": "5e398d079819ce0883f0443d8890d4884c7a8eca115d358cbdf552eacdd23ca3",
@@ -9763,6 +9811,12 @@
       "path": "plateforme/campagne_maximale_reelle/resultats_consolides/DONNEES_SOUS_EXPLOITEES.json",
       "size": 77310,
       "sha256": "3b57238cf53d43d0784efe43c309fa6a5cb47a21a6388975749f6016a8969735",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/campagne_maximale_reelle/resultats_consolides/PROTOCOLES_INSTRUMENTS_V2_CALIBRATION.json",
+      "size": 12617,
+      "sha256": "a2a387711d52c59e55a6026eb4e7ba1f04057fe3f0e10172dc7c36c44af55396",
       "storage": "inline"
     },
     {
@@ -11071,6 +11125,12 @@
       "path": "plateforme/source_corrigee/tests/test_pipeline.py",
       "size": 575,
       "sha256": "dbfd87b46212c24b1c0939114ab93b42ed92f41a6b3cc5118ab04e996442dcc5",
+      "storage": "inline"
+    },
+    {
+      "path": "plateforme/source_corrigee/tests/test_protocoles_instruments_v2.py",
+      "size": 4712,
+      "sha256": "f6c0ef2d85caa36339e30d2bce1a1a4ccdb7143b626c30611977362338d924ce",
       "storage": "inline"
     },
     {

@@ -1,0 +1,38 @@
+{
+  "schema": "oric.instrument-protocol.v1",
+  "freeze_date": "2026-08-17",
+  "repository_reference": "e9af333aec704707f151b2d37ab1f2576a255593",
+  "current_data_role": "retrospective_calibration_only",
+  "section_XIV_credit": false,
+  "id": "PACC-VECTOR-001",
+  "branch": "vivant",
+  "purpose": "Conserver la direction des ouvertures et contractions de l’espace accessible au lieu de les réduire à un scalaire susceptible de s’annuler.",
+  "inputs": [
+    "plateforme/campagne_maximale_reelle/resultats_consolides/DONNEES_SOUS_EXPLOITEES.json#analyses.santos_lopez_cross_resistance"
+  ],
+  "representation": "challenge_specific_log2_fold_response_vector",
+  "routes": [
+    "Ceftazidime",
+    "Imipenem"
+  ],
+  "challenge_order": [
+    "Ceftazidime",
+    "Ciprofloxacin",
+    "Imipenem"
+  ],
+  "neutral_band_fold": [
+    0.95,
+    1.05
+  ],
+  "primary_metrics": [
+    "log2_fold_vector",
+    "anisotropy_log2_span",
+    "max_over_min_fold_ratio",
+    "route_cosine_similarity",
+    "route_L2_distance",
+    "scalar_masking_detected"
+  ],
+  "future_causal_upgrade": "Remplacer les folds rétrospectifs par des probabilités d’accessibilité mesurées sous intervention do(m) et défis gelés identiques.",
+  "interpretation_guard": "Cette calibration décrit une géométrie de réponse. Elle ne constitue pas encore une mesure causale de P_acc au sens §XIV-9.",
+  "status": "frozen_v1"
+}
