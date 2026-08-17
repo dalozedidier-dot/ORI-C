@@ -27,6 +27,18 @@
       "registration_public_url": null
     },
     {
+      "id": "PRED-MATIERE-WAVE-HISTORY-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": false,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
+    },
+    {
       "id": "PRED-PALEO-HISTORY-02",
       "branch": "systeme_solaire",
       "status": "frozen_locally_awaiting_external_data",
