@@ -1,0 +1,18 @@
+{
+  "schema": "oric.donofrio-history-structure.recovered.v1",
+  "status": "recovered_from_previous_conversation_result_not_recomputed_in_this_package",
+  "data_status": "real_data_natural_contrast_retrospective",
+  "source_dataset_summary": {"MIC_measurements":288,"profiles":24,"antibiotics":4,"LTEE_histories":6,"final_environments":["Carbon","Nitrogen"]},
+  "within_final_environment_history_structure": {"mean_intra_history_distance":1.248,"mean_inter_history_distance":2.678,"inter_over_intra":2.15,"permutations":20000,"p_approx":0.00005},
+  "cross_environment_persistence": {"same_history_C_to_N_distance":1.280,"different_history_distance":2.725,"different_over_same":2.13,"exact_permutations":720,"p":0.00556},
+  "partial_R2_history_controlling_final_environment": {
+    "Ampicillin":{"R2":0.811,"permutation_p":"<0.0001"},
+    "Erythromycin":{"R2":0.720,"permutation_p":"<0.0001"},
+    "Tetracycline":{"R2":0.707,"permutation_p":"<0.0001"},
+    "Tobramycin":{"R2":0.380,"permutation_p":0.0828,"limit_control":true}
+  },
+  "history_x_final_environment_partial_R2_range":[0.52,0.74],
+  "observed_domain_dispersion_by_history":{"A-1":1.816,"A-5":1.533,"REL606":1.408,"A-4":1.354,"A-6":1.346,"A-2":1.138},
+  "guard":"dispersion is descriptive only: four descendants per history; not a complete volume of possible futures",
+  "section_XIV":{"3":false,"4":false,"9":false,"reason":"no frozen prospective prediction and no do(m) intervention"}
+}

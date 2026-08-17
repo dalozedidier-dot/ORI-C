@@ -1,0 +1,15 @@
+{
+  "package": "ORI-C_REPRISE_EXPLOITATION_REELLE_2026-08-18",
+  "date": "2026-08-18",
+  "repository": "dalozedidier-dot/ORI-C",
+  "repository_reference_before_new_Donofrio_integration": "c3c8037abb6f72bce6b09c5e2eec544a4bb8b9c5",
+  "raw_data_archive_recovered": "ORI-C_REPARATION_ET_INTEGRATION_7_AXES_SAFE_2026-08-16.zip",
+  "raw_data_sha_matches": {
+    "prebiotic_timecourses.csv": "d6efa7b5ee8a78989a41b7f097722a1de9be28f1420676188401cbc5b57d48fc",
+    "prebiotic_lineages.csv": "45239f4b8d33827deda589d8a43e695dc0558ed578c0740dc7660daafbd74fba",
+    "late_accretion_tracers.csv": "570219a728e5df80ecc2a628c4fb79d9b67139cdf11d502660d855363141c91a",
+    "AICC2023.zip": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41"
+  },
+  "classification_rule": "real data / retrospective unless an explicitly pre-frozen prospective experiment has been executed",
+  "section_XIV_before_and_after": "7/12"
+}

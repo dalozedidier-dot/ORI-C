@@ -1,385 +1,100 @@
-# ORI-C — dossier unique
+# ORI-C — reprise de l’exploitation réelle après D’Onofrio
 
-[![Validation](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml/badge.svg)](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/ci.yml)
-[![Analyses structurelles](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml/badge.svg)](https://github.com/dalozedidier-dot/ORI-C/actions/workflows/analyse-structure.yml)
-[![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
-[![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
+Date de consolidation : 18 août 2026
 
-Didier Daloze | Version stable 0.9.8 | 15 août 2026
+Ce package reprend exactement le travail qui avait été laissé en suspens après la nouvelle réanalyse D’Onofrio. Il pousse les **vésicules** et les **archives isotopiques/chronométriques** avec la même règle : données réelles, effets positifs et nuls conservés, analyses rétrospectives classées comme telles, aucun crédit §XIV ajouté rétroactivement.
 
-**Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
+## 1. D’Onofrio
 
-**Exploration interactive :** https://dalozedidier-dot.github.io/ORI-C/exploration.html
+La nouvelle réanalyse est conservée dans `resultats/DONOFRIO_REANALYSE_RECUPEREE.json`. Elle n’est pas recalculée ici car le résultat récupéré provenait de la conversation précédente et le jeu MIC numérique exact utilisé pour cette couche n’est pas inclus comme table autonome dans l’archive récupérée.
 
-**Roadmap de fermeture scientifique :** [`ROADMAP.md`](ROADMAP.md)
+Résultat central récupéré : distance intra-histoire 1,248 contre inter-histoires 2,678, persistance carbone↔azote 1,280 contre 2,725, trois antibiotiques avec effet historique fort et **tobramycine comme limite** (R² partiel 0,380, p = 0,0828).
 
-## Vérifier en deux minutes
+## 2. Vésicules
+
+Entrées réelles : `prebiotic_timecourses.csv` (59 328 mesures) et `prebiotic_lineages.csv`.
+
+### Dynamique temporelle
+
+La réanalyse temporelle versionnée est conservée. Les 15 contrastes FR-vers-contrôle testés sur amplitude de rebond, AUC 2–6 h et pente 2–6 h sont positifs avec p unilatéral ≤ 0,004. Cela confirme une dynamique FR spécifique.
+
+Le contraste historique P_acc d’ablation reste **-0,0375**, IC95 approximatif **[-0,145833 ; 0,0625]**. Il reste négatif et n’est pas requalifié.
+
+### Profondeur historique
+
+Le protocole gelé H-DEPTH-LADDER est reproduit exactement sur 1 044 lignes communes :
+
+- profondeur 0 : RMSE 0,118860
+- parent immédiat, profondeur 1 : RMSE 0,116124, gain **+2,302 %**
+- profondeur 2 : gain incrémental **-0,955 %**
+- profondeur 3 : **-0,495 %**
+- profondeur 4 : **-0,201 %**
+
+La profondeur effective au seuil gelé de 2 % est donc **1**. Les ancêtres plus profonds n’ajoutent pas d’information prédictive selon ce test.
+
+### Sélection contre dérive à condition finale identique
+
+Seize fichiers expérimentaux possèdent les deux bras au dernier nombre de générations commun. Sur 20 000 permutations par fichier :
+
+- 7/16 contrastes sont nominaux à p < 0,05
+- 6/16 restent sous FDR Benjamini-Hochberg q < 0,05
+- FR : 2/6 sous FDR
+- FU : 1/3
+- UR : **0/3**
+- UU : 3/4
+
+L’effet de l’histoire expérimentale existe donc dans certains contextes mais **n’est ni uniforme ni universel**.
+
+## 3. AICC2023 — incertitude chronologique
+
+Les cinq chronologies de carottes sont recalculées depuis l’archive AICC2023 réelle.
+
+La corrélation de Spearman entre âge et incertitude chronologique est forte dans les cinq carottes (rho ≈ 0,848 à 0,975). Le rapport entre la médiane de sigma dans la tranche la plus ancienne disponible et 0–100 ka varie cependant énormément :
+
+- VOSTOK : ×3,47
+- EDML : ×20,88
+- EDC : ×35,91
+- TALDICE : ×104,34
+- NGRIP : ×109,61
+
+Il existe donc un élargissement historique net de l’incertitude, mais sans loi universelle commune aux carottes.
+
+La comparaison AICC2023–AICC2012 est conservée comme **diagnostic de révision**, jamais comme vérité terrain. Selon la carotte, 78,5 % à 94,2 % des révisions absolues se trouvent dans 2 sigma AICC2023. Le q95 de |révision|/sigma atteint néanmoins 6,84 pour EDML. Cela montre pourquoi une chronologie nominale unique ne doit pas masquer la largeur réelle de l’archive.
+
+## 4. ^26Al — chronométrie et histoire de réservoir
+
+La demi-vie utilisée reste 0,717 Myr. Les médianes canoniques reconstruites sont :
+
+- angrite : 0,34528
+- EC002 : 0,18598
+- chondre jeune : 0,08177
+- carbonate CM : 0,02305
+
+Les rapports entre médianes successives sont ~1,86, 2,27 et 3,55. Malgré cette décroissance nette, **chaque paire adjacente possède des intervalles propagés à 95 % qui se chevauchent**.
+
+Avec les scénarios déclarés de réservoir canonique, appauvri ×3 et appauvri ×4, le seuil 1 % reste robuste pour les trois premiers événements, tandis que le carbonate CM n’a plus aucun seuil robuste. Le seuil 10 % n’est pas robuste à l’histoire de réservoir.
+
+Le contrôle d’hétérogénéité du dépôt montre qu’autour de 2 Myr, un CAI mesuré est ~37,87 % sous la référence de décroissance canonique, tandis qu’un second possède un déficit minimal ~84,14 %. **Le temps structure la trace, mais il ne suffit pas à déterminer l’inventaire local.**
+
+## 5. Accrétion tardive multitraceur
+
+La table contient 122 159 mesures, 56 614 échantillons, 45 labels `candidate_source`, 29 461 couples échantillon-source avec au moins 2 traceurs et 7 827 avec au moins 4.
+
+Aucune des 122 159 mesures ne possède d’incertitude renseignée. Cette absence interdit toujours une inversion calibrée de mélange tardif.
+
+Une nouvelle mesure descriptive de structuration par `candidate_source` a été calculée séparément pour chaque traceur sur log10(valeur), puis après retrait de la moyenne propre à la compilation. L’eta² conditionnel varie d’environ **0,054 à 0,175**. RE et OS conservent la plus forte structuration, W et MO la plus faible. L’archive est donc structurée, mais de façon **traceur-dépendante**, avec de vrais axes faibles qui ne doivent pas être moyennés hors du résultat.
+
+## Statut scientifique
+
+Aucune de ces analyses ne ferme rétroactivement §XIV. Le score reste **7/12**. Elles améliorent la description des domaines observés, des limites de persistance et des effets de contexte. `PACC-INT-CHALLENGE-V1` reste non exécuté sur les vésicules et aucune intervention `do(m)` n’est créée par ces réanalyses.
+
+## Reproductibilité
+
+Exécuter :
 
 ```bash
-python demo_minimale.py
+python scripts/run_all.py
+python scripts/verify_package.py
 ```
 
-Pour obtenir la même démonstration sous forme de rapport HTML autonome :
-
-```bash
-python scripts/demo_minimale_html.py --output demo_minimale_report.html
-```
-
-Un notebook prêt pour Google Colab est fourni dans [`notebooks/ORI-C_demo_colab.ipynb`](notebooks/ORI-C_demo_colab.ipynb).
-
-Une commande, aucun argument, aucun accès réseau. Elle reproduit les trois
-résultats phares avec une règle désormais explicite : les analyses biologiques
-D'Onofrio et vésicules sont **réexécutées depuis les données versionnées**, tandis
-que la métrique astronomique `C-AST-01` est **recalculée depuis les sorties
-numériques de robustesse**. Le ratio certifié intervention/bruit numérique est
-séparé du diagnostic `effect_to_ensemble_floor_ratio`, qui utilise un autre
-plancher. Douze contrôles restent exigés.
-
-Elle affiche aussi, dans le même rapport, **ce qui ne marche pas** : le résultat
-paléoclimatique négatif, la dissolution de la dépendance au chemin à 600 Ma, et
-les critères dont la puissance est nulle. Un dossier qui ne montrerait que ses
-succès ne serait pas vérifiable.
-
-Pour une lecture extérieure courte : [`GETTING_STARTED_10_MIN.md`](GETTING_STARTED_10_MIN.md) puis [`CORE_RESULTS.md`](CORE_RESULTS.md). Le premier donne le chemin de vérification minimal ; le second expose 16 résultats à fort levier sans masquer les résultats négatifs ni les limites.
-
-Installation complète, si le dépôt vient d'être cloné :
-
-```bash
-git lfs pull
-python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
-python demo_minimale.py
-```
-
-## Licence
-
-Code sous **MIT**, données produites par ORI-C sous **CC BY 4.0**. Les forks, la
-réutilisation du code et la citation des données sont libres, avec attribution.
-Deux tables dérivées portent une licence virale héritée de leur source — GEOROC
-en CC BY-SA 4.0, CHNOSZ OBIGT en GPL-3 — et les textes restent sous droits
-réservés. La carte complète est dans [`LICENSING.md`](LICENSING.md).
-
-Ce dossier rassemble **l'état intégré du programme ORI-C consacré à la
-chronologie des architectures matérielles, à l'architecture du Système solaire
-et au vivant**, sous une forme unique : un socle commun et trois branches
-autonomes.
-
-D'autres développements d'ORI-C, notamment ses dimensions cognitives et ses
-autres branches formelles, ne figurent pas ici.
-
-Le socle ne contient aucun résultat **empirique** propre à une branche. Il
-porte en revanche un résultat formel commun, le test interventionnel. Il
-rassemble ce que les trois branches partagent : le vocabulaire, la
-chaîne relationnelle, les règles d'emploi des liens typés, les niveaux de
-preuve et la carte des transitions. Ce n'est pas une quatrième branche.
-
-Les branches ne fusionnent pas leurs résultats. Elles ont des objets, des
-méthodes et des niveaux de validation différents, et le dossier les maintient
-séparés.
-
-```text
-                         SOCLE COMMUN ORI-C
-       architecture, histoire, inscription, persistance, possibles
-                                  │
-              ┌───────────────────┼───────────────────┐
-              │                   │                   │
-        BRANCHE 1            BRANCHE 2           BRANCHE 3
-        MATIÈRE           SYSTÈME SOLAIRE          VIVANT
-      Régimes 1 à 4        Régimes 5 et 6       Régimes 7 et 8
-              │                   │                   │
-              └── héritage ──────►│── conditions ────►│
-                                  │◄── rétroactions ──┘
-```
-
-
-## Apport introduit dans 0.9.6 — généalogie cosmique quantitative
-
-La version 0.9.6 a intégré le raccordement **Big Bang chaud / inventaire primordial → enrichissement stellaire → poussières et matière présolaire → nuages et disques → solides primitifs → petits corps → protoplanètes → histoires planétaires → architecture actuelle du Système solaire**.
-
-La couche `01_branche_matiere/genealogie_cosmique_quantitative/` applique désormais un **pare-feu empirique strict** : aucune simulation, donnée synthétique, donnée construite, imputation, sortie de rendement stellaire, sortie thermochimique ou intégration orbitale ne peut entrer dans ses verdicts. Les articles mixtes observation/modèle sont admissibles uniquement pour leurs mesures explicitement transcrites ; leur partie modélisée est déclarée dans `portion_excluded`.
-
-L'état courant porte **20 stades, 22 liens qualifiés, 48 sources/datasets empiriques admissibles et 120 enregistrements empiriques de synthèse**. Il produit **16 claims empiriques machine : 15 soutenus et 1 explicitement indéterminé**, **13 claims quantitatifs supplémentaires** (`GCQ-T09` à `GCQ-T21`). La campagne quantitative quantifie notamment la fraction de `26Al` encore disponible à des événements datés : **34,5 %** à l'archive angritique, **18,6 %** à EC 002, **8,18 %** au chondre jeune sélectionné et **2,30 %** au carbonate CM. L’analyse enrichie en données ajoute **11 467 lignes utiles normalisées**, dont **11 207 grains présolaires publiés**, et teste directement des distributions isotopiques NC/CC et des hétérogénéités intra-météorite, toujours sans simulation, donnée synthétique ni imputation.
-
-Le verdict empirique initial reste `supports_empirical_historical_accessibility_mechanism`. Le verdict quantitatif courant est `quantified_history_dependent_accessibility_with_explicit_open_links` : **le moment historique modifie quantitativement au moins un inventaire physique hérité qui reste accessible aux transformations suivantes**, tandis que des porteurs matériels et des architectures isotopiques persistent à travers ces changements. Ces résultats sont des extensions empiriques rétrospectives, pas une certification générale d'ORI-C.
-
-Le problème inverse orbital reste `undetermined_empirical_only`. Le chemin strict produits stellaires → endpoint actuel existe dans le graphe documenté, mais le chemin strict baseline primordiale → endpoint actuel reste ouvert. La provenance terrestre reste elle aussi `empirically_contested_not_closed`. Aucun de ces verrous n'est fermé artificiellement par C-AST ou par une simulation. `C-AST-01` reste une preuve séparée au niveau modèle sur les conséquences d'une architecture donnée.
-
-## Routes d’exécution ouvertes
-
-Les quatre verrous prioritaires disposent maintenant de routes d'exécution séparées du canon : `HC02` pour tester le bootstrap direct de `N030`, un pilote instrumental pour `MAG-PAIR-001`, un paquet laboratoire pour `VES-PACC-INT-01` et une route de nouvelles MIC sur histoires LTEE archivées pour `PRED-VIVANT-HISTOIRE-001`. Ces routes n'ajoutent aucun succès §XIV tant qu'aucune acquisition préenregistrée n'a été réalisée. Voir `ROADMAP.md` et `documentation/execution_externe/`.
-
-### Quatre verrous actifs — état exécutable
-
-`ACTION_VERROUS_2026-08-14.md` et `plan_directeur/READINESS_VERROUS.json` donnent l’état machine des quatre fronts prioritaires. La branche matière conserve son baseline scellé **46/53** et publie séparément l’extension empirique `HC02-E1`, qui atteint **53/53** sans recoder `H052`. MAG, VES et la réplication MIC restent fail-closed jusqu’à exécution externe réelle. `PACC-MAG-INT-01` prépare en parallèle un transfert matière↔vivant sous la même définition `PACC-INT-CHALLENGE-V1`, sans crédit avant acquisition.
-
-## Apports de 0.9.8 — données réelles et transversalité
-
-La version 0.9.8 élargit l’exploitation empirique sans modifier artificiellement le niveau de preuve. Le benchmark transversal passe à **24 cas** et le registre machine à **56 preuves**, tout en restant à **6 cas complets** pour **5 systèmes**. Le seuil §XIV reste **7/12**, avec les conditions **3, 4, 9, 10 et 11** ouvertes.
-
-Trois analyses supplémentaires sur données réelles sont maintenant intégrées au benchmark avec leurs limites explicites : `FIT-ORIGIN-N-01` détecte un signal d’origine ancestrale sous azote avec p exact **0,03069**, `MAT-NBOT-PART-01` mesure **28,27 %** de gain RMSE hors-source avec permutation p **0,001999**, NBO/T restant un état structural `X`, et `RNA-PAP-TRAJ-01` mesure une divergence maximale de **17,733 log2** entre deux trajectoires ARN tout en restant descriptif au niveau inter-branche.
-
-Les nouveaux protocoles `VES-PACC-INT-01` et `PACC-MAG-INT-01` rendent les prochains tests causaux exécutables sur données physiques réelles, mais ne créent aucun résultat avant acquisition. `INV-A` reste `candidate_operationalized_exploratory_not_validated`.
-
-## Résultats établis dans l’état courant du dépôt
-
-ORI-C montre que **l’architecture d’un système modifie les trajectoires qui lui restent accessibles**. Dans la couche astronomique réduite, les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés, et 13 critères préenregistrés sur 15 sont réussis.
-
-La branche astronomique possède désormais une extension dynamique jusqu'au spin. À partir des normales orbitales du calcul N-corps, un modèle séculaire du spin avec `α = 54,93″/an` reproduit La2004 avec une corrélation de 0,9899 et une RMSE de 0,079° à 1 Ma. Sur 2 Ma, le témoin avec couple lunaire effectif reste entre 22,09° et 24,44°, alors que l'ablation lunaire (`α ≈ 20″/an`) explore 1,25° à 45,04°. Les mêmes sorties propagent les six interventions Jupiter/Saturne jusqu'à l'insolation à 65°N. Cette extension reste **au niveau modèle** : elle n'intègre pas une orbite lunaire explicite ni les marées.
-
-Le dépôt contient aussi deux résultats positifs sur données biologiques réelles. Dans le jeu D’Onofrio, l’histoire améliore la prédiction de la résistance antibiotique : la RMSE passe de 1,1309 pour l’état seul à 0,8042 avec l’histoire, et le modèle historique bat également le témoin d’histoire permutée de même complexité, avec p = 0,00498. Dans les expériences de vésicules, 11 760 couples parent-descendant sont analysés et les quatre composantes préenregistrées sont soutenues : réponse à la sélection, contraste d’ablation, signal de filiation supérieur au témoin permuté et codage complet des lignées.
-
-La branche matière mesure une structure cumulative de 53 nœuds, une fermeture stricte de 46 nœuds, 34 hyperarêtes critiques pour cette fermeture et 40 relations ayant un effet mesurable sur au moins une métrique. Le test H011 établit en simulation un seuil critique qui augmente avec la turbulence, avec un rapport extrême de 3,33.
-
-La couche mémoire distingue désormais une dépendance au chemin d’une mémoire persistante : sous un même forçage final prolongé, les écarts exoplanétaires se relaxent avec un temps caractéristique de 7,02 Ma. Une différence historique qui disparaît ainsi correspond à un retard de relaxation, pas à une inscription durable.
-
-Les résultats négatifs restent attachés à leurs protocoles précis. **M2 reste non soutenu dans sa formulation paléoclimatique testée : 1 critère sur 10 au total, dont 0 sur 5 face au témoin M1P de même complexité.** Le résultat non concluant sur l’amikacine, le résultat négatif Card 2019 et l’absence de filiation dans les seules données ARN ne décrivent ni toute la branche vivant ni les résultats D’Onofrio et vésicules obtenus ensuite.
-
-La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pare-feu empirique `fail_closed_v2`, produit **9 réussites techniques, 626 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Elle produit **0 verdict scientifique `supports`**. Ce compteur décrit uniquement la plateforme d’intégration et ne remplace ni les verdicts ciblés sur données réelles ni les résultats explicitement issus de modèles.
-
-Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
-
-### Atteignabilité des critères — à lire avant tout résultat négatif
-
-Un critère peut échouer parce que l’effet n’existe pas, ou parce que le test ne peut pas le détecter. [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md) sépare les deux cas pour l’ensemble du dossier.
-
-Sur 23 critères discrets audités, 20 sont atteignables et 3 — des bootstraps — ne sont pas évaluables par cette voie, un bootstrap n’ayant pas de plancher de p général contrairement à une permutation. Un seul critère est écarté pour inatteignabilité :
-
-- la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible : la profondeur du creux mesurée est négative, il n’y a pas de creux à mesurer.
-
-> **Correction du 8 août 2026.** Cette section citait « les deux tests de signe du benchmark antibiotique longitudinal, qui exigent 9 plis favorables sur 10 ». C’était faux : le benchmark emploie un test de **sign-flip**, qui prend les magnitudes en compte et n’exige aucun nombre minimal d’unités favorables. Ces deux critères sont atteignables. L’auditeur les modélisait par le mauvais test.
-
-### Ce que vaut un témoin — hiérarchie à six niveaux
-
-Un verdict exige deux choses, et la force du témoin n’en est qu’une. La hiérarchie va du mélange simple (1) à la réplication sur données indépendantes (6), avec **IAAFT au niveau 4 comme minimum exigé pour tout critère temporel**. Le second axe est l’adéquation de la statistique : un témoin de niveau 6 sur une statistique qui ne teste pas l’hypothèse ne produit rien.
-
-Le dossier a payé cette règle deux fois le même jour. `WP-CLIM-MEM-2026` avait un témoin de niveau 1, une permutation qui ramenait l’autocorrélation de +0,450 à +0,013. Son successeur `WP-CLIM-MEM-2026-B` avait un témoin correct et une statistique asymétrique : rejouée sur l’**obliquité terrestre**, une oscillation à 41 ka calculée par mécanique céleste qui n’inscrit rien, elle accordait `soutient` avec un gain de 77,3 % — supérieur à celui de la cible glaciaire. Les deux protocoles sont clos sur `invalide`. Le contrôle qui les a rétractés n’utilise aucune donnée synthétique : il substitue la cible par d’autres colonnes réelles de la même table. Il tourne en CI, dans [`scripts/controle_negatif_reel_surrogats.py`](scripts/controle_negatif_reel_surrogats.py).
-
-### Campagne « mémoire matérielle réelle » — résultats par relation, transversalité non soutenue
-
-[`01_branche_matiere/memoire_materielle_reelle/`](01_branche_matiere/memoire_materielle_reelle/) porte `WP-MAT-MEM-2026`, cinq critères scellés le 8 août 2026 **avant inspection du moindre jeu de données**.
-
-L’intérêt de cette campagne est qu’elle vise le **niveau 6**, hors de portée de toute campagne à surrogats. Démagnétiser un échantillon ou recuire un acier écroui sont des ablations physiques, pas des permutations : le témoin est un autre échantillon réel ayant subi un traitement réel. Un seul schéma relationnel est testé sur des familles physiques sans rapport entre elles :
-
-> histoire appliquée → trace physique persistante mesurée → réponse ultérieure modifiée sous stimulus identique
-
-| famille | histoire | trace | réponse |
-|---|---|---|---|
-| magnétisme | champ et cycles antérieurs | rémanence, coercivité | boucle B-H suivante, pertes |
-| plasticité | déformation antérieure | dislocations, écrouissage | courbe σ-ε, ratcheting |
-| verre | recuit sous `Tg` | enthalpie résiduelle | cinétique de relaxation |
-| transition de phase | traitement thermique | fractions de phase | transformation ultérieure |
-
-Les jeux ont été extraits et analysés dans un pipeline séparé, mais aucune
-fiche d'admission confirmatoire n'existe encore dans `fiches/`. Cinq familles
-rendent un verdict positif sur au moins une relation partielle :
-magnétisme, plasticité, relaxation de verre, traces de fission et reconstruction
-de surface. Ce résultat partiel ne valide pas la chaîne complète. Sous les
-quatre contrôles conjoints de la matrice transversale, **zéro famille** porte le
-schéma complet `histoire → trace → réponse`, alors que trois étaient exigées :
-`C-MAT-MEM-05` conclut donc `ne_soutient_pas`.
-
-Le filtre gelé est maintenant appliqué explicitement au niveau de la synthèse :
-FABEST et les polymères soutiennent `histoire → réponse` sans trace structurale
-indépendante tabulée ; Fischer-Tropsch ne relie pas STM/XPS et réponse condition
-par condition ; Medium-Mn n'apparie pas suffisamment trace et réponse. Pour
-IODP, la cohérence trace-réponse, la résistance au-delà de 20 mT et la
-comparaison trace naturelle/IRM-ARM restent publiées comme diagnostics partiels,
-mais ne sont plus attribuées respectivement à `C01`, `C02` et `C04`. Seule
-l'ablation physique est fortement soutenue, mais le plan A/B complet de `C03`
-reste non testable avec IODP. Les permutations statistiques sont
-également distinguées des contrôles négatifs physiques, dont la masse des
-polymères fournit ici l'exemple explicite.
-
-Tous les Spearman de cette campagne utilisent désormais des rangs moyens pour
-les ex æquo. La matrice transversale permute les étiquettes uniquement au sein
-des matériaux, températures, séries ou régimes expérimentaux. Le champ
-historique `paires_minimum: 6` du gel est explicitement supplanté, sans modifier
-le fichier scellé, par
-[`NOTE_SUPERSESSION_GEL.md`](01_branche_matiere/memoire_materielle_reelle/NOTE_SUPERSESSION_GEL.md).
-
-Un test supplémentaire compare, dans des boucles magnétiques encastrées, des
-blocs ayant le même état apparent et le même stimulus mais des histoires
-différentes. Son plan ayant été choisi après inspection, il est explicitement
-**exploratoire** et ne produit aucun verdict confirmatoire. Il sert à préparer
-un test indépendant préenregistré.
-
-### Premier test prospectif préenregistré
-
-[`02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/`](02_branche_systeme_solaire/tests_suivants/preenregistrement_exoplanetes_2026_08_07/) porte `WP-EXO-PACC-2026`, gelé le 7 août 2026 et vérifiable le 7 août 2028. Hypothèse, seuil, témoin, instantané de référence et code d’analyse sont scellés par empreinte SHA-256 avant que les données à tester n’existent. C’est le premier protocole du dossier dont la conclusion ne peut pas être ajustée après lecture.
-
-Un second protocole, sur les éléments sidérophiles de GEOROC, a été **écarté après mesure** : la compilation ne gagne qu’environ six couples Os+Ir par an, ce qui repousserait toute conclusion à cinq ans. Le raisonnement est conservé dans [`protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md`](protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md).
-
-## Contenu
-
-| Dossier | Contenu | Rôle |
-|---|---|---|
-| `00_socle/` | vocabulaire, carte des 40 transitions et 47 relations, test interventionnel, suite de tests | langage transversal |
-| `01_branche_matiere/` | Chronologie des architectures de la matière, hypergraphe mécanistique de 53 nœuds, campagne d'inventaire accessible | régimes 1 à 4 |
-| `02_branche_systeme_solaire/` | article, couche astronomique N-corps, **couche spin-orbite calculée**, couche mémoire historique, application climatique séparée | régimes 5 et 6 |
-| `plan_directeur/` | plan de campagne, registre des 35 hypothèses, avancement | transversal |
-| `methodologie_puissance/` | plans de puissance et analyses de sensibilité méthodologiques ; aucune sortie de ce dossier ne constitue une preuve empirique | transversal |
-| `03_branche_vivant/` | Le vivant comme terrain ORI-C | régimes 7 et 8 |
-
-## Par où commencer
-
-0. `documentation/dossier_scientifique/DOSSIER_SCIENTIFIQUE_ORI-C.pdf` — document de synthèse pour une lecture continue. Il ne suffit pas, à lui seul, pour déterminer l’état exact des preuves. Les fichiers `ETAT_DES_PREUVES.md`, `ETAT_DES_TESTS.md`, `SCIENTIFIC_SCOPE.md` et les résultats machine lisibles font autorité pour les verdicts.
-1. `documentation/POINT_D_ENTREE.md` — la carte des documents faisant autorité et des fichiers machine lisibles.
-2. `ORI-C_Architecture_generale_du_programme.pdf` — l'architecture générale du programme.
-3. `ARCHITECTURE.md` — ce qui relie les branches, ce qui les sépare, et pourquoi le socle n'en est pas une.
-4. `ETAT_DES_PREUVES.md` — le tableau transversal des niveaux de validation, y compris les résultats négatifs.
-5. `00_socle/CODEBOOK.md` — les définitions communes, à lire avant toute branche.
-6. `AUTORITE_DES_DOCUMENTS.md` — le fichier qui tranche lorsque deux documents se contredisent.
-7. `ETAT_DES_TESTS.md` — les compteurs de tests générés.
-8. `plan_directeur/campagne_maximale_trois_branches/resultats/RAPPORT_CAMPAGNE_MAXIMALE.md` — la campagne de robustesse maximale disponible avec les données du dépôt.
-   Pour les 683 entrées en données réelles, le résultat machine courant est `plateforme/campagne_maximale_reelle/resultats_integration_maximale/results.json`. Le dossier `resultats_consolides/` est conservé comme état historique.
-9. `plan_directeur/campagne_priorites_v093/resultats/RAPPORT_PRIORITES_V093.md` — les travaux ciblés sur les verrous matière, climat, mémoire et vivant.
-10. `01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats/RAPPORT_CALIBRAGE.md` — le tri documentaire et structurel des 53 relations matérielles.
-
-## Ce que le dossier établit, en une phrase par branche
-
-**Branche 1, matière.** L’hypergraphe relie 53 nœuds, en atteint 46 dans le baseline gelé et 53/53 dans l’extension HC02-E1 empiriquement qualifiée et localise un noyau cyclique précis. Trente-quatre hyperarêtes sont critiques pour la fermeture, quarante modifient au moins une métrique et l’échelle des capacités porte 0,595 bit d’information nette. H011 fournit un seuil quantitatif dont le rapport extrême vaut 3,33 sous variation de la turbulence.
-
-**Branche 2, Système solaire.** La couche dynamique réduite réussit 13 critères préenregistrés sur 15. Les interventions sur Jupiter et Saturne produisent des effets au moins 4 964 fois supérieurs aux écarts numériques sélectionnés. Le test de relaxation à 600 Ma distingue une dépendance temporaire au chemin d’une mémoire persistante, avec un temps caractéristique de 7,02 Ma.
-
-**Branche 3, vivant.** Deux résultats positifs sont distingués des anciens tests. Le jeu D’Onofrio montre un gain prédictif de l’histoire contre l’état seul et contre une histoire permutée de même complexité, avec p = 0,00498. Les vésicules fournissent 11 760 couples parent-descendant et soutiennent les quatre composantes préenregistrées de sélection, filiation et ablation. Le benchmark intégré sur l’amikacine, le jeu Card 2019 et les trajectoires ARN restent des protocoles séparés et ne peuvent pas être généralisés à toute la branche.
-
-
-## Nouveaux travaux v0.9.3
-
-- **Matière.** Le baseline 46/53 reste gelé. `HC02-E1 = N051|N028 → N030` est maintenant qualifiée par trois expériences primaires complémentaires et ferme 53/53 en extension auditable, sans recoder H052. Cette clôture est structurelle et ne change pas le §XIV.
-- **Transfert climatique.** Le signal d'excentricité N-corps est injecté dans un modèle intermédiaire. Il améliore la RMSE dans trois fenêtres temporelles sur trois, de 3,12 % en moyenne, mais il s'agit d'une prédiction à un pas utilisant l'état climatique observé. Ce test ne remplace ni Terre-Lune complet, ni marées, ni GCM.
-- **Mémoire.** M2 et son témoin apparié M2P possèdent chacun deux bassins dans les régimes testés. Des boucles d'hystérèse apparaissent à 30 degrés, mais aucun état matériellement différent ne subsiste après le retour complet au faible forçage.
-- **Vivant.** Le jeu Card 2019 fournit une réplication externe temporelle. Le modèle état + histoire est moins bon dans chacun des quatre groupes de test et le bootstrap groupé conserve un écart défavorable. Le protocole prospectif suivant est gelé avant acquisition du prochain jeu.
-- **Prébiotique.** Deux trajectoires expérimentales de populations d'ARN catalytique sur huit cycles sont intégrées. Elles ne contiennent aucune filiation parent-descendant de compartiments, donc la continuité héréditaire reste non testable.
-
-## Travaux v0.9.4 conservés
-
-- **Graphe gelé.** Les fichiers canoniques v0.9.3 sont scellés par empreinte. Le calibrage ne modifie ni les 53 nœuds ni les 53 hyperarêtes.
-- **Tri documentaire et structurel.** Les statuts de preuve et les types de source sont séparés des effets d’ablation, des voies alternatives, des cycles et de la portée en aval. Aucun score causal unique n’est déclaré.
-- **Stabilité.** Sous stress limité aux six relations dont le plancher documentaire est inférieur à 0,65, 31 nœuds restent dans le noyau stable, 15 deviennent sensibles et les 7 nœuds du verrou hydrothermal restent classés séparément.
-- **Priorité.** `H011`, l’instabilité de streaming, est la relation documentaire la plus urgente hors du verrou des interfaces, car elle contrôle un ensemble important de nœuds planétaires.
-- **Transfert externe.** Le même schéma de relations, seuils et fermeture stricte représente deux trajectoires MESA indépendantes, une étoile de 1 masse solaire vers une naine blanche et une étoile de 12 masses solaires vers l’effondrement du cœur. Le test valide la portabilité de la représentation, pas une loi universelle ORI-C.
-
-## Portée du résultat négatif de la branche 2
-
-Il ferme une implémentation particulière de la mémoire climatique. Il ne remet
-pas en cause la couche astronomique, qui est validée séparément et dont les
-résultats sont conservés dans un dossier distinct. Il ne réfute pas les deux
-autres branches, qui portent sur d'autres objets et d'autres mécanismes.
-
-Cette séparation est le motif principal de l'organisation du dossier : un
-échec localisé doit rester localisé, et une réussite localisée ne doit pas
-s'étendre par contagion de vocabulaire.
-
-## Vérification
-
-Après un clonage Git complet :
-
-```bash
-cd ORI-C
-git lfs pull
-python verifier_dossier.py
-python scripts/valider_tout.py --strict-lfs
-python plan_directeur/campagne_maximale_trois_branches/run_all.py
-python plan_directeur/campagne_priorites_v093/run_all.py
-python 01_branche_matiere/hypergraphe_transformations/calibrage_v094/calibrage_relations.py
-```
-
-Dans un ZIP source automatique de GitHub, les objets volumineux peuvent rester
-sous forme de pointeurs. Le contrôle suivant vérifie alors l'arbre source sans
-le déclarer autonome :
-
-```bash
-python verifier_dossier.py --allow-lfs-pointers
-python scripts/valider_tout.py
-```
-
-Le vérificateur distingue les fichiers réellement modifiés des objets Git LFS
-non hydratés. Une archive canonique doit afficher zéro objet LFS non hydraté.
-Sa construction est automatisée par
-`python scripts/construire_archive_canonique.py`.
-
-## Reconstruction et contrôles
-
-Les scripts de construction conservés à la racine reconstruisent les composants historiques et les campagnes dont ils dépendent. L'archive complète livrée, son manifeste et ses fichiers de clôture constituent l'état canonique à contrôler. La généalogie dispose de ses propres scripts de validation dans `00_socle/genealogie/` et `01_branche_matiere/genealogie/`.
-
-Deux suites de tests s'exécutent séparément :
-
-```bash
-cd 00_socle && python -m pytest -q
-cd 02_branche_systeme_solaire/couche_memoire_historique
-PYTHONPATH="$PWD/src" python -m unittest discover -s tests
-```
-
-Les compteurs courants sont générés par `etat_des_tests.py` et consignés
-dans `ETAT_DES_TESTS.md`. Certains instantanés historiques conservent les
-nombres de leur exécution, mais ils sont clairement marqués et ne font pas
-autorité.
-
-La reconstruction se vérifie sans rien écraser :
-
-```bash
-python construire_dossier.py --sources <rep> --verifier-reconstruction
-```
-
-## Livraison, licence et citation
-
-- `DATA_AVAILABILITY.md` distingue le dépôt Git, le ZIP source GitHub et
-  l'archive canonique hydratée.
-- `LICENSE` fixe la licence **MIT du code** ; `LICENSING.md` cartographie séparément les données, textes, figures et contenus tiers.
-- `CITATION.cff` contient le dépôt réel et la version courante.
-- `documentation/ALIASES_DOCUMENTAIRES.md` identifie le dossier scientifique
-  canonique et ses copies de livraison.
-
-## État du dossier
-
-Cette archive constitue un dossier scientifique unique. Le socle, les trois branches, les généalogies, les données, le code, les résultats positifs, les résultats négatifs et les limites sont conservés dans une même arborescence. Les identifiants de transition restent stables parce qu’ils décrivent le contenu, et non une étape de publication.
-
-
-## Inventaire complet et recherche d’architectures
-
-- `01_branche_matiere/inventaire_hierarchique/documents/INVENTAIRE_DE_LA_MATIERE_DANS_LE_CADRE_ORI-C.pdf` : document de lecture.
-- `01_branche_matiere/inventaire_hierarchique/analyses/INVENTAIRE_ORI-C_ANALYSE_ARCHITECTURES.xlsx` : criblage des familles et relations.
-- `audit/coherence_et_extensions/` : anomalies, architectures manquantes et liens causaux candidats.
-- `TRI_ET_CORRECTIONS.md` : corrections appliquées lors de la reconstruction.
-
-## Recherche suivante exécutée
-
-La campagne `plan_directeur/campagne_recherche_suivante/` est intégrée et reproductible hors ligne. Elle produit notamment :
-
-- le seuil H011, monotone avec la turbulence dans les simulations publiées ;
-- une mesure interventionnelle de `Pacc` sur six interventions astronomiques ;
-- 11 760 couples parent-descendant dans les lignées de vésicules, avec quatre composantes préenregistrées soutenues ;
-- un gain prédictif de l’histoire dans le jeu antibiotique D’Onofrio contre l’état seul et l’histoire permutée ;
-- un audit de 27 721 couples âge-isotope dans les spéléothèmes NOAA ;
-- le protocole `WP-C2b` gelé avec points non saturés et graines réservées.
-
-Exécution complète :
-
-```bash
-python plan_directeur/campagne_recherche_suivante/run_all.py
-python scripts/valider_recherche_suivante.py
-```
-
-## Formalismes externes intégrés — 10 août 2026
-
-Le dépôt exécute désormais, sans reclasser rétroactivement les preuves certifiées, un registre machine des preuves et chiffres, une PID `X/m` sur D'Onofrio, une approximation finie des états causaux prédictifs, un pont vers la théorie de la viabilité sur la couche spin-orbite, une filtration topologique persistante de l'hypergraphe matériel, un pont fail-closed vers Chemical Organization Theory, un simulateur de puissance conjointe matière, un CCM exploratoire paléoclimatique, une réanalyse secondaire des replays LTEE et un pont formel vers Assembly Theory.
-
-Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
-
-## Publication stable 0.9.8
-
-La version 0.9.8 fige l’état scientifique du 15 août 2026 au tag technique `v0.9.8-research`. Elle conserve les verdicts antérieurs, notamment **13 / 15** critères astronomiques réussis, **M2 à 1 critère sur 10** et `C-MAT-MEM-05` non soutenus dans leurs protocoles, ainsi que le pare-feu empirique de la généalogie cosmique quantitative.
-
-Le benchmark transversal compte **24 cas**, dont **6 cas complets** sur `X, H, m, Θ, τ, P_acc, R`, répartis sur **5 systèmes distincts**. Deux systèmes possèdent une intervention directe sur `m`. `EXO-DOM-01`, au niveau `E4_modele`, maintient `X`, `Θ` et l’architecture identiques par construction et mesure `P_acc = 0,91` contre `0,87` sous `do(m)`, soit `|Delta P_acc| = 0,04` avec sham `= 0`. Le cas vésiculaire reste le seul `do(m)` empirique direct actuel et ne soutient pas la direction positive locale de son contraste P_acc.
-
-Les trois nouveaux cas réels restent fail-closed : `FIT-ORIGIN-N-01` et `RNA-PAP-TRAJ-01` sont à 5/7 sans `m` isolé ni `P_acc`, tandis que `MAT-NBOT-PART-01` reste à 3/7 et ne transforme pas NBO/T en mémoire historique. Le §XIV demeure **7/12** et `INV-A` reste exploratoire non validé transversalement.
-
-`preuves/PREUVES.json` et `preuves/CHIFFRES.json` sont les registres machine de publication. `ETAT_DES_PREUVES.md` est généré depuis le premier, et `scripts/valider_registre_preuves.py` contrôle les empreintes et les valeurs rendues publiquement.
-
-La chaîne modèle désormais exécutée est :
-
-`architecture N-corps → dynamique orbitale → spin séculaire → obliquité → insolation à 65°N`.
-
-La Lune est représentée dans cette couche par son couple effectif sur le spin. Une orbite Terre-Lune explicitement résolue, les marées et l’évolution tidale restent hors de cette version. Les analyses PID, états causaux finis, viabilité, topologie persistante, COT, CCM, PCMCI+, LTEE et Assembly Theory restent exploratoires ou méthodologiques sauf statut contraire dans `preuves/PREUVES.json`.
-
-`preuves/PREUVES.json` et `preuves/CHIFFRES.json` sont les registres machine de publication. `ETAT_DES_PREUVES.md` est généré depuis le premier, et `scripts/valider_registre_preuves.py` contrôle les empreintes et les valeurs rendues publiquement.
+Les entrées réelles nécessaires sont incluses dans `data/`. `MANIFEST.sha256` permet de contrôler l’intégrité du package.
