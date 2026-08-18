@@ -5,7 +5,7 @@ import numpy as np,pandas as pd
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 P=ROOT/'plateforme/campagne_maximale_reelle/data/late_accretion_tracers.csv'
-OUT=HERE/'resultats/ACCRETION_MULTITRACEUR_APPROFONDIE.json'
+OUT=HERE/'analyses_approfondies/ACCRETION_MULTITRACEUR_APPROFONDIE.json'
 def sha(p):
  h=hashlib.sha256()
  with p.open('rb') as f:
@@ -41,4 +41,5 @@ result={'schema':'oric.late-accretion-multitracer-deep-audit.v2','analysis_statu
                'Candidate-source structure remains tracer-dependent after a simple compilation-mean removal; this is descriptive, not a causal or calibrated mixing result.',
                'The weakest conditional source structure occurs for some tracers and must be preserved as a limit rather than averaged away.'],
  'calibrated_late_accretion_mixing_claim':False,'section_XIV_credit':False}
+OUT.parent.mkdir(parents=True,exist_ok=True)
 OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n'); print(OUT)

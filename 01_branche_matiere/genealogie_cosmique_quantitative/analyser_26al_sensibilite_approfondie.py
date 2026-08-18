@@ -4,7 +4,7 @@ import json
 HERE=Path(__file__).resolve().parent
 DISTRIBUTION=HERE/'resultats/DISTRIBUTION_ACCESSIBILITE_26AL.json'
 CROSSCHECK=HERE/'resultats/CROSSCHECK_HETEROGENEITE_26AL.json'
-OUT=HERE/'resultats/AL26_CHRONOMETRIE_APPROFONDIE.json'
+OUT=HERE/'analyses_approfondies/AL26_CHRONOMETRIE_APPROFONDIE.json'
 Z95=1.959963984540054
 dist=json.loads(DISTRIBUTION.read_text(encoding='utf-8'))
 cross_source=json.loads(CROSSCHECK.read_text(encoding='utf-8'))
@@ -44,4 +44,5 @@ result={'schema':'oric.26al-chronometry-deep-sensitivity.v2','analysis_status':'
                       'The cross-check is deterministic and post hoc; no significance test is invented.',
                       'This is not a thermal simulation, a heating probability, or a do(m) intervention.'],
         'section_XIV_credit':False}
+OUT.parent.mkdir(parents=True,exist_ok=True)
 OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n'); print(OUT)
