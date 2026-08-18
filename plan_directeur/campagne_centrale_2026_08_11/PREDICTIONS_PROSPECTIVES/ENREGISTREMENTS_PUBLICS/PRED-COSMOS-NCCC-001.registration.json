@@ -1,24 +1,31 @@
 {
-  "schema": "oric.public-blind-registration-package.v1",
-  "prediction_id": "PRED-COSMOS-NCCC-001",
-  "source_file": "PRED-COSMOS-NCCC-001.json",
-  "source_sha256": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
-  "frozen_on": "2026-08-11",
-  "hypothesis": "Une cohorte meteoritique independante conserve une information de reservoir NC/CC decodable au-dessus du hasard.",
-  "seen_data": [
-    "SOSSI et jeux isotopiques deja versionnes dans ORI-C"
-  ],
-  "forbidden_or_hidden_data": [
-    "Toute nouvelle cohorte publiee ou acquise apres ce gel"
-  ],
-  "predicted_variable": "balanced accuracy de classification NC/CC en validation reservee",
-  "prediction": ">= 0.70",
-  "competitor": "classification permutee et modele sans variables isotopiques de provenance",
-  "success": "borne basse bootstrap 95 % > 0.50 et accuracy >= 0.70",
-  "failure": "borne basse bootstrap 95 % <= 0.50 ou accuracy < 0.70",
-  "registration_service": "OSF Registries",
-  "public_url": null,
-  "registered_at": null,
-  "status": "package_ready_external_account_required",
-  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse"
+ "schema": "oric.public-blind-registration-package.v1",
+ "prediction_id": "PRED-COSMOS-NCCC-001",
+ "source_file": "PRED-COSMOS-NCCC-001.json",
+ "source_sha256": "a23120969954efb1831338ac05218a82317746b57be9f4d2356d86045824e5f6",
+ "frozen_on": "2026-08-11",
+ "hypothesis": "Une cohorte meteoritique independante conserve une information de reservoir NC/CC decodable au-dessus du hasard.",
+ "seen_data": [
+  "SOSSI et jeux isotopiques deja versionnes dans ORI-C"
+ ],
+ "forbidden_or_hidden_data": [
+  "Toute nouvelle cohorte publiee ou acquise apres ce gel"
+ ],
+ "predicted_variable": "balanced accuracy de classification NC/CC en validation reservee",
+ "prediction": ">= 0.70",
+ "competitor": "classification permutee et modele sans variables isotopiques de provenance",
+ "success": "borne basse bootstrap 95 % > 0.50 et accuracy >= 0.70",
+ "failure": "borne basse bootstrap 95 % <= 0.50 ou accuracy < 0.70",
+ "registration_service": "OSF Registries",
+ "public_url": "https://osf.io/bmkgp/",
+ "registered_at": "2026-08-13T00:48:21.405901",
+ "status": "publicly_registered",
+ "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse",
+ "registration_guid": "bmkgp",
+ "verification_2026_08_18": {
+  "seuils_et_criteres_concordent_avec_le_gel": true,
+  "date_de_gel_2026_08_11_citee_dans_l_enregistrement": true,
+  "empreinte_sha256_du_gel_citee_dans_l_enregistrement": false,
+  "note": "Le texte enregistre reprend les seuils, le modele concurrent et les criteres de succes et d'echec du paquet gele, ainsi que la date de gel. Il ne cite pas l'empreinte empreinte_avant_ouverture : le lien entre l'enregistrement public et le fichier versionne est donc affirme, non verifiable par un tiers. A corriger sur les enregistrements restants en incluant le sha256 dans le texte soumis."
+ }
 }

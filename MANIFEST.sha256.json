@@ -8213,14 +8213,14 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/PRED-COSMOS-NCCC-001.registration.json",
-      "size": 1190,
-      "sha256": "c412c83ed6c2fe4c8c0552b65b00a44c9f2098b4f0de47cc518bcd3f92cf82f7",
+      "size": 1837,
+      "sha256": "08f0634fe78755f55c3e2a37bbb571cfd5ccdbfc18748b58a152c65499d4aa04",
       "storage": "inline"
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/PRED-MATIERE-ABLATION-001.registration.json",
-      "size": 1229,
-      "sha256": "1ee0cf001b7a50cb9480e6d89ec703baf4b3c3d402212cebc2a29238e76cb632",
+      "size": 1876,
+      "sha256": "8ab44e93c4fa9c9034ff3e3722471de14050b82cf09f5f7309c3f20c28ff3e23",
       "storage": "inline"
     },
     {
@@ -8237,8 +8237,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/ENREGISTREMENTS_PUBLICS/PRED-VIVANT-HISTOIRE-001.registration.json",
-      "size": 1203,
-      "sha256": "054022cfc6e2e6232aecffd33591d54fdc3c3ba15ac768c544d185dce89804f5",
+      "size": 1850,
+      "sha256": "d0d639592b07b34423d250df534673d47ba89bf8a931ff65ea0d645856544e22",
       "storage": "inline"
     },
     {
@@ -8537,8 +8537,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PREDICTIONS_HORS_ECHANTILLON_AUDIT.json",
-      "size": 2986,
-      "sha256": "3dbba8aab625d3c6cf3fb26534e7cc1e9dab42df72c30ea69fef096edfd31743",
+      "size": 3359,
+      "sha256": "7a69f3e06b3b9225273a63a0103f57bfcb803a89f656351423bf254c63b797f5",
       "storage": "inline"
     },
     {
