@@ -302,7 +302,7 @@
     "paleoclimate_timeseries": {
       "data_kind": "empirical_compilation",
       "eligible_for_empirical_proof": true,
-      "limitations": "Séries paléoclimatiques publiées; aucun test générique n’est autorisé avant protocole long, chronologie et contrôles gelés.",
+      "limitations": "Séries paléoclimatiques publiées; aucun test générique n’est autorisé avant protocole long, chronologie et contrôles gelés. Audit 2026-08-18: dans la table canonique paleoclimate_timeseries.csv, seule la colonne target est une mesure (pile benthique LR04). forcing_1 vaut exactement 2600 - time_kyr sur les 2601 lignes, soit l’axe temporel retourné et non un forçage; forcing_2 est constante par morceaux. Aucune des deux ne peut servir de forçage admissible, et aucun test de mémoire, D-H-L ou restauration ne peut être crédité à partir d’elles. Les forçages et proxys mesurés correspondants vivent dans 02_branche_systeme_solaire/paleo_history_01/donnees_normalisees/ et relèvent du protocole gelé PALEO-HISTORY-01.",
       "scope_mode": "allow_list",
       "summary": {},
       "supported_test_ids": []

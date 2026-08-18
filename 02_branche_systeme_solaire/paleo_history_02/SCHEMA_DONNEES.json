@@ -1,0 +1,69 @@
+{
+  "schema": "oric.paleo-history-02.data.v1",
+  "statut": "projet_non_scelle",
+  "herite_de": "oric.paleo-history-01.data.v1",
+  "intervalle_primaire_ka": [0, 800],
+  "jeux_obligatoires": [
+    "LR04",
+    "pile_benthique_independante",
+    "proxy_niveau_marin_independant",
+    "EPICA_temperature",
+    "EPICA_CO2",
+    "EPICA_poussieres",
+    "Vostok",
+    "insolation_convention_1",
+    "insolation_convention_2",
+    "controle_negatif_rpi"
+  ],
+  "champs_communs": [
+    "dataset_id",
+    "source_id",
+    "age_ka_bp",
+    "age_uncertainty_ka",
+    "proxy_name",
+    "proxy_value",
+    "proxy_unit",
+    "quality_flag",
+    "sha256_source"
+  ],
+  "incertitude_chronologique": {
+    "marin": {
+      "source": "ensembles posterieurs PALMOD 2.0.0",
+      "doi": "10.1594/PANGAEA.984602",
+      "article_doi": "10.5194/essd-18-3013-2026",
+      "license": "CC-BY-4.0",
+      "compilation_sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
+      "tirages_par_site": 1000,
+      "rattachement": "tirage entier par realisation, interpolation lineaire en profondeur sur les profondeurs mesurees; aucun melange de tirages",
+      "releve": "ACQUISITION_PALMOD_ENSEMBLES.json"
+    },
+    "glaciaire": {
+      "source": "AICC2023",
+      "archive_sha256": "a0498efbcf641fc1350182dd37b9340295f53845818cdea2fb72f8a9a3c08a41",
+      "audit": "02_branche_systeme_solaire/paleo_history_01/AICC2023_UNCERTAINTY.json",
+      "rattachement": "sigma par tranche d'age, tirage gaussien tronque a +/-3 sigma, monotonie age-profondeur imposee par rejet"
+    },
+    "insolation": {
+      "source": "sans objet",
+      "justification_explicite": "une solution astronomique definit l'axe temporel et ne porte pas d'incertitude de datation"
+    }
+  },
+  "controle_negatif_reel": {
+    "nature": "variable mesuree sur les memes carottes, memes profondeurs, meme plan d'echantillonnage, de mecanisme a priori independant de l'histoire climatique de surface",
+    "candidat": "paleointensite geomagnetique relative (RPI)",
+    "carottes_recoupees_avec_PALMOD": ["ODP 983", "ODP 984", "ODP 1089", "IODP U1308"],
+    "condition_anti_circularite": "la RPI doit etre placee sur la chronologie posterieure PALMOD du meme site; toute serie dont la chronologie est accordee au d18O (PISO-1500, SINT-2000 et assimiles) est rejetee",
+    "statut_acquisition": "non_acquis",
+    "recoupement_etabli": "par nom de carotte uniquement; l'existence d'une serie RPI publiee, accessible et couvrant l'intervalle reste a verifier pour chacune",
+    "prealable_au_scellement": true
+  },
+  "interdictions": [
+    "chronologie sans incertitude ou justification explicite",
+    "interpolation du bloc test utilisant sa cible future",
+    "remplacement d'une mesure absente par une sortie de modele",
+    "selection d'un horizon apres observation des scores",
+    "imputation d'une incertitude d'age absente",
+    "usage d'une serie de controle negatif dont la chronologie est accordee au climat",
+    "synthese d'un tirage chronologique au-dela des posterieurs publies"
+  ]
+}
