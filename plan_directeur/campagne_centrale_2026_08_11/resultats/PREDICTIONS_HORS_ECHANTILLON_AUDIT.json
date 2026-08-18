@@ -1,95 +1,86 @@
 {
- "schema": "oric.section-xiv.prediction-audit.v1",
- "strict_success_definition": "résultat hors échantillon sur test indépendant, protocole gelé et enregistré publiquement avant les données, et témoin apparié battu",
- "predictions": [
-  {
-   "id": "PRED-COSMOS-NCCC-001",
-   "branch": "matiere",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": true,
-   "public_preregistration_present": true,
-   "registration_status": "publicly_registered",
-   "registration_public_url": "https://osf.io/bmkgp/",
-   "registration_registered_at": "2026-08-13T00:48:21.405901"
-  },
-  {
-   "id": "PRED-MATIERE-ABLATION-001",
-   "branch": "matiere",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": true,
-   "public_preregistration_present": true,
-   "registration_status": "publicly_registered",
-   "registration_public_url": "https://osf.io/px4rd/",
-   "registration_registered_at": "2026-08-13T10:16:01.125189"
-  },
-  {
-   "id": "PRED-MATIERE-WAVE-HISTORY-001",
-   "branch": "matiere",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": false,
-   "public_preregistration_present": false,
-   "registration_status": "package_ready_external_account_required",
-   "registration_public_url": null
-  },
-  {
-   "id": "PRED-PALEO-HISTORY-02",
-   "branch": "systeme_solaire",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": true,
-   "public_preregistration_present": false,
-   "registration_status": "submitted_pending_osf_approval_since_2026-08-13T12:28:39",
-   "registration_public_url": null
-  },
-  {
-   "id": "PRED-VIVANT-HISTOIRE-001",
-   "branch": "vivant",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": true,
-   "public_preregistration_present": true,
-   "registration_status": "publicly_registered",
-   "registration_public_url": "https://osf.io/kfju5/",
-   "registration_registered_at": "2026-08-13T10:37:53.047169"
-  },
-  {
-   "id": "PRED-VIVANT-PETRUNGARO-NIT-001",
-   "branch": "vivant",
-   "status": "frozen_locally_awaiting_external_data",
-   "data_opened": false,
-   "result_present": false,
-   "strict_success": false,
-   "matched_control_declared": true,
-   "public_preregistration_present": false,
-   "registration_status": "package_ready_external_account_required",
-   "registration_public_url": null
-  }
- ],
- "strict_success_count": 0,
- "successful_branches": [],
- "branches_required": [
-  "matiere",
-  "systeme_solaire",
-  "vivant"
- ],
- "all_branches_have_success": false,
- "registration_audit_2026_08_18": {
-  "publicly_registered": 3,
-  "pending_osf_approval": 1,
-  "not_submitted": 2,
-  "note": "La presence d'un preenregistrement public ne vaut pas succes strict : strict_success reste conditionne a l'ouverture des donnees et a l'atteinte du critere. Cet audit ne fait qu'enregistrer l'anteriorite publique, qui est la condition d'eligibilite du §XIV-3."
- }
+  "schema": "oric.section-xiv.prediction-audit.v1",
+  "strict_success_definition": "résultat hors échantillon sur test indépendant, protocole gelé et enregistré publiquement avant les données, et témoin apparié battu",
+  "predictions": [
+    {
+      "id": "PRED-COSMOS-NCCC-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": true,
+      "registration_status": "publicly_registered",
+      "registration_public_url": "https://osf.io/bmkgp/"
+    },
+    {
+      "id": "PRED-MATIERE-ABLATION-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": true,
+      "registration_status": "publicly_registered",
+      "registration_public_url": "https://osf.io/px4rd/"
+    },
+    {
+      "id": "PRED-MATIERE-WAVE-HISTORY-001",
+      "branch": "matiere",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": false,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
+    },
+    {
+      "id": "PRED-PALEO-HISTORY-02",
+      "branch": "systeme_solaire",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
+    },
+    {
+      "id": "PRED-VIVANT-HISTOIRE-001",
+      "branch": "vivant",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": true,
+      "registration_status": "publicly_registered",
+      "registration_public_url": "https://osf.io/kfju5/"
+    },
+    {
+      "id": "PRED-VIVANT-PETRUNGARO-NIT-001",
+      "branch": "vivant",
+      "status": "frozen_locally_awaiting_external_data",
+      "data_opened": false,
+      "result_present": false,
+      "strict_success": false,
+      "matched_control_declared": true,
+      "public_preregistration_present": false,
+      "registration_status": "package_ready_external_account_required",
+      "registration_public_url": null
+    }
+  ],
+  "strict_success_count": 0,
+  "successful_branches": [],
+  "branches_required": [
+    "matiere",
+    "systeme_solaire",
+    "vivant"
+  ],
+  "all_branches_have_success": false
 }
