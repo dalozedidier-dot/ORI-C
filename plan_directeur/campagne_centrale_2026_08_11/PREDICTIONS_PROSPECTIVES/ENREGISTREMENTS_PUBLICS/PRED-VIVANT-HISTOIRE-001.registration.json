@@ -23,9 +23,10 @@
  "blindness_rule": "aucune donnée interdite ne doit être ouverte entre publication et scellement de l'analyse",
  "registration_guid": "kfju5",
  "verification_2026_08_18": {
-  "seuils_et_criteres_concordent_avec_le_gel": true,
-  "date_de_gel_2026_08_11_citee_dans_l_enregistrement": true,
+  "methode": "controle de presence dans le texte OSF recupere par l'API, pas une equivalence champ par champ : les seuils numeriques du critere et la date de gel 2026-08-11 y figurent. Ce controle est faible et ne prouve pas que chaque champ du paquet gele a ete transcrit sans derive.",
+  "seuils_numeriques_presents": true,
+  "date_de_gel_presente": true,
   "empreinte_sha256_du_gel_citee_dans_l_enregistrement": false,
-  "note": "Le texte enregistre reprend les seuils, le modele concurrent et les criteres de succes et d'echec du paquet gele, ainsi que la date de gel. Il ne cite pas l'empreinte empreinte_avant_ouverture : le lien entre l'enregistrement public et le fichier versionne est donc affirme, non verifiable par un tiers. A corriger sur les enregistrements restants en incluant le sha256 dans le texte soumis."
+  "consequence": "le lien entre l'enregistrement public et le fichier versionne n'est pas verifiable par un tiers a partir du texte OSF seul. Cote depot, le lien est verrouille par source_sha256 et controle par tests/test_osf_preregistration.py. A corriger sur les enregistrements restants en incluant le sha256 dans le texte soumis."
  }
 }
