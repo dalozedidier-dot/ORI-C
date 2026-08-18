@@ -7420,9 +7420,45 @@
       "storage": "inline"
     },
     {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/ACQUISITION_GEOROC.json",
+      "size": 74107,
+      "sha256": "1a47e7408d294f60a1eac4713aafcb48e721119eb651248194cfd4c8d7d2694d",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/ACQUISITION_bundle.json",
+      "size": 29265,
+      "sha256": "d30b10d5f3927bb0b88dd10fdb32e1c752af80e792897202b5d79cac560a1ddc",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/LISEZ_MOI_bundle.md",
+      "size": 9507,
+      "sha256": "0de03d74f020bd549a959d83028bf050bcdaf9f60c5012f537a730e5c6f6e9ac",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/MANIFESTE_bundle.csv",
+      "size": 195436,
+      "sha256": "4749ddf5d95ac62c4a5ce6b26a6ca5f5aeba51d83cb0ba0b44f4f3f4a1a8b882",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/MANIFESTE_bundle.json",
+      "size": 288017,
+      "sha256": "6c7af6c4f9a25198ce4abc9ef425ad531f7808f2f98ecd6a0bfdd5024dec3f19",
+      "storage": "inline"
+    },
+    {
       "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/NOTICE_TABLES_CANDIDATES.md",
       "size": 12281,
       "sha256": "b683fddd7974244e0b5ea4568256cbb227c91108accbcf949529debb65f667a8",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/donnees_reelles_2026_08_07/documentation_source/REGISTRES_DU_BUNDLE.md",
+      "size": 4168,
+      "sha256": "a50fb58eb76a7835ef28193c6db05df2e67c2e09a477fb95a85e94ae9f471a6f",
       "storage": "inline"
     },
     {
@@ -11358,7 +11394,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "70359eb1a3aa7b639f9d17ea2945c867fbd77bc5df24615c51c9ebb41de20d9f",
+      "sha256": "7a43901b830dd7fafa784c3441371d4c70d0c7de82ed8416a013bb3777a8bb53",
       "storage": "inline"
     },
     {

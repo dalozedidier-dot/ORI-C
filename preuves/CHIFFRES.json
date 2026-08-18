@@ -244,14 +244,14 @@
       "value": 1847
     },
     {
-      "display": "1 963",
+      "display": "1 969",
       "id": "MAIN_MANIFEST_FILES",
       "pointer": "/files",
       "source": "MANIFEST.sha256.json",
       "targets": [],
       "tolerance": 0,
       "transform": "len",
-      "value": 1963
+      "value": 1969
     },
     {
       "display": "20 stades",

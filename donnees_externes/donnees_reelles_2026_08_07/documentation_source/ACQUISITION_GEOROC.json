@@ -1,0 +1,1676 @@
+{
+  "schema": 1,
+  "date": "2026-08-07",
+  "fournisseur": "GEOROC / DIGIS, Universite de Goettingen",
+  "licence": "CC BY-SA 4.0",
+  "fichiers": 185,
+  "octets": 427661792,
+  "echecs": [],
+  "entrees": [
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ADAKITE.csv",
+      "octets": 1081073,
+      "sha256": "0620e9e2890cdec9113cfe4895c2c494501626c095b82e340bf5a61dd2c8564b",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173520"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ALKALI_BASALT_part1.csv",
+      "octets": 3974424,
+      "sha256": "72a811d66ededcd4c256a3601a641ac20197d1a69691ca0b820d57dd265c304f",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173464"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ALKALI_BASALT_part2.csv",
+      "octets": 6507625,
+      "sha256": "acacdd30979d90cadf095d6a8834d54099044ce9cdfbb2791d1b491bc1329876",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173462"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ANDESITE_part1.csv",
+      "octets": 10131108,
+      "sha256": "669df1260c534b911c1f8ec253bca259a10fc57a11f7cde4cd9ed779d233b6a5",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173495"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ANDESITE_part2.csv",
+      "octets": 7441105,
+      "sha256": "a05437675bb5775ab5f4769b52fffc34b1e68a13cef170379b2c5accdfc622c3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173441"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ANDESITE_part3.csv",
+      "octets": 12466057,
+      "sha256": "88ed19ac8c29959373776b4398cd61eeae068de2c65cee9fc91868e383b63ed3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173523"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ANKARAMITE.csv",
+      "octets": 633743,
+      "sha256": "6451df95b7bc2a9ddd09f789612a91ec0f4405abb6c683a98985a01260afc923",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173435"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_ANORTHOSITE.csv",
+      "octets": 500226,
+      "sha256": "6c1cb610bcf854b03de1e8969a8409a455740d2268439bfb893325948fca29f3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173482"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALTIC-ANDESITE_part1.csv",
+      "octets": 7563113,
+      "sha256": "51ff151efc75673441b23ffb8db3b45387545d23aace9a35e13427ac4fbc0bed",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173501"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALTIC-ANDESITE_part2.csv",
+      "octets": 9099241,
+      "sha256": "7314e0ba0897f556e1900be4980434ea04a4bfe126fdaab2b9c4e62668d2bbef",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173479"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALTIC-TRACHYANDESITE.csv",
+      "octets": 2333475,
+      "sha256": "12629ce3684af186af741e5d2e0a9efe644e47aa5432b56a6c4ff2534afbcb80",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173496"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part1.csv",
+      "octets": 11170979,
+      "sha256": "05a108e7ad36f43037b2e91e753fd59f94c4858f3627c58a3d9d6cf2871be0bf",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173499"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part2.csv",
+      "octets": 8647635,
+      "sha256": "faff9968a76af6b4437cc7eb8e88a8ceecfdfcf0235a7d2662d1f649daa1bc61",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173470"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part3.csv",
+      "octets": 9146475,
+      "sha256": "7324f018cf6385a4a972e238e66d30398937c6ff1a31518fd1b0f3804c8a0cb2",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173491"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part4.csv",
+      "octets": 7142202,
+      "sha256": "8eb27106cc159ff6c3a6d9c9dce549601403eec29133af9a1552c0cf2e009c1e",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173445"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part5.csv",
+      "octets": 7138949,
+      "sha256": "d621cc4e162f8fe3e40707cf7dbdf33265eb3b7871c48049612680a77ba291dd",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173521"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part6.csv",
+      "octets": 8470368,
+      "sha256": "b7b7d86c7bb7821186d329b39d72e2a4bd53bab5f20bcfd493ce316e84be31e1",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173450"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part7.csv",
+      "octets": 12507299,
+      "sha256": "9af69c82c99af70a35ca67f35a9c3f9b99cac3d5974e6b58005ec533c4c8724d",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173475"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part8.csv",
+      "octets": 13064013,
+      "sha256": "672e26aeb6b1ac6edd96fd9f92092fb6fbf9d6c3b1aa73087a277328fdb73151",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173451"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASALT_part9.csv",
+      "octets": 12268403,
+      "sha256": "aa077239e09366bdaec18bf3dffe990a9a2dabf665ba1b7678157eed8670d9dd",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173453"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BASANITE.csv",
+      "octets": 6144555,
+      "sha256": "8da01507ebc3d21c99e4510bcca240ed43d52cfb61b1d2fbaabb99b25eb6f4ed",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173476"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BENMOREITE.csv",
+      "octets": 613563,
+      "sha256": "ceb3a6e2a0a7e2aea08b00a8759dc5cfa48652cd49cd36a9bf514b0aadadc5a8",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173522"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_BONINITE.csv",
+      "octets": 1437743,
+      "sha256": "59d62f10cf146aea5f19bcf6680a7966657617e7cee368117eae437cf26df569",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173508"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_CALC-ALKALI_BASALT.csv",
+      "octets": 709083,
+      "sha256": "f7d5a0e5747a2e475ddef9f28d692ca465ae3f7525287282b18eac84ead2d1c2",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173449"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_CARBONATITE.csv",
+      "octets": 3544659,
+      "sha256": "56c0bbd97c7b49bd83b269a8f759cabc229c241d205e85567143eaa32e81a71e",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173463"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_COMENDITIC_RHYOLITE.csv",
+      "octets": 601202,
+      "sha256": "58046c626fb71dc9b4b41f10b112dcf5bda0d7dbc421c1a536aa6284da503de2",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173515"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_DACITE_part1.csv",
+      "octets": 5799155,
+      "sha256": "e37b838a6a5accd807c6ccf43a0a19649b115422d6b898690bbe51f942da765a",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173447"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_DACITE_part2.csv",
+      "octets": 7872468,
+      "sha256": "1442a7a2d41cd5f8765c1afdeeddcc11edcc41e36c2ce97bef54c2d58713db58",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173437"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_DIORITE.csv",
+      "octets": 6735864,
+      "sha256": "81603317b83902f572b08adab1b1ed594837f648e0db7a89774f24ef596add4e",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173519"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_DOLERITE.csv",
+      "octets": 9085687,
+      "sha256": "93b56f8638a109ce5d6ab87d29a58b923ce2b7182b1ed482c0874cf85bf129cc",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173443"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_FOIDITE.csv",
+      "octets": 370644,
+      "sha256": "0b16410fe075bdc097503c11cfa5cf076f7f30969057e9ab30a378101fffdfdf",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173516"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GABBRODIORITE.csv",
+      "octets": 673778,
+      "sha256": "b0d20deae49a99b16199eb8d223eccc0b4e3301efefb01dffefbb57908d12b4c",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173448"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GABBRONORITE.csv",
+      "octets": 1096065,
+      "sha256": "289b3455b0f738371a0b4ec85a3931178ce16d78ce88088209f7eb4ef1a7ad13",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173502"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GABBRO_part1.csv",
+      "octets": 7877419,
+      "sha256": "07c38952900ec8b442bdd760e2c78ebc7220e265c696c090427088bd7faf5c45",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173514"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GABBRO_part2.csv",
+      "octets": 5049032,
+      "sha256": "e42b33618c28ea4f79d14072dfde88132b6a8ad645d3b69dc7f7187de2916717",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173438"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GRANITE_part1.csv",
+      "octets": 9658909,
+      "sha256": "0afde47e310808cca8b7b56aa2e1242a45bc0acd87777e9ae99d34696cdf432b",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173469"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GRANITE_part2.csv",
+      "octets": 12964070,
+      "sha256": "7bbb6ddba67e9a99d61909c2d5b87bdcf4c1310870c54c97dad90175f20801fe",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173500"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GRANITE_part3.csv",
+      "octets": 2124783,
+      "sha256": "b55d1113709a5e06a7e1f5923132b61d77d81a792b0fd881b7c2bedf56ccfe38",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173465"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_GRANODIORITE.csv",
+      "octets": 7778215,
+      "sha256": "dda95db958a5305eddb450aaaddf43a56692ced08340283d78a7b529c12e8c81",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173504"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_HAWAIITE.csv",
+      "octets": 2671225,
+      "sha256": "add438c9c5ea5bf18291c099d40f1f7596c68949df9fcaeb94d59ccbf99cd244",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173471"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_LAMPROITE.csv",
+      "octets": 1279171,
+      "sha256": "c54d0325ee1041534262305db6846ae0a3249c01f3ccc2e5a216c2ef145077e6",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173460"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_LAMPROPHYRE.csv",
+      "octets": 1833271,
+      "sha256": "191993b8f42ea2b3d4a128505e0ce49646ca4246ebf08b050098e172311657d3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173461"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_LATITE.csv",
+      "octets": 1295494,
+      "sha256": "3d4833d8b60e0422403e36ef40e83d19088dda6f99b6efc72fc2c1c60faec34a",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173513"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_LEUCITITE.csv",
+      "octets": 790576,
+      "sha256": "1bec9fbf989da43038ea89e8ead0202a7f06c4694e824b16f807754962ee5a26",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173509"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MELILITITE.csv",
+      "octets": 766876,
+      "sha256": "5a92ef5c4963f0d0c28ce7c4e094d6d58aeddb57dbac5bbda9c4ac5697d22813",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173454"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MONZODIORITE.csv",
+      "octets": 1518659,
+      "sha256": "e5ca19a205423f05e8077cb734d88960ea80e8cc9cde72bcb5b9a3d3d07aec94",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173518"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MONZOGABBRO.csv",
+      "octets": 258139,
+      "sha256": "c8df359e66dcdc22b8dd9df9efaad485de3248c429e4dbb27576ac5325753e4c",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173446"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MONZOGRANITE.csv",
+      "octets": 4591203,
+      "sha256": "6f0924ffe76a4fc3658fb5b6fe128353712f5fac6fd3cca6a43e12b1a7072904",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173473"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MONZONITE.csv",
+      "octets": 2576962,
+      "sha256": "571889e1e650d829a8683e3e0d500587d433fbd2491d3fc155305ad12742f960",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173511"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_MUGEARITE.csv",
+      "octets": 1059369,
+      "sha256": "3a563cc986b15524edded6faba6e14ee78281703b1d5d3fb4f83eb01cf51d961",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173468"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_NEPHELINITE.csv",
+      "octets": 2329524,
+      "sha256": "cd488b3e5bc8893778069b75cddf8d12968136f7aa350a93ffd819b3fb18ad39",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173512"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_NORITE.csv",
+      "octets": 607666,
+      "sha256": "0082e9ac7c91433d3a80dfcc0ccd193dd6cf30829a791ae4ce081be730c3b43f",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173524"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_OCEANITE.csv",
+      "octets": 217665,
+      "sha256": "59dd3170dc1c526de51e82beb49b8a645af711fbd03450ff689e1bc0bc1f6d31",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173483"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_PANTELLERITIC_RHYOLITE.csv",
+      "octets": 478369,
+      "sha256": "e329e86d6cdf2f26d110b4ccf1dabd9b25db19bd621b81c488b472ed73813cb3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173459"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_PHONOLITE.csv",
+      "octets": 4070715,
+      "sha256": "7947d89329bac51b3fe3c59e27679805e4ced60c112ecf899c68e1772dc609db",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173444"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_PHONOLITIC-TEPHRITE.csv",
+      "octets": 819863,
+      "sha256": "81ac3e72f22f224bffe3763ed3330ac9cb11751504af6eb7f81728950eeb1000",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173487"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_PHOSCORITE.csv",
+      "octets": 143402,
+      "sha256": "5f0fcdc65c7b20425b4684f9b06996c2209153bce0feef4f52503ecbcab3b205",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173488"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_PICROBASALT.csv",
+      "octets": 467709,
+      "sha256": "a0f41f881fb9bf829636ffca8207ff50affda8d6917acc857abeeb88f52590a0",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173480"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_RHYODACITE.csv",
+      "octets": 1897554,
+      "sha256": "552071641c83bc50a9fca4a9437c6e11a2fc8c9fdc407a3b784efc5ec12ecc43",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173458"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_RHYOLITE_part1.csv",
+      "octets": 7000911,
+      "sha256": "045368f2e2c9cf5bec489851aaa3d8da78746f5404c787a243be1cc8bfb7a404",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173494"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_RHYOLITE_part2.csv",
+      "octets": 8278786,
+      "sha256": "85f3b7b9f26e050c7e0781e3f4f49efaeec0019bbc6b44fc0024692655c615b4",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173493"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_RHYOLITE_part3.csv",
+      "octets": 10059850,
+      "sha256": "d30ddaefc9ea14cafca17a9c10ea35edf310f1d7e04cb7d4af5a8fe920d06af8",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173474"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_SHOSHONITE.csv",
+      "octets": 1227111,
+      "sha256": "849b35972b96ca78b2b1d63685a600e4d39c1a452ac1db4eeda2a570dd2d49aa",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173478"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_SUBALKALI_BASALT.csv",
+      "octets": 497436,
+      "sha256": "14924c414f4d94d1a96fce0a2c30c3fa321cad87b22005bbec4e991644fccb61",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173506"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_SYENITE.csv",
+      "octets": 4080875,
+      "sha256": "8e6917c59be968794b67132649a14aac73846bec9335e9fd053e5b70eea05ca3",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173489"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_SYENOGRANITE.csv",
+      "octets": 1529863,
+      "sha256": "806546ba3e204bd5c2a9cb3a96f4f4cca23239d1e17b845ae0f4f8eb2608e940",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173486"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TEPHRITE.csv",
+      "octets": 1506314,
+      "sha256": "18ccee5cf88d4db1246d46459dc453c36c3e94ab48d9ece75fbbd87e9ba1562f",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173497"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TEPHRITIC-PHONOLITE.csv",
+      "octets": 706042,
+      "sha256": "fcd30f4be085840ef6e5bfb59801705f73199ed156c58de3381b9e9e5fc592f9",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173467"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_THOLEIITIC_ANDESITE.csv",
+      "octets": 362893,
+      "sha256": "0e2ae31433f2908d32251d52530be0bbcb2f974d50ebd08259cbbbf60041a0fe",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173503"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_THOLEIITIC_BASALT_part1.csv",
+      "octets": 7442948,
+      "sha256": "4d139681eb7c0258a5730ea43a8f4557bf53216cfe6c473bdee6b0a376b0bc9a",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173484"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_THOLEIITIC_BASALT_part2.csv",
+      "octets": 10572709,
+      "sha256": "35b62eacf7c2d4c0e4516fc441c3eb0c1aed8aaaacca5c9166403b3e1bed2404",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173517"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TONALITE.csv",
+      "octets": 2499843,
+      "sha256": "03cde842fc2d527ed3b6bb6ed004271acaacfcc33d19e22c4dd458595501b53f",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173436"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRACHYANDESITE.csv",
+      "octets": 3623060,
+      "sha256": "25a52d815530d67064b528bafc52d5aeb825a19cf28e8363ac7c195b2f0a9ff9",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173452"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRACHYBASALT.csv",
+      "octets": 3664037,
+      "sha256": "dcb36ceaa17766e7eee8f4adac2a1d238ca9850fa6536598e90a04f6583d0fa4",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173442"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRACHYDACITE.csv",
+      "octets": 825694,
+      "sha256": "ccaf49c98ec6ada99ff058194176d1eae45582bc054cbda00aa0012be55b20c4",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173477"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRACHYTE.csv",
+      "octets": 8009846,
+      "sha256": "674656b2893a949e86bd63781d940bc05f1034e8386451a81b198f639e6ab89a",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173485"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRANSITIONAL_BASALT.csv",
+      "octets": 1346860,
+      "sha256": "e2719e82fffe6423a290a82ec46b7d6fe6511ddac05385ae43d7e5950f2ea576",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173472"
+    },
+    {
+      "dossier": "georoc_types_de_roches",
+      "nom": "2026-06-2JETOA_TRONDHJEMITE.csv",
+      "octets": 609151,
+      "sha256": "d4fe0204895a531afd26e0c76ef2a11f306e8a106e930039c6b427ff9e9c1815",
+      "doi": "10.25625/2JETOA",
+      "compilation": "GEOROC Compilation: Rock Types",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173492"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_ALDAN_SHIELD_ARCHEAN.csv",
+      "octets": 321067,
+      "sha256": "6959b5f1d1ce74ba6608d11847cf12e6427535040bc10b5854ec5ef336fcf6aa",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173869"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_AMAZONIAN_CRATON.csv",
+      "octets": 950780,
+      "sha256": "2123a1cba47aa354555582fecdfff7540a9aa8b1527e0ee0a705db8f11d30b57",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173854"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_BALTIC_SHIELD_ARCHEAN.csv",
+      "octets": 4209880,
+      "sha256": "4469526c02cbb473fae14e1f69525bf865bb0197387b6368bf99aefdcc055f98",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173863"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_BASTAR_CRATON.csv",
+      "octets": 94925,
+      "sha256": "0fd5dca7583c256a35e91ab81ef120e38bc1fe283dbc16407f9ae2fe73ed5d19",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173852"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_BUNDELKHAND_CRATON.csv",
+      "octets": 309858,
+      "sha256": "013262ec45286f1aed276355e9a34b09159a0694dce6ddcd638ed8f1107c1679",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173848"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_CHURCHILL_PROVINCE_ARCHEAN.csv",
+      "octets": 263824,
+      "sha256": "fb3557f619a82676b2cc72fdc992180e2b233e3cad968aab95c65bb590d49df5",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173866"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_CONGO_CRATON.csv",
+      "octets": 362845,
+      "sha256": "1880b2971baa9e3c44e312f711a9d6a8da785739b6ec9504bc3d37c3d2d7efc2",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173870"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_DHARWAR_CRATON_ARCHEAN.csv",
+      "octets": 2407194,
+      "sha256": "43a5bd01d590f11313af717d6063dd60d83d110bf905c759737cedafb3e58f6f",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173871"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_EAST_EUROPEAN_CRATON.csv",
+      "octets": 93085,
+      "sha256": "d6df9261119b85e9a3941ea8cc5d144eb82651ea687792a6d377afb59d5177e6",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173853"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_GAWLER_CRATON.csv",
+      "octets": 72890,
+      "sha256": "88bee7dd6ee4ddafaaa918ab985ff56dcef2044ea900e7ae14cc9821dd318de4",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173855"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_KAAPVAAL_CRATON_ARCHEAN.csv",
+      "octets": 3346850,
+      "sha256": "d3c433c1d82bd80417bd70bd5e8cbaf81ab3428fe14eb6a9113ee0ebbc2cb45d",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173851"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_LIMPOPO_BELT.csv",
+      "octets": 45706,
+      "sha256": "6bb6ca5ee6f8890e69116ebd15bcab8fcbe7e52bd615182c425bd6afbd08e99e",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173857"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_NORTH_ATLANTIC_CRATON_ARCHEAN.csv",
+      "octets": 2407458,
+      "sha256": "c07811dd5f6133fccb531ce7932b17f171822270a750e0a84086d245ec476a0a",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173872"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_NORTH_CHINA_CRATON.csv",
+      "octets": 2505963,
+      "sha256": "62961707fa44760fa930564c1a0128d8f7570912d6bbf9bcc7a92fec1832f350",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173868"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_OKHOTSK-OMOLON_CRATON.csv",
+      "octets": 6215,
+      "sha256": "ce00f2a717de68801851a0df36bf17e2f1396d7f05e9925d81dd3f1bfdd545e8",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173861"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_RAE_CRATON.csv",
+      "octets": 5874,
+      "sha256": "4daf6e0e7e2bdd72e7d4962b85be630db268f8cde23359182e8648dfbcd9f6bb",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173850"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SAO_FRANCISCO_CRATON_ARCHEAN.csv",
+      "octets": 768400,
+      "sha256": "e5b7b7e6bca5c6a3be58891ac44c534616dc46de9f57a48acec8b97d811de676",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173858"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SARMATIAN_CRATON.csv",
+      "octets": 120031,
+      "sha256": "c514561947a98942151f3f5f2a61aee1dd8b88f8036f7f62c334e0d0f62a4e3f",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173867"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SIBERIAN_CRATON_ARCHEAN.csv",
+      "octets": 110489,
+      "sha256": "6a4d2dbdfc5a097b8f07ff0d73d2df106a98edfe9a4b82f0afbe663d1c3e8534",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173873"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SINGHBHUM_CRATON_ARCHEAN.csv",
+      "octets": 727334,
+      "sha256": "89406a328f89dc4e2f7796a059cf8d542ea31ca54664e35d466245fb20d5b331",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173859"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SLAVE_PROVINCE_ARCHEAN.csv",
+      "octets": 350444,
+      "sha256": "b600a633281da3c4847944642856842b4c322165664ac443a642d00a4d9ca90a",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173864"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_SUPERIOR_PROVINCE_ARCHEAN.csv",
+      "octets": 5921367,
+      "sha256": "5bed283ed7a20e2d8c0b411e801c07df18fd50d2424f5127e074fff9faee6865",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173862"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_TANZANIA_CRATON_ARCHEAN.csv",
+      "octets": 348082,
+      "sha256": "222db38a0846b9e4a5e8749f4569aeb009d116190c554d052ea9b4061a6e5f77",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173849"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_WEST_AFRICAN_CRATON.csv",
+      "octets": 53291,
+      "sha256": "2197377ae969c9e0245898d16e6c745dbeaef1f28313c19822f9059dec6a96ab",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173865"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_WEST_AUSTRALIAN_CRATON.csv",
+      "octets": 4953001,
+      "sha256": "b7c774985e0cc5a27e24733ee89f908fa7792aed86a6390ae0637c0bca103da8",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173856"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_WYOMING_PROVINCE.csv",
+      "octets": 259241,
+      "sha256": "9488675e5d00b5070a850e96ced7aea4dafea6497b55aa7f9d7d92ff412c7e7a",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173875"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_YANGTZE_BLOCK.csv",
+      "octets": 200350,
+      "sha256": "d91ef95f5f051901c9eb52294de4b6cf3c8aedeef8aa61473eff55b4c8e6c35c",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173860"
+    },
+    {
+      "dossier": "georoc_cratons_archeens",
+      "nom": "2026-06-1KRR1P_ZIMBABWE_CRATON_ARCHEAN.csv",
+      "octets": 479724,
+      "sha256": "0a57dc6ad45fbfeec7f2fee395b0b43dd96d21c109718267058657e59a7701f2",
+      "doi": "10.25625/1KRR1P",
+      "compilation": "GEOROC Compilation: Archaean Cratons",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173874"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_AUSTRALIA.csv",
+      "octets": 1116619,
+      "sha256": "ae92be469da26f1421b5771481eaa507f885d945b65eac77697942096513a89a",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173752"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_AVANAVERA_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 10886,
+      "sha256": "57e621620b2173b8c1c7eee45ff881d8459b3de88e92a8c6ba4f0b11a53e9422",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173754"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_CENTRAL_ATLANTIC_MAGMATIC_PROVINCE_CAMP.csv",
+      "octets": 2933108,
+      "sha256": "7c470d4f7872ccd20e4a8373958ad4a6020984f3b6a360d908c9ba468ca8b81f",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173749"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_CHILCOTIN_PLATEAU_BASALTS.csv",
+      "octets": 41549,
+      "sha256": "511e607f4a51a09a6b9ff559b6be2f47d5bd5463567e04ead707fc0307d4df09",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173745"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_COMEI_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 177159,
+      "sha256": "fc0e5d347c6b48191032bbd327e0caf562aa7f812ae5ae64457ffd7762a80f07",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173761"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_DECCAN.csv",
+      "octets": 3741102,
+      "sha256": "23fab6a412c9849af7ddb94d3bc3e2994493dfd6ec11d15c6e33a821c54eece7",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173758"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_EMEISHAN.csv",
+      "octets": 2530243,
+      "sha256": "5f19bee25e165dd1194e666d3f07e310f6a6ccb2e9f6708994e0a5577c3d2c33",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173764"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_ETENDEKA_PROVINCE.csv",
+      "octets": 1021383,
+      "sha256": "b9af5ac68cfb3fc18a1c8fbc617c9365b4fcd4ed5511df76602b6d63a847c99a",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173760"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_ETHIOPIAN_PLATEAU.csv",
+      "octets": 752492,
+      "sha256": "72c4ae14522ee0762feb5db85fe4a365103333b131565562abfb609d3f0dd30d",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173755"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_FRANKLIN_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 221148,
+      "sha256": "163e915574d41a6fbfbafb9535fa0aa1d28c680113862a34eba717409787f0cf",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173756"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_GUNBARREL_IGNEOUS_EVENT_MAMMOTH-WESTERN_CHANNEL_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 182031,
+      "sha256": "4a058c07912d686d1d9bc9c4942b1da87d8e7ecc4100ce0d494b7c384ccfbf0d",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173753"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_HIGH_ARCTIC_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 715607,
+      "sha256": "907c5b10235dc71fb8ed3408455ba25de4620e78594bf86dcc38cb74328c6706",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173770"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_KAROO_AND_FERRAR_PROVINCES.csv",
+      "octets": 3723752,
+      "sha256": "b8683160e68e517e0436bb643d7a094ac594bbd774c245a2d41d9ec22b442042",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173743"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_KUONAMKA_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 33898,
+      "sha256": "c2ed0678cd69b363281821ab98a2424a8a6c9d3ba27d4fe0cf30c9f198a352cd",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173768"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_KUZNETSK_BASIN_OR_KUZBASS_TRAPS.csv",
+      "octets": 51042,
+      "sha256": "653dfb39ed6e5a82c9f417789a5007d48186d1294c681c25a73263a63ac56609",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173748"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_LAKE_VICTORIA_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 41906,
+      "sha256": "7ef5e6d4c6be9d23043beb30f3db423e37c4e1bd560ba45588c8a3578c5960f4",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173775"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MACKENZIE_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 837950,
+      "sha256": "45c5d75af4df99d3cbe7224dd6e4762928e246ad27dc22666cbe24e9751635b8",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173777"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MADAGASCAR_FLOOD_BASALT.csv",
+      "octets": 429258,
+      "sha256": "140a517da6fe16ca4829f59ef49220475243ceed4faa17d0768c0055e37a46a6",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173771"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MAIMECHA-KOTUI_PROVINCE.csv",
+      "octets": 43883,
+      "sha256": "34ac16246c99210da086235a43015eff37a5c2b8cc3db5e85cab004535099720",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173779"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MALANI_MAGMATIC_PROVINCE_INDIA.csv",
+      "octets": 338300,
+      "sha256": "ce695bc5d559842a062fd475fd563525ce0c1253d405b36bf13f5ecf310646a7",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173781"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MARATHON_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 137697,
+      "sha256": "3d92f193a0519cd137bb88a5d7e78380bb074836e13ef24df5ea5f723c94bd60",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173772"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MARNDA_MOORN_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 53582,
+      "sha256": "79333f9c6e1f08312b17fd90b74b17477b7f137f4257cdf45eec256a7ca0dad0",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173780"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MATACHEWAN_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 1085768,
+      "sha256": "a5e88c84cb5a97946adb679369b9a6030d50f8013cd2ff2dd6e6b6e1f46d4b4a",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173776"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_MIDCONTINENT_RIFT_SYSTEM-KEWEENAWAN.csv",
+      "octets": 1175189,
+      "sha256": "c61b9ba383ea20649e68aa0b2b33e8bbb911c7ed786d47450ba3ff7e68c60834",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173763"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_NANDALING_YANSHAN_BELT.csv",
+      "octets": 42205,
+      "sha256": "f7ae0c1bfb2941289033a30dcb03805ce724eb8b1b4d8a3d06864899b45e5ec1",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173744"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_NILUFER_UNIT_YENISEHIR_ASSOCIATION_PONTIDES.csv",
+      "octets": 40656,
+      "sha256": "9335dd831b1eef9b34dd635af21a1cdd1fa97f02d55f5f2246858cb57e629112",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173742"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_NORTH_ATLANTIC_IGNEOUS_PROVINCE_OR_NAIP.csv",
+      "octets": 6070787,
+      "sha256": "7ce5b26b022ecd21afb52dcbe784cde711d2df261612566909be8eaa17da2453",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173759"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_NORTH_GREENLAND_PROTEROZOIC.csv",
+      "octets": 79599,
+      "sha256": "0b7f08fa339e35247b6d1e4fe78a819575d17e0e28c4afe3c0abe9b949d78c74",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173765"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_PANJAL-SOUTH_QIANGTANG_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 153917,
+      "sha256": "d3338a26cfa1d792df76fafdd38bde31bb2c2ae276318a440599c9ae23044697",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173774"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_PARANA.csv",
+      "octets": 2493046,
+      "sha256": "4542b890061564c32a4a7873919dbc347c67c66b45aa339aaebfdac257fd2482",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173773"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_PESHAWAR_PLAIN_ALKALINE_IGNEOUS_PROVINCE.csv",
+      "octets": 10603,
+      "sha256": "c98f4c26d2ec0ca666489b6295f931ce2c39360ed4331902b0f1acd2f79bb9ff",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173762"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_QIANGTANG_FLOOD_BASALT_PROVINCE.csv",
+      "octets": 47878,
+      "sha256": "076060d66afd9900279819b0f12dc3ee6c30395f4c2d427c6223887bcc2318dd",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173767"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_RAJAHMUNDRY_TRAPS.csv",
+      "octets": 42577,
+      "sha256": "3e644fb68eaa9561a141e675449b0d080f8f8707ba5317744d2469accbeb138a",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173783"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_RAJMAHAL-BENGAL-SYLHET.csv",
+      "octets": 390796,
+      "sha256": "c94c855150868462d381714bc0117d3a4599eda0b2ef40e7f11b2c8d8d45e159",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173751"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_RAMPUR-GARHWAL-MANDI-DARLA_PROVINCE.csv",
+      "octets": 71136,
+      "sha256": "e900b3abb559ec3c311a575cb196b6b45364b028da05ca70e997d8b8c42bfaae",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173766"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_SEILAND_IGNEOUS_PROVINCE.csv",
+      "octets": 30359,
+      "sha256": "1c11cf89beb18ef56519c8766e316ee49b609ac82764ea58845e41f2438419b1",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173757"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_SIBERIAN_TRAPS.csv",
+      "octets": 4456766,
+      "sha256": "580281e8700887fcd960ba4488dffd60b578c2162772ce493617ef11a9ec776c",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173778"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_SOUTH_TETHYAN_SUTURE_ZONE_PAKISTAN.csv",
+      "octets": 13844,
+      "sha256": "9b68feea5a023069afba68fe3d1c0fec45bbcc3ae3ce4aad95dcd6facf83c927",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173740"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_TARIM_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 821257,
+      "sha256": "1ee987d4d99f949e89a454280993ba218f104401cbcfcc69d4f24e4076e368b4",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173750"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_TIBESTI_VOLCANIC_PROVINCE.csv",
+      "octets": 20467,
+      "sha256": "05fe5e2fbb0b2151fb81999a0933ecaf74ccac8fb77b8c06d9b9b509b036a669",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173782"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_UMKONDO_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 162315,
+      "sha256": "a88cecdaecf28054b6850404e342a9762ff995973f788610d7395279e12d4e0c",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173769"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_WRANGELLIA.csv",
+      "octets": 561415,
+      "sha256": "008e2340fbcfd8c359243469b1bc9ec9593986a83fe56082257746feba5b2e09",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173746"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_YANLIAO_LARGE_IGNEOUS_PROVINCE.csv",
+      "octets": 56910,
+      "sha256": "873cdfeae0bb7d4fe0971fa44d31bc8025cd7a8312476523df2355a00eb1beec",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173741"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_YELLOWSTONE-SNAKE_RIVER_PLAIN_VOLCANIC_PROVINCE.csv",
+      "octets": 7739536,
+      "sha256": "a045f7dafc946af56b782ee725f73eabbd6336782599351d4d77171f4356eae6",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173739"
+    },
+    {
+      "dossier": "georoc_trapps_continentaux",
+      "nom": "2026-06-WSTPOX_YEMEN_PLATEAU.csv",
+      "octets": 225713,
+      "sha256": "857742fd8bad24a0ef713fbaef2865adfb02f45debde4916e958b1a32bfea277",
+      "doi": "10.25625/WSTPOX",
+      "compilation": "GEOROC Compilation: Continental Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173747"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_BERMUDA_RISE.csv",
+      "octets": 243978,
+      "sha256": "8b7a6354a0de3355f62a046a6e5776eb1d58582fbffa690faa98b822d71b9e28",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173834"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_BRAZIL_BASIN.csv",
+      "octets": 5872,
+      "sha256": "ffb0014a9bbad402b9500720a602bece0921d7c1712c0c87ec94e04051621339",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173835"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_CAPE_VERDE_RISE.csv",
+      "octets": 4938,
+      "sha256": "87a908b38036f3ac01545cc4d7bb9819b043be6f75a59eac2eb13427dbc319f9",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173841"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_CARIBBEAN-COLOMBIAN_PLATEAU.csv",
+      "octets": 853703,
+      "sha256": "0e6d1786580314340a7e3b9d1a6dd14effdf1495101b298799770aa80c887fad",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173844"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_CUVIER_OR_WALLABY_PLATEAU.csv",
+      "octets": 4308,
+      "sha256": "964888634d50c00a163d1d61c2564f4a95955368e47ea01a420351b37f42810e",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173840"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_HESS_RISE.csv",
+      "octets": 36440,
+      "sha256": "023d715903387f355368d76aea9b281472b1a5afaea6792ab9e1608840a9af4b",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173832"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_HIKURANGI_PLATEAU.csv",
+      "octets": 24646,
+      "sha256": "bfc87c156980e5615e113bffd0d3a3e98665e84a2731285dca8317e358f8ecc8",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173846"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_KERGUELEN_PLATEAU.csv",
+      "octets": 550764,
+      "sha256": "159a49dd32b0bf27422ba1128149c68b8c46b329807cbb7057c5077611c853d7",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173839"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_MAGELLAN_RISE.csv",
+      "octets": 4877,
+      "sha256": "13b9abaa793a9cf01ac5ff61bae047cf0a5642779776ab8fa4ce714133104642",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173843"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_MANIHIKI_PLATEAU.csv",
+      "octets": 168952,
+      "sha256": "b03ea3130488c658a416498786400060a71151aac8561b448a5eb43991f7d883",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173838"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_MASCARENE_PLATEAU.csv",
+      "octets": 14443,
+      "sha256": "12583a8ade810d732d8504de73a21529bf2b8dcd52213b2e8be8edaeb55ddffa",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173842"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_MATSUMAE_PLATEAU.csv",
+      "octets": 3362,
+      "sha256": "11499b9de4c4fc702b25cb8fbee75e8402cb88130508085049cb03a0699ea92a",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173833"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_MAUD_RISE.csv",
+      "octets": 9850,
+      "sha256": "e9fe09397c90900d0a710af8ad946a35ecf2caa1a9f783a6319558f1d6e80c59",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173847"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_NATURALISTE_PLATEAU.csv",
+      "octets": 22518,
+      "sha256": "9901bf79e8454ff6b3adec9d81a09403759c80bf872a1ecce7206dba7edc9d0f",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173830"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_ONTONG_JAVA.csv",
+      "octets": 583696,
+      "sha256": "eeffa279c823076ed8c05c4cab954e1e05db0b11ee1e2ce8b56b3a1f10b8e48d",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173837"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_RIO_GRANDE_RISE.csv",
+      "octets": 33824,
+      "sha256": "d4661e6a7a4afafdb7f0432e29c4218d02622adb8fdbec9abb09125c536165f6",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173836"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_SAO_PAULO_PLATEAU.csv",
+      "octets": 3419,
+      "sha256": "1eea4d8064188f4dbf4141151b7d880b4881ed523bc54987ba97ad386a0e746f",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173831"
+    },
+    {
+      "dossier": "georoc_plateaux_oceaniques",
+      "nom": "2026-06-JRZIJF_SHATSKY_RISE.csv",
+      "octets": 322441,
+      "sha256": "bd7a109c23bdd5e2d8cb15103d801f21ea5099e39de0fc48dd2663d0e87c0601",
+      "doi": "10.25625/JRZIJF",
+      "compilation": "GEOROC Compilation: Oceanic Plateaus",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173845"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_ARGO_ABYSSAL_PLAIN_INDIAN_OCEAN.csv",
+      "octets": 35521,
+      "sha256": "4459c7723dd8d6b020d0860d7f71f514204a8ef09af006e0ffeea5e22b961b50",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173932"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_EAST_MARIANA_BASIN.csv",
+      "octets": 88492,
+      "sha256": "734f321a8fe45a892ee0219b84166e0d1ac9bdf4bdcc33d916d5938fce193d51",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173931"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_NAURU_BASIN.csv",
+      "octets": 281485,
+      "sha256": "1b5f2fbf61d80354a3836391aeecadc516f4647a0caa68cfe5b336da21b602ba",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173929"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_PANAMA_BASIN.csv",
+      "octets": 13659,
+      "sha256": "288d25594d4ddc71d27cd825ed9e36144d34a438106a32bc2c579fda52067de0",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173930"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_PIGAFETTA_BASIN.csv",
+      "octets": 359970,
+      "sha256": "cac0394ff1f2072a682a6b8fd6c6fefd538f2ab7e1bb1f32c9ccff62ecce3ea1",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173933"
+    },
+    {
+      "dossier": "georoc_trapps_bassins_oceaniques",
+      "nom": "2026-06-AVLFC2_WHARTON_BASIN.csv",
+      "octets": 77410,
+      "sha256": "5c8d998bb65c0c94ecf1de632be9ab7c2fde941767a7b02cb41e1d11d379e333",
+      "doi": "10.25625/AVLFC2",
+      "compilation": "GEOROC Compilation: Ocean Basin Flood Basalts",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173928"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_CENTRAL-NEW_YORK_KIMBERLITES.csv",
+      "octets": 55312,
+      "sha256": "502ecd75c03b07b5b592421b06baa814f0ff9e1dc43b18786b69c3c52f524a7e",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173934"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_ETNA_SICILY.csv",
+      "octets": 1856704,
+      "sha256": "0a28e36ae43763dff70682139ee34809c29117573de2b8ef162055dade490e20",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173937"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_FINGER_LAKES_FIELD_NEW_YORK.csv",
+      "octets": 3473,
+      "sha256": "c8bc3ae4a5390312b9fa0f748c34e7bb03cc46c7a6f501167eaba18377381df3",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173935"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_GALLEGO_FORMATION.csv",
+      "octets": 7073,
+      "sha256": "a953276d323be9a5a55faf9b6b5371af441ab692e6c3de99795ea915f54829ba",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173940"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_GUERRERO_MEXICO.csv",
+      "octets": 18635,
+      "sha256": "7a851df10763c7bbd2e6e3d417b5bbaca34e075b393619bf4c6c5add256f0380",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173941"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_HYBLEAN_OR_IBLEAN_PLATEAU_SICILY.csv",
+      "octets": 330743,
+      "sha256": "c2d4a33a57d231a606dbec2084c329531c0b3cb44c1016ed3fc458cbaf08a341",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173943"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_OAXACA_MEXICO.csv",
+      "octets": 18030,
+      "sha256": "11a61311015c5358af769434cdd441ce2fa2961ecdac918b54ea381372cf323c",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173942"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_RODARTE_FLOW.csv",
+      "octets": 5647,
+      "sha256": "b75242796a64b6310c3cd033beca34ac0aeb40b99a227d20f2e82395488f008c",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173938"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_TILZAPOTLA_MEXICO.csv",
+      "octets": 33379,
+      "sha256": "6b54e65feb101d4946d4334563e2a2999d3e519205b35480c6c928dd48d8864b",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173936"
+    },
+    {
+      "dossier": "georoc_contextes_volcaniques_complexes",
+      "nom": "2026-06-1VOFM5_USTICA_ISLAND_ITALY.csv",
+      "octets": 18678,
+      "sha256": "6de5539e8f27727b7b1c6965070cff5f2915634fc444a5a92e4baabcef470180",
+      "doi": "10.25625/1VOFM5",
+      "compilation": "GEOROC Compilation: Complex Volcanic Settings",
+      "url": "https://data.goettingen-research-online.de/api/access/datafile/173939"
+    }
+  ]
+}
