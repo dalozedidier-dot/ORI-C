@@ -372,12 +372,12 @@ def main() -> int:
     audit, diagnostics = build()
     out = HERE / "resultats"
     out.mkdir(exist_ok=True)
-    (out / "SEUIL_XIV.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "PACC_QUALIFICATION_STRICTE.json").write_text(json.dumps(diagnostics["pacc"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "PREDICTIONS_HORS_ECHANTILLON_AUDIT.json").write_text(json.dumps(diagnostics["prediction"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "REPLICATIONS_INDEPENDANTES_AUDIT.json").write_text(json.dumps(diagnostics["replication"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "TRANSFERT_SANS_REDEFINITION_AUDIT.json").write_text(json.dumps(diagnostics["cross_branch"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "ANTIBIOTIQUES_SPECIFICATIONS_AUDIT.json").write_text(json.dumps(diagnostics["antibiotics"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (out / "SEUIL_XIV.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
+    (out / "PACC_QUALIFICATION_STRICTE.json").write_text(json.dumps(diagnostics["pacc"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
+    (out / "PREDICTIONS_HORS_ECHANTILLON_AUDIT.json").write_text(json.dumps(diagnostics["prediction"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
+    (out / "REPLICATIONS_INDEPENDANTES_AUDIT.json").write_text(json.dumps(diagnostics["replication"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
+    (out / "TRANSFERT_SANS_REDEFINITION_AUDIT.json").write_text(json.dumps(diagnostics["cross_branch"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
+    (out / "ANTIBIOTIQUES_SPECIFICATIONS_AUDIT.json").write_text(json.dumps(diagnostics["antibiotics"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="")
     print(f"§XIV: {audit['passed_count']}/12; verrous={audit['missing_ids']}")
     return 0
 
