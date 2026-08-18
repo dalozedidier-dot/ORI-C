@@ -66,8 +66,17 @@ jobs:
         working-directory: ${{ env.CAMPAGNE }}
         run: python admettre_jeu.py --toutes
 
+      # Sur `schedule`, le contexte `inputs` est nul : `inputs.telecharger` vaut
+      # la chaîne vide, et GitHub compare les types différents en les castant en
+      # nombre — `'' != false` devient `0 != 0`, donc faux. La condition d'origine
+      # sautait donc les quatre étapes de téléchargement à chaque exécution
+      # mensuelle, et le cron ne rejouait que la campagne sur les données déjà
+      # commitées. C'est l'inverse de ce que dit l'en-tête : le mensuel existe
+      # précisément pour détecter qu'une source a bougé. Tester `event_name`
+      # explicitement est le seul moyen fiable, la valeur par défaut d'un input
+      # de `workflow_dispatch` n'étant jamais appliquée aux autres déclencheurs.
       - name: Télécharger les sources depuis leur DOI
-        if: ${{ inputs.telecharger != false }}
+        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
         run: |
           if [ -n "${{ inputs.sources }}" ]; then
@@ -79,17 +88,17 @@ jobs:
           fi
 
       - name: Vérifier empreintes, archives et provenance
-        if: ${{ inputs.telecharger == true }}
+        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python verifier_sources.py
 
       - name: Ne garder que l'exploitable
-        if: ${{ inputs.telecharger == true }}
+        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python ne_garder_que_l_exploitable.py --appliquer
 
       - name: Réempreinter ce qui est conservé
-        if: ${{ inputs.telecharger == true }}
+        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python reconstituer_provenance.py
 
