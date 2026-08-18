@@ -138,12 +138,26 @@ python -m oric_full run   --all   --real-data-only   --data-dir plateforme/campa
         <div class="section-heading"><p class="eyebrow">Priorités d'acquisition</p><h2>Données réelles à obtenir pour lever le plus de blocages</h2></div>
         <p>Chaque nombre est un maximum de tests distincts potentiellement débloquables, après dédoublonnage. Il ne garantit ni une exécution réussie ni un soutien scientifique.</p>
         <div class="feature-grid">
-          <article class="feature-card"><h3>Paléoclimat</h3><p><strong>89 tests</strong> demandent des mesures ou interventions que les séries temporelles actuelles ne portent pas.</p></article>
+          <article class="feature-card"><h3>Paléoclimat</h3><p><strong>89 tests</strong> demandent des mesures ou interventions que les séries temporelles actuelles ne portent pas. L'incertitude chronologique, qui manquait, est désormais acquise ; le contrôle négatif physique reste à obtenir.</p></article>
           <article class="feature-card"><h3>Lignées prébiotiques</h3><p><strong>85 tests</strong> demandent des filiations, traces et réponses réellement appariées.</p></article>
           <article class="feature-card"><h3>Aucun dataset déclaré</h3><p><strong>63 tests</strong> nécessitent d'abord l'identification et la déclaration d'un jeu réel adapté.</p></article>
           <article class="feature-card"><h3>Mesures antibiotiques</h3><p><strong>41 tests</strong> exigent des variables absentes des mesures actuellement associées.</p></article>
         </div>
         <p class="data-note">Le classement complet — benchmarks 48, conditions orbitales 47, cycles antibiotiques 34 et 33 cibles au total — est disponible dans <a href="https://github.com/dalozedidier-dot/ORI-C/blob/main/plateforme/campagne_maximale_reelle/PRIORITES_ACQUISITION_DONNEES.md"><code>PRIORITES_ACQUISITION_DONNEES.md</code></a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Paléoclimat, état du blocage</p><h2>Ce qui vient d'être levé, et ce qui bloque encore</h2></div>
+        <p>Le protocole <code>PALEO-HISTORY-01</code> est gelé avant exécution depuis sa rédaction : sa cible n'a jamais été ouverte, aucun résultat n'en est issu, et son gel est vérifié intact. Il exigeait deux choses qu'il ne spécifiait pas, et ce sont ces deux vides — non une erreur de conception — qui l'empêchaient de tourner.</p>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Incertitude chronologique — acquise</h3><p><strong>475 sites sur 475</strong>, 1 000 tirages âge-profondeur postérieurs par site, empreinte vérifiée fichier par fichier, zéro échec. Source PALMOD 130k, <code>10.1594/PANGAEA.984602</code>, CC-BY-4.0. La version est épinglée sur la compilation dont l'empreinte est enregistrée : la résolution par lien « version courante » est interdite, car elle dérive. Pour les carottes glaciaires, les <em>σ</em> AICC2023 étaient déjà au dépôt.</p></article>
+          <article class="feature-card"><h3>Contrôle négatif physique — manquant</h3><p>Le critère primaire exige qu'un test identique <strong>échoue</strong> sur une variable réelle mesurée sur les mêmes carottes mais insensible à l'histoire climatique. Aucune variable du produit PALMOD ne remplit cette condition. La paléointensité géomagnétique relative est le candidat retenu, et le recoupement existe sur ODP 983, ODP 984, ODP 1089 et IODP U1308 ; il reste à identifier une série publiée couvrant l'intervalle.</p></article>
+          <article class="feature-card"><h3>Circularité du réglage — mesurée</h3><p>Relevé direct des chronologies acquises : au-delà de la portée du radiocarbone, <strong>tous</strong> les points de datation marins sont de type accordé, à l'orbite ou au <span lang="en">δ</span><sup>18</sup>O. Sur 0–800 ka la cible est donc partiellement prédictible par les forçages astronomiques par construction. Le choix de l'intervalle primaire doit en tenir compte : c'est une contrainte de la discipline, pas un défaut du dossier.</p></article>
+          <article class="feature-card"><h3>Une colonne fabriquée, écartée</h3><p>Dans la table générique <code>paleoclimate_timeseries.csv</code>, seule la cible est une mesure. La colonne <code>forcing_1</code> vaut exactement <code>2600 − time_kyr</code> sur les 2 601 lignes : c'est l'axe temporel retourné, pas un forçage. Le pare-feu empirique le déclare désormais, et aucun test de mémoire ne peut être crédité à partir d'elle.</p></article>
+        </div>
+        <p class="data-note">Le successeur <code>PALEO-HISTORY-02</code> hérite du critère primaire et comble les deux vides. Il est <strong>rédigé et volontairement non scellé</strong> : trois décisions scientifiques restent ouvertes — intervalle primaire, série de référence du contrôle négatif, graine de tirage. Son outil de scellement refuse de s'exécuter tant qu'elles le sont. Aucun test n'est débloqué à ce stade et aucun verdict n'est requalifié.</p>
       </div>
     </section>
 
