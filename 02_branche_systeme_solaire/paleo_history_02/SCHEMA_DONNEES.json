@@ -2,7 +2,10 @@
   "schema": "oric.paleo-history-02.data.v1",
   "statut": "projet_non_scelle",
   "herite_de": "oric.paleo-history-01.data.v1",
-  "intervalle_primaire_ka": [0, 800],
+  "intervalle_primaire_ka": [
+    0,
+    800
+  ],
   "jeux_obligatoires": [
     "LR04",
     "pile_benthique_independante",
@@ -35,7 +38,21 @@
       "compilation_sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
       "tirages_par_site": 1000,
       "rattachement": "tirage entier par realisation, interpolation lineaire en profondeur sur les profondeurs mesurees; aucun melange de tirages",
-      "releve": "ACQUISITION_PALMOD_ENSEMBLES.json"
+      "releve": "ACQUISITION_PALMOD_ENSEMBLES.json",
+      "catalogue": "CATALOGUE_PALMOD_ENSEMBLES.json",
+      "acquisition": {
+        "statut": "acquis",
+        "sites": 475,
+        "echecs": 0,
+        "empreintes_distinctes": 475,
+        "volume_go": 1.34,
+        "cache_externe": "hors depot, conformement a repository_size_policy"
+      },
+      "version_epinglee": {
+        "version": "1.0.2",
+        "regle": "toutes les versions derivent de la compilation dont le SHA-256 est enregistre; la resolution 'current_version' est interdite car elle derive dans le temps",
+        "note": "le temoin de PALEO_HISTORY_02_ACQUISITION.json avait ete pris en 1.0.3 via current_version; 1.0.3 reste accessible mais n'est pas la version decrite par la compilation epinglee"
+      }
     },
     "glaciaire": {
       "source": "AICC2023",
@@ -51,11 +68,61 @@
   "controle_negatif_reel": {
     "nature": "variable mesuree sur les memes carottes, memes profondeurs, meme plan d'echantillonnage, de mecanisme a priori independant de l'histoire climatique de surface",
     "candidat": "paleointensite geomagnetique relative (RPI)",
-    "carottes_recoupees_avec_PALMOD": ["ODP 983", "ODP 984", "ODP 1089", "IODP U1308"],
-    "condition_anti_circularite": "la RPI doit etre placee sur la chronologie posterieure PALMOD du meme site; toute serie dont la chronologie est accordee au d18O (PISO-1500, SINT-2000 et assimiles) est rejetee",
-    "statut_acquisition": "non_acquis",
+    "carottes_recoupees_avec_PALMOD": [
+      "ODP 983",
+      "ODP 984",
+      "ODP 1089",
+      "IODP U1308"
+    ],
+    "condition_anti_circularite": "CORRIGEE 2026-08-18. L'exigence d'une chronologie non accordee est retiree : elle privait le controle de sa fonction, qui est d'heriter des memes artefacts de chronologie que la cible. Exigence correcte: (1) la RPI roule sur la MEME chronologie posterieure PALMOD que la cible du meme site; (2) la RPI n'a pas servi a construire cette chronologie - aucun tiepoint magnetostratigraphique.",
+    "statut_acquisition": "serie_rpi_non_acquise",
     "recoupement_etabli": "par nom de carotte uniquement; l'existence d'une serie RPI publiee, accessible et couvrant l'intervalle reste a verifier pour chacune",
-    "prealable_au_scellement": true
+    "prealable_au_scellement": true,
+    "tiepoints_releves": {
+      "ODP 983": {
+        "n": 12,
+        "types": {
+          "tuned": 12
+        },
+        "couverture_ka": [
+          0.5,
+          191.0
+        ]
+      },
+      "ODP 1089": {
+        "n": 8,
+        "types": {
+          "tuned": 8
+        },
+        "couverture_ka": [
+          0.5,
+          133.5
+        ]
+      },
+      "IODP U1308": {
+        "n": 8,
+        "types": {
+          "tuned": 8
+        },
+        "couverture_ka": [
+          0.5,
+          134.0
+        ]
+      },
+      "ODP 984C": {
+        "n": 18,
+        "types": {
+          "14C": 17,
+          "tephra": 1
+        },
+        "couverture_ka": [
+          0.1,
+          23.4
+        ]
+      },
+      "constat": "aucune carotte ne couvre 0-800 ka par ses seuls tiepoints; au-dela du radiocarbone la datation marine passe par l'accord orbital ou isotopique. Aucun tiepoint n'est magnetique, donc la condition (2) est remplie."
+    },
+    "reste_a_faire": "identifier, pour chaque carotte retenue, une serie RPI publiee couvrant l'intervalle primaire choisi; PANGAEA 10.1594/PANGAEA.808979 couvre 0.9-2.2 Ma pour ODP 983/984, donc hors fenetre 0-800 ka"
   },
   "interdictions": [
     "chronologie sans incertitude ou justification explicite",
@@ -63,7 +130,7 @@
     "remplacement d'une mesure absente par une sortie de modele",
     "selection d'un horizon apres observation des scores",
     "imputation d'une incertitude d'age absente",
-    "usage d'une serie de controle negatif dont la chronologie est accordee au climat",
-    "synthese d'un tirage chronologique au-dela des posterieurs publies"
+    "synthese d'un tirage chronologique au-dela des posterieurs publies",
+    "usage d'une serie de controle negatif ayant servi a construire la chronologie du site (tiepoint magnetostratigraphique)"
   ]
 }

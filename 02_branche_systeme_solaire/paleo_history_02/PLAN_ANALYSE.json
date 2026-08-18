@@ -3,9 +3,33 @@
   "statut": "projet_non_scelle",
   "herite_de": "PALEO-HISTORY-01",
   "cible_primaire": "variation_future_proxy_a_10_ka",
-  "horizons_secondaires_ka": [20, 50],
-  "fenetres_histoire_ka": [20, 50, 100],
-  "blocs_test_ka": [[0, 200], [200, 400], [400, 600], [600, 800]],
+  "horizons_secondaires_ka": [
+    20,
+    50
+  ],
+  "fenetres_histoire_ka": [
+    20,
+    50,
+    100
+  ],
+  "blocs_test_ka": [
+    [
+      0,
+      200
+    ],
+    [
+      200,
+      400
+    ],
+    [
+      400,
+      600
+    ],
+    [
+      600,
+      800
+    ]
+  ],
   "modeles": [
     "etat_et_forcages",
     "etat_forcages_histoire_reelle",
@@ -17,7 +41,10 @@
   "alpha": 0.01,
   "gain_rmse_minimum": 0.05,
   "blocs_minimum_avec_gain": 3,
-  "nulls": ["AR1", "IAAFT"],
+  "nulls": [
+    "AR1",
+    "IAAFT"
+  ],
   "realisations_chronologiques": {
     "marin": "tirage entier parmi les 1000 posterieurs PALMOD du site; interpolation lineaire en profondeur; reutilisation au-dela de 1000 dans un ordre fixe par graine declaree",
     "glaciaire": "tirage gaussien tronque a +/-3 sigma AICC2023 par tranche d'age, monotonie imposee par rejet",
@@ -26,7 +53,7 @@
   },
   "controle_negatif_reel": {
     "variable": "paleointensite_geomagnetique_relative",
-    "protocole": "le test primaire est rejoue a l'identique sur la RPI du meme site, sur la meme chronologie posteriere PALMOD",
+    "protocole": "le test primaire est rejoue a l'identique sur la RPI du meme site, sur la MEME chronologie posteriere PALMOD que la cible, artefacts de chronologie compris",
     "regle_de_rejet": "un gain de RMSE atteignant le seuil primaire sur le controle negatif rend le resultat principal non_testable, jamais supports",
     "statut": "non_acquis"
   },
@@ -40,8 +67,8 @@
     "verdict_et_motif"
   ],
   "decisions_a_trancher_avant_scellement": [
-    "unite d'analyse primaire: sites PALMOD a chronologie non accordee, ou empilement LR04 a chronologie accordee a l'orbite (circularite du reglage orbital)",
-    "serie RPI de reference par carotte, et preuve de chronologie non accordee au climat",
+    "intervalle primaire. Constat mesure sur les ensembles PALMOD: au-dela de la portee du radiocarbone (~50 ka) tous les tiepoints marins sont de type 'tuned', donc accordes a l'orbite ou au d18O. Sur 0-800 ka la cible est donc partiellement predictible par les forcages astronomiques PAR CONSTRUCTION, ce qui contamine le modele de base 'etat_et_forcages'. Trancher entre: (a) garder 0-800 ka et borner explicitement cette circularite; (b) restreindre l'intervalle primaire a la fenetre datee au radiocarbone, ou des chronologies independantes existent, en renoncant aux blocs longs; (c) autre construction argumentee.",
+    "serie RPI de reference par carotte couvrant l'intervalle primaire retenu, et preuve qu'elle n'a pas servi de tiepoint a la chronologie du site",
     "graine et ordre de reutilisation des tirages au-dela de 1000"
   ]
 }

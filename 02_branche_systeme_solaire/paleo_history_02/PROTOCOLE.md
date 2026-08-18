@@ -47,7 +47,20 @@ bloc ; témoin de complexité égale sans ordre historique.
 
 | famille | source d'incertitude | statut |
 |---|---|---|
-| enregistrements marins de site | ensembles postérieurs PALMOD 2.0.0, 1 000 tirages âge-profondeur par site — DOI `10.1594/PANGAEA.984602`, article `10.5194/essd-18-3013-2026`, CC-BY-4.0 | acquis et vérifié, voir `ACQUISITION_PALMOD_ENSEMBLES.json` |
+| enregistrements marins de site | ensembles postérieurs PALMOD 2.0.0, 1 000 tirages âge-profondeur par site — DOI `10.1594/PANGAEA.984602`, article `10.5194/essd-18-3013-2026`, CC-BY-4.0 | **acquis : 475/475 sites, 0 échec, 475 empreintes distinctes, 1,34 Go** — voir `ACQUISITION_PALMOD_ENSEMBLES.json` et `CATALOGUE_PALMOD_ENSEMBLES.json` |
+
+### Épinglage de version — contrainte de reproductibilité
+
+Les 475 ensembles sont acquis en version **1.0.2**, celle que déclare la
+compilation `PalMod2_0_0.zip` dont l'empreinte `10e0e21e…` est enregistrée. La
+résolution par lien `current_version` est **interdite** : elle dérive dans le
+temps, et un protocole préenregistré ne peut pas dépendre d'une cible mouvante.
+
+Le témoin consigné dans `PALEO_HISTORY_02_ACQUISITION.json` avait justement été
+pris ainsi, en 1.0.3. Cette version reste accessible — vérifié le 2026-08-18,
+HTTP 200, 1 000 290 octets — mais elle n'est pas celle que décrit la compilation
+épinglée, d'où la divergence d'empreinte documentée dans le relevé d'acquisition.
+Ce n'est pas une anomalie : c'est la raison même de l'épinglage.
 | carottes glaciaires EPICA et Vostok | AICC2023, σ publiés par carotte et par tranche d'âge | présent au dépôt, empreinte `a0498efb…` conforme à `AICC2023_UNCERTAINTY.json` |
 | insolation | sans objet | une solution astronomique définit l'axe temporel ; elle n'a pas d'incertitude de datation. C'est la « justification explicite » prévue par l'interdiction de `SCHEMA_DONNEES.json` |
 
@@ -90,15 +103,49 @@ aux mêmes profondeurs que les proxys climatiques.
 Le recoupement existe : PALMOD contient ODP 983, ODP 984, ODP 1089 et
 IODP U1308, qui sont des carottes de référence de la littérature RPI.
 
-### Condition anti-circularité, impérative
+### Condition d'admissibilité — corrigée le 2026-08-18
 
-La plupart des empilements RPI publiés — PISO-1500, SINT-2000 — ont un modèle
-d'âge accordé sur le δ¹⁸O. Les employer importerait exactement le couplage
-chronologie-climat que le contrôle doit détecter, et détruirait sa valeur.
+Une première rédaction exigeait que la RPI repose sur une chronologie **non
+accordée** au climat. Cette exigence était mal fondée et elle est retirée. Elle
+confondait deux problèmes distincts :
 
-Le contrôle n'est admis que si la RPI est **placée sur la chronologie postérieure
-PALMOD du même site**, indépendante de tout accord climatique. Une série RPI
-dont on ne peut pas établir que sa chronologie est non accordée est rejetée.
+1. **la circularité du réglage sur la cible.** LR04 et les tiepoints marins de
+   l'intervalle profond sont accordés sur l'orbite ou sur le δ¹⁸O. Cela rend la
+   cible partiellement prédictible par les forçages astronomiques *par
+   construction*. Ce défaut affecte le modèle de base « état et forçages », et il
+   reste entier — c'est la décision 1 en fin de document ;
+2. **le rôle du contrôle négatif**, qui est d'hériter des mêmes artefacts de
+   chronologie que la cible afin de les rendre visibles. Pour cela il doit rouler
+   sur **la même** chronologie, accordée ou non. Exiger une chronologie non
+   accordée le prive justement de ce qu'on lui demande.
+
+L'exigence correcte est double :
+
+- la RPI est placée sur **la même chronologie postérieure PALMOD** que la cible
+  du même site, artefacts compris ;
+- la RPI **n'a pas servi à construire cette chronologie**. Aucun tiepoint
+  magnétostratigraphique, sans quoi elle serait prédictible par construction.
+
+Le relevé des ensembles acquis confirme que cette seconde condition est remplie
+sur les carottes visées : les tiepoints PALMOD y sont de type `tuned` — donc
+issus du δ¹⁸O — ou `14C`/`tephra`, jamais magnétiques. La RPI reste donc
+indépendante de la construction du modèle d'âge.
+
+### Ce que les données acquises montrent
+
+Relevé direct des tables chronologiques PALMOD des quatre carottes recoupées :
+
+| carotte | tiepoints | nature | couverture des tiepoints |
+|---|---:|---|---|
+| ODP 983 | 12 | `tuned` | 0,5–191 ka |
+| ODP 1089 | 8 | `tuned` | 0,5–133,5 ka |
+| IODP U1308 | 8 | `tuned` | 0,5–134 ka |
+| ODP 984C | 18 | 17 `14C`, 1 `tephra` | 0,1–23,4 ka |
+
+Aucune ne couvre 0–800 ka par ses seuls tiepoints. C'est une contrainte
+structurelle de la discipline : au-delà de la portée du radiocarbone, la datation
+marine passe par l'accord orbital ou isotopique. Le choix de l'intervalle
+primaire doit en tenir compte — décision 1.
 
 ### Critère
 
