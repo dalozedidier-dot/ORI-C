@@ -1,0 +1,16 @@
+{
+  "schema": "oric.external-source.v1",
+  "dataset_id": "palmod_130k",
+  "titre": "PALMOD 130k marine palaeoclimate data synthesis V2_0_0",
+  "doi": "10.1594/PANGAEA.984602",
+  "article_doi": "10.5194/essd-18-3013-2026",
+  "licence": "CC-BY-4.0",
+  "compilation_sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
+  "version_epinglee": "1.0.2",
+  "sites": 475,
+  "tirages_ages_par_site": 1000,
+  "acquis_le": "2026-08-18",
+  "role": "ensembles chronologiques posterieurs fournissant l'incertitude d'age exigee par PALEO-HISTORY-02; les fichiers .lpd vivent dans un cache externe hors depot, seuls le catalogue et le releve d'empreintes sont versionnes ici",
+  "consomme_par": "02_branche_systeme_solaire/paleo_history_02/",
+  "pourquoi_hors_branche": "ces fichiers sont de la provenance d'acquisition, pas une mesure de la branche 2. Les placer sous 02_branche_systeme_solaire les faisait entrer dans le perimetre de plan_directeur/audit_transversal.py, ou un identifiant LiPD aleatoire contenant la sous-chaine 'dhl' declenchait a tort le detecteur de la notion 'diagnostic D-H-L' et faisait basculer traverse_deux_branches_ou_plus, indicateur du seuil §XIV-11"
+}

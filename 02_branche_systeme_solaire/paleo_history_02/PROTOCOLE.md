@@ -47,9 +47,15 @@ bloc ; témoin de complexité égale sans ordre historique.
 
 | famille | source d'incertitude | statut |
 |---|---|---|
-| enregistrements marins de site | ensembles postérieurs PALMOD 2.0.0, 1 000 tirages âge-profondeur par site — DOI `10.1594/PANGAEA.984602`, article `10.5194/essd-18-3013-2026`, CC-BY-4.0 | **acquis : 475/475 sites, 0 échec, 475 empreintes distinctes, 1,34 Go** — voir `ACQUISITION_PALMOD_ENSEMBLES.json` et `CATALOGUE_PALMOD_ENSEMBLES.json` |
+| enregistrements marins de site | ensembles postérieurs PALMOD 2.0.0, 1 000 tirages âge-profondeur par site — DOI `10.1594/PANGAEA.984602`, article `10.5194/essd-18-3013-2026`, CC-BY-4.0 | **acquis : 475/475 sites, 0 échec, 475 empreintes distinctes, 1,34 Go** — voir `donnees_externes/palmod_130k/` |
+| carottes glaciaires EPICA et Vostok | AICC2023, σ publiés par carotte et par tranche d'âge | présent au dépôt, empreinte `a0498efb…` conforme à `AICC2023_UNCERTAINTY.json` |
+| insolation | sans objet | une solution astronomique définit l'axe temporel ; elle n'a pas d'incertitude de datation. C'est la « justification explicite » prévue par l'interdiction de `SCHEMA_DONNEES.json` |
 
 ### Épinglage de version — contrainte de reproductibilité
+
+Le catalogue, le relevé d'empreintes et la fiche de source vivent sous
+`donnees_externes/palmod_130k/`, hors des branches : ce sont des pièces de
+provenance d'acquisition, pas des mesures de la branche 2.
 
 Les 475 ensembles sont acquis en version **1.0.2**, celle que déclare la
 compilation `PalMod2_0_0.zip` dont l'empreinte `10e0e21e…` est enregistrée. La
@@ -61,8 +67,6 @@ pris ainsi, en 1.0.3. Cette version reste accessible — vérifié le 2026-08-18
 HTTP 200, 1 000 290 octets — mais elle n'est pas celle que décrit la compilation
 épinglée, d'où la divergence d'empreinte documentée dans le relevé d'acquisition.
 Ce n'est pas une anomalie : c'est la raison même de l'épinglage.
-| carottes glaciaires EPICA et Vostok | AICC2023, σ publiés par carotte et par tranche d'âge | présent au dépôt, empreinte `a0498efb…` conforme à `AICC2023_UNCERTAINTY.json` |
-| insolation | sans objet | une solution astronomique définit l'axe temporel ; elle n'a pas d'incertitude de datation. C'est la « justification explicite » prévue par l'interdiction de `SCHEMA_DONNEES.json` |
 
 ### Règle de rattachement
 

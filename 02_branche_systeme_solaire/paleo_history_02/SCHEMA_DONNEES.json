@@ -31,15 +31,15 @@
   ],
   "incertitude_chronologique": {
     "marin": {
-      "source": "ensembles posterieurs PALMOD 2.0.0",
+      "source": "ensembles posterieurs PALMOD 2.0.0 (voir donnees_externes/palmod_130k/SOURCE.json)",
       "doi": "10.1594/PANGAEA.984602",
       "article_doi": "10.5194/essd-18-3013-2026",
       "license": "CC-BY-4.0",
       "compilation_sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
       "tirages_par_site": 1000,
       "rattachement": "tirage entier par realisation, interpolation lineaire en profondeur sur les profondeurs mesurees; aucun melange de tirages",
-      "releve": "ACQUISITION_PALMOD_ENSEMBLES.json",
-      "catalogue": "CATALOGUE_PALMOD_ENSEMBLES.json",
+      "releve": "donnees_externes/palmod_130k/ACQUISITION_ENSEMBLES.json",
+      "catalogue": "donnees_externes/palmod_130k/CATALOGUE_ENSEMBLES.json",
       "acquisition": {
         "statut": "acquis",
         "sites": 475,
