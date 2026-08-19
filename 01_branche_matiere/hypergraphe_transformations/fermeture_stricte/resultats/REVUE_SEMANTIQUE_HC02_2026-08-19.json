@@ -1,0 +1,54 @@
+{
+  "schema": "oric.hc02-independent-semantic-review.v1",
+  "date": "2026-08-19",
+  "objet": "HC02-E1",
+  "methode": "revue indépendante du contenu sémantique; ne rejoue pas les contrôles structurels de valider_hc02_extension.py",
+  "composantes_examinees": 4,
+  "objections": [
+    {
+      "controle": "A_uniformite_des_qualificatifs",
+      "constat": "3/4 composantes sont déclarées 'supported_directly'; 1 ne l'est pas",
+      "composantes": {
+        "catalytic_capacity_same_chain": "supported_by_primary_primitive_seafloor_mineral_catalysis_Zhong_2026"
+      },
+      "portee": "la matrice CSV rend pourtant un verdict 'supported' identique pour toutes, ce qui efface une différence de force que le JSON déclare lui-même"
+    },
+    {
+      "controle": "B_correspondance",
+      "constat": "aucune correspondance de nom entre le JSON et la matrice CSV",
+      "csv": [
+        "catalysis",
+        "fluid_chemistry",
+        "gradients",
+        "interface"
+      ],
+      "json": [
+        "catalytic_capacity_same_chain",
+        "chemical_gradients",
+        "reaction_products_and_fluid_chemistry",
+        "water_rock_gas_interface"
+      ],
+      "portee": "rien ne vérifie par machine que les deux décrivent les mêmes quatre composantes; l'appariement n'existe que dans la lecture humaine"
+    },
+    {
+      "controle": "C_lien_aux_entrees",
+      "composante": "catalysis",
+      "semantique_exigee": "capacité catalytique de phases compatibles avec l altération primitive",
+      "constat": "la sémantique exigée établit une compatibilité, pas une production par les entrées déclarées N051+N028",
+      "source": "Zhong et al. 2026 (10.1038/s41467-026-71130-7)",
+      "portee": "la règle 2 de la politique demande que chaque composante indispensable du nœud de sortie soit reliée à une source primaire; une phase seulement compatible avec l'altération primitive n'établit pas que la capacité catalytique est portée par le produit de N051+N028"
+    },
+    {
+      "controle": "D_etat_intermediaire",
+      "composantes": [
+        "catalysis"
+      ],
+      "constat": "ces composantes reposent sur une source qui ne documente aucune production à partir des entrées déclarées",
+      "portee": "règle 3 : l'enchaînement doit rester dans une même classe physique sans introduire d'état intermédiaire non déclaré"
+    }
+  ],
+  "verdict": "fail_closed",
+  "effet": "l'extension HC02-E1 retombe en fail-closed; le baseline scellé 46/53 est inchangé et reste l'état publié",
+  "baseline_intouche": "46/53",
+  "regle_appliquee": "POLITIQUE_EXTENSION_EMPIRIQUE.md, règles 2, 3 et 7"
+}

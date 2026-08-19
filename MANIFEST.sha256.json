@@ -1816,6 +1816,12 @@
       "storage": "inline"
     },
     {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/REVUE_SEMANTIQUE_HC02_2026-08-19.json",
+      "size": 2639,
+      "sha256": "67b79fd62c480617dd08ffed5790949da4c1ce8c2bdf772eaba1574208c1c398",
+      "storage": "inline"
+    },
+    {
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/VERROU_HYPERGRAPHE.md",
       "size": 2125,
       "sha256": "291119043143c1610a9e0f2a5c7470684ade3938b0cbeccd4ad7bfdb1578f2c2",
@@ -1837,6 +1843,12 @@
       "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/resultats/scenarios_reparation.csv",
       "size": 643,
       "sha256": "d3f2f9c5f3004414e567b15774608f30cc66287f3e3a504e1b5377915748a891",
+      "storage": "inline"
+    },
+    {
+      "path": "01_branche_matiere/hypergraphe_transformations/fermeture_stricte/revue_semantique_independante.py",
+      "size": 6664,
+      "sha256": "cec59868b1567c67e21c3a547ee8a329c349727bcd5b49a9018a85b462678493",
       "storage": "inline"
     },
     {
@@ -11514,7 +11526,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "f2463c72c10e382922f0f0a5175508cb915643decde06b819ace986968f74c58",
+      "sha256": "1f5e4b4240c6baad0b90fdbc547fbd3d4f8f380df432ad0293991c7ae0acfae5",
       "storage": "inline"
     },
     {
