@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Daloze
     given-names: Didier
-version: "0.9.8-research"
+version: "0.9.9-research"
 date-released: 2026-08-15
 repository-code: "https://github.com/dalozedidier-dot/ORI-C"
 url: "https://dalozedidier-dot.github.io/ORI-C/"

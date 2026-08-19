@@ -1,4 +1,4 @@
-# Publication stable v0.9.8-research
+# Publication stable v0.9.9-research
 
 Cette publication est un **snapshot stable et citable du programme**, pas une validation générale d’ORI-C. Elle fige ensemble le code, les données versionnées, les résultats positifs, les résultats négatifs et leurs limites au **15 août 2026**.
 
@@ -20,19 +20,19 @@ Cette publication est un **snapshot stable et citable du programme**, pas une va
 
 `preuves/PREUVES.json` porte les statuts et empreintes. `preuves/CHIFFRES.json` relie les chiffres publics aux sorties machine. `ETAT_DES_PREUVES.md` est généré. Une divergence source → registre → rendu public est une erreur de publication.
 
-Le snapshot de préparation du tag contient **1 847 contenus manifestés**, **56 preuves** et **90 chiffres canoniques**. Le fichier historique `preuves/SNAPSHOT_STABLE_0.9.8.json` est ajouté sur `main` après la publication effective avec le commit exact du tag et le SHA-256 réel de l’archive canonique. Il décrit le snapshot immuable publié et ne modifie pas le tag.
+Le snapshot de préparation du tag contient **1 992 contenus manifestés**, **56 preuves** et **90 chiffres canoniques**. Le fichier historique `preuves/SNAPSHOT_STABLE_0.9.9.json` est ajouté sur `main` après la publication effective avec le commit exact du tag et le SHA-256 réel de l’archive canonique. Il décrit le snapshot immuable publié et ne modifie pas le tag.
 
 ## Automatisation
 
-Le tag `v0.9.8-research` déclenche `.github/workflows/release.yml`. Le workflow hydrate Git LFS, exécute les validations de publication, teste les couches astronomique, spin-orbite et mémoire, les formalismes externes, la campagne maximale et la généalogie cosmique, reconstruit les sous-manifestes mémoire et revue systématique puis le manifeste racine en dernier, construit l’archive canonique et joint l’archive et son SHA-256 à la release GitHub. La campagne centrale et les nouveaux workflows de données réelles sont validés sur le commit de `main` avant la création du tag.
+Le tag `v0.9.9-research` déclenche `.github/workflows/release.yml`. Le workflow hydrate Git LFS, exécute les validations de publication, teste les couches astronomique, spin-orbite et mémoire, les formalismes externes, la campagne maximale et la généalogie cosmique, reconstruit les sous-manifestes mémoire et revue systématique puis le manifeste racine en dernier, construit l’archive canonique et joint l’archive et son SHA-256 à la release GitHub. La campagne centrale et les nouveaux workflows de données réelles sont validés sur le commit de `main` avant la création du tag.
 
 ## GitHub Pages
 
-La page publique est construite depuis `site/`. La publication 0.9.8 met à jour la version affichée, le compteur de contenus, le benchmark transversal, le registre de preuves, le §XIV et les trois nouvelles analyses sur données réelles. Avant déploiement, le workflow Pages exécute `scripts/valider_publication_stable.py`, qui appelle le validateur des registres machine.
+La page publique est construite depuis `site/`. La publication 0.9.9 met à jour la version affichée, le compteur de contenus, le benchmark transversal, le registre de preuves, le §XIV et les trois nouvelles analyses sur données réelles. Avant déploiement, le workflow Pages exécute `scripts/valider_publication_stable.py`, qui appelle le validateur des registres machine.
 
 ## DOI
 
-`.zenodo.json` est synchronisé sur `0.9.8-research`. L’obtention d’un DOI exige l’activation de l’intégration GitHub dans Zenodo et la publication effective de la release. Aucun DOI n’est inscrit tant qu’il n’existe pas.
+`.zenodo.json` est synchronisé sur `0.9.9-research`. L’obtention d’un DOI exige l’activation de l’intégration GitHub dans Zenodo et la publication effective de la release. Aucun DOI n’est inscrit tant qu’il n’existe pas.
 
 Le champ `license` Zenodo vaut `MIT` pour le logiciel. Le dépôt complet est à licences multiples. `LICENSING.md` fait autorité pour les données, textes, figures et contenus tiers.
 

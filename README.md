@@ -5,7 +5,7 @@
 [![Code MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![Données CC BY 4.0](https://img.shields.io/badge/données-CC%20BY%204.0-blue.svg)](LICENSING.md)
 
-Didier Daloze | Version stable 0.9.8 | 15 août 2026
+Didier Daloze | Version stable 0.9.9 | 19 août 2026
 
 **Site public de présentation scientifique :** https://dalozedidier-dot.github.io/ORI-C/
 
@@ -111,9 +111,9 @@ Les quatre verrous prioritaires disposent maintenant de routes d'exécution sép
 
 `ACTION_VERROUS_2026-08-14.md` et `plan_directeur/READINESS_VERROUS.json` donnent l’état machine des quatre fronts prioritaires. La branche matière conserve son baseline scellé **46/53** et publie séparément l’extension empirique `HC02-E1`, qui atteint **53/53** sans recoder `H052`. MAG, VES et la réplication MIC restent fail-closed jusqu’à exécution externe réelle. `PACC-MAG-INT-01` prépare en parallèle un transfert matière↔vivant sous la même définition `PACC-INT-CHALLENGE-V1`, sans crédit avant acquisition.
 
-## Apports de 0.9.8 — données réelles et transversalité
+## Apports de 0.9.9 — données réelles et transversalité
 
-La version 0.9.8 élargit l’exploitation empirique sans modifier artificiellement le niveau de preuve. Le benchmark transversal passe à **24 cas** et le registre machine à **56 preuves**, tout en restant à **6 cas complets** pour **5 systèmes**. Le seuil §XIV reste **7/12**, avec les conditions **3, 4, 9, 10 et 11** ouvertes.
+La version 0.9.9 élargit l’exploitation empirique sans modifier artificiellement le niveau de preuve. Le benchmark transversal passe à **24 cas** et le registre machine à **56 preuves**, tout en restant à **6 cas complets** pour **5 systèmes**. Le seuil §XIV reste **7/12**, avec les conditions **3, 4, 9, 10 et 11** ouvertes.
 
 Trois analyses supplémentaires sur données réelles sont maintenant intégrées au benchmark avec leurs limites explicites : `FIT-ORIGIN-N-01` détecte un signal d’origine ancestrale sous azote avec p exact **0,03069**, `MAT-NBOT-PART-01` mesure **28,27 %** de gain RMSE hors-source avec permutation p **0,001999**, NBO/T restant un état structural `X`, et `RNA-PAP-TRAJ-01` mesure une divergence maximale de **17,733 log2** entre deux trajectoires ARN tout en restant descriptif au niveau inter-branche.
 
@@ -366,9 +366,9 @@ Le dépôt exécute désormais, sans reclasser rétroactivement les preuves cert
 
 Les sorties d'autorité sont `preuves/PREUVES.json` et `preuves/CHIFFRES.json`. `ETAT_DES_PREUVES.md` est généré depuis le registre. Les hypothèses séparantes non testées sont isolées dans `plan_directeur/hypotheses/HYPOTHESES_SEPARANTES.json`.
 
-## Publication stable 0.9.8
+## Publication stable 0.9.9
 
-La version 0.9.8 fige l’état scientifique du 15 août 2026 au tag technique `v0.9.8-research`. Elle conserve les verdicts antérieurs, notamment **13 / 15** critères astronomiques réussis, **M2 à 1 critère sur 10** et `C-MAT-MEM-05` non soutenus dans leurs protocoles, ainsi que le pare-feu empirique de la généalogie cosmique quantitative.
+La version 0.9.9 fige l’état scientifique du 19 août 2026 au tag technique `v0.9.9-research`. Elle conserve les verdicts antérieurs, notamment **13 / 15** critères astronomiques réussis, **M2 à 1 critère sur 10** et `C-MAT-MEM-05` non soutenus dans leurs protocoles, ainsi que le pare-feu empirique de la généalogie cosmique quantitative.
 
 Le benchmark transversal compte **24 cas**, dont **6 cas complets** sur `X, H, m, Θ, τ, P_acc, R`, répartis sur **5 systèmes distincts**. Deux systèmes possèdent une intervention directe sur `m`. `EXO-DOM-01`, au niveau `E4_modele`, maintient `X`, `Θ` et l’architecture identiques par construction et mesure `P_acc = 0,91` contre `0,87` sous `do(m)`, soit `|Delta P_acc| = 0,04` avec sham `= 0`. Le cas vésiculaire reste le seul `do(m)` empirique direct actuel et ne soutient pas la direction positive locale de son contraste P_acc.
 

@@ -113,8 +113,8 @@
     },
     {
       "path": ".zenodo.json",
-      "size": 1552,
-      "sha256": "2418d1d84afbcdd646e1aeb7f4fc68fbcc3d25c188c5a3bea9b94d1b8b11d48b",
+      "size": 1957,
+      "sha256": "c52ef48d89d8100e250b1e780968f242533c92c417cda28d7925ee1100fb6dc6",
       "storage": "inline"
     },
     {
@@ -6834,7 +6834,7 @@
     {
       "path": "CITATION.cff",
       "size": 1488,
-      "sha256": "be892076456e1bee9cd77c1999f20a149a477bd6ca2676d74934c7080c7662eb",
+      "sha256": "8f2c471d0515f447afb040ce63930be38276d677806e42963819a74e9227dfc9",
       "storage": "inline"
     },
     {
@@ -7008,7 +7008,7 @@
     {
       "path": "PUBLICATION_STABLE.md",
       "size": 5262,
-      "sha256": "eabcf6a5c74792209ef6d3035a9737ac1b4983020814d3371b1d29c5f930fd1f",
+      "sha256": "8188f4fb2645dd8f66953a2945114e1d40062aa4a935a773b2f91dd6414b7b26",
       "storage": "inline"
     },
     {
@@ -7026,7 +7026,7 @@
     {
       "path": "README.md",
       "size": 34615,
-      "sha256": "577654bf093afec396ec78baf5461df4d6bdf39ef5fd3af442a3bdbc73898170",
+      "sha256": "8949cdd8deff50f22383caea62455a08da4844f091dedff873ea5f2a6ee8c38d",
       "storage": "inline"
     },
     {
@@ -7066,6 +7066,12 @@
       "storage": "inline"
     },
     {
+      "path": "RELEASE_NOTES_v0.9.9-research.md",
+      "size": 7398,
+      "sha256": "1b82082c53d334668338f90bf7fa97328d571b1fc084c8ba87b814cd9b920549",
+      "storage": "inline"
+    },
+    {
       "path": "RESULTATS_TESTS_ISSUS_REVUE.md",
       "size": 9253,
       "sha256": "585025b5c0f2958af8204eeac290fa297f5ac1ed1bb56673fc42972d7917f850",
@@ -7098,7 +7104,7 @@
     {
       "path": "VERSION",
       "size": 15,
-      "sha256": "6da4da5df053d4d7fc773732583cca4905e0217230818b990931665011685c40",
+      "sha256": "810c6f87719f3e49ae67e6ad46e9319acaf544ae234c883b964f70880ca01ab1",
       "storage": "inline"
     },
     {
@@ -11526,7 +11532,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "1f5e4b4240c6baad0b90fdbc547fbd3d4f8f380df432ad0293991c7ae0acfae5",
+      "sha256": "da1036bb0fc2b30bfc0116dd7102885ce69bd41ddd6199ede99a9c493f054765",
       "storage": "inline"
     },
     {
@@ -11910,25 +11916,25 @@
     {
       "path": "site/index.html",
       "size": 20204,
-      "sha256": "05206b82c4fbfcb79ceaac4385dca0411c10226fd8a6b9c07c1bcc2192656a6b",
+      "sha256": "fe035d913dd8ea13716fd1d871a665e02630149236bd33d33f3abad4fdd0e5bf",
       "storage": "inline"
     },
     {
       "path": "site/methode.html",
       "size": 15625,
-      "sha256": "8b8e03835fab296e0c43ae5576a2504f2d82db2ea59a6c7890eea2e0bdc952cc",
+      "sha256": "69e8cc1ae795cfe93778acd89f9ff33bc8a9d8035d591ad9abdaabc24a081a56",
       "storage": "inline"
     },
     {
       "path": "site/preuves.html",
       "size": 47711,
-      "sha256": "8f983d5e82c9f2f5cebcd1d712fd2d64837efc2777165556f943db7ab5fdb149",
+      "sha256": "c92bdf449ade8984999464cfb531dd9f2060595250ef47deba8038844927ed62",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
       "size": 23010,
-      "sha256": "fae7da936984d7af0fb7633e496340d0f0034a90cc4f66f534e6c33548004832",
+      "sha256": "08f550de8fbaa8e2adf6d00df9273103dba7aa02f1f6411b15154acac63bc534",
       "storage": "inline"
     },
     {

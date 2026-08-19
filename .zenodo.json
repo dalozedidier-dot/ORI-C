@@ -1,12 +1,12 @@
 {
   "title": "ORI-C : architecture, mémoire et futurs accessibles",
-  "description": "Snapshot stable 0.9.8-research du programme ORI-C. Cette version étend l'exploitation de données réelles, porte le benchmark transversal à 24 cas et le registre machine à 56 preuves. Six cas sont complets sur X, H, m, Θ, τ, P_acc et R pour cinq systèmes distincts. Trois analyses réelles supplémentaires sont intégrées avec qualification fail-closed : dépendance à l'origine ancestrale sous limitation azotée, information prédictive de NBO/T dans le partage du carbone et divergence de trajectoires ARN. Le seuil scientifique interne reste à 7/12, avec les conditions 3, 4, 9, 10 et 11 ouvertes. INV-A reste exploratoire et aucun invariant transversal général ORI-C n'est revendiqué comme validé. La couche astronomique N-corps reste à 13/15, M2 à 1/10 et la généalogie cosmique quantitative conserve son pare-feu empirique strict. Le champ de licence Zenodo décrit le code; LICENSING.md gouverne les données, textes, figures et contenus tiers.",
+  "description": "Snapshot stable 0.9.9-research du programme ORI-C. Version de consolidation et de tracabilite : elle n'avance aucun niveau de preuve et le seuil scientifique interne reste a 7/12, avec les conditions 3, 4, 9, 10 et 11 ouvertes. Le protocole paleoclimatique PALEO-HISTORY-02 est scelle avant execution : son incertitude chronologique est acquise (stack benthique de l'Atlantique Nord tie aux speleothemes, 337 profondeurs x 1000 tirages, 3,2-650,5 ka, DOI 10.5281/zenodo.14796413) et son controle negatif physique aussi (paleointensite geomagnetique relative d'IODP U1308, 10 763 points, DOI 10.1594/PANGAEA.808947), les deux sur la meme echelle de profondeur composite. L'intervalle primaire est ramene de 0-800 ka a 0-650 ka, borne mesuree de la donnee disponible. Trois preenregistrements publics OSF sont reportes au depot. Une fuite du pare-feu empirique est colmatee : une colonne de forcage fabriquee est declaree inadmissible. Une relecture semantique independante de l'extension HC02-E1 rend fail_closed et reste non tranchee ; le baseline scelle 46/53 est inchange. Les resultats negatifs sont conserves : astronomie 13/15, M2 1/10, C-MAT-MEM-05 non soutenu. INV-A reste exploratoire et aucun invariant transversal general n'est revendique comme valide. Le champ de licence Zenodo decrit le code ; LICENSING.md gouverne les donnees, textes, figures et contenus tiers.",
   "creators": [
     {
       "name": "Daloze, Didier"
     }
   ],
-  "version": "0.9.8-research",
+  "version": "0.9.9-research",
   "publication_date": "2026-08-15",
   "license": "MIT",
   "upload_type": "software",
