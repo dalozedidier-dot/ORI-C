@@ -1,0 +1,49 @@
+{
+  "schema": "oric.external-source.v1",
+  "dataset_id": "na_stack_u1308",
+  "titre": "North Atlantic benthic d18O stack data (speleothem-tied)",
+  "doi": "10.5281/zenodo.14796413",
+  "licence": "CC-BY-4.0",
+  "publie_le": "2023-06-12",
+  "acquis_le": "2026-08-19",
+  "echelle_de_profondeur": "composite IODP Site U1308 (mcd)",
+  "couverture_ka": [
+    3.2,
+    650.5
+  ],
+  "ensembles_chronologiques": {
+    "profondeurs": 337,
+    "tirages": 1000,
+    "sigma_median_ka": 1.936,
+    "sigma_max_ka": 4.562
+  },
+  "modele_non_accorde": {
+    "fichier": "NA-stack_untuned_age_model.txt",
+    "ages_valides": 6428,
+    "ecart_median_vs_modele_aligne_LR04_ka": 10.18
+  },
+  "role": "fournit l'incertitude chronologique et une chronologie non accordee pour PALEO-HISTORY-02, sur la meme echelle de profondeur que le controle negatif RPI",
+  "pourquoi_hors_branche": "provenance d'acquisition; hors du perimetre scanne par plan_directeur/audit_transversal.py",
+  "fichiers": {
+    "NA-stack_age-d18O.txt": {
+      "bytes": 188628,
+      "sha256": "9c08c009f34ba4716b49815d0faec965b4166a9a8c8e6ad62f352f14aa422f7f",
+      "md5_zenodo": "8a8e44c26273878888a9c902d4f218bc"
+    },
+    "NA-stack_age-samples.txt": {
+      "bytes": 4006569,
+      "sha256": "2b9e000f65eda5575db88c8ffb104dbed809419a2af6a025fd56426b131c8307",
+      "md5_zenodo": "8fb2213cb2bdc4bdfd888d3de2181fd4"
+    },
+    "NA-stack_depth_composite.txt": {
+      "bytes": 3994,
+      "sha256": "c716064adc0d6a4174f3a6e26320aa67fbdd89d2f862f665b1cb39cf92b6cb19",
+      "md5_zenodo": "e6ec9c495dfde1c5df09d2cb2208a24f"
+    },
+    "NA-stack_untuned_age_model.txt": {
+      "bytes": 193229,
+      "sha256": "a05cd36964fc5641a4d9239b3e125fc087c620a5f394cb0cfe1c543dd08ebcf3",
+      "md5_zenodo": "3f30a7d321007de2deecdbf21499412b"
+    }
+  }
+}

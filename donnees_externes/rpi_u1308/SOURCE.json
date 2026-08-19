@@ -1,0 +1,40 @@
+{
+  "schema": "oric.external-source.v1",
+  "dataset_id": "rpi_u1308",
+  "titre": "Paleomagnetic and rock magnetic data from IODP Site U1308",
+  "doi": "10.1594/PANGAEA.808947",
+  "reference": "Channell et al. 2008, Earth Planet. Sci. Lett. 274, 59-71",
+  "licence": "CC-BY-3.0",
+  "acquis_le": "2026-08-19",
+  "role": "controle negatif physique de PALEO-HISTORY-02: paleointensite geomagnetique relative",
+  "reconstruction_profondeur": {
+    "regle": "313-U1308_rpi.tab est indexe en age, 313-U1308_suscept.tab en profondeur composite; les deux tables ont 10763 lignes dans le meme ordre, ce qui restitue RPI(profondeur)",
+    "verification": "14 reculs d'age sur 10762 pas (0.13%, amplitude max 0.53 ka); 99.87% des couples (profondeur, age) croissants apres tri par profondeur",
+    "points": 10763,
+    "profondeur_mcd": [
+      0.03,
+      111.22
+    ],
+    "age_ka": [
+      0.61,
+      1528.1
+    ],
+    "resolution_mediane_ka": 0.14
+  },
+  "admissibilite_controle_negatif": "la RPI n'a pas servi a construire la chronologie du site: le stack NA est tie aux speleothemes dates U-Th, et les tiepoints PALMOD de U1308 sont de type 'tuned' issus du d18O, jamais magnetiques",
+  "pourquoi_hors_branche": "provenance d'acquisition; hors du perimetre d'audit transversal",
+  "fichiers": {
+    "313-U1308_rpi.tab": {
+      "bytes": 172921,
+      "sha256": "748437b4a97b65ac57412f6d0f224845dfa9575e163e63f0f5854dd7a99efca4"
+    },
+    "313-U1308_suscept.tab": {
+      "bytes": 196694,
+      "sha256": "89c90bf1b15ccfc78a2a1ce6d6bec750c6d3dfb73c99444b83a966351860b8e7"
+    },
+    "summary.txt": {
+      "bytes": 5223,
+      "sha256": "ed6f8082d3851999e5933e5eaebc00dc4ff248aeadfec012ddccac3da8cdb96a"
+    }
+  }
+}
