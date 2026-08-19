@@ -5861,20 +5861,26 @@
     },
     {
       "path": "02_branche_systeme_solaire/paleo_history_02/PLAN_ANALYSE.json",
-      "size": 2861,
-      "sha256": "e33ee82c82c08fd40d9d71ffc4c822e5602d2e820e0237e4b613657e5e7924be",
+      "size": 2829,
+      "sha256": "eafc618e5f0455f3de4abff663356199f6aa6ef348d00e186108a27b77db31d0",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/paleo_history_02/PROTOCOLE.md",
-      "size": 10242,
-      "sha256": "1fe02d34c6cc5c83472745fa01afbd76f27497b9cced9212de2840f4789ab15a",
+      "size": 12732,
+      "sha256": "29bbfc93aff3c06051e02f7c83ca130b1325157593c9a2954b7be086b5395809",
       "storage": "inline"
     },
     {
       "path": "02_branche_systeme_solaire/paleo_history_02/SCHEMA_DONNEES.json",
-      "size": 5352,
-      "sha256": "96f6927ef4192aa83db9bec65a955d62f2f488b0078bfc994bcc553f8115a7b2",
+      "size": 6324,
+      "sha256": "cd512da8a0a0932d436b5501304da9f0d073e43b1d3944e8bde4b9c1f7921ef9",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_02/preparer_entrees.py",
+      "size": 5567,
+      "sha256": "62e472f3cb0babce9f1972e5d6e0e38ce9070c8ea8732df14b4a3d989a61e583",
       "storage": "inline"
     },
     {
@@ -7403,8 +7409,8 @@
     },
     {
       "path": "donnees_externes/.gitignore",
-      "size": 755,
-      "sha256": "7e78e4130cbe65dd8b550627384af8b005910a3e0d02b057d19c2eb2913fd51b",
+      "size": 817,
+      "sha256": "ace44f0185ab73176debaa36000c574cfc83648305f33e7d8efe755747e9f0dd",
       "storage": "inline"
     },
     {
@@ -7570,6 +7576,36 @@
       "storage": "inline"
     },
     {
+      "path": "donnees_externes/na_stack_u1308/NA-stack_age-d18O.txt",
+      "size": 188628,
+      "sha256": "9c08c009f34ba4716b49815d0faec965b4166a9a8c8e6ad62f352f14aa422f7f",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/na_stack_u1308/NA-stack_age-samples.txt",
+      "size": 4006569,
+      "sha256": "2b9e000f65eda5575db88c8ffb104dbed809419a2af6a025fd56426b131c8307",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/na_stack_u1308/NA-stack_depth_composite.txt",
+      "size": 3994,
+      "sha256": "c716064adc0d6a4174f3a6e26320aa67fbdd89d2f862f665b1cb39cf92b6cb19",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/na_stack_u1308/NA-stack_untuned_age_model.txt",
+      "size": 193229,
+      "sha256": "a05cd36964fc5641a4d9239b3e125fc087c620a5f394cb0cfe1c543dd08ebcf3",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/na_stack_u1308/SOURCE.json",
+      "size": 1793,
+      "sha256": "efb42494be6f7cfb4024426712e3cbd6f6acce4c7dcbba1424bdb696271ba0fb",
+      "storage": "inline"
+    },
+    {
       "path": "donnees_externes/nader_vesicules_2026/S. Nader AVT raw data.xlsx",
       "size": 1899453,
       "sha256": "4df3a6ba57a1ccc0e68cabdaf7c0af7469100b1fdcf0e2abc4af168b4e4f5aab",
@@ -7711,6 +7747,30 @@
       "path": "donnees_externes/petrungaro_2026/SOURCE.json",
       "size": 666,
       "sha256": "f549790d72768f06af9004e08e57da46ba39fcdc7c3743a044878a851a25594f",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/rpi_u1308/313-U1308_rpi.tab",
+      "size": 172921,
+      "sha256": "748437b4a97b65ac57412f6d0f224845dfa9575e163e63f0f5854dd7a99efca4",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/rpi_u1308/313-U1308_suscept.tab",
+      "size": 196694,
+      "sha256": "89c90bf1b15ccfc78a2a1ce6d6bec750c6d3dfb73c99444b83a966351860b8e7",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/rpi_u1308/SOURCE.json",
+      "size": 1710,
+      "sha256": "3f9aa833b008c87ead9e894bf09381fc44d9ef54f4acf8ea778109652e20a7c3",
+      "storage": "inline"
+    },
+    {
+      "path": "donnees_externes/rpi_u1308/summary.txt",
+      "size": 5223,
+      "sha256": "ed6f8082d3851999e5933e5eaebc00dc4ff248aeadfec012ddccac3da8cdb96a",
       "storage": "inline"
     },
     {
@@ -11442,7 +11502,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "8eb5fd9361996dfc540195511be461ea778b6def25ef0a96f1ddd3eb544659b7",
+      "sha256": "c3397009966e0b1da2612933ef5557e6a532d5b636fc23caf12dd9502c19715f",
       "storage": "inline"
     },
     {

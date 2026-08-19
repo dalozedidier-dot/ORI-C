@@ -4,7 +4,7 @@
   "herite_de": "oric.paleo-history-01.data.v1",
   "intervalle_primaire_ka": [
     0,
-    800
+    650
   ],
   "jeux_obligatoires": [
     "LR04",
@@ -31,28 +31,21 @@
   ],
   "incertitude_chronologique": {
     "marin": {
-      "source": "ensembles posterieurs PALMOD 2.0.0 (voir donnees_externes/palmod_130k/SOURCE.json)",
-      "doi": "10.1594/PANGAEA.984602",
-      "article_doi": "10.5194/essd-18-3013-2026",
-      "license": "CC-BY-4.0",
-      "compilation_sha256": "10e0e21e0404cfa0cf4b0fd738b07492543f18e169b82b5e0ddc310fe9b0b9ef",
-      "tirages_par_site": 1000,
-      "rattachement": "tirage entier par realisation, interpolation lineaire en profondeur sur les profondeurs mesurees; aucun melange de tirages",
-      "releve": "donnees_externes/palmod_130k/ACQUISITION_ENSEMBLES.json",
-      "catalogue": "donnees_externes/palmod_130k/CATALOGUE_ENSEMBLES.json",
-      "acquisition": {
-        "statut": "acquis",
-        "sites": 475,
-        "echecs": 0,
-        "empreintes_distinctes": 475,
-        "volume_go": 1.34,
-        "cache_externe": "hors depot, conformement a repository_size_policy"
-      },
-      "version_epinglee": {
-        "version": "1.0.2",
-        "regle": "toutes les versions derivent de la compilation dont le SHA-256 est enregistre; la resolution 'current_version' est interdite car elle derive dans le temps",
-        "note": "le temoin de PALEO_HISTORY_02_ACQUISITION.json avait ete pris en 1.0.3 via current_version; 1.0.3 reste accessible mais n'est pas la version decrite par la compilation epinglee"
-      }
+      "source": "stack benthique Atlantique Nord tie aux speleothemes, sur l'echelle composite U1308",
+      "doi": "10.5281/zenodo.14796413",
+      "licence": "CC-BY-4.0",
+      "dossier": "donnees_externes/na_stack_u1308/",
+      "profondeurs": 337,
+      "tirages_par_profondeur": 1000,
+      "couverture_ka": [
+        3.2,
+        650.5
+      ],
+      "sigma_median_ka": 1.936,
+      "sigma_max_ka": 4.562,
+      "modele_non_accorde_disponible": "NA-stack_untuned_age_model.txt",
+      "ecart_median_accorde_vs_non_accorde_ka": 10.18,
+      "rattachement": "tirage entier par realisation; aucun melange de tirages; aucune synthese"
     },
     "glaciaire": {
       "source": "AICC2023",
@@ -63,21 +56,21 @@
     "insolation": {
       "source": "sans objet",
       "justification_explicite": "une solution astronomique definit l'axe temporel et ne porte pas d'incertitude de datation"
+    },
+    "palmod_130k": {
+      "statut": "acquis mais insuffisant pour l'intervalle primaire",
+      "dossier": "donnees_externes/palmod_130k/",
+      "portee_mesuree": "age maximal median par site 41.6 ka; 2 sites sur 80 atteignent 200 ka",
+      "usage_residuel": "robustesse multi-sites sur 0-130 ka, hors test primaire"
     }
   },
   "controle_negatif_reel": {
     "nature": "variable mesuree sur les memes carottes, memes profondeurs, meme plan d'echantillonnage, de mecanisme a priori independant de l'histoire climatique de surface",
     "candidat": "paleointensite geomagnetique relative (RPI)",
-    "carottes_recoupees_avec_PALMOD": [
-      "ODP 983",
-      "ODP 984",
-      "ODP 1089",
-      "IODP U1308"
-    ],
-    "condition_anti_circularite": "CORRIGEE 2026-08-18. L'exigence d'une chronologie non accordee est retiree : elle privait le controle de sa fonction, qui est d'heriter des memes artefacts de chronologie que la cible. Exigence correcte: (1) la RPI roule sur la MEME chronologie posterieure PALMOD que la cible du meme site; (2) la RPI n'a pas servi a construire cette chronologie - aucun tiepoint magnetostratigraphique.",
-    "statut_acquisition": "serie_rpi_non_acquise",
-    "recoupement_etabli": "par nom de carotte uniquement; l'existence d'une serie RPI publiee, accessible et couvrant l'intervalle reste a verifier pour chacune",
-    "prealable_au_scellement": true,
+    "condition_anti_circularite": "CORRIGEE 2026-08-18. L'exigence d'une chronologie non accordee est retiree : elle privait le controle de sa fonction, qui est d'heriter des memes artefacts de chronologie que la cible. Exigence correcte: (1) la RPI roule sur la MEME chronologie que la cible - ici l'echelle de profondeur composite U1308 du stack NA; (2) la RPI n'a pas servi a construire cette chronologie - aucun tiepoint magnetostratigraphique.",
+    "statut_acquisition": "acquis",
+    "recoupement_etabli": "RESOLU 2026-08-19 pour U1308: serie RPI publiee acquise et jointe a la cible sur la meme echelle de profondeur, 336 profondeurs sur 337. Les trois autres carottes recoupees n'ont pas ete instrumentees et restent des voies de robustesse.",
+    "prealable_au_scellement": false,
     "tiepoints_releves": {
       "ODP 983": {
         "n": 12,
@@ -122,7 +115,21 @@
       },
       "constat": "aucune carotte ne couvre 0-800 ka par ses seuls tiepoints; au-dela du radiocarbone la datation marine passe par l'accord orbital ou isotopique. Aucun tiepoint n'est magnetique, donc la condition (2) est remplie."
     },
-    "reste_a_faire": "identifier, pour chaque carotte retenue, une serie RPI publiee couvrant l'intervalle primaire choisi; PANGAEA 10.1594/PANGAEA.808979 couvre 0.9-2.2 Ma pour ODP 983/984, donc hors fenetre 0-800 ka"
+    "source": "paleointensite geomagnetique relative IODP U1308",
+    "doi": "10.1594/PANGAEA.808947",
+    "licence": "CC-BY-3.0",
+    "dossier": "donnees_externes/rpi_u1308/",
+    "points": 10763,
+    "resolution_mediane_ka": 0.14,
+    "meme_echelle_que_la_cible": "profondeur composite U1308",
+    "condition_2_verifiee": "la RPI n'a pas servi de tiepoint: le stack NA est tie aux speleothemes dates U-Th, jamais a la magnetostratigraphie",
+    "restitution_de_la_profondeur": "313-U1308_rpi.tab est indexe en age, 313-U1308_suscept.tab en profondeur composite; les deux tables ont 10763 lignes dans le meme ordre. Verifie: 14 reculs d'age sur 10762 pas (0.13%, amplitude max 0.53 ka) et 99.87% des couples (profondeur, age) croissants apres tri.",
+    "carottes_recoupees": [
+      "IODP U1308 (instrumentee)",
+      "ODP 983",
+      "ODP 984",
+      "ODP 1089"
+    ]
   },
   "interdictions": [
     "chronologie sans incertitude ou justification explicite",
@@ -132,5 +139,17 @@
     "imputation d'une incertitude d'age absente",
     "synthese d'un tirage chronologique au-dela des posterieurs publies",
     "usage d'une serie de controle negatif ayant servi a construire la chronologie du site (tiepoint magnetostratigraphique)"
-  ]
+  ],
+  "intervalle_primaire_justification": "CONTRAINTE MESUREE, non un choix. 0-800 ka est inexecutable: aucune source d'incertitude chronologique ne l'atteint. PALMOD 130k s'arrete vers 130 ka (age maximal median par site 41.6 ka; 0 site sur 80 echantillonnes atteint 800 ka). Le stack NA de Zenodo 14796413 porte 1000 tirages jusqu'a 650.5 ka. L'intervalle primaire est donc borne par la donnee disponible.",
+  "jointure_verifiee": {
+    "script": "02_branche_systeme_solaire/paleo_history_02/preparer_entrees.py",
+    "lignes_completes": 336,
+    "sur": 337,
+    "couverture_age_ka": [
+      4.92,
+      650.54
+    ],
+    "sigma_age_median_ka": 1.94,
+    "sans_controle_negatif": 1
+  }
 }

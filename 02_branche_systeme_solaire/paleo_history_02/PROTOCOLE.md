@@ -47,7 +47,8 @@ bloc ; témoin de complexité égale sans ordre historique.
 
 | famille | source d'incertitude | statut |
 |---|---|---|
-| enregistrements marins de site | ensembles postérieurs PALMOD 2.0.0, 1 000 tirages âge-profondeur par site — DOI `10.1594/PANGAEA.984602`, article `10.5194/essd-18-3013-2026`, CC-BY-4.0 | **acquis : 475/475 sites, 0 échec, 475 empreintes distinctes, 1,34 Go** — voir `donnees_externes/palmod_130k/` |
+| enregistrements marins de site | **stack NA sur l'échelle composite U1308**, 337 profondeurs × 1 000 tirages — DOI `10.5281/zenodo.14796413`, CC-BY-4.0 | **acquis, 3,2–650,5 ka** — voir la mise à jour du 19 août plus bas |
+| *(superseded)* PALMOD 2.0.0, 475 sites | DOI `10.1594/PANGAEA.984602` | acquis 475/475, mais **s'arrête vers 130 ka** : conservé pour la robustesse multi-sites, hors test primaire |
 | carottes glaciaires EPICA et Vostok | AICC2023, σ publiés par carotte et par tranche d'âge | présent au dépôt, empreinte `a0498efb…` conforme à `AICC2023_UNCERTAINTY.json` |
 | insolation | sans objet | une solution astronomique définit l'axe temporel ; elle n'a pas d'incertitude de datation. C'est la « justification explicite » prévue par l'interdiction de `SCHEMA_DONNEES.json` |
 
@@ -125,15 +126,16 @@ confondait deux problèmes distincts :
 
 L'exigence correcte est double :
 
-- la RPI est placée sur **la même chronologie postérieure PALMOD** que la cible
-  du même site, artefacts compris ;
+- la RPI est placée sur **la même chronologie que la cible** — ici l'échelle de
+  profondeur composite U1308 du stack NA — artefacts compris ;
 - la RPI **n'a pas servi à construire cette chronologie**. Aucun tiepoint
   magnétostratigraphique, sans quoi elle serait prédictible par construction.
 
-Le relevé des ensembles acquis confirme que cette seconde condition est remplie
-sur les carottes visées : les tiepoints PALMOD y sont de type `tuned` — donc
-issus du δ¹⁸O — ou `14C`/`tephra`, jamais magnétiques. La RPI reste donc
-indépendante de la construction du modèle d'âge.
+Le relevé des ensembles acquis confirme que cette seconde condition est remplie :
+les tiepoints PALMOD sont de type `tuned` — donc issus du δ¹⁸O — ou
+`14C`/`tephra`, jamais magnétiques ; et le stack NA retenu pour le test primaire
+est tié aux spéléothèmes datés U-Th. La RPI reste donc indépendante de la
+construction du modèle d'âge dans les deux cas.
 
 ### Ce que les données acquises montrent
 
@@ -165,6 +167,51 @@ Les séries RPI de ces quatre carottes n'ont pas été acquises. Le recoupement
 RPI publiée, accessible et couvrant l'intervalle existe pour chacune. Cette
 vérification est un préalable au scellement.
 
+## Mise à jour du 19 août 2026 — les deux vides sont comblés
+
+### L'intervalle primaire est borné par la donnée, non par un choix
+
+0–800 ka est inexécutable. Aucune source d'incertitude chronologique ne l'atteint :
+PALMOD 130k s'arrête vers 130 ka — âge maximal médian par site **41,6 ka**, et
+**aucun** des 80 sites échantillonnés n'atteint 800 ka. L'intervalle primaire
+devient **0–650 ka**, borne du stack disponible.
+
+### Incertitude chronologique — acquise
+
+*North Atlantic benthic δ18O stack*, `10.5281/zenodo.14796413`, CC-BY-4.0,
+dans `donnees_externes/na_stack_u1308/`. **337 profondeurs × 1 000 tirages
+d'âge** sur l'échelle composite d'IODP U1308, couvrant 3,2–650,5 ka, σ médian
+**1,94 ka**. Les quatre MD5 concordent avec ceux publiés par Zenodo.
+
+Le jeu fournit aussi un **modèle d'âge non accordé**, tié aux spéléothèmes datés
+U-Th. L'écart médian avec le modèle aligné sur LR04 est de **10,18 ka** : le
+choix entre les deux n'est pas cosmétique.
+
+### Contrôle négatif physique — acquis
+
+Paléointensité géomagnétique relative d'IODP U1308, `10.1594/PANGAEA.808947`,
+CC-BY-3.0, dans `donnees_externes/rpi_u1308/`. **10 763 points**, résolution
+médiane **0,14 ka**.
+
+La RPI est publiée indexée en âge, donc a priori verrouillée sur la chronologie
+de Channell. Sa profondeur est restituée par la table de susceptibilité, qui
+porte le même nombre de lignes dans le même ordre. Ce n'est pas supposé mais
+vérifié : 14 reculs d'âge sur 10 762 pas — 0,13 %, amplitude maximale 0,53 ka —
+et **99,87 %** des couples (profondeur, âge) croissants après tri par profondeur.
+
+Les deux conditions d'admissibilité sont donc remplies. La RPI roule sur la même
+échelle de profondeur que la cible, artefacts de chronologie compris. Et elle n'a
+pas servi à construire cette chronologie : le stack est tié aux spéléothèmes,
+jamais à la magnétostratigraphie.
+
+### Jointure vérifiée
+
+`preparer_entrees.py` assemble les trois couches sur l'échelle U1308 :
+**336 profondeurs complètes sur 337**, de 4,92 à 650,54 ka. La seule manquante
+est la plus superficielle, sous le départ de la série RPI. Ce script ne calcule
+aucun score et n'ouvre aucune cible.
+
+
 ## Critère primaire — hérité de 01, inchangé
 
 `supports` exige simultanément : gain de RMSE d'au moins 5 % de l'histoire réelle
@@ -180,15 +227,15 @@ rend `non_testable`, jamais `supports`.
 
 ## Décisions à trancher avant scellement
 
-1. **Circularité du réglage orbital.** LR04 a un modèle d'âge accordé sur
-   l'orbite. Tester si les forçages astronomiques plus l'histoire prédisent le
-   climat, sur une chronologie elle-même accordée à l'orbite, est circulaire. Les
-   postérieurs PALMOD de site offrent une sortie — chronologies de site non
-   accordées — mais changent l'unité d'analyse : site plutôt qu'empilement.
-   Faut-il basculer l'analyse primaire sur les sites PALMOD et reléguer LR04 en
-   robustesse ?
-2. **Série RPI de référence** pour chacune des quatre carottes, et preuve que sa
-   chronologie n'est pas accordée au climat.
+1. **Découpage des blocs.** Les quatre blocs 0-200 / 200-400 / 400-600 / 600-800
+   ne tiennent plus, l'intervalle étant borné à 650 ka par la donnée. Proposition :
+   0-200 / 200-400 / 400-650, et réécriture du critère « au moins 3 blocs sur 4 »
+   en conséquence. C'est une modification du critère primaire, donc elle précède
+   le scellement.
+2. **Modèle d'âge accordé ou non accordé.** Le stack NA fournit les deux, écart
+   médian 10,18 ka. Le non accordé attaque la circularité orbitale du modèle de
+   base « état et forçages » ; l'accordé reste comparable à la littérature.
+   À trancher avant scellement, jamais après résultat.
 3. **Graine et ordre de réutilisation** des tirages au-delà de 1 000.
 
 Tant que ces trois points ne sont pas fixés, le scellement n'a pas lieu.

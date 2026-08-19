@@ -46,7 +46,7 @@
     "IAAFT"
   ],
   "realisations_chronologiques": {
-    "marin": "tirage entier parmi les 1000 posterieurs PALMOD du site; interpolation lineaire en profondeur; reutilisation au-dela de 1000 dans un ordre fixe par graine declaree",
+    "marin": "tirage entier parmi les 1000 tirages du stack NA a la profondeur consideree; aucun melange; aucune synthese au-dela des 1000 publies",
     "glaciaire": "tirage gaussien tronque a +/-3 sigma AICC2023 par tranche d'age, monotonie imposee par rejet",
     "graine": null,
     "regle": "aucun tirage n'est synthetise; un enregistrement sans incertitude disponible est exclu du test primaire, jamais impute"
@@ -55,7 +55,8 @@
     "variable": "paleointensite_geomagnetique_relative",
     "protocole": "le test primaire est rejoue a l'identique sur la RPI du meme site, sur la MEME chronologie posteriere PALMOD que la cible, artefacts de chronologie compris",
     "regle_de_rejet": "un gain de RMSE atteignant le seuil primaire sur le controle negatif rend le resultat principal non_testable, jamais supports",
-    "statut": "non_acquis"
+    "statut": "acquis",
+    "source": "donnees_externes/rpi_u1308/ (PANGAEA 10.1594/PANGAEA.808947)"
   },
   "sorties_obligatoires": [
     "scores_par_bloc_et_modele",
@@ -67,8 +68,12 @@
     "verdict_et_motif"
   ],
   "decisions_a_trancher_avant_scellement": [
-    "intervalle primaire. Constat mesure sur les ensembles PALMOD: au-dela de la portee du radiocarbone (~50 ka) tous les tiepoints marins sont de type 'tuned', donc accordes a l'orbite ou au d18O. Sur 0-800 ka la cible est donc partiellement predictible par les forcages astronomiques PAR CONSTRUCTION, ce qui contamine le modele de base 'etat_et_forcages'. Trancher entre: (a) garder 0-800 ka et borner explicitement cette circularite; (b) restreindre l'intervalle primaire a la fenetre datee au radiocarbone, ou des chronologies independantes existent, en renoncant aux blocs longs; (c) autre construction argumentee.",
-    "serie RPI de reference par carotte couvrant l'intervalle primaire retenu, et preuve qu'elle n'a pas servi de tiepoint a la chronologie du site",
+    "decoupage des blocs. Les quatre blocs 0-200/200-400/400-600/600-800 ne tiennent plus, l'intervalle etant borne a 650 ka par la donnee. Proposer 0-200/200-400/400-650 et reecrire le critere 'au moins 3 blocs sur 4' en consequence. C'est une modification du critere primaire, donc elle precede le scellement.",
+    "modele d'age accorde ou non accorde. Le stack NA fournit les deux; l'ecart median est de 10.18 ka, donc le choix change reellement la chronologie. Le non accorde attaque la circularite orbitale du modele de base 'etat_et_forcages'; l'accorde reste comparable a la litterature. Trancher avant scellement, jamais apres resultat.",
     "graine et ordre de reutilisation des tirages au-dela de 1000"
+  ],
+  "intervalle_primaire_ka": [
+    0,
+    650
   ]
 }
