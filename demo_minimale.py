@@ -206,7 +206,7 @@ def ce_qui_ne_marche_pas() -> None:
     print("                   La matrice générique est un diagnostic de couverture,")
     print("                   pas une machine à produire des preuves.")
     print()
-    print("  Détail : ATTEIGNABILITE_DES_CRITERES_2026-08-08.md, ETAT_DES_PREUVES.md")
+    print("  Détail : documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md, ETAT_DES_PREUVES.md")
 
 
 def main() -> int:

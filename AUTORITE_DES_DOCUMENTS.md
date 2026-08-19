@@ -33,7 +33,7 @@ ci-dessous.
 ## Règles de lecture et de mise à jour
 
 1. Un résultat négatif reste limité au protocole qui l’a produit. Il ne peut pas être étendu à une branche entière ni au programme.
-1 bis. **Un résultat négatif dont le critère est inatteignable n’est pas un résultat.** Avant de citer un échec, vérifier son statut dans `ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Sur 23 critères discrets, 20 sont atteignables et 3 ne sont pas évaluables par cette voie.
+1 bis. **Un résultat négatif dont le critère est inatteignable n’est pas un résultat.** Avant de citer un échec, vérifier son statut dans `documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Sur 23 critères discrets, 20 sont atteignables et 3 ne sont pas évaluables par cette voie.
 
 Un seul critère reste écarté pour inatteignabilité : la **vallée des rayons**, dont le seuil n’est franchi à aucune taille disponible et dont la profondeur mesurée est négative, −0,002420, sur 0 succès en 40 tirages à n = 200, 400, 800 et 1600.
 

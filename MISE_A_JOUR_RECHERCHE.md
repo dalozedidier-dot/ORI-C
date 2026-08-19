@@ -47,4 +47,4 @@ Dans GitHub Actions, lancer `Recherche suivante ORI-C` avec les valeurs par déf
 
 La mise à jour intègre directement la correction Dryad au dossier complet. Les liens individuels sont désormais résolus depuis le DOI et la version publique courante. Le client conserve le chemin exact des redirections signées, valide les formats, tente l'archive complète en repli et remplace le cache de façon atomique. Un cache complet antérieur est conservé si un rafraîchissement réseau échoue.
 
-Le fichier temporaire `fix_dryad_403.patch`, responsable de l'échec des contrôles d'intégrité Python 3.12 et 3.13, a été supprimé. Six tests de régression couvrent la nouvelle acquisition. Le détail se trouve dans `CORRECTION_ACQUISITION_DRYAD_2026-08-05.md`.
+Le fichier temporaire `fix_dryad_403.patch`, responsable de l'échec des contrôles d'intégrité Python 3.12 et 3.13, a été supprimé. Six tests de régression couvrent la nouvelle acquisition. Le détail se trouve dans `documentation/historique/CORRECTION_ACQUISITION_DRYAD_2026-08-05.md`.

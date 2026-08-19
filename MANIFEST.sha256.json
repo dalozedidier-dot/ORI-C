@@ -10,6 +10,12 @@
       "storage": "inline"
     },
     {
+      "path": ".github/ISSUE_TEMPLATE/objection-de-preuve.yml",
+      "size": 2900,
+      "sha256": "e000e87bca343057ff72a5ead908c3e0a267e6dd948d0f4acec9e2c6cf97b4d9",
+      "storage": "inline"
+    },
+    {
       "path": ".github/workflows/analyse-donnees-reelles-etendues.yml",
       "size": 3185,
       "sha256": "36516f3f43c77cbd30015016f529249826a14c81325e2e614d0106a943af919a",
@@ -4733,8 +4739,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/preenregistrement_memoire_climatique/PROTOCOLE.md",
-      "size": 4637,
-      "sha256": "194ebe2fac18d546170892bcacc7cd4776ce626b91bf7083a94007ed66a2188c",
+      "size": 4662,
+      "sha256": "255c4388858f13ef4cd84a06ca47280fca10b3bc3911dda0f4e7ebe16d3b53af",
       "storage": "inline"
     },
     {
@@ -6227,8 +6233,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser.py",
-      "size": 6915,
-      "sha256": "17f3078721495c572f8206ff5d47481ed271a0e615d8a72793d678ad581e8be5",
+      "size": 6927,
+      "sha256": "591a7ded55d3b0e8e072fb72ee7179e2ff0a152a5532f7921fb7cfc3973daa99",
       "storage": "inline"
     },
     {
@@ -6239,8 +6245,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_replication_independante.py",
-      "size": 17431,
-      "sha256": "7cea7ecae8a381be3ac89296db034bc3142d26ce7680724205927f1654cb327c",
+      "size": 17443,
+      "sha256": "6a82e5ff971090be8d137e9dcb7a5e9cdf22a1facba1a509fd5fe576da471221",
       "storage": "inline"
     },
     {
@@ -6790,12 +6796,6 @@
       "storage": "inline"
     },
     {
-      "path": "ACTION_VERROUS_2026-08-14.md",
-      "size": 2417,
-      "sha256": "1563362245e050bbbb665fb5fdde102532106a6332b40a402545529c939a9e2b",
-      "storage": "inline"
-    },
-    {
       "path": "ARCHITECTURE.md",
       "size": 16750,
       "sha256": "320400b8257d524e070594499c249188bd5aa030666c59ae1e75888efe0b9825",
@@ -6808,21 +6808,9 @@
       "storage": "inline"
     },
     {
-      "path": "ATTEIGNABILITE_DES_CRITERES_2026-08-08.md",
-      "size": 5662,
-      "sha256": "577b9269dde7aa0fb827da1e6314a526cd550614169bb8610fd1fa8d186fcfa3",
-      "storage": "inline"
-    },
-    {
       "path": "AUTORITE_DES_DOCUMENTS.md",
-      "size": 33819,
-      "sha256": "424cfe1e4a45b4c2e4f812175c59078ef14429c069dfe7d4283098bfd8d35347",
-      "storage": "inline"
-    },
-    {
-      "path": "AVANCEES_ET_DECOUVERTES_2026-08-06.md",
-      "size": 5497,
-      "sha256": "0b0cff7719cba92b4fc51cce4b68b80727fee3c4f3902e5405ce00aae2414d73",
+      "size": 33844,
+      "sha256": "9c4330c11ab9300f2aa6059685c20c6a490584cdbeb398cc46d2ec0e5fa6086f",
       "storage": "inline"
     },
     {
@@ -6834,13 +6822,13 @@
     {
       "path": "CITATION.cff",
       "size": 1488,
-      "sha256": "8f2c471d0515f447afb040ce63930be38276d677806e42963819a74e9227dfc9",
+      "sha256": "e3e10e6d7743e815bed5bb5981479a832e2b0fd55b15a892fd23c12ab96608d9",
       "storage": "inline"
     },
     {
       "path": "CONTRIBUTING.md",
-      "size": 732,
-      "sha256": "e35ef599268a615c5ae5671602efa3fc43edc7a74851599ad673a928057b5cdf",
+      "size": 903,
+      "sha256": "3d94ec3f5a6c2b64077f717a9307195809711215f65cb7a1b697cafe5c212301",
       "storage": "inline"
     },
     {
@@ -6856,24 +6844,6 @@
       "storage": "inline"
     },
     {
-      "path": "CORRECTIONS_AUDIT_2026-08-04.md",
-      "size": 3842,
-      "sha256": "309c3710f09cd198120929982d78e39ae24ff61909415996884e86d88e7e328b",
-      "storage": "inline"
-    },
-    {
-      "path": "CORRECTION_ACQUISITION_DRYAD_2026-08-05.md",
-      "size": 2597,
-      "sha256": "e0f7bd95170cb8f17665eb544410effbf197669650dcc86a6cb7fa62deb75092",
-      "storage": "inline"
-    },
-    {
-      "path": "CORRECTION_DONNEES_EXTERNES_2026-08-05.md",
-      "size": 1634,
-      "sha256": "b90c030fb41e7e89095de23ead4df14e5ed2356a8c4d8ba4ef89128bd4eb32c7",
-      "storage": "inline"
-    },
-    {
       "path": "DATA_AVAILABILITY.md",
       "size": 11516,
       "sha256": "b540f19f96a63d2f8a0db2608e396e6b401b7c22c1a827c11bcb13e40311ba27",
@@ -6883,12 +6853,6 @@
       "path": "ENVIRONNEMENT.md",
       "size": 2869,
       "sha256": "1091b023fb307773ca737e8f47c12bae34c7d332b6440db08874dc010b7a077c",
-      "storage": "inline"
-    },
-    {
-      "path": "ERRATUM_SCIENTIFIQUE_v0.9.4_2026-08-07.md",
-      "size": 3525,
-      "sha256": "54a01cad54e75589461e9b3f0de6d9f3a5617861d4cb030b0dcfc0e3ff7bd397",
       "storage": "inline"
     },
     {
@@ -6911,8 +6875,8 @@
     },
     {
       "path": "FOCUS_PROGRAMME.md",
-      "size": 16352,
-      "sha256": "161abb6a27bcd92c7b7bb52f9f9320cb619e6de31b2c299e9727f6a37c9d81bd",
+      "size": 17871,
+      "sha256": "434aed60c2de9992dde5e4054928c48052f2adcf53d95762ed813d61b59b59b4",
       "storage": "inline"
     },
     {
@@ -6982,15 +6946,9 @@
       "storage": "inline"
     },
     {
-      "path": "MISE_A_JOUR_PREUVES_EMPIRIQUES_2026-08-07.md",
-      "size": 6522,
-      "sha256": "d032ef586adc0e3deb7a22919a3d2602b05db0c8bdc9e616e401994521c508e6",
-      "storage": "inline"
-    },
-    {
       "path": "MISE_A_JOUR_RECHERCHE.md",
-      "size": 3407,
-      "sha256": "4810eb52058776dcf2747dc12fe1b1f8de82ce43dbc6b19e5f17e701abf70c44",
+      "size": 3432,
+      "sha256": "c6adba1ffb824bf86a557fd2085e2d57e7f1951fd4376d972428f863ea8dc149",
       "storage": "inline"
     },
     {
@@ -7012,12 +6970,6 @@
       "storage": "inline"
     },
     {
-      "path": "PUISSANCE_VIVANT_2026-08-07.md",
-      "size": 4921,
-      "sha256": "abf24bdb8b9857ad48b70817480a0bd0831382bc190b82f9c94e37134cd510b1",
-      "storage": "inline"
-    },
-    {
       "path": "RAPPORT_SYNTHESE_ORI-C.docx",
       "size": 48547,
       "sha256": "27169aad1bee38fb6c33d536295b0a1d53193c84fb6042a8bd1815118208b4c8",
@@ -7025,8 +6977,8 @@
     },
     {
       "path": "README.md",
-      "size": 34615,
-      "sha256": "8949cdd8deff50f22383caea62455a08da4844f091dedff873ea5f2a6ee8c38d",
+      "size": 34740,
+      "sha256": "44d71edceb40824b39e01eef7a687465d632e84c990155dbecd6570f33fdfff6",
       "storage": "inline"
     },
     {
@@ -7217,8 +7169,8 @@
     },
     {
       "path": "demo_minimale.py",
-      "size": 10940,
-      "sha256": "572232f97d2321b5fee0d7d632ecd85ccde8220e624928c2302394a0c7a088fd",
+      "size": 10965,
+      "sha256": "7bd8116086b3b7cfb1e354c74361f27ce3b753f12723f5ff032dcb1117c35f52",
       "storage": "inline"
     },
     {
@@ -7426,9 +7378,63 @@
       "storage": "inline"
     },
     {
+      "path": "documentation/historique/ACTION_VERROUS_2026-08-14.md",
+      "size": 2417,
+      "sha256": "1563362245e050bbbb665fb5fdde102532106a6332b40a402545529c939a9e2b",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md",
+      "size": 5662,
+      "sha256": "577b9269dde7aa0fb827da1e6314a526cd550614169bb8610fd1fa8d186fcfa3",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/AVANCEES_ET_DECOUVERTES_2026-08-06.md",
+      "size": 5497,
+      "sha256": "0b0cff7719cba92b4fc51cce4b68b80727fee3c4f3902e5405ce00aae2414d73",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/CORRECTIONS_AUDIT_2026-08-04.md",
+      "size": 3842,
+      "sha256": "309c3710f09cd198120929982d78e39ae24ff61909415996884e86d88e7e328b",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/CORRECTION_ACQUISITION_DRYAD_2026-08-05.md",
+      "size": 2597,
+      "sha256": "e0f7bd95170cb8f17665eb544410effbf197669650dcc86a6cb7fa62deb75092",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/CORRECTION_DONNEES_EXTERNES_2026-08-05.md",
+      "size": 1634,
+      "sha256": "b90c030fb41e7e89095de23ead4df14e5ed2356a8c4d8ba4ef89128bd4eb32c7",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/ERRATUM_SCIENTIFIQUE_v0.9.4_2026-08-07.md",
+      "size": 3525,
+      "sha256": "54a01cad54e75589461e9b3f0de6d9f3a5617861d4cb030b0dcfc0e3ff7bd397",
+      "storage": "inline"
+    },
+    {
       "path": "documentation/historique/ETAT_DES_PREUVES_NARRATIF_2026-08-10.md",
       "size": 44677,
       "sha256": "9407e5667f7583c11f151d476ae66db93aa636d7e725d1be32812bf3bba14adb",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/MISE_A_JOUR_PREUVES_EMPIRIQUES_2026-08-07.md",
+      "size": 6522,
+      "sha256": "d032ef586adc0e3deb7a22919a3d2602b05db0c8bdc9e616e401994521c508e6",
+      "storage": "inline"
+    },
+    {
+      "path": "documentation/historique/PUISSANCE_VIVANT_2026-08-07.md",
+      "size": 4921,
+      "sha256": "abf24bdb8b9857ad48b70817480a0bd0831382bc190b82f9c94e37134cd510b1",
       "storage": "inline"
     },
     {
@@ -10385,8 +10391,8 @@
     },
     {
       "path": "plateforme/campagne_maximale_reelle/separer_compteurs.py",
-      "size": 5359,
-      "sha256": "f13f1c6b244281e83c644403b0d1958e627b485e47c0beb50eb7bb237f3267f9",
+      "size": 5384,
+      "sha256": "800d0d3f34ccff40d183eb50a09fd378bd8e6c4b4d0320eeead0cbf9d66bf774",
       "storage": "inline"
     },
     {
@@ -11532,7 +11538,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "da1036bb0fc2b30bfc0116dd7102885ce69bd41ddd6199ede99a9c493f054765",
+      "sha256": "b57e470c2ce295bf91b917dbf57651c02fb14761d0b7f993459c1f80be35c811",
       "storage": "inline"
     },
     {
@@ -11603,8 +11609,8 @@
     },
     {
       "path": "protocoles_geles/GEOROC_HSE_PROSPECTIF_ECARTE.md",
-      "size": 3398,
-      "sha256": "9c04533588565bbab20959027c7922675364db30e314ce268d060dc70e188892",
+      "size": 3423,
+      "sha256": "5b3ac9c9a1660d864919e7245335fe27eaa0ed3e7623f27b10ab0b57931ca38e",
       "storage": "inline"
     },
     {
@@ -11915,8 +11921,8 @@
     },
     {
       "path": "site/index.html",
-      "size": 20204,
-      "sha256": "fe035d913dd8ea13716fd1d871a665e02630149236bd33d33f3abad4fdd0e5bf",
+      "size": 20209,
+      "sha256": "10235b83f241e1ef6e9a02ce643857c337b5eea768e55c723940227ff9ecf632",
       "storage": "inline"
     },
     {
@@ -11927,14 +11933,14 @@
     },
     {
       "path": "site/preuves.html",
-      "size": 47711,
-      "sha256": "c92bdf449ade8984999464cfb531dd9f2060595250ef47deba8038844927ed62",
+      "size": 47761,
+      "sha256": "7fd5141532539c9f6c6b477ca841b76c96b252650c7cf6b3701ebbd4956295d1",
       "storage": "inline"
     },
     {
       "path": "site/reproductibilite.html",
-      "size": 23010,
-      "sha256": "08f550de8fbaa8e2adf6d00df9273103dba7aa02f1f6411b15154acac63bc534",
+      "size": 23040,
+      "sha256": "50665a619ee3c1d9efc601e767c13d2e2c9a395c1c045c0087140defb3e6e016",
       "storage": "inline"
     },
     {

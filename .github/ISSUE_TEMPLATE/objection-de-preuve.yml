@@ -1,0 +1,79 @@
+name: Objection de preuve
+description: Contester un verdict, une qualification ou un niveau de preuve du dossier.
+title: "[Objection] "
+labels: ["objection-de-preuve"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ce dépôt tient un registre machine des preuves. Une objection est traitée
+        comme une contribution scientifique, pas comme un signalement de bug.
+
+        La règle d'autorité s'applique : rapport généré > erratum > article >
+        prose. Une objection ne peut pas être tranchée par un argument de style,
+        et un verdict ne peut pas être modifié en réécrivant un Markdown.
+
+        Une objection recevable fait retomber l'élément visé en `fail_closed`
+        jusqu'à résolution. Elle ne touche jamais un baseline scellé.
+
+  - type: input
+    id: cible
+    attributes:
+      label: Élément visé
+      description: Identifiant exact, tel qu'il figure dans `preuves/PREUVES.json` ou dans le protocole gelé.
+      placeholder: "C-ANT-01, HC02-E1, PALEO-HISTORY-02, INV-A…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: nature
+    attributes:
+      label: Nature de l'objection
+      options:
+        - Le verdict ne suit pas des données invoquées
+        - La qualification sémantique est trop faible pour la classe déclarée
+        - Le témoin apparié ne contrôle pas ce qu'il prétend contrôler
+        - Le niveau de preuve annoncé dépasse la nature réelle du test
+        - Le résultat est un artefact de chronologie, d'échantillonnage ou de pipeline
+        - La source primaire ne documente pas ce qui lui est attribué
+        - Autre
+    validations:
+      required: true
+
+  - type: textarea
+    id: fondement
+    attributes:
+      label: Fondement
+      description: |
+        Ce qui rend l'objection vérifiable par un tiers. Une lecture divergente
+        est recevable si elle est argumentée ; une préférence ne l'est pas.
+      placeholder: |
+        Fichier et ligne, ou commande reproductible, ou référence publiée avec DOI.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Ce qui devrait être observé si l'objection est fondée
+      description: Formulez-le de façon falsifiable, pour qu'un script puisse trancher.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version ou commit examiné
+      placeholder: "0.9.9-research, ou le SHA du commit"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verifications
+    attributes:
+      label: Vérifications préalables
+      options:
+        - label: J'ai lu la limitation déclarée de l'élément visé, quand elle existe.
+          required: true
+        - label: J'ai vérifié que l'objection ne porte pas sur un résultat déjà publié comme négatif ou exploratoire.
+          required: true

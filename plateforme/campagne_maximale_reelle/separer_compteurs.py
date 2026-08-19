@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sépare le compteur de la campagne en deux, empirique et modèle.
 
-`ERRATUM_SCIENTIFIQUE_v0.9.4_2026-08-07.md` rappelle en prose que les
+`documentation/historique/ERRATUM_SCIENTIFIQUE_v0.9.4_2026-08-07.md` rappelle en prose que les
 intégrations N-corps, H011 et les autres expériences numériques sont des
 résultats de **modèle**, jamais des observations, et qu'ils ne doivent pas être
 lus comme les résultats sur données réelles. Tant que la campagne n'émet qu'un

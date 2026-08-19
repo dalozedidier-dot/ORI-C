@@ -154,7 +154,7 @@ def main() -> dict[str, object]:
     result = canonicalize_numbers(result)
     OUT.mkdir(exist_ok=True)
     (OUT / "RESULTAT.json").write_text(
-        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline=""
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result

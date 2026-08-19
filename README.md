@@ -109,7 +109,7 @@ Les quatre verrous prioritaires disposent maintenant de routes d'exécution sép
 
 ### Quatre verrous actifs — état exécutable
 
-`ACTION_VERROUS_2026-08-14.md` et `plan_directeur/READINESS_VERROUS.json` donnent l’état machine des quatre fronts prioritaires. La branche matière conserve son baseline scellé **46/53** et publie séparément l’extension empirique `HC02-E1`, qui atteint **53/53** sans recoder `H052`. MAG, VES et la réplication MIC restent fail-closed jusqu’à exécution externe réelle. `PACC-MAG-INT-01` prépare en parallèle un transfert matière↔vivant sous la même définition `PACC-INT-CHALLENGE-V1`, sans crédit avant acquisition.
+`documentation/historique/ACTION_VERROUS_2026-08-14.md` et `plan_directeur/READINESS_VERROUS.json` donnent l’état machine des quatre fronts prioritaires. La branche matière conserve son baseline scellé **46/53** et publie séparément l’extension empirique `HC02-E1`, qui atteint **53/53** sans recoder `H052`. MAG, VES et la réplication MIC restent fail-closed jusqu’à exécution externe réelle. `PACC-MAG-INT-01` prépare en parallèle un transfert matière↔vivant sous la même définition `PACC-INT-CHALLENGE-V1`, sans crédit avant acquisition.
 
 ## Apports de 0.9.9 — données réelles et transversalité
 
@@ -135,11 +135,11 @@ Les résultats négatifs restent attachés à leurs protocoles précis. **M2 res
 
 La campagne générique des 683 entrées, réauditée le 7 août 2026 avec le pare-feu empirique `fail_closed_v2`, produit **9 réussites techniques, 626 blocages, 48 protocoles non exécutables informatiquement, 0 échec et 0 erreur**. Elle produit **0 verdict scientifique `supports`**. Ce compteur décrit uniquement la plateforme d’intégration et ne remplace ni les verdicts ciblés sur données réelles ni les résultats explicitement issus de modèles.
 
-Le résumé détaillé et actualisé se trouve dans [`AVANCEES_ET_DECOUVERTES_2026-08-06.md`](AVANCEES_ET_DECOUVERTES_2026-08-06.md).
+Le résumé détaillé et actualisé se trouve dans [`documentation/historique/AVANCEES_ET_DECOUVERTES_2026-08-06.md`](documentation/historique/AVANCEES_ET_DECOUVERTES_2026-08-06.md).
 
 ### Atteignabilité des critères — à lire avant tout résultat négatif
 
-Un critère peut échouer parce que l’effet n’existe pas, ou parce que le test ne peut pas le détecter. [`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](ATTEIGNABILITE_DES_CRITERES_2026-08-08.md) sépare les deux cas pour l’ensemble du dossier.
+Un critère peut échouer parce que l’effet n’existe pas, ou parce que le test ne peut pas le détecter. [`documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`](documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md) sépare les deux cas pour l’ensemble du dossier.
 
 Sur 23 critères discrets audités, 20 sont atteignables et 3 — des bootstraps — ne sont pas évaluables par cette voie, un bootstrap n’ayant pas de plancher de p général contrairement à une permutation. Un seul critère est écarté pour inatteignabilité :
 

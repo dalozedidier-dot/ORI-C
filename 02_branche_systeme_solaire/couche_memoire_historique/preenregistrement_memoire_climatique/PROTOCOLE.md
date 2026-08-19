@@ -67,7 +67,7 @@ en deçà d'alpha.
 
 **Aucun test de signe sur dix plis n'est employé.** Avec dix unités, un tel test
 exigerait 9 plis favorables sur 10 pour descendre sous 0,05 — le défaut recensé
-dans `ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Le critère retenu ici est
+dans `documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md`. Le critère retenu ici est
 atteignable par construction.
 
 ## Règle de décision, écrite avant l'exécution

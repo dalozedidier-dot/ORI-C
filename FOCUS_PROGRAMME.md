@@ -1,4 +1,4 @@
-# Périmètre de recherche ORI-C — publication v0.9.7-research
+# Périmètre de recherche ORI-C — publication v0.9.9-research
 
 ## Plan directeur central actif
 
@@ -8,11 +8,12 @@ quatre campagnes : fermeture mécanistique, quantification, transversalité et
 prédiction. Son lanceur publie l'admissibilité des données, les dépendances et
 les blocages ; il ne transforme jamais un axe documenté en résultat exécuté.
 
-`PALEO-HISTORY-01` reste prioritaire. Les neuf familles de sources sont
-désormais présentes, mais la campagne reste `non_testable` tant que leurs
-incertitudes chronologiques et leur table normalisée ne satisfont pas le schéma
-gelé. Les défauts d'admission sont publiés dans
-`resultats/ADMISSION_PALEO_HISTORY_01.json` ; le protocole reste inchangé.
+`PALEO-HISTORY-01` reste gelé avant exécution et son protocole est inchangé.
+Il était sous-spécifié sur deux points opérationnels — l'origine des incertitudes
+chronologiques et le nom du contrôle négatif — qui l'empêchaient de tourner.
+`PALEO-HISTORY-02` lui succède depuis le 19 août 2026 : il hérite intégralement
+du critère primaire, comble ces deux vides et est scellé avant exécution. Les
+deux sources sont acquises et jointes sur la même échelle de profondeur.
 
 La gouvernance centrale retient uniquement les travaux qui ferment un verrou,
 mesurent `P_acc`, testent un invariant, ajoutent une intervention, fournissent
@@ -106,3 +107,26 @@ Côté causal prospectif, `MAG-PAIR-001` possède un paquet d’exécution machi
 - `MAG-PAIR-001` possède un pilote instrumental non confirmatoire ; seeds de randomisation/permutation et exclusion non-outcome sont gelés, les paramètres instrumentaux restent à mesurer avec le laboratoire.
 - `VES-PACC-INT-01` possède un paquet laboratoire et un gate prospectif explicite ; les capacités instrumentales compatibles sont documentées sans ouvrir le préenregistrement.
 - `PRED-VIVANT-HISTOIRE-001` possède une voie accélérée : nouvelles MIC sur histoires LTEE cryo-archivées, mesurées seulement après préenregistrement par une équipe indépendante.
+
+## Mise à jour opérationnelle du 19 août 2026 — instrumentation du verrou paléoclimatique
+
+`PALEO-HISTORY-02` est scellé avant exécution. Son incertitude chronologique
+vient du stack benthique de l'Atlantique Nord tié aux spéléothèmes datés U-Th
+(`10.5281/zenodo.14796413`, 337 profondeurs × 1 000 tirages, 3,2–650,5 ka), et
+son contrôle négatif physique de la paléointensité géomagnétique relative d'IODP
+U1308 (`10.1594/PANGAEA.808947`, 10 763 points). Les deux roulent sur la même
+échelle de profondeur composite, et la jointure est vérifiée : 336 profondeurs
+complètes sur 337.
+
+L'intervalle primaire passe de 0–800 ka à **0–650 ka**. C'est une contrainte
+mesurée, non un arbitrage : PALMOD 130k, acquis intégralement, s'arrête vers
+130 ka et aucune source d'incertitude chronologique n'atteint 800 ka.
+
+L'exécution reste suspendue à la visibilité publique de la registration
+`PRED-PALEO-HISTORY-02`, approuvée par OSF le 15 août avec conservation de la
+date de soumission du 13 août, mais non encore propagée à l'API publique ni à
+l'index des registres. Tant qu'un tiers ne peut pas la constater, la condition
+d'antériorité du §XIV-3 n'est pas remplie telle qu'elle est écrite.
+
+Une relecture sémantique indépendante de l'extension `HC02-E1` rend `fail_closed`
+et reste non tranchée. Le baseline scellé **46/53** est inchangé.

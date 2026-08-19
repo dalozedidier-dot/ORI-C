@@ -48,7 +48,7 @@ sidérophiles, qui restent rares et coûteux à mesurer.
 
 Geler ce protocole aurait produit un critère non franchissable sur tout horizon
 raisonnable, c'est-à-dire exactement le défaut recensé dans
-`ATTEIGNABILITE_DES_CRITERES_2026-08-08.md` pour la vallée des rayons et pour les
+`documentation/historique/ATTEIGNABILITE_DES_CRITERES_2026-08-08.md` pour la vallée des rayons et pour les
 tests de signe du benchmark antibiotique.
 
 **Un protocole dont on sait d'avance qu'il ne pourra pas conclure ne doit pas
