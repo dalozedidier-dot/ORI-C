@@ -4,9 +4,19 @@
  "frozen_on": "2026-08-19",
  "herite_de": "PALEO-HISTORY-01",
  "regle": "Toute modification d'un fichier scelle exige un nouveau numero de protocole et une justification publique ; les resultats anterieurs ne peuvent pas etre requalifies retroactivement.",
+ "correction_du_scellement": {
+  "date": "2026-08-19",
+  "motif": "le premier scellement du meme jour figeait dans PLAN_ANALYSE.json une reference perimee: controle_negatif_reel.protocole citait 'la MEME chronologie posterieure PALMOD' alors que tout le reste du protocole, y compris la source du controle et l'echelle declaree au schema, designe l'echelle composite U1308 du stack NA. Contradiction interne, corrigee avant toute execution.",
+  "portee": "correction d'une reference factuelle, non du critere. Blocs, seuils, modeles, nulls, alpha et regle de rejet sont inchanges. Aucun resultat n'existait: rien n'est requalifie retroactivement.",
+  "empreintes_du_premier_scellement": {
+   "PROTOCOLE.md": "b459960ddb0384d2f753593f8d5144b642c3ceace41e849b0af22ec6ea984a03",
+   "SCHEMA_DONNEES.json": "3c9c4e38bcef6eea9ec6883cebff8d27374dc996559b8a5b51b58e0b9c5f954a",
+   "PLAN_ANALYSE.json": "9238e936b0be4d24f5dd466106658d66cf9ad4bad89e12f0b35c09fe41de428e"
+  }
+ },
  "fichiers": {
   "PROTOCOLE.md": "b459960ddb0384d2f753593f8d5144b642c3ceace41e849b0af22ec6ea984a03",
   "SCHEMA_DONNEES.json": "3c9c4e38bcef6eea9ec6883cebff8d27374dc996559b8a5b51b58e0b9c5f954a",
-  "PLAN_ANALYSE.json": "9238e936b0be4d24f5dd466106658d66cf9ad4bad89e12f0b35c09fe41de428e"
+  "PLAN_ANALYSE.json": "243cb7d5d5c29e1de9d35ffbc89cfe82fb6ffdc674ab5a5105400c1c8af8dcc4"
  }
 }

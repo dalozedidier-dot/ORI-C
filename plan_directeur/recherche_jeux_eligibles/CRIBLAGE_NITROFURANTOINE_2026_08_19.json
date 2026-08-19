@@ -1,0 +1,51 @@
+{
+  "schema": "oric.eligible-dataset-screening.v1",
+  "date": "2026-08-19",
+  "prediction": "PRED-VIVANT-PETRUNGARO-NIT-001",
+  "specification_gelee": {
+    "organisme": "Escherichia coli",
+    "environnement": "selection sous nitrofurantoine",
+    "mesures_requises": [
+      "identifiant de population",
+      "resistance quantitative initiale X",
+      "fond genetique initial m fixe avant evolution",
+      "resistance quantitative future R",
+      "identifiant de replicat independant"
+    ],
+    "minimum_populations_independantes": 30,
+    "minimum_fonds_genetiques": 10,
+    "minimum_replicats_par_fond": 2
+  },
+  "candidats_cribles": [
+    {
+      "id": "PLOS-GENETICS-2018-MUTATION-RATES",
+      "reference": "High mutation rates limit evolutionary adaptation in Escherichia coli, PLOS Genetics, 10.1371/journal.pgen.1007324",
+      "donnees": "Dryad 10.5061/dryad.mh206",
+      "populations_independantes": 32,
+      "fonds_genetiques": 4,
+      "replicats_par_fond": 8,
+      "verdict": "rejete",
+      "motifs": [
+        "4 fonds genetiques contre 10 exiges",
+        "la nitrofurantoine n'est pas l'environnement de selection: les populations evoluent en milieu minimal glucose, la nitrofurantoine ne sert qu'au dosage de tolerance"
+      ]
+    },
+    {
+      "id": "ANTIC-UPEC-NITR-2023",
+      "reference": "Exploring the in situ evolution of nitrofurantoin resistance in clinically derived uropathogenic Escherichia coli isolates, J Antimicrob Chemother 78(2):373, 10.1093/jac/dkac402",
+      "donnees": "aucune accession publique identifiee; supplementaires JAC uniquement",
+      "patients": 17,
+      "isolats": 45,
+      "transitions_sensible_vers_resistant": 2,
+      "verdict": "rejete",
+      "motifs": [
+        "2 patients seulement presentent une acquisition de resistance, donc 2 reponses futures mesurees contre 30 populations independantes exigees",
+        "les 45 isolats ne sont pas des populations independantes: plusieurs proviennent du meme patient et de la meme lignee",
+        "aucun depot public avec accession n'a ete trouve"
+      ],
+      "interet_residuel": "selection in situ reellement sous nitrofurantoine et MIC mesurees avant/apres; utile comme reference de conception, pas comme jeu de test"
+    }
+  ],
+  "conclusion": "aucun jeu public identifie ce jour ne satisfait la specification. Le point dur est la conjonction: selection reellement conduite sous nitrofurantoine ET au moins 10 fonds genetiques distincts ET au moins 30 populations independantes avec resistance mesuree avant et apres. Les etudes d'evolution experimentale ont les effectifs mais pas l'environnement de selection; les etudes cliniques ont l'environnement mais pas les effectifs ni l'independance.",
+  "suite": "elargir a d'autres nitrofuranes ou a un antibiotique dont la selection experimentale est usuelle, ce qui exigerait un nouveau numero de prediction; ou commander le jeu, ce qui releve de la route materielle deja decrite dans REPLICATION_LTEE_NEW_MIC_PLAN"
+}

@@ -54,7 +54,7 @@
   },
   "controle_negatif_reel": {
     "variable": "paleointensite_geomagnetique_relative",
-    "protocole": "le test primaire est rejoue a l'identique sur la RPI du meme site, sur la MEME chronologie posteriere PALMOD que la cible, artefacts de chronologie compris",
+    "protocole": "le test primaire est rejoue a l'identique sur la RPI du meme site, sur la MEME chronologie que la cible - l'echelle de profondeur composite U1308 du stack NA - artefacts de chronologie compris",
     "regle_de_rejet": "un gain de RMSE atteignant le seuil primaire sur le controle negatif rend le resultat principal non_testable, jamais supports",
     "statut": "acquis",
     "source": "donnees_externes/rpi_u1308/ (PANGAEA 10.1594/PANGAEA.808947)"
