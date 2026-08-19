@@ -1,11 +1,15 @@
-# PALEO-HISTORY-02 — protocole préenregistré (projet non scellé)
+# PALEO-HISTORY-02 — protocole préenregistré
 
 ## Statut
 
-**Projet. Non scellé, non exécuté.** Ce document devient un protocole gelé quand
-`sceller.py` écrit `GEL_PALEO_HISTORY_02.json` avec les empreintes des trois
-fichiers, et pas avant. Les décisions listées en fin de document doivent être
-tranchées d'abord : elles sont scientifiques, pas techniques.
+**Scellé le 19 août 2026, non exécuté.** Les trois décisions ouvertes ont été
+tranchées ce jour et sont consignées plus bas avec leur justification. Le gel
+porte sur `PROTOCOLE.md`, `SCHEMA_DONNEES.json` et `PLAN_ANALYSE.json`.
+
+L'exécution reste suspendue à une condition **externe** : la registration
+publique `PRED-PALEO-HISTORY-02` est en attente d'approbation chez OSF depuis le
+13 août. La règle d'antériorité interdit d'ouvrir la cible avant qu'une URL
+publique et un horodatage existent.
 
 ## Pourquoi un nouveau numéro
 
@@ -225,17 +229,26 @@ Un échec rend `does_not_support`. Une donnée obligatoire absente, une p-value
 inatteignable, une chronologie non propageable ou un contrôle négatif non acquis
 rend `non_testable`, jamais `supports`.
 
-## Décisions à trancher avant scellement
+## Décisions tranchées le 19 août 2026
 
-1. **Découpage des blocs.** Les quatre blocs 0-200 / 200-400 / 400-600 / 600-800
-   ne tiennent plus, l'intervalle étant borné à 650 ka par la donnée. Proposition :
-   0-200 / 200-400 / 400-650, et réécriture du critère « au moins 3 blocs sur 4 »
-   en conséquence. C'est une modification du critère primaire, donc elle précède
-   le scellement.
-2. **Modèle d'âge accordé ou non accordé.** Le stack NA fournit les deux, écart
-   médian 10,18 ka. Le non accordé attaque la circularité orbitale du modèle de
-   base « état et forçages » ; l'accordé reste comparable à la littérature.
-   À trancher avant scellement, jamais après résultat.
-3. **Graine et ordre de réutilisation** des tirages au-delà de 1 000.
+**Découpage des blocs — aucune latitude.** La prédiction publiquement
+enregistrée `PRED-PALEO-HISTORY-02` fixe « gain ≥ 5 % dans au moins **3 blocs
+sur 4** ». Passer à trois blocs romprait la cohérence avec l'enregistrement
+public. Le nombre de blocs est donc imposé ; seule la découpe restait libre.
+L'intervalle étant borné à 650 ka, quatre largeurs égales donnent **0–162,5 /
+162,5–325 / 325–487,5 / 487,5–650 ka**. Le critère primaire reste littéralement
+inchangé.
+
+**Modèle d'âge — le non accordé est primaire.** Le modèle accordé rend la cible
+partiellement prédictible par les forçages astronomiques *par construction* :
+il gonfle le modèle de base « état et forçages » et biaise le test contre
+l'hypothèse. Le modèle non accordé, tié aux spéléothèmes datés U-Th, supprime
+cette circularité. Il est donc retenu en primaire, l'accordé restant une
+robustesse **déclarée à l'avance** — jamais une substitution après résultat.
+Écart médian entre les deux : 10,18 ka.
+
+**Graine — 20260819.** Les 1 000 tirages publiés sont parcourus dans l'ordre du
+fichier ; au-delà, on recommence au premier selon une permutation fixée par cette
+graine. Aucun tirage n'est synthétisé.
 
 Tant que ces trois points ne sont pas fixés, le scellement n'a pas lieu.

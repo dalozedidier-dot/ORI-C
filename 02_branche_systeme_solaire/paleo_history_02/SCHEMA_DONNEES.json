@@ -1,6 +1,6 @@
 {
   "schema": "oric.paleo-history-02.data.v1",
-  "statut": "projet_non_scelle",
+  "statut": "pret_au_scellement",
   "herite_de": "oric.paleo-history-01.data.v1",
   "intervalle_primaire_ka": [
     0,

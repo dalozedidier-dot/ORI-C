@@ -1,6 +1,6 @@
 {
   "criterion_id": "PALEO-HISTORY-02",
-  "statut": "projet_non_scelle",
+  "statut": "pret_au_scellement",
   "herite_de": "PALEO-HISTORY-01",
   "cible_primaire": "variation_future_proxy_a_10_ka",
   "horizons_secondaires_ka": [
@@ -15,19 +15,19 @@
   "blocs_test_ka": [
     [
       0,
-      200
+      162.5
     ],
     [
-      200,
-      400
+      162.5,
+      325
     ],
     [
-      400,
-      600
+      325,
+      487.5
     ],
     [
-      600,
-      800
+      487.5,
+      650
     ]
   ],
   "modeles": [
@@ -48,8 +48,9 @@
   "realisations_chronologiques": {
     "marin": "tirage entier parmi les 1000 tirages du stack NA a la profondeur consideree; aucun melange; aucune synthese au-dela des 1000 publies",
     "glaciaire": "tirage gaussien tronque a +/-3 sigma AICC2023 par tranche d'age, monotonie imposee par rejet",
-    "graine": null,
-    "regle": "aucun tirage n'est synthetise; un enregistrement sans incertitude disponible est exclu du test primaire, jamais impute"
+    "graine": 20260819,
+    "regle": "aucun tirage n'est synthetise; un enregistrement sans incertitude disponible est exclu du test primaire, jamais impute",
+    "ordre_reutilisation": "les 1000 tirages publies sont parcourus dans l'ordre du fichier; au-dela, on recommence au premier, permutation fixee par la graine 20260819; aucun tirage n'est synthetise"
   },
   "controle_negatif_reel": {
     "variable": "paleointensite_geomagnetique_relative",
@@ -67,13 +68,21 @@
     "controle_negatif_reel",
     "verdict_et_motif"
   ],
-  "decisions_a_trancher_avant_scellement": [
-    "decoupage des blocs. Les quatre blocs 0-200/200-400/400-600/600-800 ne tiennent plus, l'intervalle etant borne a 650 ka par la donnee. Proposer 0-200/200-400/400-650 et reecrire le critere 'au moins 3 blocs sur 4' en consequence. C'est une modification du critere primaire, donc elle precede le scellement.",
-    "modele d'age accorde ou non accorde. Le stack NA fournit les deux; l'ecart median est de 10.18 ka, donc le choix change reellement la chronologie. Le non accorde attaque la circularite orbitale du modele de base 'etat_et_forcages'; l'accorde reste comparable a la litterature. Trancher avant scellement, jamais apres resultat.",
-    "graine et ordre de reutilisation des tirages au-dela de 1000"
-  ],
   "intervalle_primaire_ka": [
     0,
     650
+  ],
+  "blocs_justification": "QUATRE blocs imposes, non choisis: la prediction publiquement enregistree PRED-PALEO-HISTORY-02 fixe 'gain >= 5 % dans au moins 3 blocs sur 4'. Passer a trois blocs romprait la coherence avec l'enregistrement public. Seule la decoupe est libre; l'intervalle etant borne a 650 ka par la donnee, quatre blocs de largeur egale donnent 162.5 ka chacun. Le critere 'au moins 3 sur 4' reste litteralement inchange.",
+  "modele_age": {
+    "primaire": "non_accorde",
+    "fichier": "donnees_externes/na_stack_u1308/NA-stack_untuned_age_model.txt",
+    "robustesse": "accorde (aligne LR04), NA-stack_age-d18O.txt",
+    "justification": "le modele accorde rend la cible partiellement predictible par les forcages astronomiques PAR CONSTRUCTION, ce qui gonfle le modele de base 'etat_et_forcages' et biaise le test. Le modele non accorde, tie aux speleothemes dates U-Th, supprime cette circularite: il est donc le primaire. L'accorde est conserve en robustesse declaree a l'avance, jamais en substitution apres resultat. Ecart median entre les deux: 10.18 ka.",
+    "regle": "aucune selection du modele apres observation des scores"
+  },
+  "decisions_tranchees_le_2026_08_19": [
+    "blocs: quatre, imposes par l'enregistrement public; decoupe en quatre largeurs egales de 162.5 ka",
+    "modele d'age: non accorde en primaire, accorde en robustesse declaree",
+    "graine: 20260819"
   ]
 }
