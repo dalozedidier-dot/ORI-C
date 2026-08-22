@@ -79,7 +79,7 @@ jobs:
 
       - name: Vérifier l'intégrité initiale
         run: |
-          python verifier_dossier.py \
+          python verifier_dossier.py --allow-lfs-pointers \
             | tee "$OUT/logs/integrite_initiale.log"
           python scripts/valider_tout.py \
             | tee "$OUT/logs/validation_rapide.log"

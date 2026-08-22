@@ -203,8 +203,9 @@ def repeter_sur_un_clone_reel() -> bool:
     Rien n'est simulé ici : le clone est réel, les données sont celles qui sont
     commitées, et `run_all.py` est le même script qu'ailleurs. Seules les
     conditions du runner sont reproduites — pointeurs LFS non hydratés au
-    clonage, puis `git lfs pull` — parce que c'est là que se logeaient les
-    échecs invisibles depuis une machine où LFS est toujours hydraté.
+    clonage, puis hydratation du seul dossier de campagne — parce que c'est là
+    que se logeaient les échecs invisibles depuis une machine où LFS est
+    toujours hydraté.
     """
     import shutil
     import tempfile
@@ -228,10 +229,13 @@ def repeter_sur_un_clone_reel() -> bool:
         if fait.returncode != 0:
             print("  répétition sur clone   clonage impossible, contrôle sauté")
             return True
-        # La CI hydre LFS avant de lire les données. Le clone ci-dessus les a
-        # laissées en pointeurs pour vérifier que le workflow le fait bien ;
-        # on les hydre maintenant, comme lui.
-        hydrate = subprocess.run(["git", "lfs", "pull"], cwd=clone,
+        # La CI n'hydrate que les objets ouverts par cette campagne. Le clone
+        # ci-dessus les a laissés en pointeurs pour vérifier ce chemin exact.
+        hydrate = subprocess.run([
+            "git", "lfs", "pull",
+            f"--include={campagne}/**",
+            "--exclude=",
+        ], cwd=clone,
                                  capture_output=True, text=True)
         if hydrate.returncode != 0:
             print("  répétition sur clone   git lfs pull impossible, contrôle sauté")

@@ -256,6 +256,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Charger les trajectoires astronomiques nécessaires au spin
+        run: >-
+          git lfs pull
+          --include="02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/**"
+          --exclude=""
+
       - name: Préparer l'espace temporaire spin-orbite
         run: |
           echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib-spin" >> "$GITHUB_ENV"

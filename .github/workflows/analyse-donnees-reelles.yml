@@ -58,6 +58,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Charger l'archive de vésicules intégrée par la campagne
+        run: >-
+          git lfs pull
+          --include="donnees_externes/vesicules_sokolskyi_baum_2026/**"
+          --exclude=""
+
       - name: Préparer l'espace temporaire
         run: |
           echo "MPLCONFIGDIR=$RUNNER_TEMP/matplotlib" >> "$GITHUB_ENV"

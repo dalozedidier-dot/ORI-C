@@ -17,80 +17,80 @@
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles-etendues.yml",
-      "size": 3185,
-      "sha256": "36516f3f43c77cbd30015016f529249826a14c81325e2e614d0106a943af919a",
+      "size": 3116,
+      "sha256": "f669b9d91482d9279dc7c854f7b3e9b3517ca1e93de9d549123540a4b0684b73",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-donnees-reelles.yml",
-      "size": 7656,
-      "sha256": "6e22ac76be70dfdcd999f12954f87f6172ee296e7f3a5bb373b0e0d59d09d918",
+      "size": 7774,
+      "sha256": "1b1cb99b4bd2ba3fb9d0d06c0538e2ec97e4f9cf517adca09d085e977f834c86",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-formalismes-externes.yml",
-      "size": 2932,
-      "sha256": "fc37e5dbe20b11b8630ea162ebd6ea71913ce46617dbfa161cd17c6c718e0fa7",
+      "size": 3123,
+      "sha256": "6fe3429d4acd453ea16a21e683769575aa8b3d91809142fe6b4c6f5db6f11cc9",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-genealogie-cosmique.yml",
-      "size": 8063,
-      "sha256": "550a017ae863c9aad14278421848948e6dbe94479f08e5e1e3763593b085bcfc",
+      "size": 7972,
+      "sha256": "8edab52b846c83ec46883321aef09509d0826ddeab552e81cf2f16e1dff42b77",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-maximale-trois-branches.yml",
-      "size": 6999,
-      "sha256": "24063ae1f2613be61d6174ef37f3d3121a2fcf051816fc691119a9347cac0d45",
+      "size": 6842,
+      "sha256": "a348e5be9e239a1afd41c65ce02a37c770e32e8008bd74a951bb2c84a2b0b2a2",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-paleoclimat-approfondie.yml",
-      "size": 5186,
-      "sha256": "9d999619954325574ad3e73eec7e67d738fcd81d6701f8210f9401540f62aced",
+      "size": 5096,
+      "sha256": "e251e0a7a8c2a94dd284e198b203edb014142c79d5cda8803215a605842f0526",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-structure.yml",
-      "size": 10270,
-      "sha256": "a92c10719e77f28fdf6bc3740b61456eca7e97fe4ccccfccaf57441e096c7a2f",
+      "size": 10201,
+      "sha256": "c7753d1b7e622352ebc0e1264663b2d0b7bb34778c1827fa333b673a0dd04097",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 13418,
-      "sha256": "5ffdac6f44f06cf733af044b94c0955d315bbed366ff64e06969633c58d9ce48",
+      "size": 13621,
+      "sha256": "db48bc4c0f37f3973a403253b621109d84e73ebb800e1430ee8feb99532ca16c",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/audit-empirique-strict.yml",
-      "size": 5928,
-      "sha256": "6cb6df61dda6620a28a5fe13c6e41857056a67f5c63ae9cc3708bff316224392",
+      "size": 5836,
+      "sha256": "e7ed85baa03e452317ef810ea3d774bd37e43a992ed11332b7aeaee9076c0fb5",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/campagne-centrale-invariant.yml",
-      "size": 12346,
-      "sha256": "9ecb60a2f77f47e2237654ff6b188e97887cf96bac86555d811951c79601b927",
+      "size": 12277,
+      "sha256": "4daf24fba4d18d3cc7ef421df26cf5c290045bc7494433b56dd079d97ac20914",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/campagne-matiere.yml",
-      "size": 4993,
-      "sha256": "1bdbf38505eece24a670be43f522dfeb871e21eaa8a81e09e10c2e95b8dcd3d9",
+      "size": 5060,
+      "sha256": "4142435814660f7246072f994dd11174a5f608e2f1490fc3ea2927c54b7b8f82",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 18507,
-      "sha256": "1845bf7904ccb4522282d751d92b57c383a6ee28c21f1397bf633ae29fed5caf",
+      "size": 18224,
+      "sha256": "4e05ca7754f2aa2f2e5ea711738b9ab9e37e7ffd4527b9942ec6cf72f2c7381d",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/donnees-reelles-vivant-2026.yml",
-      "size": 5624,
-      "sha256": "cc634bb51491613ab9eeb10d5b99482ccd11361b131039c07ba634085757f207",
+      "size": 5784,
+      "sha256": "35f7bddd3cbbfdf657f5d7ea05fc8eaf6b6a64bcf554b5bfb75b77c9603b3ee1",
       "storage": "inline"
     },
     {
@@ -101,14 +101,14 @@
     },
     {
       "path": ".github/workflows/recherche-suivante.yml",
-      "size": 5040,
-      "sha256": "ebb0daa8ab444032b0aa7d91a3386a042bb30d3f89a6c06ff8e40f6a5b54175c",
+      "size": 5215,
+      "sha256": "dacac250e2b4d67e22c783230a5195d029e3695a541d860f2811fe393ced0c9a",
       "storage": "inline"
     },
     {
       "path": ".github/workflows/release.yml",
-      "size": 10741,
-      "sha256": "cdff99b4fbccd2ef96e84c7467bd3c0878bb9d13117cad8e84edad835a6823ea",
+      "size": 10684,
+      "sha256": "e70cd20a6cffbca42d48016dc386a447637409aa3c96f79d4b93390fe76b46a3",
       "storage": "inline"
     },
     {
@@ -4500,7 +4500,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
       "size": 19303,
-      "sha256": "784fb4314275e592caac10e55f00f46da9fd106a2a92b6ec763dcc1dee37c405",
+      "sha256": "f699c8ba1341148787658150e1b72b44488f1ea1bc6ddea693f55200f2b0b26a",
       "storage": "inline"
     },
     {
@@ -11747,8 +11747,8 @@
     },
     {
       "path": "scripts/controle_avant_push.py",
-      "size": 12724,
-      "sha256": "3bf51b0d4547177a4da8b691168072ebff548da9d98945e98b2186271963fa5c",
+      "size": 12796,
+      "sha256": "659173a90284c7b07a4da1a5bcd43254dcd6d7c05684a28edf7df757d13a1543",
       "storage": "inline"
     },
     {

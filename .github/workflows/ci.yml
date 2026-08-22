@@ -42,10 +42,10 @@ jobs:
       - name: Compiler et vérifier l'intégrité
         run: |
           python -m compileall -q .
-          python verifier_dossier.py
+          python verifier_dossier.py --allow-lfs-pointers
           python scripts/verifier_fins_de_ligne.py
-          python scripts/controle_avant_push.py
-          python scripts/valider_tout.py --strict-lfs
+          python scripts/controle_avant_push.py --allow-lfs-pointers
+          python scripts/valider_tout.py
       - name: Exécuter les suites portables du socle et de la matière
         run: |
           python -m pytest -q plateforme/source_corrigee/tests
@@ -208,7 +208,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r plateforme/source_corrigee/requirements-lock.txt
       - name: Contrôler l'intégrité après un clonage Windows
-        run: python verifier_dossier.py
+        run: python verifier_dossier.py --allow-lfs-pointers
       - name: Contrôler que le manifeste correspond au contenu indexé
         run: python scripts/verifier_fins_de_ligne.py
       - name: Exécuter la suite du socle sans forcer l'encodage

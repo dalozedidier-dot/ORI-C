@@ -24,6 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Charger les trajectoires astronomiques utilisées par la viabilité
+        run: >-
+          git lfs pull
+          --include="02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/**"
+          --exclude=""
       - uses: actions/setup-python@v6
         with: {python-version: '3.12'}
       - run: python -m pip install -r plateforme/source_corrigee/requirements-lock.txt

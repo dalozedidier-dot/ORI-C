@@ -76,7 +76,7 @@ jobs:
 
       - name: Vérifier l'état initial
         run: |
-          python verifier_dossier.py | tee "$OUT/logs/integrite_initiale.log"
+          python verifier_dossier.py --allow-lfs-pointers | tee "$OUT/logs/integrite_initiale.log"
           python scripts/valider_tout.py | tee "$OUT/logs/validation_rapide.log"
 
       - name: Recalculer la carte relationnelle

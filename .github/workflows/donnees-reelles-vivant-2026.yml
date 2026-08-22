@@ -75,7 +75,7 @@ jobs:
 
       - name: Vérifier l'intégrité initiale
         run: |
-          python verifier_dossier.py
+          python verifier_dossier.py --allow-lfs-pointers
           python scripts/verifier_fins_de_ligne.py
 
       - name: Réextraire et analyser

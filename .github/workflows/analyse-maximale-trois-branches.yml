@@ -45,7 +45,7 @@ jobs:
           OMP_NUM_THREADS: '1'
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
         run: |
-          python verifier_dossier.py
+          python verifier_dossier.py --allow-lfs-pointers
           python scripts/valider_tout.py
 
   structure-complete:
