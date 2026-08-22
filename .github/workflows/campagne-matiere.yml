@@ -40,11 +40,9 @@ jobs:
     steps:
       - name: Récupérer le dépôt
         uses: actions/checkout@v6
-        with:
-          lfs: true
 
-      - name: Hydrater Git LFS
-        run: git lfs pull
+      - name: Charger les données de mémoire matérielle
+        run: git lfs pull --include="01_branche_matiere/memoire_materielle_reelle/**" --exclude=""
 
       - name: Installer Python
         uses: actions/setup-python@v6

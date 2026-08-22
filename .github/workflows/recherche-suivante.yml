@@ -29,11 +29,12 @@ jobs:
       DRYAD_API_CLIENT_SECRET: ${{ secrets.DRYAD_API_CLIENT_SECRET }}
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
 
-      - name: Hydrater Git LFS
-        run: git lfs pull
+      - name: Charger seulement les archives intégrées des jeux étudiés
+        run: >-
+          git lfs pull
+          --include="donnees_externes/vesicules_sokolskyi_baum_2026/**,donnees_externes/histoire_antibiotique_donofrio_2026/**"
+          --exclude=""
 
       - uses: actions/setup-python@v6
         with:

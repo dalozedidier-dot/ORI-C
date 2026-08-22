@@ -39,14 +39,16 @@ jobs:
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
 
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
 
-      - name: Finaliser Git LFS
-        run: git lfs pull
+      - name: Charger seulement les archives biologiques nécessaires
+        run: >-
+          git lfs pull
+          --include="donnees_externes/petrungaro_2026/**,donnees_externes/card_2019_complet/**"
+          --exclude=""
 
       - name: Installer Python
         uses: actions/setup-python@v6

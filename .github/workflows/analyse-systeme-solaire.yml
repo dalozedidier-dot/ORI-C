@@ -50,14 +50,10 @@ jobs:
       MEMORY: ${{ github.workspace }}/02_branche_systeme_solaire/couche_memoire_historique
 
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-
-      - name: Finaliser Git LFS
-        run: git lfs pull
 
       - name: Préparer l'espace temporaire mémoire
         run: |
@@ -163,14 +159,16 @@ jobs:
       ASTRO_CODE: ${{ github.workspace }}/02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
 
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
 
-      - name: Finaliser Git LFS
-        run: git lfs pull
+      - name: Charger seulement les résultats astronomiques de référence
+        run: >-
+          git lfs pull
+          --include="02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/**"
+          --exclude=""
 
       - name: Préparer l'espace temporaire astronomie
         run: |
@@ -253,14 +251,10 @@ jobs:
       ASTRO_CODE: ${{ github.workspace }}/02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests
 
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-
-      - name: Finaliser Git LFS
-        run: git lfs pull
 
       - name: Préparer l'espace temporaire spin-orbite
         run: |
@@ -334,4 +328,3 @@ jobs:
           path: ${{ runner.temp }}/oric-spin-orbite
           if-no-files-found: error
           retention-days: 30
-

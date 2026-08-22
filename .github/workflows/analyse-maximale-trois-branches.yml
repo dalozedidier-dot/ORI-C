@@ -25,13 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-      - name: Finaliser Git LFS
-        run: git lfs pull
       - name: Installer Python
         uses: actions/setup-python@v6
         with:
@@ -93,13 +90,10 @@ jobs:
       OMP_NUM_THREADS: '1'
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-      - name: Finaliser Git LFS
-        run: git lfs pull
       - name: Préparer l'artefact
         run: |
           echo "OUT=$RUNNER_TEMP/oric-trois-branches" >> "$GITHUB_ENV"

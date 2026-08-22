@@ -53,14 +53,10 @@ jobs:
       DATA: ${{ github.workspace }}/plateforme/campagne_maximale_reelle/data
 
     steps:
-      - name: Récupérer le dépôt et Git LFS
+      - name: Récupérer le dépôt
         uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-
-      - name: Finaliser Git LFS
-        run: git lfs pull
 
       - name: Préparer l'espace temporaire
         run: |

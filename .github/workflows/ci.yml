@@ -3,7 +3,15 @@ name: Validation ORI-C
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'site/**'
   pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'site/**'
 
 env:
   PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
@@ -21,10 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-      - name: Hydrater Git LFS
-        run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
@@ -122,10 +127,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-      - name: Hydrater Git LFS
-        run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -195,10 +197,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          lfs: true
           fetch-depth: 1
-      - name: Hydrater Git LFS
-        run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -221,14 +220,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      # Les données de la campagne sont en Git LFS : `.gitattributes` y route
-      # `*.gz` et `*.zip`. Sans `lfs: true`, le runner ne reçoit que des
-      # pointeurs de 130 octets et toute lecture échoue.
+      # Cette campagne est la seule suite de la CI générale qui ouvre les
+      # archives de mémoire matérielle suivies par Git LFS.
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-      - name: Hydrater Git LFS
-        run: git lfs pull
+      - name: Charger les données de mémoire matérielle
+        run: git lfs pull --include="01_branche_matiere/memoire_materielle_reelle/**" --exclude=""
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -253,9 +249,6 @@ jobs:
         python-version: ['3.12', '3.13']
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-      - run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
@@ -277,9 +270,6 @@ jobs:
         python-version: ['3.12', '3.13']
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-      - run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
@@ -295,9 +285,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-      - run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -323,9 +310,6 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-      - run: git lfs pull
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'

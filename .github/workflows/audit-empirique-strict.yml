@@ -38,11 +38,6 @@ jobs:
       OMP_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v6
-        with:
-          lfs: true
-
-      - name: Hydrater Git LFS
-        run: git lfs pull
 
       - uses: actions/setup-python@v6
         with:
