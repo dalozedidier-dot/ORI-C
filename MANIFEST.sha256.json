@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/analyse-systeme-solaire.yml",
-      "size": 13659,
-      "sha256": "47e789beb7b727eadeff37534c219c8d95b48de9e34921a796a29899185bf743",
+      "size": 13603,
+      "sha256": "febc64f2123f0e6712e602e25cf512f4c0319def778d40544b6c82d4caecd8a9",
       "storage": "inline"
     },
     {
@@ -71,8 +71,8 @@
     },
     {
       "path": ".github/workflows/campagne-centrale-invariant.yml",
-      "size": 12390,
-      "sha256": "5accb50ec0236a0c3799cbaa9ff637b2cac8a31543bb1b2f041a5d570abccae0",
+      "size": 12330,
+      "sha256": "30f93cd0fb8be1a4d85cd012dc5c68d599f370d98917d18a5e3219175aab3735",
       "storage": "inline"
     },
     {
@@ -83,8 +83,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 18397,
-      "sha256": "f5024e32be822ad8b99dc6a8d6dbdf1724f910c4bb2f97257e7ec6052a942cd1",
+      "size": 18499,
+      "sha256": "bb10b2eeff3ea03cdb16ad57129a36462195f4d3b25963ab37e04351e64e1894",
       "storage": "inline"
     },
     {

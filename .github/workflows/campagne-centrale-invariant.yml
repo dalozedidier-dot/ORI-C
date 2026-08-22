@@ -20,7 +20,6 @@ on:
       - '03_branche_vivant/lignees_vesicules/analyser_ves_pacc_int_01.py'
       - '03_branche_vivant/lignees_vesicules/RECHERCHE_REPLICATION_INDEPENDANTE_2026-08-12.json'
       - '03_branche_vivant/benchmark_externe_santos_lopez_2021/**'
-      - '.github/workflows/campagne-centrale-invariant.yml'
 
 permissions:
   contents: read

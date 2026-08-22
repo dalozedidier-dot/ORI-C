@@ -25,7 +25,6 @@ on:
       - '02_branche_systeme_solaire/couche_memoire_historique/**'
       - '02_branche_systeme_solaire/couche_spin_orbite/**'
       - 'scripts/verifier_reproductibilite_spin_orbite.py'
-      - '.github/workflows/analyse-systeme-solaire.yml'
 
 permissions:
   contents: read

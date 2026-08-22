@@ -71,6 +71,7 @@ jobs:
             --reference "$RUNNER_TEMP/calibrage-reference/resultats" \
             --candidate 01_branche_matiere/hypergraphe_transformations/calibrage_v094/resultats
       - name: Exécuter les priorités v0.9.3
+        if: github.event_name == 'workflow_dispatch'
         run: |
           git lfs pull \
             --include="02_branche_systeme_solaire/couche_astronomique/resultats/real_science_max/baseline_20myr_dt10/**" \
@@ -220,6 +221,7 @@ jobs:
 
   campagne_matiere:
     name: Campagne mémoire matérielle
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
