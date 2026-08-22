@@ -123,6 +123,9 @@ jobs:
 
       - name: Tester la campagne centrale
         run: |
+          git lfs pull \
+            --include="donnees_externes/paleo_history_01/**" \
+            --exclude=""
           python -m pytest -q \
             plan_directeur/campagne_centrale_2026_08_11/tests \
             03_branche_vivant/lignees_vesicules/tests/test_pacc_prospectif_gate.py \

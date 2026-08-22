@@ -33,8 +33,11 @@ def _is_number(value: Any) -> bool:
 VOLATILE_JSON_LOCATIONS = frozenset({
     # Métadonnée du runner GitHub/Azure : le patch du noyau peut changer entre
     # deux exécutions sans modifier le code, les dépendances ni les résultats.
+    # La chaîne Python contient aussi la date de compilation et le compilateur,
+    # qui diffèrent entre l'artefact Linux et une reproduction Windows.
     # Toutes les autres clés de environment.json restent comparées strictement.
     "environment.json.platform",
+    "environment.json.python",
 })
 
 
