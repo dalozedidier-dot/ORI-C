@@ -126,7 +126,7 @@ def main() -> int:
             "l'operativite, qui reste sans donnee."),
     }
     (ICI / "chaine_filtres_azote.json").write_text(
-        json.dumps(rapport, ensure_ascii=False, indent=2), encoding="utf-8")
+        json.dumps(rapport, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
     print(json.dumps(rapport, ensure_ascii=False, indent=2))
     return 0
 

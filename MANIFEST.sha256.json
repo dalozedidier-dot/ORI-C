@@ -568,6 +568,12 @@
       "storage": "inline"
     },
     {
+      "path": "00_socle/tests/test_checkup_portable.py",
+      "size": 2892,
+      "sha256": "0493753db9b78c03945c0643790e8b5df8a8f7e474315232d376a0d1a987939f",
+      "storage": "inline"
+    },
+    {
       "path": "00_socle/tests/test_documents.py",
       "size": 8394,
       "sha256": "efd24977749ba38fb403ab577c00d14bf981c72be9524506adb99fdddf952886",
@@ -2021,14 +2027,14 @@
     },
     {
       "path": "01_branche_matiere/inventaire_hierarchique/carte_causale.py",
-      "size": 15198,
-      "sha256": "5933d6641c0f511d8b2d7982635a2c50630a9c77ebaa01eaf9d2ef911785f35e",
+      "size": 15212,
+      "sha256": "629cff9fd90cffbe8be688134479b1c431940d433761a8ee1dc72aa52c69e98b",
       "storage": "inline"
     },
     {
       "path": "01_branche_matiere/inventaire_hierarchique/chaine_filtres.py",
-      "size": 5782,
-      "sha256": "127d865cf2a6dfb7b79bcfd3bae780fb3c834dba1c36a83b979d88656a33bf22",
+      "size": 5796,
+      "sha256": "16f81eaf7fb9fa86ca3e294eaf9a902d6b047a5255d5a902c5390fd689d0db1d",
       "storage": "inline"
     },
     {
@@ -2051,8 +2057,8 @@
     },
     {
       "path": "01_branche_matiere/inventaire_hierarchique/detecter_manques.py",
-      "size": 8542,
-      "sha256": "05a36638394a1c803929318f4cc3eddfb449e4bead53de52c2629e4ccb6aa90c",
+      "size": 8556,
+      "sha256": "67f4420a56e2d89ea37f38a6948245f6e8410093f8dfd0ba6a627d7aa614ca6e",
       "storage": "inline"
     },
     {
@@ -3275,8 +3281,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/code/ORI-C_Systeme_solaire_tests/src/oric_solar_history/reporting.py",
-      "size": 1740,
-      "sha256": "926035339266a285dd30f23225dc23690e0e6266b1624b1d9cf5963f27f9a5c0",
+      "size": 1850,
+      "sha256": "b575dc5e0a345ac73e450ac2bd15e09fcd88f126f958c9ef9b90f5147b9ce90a",
       "storage": "inline"
     },
     {
@@ -5933,8 +5939,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/tests_suivants/auditer_speleothemes.py",
-      "size": 7445,
-      "sha256": "fd3e859e8ff16cff5a4385a6d353ad0d2c8a8a4042854cc9b52c3e1a4d9ab725",
+      "size": 7459,
+      "sha256": "6ffbbafcb1feb3d972bbbbdac1f56db5eeadd5b743aad5ee2d8a2ab4375a5793",
       "storage": "inline"
     },
     {
@@ -6179,8 +6185,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_externe_santos_lopez_2021/analyser_benchmark.py",
-      "size": 6330,
-      "sha256": "0c7be7a1f189ca278aa35b86151d1e359b3812af67a6848e440e15dc0f3d1728",
+      "size": 6351,
+      "sha256": "f9be07bcebfa37ede95ff0a245687e6375d6cafb9f2e7a8935844596716f7b7c",
       "storage": "inline"
     },
     {
@@ -6815,8 +6821,8 @@
     },
     {
       "path": "CHECKUP_COMPLET.md",
-      "size": 3006,
-      "sha256": "7b21c5f5700f75380c640c9bd23aa056e00d8f6dd35a071faa2eb0253ee7e985",
+      "size": 4025,
+      "sha256": "9cfd25b83a835c8e809e98c85ea5ca2200308e9551194956a2ae3de974625344",
       "storage": "inline"
     },
     {
@@ -7121,8 +7127,8 @@
     },
     {
       "path": "checkup_complet.py",
-      "size": 25879,
-      "sha256": "583119909c52b42ec1fa0e6cb4fee0033f36849e13c2b2b188886e3e08f7f6a0",
+      "size": 29466,
+      "sha256": "0f7a709372b350e902c6cc67a7c6e20ed3e9f154f74ce6ee109bb21f1f1db939",
       "storage": "inline"
     },
     {
@@ -9311,8 +9317,8 @@
     },
     {
       "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/analyser.py",
-      "size": 16040,
-      "sha256": "f0ebc038d08ef2a54c8525d57961da2298c9f27bfe6ec2a76a438ddb883c3240",
+      "size": 16258,
+      "sha256": "bd9d46c248f56e86d6e5e5495139b6648c3a429c934bc0e09bb217f510b67d97",
       "storage": "inline"
     },
     {
@@ -9341,8 +9347,8 @@
     },
     {
       "path": "plan_directeur/exploitation_donnees_reelles_2026_08_15/tests/test_analyser.py",
-      "size": 2413,
-      "sha256": "985ab98b24d3a7175f59631c1fb990e8a33a604739476178ac457ff3f855f6bf",
+      "size": 2812,
+      "sha256": "e139f776d5759585bf32c916844f43139eb71df76f5e791c2fb585de7060a92c",
       "storage": "inline"
     },
     {
@@ -11538,7 +11544,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "b57e470c2ce295bf91b917dbf57651c02fb14761d0b7f993459c1f80be35c811",
+      "sha256": "d147b551d54d600bf48094034063471d0379ab4c925d4232a356460bc5601827",
       "storage": "inline"
     },
     {
@@ -11723,8 +11729,8 @@
     },
     {
       "path": "scripts/construire_core_results.py",
-      "size": 4306,
-      "sha256": "8f020aac70cfd669d7771ec1fd6c2a979c9515c21c28bc521a677155fe3460b0",
+      "size": 4308,
+      "sha256": "52f8c12ee003a2a41f92228af933c6e464bc944c1a0a1d9981d216a9a2ee5764",
       "storage": "inline"
     },
     {
@@ -11903,8 +11909,8 @@
     },
     {
       "path": "site/core.html",
-      "size": 9846,
-      "sha256": "e7b064f8167ee40b448dd3d0329aa24b899ce4f345e989a1f6e4d1a8811daad8",
+      "size": 9848,
+      "sha256": "90bf72543f33bf62f69befb089e5a08366a4e30fae22a5a123e5b3db967f4315",
       "storage": "inline"
     },
     {

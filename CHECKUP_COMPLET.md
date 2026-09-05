@@ -54,10 +54,26 @@ preuve positive.
 
 ## Règle de reproductibilité
 
-Le check-up **vérifie** les manifestes ; il ne les reconstruit pas pour masquer
-une divergence. Si un recalcul modifie un artefact versionné, le contrôle final
-doit échouer jusqu'à ce que la différence soit examinée, scientifiquement
-acceptée, puis scellée volontairement dans une mise à jour.
+Le check-up **vérifie** les manifestes sans les reconstruire. Les trois sorties
+numériques explicitement déclarées dans `NUMERIC_OUTPUTS` sont comparées aux
+références présentes au démarrage, avec les tolérances de la CI : `1e-8` en
+relatif et `1e-10` en absolu. Cette liste couvre le résultat et les prédictions
+du benchmark Santos-López, ainsi que leur reprise dans la synthèse de la
+campagne de recherche suivante.
+
+Après une étape réussie, les recalculs différents sont archivés sous
+`reproductibilite/` dans le dossier du rapport, avec leurs références et un
+fichier `comparison.json`. Si la comparaison confirme leur équivalence, les
+octets de référence sont rétablis avant les étapes suivantes. Le rapport
+mentionne cette opération. Une différence hors tolérance, un fichier absent,
+une modification de structure ou de verdict provoque un échec et conserve les
+sorties modifiées pour examen. Les autres fichiers restent soumis au contrôle
+strict du manifeste. Une évolution scientifique des résultats exige toujours
+une mise à jour examinée et scellée volontairement.
+
+Les générateurs structurels écrivent leurs sorties en LF sur tous les systèmes.
+Les figures astronomiques utilisent le moteur non interactif Agg, qui permet
+de produire des PNG sans installation de Tcl/Tk.
 
 ## Synchronisation structurelle
 

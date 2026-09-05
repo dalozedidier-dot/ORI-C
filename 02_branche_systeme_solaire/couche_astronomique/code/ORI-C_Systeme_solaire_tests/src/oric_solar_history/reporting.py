@@ -2,6 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import matplotlib
+
+# This module exports PNG files and never opens interactive windows.
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 

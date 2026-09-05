@@ -65,6 +65,60 @@ SOURCE_BUNDLE_KEYS = (
     "edc3_pdf",
 )
 
+# Same tolerances as scripts/verifier_reproductibilite_resultats.py in CI.
+# Only these known floating-point outputs may be reconciled. Source data,
+# structural artifacts, statuses, counts and all other files remain strict.
+NUMERIC_OUTPUTS = (
+    "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/RESULTAT.json",
+    "03_branche_vivant/benchmark_externe_santos_lopez_2021/resultats/predictions_hors_echantillon.csv",
+    "plan_directeur/campagne_recherche_suivante/resultats/SYNTHESE.json",
+)
+
+
+def reconcile_numeric_outputs(root: Path, references: dict[str, bytes], output: Path) -> list[str]:
+    """Archive candidates and restore references only after a successful comparison.
+
+    A scientific or structural difference raises before any file is restored.
+    The manifest itself is never regenerated. Raw candidates remain available
+    beside their references so that the numerical comparison can be repeated.
+    """
+    from scripts.verifier_reproductibilite_resultats import compare_directories
+
+    changed = [name for name, data in references.items()
+               if not (root / name).is_file() or (root / name).read_bytes() != data]
+    if not changed:
+        return []
+    reference_dir = output / "reference"
+    candidate_dir = output / "candidate"
+    candidate_dir.mkdir(parents=True, exist_ok=True)
+    for name in changed:
+        reference = reference_dir / name
+        reference.parent.mkdir(parents=True, exist_ok=True)
+        reference.write_bytes(references[name])
+        candidate = candidate_dir / name
+        if (root / name).is_file():
+            candidate.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(root / name, candidate)
+    state, errors, count, _ = compare_directories(
+        reference_dir, candidate_dir, relative_tolerance=1e-8, absolute_tolerance=1e-10,
+    )
+    (output / "comparison.json").write_text(json.dumps({
+        "files": changed, "compared_files": count,
+        "relative_tolerance": 1e-8, "absolute_tolerance": 1e-10,
+        "numbers_compared": state.numbers_compared,
+        "maximum_absolute_difference": state.maximum_absolute_difference,
+        "errors": errors,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    if errors:
+        raise ValueError("; ".join(errors[:8]))
+    # Check again before replacing, in case another process changed a candidate.
+    for name in changed:
+        if (root / name).read_bytes() != (candidate_dir / name).read_bytes():
+            raise ValueError(f"modification concurrente : {name}")
+    for name in changed:
+        (root / name).write_bytes(references[name])
+    return changed
+
 
 @dataclass
 class Step:
@@ -146,11 +200,16 @@ class Runner:
         self.fail_fast = fail_fast
         self.steps: list[Step] = []
         self.counter = 0
+        self.numeric_references = {
+            name: (ROOT / name).read_bytes() for name in NUMERIC_OUTPUTS
+            if (ROOT / name).is_file()
+        }
         self.env = os.environ.copy()
         self.env["PYTHONUTF8"] = "1"
         self.env.setdefault("PYTEST_DISABLE_PLUGIN_AUTOLOAD", "1")
         self.env.setdefault("OPENBLAS_NUM_THREADS", "1")
         self.env.setdefault("OMP_NUM_THREADS", "1")
+        self.env.setdefault("MPLBACKEND", "Agg")
         self.env.setdefault("MPLCONFIGDIR", str(output_dir / "mplconfig"))
 
     def record(self, name: str, status: str, detail: str | None = None) -> Step:
@@ -202,6 +261,19 @@ class Runner:
         self.steps.append(step)
         marker = "OK" if status == "PASS" else ("AVERT" if status == "WARN" else "ECHEC")
         print(f"[{marker}] {name} — {detail}", flush=True)
+        if returncode == 0:
+            comparison_dir = self.output_dir / "reproductibilite" / f"{self.counter:02d}"
+            try:
+                restored = reconcile_numeric_outputs(ROOT, self.numeric_references, comparison_dir)
+            except (OSError, ValueError) as exc:
+                self.record(f"reproductibilité après {name}", "FAIL", str(exc))
+            else:
+                if restored:
+                    self.record(
+                        f"reproductibilité après {name}", "PASS",
+                        f"{len(restored)} sorties conformes à rel=1e-8, abs=1e-10; "
+                        f"références rétablies, recalculs conservés dans {comparison_dir}",
+                    )
         if status == "FAIL":
             try:
                 tail = log_path.read_text(encoding="utf-8", errors="replace").splitlines()[-18:]

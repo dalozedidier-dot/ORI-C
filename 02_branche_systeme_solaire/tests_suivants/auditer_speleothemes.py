@@ -174,7 +174,7 @@ def main() -> dict[str, object]:
         result["source_file"] = source_reference(path)
     OUT.mkdir(exist_ok=True)
     (OUT / "AUDIT_SPELEOTHEMES.json").write_text(
-        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result

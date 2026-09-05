@@ -140,7 +140,7 @@ def main() -> dict:
         pred_history=p_hist,
         sqerr_state=(y-p_state)**2,
         sqerr_history=(y-p_hist)**2,
-    ).to_csv(OUT / "predictions_hors_echantillon.csv", index=False)
+    ).to_csv(OUT / "predictions_hors_echantillon.csv", index=False, lineterminator="\n")
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return result
 

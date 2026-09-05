@@ -251,7 +251,7 @@ def main() -> int:
         },
     }
     (ICI / "carte_causale.json").write_text(
-        json.dumps(rapport, ensure_ascii=False, indent=2), encoding="utf-8")
+        json.dumps(rapport, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
     print(f"A  contrastes a composition constante : {len(CONTRASTES)}")
     print(f"   variables controlees : "
