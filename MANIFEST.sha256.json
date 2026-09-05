@@ -2880,7 +2880,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/MANIFESTE.json",
       "size": 54046,
-      "sha256": "00c2278a75f7ec1d85713680a4af997975351a6dddfa7932e1cff96c71a1cfa3",
+      "sha256": "4d57cc0f4d9813d94ec5f94f0490d322894b5fce1d05d7a300935c0d680a7e98",
       "storage": "inline"
     },
     {
@@ -2892,7 +2892,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_astronomique/SHA256SUMS.txt",
       "size": 35409,
-      "sha256": "69c9de307c5a30e719f2cbfb2c118b0321d51348fe169aacca0e10e9cbc90816",
+      "sha256": "4b094689e8ab227b98fe2ede7c750edde4f364b8d5f6b96a8c7b5d80e8013154",
       "storage": "inline"
     },
     {

@@ -338,9 +338,9 @@
       "sha256": "90e2a453ffc18423a524b33c3dce67e9c69fd08e09bb6a14f252a28bafc20677"
     },
     {
-      "bytes": 1740,
+      "bytes": 1850,
       "path": "code/ORI-C_Systeme_solaire_tests/src/oric_solar_history/reporting.py",
-      "sha256": "926035339266a285dd30f23225dc23690e0e6266b1624b1d9cf5963f27f9a5c0"
+      "sha256": "b575dc5e0a345ac73e450ac2bd15e09fcd88f126f958c9ef9b90f5147b9ce90a"
     },
     {
       "bytes": 3903,
