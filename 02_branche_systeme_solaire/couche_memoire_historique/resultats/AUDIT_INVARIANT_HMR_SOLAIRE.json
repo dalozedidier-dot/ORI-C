@@ -1,14 +1,21 @@
 {
   "schema": "oric.hmr-two-filter-solar-audit.v1",
   "id": "HMR-SOLAR-OPEN-ARTIFACTS-01",
-  "status": "executed_on_already_open_versioned_artifacts",
+  "status": "synthesis_of_two_distinct_existing_results_no_XIV_credit",
+  "same_dataset_two_filter_test_executed": false,
+  "source_sha256": {
+    "02_branche_systeme_solaire/couche_memoire_historique/results_stress/mpt/e_hardened_verdict.json": "613edf691d4e44b10fe373447d4a59274b172587177b8d2659482cb0a4b73ae6",
+    "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json": "c4fca9540ac195f67de8eae06e0c3cc331e1c2fa6c49438c6edfb53f7de49707"
+  },
   "section_XIV_credit": false,
   "new_dataset_opened": false,
   "filters": {
     "H_given_rich_X": {
-      "question": "Does ordered history survive the equal-complexity rich-X control?",
+      "question": "Does M2 beat the equal-complexity forcing-memory model M1P?",
       "candidate": "M2",
-      "rich_X_matched_control": "M1P",
+      "matched_control": "M1P",
+      "rich_X_equivalence_established": false,
+      "scope": "M1P contains a slow state driven by past forcing. This is not a direct H given current rich X test.",
       "delivered_bounds": {
         "relative_RMSE_gain": -0.18386883476373805,
         "SESOI": 0.05,
@@ -27,8 +34,9 @@
         "criteria_passed": 0,
         "criteria_total_reported": 5
       },
-      "passes": false,
-      "verdict": "ordered history does not survive the equal-complexity rich-X control",
+      "passes": null,
+      "equal_complexity_comparison_passes": false,
+      "verdict": "equal_complexity_gates_fail",
       "source": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/mpt/e_hardened_verdict.json"
     },
     "m_to_R": {
@@ -47,10 +55,10 @@
       "sham_max_absolute_change": 0.0,
       "passes_model_level": true,
       "strict_empirical_P_acc": false,
-      "verdict": "m changes R inside the already-open reduced model, without strict empirical P_acc qualification",
+      "verdict": "model_intervention_gates_pass",
       "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json"
     }
   },
-  "combined_verdict": "solar invariance is split: H fails after rich-X matching, while m changes R only at retrospective model level",
+  "combined_verdict": "No joint two-filter inference: distinct datasets and no established rich-X equivalence.",
   "rule": "No threshold is lowered and no result is promoted to section XIV credit."
 }

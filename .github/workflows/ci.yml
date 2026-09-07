@@ -159,9 +159,12 @@ jobs:
       - name: Vérifier les vues dérivées du noyau et des verrous
         run: |
           python scripts/construire_core_results.py
+          python scripts/auditer_invariant_hmr_solaire.py
+          python 02_branche_systeme_solaire/paleo_history_03_age_ensemble/verifier_avant_ouverture.py --verify-only
+          python -m unittest discover -s scripts/tests -p test_authority_guards.py
           python scripts/construire_verrous_actifs.py
           python scripts/evaluer_readiness_verrous.py
-          git diff --exit-code -- CORE_RESULTS.md site/core.html plan_directeur/VERROUS_ACTIFS.json plan_directeur/READINESS_VERROUS.json
+          git diff --exit-code -- CORE_RESULTS.md site/core.html plan_directeur/VERROUS_ACTIFS.json plan_directeur/READINESS_VERROUS.json 02_branche_systeme_solaire/couche_memoire_historique/resultats/AUDIT_INVARIANT_HMR_SOLAIRE.json
       - name: Valider les notebooks d’entrée
         run: |
           python -m json.tool notebooks/ORI-C_demo_colab.ipynb > /dev/null

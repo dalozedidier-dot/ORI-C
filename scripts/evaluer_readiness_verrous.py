@@ -22,6 +22,7 @@ def main():
     matter = load('plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json')
     matter_result = load('01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json')
     paleo = load('02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.json')
+    paleo_audit = load('plan_directeur/AUDIT_PALEO_ENSEMBLE_03.json')
     solar_hmr = load('02_branche_systeme_solaire/couche_memoire_historique/resultats/AUDIT_INVARIANT_HMR_SOLAIRE.json')
 
     missing_mag = [k for k, v in mag['frozen_fields'].items() if v is None]
@@ -86,7 +87,7 @@ def main():
             'target': 'XIV-11 after both matter and living qualify',
         },
         'invariant_H_m_R': {
-            'status': 'two_filters_replayed_on_already_open_solar_artifacts_no_XIV_credit',
+            'status': solar_hmr['status'],
             'authority': 'plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json',
             'solar_audit': solar_hmr['id'],
             'solar_H_given_rich_X_passes': solar_hmr['filters']['H_given_rich_X']['passes'],
@@ -98,14 +99,16 @@ def main():
         'section_XIV': 'unchanged_7_of_12_until_real_execution_or_replication',
         'paleo_age_ensemble_route': {
             'id': paleo['id'],
-            'status': paleo['status'],
+            'status': paleo_audit['status'],
+            'execution_allowed': paleo_audit['execution_allowed'],
+            'blockers': paleo_audit['blockers'],
             'dataset_doi': paleo['source']['doi'],
             'age_model_ensembles': paleo['source']['age_ensemble_count'],
             'untuned_age_model_available': bool(paleo['source'].get('untuned_age_model_file')),
-            'raw_values_opened_by_ORI_C': paleo['firewall']['raw_values_opened_by_ORI_C'],
+            'raw_values_opened_by_ORI_C': paleo_audit['raw_values_opened_by_ORI_C'],
             'old_pred_paleo_history_02_unchanged': paleo['firewall']['old_prediction_unchanged'] == 'PRED-PALEO-HISTORY-02',
             'section_XIV_credit': paleo['section_XIV_credit'],
-            'next': 'freeze_committed_stop_without_opening_values',
+            'next': paleo_audit['next'],
         },
     }
     OUT.write_text(

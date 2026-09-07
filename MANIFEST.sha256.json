@@ -83,8 +83,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "size": 18450,
-      "sha256": "73cc98a2895ebdf949ac3cc571576725303bb5ef718574f1b42250fde3dee349",
+      "size": 18803,
+      "sha256": "3d6cefb6c63098bc1d12b033357df000f6be18dca77d68e86828c6a25d4399d1",
       "storage": "inline"
     },
     {
@@ -4506,7 +4506,7 @@
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
       "size": 19412,
-      "sha256": "18c7f76e56a628f3a28ec30344d9f0971f484aaea7775b69a41ee93c33b42ebb",
+      "sha256": "af6aafa0736d9ca811a7d3b1a061eecf8c2e90ab4e001cdbf82808d4ec01fcca",
       "storage": "inline"
     },
     {
@@ -4793,8 +4793,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/resultats/AUDIT_INVARIANT_HMR_SOLAIRE.json",
-      "size": 2293,
-      "sha256": "5810d8c0bd10e2e24a08cdcc5531c2e88574ab8f8f8a1132d2597036e6a34d97",
+      "size": 2792,
+      "sha256": "db7a7adabc8130647cd20baa7c84ed48a9b6f2861ef5f2bd51ebe03f60a78ed5",
       "storage": "inline"
     },
     {
@@ -5945,8 +5945,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/paleo_history_03_age_ensemble/verifier_avant_ouverture.py",
-      "size": 2575,
-      "sha256": "7d3bf65293cf492c08bc1e643358b4ce780683b9b0a7d924ccbd67162949e01e",
+      "size": 2623,
+      "sha256": "98e11e074bab35dbeb28eed0b80dec3f1b2b4c0e6986081075aea66b503898f0",
       "storage": "inline"
     },
     {
@@ -8164,6 +8164,12 @@
       "storage": "inline"
     },
     {
+      "path": "plan_directeur/AUDIT_PALEO_ENSEMBLE_03.json",
+      "size": 1564,
+      "sha256": "c3ae5efe696f5728e9cdb35ba618477bfcb6e4c71cc3b63fabae0f7fb872575a",
+      "storage": "inline"
+    },
+    {
       "path": "plan_directeur/AUDIT_TRANSVERSAL.md",
       "size": 3876,
       "sha256": "8406e902724f0fa80dd07481f7bc87b9a07946e9ca70628ed9b158eb6b66efd4",
@@ -8207,8 +8213,8 @@
     },
     {
       "path": "plan_directeur/PALEO_AGE_ENSEMBLE_ROUTE.json",
-      "size": 1352,
-      "sha256": "725d944cb38d2eb6a7a079ac88f06a9cebb307204e6c64427cbe1a4bcbf9f682",
+      "size": 1510,
+      "sha256": "530ee202bbcb6db67ee20699ef29d5758d4d01350f2834b358be7831cb2e5047",
       "storage": "inline"
     },
     {
@@ -8231,8 +8237,8 @@
     },
     {
       "path": "plan_directeur/READINESS_VERROUS.json",
-      "size": 3767,
-      "sha256": "1524611f840c3fb0fa5d78ba4e8ee39b3bbd8249c64e1f89f1fa7a6e20fa9c92",
+      "size": 4475,
+      "sha256": "faf1b2412169a028e993f2b1f73f5e43c731557a2184ba1f1219be4cefc6b5bc",
       "storage": "inline"
     },
     {
@@ -8255,8 +8261,8 @@
     },
     {
       "path": "plan_directeur/VERROUS_ACTIFS.json",
-      "size": 3632,
-      "sha256": "4e4ebaa644ca1a0d15ee180e2400f6c381720006331f99bea19aed94026281b6",
+      "size": 3687,
+      "sha256": "167a0afdceca5c5fab5a1a09da8582caadb1575c587f4a5ca39844a0d38b5bab",
       "storage": "inline"
     },
     {
@@ -11568,7 +11574,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "e4cbe88dba1a7d86e9f899e15115d23aa409ab7dc55450e1ba398a10c25db660",
+      "sha256": "6b74c9afb14d55801273f7b47e81d7e5d25680a4c3747840f0be167619511e1b",
       "storage": "inline"
     },
     {
@@ -11741,8 +11747,8 @@
     },
     {
       "path": "scripts/auditer_invariant_hmr_solaire.py",
-      "size": 4782,
-      "sha256": "a5aa63c50c22719a060cae661e65956bb3da4bdfd7ff56dce98eb5ea2f63f6f5",
+      "size": 5755,
+      "sha256": "44798467861b508f7d6e0dd41935958419873125dd532b948860d8e3ba1be4f4",
       "storage": "inline"
     },
     {
@@ -11777,8 +11783,8 @@
     },
     {
       "path": "scripts/construire_verrous_actifs.py",
-      "size": 7218,
-      "sha256": "4492d2e2e7e59b525f2ed9a723bda9256cc0a7b8acbfbd973aade6a011a97dd8",
+      "size": 7356,
+      "sha256": "8626bd9831af48b4391473b31f6cc674470cabbdf3c119c8aa84b6a463e6ef29",
       "storage": "inline"
     },
     {
@@ -11801,8 +11807,8 @@
     },
     {
       "path": "scripts/evaluer_readiness_verrous.py",
-      "size": 6838,
-      "sha256": "5e846f6bbd21d7c683ff62b6ea5413795ca3d27d75117af659a293039dd12f39",
+      "size": 6948,
+      "sha256": "a3d0477a77b855846711e42ad7c532b8e5a54558bc3f6d87fca94d5aa77ab836",
       "storage": "inline"
     },
     {
@@ -11821,6 +11827,12 @@
       "path": "scripts/surrogats.py",
       "size": 6160,
       "sha256": "bd4fb7eb39c0dfda18c123392a0c4ce9f8cf51c293a0b9784f2cdf89f161561d",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/tests/test_authority_guards.py",
+      "size": 2015,
+      "sha256": "0323931ea41cdfd4915173c7464cac65aac9bf91d58806dac2e297f87a141682",
       "storage": "inline"
     },
     {

@@ -74,10 +74,10 @@
     "target": "XIV-11 after both matter and living qualify"
   },
   "invariant_H_m_R": {
-    "status": "two_filters_replayed_on_already_open_solar_artifacts_no_XIV_credit",
+    "status": "synthesis_of_two_distinct_existing_results_no_XIV_credit",
     "authority": "plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json",
     "solar_audit": "HMR-SOLAR-OPEN-ARTIFACTS-01",
-    "solar_H_given_rich_X_passes": false,
+    "solar_H_given_rich_X_passes": null,
     "solar_m_to_R_passes_model_level": true,
     "solar_strict_empirical_P_acc": false,
     "section_XIV_credit": false,
@@ -86,13 +86,20 @@
   "section_XIV": "unchanged_7_of_12_until_real_execution_or_replication",
   "paleo_age_ensemble_route": {
     "id": "PRED-PALEO-HISTORY-03-AGE-ENSEMBLE",
-    "status": "frozen_unopened",
+    "status": "blocked_provenance_and_incomplete_design",
+    "execution_allowed": false,
+    "blockers": [
+      "The global unopened assertion is not supported by the prior versioned summaries.",
+      "An untuned chronology is a robustness comparison, not an established negative outcome control. Rejecting success on it lacks justification.",
+      "Latitude, season, estimator, regularization grid, history summaries, training split, leakage embargo, permutation method and seed remain unspecified.",
+      "The chronology distribution is not by itself a sampling confidence interval for predictive performance."
+    ],
     "dataset_doi": "10.5281/zenodo.14796413",
     "age_model_ensembles": 1000,
     "untuned_age_model_available": true,
-    "raw_values_opened_by_ORI_C": false,
+    "raw_values_opened_by_ORI_C": null,
     "old_pred_paleo_history_02_unchanged": true,
     "section_XIV_credit": false,
-    "next": "freeze_committed_stop_without_opening_values"
+    "next": "Resolve provenance from existing records and specify any scientific revision under a new version before considering execution. No source values may be opened by this audit."
   }
 }

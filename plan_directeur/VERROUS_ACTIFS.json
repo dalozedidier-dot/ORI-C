@@ -42,7 +42,8 @@
       "rank": 1,
       "id": "PRED-PALEO-HISTORY-03-AGE-ENSEMBLE",
       "branch": "systeme_solaire",
-      "status": "frozen_unopened",
+      "status": "blocked_provenance_and_incomplete_design",
+      "execution_open": false,
       "source_doi": "10.5281/zenodo.14796413",
       "age_model_ensembles": 1000,
       "purpose": "replace fabricated LR04 age uncertainty with published chronology ensembles in a new frozen prediction ID",
@@ -50,7 +51,7 @@
         "solar-system H-versus-X test",
         "chronology uncertainty propagation"
       ],
-      "raw_values_opened_by_ORI_C": false,
+      "raw_values_opened_by_ORI_C": null,
       "section_XIV_credit": false
     },
     {

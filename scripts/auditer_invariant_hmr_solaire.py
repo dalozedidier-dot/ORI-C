@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Rejoue les deux filtres H|X riche et m vers R sur des artefacts déjà ouverts."""
+"""Synthèse de deux résultats distincts, sans nouvelle analyse des observations."""
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,17 +36,31 @@ def build() -> dict:
     reference_block = criterion(reference, "blockwise_wilcoxon_M2_better")
     wide_block = criterion(wide, "blockwise_wilcoxon_M2_better")
     pacc = intervention["P_acc"]
+    comparison_pass = all(bool(row['passed']) for block in (reference, wide) for row in block['detail'])
+    matching = intervention['matching']
+    model_pass = bool(
+        matching['X_exact_by_construction'] and matching['same_architecture']
+        and matching['same_future_forcing']
+        and all(value == 0 for value in matching['max_abs_X_difference_control_vs_do_m'].values())
+        and intervention['direct_INV_A_m_intervention']
+        and pacc['abs_Delta_bootstrap_q025'] > pacc['epsilon_acc']
+        and pacc['sham_max_abs_Delta'] == 0
+    )
     return {
         "schema": "oric.hmr-two-filter-solar-audit.v1",
         "id": "HMR-SOLAR-OPEN-ARTIFACTS-01",
-        "status": "executed_on_already_open_versioned_artifacts",
+        "status": "synthesis_of_two_distinct_existing_results_no_XIV_credit",
+        "same_dataset_two_filter_test_executed": False,
+        "source_sha256": {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in (H_SOURCE, M_SOURCE)},
         "section_XIV_credit": False,
         "new_dataset_opened": False,
         "filters": {
             "H_given_rich_X": {
-                "question": "Does ordered history survive the equal-complexity rich-X control?",
+                "question": "Does M2 beat the equal-complexity forcing-memory model M1P?",
                 "candidate": "M2",
-                "rich_X_matched_control": "M1P",
+                "matched_control": "M1P",
+                "rich_X_equivalence_established": False,
+                "scope": "M1P contains a slow state driven by past forcing. This is not a direct H given current rich X test.",
                 "delivered_bounds": {
                     "relative_RMSE_gain": reference_gain["value"],
                     "SESOI": reference_gain["threshold"],
@@ -64,8 +79,9 @@ def build() -> dict:
                     "criteria_passed": wide["passed"],
                     "criteria_total_reported": wide["total"],
                 },
-                "passes": False,
-                "verdict": "ordered history does not survive the equal-complexity rich-X control",
+                "passes": None,
+                "equal_complexity_comparison_passes": comparison_pass,
+                "verdict": "equal_complexity_gates_pass" if comparison_pass else "equal_complexity_gates_fail",
                 "source": H_SOURCE.relative_to(ROOT).as_posix(),
             },
             "m_to_R": {
@@ -82,13 +98,13 @@ def build() -> dict:
                     pacc["abs_Delta_bootstrap_q975"],
                 ],
                 "sham_max_absolute_change": pacc["sham_max_abs_Delta"],
-                "passes_model_level": bool(intervention["direct_INV_A_support"]),
+                "passes_model_level": model_pass,
                 "strict_empirical_P_acc": False,
-                "verdict": "m changes R inside the already-open reduced model, without strict empirical P_acc qualification",
+                "verdict": "model_intervention_gates_pass" if model_pass else "model_intervention_gates_fail",
                 "source": M_SOURCE.relative_to(ROOT).as_posix(),
             },
         },
-        "combined_verdict": "solar invariance is split: H fails after rich-X matching, while m changes R only at retrospective model level",
+        "combined_verdict": "No joint two-filter inference: distinct datasets and no established rich-X equivalence.",
         "rule": "No threshold is lowered and no result is promoted to section XIV credit.",
     }
 

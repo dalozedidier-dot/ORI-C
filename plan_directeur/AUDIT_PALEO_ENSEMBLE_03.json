@@ -1,0 +1,21 @@
+{
+  "id": "PRED-PALEO-HISTORY-03-AGE-ENSEMBLE",
+  "status": "blocked_provenance_and_incomplete_design",
+  "execution_allowed": false,
+  "raw_values_opened_by_ORI_C": null,
+  "section_XIV_credit": false,
+  "frozen_protocol_preserved": true,
+  "evidence_source": "02_branche_systeme_solaire/paleo_history_02/SCHEMA_DONNEES.json",
+  "prior_access_evidence": {
+    "NA-stack_age-samples.txt": "Prior schema reports 337 depths, 1000 draws, median sigma 1.936 ka and maximum sigma 4.562 ka. Exact access history remains unverified.",
+    "NA-stack_untuned_age_model.txt": "Prior schema reports a 10.18 ka median difference from tuned chronology. Exact access history remains unverified.",
+    "NA-stack_age-d18O.txt": "Prior plan names this file and the schema reports a target/control join at 336 of 337 depths. Exact access history remains unverified."
+  },
+  "blockers": [
+    "The global unopened assertion is not supported by the prior versioned summaries.",
+    "An untuned chronology is a robustness comparison, not an established negative outcome control. Rejecting success on it lacks justification.",
+    "Latitude, season, estimator, regularization grid, history summaries, training split, leakage embargo, permutation method and seed remain unspecified.",
+    "The chronology distribution is not by itself a sampling confidence interval for predictive performance."
+  ],
+  "next": "Resolve provenance from existing records and specify any scientific revision under a new version before considering execution. No source values may be opened by this audit."
+}

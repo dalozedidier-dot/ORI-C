@@ -29,6 +29,7 @@ def main() -> int:
     matter = load('plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json')
     matter_result = load('01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json')
     paleo = load('02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.json')
+    paleo_audit = load('plan_directeur/AUDIT_PALEO_ENSEMBLE_03.json')
 
     yen_gain = yen['primary_result']['history_gain_percent']
     rich_gain = yen['strict_state_sensitivity']['history_gain_percent']
@@ -64,12 +65,13 @@ def main() -> int:
                 'rank': 1,
                 'id': paleo['id'],
                 'branch': 'systeme_solaire',
-                'status': paleo['status'],
+                'status': paleo_audit['status'],
+                'execution_open': paleo_audit['execution_allowed'],
                 'source_doi': paleo['source']['doi'],
                 'age_model_ensembles': paleo['source']['age_ensemble_count'],
                 'purpose': 'replace fabricated LR04 age uncertainty with published chronology ensembles in a new frozen prediction ID',
                 'targets': ['solar-system H-versus-X test', 'chronology uncertainty propagation'],
-                'raw_values_opened_by_ORI_C': paleo['firewall']['raw_values_opened_by_ORI_C'],
+                'raw_values_opened_by_ORI_C': paleo_audit['raw_values_opened_by_ORI_C'],
                 'section_XIV_credit': paleo['section_XIV_credit'],
             },
             {

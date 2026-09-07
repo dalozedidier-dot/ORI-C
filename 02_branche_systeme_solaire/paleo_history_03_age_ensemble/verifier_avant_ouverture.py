@@ -64,9 +64,9 @@ def main() -> int:
     print(f"Gel commité vérifié: sha256:{digest}")
     if args.verify_only:
         return 0
-    with args.data_path.open("rb") as stream:
-        print(f"Accès autorisé après gel commité: {stream.read(0)!r}")
-    return 0
+    print("OUVERTURE REFUSEE: protocole bloqué par AUDIT_PALEO_ENSEMBLE_03.json. "
+          "La vérification du SHA ne constitue pas une autorisation scientifique.")
+    return 2
 
 
 if __name__ == "__main__":
