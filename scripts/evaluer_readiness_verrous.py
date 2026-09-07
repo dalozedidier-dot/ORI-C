@@ -20,7 +20,9 @@ def main():
     yen = load('03_branche_vivant/benchmark_yen_papin_2017/resultats/RESULTAT.json')
     gajrani = load('03_branche_vivant/memoire_externalisee_gajrani_2025/resultats/RESULTAT.json')
     matter = load('plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json')
-    paleo = load('plan_directeur/PALEO_AGE_ENSEMBLE_ROUTE.json')
+    matter_result = load('01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json')
+    paleo = load('02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.json')
+    solar_hmr = load('02_branche_systeme_solaire/couche_memoire_historique/resultats/AUDIT_INVARIANT_HMR_SOLAIRE.json')
 
     missing_mag = [k for k, v in mag['frozen_fields'].items() if v is None]
     payload = {
@@ -66,11 +68,17 @@ def main():
             'lesson': 'physical environmental trace m can transmit H into future R',
         },
         'matter_wave_history_001': {
-            'status': matter.get('route_status', matter['statut']),
+            'status': 'executed_negative_no_XIV_credit',
             'dataset_doi': matter['source']['dataset_doi'],
-            'raw_data_opened_by_ORI_C': matter['data_firewall']['raw_experimental_archive_opened_by_ORI_C'],
+            'raw_data_opened_by_ORI_C': matter_result['opening']['opened_after_local_freeze'],
             'strict_new_data_prospective_credit': matter['data_firewall']['strict_new_data_prospective_credit'],
-            'next': 'publish_frozen_mapping_before_opening_exp_zip',
+            'n_trials': matter_result['label_reconstruction']['n_trials'],
+            'classifier_gain_percentage_points': matter_result['classifier']['gain_percentage_points'],
+            'frozen_gain_threshold_percentage_points': matter_result['classifier']['success_threshold_gain_pp'],
+            'bootstrap_95pct_gain': matter_result['classifier']['bootstrap95_gain_pp'],
+            'permutation_p': matter_result['classifier']['permutation_p_one_sided'],
+            'section_XIV_credit': matter_result['section_XIV_credit'],
+            'next': 'none_route_consumed_negative_result_retained',
         },
         'cross_branch_pacc': {
             'definition_id': pmag['definition_id'],
@@ -78,18 +86,26 @@ def main():
             'target': 'XIV-11 after both matter and living qualify',
         },
         'invariant_H_m_R': {
-            'status': 'sharpened_by_one_negative_X_enrichment_control_and_one_positive_physical_trace_intervention',
+            'status': 'two_filters_replayed_on_already_open_solar_artifacts_no_XIV_credit',
             'authority': 'plan_directeur/MISE_A_JOUR_INVARIANT_HMR.json',
-            'next': 'replicate the same two-filter logic in matter and then solar-system branch without weakening gates',
+            'solar_audit': solar_hmr['id'],
+            'solar_H_given_rich_X_passes': solar_hmr['filters']['H_given_rich_X']['passes'],
+            'solar_m_to_R_passes_model_level': solar_hmr['filters']['m_to_R']['passes_model_level'],
+            'solar_strict_empirical_P_acc': solar_hmr['filters']['m_to_R']['strict_empirical_P_acc'],
+            'section_XIV_credit': solar_hmr['section_XIV_credit'],
+            'next': 'no_internal_dataset_route_opened; preserve gates until a valid external act',
         },
         'section_XIV': 'unchanged_7_of_12_until_real_execution_or_replication',
         'paleo_age_ensemble_route': {
+            'id': paleo['id'],
             'status': paleo['status'],
             'dataset_doi': paleo['source']['doi'],
             'age_model_ensembles': paleo['source']['age_ensemble_count'],
-            'untuned_age_model_available': bool(paleo['source'].get('untuned_file')),
-            'old_pred_paleo_history_02_unchanged': paleo['relationship_to_PRED_PALEO_HISTORY_02']['does_not_retroactively_change_frozen_protocol'],
-            'next': 'freeze_new_prediction_ID_around_published_age_ensembles_before_value_analysis',
+            'untuned_age_model_available': bool(paleo['source'].get('untuned_age_model_file')),
+            'raw_values_opened_by_ORI_C': paleo['firewall']['raw_values_opened_by_ORI_C'],
+            'old_pred_paleo_history_02_unchanged': paleo['firewall']['old_prediction_unchanged'] == 'PRED-PALEO-HISTORY-02',
+            'section_XIV_credit': paleo['section_XIV_credit'],
+            'next': 'freeze_committed_stop_without_opening_values',
         },
     }
     OUT.write_text(

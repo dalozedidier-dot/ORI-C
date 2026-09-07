@@ -29,14 +29,16 @@
     {
       "id": "PRED-MATIERE-WAVE-HISTORY-001",
       "branch": "matiere",
-      "status": "frozen_locally_awaiting_external_data",
-      "data_opened": false,
-      "result_present": false,
+      "status": "executed_negative_no_XIV_credit",
+      "data_opened": true,
+      "result_present": true,
       "strict_success": false,
-      "matched_control_declared": false,
+      "matched_control_declared": true,
       "public_preregistration_present": false,
       "registration_status": "package_ready_external_account_required",
-      "registration_public_url": null
+      "registration_public_url": null,
+      "section_XIV_credit": false,
+      "execution_authority": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json"
     },
     {
       "id": "PRED-PALEO-HISTORY-02",

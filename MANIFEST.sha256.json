@@ -4505,8 +4505,8 @@
     },
     {
       "path": "02_branche_systeme_solaire/couche_memoire_historique/MANIFEST.sha256",
-      "size": 19303,
-      "sha256": "f699c8ba1341148787658150e1b72b44488f1ea1bc6ddea693f55200f2b0b26a",
+      "size": 19412,
+      "sha256": "18c7f76e56a628f3a28ec30344d9f0971f484aaea7775b69a41ee93c33b42ebb",
       "storage": "inline"
     },
     {
@@ -4789,6 +4789,12 @@
       "path": "02_branche_systeme_solaire/couche_memoire_historique/requirements.txt",
       "size": 63,
       "sha256": "8a317ec1eff6ffdbcca3322c92ee5379f062a37e16863309adc3a4642ed914a2",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/couche_memoire_historique/resultats/AUDIT_INVARIANT_HMR_SOLAIRE.json",
+      "size": 2293,
+      "sha256": "5810d8c0bd10e2e24a08cdcc5531c2e88574ab8f8f8a1132d2597036e6a34d97",
       "storage": "inline"
     },
     {
@@ -5923,6 +5929,24 @@
       "path": "02_branche_systeme_solaire/paleo_history_02/verifier_gel.py",
       "size": 1117,
       "sha256": "f5791add56e9a06c6e252de32ac4fb2c84a85e333d66b7e5b81ca6c82b26e3ea",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.json",
+      "size": 3461,
+      "sha256": "f524b582a986e4b89b9084b280e7d0e4237d03fe66e0abb70d94d4c67d6df7e5",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.sha256",
+      "size": 106,
+      "sha256": "f502d1c9066b7f38d0bc68f97bda40c812b837a53fd298ff08780c99e363c82e",
+      "storage": "inline"
+    },
+    {
+      "path": "02_branche_systeme_solaire/paleo_history_03_age_ensemble/verifier_avant_ouverture.py",
+      "size": 2575,
+      "sha256": "7d3bf65293cf492c08bc1e643358b4ce780683b9b0a7d924ccbd67162949e01e",
       "storage": "inline"
     },
     {
@@ -8207,8 +8231,8 @@
     },
     {
       "path": "plan_directeur/READINESS_VERROUS.json",
-      "size": 3268,
-      "sha256": "85da67792504e1203cd57349bb99908b35eb1965aa61b0f6606642998bf8593a",
+      "size": 3767,
+      "sha256": "1524611f840c3fb0fa5d78ba4e8ee39b3bbd8249c64e1f89f1fa7a6e20fa9c92",
       "storage": "inline"
     },
     {
@@ -8231,8 +8255,8 @@
     },
     {
       "path": "plan_directeur/VERROUS_ACTIFS.json",
-      "size": 3559,
-      "sha256": "519cf9bf6f7fc1dbd30d455cca0c0298788f942d0f57f02e8b9f40b1cf187d04",
+      "size": 3632,
+      "sha256": "4e4ebaa644ca1a0d15ee180e2400f6c381720006331f99bea19aed94026281b6",
       "storage": "inline"
     },
     {
@@ -8531,8 +8555,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/evaluer_seuil_xiv.py",
-      "size": 20707,
-      "sha256": "786108182031e8ee8849b4729649f8f7bb279022ab8b371ab5d44feae09e6461",
+      "size": 21393,
+      "sha256": "c769dc6b372098769575aba2d792172844f8e90b55850d33f45adc1a9803d27c",
       "storage": "inline"
     },
     {
@@ -8639,8 +8663,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/resultats/PREDICTIONS_HORS_ECHANTILLON_AUDIT.json",
-      "size": 2980,
-      "sha256": "9623a4b685afcc556a303793fe78c96a08417ddbb2db6466c49bc3eaa61c9ee0",
+      "size": 3117,
+      "sha256": "decaa95c9f6c6be4a08354c4d36275661fb6866dc62b1e0f36c382e336842c97",
       "storage": "inline"
     },
     {
@@ -11544,7 +11568,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "d147b551d54d600bf48094034063471d0379ab4c925d4232a356460bc5601827",
+      "sha256": "e4cbe88dba1a7d86e9f899e15115d23aa409ab7dc55450e1ba398a10c25db660",
       "storage": "inline"
     },
     {
@@ -11716,6 +11740,12 @@
       "storage": "inline"
     },
     {
+      "path": "scripts/auditer_invariant_hmr_solaire.py",
+      "size": 4782,
+      "sha256": "a5aa63c50c22719a060cae661e65956bb3da4bdfd7ff56dce98eb5ea2f63f6f5",
+      "storage": "inline"
+    },
+    {
       "path": "scripts/common.py",
       "size": 1143,
       "sha256": "4890eaa13a881abab3d36e381f45cd23332c7d0fc3cb930a0255e4f640390bbf",
@@ -11747,8 +11777,8 @@
     },
     {
       "path": "scripts/construire_verrous_actifs.py",
-      "size": 6747,
-      "sha256": "e5f240db86abeab1405b28eb23b9fdfc812d582d5b2a3dc25b93955d4322716c",
+      "size": 7218,
+      "sha256": "4492d2e2e7e59b525f2ed9a723bda9256cc0a7b8acbfbd973aade6a011a97dd8",
       "storage": "inline"
     },
     {
@@ -11771,8 +11801,8 @@
     },
     {
       "path": "scripts/evaluer_readiness_verrous.py",
-      "size": 5551,
-      "sha256": "a2008df9b8a8db6dbeb24d87073c93074242bb3abc5b8171f5ecca96fd3ae8fd",
+      "size": 6838,
+      "sha256": "5e846f6bbd21d7c683ff62b6ea5413795ca3d27d75117af659a293039dd12f39",
       "storage": "inline"
     },
     {

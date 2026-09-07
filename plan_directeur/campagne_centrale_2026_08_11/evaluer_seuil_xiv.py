@@ -53,6 +53,7 @@ def branch_for_prediction(identifier: str) -> str:
 def prediction_audit() -> dict:
     rows = []
     registration_dir = PRED_DIR / "ENREGISTREMENTS_PUBLICS"
+    watkins_execution = load("01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json")
     for path in sorted(PRED_DIR.glob("PRED-*.json")):
         item = json.loads(path.read_text(encoding="utf-8"))
         result = item.get("resultat")
@@ -72,18 +73,28 @@ def prediction_audit() -> dict:
             and result.get("protocol_frozen_before_data") is True
             and public_preregistration
         )
-        rows.append({
+        row = {
             "id": item["id"],
             "branch": branch_for_prediction(item["id"]),
             "status": item.get("statut"),
             "data_opened": item.get("date_ouverture") is not None,
             "result_present": result is not None,
             "strict_success": success,
-            "matched_control_declared": bool(item.get("modele_concurrent")),
+            "matched_control_declared": bool(item.get("modele_concurrent") or item.get("competitors")),
             "public_preregistration_present": public_preregistration,
             "registration_status": registration.get("status", "missing"),
             "registration_public_url": registration.get("public_url"),
-        })
+        }
+        if item["id"] == "PRED-MATIERE-WAVE-HISTORY-001":
+            row.update({
+                "status": "executed_negative_no_XIV_credit",
+                "data_opened": watkins_execution["opening"]["opened_after_local_freeze"],
+                "result_present": True,
+                "strict_success": False,
+                "section_XIV_credit": watkins_execution["section_XIV_credit"],
+                "execution_authority": "01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json",
+            })
+        rows.append(row)
     successes = [row for row in rows if row["strict_success"]]
     successful_branches = sorted({row["branch"] for row in successes})
     required = ["matiere", "systeme_solaire", "vivant"]

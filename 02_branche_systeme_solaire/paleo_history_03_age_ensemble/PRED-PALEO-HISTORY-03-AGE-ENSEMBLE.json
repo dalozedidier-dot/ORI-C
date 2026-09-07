@@ -1,0 +1,62 @@
+{
+  "schema": "oric.frozen-prediction.v1",
+  "id": "PRED-PALEO-HISTORY-03-AGE-ENSEMBLE",
+  "status": "frozen_unopened",
+  "frozen_on": "2026-09-07",
+  "section_XIV_credit": false,
+  "source": {
+    "dataset": "North Atlantic benthic d18O stack data",
+    "doi": "10.5281/zenodo.14796413",
+    "age_ensemble_file": "NA-stack_age-samples.txt",
+    "age_ensemble_count": 1000,
+    "untuned_age_model_file": "NA-stack_untuned_age_model.txt"
+  },
+  "firewall": {
+    "raw_values_opened_by_ORI_C": false,
+    "allowed_before_committed_freeze": [
+      "metadata",
+      "filenames",
+      "published ensemble count"
+    ],
+    "opening_rule": "No value-bearing source file may be opened until this exact freeze and its SHA256 receipt are committed in HEAD.",
+    "old_prediction_unchanged": "PRED-PALEO-HISTORY-02"
+  },
+  "mapping_depth_to_age": {
+    "join_key": "published composite depth",
+    "primary_chronology": "each complete published age-model realization is applied as one indivisible depth-to-age mapping",
+    "ensemble_rule": "use all 1000 published realizations in file order, without synthesis, mixing, selection, repair, or outcome-dependent weighting",
+    "untuned_control": "apply the published untuned depth-to-age mapping to the same depth-indexed observations",
+    "interpolation": "linear interpolation only after a complete depth-to-age mapping has been selected, with no extrapolation beyond common support",
+    "duplicate_rule": "aggregate exact duplicate ages by arithmetic mean within a realization before interpolation",
+    "monotonicity_rule": "a non-monotone or incomplete realization is reported invalid and excluded by a source-quality rule fixed before scores are computed",
+    "missing_rule": "complete-case evaluation on common support, no imputation"
+  },
+  "analysis_blocks": {
+    "primary_interval_ka": [0.0, 650.0],
+    "fixed_test_blocks_ka": [
+      [0.0, 162.5],
+      [162.5, 325.0],
+      [325.0, 487.5],
+      [487.5, 650.0]
+    ],
+    "minimum_blocks_passing": 3,
+    "history_windows_ka": [20.0, 50.0, 100.0],
+    "forecast_horizon_ka": 10.0
+  },
+  "models": {
+    "X_rich": "current proxy state, current astronomical forcings, fixed seasonal and latitude convention, and the same nonlinear basis and regularization budget as X_plus_H",
+    "X_plus_H": "X_rich plus ordered lag summaries over the frozen history windows",
+    "matched_control": "X_rich plus equal-dimensional history summaries permuted within each fixed test block",
+    "chronology_negative_control": "repeat the full comparison under the published untuned chronology"
+  },
+  "primary_metric": "out-of-block RMSE at the frozen 10 ka horizon",
+  "sesoi": {
+    "minimum_relative_RMSE_gain": 0.05,
+    "minimum_blocks_passing": 3,
+    "alpha": 0.01,
+    "age_ensemble_support_rule": "the median relative gain across valid age realizations must reach 0.05 and its central 95 percent interval must be strictly positive"
+  },
+  "failure_rule": "Fail if the median gain is below 0.05, its central 95 percent interval includes zero, fewer than 3 of 4 blocks pass, the matched control is not beaten at alpha 0.01, or the untuned chronology control reaches the same primary gate. Report non_testable if source integrity or common-support requirements fail.",
+  "stopping_rule": "After committing this freeze, stop. Do not download, preview, parse, summarize, or analyze value-bearing files in this route.",
+  "thresholds_may_move_after_opening": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "oric.hmr-two-filter-solar-audit.v1",
+  "id": "HMR-SOLAR-OPEN-ARTIFACTS-01",
+  "status": "executed_on_already_open_versioned_artifacts",
+  "section_XIV_credit": false,
+  "new_dataset_opened": false,
+  "filters": {
+    "H_given_rich_X": {
+      "question": "Does ordered history survive the equal-complexity rich-X control?",
+      "candidate": "M2",
+      "rich_X_matched_control": "M1P",
+      "delivered_bounds": {
+        "relative_RMSE_gain": -0.18386883476373805,
+        "SESOI": 0.05,
+        "gain_gate_pass": false,
+        "blockwise_p": 0.9999999403953552,
+        "blockwise_gate_pass": false,
+        "criteria_passed": 0,
+        "criteria_total_reported": 5
+      },
+      "wide_bounds": {
+        "relative_RMSE_gain": -0.31568283027747013,
+        "SESOI": 0.05,
+        "gain_gate_pass": false,
+        "blockwise_p": 0.9999980330467224,
+        "blockwise_gate_pass": false,
+        "criteria_passed": 0,
+        "criteria_total_reported": 5
+      },
+      "passes": false,
+      "verdict": "ordered history does not survive the equal-complexity rich-X control",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/results_stress/mpt/e_hardened_verdict.json"
+    },
+    "m_to_R": {
+      "question": "Does a direct intervention on physical trace m change future response R at matched X?",
+      "X_exact_by_construction": true,
+      "same_future_forcing": true,
+      "direct_intervention": true,
+      "R": "P_acc over the frozen future challenge cells",
+      "control_median": 0.91,
+      "do_m_median": 0.87,
+      "signed_change": -0.040000000000000036,
+      "absolute_change_95pct_interval": [
+        0.040000000000000036,
+        0.040000000000000036
+      ],
+      "sham_max_absolute_change": 0.0,
+      "passes_model_level": true,
+      "strict_empirical_P_acc": false,
+      "verdict": "m changes R inside the already-open reduced model, without strict empirical P_acc qualification",
+      "source": "02_branche_systeme_solaire/couche_memoire_historique/do_m_trace/resultats/RESULTAT_DO_M.json"
+    }
+  },
+  "combined_verdict": "solar invariance is split: H fails after rich-X matching, while m changes R only at retrospective model level",
+  "rule": "No threshold is lowered and no result is promoted to section XIV credit."
+}

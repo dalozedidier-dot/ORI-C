@@ -27,7 +27,8 @@ def main() -> int:
     repplan = load('plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/REPLICATION_LTEE_NEW_MIC_PLAN.json')
     yen = load('03_branche_vivant/benchmark_yen_papin_2017/resultats/RESULTAT.json')
     matter = load('plan_directeur/campagne_centrale_2026_08_11/PREDICTIONS_PROSPECTIVES/PRED-MATIERE-WAVE-HISTORY-001.json')
-    paleo = load('plan_directeur/PALEO_AGE_ENSEMBLE_ROUTE.json')
+    matter_result = load('01_branche_matiere/memoire_materielle_reelle/derive/RESULTAT_WATKINS_2026.json')
+    paleo = load('02_branche_systeme_solaire/paleo_history_03_age_ensemble/PRED-PALEO-HISTORY-03-AGE-ENSEMBLE.json')
 
     yen_gain = yen['primary_result']['history_gain_percent']
     rich_gain = yen['strict_state_sensitivity']['history_gain_percent']
@@ -43,31 +44,36 @@ def main() -> int:
         'scientific_core': {
             'claim': 'same or sufficiently matched X with different H matters only when H survives rich-X control or is carried by manipulable m changing R/P_acc',
             'status': 'sharpened_not_yet_transversally_validated',
-            'new_evidence_ids': ['YEN-PAPIN-HIST-01', 'GAJRANI-EXTMEM-01'],
+            'new_evidence_ids': ['YEN-PAPIN-HIST-01', 'GAJRANI-EXTMEM-01', 'HMR-SOLAR-OPEN-ARTIFACTS-01'],
         },
+        'executed_routes': [
+            {
+                'id': matter['id'],
+                'branch': 'matiere',
+                'status': 'executed_negative_no_XIV_credit',
+                'raw_data_opened_by_ORI_C': matter_result['opening']['opened_after_local_freeze'],
+                'n_trials': matter_result['label_reconstruction']['n_trials'],
+                'classifier_gain_percentage_points': matter_result['classifier']['gain_percentage_points'],
+                'frozen_gain_threshold_percentage_points': matter_result['classifier']['success_threshold_gain_pp'],
+                'bootstrap_95pct_gain': matter_result['classifier']['bootstrap95_gain_pp'],
+                'section_XIV_credit': matter_result['section_XIV_credit'],
+            },
+        ],
         'fronts': [
             {
                 'rank': 1,
-                'id': matter['id'],
-                'branch': 'matiere',
-                'status': matter.get('route_status', matter['statut']),
-                'raw_data_opened_by_ORI_C': matter['data_firewall']['raw_experimental_archive_opened_by_ORI_C'],
-                'source_doi': matter['source']['dataset_doi'],
-                'purpose': 'test rich-X versus temporal-history information on a real bistable metamaterial',
-                'targets': ['H-to-R material discrimination', 'future matter protocol design'],
-            },
-            {
-                'rank': 2,
-                'id': 'PALEO-AGE-ENSEMBLE-ROUTE',
+                'id': paleo['id'],
                 'branch': 'systeme_solaire',
-                'status': 'published_chronology_ensemble_and_untuned_model_identified_not_opened',
+                'status': paleo['status'],
                 'source_doi': paleo['source']['doi'],
                 'age_model_ensembles': paleo['source']['age_ensemble_count'],
                 'purpose': 'replace fabricated LR04 age uncertainty with published chronology ensembles in a new frozen prediction ID',
                 'targets': ['solar-system H-versus-X test', 'chronology uncertainty propagation'],
+                'raw_values_opened_by_ORI_C': paleo['firewall']['raw_values_opened_by_ORI_C'],
+                'section_XIV_credit': paleo['section_XIV_credit'],
             },
             {
-                'rank': 3,
+                'rank': 2,
                 'id': 'VES-PACC-INT-01',
                 'branch': 'vivant',
                 'scientific_design_complete': True,
@@ -84,7 +90,7 @@ def main() -> int:
                 'targets': ['XIV-9', 'XIV-3', 'XIV-4'],
             },
             {
-                'rank': 4,
+                'rank': 3,
                 'id': 'MAG-PAIR-001',
                 'branch': 'matiere',
                 'status': mag['status'],
@@ -96,7 +102,7 @@ def main() -> int:
                 'targets': ['XIV-9', 'XIV-11', 'PRED-MATIERE-ABLATION-001'],
             },
             {
-                'rank': 5,
+                'rank': 4,
                 'id': 'PRED-VIVANT-HISTOIRE-001',
                 'branch': 'vivant',
                 'status': 'frozen_prediction_not_supported_by_two_external_history_datasets_so_far',
@@ -111,7 +117,7 @@ def main() -> int:
                 'targets': ['XIV-3', 'XIV-4', 'XIV-10'],
             },
             {
-                'rank': 6,
+                'rank': 5,
                 'id': 'H052-HC01-HC02',
                 'branch': 'matiere',
                 'canonical_closure': f"{h['canonical_closure']['reachable_nodes']}/{h['canonical_closure']['total_nodes']}",

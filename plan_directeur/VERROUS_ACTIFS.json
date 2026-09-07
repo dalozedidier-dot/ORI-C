@@ -17,38 +17,44 @@
     "status": "sharpened_not_yet_transversally_validated",
     "new_evidence_ids": [
       "YEN-PAPIN-HIST-01",
-      "GAJRANI-EXTMEM-01"
+      "GAJRANI-EXTMEM-01",
+      "HMR-SOLAR-OPEN-ARTIFACTS-01"
     ]
   },
+  "executed_routes": [
+    {
+      "id": "PRED-MATIERE-WAVE-HISTORY-001",
+      "branch": "matiere",
+      "status": "executed_negative_no_XIV_credit",
+      "raw_data_opened_by_ORI_C": true,
+      "n_trials": 209,
+      "classifier_gain_percentage_points": 3.8277511961722466,
+      "frozen_gain_threshold_percentage_points": 10.0,
+      "bootstrap_95pct_gain": [
+        -2.8708133971291865,
+        10.526315789473683
+      ],
+      "section_XIV_credit": false
+    }
+  ],
   "fronts": [
     {
       "rank": 1,
-      "id": "PRED-MATIERE-WAVE-HISTORY-001",
-      "branch": "matiere",
-      "status": "frozen_before_raw_ORI_C_analysis_pending_public_commit",
-      "raw_data_opened_by_ORI_C": false,
-      "source_doi": "10.5281/zenodo.21476531",
-      "purpose": "test rich-X versus temporal-history information on a real bistable metamaterial",
-      "targets": [
-        "H-to-R material discrimination",
-        "future matter protocol design"
-      ]
-    },
-    {
-      "rank": 2,
-      "id": "PALEO-AGE-ENSEMBLE-ROUTE",
+      "id": "PRED-PALEO-HISTORY-03-AGE-ENSEMBLE",
       "branch": "systeme_solaire",
-      "status": "published_chronology_ensemble_and_untuned_model_identified_not_opened",
+      "status": "frozen_unopened",
       "source_doi": "10.5281/zenodo.14796413",
       "age_model_ensembles": 1000,
       "purpose": "replace fabricated LR04 age uncertainty with published chronology ensembles in a new frozen prediction ID",
       "targets": [
         "solar-system H-versus-X test",
         "chronology uncertainty propagation"
-      ]
+      ],
+      "raw_values_opened_by_ORI_C": false,
+      "section_XIV_credit": false
     },
     {
-      "rank": 3,
+      "rank": 2,
       "id": "VES-PACC-INT-01",
       "branch": "vivant",
       "scientific_design_complete": true,
@@ -65,7 +71,7 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 3,
       "id": "MAG-PAIR-001",
       "branch": "matiere",
       "status": "protocol_ready_physical_execution_required",
@@ -81,7 +87,7 @@
       ]
     },
     {
-      "rank": 5,
+      "rank": 4,
       "id": "PRED-VIVANT-HISTOIRE-001",
       "branch": "vivant",
       "status": "frozen_prediction_not_supported_by_two_external_history_datasets_so_far",
@@ -97,7 +103,7 @@
       ]
     },
     {
-      "rank": 6,
+      "rank": 5,
       "id": "H052-HC01-HC02",
       "branch": "matiere",
       "canonical_closure": "46/53",
