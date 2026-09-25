@@ -1,0 +1,278 @@
+{
+  "status": "exploratory_retrospective_sensitivity_no_XIV_credit",
+  "source": "donnees_externes/histoire_antibiotique_donofrio_2026/extracted/Figure_3_N-lim_Expt_MIC_Raw_Data.csv",
+  "source_sha256": "ea4bbf2784a515354d246769820c5f547f1e5856f45da3e68c8898a0c91afbb4",
+  "seed": 20260925,
+  "rows": 288,
+  "excluded_rows": 0,
+  "strains": 24,
+  "histories": 6,
+  "canonical_implementation_max_abs_prediction_difference": 0.00025172319754729333,
+  "sklearn_direct_svd_max_abs_prediction_difference": 1.2434497875801753e-14,
+  "state_rmse": 1.1308981248799623,
+  "history_rmse": 0.8042284477036594,
+  "gain_percent": 28.8858624830576,
+  "full_leave_one_strain_out": {
+    "state_rmse": 1.1240981838509465,
+    "history_rmse": 0.8069394207896086,
+    "gain_percent": 28.214507203882526
+  },
+  "canonical_fold_unseen_histories": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "strain_block_permutation": {
+    "scheme": "within_final_environment_keep_all_12_measurements_per_strain",
+    "permutations": 9999,
+    "extreme_count": 0,
+    "p_plus_one": 0.0001,
+    "null_rmse_mean": 1.2423267756970267,
+    "null_rmse_quantiles": [
+      1.0512428068839672,
+      1.2435078468028202,
+      1.4368186249213344
+    ]
+  },
+  "exclude_one_history_sensitivity": [
+    {
+      "excluded_history": "A-1",
+      "original_5fold": {
+        "state_rmse": 1.1953288635179762,
+        "history_rmse": 1.1953288635179813,
+        "gain_percent": -4.272486065671681e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-6"
+          ],
+          [
+            "A-5"
+          ],
+          [
+            "A-4"
+          ],
+          [
+            "A-2"
+          ],
+          [
+            "REL606"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 1.1051055421389615,
+        "history_rmse": 0.7880655677255001,
+        "gain_percent": 28.688660252288848
+      }
+    },
+    {
+      "excluded_history": "A-2",
+      "original_5fold": {
+        "state_rmse": 0.842541083686412,
+        "history_rmse": 0.8425410836864087,
+        "gain_percent": 3.953123637962706e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-6"
+          ],
+          [
+            "A-5"
+          ],
+          [
+            "A-4"
+          ],
+          [
+            "A-1"
+          ],
+          [
+            "REL606"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 0.7977156306120298,
+        "history_rmse": 0.7213570441245204,
+        "gain_percent": 9.572156236793923
+      }
+    },
+    {
+      "excluded_history": "A-4",
+      "original_5fold": {
+        "state_rmse": 1.3166193177149994,
+        "history_rmse": 1.316619317714994,
+        "gain_percent": 4.0475408848241607e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-6"
+          ],
+          [
+            "A-5"
+          ],
+          [
+            "A-2"
+          ],
+          [
+            "A-1"
+          ],
+          [
+            "REL606"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 1.2072962444058766,
+        "history_rmse": 0.8361399111776452,
+        "gain_percent": 30.742772119769278
+      }
+    },
+    {
+      "excluded_history": "A-5",
+      "original_5fold": {
+        "state_rmse": 1.31277815908994,
+        "history_rmse": 1.3127781590899368,
+        "gain_percent": 2.5371149350811837e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-6"
+          ],
+          [
+            "A-4"
+          ],
+          [
+            "A-2"
+          ],
+          [
+            "A-1"
+          ],
+          [
+            "REL606"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 1.2018219827742604,
+        "history_rmse": 0.8280982402594044,
+        "gain_percent": 31.096430908358002
+      }
+    },
+    {
+      "excluded_history": "A-6",
+      "original_5fold": {
+        "state_rmse": 1.3063984616799025,
+        "history_rmse": 1.3063984616798983,
+        "gain_percent": 3.229372674054257e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-5"
+          ],
+          [
+            "A-4"
+          ],
+          [
+            "A-2"
+          ],
+          [
+            "A-1"
+          ],
+          [
+            "REL606"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 1.1941618346999123,
+        "history_rmse": 0.8161439419231655,
+        "gain_percent": 31.655499430003225
+      }
+    },
+    {
+      "excluded_history": "REL606",
+      "original_5fold": {
+        "state_rmse": 1.2790091653158429,
+        "history_rmse": 1.2790091653158515,
+        "gain_percent": -6.770662655836212e-13,
+        "unseen_histories_by_fold": [
+          [
+            "A-6"
+          ],
+          [
+            "A-5"
+          ],
+          [
+            "A-4"
+          ],
+          [
+            "A-2"
+          ],
+          [
+            "A-1"
+          ]
+        ],
+        "interpretation": "changes_estimand_to_unseen_histories"
+      },
+      "leave_one_strain_out": {
+        "state_rmse": 1.1750069594315842,
+        "history_rmse": 0.8446069617359703,
+        "gain_percent": 28.118982193556253
+      }
+    }
+  ],
+  "cross_environment_transfer": [
+    {
+      "train_environment": "Carbon",
+      "test_environment": "Nitrogen",
+      "state_rmse": 0.973537031102312,
+      "history_rmse": 0.7844721621254166,
+      "gain_percent": 19.42040856553982,
+      "exact_permutations": 720,
+      "p_history_alignment": 0.006944444444444444
+    },
+    {
+      "train_environment": "Nitrogen",
+      "test_environment": "Carbon",
+      "state_rmse": 1.158264197388036,
+      "history_rmse": 0.833812099706893,
+      "gain_percent": 28.011924948798768,
+      "exact_permutations": 720,
+      "p_history_alignment": 0.006944444444444444
+    }
+  ],
+  "random_group_partition_sensitivity": {
+    "partitions": 500,
+    "seed": 20260926,
+    "positive_gain_count": 500,
+    "gain_percent_quantiles": [
+      20.14178561880331,
+      23.39578166288709,
+      27.79275747651458,
+      31.496589665965065,
+      33.15333477389396
+    ],
+    "interpretation": "split_sensitivity_distribution_not_a_confidence_interval"
+  },
+  "limitations": [
+    "Post hoc sensitivity using already public data, not a new confirmatory protocol.",
+    "Strain-block permutation assumes exchangeability of strains within environment under the null.",
+    "Only six observed ancestral histories. Related descendants need not be independent experimental replicates.",
+    "Limitation is the environment in which the strain evolved, not a measured complete current state. The baseline controls antibiotic and evolution environment only.",
+    "Transfer only concerns the same known histories in two measured environments.",
+    "No causal intervention on memory and no general ORI-C validation."
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3"
+  },
+  "verification": {
+    "published_rmse_agreement_tolerance": 2e-06,
+    "history_rmse_difference_from_published": -1.1264144406109011e-06,
+    "sklearn_predictions_verified": true
+  }
+}

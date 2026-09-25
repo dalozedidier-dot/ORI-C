@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "independent_augmented_lstsq_max_abs_difference": 1.1546319456101628e-14,
+  "checks": [
+    "group_disjoint_splits",
+    "finite_predictions",
+    "ridge_against_augmented_lstsq",
+    "constant_history_has_no_effect",
+    "complete_permutation_counts",
+    "source_dimensions",
+    "known_histories_in_baseline_folds"
+  ]
+}

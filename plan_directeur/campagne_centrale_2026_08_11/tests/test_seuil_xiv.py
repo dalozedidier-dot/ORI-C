@@ -26,7 +26,19 @@ def test_aucune_validation_croisee_retrospective_ne_compte_comme_prediction_pros
     prediction = MODULE.prediction_audit()
     assert prediction["strict_success_count"] == 0
     assert prediction["all_branches_have_success"] is False
-    assert all(row["result_present"] is False for row in prediction["predictions"])
+    # An executed negative result must remain visible without earning credit.
+    by_id = {row["id"]: row for row in prediction["predictions"]}
+    watkins = by_id["PRED-MATIERE-WAVE-HISTORY-001"]
+    assert watkins["result_present"] is True
+    assert watkins["status"] == "executed_negative_no_XIV_credit"
+    assert watkins["strict_success"] is False
+    assert watkins["section_XIV_credit"] is False
+    assert all(row["strict_success"] is False for row in prediction["predictions"])
+    assert all(
+        row["result_present"] is False
+        for key, row in by_id.items()
+        if key != "PRED-MATIERE-WAVE-HISTORY-001"
+    )
 
 
 def test_pacc_strict_refuse_proxy_et_modele_comme_preuve_empirique() -> None:

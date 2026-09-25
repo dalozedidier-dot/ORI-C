@@ -6257,8 +6257,8 @@
     },
     {
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/PROTOCOLE.md",
-      "size": 655,
-      "sha256": "024602d40612112977be3152df808ae1884166d2ee53d0dd7ced617acd06696a",
+      "size": 1439,
+      "sha256": "c545fb7b168687fefe33378851db8f17ece21698ea823ccceebd429cc6da599d",
       "storage": "inline"
     },
     {
@@ -6283,6 +6283,54 @@
       "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/analyser_wong_seguin_2015.py",
       "size": 10101,
       "sha256": "2a0bba3556d43ac77099404d1703b891b720220386e87a70610ce3d032bcb80a",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/README.md",
+      "size": 3795,
+      "sha256": "aab0c073bedffcf12395a3079883cdf2c03b9a93a7f27fbf7d43b6a399f8f53f",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/approfondissement_donofrio.py",
+      "size": 13122,
+      "sha256": "807c5e2fd2039f9c71cfc9acab586cd45f729f984ac84d09c0269e451106bbd7",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/resultats/permutations_souches.csv",
+      "size": 187517,
+      "sha256": "cca1c0fab60a7f6e2c1ee0f1c4ef672a50202d559e8257332e5b45aeea689ab4",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/resultats/predictions.csv",
+      "size": 20657,
+      "sha256": "ddf8f7157ecfa9715f7a7ba114bad9cd4c4499af018c0d1a76b080288a90e66b",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/resultats/resultat.json",
+      "size": 7473,
+      "sha256": "685a7523960fd139797840c44bf590e4da1a625aae5d9d0aa2a87002dcf188b1",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/resultats/sensibilite_partitions.csv",
+      "size": 9305,
+      "sha256": "38b234e714f949b7db5796380122abb008ec998437c7f3d79bd8e95be5f3ece5",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/resultats/verification.json",
+      "size": 350,
+      "sha256": "4a050707380036cca199bcf5f38d1a619ff933936e5870d6140e77a9aa675bb8",
+      "storage": "inline"
+    },
+    {
+      "path": "03_branche_vivant/benchmark_histoire_antibiotique_2026/approfondissement_2026_09_25/verifier_approfondissement.py",
+      "size": 2203,
+      "sha256": "7e443c5d39bdf06fb2167287813b74da299dcc9911d2a4a13456de556e690901",
       "storage": "inline"
     },
     {
@@ -7061,8 +7109,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "size": 5457,
-      "sha256": "986564e6be438b1df27a9b319c5a17a860c7713af23d144b59deda6beedfbc32",
+      "size": 6141,
+      "sha256": "bee8fb46063d912d1b2f217d0b2c16dcb555f63941f4115013fc21ad6ae2e486",
       "storage": "inline"
     },
     {
@@ -8735,8 +8783,8 @@
     },
     {
       "path": "plan_directeur/campagne_centrale_2026_08_11/tests/test_seuil_xiv.py",
-      "size": 2847,
-      "sha256": "d8e3da688a5c762e5c3e41c57680666bba5b3b79a1fbec863cfc0f0d19b32c25",
+      "size": 3400,
+      "sha256": "1448597ee083da87abda838e639ae44a60170acbabf29eaf7ac12b04edf03bb9",
       "storage": "inline"
     },
     {
@@ -11574,7 +11622,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "6b74c9afb14d55801273f7b47e81d7e5d25680a4c3747840f0be167619511e1b",
+      "sha256": "8f69e982df48eeeb817d253f56d1a582e7d4c385da3b1a125e22d3f28e8d4d6d",
       "storage": "inline"
     },
     {
