@@ -85,11 +85,6 @@ jobs:
             python telecharger_toutes_sources.py
           fi
 
-      - name: Vérifier empreintes, archives et provenance
-        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
-        working-directory: ${{ env.CAMPAGNE }}
-        run: python verifier_sources.py
-
       - name: Ne garder que l'exploitable
         if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
@@ -99,6 +94,13 @@ jobs:
         if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
         working-directory: ${{ env.CAMPAGNE }}
         run: python reconstituer_provenance.py
+
+      # Le téléchargement produit la provenance des sources. L'inventaire
+      # fichiers_conserves n'existe qu'après extraction et reconstruction.
+      - name: Vérifier empreintes, archives et provenance
+        if: ${{ github.event_name == 'schedule' || inputs.telecharger }}
+        working-directory: ${{ env.CAMPAGNE }}
+        run: python verifier_sources.py
 
       - name: Exécuter la campagne
         working-directory: ${{ env.CAMPAGNE }}
@@ -122,5 +124,6 @@ jobs:
             ${{ env.CAMPAGNE }}/derive/
             ${{ env.CAMPAGNE }}/INSPECTION.json
             ${{ env.CAMPAGNE }}/TRI_DEPOT.json
+            ../DONNEES_MATIERE_ORI-C/PROVENANCE.json
           if-no-files-found: warn
           retention-days: 90

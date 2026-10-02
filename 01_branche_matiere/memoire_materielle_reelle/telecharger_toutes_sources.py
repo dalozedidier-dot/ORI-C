@@ -294,7 +294,8 @@ def main() -> int:
     # sortir le programme en 0 sur un fichier tronqué.
     echecs = [f["nom_original"] for r in rapports for f in r["fichiers"]
               if f.get("statut", "").startswith("échec")
-              or f.get("taille_conforme") is False]
+              or f.get("taille_conforme") is False
+              or f.get("md5_conforme") is False]
 
     print()
     print(f"Volume annoncé : {volume / 1e9:.2f} Go")

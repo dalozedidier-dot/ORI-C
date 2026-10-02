@@ -77,8 +77,8 @@
     },
     {
       "path": ".github/workflows/campagne-matiere.yml",
-      "size": 5060,
-      "sha256": "4142435814660f7246072f994dd11174a5f608e2f1490fc3ea2927c54b7b8f82",
+      "size": 5265,
+      "sha256": "32016bf0a6a6b8f88c57307c36ef2a3122dec155d9b78a28836b4a935d840bfc",
       "storage": "inline"
     },
     {
@@ -2687,8 +2687,8 @@
     },
     {
       "path": "01_branche_matiere/memoire_materielle_reelle/telecharger_toutes_sources.py",
-      "size": 14544,
-      "sha256": "c965d5b3624d8bff4283e546c8e54f8e7b1bb50b09c1fac82ac750c1e264d7e6",
+      "size": 14592,
+      "sha256": "2fbc54baddf43c86caa0babb9f68dd230faccf05532e57398e0b14607af4c0c7",
       "storage": "inline"
     },
     {
@@ -11622,7 +11622,7 @@
     {
       "path": "preuves/CHIFFRES.json",
       "size": 30884,
-      "sha256": "8f69e982df48eeeb817d253f56d1a582e7d4c385da3b1a125e22d3f28e8d4d6d",
+      "sha256": "d88251fc52e7511d1cf38056f7b4ccb1de51b2c89bafb1f1d76fbc5a4e381972",
       "storage": "inline"
     },
     {
@@ -11881,6 +11881,12 @@
       "path": "scripts/tests/test_authority_guards.py",
       "size": 2015,
       "sha256": "0323931ea41cdfd4915173c7464cac65aac9bf91d58806dac2e297f87a141682",
+      "storage": "inline"
+    },
+    {
+      "path": "scripts/tests/test_campagne_matiere_workflow.py",
+      "size": 905,
+      "sha256": "74f23fdea4fbe58ebbcf8ebcd5b52b9859e4dd7530ef5ec7c1dfcd9e699717f4",
       "storage": "inline"
     },
     {
